@@ -1,0 +1,152 @@
+{
+  "actual_budget": {
+    "optimizer_updates": 1000,
+    "training": {
+      "kc": {
+        "checkpoint_score": {
+          "max_normalized_violation": 0.9987237527506861,
+          "sum_normalized_violation": 14.778321811685176
+        },
+        "history": [
+          {
+            "components": {},
+            "physics_audit_max": 1.0000174716055341,
+            "physics_audit_sum": 39.99982760830573,
+            "step": 0,
+            "training_loss": null
+          },
+          {
+            "components": {
+              "boundary": 1.208157404827661,
+              "clock_alignment": 0.07844333827141667,
+              "initial": 0.986913633101039,
+              "interior": 0.9856829070867641
+            },
+            "physics_audit_max": 3.3714093577968325,
+            "physics_audit_sum": 37.592571829347996,
+            "step": 1,
+            "training_loss": 3.184676111929035
+          },
+          {
+            "components": {
+              "boundary": 0.46903509489615053,
+              "clock_alignment": 0.32959391766627943,
+              "initial": 0.21359005213316493,
+              "interior": 0.10031423173655256
+            },
+            "physics_audit_max": 1.4928709140383518,
+            "physics_audit_sum": 17.66151132897849,
+            "step": 200,
+            "training_loss": 0.799419074649182
+          },
+          {
+            "components": {
+              "boundary": 0.4112623220835546,
+              "clock_alignment": 0.028370870189598635,
+              "initial": 0.09898654982026601,
+              "interior": 0.03336093332862055
+            },
+            "physics_audit_max": 0.9987624009971094,
+            "physics_audit_sum": 13.764228056854218,
+            "step": 400,
+            "training_loss": 0.5450283487419211
+          },
+          {
+            "components": {
+              "boundary": 0.4292299232079344,
+              "clock_alignment": 0.10847525951875113,
+              "initial": 0.31745036727474696,
+              "interior": 0.10059155643370507
+            },
+            "physics_audit_max": 1.3106884319547198,
+            "physics_audit_sum": 16.640480554180794,
+            "step": 600,
+            "training_loss": 0.8526956098923241
+          },
+          {
+            "components": {
+              "boundary": 0.4142516345710595,
+              "clock_alignment": 0.09199833360834092,
+              "initial": 0.0857285017581542,
+              "interior": 0.03587131317535083
+            },
+            "physics_audit_max": 1.0010686557072888,
+            "physics_audit_sum": 16.163896418518775,
+            "step": 800,
+            "training_loss": 0.5404513661849816
+          },
+          {
+            "components": {
+              "boundary": 0.41637655467824736,
+              "clock_alignment": 0.6184021530253951,
+              "initial": 0.10868029303366597,
+              "interior": 0.02067900569637806
+            },
+            "physics_audit_max": 0.9987237527506861,
+            "physics_audit_sum": 14.778321811685176,
+            "step": 1000,
+            "training_loss": 0.5766559610595612
+          }
+        ],
+        "wall_seconds": 303.6399999999994
+      }
+    },
+    "wall_seconds": 311.9060000000027
+  },
+  "artifacts": {
+    "baseline_raw_metrics": "outputs\\runs\\20260821T032527Z-pilot-g6-qpop-method-003\\metrics-raw.json",
+    "baseline_run_summary": "outputs\\runs\\20260821T032527Z-pilot-g6-qpop-method-003\\pilot_summary.json",
+    "checkpoint_kc": "outputs\\runs\\20260821T033252Z-pilot-g6-kc-full-joint-001\\checkpoint-kc.pt",
+    "intent": "docs\\experiment\\intents\\20260821T033252Z-pilot-g6-kc-full-joint-001.json",
+    "metrics_kc": "outputs\\runs\\20260821T033252Z-pilot-g6-kc-full-joint-001\\metrics-kc.json",
+    "prediction_kc": "outputs\\runs\\20260821T033252Z-pilot-g6-kc-full-joint-001\\prediction-kc.h5",
+    "summary": "outputs\\runs\\20260821T033252Z-pilot-g6-kc-full-joint-001\\pilot_summary.json",
+    "training_kc": "outputs\\runs\\20260821T033252Z-pilot-g6-kc-full-joint-001\\training-kc.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-osc-bundled-reference-through-512.0793ns",
+  "checkpoint": {
+    "id": "oracle-blind-physics-audit-best",
+    "selection": "max normalized raw physics violation, then sum"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_UNQUALIFIED_ORACLE",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.qpop_method_pilot"
+  ],
+  "ended_at": "2026-08-21T03:38:46.987340Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "python": "3.11.9",
+    "torch": "2.5.1+cpu"
+  },
+  "evaluator_id": "frozen-project-development-evaluator-qpop-reference-v1",
+  "evidence_identity": "QPOP_CPC_V1_BUNDLED_REFERENCE_UNQUALIFIED",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "g6-qpop-raw-identity-kc-development-pilot-v1",
+  "failure_class": null,
+  "gate": "G6",
+  "gate_outcome": "DEVELOPMENT_KC_SIGNAL_NOT_DETECTED",
+  "method_id": "paired-kc-qpop-full-physics-full-joint-pilot-v1",
+  "numerical_validity": "VALID_DEVELOPMENT_PILOT",
+  "physical_contract_id": "PROVISIONAL_G3_QPOP_CPC_V1_IMT_CONTRACT",
+  "planned_budget": {
+    "methods": 1,
+    "optimizer_updates_per_method": 1000
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_G3_G6_DEVELOPMENT_ONLY",
+  "run_id": "20260821T033252Z-pilot-g6-kc-full-joint-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "protocol_selection",
+  "seed": 17,
+  "split_id": "qpop-cpc-v1-bundled-reference-development-only-v1",
+  "started_at": "2026-08-21T03:33:35.077911Z",
+  "supersedes": null,
+  "tier": "pilot"
+}

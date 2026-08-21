@@ -1,0 +1,79 @@
+{
+  "actual_budget": {
+    "active_stage_seconds": 72.496171,
+    "attempt_number": 4,
+    "qpop_processes_started": 0,
+    "stage": "resolve",
+    "wall_seconds_from_intent": 161.5549563
+  },
+  "artifacts": {
+    "apt_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-004/logs/apt.log",
+    "failure_record": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-004/resolve.failure.json",
+    "intent": "outputs/runs/20260819T105458Z-smoke-g2-env-resolve-attempt-004/environment_intent.json",
+    "petsc_configure_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-004/logs/petsc-configure-console.log",
+    "run_record": "outputs/runs/20260819T105458Z-smoke-g2-env-resolve-attempt-004/environment_attempt.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-oscillation-environment",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_ENVIRONMENT_RESOLUTION"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "dirty": true,
+    "exact_worktree_snapshot": "NOT_AVAILABLE",
+    "kind": "working-tree-uncommitted",
+    "revision": "29e35ae5dd5165e5e15586312ee92cf940e8ad7f"
+  },
+  "command": [
+    "wsl.exe",
+    "-d",
+    "PINN-PCM-SCI-Ubuntu-20.04",
+    "-u",
+    "root",
+    "--",
+    "/usr/bin/python3",
+    "/mnt/e/Python demo/PINN-PCM-SCI/pinn_pcm_sci/qpop_legacy_stack.py",
+    "resolve",
+    "--spec",
+    "/mnt/e/Python demo/PINN-PCM-SCI/configs/qpop/legacy-stack-ubuntu-20.04/stack_spec.json",
+    "--evidence-root",
+    "/mnt/e/Python demo/PINN-PCM-SCI/outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-004",
+    "--execute"
+  ],
+  "ended_at": "2026-08-19T10:57:40.057262Z",
+  "environment": {
+    "bison": "2:3.5.1+dfsg-1",
+    "environment_id": "qpop-cpc-v1-ubuntu-20.04-source-stack-v1",
+    "execution_spec_sha256": "5b56f745bb4b9e6c13316f34ca8dd120a95efa72cff71587bc8eeb7d42e1c828",
+    "flex": "NOT_INSTALLED",
+    "os": "Ubuntu 20.04",
+    "runtime": "cpu",
+    "wsl_distribution": "PINN-PCM-SCI-Ubuntu-20.04"
+  },
+  "evaluator_id": "NOT_RUN_ENVIRONMENT_PREFLIGHT",
+  "evidence_identity": "ENVIRONMENT_PREFLIGHT_ONLY",
+  "execution_status": "FAILED",
+  "experiment_group_id": "g2-qpop-legacy-environment-resolution-v1",
+  "failure_class": "MISSING_PTSCOTCH_BUILD_DEPENDENCY_FLEX",
+  "gate": "G2",
+  "gate_outcome": "G2_ENVIRONMENT_BLOCKED",
+  "method_id": "qpop-legacy-stack-resolve-v1",
+  "numerical_validity": "NOT_EVALUATED",
+  "physical_contract_id": "NOT_YET_FROZEN_G2_ENVIRONMENT_PREFLIGHT",
+  "planned_budget": {
+    "attempt_number": 4,
+    "build_jobs": 2,
+    "stage": "resolve"
+  },
+  "replay_of": "20260819T102543Z-smoke-g2-env-resolve-attempt-003",
+  "route_disposition": "BLOCKED",
+  "run_id": "20260819T105458Z-smoke-g2-env-resolve-attempt-004",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_ENVIRONMENT_PREFLIGHT",
+  "started_at": "2026-08-19T10:54:58.5023057Z",
+  "supersedes": null,
+  "tier": "smoke"
+}

@@ -1,0 +1,1881 @@
+{
+  "title": "Kinetics-Clock PINNs for Endogenous High-Frequency VO2 Switching Fronts",
+  "title_zh": "<TODO[title_zh]: Chinese translation; keep proper nouns and method acronyms in English>",
+  "method_name": "<TODO[method_name]: short handle for the proposed method, e.g. 'Persistent Baseline GRPO (PB-GRPO)'>",
+  "hook": "A two-dimensional VO2 PINN may not need more spectral capacity to resolve a pulse-created switching front: at matched total parameter count, a physically constrained local kinetics clock can make the same front slower in the network coordinate while preserving the original electro-thermal-phase equations. The claim is deliberately narrower than a general coordinate-warp advantage and is tested against learned and analytic coordinate transforms as well as the strongest spectral, causal, weighting, and hard-constraint alternatives.",
+  "abstract_draft": "<TODO[abstract_draft]: 150-250 words. Order: problem → bottleneck (cite ≥ 1 Phase 0 paper) → contribution (one sentence) → falsification prediction → expected outcome.>",
+  "motivation": {
+    "problem_framing": "<TODO[motivation.problem_framing]: 2-3 paragraphs framing the user's problem. Reference the bottleneck_statement from Phase 1 and the closest_adjacent papers. NOT a category label.>",
+    "why_now": "<TODO[motivation.why_now]: one paragraph on what makes this gap timely. Cite the most recent Phase 0 papers (within last 4-12 months) that get close but stop short.>",
+    "why_prior_stopped": [
+      {
+        "paper_id": "arxiv:2509.04966v2",
+        "venue_year": "arXiv 2025",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[0].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[0].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[0].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "arxiv:2605.04502v1",
+        "venue_year": "arXiv 2026-05",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[1].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[1].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[1].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "openalex:W4403555504",
+        "venue_year": "arXiv (Cornell University) 2024",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[2].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[2].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[2].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+        "venue_year": "arXiv 2026-04",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[3].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[3].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[3].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      }
+    ],
+    "what_changes_when_gap_closes": "<TODO[motivation.what_changes_when_gap_closes]: 2-3 sentences naming downstream consequences. NOT \"better numbers\" — name the specific capability or theoretical statement that becomes available>"
+  },
+  "core_claim": "<TODO[core_claim]: one sentence; should mirror the candidate's hook stripped to its load-bearing assertion>",
+  "sub_claims": "<TODO[sub_claims]: list of {id, statement, supports_which_aspect}; 2-4 entries>",
+  "key_equations": "<TODO[key_equations]: optional 3-6 equations; each {id, linked_step_id, latex, description, description_zh}. Emit [] (literal empty list) for a pure-prose candidate.>",
+  "method_flow": {
+    "high_level_pipeline": "<TODO[method_flow.high_level_pipeline]: 3-5 sentences narrating the method end-to-end as a story: input → key transformation → output>",
+    "steps": "<TODO[method_flow.steps]: derive from candidate.core_mechanism_steps; emit a list where each entry is {step_id, title, what_changes, why_this_step, linked_component, linked_falsification, input, output}. Each step_id MUST be S1, S2, ... in reading order. linked_component ∈ {theory, engineering, both}; linked_falsification ∈ {metric_specification, mechanism_distinguisher, both}.>",
+    "design_reasoning_echo": "<TODO[method_flow.design_reasoning_echo]: one paragraph echoing or condensing candidate.core_mechanism_reasoning>"
+  },
+  "plain_motivation_en": "<TODO[plain_motivation_en]: plain-language English rendering of motivation for a reader outside this subfield. Simplify LANGUAGE only — never drop the load-bearing mechanism. Spell out every abbreviation on first use.>",
+  "plain_motivation_zh": "<TODO[plain_motivation_zh]: Chinese 普通版 counterpart. Same content; keep identifiers/symbols/acronyms in English.>",
+  "plain_method_steps_en": "<TODO[plain_method_steps_en]: list of {step_id, what_to_do, why_this_makes_sense}; SAME step_ids and SAME order as method_flow.steps.>",
+  "plain_method_steps_zh": "<TODO[plain_method_steps_zh]: Chinese 普通版 counterpart; English for identifiers/symbols/acronyms.>",
+  "plain_method_modules_en": "<TODO[plain_method_modules_en]: group the CONTRIBUTION steps into named modules; list of {module_id, purpose_oneline, step_ids}.>",
+  "plain_method_modules_zh": "<TODO[plain_method_modules_zh]: Chinese 普通版 counterpart.>",
+  "falsification_prediction": "Generate a predeclared bank of 2D VO2 pulse-switching trajectories with the named FEniCSx model, then train the kinetics-clock PINN and all matched baselines on the training cases, select only on in-distribution validation, and score locked whole-case OOD afterward. If the mechanism works, switching-time absolute error, phase-front Hausdorff/topology error, energy-balance error, worst normalized coupled residual, and V/T/ξ field error should decrease relative to the unmodified-coordinate arm without a wall-time or memory claim being required. The one load-bearing variable is τψ(x,t), the learned accumulated kinetics clock; the sole negative-control intervention fixes gψ(x,t)=t in nondimensional units while leaving the head, budget, samples, and residual implementation unchanged, and predicts those downstream device metrics return toward the unmodified-coordinate PINN baseline. Failure of the clock arm to beat both that identity control and the learned/analytic coordinate-transform competitors, or failure of the identity intervention to remove the downstream gain, falsifies the claimed kinetics-specific mechanism.",
+  "compute_budget": "9.5 80GB-class GPU-days on one GPU for the bounded 2D FEniCSx data generation, matched training arms, three-seed replication, and locked post-selection OOD scoring; $0 paid API.",
+  "almost_prior_paper_id": "arxiv:2509.04966v2",
+  "almost_prior_venue_year": "arXiv 2025",
+  "what_step_was_missed": "NeuSA would have needed to replace its single global physical-time coefficient flow with a spatially local monotone clock whose rate is coupled to the endogenous phase-kinetic right-hand side, then re-express the complete electric, heat, and phase residuals under that map rather than assuming a fixed global spectral evolution.",
+  "feasibility_validation": {
+    "compute": {
+      "verdict": "feasible",
+      "rationale": "API line ≈ $0 vs $10000 (0%) → feasible. Overall (worse line) → feasible."
+    },
+    "data": {
+      "verdict": "<TODO[feasibility_validation.data.verdict]: feasible | tight | infeasible>",
+      "rationale": "<TODO[feasibility_validation.data.rationale]: one sentence: required data sources accessible; if any closed/private, name a public substitute>"
+    },
+    "theoretical": {
+      "verdict": "<TODO[feasibility_validation.theoretical.verdict]: feasible | tight | infeasible | n/a (only when the candidate has no theoretical contribution)>",
+      "rationale": "<TODO[feasibility_validation.theoretical.rationale]: one sentence; if tight, name the missing prerequisite>"
+    },
+    "engineering": {
+      "verdict": "<TODO[feasibility_validation.engineering.verdict]: feasible | tight | infeasible | n/a (only when the candidate has no engineering contribution)>",
+      "rationale": "<TODO[feasibility_validation.engineering.rationale]: one sentence; if tight, name the binding implementation cost>"
+    },
+    "falsification": {
+      "verdict": "<TODO[feasibility_validation.falsification.verdict]: feasible | tight | infeasible>",
+      "rationale": "<TODO[feasibility_validation.falsification.rationale]: one sentence: the falsification_prediction experiment is concrete enough to run with available tooling>"
+    },
+    "overall": "<TODO[feasibility_validation.overall]: feasible | tight | infeasible>"
+  },
+  "differentiation_from_lit": [
+    {
+      "paper_id": "arxiv:2509.04966v2",
+      "venue_year": "arXiv 2025",
+      "delta": "NeuSA constructs a global truncated spectral state evolved by a NODE for canonical wave problems, whereas this candidate constructs a spatially local, strictly monotone kinetics coordinate jointly constrained by the phase-rate law and evaluates the unchanged VO2 electro-thermal-phase residuals through its full pullback."
+    },
+    {
+      "paper_id": "arxiv:2605.04502v1",
+      "venue_year": "arXiv 2026-05",
+      "delta": "The adaptive-spectral study varies Fourier frequencies and initial-condition gates for one stiff ODE, whereas this candidate changes the independent coordinate of a 2D coupled device PDE and retains every time- and space-derivative cross term induced by that local map."
+    },
+    {
+      "paper_id": "openalex:W4403555504",
+      "venue_year": "arXiv (Cornell University) 2024",
+      "delta": "The energy-embedded phase-field PINN obtains steady microstructures by replacing dynamic evolution with a static problem, whereas this candidate retains and scores the full pulse-driven switching trajectory, event timing, moving topology, and energy balance."
+    },
+    {
+      "paper_id": "semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+      "venue_year": "arXiv 2026-04",
+      "delta": "The operando VO2 work reveals sub-nanosecond electro-thermo-phase topology dynamics and supplies a physical target regime, whereas this candidate constructs a physics-residual neural coordinate solver whose claim is bounded to synthetic numerical closure rather than experimental validation."
+    }
+  ],
+  "reviewer_concerns_and_responses": [
+    {
+      "attack": "Paper-pointed threat: openalex:W4403443387 (collision_hits). R-adaptive DeepONet already demonstrates that transforming discontinuous PDE solutions from a physical domain to an equidistributed computational domain, then learning the solution and coordinate transformation maps separately, can overcome a sharp-solution representation bottleneck; therefore a broad claim that learned adaptive coordinates themselves resolve fronts is already occupied. The candidate stands only on its narrower result: a spatially local temporal clock constrained by the endogenous phase-kinetic rate, a complete pullback of the unchanged coupled electro-thermal-phase PDE, and a kinetics-specific gain over matched generic learned and analytic transforms. The retrieved pool covered learned/adaptive coordinate transforms and moving-mesh PINNs but showed no exact `Kξ`-driven material-time or reaction-progress-coordinate PINN of this form; that absence is provisional because arXiv and OpenAlex succeeded, Semantic Scholar coverage was partial with some rate-limited queries, and OpenReview was unavailable.",
+      "severity": "non_blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[0].response]: 2-3 sentences: explain where in the candidate (which field) the defense is anchored; reference the Phase 3.2 verdict_rationale when relevant>",
+      "fields_changed_to_address": []
+    },
+    {
+      "attack": "Un-retrieved mechanism family flagged by the audit (parametric knowledge, not in the retrieved pool): Intrinsic-time/material-time constitutive reparameterization and reaction-progress-variable methods remain a scoop-check family; query `material time internal variable neural PDE` and `reaction progress coordinate PINN`. — novelty vs this family is UNVERIFIED; run a targeted scoop-check on that vocabulary before investing.",
+      "severity": "non_blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[1].response]: 1-2 sentences: state what a scoop-check on the named family must establish for the candidate's delta to survive (do NOT claim the check already passed)>",
+      "fields_changed_to_address": []
+    }
+  ],
+  "domain_landscape": {
+    "n_papers": 39,
+    "pattern_distribution": [
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "count": 1,
+        "share": 0.03,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "count": 5,
+        "share": 0.13,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "count": 5,
+        "share": 0.13,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "count": 2,
+        "share": 0.05,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "count": 4,
+        "share": 0.1,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "count": 5,
+        "share": 0.13,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "count": 5,
+        "share": 0.13,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "count": 1,
+        "share": 0.03,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "count": 14,
+        "share": 0.36,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "count": 1,
+        "share": 0.03,
+        "saturation_band": "untested"
+      }
+    ],
+    "candidate_uses": [
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "role": "closes Gap 1",
+        "sub_pattern_id": "C12 (Substitute the Operator or Representation)",
+        "saturation_in_domain": "mid_frequency"
+      }
+    ],
+    "position_note": "<TODO[domain_landscape.position_note]: one sentence describing how the candidate's chosen patterns sit relative to the area's pattern usage; descriptive, not prescriptive>"
+  },
+  "literature_breakdown": {
+    "summary": {
+      "n_phase0_total": 75,
+      "n_phase0_on_topic": 39,
+      "n_phase0_outside_taxonomy": 36,
+      "n_phase3_collision": 229
+    },
+    "phase0_by_pattern": [
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "pattern_name": "Prove Equivalence to Unify",
+        "papers": [
+          {
+            "paper_id": "arxiv:2606.04638v1",
+            "title": "Mixed potential for nonlinear RLC circuits with memristors",
+            "venue_year": "arXiv 2026-06",
+            "bottleneck_targeted": "Extend mixed-potential analysis to RLCM circuits by proving a flux-charge to voltage-current equivalence"
+          }
+        ]
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "pattern_name": "Substitute the Operator or Representation",
+        "papers": [
+          {
+            "paper_id": "openalex:W4411035259",
+            "title": "Machine Learning-Driven Structural Optimization of a Bistable RF MEMS Switch for Enhanced RF Performance",
+            "venue_year": "Micromachines 2025",
+            "bottleneck_targeted": "Computational cost of conventional EM-driven RF MEMS optimization"
+          },
+          {
+            "paper_id": "openalex:W4403511649",
+            "title": "Machine Learning-Assisted Device Circuit Co-Optimization: A Case Study on Inverter",
+            "venue_year": "IEEE Transactions on Electron Devices 2024",
+            "bottleneck_targeted": "Costly manual device-circuit co-optimization"
+          },
+          {
+            "paper_id": "openalex:W4411147683",
+            "title": "Million鈥怉tom Simulation of the Set Process in Phase Change Memories at the Real Device Scale",
+            "venue_year": "Advanced Electronic Materials 2025",
+            "bottleneck_targeted": "DFT-scale simulations cannot reach real PCM device length and time scales"
+          },
+          {
+            "paper_id": "openalex:W4417467572",
+            "title": "Physics-informed neural operators for ultrafast spectroscopy data reconstruction",
+            "venue_year": "arXiv 2025-12",
+            "bottleneck_targeted": "Reconstruct ultrafast spectroscopy signals from sparse photon-limited frequency-time measurements"
+          }
+        ]
+      },
+      {
+        "pattern_id": "architectural_operator_substitution, heterogeneous_decomposition",
+        "pattern_name": "architectural_operator_substitution, heterogeneous_decomposition",
+        "papers": [
+          {
+            "paper_id": "openalex:W4415215811",
+            "title": "A digital twin for predicting the solder degradation lifetime of a GaN eHEMT integrated power module under power cycling conditions",
+            "venue_year": "Power Electronic Devices and Components 2025",
+            "bottleneck_targeted": "computationally expensive multiphysics prediction of solder degradation lifetime"
+          }
+        ]
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "pattern_name": "Design a Confound-Isolating Diagnostic",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+            "title": "Electrically steered conduction topologies and period-doubling phase dynamics in VO2",
+            "venue_year": "arXiv 2026-04",
+            "bottleneck_targeted": "Separating electric-field effects from Joule heating in VO2 IMT"
+          },
+          {
+            "paper_id": "semanticscholar:e115740c26c6399980979c31b8b77a1831664026",
+            "title": "Structural Modulation of Magnetic Softness in Fe‐Based Amorphous Alloys via Pulse Current Training",
+            "venue_year": "Rare Metals 2026",
+            "bottleneck_targeted": "Coercivity caused by structural defects and localized stress"
+          },
+          {
+            "paper_id": "semanticscholar:1d8dc6ca09cfe476dbb21dc284ba34560a426b83",
+            "title": "Exploring Short-Circuit Failure Mechanism of Cascode GaN HEMT",
+            "venue_year": "IEEE transactions on power electronics 2026",
+            "bottleneck_targeted": "Locating and explaining pulse short-circuit failure origins"
+          },
+          {
+            "paper_id": "semanticscholar:d957064051c164323210455c22186bb5930d2f76",
+            "title": "Monitoring Single-Entity Nucleation in Single Nanopipettes and the Foundational Ion Transport Dynamics",
+            "venue_year": "ECS Meeting Abstracts 2026",
+            "bottleneck_targeted": "Observing and controlling localized pre-nucleation ion-transport dynamics"
+          },
+          {
+            "paper_id": "arxiv:2605.04502v1",
+            "title": "Gradient Scaling Effects in Adaptive Spectral PINNs for Stiff Nonlinear ODEs",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Isolate how initial-condition gates alter gradient scaling and optimization conditioning in adaptive spectral PINNs"
+          }
+        ]
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "pattern_name": "Decompose and Delegate to Solvers",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:88054efb2dd038882421c2f2d71b29e296b24691",
+            "title": "FEcMD: A multi-physics and multi-scale computational program for dynamic coupling molecular dynamics simulations with transient electric field and heat conduction in metal nanostructures",
+            "venue_year": "arXiv 2026-01",
+            "bottleneck_targeted": "Coupled atomic evolution, electrodynamics, and heat conduction in nanostructures"
+          },
+          {
+            "paper_id": "openalex:W4403665378",
+            "title": "Differentiability in unrolled training of neural physics simulators on transient dynamics",
+            "venue_year": "Computer Methods in Applied Mechanics and Engineering 2024",
+            "bottleneck_targeted": "uncertainty over how unrolling and temporal gradients affect neural physics-simulator accuracy"
+          }
+        ]
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "pattern_name": "Liberate a Fixed Generative Component",
+        "papers": [
+          {
+            "paper_id": "openalex:W4411043135",
+            "title": "Enhancing Johnson-Nyquist noise for high-performance Mott memristor-based oscillatory TRNG",
+            "venue_year": "npj Unconventional Computing 2025",
+            "bottleneck_targeted": "slow and energy-inefficient memristor TRNG generation"
+          },
+          {
+            "paper_id": "openalex:W7105852250",
+            "title": "Fast-Converging Hybrid Pulse for High Precision Multilevel Phase Change Memory",
+            "venue_year": "IEEE Electron Device Letters 2025",
+            "bottleneck_targeted": "iterative feedback write-and-verify causes pulse and control overhead"
+          },
+          {
+            "paper_id": "arxiv:2607.14233v1",
+            "title": "LIGO-PINN: Learned Initialization via Gated Optimization to Alleviate Convergence Failures in Physics Informed Neural Networks",
+            "venue_year": "arXiv 2026-07",
+            "bottleneck_targeted": "Alleviate catastrophic PINN convergence failures by learning initial network weights through gated layerwise optimization"
+          },
+          {
+            "paper_id": "arxiv:2605.03056v1",
+            "title": "Exchange-Only Silicon Based Spin Qubits: Charge Noise, PINN Optimised Pulse Sequences,and Gate-Level Fidelity",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Optimize pulse sequences in stages, first reaching a fidelity target then treating duration as a continuously reduced design variable"
+          }
+        ]
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "pattern_name": "Decompose for Differentiated Treatment",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:52f183f24681463244b3f25c0e4d14532aa129a6",
+            "title": "Wavelength-decoupled photonic memristor for neuromorphic systems",
+            "venue_year": "Journal of Physics D: Applied Physics 2026",
+            "bottleneck_targeted": "Read disturbance and inefficient optical programming in photonic memristors"
+          },
+          {
+            "paper_id": "openalex:W4416078224",
+            "title": "A Streamlined Test-Oriented Lifetime Assessment Framework for Automotive Power Electronics Converters",
+            "venue_year": "IEEE Transactions on Power Electronics 2025",
+            "bottleneck_targeted": "costly lifetime assessment requiring extensive tests or high-fidelity models"
+          }
+        ]
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition, structural_prior_encoding",
+        "pattern_name": "heterogeneous_decomposition, structural_prior_encoding",
+        "papers": [
+          {
+            "paper_id": "openalex:W7154613740",
+            "title": "Automated, physics-guided AI framework for asymmetry-aware ferroelectric compact models",
+            "venue_year": "Scientific Reports 2026",
+            "bottleneck_targeted": "Manual inconsistent parameter extraction across asymmetric FeCAP and FeFET models"
+          },
+          {
+            "paper_id": "openalex:W7164614307",
+            "title": "DSpinGNN: A Physics-Informed Equivariant Graph Neural Network for Dynamic Magnetic Exchange Prediction in Strain-Deformed Monolayer CrI$_3$",
+            "venue_year": "arXiv (Cornell University) 2026",
+            "bottleneck_targeted": "Mesoscale prediction of strain-dependent magnetic exchange inaccessible to direct DFT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "pattern_name": "Reframe as a Solvable Object",
+        "papers": [
+          {
+            "paper_id": "openalex:W4414309803",
+            "title": "A thermodynamic interpretation of the phase field method for the computational study of memristive electric conduction",
+            "venue_year": "arXiv 2025-09",
+            "bottleneck_targeted": "Give a thermodynamic account of memristive hysteresis and spontaneous filament formation while retaining scalable phase-field simulation"
+          },
+          {
+            "paper_id": "arxiv:2604.14879v1",
+            "title": "SOLIS: Physics-Informed Learning of Interpretable Neural Surrogates for Nonlinear Systems",
+            "venue_year": "arXiv 2026-04",
+            "bottleneck_targeted": "Recast unknown nonlinear system identification as state-conditioned Quasi-LPV representation learning with interpretable parameters"
+          },
+          {
+            "paper_id": "arxiv:2606.26865v1",
+            "title": "Quantum Physics-Informed Neural Networks for Solving Integro and Fractional PDEs",
+            "venue_year": "arXiv 2026-06",
+            "bottleneck_targeted": "Reformulate nonlocal integro-differential equations as equivalent coupled PDEs using auxiliary functions to avoid quadrature"
+          },
+          {
+            "paper_id": "arxiv:2604.15398v1",
+            "title": "Python library supporting Discrete Variational Formulations and training solutions with Collocation-based Robust Variational Physics Informed Neural Networks (DVF-CRVPINN)",
+            "venue_year": "arXiv 2026-04",
+            "bottleneck_targeted": "Cast PDE learning on point sets through discrete weak variational formulations with a robust error-related loss"
+          }
+        ]
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object, structural_prior_encoding",
+        "pattern_name": "reframe_as_solvable_object, structural_prior_encoding",
+        "papers": [
+          {
+            "paper_id": "openalex:W4403555504",
+            "title": "Physics-informed neural networks incorporating energy dissipation for the phase-field model of ferroelectric microstructure evolution",
+            "venue_year": "arXiv (Cornell University) 2024",
+            "bottleneck_targeted": "Ill-posed static prediction of steady ferroelectric microstructures and dynamic PINN propagation failure"
+          }
+        ]
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "pattern_name": "Manufacture the Supervisory Signal",
+        "papers": [
+          {
+            "paper_id": "openalex:W4403422130",
+            "title": "Extended Physics-Informed Neural Networks for Parameter Identification of Switched Mode Power Converters With Undetermined Topological Durations",
+            "venue_year": "IEEE Transactions on Power Electronics 2024",
+            "bottleneck_targeted": "unknown switching instants and transition states hinder converter parameter identification"
+          }
+        ]
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "pattern_name": "Encode Structure by Construction",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:380887729f8f1c9a78a1d08d882d3a626c27f0e9",
+            "title": "Hardware Implementation of Fuzzy Logic Based on Thermal Memory Elements for Fault-Tolerant Control in Mechanical Engineering",
+            "venue_year": "Advances in Engineering Research 2026",
+            "bottleneck_targeted": "Hardware realization of thermal-memory fuzzy logic with controlled heat flow"
+          },
+          {
+            "paper_id": "openalex:W7118070993",
+            "title": "Physics-Guided Neural Temperature Estimator for End-to-End Interpretable PMSM Thermal State Monitoring",
+            "venue_year": "arXiv 2026-01",
+            "bottleneck_targeted": "Accurate interpretable thermal-state monitoring without complete physical models"
+          },
+          {
+            "paper_id": "openalex:W7130617539",
+            "title": "Solving BDNK diffusion using physics-informed neural networks",
+            "venue_year": "arXiv (Cornell University) 2026",
+            "bottleneck_targeted": "PINN enforcement of initial and periodic conditions for BDNK diffusion"
+          },
+          {
+            "paper_id": "openalex:W4405288867",
+            "title": "Energy-Efficient Integrated Electro-Optic Memristors",
+            "venue_year": "Nano Letters 2024",
+            "bottleneck_targeted": "inefficient and poorly scalable electro-optic memristor integration"
+          },
+          {
+            "paper_id": "openalex:W7125193278",
+            "title": "Unraveling Origin of Stochasticity in Multi鈥怓ilamentary Memristor",
+            "venue_year": "Advanced Functional Materials 2026",
+            "bottleneck_targeted": "need for controllable robust stochastic memristor entropy sources"
+          },
+          {
+            "paper_id": "openalex:W4411345460",
+            "title": "Analog Switching in Hexagonal Boron Nitride Memristors via Multiple Nano鈥怓ilaments Confinement",
+            "venue_year": "Small 2025",
+            "bottleneck_targeted": "abrupt variable filament switching prevents reliable analog weight updates"
+          },
+          {
+            "paper_id": "openalex:W4402816505",
+            "title": "Significant Power Consumption Reduction and Speed Boosting in Phase Change Memory with Nanocurrent Channels",
+            "venue_year": "Nano Letters 2024",
+            "bottleneck_targeted": "excessive PCM RESET power and slow SET operation"
+          },
+          {
+            "paper_id": "openalex:W4405475353",
+            "title": "Polarization-encodable photonic memory cells using next-generation 2D phase-change materials",
+            "venue_year": "Nano Research 2024",
+            "bottleneck_targeted": "slow power-hungry and insertion-loss-limited conventional photonic PCM memories"
+          },
+          {
+            "paper_id": "openalex:W4415159230",
+            "title": "A Physics-Informed Neural Network for Unconditionally Stable Time-Domain Simulations",
+            "venue_year": "arXiv 2025-05",
+            "bottleneck_targeted": "stability limitations in time-domain electromagnetic PINN simulations"
+          },
+          {
+            "paper_id": "arxiv:2605.02352v1",
+            "title": "Geometric Quantum Physics Informed Neural Network",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Encode finite- and Lie-group symmetries directly into a QPINN circuit ansatz so compatible solutions preserve them by construction"
+          },
+          {
+            "paper_id": "arxiv:2509.04966v2",
+            "title": "Neuro-Spectral Architectures for Causal Physics-Informed Networks",
+            "venue_year": "arXiv 2025",
+            "bottleneck_targeted": "Standard MLP PINNs can violate causality and underrepresent high-frequency dynamics in complex initial-value problems"
+          }
+        ]
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "pattern_name": "Unify Heterogeneous Inputs into One Space",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:f65bbcb290ad0ea7d6e3bcdf2c8bebf110710865",
+            "title": "Probing Nanosecond-to-Microsecond Structural Dynamics by Ultrafast Transmission Electron Microscopy with Optical and Electrical Excitation",
+            "venue_year": "Photonics 2026",
+            "bottleneck_targeted": "Real-space observation of electrically driven mesoscopic structural dynamics"
+          }
+        ]
+      }
+    ],
+    "phase0_outside_taxonomy": [
+      {
+        "paper_id": "semanticscholar:b899b1c77e3cd1bbf75023f7ca5a7aac1297882d",
+        "title": "In Situ Monitoring of Diffusive Morphology Transformation of Semiconductor Materials under Joule Heating.",
+        "venue_year": "ACS Applied Materials and Interfaces 2026",
+        "bottleneck_targeted": "Dynamic surface-diffusion quantification under Joule heating"
+      },
+      {
+        "paper_id": "semanticscholar:2754cddc7782f8d38946d029d59de78b2d432d58",
+        "title": "Reversible structural phase transition in MoOx thin films for tunable optical devices",
+        "venue_year": "OPTO 2026",
+        "bottleneck_targeted": "Low-loss visible optical phase-change material and localized switching"
+      },
+      {
+        "paper_id": "semanticscholar:b6fca0a0fcad6528e9b474c116fd88c9130a22cd",
+        "title": "Investigation of backward switching and write margin optimization of SOT-MTJ devices",
+        "venue_year": "Applied Physics Letters 2026",
+        "bottleneck_targeted": "Backward switching limits the SOT-MTJ write-current window"
+      },
+      {
+        "paper_id": "semanticscholar:3853631b92133098f047027d51d49ab9283aec6a",
+        "title": "Real-Time Optical Quantification of Surface Diffusion in Semiconductor Nanostructures",
+        "venue_year": "IEEE/LEOS International Conference on Optical MEMS 2026",
+        "bottleneck_targeted": "Time-resolved high-temperature surface-diffusion measurement"
+      },
+      {
+        "paper_id": "semanticscholar:6d791889122177a87c88e2ce20ea6f4c050a13e1",
+        "title": "Nanoscale crystallization of Cr2Ge2Te6 thin films induced by terahertz near-fields",
+        "venue_year": "Applied Physics Letters 2026",
+        "bottleneck_targeted": "Nanoscale ultrafast phase switching in Cr2Ge2Te6"
+      },
+      {
+        "paper_id": "semanticscholar:c1022cf0ba4d5918f4566fd24587252e3371b012",
+        "title": "Curing‐Induced Nanophase Engineering in Boronic‐Ester Epoxy Vitrimers for Low‐Loss, High‐Breakdown, and Stress‐Relaxed Insulation",
+        "venue_year": "Advanced Functional Materials 2026",
+        "bottleneck_targeted": "Reliability trade-off between dielectric strength and stress relaxation"
+      },
+      {
+        "paper_id": "semanticscholar:177ef0760b143a193b41b380ae5b5df2637265fa",
+        "title": "Surface plasmon effects on pore formation around an array of rods on a surface irradiated by a pulsed electromagnetic wave",
+        "venue_year": "The Physics of Fluids 2026",
+        "bottleneck_targeted": "Predicting plasmon-mediated melting and pore formation"
+      },
+      {
+        "paper_id": "openalex:W7165788766",
+        "title": "Diffusive memristors in the edge of chaos",
+        "venue_year": "Nature Communications 2026",
+        "bottleneck_targeted": "Power-intensive electrothermal edge-of-chaos devices"
+      },
+      {
+        "paper_id": "openalex:W4408253605",
+        "title": "Electrochemical ohmic memristors for continual learning",
+        "venue_year": "Nature Communications 2025",
+        "bottleneck_targeted": "Stable analog and binary memristive switching for continual learning"
+      },
+      {
+        "paper_id": "openalex:W4403632046",
+        "title": "Flexible TiO2-WO3−x hybrid memristor with enhanced linearity and synaptic plasticity for precise weight tuning in neuromorphic computing",
+        "venue_year": "npj Flexible Electronics 2024",
+        "bottleneck_targeted": "Nonlinear and nonuniform conductance evolution in WO3-based memristors"
+      },
+      {
+        "paper_id": "openalex:W4404544681",
+        "title": "Multilevel Optical Storage, Dynamic Light Modulation, and Polarization Control in Filamented Memristor System",
+        "venue_year": "Advanced Materials 2024",
+        "bottleneck_targeted": "stochastic filament switching and limited optical functionality in ECM memristors"
+      },
+      {
+        "paper_id": "openalex:W4410828447",
+        "title": "Investigating the effect of electrical and thermal transport properties on oxide-based memristors performance and reliability",
+        "venue_year": "Scientific Reports 2025",
+        "bottleneck_targeted": "unclear coupling of transport properties to conductive-filament switching uniformity"
+      },
+      {
+        "paper_id": "openalex:W4404902101",
+        "title": "Simultaneous achieving negative photoconductivity response and volatile resistive switching in Cs2CoCl4 single crystals towards artificial optoelectronic synapse",
+        "venue_year": "Light Science & Applications 2024",
+        "bottleneck_targeted": "lack of devices combining negative photoconductivity with volatile resistive switching"
+      },
+      {
+        "paper_id": "openalex:W4402704272",
+        "title": "Defect-engineered monolayer MoS2 with enhanced memristive and synaptic functionality for neuromorphic computing",
+        "venue_year": "Communications Materials 2024",
+        "bottleneck_targeted": "nonlinear asymmetric and variable synaptic updates in monolayer MoS2 memristors"
+      },
+      {
+        "paper_id": "openalex:W4414774031",
+        "title": "Two-dimensional halide perovskite memristors for resistive switching memory systems",
+        "venue_year": "Materials Advances 2025",
+        "bottleneck_targeted": "energy-efficient resistive switching in memory systems"
+      },
+      {
+        "paper_id": "openalex:W4416083203",
+        "title": "Spike-timing-dependent plasticity and synaptic consolidation in Hfo鈧?memristors for adaptive neuromorphic computing",
+        "venue_year": "Neuromorphic Computing and Engineering 2025",
+        "bottleneck_targeted": "reliable biologically plausible STDP in HfO-based memristors"
+      },
+      {
+        "paper_id": "openalex:W4406382568",
+        "title": "Forming and compliance-free operation of low-energy, fast-switching HfO <sub> <i>x</i> </sub> S <sub> <i>y</i> </sub> /HfS <sub>2</sub> memristors",
+        "venue_year": "Nanoscale Horizons 2025",
+        "bottleneck_targeted": "electroforming and compliance requirements in low-energy memristors"
+      },
+      {
+        "paper_id": "openalex:W4404658346",
+        "title": "On ultrafast x-ray scattering methods for magnetism",
+        "venue_year": "Advances in Physics X 2024",
+        "bottleneck_targeted": "limited methods for resolving ultrafast magnetic responses"
+      },
+      {
+        "paper_id": "openalex:W4406150043",
+        "title": "Exploring Multilevel Properties of GeTe-Based Phase Change Memory Devices for Programmable Synaptic Activity",
+        "venue_year": "ACS Applied Electronic Materials 2025",
+        "bottleneck_targeted": "need for multilevel GeTe PCM synaptic behavior"
+      },
+      {
+        "paper_id": "openalex:W4411639861",
+        "title": "RF Integrated Passive Devices Trimming Using Phase Change Material Switches",
+        "venue_year": "IEEE Microwave and Wireless Technology Letters 2025",
+        "bottleneck_targeted": "postfabrication compensation of RF passive-device variation"
+      },
+      {
+        "paper_id": "openalex:W4409228460",
+        "title": "Ultra-Long Disturb-Free Read Operation With Low Resistance Drift in Phase Change Memory",
+        "venue_year": "IEEE Transactions on Electron Devices 2025",
+        "bottleneck_targeted": "read-induced resistance drift limits high-endurance PCM compute-in-memory"
+      },
+      {
+        "paper_id": "openalex:W4406198433",
+        "title": "Spiking and bursting activities in an NLAM-based CNN cell",
+        "venue_year": "Chaos Solitons & Fractals 2025",
+        "bottleneck_targeted": "Characterize spiking and bursting behavior in an NLAM-based CNN cell"
+      },
+      {
+        "paper_id": "openalex:W4405736797",
+        "title": "Spiking Flip-Flop Memory in Resonant Tunneling Diode Neurons",
+        "venue_year": "Physical Review Letters 2024",
+        "bottleneck_targeted": "Enable controllable switching and retention between spiking and quiescent RTD-neuron regimes"
+      },
+      {
+        "paper_id": "openalex:W4413095961",
+        "title": "ATOMIC: Automatic Tool for Memristive IMPLY based Circuit-level Simulation and Validation",
+        "venue_year": "arXiv 2025-07",
+        "bottleneck_targeted": "Reduce manual time for simulation, evaluation, and validation of memristive IMPLY circuits"
+      },
+      {
+        "paper_id": "openalex:W4405611765",
+        "title": "Design and Application of Passive Very High-Frequency Memristor Emulator",
+        "venue_year": "Circuits Systems and Signal Processing 2024",
+        "bottleneck_targeted": "Design and apply a passive very-high-frequency memristor emulator"
+      },
+      {
+        "paper_id": "arxiv:2604.14201v1",
+        "title": "LSTM-PINN for Steady-State Electrothermal Transport: Preserving Multi-Field Consis tency in Strongly Coupled Heat and Fluid Flow",
+        "venue_year": "arXiv 2026-04",
+        "bottleneck_targeted": "Mitigate residual stiffness, gradient-scale disparity, and cross-field inconsistency in electrothermal PINNs"
+      },
+      {
+        "paper_id": "arxiv:2605.08260v2",
+        "title": "Two-dimensional clay channels for tunable nanofluidic memristor",
+        "venue_year": "arXiv 2026-05",
+        "bottleneck_targeted": "Tune ionic memristive loops through channel path and electrode-configuration control"
+      },
+      {
+        "paper_id": "arxiv:2607.13042v1",
+        "title": "Automatic Differentiation from Scratch: How PyTorch Computes Gradients in Physics-Informed Neural Networks",
+        "venue_year": "arXiv 2026-06",
+        "bottleneck_targeted": "Explain and verify nested automatic differentiation used by PINN training"
+      },
+      {
+        "paper_id": "arxiv:2607.26815v1",
+        "title": "End-to-End Modeling of a Volatile TiO2 Memristor for Neuromorphic Circuit Simulation",
+        "venue_year": "arXiv 2026-07",
+        "bottleneck_targeted": "Produce a SPICE-ready volatile TiO2 memristor model matching continuous and pulsed measurements"
+      },
+      {
+        "paper_id": "arxiv:2607.23709v1",
+        "title": "Elemental Germanium Phase-Change Memory",
+        "venue_year": "arXiv 2026-07",
+        "bottleneck_targeted": "Replace chalcogenide PCM limitations in retention, drift, speed, and CMOS compatibility with elemental Ge"
+      },
+      {
+        "paper_id": "arxiv:2607.29399v1",
+        "title": "Memristor-Based Pulse Width Modulation Circuit for Power Converters with Programmable Frequencies",
+        "venue_year": "arXiv 2026-07",
+        "bottleneck_targeted": "Avoid digital-conversion overhead while retaining programmable PWM in memristor-based power-converter control"
+      },
+      {
+        "paper_id": "arxiv:2606.10262v1",
+        "title": "Filamentary Transport and Thermoelectric Effects in Mushroom Phase Change Memory Cells",
+        "venue_year": "arXiv 2026-06",
+        "bottleneck_targeted": "Quantify polarity-dependent reset energy and programming-region formation under thermoelectric and filamentary transport"
+      },
+      {
+        "paper_id": "arxiv:2606.19368v1",
+        "title": "Neural Architectures as Functional Priors in Physics-Informed Control Problems",
+        "venue_year": "arXiv 2026-06",
+        "bottleneck_targeted": "Characterize how architecture-dependent functional priors shape PINN-derived controls"
+      },
+      {
+        "paper_id": "arxiv:2603.23578v1",
+        "title": "Residual Attention Physics-Informed Neural Networks for Robust Multiphysics Simulation of Steady-State Electrothermal Energy Systems",
+        "venue_year": "arXiv 2026-03",
+        "bottleneck_targeted": "Improve PINN field prediction under nonlinear coupling, variable coefficients, and interfaces via residual attention"
+      },
+      {
+        "paper_id": "arxiv:2607.15844v1",
+        "title": "Electrothermal control of spin-reorientation transition in Co/Fe_3GaTe_2 heterostructures",
+        "venue_year": "arXiv 2026-07",
+        "bottleneck_targeted": "Achieve reversible thermal and electrothermal control of spin reorientation in a magnetic heterostructure"
+      },
+      {
+        "paper_id": "arxiv:2602.19265v1",
+        "title": "Spectral bias in physics-informed and operator learning: Analysis and mitigation guidelines",
+        "venue_year": "arXiv 2026",
+        "bottleneck_targeted": "Spectral bias causes physics-informed models to learn high-frequency PDE modes late and inaccurately"
+      }
+    ],
+    "phase3_collision": [
+      {
+        "paper_id": "semanticscholar:ec7a7c48e5e211e80044ee86a2518cf592350930",
+        "title": "Multistage physics informed neural network for solving coupled multiphysics problems in material degradation and fluid dynamics",
+        "venue_year": "Engineering computations 2025"
+      },
+      {
+        "paper_id": "arxiv:2606.12050v1",
+        "title": "Reliable Error Estimation for PINNs: Lower and Upper A Posteriori Bounds",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2512.23396v2",
+        "title": "PINNs for Electromagnetic Wave Propagation",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2512.24365v2",
+        "title": "A Critical Assessment of PINNs and Operator Learning for Geotechnical Engineering",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "openalex:W4416672918",
+        "title": "An Improved Physics-Informed Neural Network Approach for Solving the FitzHugh–Nagumo Equation",
+        "venue_year": "Computation 2025"
+      },
+      {
+        "paper_id": "openalex:W7172253115",
+        "title": "Computational mathematics approaches to deep neural network architecture design",
+        "venue_year": "Open MIND 2026"
+      },
+      {
+        "paper_id": "openalex:W7165748244",
+        "title": "Physics-Informed Neural Networks in Aerospace Engineering: A Systematic Review of Architectures, Training Strategies, and Open Challenges",
+        "venue_year": "Applied Sciences 2026"
+      },
+      {
+        "paper_id": "semanticscholar:3b3dd47d418e8d38fc93d94a0608fbcce9cac934",
+        "title": "FFV-PINN: A Fast Physics-Informed Neural Network with Simplified Finite Volume Discretization and Residual Correction",
+        "venue_year": "Computer Methods in Applied Mechanics and Engineering 2025"
+      },
+      {
+        "paper_id": "arxiv:2604.23003v1",
+        "title": "Collocation-based Robust Physics Informed Neural Networks for time-dependent simulations of pollution propagation under thermal inversion conditions on Spitsbergen",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2511.11638v1",
+        "title": "Enhancing PINN Accuracy for the RLW Equation: Adaptive and Conservative Approaches",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2604.20731v1",
+        "title": "CO$_2$ sequestration hybrid solver using isogeometric alternating-directions and collocation-based robust variational physics informed neural networks (IGA-ADS-CRVPINN)",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2604.28180v1",
+        "title": "An adaptive wavelet-based PINN for problems with localized high-magnitude source",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2606.02585v1",
+        "title": "An improved PINN framework integrating localized collocation scheme and PIKF",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2511.00792v1",
+        "title": "Fast PINN Eigensolvers via Biconvex Reformulation",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2604.04920v1",
+        "title": "PINNs in PDE Constrained Optimal Control Problems: Direct vs Indirect Methods",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2605.08408v1",
+        "title": "AdamFLIP: Adaptive Momentum Feedback Linearization Optimization for Hard Constrained PINN Training",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "openalex:W4417339953",
+        "title": "Prediction of remaining useful life for electronic equipment based on online PINN",
+        "venue_year": "Scientific Reports 2025"
+      },
+      {
+        "paper_id": "openalex:W4416199645",
+        "title": "Thermodynamic Biomarkers of Neuroinflammation: Nanothermometry, Energy–Stress Dynamics, and Predictive Entropy in Glial–Vascular Networks",
+        "venue_year": "International Journal of Molecular Sciences 2025"
+      },
+      {
+        "paper_id": "openalex:W4415518582",
+        "title": "Learning 2D Shallow Water Equations With Physics‐Informed Neural Operator Networks",
+        "venue_year": "Water Resources Research 2026"
+      },
+      {
+        "paper_id": "openalex:W7161452602",
+        "title": "Deep Learning for Solving and Estimating Dynamic Models in Economics and Finance",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7162215563",
+        "title": "Hybrid physics-informed artificial intelligence for high-fidelity modeling and optimization of electrical systems",
+        "venue_year": "Frontiers in Artificial Intelligence 2026"
+      },
+      {
+        "paper_id": "openalex:W7117481098",
+        "title": "Advancing Identification of Transformation Products and Predicting Their Environmental Fate: The Current State of Machine Learning and Artificial Intelligence in Antibiotic Photolysis",
+        "venue_year": "Applied Sciences 2025"
+      },
+      {
+        "paper_id": "openalex:W7150923305",
+        "title": "DNS-Calibrated Physics-Informed Neural Networks with Learnable Constants for Reynolds Number Extrapolation in Turbulent Channel Flows",
+        "venue_year": "Applied Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W7165632191",
+        "title": "PINN for stiff moving-boundary PDE to predict the locking point in superheated steam drying",
+        "venue_year": "Scientific Reports 2026"
+      },
+      {
+        "paper_id": "semanticscholar:c67046bde74e28d097d595db5dd69a729a868e88",
+        "title": "Physics-informed neural network-based discovery of hyperelastic constitutive models from extremely scarce data",
+        "venue_year": "Computer Methods in Applied Mechanics and Engineering 2025"
+      },
+      {
+        "paper_id": "semanticscholar:0dbb85bd162ae4cc32720d287127bb4a0417b46d",
+        "title": "Physics-informed neural network with symbolic regression for deriving analytical approximate solutions to nonlinear partial differential equations",
+        "venue_year": "Neural computing & applications (Print) 2025"
+      },
+      {
+        "paper_id": "semanticscholar:e0209a312ffb08d3dd1723d4b959b301c738ab79",
+        "title": "A pseudo-time stepping and parameterized physics-informed neural network framework for Navier–Stokes equations",
+        "venue_year": "The Physics of Fluids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:8a4752170c279f9bfd5af503568426bf7d4a1b43",
+        "title": "Uniform Physics Informed Neural Network Framework for Microgrid and Its Application in Voltage Stability Analysis",
+        "venue_year": "IEEE Access 2025"
+      },
+      {
+        "paper_id": "semanticscholar:a4c7107407320a26651f3bfb0932c6e5f700d179",
+        "title": "A physics-informed neural network for turbulent wake simulations behind wind turbines",
+        "venue_year": "The Physics of Fluids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:878541a1f92dbb36fa8cdba5ca8ec7999614680b",
+        "title": "Interpretable Physics-Informed Neural Network for Reliable Humidity Forecasting in Contrasting Climates of Sindh.",
+        "venue_year": "VAWKUM Transactions on Computer Sciences 2025"
+      },
+      {
+        "paper_id": "semanticscholar:512af30ced93092a110a426635c11fa8c8ca6c98",
+        "title": "AI-driven Physics Informed Neural Network for Daily Temperature Forecasting with Constraint Aware Learning and Explainable Feature Attribution",
+        "venue_year": "VFAST Transactions on Software Engineering 2025"
+      },
+      {
+        "paper_id": "semanticscholar:ce64307a53c373e2a21777098f8e6544a29dd788",
+        "title": "Physics-informed radial basis function neural network for efficiently modeling oil–water two-phase Darcy flow",
+        "venue_year": "The Physics of Fluids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:197ba6e19867b1df6c3bd20f6c59b85eac0aaf85",
+        "title": "Physics-informed neural network compression mechanism for airfoil flow field prediction",
+        "venue_year": "The Physics of Fluids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:4908b93c562589072ef7d56f81b943def7ae47a4",
+        "title": "Physics-informed neural network for predicting multi-row film cooling superposition using Fourier transform and attention mechanism",
+        "venue_year": "The Physics of Fluids 2025"
+      },
+      {
+        "paper_id": "arxiv:2607.13042v1",
+        "title": "Automatic Differentiation from Scratch: How PyTorch Computes Gradients in Physics-Informed Neural Networks",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2607.14233v1",
+        "title": "LIGO-PINN: Learned Initialization via Gated Optimization to Alleviate Convergence Failures in Physics Informed Neural Networks",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2512.22189v1",
+        "title": "Physics-Informed Machine Learning for Transformer Condition Monitoring -- Part II: Physics-Informed Neural Networks and Uncertainty Quantification",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2601.04176v1",
+        "title": "Robust Physics Discovery from Highly Corrupted Data: A PINN Framework Applied to the Nonlinear Schrödinger Equation",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2511.21276v2",
+        "title": "A physics-informed U-Net-LSTM network for nonlinear structural response under seismic excitation",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2602.02779v3",
+        "title": "Comparison of Trefftz-Based PINNs and Standard PINNs Focusing on Structure Preservation",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "openalex:W7131087710",
+        "title": "Implementing physics-informed neural networks with deep learning for differential equations",
+        "venue_year": "Frontiers in Artificial Intelligence 2026"
+      },
+      {
+        "paper_id": "openalex:W7114922800",
+        "title": "Embedding Time-Frequency Transform Neural Networks for Efficient Fault Diagnosis",
+        "venue_year": "Applied Sciences 2025"
+      },
+      {
+        "paper_id": "openalex:W7124426683",
+        "title": "Failure mechanisms and resolution in deep energy method",
+        "venue_year": "International Journal of Mechanical Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W7134113974",
+        "title": "Scientific Evolution of Physics-Informed NeuralNetworks: A Comprehensive Review of RecentArchitectural Variants and Optimization Strategies",
+        "venue_year": "European Journal of Pure and Applied Mathematics 2026"
+      },
+      {
+        "paper_id": "openalex:W7134993012",
+        "title": "Robust Parameter and State Estimation in Multiscale Neuronal Systems Using Physics-Informed Neural Networks",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7164701737",
+        "title": "Physics-Informed Neural Networks for Chemotherapy Pharmacokinetics: Benchmarking the Clinical Estimator and Exposing Parameter Identifiability",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7128647267",
+        "title": "Data-driven discovery of digital twins in biomedical research",
+        "venue_year": "Briefings in Bioinformatics 2025"
+      },
+      {
+        "paper_id": "openalex:W7135022255",
+        "title": "Neural Network Inversion Algorithm for Geostress Field Based on Physics-Informed Constraints",
+        "venue_year": "Geosciences 2026"
+      },
+      {
+        "paper_id": "openalex:W7148176775",
+        "title": "Physics-Enforced Neural Ordinary Differential Equation for Chemical Kinetics Optimization in Reaction-Diffusion Systems",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "semanticscholar:606be9420c6bfe7d9cc72ba25fefad016b5acc56",
+        "title": "A physics-informed neural network framework for laminated composite plates under bending",
+        "venue_year": "Thin-walled structures 2025"
+      },
+      {
+        "paper_id": "semanticscholar:2923de433a458afec50f8392c6e91b427a939539",
+        "title": "ST-GPINN: a spatio-temporal graph physics-informed neural network for enhanced water quality prediction in water distribution systems",
+        "venue_year": "npj Clean Water 2025"
+      },
+      {
+        "paper_id": "semanticscholar:5f730a9ce767d96d938788a405deb011fac7c888",
+        "title": "A physics-informed neural network for modeling fracture without gradient damage: Formulation, application, and assessment",
+        "venue_year": "Journal of the mechanics and physics of solids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:2871bd1e10e671ccf782a89750c86c188d252bd4",
+        "title": "A fatigue life prediction framework of laser-directed energy deposition Ti-6Al-4V based on physics-informed neural network",
+        "venue_year": "International Journal of Structural Integrity 2025"
+      },
+      {
+        "paper_id": "semanticscholar:5f3b82dd16ac2811af8494d64026da334a6a6bdd",
+        "title": "Inverse Design Method for Electromagnetic Periodic Structures Based on Physics-Informed Neural Network With Embedded Analytical Models",
+        "venue_year": "IEEE transactions on microwave theory and techniques 2025"
+      },
+      {
+        "paper_id": "semanticscholar:87aa216a88deef8294245d0dc78a393064e9e54a",
+        "title": "Physics-Informed Neural Network for Satellite Battery Degradation Estimation Based on an Extreme Segment Data Within 2 Min",
+        "venue_year": "IEEE transactions on industrial electronics (1982. Print) 2025"
+      },
+      {
+        "paper_id": "semanticscholar:434cd8d96bf4814fa4bc9d97662fe9246df3d665",
+        "title": "DeepONet-embedded physics-informed neural network for production prediction of multiscale shale matrix–fracture system",
+        "venue_year": "The Physics of Fluids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:c823c46682bd42e53111dae200a5077d637fcb4d",
+        "title": "ReVeal: A Physics-Informed Neural Network for High-Fidelity Radio Environment Mapping",
+        "venue_year": "International Symposium on Dynamic Spectrum Access Networks 2025"
+      },
+      {
+        "paper_id": "semanticscholar:b6d795ac7d98c4365c3eff8f52ed55f53877fd85",
+        "title": "Hybrid physics‐informed neural network with parametric identification for modeling bridge temperature distribution",
+        "venue_year": "Comput. Aided Civ. Infrastructure Eng. 2025"
+      },
+      {
+        "paper_id": "semanticscholar:c1098ffd3c621ff3d23513c1e40e88e4eac2c014",
+        "title": "Physics-informed neural networks with hybrid Kolmogorov-Arnold network and augmented Lagrangian function for solving partial differential equations",
+        "venue_year": "Scientific Reports 2025"
+      },
+      {
+        "paper_id": "semanticscholar:a97839ce370bbcf646d0e5da68f307605b924e1f",
+        "title": "Automatic network structure discovery of physics informed neural networks via knowledge distillation",
+        "venue_year": "Nature Communications 2025"
+      },
+      {
+        "paper_id": "semanticscholar:08023d84172112989881af99ee0d4fb696e37c16",
+        "title": "Physics-informed neural network for elastic–plastic mesh-free modelling of tunnelling-induced deformation",
+        "venue_year": "Acta Geotechnica 2025"
+      },
+      {
+        "paper_id": "semanticscholar:87e95e7637e7a972acf539620196752eeaf305c8",
+        "title": "Physics-informed neural network coupled with semi-analytical hybrid modeling of micropolar magnetohydrodynamic channel flow with heat and mass transport in a porous medium",
+        "venue_year": "The Physics of Fluids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:e25f5c7c7eff4cf40414e1bf801e3b908e9ef7d0",
+        "title": "Data-driven machine learning approach based on physics-informed neural network for population balance model",
+        "venue_year": "Advances in Continuous and Discrete Models 2025"
+      },
+      {
+        "paper_id": "semanticscholar:2faf4700410c0142373f482c96fb50c8f42afade",
+        "title": "A physics-informed neural network-based aerodynamic parameter identification method for aircraft",
+        "venue_year": "The Physics of Fluids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:e47ce708c6a3a8d6fc845f1405889b337604406f",
+        "title": "Physics-informed Neural Implicit Flow neural network for parametric PDEs",
+        "venue_year": "Neural Networks 2025"
+      },
+      {
+        "paper_id": "arxiv:2606.19368v1",
+        "title": "Neural Architectures as Functional Priors in Physics-Informed Control Problems",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2511.11071v1",
+        "title": "Boosting Neural Video Representation via Online Structural Reparameterization",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2603.05672v1",
+        "title": "Partial Information Decomposition of Electronic Observables Along a Reaction Coordinate",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "openalex:W7128633767",
+        "title": "Generative AI Driven Process Calculations for Fuel Cells and Flow Batteries",
+        "venue_year": "ACS Omega 2026"
+      },
+      {
+        "paper_id": "openalex:W4416123521",
+        "title": "Review of Fault Detection Approaches for Large-Scale Lithium-Ion Battery Systems: A Spatio-Temporal Perspective",
+        "venue_year": "Batteries 2025"
+      },
+      {
+        "paper_id": "semanticscholar:2d9b45eebd95af52437cd9be1d91d0ce7f042e9d",
+        "title": "Physics-informed neural network approach to analyze the onset of oscillatory and stationary convections in chemically triggered Navier-Stokes-Voigt fluid layer heated and salted from below",
+        "venue_year": "Applied Mathematics and Mechanics 2025"
+      },
+      {
+        "paper_id": "semanticscholar:5f16ad69ed0f935fe0a603ce01ce1a66daa5f26e",
+        "title": "An enhanced hybrid adaptive physics-informed neural network for forward and inverse PDE problems",
+        "venue_year": "Applied intelligence (Boston) 2025"
+      },
+      {
+        "paper_id": "semanticscholar:9118cc7b7df11ce6a22cd6b2d38b4d4dff44eb18",
+        "title": "Ocean Surface Wind Speed Estimation From GNSS-R Data Using Physics-Informed Attention-Aided Convolutional Neural Network",
+        "venue_year": "IEEE Transactions on Geoscience and Remote Sensing 2025"
+      },
+      {
+        "paper_id": "semanticscholar:a0d11cf47bd03c7584b9a9a1360373d7b6d13807",
+        "title": "Physics-informed Modularized Neural Network for Advanced Building Control by Deep Reinforcement Learning",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "semanticscholar:75a1d7d177bbd3766c69267a3668441553fa69ce",
+        "title": "A Novel Method for Estimating the State of Health of Lithium-Ion Batteries Based on Physics-Informed Neural Network",
+        "venue_year": "Batteries 2025"
+      },
+      {
+        "paper_id": "semanticscholar:75835acbe7833e6ab6126dcabd0db4ac73e9f7fc",
+        "title": "A systematic resilience assessment framework for multi-state systems based on physics-informed neural network",
+        "venue_year": "Reliability Engineering & System Safety 2025"
+      },
+      {
+        "paper_id": "semanticscholar:4b598b496297e58b9502b74cb1d1ceca9b80deb5",
+        "title": "A lightweight two-stage physics-informed neural network for SOH estimation of lithium-ion batteries with different chemistries",
+        "venue_year": "Journal of Energy Chemistry 2025"
+      },
+      {
+        "paper_id": "semanticscholar:64f171ec92fd6c8aa8009de5fd06ed24e6bfe4d1",
+        "title": "Physics-informed neural network supported wiener process for degradation modeling and reliability prediction",
+        "venue_year": "Reliability Engineering & System Safety 2025"
+      },
+      {
+        "paper_id": "semanticscholar:85447c1484a779fafbc70cf918b78a5e503ca51b",
+        "title": "Physics-informed neural network for long-term prognostics of proton exchange membrane fuel cells",
+        "venue_year": "Applied Energy 2025"
+      },
+      {
+        "paper_id": "semanticscholar:5f7be2c28a7374cc589307e48bbd74fd95c7c22e",
+        "title": "Physics-informed neural network for co-estimation of state of health, remaining useful life, and short-term degradation path in Lithium-ion batteries",
+        "venue_year": "Applied Energy 2025"
+      },
+      {
+        "paper_id": "semanticscholar:9b1ac21c9f07a936488ed3f2d3806673df01b1a2",
+        "title": "A novel frequency-domain physics-informed neural network for accurate prediction of 3D Spatio-temporal wind fields in wind turbine applications",
+        "venue_year": "Applied Energy 2025"
+      },
+      {
+        "paper_id": "semanticscholar:ffe023fb9daac9d0154a85a03116c2ba31d3de59",
+        "title": "Physics-Informed Neural Network for modeling and predicting temperature fluctuations in proton exchange membrane electrolysis",
+        "venue_year": "Energy and AI 2025"
+      },
+      {
+        "paper_id": "semanticscholar:50c51255f50229ad27d7a0cbe228378a753975d6",
+        "title": "A physics-informed neural network-based method for predicting degradation trajectories and remaining useful life of supercapacitors",
+        "venue_year": "Green Energy and Intelligent Transportation 2025"
+      },
+      {
+        "paper_id": "semanticscholar:f9a2948631bf5a5de4c91fe464db0b798c6f394b",
+        "title": "A generic physics-informed neural network framework for lithium-ion batteries state of health estimation",
+        "venue_year": "Energy 2025"
+      },
+      {
+        "paper_id": "semanticscholar:046663615af406ccbd2dd765621784833826fc7d",
+        "title": "A framework of parallel physics-informed neural network with Laplace transform for well testing interpretation",
+        "venue_year": "The Physics of Fluids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:d8dc5c47a7c32854c350083ec00778263db287d7",
+        "title": "An advanced physics-informed neural network-based framework for nonlinear and complex topology optimization",
+        "venue_year": "Engineering structures 2025"
+      },
+      {
+        "paper_id": "semanticscholar:6243283784b3ca62044dc0a818a547a65afaff89",
+        "title": "Hybrid physics-data-driven model for temperature field prediction of asphalt pavement based on physics-informed neural network",
+        "venue_year": "Construction and Building Materials 2025"
+      },
+      {
+        "paper_id": "semanticscholar:240961f65072e35e9c2b5245424a5fc3f620a559",
+        "title": "Physics-informed neural network for chiller plant optimal control with structure-type and trend-type prior knowledge",
+        "venue_year": "Applied Energy 2025"
+      },
+      {
+        "paper_id": "semanticscholar:4c3b43be5f7c4c1b2d76d1ca0f0214bef82e2a6f",
+        "title": "A generalizable physics-informed neural network for lithium-ion battery SOH estimation utilizing partial charging segments",
+        "venue_year": "Journal of Energy Chemistry 2025"
+      },
+      {
+        "paper_id": "semanticscholar:d89f2f770f6b191d859f328ae510ae38d204d773",
+        "title": "Probabilistic fatigue life prediction in additive manufacturing materials with a physics-informed neural network framework",
+        "venue_year": "Expert systems with applications 2025"
+      },
+      {
+        "paper_id": "semanticscholar:db80fec7b3cd1ea44af430ac783a2475dac6c665",
+        "title": "A general physics-informed neural network framework for fatigue life prediction of metallic materials",
+        "venue_year": "Engineering Fracture Mechanics 2025"
+      },
+      {
+        "paper_id": "semanticscholar:408075361b43412bd5c4723a0e7ff42c9bf19c52",
+        "title": "Barrier option pricing and volatility surface predicting with an extended physics-informed neural network",
+        "venue_year": "Expert systems with applications 2025"
+      },
+      {
+        "paper_id": "arxiv:2604.05925v1",
+        "title": "Hydrodynamic Switching Fronts Polarize Deformable Particle Trains",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2605.15182v1",
+        "title": "Warp-as-History: Generalizable Camera-Controlled Video Generation from One Training Video",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2606.02682v1",
+        "title": "Neural Networks and Schramm-Loewner Evolutions",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "openalex:W7154470437",
+        "title": "Recent Progress in the Physics-Constrained State of Health Estimation for Lithium-Ion Batteries",
+        "venue_year": "Energies 2026"
+      },
+      {
+        "paper_id": "openalex:W7124684693",
+        "title": "Physics-guided deep ensemble and inverse design for sustainable concrete",
+        "venue_year": "Multiscale and Multidisciplinary Modeling Experiments and Design 2026"
+      },
+      {
+        "paper_id": "openalex:W7124718871",
+        "title": "Artificial Intelligence in Local Energy Systems: A Perspective on Emerging Trends and Sustainable Innovation",
+        "venue_year": "Energies 2026"
+      },
+      {
+        "paper_id": "openalex:W7114813348",
+        "title": "Research Progress in Microscopic Mechanisms and Cross-Scale Simulation of Seepage Behavior in Porous Media",
+        "venue_year": "Processes 2025"
+      },
+      {
+        "paper_id": "openalex:W4416887539",
+        "title": "Hebbian Physics Networks: A self-organizing computational architecture based on local physical laws",
+        "venue_year": "Physical Review Research 2026"
+      },
+      {
+        "paper_id": "openalex:W7167748718",
+        "title": "CodeJeNN: A simple C++ neural network generator for physics applications",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416210665",
+        "title": "Machine learning-based prediction of crack mouth opening displacement in ultra-high-performance concrete",
+        "venue_year": "Scientific Reports 2025"
+      },
+      {
+        "paper_id": "openalex:W4417240226",
+        "title": "AI-driven virtual cell models in preclinical research: technical pathways, validation mechanisms, and clinical translation potential",
+        "venue_year": "npj Digital Medicine 2025"
+      },
+      {
+        "paper_id": "openalex:W7131277386",
+        "title": "Artificial Intelligence-Driven Natural Product Discovery for Cancer Metastasis and Chemoresistance: From Computational Prediction to Preclinical Validation",
+        "venue_year": "Cancers 2026"
+      },
+      {
+        "paper_id": "openalex:W4417436009",
+        "title": "A Decade of Soft Robotic Manipulators: Advances in Design, Modeling, Control, and Emerging Challenges",
+        "venue_year": "Journal of Bionic Engineering 2025"
+      },
+      {
+        "paper_id": "openalex:W4416228604",
+        "title": "Process Control via Electrical Impedance Tomography for Energy-Aware Industrial Systems",
+        "venue_year": "Energies 2025"
+      },
+      {
+        "paper_id": "openalex:W4416782409",
+        "title": "The Fluidic Connectome in Brain Disease: Integrating Aquaporin-4 Polarity with Multisystem Pathways in Neurodegeneration",
+        "venue_year": "International Journal of Molecular Sciences 2025"
+      },
+      {
+        "paper_id": "openalex:W7124865009",
+        "title": "Structural dynamics of plant transcription factors and their functional implications",
+        "venue_year": "The Plant Journal 2026"
+      },
+      {
+        "paper_id": "openalex:W7130309991",
+        "title": "Transient Reactive Grain Model with Uncertainty Quantifications and SensiTivity (TRUST) for Hydrogen Direct Reduction of Iron Ore",
+        "venue_year": "ChemRxiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2412.07321v1",
+        "title": "A class of refined implicit-explicit Runge-Kutta methods with robust time adaptability and unconditional convergence for the Cahn-Hilliard model",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "openalex:W4403443387",
+        "title": "R-adaptive DeepONet: Learning Solution Operators for PDEs with Discontinuous Solutions Using an R-adaptive Strategy",
+        "venue_year": "arXiv (Cornell University) 2024"
+      },
+      {
+        "paper_id": "arxiv:2509.04409v1",
+        "title": "An Arbitrary-Order Moving-Mesh Finite Element Algorithm for One-Dimensional Implicit Moving Boundary Problems",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "openalex:W4389681825",
+        "title": "A Stable Time-Dependent Mesh Method for Generalized Credit Rating Migration Problem",
+        "venue_year": "Journal of Nonlinear Mathematical Physics 2023"
+      },
+      {
+        "paper_id": "arxiv:2409.16826v1",
+        "title": "Learning phase-space flows using time-discrete implicit Runge-Kutta PINNs",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2607.10983v1",
+        "title": "Fast(er)PM and Moving Mesh: JAX-native Geometric Multigrid Methods",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2306.02526v2",
+        "title": "Fast and high-order approximation of parabolic equations using hierarchical direct solvers and implicit Runge-Kutta methods",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "openalex:W4405847683",
+        "title": "Moving Mesh Partial Differential Equation Modelling of a 5CB Nematic Liquid Crystal Confined in Symmetric and Asymmetric Pi-Cells: A Review",
+        "venue_year": "Symmetry 2024"
+      },
+      {
+        "paper_id": "openalex:W4404239732",
+        "title": "Residual-based attention Physics-informed Neural Networks for spatio-temporal ageing assessment of transformers operated in renewable power plants",
+        "venue_year": "Engineering Applications of Artificial Intelligence 2024"
+      },
+      {
+        "paper_id": "openalex:W7140279393",
+        "title": "An efficient adaptive moving grid algorithm for time-fractional integrodifferential equations governing viscoelastic nanofluid dynamics",
+        "venue_year": "Networks and Heterogeneous Media 2026"
+      },
+      {
+        "paper_id": "openalex:W4395484060",
+        "title": "Physics-Informed Neural Networks for Solving High-Index Differential-Algebraic Equation Systems Based on Radau Methods",
+        "venue_year": "International Journal of Intelligent Systems 2024"
+      },
+      {
+        "paper_id": "openalex:W4417278089",
+        "title": "A MOVING MESH FINITE ELEMENT METHOD AND ITS APPLICATIONS IN MALARIA TRANSMISSION MODEL",
+        "venue_year": "International Journal of Science Research and Technology 2025"
+      },
+      {
+        "paper_id": "arxiv:2603.11349v1",
+        "title": "Contractivity of Multi-Stage Runge-Kutta Dynamics",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2508.19561v1",
+        "title": "Energy-Equidistributed Moving Sampling Physics-informed Neural Networks for Solving Conservative Partial Differential Equations",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2401.06196v1",
+        "title": "VW-PINNs: A volume weighting method for PDE residuals in physics-informed neural networks",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2510.08924v1",
+        "title": "AB-PINNs: Adaptive-Basis Physics-Informed Neural Networks for Residual-Driven Domain Decomposition",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2602.09729v1",
+        "title": "Beyond Free-Stream Preservation: Transport Polynomial Exactness for Moving-Mesh Methods under Arbitrary Mesh Motion",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "openalex:W4362673252",
+        "title": "Physics-informed deep learning for three-dimensional transient heat transfer analysis of functionally graded materials",
+        "venue_year": "Computational Mechanics 2023"
+      },
+      {
+        "paper_id": "openalex:W4414064244",
+        "title": "A Fitted Linear Multistep Approach for Singularly Perturbed Parabolic‐Type Reaction–Diffusion Problems Using Shishkin Meshes",
+        "venue_year": "International Journal of Mathematics and Mathematical Sciences 2025"
+      },
+      {
+        "paper_id": "semanticscholar:0b522f352ad108a41e997f8b6bd19bc4bd88cc83",
+        "title": "Research on vehicle trajectory planning algorithm integrating spatiotemporal constraints and adaptive curvature",
+        "venue_year": "Scientific Reports 2025"
+      },
+      {
+        "paper_id": "semanticscholar:63ff67b997843e1b20768003eff101f2bf3f9404",
+        "title": "Adaptive Moving Mesh Methods for Solving Partial Differential Equations and Applications",
+        "venue_year": "2023"
+      },
+      {
+        "paper_id": "semanticscholar:f6f678533c85920e474ac6082ddf26a37733e305",
+        "title": "Nodal Hybrid Neural Solvers for Parametric PDE Systems",
+        "venue_year": "2025"
+      },
+      {
+        "paper_id": "semanticscholar:a05036a32dfb18f432d68e6c36643502085cb906",
+        "title": "An Unstructured Mesh Coordinate Transformation‐Based FDTD Method",
+        "venue_year": "International journal of numerical modelling 2024"
+      },
+      {
+        "paper_id": "arxiv:2401.05211v1",
+        "title": "Error estimation for physics-informed neural networks with implicit Runge-Kutta methods",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2302.07557v2",
+        "title": "On the Generalization of PINNs outside the training domain and the Hyperparameters influencing it",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2508.20440v6",
+        "title": "DDC-PINNs: A Predictor-Corrector Approach Based on Neural Network-Driven Domain Decomposition and Classical ODE Solvers for Time-Dependent PDEs",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2302.14227v2",
+        "title": "A unified scalable framework for causal sweeping strategies for Physics-Informed Neural Networks (PINNs) and their temporal decompositions",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2503.05716v1",
+        "title": "Normalized Fourier-induced PINN method for solving the wave propagation equation in a non-unitized domain over an extended time range",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2604.01835v1",
+        "title": "Goal oriented error estimation for adaptive sampling of PINNS",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "openalex:W4402172185",
+        "title": "An artificial neural network based deep collocation method for the solution of transient linear and nonlinear partial differential equations",
+        "venue_year": "Frontiers of Structural and Civil Engineering 2024"
+      },
+      {
+        "paper_id": "openalex:W4400427929",
+        "title": "Energy‐based PINNs for solving coupled field problems: Concepts and application to the multi‐objective optimal design of an induction heater",
+        "venue_year": "IET Science Measurement & Technology 2024"
+      },
+      {
+        "paper_id": "openalex:W4308194133",
+        "title": "Physics-Informed Neural Networks for shell structures",
+        "venue_year": "European Journal of Mechanics - A/Solids 2022"
+      },
+      {
+        "paper_id": "openalex:W4387875437",
+        "title": "Effects of variational formulations on physics‐informed neural network performance in solid mechanics",
+        "venue_year": "PAMM 2023"
+      },
+      {
+        "paper_id": "openalex:W4301797398",
+        "title": "Robust, multidimensional mesh motion based on Monge-Kantorovich equidistribution",
+        "venue_year": "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information) 2024"
+      },
+      {
+        "paper_id": "openalex:W4412434678",
+        "title": "Leveraging physics-informed neural networks for efficient modelling of coastal ecosystems dynamics: A case study of Sundarbans mangrove forest",
+        "venue_year": "Ecological Informatics 2025"
+      },
+      {
+        "paper_id": "openalex:W4405801561",
+        "title": "Simulation of 3D turbulent flows using a discretized generative model physics-informed neural networks",
+        "venue_year": "International Journal of Non-Linear Mechanics 2024"
+      },
+      {
+        "paper_id": "openalex:W4378942726",
+        "title": "Adversarial Adaptive Sampling: Unify PINN and Optimal Transport for the Approximation of PDEs",
+        "venue_year": "arXiv (Cornell University) 2023"
+      },
+      {
+        "paper_id": "semanticscholar:6cf4005324bffdf4b5cf24899ab1138ebb8434e6",
+        "title": "Virtual Sensing Model for Power Prediction of Satellite Solar Array: J₂ Perturbation Dynamics Resolution via Dual-Coordinate Transformation and Adaptive Runge–Kutta",
+        "venue_year": "IEEE Sensors Journal 2025"
+      },
+      {
+        "paper_id": "semanticscholar:bdc908c7fc4da1eee2c0fcf7b73cd9fdf7722564",
+        "title": "Robust 3D coordinate transformation based on genetic algorithm intelligent weighting",
+        "venue_year": "Physica Scripta 2024"
+      },
+      {
+        "paper_id": "semanticscholar:d60f7a2f6ab89f44ffda4cc4061773bdcbc1876c",
+        "title": "Calculating free-energy differences using an average force: A tutorial for adaptive biasing force simulations",
+        "venue_year": "Journal of Physical Chemistry B 2025"
+      },
+      {
+        "paper_id": "semanticscholar:fb03637398a9c562f67b19a70315a51b0e38eb57",
+        "title": "Fast and spectrally accurate construction of adaptive diagonal basis sets for electronic structure.",
+        "venue_year": "Journal of Chemical Physics 2024"
+      },
+      {
+        "paper_id": "semanticscholar:1c390e3793f100a94e755d1323d5c18a1f029ef4",
+        "title": "A coordinate transformation based barycentric interpolation collocation method and its application in bending, free vibration and buckling analysis of irregular Kirchhoff plates",
+        "venue_year": "International Journal for Numerical Methods in Engineering 2023"
+      },
+      {
+        "paper_id": "semanticscholar:53c6170b16f545b9ba494a19cf7f657ad6388815",
+        "title": "Efficient Three-Dimensional Marine Controlled-Source Electromagnetic Modeling Using Coordinate Transformations and Adaptive High-Order Finite Elements",
+        "venue_year": "Applied Sciences 2025"
+      },
+      {
+        "paper_id": "semanticscholar:54d68c60a6a667aeb28e472d29b6613dd6ed36a5",
+        "title": "Neural Approach to Coordinate Transformation for LiDAR–Camera Data Fusion in Coastal Observation",
+        "venue_year": "Italian National Conference on Sensors 2024"
+      },
+      {
+        "paper_id": "arxiv:2510.27314v2",
+        "title": "A non-iterative domain decomposition time integrator combined with discontinuous Galerkin space discretizations for acoustic wave equations",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2404.19059v3",
+        "title": "Convergence and stability of randomized implicit two-stage Runge-Kutta schemes",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2601.20235v1",
+        "title": "A Unified Variational Functional for Equidistribution and Alignment in Moving Mesh Adaptation",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2504.00249v3",
+        "title": "Plane-Wave Decomposition and Randomised Training; a Novel Path to Generalised PINNs for SHM",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2607.07497v1",
+        "title": "Explicit stabilized implementation of singly diagonally implicit Runge-Kutta methods",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2308.02659v1",
+        "title": "Coordinate-adaptive integration of PDEs on tensor manifolds",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2303.00779v2",
+        "title": "Timed material self-assembly controlled by circadian clock proteins",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2304.14879v1",
+        "title": "On the convergence of monolithic multigrid for implicit Runge-Kutta time stepping of finite element problems",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2309.07825v1",
+        "title": "Freeze-free cosmological evolution with a non-monotonic internal clock",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2602.06996v1",
+        "title": "Curriculum-Learned Vanishing Stacked Residual PINNs for Hyperbolic PDE State Reconstruction",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2501.12778v1",
+        "title": "Structure-Preserving Implicit Runge-Kutta Methods for Stochastic Poisson Systems with Multiple Noises",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2603.16039v2",
+        "title": "Residual Stream Duality in Modern Transformer Architectures",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2306.06614v3",
+        "title": "Cost-reduction implicit exponential Runge-Kutta methods for highly oscillatory systems",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2603.29143v1",
+        "title": "Electronic Collective Variables for Chemical Reactions",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2407.01613v2",
+        "title": "Self-adaptive weights based on balanced residual decay rate for physics-informed neural networks and deep operator networks",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2505.17719v2",
+        "title": "Stage-Parallel Implicit Runge--Kutta methods via low-rank matrix equation corrections",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2411.11276v2",
+        "title": "Coupled Integral PINN for Discontinuity",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2601.01462v1",
+        "title": "Convergence Analysis of PINNs for Fractional Diffusion Equations in Bounded Domains",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2410.13228v2",
+        "title": "From PINNs to PIKANs: Recent Advances in Physics-Informed Machine Learning",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2603.24451v1",
+        "title": "Stable corrections for perturbed diagonally implicit Runge--Kutta methods",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2411.12634v2",
+        "title": "Quadratic projectable Runge-Kutta methods",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "openalex:W3184908771",
+        "title": "Finite basis physics-informed neural networks (FBPINNs): a scalable domain decomposition approach for solving differential equations",
+        "venue_year": "Advances in Computational Mathematics 2023"
+      },
+      {
+        "paper_id": "openalex:W4405056159",
+        "title": "Adaptive temporal mesh equidistribution for studying the singularly perturbed delay-in-time parabolic equations",
+        "venue_year": "Zeitschrift für angewandte Mathematik und Physik 2024"
+      },
+      {
+        "paper_id": "openalex:W4399840403",
+        "title": "Multilevel domain decomposition-based architectures for physics-informed neural networks",
+        "venue_year": "Computer Methods in Applied Mechanics and Engineering 2024"
+      },
+      {
+        "paper_id": "openalex:W4382893306",
+        "title": "Physics-informed neural networks with residual/gradient-based adaptive sampling methods for solving partial differential equations with sharp solutions",
+        "venue_year": "Applied Mathematics and Mechanics 2023"
+      },
+      {
+        "paper_id": "openalex:W4410309052",
+        "title": "Physics-Informed Neural Networks for the Structural Analysis and Monitoring of Railway Bridges: A Systematic Review",
+        "venue_year": "Mathematics 2025"
+      },
+      {
+        "paper_id": "openalex:W4315767524",
+        "title": "A Study on CFL Conditions for the DG Solution of Conservation Laws on Adaptive Moving Meshes",
+        "venue_year": "Numerical Mathematics Theory Methods and Applications 2023"
+      },
+      {
+        "paper_id": "openalex:W4309636342",
+        "title": "Carboxylic Acids as Adaptive Functional Groups in Metallaphotoredox Catalysis",
+        "venue_year": "Accounts of Chemical Research 2022"
+      },
+      {
+        "paper_id": "openalex:W4388509983",
+        "title": "Mixed formulation of physics‐informed neural networks for thermo‐mechanically coupled systems and heterogeneous domains",
+        "venue_year": "International Journal for Numerical Methods in Engineering 2023"
+      },
+      {
+        "paper_id": "openalex:W4404627985",
+        "title": "Adaptive Training of Grid-Dependent Physics-Informed Kolmogorov-Arnold Networks",
+        "venue_year": "IEEE Access 2024"
+      },
+      {
+        "paper_id": "openalex:W4384306323",
+        "title": "An overview on modelling approaches for photochemical and photoelectrochemical solar fuels processes and technologies",
+        "venue_year": "Energy Conversion and Management 2023"
+      },
+      {
+        "paper_id": "openalex:W7119233629",
+        "title": "Adaptive moving mesh methods for the planar Willmore flow",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4413296970",
+        "title": "A Physics-Informed Neural Network (PINN) framework for generic bioreactor modelling",
+        "venue_year": "Computers & Chemical Engineering 2025"
+      },
+      {
+        "paper_id": "openalex:W4394647976",
+        "title": "A moving mesh finite element method for Bernoulli free boundary problems",
+        "venue_year": "arXiv (Cornell University) 2024"
+      },
+      {
+        "paper_id": "openalex:W4321599078",
+        "title": "Constrained Self-Adaptive Physics-Informed Neural Networks with ResNet Block-Enhanced Network Architecture",
+        "venue_year": "Mathematics 2023"
+      },
+      {
+        "paper_id": "semanticscholar:859c62102a70909e53a2b1adaeff9b3d9f54c162",
+        "title": "Resilient Adaptive Stabilization for Nonlinear CPSs Dealing With Deception Attacks",
+        "venue_year": "IEEE Transactions on Control of Network Systems 2025"
+      },
+      {
+        "paper_id": "semanticscholar:f48fcf94e6b31980ba3d6a7635046b0f14b9f373",
+        "title": "Finite-Time Adaptive Bipartite Consensus Tracking Control for Constrained Nonlinear MASs: A Locally Optimal Bipartition Strategy",
+        "venue_year": "IEEE Transactions on Systems, Man, and Cybernetics: Systems 2025"
+      },
+      {
+        "paper_id": "semanticscholar:10e53930fef24588789b135a8031237e1231ed61",
+        "title": "PAS-Net: Physics-informed Adaptive Scale Deep Operator Network",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "semanticscholar:cf01858af3e9d37cd4818a7989dec49451c1c622",
+        "title": "An Inverse Kinematics Solution for Mobile Manipulators in Textile Workshops Based on an Improved Particle Swarm Optimization",
+        "venue_year": "Symmetry 2025"
+      },
+      {
+        "paper_id": "semanticscholar:509282c42d55d4041f034bc4d8f9ef9a58496c0f",
+        "title": "Fine-tuning physics-informed neural networks for cavity flows using coordinate transformation",
+        "venue_year": "Computers &amp; Fluids 2025"
+      },
+      {
+        "paper_id": "semanticscholar:8fee5abc9589ea5991249768f22b874342181ae6",
+        "title": "A Reliable DBH Estimation Method Using Terrestrial LiDAR Points through Polar Coordinate Transformation and Progressive Outlier Removal",
+        "venue_year": "Forests 2024"
+      },
+      {
+        "paper_id": "semanticscholar:66146f6e71a7dafe2d4245bce6e5ac499990dc65",
+        "title": "An Adaptive Coordinate-Stretched Spectral Collocation–QLM Scheme for Singularly Perturbed Boundary-Layer Problems",
+        "venue_year": "Journal of Al-Qadisiyah for Computer Science and Mathematics 2026"
+      },
+      {
+        "paper_id": "semanticscholar:9043376f111c20dfa097f3f8ba67f16533f81df0",
+        "title": "MambaPan3D: Mamba-Transformer for 3D LiDAR Panoptic Segmentation with Adaptive Coordinate Fusion",
+        "venue_year": "IEEE International Conference on Tools with Artificial Intelligence 2025"
+      },
+      {
+        "paper_id": "semanticscholar:f68fda7f7544a2ab22aa10049bfb935bd2dd7928",
+        "title": "Analysis on n-level quantum systems by means of a coordinate transformation",
+        "venue_year": "IEEE Conference on Decision and Control 2024"
+      },
+      {
+        "paper_id": "arxiv:2308.09246v3",
+        "title": "Holomorphic General Coordinate Invariant Modified Measure Gravitational Theory",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2501.03086v1",
+        "title": "A unifying moving mesh method for curves, surfaces, and domains based on mesh equidistribution and alignment",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2211.12393v2",
+        "title": "Improving Weak PINNs for Hyperbolic Conservation Laws: Dual Norm Computation, Boundary Conditions and Systems",
+        "venue_year": "arXiv 2022"
+      },
+      {
+        "paper_id": "arxiv:2311.12497v1",
+        "title": "Entropy production by implicit Runge-Kutta schemes",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2302.11384v2",
+        "title": "The internal clock of many-body delocalization",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2303.16530v1",
+        "title": "Runtime Verification of Self-Adaptive Systems with Changing Requirements",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2404.16665v2",
+        "title": "A new way of deriving implicit Runge-Kutta methods based on repeated integrals",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2503.14222v5",
+        "title": "Vanishing Stacked-Residual PINN for State Reconstruction of Hyperbolic Systems",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2410.01599v1",
+        "title": "Towards Model Discovery Using Domain Decomposition and PINNs",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2403.08798v1",
+        "title": "Self-adaptive, Requirements-driven Autoscaling of Microservices",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2409.01131v1",
+        "title": "Second order finite volume IMEX Runge-Kutta schemes for two dimensional parabolic PDEs in finance",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2302.10239v1",
+        "title": "Basic postulates of some coordinate transformations within material media",
+        "venue_year": "arXiv 2022"
+      },
+      {
+        "paper_id": "arxiv:2510.21262v1",
+        "title": "PINN Balls: Scaling Second-Order Methods for PINNs with Domain Decomposition and Adaptive Sampling",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2604.14472v1",
+        "title": "Auxiliary Finite-Difference Residual-Gradient Regularization for PINNs",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2504.19013v3",
+        "title": "$PINN - a Domain Decomposition Method for Bayesian Physics-Informed Neural Networks",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2306.16993v1",
+        "title": "Weight Compander: A Simple Weight Reparameterization for Regularization",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2410.06463v1",
+        "title": "Average energy dissipation rates of additive implicit-explicit Runge-Kutta methods for gradient flow problems",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2210.16693v2",
+        "title": "How Do Shock Waves Define the Space-Time Structure of Gradual Solar Energetic Particle Events?",
+        "venue_year": "arXiv 2022"
+      },
+      {
+        "paper_id": "arxiv:2306.12696v3",
+        "title": "Efficient solver of relativistic hydrodynamics with implicit Runge-Kutta method",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2606.14942v1",
+        "title": "Bayesian Variational System Identification with Weak-Form Residual Likelihoods",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2604.14479v2",
+        "title": "Smooth perturbations of diagonally implicit Runge--Kutta methods",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2412.10125v2",
+        "title": "Error bounds for full space-time splitting discretizations of semi-linear SPDEs -- with a focus on dG domain decompositions",
+        "venue_year": "arXiv 2024"
+      },
+      {
+        "paper_id": "arxiv:2303.03769v1",
+        "title": "Learning Hamiltonian Systems with Mono-Implicit Runge-Kutta Methods",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2503.04056v1",
+        "title": "Gradient-enhanced PINN with residual unit for studying forward-inverse problems of variable coefficient equations",
+        "venue_year": "arXiv 2025"
+      },
+      {
+        "paper_id": "arxiv:2305.05452v2",
+        "title": "Implicit-explicit Runge-Kutta for radiation hydrodynamics I: gray diffusion",
+        "venue_year": "arXiv 2023"
+      },
+      {
+        "paper_id": "arxiv:2608.10389v1",
+        "title": "Efficient Weak-Entropy PINN for Solving Hyperbolic Conservation Laws",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "arxiv:2608.12447v1",
+        "title": "Geometric and Behavioral Stratification in Transformer Residual Streams",
+        "venue_year": "arXiv 2026"
+      },
+      {
+        "paper_id": "openalex:W4323027205",
+        "title": "Dasa-Pinns: Differentiable Adversarial Self-Adaptive Pointwise Weighting Scheme for Physics-Informed Neural Networks",
+        "venue_year": "SSRN Electronic Journal 2023"
+      },
+      {
+        "paper_id": "openalex:W4362664882",
+        "title": "Regression Transformer enables concurrent sequence regression and generation for molecular language modelling",
+        "venue_year": "Nature Machine Intelligence 2023"
+      },
+      {
+        "paper_id": "openalex:W4409319867",
+        "title": "Exact and numerical approaches for solitary and periodic waves in a (2+1)-dimensional breaking soliton system with adaptive moving mesh",
+        "venue_year": "AIMS Mathematics 2025"
+      },
+      {
+        "paper_id": "openalex:W4392727858",
+        "title": "Gradient-annihilated PINNs for solving Riemann problems: Application to relativistic hydrodynamics",
+        "venue_year": "Computer Methods in Applied Mechanics and Engineering 2024"
+      },
+      {
+        "paper_id": "openalex:W4365504037",
+        "title": "A survey on deep learning tools dealing with data scarcity: definitions, challenges, solutions, tips, and applications",
+        "venue_year": "Journal Of Big Data 2023"
+      }
+    ]
+  }
+}

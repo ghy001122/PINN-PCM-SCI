@@ -1,0 +1,883 @@
+[
+ {
+  "title": "In Situ Monitoring of Diffusive Morphology Transformation of Semiconductor Materials under Joule Heating.",
+  "title_norm": "in situ monitoring of diffusive morphology transformation of semiconductor mater",
+  "abstract": "Accurate quantification of surface diffusion is essential for controlling semiconductor morphology, yet reported values for silicon and germanium remain highly scattered. Conventional approaches based on ex situ snapshots or simplified models fail to capture dynamic evolution. Here, we present an in situ method to derive surface diffusion coefficients of silicon and germanium under Joule heating. Real-time reflectance monitoring combined with Raman thermometry enables simultaneous tracking of hole shrinkage and surface temperature, and the resulting trajectories are quantitatively matched to phase-field simulations with a sub-50 nm RMSD accuracy. From these fits, surface diffusion coefficients of 5.5 × 10-12-1.0 × 10-10 m2/s for silicon (1050-1200 °C) and 5.0 × 10-12-8.0 × 10-11 m2/s for germanium (750-900 °C) are obtained. Arrhenius analysis over these temperature windows yields activation energies of 3.25 eV (Si) and 1.96 eV (Ge). The germanium coefficients are up to 2 orders of magnitude higher than literature values measured under oxide-suppressed high-vacuum conditions. These results establish a quantitative framework linking surface diffusion kinetics to morphology evolution during annealing.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "ACS Applied Materials and Interfaces",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Taeyeong Kim",
+   "Bongjae Lee",
+   "Jungchul Lee"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "b899b1c77e3cd1bbf75023f7ca5a7aac1297882d",
+  "paper_id": "doi:10.1021/acsami.5c25601",
+  "doi": "10.1021/acsami.5c25601",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/b899b1c77e3cd1bbf75023f7ca5a7aac1297882d",
+  "published_iso": "2026-03-23",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "High-resolution spatiotemporal mapping of transient Joule heating and skin tissue responses during microneedle electroporation.",
+  "title_norm": "high resolution spatiotemporal mapping of transient joule heating and skin tissu",
+  "abstract": "Microneedle electroporation holds promise for enhancing dermal gene and drug delivery, yet the biophysical consequences of millisecond exponential-decay pulses remain incompletely characterized. We employed mid-wave infrared temperature mapping, three-dimensional electromagnetic modeling, cell viability staining, and histological analysis to systematically characterize the thermal, electrical, and biological responses of skin during microneedle electroporation. Millisecond pulsed electric fields induced pronounced, spatially heterogeneous Joule heating, with peak temperatures governed by pulse voltage and duration. A consistent voltage- and pulse-duration dependent thermal asymmetry was observed, with the anode hotter than the cathode; the anode-cathode temperature difference reached a maximum ΔT of 37.8 °C at 200 V (∼40 ms). Numerical simulations indicated that localized electric field enhancement at microneedle tips and edges contributes to these thermal effects. Biologically, anode-focused heating caused thermal charring, coagulative necrosis, and sustained inflammation, whereas electroporation-induced acute cell death remained symmetric around both electrodes. High-voltage microneedle electroporation (≥100 V) thus produces substantial localized thermal injury, particularly at the anode. These findings establish a link between transient electro-thermal dynamics and tissue injury, delineating the distinct spatial contributions of electroporation-mediated and thermal damage, and provide a biophysical basis for understanding localized Joule heating and tissue responses during millisecond-scale microneedle electroporation.",
+  "tldr": "The findings establish a link between transient electro-thermal dynamics and tissue injury, delineating the distinct spatial contributions of electroporation-mediated and thermal damage, and provide a biophysical basis for understanding localized Joule heating and tissue responses during millisecond-scale microneedle electroporation.",
+  "year": 2026,
+  "venue": "Bioelectrochemistry",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Dengning Xia",
+   "Hunter Chan",
+   "Huan Yu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "1f678f886493c05712b8bea5d8c1c0ba9f37318b",
+  "paper_id": "doi:10.1016/j.bioelechem.2026.109421",
+  "doi": "10.1016/j.bioelechem.2026.109421",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/1f678f886493c05712b8bea5d8c1c0ba9f37318b",
+  "published_iso": "2026-08-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Electrically steered conduction topologies and period-doubling phase dynamics in VO2",
+  "title_norm": "electrically steered conduction topologies and period doubling phase dynamics in",
+  "abstract": "The insulator-to-metal transition (IMT) in strongly correlated materials, such as vanadium dioxide (VO2), offers a transformative platform for next-generation adaptive electronics and neuromorphic computing. However, harnessing this non-equilibrium phase transition for deterministic device operation is fundamentally hindered by the inability to disentangle electric-field effects from Joule heating, owing to a lack of operando techniques capable of resolving phase dynamics at nanoscale spatial and sub-nanosecond temporal scales. Here, using a newly developed electrical-pulse-pump ultrafast transmission electron microscope (E-UTEM), we directly visualize the multi-scale electro-thermo-mechanical dynamics of the IMT in suspended VO2 devices. Our results reveal that electric-field-induced Poole-Frenkel (PF) emission, localized by patterned oxygen vacancies, plays a decisive role in redistributing the internal electric field to trigger a deterministic Mott transition. The extreme non-linearity of this PF effect enables the formation of dynamically reconfigurable connectivity topologies that bypass conventional thermal limits. Furthermore, we observe that the coupling of thermal and elastic energies governs a discrete domain evolution, characterized by step-wise and period-doubling configurational resets, which is a hallmark of non-equilibrium phase dynamics in constrained geometries. By integrating experimental imaging with phase-field simulations, we establish a comprehensive framework for the electrically-driven IMT and predict sub-100-ps switching kinetics. These findings provide a fundamental basis for the rational design of ultrafast, low-energy functional devices through nanoscale defect and strain engineering in correlated systems.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Siyuan Huang",
+   "Shuaishuai Sun",
+   "Yin Shi",
+   "Wentao Wang",
+   "Chunhui Zhu",
+   "H. Tian"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+  "paper_id": "arxiv:2604.19329",
+  "doi": "",
+  "arxiv_id": "2604.19329",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+  "published_iso": "2026-04-21",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Wavelength-decoupled photonic memristor for neuromorphic systems",
+  "title_norm": "wavelength decoupled photonic memristor for neuromorphic systems",
+  "abstract": "Photonic memristors based on phase-change materials can provide non-volatile optical weights for neuromorphic hardware, but practical devices often suffer from read-disturbance, inefficient optical heating, and iterative empirical optimization. Here, we present a physics-based design workflow for planar thin-film photonic memristors that uses interference to separate optical read and write channels by wavelength. The model combines transfer-matrix optics, a compact thermal description, and state-update rules to link wavelength-dependent absorption in the active film to the evolution of memristive states, and it is generalized to absorbing phase-change media. As a representative case study, we use an antimony (Sb) cavity to demonstrate the workflow, first by selecting a probe wavelength which maximizes optical contrast and a programming wavelength that maximizes heating efficiency, enabling low-disturb readout and energy-efficient switching within a single device geometry. Spacer-controlled field localization tunes the hysteresis and supports gradual, analog-like weight updates under pulse trains. Robustness tests show that thermal relaxation and heat retention set the main programming margins, while readout contrast is comparatively stable. The approach provides design rules for interference-engineered photonic memory elements.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Physics D: Applied Physics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Kameyab Raza Abidi",
+   "G. Das"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "52f183f24681463244b3f25c0e4d14532aa129a6",
+  "paper_id": "doi:10.1088/1361-6463/ae6e4e",
+  "doi": "10.1088/1361-6463/ae6e4e",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1088/1361-6463/ae6e4e",
+  "published_iso": "2026-05-15",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Interhemispheric Asymmetries in the Large‐Scale Traveling Atmospheric and Ionospheric Disturbances During the 5–6 August 2011 Geomagnetic Storm",
+  "title_norm": "interhemispheric asymmetries in the large scale traveling atmospheric and ionosp",
+  "abstract": "In this study, we investigate the interhemispheric asymmetry (IHA) in high‐latitude Joule heating during the initial phase of the 5–6 August 2011 storm. We also examine its relationship with IHAs in the large‐scale traveling atmospheric and ionospheric disturbances (LSTADs/LSTIDs) in the American sector. The analysis is carried out using the Global Ionosphere Thermosphere Model (GITM) driven by the Active Magnetosphere and Planetary Electrodynamics Response Experiment (AMPERE) field‐aligned current (FAC) patterns together with a series of ground‐based and satellite observations. First, GITM simulation results indicate that Joule heating during the initial phase in the Northern Hemisphere (NH) is roughly twice that in the Southern Hemisphere (SH) and exhibits pronounced IHAs in terms of spatial distribution. Particularly, at the beginning of the initial phase, Joule heating deposited in the NH is concentrated in the afternoon sector, where the American sector is located, while the SH shows minimal heating in the same sector. Second, the GITM simulation results reveal that the strong NH Joule heating launches an equatorward‐propagating LSTAD/LSTID first. About an hour later, enhanced duskside Joule heating in the SH generates another LSTAD/LSTID. The two disturbances propagate with comparable phase speeds, so the NH one reaches the geomagnetic equator earlier than its SH counterpart. Such IHAs in the LSTAD/LSTID have also been confirmed by the observations. Moreover, observations further reveal an additional NH LSTAD/LSTID likely triggered by regional heating near the onset of the initial phase, which is not reproduced by GITM due to limitations in resolving regional electrodynamic forcings in FAC patterns.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Geophysical Research - Space Physics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Katelyn Youngjohn",
+   "Qingyu Zhu",
+   "C. Valladares",
+   "S. Vines",
+   "M. Hairston"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "021d514ddc6fc73b34de8d078bda7663fdda57c3",
+  "paper_id": "doi:10.1029/2025JA034740",
+  "doi": "10.1029/2025JA034740",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/021d514ddc6fc73b34de8d078bda7663fdda57c3",
+  "published_iso": "2026-05-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Electrothermal Model of an AC Catenary and Mechanisms of Ice Melting under an Autotransformer Traction Power Supply System",
+  "title_norm": "electrothermal model of an ac catenary and mechanisms of ice melting under an au",
+  "abstract": "Objective: to develop an electrothermal model for melting ice accretions on the catenary system of an electrified railway under an autotransformer traction power supply system, taking into account non-uniform icing and the thermophysical properties of the multilayer system “conductor — air gap — ice — ambient environment”. Methods: to investigate the melting process, a two-dimensional transient thermal model of the cross-section of the “conductor — air gap — ice — ambient environment” system was developed. Heat sources were defined according to the Joule — Lenz law for a prescribed heating current, phase change was incorporated using the equivalent heat capacity method, and external heat losses were described by radiative-convective heat transfer. Numerical simulation of the temperature field was performed using the finite element method. Results: it was established that electrothermal melting of ice accretions leads to the formation of a non-uniform temperature field caused by sequential heat transfer from the conductor to the ice layer through the air gap. It was shown that geometric non-uniformity of icing modifies the heat-transfer boundary conditions and causes differences in the thermal response of the system elements, thereby determining the spatial characteristics and kinetics of the melting process. Practical significance: the developed model can be used to analyze thermal regimes for de-icing overhead wires and to evaluate the energy parameters of melting processes. The results obtained allow us to clarify the physical mechanism of electrothermal melting of ice deposits and can serve as a basis for further research into overhead wire de-icing processes.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Bulletin of scientific research results",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "I‐Chen Li",
+   "I. Vikulov"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "0864767a062599e6b43e130021c7714065e1dfa3",
+  "paper_id": "doi:10.20295/2223-9987-2026-2-73-85",
+  "doi": "10.20295/2223-9987-2026-2-73-85",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/0864767a062599e6b43e130021c7714065e1dfa3",
+  "published_iso": "2026-06-29",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "FEcMD: A multi-physics and multi-scale computational program for dynamic coupling molecular dynamics simulations with transient electric field and heat conduction in metal nanostructures",
+  "title_norm": "fecmd a multi physics and multi scale computational program for dynamic coupling",
+  "abstract": "Field emission coupled with molecular dynamics simulation (FEcMD) software package is a computational tool for studying atomic structure evolution, structural deformation, phase transitions, recrystallization as well as electron emission characteristics of micro- and nano-protrusions and nanowires consisting of elemental metals or multi-component alloys by means of multi-physics and multi-scale methodology. Current implementations of molecular dynamics simulation coupled with multi-scale electrodynamics (ED) and heat conduction (HC) in FEcMD program are advanced mainly in the two aspects as follows. In electrodynamics, the FEcMD program incorporates the space charge interactions (space charge potential and exchange-correlation effects) in the self-consistent solved Poisson-Schr\\\"odinger equation with Wentzel-Kramers-Brillouin-Jeffreys (WKBJ) approximation to evaluate the field emission current density and the related resistive heating process more reliably for nanowires or nano-protrusions especially for nano-gaps between two metal electrodes. Meanwhile, the two-temperature heat conduction model is implemented in electrodynamics coupled with molecular dynamics simulations (ED-MD), providing more dedicated descriptions for the hierarchical electron-phonon two-channel heat conduction mechanism and the temperature evolutions of electron and phonon subsystems under the radiofrequency (RF) or pulse electric fields. Benchmark tests are performed for some key implementations in FEcMD software to validate the numerical results, and also to demonstrate the use of program to study the atomic structure evolution of metal nano-structures under electric field and heating processes.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Bing Xiao",
+   "Nan Li",
+   "Wenqian Kong",
+   "Rui Chu",
+   "Hongyu Zhang",
+   "G. Meng"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "88054efb2dd038882421c2f2d71b29e296b24691",
+  "paper_id": "arxiv:2601.14712",
+  "doi": "",
+  "arxiv_id": "2601.14712",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/88054efb2dd038882421c2f2d71b29e296b24691",
+  "published_iso": "2026-01-21",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Reversible structural phase transition in MoOx thin films for tunable optical devices",
+  "title_norm": "reversible structural phase transition in moox thin films for tunable optical de",
+  "abstract": "Optical phase-change materials (OPCMs) offer a powerful platform for electrically driven reconfigurable photonics, yet the development of low-loss optical phase change materials, in particular in the visible range, remains a significant challenge. Currently investigated materials such as Sb2Se3 and Sb2S3 remain quite absorptive in that wavelength range. In this work, we demonstrate the use of molybdenum oxide (MoOx, x ≈ 3) as a low-loss OPCM. Through ellipsometry, we observed large changes in the refractive index between its amorphous and crystalline phases. This transition is achieved by annealing the material above its crystallization temperature, with crystallization confirmed via x-ray diffraction. In both phases, the imaginary part of the refractive index for green light was below 1×10-4, demonstrating the material’s potential for reconfigurable photonic devices. With an on-chip heater, Joule heating pulses were used to induce a reversible amorphous-to-crystalline phase transition, confirmed with selected area electron diffraction (SAED). During optical characterization, a change in reflectivity was observed. However, signs of layer delamination were also identified, which are expected to contribute to the reflectivity variation. Nevertheless, the observed reversible crystallization of MoOx using electrical pulses marks an important step toward its use in reconfigurable flat optics. Thermal simulations guided the microheater design to enable localized switching, while optical simulations provide a baseline for expected modulation. This work represents the first experimental demonstration of electrically induced phase switching of MoOx thin films integrated into an optical device, highlighting both the promise and practical challenges of this emerging material system.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "OPTO",
+  "publication_types": [],
+  "authors": [
+   "Christian Valencia",
+   "S. Saseendran",
+   "B. Figeys",
+   "R. Jansen",
+   "Xavier Rottenberg",
+   "P. Van Dorpe"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "2754cddc7782f8d38946d029d59de78b2d432d58",
+  "paper_id": "doi:10.1117/12.3081239",
+  "doi": "10.1117/12.3081239",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/2754cddc7782f8d38946d029d59de78b2d432d58",
+  "published_iso": "2026-03-05",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Structural Modulation of Magnetic Softness in Fe‐Based Amorphous Alloys via Pulse Current Training",
+  "title_norm": "structural modulation of magnetic softness in fe based amorphous alloys via puls",
+  "abstract": "\n \n Fe‐based amorphous alloys, despite their intrinsically low magnetocrystalline anisotropy, suffer from quasi‐dislocation dipoles and localized stress fields that impede domain‐wall motion and increase coercivity. Here, we introduce pulse current training (PCT) as an energy‐efficient technique to overcome these limitations in a Fe\n 76\n Si\n 9\n B\n 10\n P\n 5\n ribbon. As quenched ribbons exhibit a coercivity\n H\n c\n  ∼ 10.6 A m\n −1\n and the optimized infrared annealing reduced\n H\n c\n  ∼ 2 A m\n −1\n with a saturation magnetization\n M\n s\n  ∼ 162 emu g\n −1\n . By applying controlled square‐wave current pulses (\n J\n  = 7000 A cm\n −2\n ,\n T\n w\n :\n T\n p\n  = 1:2,\n T\n p\n  = 0.06 s) over 18–50 cycles, PCT further reduces\n H\n c\n to below 1 A m\n −1\n and increases\n M\n s\n to 179 emu g\n −1\n . Within a moderate‐cycle window, the ribbons maintain sufficient bendability for a practical core. Ultra‐rapid thermal annealing performed as a control reduces\n H\n c\n to ∼2.5 A m\n −1\n but does not reach the level achieved by PCT, indicating that rapid heating alone cannot account for the superior magnetic softening. Finite‐element simulations and structural characterization show that PCT produces rapid and nearly uniform Joule heating, enabling efficient structural relaxation and enhanced medium‐range order while retaining an overall amorphous structure. Compared with conventional annealing, PCT implements a distinct, pulse energy injection pathway on the potential energy landscape, enabling more controllable tuning of amorphous configurations. This work establishes PCT as a versatile approach for tailoring both magnetic and mechanical properties in amorphous soft magnetic materials, paving the way for their optimized application in advanced electromagnetic devices.\n",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Rare Metals",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shumin Ye",
+   "Zida Zhang",
+   "Rie Y. Umetsu",
+   "Huaping Ding",
+   "Xiong Liang",
+   "Yuanfei Cai"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "e115740c26c6399980979c31b8b77a1831664026",
+  "paper_id": "doi:10.1002/rar2.70412",
+  "doi": "10.1002/rar2.70412",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1002/rar2.70412",
+  "published_iso": "2026-06-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Investigation of backward switching and write margin optimization of SOT-MTJ devices",
+  "title_norm": "investigation of backward switching and write margin optimization of sot mtj dev",
+  "abstract": "Spin–orbit-torque magnetic random access memory (SOT-MRAM) offers superior advantages compared to conventional spin-transfer-torque MRAM. However, it suffers from backward switching, which severely constrains the write current window, presenting critical challenges for commercialization. Here, we investigate this phenomenon in full SOT-magnetic tunnel junction structures fabricated on 300 mm wafers. Experiments and numerical simulations demonstrate that Joule heating and field-like torque are the primary factors that dominate the backward switching phenomenon. Based on these insights, the write margin is enhanced by optimizing the SOT layer thickness, pulse width engineering, and stray field optimizations. Our findings establish thermal management as a primary design consideration for scalable SOT-MRAM arrays.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Applied Physics Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yi Xu",
+   "Chao Wang",
+   "Yinuo Shi",
+   "Xin Cao",
+   "Zhou Li",
+   "D. Zeng"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "b6fca0a0fcad6528e9b474c116fd88c9130a22cd",
+  "paper_id": "doi:10.1063/5.0314449",
+  "doi": "10.1063/5.0314449",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/b6fca0a0fcad6528e9b474c116fd88c9130a22cd",
+  "published_iso": "2026-03-23",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Ionosphere‐Thermosphere Responses to the March 2023 Geomagnetic Storm Using Observations and TIEGCM Simulations Driven by Data Assimilated Aurora and Electric Fields",
+  "title_norm": "ionosphere thermosphere responses to the march 2023 geomagnetic storm using obse",
+  "abstract": "We investigate Ionosphere‐Thermosphere (IT) responses to the March 2023 geomagnetic storm using GOLD and PFISR observations, along with TIEGCM simulations driven by data‐assimilated aurora and electric fields. A Lattice Kriging approach is implemented to assimilate auroral electron flux and characteristic energy from ground‐based (THEMIS/ASIs) and satellite (DMSP/SSUSIs) measurements, and the empirical model (Zhang & Paxton, 2008, https://doi.org/10.1016/j.jastp.2008.03.008). Electric field assimilation uses SuperDARN ion drifts, PFISR, and the SuperDARN SHF potential model. Compared to the default run, the assimilated simulation better captures GOLD observations, including an O/N2 depletion by ∼0.5, and a neutral temperature enhancement of ∼170 K relative to a quiet day. These changes are primarily driven by enhanced Joule heating from assimilated aurora and electric fields, and the resultant upwelling. Results from different model runs implies that aurora modestly increases temperature, while electric fields further enhance it and modulate its spatial structure. The assimilated run also captures the local PFISR observations, including (a) F‐region elevated ion and electron temperatures (∼4000 K); (b) a negative ionospheric storm phase with ∼60% F‐region electron density reduction; and (c) E‐region electron density enhancements by 50%, relative to a quiet day. Electric fields more strongly elevate ion temperature and reduce F‐ region electron density, whereas aurora drives E‐region electron density enhancements. The combined effect of both drivers produces the largest height‐integrated Joule heating at the Poker Flat, reaching ∼120 mW/m2. Overall, we demonstrate that assimilating high‐latitude drivers into TIEGCM significantly improves its capability to simulate storm‐time IT dynamics with richer spatial structures and increased variability.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Geophysical Research - Space Physics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "P. Poudel",
+   "Xian Lu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "2ac1b92d8cdea45bd80d34640f67da40b650df5d",
+  "paper_id": "doi:10.1029/2025JA034954",
+  "doi": "10.1029/2025JA034954",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1029/2025ja034954",
+  "published_iso": "2026-06-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Exploring Short-Circuit Failure Mechanism of Cascode GaN HEMT",
+  "title_norm": "exploring short circuit failure mechanism of cascode gan hemt",
+  "abstract": "This letter reveals the in-depth failure mechanisms of Cascode gallium nitride devices under a single pulse short-circuit event through simulation-based analysis and experimental validations. Under precisely controlled short-circuit conditions, a unique “recovery” failure phenomenon is observed, which results in two main burned regions: first, the drain corner surrounded by gate fingers, and second, the drain pad connection metal. Thermal simulations identify the drain corner as the primary failure origin. The failure process is then revealed by an equivalent circuit model. The high electric fields induce thermal breakdown of the dielectric, creating a conductive path that increases total drain current. The burned area subsequently becomes highly resistive again, reducing drain current while maintaining significant leakage. Under high bus voltage, Joule heating ultimately triggers catastrophic device destruction. Furthermore, a Schmitt trigger-based detection method experimentally confirms the first burned area as the initiation site of the short-circuit failure.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE transactions on power electronics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Sheng Li",
+   "Qinhan Wang",
+   "Weihao Lu",
+   "Leke Wu",
+   "Yiheng Li",
+   "Tinggang Zhu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "1d8dc6ca09cfe476dbb21dc284ba34560a426b83",
+  "paper_id": "doi:10.1109/TPEL.2025.3611494",
+  "doi": "10.1109/TPEL.2025.3611494",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/1d8dc6ca09cfe476dbb21dc284ba34560a426b83",
+  "published_iso": "2026-03-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Real-Time Optical Quantification of Surface Diffusion in Semiconductor Nanostructures",
+  "title_norm": "real time optical quantification of surface diffusion in semiconductor nanostruc",
+  "abstract": "We present an in-situ optical framework for precise quantification of high-temperature surface diffusion in silicon nanostructures under Joule heating. Silicon hole arrays are Joule-heated in high vacuum while real-time reflectance monitoring tracks pore shrinkage with sub-50 nm resolution. Surface temperature is measured via Raman thermometry, using Stokes peak shifts at moderate temperatures and Stokes/anti-Stokes intensity ratios at higher temperatures. Surface diffusion coefficients are extracted by fitting experimental diameter–time trajectories to phase-field simulations that explicitly incorporate curvature effects. The method circumvents exsitu imaging and simplified exponential fits, yielding validated, time-resolved diffusion coefficients for silicon under microfabrication-relevant conditions.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE/LEOS International Conference on Optical MEMS",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Taeyeong Kim",
+   "B. Lee",
+   "Jungchul Lee"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "3853631b92133098f047027d51d49ab9283aec6a",
+  "paper_id": "doi:10.1109/MEMS64181.2026.11419500",
+  "doi": "10.1109/MEMS64181.2026.11419500",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/3853631b92133098f047027d51d49ab9283aec6a",
+  "published_iso": "2026-01-25",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Electrically Assisted Processing of Metallic Materials: Coupled Mechanisms, Microstructure Evolution, and Service Performance",
+  "title_norm": "electrically assisted processing of metallic materials coupled mechanisms micros",
+  "abstract": "Electrically assisted processing of metallic materials has emerged as a promising paradigm for reducing deformation resistance while concurrently tailoring microstructure and service-related properties under coupled electrical, thermal, and mechanical fields. This review focuses on deformation-dominated and surface-strengthening scenarios, examining recent advances from three interconnected perspectives: fundamental mechanisms, microstructural evolution, and property responses. Available evidence suggests that Joule heating typically constitutes the dominant contribution under high-duty-cycle or near-steady-state current conditions, whereas non-thermal electroplastic effects become increasingly pronounced under short-pulse, high-current-density, and temporally decoupled loading regimes. Current assistance can accelerate recovery and recrystallization, refine grain structure, modify crystallographic texture, and alter phase transformation and precipitation kinetics. Additionally, it can relax or redistribute residual stresses while reducing flow stress and forming forces. In select hybrid surface treatments, these microstructural modifications translate into enhanced resistance to fatigue, wear, and corrosion. Nevertheless, the available evidence precludes a single universal explanation, given that current crowding, defect-selective heating, electron–dislocation interactions, and magnetic effects operate concurrently, with their relative importance varying across material systems and processing conditions. Moving forward, establishing a unified framework that links electrical parameters, defect evolution, microstructure, and performance is imperative, with focused efforts on the quantitative delineation of thermal and non-thermal contributions, predictive constitutive modeling, residual stress stability, and industrial scalability.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Metals",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Xiaohui Li",
+   "Yuhong Lin",
+   "Mingjian Wu",
+   "Lijie Chen",
+   "Lianhao Liu",
+   "G. Song"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "59611a6ee31f3b45d2717beea8031ac1ffbe24b9",
+  "paper_id": "doi:10.3390/met16060578",
+  "doi": "10.3390/met16060578",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3390/met16060578",
+  "published_iso": "2026-05-25",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Nanoscale crystallization of Cr2Ge2Te6 thin films induced by terahertz near-fields",
+  "title_norm": "nanoscale crystallization of cr2ge2te6 thin films induced by terahertz near fiel",
+  "abstract": "Cr2Ge2Te6 (CrGT) is a promising phase-change material exhibiting low operating energy and a thermally stable amorphous phase, suitable for next-generation nonvolatile memory. To assess its nanoscale switching behavior, we investigated phase transitions in amorphous CrGT thin films using a scanning tunneling microscope excited by picosecond terahertz (THz) pulses. Local THz near-fields enhanced within the tunnel junction induced reproducible nanoscale crystallization without mechanical contact. By varying the field strength, we identified a threshold far-electric field of approximately 0.6 kV cm−1 for the onset of crystallization. The results indicate that Joule heating generated by the tip-enhanced THz near-field governs the amorphous-to-crystalline transition. These findings establish THz field-driven nanoscale phase switching in CrGT and provide a physical framework for ultrafast, nonvolatile phase-control architectures.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Applied Physics Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "D. Kim",
+   "M. Kawaji",
+   "R. Tamaki",
+   "S. Kusaba",
+   "Y. Wang",
+   "Y. Shuang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "6d791889122177a87c88e2ce20ea6f4c050a13e1",
+  "paper_id": "doi:10.1063/5.0316592",
+  "doi": "10.1063/5.0316592",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://ynu.repo.nii.ac.jp/records/2002721",
+  "published_iso": "2026-04-13",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Investigation of the Evolution Mechanism and Multiphysics Coupling in Tree‐Contact Single‐Phase‐to‐Ground Fault",
+  "title_norm": "investigation of the evolution mechanism and multiphysics coupling in tree conta",
+  "abstract": "\n Tree‐contact single‐phase‐to‐ground fault (TSF) is a common and hazardous type of failure in distribution networks. TSF is likely to occur when overhead conductors contact moist tree branches, potentially leading to insulation breakdown, posing serious threats to grid safety. This study investigates the fault evolution mechanism of TSF by establishing a multiphysics coupled simulation model incorporating electric, thermal and fluid fields, aiming to reveal the characteristics of moisture migration and heat accumulation within the tree. To validate the model, a TSF simulation experiment was designed and implemented. Surface temperature data were collected using an infrared thermal imaging camera and compared with simulation results. The observed consistency in the temperature rise trends between experimental and simulated data confirms the accuracy and reliability of the model in capturing the real discharge process. The results reveal that during discharge, electric current tends to flow along low‐resistance moisture‐rich pathways, where local current density accumulation intensifies Joule heating. This thermal effect, in turn, drives further moisture migration, forming a positive feedback loop that accelerates fault progression. The findings provide theoretical insight and visualisation tools for understanding TSF mechanisms, offering a basis for fault identification and monitoring.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "High Voltage",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Wenjun Ning",
+   "Zuopeng Li",
+   "Mingxian Liu",
+   "Jianbo He",
+   "Tianxiang Chen",
+   "Shenli Jia"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "26faba2a7b667b40b8cecec2d5a3340b8405d31f",
+  "paper_id": "doi:10.1049/hve2.70195",
+  "doi": "10.1049/hve2.70195",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1049/hve2.70195",
+  "published_iso": "2026-05-14",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Ionosphere Response to the October 2024 G4 Geomagnetic Storm: Multi‐Instrument Observations and Physical Mechanism",
+  "title_norm": "ionosphere response to the october 2024 g4 geomagnetic storm multi instrument ob",
+  "abstract": "The intense geomagnetic storm on 10–11 October 2024 (SYM‐H minimum ∼−346 nT) triggered significant global ionospheric disturbances, posing potential space weather risks to satellite navigation and communication systems. This study employs a combination of dense GNSS observation networks, in situ measurements from Swarm satellites, ionosonde data, and TIE‐GCM numerical simulations to analyze storm‐time ionospheric perturbations on a global scale, with a focused investigation over the North American sector. Using 3D GNSS tomography, we characterize the propagation and vertical evolution mechanisms of Large‐Scale Traveling Ionospheric Disturbances and the Storm Enhanced Density (SED) structure from a multidimensional perspective. Results reveal that intense polar Joule heating generated alternating bands of positive and negative ionospheric disturbances at high latitudes, propagating equatorward at a horizontal phase velocity of approximately 740 m/s. The disturbances peaked at ∼350 km altitude (dIED > ±0.3 × 1011el/m3), corroborated by multiple ionosonde stations. A pronounced SED plume with significant vertical extent emerged around 18:00 UT on October 10. The steep gradient region at the plume edge coincided with strong irregularities identified by ROTI, and the plume persisted for 8 hr, gradually drifting westward before dissipating. This evolution was primarily driven by the equatorial super‐fountain effect induced by penetration electric fields, which propelled high‐density plasma to diffuse toward midlatitudes along the magnetic field lines. Concurrently, the downward plasma accumulation and physical compression driven by poleward neutral winds, combined with reduced recombination losses resulting from elevated O/N2 ratios at mid‐to‐low latitudes, jointly sustained the plume structure.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Geophysical Research - Space Physics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xiongqi Guan",
+   "Wang Li",
+   "Xiangzhou Meng",
+   "Xiujiang Pan",
+   "Xiaoqing Zuo",
+   "Dongsheng Zhao"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "3efa6e13f978cf7984b64c27d3dc9c92afa90c9a",
+  "paper_id": "doi:10.1029/2026JA035184",
+  "doi": "10.1029/2026JA035184",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/3efa6e13f978cf7984b64c27d3dc9c92afa90c9a",
+  "published_iso": "2026-04-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Low-Channel-Count Thermoacoustic Multi-Ring Array for Radially Shaped Acoustic Orbital Angular Momentum Beams",
+  "title_norm": "low channel count thermoacoustic multi ring array for radially shaped acoustic o",
+  "abstract": "",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Vibration Engineering & Technologies",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Dalun Rong",
+   "Jiang Yu",
+   "Haowen Kong",
+   "Yeshun Wang",
+   "Xiya Tang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "97dd2643c2697c2de6e8fad13e8f7c9b132b3cd8",
+  "paper_id": "doi:10.1007/s42417-026-02576-8",
+  "doi": "10.1007/s42417-026-02576-8",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/97dd2643c2697c2de6e8fad13e8f7c9b132b3cd8",
+  "published_iso": "2026-06-13",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Laser power transmission in space: Plasma-based power cell",
+  "title_norm": "laser power transmission in space plasma based power cell",
+  "abstract": "Laser power beaming offers a route to space energy delivery, but semiconductor laser photovoltaic receivers face thermalization, joule heat, and radiative recombination waste, etc. Here we propose a gas-phase plasma power cell that converts vacuum-ultraviolet photons into electrical output through xenon photoionization and magnetically biased charge separation. Particle-in-cell Monte Carlo simulations of a low-pressure xenon chamber driven by a 58.4 nm pulsed laser predict a steady-state laser-to-electrical conversion efficiency of 82.25% at 2000 W/m2 average incident power. Energy accounting closes to 1%, with 7.52% photon escape, 8.95% boundary loss, and 1.29% chamber-stored energy. Parameter scans over bias voltage, magnetic field, and gas pressure identify photon absorption and electron confinement as controlling design factors. These results are a proof-of-concept gas-phase receiver architecture for space laser power beaming.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Li Lin",
+   "Michael Keidar"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "fc5f183c5520d4e77139fac56aa5f8e74d127f15",
+  "paper_id": "arxiv:2607.25843",
+  "doi": "",
+  "arxiv_id": "2607.25843",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/fc5f183c5520d4e77139fac56aa5f8e74d127f15",
+  "published_iso": "2026-07-28",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Curing‐Induced Nanophase Engineering in Boronic‐Ester Epoxy Vitrimers for Low‐Loss, High‐Breakdown, and Stress‐Relaxed Insulation",
+  "title_norm": "curing induced nanophase engineering in boronic ester epoxy vitrimers for low lo",
+  "abstract": "Epoxy dielectrics for high‐frequency power‐electronic insulation face a persistent trade‐off between electrical reliability and network adaptability: rigid cross‐linked networks provide high dielectric strength but lock in cure‐induced stress, while epoxy vitrimers often struggle to maintain low dielectric loss and stable breakdown performance under electrical stress. Here, we report a boronic‐ester epoxy vitrimer in which catalyst‐free bond exchange is coupled with curing‐induced nanophase‐separated morphology. The resulting vitrimer network releases > 87.7% of curing stress while maintaining low dielectric loss across a broad frequency range, with tanδ as low as 4.2 × 10−4 at 100 Hz. More importantly, it retains low dielectric loss at 30 kHz, leading to reduced electrothermal heating, an 84% decrease in partial‐discharge activity, and a 78%–101% increase in alternating‐current (AC) breakdown strength relative to conventional epoxy. Multiscale experiments, together with density‐functional‐theory (DFT) and phase‐field simulations, show that polarized B─O motifs and interfacial permittivity/conductivity contrast jointly regulate charge trapping, redistribute local electric fields, and suppress damage localization and Joule‐heating hot spots, while dynamic exchange relaxes cure‐induced residual stress. Mechanical scratch healing restores up to 93% of breakdown strength, and reprocessed samples preserve low‐loss, high‐breakdown performance, establishing a recyclable epoxy‐insulation platform for reliable high‐frequency dielectrics.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Advanced Functional Materials",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yiwei Wang",
+   "Li Zhang",
+   "Qingsong Liu",
+   "Guan Wang",
+   "Tianqu Hao",
+   "Qingmin Li"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "c1022cf0ba4d5918f4566fd24587252e3371b012",
+  "paper_id": "doi:10.1002/adfm.76568",
+  "doi": "10.1002/adfm.76568",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c1022cf0ba4d5918f4566fd24587252e3371b012",
+  "published_iso": "2026-06-26",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Rapid volumetric rewarming of cryopreserved samples using a steerable ultrasound array.",
+  "title_norm": "rapid volumetric rewarming of cryopreserved samples using a steerable ultrasound",
+  "abstract": "This work presents the characterization and application of a 128-element high-power High-Intensity Focused Ultrasound (HIFU) phased array for the rapid and spatially uniform rewarming of cryopreserved biological samples. The device operates 512 Watts of electrical power with electronically steerable foci, enabling sub-millimeter precision heating over centimeter-scale volumes. Using simulation-informed configurations and iterative focal cycling, we achieve warming rates exceeding 150 °C/min with spatial variations below ±10 °C in mouse organs, and 200 °C/min with ±15 °C homogeneity in agar phantoms, controlled with multiple thermocouples. These conditions are necessary to avoid recrystallization damage during thawing, demonstrating the system's ability to outperform conventional water-bath methods, especially within the critical -80 °C to -30 °C zone. The peak acoustic intensity employed for sample thawing was 15 W/cm2, with 1 ms pulse duration per active element and a 6% duty cycle, for a total HIFU exposure time of 90-120 s. Numerical studies with k-Wave and T-Array provided the acoustic field intensity and steering range that the device can produce. Thermal shielding strategies and impedance-matched acoustic paths were developed to ensure efficient energy delivery during cryogenic transitions. Our findings establish the feasibility of high-power, electronically controlled HIFU arrays as scalable, non-invasive tools for safe rewarming of cryopreserved organs, paving the way toward clinical translation and long-term organ banking.",
+  "tldr": "The findings establish the feasibility of high-power, electronically controlled HIFU arrays as scalable, non-invasive tools for safe rewarming of cryopreserved organs, paving the way toward clinical translation and long-term organ banking.",
+  "year": 2026,
+  "venue": "Ultrasonics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "E. Alcalá",
+   "M. Lobillo",
+   "P. P. Pérez",
+   "J. J. Jiménez",
+   "E. Kendziorra",
+   "P. Cabras"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "267254b3fa1851a85787a84e00c3fb2cedf39245",
+  "paper_id": "doi:10.1016/j.ultras.2026.108135",
+  "doi": "10.1016/j.ultras.2026.108135",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/267254b3fa1851a85787a84e00c3fb2cedf39245",
+  "published_iso": "2026-05-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Laser-induced thermal stresses in fiber-reinforced elastic structures with voids",
+  "title_norm": "laser induced thermal stresses in fiber reinforced elastic structures with voids",
+  "abstract": "",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Engineering Mathematics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "M. Fekry"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "f19a4aedc6811180d2dcfd0c889fa605787f98a1",
+  "paper_id": "doi:10.1007/s10665-025-10509-9",
+  "doi": "10.1007/s10665-025-10509-9",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f19a4aedc6811180d2dcfd0c889fa605787f98a1",
+  "published_iso": "2026-02-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "(Invited) In situ\n Raman Spectroscopy of Plasma-Liquid Interaction Using Probe Molecules",
+  "title_norm": "invited in situ raman spectroscopy of plasma liquid interaction using probe mole",
+  "abstract": "\n In plasma electrochemistry (PEC), energetic electrons, ions, excited species, and radicals generated by atmospheric-pressure plasmas induce chemical reactions when put in contact with water, resulting in the production of aqueous species such as solvated electrons, OH, H\n 2\n O\n 2\n , NO\n 2\n -\n , and NO\n 3\n -\n . Such species, as well as the strong electric field at the plasma-liquid interface and irradiation by plasma-produced photons, are believed to be critical to potential applications in agriculture, water treatment, decarbonized chemical processing, nanomaterials synthesis, and other plasma-based technologies [1–4]. Compared to conventional methods, electrochemistry performed in the strongly non-equilibrium conditions of plasmas can require fewer steps, mitigate the use of toxic chemicals (e.g. acids, reducing agents), and reduce reliance on catalysts and/or external heating.\n \n \n The study of the precise mechanisms of PEC for a given process can benefit from the direct and detailed experimental investigation of the plasma-liquid interfacial region. Liquid-and gas-phase diagnostics of the interface are necessary for understanding how the plasma transforms aqueous chemistry [5]. The majority of existing liquid-phase diagnostics must be performed\n ex situ\n after treatment and removed from the PEC reactor. Many techniques risk the degradation of dyes, chemical probes, or spin traps/probes if performed\n in situ\n with plasma. The spatial distribution of species is not often accessible. Without alternative\n in situ\n techniques, the mechanisms of PEC can only be inferred from volume-averaged measurements with poor or no time resolution, diminishing the likelihood of identifying specific reactions with the support of rigorous experimental evidence that validate numerical or theoretical models.\n \n \n Among potential\n in situ\n techniques, spontaneous Raman spectroscopy (SRS) is advantageous because of its non-intrusiveness, selectivity, versatility, and straightforward calibration. Shaping the laser beam into a light sheet enables probing of the interfacial region with micron-scale depth resolution. Detection volumes on the order of 100 pL or smaller are possible. Pulsed laser excitation combined with gated detection suppresses interference from plasma optical emission. For PEC in pure water,\n in situ\n SRS showed that the concentrations of aqueous H\n 2\n O\n 2\n and NO\n 3\n -\n both exceed those of the bulk liquid at a depth of a few tens of microns from the plasma-liquid interface [6].\n \n \n In this work, we focus on how plasma-liquid interaction induces transient changes to SRS spectra, which are observable\n in situ\n but not\n ex situ\n . We seek to establish relationships between the aqueous environment and changes to the spectral profiles of several probe molecules during plasma operation. The probe molecules have been chosen based on the expectation of their natural occurrence during PEC processes related to graphene quantum dot synthesis [1,2,5]. First, we have used the nitrate anion as a probe molecule of the aqueous environment, tracking the spectral width of the N-O symmetric stretch mode (\n v\n 1\n ) of NO\n 3\n -\n . To do so, we introduced NaNO\n 3\n into water to boost the concentration of NO\n 3\n -\n and therefore the strength of the SRS signal. At several millimeters depth from the plasma-liquid interface, upon plasma generation the spectrum broadens by several cm\n -1\n compared to the reference spectrum of bulk water before plasma treatment. This broadening occurs gradually over several minutes and then relaxes after the plasma is switched off. However, near the interface, the spectrum narrows by a few cm\n -1\n compared to the reference spectrum, but this effect is unrelated to the plasma. These results will be compared to temperature- and pH-calibrated SRS spectra of nitrate-containing solutions. Second, we explore the use of carbonaceous probe molecules such as the carbonate anion (CO\n 3\n 2-\n ) and acetic acid.\n \n \n Acknowledgments\n \n Financial support: Campus France Franco-Thai PhD fellowship (French Embassy in Thailand, E4C Engie sponsorship), IP Paris Energy4Climate “E4C” Interdisciplinary Center, Campus France PHC Stefanik project (49885SJ), CNRS-IEA “GRAFMET”, EUR PLASMAScience, Fédération Plas@Par, ANR grants ANR-15-CE06-0007-01 and ANR-23-CE50-0023.\n \n References\n \n \n [1] T. Orriere, D. Kurniawan, Y.-C. Chang, D. Z. Pai, and W.-H. Chiang, Nanotechnology\n 31\n , 485001 (2020).\n \n \n [2] J.-S. Yang, D. Z. Pai, and W.-H. Chiang, Carbon\n 153\n , 315 (2019).\n \n \n [3] S. Kooshki, P. Pareek, R. Mentheour, M. Janda, and Z. Machala, Environmental Technology & Innovation\n 32\n , 103287 (2023).\n \n \n [4] D. S. Mallapragada et al., Joule\n 7\n , 23 (2023).\n \n \n [5] D. Kurniawan, F. Caielli, K. Thyagajaran, K. K. Ostrikov, W.-H. Chiang, and D. Z. Pai, Nanoscale\n 16\n , 15104 (2024).\n \n \n [6] D. Z. Pai, Journal of Physics D: Applied Physics\n 54\n , 355201 (2021).\n",
+  "tldr": "",
+  "year": 2026,
+  "venue": "ECS Meeting Abstracts",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Kasidapa Polprasarn",
+   "David Pai"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "aad9bc1c21b363495adaa18d3a94b446555c9e5a",
+  "paper_id": "doi:10.1149/ma2026-01241300mtgabs",
+  "doi": "10.1149/ma2026-01241300mtgabs",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/aad9bc1c21b363495adaa18d3a94b446555c9e5a",
+  "published_iso": "2026-07-07",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Electrophoretic NMR in Aqueous Systems: Addressing Practical Aspects in Probehead Design and Data Processing",
+  "title_norm": "electrophoretic nmr in aqueous systems addressing practical aspects in probehead",
+  "abstract": "Electrophoretic NMR combines pulsed‐field gradient NMR with in situ DC electrophoresis to measure the electrophoretic mobility of individual molecular species in solution, resolved by their chemical shift. While the technique has found broad application in concentrated ionic systems, its application to dilute aqueous systems for the study of polyelectrolytes, proteins, and complexes poses distinct practical challenges. We describe the design and evolution of dedicated E‐NMR probeheads optimized for aqueous media. The experiment is implemented as a constant‐gradient, constant‐time pulsed‐field gradient spin echo sequence in which electrophoretic motion appears as a pure phase modulation, cleanly separable from the amplitude attenuation caused by diffusion. For data processing, a modified States‐type two‐dimensional Fourier transform is applied to data acquired with alternating electric field polarity, yielding phase‐sensitive mobility‐ordered spectroscopy (MOSY) spectra without requiring prior knowledge of the number of mobile species—a critical advantage for polydisperse or multicomponent systems at low concentration. Practical considerations including Joule heating, voltage/current monitoring, and synchronization of the electric field to the NMR pulse sequence are discussed. The approach is demonstrated in the quantitative analysis of counterion condensation on polyelectrolytes, from which the effective molecular charge is obtained via a combination of diffusion coefficient and electrophoretic mobility measurements.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Analysis &amp; Sensing",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "B. Kohn",
+   "Sascha Bartosch",
+   "Ulrich Scheler"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "82221db1ac794f214001de3cc94ad177ad2cb990",
+  "paper_id": "doi:10.1002/anse.70101",
+  "doi": "10.1002/anse.70101",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1002/anse.70101",
+  "published_iso": "2026-07-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Surface plasmon effects on pore formation around an array of rods on a surface irradiated by a pulsed electromagnetic wave",
+  "title_norm": "surface plasmon effects on pore formation around an array of rods on a surface i",
+  "abstract": "This study investigates fluid flow, heat transfer, and energy generation induced by surface plasmon resonance in an array of nanorods (NRs) on a metal surface irradiated by a laser in the transverse magnetic mode. Surface plasmons are electromagnetic waves that propagate along the interface between two media, resulting in both distributed and localized heat input on the surface. The heating, melting, and solidification behaviors of NRs or nanoparticles are crucial for understanding additive manufacturing, plasma processing, and various nanotechnology applications. Simulations performed with COMSOL software, which solve the transport and electromagnetic equations, reveal the dependence of surface plasmon or energy absorption on the incident angle, the width and frequency of the laser, and the number of NRs on the metal surface. Oscillations of surface plasmons lead to initial melting at distinct locations, with the peak surface temperature approximately coinciding with the peaks of energy generation. A secondary energy-generation peak, caused by the penetration of a strong electric field intensity, appears near the triple-phase line of the first NR. The molten pools due to thermocapillary flow subsequently expand and coalesce, enclosing voids and forming pores that transition from deformed to cylindrical shapes between the NRs.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ming-jie Liu",
+   "Jian Hong",
+   "Tzu-Chun Lin",
+   "Chunyu Huang",
+   "Yu-Tang Huang",
+   "P. Wei"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "177ef0760b143a193b41b380ae5b5df2637265fa",
+  "paper_id": "doi:10.1063/5.0298841",
+  "doi": "10.1063/5.0298841",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/177ef0760b143a193b41b380ae5b5df2637265fa",
+  "published_iso": "2026-02-01",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Development of a Numerically Inexpensive 3D CFD Model of Slag Reduction in a Submerged Arc Furnace for Phosphorus Recovery from Sewage Sludge",
+  "title_norm": "development of a numerically inexpensive 3d cfd model of slag reduction in a sub",
+  "abstract": "Phosphorus is an essential resource for numerous industrial applications. However, its uneven global distribution makes Europe heavily dependent on imports. Recovering phosphorus from waste streams is therefore crucial for improving resource security. The FlashPhos project addresses this challenge by developing a process to recover phosphorus from sewage sludge, in which phosphorus-rich slag is produced in a flash reactor and subsequently reduced in a Submerged Arc Furnace (SAF). In this process, approximately 250 kg/h of sewage sludge is converted into slag, which is further processed in the SAF to recover about 8 kg/h of white phosphorus. This work focuses on the development of a computational model of the SAF, with particular emphasis on slag behaviour. Due to the extreme operating conditions, which severely limit experimental access, a numerically efficient three-dimensional CFD model was developed to investigate the internal flow of the three-phase, AC-powered SAF. The model accounts for multiphase interactions, dynamic bubble generation and energy sinks associated with the reduction reaction, and Joule heating. A temperature control loop adjusts electrode currents to reach and maintain a prescribed target temperature. To further reduce computational cost, a novel simulation approach is introduced, achieving a reduction in simulation time of up to 300%. This approach replaces the solution of the electric potential equation with time-averaged Joule-heating values obtained from a preceding simulation. The system requires transient simulation and reaches a pseudo-steady state after approximately 337 s. The results demonstrate effective slag mixing, with gas bubbles significantly enhancing flow velocities compared to natural convection alone, leading to maximum slag velocities of 0.9–1.0 m/s. The temperature field is largely uniform and closely matches the target temperature within ±2 K, indicating efficient mixing and control. A parameter study reveals a strong sensitivity of the flow behaviour to the slag viscosity, while electrode spacing shows no clear influence. Overall, the model provides a robust basis for further development and future coupling with the gas phase.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Processes",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Daniel Wieser",
+   "Benjamin Ortner",
+   "R. Prieler",
+   "Valentin Mally",
+   "Christoph Hochenauer"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "e1657e19c8859277c93639bd8191545c97e754f9",
+  "paper_id": "doi:10.3390/pr14020289",
+  "doi": "10.3390/pr14020289",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3390/pr14020289",
+  "published_iso": "2026-01-14",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Probing Nanosecond-to-Microsecond Structural Dynamics by Ultrafast Transmission Electron Microscopy with Optical and Electrical Excitation",
+  "title_norm": "probing nanosecond to microsecond structural dynamics by ultrafast transmission ",
+  "abstract": "Time-resolved visualization of local structural dynamics driven by external fields is essential for understanding structure–property relationships in functional materials and devices. Conventional ultrafast methods primarily capture femtosecond-to-picosecond photoinduced dynamics, yet they lack real-space access to spatially inhomogeneous processes occurring at their intrinsic mesoscopic timescales that govern material and device performance—particularly electrically driven processes that closely mimic actual device operating conditions. Here, we report a multifunctional ultrafast transmission electron microscopy (UTEM) platform targeting reversible structural dynamics spanning nanoseconds to microseconds under stroboscopic multi-field excitation. Our system employs photoelectron pulses generated by nanosecond UV laser illumination as the probe, alongside optical and electric pulses as pump excitation. A unified electronic synchronization scheme based on a high-speed photodiode and a digital delay generator enables precise timing control among the optical pump, electrical pump, and photoelectron pulses across the nanosecond-to-microsecond range. Using vanadium dioxide (VO2) as a model system, we demonstrate a combined spatiotemporal resolution with measurable signals on the order of 10 nm–10 ns, allowing real-space mapping of spatially inhomogeneous dynamics. Electrical-pump experiments further reveal Joule-heating-induced non-uniform structural phase transitions and thermal-shock-excited megahertz-range mechanical oscillations. These results establish the developed multi-field UTEM platform as a practical tool for probing local structural dynamics in functional materials under optical and electrical excitation.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Photonics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yanqing Tong",
+   "Siyuan Huang",
+   "Jun Li",
+   "Xiaotian Wang",
+   "H. Tian",
+   "Huaixin Yang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "f65bbcb290ad0ea7d6e3bcdf2c8bebf110710865",
+  "paper_id": "doi:10.3390/photonics13070610",
+  "doi": "10.3390/photonics13070610",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2304-6732/13/7/610/pdf?version=1782379789",
+  "published_iso": "2026-06-25",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Nanosecond plasma discharge dynamics on a levitated water droplet",
+  "title_norm": "nanosecond plasma discharge dynamics on a levitated water droplet",
+  "abstract": "The interaction between nanosecond pulsed discharges and acoustically levitated droplets is investigated using time-resolved ICCD imaging, optical emission spectroscopy (OES), electrical diagnostics, and numerical simulations. Experiments are carried out in a pin-to-pin electrode configuration in air at atmospheric pressure with ultra pure water droplets (1 µS.cm−1) and saline droplets (16 mS.cm−1). The results show that the droplet acts as an obstacle contoured by the plasma channel while enhancing the local electric field through polarization, thereby facilitating plasma ignition. For ultra pure water, two streamers develop between the electrodes and the droplet and subsequently merge into a single plasma channel enveloping the droplet surface after approximately 2 ns. In contrast, for saline droplets, electron neutralization at the liquid interface slows streamer propagation along the surface, delaying the merging process. After about 10 ns, however, the discharge evolution becomes similar for both droplet types, regardless of conductivity. The droplet behaves as a capacitor, with its capacitance governing the charging time and influencing early streamer dynamics. Finite element numerical simulations confirm the electric field enhancement near the droplet poles, while evaporation measurements indicate negligible plasma-induced heating, excluding significant Joule effect. Overall, these findings advance the understanding of plasma–droplet interactions and highlight the decisive role of liquid conductivity and dielectric properties in discharge dynamics. The insights gained provide a foundation for optimizing plasma–liquid processes involving droplets in environmental, biomedical, and material science applications.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Plasma Sources Science & Technology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Alexandre Devos",
+   "S. Dozias",
+   "Julien Lemaire",
+   "N. Semmar",
+   "P. E. Bocanegra",
+   "Éric Robert"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "8499b263222ea3aa1a45290d5dade2a49f23ead4",
+  "paper_id": "doi:10.1088/1361-6595/ae4d85",
+  "doi": "10.1088/1361-6595/ae4d85",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1088/1361-6595/ae4d85",
+  "published_iso": "2026-03-04",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Monitoring Single-Entity Nucleation in Single Nanopipettes and the Foundational Ion Transport Dynamics",
+  "title_norm": "monitoring single entity nucleation in single nanopipettes and the foundational ",
+  "abstract": "Crystallization of biomacromolecules is technically challenging and of great importance not just for structural determination and function correlations, but also for pharmaceutical industry and other applications. Distinct from classic ensemble approaches involving trial-error high-throughput screening, a single-entity method named NanoAC is developed, highlighting Active Control of Nanoscale ion transport behaviors. The enabling mechanism for NanoAC is our capability to fine tune the mass exchange through a single nanopipette connecting the analyte sample solution with the precipitating solution. Supersaturation and its changes are spatially localized at the interfacial region confined by the nanotip where the analyte and precipitant solutions meet. Migration driven by external electric field across the single nanopipette is adjusted in-situ, to be along with or against the diffusion governed by the set concentration gradient/s. The spatiotemporal control in the extent of supersaturation, i.e. the thermodynamics and kinetics in chemical space, is achieved so as to facilitate or inhibit the phase transition solely occurring at the nanotip region. The method efficacy is demonstrated using two protein protypes, insulin and lysozyme, along with common precipitants such as the gradients of pH and ionic strength. Multiple phase transition stages are resolved at single entity levels by electroanalytical and optical techniques. Quantifiable electrical feedback, such as changes in current amplitudes and noise level, are correlated with optically resolved features at the corresponding phase transitions as multi-modal signatures for the in-situ controls of the growth kinetics. True atomic resolution at up to 1.20 Å is determined by X-ray crystallography consistently from NanoAC synthesized lysozyme single crystals. Importantly, prior to the thermodynamically irreversible nucleation, transient events are resolved in significantly undersaturated solutions. Different single entity events are classified by current amplitude, duration and charges which suggest the transient formation and transformation of pre-nucleation clusters or molecular assemblies. These results highlight the enabling enrichment and trapping capability of mobile ions by the NanoAC. The governing mechanism, time- and history-dependent ion transport restrained at nanoscale interfaces, is the same physicochemical origin in many energy conversion, separation and electrochemistry processes. Two unique and characteristic current-potential responses of 1. pinched current–potential hysteretic loops separated by a cross-point away from origin (0,0) and 2. negative differential resistance, will be briefly introduced as the foundation of the dynamic ionic current features. Through combined electrochemical experiments and finite element simulations, enrichment and depletion of mobile charge carriers, as well as spatial distributions of matter and flux, are resolved under different stimulating potential waveforms, such as cyclically sweeping voltammetry and pulsed or constant potential electrolysis. Noteworthily, these are signature properties of memristors and exemplify the high reversibility and consistency of our nanofluidic memristors. Such mechanistic understanding and controllable state-switching dynamics shine light on avenues to achieve higher-order complexity functions.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "ECS Meeting Abstracts",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Gangli Wang",
+   "Ruoyu Yang",
+   "Yusuf Balogun",
+   "Dipak Baram",
+   "Sarah Ake",
+   "Suwen Shi"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "d957064051c164323210455c22186bb5930d2f76",
+  "paper_id": "doi:10.1149/ma2026-01472391mtgabs",
+  "doi": "10.1149/ma2026-01472391mtgabs",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/d957064051c164323210455c22186bb5930d2f76",
+  "published_iso": "2026-07-07",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Hardware Implementation of Fuzzy Logic Based on Thermal Memory Elements for Fault-Tolerant Control in Mechanical Engineering",
+  "title_norm": "hardware implementation of fuzzy logic based on thermal memory elements for faul",
+  "abstract": "\n \n Introduction.\n \n The automation of high-temperature processes (for example, laser welding) requires fault-tolerant real-time control systems. Traditional microprocessors exhibit critical software latencies, while promising in-memory computing platforms (MRAM, RRAM) are subject to thermal instability and state drift in hot zones. There is a significant scientific gap in the development of controllers capable of utilizing heat transfer physics as a computational medium, thereby converting thermal interference into a useful logic signal. This study is aimed at the computer modeling of heat flows in thermal memory elements (TME) to justify the hardware implementation of fuzzy logic inference. The research addresses the tasks of the topological formation of AND/OR logic gates and the analysis of the impact of dielectric insulation on the weight parameter adjustment.\n \n \n \n Materials and Methods.\n \n The investigation of thermal processes in memory cells (a 2–5 µm aluminum film on a silicon substrate) was conducted by the finite element method in the Transient Thermal module of ANSYS Workbench. The cells were fabricated via vacuum electron-beam evaporation: aluminum tracks 75 µm wide and 4 mm long were formed on the silicon substrate. The structures were subjected to rectangular current pulses with a current density amplitude of (2–2.5) ⋅ 10¹⁰ A/m² and a duration of 1–2 ms; the local heating of the structures reached up to 30°C. To implement AND and OR logic gates, the interelement distances were topologically varied to 0.1 mm and 0.5 mm, respectively. Furthermore, SiO₂ dielectric pockets with a depth of 30 µm were introduced into the design for directional heat flow control.\n \n \n \n Results\n \n . Based on the developed computer models in ANSYS Workbench, a comprehensive study of non-stationary thermal fields in TME structures was conducted. It is proven that the integration of SiO₂ dielectric insulation effectively controls the direction and power of the heat flow, eliminating parasitic energy dissipation. The modeling physically substantiates the feasibility of hardware formation of a fuzzy inference rule base directly within the crystal topology. It is established that varying the interelement distances is the key factor in logic setting: a distance of 0.1 mm between the input and output elements provides the realization of the OR logic operation, whereas a 0.5 mm distance corresponds to the AND operation.\n \n \n \n Discussion\n \n . The data obtained confirm that thermal field superposition enables delay-free fuzzy logic operations. The logic gate models developed exhibit response times (1–2 ms) that are an order of magnitude lower than those of standard PLC (20–50 ms). In contrast to phase-change memory (PCM), the proposed method demonstrates robustness against external temperature noise through the algorithmic correction of logic thresholds. The primary limitation of this study is the thermal inertia of the silicon substrate, which accounts for a 5–7% discrepancy between the ANSYS simulation results and in-situ experiments.\n \n \n \n Conclusion\n \n . The findings validate the feasibility of hardware-based topological design for a fuzzy inference rule base and the practical implementation of in-memory computing. This opens up promising prospects for integrating peripheral artificial intelligence (Edge AI) directly into the hot zones of industrial equipment.\n",
+  "tldr": "It is proven that the integration of SiO₂ dielectric insulation effectively controls the direction and power of the heat flow, eliminating parasitic energy dissipation and validate the feasibility of hardware formation of a fuzzy inference rule base directly within the crystal topology.",
+  "year": 2026,
+  "venue": "Advances in Engineering Research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "O. V. Volodina",
+   "A. A. Skvortsov",
+   "M. Rybakova",
+   "M. Koryachko"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "380887729f8f1c9a78a1d08d882d3a626c27f0e9",
+  "paper_id": "doi:10.23947/2687-1653-2026-26-2-2661",
+  "doi": "10.23947/2687-1653-2026-26-2-2661",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.vestnik-donstu.ru/jour/article/download/2724/2088",
+  "published_iso": "2026-06-26",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ }
+]

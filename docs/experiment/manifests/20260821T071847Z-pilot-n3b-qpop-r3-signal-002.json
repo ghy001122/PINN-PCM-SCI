@@ -1,0 +1,73 @@
+{
+  "actual_budget": {
+    "cases": 9,
+    "signal_cases": 0,
+    "wall_seconds": 767.5630000000092
+  },
+  "artifacts": {
+    "case_01": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\case-qpop-r3-v1-v7.5-r300000.h5",
+    "case_02": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\case-qpop-r3-v1-v7.5-r500000.h5",
+    "case_03": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\case-qpop-r3-v1-v7.5-r700000.h5",
+    "case_04": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\case-qpop-r3-v1-v9-r300000.h5",
+    "case_05": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\case-qpop-r3-v1-v9-r500000.h5",
+    "case_06": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\case-qpop-r3-v1-v9-r700000.h5",
+    "case_07": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\case-qpop-r3-v1-v10.5-r300000.h5",
+    "case_08": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\case-qpop-r3-v1-v10.5-r500000.h5",
+    "case_09": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\case-qpop-r3-v1-v10.5-r700000.h5",
+    "intent": "docs\\experiment\\intents\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002.json",
+    "run_root": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002",
+    "summary": "outputs\\runs\\20260821T071847Z-pilot-n3b-qpop-r3-signal-002\\summary.json"
+  },
+  "case_id": "qpop-r3-v1-3x3-signal-grid",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "INDEPENDENT_NUMERICAL_ORACLE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_REDUCED_ORACLE_DEVELOPMENT",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.reduced_oracle_runner",
+    "signal"
+  ],
+  "ended_at": "2026-08-21T07:31:48.992927Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1"
+  },
+  "evaluator_id": "qpop-r3-v1-event-diagnostic-v1",
+  "evidence_identity": "QPOP_R3_V1_REDUCED_SYNTHETIC_ORACLE",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "qpop-r3-v1-reduced-oracle",
+  "failure_class": null,
+  "gate": "N3B",
+  "gate_outcome": "REDUCED_ORACLE_NO_SIGNAL",
+  "method_id": "qpop-r3-v1-signal",
+  "numerical_validity": "VALID_REDUCED_ORACLE_NUMERICS",
+  "physical_contract_id": "qpop-r3-v1",
+  "planned_budget": {
+    "cases": 9,
+    "grid": [
+      50,
+      20
+    ],
+    "time_steps_per_case": 494
+  },
+  "replay_of": null,
+  "route_disposition": "REDUCED_ORACLE_NO_SIGNAL",
+  "run_id": "20260821T071847Z-pilot-n3b-qpop-r3-signal-002",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "qpop-r3-v1-development-signal-grid-v1",
+  "started_at": "2026-08-21T07:19:01.431677Z",
+  "supersedes": "20260821T070733Z-pilot-n3b-qpop-r3-signal-001",
+  "tier": "pilot"
+}

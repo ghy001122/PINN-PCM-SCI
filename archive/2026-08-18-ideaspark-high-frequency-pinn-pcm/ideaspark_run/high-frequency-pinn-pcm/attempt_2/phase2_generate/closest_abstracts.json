@@ -1,0 +1,118 @@
+[
+  {
+    "title": "Electrically steered conduction topologies and period-doubling phase dynamics in VO2",
+    "title_norm": "electrically steered conduction topologies and period doubling phase dynamics in",
+    "abstract": "The insulator-to-metal transition (IMT) in strongly correlated materials, such as vanadium dioxide (VO2), offers a transformative platform for next-generation adaptive electronics and neuromorphic computing. However, harnessing this non-equilibrium phase transition for deterministic device operation is fundamentally hindered by the inability to disentangle electric-field effects from Joule heating, owing to a lack of operando techniques capable of resolving phase dynamics at nanoscale spatial and sub-nanosecond temporal scales. Here, using a newly developed electrical-pulse-pump ultrafast transmission electron microscope (E-UTEM), we directly visualize the multi-scale electro-thermo-mechanical dynamics of the IMT in suspended VO2 devices. Our results reveal that electric-field-induced Poole-Frenkel (PF) emission, localized by patterned oxygen vacancies, plays a decisive role in redistributing the internal electric field to trigger a deterministic Mott transition. The extreme non-linearity of this PF effect enables the formation of dynamically reconfigurable connectivity topologies that bypass conventional thermal limits. Furthermore, we observe that the coupling of thermal and elastic energies governs a discrete domain evolution, characterized by step-wise and period-doubling configurational resets, which is a hallmark of non-equilibrium phase dynamics in constrained geometries. By integrating experimental imaging with phase-field simulations, we establish a comprehensive framework for the electrically-driven IMT and predict sub-100-ps switching kinetics. These findings provide a fundamental basis for the rational design of ultrafast, low-energy functional devices through nanoscale defect and strain engineering in correlated systems.",
+    "tldr": "",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Siyuan Huang",
+      "Shuaishuai Sun",
+      "Yin Shi",
+      "Wentao Wang",
+      "Chunhui Zhu",
+      "H. Tian"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+    "paper_id": "semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+    "doi": "",
+    "arxiv_id": "2604.19329",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+    "published_iso": "2026-04-21",
+    "from_query": [
+      "memristor phase-field Joule-heating pulse simulation"
+    ],
+    "year_month": "2026-04",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Physics-informed neural networks incorporating energy dissipation for the phase-field model of ferroelectric microstructure evolution",
+    "title_norm": "physics informed neural networks incorporating energy dissipation for the phase ",
+    "abstract": "Physics-informed neural networks (PINNs) are an emerging technique to solve partial differential equations (PDEs). In this work, we propose a simple but effective PINN approach for the phase-field model of ferroelectric microstructure evolution. This model is a time-dependent, nonlinear, and high-order PDE system of multi-physics, challenging to be solved using a baseline PINN. Considering that the acquisition of steady microstructures is one of the primary focuses in simulations of ferroelectric microstructure evolution, we simplify the time-dependent PDE system to be a static problem. This static problem, however, is ill-posed. To overcome this issue, a term originated from the law of energy dissipation is embedded into the loss function as an extra constraint for the PINN. With this modification, the PINN successfully predicts the steady ferroelectric microstructure without tracking the evolution process. In addition, although the proposed PINN approach cannot tackle the dynamic problem in a straightforward fashion, it is of benefit to the PINN prediction of the evolution process by providing labeled data. These data are crucial because they help the PINN avoid the propagation failure, a common failure mode of PINNs when predicting dynamic behaviors. The above mentioned advantages of the proposed PINN approach are demonstrated through a number of examples.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Lan Shang",
+      "Sizheng Zheng",
+      "Jin Wang",
+      "Jie Wang"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4403555504",
+    "doi": "10.48550/arxiv.2409.02959",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2409.02959",
+    "published_iso": "2024-09-03",
+    "oa_field": "Materials Science",
+    "semantic_recall": false,
+    "from_query": [
+      "causal Fourier-feature PINN stiff switching fronts"
+    ],
+    "paper_id": "openalex:W4403555504",
+    "year_month": "2024-09",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Gradient Scaling Effects in Adaptive Spectral PINNs for Stiff Nonlinear ODEs",
+    "title_norm": "gradient scaling effects in adaptive spectral pinns for stiff nonlinear odes",
+    "abstract": "Physics-Informed Neural Networks (PINNs) often struggle to train reliably on stiff and oscillatory dynamical systems due to poor optimization conditioning. While prior work has emphasized representational remedies such as spectral parameterizations, the optimization implications of initial-condition (IC) embeddings in adaptive spectral PINNs have not been well characterized. In this work, we show that the choice of IC gating function induces explicit time-dependent gradient scaling, which interacts with spectral representations during training. Using a nonlinear stiff spring-pendulum ODE as a controlled benchmark, we compare exponential and linear IC gates in combination with fixed and adaptive Fourier spectral trunks. We observe stiffness-dependent changes in relative dominance for adaptive PINNs: at moderate stiffness ($k=20$), exponential gating often yields lower error but exhibits heterogeneous behavior across random seeds, whereas at higher stiffness ($k=60$), linear gating becomes preferable, with additional reversals observed at larger $k$. These trends hold for both relative $L^2$ error and maximum pointwise error and are confirmed by paired Wilcoxon signed-rank tests with Holm correction. Overall, our results demonstrate that IC embeddings are not a neutral design choice in PINNs: the induced gradient scaling materially shapes optimization conditioning in stiff regimes, with distinct sensitivity patterns in baseline and adaptive spectral models.",
+    "year": 2026,
+    "venue": "arXiv",
+    "authors": [
+      "Isabela M. Yepes",
+      "Pavlos Protopapas"
+    ],
+    "citations": null,
+    "source": "arxiv",
+    "source_id": "2605.04502v1",
+    "doi": "",
+    "paper_url": "https://arxiv.org/abs/2605.04502v1",
+    "published_iso": "2026-05-06T05:10:20Z",
+    "from_query": [
+      "causal Fourier-feature PINN stiff switching fronts"
+    ],
+    "paper_id": "arxiv:2605.04502v1",
+    "year_month": "2026-05",
+    "retrieved_via": "arxiv",
+    "relevance": "core"
+  },
+  {
+    "title": "Neuro-Spectral Architectures for Causal Physics-Informed Networks",
+    "title_norm": "neuro spectral architectures for causal physics informed networks",
+    "abstract": "Physics-Informed Neural Networks (PINNs) have emerged as a powerful framework for solving partial differential equations (PDEs). However, standard MLP-based PINNs often fail to converge when dealing with complex initial value problems, leading to solutions that violate causality and suffer from a spectral bias towards low-frequency components. To address these issues, we introduce NeuSA (Neuro-Spectral Architectures), a novel class of PINNs inspired by classical spectral methods, designed to solve linear and nonlinear PDEs with variable coefficients. NeuSA learns a projection of the underlying PDE onto a spectral basis, leading to a finite-dimensional representation of the dynamics which is then integrated with an adapted Neural ODE (NODE). This allows us to overcome spectral bias, by leveraging the high-frequency components enabled by the spectral representation; to enforce causality, by inheriting the causal structure of NODEs, and to start training near the target solution, by means of an initialization scheme based on classical methods. We validate NeuSA on canonical benchmarks for linear and nonlinear wave equations, demonstrating strong performance as compared to other architectures, with faster convergence, improved temporal consistency and superior predictive accuracy. Code and pretrained models are available in https://github.com/arthur-bizzi/neusa.",
+    "year": 2025,
+    "venue": "arXiv",
+    "authors": [
+      "Arthur Bizzi",
+      "Leonardo M. Moreira",
+      "Márcio Marques",
+      "Leonardo Mendonça",
+      "Christian Júnior de Oliveira",
+      "Vitor Balestro",
+      "Lucas dos Santos Fernandez",
+      "Daniel Yukimura",
+      "Pavel Petrov",
+      "João M. Pereira",
+      "Tiago Novello",
+      "Lucas Nissenbaum"
+    ],
+    "citations": null,
+    "source": "arxiv",
+    "source_id": "2509.04966v2",
+    "doi": "",
+    "paper_url": "https://arxiv.org/abs/2509.04966v2",
+    "published_iso": "2025-09-05T09:43:45Z",
+    "retrieved_via": "host_web",
+    "host_why": "同时处理谱偏置与时间因果，对高频脉冲驱动、强瞬态 PCM 状态演化尤其承重，可防止只改善空间频谱却破坏时间推进。",
+    "relevance": "core",
+    "paper_id": "arxiv:2509.04966v2"
+  }
+]

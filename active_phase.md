@@ -1,33 +1,32 @@
 # 当前阶段
 
-- `phase_id`: `PRE_RESEARCH_INITIALIZED`
-- `phase_name`: Codex 项目初始化完成，等待研究启动指令
-- `lifecycle_state`: `ACTIVE`
-- `authorization_scope`: `GOVERNANCE_ONLY`
-- `claim_status`: `NO_SCIENTIFIC_CLAIMS`
-- `effective_date`: `2026-08-16`
+- `phase_id`: `BOUNDED_METHOD_IMPLEMENTATION_NEGATIVE_CLOSEOUT`
+- `phase_name`: R4 与强 raw 能力门有界负面收口，等待单一新科学路线
+- `lifecycle_state`: `AWAITING_NEW_SCIENTIFIC_ROUTE`
+- `blocker_id`: `RAW_EVENT_NOT_RESOLVED_AFTER_BOUNDED_IMPLEMENTATION_REPAIRS`
+- `authorization_scope`: `READ_ONLY_CLOSEOUT_AND_NEW_ROUTE_SELECTION_ONLY`
+- `resume_authorization`: `USER_STANDING_RESEARCH_EXECUTION_AUTHORIZATION_2026-08-21`
+- `resume_authorization_outcome`: `CONSUMED_R4_AND_RAW_V3_NEGATIVE_CLOSEOUT`
+- `claim_status`: `BOUNDED_NEGATIVE_DEVELOPMENT_RESULT_NO_FORMAL_EVIDENCE`
+- `effective_date`: `2026-08-21`
 
 ## 当前允许
 
-- 读取和维护项目入口、规范、状态与计划文档；
-- 对项目文件做一次与真实改动直接相关的语义一致性检查；
-- 向用户报告初始化结果和待决事项。
+- 读取、复核和汇报已有代码、manifest、指标与失败证据；
+- 设计一个新的、有明确事件信号且不复用当前失败实现的二维电—热—相态科学路线；
+- 保留 KC、完整导数回拉、artifact/evaluator/ledger 和初值精确结构表示作为后续可复用实现资产；
+- 修复文档、索引和确定性一致性门禁，不启动科研运行。
 
 ## 当前不允许
 
-- 正式文献调研或 idea 筛选；
-- 选择材料、器件、物理方程、PINN 架构或论文主张；
-- 创建研究数据、求解器、训练代码、实验配置或论文科学内容；
-- 运行数值求解、训练、参数扫描、消融或 OOD 评估；
-- 将治理文件或 Git 状态表述为学术研究成果。
+- 重跑或继续调节 R3、R4、当前七未知量 raw、稀疏锚点、PHA 或 KC；
+- 启动 KC pilot、formal、GPU、外部付费计算或新的 PDE/动力学实现；
+- 把 R4 数值不收敛写成科学上的 `R4_NO_SIGNAL`，或把 development 结果写成 KC 的一般性否定；
+- 改写历史 manifest/index，或在没有当前用户明确指令时提交、推送、开 PR、合并和清理工作树。
 
-## 阶段事实
+## 证据入口
 
-- 本阶段只建立 Codex 项目骨架。
-- `formal_research_started = false`
-- `scientific_execution_count = 0`
-- `scientific_evidence_count = 0`
-
-## 退出条件
-
-只有用户明确指示开始正式学术研究，并确认或接受一个有界的 Phase 0 研究计划后，才能更新本文件进入研究阶段。更新阶段状态本身不代表任何科学 claim 成立。
+- [当前项目状态](PROJECT_STATE.md)
+- [唯一 live plan](docs/plans/NEXT_ACTIONS.md)
+- [R4 与 raw-v3 收口事实](docs/experiment/2026-08-21-r4-and-raw-v3-closeout.md)
+- [实验索引](docs/experiment/INDEX.md)

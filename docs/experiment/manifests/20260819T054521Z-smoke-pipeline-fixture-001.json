@@ -1,0 +1,69 @@
+{
+  "actual_budget": {
+    "optimizer_steps": 1
+  },
+  "artifacts": {
+    "case": "outputs\\runs\\20260819T054521Z-smoke-pipeline-fixture-001\\case.h5",
+    "checkpoint": "outputs\\runs\\20260819T054521Z-smoke-pipeline-fixture-001\\checkpoint.pt",
+    "metric_spec": "outputs\\runs\\20260819T054521Z-smoke-pipeline-fixture-001\\metric_spec.json",
+    "metrics": "outputs\\runs\\20260819T054521Z-smoke-pipeline-fixture-001\\metrics.json",
+    "prediction": "outputs\\runs\\20260819T054521Z-smoke-pipeline-fixture-001\\prediction.h5",
+    "split": "outputs\\runs\\20260819T054521Z-smoke-pipeline-fixture-001\\split.json"
+  },
+  "case_id": "g1-non-scientific-fixture-001",
+  "checkpoint": {
+    "id": "step-0001",
+    "selection": "single-step-smoke"
+  },
+  "claim_status": "NO_NUMERICAL_EVIDENCE",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree",
+    "revision": "29e35ae5dd5165e5e15586312ee92cf940e8ad7f"
+  },
+  "command": [
+    "E:\\Python demo\\PINN-PCM-SCI\\pinn_pcm_sci\\smoke.py",
+    "--raw-fixture",
+    "fixtures\\g1\\non_scientific_raw.json",
+    "--output-root",
+    "outputs\\runs",
+    "--experiment-root",
+    "docs\\experiment",
+    "--run-id",
+    "20260819T054521Z-smoke-pipeline-fixture-001",
+    "--seed",
+    "7"
+  ],
+  "ended_at": "2026-08-19T05:45:34.759798Z",
+  "environment": {
+    "h5py": "3.12.1",
+    "numpy": "2.1.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "runtime": "cpu",
+    "torch": "2.5.1+cpu"
+  },
+  "evaluator_id": "fixture-evaluator-v1",
+  "evidence_identity": "ENGINEERING_CONTROL_FLOW_ONLY",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "g1-pipeline-smoke-v1",
+  "failure_class": null,
+  "gate": "G1",
+  "gate_outcome": "SMOKE_PASS",
+  "method_id": "fixture-model-v1",
+  "numerical_validity": "NOT_APPLICABLE_ENGINEERING_SMOKE",
+  "physical_contract_id": "NON_SCIENTIFIC_FIXTURE_CONTRACT_V1",
+  "planned_budget": {
+    "optimizer_steps": 1
+  },
+  "replay_of": null,
+  "route_disposition": null,
+  "run_id": "20260819T054521Z-smoke-pipeline-fixture-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "pipeline",
+  "seed": 7,
+  "split_id": "fixture-split-v1",
+  "started_at": "2026-08-19T05:45:31.861454Z",
+  "supersedes": null,
+  "tier": "smoke"
+}

@@ -1,0 +1,55 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition 鈥?stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+      "chosen_pattern_id": "generative_process_redesign",
+      "anchor_alternates": [],
+      "companion_pattern": null,
+      "companion_rationale": "",
+      "selection_rationale": "This is the most load-bearing gap because it directly demands the runnable method committed by intake.contribution_type and closes the central failure on pulse-generated moving high-frequency fronts across the electric-Joule-thermal-phase chain. generative_process_redesign treats globally fixed space-time residual aggregation and its intervention schedule as design variables; any score or bound must use one explicit perturbation coordinate through the first-order term, replacement path, and Hessian remainder, and if an exact or safe path-Hessian envelope is unavailable the guarantee is dropped and the score remains empirical."
+    },
+    {
+      "gap": "No retrieved frontier leaf tests whether one globally aggregated space-time objective over all coupled fields and switching regimes is necessary rather than assumed 鈥?stakes: if this shared assumption hides a fast local residual beneath slow-field averages, published accuracy conclusions can rest on the wrong certificate and principled high-frequency PINN design remains blocked.",
+      "chosen_pattern_id": "assumption_audit_and_pivot",
+      "anchor_alternates": [],
+      "companion_pattern": "controlled_diagnostic_design",
+      "companion_rationale": "assumption_audit_and_pivot identifies and inverts the necessity claim behind one global aggregate but does not by itself ship a confound-isolating empirical test; controlled_diagnostic_design owns the matched, compute-controlled objective interventions needed to measure whether the aggregate masks fast local residual failure.",
+      "selection_rationale": "Under shared_evaluation, this sibling interrogates the anchor's load-bearing aggregation choice with the same solver-scored event, topology, energy, and coupled-residual observables; removing it makes the redesign's claimed causal mechanism indistinguishable from a generic training tweak and weakens falsification. assumption_audit_and_pivot replaces the necessity assumption with a weaker, explicitly coordinate-consistent intervention claim, while the companion tests that claim under matched architecture, sampling budget, and optimization."
+    },
+    {
+      "gap": "No retrieved frontier leaf establishes that event order, front topology, and energy balance remain correct for held-out entire device geometries, material combinations, and pulse protocols that shift the spectrum and stiffness beyond training 鈥?stakes: reported gains may not transfer across devices or operating regimes, making the scientific conclusion non-general and the model unsafe as a design surrogate.",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": null,
+      "companion_rationale": "",
+      "selection_rationale": "Under shared_evaluation, this sibling uses the anchor's locked method and the same independent solver observables on held-out whole entities; removing it opens the reviewer objection that gains arise from device or protocol interpolation and leaves the intended device-level claim unverifiable. controlled_diagnostic_design supplies matched geometry, material-stiffness, and pulse-spectrum interventions plus a separate joint formal-OOD test, with all formal-OOD entities excluded from mechanism selection."
+    }
+  ],
+  "coherence_thread_type": "shared_evaluation",
+  "deliverable_coverage": "method 鈥?the anchor gap's generative_process_redesign directly ships the runnable residual-intervention training process; its assumption audit and solver-bounded diagnostics falsify the mechanism without defining it from formal-OOD outcomes.",
+  "user_direction_disposition": {
+    "verdict": "adopted",
+    "user_wanted": "闈㈠悜鐩稿彉鏉愭枡/鍣ㄤ欢鐨勬姉楂橀PINN",
+    "chosen": "A high-frequency-resistant PCM-device PINN that redesigns the globally fixed coupled-residual training process around coordinate-consistent interventions, then tests the mechanism and whole-entity transfer with an independent numerical-solver oracle.",
+    "why_departed": ""
+  },
+  "composition_note": "",
+  "pattern_saturation": {
+    "generative_process_redesign": {
+      "share": 0.1,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "assumption_audit_and_pivot": {
+      "share": 0.0,
+      "saturation_band": "untested",
+      "selection_note": "untested lane 鈥?differentiation_from_lit must substantively defend the choice"
+    },
+    "controlled_diagnostic_design": {
+      "share": 0.13,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": []
+}

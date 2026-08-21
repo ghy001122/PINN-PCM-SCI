@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "resistance_ohm": 300000.0,
+      "voltage_v": 7.5
+    },
+    {
+      "resistance_ohm": 500000.0,
+      "voltage_v": 7.5
+    },
+    {
+      "resistance_ohm": 700000.0,
+      "voltage_v": 7.5
+    },
+    {
+      "resistance_ohm": 300000.0,
+      "voltage_v": 9.0
+    },
+    {
+      "resistance_ohm": 500000.0,
+      "voltage_v": 9.0
+    },
+    {
+      "resistance_ohm": 700000.0,
+      "voltage_v": 9.0
+    },
+    {
+      "resistance_ohm": 300000.0,
+      "voltage_v": 10.5
+    },
+    {
+      "resistance_ohm": 500000.0,
+      "voltage_v": 10.5
+    },
+    {
+      "resistance_ohm": 700000.0,
+      "voltage_v": 10.5
+    }
+  ],
+  "end_time_ns": 494.0,
+  "gate": "N3B",
+  "grid": [
+    50,
+    20
+  ],
+  "pulse_protocol": "four-60ns-on-60ns-off-5ns-edge",
+  "run_id": "20260821T070733Z-pilot-n3b-qpop-r3-signal-001",
+  "schema_version": "qpop-r3-v1-intent-v1",
+  "scientific_role": "oracle_qualification",
+  "started_at": "2026-08-21T07:08:19.609626Z",
+  "structure_threshold": 0.5595005728407872,
+  "tier": "pilot",
+  "time_step_ns": 1.0
+}

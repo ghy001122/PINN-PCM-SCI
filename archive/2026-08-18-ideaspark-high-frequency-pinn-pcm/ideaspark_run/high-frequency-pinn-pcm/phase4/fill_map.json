@@ -1,0 +1,190 @@
+{
+  "method_name": "Kinetics-Clock Physics-Informed Neural Network (KC-PINN)",
+  "abstract_draft": "High-frequency VO2 pulse switching creates localized, sub-nanosecond electro-thermal-phase fronts that standard two-dimensional physics-informed neural networks (PINNs) can underresolve even when the governing residuals are correct. Phase 0 places the nearest architectural precedent in NeuSA (arxiv:2509.04966v2), whose global spectral neural ordinary differential equation targets canonical wave evolution, while adaptive spectral PINNs (arxiv:2605.04502v1) diagnose gradient scaling only in a stiff ordinary differential equation; neither supplies a spatially local material-time map tied to the phase-rate law. We propose Kinetics-Clock PINN (KC-PINN): an exactly monotone analytic Gaussian-basis clock whose derivative is coupled to the endogenous VO2 phase-rate magnitude, with the electric, heat, and phase residuals evaluated through the complete first- and second-order space-time pullback so no governing equation is replaced. The predeclared falsification asks whether KC-PINN improves locked whole-case out-of-distribution switching-time, front-topology, energy-balance, coupled-residual, and field errors over parameter-matched spectral, causal, weighting, hard-constraint, and generic coordinate-transform alternatives. Its negative control fixes `tau=t` and disables the auxiliary clock residual while preserving the field head, physical-residual code, samples, budget, and dormant clock parameters; the mechanism fails if gains survive that intervention or do not exceed generic transforms. If supported, the result would isolate a kinetics-specific representation mechanism for resolving two-dimensional pulse-driven VO2 fronts, not a general speed or memory advantage.",
+  "motivation.problem_framing": "The structural problem is that an endogenous switching law can compress most phase change into a small, spatially moving portion of physical time. In a two-dimensional VO2 device, different locations therefore advance through the transition at different rates while voltage, temperature, and phase remain tightly coupled. A network expressed only in global physical time must represent a sharp front and smooth background with the same coordinate, exposing the high-frequency and residual-conditioning weaknesses highlighted by arxiv:2602.19265v1 and the adaptive-spectral diagnosis in arxiv:2605.04502v1.\n\nThe closest architectural precedent, NeuSA (arxiv:2509.04966v2), adds a global spectral state and causal evolution for canonical wave problems, but it does not construct a spatially local clock from the material kinetics. The energy-dissipation phase-field PINN in openalex:W4403555504 avoids propagation failure by solving a static steady-state problem, so it cannot represent pulse-created event time or moving topology. KC-PINN instead uses a finite analytic Gaussian basis with error-function primitives to construct the local clock without numerical time quadrature: the original electro-thermal-phase equations remain authoritative, and every first- and second-order derivative is pulled back through the learned map, including all spatial Hessian and cross terms created by a clock that varies across the device.",
+  "motivation.why_now": "Three recent strands make this narrow gap actionable at once: arxiv:2605.04502v1 isolates gradient-scaling effects in adaptive spectral PINNs, arxiv:2602.19265v1 consolidates the high-frequency failure mechanism, and semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2 exposes sub-nanosecond VO2 electro-thermo-phase topology as the relevant physical regime. A named FEniCSx model can now supply controlled synthetic trajectories, while automatic differentiation can evaluate the complete local-coordinate pullback rather than approximating or dropping its cross terms. The opportunity is therefore not merely to add spectral capacity, but to test whether an endogenous kinetics-aligned coordinate removes the specific representation bottleneck under a retrieval-bounded novelty claim.",
+  "motivation.why_prior_stopped[0].what_they_did": "NeuSA (arxiv:2509.04966v2) represents canonical initial-value problems with a truncated global spectral state evolved by a neural ordinary differential equation and causal physics constraints.",
+  "motivation.why_prior_stopped[0].what_they_did_not_do": "It did not learn a spatially local monotone clock tied to the material phase-rate law or pull a coupled electro-thermal-phase device PDE through that clock.",
+  "motivation.why_prior_stopped[0].structural_reason_they_stopped": "Its representation assumes a global spectral evolution coordinate and therefore lacks the endogenous, spatially heterogeneous kinetics signal needed to define local material time.",
+  "motivation.why_prior_stopped[1].what_they_did": "The adaptive-spectral study (arxiv:2605.04502v1) varies Fourier frequencies and initial-condition gates to diagnose gradient scaling in a stiff nonlinear ordinary differential equation.",
+  "motivation.why_prior_stopped[1].what_they_did_not_do": "It did not transform the independent time coordinate of a two-dimensional coupled device PDE or retain the chain-rule terms induced by a spatially varying map.",
+  "motivation.why_prior_stopped[1].structural_reason_they_stopped": "Its diagnostic setting has no spatially resolved phase-kinetic right-hand side from which an endogenous local clock could be constructed and tested.",
+  "motivation.why_prior_stopped[2].what_they_did": "The energy-embedded phase-field PINN (openalex:W4403555504) predicts steady ferroelectric microstructures by enforcing energy dissipation in a static formulation.",
+  "motivation.why_prior_stopped[2].what_they_did_not_do": "It did not retain pulse-driven dynamic evolution, switching time, or moving phase-front topology in the learned solution.",
+  "motivation.why_prior_stopped[2].structural_reason_they_stopped": "It handles dynamic PINN propagation failure by replacing the trajectory problem with a steady variational target rather than by changing how physical time is represented.",
+  "motivation.why_prior_stopped[3].what_they_did": "The operando VO2 study (semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2) resolves electrically steered conduction topologies and sub-nanosecond electro-thermo-phase dynamics.",
+  "motivation.why_prior_stopped[3].what_they_did_not_do": "It did not provide a PINN coordinate mechanism that solves the governing device fields or isolates kinetics-specific representation value on synthetic numerical evidence.",
+  "motivation.why_prior_stopped[3].structural_reason_they_stopped": "Its contribution is physical measurement and mechanism discrimination, not a differentiable PDE solver or a training coordinate derived from the measured kinetics.",
+  "motivation.what_changes_when_gap_closes": "Closing the gap would make pulse-created event time, moving front topology, and electro-thermal energy closure jointly representable by one two-dimensional PINN without replacing the underlying equations with a static surrogate. That capability would connect the dynamic target regime exposed by semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2 to a solver that can be evaluated on whole held-out devices or protocols, while directly testing whether the global spectral remedy of arxiv:2509.04966v2 is insufficient when kinetics are spatially heterogeneous. It would also establish a reusable conditional statement: when the local phase-rate magnitude is informative and the pullback is complete, coordinate adaptation can be attributed to material kinetics rather than to generic extra capacity.",
+  "core_claim": "An exactly monotone analytic Gaussian-basis local time coordinate, coupled to the endogenous phase-rate magnitude and used with a complete first- and second-order PDE pullback, can reduce the representation stiffness of two-dimensional VO2 switching fronts without changing the governing electro-thermal-phase model.",
+  "sub_claims": [
+    {
+      "id": "c1",
+      "statement": "A finite Gaussian-basis clock with analytic error-function primitives, `kref>0`, and `kfloor=sqrt(eps_dtype)*kref` has an exactly positive time derivative and preserves pointwise invertibility; if `r_tau` is driven small where `|K_xi|` is large, fast physical transitions are stretched in the network coordinate, without an approximation guarantee.",
+      "supports_which_aspect": "Closes the mismatch between one global physical-time coordinate and spatially heterogeneous switching progress."
+    },
+    {
+      "id": "c2",
+      "statement": "Applying the full space-time chain rule to voltage, temperature, and phase retains the original coupled residuals, including all spatial terms induced by the local clock.",
+      "supports_which_aspect": "Prevents the coordinate substitution from becoming an unacknowledged change to the device physics."
+    },
+    {
+      "id": "c3",
+      "statement": "An identity-map control that fixes `tau=t`, bypasses the analytic clock branch, and disables the direct `r_tau` residual can distinguish kinetics-specific value from parameter count, generic coordinate adaptation, or unchanged PINN training machinery.",
+      "supports_which_aspect": "Makes the proposed mechanism falsifiable rather than attributing any gain to a broad adaptive-coordinate family."
+    }
+  ],
+  "key_equations": [
+    {
+      "id": "E1",
+      "linked_step_id": "S2",
+      "latex": "\\tau_\\psi(\\mathbf{x},t)=k_{\\mathrm{floor}}t+\\sum_{j=1}^{M_\\tau}\\operatorname{softplus}(a_{\\psi,j}(\\mathbf{x}))B_j(t),\\quad b_j(t)=e^{-((t-c_j)/w)^2},\\quad B_j(t)=\\frac{\\sqrt{\\pi}w}{2}\\left[\\operatorname{erf}\\!\\left(\\frac{t-c_j}{w}\\right)+\\operatorname{erf}\\!\\left(\\frac{c_j}{w}\\right)\\right],\\quad k_{\\mathrm{ref}}>0",
+      "description": "The clock is evaluated by analytic Gaussian primitives, never finite time quadrature. Fixed knots `c_j`, spacing `w`, a declared positive reference rate `kref>0`, `kfloor=sqrt(eps_dtype)*kref`, and a training-validation-only choice `M_tau in {8,16,32}` make `tau_psi(x,0)=0` and `partial_t tau_psi=kfloor+sum_j softplus(a_psi,j)b_j(t)>0` exactly for the implemented map.",
+      "description_zh": "时钟由高斯基函数的解析误差函数原语直接计算，不使用有限时间求积。固定结点 `c_j`、间距 `w`、预先声明的正参考速率 `kref>0`、`kfloor=sqrt(eps_dtype)*kref`，并仅在训练—验证集上从 `M_tau in {8,16,32}` 选择，可使 `tau_psi(x,0)=0` 且实现中的 `partial_t tau_psi>0` 精确成立。"
+    },
+    {
+      "id": "E2",
+      "linked_step_id": "S5",
+      "latex": "r_\\tau=\\partial_t\\tau_\\psi-\\sqrt{K_\\xi(\\hat T,\\hat E,\\hat\\xi,\\nabla\\hat\\xi,\\Delta\\hat\\xi)^2+k_{\\mathrm{floor}}^2},\\qquad |\\partial\\hat\\xi/\\partial\\tau|=|K_\\xi|/\\sqrt{K_\\xi^2+k_{\\mathrm{floor}}^2}<1\\quad\\text{when }r_\\tau=0\\text{ and }\\mathcal{R}_\\xi=0",
+      "description": "The sole auxiliary clock residual directly couples the exact clock derivative to the smooth positive phase-rate magnitude. The displayed normalized phase slope is conditional on vanishing phase and clock residuals; it is not an approximation bound.",
+      "description_zh": "唯一的辅助时钟残差把时钟的精确时间导数直接耦合到平滑的正相变速率幅值。所示归一化相态斜率仅在相态残差与时钟残差同时为零时成立，不构成近似误差界。"
+    },
+    {
+      "id": "E3",
+      "linked_step_id": "S4",
+      "latex": "\\partial_t f=f_\\tau\\tau_t+f_p\\!\\cdot\\dot p,\\quad \\partial_{tt}f=f_{\\tau\\tau}\\tau_t^2+f_\\tau\\tau_{tt}+2(f_{\\tau p}\\!\\cdot\\dot p)\\tau_t+f_{pp}[\\dot p,\\dot p]+f_p\\!\\cdot\\ddot p",
+      "description": "For each scalar `f=h_theta(x,tau_psi,p(t))`, the complete first- and second-order temporal pullback is evaluated on each open pulse-smooth interval. Pulse jumps are handled as interfaces and are never differentiated through.",
+      "description_zh": "对每个标量场 `f=h_theta(x,tau_psi,p(t))`，在每个脉冲光滑开区间内计算完整的一阶和二阶时间拉回；脉冲跳变作为界面处理，绝不对跳变本身求导。"
+    },
+    {
+      "id": "E4",
+      "linked_step_id": "S4",
+      "latex": "D_{\\mathbf{x}}^2f=f_{\\mathbf{x}\\mathbf{x}}+f_{\\mathbf{x}\\tau}\\otimes\\nabla\\tau_\\psi+\\nabla\\tau_\\psi\\otimes f_{\\tau\\mathbf{x}}+f_{\\tau\\tau}\\nabla\\tau_\\psi\\otimes\\nabla\\tau_\\psi+f_\\tau D_{\\mathbf{x}}^2\\tau_\\psi,\\qquad \\Delta f=\\operatorname{tr}(D_{\\mathbf{x}}^2f)",
+      "description": "The full physical-space Hessian, including both mixed contractions, the clock-gradient outer product, and the clock Hessian, is constructed before taking a trace or divergence; a Hessian is never conflated with its Laplacian.",
+      "description_zh": "先构造完整物理空间 Hessian，包括两项混合缩并、时钟梯度外积和时钟 Hessian，再取迹或散度；Hessian 与 Laplacian 不混用。"
+    },
+    {
+      "id": "E5",
+      "linked_step_id": "S5",
+      "latex": "\\mathbf{R}_{\\mathrm{phys}}=\\left(\\nabla\\!\\cdot[\\sigma(\\hat T,\\hat\\xi)\\nabla\\hat V],\\;\\rho c_p\\partial_t\\hat T-\\nabla\\!\\cdot[k(\\hat T,\\hat\\xi)\\nabla\\hat T]-\\sigma|\\nabla\\hat V|^2,\\;\\partial_t\\hat\\xi-K_\\xi(\\hat T,\\hat E,\\hat\\xi,\\nabla\\hat\\xi,\\Delta\\hat\\xi)\\right),\\quad \\mathcal{L}=\\sum_q\\|\\mathcal{R}_q/s_q\\|_2^2+\\mathbf{1}_{\\mathrm{clock}}\\|r_\\tau/s_\\tau\\|_2^2+\\mathcal{L}_{\\mathrm{IC/BC/interface}}",
+      "description": "The original electric, Joule-heat, and phase equations are evaluated using the complete pulled-back derivatives, with frozen residual scales and nonempty initial, boundary, constitutive, and pulse-interface terms. The clock term is disabled when the identity control sets `tau=t`.",
+      "description_zh": "使用完整拉回导数计算原始电学、焦耳热和相态方程，并保留冻结残差尺度以及非空的初值、边界、本构和脉冲界面项；恒等对照令 `tau=t` 时关闭时钟残差项。"
+    }
+  ],
+  "method_flow.high_level_pipeline": "KC-PINN first freezes a nondimensional two-dimensional VO2 electro-thermal-phase contract, including pulse interfaces, so the coordinate cannot silently alter the physics. A coefficient network `a_psi(x)` instantiates an analytic Gaussian-basis cumulative clock whose error-function primitives make `tau_psi(x,0)=0` and `partial_t tau_psi>0` exact, with `kfloor=sqrt(eps_dtype)*kref` and `M_tau` selected only from `{8,16,32}` on training-validation cases. A capacity-matched field head predicts voltage, temperature, and phase from `(x,tau_psi,p(t))`; automatic differentiation constructs the complete first- and second-order temporal pullback and full spatial Hessian before the unchanged physical equations and `r_tau=partial_t tau_psi-sqrt(K_xi^2+kfloor^2)` are evaluated. All choices are locked before whole-case OOD scoring, and the matched identity intervention fixes `tau=t` while disabling `r_tau` to test whether any downstream gain requires the kinetics clock.",
+  "method_flow.steps": [
+    {
+      "step_id": "S1",
+      "title": "Freeze the physical contract",
+      "what_changes": "Nondimensionalize the existing two-dimensional electrical, heat, and phase equations and freeze their constitutive functions, pulse input, initial and boundary conditions, and residual scales; add no new governing equation.",
+      "why_this_step": "It makes the local clock a representation change rather than a physics substitution and fixes the quantities used to grade coupled residual and energy closure.",
+      "linked_component": "theory",
+      "linked_falsification": "metric_specification",
+      "input": "Device geometry, pulse protocol, constitutive laws, and initial and boundary conditions from the named FEniCSx model.",
+      "output": "Frozen dimensionless physical operators and training-only residual scales used by all later steps."
+    },
+    {
+      "step_id": "S2",
+      "title": "Construct the analytic positive-basis clock",
+      "what_changes": "Evaluate a coefficient network `a_psi(x)` with `M_tau` spatial coefficients and form `tau_psi(x,t)=kfloor*t+sum_j softplus(a_psi,j(x))*B_j(t)`, where fixed Gaussian bases `b_j(t)` have analytic error-function primitives `B_j(t)`; predeclare `kref>0`, set `kfloor=sqrt(eps_dtype)*kref`, use `M_tau=16` by default, and select only from `{8,16,32}` on training-validation cases with ties resolved toward the smaller value.",
+      "why_this_step": "The analytic construction gives `tau_psi(x,0)=0` and `partial_t tau_psi=kfloor+sum_j softplus(a_psi,j)b_j(t)>0` exactly without finite quadrature, while the acyclic coefficient network never reads a predicted field.",
+      "linked_component": "both",
+      "linked_falsification": "mechanism_distinguisher",
+      "input": "Normalized spatial coordinates, fixed Gaussian knots and spacing, the declared positive reference rate `kref`, and the training-validation-only `M_tau` choice.",
+      "output": "The strictly monotone local clock `tau_psi` and its exact automatic-differentiation derivatives."
+    },
+    {
+      "step_id": "S3",
+      "title": "Predict the coupled fields in clock coordinates",
+      "what_changes": "Feed `(x,tau_psi,p(t))` to a capacity-matched solution head `h_theta` that returns voltage, temperature, and phase, then compute electric field, current density, and Joule heating deterministically from those fields and the frozen constitutive laws.",
+      "why_this_step": "A single shared clock retains the electric-to-Joule-to-thermal-to-phase causal chain, while the known one-sided pulse value enters only the solution head and the clock graph remains acyclic.",
+      "linked_component": "engineering",
+      "linked_falsification": "metric_specification",
+      "input": "Spatial coordinates, the analytic clock from S2, the one-sided pulse value, and the frozen constitutive contract from S1.",
+      "output": "Clock-coordinate fields `V_hat`, `T_hat`, and `xi_hat` plus deterministic `E_hat`, `J_hat`, and `QJ_hat`."
+    },
+    {
+      "step_id": "S4",
+      "title": "Pull back every required derivative",
+      "what_changes": "Use automatic differentiation to compute the complete first- and second-order physical-time derivatives and the full `2x2` physical-space Hessian for each scalar field, retaining all `tau-pulse`, mixed spatial-clock, clock-gradient outer-product, and clock-Hessian contractions before taking any trace or divergence.",
+      "why_this_step": "A space-dependent time coordinate preserves the declared PDE only when every induced chain-rule term is retained with the correct tensor shape; pulse jumps are handled as interfaces rather than differentiated through.",
+      "linked_component": "theory",
+      "linked_falsification": "both",
+      "input": "The fields from S3, analytic clock derivatives from S2, and one-sided pulse values on open pulse-smooth intervals.",
+      "output": "Physical-coordinate temporal derivatives, spatial gradients, full Hessians, Laplacians, and divergence-ready quantities."
+    },
+    {
+      "step_id": "S5",
+      "title": "Evaluate the original physics and kinetics-clock residuals",
+      "what_changes": "Insert the S4 derivatives into the unchanged electric, heat, and phase equations and add `r_tau=partial_t tau_psi-sqrt(K_xi^2+kfloor^2)` on open pulse-smooth intervals. At each pulse edge, use one-sided pulse values, enforce continuity of `T` and `xi`, solve the electric boundary-value condition on both sides so `V` may follow the imposed step, and retain the nonempty initial, boundary, constitutive, and interface residuals. Compute energy balance separately as a downstream diagnostic, not as an added training residual.",
+      "why_this_step": "This preserves the declared electro-thermal-phase model while making the clock kinetics-specific; when both the phase and clock residuals vanish, |∂ξ/∂τ|=|Kξ|/sqrt(Kξ²+kfloor²)<1 is a conditional property, not an approximation guarantee.",
+      "linked_component": "theory",
+      "linked_falsification": "both",
+      "input": "Pulled-back derivatives from S4, the frozen physical contract from S1, and the phase-kinetic right-hand side evaluated from S3 fields.",
+      "output": "Scale-ready electric, heat, phase, clock, initial, boundary, constitutive, and interface residuals, plus a separately reported energy-balance diagnostic."
+    },
+    {
+      "step_id": "S6",
+      "title": "Match capacity, samples, and training budget",
+      "what_changes": "Shrink the solution head to pay for the clock network so total parameter allocation is matched, then keep nonempty collocation sets, residual normalizations, update count, stopping rule, optimizer settings, wall-time cap, and checkpoint selection criterion fixed across arms; jointly optimize clock and field parameters from the first update.",
+      "why_this_step": "Reallocating rather than adding capacity prevents parameter count or a different training contract from masquerading as a clock effect.",
+      "linked_component": "engineering",
+      "linked_falsification": "both",
+      "input": "The S1 residual scales, S2 clock, S3 field head, S5 residuals, and the predeclared common budget.",
+      "output": "Capacity- and budget-matched KC-PINN checkpoints selected only by the in-distribution validation criterion."
+    },
+    {
+      "step_id": "S7",
+      "title": "Train mandatory same-bottleneck baselines",
+      "what_changes": "Under the matched S6 contract, train a same-architecture analytic monotone coordinate transform that retains the complete pullback and the unchanged phase residual containing `K_xi` but omits the `K_xi`-driven clock coupling (`k_eff` and `r_tau`), an unmodified-coordinate MLP-PINN, analytic fixed transforms, fixed-Fourier and adaptive-spectral PINNs, causal PINN and NeuSA, self-adaptive and loss-conditional weighting, and hard-constraint/AdamFLIP comparators.",
+      "why_this_step": "The candidate survives only if the kinetics-specific clock adds value beyond generic learned coordinates, analytic time warps, spectral capacity, causality, loss weighting, and hard constraints.",
+      "linked_component": "engineering",
+      "linked_falsification": "mechanism_distinguisher",
+      "input": "The frozen physical and budget contracts plus the predeclared comparator definitions.",
+      "output": "Matched baseline checkpoints for the same training-validation cases."
+    },
+    {
+      "step_id": "S8",
+      "title": "Run the matched identity intervention",
+      "what_changes": "Instantiate the same clock tensors but freeze and bypass them with `tau=t`, disable `r_tau`, retain the identical solution-head architecture and nominal parameter and memory allocation, and keep samples, pullback code, update count, wall-time cap, optimizer settings, and physical residual implementation unchanged; report both nominal and active-trainable counts.",
+      "why_this_step": "This sole negative-control intervention tests whether downstream gains require the kinetics clock rather than dormant parameters or differently coded physics; a widened unmodified-coordinate arm in S7 separately provides active-parameter-matched performance.",
+      "linked_component": "engineering",
+      "linked_falsification": "mechanism_distinguisher",
+      "input": "The S2-S6 implementation with the clock-control switch set to identity.",
+      "output": "A capacity- and code-matched `tau=t` intervention arm with `r_tau` disabled."
+    },
+    {
+      "step_id": "S9",
+      "title": "Validate in distribution and lock every choice",
+      "what_changes": "Decode all arms at requested physical times and report field error, switching-time error, phase-front Hausdorff and topology error, energy-balance error, worst normalized coupled residual, wall time, and memory on training-validation cases; then freeze architecture, `M_tau`, hyperparameters, thresholds, metric definitions, and stopping rule.",
+      "why_this_step": "All estimands must remain physical-time functionals, and no formal-OOD result may influence model or evaluation choices.",
+      "linked_component": "engineering",
+      "linked_falsification": "both",
+      "input": "KC-PINN, identity-control, and baseline checkpoints plus the in-distribution validation cases.",
+      "output": "Physical-time validation metrics and a locked solver-and-scoring contract."
+    },
+    {
+      "step_id": "S10",
+      "title": "Score locked whole-case OOD",
+      "what_changes": "Apply the locked solver procedure independently to each held-out whole geometry, material combination, and pulse protocol, then compare the same physical-time field, switching, front, energy, and coupled-residual metrics without changing the clock, field head, baselines, thresholds, or stopping rule.",
+      "why_this_step": "Whole-entity post-lock scoring tests generalization without leakage and bounds any positive conclusion to synthetic numerical evidence for the declared VO2 model.",
+      "linked_component": "engineering",
+      "linked_falsification": "both",
+      "input": "The S9 locked contract and untouched formal-OOD whole cases.",
+      "output": "A bounded synthetic-numerical OOD result, not an experimental-validation claim."
+    }
+  ],
+  "method_flow.design_reasoning_echo": "The design treats local phase-kinetic magnitude as an endogenous proxy for where physical time is representationally compressed; that premise is untested and is the falsification target, not an asserted material law. The forward graph remains acyclic because `a_psi(x)` produces the analytic Gaussian-basis clock without reading predicted fields, while the predicted kinetics enter afterward only through `r_tau=partial_t tau_psi-sqrt(K_xi^2+kfloor^2)`. The estimands are the physical voltage, temperature, and phase fields on complete device trajectories, with switching time, front topology, energy balance, and coupled residuals derived from those fields; synthetic collocation and reference trajectories come from the named FEniCSx model and remain split by whole case. A naive capacity increase or generic learned transform may already help, so the contribution survives only if the exact kinetics-coupled clock beats those alternatives and loses its downstream advantage when the identity intervention fixes `tau=t` and disables `r_tau`.",
+  "feasibility_validation.data.verdict": "feasible",
+  "feasibility_validation.data.rationale": "No closed data are required because the named FEniCSx model supplies the synthetic two-dimensional trajectories, while public VO2 measurements are contextual targets rather than training evidence.",
+  "feasibility_validation.theoretical.verdict": "tight",
+  "feasibility_validation.theoretical.rationale": "Pointwise temporal invertibility follows exactly from the analytic positive-basis clock, but the implementation must still verify every displayed second-order temporal and full spatial-Hessian pullback term and each one-sided pulse-interface condition.",
+  "feasibility_validation.engineering.verdict": "tight",
+  "feasibility_validation.engineering.rationale": "The binding implementation cost is stable nested automatic differentiation through a spatially varying clock inside coupled divergence operators, although it fits the stated single-GPU bounded workflow.",
+  "feasibility_validation.falsification.verdict": "feasible",
+  "feasibility_validation.falsification.rationale": "The locked whole-case scoring is concrete, and the mechanism intervention is implementable by fixing `tau=t`, disabling the auxiliary residual `r_tau`, retaining dormant clock tensors, and leaving the field head and physical-residual code unchanged.",
+  "feasibility_validation.overall": "tight",
+  "reviewer_concerns_and_responses[0].response": "The Phase 3.2 rationale already concedes that broad learned adaptive-coordinate novelty is occupied by R-adaptive DeepONet; accordingly, the `core_claim`, S2-S5, and E1-E5 bind the contribution to an analytic, spatially local clock coupled to endogenous VO2 kinetics and a complete pullback of the unchanged coupled PDE. The S8 identity control fixes `tau=t`, disables `r_tau`, retains dormant clock tensors for nominal-count parity, and leaves the field head plus all physical residuals unchanged; failure against this control or the generic learned and analytic transforms defeats the kinetics-specific claim.",
+  "reviewer_concerns_and_responses[1].response": "Novelty remains retrieval-bounded and unverified against intrinsic-time, material-time, and reaction-progress-variable methods. A targeted scoop-check must establish that no retrieved work already combines an endogenous phase-rate-driven spatially local monotone clock, full electro-thermal-phase PDE pullback, and the same identity intervention; an exact match would subsume the novelty claim, while a partial match would require narrowing it to the remaining interface delta.",
+  "domain_landscape.position_note": "The candidate uses the area's mid-frequency architectural-operator-substitution pattern, but positions it as a kinetics-conditioned local time representation rather than joining the more common structural-prior or generic spectral-capacity variants."
+}

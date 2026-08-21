@@ -1,0 +1,100 @@
+{
+  "actual_budget": {
+    "build_status": "NOT_RUN",
+    "preflight_status": "NOT_RUN",
+    "qpop_processes_started": 0,
+    "resolve_status": "FAILED",
+    "verify_status": "NOT_RUN",
+    "wall_seconds_from_intent": 683.7192379
+  },
+  "artifacts": {
+    "apt_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v2/g2-final-001/logs/apt.log",
+    "evidence_root": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v2/g2-final-001",
+    "intent": "outputs/runs/20260820T142429Z-smoke-g2-env-final-001/environment_intent.json",
+    "openmpi_build_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v2/g2-final-001/logs/openmpi-build.log",
+    "openmpi_configure_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v2/g2-final-001/logs/openmpi-configure.log",
+    "python_install_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v2/g2-final-001/logs/python-install.log",
+    "python_resolution_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v2/g2-final-001/logs/python-resolution.log",
+    "resolve_failure": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v2/g2-final-001/resolve.failure.json",
+    "run_record": "outputs/runs/20260820T142429Z-smoke-g2-env-final-001/environment_attempt.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-oscillation-environment",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_ENVIRONMENT_RESOLVE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "builder_sha256": "72129df35fb041b96caa1f695d8447b7d2b007185690d66070352eacd1036425",
+    "dirty": true,
+    "g2_smoke_runner_sha256": "46b4cb34d2800d38008957c81e1ff210d48d18c88ec733bb460194999906e58b",
+    "git_revision": "29e35ae5dd5165e5e15586312ee92cf940e8ad7f",
+    "kind": "working-tree-uncommitted",
+    "legacy_test_sha256": "ce6e36312bcd6db43847f9765f3fe47a0bf528b3636903fcb3215967a2a3f247",
+    "smoke_test_sha256": "646bc25a83f2cc9cc21188d91663f25bef3ce604b3678c07f1b80eb9c8a3c601"
+  },
+  "command": [
+    "wsl.exe",
+    "-d",
+    "PINN-PCM-SCI-Ubuntu-20.04",
+    "--user",
+    "root",
+    "--exec",
+    "/usr/bin/python3",
+    "/mnt/e/Python demo/PINN-PCM-SCI/pinn_pcm_sci/qpop_legacy_stack.py",
+    "resolve",
+    "--spec",
+    "/mnt/e/Python demo/PINN-PCM-SCI/configs/qpop/legacy-stack-ubuntu-20.04/stack_spec.json",
+    "--evidence-root",
+    "/mnt/e/Python demo/PINN-PCM-SCI/outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v2/g2-final-001",
+    "--execute"
+  ],
+  "ended_at": "2026-08-20T14:35:52.816322Z",
+  "environment": {
+    "environment_id": "qpop-cpc-v1-ubuntu-20.04-source-stack-v2",
+    "execution_spec_sha256": "43aa42d901c26900189643529fa90808d3662a85254c777e91b25e86c2dcaba3",
+    "failure_artifact_sha256": "5795c0877b15234be76c551c09750df19d0d591e92f6d0bac1b3cd27367f05a2",
+    "failure_message": "pybind11 source artifact has an unexpected layout",
+    "install_prefix": "/opt/qpop-cpc-v1-env-g2-final-001",
+    "intent_sha256": "ccc9b29fbf9e3d9f3cd13a2e241db1eaacf695340d89fe2e8996e954f4adfce3",
+    "openmpi_build_log_sha256": "352fb2e041866ed298d99dc838b6b32d34e704583a080ec8a30d7b8fa9323fa3",
+    "os": "Ubuntu 20.04",
+    "python_install_log_sha256": "1453472f2c7f657df22c28dbd18d90f1f5599a1557dc5d3adb53816f883a34c0",
+    "python_resolution_log_sha256": "e0950a7da5b5977df3573b7437d4e35098b6a824488013d4dbbede9dfb263ac2",
+    "runtime": "cpu",
+    "stage": "resolve",
+    "wsl_distribution": "PINN-PCM-SCI-Ubuntu-20.04"
+  },
+  "evaluator_id": "NOT_RUN_ENVIRONMENT_INTEGRATION",
+  "evidence_identity": "ENVIRONMENT_INTEGRATION_ONLY",
+  "execution_status": "FAILED",
+  "experiment_group_id": "g2-qpop-legacy-environment-resolution-v1",
+  "failure_class": "PYBIND11_SOURCE_ARTIFACT_UNEXPECTED_LAYOUT",
+  "gate": "G2",
+  "gate_outcome": "G2_ENVIRONMENT_BLOCKED_FINAL",
+  "method_id": "qpop-legacy-stack-integration-v2",
+  "numerical_validity": "NOT_EVALUATED",
+  "physical_contract_id": "NOT_YET_FROZEN_G2_ENVIRONMENT_INTEGRATION",
+  "planned_budget": {
+    "build_jobs": 2,
+    "conditional_native_evaluator_timeout_seconds": 300,
+    "conditional_native_wall_timeout_seconds": 1800,
+    "stages": [
+      "resolve",
+      "preflight_if_resolve_passes",
+      "build_if_preflight_passes",
+      "verify_if_build_passes",
+      "one_native_qpop_smoke_if_verify_passes"
+    ]
+  },
+  "replay_of": null,
+  "route_disposition": "G2_ENVIRONMENT_BLOCKED_FINAL",
+  "run_id": "20260820T142429Z-smoke-g2-env-final-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_ENVIRONMENT_INTEGRATION",
+  "started_at": "2026-08-20T14:24:29.0970841Z",
+  "supersedes": "20260819T124542Z-smoke-g2-env-resolve-attempt-007",
+  "tier": "smoke"
+}

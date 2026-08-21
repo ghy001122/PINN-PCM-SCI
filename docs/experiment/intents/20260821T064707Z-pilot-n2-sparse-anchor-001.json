@@ -1,0 +1,23 @@
+{
+  "anchor_weight": 1.0,
+  "baseline_run_root": "outputs\\runs\\20260821T062846Z-pilot-n1-strong-raw-001",
+  "eta_scale": 1.6,
+  "gate": "N2",
+  "node_sample_count": 82,
+  "node_sampling_seed": 17,
+  "optimizer_updates": 1000,
+  "physics_ceiling": 1.25,
+  "run_id": "20260821T064707Z-pilot-n2-sparse-anchor-001",
+  "schema_version": "qpop-sparse-anchor-diagnostic-intent-v1",
+  "scientific_role": "bottleneck_audit",
+  "scientific_use": "SOLVER_ASSISTED_DIAGNOSTIC_ONLY",
+  "started_at": "2026-08-21T06:47:21.426532Z",
+  "supersedes": null,
+  "target_times_ns": [
+    130.0,
+    260.0,
+    390.0,
+    494.0
+  ],
+  "tier": "pilot"
+}

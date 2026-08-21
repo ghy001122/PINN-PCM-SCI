@@ -1,0 +1,7 @@
+interface:
+  display_name: "ResearchStudio Idea Spark"
+  short_description: "Explicit-only, project-gated research ideation workflow"
+  default_prompt: "Use $idea-spark only after active_phase.md explicitly authorizes the research task."
+
+policy:
+  allow_implicit_invocation: false

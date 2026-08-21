@@ -1,0 +1,17 @@
+{
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_UNQUALIFIED_ORACLE",
+  "gate": "G6",
+  "methods": [
+    "raw",
+    "identity",
+    "kc"
+  ],
+  "run_id": "20260821T031656Z-pilot-g6-qpop-method-001",
+  "schema_version": "qpop-method-development-pilot-intent-v1",
+  "scientific_role": "protocol_selection",
+  "seed": 17,
+  "started_at": "2026-08-21T03:17:12.062201Z",
+  "tier": "pilot",
+  "training_uses_qpop_transient_labels": false,
+  "updates_per_method": 20
+}

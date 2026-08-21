@@ -1,0 +1,89 @@
+{
+  "actual_budget": {
+    "build_status": "BUILT_NOT_YET_VERIFIED",
+    "preflight_status": "PREFLIGHT_PASS",
+    "qpop_processes_started": 0,
+    "resolve_status": "RESOLVED",
+    "verify_status": "FAILED_PROBE_COMPATIBILITY",
+    "wall_budget_exhausted": false,
+    "wall_seconds_from_intent": 117.5891243
+  },
+  "artifacts": {
+    "build_manifest": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-001/build.manifest.json",
+    "evidence_root": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-001",
+    "intent": "outputs/runs/20260821T014727Z-smoke-g2-env-verify-resume-001/environment_intent.json",
+    "preflight": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-001/preflight.json",
+    "resolution_lock": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-001/resolution.lock.json",
+    "run_record": "outputs/runs/20260821T014727Z-smoke-g2-env-verify-resume-001/environment_attempt.json",
+    "verify_failure": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-001/verify.failure.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-oscillation-environment",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_ENVIRONMENT_VERIFY"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "builder_sha256": "e38d1362c42138d4938b6d67f423d4ada3449708caa11a549a2404f5e9fdb176",
+    "dirty": true,
+    "g2_smoke_runner_sha256": "46b4cb34d2800d38008957c81e1ff210d48d18c88ec733bb460194999906e58b",
+    "git_revision": "29e35ae5dd5165e5e15586312ee92cf940e8ad7f",
+    "kind": "working-tree-uncommitted",
+    "legacy_test_sha256": "0aac7294f9256e4eb389ca8624e641bfc8cd78bb992cb89e827d3edac1e4e328",
+    "smoke_test_sha256": "646bc25a83f2cc9cc21188d91663f25bef3ce604b3678c07f1b80eb9c8a3c601",
+    "stack_spec_sha256": "e1f74ca4cedf864169d4814412e01e510df7b272a541ad8350e7b35990ce4fce"
+  },
+  "command": [
+    "wsl.exe",
+    "-d",
+    "PINN-PCM-SCI-Ubuntu-20.04",
+    "-u",
+    "root",
+    "--",
+    "/usr/bin/python3",
+    "/mnt/e/Python demo/PINN-PCM-SCI/pinn_pcm_sci/qpop_legacy_stack.py",
+    "verify",
+    "--execute"
+  ],
+  "ended_at": "2026-08-21T01:49:24.747002Z",
+  "environment": {
+    "build_manifest_sha256": "69aa55488e74e58c6236dccf92bd86ed0118a3446e64d6bfd65dd89d917595b1",
+    "failure_message": "verify probe assumed dolfin.cpp.common exposes __file__; the installed 2019.1 binding exposes the extension path on dolfin.cpp",
+    "install_prefix": "/opt/qpop-cpc-v1-env-g2-final-002",
+    "runtime": "CPU",
+    "stage": "verify",
+    "verify_failure_sha256": "87e6e19065ffd2b487815780e95bc1982462c953796a6f92ec1817a7dcf2a904",
+    "wsl_distribution": "PINN-PCM-SCI-Ubuntu-20.04"
+  },
+  "evaluator_id": "NOT_RUN_ENVIRONMENT_INTEGRATION",
+  "evidence_identity": "ENVIRONMENT_INTEGRATION_ONLY",
+  "execution_status": "FAILED",
+  "experiment_group_id": "g2-qpop-legacy-environment-resolution-v1",
+  "failure_class": "DOLFIN_VERIFY_PROBE_EXTENSION_IDENTITY_INCOMPATIBLE",
+  "gate": "G2",
+  "gate_outcome": "G2_ENVIRONMENT_VERIFY_FAILED_PROBE_COMPATIBILITY",
+  "method_id": "qpop-legacy-stack-integration-v3-runtime-path-verified",
+  "numerical_validity": "NOT_EVALUATED",
+  "physical_contract_id": "NOT_YET_FROZEN_G2_ENVIRONMENT_INTEGRATION",
+  "planned_budget": {
+    "build_jobs": 2,
+    "environment_wall_timeout_seconds": 1800,
+    "stages": [
+      "resolve",
+      "preflight",
+      "build",
+      "verify",
+      "conditional_native_smoke"
+    ]
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_MINIMAL_VERIFY_PROBE_FIX",
+  "run_id": "20260821T014727Z-smoke-g2-env-verify-resume-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_ENVIRONMENT_INTEGRATION",
+  "started_at": "2026-08-21T01:47:27.1578777Z",
+  "supersedes": "20260821T013651Z-smoke-g2-env-python-binding-resume-002",
+  "tier": "smoke"
+}

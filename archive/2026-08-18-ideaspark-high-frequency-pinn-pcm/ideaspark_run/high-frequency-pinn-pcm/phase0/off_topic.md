@@ -1,0 +1,161 @@
+# Off-topic papers removed from the gap corpus (Phase 0.4 host partition)
+
+These were retrieved by a connector but the host judged them outside the research direction (cross-domain "memory-augmented" false positives, surveys, unrelated fields). They are archived here for transparency but do NOT feed Phase 1 or the deep-read pool.
+
+- **High-resolution spatiotemporal mapping of transient Joule heating and skin tissue responses during m** (`semanticscholar:1f678f886493c05712b8bea5d8c1c0ba9f37318b`)
+  - Transient electrothermal modeling is applied to skin electroporation and tissue injury, a biomedical keyword false positive.
+- **Interhemispheric Asymmetries in the Large‐Scale Traveling Atmospheric and Ionospheric Disturbances D** (`semanticscholar:021d514ddc6fc73b34de8d078bda7663fdda57c3`)
+  - Joule heating here concerns geomagnetic-storm ionospheric dynamics, not phase-change materials or devices.
+- **Electrothermal Model of an AC Catenary and Mechanisms of Ice Melting under an Autotransformer Tracti** (`semanticscholar:0864767a062599e6b43e130021c7714065e1dfa3`)
+  - The modeled phase change is railway-catenary ice melting, an unrelated application domain.
+- **Ionosphere‐Thermosphere Responses to the March 2023 Geomagnetic Storm Using Observations and TIEGCM ** (`semanticscholar:2ac1b92d8cdea45bd80d34640f67da40b650df5d`)
+  - This is ionosphere-thermosphere storm modeling, unrelated to functional phase-change devices.
+- **Electrically Assisted Processing of Metallic Materials: Coupled Mechanisms, Microstructure Evolution** (`semanticscholar:59611a6ee31f3b45d2717beea8031ac1ffbe24b9`)
+  - This is a review of electrically assisted metallic-material processing, and pure reviews are excluded by the rubric.
+- **Investigation of the Evolution Mechanism and Multiphysics Coupling in Tree‐Contact Single‐Phase‐to‐G** (`semanticscholar:26faba2a7b667b40b8cecec2d5a3340b8405d31f`)
+  - The multiphysics problem is a tree-contact distribution-grid fault, not phase-change material or memory-device dynamics.
+- **Ionosphere Response to the October 2024 G4 Geomagnetic Storm: Multi‐Instrument Observations and Phys** (`semanticscholar:3efa6e13f978cf7984b64c27d3dc9c92afa90c9a`)
+  - Joule heating refers to geomagnetic-storm ionospheric disturbances, an unrelated field.
+- **Low-Channel-Count Thermoacoustic Multi-Ring Array for Radially Shaped Acoustic Orbital Angular Momen** (`semanticscholar:97dd2643c2697c2de6e8fad13e8f7c9b132b3cd8`)
+  - A thermoacoustic array for orbital-angular-momentum beams is outside phase-change devices and PINNs.
+- **Laser power transmission in space: Plasma-based power cell** (`semanticscholar:fc5f183c5520d4e77139fac56aa5f8e74d127f15`)
+  - The study concerns plasma-based laser power transmission in space, not phase-change electronics.
+- **Rapid volumetric rewarming of cryopreserved samples using a steerable ultrasound array.** (`semanticscholar:267254b3fa1851a85787a84e00c3fb2cedf39245`)
+  - Pulsed ultrasound rewarming of cryopreserved organs is a biomedical application outside the research direction.
+- **Laser-induced thermal stresses in fiber-reinforced elastic structures with voids** (`semanticscholar:f19a4aedc6811180d2dcfd0c889fa605787f98a1`)
+  - Laser-induced stress in fiber-reinforced elastic structures is unrelated to phase-change memory devices or PINNs.
+- **(Invited) In situ
+ Raman Spectroscopy of Plasma-Liquid Interaction Using Probe Molecules** (`semanticscholar:aad9bc1c21b363495adaa18d3a94b446555c9e5a`)
+  - In-situ Raman diagnostics of plasma-liquid chemistry are outside the target materials and modeling problem.
+- **Electrophoretic NMR in Aqueous Systems: Addressing Practical Aspects in Probehead Design and Data Pr** (`semanticscholar:82221db1ac794f214001de3cc94ad177ad2cb990`)
+  - Electrophoretic NMR of aqueous molecular systems is a chemistry instrumentation false positive.
+- **Development of a Numerically Inexpensive 3D CFD Model of Slag Reduction in a Submerged Arc Furnace f** (`semanticscholar:e1657e19c8859277c93639bd8191545c97e754f9`)
+  - The transient electrothermal CFD model addresses industrial slag reduction and phosphorus recovery, an unrelated domain.
+- **Nanosecond plasma discharge dynamics on a levitated water droplet** (`semanticscholar:8499b263222ea3aa1a45290d5dade2a49f23ead4`)
+  - Nanosecond plasma discharge around water droplets is an unrelated plasma-fluid problem.
+- **Synergetic properties of advanced materials for high-power and high-temperature applications** (`openalex:W7153277229`)
+  - This is a broad review of high-power thermal and magnetic materials, so it is excluded as a pure review.
+- **A practitioner’s guide to Kolmogorov–Arnold networks** (`openalex:W7160944501`)
+  - This is a practitioner review of Kolmogorov-Arnold networks, excluded under the pure-review rule.
+- **Intelligent Optimization in Power Electronics: Methods, Applications, and Practical Limits** (`openalex:W7136254111`)
+  - This is a review of intelligent optimization in power electronics rather than an original PCM-PINN study.
+- **Critical Review of Temperature Prediction for Lithium-Ion Batteries in Electric Vehicles** (`openalex:W4404931206`)
+  - This is a battery-temperature prediction review, both cross-domain and review-only.
+- **Reliability Challenges, Models, and Physics of Silicon Carbide and Gallium Nitride Power Devices** (`openalex:W4407809025`)
+  - This is a review of SiC and GaN reliability, excluded as review-only and outside PCM.
+- **Low-Power Memristor for Neuromorphic Computing: From Materials to Applications** (`openalex:W4409406251`)
+  - This is a broad review of low-power memristor materials and applications, excluded by the pure-review rule.
+- **Evolutionary Optimization of Physics-Informed Neural Networks: Evo-PINN Frontiers and Opportunities** (`openalex:W7124162332`)
+  - The article is a review and perspective on evolutionary PINN optimization rather than a primary high-frequency PCM study.
+- **Charting electronic-state manifolds across molecules with multi-state learning and gap-driven dynami** (`openalex:W4410340846`)
+  - Physics-informed active learning is used for molecular photochemistry, a cross-domain false positive.
+- **Advancements in 2D layered material memristors: unleashing their potential beyond memory** (`openalex:W4405664597`)
+  - This is a review of 2D-material memristors, excluded under the pure-review rule.
+- **Battery intelligent temperature warning model with physically-informed attention residual networks** (`openalex:W4408258773`)
+  - A physically informed battery-temperature warning model is in an unrelated electrochemical-energy domain.
+- **PHYSICS-INFORMED MACHINE LEARNING FOR NANOSCALE TRANSPORT PHENOMENA: CHALLENGES, APPROACHES, AND FUT** (`openalex:W7154681973`)
+  - This is a comprehensive review of physics-informed learning for nanoscale transport, excluded as a pure review.
+- **A selective review of modern stochastic modeling: SDE/SPDE numerics, data-driven identification, and** (`openalex:W7119520497`)
+  - This is a stochastic-modeling review centered on biology and epidemiology.
+- **锂离子电池温度状态：定义、检测与估计** (`openalex:W4403904022`)
+  - The paper reviews lithium-ion battery temperature-state definitions and estimation, outside the target direction.
+- **From Microbial Switches to Metabolic Sensors: Rewiring the Gut–Brain Kynurenine Circuit** (`openalex:W4411357947`)
+  - Gut-brain metabolic sensing and therapeutic protocols are unrelated biomedical topics.
+- **Operating Mechanism Principles and Advancements for Halide Perovskite-Based Memristors and Neuromorp** (`openalex:W4402918282`)
+  - The article outlines and summarizes halide-perovskite memristor mechanisms and advances, making it a review rather than primary evidence.
+- **Cross-Disciplinary Research Gaps in Physical, Chemical, and Environmental Sciences: An Integrative R** (`openalex:W4416341844`)
+  - This is an extremely broad cross-disciplinary integrative review, excluded by the rubric.
+- **Model order reduction techniques for the numerical multiscale simulation and analysis of lithium-ion** (`openalex:W4402851765`)
+  - Reduced-order simulation of lithium-ion batteries is a different device and physical domain.
+- **A Synergistic Physics–Data-Driven and Memory-Resident Computing Approach for Security Assessment in ** (`openalex:W7128432092`)
+  - The PINN is for power-system contingency assessment; memory-resident computing is not a phase-change material mechanism.
+- **Localized Conduction Channels in Memristors** (`openalex:W4405649561`)
+  - This article compiles historical observations and explanations of memristor channels rather than presenting a primary study, so it is review-only.
+- **Mott Memristors for Neuromorphics** (`openalex:W4403830314`)
+  - This is a review of Mott memristors for neuromorphic computing, excluded under the pure-review rule.
+- **Overview of Monitoring, Diagnostics, Aging Analysis, and Maintenance Strategies in High-Voltage AC/D** (`openalex:W4416422341`)
+  - This is a comprehensive review of high-voltage cable monitoring and aging, outside PCM and review-only.
+- **Real-Time Digital Twins for Intelligent Fault Diagnosis and Condition-Based Monitoring of Electrical** (`openalex:W4413908572`)
+  - The article is an overview of digital twins for electrical-machine monitoring rather than primary PCM-PINN research.
+- **High-Entropy Oxide Memristors for Neuromorphic Computing: From Material Engineering to Functional In** (`openalex:W4413484867`)
+  - This is a review of high-entropy-oxide memristors, excluded as a pure review.
+- **Recent advances in machine learning and coarse-grained potentials for biomolecular simulations** (`openalex:W4411488835`)
+  - This is a review of machine learning for biomolecular simulation, an unrelated domain.
+- **Roadmap for Molecular Benchmarks in Nonadiabatic Dynamics** (`openalex:W4412440580`)
+  - This perspective and roadmap concerns molecular nonadiabatic-dynamics benchmarks, not phase-change electronics.
+- **Deep Learning Reaction Framework (DLRN) for kinetic modeling of time-resolved data** (`openalex:W4410395903`)
+  - The neural framework models chemical reaction kinetics from spectroscopy data, outside the target materials and device domain.
+- **Protein Catalysis Through Structural Dynamics: A Comprehensive Analysis of Energy Conversion in Enzy** (`openalex:W4411582383`)
+  - This is a review of protein catalysis and structural dynamics, an unrelated biological field.
+- **Lead-free halide perovskite memristors for scalable crossbar arrays** (`openalex:W4413607988`)
+  - The paper summarizes materials, transport, fabrication, and architectures of lead-free perovskite memristors and is review-like rather than primary research.
+- **Toward Data-Driven Predictive Modeling of Electrocatalyst Stability and Surface Reconstruction** (`openalex:W4410785598`)
+  - This perspective reviews data-driven modeling of electrocatalyst reconstruction, outside phase-change devices.
+- **Visualization of High-Intensity Laser–Matter Interactions in Virtual Reality and Web Browser** (`openalex:W4409964856`)
+  - A browser and VR tool for laser-plasma simulation visualization is outside the target scientific mechanism.
+- **Experimental characterization of high-strain-rate viscoelastic and damage behavior in anisotropic so** (`openalex:W7128594460`)
+  - Laser-cavitation characterization of soft-material damage is unrelated to phase-change electronics and PINNs.
+- **Multiscale Modeling and Data-Driven Life Prediction of Kinematic Interface Behaviors in Mechanical D** (`openalex:W4410895393`)
+  - The multiscale data-driven model concerns mechanical drive-system wear and vibration, an unrelated domain.
+- **Self-Rectifying Memristors for Beyond-CMOS Computing: Mechanisms, Materials, and Integration Prospec** (`openalex:W7122422819`)
+  - This is a review of self-rectifying memristor mechanisms and integration, excluded under the pure-review rule.
+- **FINCHES: A Computational Framework for Predicting Intermolecular Interactions in Intrinsically Disor** (`openalex:W4411897719`)
+  - This is a review of protein-interaction modeling, unrelated to phase-change materials.
+- **Making chemistry compute with non-steady-state chemical dynamics** (`openalex:W7125694562`)
+  - Non-steady-state chemical computing is outside the PCM-PINN research direction.
+- **Structural dynamics of plant transcription factors and their functional implications** (`openalex:W7124865009`)
+  - Plant transcription-factor structural dynamics are an unrelated biological topic.
+- **Revolutionizing Gas Turbine Aerodynamics: Advanced Numerical Methods for High-Fidelity Simulations, ** (`openalex:W4411500345`)
+  - This is a comprehensive review of gas-turbine simulation and aerothermodynamics, an unrelated field.
+- **Collocation-based Robust Physics Informed Neural Networks for time-dependent simulations of pollutio** (`arxiv:2604.23003v1`)
+  - The robust PINN is applied to atmospheric pollution propagation, an unrelated application domain.
+- **CO$_2$ sequestration hybrid solver using isogeometric alternating-directions and collocation-based r** (`arxiv:2604.20731v1`)
+  - The hybrid PINN solver addresses CO2 sequestration in porous media, a cross-domain false positive.
+- **Hydrodynamic Switching Fronts Polarize Deformable Particle Trains** (`arxiv:2604.05925v1`)
+  - Switching fronts here are hydrodynamic state propagation in particle suspensions, not electronic phase-change devices.
+- **MR Simulation with Phase Distribution Graphs: Off-Resonant Pulse Response and Slice-Selection** (`arxiv:2606.15164v1`)
+  - Differentiable off-resonant RF pulse simulation is for magnetic-resonance imaging, not phase-change devices.
+- **Causal Discovery in Action: Learning Chain-Reaction Mechanisms from Interventions** (`arxiv:2603.22620v2`)
+  - This is generic causal discovery for chain-reaction systems, unrelated to PCM or PINNs.
+- **Energy and Scaling Limits of Phase-Change Memory** (`arxiv:2605.28336v1`)
+  - This is a review of PCM energy and scaling limits, and the rubric excludes pure reviews even when topically close.
+- **Midterm Status Report of the ILC Technology Network Activities** (`arxiv:2603.01172v1`)
+  - This status report concerns International Linear Collider engineering activities, an unrelated domain.
+- **Global Self-Attention with Exact Fourier Propagation for Phase-Only Far-Field Holography** (`arxiv:2602.17624v3`)
+  - Self-attention for far-field holography is an optical inverse problem unrelated to phase-change materials or PINNs.
+- **Disentangling Dynamical Systems: Causal Representation Learning Meets Local Sparse Attention** (`arxiv:2603.14483v2`)
+  - Generic causal representation learning for system identification does not address PCM devices, high-frequency PINNs, or their governing physics.
+- **Neural Networks and Schramm-Loewner Evolutions** (`arxiv:2606.02682v1`)
+  - Neural prediction of Schramm-Loewner evolution parameters is an unrelated mathematical topic.
+- **Token Predictors Are Not Planners: Building Physically Grounded Causal Reasoners** (`arxiv:2606.01810v1`)
+  - This work concerns causal reasoning in embodied AI agents rather than physical phase-change devices.
+- **Numerical modeling and simulation on nanosecond laser-target interactions** (`arxiv:2608.09969v1`)
+  - This is a review of nanosecond laser-target simulation, excluded under the pure-review rule.
+- **Causal-Audit: A Framework for Risk Assessment of Assumption Violations in Time-Series Causal Discove** (`arxiv:2604.02488v1`)
+  - Assumption auditing for time-series causal discovery is unrelated to phase-change material PINNs.
+- **Mi-Memory: A Lifecycle Memory Framework for Personal AI** (`arxiv:2607.18975v1`)
+  - Personal-AI memory lifecycle infrastructure is a lexical memory false positive.
+- **Physics-Informed Neural Network Digital Twin for Dynamic Tray-Wise Modeling of Distillation Columns ** (`arxiv:2603.24644v1`)
+  - The PINN digital twin models industrial distillation columns, a cross-domain application.
+- **A cubical formalisation of topos causal models: intervention, forcing, and a contextuality obstructi** (`arxiv:2607.15629v2`)
+  - Topos causal models and formalized interventions are unrelated mathematical causal-inference work.
+- **MRMMIA: Membership Inference Attacks on Memory in Chat Agents** (`arxiv:2605.27825v1`)
+  - Membership attacks on chat-agent memory are an AI-security topic unrelated to material memory devices.
+- **Causal Mechanism Reduction: Mechanism Replacement for Neural Network Pruning and Abstraction** (`arxiv:2602.24266v2`)
+  - Causal mechanism reduction for neural-network pruning is unrelated to physical phase-change mechanisms.
+- **MEM: Multi-Scale Embodied Memory for Vision Language Action Models** (`arxiv:2603.03596v2`)
+  - Embodied memory for vision-language-action robot policies is a lexical memory false positive.
+- **Optimizing Experimental Design for Causal Effect Estimation with Partial Measurements** (`arxiv:2606.26818v1`)
+  - Experimental design for statistical causal-effect estimation is unrelated to PCM and PINNs.
+- **Oracle Agent Memory as an Enterprise Memory Substrate for Long-Horizon AI Agents** (`arxiv:2607.13157v1`)
+  - Database-backed memory for long-horizon AI agents is a lexical memory false positive.
+- **Operationalising Relative Causal Knowledge: Backbone Identifiability from Private Reports on a Share** (`arxiv:2608.10664v1`)
+  - Identifiability of causal knowledge shared by agents is unrelated to phase-change materials and devices.
+- **Scientific machine learning for closure models in multiscale problems: A review** (`openalex:W4403254920`)
+  - This is a review of scientific-machine-learning closure models, excluded under the pure-review rule.
+- **A review on mitigating thermal runaway propagation in battery packs: from mechanisms to modeling and** (`openalex:W7160398056`)
+  - This is a review of battery-pack thermal runaway, both cross-domain and review-only.
+- **Magnetic Barkhausen Noise Sensor: A Comprehensive Review of Recent Advances in Non-Destructive Testi** (`openalex:W7117740234`)
+  - This is a comprehensive review of magnetic Barkhausen sensors, outside the target direction and review-only.
+- **Review of Memristors for In‐Memory Computing and Spiking Neural Networks** (`openalex:W7108321963`)
+  - This is a review of memristors for in-memory and spiking systems, excluded by the pure-review rule.

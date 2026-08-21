@@ -1,0 +1,7 @@
+interface:
+  display_name: "Leader Goal Brief"
+  short_description: "Explicit project-gated goal brief authoring"
+  default_prompt: "Use $leader to draft a bounded goal brief that obeys the repository authority chain and current phase."
+
+policy:
+  allow_implicit_invocation: false

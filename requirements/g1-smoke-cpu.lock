@@ -1,0 +1,13 @@
+# Frozen G1 CPU dependency closure for CPython 3.11 on Windows x86-64.
+# Direct requirements originate in g1-smoke-cpu.in.
+filelock==3.32.3
+fsspec==2026.7.0
+h5py==3.12.1
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+mpmath==1.3.0
+networkx==3.6.1
+numpy==2.1.1
+sympy==1.13.1
+torch==2.5.1
+typing_extensions==4.16.0

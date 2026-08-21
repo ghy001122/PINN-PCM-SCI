@@ -1,0 +1,698 @@
+[
+ {
+  "title": "Enhancing PINN Accuracy for the RLW Equation: Adaptive and Conservative Approaches",
+  "title_norm": "enhancing pinn accuracy for the rlw equation adaptive and conservative approache",
+  "abstract": "Standard physics-informed neural network implementations have produced large error rates when using these models to solve the regularized long wave (RLW) equation. Two improved PINN approaches were developed in this research: an adaptive approach with self-adaptive loss weighting and a conservative approach enforcing explicit conservation laws. Three benchmark tests were used to demonstrate how effective PINN's are as they relate to the type of problem being solved (i.e., time dependent RLW equation). The first was a single soliton traveling along a line (propagation), the second was the interaction between two solitons, and the third was the evolution of an undular bore over the course of $t=250$. The results demonstrated that the effectiveness of PINNs are problem specific. The adaptive PINN was significantly better than both the conservative PINN and the standard PINN at solving problems involving complex nonlinear interactions such as colliding two solitons. The conservative approach was significantly better at solving problems involving long term behavior of single solitons and undular bores. However, the most important finding from this research is that explicitly enforcing conservation laws may be harmful to optimizing the solution of highly nonlinear systems of equations and therefore requires special training methods. The results from our adaptive and conservative approaches were within $O(10^{-5})$ of established numerical solutions for the same problem, thus demonstrating that PINNs can provide accurate solutions to complex systems of partial differential equations without the need for a discretization of space or time (mesh free). Moreover, the finding from this research challenges the assumptions that conservation enforcement will always improve the performance of a PINN and provides researchers with guidelines for designing PINNs for use on specific types of problems.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Aamir Shehzad"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2511.11638v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2511.11638v1",
+  "published_iso": "2025-11-08T22:19:41Z",
+  "from_query": [
+   "impact partitioned residual packet PINN",
+   "local operator VO2 switching PINN",
+   "downstream error decomposed multiphysics PINN",
+   "whole device protocol OOD PINN"
+  ]
+ },
+ {
+  "title": "Frequency-modulated enhancement of microwave resonator sensing",
+  "title_norm": "frequency modulated enhancement of microwave resonator sensing",
+  "abstract": "We use the Pound-Drever-Hall (PDH) technique to characterize the frequency stability of a microwave-frequency surface acoustic wave (SAW) resonator-based sensor. The multi-mode acoustic resonator is integrated in a notch geometry with a transmission line, all fabricated on Y-cut lithium niobate. We measure the amplitude and phase of the resonator transfer function and the PDH signal across the resonator full spectral range. We use these measurements to emphasize the differences between the PDH measurement and a standard Phase-Locked Loop (PLL) technique. As compared to a PLL, we demonstrate that PDH is insensitive to phase error and exhibits a reduced Allan deviation of the center frequency measurement, in each case by up to an order of magnitude. The method rejects spurious effects and background frequency drift, demonstrating the enhancements possible with PDH-based measurements, which can be realized in a wide range of microwave-frequency resonator-based sensors and devices.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Pranaya Kishore Rath",
+   "James D. Philips",
+   "Taekwan Yoon",
+   "Kent R. Shirer",
+   "Arash Fereidouni",
+   "Johannes Pollanen"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.06289v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.06289v2",
+  "published_iso": "2025-12-06T04:40:03Z",
+  "from_query": [
+   "endogenous high frequency phase fronts"
+  ]
+ },
+ {
+  "title": "Device Context Protocol: A Compact, Safety-First Architecture for LLM-Driven Control of Constrained Devices",
+  "title_norm": "device context protocol a compact safety first architecture for llm driven contr",
+  "abstract": "Large language models are increasingly used as orchestrators of external tools via the Model Context Protocol (MCP), but MCP is built for software services with megabytes of memory and does not descend to the microcontrollers that dominate the long tail of physical devices. Recent work (IoT-MCP) ports MCP to edge gateways at 74 KB peak memory; this still excludes the smallest commodity MCUs and, critically, does not address the safety problem of giving an unreliable caller (an LLM that may hallucinate or be prompt-injected) direct control of physical hardware. We present the Device Context Protocol (DCP): a sub-50-byte typical frame (6-byte header + CBOR payload + optional 16-byte HMAC), a manifest schema in which capability scoping, range and type checks, dry-run evaluation, and units-as-types are protocol-layer primitives, and a host-side Bridge that rejects malformed or hallucinated calls before any byte reaches the device. Reference firmware measures 27.6 KB flash / 0.6 KB RAM on ESP32; the Python Bridge, ESP32 firmware, and a language-neutral conformance suite are MIT-licensed and public. An empirical study -- 675 tool calls produced by five LLMs across four vendors (DeepSeek, Alibaba, Zhipu, MiniMax) against six categories of adversarial prompts, with the injection category instantiating AgentDojo's attack templates -- shows DCP rejects 100% of capability-escalation attempts and 78% of prompt-injection attempts, versus 0--1% for Raw MCP and IoT-MCP, matching the expressiveness of a well-formed OpenAPI 3 schema at three orders of magnitude less firmware footprint. We position DCP as the missing layer between MCP (which is moving toward enterprise SaaS connectivity) and the physical devices it does not reach.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Dongxu Yang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.26159v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.26159v1",
+  "published_iso": "2026-05-24T12:37:19Z",
+  "from_query": [
+   "whole device protocol OOD PINN"
+  ]
+ },
+ {
+  "title": "LIGO-PINN: Learned Initialization via Gated Optimization to Alleviate Convergence Failures in Physics Informed Neural Networks",
+  "title_norm": "ligo pinn learned initialization via gated optimization to alleviate convergence",
+  "abstract": "Physics-informed neural networks (PINNs) have had a broad research impact in modeling domains governed by partial differential equations (PDE). However, PINNs have been shown to perform poorly, sometimes even converging to trivial solutions, in challenging PDE domains, or when generalizing to unseen but related PDE domains. Previously proposed solutions detail hyperparameter tuning to reduce loss imbalance between data-driven and physics guided losses, curriculum learning based training strategies, or dynamic re-sampling of hard collocation points. These methods face certain pitfalls: hyperparameter tuning is expensive, designing a training curriculum is ambiguous in multi-parameter PDE settings, and dynamic resampling still fails in complex PDE settings. Complementary to this line of thinking, we believe the initial PINN network weights also play a crucial role in the emergence of catastrophic failures during training, yet the effect of PINN weight initialization has been surprisingly under-investigated. To this end, we propose a framework for Learned Initialization via Gated Layerwise Optimization (LIGO-PINN) to overcome PINN convergence failures. Through rigorous evaluation on 1D and 2D PDE domains, including a challenging 2D fluid dynamics setting, we demonstrate that our methodology outperforms state-of-the-art methods designed to alleviate PINN failures, achieving a 91.5% average performance improvement across six baselines and 81% over the strongest baseline. We also verify that LIGO-PINN generalizes to 3D unstructured domains. Finally, we analyze training dynamics across all three PDE domains to explain both LIGO-PINN's improvement and the convergence failure of traditional PINNs. Code: https://github.com/scailab/ligo-pinn\n  Keywords: Machine Learning, Physics-Informed Neural Networks, Deep Learning, PDE Modeling",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Nilay Anurag",
+   "Shital Adhikari",
+   "Taniya Kapoor",
+   "Nikhil Muralidhar"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.14233v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.14233v1",
+  "published_iso": "2026-07-15T18:00:44Z",
+  "from_query": [
+   "impact partitioned residual packet PINN",
+   "downstream error decomposed multiphysics PINN",
+   "local operator VO2 switching PINN",
+   "whole device protocol OOD PINN"
+  ]
+ },
+ {
+  "title": "Time-Scaled Intertwining Cocycles and Identifiability of Multi-Semigroup Mixtures on Hilbert Operator Networks",
+  "title_norm": "time scaled intertwining cocycles and identifiability of multi semigroup mixture",
+  "abstract": "We study rigidity phenomena for time-scaled intertwining families of dissipative semigroups $\\mathcal S_i(t)=e^{-tA_i}$ and prove that a network of bounded injective operators satisfying $K_{ij}\\mathcal S_j(t)=\\mathcal S_i(λ_{ij}t)K_{ij}$ and $K_{ik}=K_{ij}K_{jk}$ necessarily admits a multiplicative gauge representation $λ_{ij}=τ_i/τ_j$, if and only if the renormalized generators $\\{τ_iA_i\\}$ form a common isospectral class with matching eigenspace dimensions; in particular, eigenspaces are transported isomorphically across sectors. The operators $K_{ij}$ define parallel transport in a flat Hilbert bundle over the index network, with flatness derived from the intertwining constraints rather than assumed. As an application, the mixture observable $M(t)=\\sum_i w_i\\mathcal B_0K_{0i}\\mathcal S_i(t)ψ_i$ reduces under finite spectral support to a structured exponential sum. Under spectral separation, the modal parameters are uniquely identifiable, with sector tags determined intrinsically by the operator spectra; under eigenspace observability, active state components are uniquely recovered. Finite-window exact reconstruction holds from $2L$ samples, and the stability bound $\\|\\widehatΘ-Θ_\\ast\\|_{\\mathcal X}\\le C_{\\mathrm{stab}}κ_{\\mathrm{exp}}\\varepsilon$ follows with constants explicitly controlled by the spectral geometry and observability of the network.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Anton Alexa"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.20322v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.20322v2",
+  "published_iso": "2026-03-19T23:56:32Z",
+  "from_query": [
+   "local operator VO2 switching PINN"
+  ]
+ },
+ {
+  "title": "Trapped fireshell (halo) of photons and pairs around black-hole horizon: source for ultra-high-energy particles",
+  "title_norm": "trapped fireshell halo of photons and pairs around black hole horizon source for",
+  "abstract": "We study the Compton-rocket effect of strong radiation force accelerating electrons in an opaque fireshell (or fire spot) of dense photons and electron-positron pairs, whose temperature is spatially inhomogeneous and exceeds the electron mass. We find the possibility of the charged-particle acceleration and the avalanche runaway process, leading to a non-trivial probability of ultra-high-energy (UHE) electrons and protons, which subsequently produce very-high-energy (VHE) photons and neutrinos. In a simplified one-dimensional model, we qualitatively show such peculiar dynamics using the fireball, Gamma-Ray Burst central engine, whose inner part inflows and forms a gravitationally trapped fireshell (halo) around the horizon of a black hole. The fireshell is metastable, cooling via UHE particle emissions and blackbody radiation. We calculate the UHE particle luminosity varying in time, and discuss the peculiar features of such produced UHE particles, which lead to VHE particles, in connection with possible numerical simulations, observations and experiments.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "She-Sheng Xue"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.03702v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.03702v3",
+  "published_iso": "2025-12-03T11:51:03Z",
+  "from_query": [
+   "endogenous high frequency phase fronts"
+  ]
+ },
+ {
+  "title": "Robust Physics Discovery from Highly Corrupted Data: A PINN Framework Applied to the Nonlinear Schrödinger Equation",
+  "title_norm": "robust physics discovery from highly corrupted data a pinn framework applied to ",
+  "abstract": "We demonstrate a deep learning framework capable of recovering physical parameters from the Nonlinear Schrodinger Equation (NLSE) under severe noise conditions. By integrating Physics-Informed Neural Networks (PINNs) with automatic differentiation, we achieve reconstruction of the nonlinear coefficient beta with less than 0.2 percent relative error using only 500 sparse, randomly sampled data points corrupted by 20 percent additive Gaussian noise, a regime where traditional finite difference methods typically fail due to noise amplification in numerical derivatives. We validate the method's generalization capabilities across different physical regimes (beta between 0.5 and 2.0) and varying data availability (between 100 and 1000 training points), demonstrating consistent sub-1 percent accuracy. Statistical analysis over multiple independent runs confirms robustness (standard deviation less than 0.15 percent for beta equals 1.0). The complete pipeline executes in approximately 80 minutes on modest cloud GPU resources (NVIDIA Tesla T4), making the approach accessible for widespread adoption. Our results indicate that physics-based regularization acts as an effective filter against high measurement uncertainty, positioning PINNs as a viable alternative to traditional optimization methods for inverse problems in spatiotemporal dynamics where experimental data is scarce and noisy. All code is made publicly available to facilitate reproducibility.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Pietro de Oliveira Esteves"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2601.04176v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2601.04176v1",
+  "published_iso": "2026-01-07T18:43:11Z",
+  "from_query": [
+   "impact partitioned residual packet PINN",
+   "downstream error decomposed multiphysics PINN",
+   "local operator VO2 switching PINN",
+   "whole device protocol OOD PINN"
+  ]
+ },
+ {
+  "title": "Curriculum-Learned Vanishing Stacked Residual PINNs for Hyperbolic PDE State Reconstruction",
+  "title_norm": "curriculum learned vanishing stacked residual pinns for hyperbolic pde state rec",
+  "abstract": "Modeling distributed dynamical systems governed by hyperbolic partial differential equations (PDEs) remains challenging due to discontinuities and shocks that hinder the convergence of traditional physics-informed neural networks (PINNs). The recently proposed vanishing stacked residual PINN (VSR-PINN) embeds a vanishing-viscosity mechanism within stacked residual refinements to enable a smooth transition from the parabolic to hyperbolic regime. This paper integrates three curriculum-learning methods as primal-dual (PD) optimization, causality progression, and adaptive sampling into the VSR-PINN. The PD strategy balances physics and data losses, the causality scheme unlocks deeper stacks by respecting temporal and gradient evolution, and adaptive sampling targets high residuals. Numerical experiments on traffic reconstruction confirm that enforcing causality systematically reduces the median point-wise MSE and its variability across runs, yielding improvements of nearly one order of magnitude over non-causal training in both the baseline and PD variants.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Katayoun Eshkofti",
+   "Matthieu Barreau"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.06996v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.06996v1",
+  "published_iso": "2026-01-28T10:09:52Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "Physics-Informed Neural Networks for Device and Circuit Modeling: A Case Study of NeuroSPICE",
+  "title_norm": "physics informed neural networks for device and circuit modeling a case study of",
+  "abstract": "We present NeuroSPICE, a physics-informed neural network (PINN) framework for device and circuit simulation. Unlike conventional SPICE, which relies on time-discretized numerical solvers, NeuroSPICE leverages PINNs to solve circuit differential-algebraic equations (DAEs) by minimizing the residual of the equations through backpropagation. It models device and circuit waveforms using analytical equations in time domain with exact temporal derivatives. While PINNs do not outperform SPICE in speed or accuracy during training, they offer unique advantages such as surrogate models for design optimization and inverse problems. NeuroSPICE's flexibility enables the simulation of emerging devices, including highly nonlinear systems such as ferroelectric memories.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Chien-Ting Tung",
+   "Chenming Hu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.23624v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.23624v2",
+  "published_iso": "2025-12-29T17:28:35Z",
+  "from_query": [
+   "whole device protocol OOD PINN"
+  ]
+ },
+ {
+  "title": "Goal oriented error estimation for adaptive sampling of PINNS",
+  "title_norm": "goal oriented error estimation for adaptive sampling of pinns",
+  "abstract": "Physics-Informed Neural Networks (PINNs) are mesh-free approaches for the numerical approximation of partial differential equations, where a neural network is trained by minimizing a loss function derived from the governing equations and boundary conditions. The Deep Ritz method can be interpreted as a particular variational form of a PINN, where the loss corresponds to the minimization of an energy functional associated with a symmetric positive definite problem.\n  In this work, we study the approximation of the Laplace equation using both the classical PINN formulation and its variational counterpart, the Deep Ritz method, with the objective of accurately estimating prescribed goal functionals. When standard sampling strategies, such as uniform or loss-based sampling, are employed during training, the convergence of the functional error and the attained minimal functional value can be slow.\n  To address this issue, we introduce a functional-oriented importance sampling strategy that can be applied to both PINNs and the Deep Ritz method. The key ingredient is the construction of a reliable and accurate estimator for the error in a given quantity of interest. This estimator is derived using concepts from the Dual Weighted Residual (DWR) framework and is implemented entirely within the neural network setting. It is then used to adaptively guide the sampling of training points in the computational domain, focusing computational effort on regions that have the strongest influence on the functional value.\n  Numerical experiments demonstrate that the proposed adaptive sampling strategy significantly accelerates the convergence of the functional error and improves the minimization of the target functional during training for both PINN and Deep Ritz formulations.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Medard Govoeyi",
+   "Thomas Richter"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.01835v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.01835v1",
+  "published_iso": "2026-04-02T09:47:11Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "A Protocol-Language Model for Network Intrusion (Without Deep Packet Inspection)",
+  "title_norm": "a protocol language model for network intrusion without deep packet inspection",
+  "abstract": "Modern network intrusion detection systems (NIDS) are caught in a structural contradiction: the protocols carrying the highest threat intelligence are precisely those encrypted under TLS 1.3 and QUIC, where payload inspection yields nothing. We ask a simpler question -- what if the attack signature is not in the bytes, but in the rhythm? -- and answer it by treating network flows as a language whose grammar is written entirely in L3/L4 packet metadata: length, inter-arrival time, TTL, TCP flags, and hashed port numbers. We present PLM-NIDS, which proves three claims in sequence. (1) The grammar exists and is learnable: a RWKV-4 state-space model trained on 344,232 unlabelled Monday flows achieves a causal LM validation loss of 0.204, demonstrating that benign traffic has predictable, statistically consistent structure. (2) Attacks violate this grammar: the per-flow perplexity score cleanly separates benign from attack flows with PR-AUC = 0.93 using zero attack labels at training time. (3) This separation is architecturally nontrivial: an LSTM trained on identical token sequences degenerates to a majority-class predictor (ROC-AUC approximately 0.50, F1 = 0.91 by always predicting \"attack\"), proving that RWKV's causal pre-training provides an inductive bias unavailable to direct classifiers. Supervised fine-tuning further raises PR-AUC to 0.94 and ROC-AUC to 0.75, with a precision of 97.7% at the calibrated operating threshold. The RWKV backbone's O(T) recurrent inference enables per-packet streaming without flow buffering, making PLM-NIDS operationally viable at line rate. Because it reads only IP/TCP/UDP headers, it is inherently encryption-agnostic: TLS 1.3, QUIC, and future encrypted protocols are handled transparently.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Vivek Kumar Sharma"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.00155v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.00155v1",
+  "published_iso": "2026-05-29T07:03:11Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "Building Trust in PINNs: Error Estimation through Finite Difference Methods",
+  "title_norm": "building trust in pinns error estimation through finite difference methods",
+  "abstract": "Physics-informed neural networks (PINNs) constitute a flexible deep learning approach for solving partial differential equations (PDEs), which model phenomena ranging from heat conduction to quantum mechanical systems. Despite their flexibility, PINNs offer limited insight into how their predictions deviate from the true solution, hindering trust in their prediction quality. We propose a lightweight post-hoc method that addresses this gap by producing pointwise error estimates for PINN predictions, which offer a natural form of explanation for such models, identifying not just whether a prediction is wrong, but where and by how much. For linear partial differential equations, the error between a PINN approximation and the true solution satisfies the same differential operator as the original problem, but driven by the PINN's PDE residual as its source term. We solve this error equation numerically using finite difference methods requiring no knowledge of the true solution. Evaluated on several benchmark PDEs, our method yields accurate error maps at low computational cost, enabling targeted and interpretable validation of PINNs.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Aleksander Krasowski",
+   "René P. Klausen",
+   "Aycan Celik",
+   "Sebastian Lapuschkin",
+   "Wojciech Samek",
+   "Jonas Naujoks"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.15526v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.15526v1",
+  "published_iso": "2026-03-16T16:51:42Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "Auxiliary Finite-Difference Residual-Gradient Regularization for PINNs",
+  "title_norm": "auxiliary finite difference residual gradient regularization for pinns",
+  "abstract": "Physics-informed neural networks (PINNs) are often selected by a single scalar loss even when the quantity of interest is more specific. We study a hybrid design in which the governing PDE residual remains automatic-differentiation (AD) based, while finite differences (FD) appear only in a weak auxiliary term that penalizes gradients of the sampled residual field. The FD term regularizes the residual field without replacing the PDE residual itself.\n  We examine this idea in two stages. Stage 1 is a controlled Poisson benchmark comparing a baseline PINN, the FD residual-gradient regularizer, and a matched AD residual-gradient baseline. Stage 2 transfers the same logic to a three-dimensional annular heat-conduction benchmark (PINN3D), where baseline errors concentrate near a wavy outer wall and the auxiliary grid is implemented as a body-fitted shell adjacent to the wall.\n  In Stage 1, the FD regularizer reproduces the main effect of residual-gradient control while exposing a trade-off between field accuracy and residual cleanliness. In Stage 2, the shell regularizer improves the application-facing quantities, namely outer-wall flux and boundary-condition behavior. Across seeds 0-5 and 100k epochs, the most reliable tested configuration is a fixed shell weight of 5e-4 under the Kourkoutas-beta optimizer regime: relative to a matched run without the shell term, it reduces the mean outer-wall BC RMSE from 1.22e-2 to 9.29e-4 and the mean wall-flux RMSE from 9.21e-3 to 9.63e-4. Adam with beta2=0.999 becomes usable when the initial learning rate is reduced to 1e-3, although its shell benefit is less robust than under Kourkoutas-beta. Overall, the results support a targeted view of hybrid PINNs: an auxiliary-only FD regularizer is most valuable when it is aligned with the physical quantity of interest, here the outer-wall flux.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Stavros Kassinos"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.14472v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.14472v1",
+  "published_iso": "2026-04-15T23:09:19Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
+  "title_norm": "whole world grounded hand object lifted from egocentric videos",
+  "abstract": "Egocentric manipulation videos are highly challenging due to severe occlusions during interactions and frequent object entries and exits from the camera view as the person moves. Current methods typically focus on recovering either hand or object pose in isolation, but both struggle during interactions and fail to handle out-of-sight cases. Moreover, their independent predictions often lead to inconsistent hand-object relations. We introduce WHOLE, a method that holistically reconstructs hand and object motion in world space from egocentric videos given object templates. Our key insight is to learn a generative prior over hand-object motion to jointly reason about their interactions. At test time, the pretrained prior is guided to generate trajectories that conform to the video observations. This joint generative reconstruction substantially outperforms approaches that process hands and objects separately followed by post-processing. WHOLE achieves state-of-the-art performance on hand motion estimation, 6D object pose estimation, and their relative interaction reconstruction. Project website: https://judyye.github.io/whole-www",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yufei Ye",
+   "Jiaman Li",
+   "Ryan Rong",
+   "C. Karen Liu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.22209v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.22209v1",
+  "published_iso": "2026-02-25T18:59:10Z",
+  "from_query": [
+   "whole device protocol OOD PINN"
+  ]
+ },
+ {
+  "title": "Reliable Error Estimation for PINNs: Lower and Upper A Posteriori Bounds",
+  "title_norm": "reliable error estimation for pinns lower and upper a posteriori bounds",
+  "abstract": "Physics-informed neural networks (PINNs) combine machine learning with physical laws to solve differential equations. While existing results provide rigorous \\emph{a posteriori} upper bounds for PINN prediction errors, complete certification also requires complementary lower information in order to obtain computable two-sided error enclosures. In this paper, we derive computable \\emph{a posteriori} lower bounds for PINN errors in ordinary differential equations on suitable certified state-space domains under a localized strong monotonicity condition. We combine these estimates with complementary localized upper bounds under a one-sided Lipschitz condition, which is weaker than the global Lipschitz assumption used in previous work and can yield sharper upper error bands. The resulting bounds depend only on the neural-network approximation, the ODE residual, and local monotonicity and growth constants, and therefore do not require access to the exact solution. For linear time-invariant and time-varying systems, we further derive explicit formulas in terms of the minimal and maximal eigenvalues of the symmetric part of the system matrix. We also discuss the distinction between soft and hard enforcement of initial conditions in PINNs and explain why exact enforcement can make the scalar lower certificate uninformative. To recover nontrivial lower information in the linear setting, we use a signed-residual finite-probe certificate based on coordinate unit vectors. We also formulate a certificate-informed training strategy in which the propagated upper certificate is used as an auxiliary regularizer, while lower certificates remain post-training diagnostics. Altogether, the proposed framework provides rigorous and practically computable error certificates for PINN approximations of ODEs, while making explicit the domains and model classes for which the assumptions can be verified.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Ismail Huseynov",
+   "Arzu Ahmadova",
+   "Agamirza Bashirov"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.12050v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.12050v1",
+  "published_iso": "2026-06-10T13:15:32Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "Residual Stream Duality in Modern Transformer Architectures",
+  "title_norm": "residual stream duality in modern transformer architectures",
+  "abstract": "Recent work has made clear that the residual pathway is not mere optimization plumbing; it is part of the model's representational machinery. We agree, but argue that the cleanest way to organize this design space is through a two-axis view of the Transformer. A decoder evolves information along two ordered dimensions: sequence position and layer depth. Self-attention already provides adaptive mixing along the sequence axis, whereas the residual stream usually performs fixed addition along the depth axis. If we fix a token position and treat layer index as the ordered variable, then a causal depth-wise residual attention read is exactly the same local operator as causal short sliding-window attention (ShortSWA), except written over depth rather than over sequence. This is the core residual stream duality behind Transformer$^2$. This perspective also clarifies the recent literature. ELC-BERT and DenseFormer already show that learned aggregation over depth can outperform uniform residual accumulation, while Vertical Attention, DeepCrossAttention (DCA), MUDDFormer, and Attention Residuals move further toward explicit attention-based routing over earlier layers. The key point, however, is that operator-level duality does not imply systems-level symmetry. For large-scale autoregressive models, sequence-axis ShortSWA is usually the more hardware-friendly placement because it reuses token-side sliding-window kernels, KV-cache layouts, and chunked execution. If the goal is instead to change the shortcut itself, Deep Delta Learning (DDL) is the cleaner intervention because it modifies the residual operator directly rather than adding a separate cross-layer retrieval path. Our recommendation is therefore simple: use DDL when the shortcut is the object of interest, and use sequence-axis ShortSWA when the goal is local adaptive mixing.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yifan Zhang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.16039v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.16039v2",
+  "published_iso": "2026-03-17T00:56:29Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "Finite key analysis of experimentally realized practical COW-QKD protocol",
+  "title_norm": "finite key analysis of experimentally realized practical cow qkd protocol",
+  "abstract": "An experimental implementation of the Coherent One-Way Quantum Key Distribution (COW-QKD) protocol is reported under realistic conditions, and a clean and easy-to-use framework for performing finite key analysis of the COW-QKD protocol is provided by extending a set of existing results. The framework provided here is used to perform finite key rate analysis of the COW-QKD protocol with respect to the actual parameters used in the experimental realization reported here. The system is kept running for several hours with different experimental parameters and stable secure key rates between 1.2 to 1.6 kbps are observed. In addition, QBER, phase error rate and secure key rate are obtained under finite key analysis, and it is shown that COW-QKD is secure for medium-range transmissions (up-to ~ 156 (171) km of optical fiber with 0.2 dB loss per km if detector efficiency is 0.1 (0.2) and other parameters are same as those used in this experiment).",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Neha Pathania",
+   "Sandeep Mishra",
+   "Anirban Pathak"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.22646v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.22646v1",
+  "published_iso": "2026-02-26T05:57:24Z",
+  "from_query": [
+   "whole device protocol OOD PINN"
+  ]
+ },
+ {
+  "title": "Optimal $L^2$-norm error estimate of multiphysics finite element method for poroelasticity model and simulating brain edema",
+  "title_norm": "optimal l 2 norm error estimate of multiphysics finite element method for poroel",
+  "abstract": "In this paper, we derive an optimal $L^2$-norm error estimate of the multiphysics finite element method for the poroelasticity model by introducing an auxiliary problem. We show some numerical tests to verify the theoretical result and apply the multiphysics finite element method to simulate the brain edema which caused by abnormal accumulation of cerebrospinal fluid in injured areas. And we investigate the effects of the key physical parameters on brain edema and observed that the permeability $K$ has the biggest influence on intracranial pressure and tissue deformation, Young's modulus $E$ and Poisson ratio $ν$ have little effect on the maximum value of intracranial pressure, but have great effect on the tissue deformation and the developing speed of brain edema.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Zhihao Ge",
+   "Yanan He",
+   "Yajie Yang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.19854v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.19854v1",
+  "published_iso": "2026-02-23T13:54:53Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "Towards Autonomous Driving with Short-Packet Rate Splitting: Age of Information Analysis and Optimization",
+  "title_norm": "towards autonomous driving with short packet rate splitting age of information a",
+  "abstract": "To address the high mobility impacts and the ultra-reliable and low-latency communication (URLLC) requirements in autonomous driving scenarios, rate-splitting multiple access (RSMA) combined with short-packet communication (SPC) emerges as a promising solution.Autonomous vehicles rely on real-time information exchange to ensure safety and coordination, making information freshness essential.By jointly capturing transmission delays and packet errors, age of information (AoI) serves as a comprehensive metric for freshness.In this paper, we investigate short-packet rate splitting to enhance information freshness measured by the AoI.By splitting the unicast messages into common and private parts, encoding all common parts together with the multicast message into a common stream, and encoding each private part into a private stream, RSMA effectively manages interference and enables achieving lower AoI.By considering critical factors such as transmit power, vehicle velocity, blocklength, and the number of transmit antennas, we derive closed-form expressions for the average AoI (AAoI) of the common stream under partial decoding and the overall AAoI under complete decoding.To enhance the AAoI performance, we propose the multi-start two-step successive convex approximation (SCA) algorithm.This algorithm first optimizes the power allocation and subsequently optimizes the rate splitting under the quality of service (QoS) trade-off constraint.Simulation results demonstrate that our short-packet rate-splitting scheme significantly improves the AAoI performance while ensuring system fairness and enabling ultra-low AAoI through the common stream, meeting the requirements of autonomous driving applications.Moreover, the trade-off between the common and overall performance is revealed, indicating that the overall performance can be further enhanced while maintaining the advantages of the common stream.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Zirui Zheng",
+   "Yingyang Chen",
+   "Xinyue Pei",
+   "Xingwei Wang",
+   "Zhiquan Liu",
+   "Theodoros A. Tsiftsis",
+   "Miaowen Wen",
+   "Pingzhi Fan"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.13691v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.13691v1",
+  "published_iso": "2026-04-15T10:12:35Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "AWCP: A Workspace Delegation Protocol for Deep-Engagement Collaboration across Remote Agents",
+  "title_norm": "awcp a workspace delegation protocol for deep engagement collaboration across re",
+  "abstract": "The rapid evolution of Large Language Model (LLM)-based autonomous agents is reshaping the digital landscape toward an emerging Agentic Web, where increasingly specialized agents must collaborate to accomplish complex tasks. However, existing collaboration paradigms are constrained to message passing, leaving execution environments as isolated silos. This creates a context gap: agents cannot directly manipulate files or invoke tools in a peer's environment, and must instead resort to costly, error-prone environment reconstruction. We introduce the Agent Workspace Collaboration Protocol (AWCP), which bridges this gap through temporary workspace delegation inspired by the Unix philosophy that everything is a file. AWCP decouples a lightweight control plane from pluggable transport mechanisms, allowing a Delegator to project its workspace to a remote Executor, who then operates on the shared files directly with unmodified local toolchains. We provide a fully open-source reference implementation with MCP tool integration and validate the protocol through live demonstrations of asymmetric collaboration, where agents with complementary capabilities cooperate through delegated workspaces. By establishing the missing workspace layer in the agentic protocol stack, AWCP paves the way for a universally interoperable agent ecosystem in which collaboration transcends message boundaries. The protocol and reference implementation are publicly available at https://github.com/SII-Holos/awcp.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Xiaohang Nie",
+   "Zihan Guo",
+   "Youliang Chen",
+   "Yuanjian Zhou",
+   "Weinan Zhang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.20493v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.20493v1",
+  "published_iso": "2026-02-24T02:49:08Z",
+  "from_query": [
+   "whole device protocol OOD PINN"
+  ]
+ },
+ {
+  "title": "Optimal Error Estimates of a new Multiphysic Finite Element Method for Nonlinear Poroelasticity model with Hencky-Mises Stress Tensor",
+  "title_norm": "optimal error estimates of a new multiphysic finite element method for nonlinear",
+  "abstract": "In this paper, we develop a new multiphysics finite element method for a nonlinear poroelastic model with Hencky-Mises stress tensor. By introducing some new notations, we reformulate the original model into a fluid-fluid coupling problem, which is viewed as a generalized nonlinear Stokes sub-problem combined with a reaction-diffusion sub-problem. Then, we establish the existence and uniqueness of the weak solution for the reformulated problem, and propose a stable, fully discrete multiphysics finite element method which employs Lagrangian finite element pairs for spatial discretization and a backward Euler scheme for temporal discretization. By ensuring the parameters $κ_1$ and $κ_3$ remain bounded and non-zero even as $λ$ tends to infinity, the proposed method maintains stability for a wide range of Lagrangian element pairs. Based on the continuity and monotonicity of the nonlinear term $\\mathcal{N}(\\varepsilon(\\mathbf{u}_h^{n}))$, we give the stability analysis and derive optimal error estimates for the displacement vector $\\mathbf{u}$ and the pressure $p$ in both $L^2$-norm and $H^1$-norm. In particular, the $L^2$-norm error estimate for the displacement $\\mathbf{u}$, which was not present in previous literature, is established here through an auxiliary problem and a Poincar$\\acute{e}$ inequality. Also, we present numerical tests to verify the theoretical analysis, and the results confirm the optimal convergence rates. Finally, we draw conclusions to summarize the work.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yanan He",
+   "Zhihao Ge"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.19457v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.19457v1",
+  "published_iso": "2026-02-23T02:58:23Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "FFV-PINN: A Fast Physics-Informed Neural Network with Simplified Finite Volume Discretization and Residual Correction",
+  "title_norm": "ffv pinn a fast physics informed neural network with simplified finite volume di",
+  "abstract": "Physics-informed neural networks (PINNs) have emerged as a major research focus. However, today's PINNs encounter several limitations. Firstly, during the construction of the loss function using automatic differentiation, PINNs often neglect information from neighboring points, which hinders their ability to enforce physical constraints and diminishes their accuracy. Furthermore, issues such as instability and poor convergence persist during PINN training, limiting their applicability to complex fluid dynamics problems. To address these challenges, a fast physics-informed neural network framework that integrates a simplified finite volume method (FVM) and residual correction loss term has been proposed, referred to as Fast Finite Volume PINN (FFV-PINN). FFV-PINN utilizes a simplified FVM discretization for the convection term, with an accompanying improvement in the dispersion and dissipation behavior. Unlike traditional FVM, the FFV-PINN outputs can be simply and directly harnessed to approximate values on control surfaces, thereby simplifying the discretization process. Moreover, a residual correction loss term is introduced to significantly accelerates convergence and improves training efficiency. To validate the performance, we solve a series of challenging problems -- including flow in the two-dimensional steady and unsteady lid-driven cavity, three-dimensional steady lid-driven cavity, backward-facing step flows, and natural convection at high Reynolds number and Rayleigh number. Notably, the FFV-PINN can achieve data-free solutions for the lid-driven cavity flow at Re = 10000 and natural convection at Ra = 1e8 for the first time in PINN literature, even while requiring only 680s and 231s. It further highlights the effectiveness of FFV-PINN in improving both speed and accuracy, marking another step forward in the progression of PINNs as competitive neural PDE solvers.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Chang Wei",
+   "Yuchen Fan",
+   "Jian Cheng Wong",
+   "Chin Chun Ooi",
+   "Heyang Wang",
+   "Pao-Hsiung Chiu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.24114v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.24114v1",
+  "published_iso": "2026-03-25T09:22:30Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "Review the Code, Not the Story: A Vision and Protocol for Code-First Peer Review",
+  "title_norm": "review the code not the story a vision and protocol for code first peer review",
+  "abstract": "Peer review in computational fields remains centered on author-written manuscripts, even though the decisive evidence for many claims resides in executable code, data, configurations, and experiment pipelines. This manuscript-first workflow gives authors substantial control over narrative framing while leaving reviewers with limited time to inspect implementation details, reproduce results, or detect unsupported claims. This vision and protocol paper proposes code-first peer review: authors submit executable research artifacts and minimal claim manifests; a venue-controlled AI system builds the environment, executes experiments, audits code paths, maps claims to evidence, and generates a standardized Review Package for human reviewers. The goal is not to replace reviewers or to give authors an automatic writing assistant. Instead, AI serves as review infrastructure that shifts the target of peer review from polished narratives to executable evidence. We formalize a claim-evidence contract, define the Generated Review View and Review Package abstractions, give a worked example, outline a system architecture, and analyze evaluation and governance challenges including AI bias, prompt injection, model instability, auditability, and author appeal.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Jienan Chen"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.07683v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.07683v1",
+  "published_iso": "2026-06-05T01:26:07Z",
+  "from_query": [
+   "whole device protocol OOD PINN"
+  ]
+ },
+ {
+  "title": "Residual Attention Physics-Informed Neural Networks for Robust Multiphysics Simulation of Steady-State Electrothermal Energy Systems",
+  "title_norm": "residual attention physics informed neural networks for robust multiphysics simu",
+  "abstract": "Efficient thermal management and precise field prediction are critical for the design of advanced energy systems, including electrohydrodynamic transport, microfluidic energy harvesters, and electrically driven thermal regulators. However, the steady-state simulation of these electrothermal coupled multiphysics systems remains challenging for physics-informed neural computation due to strong nonlinear field coupling, temperature-dependent coefficient variability, and complex interface dynamics. This study proposes a Residual Attention Physics-Informed Neural Network (RA-PINN) framework for the unified solution of coupled velocity, pressure, electric-potential, and temperature fields. By integrating a unified five-field operator formulation with residual-connected feature propagation and attention-guided channel modulation, the proposed architecture effectively captures localized coupling structures and steep gradients. We evaluate RA-PINN across four representative energy-relevant benchmarks: constant-coefficient coupling, indirect pressure-gauge constraints, temperature-dependent transport, and oblique-interface consistency. Comparative analysis against Pure-MLP, LSTM-PINN, and pLSTM-PINN demonstrates that RA-PINN achieves superior accuracy, yielding the lowest MSE, RMSE, and relative $L_2$ errors across all scenarios. Notably, RA-PINN maintains high structural fidelity in interface-dominated and variable-coefficient settings where conventional PINN backbones often fail. These results establish RA-PINN as a robust and accurate computational framework for the high-fidelity modeling and optimization of complex electrothermal multiphysics in sustainable energy applications.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yuqing Zhou",
+   "Ze Tao",
+   "Fujun Liu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.23578v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.23578v1",
+  "published_iso": "2026-03-24T13:44:46Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "Feature Partitioning and Semantic Equalization for Intrinsic Robustness in Semantic Communication under Packet Loss",
+  "title_norm": "feature partitioning and semantic equalization for intrinsic robustness in seman",
+  "abstract": "Semantic communication can improve transmission efficiency by focusing on task-relevant information. However, under packet-based communication protocols, any error typically results in the loss of an entire packet, making semantic communication particularly vulnerable to packet loss. Since high-dimensional semantic features must be partitioned into one-dimensional transmission units during packetization. A critical open question is how to partition semantic features to maximize robustness. To address this, we systematically investigate the performance of two mainstream architectures, Transformer and Convolutional neural networks (CNN), under various feature partitioning schemes. The results show that the Transformer architecture exhibits inherent robustness to packet loss when partitioned along the channel dimension. In contrast, the CNN-based baseline exhibits imbalanced channel utilization, causing severe degradation once dominant channels are lost. To enhance the CNN resilience, we propose a lightweight Semantic Equalization Mechanism (SEM) that balances channel contributions and prevents a few channels from dominating. SEM consists of two parallel approaches: a Dynamic Scale module that adaptively adjusts channel importance, and a Broadcast module that facilitates information interaction among channels. Experimental results demonstrate that CNN equipped with SEM achieve graceful degradation under packet loss (retaining about 85% of lossless PSNR at 40% packet loss), comparable to that of Transformer models. Our findings indicate that, under an appropriate partitioning strategy, maintaining a balanced semantic representation is a fundamental condition for achieving intrinsic robustness against packet loss. These insights may also extend to other modalities such as video and support practical semantic communication design.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Xiao Yang",
+   "Shuai Ma",
+   "Yong Liang",
+   "Guangming Shi"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2511.16983v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2511.16983v1",
+  "published_iso": "2025-11-21T06:30:59Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "Comparison of Trefftz-Based PINNs and Standard PINNs Focusing on Structure Preservation",
+  "title_norm": "comparison of trefftz based pinns and standard pinns focusing on structure prese",
+  "abstract": "In this study, we investigate the capability of physics-informed neural networks (PINNs) to preserve global physical structures by comparing standard PINNs with a Trefftz-based PINN (Trefftz-PINN). The target problem is the reproduction of mag-netic field-line structures in a helical fusion reactor configuration. Using identical training data sampled from exact solutions, we perform comparisons under matched mean squared error (MSE) levels. Visualization of magnetic field lines reveals that standard PINNs may exhibit structural collapse across magnetic surfaces even when the MSE is sufficiently small, whereas Trefftz-PINNs successfully preserve the global topology of magnetic field lines. Furthermore, the proposed framework is extended to computational fluid dynamics (CFD) problems, where streamline structures of veloc-ity fields are analyzed. Similar tendencies are observed, demonstrating that Trefftz-PINNs provide superior structure preservation compared to standard PINNs. These results indicate that minimizing numerical error alone does not guarantee physical consistency, and that constraining the solution space prior to learning is an effective strategy for physics-consistent surrogate modeling.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Koji Koyamada"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.02779v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.02779v3",
+  "published_iso": "2026-02-02T20:34:51Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "Foresight Residual RL for Long-Horizon Robot Manipulation with Vision-Language-Action Models",
+  "title_norm": "foresight residual rl for long horizon robot manipulation with vision language a",
+  "abstract": "Vision-Language-Action (VLA) policies offer strong general-purpose manipulation priors, but often fail on tight-tolerance, contact-rich assembly due to long-horizon credit assignment and subtask coupling: a state that is geometrically successful for the current skill can be brittle for downstream skills. We show this failure mode in residual reinforcement learning (RL) over a frozen VLA base policy: constant sparse success rewards improve each subtask in isolation yet yield little or no gain when skills are chained, because terminal state quality is uncontrolled. We propose Foresight Residual RL, which optimizes handoff quality by augmenting each subtask's sparse success reward with an offline-estimated foresight value -- the probability of future subtask success conditioned on the terminal state of the current subtask. Concretely, we (i) train a visual foresight predictor from images of terminal states of the base policy, labeled using downstream rollout statistics, and (ii) train residual policies via backward foresight induction, using the predictor output as a reward multiplier. On a three-phase wrench-based nut-tightening assembly task in Isaac Gym (grasp, move-insert, rotate), our method achieves 85.6% full-task success, outperforming standard subtask residual RL (54.5%) and VLA baselines, while leaving per-subtask success unchanged. These results highlight that improving long-horizon performance requires shaping which successful states are produced at each sub-task, not only whether success occurs.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yuhan Liu",
+   "Xinyu Zhang",
+   "Litao Liu",
+   "Abdeslam Boularias"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.16506v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.16506v1",
+  "published_iso": "2026-07-17T21:00:28Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "A Unified Pore-Scale Multiphysics Model for the Integrated Soot Transport-Deposition-Oxidation in Catalytic Diesel Particulate Filters",
+  "title_norm": "a unified pore scale multiphysics model for the integrated soot transport deposi",
+  "abstract": "Understanding the intricate interplay between soot dynamics and chemical reactions within catalytic diesel particulate filters (CDPF) is crucial for enhancing both filtration efficiency and regeneration performance. In this paper, we establish a unified pore-scale multiphysics model based on the Eulerian-Lagrangian framework to comprehensively resolve the transport, deposition, and oxidation of soot. Distinguishing itself from conventional empirical correlations and stochastic-based approximations, the system models soot deposition through fundamental physical principles, integrating elastic deformation and surface adhesion mechanics at the particle-wall interface. Simultaneously, it incorporates a robust oxidation model that accounts for the competitive kinetics of both $\\textrm{O}_2$ and $\\textrm{NO}_2$ pathways, enabling comprehensive coverage of all CDPF operating regimes. Validated against three classical benchmark cases, the model demonstrates superior accuracy in capturing interfacial mass transfer and particle-wall interactions. Simulation under a typical CDPF low-temperature operating condition emphasizes the pivotal role of $\\textrm{NO}_2$ and catalyst in promoting regeneration and reveals complex synergistic and competitive effects between distinct reaction pathways. Notably, the reaction rate of direct $\\textrm{O}_2$ pathway is accelerated by a factor of 87 in the presence of the catalyst. For ultra-fine soot particles ($50~\\mathrm{nm}$), the Brownian motion and thermophoretic forces directly dictate the deposition efficiency. Their strong thermal sensitivity also underscores the necessity for an integrated soot transport-deposition-oxidation framework. To support further research, the model implementation can be accessed at https://github.com/zhangyujing2001.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Yujing Zhang",
+   "Yunhua Zhang",
+   "Liang Fang",
+   "Diming Lou",
+   "Piqiang Tan",
+   "Zhiyuan Hu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.22230v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.22230v2",
+  "published_iso": "2025-12-23T05:19:24Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "Residual subspace evolution strategies for nonlinear inverse problems",
+  "title_norm": "residual subspace evolution strategies for nonlinear inverse problems",
+  "abstract": "Nonlinear inverse problems pervade engineering and science, yet noisy, non-differentiable, or expensive residual evaluations routinely defeat Jacobian-based solvers. Derivative-free alternatives either demand smoothness, require large populations to stabilise covariance estimates, or stall on flat regions where gradient information fades. This paper introduces residual subspace evolution strategies (RSES), a derivative-free solver that draws Gaussian probes around the current iterate, records how residuals change along those directions, and recombines the probes through a least-squares solve to produce an optimal update. The method builds a residual-only surrogate without forming Jacobians or empirical covariances, and each iteration costs just $k+1$ residual evaluations with $O(k^3)$ linear algebra overhead, where $k$ remains far smaller than the parameter dimension. Benchmarks on calibration, regression, and deconvolution tasks show that RSES reduces misfit consistently across deterministic and stochastic settings, matching or exceeding xNES, NEWUOA, Adam, and ensemble Kalman inversion under matched evaluation budgets. The gains are most pronounced when smoothness or covariance assumptions break, suggesting that lightweight residual-difference surrogates can reliably guide descent where heavier machinery struggles.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Francesco Alemanno"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.10325v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.10325v2",
+  "published_iso": "2025-12-11T06:20:13Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "A Physics-Informed Neural Network Approach to Multiphysics Continuum Modeling of Cancer Growth via Chemo-fluid Coupling",
+  "title_norm": "a physics informed neural network approach to multiphysics continuum modeling of",
+  "abstract": "Tumor progression is an inherently multiphysical phenomenon in which interstitial fluid dynamics, biochemical transport, and cellular mechanics interact across multiple spatiotemporal scales. Classical mesh-based solvers, although accurate, impose prohibitive computational costs for the repeated evaluations demanded by inverse parameter identification and future patient-specific predictive pipelines. In this work we introduce a Physics-Informed Neural Network (PINN) framework for a tractable chemo-fluidic continuum model of tumor growth that couples an advection-diffusion-reaction (ADR) equation for the tumor volume fraction with a quasi-static Darcy pressure equation for the interstitial fluid pressure. By intentionally decoupling the solid-mechanical equilibrium, we obtain a three-equation system whose gradient structure is stable under automatic differentiation, enabling robust deep-learning optimization. The network simultaneously learns both state variables from physics constraints alone (forward problem) and recovers hidden transport parameters from sparse, noisy synthetic measurements (Data-Assimilation PINN, DA-PINN, inverse problem). We verify the forward solver against a high-resolution finite-difference (FD) reference, achieving a mean absolute error below 0.002. For the inverse problem, starting from an initial permeability estimate of 0.08 (a factor of 4x above the true value of 0.02) with only 5% spatially sparse observations corrupted by 5% Gaussian noise, the DA-PINN recovers the permeability with a relative error below 5%. These results demonstrate that physics-informed deep learning constitutes a viable, computationally efficient route to multiphysics oncology modeling and lays the mathematical groundwork for future integration into clinical data assimilation pipelines.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Celia Taboada",
+   "Pedro Navas",
+   "Miguel Molinos"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2608.10014v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2608.10014v1",
+  "published_iso": "2026-08-08T11:17:43Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "Residual Symmetries and Their Algebras in the Kerr-Schild Double Copy",
+  "title_norm": "residual symmetries and their algebras in the kerr schild double copy",
+  "abstract": "The Kerr-Schild double copy (KSDC) is well-known for relating exact classical solutions between Yang-Mills theory and theories of gravity. However, whether this correspondence provides a more fundamental mapping between the underlying symmetries of gauge theory and gravity remains an underdeveloped area of research in the contemporary double copy program. In this paper, we demonstrate that the KSDC correspondence does not provide a mapping between the residual symmetry structures of the Kerr-Schild ansatz in Yang-Mills theory and gravity. On the gauge theory side, residual symmetries form an infinite-dimensional algebra of functions along null directions. On the gravitational side, residual diffeomorphisms preserving the Kerr-Schild form of the Schwarzschild metric generate a conformal algebra on $S^2$, which decomposes into Killing vectors and proper conformal Killing vectors (CKVs). While the Killing sector reproduces the expected global isometries, the CKV sector yields an infinite-dimensional algebra after imposing asymptotic flatness and horizon regularity. This appears to contradict the fact that the Schwarzschild solution admits no proper conformal symmetries. We resolve this apparent contradiction by constructing a Weyl-compensated BRST complex, showing that the CKV sector is BRST-exact and therefore trivial in cohomology, so that the physical symmetry algebra reduces to the global isometries of Schwarzschild. This demonstrates that the KSDC introduces an enlarged symmetry structure at the level of the ansatz, but preserves physical symmetries after a cohomological reduction, revealing a fundamental mismatch between Yang-Mills and gravity at the level of residual symmetries.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "B. P. Holton"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.05262v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.05262v2",
+  "published_iso": "2026-04-06T23:54:45Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ },
+ {
+  "title": "Coupling-Robust Accuracy in Multiphysics Physics Informed Neural Networks via Kronecker-Preconditioned Optimization",
+  "title_norm": "coupling robust accuracy in multiphysics physics informed neural networks via kr",
+  "abstract": "Physics-informed neural networks (PINNs) offer a mesh-free route to solving coupled multiphysics systems, but their accuracy degrades systematically as inter-equation coupling strengthens, and inverse-gradient-norm loss balancing alone does not reliably prevent this failure. This study explains why coupling degrades PINN training and identifies an optimizer structure that removes the dependence, replacing case-by-case tuning with a principled remedy. Through a neural tangent kernel analysis, we prove that the standard kernel's spectral radius grows as $Ω(γ^2)$ with coupling strength $γ$, whereas block-diagonal Gauss-Newton (GN) preconditioning bounds it by the number of networks $S$, independent of $γ$; no diagonal preconditioner recovers this bound for any coupling type or loss weighting. We realize block-diagonal GN preconditioning through the Kronecker-preconditioned optimizer SOAP combined with inverse-gradient-norm loss balancing (SOAP+GradNorm) and evaluate it across 222 experiments on four benchmarks of increasing difficulty. Across all systems, SOAP+GradNorm is the only configuration whose degradation remains bounded in every regime tested: it preserves weak-coupling accuracy in linear problems and limits degradation to $2.3\\times$ in the nonlinear Nernst-Planck-Poisson system, whereas Adam-based training leaves the $L_2$ error above the 0.1 failure threshold. The same effect applies to a six-residual, four-network, 2D electro-osmotic flow where the electric double layer is resolved down to a Debye length of $\\varepsilon = 0.01$ on an $x$-invariant reference solution. These results recast coupling-induced accuracy loss as a problem of the preconditioner's structure rather than loss weighting and identify Kronecker preconditioning as a structural lever for training PINNs on strongly coupled, stiff multiphysics systems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Youngjae Park",
+   "Jaemin Kim",
+   "Junghwa Hong"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.23391v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.23391v3",
+  "published_iso": "2026-05-22T09:01:31Z",
+  "from_query": [
+   "downstream error decomposed multiphysics PINN"
+  ]
+ },
+ {
+  "title": "A guided residual search for nonlinear state-space identification",
+  "title_norm": "a guided residual search for nonlinear state space identification",
+  "abstract": "Identifying the parameters of nonlinear state-space models from input-output data typically requires solving a highly non-convex optimization problem, which is prone to slow convergence and suboptimal local solutions. This work improves the reliability and efficiency of the estimation process by decomposing the overall optimization problem into a sequence of tractable subproblems. Starting from a linear baseline model, nonlinear residual dynamics are first estimated using a guided residual search (GRS) and subsequently refined through multiple-shooting optimization. Experiments on two benchmarks show competitive performance with state-of-the-art black-box methods and improved convergence over naive initialization.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Merijn Floren",
+   "Jan Swevers"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.22964v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.22964v2",
+  "published_iso": "2026-02-26T13:01:42Z",
+  "from_query": [
+   "impact partitioned residual packet PINN"
+  ]
+ }
+]

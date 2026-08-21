@@ -1,0 +1,56 @@
+{
+  "actual_budget": {
+    "case_artifacts": 1,
+    "model_updates": 0,
+    "wall_seconds": 0.11000000000058208
+  },
+  "artifacts": {
+    "intent": "docs\\experiment\\intents\\20260821T030033Z-pilot-g5-qpop-signal-001.json",
+    "report": "outputs\\runs\\20260821T030033Z-pilot-g5-qpop-signal-001\\signal_audit.json",
+    "source_case": "outputs\\runs\\20260821T025742Z-smoke-g3-qpop-reference-import-001\\case.h5"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-osc-bundled-reference-through-512.0793ns",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_AUDIT"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_UNQUALIFIED_ORACLE",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.qpop_signal_audit"
+  ],
+  "ended_at": "2026-08-21T03:00:42.410040Z",
+  "environment": {
+    "device": "cpu",
+    "python": "3.11.9"
+  },
+  "evaluator_id": "frozen-project-qpop-signal-audit-v1",
+  "evidence_identity": "QPOP_CPC_V1_BUNDLED_REFERENCE_UNQUALIFIED",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "g5-qpop-development-signal-audit-v1",
+  "failure_class": null,
+  "gate": "G5",
+  "gate_outcome": "DEVELOPMENT_CLOCK_SIGNAL_PRESENT",
+  "method_id": "qpop-structural-signal-audit-v1",
+  "numerical_validity": "VALID_DEVELOPMENT_DIAGNOSTIC",
+  "physical_contract_id": "PROVISIONAL_G3_QPOP_CPC_V1_IMT_CONTRACT",
+  "planned_budget": {
+    "case_artifacts": 1,
+    "model_updates": 0
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_METHOD_DEVELOPMENT_ONLY",
+  "run_id": "20260821T030033Z-pilot-g5-qpop-signal-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "bottleneck_audit",
+  "seed": 0,
+  "split_id": "DEVELOPMENT_ONLY_NO_FORMAL_SPLIT",
+  "started_at": "2026-08-21T03:00:42.298559Z",
+  "supersedes": null,
+  "tier": "pilot"
+}

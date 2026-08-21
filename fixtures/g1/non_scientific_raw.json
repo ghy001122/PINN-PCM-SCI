@@ -1,0 +1,101 @@
+{
+  "breakpoints": [
+    0.5
+  ],
+  "case_id": "g1-non-scientific-fixture-001",
+  "schema_version": "raw-case-fixture-v2",
+  "mesh_unit": "arbitrary_fixture_length",
+  "cells": [
+    [
+      0,
+      1,
+      2
+    ]
+  ],
+  "circuit": {
+    "voltage": [
+      0.0,
+      0.5,
+      1.0,
+      0.5,
+      0.0
+    ]
+  },
+  "circuit_units": {
+    "voltage": "V"
+  },
+  "evidence_identity": "NON_SCIENTIFIC_FIXTURE",
+  "field_units": {
+    "eta": "1"
+  },
+  "field_registry": {
+    "eta": {
+      "source_name": "eta",
+      "physical_symbol": "eta",
+      "quantity_label": "non_scientific_fixture_order_parameter",
+      "unit": "1",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "NON_SCIENTIFIC_FIXTURE"
+    }
+  },
+  "fields": {
+    "eta": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5,
+        1.0
+      ],
+      [
+        0.5,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.5,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "nodes": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "physical_contract_id": "NON_SCIENTIFIC_FIXTURE_CONTRACT_V1",
+  "field_time": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "circuit_time": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "time_unit": "arbitrary_fixture_time"
+}

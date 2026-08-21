@@ -1,0 +1,302 @@
+{
+  "intake": {
+    "domain": "面向二维及以上相变材料/器件的抗高频 PINN，目标动力学闭合电势/电流—焦耳热/温度—相态演化因果链",
+    "venue": "中科院二区定位的方法论文候选",
+    "time": "约一个月形成论文初稿；本轮仅授权文献与 idea 筛选，不授权训练",
+    "data": [
+      "可信多物理数值求解器生成的二维及以上 PCM 器件电势、温度、相态时空场与相应 PDE/本构量",
+      "以完整器件、几何、材料参数组合、脉冲协议或整条轨迹为实体分组，并设置 formal OOD",
+      "合成数值证据与实验验证严格区分，不把前者表述为后者"
+    ],
+    "compute": "未来 MVE 按 1 张 80GB 级 GPU、最多 10 GPU-days、无付费 API 估计；任何执行仍需后续明确批准",
+    "expertise": "PINN、相变材料/器件与电热相态多物理数值建模",
+    "preference": "both",
+    "baseline": "标准 MLP-PINN、Fourier-feature/自适应谱 PINN、causal PINN/NeuSA 等强学习基线，并以二维及以上 FEM/相场多物理求解器作为数值参考",
+    "user_direction": "面向相变材料/器件的抗高频PINN",
+    "excluded_direction": "n_a",
+    "limitation": "现有 PINN 尚未证明能在相变切换内生地产生高频分量、移动界面和跨场刚性时，同时保持频率解析、场间一致与时间因果正确",
+    "contribution_type": "method",
+    "_inferred_fields": [
+      "data",
+      "expertise",
+      "preference",
+      "baseline",
+      "limitation"
+    ]
+  },
+  "bottleneck_statement": "对于脉冲驱动的二维及以上相变材料/器件，关键高频分量并非只存在于初态，而会随温度依赖电导、热失控和相态前沿在切换过程中内生地产生并跨电势、温度与相态场迁移；同一训练过程因而同时承受慢背景与快速局部前沿之间的频谱、梯度尺度和时间因果失配，低聚合残差仍可能对应错误的前沿拓扑、事件顺序或稳态坍缩。NeuSA 在矩形域中以谱分解和 NODE 改善波动方程的高频与因果性，但其保证依赖带限初态与 Lipschitz 向量场，未覆盖相变中后生的非平滑耦合前沿 [arxiv:2509.04966v2]；自适应谱 PINN 表明刚性会改变初值门控诱导的梯度尺度乃至方法排序，却仅在单个非线性 ODE 上验证 [arxiv:2605.04502v1]；相场 PINN 则通过退化为静态平衡明确绕开动态传播失败 [openalex:W4403555504]，而 VO2 器件观测显示实际目标包含亚纳秒电—热—相态/结构耦合及周期倍增域演化 [semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2]。因此，现有方法尚不能在这一问题类上产生同时频率解析、跨场一致且因果正确的动态解。",
+  "closest_adjacent": [
+    {
+      "paper_id": "arxiv:2509.04966v2",
+      "is_anchor": true,
+      "summary_and_residue": "NeuSA 把向量值初边值 PDE 投影到截断的全局谱基，并用 NODE 因果推进谱系数，同时以明确 PDE 残差训练。其保证要求带限初态和全局 Lipschitz 神经向量场，且实现针对矩形域与齐次标准边界；它没有证明能恢复由非平滑、强耦合电—热—相态转变在 t>0 后持续生成的高频内容。"
+    },
+    {
+      "paper_id": "arxiv:2605.04502v1",
+      "is_anchor": false,
+      "summary_and_residue": "该文用固定/自适应 Fourier 谱干和不同初值门控，揭示门控对残差 Jacobian 的时间缩放以及随刚性变化的方法排序反转。验证只覆盖单个弹簧摆 ODE、预设频带和门控，未包含空间界面、多场 PDE 残差或相变器件协议 OOD。"
+    },
+    {
+      "paper_id": "openalex:W4403555504",
+      "is_anchor": false,
+      "summary_and_residue": "en-PF PINN 在静态相场、力学与 Maxwell 残差中加入能量耗散约束，以排除平凡平衡解。该文明确把难以直接求解的动态高阶耦合系统改写为静态问题，因此没有闭合切换轨迹中的因果传播、事件顺序或移动高频前沿。"
+    },
+    {
+      "paper_id": "semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+      "is_anchor": false,
+      "summary_and_residue": "该文通过 operando 电脉冲泵浦超快 TEM 与相场模拟，解析了 VO2 中 Poole–Frenkel 导电、电热机械耦合和周期倍增域演化，并预测亚 100 ps 切换。它不是 PINN 方法且证据集中在特定悬空 VO2 几何，因此定义了真实动态难度，却没有给出可跨器件和协议验证的抗高频 PINN 闭环。"
+    }
+  ],
+  "what_phase_0_did_not_address": [
+    "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition — stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+    "No retrieved frontier leaf establishes that event order, front topology, and energy balance remain correct for held-out entire device geometries, material combinations, and pulse protocols that shift the spectrum and stiffness beyond training — stakes: reported gains may not transfer across devices or operating regimes, making the scientific conclusion non-general and the model unsafe as a design surrogate.",
+    "No retrieved frontier leaf tests whether one globally aggregated space-time objective over all coupled fields and switching regimes is necessary rather than assumed — stakes: if this shared assumption hides a fast local residual beneath slow-field averages, published accuracy conclusions can rest on the wrong certificate and principled high-frequency PINN design remains blocked."
+  ],
+  "method_lineage": {
+    "line": "PDE-/constitutive-residual PINNs for causal, high-frequency, stiff multiphysics phase-transition dynamics",
+    "nodes": [
+      {
+        "node_id": "n0",
+        "method": "Lagaris-style neural trial functions for differential equations",
+        "move": "Represent the solution with a neural trial function that satisfies constraints and minimize differential-equation residuals.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "The formulation did not yet provide the modern automatic-differentiation, data-plus-physics framework needed for large coupled spatiotemporal PDEs.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n1",
+        "method": "Automatic-differentiation collocation PINNs",
+        "move": "Unify PDE, constitutive, initial/boundary, and optional data mismatches in a trainable composite physics-informed objective.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Global residual minimization remains vulnerable to spectral bias, gradient imbalance, stiffness, and non-causal convergence in time-dependent PDEs.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n2",
+        "method": "Fourier-feature and sinusoidal-coordinate PINNs",
+        "move": "Expose higher input frequencies to the network instead of relying on a plain smooth MLP to discover them late in training.",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "High-frequency representability still depends on frequency choices and does not by itself resolve temporal causality or stiff cross-residual conditioning.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n3",
+        "method": "Causal PINNs with time-ordered residual weighting or temporal decomposition",
+        "move": "Prevent later-time residuals from dominating before earlier-time dynamics have been learned.",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "2-4y",
+        "confidence": "medium",
+        "residual_problem": "Time ordering alone does not guarantee recovery of dynamically generated high frequencies or balance multiple discontinuous coupled fields.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n4",
+        "method": "NeuSA neuro-spectral causal PINN",
+        "move": "Project a PDE onto a global spectral basis, evolve coefficients through a NODE flow, and train with the reconstructed PDE residual.",
+        "parent": "n3",
+        "provenance": "retrieved:arxiv:2509.04966v2",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Band-limited initial data, smooth/Lipschitz dynamics, rectangular homogeneous-boundary bases, and canonical wave tests leave endogenous discontinuous coupled phase fronts and entity-level OOD unresolved.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n5",
+        "method": "Adaptive spectral PINNs with initial-condition gates",
+        "move": "Make spectral frequencies trainable and diagnose how hard initial-condition gates rescale residual gradients over time.",
+        "parent": "n2",
+        "provenance": "retrieved:arxiv:2605.04502v1",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Evidence is limited to a 0D spring-pendulum ODE with selected gates and bands, leaving spatial interfaces, coupled PDE residuals, and PCM protocol OOD unresolved.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n6",
+        "method": "Energy-dissipation-embedded phase-field PINN",
+        "move": "Add a free-energy dissipation term to coupled static PDE residuals after reformulating dynamic phase evolution as equilibrium prediction.",
+        "parent": "n1",
+        "provenance": "retrieved:openalex:W4403555504",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The dynamic problem is explicitly not solved straightforwardly, so transient event order, propagation, and dynamically generated high frequencies remain open.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n7",
+        "method": "LSTM-PINN for strongly coupled electrothermal transport",
+        "move": "Use depth-recursive memory to maintain spatial feature dependencies and cross-field consistency in a five-field electrothermal formulation.",
+        "parent": "n1",
+        "provenance": "retrieved:arxiv:2604.14201v1",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The formulation is steady-state heat/fluid/electric transport and does not include temporal phase kinetics, switching fronts, or PCM device OOD.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n8",
+        "method": "Residual-attention PINN for electrothermal multiphysics",
+        "move": "Use residual feature propagation and channel attention to improve steep-gradient and interface fidelity across coupled steady fields.",
+        "parent": "n1",
+        "provenance": "retrieved:arxiv:2603.23578v1",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Validation remains on steady electrothermal benchmark regimes without phase evolution, causal pulse switching, or whole-device OOD.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n9",
+        "method": "Extended PINN for unknown switched-topology durations",
+        "move": "Jointly infer piecewise topology durations, transition states, and physical parameters with a pseudolabel network and piecewise PINN.",
+        "parent": "n1",
+        "provenance": "retrieved:openalex:W4403422130",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Evidence is confined to parameter identification in a DCM buck converter, not a spatially distributed electro-thermal-phase PDE with moving fronts.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "c1",
+        "method": "XPINN space-time domain decomposition",
+        "move": "Split a difficult domain into subdomains with separate networks and interface coupling.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Interface coordination and where to decompose remain nontrivial for moving, field-coupled phase fronts.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c2",
+        "method": "VPINN variational residual formulation",
+        "move": "Replace purely pointwise strong residuals with weak/variational test-function residuals.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Test-space and quadrature choices do not automatically resolve causal high-frequency evolution or cross-field stiffness.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c3",
+        "method": "Self-adaptive PINNs with learned residual weights",
+        "move": "Adapt pointwise or termwise weights so hard residual regions receive more optimization pressure.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Weight adaptation can chase current errors without guaranteeing event causality, spectral transfer, or coupled conservation.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c4",
+        "method": "Discrete-time PINNs with implicit Runge–Kutta stages",
+        "move": "Embed a time-stepping scheme and learn stage-consistent states instead of fitting the whole continuous time domain at once.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Large stage systems and unresolved spatial/coupled stiffness remain difficult when switching creates sharp fronts.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      }
+    ],
+    "notes": "Provenance discipline: retrieved nodes are the recent grounded frontier; parametric nodes are awareness-only and must not be cited as hard prior art. Anti-fabrication: the lineage is intentionally limited to concrete methods known well enough to name, and no missing age-band node is invented. Anti-over-conservatism: regression is flagged only against a named method and move. Collateral nodes are never gap sites or shared ancestors. Recognition inventory for this residual comprised six mechanism families—spectral/coordinate representation, causal time ordering, space-time decomposition, weak residuals, adaptive residual weighting/sampling, and solver-embedded time stepping—and the oldest confidently known representatives outside the retrieval window are included above."
+  },
+  "domain_pattern_distribution": {
+    "n_total": 75,
+    "n_on_topic": 39,
+    "patterns": [
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "count": 1,
+        "share": 0.03,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "count": 5,
+        "share": 0.13,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "count": 5,
+        "share": 0.13,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "count": 2,
+        "share": 0.05,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "count": 4,
+        "share": 0.10,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "count": 5,
+        "share": 0.13,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "count": 5,
+        "share": 0.13,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "count": 1,
+        "share": 0.03,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "count": 14,
+        "share": 0.36,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "count": 1,
+        "share": 0.03,
+        "saturation_band": "untested"
+      }
+    ],
+    "saturation_threshold_saturated": 0.50,
+    "saturation_threshold_untested_count": 1,
+    "notes": "structural_prior_encoding is the most-used observed pattern; the closest papers using it either solve canonical high-frequency PDEs or static/steady multiphysics, so dynamically generated coupled phase fronts remain the common stopping point."
+  },
+  "fulltext_degraded": false,
+  "state": "proceed",
+  "ood_reasons": [],
+  "remedial_steps": []
+}

@@ -1,0 +1,1455 @@
+[
+ {
+  "title": "A non-iterative domain decomposition time integrator combined with discontinuous Galerkin space discretizations for acoustic wave equations",
+  "title_norm": "a non iterative domain decomposition time integrator combined with discontinuous",
+  "abstract": "We propose a novel non-iterative domain decomposition time integrator for acoustic wave equations using a discontinuous Galerkin discretization in space. It is based on a local Crank-Nicolson approximation combined with a suitable local prediction step in time. In contrast to earlier work using linear continuous finite elements with mass lumping, the proposed approach enables higher-order approximations and also heterogeneous material parameters in a natural way.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Tim Buchholz",
+   "Marlis Hochbruck"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2510.27314v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2510.27314v2",
+  "published_iso": "2025-10-31T09:40:12Z",
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Multigrid methods for total variation",
+  "title_norm": "multigrid methods for total variation",
+  "abstract": "Based on a nonsmooth coherence condition, we construct and prove the convergence of a forward-backward splitting method that alternates between steps on a fine and a coarse grid. Our focus is a total variation regularised inverse imaging problems, specifically, their dual problems, for which we develop in detail the relevant coarse-grid problems. We demonstrate the performance of our method on total variation denoising and magnetic resonance imaging.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Felipe Guerra",
+   "Tuomo Valkonen"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2502.18659v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2502.18659v1",
+  "published_iso": "2025-02-25T21:39:36Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Dynamic Loss-Based Sample Reweighting for Improved Large Language Model Pretraining",
+  "title_norm": "dynamic loss based sample reweighting for improved large language model pretrain",
+  "abstract": "Pretraining large language models (LLMs) on vast and heterogeneous datasets is crucial for achieving state-of-the-art performance across diverse downstream tasks. However, current training paradigms treat all samples equally, overlooking the importance or relevance of individual samples throughout the training process. Existing reweighting strategies, which primarily focus on group-level data importance, fail to leverage fine-grained instance-level information and do not adapt dynamically to individual sample importance as training progresses. In this paper, we introduce novel algorithms for dynamic, instance-level data reweighting aimed at improving both the efficiency and effectiveness of LLM pretraining. Our methods adjust the weight of each training sample based on its loss value in an online fashion, allowing the model to dynamically focus on more informative or important samples at the current training stage. In particular, our framework allows us to systematically devise reweighting strategies deprioritizing redundant or uninformative data, which we find tend to work best. Furthermore, we develop a new theoretical framework for analyzing the impact of loss-based reweighting on the convergence of gradient-based optimization, providing the first formal characterization of how these strategies affect convergence bounds. We empirically validate our approach across a spectrum of tasks, from pretraining 7B and 1.4B parameter LLMs to smaller-scale language models and linear regression problems, demonstrating that our loss-based reweighting approach can lead to faster convergence and significantly improved performance.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Daouda Sow",
+   "Herbert Woisetschläger",
+   "Saikiran Bulusu",
+   "Shiqiang Wang",
+   "Hans-Arno Jacobsen",
+   "Yingbin Liang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2502.06733v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2502.06733v1",
+  "published_iso": "2025-02-10T17:57:15Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Â-and Î-stability of collocation Runge-Kutta methods",
+  "title_norm": "â and î stability of collocation runge kutta methods",
+  "abstract": "This paper deals with stability of classical Runge-Kutta collocation methods. When such methods are embedded in linearly implicit methods as developed in [12] and used in [13] for the time integration of nonlinear evolution PDEs, the stability of these methods has to be adapted to this context. For this reason, we develop in this paper several notions of stability, that we analyze. We provide sufficient conditions that can be checked algorithmically to ensure that these stability notions are fulfilled by a given Runge-Kutta collocation method. We also introduce examples and counterexamples used in [13] to highlight the necessity of these stability conditions in this context.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Guillaume Dujardin",
+   "Ingrid Lacroix-Violet"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2304.09672v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2304.09672v1",
+  "published_iso": "2023-04-19T14:01:14Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "From PDEs constrained optimization to controllability problems via time domain decomposition",
+  "title_norm": "from pdes constrained optimization to controllability problems via time domain d",
+  "abstract": "This paper focuses on the application of time domain decomposition to solve partial differential equations constrained optimization problems and controllability problems. After clarifying the link between these two types of problems, we show that applying time domain decomposition to both problems leads to the same convergence behavior. Our numerical experiments also confirm these theoretical findings.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Pierre-Henri Cocquet",
+   "Liu-Di Lu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.22312v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.22312v1",
+  "published_iso": "2026-05-21T10:59:04Z",
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Set-Theoretically Perfect Ideals and Residual Intersections",
+  "title_norm": "set theoretically perfect ideals and residual intersections",
+  "abstract": "This paper studies algebraic residual intersections in rings with Serre's condition \\( S_{s} \\). It demonstrates that residual intersections admit free approaches i.e. perfect subideal with the same radical. This fact leads to determining a uniform upper bound for the multiplicity of residual intersections. In positive characteristic, it follows that residual intersections are cohomologically complete intersection and, hence, their variety is connected in codimension one.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "S. Hamid Hassanzadeh"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2409.05705v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2409.05705v2",
+  "published_iso": "2024-09-09T15:17:04Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "On the Need for Artifacts to Support Research on Self-Adaptation Mature for Industrial Adoption",
+  "title_norm": "on the need for artifacts to support research on self adaptation mature for indu",
+  "abstract": "Despite the vast body of knowledge developed by the self-adaptive systems community and the wide use of self-adaptation in industry, it is unclear whether or to what extent industry leverages output of academics. Hence, it is important for the research community to answer the question: Are the solutions developed by the self-adaptive systems community mature enough for industrial adoption? Leveraging a set of empirically-grounded guidelines for industry-relevant artifacts in self-adaptation, we develop a position to answer this question from the angle of using artifacts for evaluating research results in self-adaptation, which is actively stimulated and applied by the community.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Danny Weyns",
+   "Thomas Vogel"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2303.15025v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2303.15025v1",
+  "published_iso": "2023-03-27T09:17:10Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "A new way of deriving implicit Runge-Kutta methods based on repeated integrals",
+  "title_norm": "a new way of deriving implicit runge kutta methods based on repeated integrals",
+  "abstract": "Runge-Kutta methods have an irreplaceable position among numerical methods designed to solve ordinary differential equations. Especially, implicit ones are suitable for approximating solutions of stiff initial value problems. We propose a new way of deriving coefficients of implicit Runge-Kutta methods. This approach based on repeated integrals yields both new and well-known Butcher's tableaux. We discuss the properties of newly derived methods and compare them with standard collocation implicit Runge-Kutta methods in a series of numerical experiments, including the Prothero-Robinson problem.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Hana Mizerová",
+   "Katarína Tvrdá"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2404.16665v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2404.16665v2",
+  "published_iso": "2024-04-25T15:06:48Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Domain decomposition solvers for operators with fractional interface perturbations",
+  "title_norm": "domain decomposition solvers for operators with fractional interface perturbatio",
+  "abstract": "Operators with fractional perturbations are crucial components for robust preconditioning of interface-coupled multiphysics systems. However, in case the perturbation is strong, standard approaches can fail to provide scalable approximation of the inverse, thus compromising efficiency of the entire multiphysics solver. In this work, we develop efficient and parameter-robust algorithms for interface-perturbed operators based on the non-overlapping domain decomposition method. As preconditioners for the resulting Schur complement problems we utilize (inverses of) weighted sums of fractional powers of the interfacial Laplacian. Realization of the preconditioner in terms of rational approximation is discussed. We demonstrate performance of the solvers by numerical examples including application to coupled Darcy-Stokes problem.",
+  "year": 2022,
+  "venue": "arXiv",
+  "authors": [
+   "Miroslav Kuchta"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2211.15308v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2211.15308v2",
+  "published_iso": "2022-11-28T13:43:16Z",
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "From Imitation to Refinement -- Residual RL for Precise Assembly",
+  "title_norm": "from imitation to refinement residual rl for precise assembly",
+  "abstract": "Recent advances in Behavior Cloning (BC) have made it easy to teach robots new tasks. However, we find that the ease of teaching comes at the cost of unreliable performance that saturates with increasing data for tasks requiring precision. The performance saturation can be attributed to two critical factors: (a) distribution shift resulting from the use of offline data and (b) the lack of closed-loop corrective control caused by action chucking (predicting a set of future actions executed open-loop) critical for BC performance. Our key insight is that by predicting action chunks, BC policies function more like trajectory \"planners\" than closed-loop controllers necessary for reliable execution. To address these challenges, we devise a simple yet effective method, ResiP (Residual for Precise Manipulation), that overcomes the reliability problem while retaining BC's ease of teaching and long-horizon capabilities. ResiP augments a frozen, chunked BC model with a fully closed-loop residual policy trained with reinforcement learning (RL) that addresses distribution shifts and introduces closed-loop corrections over open-loop execution of action chunks predicted by the BC trajectory planner. Videos, code, and data: https://residual-assembly.github.io.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Lars Ankile",
+   "Anthony Simeonov",
+   "Idan Shenfeld",
+   "Marcel Torne",
+   "Pulkit Agrawal"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2407.16677v4",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2407.16677v4",
+  "published_iso": "2024-07-23T17:44:54Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "CHESS: A Framework for Evaluation of Self-adaptive Systems based on Chaos Engineering",
+  "title_norm": "chess a framework for evaluation of self adaptive systems based on chaos enginee",
+  "abstract": "There is an increasing need to assess the correct behavior of self-adaptive and self-healing systems due to their adoption in critical and highly dynamic environments. However, there is a lack of systematic evaluation methods for self-adaptive and self-healing systems. We proposed CHESS, a novel approach to address this gap by evaluating self-adaptive and self-healing systems through fault injection based on chaos engineering (CE) [ arXiv:2208.13227 ].\n  The artifact presented in this paper provides an extensive overview of the use of CHESS through two microservice-based case studies: a smart office case study and an existing demo application called Yelb. It comes with a managing system service, a self-monitoring service, as well as five fault injection scenarios covering infrastructure faults and functional faults. Each of these components can be easily extended or replaced to adopt the CHESS approach to a new case study, help explore its promises and limitations, and identify directions for future research.\n  Keywords: self-healing, resilience, chaos engineering, evaluation, artifact",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Sehrish Malik",
+   "Moeen Ali Naqvi",
+   "Leon Moonen"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2303.07283v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2303.07283v1",
+  "published_iso": "2023-03-13T17:00:55Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Entropy production by implicit Runge-Kutta schemes",
+  "title_norm": "entropy production by implicit runge kutta schemes",
+  "abstract": "This paper follows up on the author's recent paper \"Entropy Production by Explicit Runge-Kutta schemes\", where a formula for the production of entropy by fully discrete schemes with explicit Runge-Kutta time integrators was presented. In this paper, the focus is on implicit Runge-Kutta schemes, for which the fully discrete numerical entropy evolution scheme is derived and tested.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Carlos Lozano"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2311.12497v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2311.12497v1",
+  "published_iso": "2023-11-21T10:14:51Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "How Do Shock Waves Define the Space-Time Structure of Gradual Solar Energetic Particle Events?",
+  "title_norm": "how do shock waves define the space time structure of gradual solar energetic pa",
+  "abstract": "We revisit the full variety of observed temporal and spatial distributions of energetic solar protons in \"gradual\" solar energetic-particle (SEP) events resulting from the spatial variations in the shock waves that accelerate them. Differences in the shock strength at the solar longitude of a spacecraft and at the footpoint of its connecting magnetic field line, nominally 55 degrees to the west, drive much of that variation. The shock wave itself, together with energetic particles trapped near it by self-amplified Alfven waves, forms an underlying autonomous structure that can drive across magnetic field lines intact, spreading proton intensities in a widening SEP longitude distribution. During the formation of this fundamental structure, historically called an \"energetic storm particle\" (ESP) event, many SEPs leak away early, amplifying waves as they flow along well-connected field lines and broaden the distribution outward; behind this structure between the shock and the Sun a \"reservoir\" of quasi-trapped SEPs forms. Very large SEP events are complicated by additional extensive wave growth that can spread an extended ESP-like trapping region. The multiplicity of shock-related processes contributing to the observed SEP profiles causes correlations of the events to be poorly represented by the peak intensities commonly used. In fact, the extensive spatial distributions of SEPs are sometimes interwoven with the structures of the shocks that have accelerated them and sometimes free. We should consider new questions: Which extremes of the shock contribute most to the SEPs profile of an event, (1) the shock at the longitude of a spacecraft, (2) the shock ~55 degrees to the west at the footpoint of the field, or (3) SEPs that have collected in the reservoir? How does the space-time distribution of SEPs correspond with the underlying space-time distribution of shock strength?",
+  "year": 2022,
+  "venue": "arXiv",
+  "authors": [
+   "Donald V. Reames"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2210.16693v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2210.16693v2",
+  "published_iso": "2022-10-29T20:57:04Z",
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Residual Stream Duality in Modern Transformer Architectures",
+  "title_norm": "residual stream duality in modern transformer architectures",
+  "abstract": "Recent work has made clear that the residual pathway is not mere optimization plumbing; it is part of the model's representational machinery. We agree, but argue that the cleanest way to organize this design space is through a two-axis view of the Transformer. A decoder evolves information along two ordered dimensions: sequence position and layer depth. Self-attention already provides adaptive mixing along the sequence axis, whereas the residual stream usually performs fixed addition along the depth axis. If we fix a token position and treat layer index as the ordered variable, then a causal depth-wise residual attention read is exactly the same local operator as causal short sliding-window attention (ShortSWA), except written over depth rather than over sequence. This is the core residual stream duality behind Transformer$^2$. This perspective also clarifies the recent literature. ELC-BERT and DenseFormer already show that learned aggregation over depth can outperform uniform residual accumulation, while Vertical Attention, DeepCrossAttention (DCA), MUDDFormer, and Attention Residuals move further toward explicit attention-based routing over earlier layers. The key point, however, is that operator-level duality does not imply systems-level symmetry. For large-scale autoregressive models, sequence-axis ShortSWA is usually the more hardware-friendly placement because it reuses token-side sliding-window kernels, KV-cache layouts, and chunked execution. If the goal is instead to change the shortcut itself, Deep Delta Learning (DDL) is the cleaner intervention because it modifies the residual operator directly rather than adding a separate cross-layer retrieval path. Our recommendation is therefore simple: use DDL when the shortcut is the object of interest, and use sequence-axis ShortSWA when the goal is local adaptive mixing.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yifan Zhang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.16039v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.16039v2",
+  "published_iso": "2026-03-17T00:56:29Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Runtime Verification of Self-Adaptive Systems with Changing Requirements",
+  "title_norm": "runtime verification of self adaptive systems with changing requirements",
+  "abstract": "To accurately make adaptation decisions, a self-adaptive system needs precise means to analyze itself at runtime. To this end, runtime verification can be used in the feedback loop to check that the managed system satisfies its requirements formalized as temporal-logic properties. These requirements, however, may change due to system evolution or uncertainty in the environment, managed system, and requirements themselves. Thus, the properties under investigation by the runtime verification have to be dynamically adapted to represent the changing requirements while preserving the knowledge about requirements satisfaction gathered thus far, all with minimal latency. To address this need, we present a runtime verification approach for self-adaptive systems with changing requirements. Our approach uses property specification patterns to automatically obtain automata with precise semantics that are the basis for runtime verification. The automata can be safely adapted during runtime verification while preserving intermediate verification results to seamlessly reflect requirement changes and enable continuous verification. We evaluate our approach on an Arduino prototype of the Body Sensor Network and the Timescales benchmark. Results show that our approach is over five times faster than the typical approach of redeploying and restarting runtime monitors to reflect requirements changes, while improving the system's trustworthiness by avoiding interruptions of verification.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Marc Carwehl",
+   "Thomas Vogel",
+   "Genaína Nunes Rodrigues",
+   "Lars Grunske"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2303.16530v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2303.16530v1",
+  "published_iso": "2023-03-29T08:37:55Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Explicit stabilized implementation of singly diagonally implicit Runge-Kutta methods",
+  "title_norm": "explicit stabilized implementation of singly diagonally implicit runge kutta met",
+  "abstract": "Implicit methods are a natural approach for the integration of stiff differential equations, to avoid time-step restrictions faced by standard explicit integrators. Explicit stabilised integrators are an alternative to implicit methods, which can be particularly efficient in high-dimensional applications with diffusive terms. Towards the best of both worlds, we introduce a new explicit stabilised implementation of a class of diagonally implicit Runge-Kutta methods. This allows us to implement high-order singly-diagonally-implicit Runge-Kutta methods for advection-diffusion-reaction PDEs with a provable computational cost analogous to that of standard explicit stabilised methods. The main ingredient is to recast the implicit Runge-Kutta update as the steady state of a modified auxiliary system, which is then computed using a partitioned Runge-Kutta-Chebyshev method inspired by optimisation techniques.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Ibrahim Almuslimani",
+   "Gilles Vilmart",
+   "Konstantinos Zygalakis"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.07497v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.07497v1",
+  "published_iso": "2026-07-08T14:57:16Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "SpaceTimePilot: Generative Rendering of Dynamic Scenes Across Space and Time",
+  "title_norm": "spacetimepilot generative rendering of dynamic scenes across space and time",
+  "abstract": "We present SpaceTimePilot, a video diffusion model that disentangles space and time for controllable generative rendering. Given a monocular video, SpaceTimePilot can independently alter the camera viewpoint and the motion sequence within the generative process, re-rendering the scene for continuous and arbitrary exploration across space and time. To achieve this, we introduce an effective animation time-embedding mechanism in the diffusion process, allowing explicit control of the output video's motion sequence with respect to that of the source video. As no datasets provide paired videos of the same dynamic scene with continuous temporal variations, we propose a simple yet effective temporal-warping training scheme that repurposes existing multi-view datasets to mimic temporal differences. This strategy effectively supervises the model to learn temporal control and achieve robust space-time disentanglement. To further enhance the precision of dual control, we introduce two additional components: an improved camera-conditioning mechanism that allows altering the camera from the first frame, and CamxTime, the first synthetic space-and-time full-coverage rendering dataset that provides fully free space-time video trajectories within a scene. Joint training on the temporal-warping scheme and the CamxTime dataset yields more precise temporal control. We evaluate SpaceTimePilot on both real-world and synthetic data, demonstrating clear space-time disentanglement and strong results compared to prior work. Project page: https://zheninghuang.github.io/Space-Time-Pilot/ Code: https://github.com/ZheningHuang/spacetimepilot",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Zhening Huang",
+   "Hyeonho Jeong",
+   "Xuelin Chen",
+   "Yulia Gryaditskaya",
+   "Tuanfeng Y. Wang",
+   "Joan Lasenby",
+   "Chun-Hao Huang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.25075v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.25075v1",
+  "published_iso": "2025-12-31T18:59:57Z",
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "A variational multiscale method derived from an adaptive stabilized conforming finite element method via residual minimization on dual norms",
+  "title_norm": "a variational multiscale method derived from an adaptive stabilized conforming f",
+  "abstract": "This paper interprets the stabilized finite element method via residual minimization as a variational multiscale method. We approximate the solution to the partial differential equations using two discrete spaces that we build on a triangulation of the domain; we denote these spaces as coarse and enriched spaces. Building on the adaptive stabilized finite element method via residual minimization, we find a coarse-scale approximation in a continuous space by minimizing the residual on a dual discontinuous Galerkin norm; this process allows us to compute a robust error estimate to construct an on-the-fly adaptive method. We reinterpret the residual projection using the variational multiscale framework to derive a fine-scale approximation. As a result, on each mesh of the adaptive process, we obtain stable coarse- and fine-scale solutions derived from a symmetric saddle-point formulation and an a-posteriori error indicator to guide automatic adaptivity. We test our framework in several challenging scenarios for linear and nonlinear convection-dominated diffusion problems to demonstrate the framework's performance in providing stability in the solution with optimal convergence rates in the asymptotic regime and robust performance in the pre-asymptotic regime. Lastly, we introduce a heuristic dual-term contribution in the variational form to improve the full-scale approximation for symmetric formulations (e.g., diffusion problem).",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Juan F. Giraldo",
+   "Victor M. Calo"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2305.12454v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2305.12454v1",
+  "published_iso": "2023-05-21T13:19:02Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Simultaneous reweighting of Transverse Momentum Dependent distributions",
+  "title_norm": "simultaneous reweighting of transverse momentum dependent distributions",
+  "abstract": "The Bayesian reweighting procedure is extended to the case of multiple independent extractions of transverse momentum dependent parton distributions (TMDs). By exploiting the data on transverse single spin asymmetries, $A_N$, for inclusive pion production in polarized proton-proton collisions measured at RHIC, we perform a simultaneous reweighting of the quark Sivers, transversity and Collins TMD functions extracted from semi-inclusive deep inelastic scattering (SIDIS) and $e^+ e^-$ annihilation into hadron pairs. The impact of the implementation of the Soffer bound, as well as the differences between older and newer $A_N$ data, are investigated. The agreement with $A_N$ data at large-$x_F$ values, a kinematical region complementary to those explored in SIDIS measurements, is enhanced, improving the knowledge of the polarized quark TMDs in the large-$x$ region.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Mariaelena Boglione",
+   "Umberto D'Alesio",
+   "Carlo Flore",
+   "Josè Osvaldo Gonzalez-Hernandez",
+   "Francesco Murgia",
+   "Alexei Prokudin"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2402.12322v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2402.12322v2",
+  "published_iso": "2024-02-19T17:54:57Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Exponential Runge-Kutta methods of collocation type for parabolic equations with time-dependent delay",
+  "title_norm": "exponential runge kutta methods of collocation type for parabolic equations with",
+  "abstract": "In this paper, exponential Runge-Kutta methods of collocation type (ERKC) which were originally proposed in (Appl Numer Math 53:323-339, 2005) are extended to semilinear parabolic problems with time-dependent delay. Two classes of the ERKC methods are constructed and their convergence properties are analyzed. It is shown that methods with $s$ arbitrary nonconfluent collocation parameters achieve convergence of order $s$. Provided that the collocation parameters fulfill some additional conditions and the solutions of the problems exhibit sufficient temporal and spatial smoothness, we derive superconvergence results. Finally, some numerical experiments are presented to illustrate our theoretical results.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Qiumei Huang",
+   "Alexander Ostermann",
+   "Gangfan Zhong"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2503.04674v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2503.04674v3",
+  "published_iso": "2025-03-06T18:10:02Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Error bounds for full space-time splitting discretizations of semi-linear SPDEs -- with a focus on dG domain decompositions",
+  "title_norm": "error bounds for full space time splitting discretizations of semi linear spdes ",
+  "abstract": "We consider a fully discretized numerical scheme for parabolic stochastic partial differential equations with multiplicative noise. Our abstract framework can be applied to formulate a non-iterative domain decomposition approach. Such methods can help to parallelize the code and therefore lead to a more efficient implementation. The domain decomposition is integrated through the Douglas-Rachford splitting scheme, where one split operator acts on one part of the domain. For an efficient space discretization of the underlying equation, we chose the discontinuous Galerkin method as this suits the parallelization strategy well. For this fully discretized scheme, we provide a strong space-time convergence result. We conclude the manuscript with numerical experiments validating our theoretical findings.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Monika Eisenmann",
+   "Eskil Hansen",
+   "Marvin Jans"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2412.10125v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2412.10125v2",
+  "published_iso": "2024-12-13T13:11:20Z",
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Residual Off-Policy RL for Finetuning Behavior Cloning Policies",
+  "title_norm": "residual off policy rl for finetuning behavior cloning policies",
+  "abstract": "Recent advances in behavior cloning (BC) have enabled impressive visuomotor control policies. However, these approaches are limited by the quality of human demonstrations, the manual effort required for data collection, and the diminishing returns from offline data. In comparison, reinforcement learning (RL) trains an agent through autonomous interaction with the environment and has shown remarkable success in various domains. Still, training RL policies directly on real-world robots remains challenging due to sample inefficiency, safety concerns, and the difficulty of learning from sparse rewards for long-horizon tasks, especially for high-degree-of-freedom (DoF) systems.\n  We present a recipe that combines the benefits of BC and RL through a residual learning framework. Our approach leverages BC policies as black-box bases and learns lightweight per-step residual corrections via sample-efficient off-policy RL. We demonstrate that our method requires only sparse binary reward signals and can effectively improve manipulation policies on high-degree-of-freedom (DoF) systems in both simulation and the real world. In particular, we demonstrate, to the best of our knowledge, the first successful real-world RL training on a humanoid robot with dexterous hands. Our results demonstrate state-of-the-art performance in various vision-based tasks, pointing towards a practical pathway for deploying RL in the real world.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Lars Ankile",
+   "Zhenyu Jiang",
+   "Rocky Duan",
+   "Guanya Shi",
+   "Pieter Abbeel",
+   "Anusha Nagabandi"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2509.19301v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2509.19301v2",
+  "published_iso": "2025-09-23T17:59:46Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Self-adaptive, Requirements-driven Autoscaling of Microservices",
+  "title_norm": "self adaptive requirements driven autoscaling of microservices",
+  "abstract": "Microservices architecture offers various benefits, including granularity, flexibility, and scalability. A crucial feature of this architecture is the ability to autoscale microservices, i.e., adjust the number of replicas and/or manage resources. Several autoscaling solutions already exist. Nonetheless, when employed for diverse microservices compositions, current solutions may exhibit suboptimal resource allocations, either exceeding the actual requirements or falling short. This can in turn lead to unbalanced environments, downtime, and undesirable infrastructure costs. We propose MS-RA, a self-adaptive, requirements-driven solution for microservices autoscaling. MS-RA utilizes service-level objectives (SLOs) for real-time decision making. Our solution, which is customizable to specific needs and costs, facilitates a more efficient allocation of resources by precisely using the right amount to meet the defined requirements. We have developed MS-RA based on the MAPE-K self-adaptive loop, and have evaluated it using an open-source microservice-based application. Our results indicate that MS-RA considerably outperforms the horizontal pod autoscaler (HPA), the industry-standard Kubernetes autoscaling mechanism. It achieves this by using fewer resources while still ensuring the satisfaction of the SLOs of interest. Specifically, MS-RA meets the SLO requirements of our case-study system, requiring at least 50% less CPU time, 87% less memory, and 90% fewer replicas compared to the HPA.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "João Paulo Karol Santos Nunes",
+   "Shiva Nejati",
+   "Mehrdad Sabetzadeh",
+   "Elisa Yumi Nakagawa"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2403.08798v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2403.08798v1",
+  "published_iso": "2024-02-02T03:00:05Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Sinc-collocation methods with consistent collocation points for Fredholm integral equations of the second kind",
+  "title_norm": "sinc collocation methods with consistent collocation points for fredholm integra",
+  "abstract": "Sinc-collocation methods are known to be efficient for Fredholm integral equations of the second kind, even if functions in the equations have endpoint singularity. However, existing methods have the disadvantage of inconsistent collocation points. This inconsistency complicates the implementation of such methods, particularly for large-scale problems. To overcome this drawback, this study proposes another Sinc-collocation methods with consistent collocation points. The results of a theoretical error analysis show that the proposed methods have the same convergence property as existing methods. Numerical experiments suggest the superiority of the proposed methods in terms of implementation and computational cost.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Tomoaki Okayama"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2301.12692v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2301.12692v3",
+  "published_iso": "2023-01-30T06:50:39Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "MedScore: Generalizable Factuality Evaluation of Free-Form Medical Answers by Domain-adapted Claim Decomposition and Verification",
+  "title_norm": "medscore generalizable factuality evaluation of free form medical answers by dom",
+  "abstract": "While Large Language Models (LLMs) can generate fluent and convincing responses, they are not necessarily correct. This is especially apparent in the popular decompose-then-verify factuality evaluation pipeline, where LLMs evaluate generations by decomposing the generations into individual, valid claims. Factuality evaluation is especially important for medical answers, since incorrect medical information could seriously harm the patient. However, existing factuality systems are a poor match for the medical domain, as they are typically only evaluated on objective, entity-centric, formulaic texts such as biographies and historical topics. This differs from condition-dependent, conversational, hypothetical, sentence-structure diverse, and subjective medical answers, which makes decomposition into valid facts challenging. We propose MedScore, a new pipeline to decompose medical answers into condition-aware valid facts and verify against in-domain corpora. Our method extracts up to three times more valid facts than existing methods, reducing hallucination and vague references, and retaining condition-dependency in facts. The resulting factuality score substantially varies by decomposition method, verification corpus, and used backbone LLM, highlighting the importance of customizing each step for reliable factuality evaluation by using our generalizable and modularized pipeline for domain adaptation.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Heyuan Huang",
+   "Alexandra DeLucia",
+   "Vijay Murari Tiyyala",
+   "Mark Dredze"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2505.18452v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2505.18452v2",
+  "published_iso": "2025-05-24T01:23:09Z",
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Deep Lossy Plus Residual Coding for Lossless and Near-lossless Image Compression",
+  "title_norm": "deep lossy plus residual coding for lossless and near lossless image compression",
+  "abstract": "Lossless and near-lossless image compression is of paramount importance to professional users in many technical fields, such as medicine, remote sensing, precision engineering and scientific research. But despite rapidly growing research interests in learning-based image compression, no published method offers both lossless and near-lossless modes. In this paper, we propose a unified and powerful deep lossy plus residual (DLPR) coding framework for both lossless and near-lossless image compression. In the lossless mode, the DLPR coding system first performs lossy compression and then lossless coding of residuals. We solve the joint lossy and residual compression problem in the approach of VAEs, and add autoregressive context modeling of the residuals to enhance lossless compression performance. In the near-lossless mode, we quantize the original residuals to satisfy a given $\\ell_\\infty$ error bound, and propose a scalable near-lossless compression scheme that works for variable $\\ell_\\infty$ bounds instead of training multiple networks. To expedite the DLPR coding, we increase the degree of algorithm parallelization by a novel design of coding context, and accelerate the entropy coding with adaptive residual interval. Experimental results demonstrate that the DLPR coding system achieves both the state-of-the-art lossless and near-lossless image compression performance with competitive coding speed.",
+  "year": 2022,
+  "venue": "arXiv",
+  "authors": [
+   "Yuanchao Bai",
+   "Xianming Liu",
+   "Kai Wang",
+   "Xiangyang Ji",
+   "Xiaolin Wu",
+   "Wen Gao"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2209.04847v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2209.04847v2",
+  "published_iso": "2022-09-11T12:11:56Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Explaining Online Reinforcement Learning Decisions of Self-Adaptive Systems",
+  "title_norm": "explaining online reinforcement learning decisions of self adaptive systems",
+  "abstract": "Design time uncertainty poses an important challenge when developing a self-adaptive system. As an example, defining how the system should adapt when facing a new environment state, requires understanding the precise effect of an adaptation, which may not be known at design time. Online reinforcement learning, i.e., employing reinforcement learning (RL) at runtime, is an emerging approach to realizing self-adaptive systems in the presence of design time uncertainty. By using Online RL, the self-adaptive system can learn from actual operational data and leverage feedback only available at runtime. Recently, Deep RL is gaining interest. Deep RL represents learned knowledge as a neural network whereby it can generalize over unseen inputs, as well as handle continuous environment states and adaptation actions. A fundamental problem of Deep RL is that learned knowledge is not explicitly represented. For a human, it is practically impossible to relate the parametrization of the neural network to concrete RL decisions and thus Deep RL essentially appears as a black box. Yet, understanding the decisions made by Deep RL is key to (1) increasing trust, and (2) facilitating debugging. Such debugging is especially relevant for self-adaptive systems, because the reward function, which quantifies the feedback to the RL algorithm, must be defined by developers. The reward function must be explicitly defined by developers, thus introducing a potential for human error. To explain Deep RL for self-adaptive systems, we enhance and combine two existing explainable RL techniques from the machine learning literature. The combined technique, XRL-DINE, overcomes the respective limitations of the individual techniques. We present a proof-of-concept implementation of XRL-DINE, as well as qualitative and quantitative results of applying XRL-DINE to a self-adaptive system exemplar.",
+  "year": 2022,
+  "venue": "arXiv",
+  "authors": [
+   "Felix Feit",
+   "Andreas Metzger",
+   "Klaus Pohl"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2210.05931v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2210.05931v1",
+  "published_iso": "2022-10-12T05:38:27Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Smooth perturbations of diagonally implicit Runge--Kutta methods",
+  "title_norm": "smooth perturbations of diagonally implicit runge kutta methods",
+  "abstract": "A mixed accuracy framework for Runge--Kutta methods presented in [Grant, JSC 2022] has been shown to speed up the computation in diagonally implicit Runge--Kutta (DIRK) methods by using less expensive low accuracy approaches for the implicit stages. This theory included both smooth and nonsmooth perturbations, and subsequent work focused primarily on the case of nonsmooth perturbations that arise from mixed precision simulations. In this work the focus is on smooth perturbations that arise from using less accurate models or under-resolved iterative solvers to simplify the implicit computations. We develop an accuracy and stability analysis based on the framework in [Grant, JSC 2022] to design methods that strategically replace the original operator by a lower accuracy operator to reduce computational cost while mitigating the effect of the perturbations. In particular, we focus on designing novel methods that are high order for smooth perturbations that satisfy additional local consistency conditions. Finally, we verify the performance of the novel perturbed DIRK methods designed in this work and numerically study the impact of different types of smooth perturbations on the accuracy and stability of the methods.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "John Driscoll",
+   "Sigal Gottlieb",
+   "Zachary J. Grant",
+   "César Herrera",
+   "Tej Sai Kakumanu",
+   "Monica Stephens"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.14479v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.14479v2",
+  "published_iso": "2026-04-15T23:27:00Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "A unified framework for the analysis, numerical approximation and model reduction of linear operator equations, Part I: Well-posedness in space and time",
+  "title_norm": "a unified framework for the analysis numerical approximation and model reduction",
+  "abstract": "We present a unified framework to construct well-posed formulations for large classes of linear operator equations including elliptic, parabolic and hyperbolic partial differential equations. This general approach incorporates known weak variational formulations as well as novel space-time variational forms of the hyperbolic wave equation. The main concept is completion and extension of operators starting from the strong form of the problem.\n  This paper lays the theoretical foundation for a unified approach towards numerical approximation methods and also model reduction of parameterized linear operator equations which will be the subject of the following parts.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Moritz Feuerle",
+   "Richard Löscher",
+   "Olaf Steinbach",
+   "Karsten Urban"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2508.05407v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2508.05407v1",
+  "published_iso": "2025-08-07T13:59:00Z",
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Foresight Residual RL for Long-Horizon Robot Manipulation with Vision-Language-Action Models",
+  "title_norm": "foresight residual rl for long horizon robot manipulation with vision language a",
+  "abstract": "Vision-Language-Action (VLA) policies offer strong general-purpose manipulation priors, but often fail on tight-tolerance, contact-rich assembly due to long-horizon credit assignment and subtask coupling: a state that is geometrically successful for the current skill can be brittle for downstream skills. We show this failure mode in residual reinforcement learning (RL) over a frozen VLA base policy: constant sparse success rewards improve each subtask in isolation yet yield little or no gain when skills are chained, because terminal state quality is uncontrolled. We propose Foresight Residual RL, which optimizes handoff quality by augmenting each subtask's sparse success reward with an offline-estimated foresight value -- the probability of future subtask success conditioned on the terminal state of the current subtask. Concretely, we (i) train a visual foresight predictor from images of terminal states of the base policy, labeled using downstream rollout statistics, and (ii) train residual policies via backward foresight induction, using the predictor output as a reward multiplier. On a three-phase wrench-based nut-tightening assembly task in Isaac Gym (grasp, move-insert, rotate), our method achieves 85.6% full-task success, outperforming standard subtask residual RL (54.5%) and VLA baselines, while leaving per-subtask success unchanged. These results highlight that improving long-horizon performance requires shaping which successful states are produced at each sub-task, not only whether success occurs.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yuhan Liu",
+   "Xinyu Zhang",
+   "Litao Liu",
+   "Abdeslam Boularias"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.16506v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.16506v1",
+  "published_iso": "2026-07-17T21:00:28Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Rethinking Loss Reweighting for Imbalance Learning as an Inverse Problem: A Neural Collapse Point of View",
+  "title_norm": "rethinking loss reweighting for imbalance learning as an inverse problem a neura",
+  "abstract": "Loss reweighting is a widely used strategy for long-tailed classification, but existing reweighting strategies often rely on heuristics and rarely define a well-specified target. Inspired by Neural Collapse (NC), the ideal simplex Equiangular Tight Frame (ETF) terminal geometry suggests equal per-class average loss as a reasonable target for reweighting. Based on the ideal equal loss objective, we consider loss reweighting as an inverse problem and propose an inverse-view reweighting strategy that infers class weights dynamically to match this ideal objective. Empirically, NC metrics suggest our method can effectively reduce the loss imbalance coefficient and closer alignment with NC geometry while consistently outperforming strong long-tailed baselines on different datasets.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Jinping Wang",
+   "Zixin Tong",
+   "Zhiwu Xie",
+   "Zhiqiang Gao"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.10047v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.10047v1",
+  "published_iso": "2026-05-11T06:16:46Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Stable corrections for perturbed diagonally implicit Runge--Kutta methods",
+  "title_norm": "stable corrections for perturbed diagonally implicit runge kutta methods",
+  "abstract": "A mixed accuracy framework for Runge--Kutta methods presented in Grant [JSC 2022] and applied to diagonally implicit Runge--Kutta (DIRK) methods can significantly speed up the computation by replacing the implicit solver by less expensive low accuracy approaches such as lower precision computation of the implicit solve, under-resolved iterative solvers, or simpler, less accurate models for the implicit stages. Understanding the effect of the perturbation errors introduced by the low accuracy computations enables the design of stable and accurate mixed accuracy DIRK methods where the errors from the low-accuracy computation are damped out by multiplication by \\dt at multiple points in the simulation, resulting in a more accurate simulation than if low-accuracy was used for all computation. To improve upon this, explicit corrections were previously proposed and analyzed for accuracy, and their performance was tested in related work. Explicit corrections work well when the time-step is sufficiently small, but may introduce instabilities when the time-step is larger. In this work, the stability of the mixed accuracy approach is carefully studied, and used to design novel stabilized correction approaches.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "John Driscoll",
+   "Sigal Gottlieb",
+   "Zachary J. Grant",
+   "César Herrera",
+   "Tej Sai Kakumanu",
+   "Michael H. Sawicki",
+   "Monica Stephens"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.24451v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.24451v1",
+  "published_iso": "2026-03-25T16:02:53Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Residual subspace evolution strategies for nonlinear inverse problems",
+  "title_norm": "residual subspace evolution strategies for nonlinear inverse problems",
+  "abstract": "Nonlinear inverse problems pervade engineering and science, yet noisy, non-differentiable, or expensive residual evaluations routinely defeat Jacobian-based solvers. Derivative-free alternatives either demand smoothness, require large populations to stabilise covariance estimates, or stall on flat regions where gradient information fades. This paper introduces residual subspace evolution strategies (RSES), a derivative-free solver that draws Gaussian probes around the current iterate, records how residuals change along those directions, and recombines the probes through a least-squares solve to produce an optimal update. The method builds a residual-only surrogate without forming Jacobians or empirical covariances, and each iteration costs just $k+1$ residual evaluations with $O(k^3)$ linear algebra overhead, where $k$ remains far smaller than the parameter dimension. Benchmarks on calibration, regression, and deconvolution tasks show that RSES reduces misfit consistently across deterministic and stochastic settings, matching or exceeding xNES, NEWUOA, Adam, and ensemble Kalman inversion under matched evaluation budgets. The gains are most pronounced when smoothness or covariance assumptions break, suggesting that lightweight residual-difference surrogates can reliably guide descent where heavier machinery struggles.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Francesco Alemanno"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.10325v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.10325v2",
+  "published_iso": "2025-12-11T06:20:13Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Exploring Criteria of Loss Reweighting to Enhance LLM Unlearning",
+  "title_norm": "exploring criteria of loss reweighting to enhance llm unlearning",
+  "abstract": "Loss reweighting has shown significant benefits for machine unlearning with large language models (LLMs). However, their exact functionalities are left unclear and the optimal strategy remains an open question, thus impeding the understanding and improvement of existing methodologies. In this paper, we identify two distinct goals of loss reweighting, namely, Saturation and Importance -- the former indicates that those insufficiently optimized data should be emphasized, while the latter stresses some critical data that are most influential for loss minimization. To study their usefulness, we design specific reweighting strategies for each goal and evaluate their respective effects on unlearning. We conduct extensive empirical analyses on well-established benchmarks, and summarize some important observations as follows: (i) Saturation enhances efficacy more than importance-based reweighting, and their combination can yield additional improvements. (ii) Saturation typically allocates lower weights to data with lower likelihoods, whereas importance-based reweighting does the opposite. (iii) The efficacy of unlearning is also largely influenced by the smoothness and granularity of the weight distributions. Based on these findings, we propose SatImp, a simple reweighting method that combines the advantages of both saturation and importance. Empirical results on extensive datasets validate the efficacy of our method, potentially bridging existing research gaps and indicating directions for future research. Our code is available at https://github.com/tmlr-group/SatImp.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Puning Yang",
+   "Qizhou Wang",
+   "Zhuo Huang",
+   "Tongliang Liu",
+   "Chengqi Zhang",
+   "Bo Han"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2505.11953v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2505.11953v2",
+  "published_iso": "2025-05-17T10:41:22Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Fast and high-order approximation of parabolic equations using hierarchical direct solvers and implicit Runge-Kutta methods",
+  "title_norm": "fast and high order approximation of parabolic equations using hierarchical dire",
+  "abstract": "An additive Runge-Kutta method is used for the time stepping, which integrates the linear stiff terms by an explicit singly diagonally implicit Runge-Kutta (ESDIRK) method and the nonlinear terms by an explicit Runge-Kutta (ERK) method. In each time step, the implicit solve is performed by the recently developed Hierarchical Poincaré-Steklov (HPS) method. This is a fast direct solver for elliptic equations that decomposes the space domain into a hierarchical tree of subdomains and builds spectral collocation solvers locally on the subdomains. These ideas are naturally combined in the presented method since the singly diagonal coefficient in ESDIRK and a fixed time-step ensures that the coefficient matrix in the implicit solve of HPS remains the same for all time stages. This means that the precomputed inverse can be efficiently reused, leading to a scheme with complexity (in two dimensions) $\\mathcal{O}(N^{1.5})$ for the precomputation where the solution operator to the elliptic problems is built, and then $\\mathcal{O}(N \\log N)$ for the solve in each time step. The stability of the method is proved for first order in time and any order in space, and numerical evidence substantiates a claim of stability for a much broader class of time discretization methods. Numerical experiments supporting the accuracy of efficiency of the method in one and two dimensions are presented.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Ke Chen",
+   "Daniel Appelö",
+   "Tracy Babb",
+   "Per-Gunnar Martinsson"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2306.02526v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2306.02526v2",
+  "published_iso": "2023-06-05T01:21:48Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Geometric and Behavioral Stratification in Transformer Residual Streams",
+  "title_norm": "geometric and behavioral stratification in transformer residual streams",
+  "abstract": "Trained transformer models develop privileged bases: coordinate axes whose statistics differ from the rest of the residual stream. But what kind of direction does such a basis select? We investigate the prediction direction, the unembedding direction of the token a model currently predicts, and find that it functions as a content-defined privileged anchor. Measured with respect to this anchor, residual-stream variation is geometrically and behaviorally stratified by proximity to the prediction.\n  The stratification holds in all eighteen models tested (dense and mixture-of-experts, 7B-120B, base and instruction-tuned). A narrow, scale-invariant prediction interface concentrates readout-relevant structure, while the vast prediction-distal complement expands with model scale. Because the prediction direction sits nearly orthogonal to the principal variance axes, variance-based analyses recover this organization only partly, and the shortfall grows with prompt heterogeneity.\n  Anchoring reveals a steep geometric gradient: prediction-proximal regions are highly structured and cluster related prompts, while the complement is flatter and anti-discriminates among prompt groups. The interface is a narrow slice but functionally decisive. Disrupting the variance directions closest to the prediction causes immediate divergence and frequent task-frame shifts; disrupting the next level down delays divergence and preserves framing. The complement is weakly readout-aligned per direction yet causally and temporally load-bearing, and behavior is driven by direction rather than magnitude.\n  These results establish the prediction direction as a privileged anchor distinct from previously described coordinate axes, and give a geometric account of how high-dimensional computation coexists with linear readout.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Nelson Guda"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2608.12447v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2608.12447v1",
+  "published_iso": "2026-08-12T17:42:20Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Self-Explainability in Self-Adaptive and Self-Organising Systems: Status and Research Directions",
+  "title_norm": "self explainability in self adaptive and self organising systems status and rese",
+  "abstract": "The growing complexity of self-adaptive and self-organising systems, fuelled by advances in Artificial Intelligence (AI), has made them increasingly difficult to understand and trust. While Explainable AI aims to provide insight into AI decision-making, a more advanced goal is for systems to explain themselves - an ability referred to as Self-Explainability (SX). This article presents a systematic literature review on SX, analysing existing approaches, including their domains, targets, and evaluation methods. The review develops a unified definition and taxonomy of SX and introduces Levels of Self-Explainability, providing a framework for positioning current and future research. Our results show that most SX approaches remain conceptual, with few practical implementations. Moreover, there is currently no formal or de facto standard for evaluating SX, highlighting a major research gap. This work thus establishes a foundation and roadmap for advancing Self-Explainability in complex systems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Tom Beyer",
+   "Svea Wisy",
+   "Sven Tomforde"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.09568v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.09568v1",
+  "published_iso": "2026-06-08T14:42:21Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Second order finite volume IMEX Runge-Kutta schemes for two dimensional parabolic PDEs in finance",
+  "title_norm": "second order finite volume imex runge kutta schemes for two dimensional paraboli",
+  "abstract": "We present a novel and general methodology for building second-order finite volume implicit-explicit Runge-Kutta numerical schemes for solving two-dimensional financial parabolic PDEs with mixed derivatives. The methods achieve second-order convergence even in the presence of non-regular initial conditions. The IMEX time integrator allows to overcome the tiny time-step induced by the diffusive term in the explicit schemes, also providing accurate and non-oscillatory approximations of the Greeks.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "J. G. López-Salas",
+   "M. Suárez-Taboada",
+   "M. J. Castro",
+   "A. M. Ferreiro-Ferreiro",
+   "J. A. García-Rodríguez"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2409.01131v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2409.01131v1",
+  "published_iso": "2024-09-02T10:09:14Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Residual Symmetries and Their Algebras in the Kerr-Schild Double Copy",
+  "title_norm": "residual symmetries and their algebras in the kerr schild double copy",
+  "abstract": "The Kerr-Schild double copy (KSDC) is well-known for relating exact classical solutions between Yang-Mills theory and theories of gravity. However, whether this correspondence provides a more fundamental mapping between the underlying symmetries of gauge theory and gravity remains an underdeveloped area of research in the contemporary double copy program. In this paper, we demonstrate that the KSDC correspondence does not provide a mapping between the residual symmetry structures of the Kerr-Schild ansatz in Yang-Mills theory and gravity. On the gauge theory side, residual symmetries form an infinite-dimensional algebra of functions along null directions. On the gravitational side, residual diffeomorphisms preserving the Kerr-Schild form of the Schwarzschild metric generate a conformal algebra on $S^2$, which decomposes into Killing vectors and proper conformal Killing vectors (CKVs). While the Killing sector reproduces the expected global isometries, the CKV sector yields an infinite-dimensional algebra after imposing asymptotic flatness and horizon regularity. This appears to contradict the fact that the Schwarzschild solution admits no proper conformal symmetries. We resolve this apparent contradiction by constructing a Weyl-compensated BRST complex, showing that the CKV sector is BRST-exact and therefore trivial in cohomology, so that the physical symmetry algebra reduces to the global isometries of Schwarzschild. This demonstrates that the KSDC introduces an enlarged symmetry structure at the level of the ansatz, but preserves physical symmetries after a cohomological reduction, revealing a fundamental mismatch between Yang-Mills and gravity at the level of residual symmetries.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "B. P. Holton"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.05262v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.05262v2",
+  "published_iso": "2026-04-06T23:54:45Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Online ML Self-adaptation in Face of Traps",
+  "title_norm": "online ml self adaptation in face of traps",
+  "abstract": "Online machine learning (ML) is often used in self-adaptive systems to strengthen the adaptation mechanism and improve the system utility. Despite such benefits, applying online ML for self-adaptation can be challenging, and not many papers report its limitations. Recently, we experimented with applying online ML for self-adaptation of a smart farming scenario and we had faced several unexpected difficulties -- traps -- that, to our knowledge, are not discussed enough in the community. In this paper, we report our experience with these traps. Specifically, we discuss several traps that relate to the specification and online training of the ML-based estimators, their impact on self-adaptation, and the approach used to evaluate the estimators. Our overview of these traps provides a list of lessons learned, which can serve as guidance for other researchers and practitioners when applying online ML for self-adaptation.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Michal Töpfer",
+   "František Plášil",
+   "Tomáš Bureš",
+   "Petr Hnětynka",
+   "Martin Kruliš",
+   "Danny Weyns"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2309.05805v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2309.05805v1",
+  "published_iso": "2023-09-11T20:17:11Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Structure-Preserving Implicit Runge-Kutta Methods for Stochastic Poisson Systems with Multiple Noises",
+  "title_norm": "structure preserving implicit runge kutta methods for stochastic poisson systems",
+  "abstract": "In this paper, we propose the diagonal implicit Runge-Kutta methods and transformed Runge-Kutta methods for stochastic Poisson systems with multiple noises. We prove that the first methods can preserve the Poisson structure, Casimir functions, and quadratic Hamiltonian functions in the case of constant structure matrix. Darboux-Lie theorem combined with coordinate transformation is used to construct the transformed Runge-Kutta methods for the case of non-constant structure matrix that preserve both the Poisson structure and the Casimir functions. Finally, through numerical experiments on stochastic rigid body systems and linear stochastic Poisson systems, the structure-preserving properties of the proposed two kinds of numerical methods are effectively verified.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Liying Zhang",
+   "Fenglin Xue",
+   "Lijin Wang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2501.12778v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2501.12778v1",
+  "published_iso": "2025-01-22T10:21:26Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "A Residual Minimization approach for Nonlinear Partial Differential Equations set in Banach spaces",
+  "title_norm": "a residual minimization approach for nonlinear partial differential equations se",
+  "abstract": "In this work, we propose and analyze a residual-minimization strategy for the numerical solution of nonlinear PDEs posed in Banach spaces. Given a finite-dimensional trial space and a suitably enriched discrete test space (of higher dimension than the trial space), we approximate the solution by minimizing the variational residual in a discrete dual norm. This minimization is equivalent to a nonlinear saddle-point formulation for the discrete solution in the trial space together with a residual representative in the test space. The latter provides a natural a posteriori error estimator, enabling automatic mesh adaptivity. To solve the resulting nonlinear saddle-point problem, we propose a Newton iteration whose linearized saddle-point system is symmetric, thereby guaranteeing solvability at each step. We take the $p$-Laplacian as a model problem and support the theoretical developments with representative numerical experiments, using standard $H^1$-conforming piecewise linear functions for the trial space, and lowest-order Crouzeix--Raviart functions for the test space.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Ignacio Muga",
+   "Jorge Perera",
+   "Sergio Rojas",
+   "Ricardo Ruiz-Baier"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.00341v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.00341v1",
+  "published_iso": "2026-04-01T00:31:58Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "A Decentralized and Self-Adaptive Approach for Monitoring Volatile Edge Environments",
+  "title_norm": "a decentralized and self adaptive approach for monitoring volatile edge environm",
+  "abstract": "Edge computing provides resources for IoT workloads at the network edge. Monitoring systems are vital for efficiently managing resources and application workloads by collecting, storing, and providing relevant information about the state of the resources. However, traditional monitoring systems have a centralized architecture for both data plane and control plane, which increases latency, creates a failure bottleneck, and faces challenges in providing quick and trustworthy data in volatile edge environments, especially where infrastructures are often built upon failure-prone, unsophisticated computing and network resources. Thus, we propose DEMon, a decentralized, self-adaptive monitoring system for edge. DEMon leverages the stochastic gossip communication protocol at its core. It develops efficient protocols for information dissemination, communication, and retrieval, avoiding a single point of failure and ensuring fast and trustworthy data access. Its decentralized control enables self-adaptive management of monitoring parameters, addressing the trade-offs between the quality of service of monitoring and resource consumption. We implement the proposed system as a lightweight and portable container-based system and evaluate it through experiments. We also present a use case demonstrating its feasibility. The results show that DEMon efficiently disseminates and retrieves the monitoring information, addressing the challenges of edge monitoring.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Shashikant Ilager",
+   "Jakob Fahringer",
+   "Alessandro Tundo",
+   "Ivona Brandić"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2405.07806v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2405.07806v1",
+  "published_iso": "2024-05-13T14:47:34Z",
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Convergence and stability of randomized implicit two-stage Runge-Kutta schemes",
+  "title_norm": "convergence and stability of randomized implicit two stage runge kutta schemes",
+  "abstract": "We randomize the implicit two-stage Runge-Kutta scheme in order to improve the rate of convergence (with respect to a deterministic scheme) and stability of the approximate solution (with respect to the solution generated by the explicit scheme). For stability analysis, we use Dahlquist's concept of A-stability, adopted to randomized schemes by considering three notions of stability: asymptotic, mean-square, and in probability. The randomized implicit RK2 scheme proves to be A-stable asymptotically and in probability but not in the mean-square sense.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Tomasz Bochacik",
+   "Paweł Przybyłowicz"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2404.19059v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2404.19059v3",
+  "published_iso": "2024-04-29T19:00:26Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Residual Centering and Error Bounds for Convex Approximation of Mixed-Integer Recourse",
+  "title_norm": "residual centering and error bounds for convex approximation of mixed integer re",
+  "abstract": "We study convex approximations of mixed-integer recourse functions in two-stage stochastic programming. For first-stage decisions, the relevant approximation error is the signed expected residual between the convex approximation and the integer-recourse value function. On bounded uncertainty boxes, we identify residual conditions that yield deterministic bounds for this expectation error. The central condition is coordinate slice-centering, under which integration by parts gives an anisotropic total-variation bound and a mixed-derivative bound whose all-coordinate case is expressed through Vitali variation of the density. Exact centering, however, may be incompatible with convexity, even for totally unimodular ceiling recourse. We therefore use commuting coordinate projectors to decompose an arbitrary residual into a centered component and an explicit slice-mean defect. The resulting defect-adjusted bounds provide selectable error certificates and uniform first-stage decision-quality guarantees. We further establish sharp constants, extend the mixed-derivative estimate to nonsmooth densities, and develop tensor-product and geometric extensions of the framework, alongside a max-affine convex fitting and audit methodology.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Alban Kryeziu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2608.00245v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2608.00245v1",
+  "published_iso": "2026-07-31T19:41:39Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Cost-reduction implicit exponential Runge-Kutta methods for highly oscillatory systems",
+  "title_norm": "cost reduction implicit exponential runge kutta methods for highly oscillatory s",
+  "abstract": "In this paper, two novel classes of implicit exponential Runge-Kutta (ERK) methods are studied for solving highly oscillatory systems. First of all, we analyze the symplectic conditions of two kinds of exponential integrators, and present a first-order symplectic method. In order to solve highly oscillatory problems, the highly accurate implicit ERK integrators (up to order four) are formulated by comparing the Taylor expansions of numerical and exact solutions, it is shown that the order conditions of two new kinds of exponential methods are identical to the order conditions of classical Runge-Kutta (RK) methods. Moreover, we investigate the linear stability properties of these exponential methods. Finally, numerical results not only present the long time energy preservation of the first-order symplectic method, but also illustrate the accuracy and efficiency of these formulated methods in comparison with standard ERK methods.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Xianfa Hu",
+   "Wansheng Wang",
+   "Bin Wang",
+   "Yonglei Fang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2306.06614v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2306.06614v3",
+  "published_iso": "2023-06-11T08:04:05Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "A guided residual search for nonlinear state-space identification",
+  "title_norm": "a guided residual search for nonlinear state space identification",
+  "abstract": "Identifying the parameters of nonlinear state-space models from input-output data typically requires solving a highly non-convex optimization problem, which is prone to slow convergence and suboptimal local solutions. This work improves the reliability and efficiency of the estimation process by decomposing the overall optimization problem into a sequence of tractable subproblems. Starting from a linear baseline model, nonlinear residual dynamics are first estimated using a guided residual search (GRS) and subsequently refined through multiple-shooting optimization. Experiments on two benchmarks show competitive performance with state-of-the-art black-box methods and improved convergence over naive initialization.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Merijn Floren",
+   "Jan Swevers"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.22964v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.22964v2",
+  "published_iso": "2026-02-26T13:01:42Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Multiple-Relaxation Runge Kutta Methods for Conservative Dynamical Systems",
+  "title_norm": "multiple relaxation runge kutta methods for conservative dynamical systems",
+  "abstract": "We generalize the idea of relaxation time stepping methods in order to preserve multiple nonlinear conserved quantities of a dynamical system by projecting along directions defined by multiple time stepping algorithms. Similar to the directional projection method of Calvo et. al., we use embedded Runge-Kutta methods to facilitate this in a computationally efficient manner. Proof of the accuracy of the modified RK methods and the existence of valid relaxation parameters are given, under some restrictions. Among other examples, we apply this technique to Implicit-Explicit Runge-Kutta time integration for the Korteweg-de Vries equation and investigate the feasibility and effect of conserving multiple invariants for multi-soliton solutions.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Abhijit Biswas",
+   "David I. Ketcheson"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2302.05235v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2302.05235v1",
+  "published_iso": "2023-02-10T13:24:47Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Mitigating Frequency Learning Bias in Quantum Models via Multi-Stage Residual Learning",
+  "title_norm": "mitigating frequency learning bias in quantum models via multi stage residual le",
+  "abstract": "Quantum machine learning models based on parameterized circuits can be viewed as Fourier series approximators. However, they often struggle to learn functions with multiple frequency components, particularly high-frequency or non-dominant ones; a phenomenon we term the quantum Fourier parameterization bias. Inspired by recent advances in classical Fourier neural operators (FNOs), we adapt the multi-stage residual learning idea to the quantum domain, iteratively training additional quantum modules on the residuals of previous stages. We evaluate our method on a synthetic benchmark composed of spatially localized frequency components with diverse envelope shapes (Gaussian, Lorentzian, triangular). Systematic experiments show that the number of qubits, the encoding scheme, and residual learning are all crucial for resolving multiple frequencies; residual learning alone can improve test MSE significantly over a single-stage baseline trained for the same total number of epochs. Our work provides a practical framework for enhancing the spectral expressivity of quantum models and offers new insights into their frequency-learning behavior.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Ammar Daskin"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.10083v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.10083v2",
+  "published_iso": "2026-03-10T11:18:20Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "On the convergence of monolithic multigrid for implicit Runge-Kutta time stepping of finite element problems",
+  "title_norm": "on the convergence of monolithic multigrid for implicit runge kutta time steppin",
+  "abstract": "Finite element discretization of time dependent problems also require effective time-stepping schemes. While implicit Runge-Kutta methods provide favorable accuracy and stability problems, they give rise to large and complicated systems of equations to solve for each time step. These algebraic systems couple all Runge-Kutta stages together, giving a much larger system than for single-stage methods. We consider an approach to these systems based on monolithic smoothing. If stage-coupled smoothers possess a certain kind of structure, then the question of convergence of a two-grid or multi-grid iteration reduces to convergence of a related strategy for a single-stage system with a complex-valued time step. In addition to providing a general theoretical approach to the convergence of monolithic multigrid methods, several numerical examples are given to illustrate the theory show how higher-order Runge-Kutta methods can be made effective in practice.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Robert C. Kirby"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2304.14879v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2304.14879v1",
+  "published_iso": "2023-04-28T14:37:29Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Bellman Residual Minimization for Control: Geometry, Stationarity, and Convergence",
+  "title_norm": "bellman residual minimization for control geometry stationarity and convergence",
+  "abstract": "Markov decision problems are most commonly solved via dynamic programming. Another approach is Bellman residual minimization, which directly minimizes the squared Bellman residual objective function. However, compared to dynamic programming, this approach has received relatively less attention, mainly because it is often less efficient in practice and can be more difficult to extend to model-free settings such as reinforcement learning. Nonetheless, Bellman residual minimization has several advantages that make it worth investigating, such as more stable convergence with function approximation for value functions. While Bellman residual methods for policy evaluation have been widely studied, methods for policy optimization (control tasks) have been scarcely explored. In this paper, we establish foundational results for the control Bellman residual minimization for policy optimization.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Donghwan Lee",
+   "Hyukjun Yang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2601.18840v4",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2601.18840v4",
+  "published_iso": "2026-01-26T10:58:27Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Error estimation for physics-informed neural networks with implicit Runge-Kutta methods",
+  "title_norm": "error estimation for physics informed neural networks with implicit runge kutta ",
+  "abstract": "The ability to accurately approximate trajectories of dynamical systems enables their analysis, prediction, and control. Neural network (NN)-based approximations have attracted significant interest due to fast evaluation with good accuracy over long integration time steps. In contrast to established numerical approximation schemes such as Runge-Kutta methods, the estimation of the error of the NN-based approximations proves to be difficult. In this work, we propose to use the NN's predictions in a high-order implicit Runge-Kutta (IRK) method. The residuals in the implicit system of equations can be related to the NN's prediction error, hence, we can provide an error estimate at several points along a trajectory. We find that this error estimate highly correlates with the NN's prediction error and that increasing the order of the IRK method improves this estimate. We demonstrate this estimation methodology for Physics-Informed Neural Network (PINNs) on the logistic equation as an illustrative example and then apply it to a four-state electric generator model that is regularly used in power system modelling.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Jochen Stiasny",
+   "Spyros Chatzivasileiadis"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2401.05211v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2401.05211v1",
+  "published_iso": "2024-01-10T15:18:56Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "On the Convergence of Black-Box Variational Inference",
+  "title_norm": "on the convergence of black box variational inference",
+  "abstract": "We provide the first convergence guarantee for full black-box variational inference (BBVI), also known as Monte Carlo variational inference. While preliminary investigations worked on simplified versions of BBVI (e.g., bounded domain, bounded support, only optimizing for the scale, and such), our setup does not need any such algorithmic modifications. Our results hold for log-smooth posterior densities with and without strong log-concavity and the location-scale variational family. Also, our analysis reveals that certain algorithm design choices commonly employed in practice, particularly, nonlinear parameterizations of the scale of the variational approximation, can result in suboptimal convergence rates. Fortunately, running BBVI with proximal stochastic gradient descent fixes these limitations, and thus achieves the strongest known convergence rate guarantees. We evaluate this theoretical insight by comparing proximal SGD against other standard implementations of BBVI on large-scale Bayesian inference problems.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Kyurae Kim",
+   "Jisu Oh",
+   "Kaiwen Wu",
+   "Yi-An Ma",
+   "Jacob R. Gardner"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2305.15349v4",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2305.15349v4",
+  "published_iso": "2023-05-24T16:59:50Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Learning Hamiltonian Systems with Mono-Implicit Runge-Kutta Methods",
+  "title_norm": "learning hamiltonian systems with mono implicit runge kutta methods",
+  "abstract": "Numerical integrators could be used to form interpolation conditions when training neural networks to approximate the vector field of an ordinary differential equation (ODE) from data. When numerical one-step schemes such as the Runge-Kutta methods are used to approximate the temporal discretization of an ODE with a known vector field, properties such as symmetry and stability are much studied. Here, we show that using mono-implicit Runge-Kutta methods of high order allows for accurate training of Hamiltonian neural networks on small datasets. This is demonstrated by numerical experiments where the Hamiltonian of the chaotic double pendulum in addition to the Fermi-Pasta-Ulam-Tsingou system is learned from data.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Håkon Noren"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2303.03769v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2303.03769v1",
+  "published_iso": "2023-03-07T10:04:51Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Variational Reformulation of Generalized Nash Equilibrium Problems with Non-ordered Preferences",
+  "title_norm": "variational reformulation of generalized nash equilibrium problems with non orde",
+  "abstract": "The preferences of players in non-cooperative games represent their choice in the set of available options, which meet the completeness property if players are able to compare any pair of available options. In the existing literature, the variational reformulation of generalized Nash games relies on the numerical representation of players' preferences into objective functions, which is only possible if preferences are transitive and complete. In this work, we first characterize the jointly convex generalized Nash equilibrium problems in terms of a variational inequality without requiring any numerical representation of preferences. Furthermore, we provide the suitable conditions under which any solution of a quasi-variational inequality becomes an equilibrium for the generalized Nash game with non-ordered (incomplete and non-transitive) non-convex inter-dependent preferences. We check the solvability of these games when the strategy maps of players are (possibly) unbounded. As an application, we derive the occurrence of competitive equilibrium for Arrow-Debreu economy under uncertainty.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Asrifa Sultana",
+   "Shivani Valecha"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2302.08702v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2302.08702v1",
+  "published_iso": "2023-02-17T05:27:54Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Implicit-explicit Runge-Kutta for radiation hydrodynamics I: gray diffusion",
+  "title_norm": "implicit explicit runge kutta for radiation hydrodynamics i gray diffusion",
+  "abstract": "Radiation hydrodynamics are a challenging multiscale and multiphysics set of equations. To capture the relevant physics of interest, one typically must time step on the hydrodynamics timescale, making explicit integration the obvious choice. On the other hand, the coupled radiation equations have a scaling such that implicit integration is effectively necessary in non-relativistic regimes. A first-order Lie-Trotter-like operator split is the most common time integration scheme used in practice, alternating between an explicit hydrodynamics step and an implicit radiation solve and energy deposition step. However, such a scheme is limited to first-order accuracy, and nonlinear coupling between the radiation and hydrodynamics equations makes a more general additive partitioning of the equations non-trivial. Here, we develop a new formulation and partitioning of radiation hydrodynamics with gray diffusion that allows us to apply (linearly) implicit-explicit Runge-Kutta time integration schemes. We prove conservation of total energy in the new framework, and demonstrate 2nd-order convergence in time on multiple radiative shock problems, achieving error 3--5 orders of magnitude smaller than the first-order Lie-Trotter operator split at the hydrodynamic CFL, even when Lie-Trotter applies a 3rd-order TVD Runge-Kutta scheme to the hydrodynamics equations.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Ben S. Southworth",
+   "HyeongKae Park",
+   "Svetlana Tokareva",
+   "Marc Charest"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2305.05452v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2305.05452v2",
+  "published_iso": "2023-05-09T13:45:09Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Dimension gap and variational principle for Anosov representations",
+  "title_norm": "dimension gap and variational principle for anosov representations",
+  "abstract": "We consider a representation of a finitely generated CAT(--K) group $Γ$ in SL(d, R) that is Zariski dense and k-Anosov for at least two values of k. We exhibit a gap for the Minkowski dimension of minimal sets for the action of $Γ$ on flags spaces. The proof uses a variational principle for the action on partial flags.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "François Ledrappier",
+   "Pablo Lessa"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2310.13465v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2310.13465v3",
+  "published_iso": "2023-10-20T12:58:13Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Efficient solver of relativistic hydrodynamics with implicit Runge-Kutta method",
+  "title_norm": "efficient solver of relativistic hydrodynamics with implicit runge kutta method",
+  "abstract": "We propose a new method to solve the relativistic hydrodynamic equations based on implicit Runge-Kutta methods with a locally optimized fixed-point iterative solver. For numerical demonstration, we implement our idea for ideal hydrodynamics using the one-stage Gauss-Legendre method as an implicit method. The accuracy and computational cost of our new method are compared with those of explicit ones for the (1+1)-dimensional Riemann problem, as well as the (2+1)-dimensional Gubser flow and event-by-event initial conditions for heavy-ion collisions generated by TrENTo. We demonstrate that the solver converges with only one iteration in most cases, and as a result, the implicit method requires a smaller computational cost than the explicit one at the same accuracy in these cases, while it may not converge with an unrealistically large $Δt$. By showing a relationship between the one-stage Gauss-Legendre method with the iterative solver and the two-step Adams-Bashforth method, we argue that our method benefits from both the stability of the former and the efficiency of the latter.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Nathan Touroux",
+   "Masakiyo Kitazawa",
+   "Koichi Murase",
+   "Marlene Nahrgang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2306.12696v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2306.12696v3",
+  "published_iso": "2023-06-22T06:56:28Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "An adaptive superconvergent finite element method based on local residual minimization",
+  "title_norm": "an adaptive superconvergent finite element method based on local residual minimi",
+  "abstract": "We introduce an adaptive superconvergent finite element method for a class of mixed formulations to solve partial differential equations involving a diffusion term. It combines a superconvergent postprocessing technique for the primal variable with an adaptive finite element method via residual minimization. Such a residual minimization procedure is performed on a local postprocessing scheme, commonly used in the context of mixed finite element methods. Given the local nature of that approach, the underlying saddle point problems associated with residual minimizations can be solved with minimal computational effort. We propose and study a posteriori error estimators, including the built-in residual representative associated with residual minimization schemes; and an improved estimator which adds, on the one hand, a residual term quantifying the mismatch between discrete fluxes and, on the other hand, the interelement jumps of the postprocessed solution. We present numerical experiments in two dimensions using Brezzi-Douglas-Marini elements as input for our methodology. The experiments perfectly fit our key theoretical findings and suggest that our estimates are sharp.",
+  "year": 2022,
+  "venue": "arXiv",
+  "authors": [
+   "Ignacio Muga",
+   "Sergio Rojas",
+   "Patrick Vega"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2210.00390v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2210.00390v1",
+  "published_iso": "2022-10-01T22:47:51Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Quadratic projectable Runge-Kutta methods",
+  "title_norm": "quadratic projectable runge kutta methods",
+  "abstract": "Runge-Kutta methods are affine equivariant: applying a method before or after an affine change of variables yields the same numerical trajectory. However, for some applications, one would like to perform numerical integration after a quadratic change of variables. For example, in Lie-Poisson reduction, a quadratic transformation reduces the number of variables in a Hamiltonian system, yielding a more efficient representation of the dynamics. Unfortunately, directly applying a symplectic Runge-Kutta method to the reduced system generally does not preserve its Hamiltonian structure, so many proposed techniques require computing numerical trajectories of the original, unreduced system.\n  In this paper, we study when a Runge-Kutta method in the original variables descends to a numerical integrator expressible entirely in terms of the quadratically transformed variables. In particular, we show that symplectic diagonally implicit Runge-Kutta (SyDIRK) methods, applied to a quadratic projectable vector field, are precisely the Runge-Kutta methods that descend to a method (generally not of Runge-Kutta type) in the projected variables. We illustrate our results with several examples in both conservative and non-conservative dynamics.",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Ari Stern",
+   "Milo Viviani"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2411.12634v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2411.12634v2",
+  "published_iso": "2024-11-19T16:46:12Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "A smooth variational principle on Wasserstein space",
+  "title_norm": "a smooth variational principle on wasserstein space",
+  "abstract": "In this note, we provide a smooth variational principle on Wasserstein space by constructing a smooth gauge-type function using the sliced Wasserstein distance. This function is a crucial tool for optimization problems and in viscosity theory of PDEs on Wasserstein space.",
+  "year": 2022,
+  "venue": "arXiv",
+  "authors": [
+   "Erhan Bayraktar",
+   "Ibrahim Ekren",
+   "Xin Zhang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2209.15028v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2209.15028v2",
+  "published_iso": "2022-09-29T18:07:53Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Stage-Parallel Implicit Runge--Kutta methods via low-rank matrix equation corrections",
+  "title_norm": "stage parallel implicit runge kutta methods via low rank matrix equation correct",
+  "abstract": "Implicit Runge--Kutta (IRK) methods are highly effective for solving stiff ordinary differential equations (ODEs) but can be computationally expensive for large-scale problems due to the need of solving coupled algebraic equations at each step. This study improves IRK efficiency by leveraging parallelism to decouple stage computations and reduce communication overhead, specifically we stably decouple a perturbed version of the stage system of equations and recover the exact solution by solving a Sylvester matrix equation with an explicitly known low-rank right-hand side. Two IRK families -- symmetric methods and collocation methods -- are analyzed, with extensions to nonlinear problems using a simplified Newton method. Implementation details, shared memory parallel code, and numerical examples, particularly for ODEs from spatially discretized PDEs, demonstrate the efficiency of the proposed IRK technique.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Fabio Durastante",
+   "Mariarosa Mazza"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2505.17719v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2505.17719v2",
+  "published_iso": "2025-05-23T10:35:43Z",
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Three Variations on Variational Autoencoders",
+  "title_norm": "three variations on variational autoencoders",
+  "abstract": "Variational autoencoders (VAEs) are one class of generative probabilistic latent-variable models designed for inference based on known data. We develop three variations on VAEs by introducing a second parameterized encoder/decoder pair and, for one variation, an additional fixed encoder. The parameters of the encoders/decoders are to be learned with a neural network. The fixed encoder is obtained by probabilistic-PCA. The variations are compared to the Evidence Lower Bound (ELBO) approximation to the original VAE. One variation leads to an Evidence Upper Bound (EUBO) that can be used in conjunction with the original ELBO to interrogate the convergence of the VAE.",
+  "year": 2022,
+  "venue": "arXiv",
+  "authors": [
+   "R. I. Cukier"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2212.04451v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2212.04451v2",
+  "published_iso": "2022-12-06T20:33:19Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "VAE-MS: An Asymmetric Variational Autoencoder for Mutational Signature Extraction",
+  "title_norm": "vae ms an asymmetric variational autoencoder for mutational signature extraction",
+  "abstract": "Mutational signature analysis has emerged as a powerful method for uncovering the underlying biological processes driving cancer development. However, the signature extraction process, typically performed using non-negative matrix factorization (NMF), often lacks reliability and clinical applicability. To address these limitations, several solutions have been introduced, including the use of neural networks to achieve more accurate estimates and probabilistic methods to better capture natural variation in the data. In this work, we introduce a Variational Autoencoder for Mutational Signatures (VAE-MS), a novel model that leverages both an asymmetric architecture and probabilistic methods for the extraction of mutational signatures. VAE-MS is compared to with three state-of-the-art models for mutational signature extraction: SigProfilerExtractor, the NMF-based gold standard; MUSE-XAE, an autoencoder that employs an asymmetric design without probabilistic components; and SigneR, a Bayesian NMF model, to illustrate the strength in combining a nonlinear extraction with a probabilistic model. In the ability to reconstruct input data and generalize to unseen data, models with probabilistic components (VAE-MS, SigneR) dramatically outperformed models without (SigProfilerExtractor, MUSE-XAE). The NMF-baed models (SigneR, SigProfilerExtractor) had the most accurate reconstructions in simulated data, while VAE-MS reconstructed more accurately on real cancer data. Upon evaluating the ability to extract signatures consistently, no model exhibited a clear advantage over the others. Software for VAE-MS is available at https://github.com/CLINDA-AAU/VAE-MS.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Ida Egendal",
+   "Rasmus Froberg Brøndum",
+   "Dan J Woodcock",
+   "Christopher Yau",
+   "Martin Bøgsted"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.22239v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.22239v1",
+  "published_iso": "2026-02-24T08:08:38Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Adaptive stabilized finite elements via residual minimization onto bubble enrichments",
+  "title_norm": "adaptive stabilized finite elements via residual minimization onto bubble enrich",
+  "abstract": "The Adaptive Stabilized Finite Element method (AS-FEM) developed in Calo et. al. combines the idea of the residual minimization method with the inf-sup stability offered by the discontinuous Galerkin (dG) frameworks. As a result, the discretizations deliver stabilized approximations and residual representatives in the dG space that can drive automatic adaptivity. We generalize AS FEM by considering continuous test spaces; thus, we propose a residual minimization method on a stable Continuous Interior Penalty (CIP) formulation that considers a C0-conforming trial FEM space and a test space based on the enrichment of the trial space by bubble functions. In our numerical experiments, the test space choice results in a significant reduction of the total degrees of freedom compared to the dG test spaces of Calo et. al. that converge at the same rate. Moreover, as trial and test spaces are C0-conforming, implementing a full dG data structure is unnecessary, simplifying the method's implementation considerably and making it appealing for industrial applications, see Labanda et. al.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "José G. Hasbani",
+   "Paulina Sepúlveda",
+   "Ignacio Muga",
+   "Victor M. Calo",
+   "Sergio Rojas"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2303.17982v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2303.17982v1",
+  "published_iso": "2023-03-31T11:34:05Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "A residual stress characterization method of a small diameter wire by matter removal",
+  "title_norm": "a residual stress characterization method of a small diameter wire by matter rem",
+  "abstract": "Standard spring design is based on the assumption that there is no residual stress in the wire. This assumption can be quite strong for small wires that undergo a significant wire drawing during the manufacturing process. The main objective of this work is to design and test a method for characterizing residual stresses in small diameter drawn wires. The basic principle consists in removing a part of the material and then measuring the associated displacements. This material removal was simulated by finite elements and experimented in real situation. The first results are encouraging because they seem to show that the residual stresses in the wire studied are significant, and justify our investigations.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Julien Vaïssette",
+   "Manuel Paredes",
+   "Catherine Mabru"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2302.10732v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2302.10732v1",
+  "published_iso": "2023-02-21T15:31:38Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Minimizing Residuals in ODE Integration Using Optimal Control",
+  "title_norm": "minimizing residuals in ode integration using optimal control",
+  "abstract": "Given the set of discrete solution points or nodes, called the skeleton, generated by an ODE solver, we study the problem of fitting a curve passing through the nodes in the skeleton minimizing a norm of the residual vector of the ODE. We reformulate this interpolation problem as a multi-stage optimal control problem and, for the minimization of two different norms, we apply the associated maximum principle to obtain the necessary conditions of optimality. We solve the problem analytically for the Dahlquist test problem and a variant of the leaky bucket problem, in terms of the given skeleton. We also consider the Van der Pol equation, for which we obtain interpolating curves with minimal residual norms by numerically solving a direct discretization of the problem through optimization software. With the skeletons obtained by various ODE solvers of MATLAB, we make comparisons between the residuals obtained by our approach and those obtained by the MATLAB function deval.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Robert M. Corless",
+   "C. Yalçın Kaya"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2510.20117v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2510.20117v2",
+  "published_iso": "2025-10-23T01:37:26Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "IGA-ODIL: Optimizing DIscretre robust Loss with Isogeometric Analysis to solve forward and inverse problems faster using machine learning tools",
+  "title_norm": "iga odil optimizing discretre robust loss with isogeometric analysis to solve fo",
+  "abstract": "Physics-informed neural networks (PINNs) formulate the solution of partial differential equations as residual minimization problems over neural network parameterizations. Although highly flexible, optimization of PINNs using modern variants of Stochastic Gradient Descent algorithms is expensive. On the other hand, iterative computation of PINN parameterization using the Gauss-Newton method suffers from convergence difficulties, dense Jacobian structures, and poor conditioning that limit the effectiveness of second-order optimization methods. In this work, we introduce IGA-ODIL, a spline-based residual minimization framework combining ideas from Optimizing DIscrete Loss (ODIL), robust variational residual minimization, and Isogeometric Analysis (IGA). Instead of neural-network parameterizations of PINNs, the unknown solution is represented by smooth B-spline basis functions, leading to sparse structured Jacobians and efficient Gauss--Newton optimization. We also derive robust residual formulations based on weighted Gram operators, making the loss function related with the true error. The resulting systems inherit locality, sparsity, and approximation-theoretic properties of classical finite element and isogeometric methods while preserving the residual-learning philosophy of scientific machine learning. The proposed methodology is evaluated on several benchmark problems, including Poisson equations, convection-dominated advection--diffusion equations, Helmholtz problems with highly oscillatory solutions, nonlinear Allen--Cahn equations, and inverse Helmholtz parameter identification. Numerical experiments demonstrate orders-of-magnitude speedups compared with PINNs and CRVPINNs while maintaining high accuracy and robustness.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Maciej Paszyński",
+   "Tomasz Służalec"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.30272v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.30272v1",
+  "published_iso": "2026-05-28T17:30:08Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Variational inference based on a subclass of closed skew normals",
+  "title_norm": "variational inference based on a subclass of closed skew normals",
+  "abstract": "Gaussian distributions are widely used in Bayesian variational inference to approximate intractable posterior densities, but the ability to accommodate skewness can improve approximation accuracy significantly, when data or prior information is scarce. We study the properties of a subclass of closed skew normals constructed using affine transformation of independent standardized univariate skew normals as the variational density, and illustrate how it provides increased flexibility and accuracy in approximating the joint posterior in various applications, by overcoming limitations in existing skew normal variational approximations. The evidence lower bound is optimized using stochastic gradient ascent, where analytic natural gradient updates are derived. We also demonstrate how problems in maximum likelihood estimation of skew normal parameters occur similarly in stochastic variational inference, and can be resolved using the centered parametrization. Supplemental materials are available online.",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Linda S. L. Tan",
+   "Aoxiang Chen"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2306.02813v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2306.02813v2",
+  "published_iso": "2023-06-05T12:08:46Z",
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ }
+]

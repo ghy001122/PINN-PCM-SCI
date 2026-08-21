@@ -1,0 +1,493 @@
+{
+  "trace_report": {
+    "likely_fatal_step": {
+      "step": "Step 5",
+      "reason": "The continuation is the only claimed mechanism, yet the original text did not bind what bisection brackets, whether a trial is trained before feasibility is checked, how rollback works, or how the matched total update budget is allocated. I attacked this first rather than accepting BLOCK 2's account."
+    },
+    "operative_readings": [
+      {
+        "term": "advances s by bisection only when ... M(s) is nonnegative",
+        "verbatim_quote": "5. Train the continuation arm by evaluating L_s and M(s), updating the same network parameters, and moving s forward by the declared bisection rule only after training and validation feasibility; the changed s alters the next parameter update and therefore the predicted phi, T, xi, switching event, front, and energy.",
+        "reading": "Current-stage feasibility authorizes an immediate midpoint trial, which is then trained.",
+        "disposition": "Defensible but originally omitted trial budget and rollback."
+      },
+      {
+        "term": "advances s by bisection only when ... M(s) is nonnegative",
+        "verbatim_quote": "5. Train the continuation arm by evaluating L_s and M(s), updating the same network parameters, and moving s forward by the declared bisection rule only after training and validation feasibility; the changed s alters the next parameter update and therefore the predicted phi, T, xi, switching event, front, and energy.",
+        "reading": "Bisection searches only coordinates already feasible at the unchanged checkpoint.",
+        "disposition": "Defensible literal reading; it cannot leave s=0 in the dry-run instance. The patch selects and specifies the first reading."
+      }
+    ],
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": [
+          "declared 2D VO2 PDE and boundary/initial conditions",
+          "device entities and pulse protocols",
+          "mesh/time refinement levels"
+        ],
+        "produces": [
+          "training trajectories: entity x time x 2D fields",
+          "validation trajectories of the same type",
+          "untouched formal-OOD trajectories",
+          "per-block convergence metadata"
+        ],
+        "note": "Training and validation must be nonempty; formal-OOD is not read by the controller."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "collocation coordinates N x (x,y,t,entity covariates)",
+          "common initialization theta_0 in R^P"
+        ],
+        "produces": [
+          "phi,T,xi predictions at N points",
+          "matched arm definitions and U_total"
+        ],
+        "note": "P, collocation data, optimizer settings, and total updates are shared."
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "predicted fields and derivatives",
+          "FEniCSx reference terms",
+          "two-finest convergence metadata"
+        ],
+        "produces": [
+          "B residual vectors r_b",
+          "B positive scales a_b",
+          "B normalized MSE values ell_b",
+          "B positive effective floors epsilon_b^{F,+}",
+          "versioned residual table"
+        ],
+        "note": "Directly computed identities are not residual evidence; invalid/empty scales fail preflight."
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "matched backbone/data/U_total",
+          "global-sum and strong-baseline objectives"
+        ],
+        "produces": [
+          "baseline checkpoints indexed by update",
+          "baseline Front-Energy-Causality metrics"
+        ],
+        "note": "No formal-OOD entity is consumed."
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "theta_0",
+          "ell_b(theta)",
+          "epsilon_b(0)",
+          "epsilon_b^{F,+}",
+          "rho",
+          "delta_s",
+          "U_total",
+          "training and validation margins"
+        ],
+        "produces": [
+          "last-feasible (theta_lo,s_lo)",
+          "accepted and failed trial log",
+          "continuation checkpoints",
+          "remaining update count"
+        ],
+        "note": "Patched controller binds trial, bracket, rollback, update charging, and termination; original text did not."
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "matched-update continuation and global checkpoints",
+          "independent FEniCSx oracle"
+        ],
+        "produces": [
+          "paired M, worst-block residual, event-order, topology, energy, and switching-time differences"
+        ],
+        "note": "Similar aggregate loss is a pairing filter, not proof."
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "same s schedule and endpoints",
+          "permuted block-to-floor mapping",
+          "same U_total/data/backbone"
+        ],
+        "produces": [
+          "retrained permutation-control checkpoints and downstream metrics"
+        ],
+        "note": "If all block schedules are identical, the permutation is forced to be null and carries no evidence."
+      },
+      {
+        "step": "S8",
+        "consumes": [
+          "frozen method and checkpoint",
+          "single-factor and joint whole-entity OOD sets"
+        ],
+        "produces": [
+          "oracle-scored OOD event, topology, energy, and residual metrics"
+        ],
+        "note": "OOD data is evaluation-only."
+      },
+      {
+        "step": "S9",
+        "consumes": [
+          "all arm logs and costs"
+        ],
+        "produces": [
+          "paired-seed estimates, failures, wall time, memory, preprocessing cost, scope statement"
+        ],
+        "note": "These are empirical outputs, not guarantee-grade conclusions."
+      }
+    ],
+    "unbound_parameter_audit": [
+      {
+        "item": "delta_s",
+        "result": "bound",
+        "basis": "Named default 0.02 with validation sweep 0.01 to 0.05."
+      },
+      {
+        "item": "rho",
+        "result": "repaired",
+        "basis": "Named default/sweep existed but rho was absent from the written L_s formula; patch inserts it."
+      },
+      {
+        "item": "U_total and trial allocation",
+        "result": "repaired",
+        "basis": "U_total is inherited from the predeclared matched arm; U_try is now deterministically derived from U_rem and every attempted update is charged."
+      },
+      {
+        "item": "two finest mesh/time resolutions",
+        "result": "bound",
+        "basis": "A definitional convergence pair, not a tunable behavioral threshold."
+      },
+      {
+        "item": "matched update checkpoints and paired seeds",
+        "result": "evaluation scale",
+        "basis": "They size reporting and do not alter the continuation transition rule."
+      }
+    ],
+    "estimand_match": {
+      "declared": "Paired arm differences over predeclared synthetic 2D VO2 entities and matched OOD interventions in device and worst-block errors.",
+      "constructed": "S6 and S8 form paired differences over the same entity/process population and conditioning.",
+      "result": "match, conditional on entity pairing and metric definitions being frozen before OOD."
+    },
+    "dry_run": {
+      "instance": "Three scalar block surrogates ell_b(theta)=(theta_b-t_b)^2 with theta_0=[0,0,0], targets [1,-1,0.5], floors [0.04,0.01,0.0025], rho=1, delta_s=0.02. For the comparison only, learning rate 1e-5 and U_total=70 are invented instance settings held equal across arms.",
+      "execution": {
+        "mode": "executed",
+        "interpreter": "project .venv Python 3.11.9",
+        "script": "import json\nimport math\n\n\nRHO = 1.0\nDELTA_S = 0.02\nTHETA0 = [0.0, 0.0, 0.0]\nTARGET = [1.0, -1.0, 0.5]\nFLOOR = [0.04, 0.01, 0.0025]\nLEARNING_RATE = 1.0e-5  # invented instance setting, not a candidate parameter\nTOTAL_UPDATES = 70      # invented instance setting, held equal across arms\n\n\ndef ell(theta):\n    return [(x - t) ** 2 for x, t in zip(theta, TARGET)]\n\n\nELL0 = ell(THETA0)\nEPS0 = [max(x, f) for x, f in zip(ELL0, FLOOR)]\n\n\ndef epsilon(s):\n    return [e0 ** (1.0 - s) * ef ** s for e0, ef in zip(EPS0, FLOOR)]\n\n\ndef loss_margin(theta, s):\n    values = ell(theta)\n    eps = epsilon(s)\n    ratios = [x / e for x, e in zip(values, eps)]\n    loss = RHO * sum(max(r - 1.0, 0.0) ** 2 for r in ratios)\n    margin = 1.0 - max(ratios)\n    return loss, margin, ratios\n\n\ndef gradient(theta, s):\n    values = ell(theta)\n    eps = epsilon(s)\n    out = []\n    for x, t, value, e in zip(theta, TARGET, values, eps):\n        ratio = value / e\n        if ratio <= 1.0:\n            out.append(0.0)\n        else:\n            out.append(RHO * 4.0 * (ratio - 1.0) * (x - t) / e)\n    return out\n\n\ndef train(theta, schedule):\n    state = list(theta)\n    for s, updates in schedule:\n        for _ in range(updates):\n            g = gradient(state, s)\n            state = [x - LEARNING_RATE * dx for x, dx in zip(state, g)]\n    loss, margin, ratios = loss_margin(state, schedule[-1][0])\n    return {\"theta\": state, \"loss\": loss, \"margin\": margin, \"ratios\": ratios}\n\n\n# Reading A: current-stage feasibility authorizes an immediate midpoint trial.\nmidpoint_trial = 0.5\nmidpoint_state = loss_margin(THETA0, midpoint_trial)\n\n# Reading B: bisection is over coordinates already feasible at the unchanged theta.\nlo, hi = 0.0, 1.0\nwhile hi - lo > DELTA_S:\n    mid = (lo + hi) / 2.0\n    if loss_margin(THETA0, mid)[1] >= 0.0:\n        lo = mid\n    else:\n        hi = mid\ncurrent_feasible = {\n    \"accepted_s\": lo,\n    \"first_rejected_s\": hi,\n    \"accepted_margin\": loss_margin(THETA0, lo)[1],\n    \"rejected_margin\": loss_margin(THETA0, hi)[1],\n}\n\n# Same-budget T5 toy: direct terminal penalty versus one defensible staged reading.\ndirect = train(THETA0, [(1.0, TOTAL_UPDATES)])\nstages = [0.5, 0.75, 0.875, 0.9375, 0.96875, 0.984375, 1.0]\nstaged = train(THETA0, [(s, TOTAL_UPDATES // len(stages)) for s in stages])\n\nzero_floor_error = None\ntry:\n    _ = 0.0 / 0.0\nexcept ZeroDivisionError as exc:\n    zero_floor_error = type(exc).__name__ + \": \" + str(exc)\n\nreport = {\n    \"initial\": {\n        \"ell\": ELL0,\n        \"epsilon_0\": EPS0,\n        \"loss_s0\": loss_margin(THETA0, 0.0)[0],\n        \"margin_s0\": loss_margin(THETA0, 0.0)[1],\n    },\n    \"reading_A_midpoint_before_training\": {\n        \"next_s\": midpoint_trial,\n        \"loss\": midpoint_state[0],\n        \"margin\": midpoint_state[1],\n        \"ratios\": midpoint_state[2],\n    },\n    \"reading_B_bisect_currently_feasible\": current_feasible,\n    \"zero_floor_probe\": zero_floor_error,\n    \"t5_same_budget\": {\n        \"learning_rate\": LEARNING_RATE,\n        \"updates_each\": TOTAL_UPDATES,\n        \"direct_s1\": direct,\n        \"staged_midpoints\": staged,\n        \"worst_ratio_difference_staged_minus_direct\": max(staged[\"ratios\"]) - max(direct[\"ratios\"]),\n        \"classification\": \"instance_contingent\",\n    },\n}\n\nprint(json.dumps(report, indent=2, sort_keys=True))\n\r\n",
+        "output": "{\r\n  \"initial\": {\r\n    \"ell\": [\r\n      1.0,\r\n      1.0,\r\n      0.25\r\n    ],\r\n    \"epsilon_0\": [\r\n      1.0,\r\n      1.0,\r\n      0.25\r\n    ],\r\n    \"loss_s0\": 0.0,\r\n    \"margin_s0\": 0.0\r\n  },\r\n  \"reading_A_midpoint_before_training\": {\r\n    \"loss\": 178.0,\r\n    \"margin\": -9.0,\r\n    \"next_s\": 0.5,\r\n    \"ratios\": [\r\n      5.0,\r\n      10.0,\r\n      10.0\r\n    ]\r\n  },\r\n  \"reading_B_bisect_currently_feasible\": {\r\n    \"accepted_margin\": 0.0,\r\n    \"accepted_s\": 0.0,\r\n    \"first_rejected_s\": 0.015625,\r\n    \"rejected_margin\": -0.07460782832131763\r\n  },\r\n  \"t5_same_budget\": {\r\n    \"classification\": \"instance_contingent\",\r\n    \"direct_s1\": {\r\n      \"loss\": 26.248524349790845,\r\n      \"margin\": -4.975673835886826,\r\n      \"ratios\": [\r\n        5.975673835886826,\r\n        2.2170922238456474,\r\n        1.0994019482534367\r\n      ],\r\n      \"theta\": [\r\n        0.5110961715884472,\r\n        -0.8511009662944166,\r\n        0.5524261849711916\r\n      ]\r\n    },\r\n    \"learning_rate\": 1e-05,\r\n    \"staged_midpoints\": {\r\n      \"loss\": 66.86865087558287,\r\n      \"margin\": -7.6677230904794555,\r\n      \"ratios\": [\r\n        8.667723090479456,\r\n        3.8034872919662135,\r\n        1.4638237672812857\r\n      ],\r\n      \"theta\": [\r\n        0.4111800584056462,\r\n        -0.8049746864643922,\r\n        0.4395057075568016\r\n      ]\r\n    },\r\n    \"updates_each\": 70,\r\n    \"worst_ratio_difference_staged_minus_direct\": 2.6920492545926296\r\n  },\r\n  \"zero_floor_probe\": \"ZeroDivisionError: float division by zero\"\r\n}\r\n"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "Initial ell and epsilon(0)",
+          "value": "[1,1,0.25] and [1,1,0.25]",
+          "arithmetic": "epsilon_b(0)=max(ell_b(theta_0),epsilon_b^F), so every initial ratio is 1."
+        },
+        {
+          "quantity": "Initial loss and margin",
+          "value": "L_0=0; M(0)=0",
+          "arithmetic": "sum(max(1-1,0)^2)=0 and 1-max([1,1,1])=0."
+        },
+        {
+          "quantity": "Immediate midpoint reading at s=0.5",
+          "value": "ratios=[5,10,10], L=178, M=-9",
+          "arithmetic": "epsilon is the geometric midpoint; L=(5-1)^2+(10-1)^2+(10-1)^2=16+81+81=178."
+        },
+        {
+          "quantity": "Current-feasible bisection reading",
+          "value": "accepted s=0; first rejected s=0.015625 with M=-0.0746078283",
+          "arithmetic": "Six halvings reduce the bracket to width 1/64=0.015625; every positive midpoint is infeasible at unchanged theta_0."
+        },
+        {
+          "quantity": "Same-budget naive versus staged worst ratio",
+          "value": "direct=5.9756738359; staged=8.6677230905; staged-direct=2.6920492546",
+          "arithmetic": "Executed 70 gradient updates in each arm under the declared toy functions."
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "The original Step 5 has no unique next state: one defensible reading tries s=0.5 with L=178 and M=-9, while another returns accepted s=0 after the same bisection tolerance.",
+          "kind": "structural",
+          "why": "The divergence follows from omitted transition semantics, not from whether the invented residual magnitudes resemble VO2. Repaired by binding trial, bracket, rollback, update charging, and stop behavior."
+        },
+        {
+          "anomaly": "rho=1 was declared and swept but the original formula L_s=sum_b[...] did not consume rho.",
+          "kind": "structural",
+          "why": "A declared parameter absent from its only stated objective has no effect for any instance. Repaired by inserting rho into L_s."
+        },
+        {
+          "anomaly": "ell=0 and epsilon^F=0 yields 0/0 and Python raises ZeroDivisionError.",
+          "kind": "structural",
+          "why": "The ratio is undefined for any exact-zero block under the original algebra. Repaired with a dtype-derived positive denominator guard and by separating algebraic identities from residual evidence."
+        },
+        {
+          "anomaly": "At s=0, L_0=0 and M(0)=0 exactly because epsilon(0) is defined from ell(theta_0).",
+          "kind": "structural",
+          "why": "This is forced by construction and therefore provides no confirmation of trainability or physical fidelity; it is only a valid initialization invariant."
+        },
+        {
+          "anomaly": "On the invented convex instance, the staged arm's worst ratio is 2.6920492546 higher than direct s=1 after the same 70 updates.",
+          "kind": "instance_contingent",
+          "why": "Changing the toy residual geometry or optimizer step can reverse the comparison. It is a falsification lead, not evidence about the real PINN and not sufficient for a blocker."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty residual-block set or empty collocation/entity set",
+        "behavior": "mean and max are undefined, so the original procedure cannot emit ell or M.",
+        "finding": "Repaired with nonempty preflight requirements."
+      },
+      {
+        "probe": "k=0",
+        "behavior": "No k-indexed selection exists in this mechanism.",
+        "finding": null
+      },
+      {
+        "probe": "a_b=0 or nonfinite",
+        "behavior": "ell_b divides by zero or is nonfinite.",
+        "finding": "Repaired by fail-fast preflight; algebraic identities are reported separately."
+      },
+      {
+        "probe": "epsilon_b^F=0 and ell_b(theta_0)=0",
+        "behavior": "The original ratio is 0/0; executed probe raised ZeroDivisionError.",
+        "finding": "Repaired with epsilon_b^{F,+}=max(epsilon_b^F,u), where u is fixed by the declared dtype."
+      },
+      {
+        "probe": "all blocks identical and tied at every threshold",
+        "behavior": "L and M remain defined with the positive-floor patch, and equality M=0 is accepted. A block-identity permutation is algebraically null.",
+        "finding": "Non-blocking: the permutation control must be reported as forced/no-information for this case rather than banked as confirmation."
+      },
+      {
+        "probe": "single residual block",
+        "behavior": "The controller halts normally, but the cross-block masking claim is out of scope for that entity.",
+        "finding": null
+      },
+      {
+        "probe": "maximum specified coordinate s=1",
+        "behavior": "The patched controller accepts and halts if both margins are nonnegative; otherwise it exhausts the charged budget and emits the last feasible checkpoint and failed bracket.",
+        "finding": null
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "Residual blocks with different units become comparable without a hidden bridge weight.",
+        "established_by": "S3",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null,
+        "repair": "Wording changed to explicit, versioned scales and rho; comparability remains conditional on valid nonzero scales."
+      },
+      {
+        "claim": "M(s)>=0 is a simultaneous residual-feasibility certificate.",
+        "established_by": "S5",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The continuation obeys the same total optimizer-update budget as baselines.",
+        "established_by": "S5",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null,
+        "repair": "All trial updates, including rolled-back failures, are now charged to U_total."
+      },
+      {
+        "claim": "M(s) predicts device fidelity better than a small global residual sum.",
+        "established_by": "S6",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The matched residual-identity intervention isolates the continuation mechanism.",
+        "established_by": "S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "permuted schedules must differ",
+          "retraining and all non-permuted inputs must remain matched",
+          "the permutation must not change total update consumption"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Whole-entity OOD evaluation does not tune the path.",
+        "established_by": "S8",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "architecture, controller, scales, floors, thresholds, and checkpoint are frozen before OOD access"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The direct s=1 naive premise is false in the target stiff system.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Each cited gap is closed.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null,
+        "repair": "Each how_closed sentence is downgraded to 'targets' because no falsification experiment has run."
+      },
+      {
+        "claim": "No removal bound, Hessian guarantee, real-device validation, or global PINN guarantee is claimed.",
+        "established_by": "S9",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "From the anchor gap and the same residual/floor inputs, optimize the terminal s=1 hinge penalty directly from theta_0 for all U_total updates, with no continuation controller.",
+      "naive_fairness": "It uses the same fields, floors, information, initialization, optimizer step, and 70-update toy budget; it is simpler because it removes all stage, bracket, validation-gate, and rollback logic.",
+      "instance_behavior": {
+        "naive": "After 70 updates: worst ratio=5.9756738359, L=26.2485243498, M=-4.9756738359.",
+        "mechanism": "Under the stated midpoint schedule reading and the same 70 updates: worst ratio=8.6677230905, L=66.8686508756, M=-7.6677230905.",
+        "divergence": "Mechanism minus naive worst ratio = +2.6920492546.",
+        "kind": "instance_contingent"
+      },
+      "verdict": "equivalent_to_naive",
+      "reasoning": "The continuation does not confront the declared obstacle on this particular invented instance; the simpler direct arm is better. Because the outcome depends on the synthetic residual geometry and the previously unspecified controller, it is not structural equivalence and cannot by itself support a blocking finding."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "The direct-terminal naive arm outperformed the staged continuation on the invented same-budget instance; the candidate's branch-(i) advantage remains an empirical prediction.",
+      "severity": "note",
+      "why_not_repaired": "The result is instance-contingent and the authorized falsification experiment, not a coherence rewrite, owns whether the advantage exists for the declared VO2 PINN.",
+      "verbatim_step_quote": "5. Train the continuation arm by evaluating L_s and M(s), updating the same network parameters, and moving s forward by the declared bisection rule only after training and validation feasibility; the changed s alters the next parameter update and therefore the predicted phi, T, xi, switching event, front, and energy.",
+      "executed_evidence": "Python 3.11.9 stdlib trace, same toy residuals and 70 updates: direct s=1 worst ratio 5.9756738359 and L 26.2485243498; staged reading worst ratio 8.6677230905 and L 66.8686508756; difference +2.6920492546.",
+      "reading_dependence": "reading_dependent: staged midpoint controller with equal 10-update allocations across seven trial coordinates",
+      "structural_requirement": null
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism",
+      "value": "The shared_evaluation object is the Front-Energy-Causality framework, which reports dimensionless electric, thermal, phase-kinetic, and non-tautological constitutive residual errors together with switching-time error, programming-energy error, event-order violations, and phase-front topology error against an independent FEniCSx trajectory. A parameter-matched PINN outputs electric potential phi, temperature T, and phase fraction xi on a two-dimensional VO2 device; current density and Joule heating are computed as j=-sigma(T,xi) grad(phi) and q_J=sigma(T,xi)|grad(phi)|^2, and automatic differentiation supplies the coupled PDE and independently evaluable constitutive residuals r_b. Algebraic identities created by directly defining j or q_J are reported as identities, not counted as residual blocks. Each ell_b is the mean squared r_b divided by a_b^2, where a_b is the nonzero root-mean-square magnitude of the corresponding FEniCSx PDE term on training entities. The versioned residual table must fail preflight on an empty sample set, a nonfinite scale, or a_b<=0. For each block, epsilon_b^F is the observed discretization-convergence floor from the two finest available FEniCSx mesh/time resolutions on training entities, evaluated in the same normalized residual coordinates as ell_b. Let u be machine epsilon for the declared training dtype and epsilon_b^{F,+}=max(epsilon_b^F,u); this is a numerical denominator guard, not a claimed physical floor. Set epsilon_b(0)=max(ell_b(theta_0),epsilon_b^{F,+}) and epsilon_b(s)=epsilon_b(0)^(1-s)(epsilon_b^{F,+})^s for s in [0,1]. Training minimizes L_s=rho sum_b[max(ell_b/epsilon_b(s)-1,0)]^2 and uses M(s)=1-max_b ell_b/epsilon_b(s); all scales and rho are therefore explicit and versioned rather than hidden bridge weights. The continuation controller inherits the predeclared matched-arm update count U_total, maintains a last-feasible checkpoint (theta_lo,s_lo), an upper bracket s_hi, and remaining updates U_rem, and never reads formal-OOD entities. Initially (theta_lo,s_lo,s_hi,U_rem)=(theta_0,0,1,U_total). A trial uses s_try=1 when 1-s_lo<=delta_s and otherwise (s_lo+s_hi)/2, restores theta_lo, spends U_try=max(1,floor(U_rem/2)) optimizer updates on L_{s_try}, and then evaluates M on nonempty training and validation sets. A feasible trial is accepted as the new checkpoint and resets s_hi=1; an infeasible trial is rolled back and sets s_hi=s_try. Every attempted update is charged to U_rem. The arm stops at accepted s=1 or when U_rem=0 and emits the last feasible checkpoint and failed bracket. delta_s=0.02 is the bisection tolerance, swept over 0.01 to 0.05 for validation stability, and rho=1 is the dimensionless overall penalty scale, swept over 0.5, 1, and 2. M(s) is the reported load-bearing certificate: it replaces a small global average with an auditable simultaneous-feasibility condition, while the network, PDEs, samples, optimizer family, and total optimizer updates remain unchanged. The assumption-audit companion compares this path against the same backbone trained with a globally normalized residual sum at equal updates and records cases with similar aggregate loss but divergent M(s), then asks whether the independent FEniCSx event, topology, and energy errors diverge in the predicted direction. After every design choice is frozen without formal-OOD entities, the same framework evaluates matched pairs that independently change geometry, VO2 material-stiffness parameters, or pulse spectrum, followed by a joint whole-entity OOD split; this is an evaluation of the one mechanism, not a second learned module. All claims are conditional on the declared synthetic FEniCSx electro-thermal-phase model, and no removal bound, Hessian guarantee, real-device validation, or global PINN guarantee is claimed.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1/T2/T3 findings by consuming rho, binding an executable charged-budget bisection controller, enforcing nonempty/nonzero preflight, separating forced identities, and guarding zero floors."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism_steps",
+      "value": "1. Use FEniCSx to solve the declared two-dimensional VO2 electric-thermal-phase PDE for complete device entities, perform the existing mesh/time refinement, and emit nonempty grouped training, validation, and untouched formal-OOD trajectories plus convergence-floor metadata.\n2. Implement one parameter-capped PINN backbone that outputs phi, T, and xi; use the same initialization, nonempty collocation set, optimizer family and settings, and predeclared total update budget U_total for solver-floor continuation and every matched-backbone baseline.\n3. Compute j, q_J, all independently evaluable PDE/constitutive/initial/boundary residual blocks, the training-only scales a_b, the same-coordinate converged floors epsilon_b^F, the dtype guard u, the effective positive floors epsilon_b^{F,+}, and epsilon_b(0). Fail preflight on empty samples, nonfinite quantities, or a_b<=0; report algebraic identities separately rather than treating forced zeros as evidence. Emit a versioned residual-definition table consumed unchanged by every arm.\n4. Train the equal-budget global-sum arm and the predeclared strong baselines, including Fourier-feature/adaptive PINN, causal PINN, and NeuSA where its published code supports the declared boundary conditions; emit checkpoints and Front-Energy-Causality metrics without using formal-OOD entities.\n5. Train the continuation arm with the explicit bracket controller. Start from the feasible checkpoint (theta_0,0), s_hi=1, and U_rem=U_total. At each trial choose s_try=1 when 1-s_lo<=delta_s and otherwise (s_lo+s_hi)/2; restore theta_lo; spend U_try=max(1,floor(U_rem/2)) updates on L_{s_try}=rho sum_b[max(ell_b/epsilon_b(s_try)-1,0)]^2; charge those updates to U_rem; accept and reset the upper bracket only if M(s_try)>=0 on both training and validation entities, otherwise roll back and set s_hi=s_try. Stop at accepted s=1 or exhausted U_rem and emit the last feasible checkpoint plus every failed bracket.\n6. At matched update checkpoints, pair continuation and global-sum models with similar aggregate loss and evaluate both through the independent FEniCSx oracle; emit the divergence between M(s) and downstream event, topology, energy, and worst-block residual errors.\n7. Run the negative control by permuting the residual-block identities attached to epsilon_b(s) at every unchanged value of the same coordinate s while preserving architecture, endpoints, collocation, and total update budget; retraining propagates the wrong feasibility path into phi, T, and xi and tests whether downstream errors return toward the global-sum arm.\n8. Freeze architecture, scales, floors, rho, delta_s, the controller, and the final checkpoint, then evaluate matched whole-entity pairs that vary one of geometry, material stiffness, or pulse spectrum and finally the joint formal-OOD split; emit oracle-scored event order, topology, energy, and residual metrics.\n9. Report paired-seed estimates, wall time, peak memory, solver preprocessing cost, all failed continuation stages, and synthetic-model scope, with no real-device or guarantee-grade claim.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the likely-fatal T1 Step-5 ambiguity and the T3 empty/zero degeneracies while preserving the candidate's single-coordinate continuation mechanism."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "gap_closure[0].how_closed",
+      "value": "Targets the gap by replacing the inherited fixed aggregate-loss endpoint with a one-coordinate continuation toward simultaneous solver-floor residual feasibility; whether this closes the empirical gap remains the falsification target, and corpus support is thin for PCM PINNs.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T4 overclaim that an unexecuted proposal has already closed the anchor evidence gap."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "gap_closure[1].how_closed",
+      "value": "Targets the gap by moving the certificate from scalar aggregate loss to the explicitly controlled continuation closure margin and pairing it with a matched-budget independent-solver intervention test; empirical closure remains unestablished.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T4 overclaim while preserving the assumption-audit narrative."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "gap_closure[2].how_closed",
+      "value": "Targets the gap by locking the trained method before matched whole-entity geometry, material-stiffness, and pulse-spectrum interventions are scored by an independent FEniCSx oracle under the same Front-Energy-Causality framework; transfer remains an empirical question.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T4 overclaim while preserving the controlled-diagnostic design."
+    }
+  ],
+  "final_candidate": {
+    "title": "Solver-Floor Continuation for Causal High-Frequency PINNs in 2D VO2 Devices",
+    "hook": "A 2D VO2 PINN may not need a new spectral operator: at equal parameter, solver-data, collocation, and optimizer-update budgets, replacing the fixed global residual sum with a single-coordinate solver-floor continuation should recover event order and moving-front topology more faithfully.",
+    "hook_shape_rationale": "Shape (c), counter-intuitive minimalism, passes because the candidate is capped at the strongest matched-budget baseline's parameter count, numerical-solver data, collocation points, and optimizer updates while changing only the objective-refinement path. Shape (a) was viable, but rejected because no supplied pilot establishes a surprising regime split before the proposed falsification run.",
+    "gap_closure": [
+      {
+        "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition 鈥?stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+        "main_pattern": "generative_process_redesign",
+        "sub_pattern": "C23 (Liberate a Fixed Generative Component)",
+        "companion_pattern": null,
+        "how_closed": "Targets the gap by replacing the inherited fixed aggregate-loss endpoint with a one-coordinate continuation toward simultaneous solver-floor residual feasibility; whether this closes the empirical gap remains the falsification target, and corpus support is thin for PCM PINNs."
+      },
+      {
+        "gap": "No retrieved frontier leaf tests whether one globally aggregated space-time objective over all coupled fields and switching regimes is necessary rather than assumed 鈥?stakes: if this shared assumption hides a fast local residual beneath slow-field averages, published accuracy conclusions can rest on the wrong certificate and principled high-frequency PINN design remains blocked.",
+        "main_pattern": "assumption_audit_and_pivot",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "companion_pattern": "controlled_diagnostic_design",
+        "how_closed": "Targets the gap by moving the certificate from scalar aggregate loss to the explicitly controlled continuation closure margin and pairing it with a matched-budget independent-solver intervention test; empirical closure remains unestablished."
+      },
+      {
+        "gap": "No retrieved frontier leaf establishes that event order, front topology, and energy balance remain correct for held-out entire device geometries, material combinations, and pulse protocols that shift the spectrum and stiffness beyond training 鈥?stakes: reported gains may not transfer across devices or operating regimes, making the scientific conclusion non-general and the model unsafe as a design surrogate.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "companion_pattern": null,
+        "how_closed": "Targets the gap by locking the trained method before matched whole-entity geometry, material-stiffness, and pulse-spectrum interventions are scored by an independent FEniCSx oracle under the same Front-Energy-Causality framework; transfer remains an empirical question."
+      }
+    ],
+    "core_mechanism": "The shared_evaluation object is the Front-Energy-Causality framework, which reports dimensionless electric, thermal, phase-kinetic, and non-tautological constitutive residual errors together with switching-time error, programming-energy error, event-order violations, and phase-front topology error against an independent FEniCSx trajectory. A parameter-matched PINN outputs electric potential phi, temperature T, and phase fraction xi on a two-dimensional VO2 device; current density and Joule heating are computed as j=-sigma(T,xi) grad(phi) and q_J=sigma(T,xi)|grad(phi)|^2, and automatic differentiation supplies the coupled PDE and independently evaluable constitutive residuals r_b. Algebraic identities created by directly defining j or q_J are reported as identities, not counted as residual blocks. Each ell_b is the mean squared r_b divided by a_b^2, where a_b is the nonzero root-mean-square magnitude of the corresponding FEniCSx PDE term on training entities. The versioned residual table must fail preflight on an empty sample set, a nonfinite scale, or a_b<=0. For each block, epsilon_b^F is the observed discretization-convergence floor from the two finest available FEniCSx mesh/time resolutions on training entities, evaluated in the same normalized residual coordinates as ell_b. Let u be machine epsilon for the declared training dtype and epsilon_b^{F,+}=max(epsilon_b^F,u); this is a numerical denominator guard, not a claimed physical floor. Set epsilon_b(0)=max(ell_b(theta_0),epsilon_b^{F,+}) and epsilon_b(s)=epsilon_b(0)^(1-s)(epsilon_b^{F,+})^s for s in [0,1]. Training minimizes L_s=rho sum_b[max(ell_b/epsilon_b(s)-1,0)]^2 and uses M(s)=1-max_b ell_b/epsilon_b(s); all scales and rho are therefore explicit and versioned rather than hidden bridge weights. The continuation controller inherits the predeclared matched-arm update count U_total, maintains a last-feasible checkpoint (theta_lo,s_lo), an upper bracket s_hi, and remaining updates U_rem, and never reads formal-OOD entities. Initially (theta_lo,s_lo,s_hi,U_rem)=(theta_0,0,1,U_total). A trial uses s_try=1 when 1-s_lo<=delta_s and otherwise (s_lo+s_hi)/2, restores theta_lo, spends U_try=max(1,floor(U_rem/2)) optimizer updates on L_{s_try}, and then evaluates M on nonempty training and validation sets. A feasible trial is accepted as the new checkpoint and resets s_hi=1; an infeasible trial is rolled back and sets s_hi=s_try. Every attempted update is charged to U_rem. The arm stops at accepted s=1 or when U_rem=0 and emits the last feasible checkpoint and failed bracket. delta_s=0.02 is the bisection tolerance, swept over 0.01 to 0.05 for validation stability, and rho=1 is the dimensionless overall penalty scale, swept over 0.5, 1, and 2. M(s) is the reported load-bearing certificate: it replaces a small global average with an auditable simultaneous-feasibility condition, while the network, PDEs, samples, optimizer family, and total optimizer updates remain unchanged. The assumption-audit companion compares this path against the same backbone trained with a globally normalized residual sum at equal updates and records cases with similar aggregate loss but divergent M(s), then asks whether the independent FEniCSx event, topology, and energy errors diverge in the predicted direction. After every design choice is frozen without formal-OOD entities, the same framework evaluates matched pairs that independently change geometry, VO2 material-stiffness parameters, or pulse spectrum, followed by a joint whole-entity OOD split; this is an evaluation of the one mechanism, not a second learned module. All claims are conditional on the declared synthetic FEniCSx electro-thermal-phase model, and no removal bound, Hessian guarantee, real-device validation, or global PINN guarantee is claimed.",
+    "core_mechanism_reasoning": "BLOCK 1 - PREMISES\nPremise: pulse-driven VO2 dynamics couple electric conduction, Joule heating, thermal transport, and phase kinetics strongly enough that a small average residual can coexist with one failed physical block; the retrieved PCM and PINN evidence makes this physically plausible.\nPremise: mesh/time-refined FEniCSx trajectories provide a usable numerical reference and blockwise discretization floors for the declared synthetic model; this is believed because convergence is checked within the same solver formulation rather than inferred from the PINN.\nObservation-model premise: training and validation signals are sampled as complete FEniCSx whole-device trajectories with entity-grouped geometry, material, and protocol splits plus stratified space-time collocation; they are complete only for the declared synthetic design distribution, formal-OOD entities never tune the path, and no experimental-population representativeness is assumed.\nPremise: M(s) predicts causal device fidelity better than an equally small global residual sum - untested - falsification target.\nESTIMAND: the paired difference, over the predeclared population of synthetic 2D VO2 device entities and pulse trajectories, in switching-time, programming-energy, event-order, phase-front-topology, and worst-block normalized-residual errors between solver-floor continuation and equal-budget baselines, plus the corresponding difference under each matched OOD intervention.\nBLOCK 2 - NAIVE-BASELINE AUDIT\nBranch (i): the runnable naive version sets every block directly to its final solver-floor constraint at s=1 and optimizes from theta_0, but it silently assumes that a stiff, feedback-coupled electric-to-Joule-to-thermal-to-phase system can enter all tight residual basins simultaneously from initialization; that premise is false in the target setting, so the contribution confronts it with a single physically shared continuation coordinate and does not add cosmetic weights, packets, local heads, or a new operator. Continuation and constrained penalties are standard tools, but this instance is not exhausted by the textbook recipe because the terminal tolerances are solver-discretization floors for mutually endogenous PDE/constitutive blocks and must remain identifiable under one fixed update budget and a moving-front causal evaluation.\nBLOCK 3 - DESIGN RATIONALE\nThe three gaps share one mechanism and one measurement object: the anchor creates M(s), the assumption audit tests whether it carries information hidden by aggregate loss, and whole-entity OOD probes the same locked object rather than adding a model branch. I rejected learned field-frequency partitioning plus local operators because it recreates an unidentifiable decomposition/operator composition, and rejected global Fourier enrichment, causal time weighting, XPINN partitioning, weak residuals, learned residual weights, and solver-embedded stepping because the method lineage already occupies those sources. I also rejected direct s=1 feasibility because it is the naive failure case and rejected any Taylor/Hessian removal bound because the available evidence does not price a safe same-coordinate path-Hessian envelope.",
+    "core_mechanism_steps": "1. Use FEniCSx to solve the declared two-dimensional VO2 electric-thermal-phase PDE for complete device entities, perform the existing mesh/time refinement, and emit nonempty grouped training, validation, and untouched formal-OOD trajectories plus convergence-floor metadata.\n2. Implement one parameter-capped PINN backbone that outputs phi, T, and xi; use the same initialization, nonempty collocation set, optimizer family and settings, and predeclared total update budget U_total for solver-floor continuation and every matched-backbone baseline.\n3. Compute j, q_J, all independently evaluable PDE/constitutive/initial/boundary residual blocks, the training-only scales a_b, the same-coordinate converged floors epsilon_b^F, the dtype guard u, the effective positive floors epsilon_b^{F,+}, and epsilon_b(0). Fail preflight on empty samples, nonfinite quantities, or a_b<=0; report algebraic identities separately rather than treating forced zeros as evidence. Emit a versioned residual-definition table consumed unchanged by every arm.\n4. Train the equal-budget global-sum arm and the predeclared strong baselines, including Fourier-feature/adaptive PINN, causal PINN, and NeuSA where its published code supports the declared boundary conditions; emit checkpoints and Front-Energy-Causality metrics without using formal-OOD entities.\n5. Train the continuation arm with the explicit bracket controller. Start from the feasible checkpoint (theta_0,0), s_hi=1, and U_rem=U_total. At each trial choose s_try=1 when 1-s_lo<=delta_s and otherwise (s_lo+s_hi)/2; restore theta_lo; spend U_try=max(1,floor(U_rem/2)) updates on L_{s_try}=rho sum_b[max(ell_b/epsilon_b(s_try)-1,0)]^2; charge those updates to U_rem; accept and reset the upper bracket only if M(s_try)>=0 on both training and validation entities, otherwise roll back and set s_hi=s_try. Stop at accepted s=1 or exhausted U_rem and emit the last feasible checkpoint plus every failed bracket.\n6. At matched update checkpoints, pair continuation and global-sum models with similar aggregate loss and evaluate both through the independent FEniCSx oracle; emit the divergence between M(s) and downstream event, topology, energy, and worst-block residual errors.\n7. Run the negative control by permuting the residual-block identities attached to epsilon_b(s) at every unchanged value of the same coordinate s while preserving architecture, endpoints, collocation, and total update budget; retraining propagates the wrong feasibility path into phi, T, and xi and tests whether downstream errors return toward the global-sum arm.\n8. Freeze architecture, scales, floors, rho, delta_s, the controller, and the final checkpoint, then evaluate matched whole-entity pairs that vary one of geometry, material stiffness, or pulse spectrum and finally the joint formal-OOD split; emit oracle-scored event order, topology, energy, and residual metrics.\n9. Report paired-seed estimates, wall time, peak memory, solver preprocessing cost, all failed continuation stages, and synthetic-model scope, with no real-device or guarantee-grade claim.",
+    "falsification_prediction": "The minimal experiment trains the continuation PINN, the equal-budget global-sum backbone, Fourier/adaptive and causal PINNs, and NeuSA on entity-grouped FEniCSx trajectories for a bounded two-dimensional VO2 device campaign, then measures worst-block normalized residual, switching-time error, programming-energy error, event-order violations, and phase-front topology error. If the candidate works, those downstream errors decrease for the continuation arm at the same parameter, collocation, solver-data, and update budgets, including on the locked whole-entity OOD split. The named load-bearing variable is M(s), and the negative control permutes residual identities along the unchanged s-coordinate and epsilon schedule; the mechanism predicts that event, topology, energy, and worst-block errors move back toward the global-sum baseline rather than merely changing M(s). Failure to outperform the matched global arm, or persistence of the downstream gain under the permutation control, falsifies the proposed continuation mechanism.",
+    "compute_budget": "Estimated full falsification campaign: 8.0 80GB-class GPU-days on one GPU plus $0 paid API, with FEniCSx generation and refinement run on existing local CPU resources; this is tight but inside the user's 10 GPU-day envelope and includes iteration, matched baselines, controls, and three-seed replication.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "arxiv:2509.04966v2",
+        "delta": "Abstract-only inference: NeuSA constructs a global spectral projection evolved by a NODE for canonical wave PDEs, whereas this candidate keeps a parameter-capped backbone and constructs a solver-floor residual-feasibility continuation plus same-coordinate causal-device falsification for coupled moving 2D VO2 fronts."
+      },
+      {
+        "paper_id": "arxiv:2605.04502v1",
+        "delta": "The adaptive-spectral study measures how initial-condition gates rescale gradients in a stiff 0D spring-pendulum ODE, while this candidate replaces the global coupled objective endpoint and measures event, topology, energy, and simultaneous-residual consequences in a spatial electro-thermal-phase device."
+      },
+      {
+        "paper_id": "openalex:W4403555504",
+        "delta": "The energy-dissipation PINN simplifies dynamic phase evolution to an ill-posed static prediction with an added energy constraint, whereas this candidate retains transient propagation and constructs a continuation whose terminal object is simultaneous dynamic residual feasibility."
+      },
+      {
+        "paper_id": "semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+        "delta": "The VO2 study uses operando imaging and phase-field simulation to reveal electro-thermo-mechanical switching and period-doubling domains, while this candidate constructs and falsifies a PINN training mechanism across grouped synthetic devices and pulse protocols without claiming experimental validation."
+      }
+    ],
+    "almost_prior_paper_id": "arxiv:2509.04966v2",
+    "what_step_was_missed": "It would have needed to replace its fixed reconstructed-PDE aggregate with a solver-discretization-floor vector traversed by one explicit continuation coordinate and then show, on coupled 2D phase fronts, that the resulting closure margin predicts event, topology, and energy fidelity under a same-coordinate permutation control.",
+    "signature_terms": [
+      "residual-feasibility continuation PINN",
+      "same-coordinate objective intervention",
+      "coupled moving-front certificate",
+      "whole-device spectrum-stiffness OOD",
+      "VO2 electrothermal phase kinetics"
+    ],
+    "alias_terms": [
+      "space-time domain decomposition",
+      "variational test-function residual minimization",
+      "self-adaptive loss reweighting",
+      "implicit Runge Kutta collocation"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

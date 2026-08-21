@@ -1,0 +1,1448 @@
+[
+ {
+  "title": "Implementing physics-informed neural networks with deep learning for differential equations",
+  "title_norm": "implementing physics informed neural networks with deep learning for differentia",
+  "abstract": "Physics-aware machine learning integrates domain-specific physical knowledge into machine learning models, leading to the development of physics-informed neural networks (PINNs). PINNs embed physical laws directly into the learning process, enabling interpretable and physically consistent solutions to complex problems. However, the practical use of PINNs presents challenges and their applications are complex. Therefore, in this paper, we demonstrate the implementation of PINNs for systems of ordinary differential equations (ODEs), an area that is often overlooked by the physics community, which typically focuses on partial differential equations. We discuss two key challenges: the inverse problem, which involves estimating unknown parameters of ODEs, and the forward problem, which provides an approximate solution to ODEs. To provide practical insights into PINNs, we present two case studies based on a Python implementation using DeepXDE. Drawing on these studies, we discuss key challenges and identify promising directions for future research in PINN-based implementation frameworks.",
+  "year": 2026,
+  "venue": "Frontiers in Artificial Intelligence",
+  "authors": [
+   "Frank Emmert‐Streib",
+   "Shailesh Tripathi",
+   "Amer Farea",
+   "Andreas Holzinger"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W7131087710",
+  "doi": "10.3389/frai.2026.1717117",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1717117/pdf",
+  "published_iso": "2026-02-23",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Prediction of remaining useful life for electronic equipment based on online PINN",
+  "title_norm": "prediction of remaining useful life for electronic equipment based on online pin",
+  "abstract": "As critical components of spacecraft systems, electronic equipment requires accurate remaining useful life (RUL) prediction to ensure reliable operations. Traditional physics-based and data-driven methods are limited by poor generalization and substantial data demands, respectively. While Physics-Informed Neural Networks (PINNs) integrate physical laws to enhance accuracy, they remain susceptible to performance degradation under shifting operational conditions due to catastrophic forgetting. This paper proposes a novel online PINN framework integrated with continual learning to dynamically adapt to new degradation patterns. Validated on NASA's IGBT dataset, our method reduces RUL prediction error to 27.2% of a traditional LSTM model and achieves an online update time of less than 800ms/cycle. These results demonstrate a significant improvement in robustness and accuracy, providing a superior solution for RUL estimation of aerospace power electronics under extreme environments.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Feng Han",
+   "Bo Mo"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4417339953",
+  "doi": "10.1038/s41598-025-32497-7",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-32497-7_reference.pdf",
+  "published_iso": "2025-12-15",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Precise Identification of Tomato Leaf Diseases: A VMamba-FCS Classification Model Based on Multi-Mechanism Synergistic Enhancement",
+  "title_norm": "precise identification of tomato leaf diseases a vmamba fcs classification model",
+  "abstract": "To address the challenge of balancing computational efficiency with fine-grained feature capture in complex field environments when using existing deep learning methods for tomato leaf disease detection, this paper proposes a novel lightweight classification model called Visual Mamba with Frequency-channel attention, Cross-layer attention and Salient feature suppression (VMamba-FCS). Based on the visual state-space model, this model integrates three collaborative enhancement mechanisms: a frequency-domain channel attention module, which improves the perception of disease-related textures by recalibrating features in the frequency domain; a cross-layer attention module, which promotes multi-scale feature fusion by integrating the semantic context of early layers; and a salient feature suppression module, which forces the network to learn more comprehensive discriminative features to improve robustness by suppressing overactivated feature regions during training. Experimental results on the real-world field dataset “Tomato-Village” demonstrate that VMamba-FCS achieves a classification accuracy of 93.62% and an inference speed of 126.5 frames per second (FPS) with only 1.20 M parameters, representing a 7.48% improvement in accuracy compared to the basic VMamba model. In the cross-dataset (PlantDoc) generalization test, VMamba-FCS significantly outperformed all comparison models with an accuracy of 71.3%, demonstrating its excellent domain adaptability and robustness. This work verifies the effectiveness of the multi-mechanism collaborative enhancement strategy in the state-space model architecture, providing a new lightweight solution for real-time and accurate agricultural disease detection on resource-constrained edge devices.",
+  "year": 2026,
+  "venue": "Agriculture",
+  "authors": [
+   "Z L Liu",
+   "Zenglin Zhang",
+   "Sigao Li"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7154503588",
+  "doi": "10.3390/agriculture16080875",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2077-0472/16/8/875/pdf?version=1776246843",
+  "published_iso": "2026-04-15",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Colloquium: Semi-Dirac Fermions in Quantum Matter",
+  "title_norm": "colloquium semi dirac fermions in quantum matter",
+  "abstract": "This article reviews the recent progress on the subject of semi-Dirac fermions, two dimensional quasiparticles that disperse quadratically, as Galilean invariant particles, or linearly, as massless relativistic particles, depending on their direction of motion. These particles exist at a phase boundary set by the continuous change in the connectivity of Fermi surfaces, known as topological Lifshitz transitions. The basic properties and the current experimental evidence of the existence of these particles in both synthetic lattices and quantum materials are presented. The many-body problem of semi-Dirac fermions is discussed from a theoretical perspective with an eye to physical observables of relevance to experiments.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Bruno Uchoa",
+   "Mohamed M. Elsayed",
+   "Valeri N. Kotov",
+   "Yinming Shao",
+   "D. N. Basov"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7171268686",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2607.20627",
+  "published_iso": "2026-07-22",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "VO2 multiphysics time warp"
+  ]
+ },
+ {
+  "title": "Embedding Time-Frequency Transform Neural Networks for Efficient Fault Diagnosis",
+  "title_norm": "embedding time frequency transform neural networks for efficient fault diagnosis",
+  "abstract": "To address the challenges of non-stationary signals, noise corruption, and limited interpretability in intelligent fault diagnosis, we propose a Time-Frequency Dual Transformation (TFDT) framework. By embedding a trainable Time-Frequency Convolution (TFConv) layer into a convolutional neural network, TFDT integrates physics-informed time-frequency transforms—STTF, Morlet wavelet, and Chirplet—into the learning process. This allows the model to adaptively extract fault-sensitive features while maintaining physical interpretability. Experimental results on the CWRU dataset show that TFDT outperforms standard CNNs and fixed-transform pipelines in accuracy, convergence speed, and robustness under noisy conditions. Ablation studies confirm the critical role of the TFConv layer, and t-SNE visualizations reveal discriminative and compact feature clusters, supporting the model’s interpretability claims.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Yanfeng Chai",
+   "Lihong Zhang",
+   "Rui Zhang",
+   "Qiang Zhang",
+   "Yang Zhang"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7114922800",
+  "doi": "10.3390/app152413082",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/15/24/13082/pdf",
+  "published_iso": "2025-12-12",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Recent Progress in the Physics-Constrained State of Health Estimation for Lithium-Ion Batteries",
+  "title_norm": "recent progress in the physics constrained state of health estimation for lithiu",
+  "abstract": "Due to the high energy density and long cycle life, lithium-ion batteries play an important role in electric transportation and energy storage systems. Therefore, accurate state of health (SOH) estimation is of great significance for battery lifetime management and safe operation. Existing SOH estimation methods are highly dependent on data and suffer from insufficient physical interpretability and limited cross-scenario generalization. To address the issues, introducing physical information constraints enables physical consistency requirements to be incorporated into the estimation process and confines the estimation to the physically feasible domain, thereby improving prediction performance and enhancing physical interpretability. From the perspective of sources of physical constraints and forms of constraint implementation, the review systematically summarizes the current research. Regarding the sources of constraints, equivalent circuit constraints, mechanism-based constraints, and degradation-dynamics constraints are introduced, and the advantages, disadvantages, and applicable scenarios of typical implementation forms, including physics-informed loss, physics-informed initialization, physics-driven architecture design, and virtual physics-driven fusion, are summarized. Finally, current challenges and future research directions are outlined based on a comprehensive comparison of existing studies, with the aim of providing a useful reference for future research on physics-informed SOH estimation.",
+  "year": 2026,
+  "venue": "Energies",
+  "authors": [
+   "Yuehua Chen",
+   "Jinye Lu",
+   "Zheng Tang",
+   "Jinghui Zhu",
+   "Shi Wang",
+   "Huajun Dong"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W7154470437",
+  "doi": "10.3390/en19081920",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1996-1073/19/8/1920/pdf?version=1776259149",
+  "published_iso": "2026-04-15",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Martini 3 Coarse-Grained Models for Steroid Hormones",
+  "title_norm": "martini 3 coarse grained models for steroid hormones",
+  "abstract": "Steroid hormones are central to the development, metabolism, homeostasis and reproduction of animals and have been the subject of many evolutionary, ecotoxicological and human health studies. Coarse-grain molecular dynamics (CG MD) simulations are a powerful tool to study the structural and dynamic behavior of steroid hormones and their interactions. Here, we expand the capabilities of the widely used Martini 3 CG framework by parameterizing and validating a set of 20 steroid hormone models — including both endogenous and synthetic molecules — to enable their study across diverse targets, systems, and fields of interest. Hormone parameterization followed Martini 3 guidelines, while leveraging the similarities with the parent cholesterol molecule, for which a Martini 3 model is available. Notably, we were able to base our parameterization on the hundreds of experimental structures in the protein data bank that contain steroid hormones, instead of relying on atomistic simulations as is typical with Martini. The parameterized models match to within 5% target molecular volumes, and recover the overall hydrophobicity trend of the hormones, although higher hydrophobicities tended to be overestimated. In free simulations of protein-hormone systems the experimentally known binding poses could be recovered for 89% of the cases, indicating a successful parameterization also from a functional standpoint. Since several Martini 3 protein models were tested, we also incidentally show that the flexibility profile of the OLIVES model is the best suited for this type of protein–ligand recognition. We expect that the availability of our fully validated Martini 3 CG steroid hormone models will contribute to new studies, collaborations, and applications across different scientific fields.",
+  "year": 2026,
+  "venue": "ChemRxiv",
+  "authors": [
+   "Tâmela Zamboni Madaloz",
+   "Karin dos Santos",
+   "Fatmegyul Mustan",
+   "Fernando Neiva Nunes",
+   "Guilherme Razzera",
+   "Manuel N. Melo"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7160965003",
+  "doi": "10.26434/chemrxiv.15002998/v1",
+  "arxiv_id": null,
+  "paper_url": "https://chemrxiv.org/doi/pdf/10.26434/chemrxiv.15002998/v1",
+  "published_iso": "2026-05-11",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Physics-guided deep ensemble and inverse design for sustainable concrete",
+  "title_norm": "physics guided deep ensemble and inverse design for sustainable concrete",
+  "abstract": "Abstract Cement production contributes a significant share of global CO $$_2$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mmultiscripts> <mml:mrow/> <mml:mn>2</mml:mn> <mml:mrow/> </mml:mmultiscripts> </mml:math> emissions, yet most laboratories can only access small concrete mix datasets, which limits the direct use of data-driven design tools. This study develops a physics-guided deep ensemble and inverse design framework to support the design of lower-carbon concrete mixtures under data scarcity. The framework first augments a 103-record concrete slump dataset with a physics-regularized conditional tabular GAN (PR-CTGAN) that enforces mass balance, water–binder bounds, and admixture dosage limits during synthetic data generation. It then trains a heterogeneous deep ensemble that combines tree-based regressors with a deep evidential regression (DER) network and a physics-regularized neural network (PRNN) that encodes an empirical slump–water–binder relation as a soft penalty in the loss. This ensemble predicts slump, flow, and 28-day compressive strength while providing uncertainty estimates for each target. Multi-objective Bayesian optimisation tunes the evidential backbone to balance accuracy and probabilistic calibration, and explainable AI tools (SHAP and Sobol sensitivity analysis) highlight how water, binder chemistry, and aggregate ratios drive fresh and hardened behaviour in a way that aligns with concrete practice. Finally, an NSGA-III-based inverse design stage searches the mix space for candidate formulations that meet workability and strength targets while lowering estimated binder-related CO $$_2$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mmultiscripts> <mml:mrow/> <mml:mn>2</mml:mn> <mml:mrow/> </mml:mmultiscripts> </mml:math> emissions compared with an all-cement reference mix. The framework integrates physics-guided data augmentation, uncertainty-aware evidential prediction, and eco-constrained inverse optimisation into a single pipeline for sustainable concrete mix design.",
+  "year": 2026,
+  "venue": "Multiscale and Multidisciplinary Modeling Experiments and Design",
+  "authors": [
+   "Arvind Dewangan",
+   "Neha Sharma",
+   "Akanksha Kulshreshtha",
+   "Reeta Gulia",
+   "Sumit Saini",
+   "Sagar Paruthi"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7124684693",
+  "doi": "10.1007/s41939-025-01154-x",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s41939-025-01154-x.pdf",
+  "published_iso": "2026-01-18",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Artificial Intelligence in Local Energy Systems: A Perspective on Emerging Trends and Sustainable Innovation",
+  "title_norm": "artificial intelligence in local energy systems a perspective on emerging trends",
+  "abstract": "Local energy systems (LESs) are becoming larger and more heterogeneous as distributed energy resources, electrified loads, and active prosumers proliferate, increasing the need for reliable coordination of operation, markets, and community governance. This Perspective synthesizes recent literature to map how artificial intelligence (AI) supports forecasting and situational awareness, optimization, and real-time control of distributed assets, and community-oriented markets and engagement, while arguing that adoption is limited by system-level credibility rather than model accuracy alone. The analysis highlights interlocking deployment barriers, such as governance-integrated explainability, distributional equity, privacy and data governance, robustness under non-stationarity, and the computational footprint of AI. Building on this diagnosis, the paper proposes principles-as-constraints for sustainable, trustworthy LES AI and a deployment-oriented validation and reporting framework. It recommends evaluating LES AI with deployment-ready evidence, including stress testing under shift and rare events, calibrated uncertainty, constraint-violation and safe-fallback behavior, distributional impact metrics, audit-ready documentation, edge feasibility, and transparent energy/carbon accounting. Progress should be judged by measurable system benefits delivered under verifiable safeguards.",
+  "year": 2026,
+  "venue": "Energies",
+  "authors": [
+   "Sàra Ferenci",
+   "Florina-Ambrozia Coteț",
+   "Elena Simina Lakatos",
+   "Radu Munteanu",
+   "Loránd Szabó"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W7124718871",
+  "doi": "10.3390/en19020476",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1996-1073/19/2/476/pdf?version=1768644582",
+  "published_iso": "2026-01-17",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "A dynamic modeling approach for infrastructure project evaluation under evolving risks",
+  "title_norm": "a dynamic modeling approach for infrastructure project evaluation under evolving",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Research Square",
+  "authors": [
+   "Nayled Acuña-Coll",
+   "Mauricio Sánchez‐Silva"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7124830458",
+  "doi": "10.21203/rs.3.rs-8287276/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.researchsquare.com/article/rs-8287276/latest.pdf",
+  "published_iso": "2026-01-19",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Thermodynamic Biomarkers of Neuroinflammation: Nanothermometry, Energy–Stress Dynamics, and Predictive Entropy in Glial–Vascular Networks",
+  "title_norm": "thermodynamic biomarkers of neuroinflammation nanothermometry energy stress dyna",
+  "abstract": "Homeostasis, which supports and maintains brain function, results from the continuous regulation of thermodynamics within tissue: the balance of heat production, redox oscillations, and vascular convection regulates coherent energy flow within the organ. Neuroinflammation disturbs this balance, creating measurable entropy gradients that precede structural damage to its tissue components. This paper proposes that a thermodynamic unity can be devised that incorporates nanoscale physics, energetic neurophysiology, and systems neuroscience, and can be used to understand and treat neuroinflammatory processes. Using multifactorial modalities such as quantum thermometry, nanoscale calorimetry, and redox oscillometry we define how local entropy production (st), relaxation time (τR), and coherence lengths (λc) allow quantification of the progressive loss of energetic symmetry within neural tissues. It is these variables that provide the basis for the etiology of thermodynamic biomarkers which on a molecular-redox-to-network scale characterize the transitions governing the onset of the neuroinflammatory process as well as the recovery potential of the organism. The entropic probing of systems (PEP) further allows the translation of these parameters into dynamic patient-specific trajectories that model the behavior of individuals by predicting recurrent bouts of instability through the application of machine learning algorithms to the vectors of entropy flux. The parallel development of the nanothermodynamic intervention, which includes thermoplasmonic heat rebalancing, catalytic redox nanoreacting systems, and adaptive field-oscillation synchronicity, shows by example how the corrections that can be applied to the entropy balance of the cell and system as a whole offer a feasible form of restoration of energy coherence. Such closed loop therapy would not function by the suppression of inflammatory signaling, but rather by the re-establishment of reversible energy relations between mitochondrial, glial, and vascular territories. The combination of these factors allows for correction of neuroinflammation, which can now be viewed from a fresh perspective as a dynamic phase disorder that is diagnosable, predictable, and curable through the physics of coherence rather than the molecular suppression of inflammatory signaling. The significance of this set of ideas is considerable as it introduces a feasible and verifiable structure to what must ultimately become the basis of a new branch of science: predictive energetic medicine. It is anticipated that entropy, as a measurable and modifiable variable in therapeutic “inscription”, will be found to be one of the most significant parameters determining the neurorestoration potential in future medical science.",
+  "year": 2025,
+  "venue": "International Journal of Molecular Sciences",
+  "authors": [
+   "Valentin Titus Grigorean",
+   "Adrian Dumitru",
+   "Cătălina-Ioana Tătaru",
+   "Matei Șerban",
+   "Alexandru Vlad Ciurea",
+   "Octavian Munteanu"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4416199645",
+  "doi": "10.3390/ijms262211022",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1422-0067/26/22/11022/pdf?version=1763113670",
+  "published_iso": "2025-11-14",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Failure mechanisms and resolution in deep energy method",
+  "title_norm": "failure mechanisms and resolution in deep energy method",
+  "abstract": "• We diagnose two distinct failure modes in DEM, elucidate their root causes, and propose effective remedies. • We establish that inaccurate numerical integration is the root cause of unphysical forward divergence. • EINO can circumvent forward divergence even for the nonlinear problem on very coarse mesh. • We reveal that the failure of inverse analysis is fundamentally due to an ill-posed variational formulation. • EINO enables efficient and accurate inverse analysis under high-noise conditions. The deep energy/Ritz method (DEM/DRM) offers advantages over physics-informed neural networks (PINNs), including reduced derivative orders and accelerated training. However, DEM encounters critical failure modes in both forward and inverse analyses, with underlying mechanisms and robust remedies remaining underexplored. To our knowledge, this work presents the first formal analysis that systematically identifies two distinct DEM failure modes, forward divergence and inverse collapse, and establishes their root causes along with sound countermeasures. In forward analysis, DEM training may diverge due to artificial energy minimization, where abrupt loss reductions below the physically admissible minimum occur with catastrophic errors, which are thermodynamically infeasible but remain unclarified. We prove that this stems from numerical integration inaccuracies in neural network representations, inducing pathological overfitting with escalating complexity. In inverse problems involving unknown material parameters or Neumann boundary conditions, we reveal that DEM fails because its variational formulation with respect to such unknown parameters is not well defined. To overcome these limitations, we propose a novel Energy-Informed Neural Operator Network (EINO), integrating a new regularization technique. Our framework incorporates: (1) a finite-element-informed regularization that lower-bounds the loss by the ground-truth FEM energy to ensure stability, and (2) a deep operator architecture with two-stage training that reconstructs unknown parameters/boundary conditions by embedding inverse constraints. Comprehensive benchmarks on 2D/3D linear/nonlinear solid mechanics and diffusion problems confirm EINO’s superiority over DEM. EINO resolves forward divergence even on very coarse meshes and achieves substantially lower parameter errors in inverse discovery (e.g., <2% relative error under 200% Gaussian noise). The elucidated failure mechanisms and the EINO framework collectively promote physics-constrained learning for surrogate modeling and inverse uncertainty quantification, minimizing the reliance on labeled data.",
+  "year": 2026,
+  "venue": "International Journal of Mechanical Sciences",
+  "authors": [
+   "Xi Wang",
+   "Jidong Zhao",
+   "Zhenyu Yin",
+   "Xiaoying Zhuang"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W7124426683",
+  "doi": "10.1016/j.ijmecsci.2026.111278",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7124426683",
+  "published_iso": "2026-01-17",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Spatial Stress Testing and Climate Value-at-Risk: A Quantitative Framework for ICAAP and Pillar 2",
+  "title_norm": "spatial stress testing and climate value at risk a quantitative framework for ic",
+  "abstract": "This paper develops a quantitative framework for climate–financial risk measurement that combines a spatially explicit jump–diffusion asset–loss model with prudentially aligned risk metrics. The approach connects regional physical hazards and transition variables derived from climate-consistent pathways to asset returns and credit parameters through the use of climate-adjusted volatilities and jump intensities. Fat tails and geographic heterogeneity are captured by it, which conventional diffusion-based or purely narrative stress tests fail to reflect. The framework delivers portfolio-level Spatial Climate Value-at-Risk (SCVaR) and Expected Shortfall (ES) across scenario–horizon matrices and incorporates an explicit robustness layer (block bootstrap confidence intervals, unconditional/conditional coverage backtests, and structural-stability tests). All ES measures are understood as Conditional Expected Shortfall (CES), i.e., tail expectations evaluated conditional on climate stress scenarios. Applications to bank loan books, pension portfolios, and sovereign exposures show how climate shocks reprice assets, alter default and recovery dynamics, and amplify tail losses in a region- and sector-dependent manner. The resulting, statistically validated outputs are designed to be decision-useful for Internal Capital Adequacy Assessment Process (ICAAP) and Pillar 2: climate-adjusted capital buffers, scenario-based stress calibration, and disclosure bridges that complement alignment metrics such as the Green Asset Ratio (GAR). Overall, the framework operationalises a move from exposure tallies to forward-looking, risk-sensitive, and auditable measures suitable for supervisory dialogue and internal risk appetite.",
+  "year": 2026,
+  "venue": "Journal of risk and financial management",
+  "authors": [
+   "Francesco Rania"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7118825620",
+  "doi": "10.3390/jrfm19010048",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1911-8074/19/1/48/pdf",
+  "published_iso": "2026-01-07",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Learning 2D Shallow Water Equations With Physics‐Informed Neural Operator Networks",
+  "title_norm": "learning 2d shallow water equations with physics informed neural operator networ",
+  "abstract": "Abstract This study investigates the application of Physics‐Informed Neural Operators (PINOs) for solving the two‐dimensional shallow water equations (2D SWE) in the context of flood modeling. Unlike Physics‐Informed Neural Networks (PINNs), which require retraining for each new initial or boundary condition (BC), PINOs learn the solution operator itself, enabling fast inference across a range of conditions without retraining. PINNs have moreover been shown to struggle with complex bed topography due to the difficulty of satisfying the well‐balanced property (Tian et al., 2025, https://doi.org/10.1029/2025wr040052 ; Dazzi, 2024, https://doi.org/10.1029/2023wr036589 ), a limitation that PINOs can partially mitigate by incorporating data alongside the physics loss. We evaluate the method on experiments of increasing physical complexity: a radial dam break, constant BCs with and without friction, time‐dependent BCs, and a real‐world test case. The results show that PINOs capture key flood dynamics, particularly water depth, while reducing inference time by up to two orders of magnitude compared to numerical solvers. Relative test errors for water depth ranged from 0.3% for the radial dam break to 10.9% for cases with bottom topography, 7.3% with friction, and 9.0% under time‐dependent BCs. For the real‐world case, an additional data loss term yielded a water depth error of 25.8%. Larger errors were consistently observed for velocity components. The findings establish PINOs as a promising complement to traditional numerical solvers, offering a balance between computational efficiency and solution accuracy. Future work will focus on improving accuracy and extending the framework toward real‐world flood forecasting applications.",
+  "year": 2026,
+  "venue": "Water Resources Research",
+  "authors": [
+   "Robert Keppler",
+   "Rasmus Fensholt",
+   "Julian Koch"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4415518582",
+  "doi": "10.1029/2025wr042156",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4415518582",
+  "published_iso": "2026-08-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Scientific Evolution of Physics-Informed NeuralNetworks: A Comprehensive Review of RecentArchitectural Variants and Optimization Strategies",
+  "title_norm": "scientific evolution of physics informed neuralnetworks a comprehensive review o",
+  "abstract": "Physics-Informed Neural Networks (PINNs) are a machine learning technique that directly incorporates the governing physics of problems, such as partial differential equations (PDEs) and ordinary differential equations (ODEs), into the neural network architecture. The primary goal of PINNs is to approximate solutions while satisfying given constraints and minimizing the residuals of the differential equations. PINNs have been employed to solve various problems, including integro-differential equations, fractional differential equations, and stochastic PDEs. Over the past two years, significant advancements have addressed the challenges associated with PINNs, resulting in notable improvements in accuracy and performance. This review provides a comprehensive summary of the latest methodologies contributing to these advancements, focusing on innovations in hyperparameter optimization and novel PINN variants inspired by other neural networks. Examples include MultiInNet-PINN, Transformer-based PINNs such as Tr-PINN and PINNsFormer, as well as PINNs incorporating attention mechanisms and recurrent neural network (RNN) architectures (PIANN). Additionally, this review highlights recent research on domain decomposition techniques in PINN architectures.By consolidating recent architectural and algorithmic advances, this review identifies critical research opportunities for enhancing the reliability, efficiency, and broader applicability of PINNs in scientific computing",
+  "year": 2026,
+  "venue": "European Journal of Pure and Applied Mathematics",
+  "authors": [
+   "Ilyas Khan",
+   "Ahmad -",
+   "Husna Zafar",
+   "Aneeqa Zafar",
+   "Muhammad Jawad",
+   "Mohd Anul Haq"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7134113974",
+  "doi": "10.29020/nybg.ejpam.v19i1.6334",
+  "arxiv_id": null,
+  "paper_url": "https://www.ejpam.com/ejpam/article/download/6334/2750",
+  "published_iso": "2026-02-27",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Deep Learning for Solving and Estimating Dynamic Models in Economics and Finance",
+  "title_norm": "deep learning for solving and estimating dynamic models in economics and finance",
+  "abstract": "This script offers an implementation-oriented introduction to deep learning methods for solving and estimating high-dimensional dynamic stochastic models in economics and finance. Its starting point is the curse of dimensionality: heterogeneous-agent economies, overlapping-generations models with aggregate risk, continuous-time models with occasionally binding constraints, climate-economy models, and macro-finance environments with many assets and frictions generate state and parameter spaces that strain classical tensor-product grid methods. The exposition is organized around four complementary methodologies. Deep Equilibrium Nets embed discrete-time equilibrium conditions into neural-network loss functions. Physics-Informed Neural Networks approximate continuous-time Hamilton--Jacobi--Bellman, Kolmogorov forward, and related partial differential equations. Deep surrogate models provide fast, differentiable approximations to expensive structural models, while Gaussian processes add a probabilistic layer that quantifies approximation uncertainty; together they support estimation, sensitivity analysis, and constrained policy design. Gaussian-process-based dynamic programming, combined with active learning and dimension reduction, extends value-function iteration to very large continuous state spaces. Applications span representative-agent and international real business cycle models, overlapping-generations and heterogeneous-agent economies, continuous-time macro-finance, structural estimation by simulated method of moments, and climate economics under uncertainty. Companion notebooks in TensorFlow and PyTorch invite hands-on experimentation. These notes are a deliberately subjective and inevitably incomplete snapshot of a rapidly evolving field, aimed at equipping PhD students and researchers to engage with this frontier hands-on.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Simon Scheidegger"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7161452602",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.14493",
+  "published_iso": "2026-05-14",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Generative AI Driven Process Calculations for Fuel Cells and Flow Batteries",
+  "title_norm": "generative ai driven process calculations for fuel cells and flow batteries",
+  "abstract": "High Resolution Image Download MS PowerPoint Slide Electrochemical energy systems such as proton-exchange membrane fuel cells (PEMFCs), solid-oxide fuel cells (SOFCs), and vanadium redox flow batteries (VRFBs) are governed by strongly coupled, nonlinear transport–kinetics equations spanning multiple scales. Mechanistic solvers provide physical fidelity but impose modeling and software burdens that hinder rapid iteration, while purely data-driven surrogates, such as artificial neural networks (ANNs) and deep reinforcement learning (DRL), can be brittle under distribution shift. This paper proposes a Generative AI assisted computational framework that utilizes large language models (LLMs) to orchestrate retrieval-augmented generation (RAG), physics-constrained prompting, and tool-integrated reasoning for electrochemical process calculations. We evaluate this framework on two complementary data sets: (1) synthetic data from physics-based simulators for controlled benchmarking, and (2) Aspen Plus data from high-fidelity industrial process simulations validated against experimental measurements. For PEMFC polarization curve decomposition, the framework achieves RMSE of 9.6 mV (synthetic) and 7.8 mV (Aspen data), with constraint violations reduced from 48%/42% to 1.2%/0.5% respectively. For VRFB optimization, energy efficiency reaches 79.1% (synthetic) and 74.9% (Aspen data). The dual-data set evaluation demonstrates robustness across data characteristics while a preliminary user study ( N = 5) shows 85% reduction in human effort. We compare against ePCDNN, ANN-based models, DRL parameter tuning, and mechanistic approaches, providing an ablation study isolating the effects of RAG quality, physics constraints, and prompt engineering. We discuss integration with digital twins, fault detection, and responsible deployment.",
+  "year": 2026,
+  "venue": "ACS Omega",
+  "authors": [
+   "Rishi Garg",
+   "Vasudev Majhi",
+   "Vinay Chamola",
+   "Anubhav Elhence",
+   "Jay Pandey"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7128633767",
+  "doi": "10.1021/acsomega.5c12654",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/acsomega.5c12654?ref=article_openPDF",
+  "published_iso": "2026-02-11",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Navigating structure-based drug discovery with emerging innovations in physics- and knowledge-based approaches",
+  "title_norm": "navigating structure based drug discovery with emerging innovations in physics a",
+  "abstract": "Structure-based drug design is rapidly evolving, driven by advances in both physics-based and knowledge-based methods. These computational approaches are increasingly integrated across all stages of drug discovery. Despite remarkable progress, challenges remain in achieving accuracy, generalizability, computational efficiency, and chemical synthesizability. In this review, we provide a critical overview of advances, strengths, and limitations of recent methods. We also discuss synergies between the two concepts that hold promises for future advancements towards their practical applicability.",
+  "year": 2025,
+  "venue": "npj Drug Discovery.",
+  "authors": [
+   "Jordy Homing Lam",
+   "Vsevolod Katritch"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4416844990",
+  "doi": "10.1038/s44386-025-00031-4",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s44386-025-00031-4.pdf",
+  "published_iso": "2025-12-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Bioengineering hybrid artificial life",
+  "title_norm": "bioengineering hybrid artificial life",
+  "abstract": "The goal of bioengineering in synthetic biology is to redesign, reprogram, and rewire biological systems for specific applications using standardized parts such as promoters and ribosomes. For example, bioengineered micro-organisms capable of cleaning up environmental pollution or producing antibodies de novo to defend against viral pandemics have been predicted. Artificial Life (ALife) facilitates the design and understanding of living systems, not just those found in nature, but life as it could be , while synthetic biology provides the means to realize life as it can be engineered. Despite significant advances, the synthesis of evolving, adaptable, and bioengineered problem-solving ALife has yet to achieve practical feasibility. This is primarily due to limitations in directed evolution, fitness landscape mapping, and fitness approximation. Thus, currently synthetic (biological) ALife does not continue to evolve and adapt to changing tasks and environments. This is in stark contrast to current digital based ALife that continues to adapt and evolve in simulated environments demonstrating the dictum of life as it could be . We posit that if the bioengineering (on-demand design) of problem solving ALife is to ever become a reality then open issues pervading the directed evolution of synthetic ALife must first be addressed. This review examines open challenges in directed evolution, genetic diversity generation, fitness mapping, and fitness estimation, and outlines future directions toward a hybrid synthetic ALife design methodology. This review provides a novel perspective for a singular (hybridized) evolutionary design methodology, combining digital (in silico) and synthetic (in vitro) evolutionary design methods drawn from various bioengineering, digital and robotic ALife applications, while addressing highlighted directed evolution deficiencies.",
+  "year": 2025,
+  "venue": "Frontiers in Bioinformatics",
+  "authors": [
+   "Innocent Sibanda",
+   "Geoff Nitschke"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4417354472",
+  "doi": "10.3389/fbinf.2025.1676359",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/bioinformatics/articles/10.3389/fbinf.2025.1676359/pdf",
+  "published_iso": "2025-12-16",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Robust Parameter and State Estimation in Multiscale Neuronal Systems Using Physics-Informed Neural Networks",
+  "title_norm": "robust parameter and state estimation in multiscale neuronal systems using physi",
+  "abstract": "Inferring biophysical parameters and hidden state variables from partial and noisy observations is a fundamental challenge in computational neuroscience. This problem is particularly difficult for fast - slow spiking and bursting models, where strong nonlinearities, multiscale dynamics, and limited observational data often lead to severe sensitivity to initial parameter guesses and convergence failure in the methods replying on the traditional numerical forward solvers. In this work, we developed a physics-informed neural network (PINN) framework for the joint reconstruction of unobserved state variables and the estimation of unknown biophysical parameters in neuronal models. We demonstrate the effectiveness of the method on biophysical neuron models, including the Morris-Lecar model across multiple spiking and bursting regimes and a respiratory model neuron. The method requires only partial voltage observations over short observation windows and remains robust even when initialized with non-informative parameter guesses. These results suggest that PINN can deliver robust and accurate parameter inference and state reconstruction, providing a promising alternative for inverse problems in multiscale neuronal dynamics, where traditional techniques often struggle.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Changliang Wei",
+   "Yangyang Wang",
+   "Xueyu Zhu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7134993012",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.08742",
+  "published_iso": "2026-02-27",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "An Improved Physics-Informed Neural Network Approach for Solving the FitzHugh–Nagumo Equation",
+  "title_norm": "an improved physics informed neural network approach for solving the fitzhugh na",
+  "abstract": "The FitzHugh–Nagumo (FHN) equation in one dimension is solved in this paper using an improved physics-informed neural network (PINN) approach. Examining test problems with known analytical solutions and the explicit finite difference method (EFDM) allowed for the demonstration of the PINN’s effectiveness. Our study presents an improved PINN formulation tailored to the FitzHugh–Nagumo reaction–diffusion system. The proposed framework is efficiently designed, validated, and systematically optimized, demonstrating that a careful balance among model complexity, collocation density, and training strategy enables high accuracy within limited computational time. Despite the very strong agreement that both methods provide, we have demonstrated that the PINN results exhibit a closer agreement with the analytical solutions for Test Problem 1, whereas the EFDM yielded more accurate results for Test Problem 2. This study is crucial for evaluating the PINN’s performance in solving the FHN equation and its application to nonlinear processes like pulse propagation in optical fibers, drug delivery, neural behavior, geophysical fluid dynamics, and long-wave propagation in oceans, highlighting the potential of PINNs for complex systems. Numerical models for this class of nonlinear partial differential equations (PDEs) may be developed by existing and future model creators of a wide range of various nonlinear physical processes in the physical and engineering sectors using the concepts of the solution methods employed in this study.",
+  "year": 2025,
+  "venue": "Computation",
+  "authors": [
+   "Miloš Ivanović",
+   "Matija Savović",
+   "Svetislav Savović"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416672918",
+  "doi": "10.3390/computation13120275",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-3197/13/12/275/pdf?version=1764062400",
+  "published_iso": "2025-11-25",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "A Survey of Reinforcement Learning For Economics",
+  "title_norm": "a survey of reinforcement learning for economics",
+  "abstract": "This survey (re)introduces reinforcement learning methods to economists. The curse of dimensionality limits how far exact dynamic programming can be effectively applied, forcing us to rely on suitably \"small\" problems or our ability to convert \"big\" problems into smaller ones. While this reduction has been sufficient for many classical applications, a growing class of economic models resists such reduction. Reinforcement learning algorithms offer a natural, sample-based extension of dynamic programming, extending tractability to problems with high-dimensional states, continuous actions, and strategic interactions. I review the theory connecting classical planning to modern learning algorithms and demonstrate their mechanics through simulated examples in pricing, inventory control, strategic games, and preference elicitation. I also examine the practical vulnerabilities of these algorithms, noting their brittleness, sample inefficiency, sensitivity to hyperparameters, and the absence of global convergence guarantees outside of tabular settings. The successes of reinforcement learning remain strictly bounded by these constraints, as well as a reliance on accurate simulators. When guided by economic structure, reinforcement learning provides a remarkably flexible framework. It stands as an imperfect, but promising, addition to the computational economist's toolkit. A companion survey (Rust and Rawat, 2026b) covers the inverse problem of inferring preferences from observed behavior. All simulation code is publicly available.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Pranjal Rawat"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7134992312",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.08956",
+  "published_iso": "2026-03-09",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Physics-Informed Neural Networks for Chemotherapy Pharmacokinetics: Benchmarking the Clinical Estimator and Exposing Parameter Identifiability",
+  "title_norm": "physics informed neural networks for chemotherapy pharmacokinetics benchmarking ",
+  "abstract": "Physics-Informed Neural Networks (PINNs) are an attractive tool for partial-observation problems in biology, where the governing dynamics are known but some compartments cannot be measured. Chemotherapy pharmacokinetics (PK) is a clean instance: drug concentration in plasma is routinely measured, but concentration in tissue -- which determines tumour kill and off-target toxicity -- is not. We benchmark a PINN against the standard clinical baseline (nonlinear least-squares on the analytical biexponential plasma solution, hereafter NLS) and a physics-agnostic neural baseline (a data-only MLP) on two PK problems. On the linear two-compartment problem, NLS is near-optimal; the PINN matches it to within a small constant factor while also producing the tissue curve in a single training pass, whereas the data-only MLP fails on tissue by roughly 10x. On a Michaelis-Menten extension (saturable elimination), the biexponential closed form no longer exists, so NLS is mis-specified and silently returns meaningless rate constants. The PINN instead exposes a deeper fact: the Michaelis-Menten two-compartment model is non-identifiable from plasma alone, and the PINN reports this honestly by converging to a basin with k12 -> 0. Adding two sparse tissue observations largely resolves identifiability: across five seeds the PINN recovers k21 to within 1% of truth and Vmax, Km to within one standard-deviation bar, while k12 moves in the correct direction (0.02 -> 0.82) but remains ~2 sigma below truth -- a recovery the closed-form NLS estimator cannot attempt at all, because its biexponential ansatz describes only plasma. Our claim is not that PINNs beat NLS. It is that PINNs offer a uniform recipe that ties the textbook estimator on the textbook problem, exposes structural identifiability that the textbook estimator hides, and absorbs heterogeneous measurements within a single loss.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Riya Bisht",
+   "Dhruv Agarwal"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7164701737",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2606.12658",
+  "published_iso": "2026-06-10",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Research Progress in Microscopic Mechanisms and Cross-Scale Simulation of Seepage Behavior in Porous Media",
+  "title_norm": "research progress in microscopic mechanisms and cross scale simulation of seepag",
+  "abstract": "With the advancement of aerospace equipment toward high-speed and heavy-duty applications, conventional forced lubrication systems are facing significant challenges in terms of reliability and adaptability to complex operating conditions. Porous medium materials, owing to their unique self-lubricating and oil-retention capabilities, are regarded as an ideal lubrication solution. However, their seepage behavior is governed by the strong coupling effects of microscopic pore structures and fluid physicochemical properties, the mechanisms of which remain inadequately understood, thereby severely constraining the design and application of high-performance lubricating materials. To address this, this paper systematically reviews recent research progress on seepage behavior in porous media, with the aim of establishing a correlation between microstructural characteristics and macroscopic performance. Starting from the characterization of porous media, this work comprehensively analyzes the structure–seepage relationships in porous polymers, metal foams, and porous ceramics, and constructs a multi-scale theoretical framework encompassing macroscopic continuum theories, mesoscopic lattice Boltzmann methods (LBM), pore network models, and microscopic molecular dynamics. The advantages and limitations of experimental measurements and numerical simulation approaches are also compared. In particular, this study critically highlights the current neglect of key interfacial parameters such as surface wettability and pore roughness, and proposes an in-depth investigation into the seepage mechanisms of polyimide porous cage materials based on LBM. Furthermore, the potential application of emerging research paradigms such as data-driven approaches and intelligent computing in seepage studies is discussed. Finally, it is emphasized that future efforts should focus on developing deeply integrated cross-scale simulation methodologies, strengthening multi-physics coupling and artificial intelligence-assisted research, and advancing the development of intelligent porous lubricating materials with gradient structures or stimulus-responsive characteristics. This is expected to provide a solid theoretical foundation and technical pathway for the rational design and optimization of high-performance lubrication systems.",
+  "year": 2025,
+  "venue": "Processes",
+  "authors": [
+   "Zhaoliang Dou",
+   "Shuang Li",
+   "Fengbin Liu"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7114813348",
+  "doi": "10.3390/pr13124005",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2227-9717/13/12/4005/pdf",
+  "published_iso": "2025-12-11",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "The Endocannabinoid–Microbiota–Neuroimmune Super-System: A Unifying Feedback Architecture for Systems Resilience, Collapse Trajectories, and Precision Feedback Medicine",
+  "title_norm": "the endocannabinoid microbiota neuroimmune super system a unifying feedback arch",
+  "abstract": "Modern biomedicine frequently contextualizes disease around isolated molecular or organ-specific mechanisms, but numerous chronic diseases, including Alzheimer's disease, multiple sclerosis, depression, diabetes, and sepsis, share common trajectories of systemic destabilization. An increasing body of evidence indicates that health is not a property of single organs but the emergent property of interdependent feedback networks linking the microbiome, endocannabinoidome, neuroimmune system, and metabolic regulators. We propose the Endocannabinoid-Microbiota-Neuroimmune Super-System (EMN-S) as an evolutionarily conserved conceptual model that describes how these fields of influence reciprocally interact through feedback control. The microbial communities constituting the EMN-S encode environmental and dietary inputs, endocannabinoid signaling serves as an integrative regulator that synchronizes neural and immune activity, and neuroimmune circuits effectuate adaptive behaviors that alter microbiotal and lipid ecosystems. This review formalizes the EMN-S, contending that it is a unitary and cohesive model of physiological resilience, as well as offering a framework for precision feedback therapeutics. We describe how three mechanisms-encoder drift, integrator detuning, and executor overutilization-convert stabilizing negative feedback into runaway feedback cascades that underlie chronic, recurrent, and multisystemic disease. We then specify the EMN-S signature-integrated microbiome, lipidomic, and immune readouts-as an early indicator of resilience collapse and prospective preclinical state. Finally, we recapitulate the potential of AI-driven digital twins to illuminate feedback collapse, predict tipping points, and direct closed-loop intervention and treatments to restore dynamic equilibrium. By anchoring complexity in concrete and measurable feedback principles, the EMN-S shifts focus to investigate pathophysiology as opposed to reductionist lesion models of systemic derangements and embraces a systemic, empirically testable theory of stability.",
+  "year": 2025,
+  "venue": "International Journal of Molecular Sciences",
+  "authors": [
+   "Cătălin Aliuş",
+   "Alexandru Breazu",
+   "Cosmin Panţu",
+   "Corneliu Toader",
+   "Matei Șerban",
+   "Răzvan-Adrian Covache-Busuioc"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4416337549",
+  "doi": "10.3390/ijms262210959",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1422-0067/26/22/10959/pdf?version=1762949502",
+  "published_iso": "2025-11-12",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Hebbian Physics Networks: A self-organizing computational architecture based on local physical laws",
+  "title_norm": "hebbian physics networks a self organizing computational architecture based on l",
+  "abstract": "Physical transport processes organize through local interactions that redistribute imbalance while preserving conservation. Classical solvers enforce this organization by applying fixed discrete operators on rigid grids. We introduce the Hebbian Physics Network (HPN), a computational framework that replaces this rigid scaffolding with a plastic transport geometry. An HPN is a coupled dynamical system of physical states on nodes and constitutive weights on edges in a graph. Residuals, local violations of continuity, momentum balance, or energy conservation, act as thermodynamic forces that drive the joint evolution of both the state and the operator (i.e., the adaptive weights). The weights adapt through a residual-modulated anti-Hebbian rule, which we prove constitutes a strictly local gradient descent on the residual energy. This mechanism ensures thermodynamic consistency: Near equilibrium, the realized transport operator converges to a symmetric, positive-definite form, reproducing Onsager's reciprocal relations without explicit enforcement. Far from equilibrium, the system self-organizes into transport topologies within a thermodynamically admissible class that redistribute imbalance through adaptive local geometry. Unlike optimization-based approaches that impose physics through global loss functions, HPNs embed conservation intrinsically: Transport is restored locally by the evolving operator itself, without a global Poisson solve or backpropagated objective. We demonstrate the framework on scalar diffusion and incompressible lid-driven cavity flow, showing that physically consistent transport geometries and flow structures emerge from random initial conditions solely through residual-driven local adaptation. HPNs thus reframe computation not as the solution of a fixed equation, but as a thermodynamic relaxation process in which the constitutive geometry and physical state coevolve.",
+  "year": 2026,
+  "venue": "Physical Review Research",
+  "authors": [
+   "Gunjan Auti",
+   "Hirofumi Daiguji",
+   "Gouhei Tanaka"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416887539",
+  "doi": "10.1103/tzgk-jqj4",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416887539",
+  "published_iso": "2026-03-02",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Data-driven discovery of digital twins in biomedical research",
+  "title_norm": "data driven discovery of digital twins in biomedical research",
+  "abstract": "Recent technological advances have expanded the availability of high-throughput biological datasets, opening the way to the reliable design of digital twins of biomedical systems or patients. Such computational tools represent key chemical reaction networks driving perturbation or drug response and can profoundly guide drug discovery and personalized therapeutics. Yet, their development still depends on laborious data integration by the human modeler, so that automated approaches are critically needed. The successes of data-driven system discovery in Physics, rooted in clean datasets and well-defined governing laws, have fueled interest in applying similar techniques in Biology, which presents unique challenges. Here, we reviewed 177 methodologies for automatically inferring digital twins from biological time series, which mostly involved symbolic or sparse regression, and recapitulated them in a Shiny app. We evaluated algorithms according to eight biological and methodological challenges, associated with integrating noisy/incomplete data, multiple conditions, prior knowledge, latent variables, or dealing with high dimensionality, unobserved variable derivatives, candidate library design, and uncertainty quantification. Upon these criteria, sparse regression generally outperformed symbolic regression, particularly when using Bayesian frameworks. Next, deep learning and large language models further emerge as innovative tools to integrate prior knowledge, although their reliability and consistency need to be improved. While no single method addresses all challenges, we argue that progress in learning digital twins will come from hybrid and modular frameworks combining chemical reaction network-based mechanistic grounding, Bayesian uncertainty quantification, and the generative and knowledge integration capacities of deep learning. To support their development, we further highlight key components required for future benchmark development to evaluate methods across all challenges.",
+  "year": 2025,
+  "venue": "Briefings in Bioinformatics",
+  "authors": [
+   "Clémence Métayer",
+   "Annabelle Ballesta",
+   "Julien Martinelli"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7128647267",
+  "doi": "10.1093/bib/bbaf722",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7128647267",
+  "published_iso": "2025-12-23",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Electrically driven composite phase change materials for latent thermal energy storage in localized space heating: Progress, challenges, and prospects",
+  "title_norm": "electrically driven composite phase change materials for latent thermal energy s",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Renewable and Sustainable Energy Reviews",
+  "authors": [
+   "Sheher Yar Khan",
+   "Haider Ali",
+   "Abdur Rehman Mazhar",
+   "Wenjie Ji",
+   "Jihong Wang",
+   "Yongliang Li"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7128316768",
+  "doi": "10.1016/j.rser.2026.116739",
+  "arxiv_id": null,
+  "paper_url": "https://pure-oai.bham.ac.uk/ws/files/293381968/Manuscript.pdf",
+  "published_iso": "2026-02-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "CodeJeNN: A simple C++ neural network generator for physics applications",
+  "title_norm": "codejenn a simple c neural network generator for physics applications",
+  "abstract": "Machine learning has shown speedups for numerical methods in physics applications, but integrating Python-based libraries into high-performance C++ solvers creates performance bottlenecks. We present CodeJeNN, which bridges this gap by auto-generating self-contained C++ code from trained Keras models for inference. This eliminates external dependencies through minimal inlined functions, allowing seamless integration into existing frameworks. We describe the Keras-to-C++ workflow, supported architectures, and limitations. CodeJeNN is demonstrated through inference benchmarks against Keras in eager and JIT modes and a CFD test case modeling viscosity in a hydrogen-air mixing layer, showing speedups without sacrificing accuracy.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Jay Arcities",
+   "Pavel Popov",
+   "Eric J. Ching",
+   "Kamal Viswanath",
+   "Ryan F. Johnson"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7167748718",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2607.02746",
+  "published_iso": "2026-07-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Hybrid physics-informed artificial intelligence for high-fidelity modeling and optimization of electrical systems",
+  "title_norm": "hybrid physics informed artificial intelligence for high fidelity modeling and o",
+  "abstract": "The integration of machine learning with domain-specific physics has revolutionized the design, monitoring, and control of electrical machines and drives. This state-of-the-art review of physics-informed machine learning (PIML) is being leveraged to address data scarcity, improve model interpretability, and enforce physical laws, thus achieving computationally cost efficient and accurate solutions. The review also discusses challenges related to parameter sensitivity, dynamic behavior, and robustness, thereby underlining the potential of PIML to deliver computationally efficient, accurate, and scalable solutions for Industry 4.0 applications. Special emphasis is placed on hybrid physics-informed neural network (PINN) models that combine machine learning with physics-based principles for real-time diagnostics, digital twins, fault detection, and high-fidelity modeling, control and optimization of electrical machines and drives. Notable examples of these hybrid models include Deep Operator Networks (DeepONets), Fourier Neural Operators, Extreme Learning Machines (ELM)-enhanced PINNs, Graph-Based PINNs (PIGNNs), and domain decomposition PINNs, all of which illustrate the shift from traditional black-box approaches to transparent, physics-informed strategies. Through a state-of-the-art review of AI methodological contributions of PIML case studies and simulations, the potential of PIML to provide robust, scalable solutions is demonstrated, fostering a paradigm shift from black-box data-driven approaches to white-box, physics-informed strategies.",
+  "year": 2026,
+  "venue": "Frontiers in Artificial Intelligence",
+  "authors": [
+   "Joseph Nyangon"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7162215563",
+  "doi": "10.3389/frai.2026.1751785",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1751785/pdf",
+  "published_iso": "2026-05-28",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Computational mathematics approaches to deep neural network architecture design",
+  "title_norm": "computational mathematics approaches to deep neural network architecture design",
+  "abstract": "Designing appropriate neural network architectures remains one of the central open challenges in deep learning. The performance of a neural network depends critically on its depth, width, and connectivity. Yet identifying a suitable architecture for a given task is still largely ad hoc, relying on trial and error, heuristics, or computationally prohibitive neural architecture search algorithms that require training and evaluating hundreds of candidate networks. This dissertation addresses these challenges by developing principled, mathematically rigorous approaches to neural network architecture adaptation. The proposed methods draw on tools from computational mathematics, including optimal control theory, topological derivatives, and the dual weighted residual approach for a posteriori error estimation from finite element theory. The first part of the dissertation (chapter 2 through chapter 4) focuses on adaptive architecture design for generic regression and classification tasks. A core aim is to answer three fundamental questions in a principled way: when to add new capacity (new layer) to a network, where to add it in the network, and how to initialize it. Chapter 2 introduces an adaptive, stability-promoting layerwise training framework in which layers are added and trained sequentially. By incorporating manifold regularization, sparsity regularization, and physics-informed terms, the framework promotes stability in each hidden layer, and necessary conditions for the trainability of newly added layers are rigorously derived. A second stage employs a sequence of shallow networks to extract residual information, further improving accuracy. Chapter 3 takes a topology optimization perspective by introducing the concept of a topological derivative for neural networks, which quantifies the sensitivity of a shape functional to the insertion of a new layer. Both the optimal insertion location and a principled initialization strategy for the added layer are derived. Chapter 4 completes the trilogy by deriving rigorous a posteriori error estimates for neural networks using the dual weighted residual approach. The resulting computable error bounds decompose approximation error across network layers and directly guide adaptive depth refinement, establishing formal connections between neural network approximation theory and classical numerical analysis. The second part of the dissertation (chapter 5) focuses on the design of an architecture tailored to a specific scientific machine learning task. In particular, chapter 5 introduces the Linear Latent Network (LiLaN), a novel architecture for learning solution operators of stiff nonlinear ordinary and partial differential equations. These systems pose significant challenges to both traditional numerical solvers and existing machine learning approaches due to their multiscale temporal dynamics. Inspired by operator splitting and latent dynamics, LiLaN maps state solutions into a latent space via nonlinear encoders, where the dynamics has constant velocity (admitting closed-form solutions), thereby eliminating the need for numerical integration at inference time entirely. Theoretical results establish that LiLaN architecture can approximate an arbitrary continuous flow map to any desired accuracy (universal approximation theorem). Numerical experiments on benchmark problems from chemical kinetics, plasma physics, and phase-field modeling demonstrate up to three orders of magnitude wall-clock speedup over traditional stiff solvers while achieving lower approximation error than competing machine learning approaches. Chapter 6 lies outside the central theme of the thesis and focuses on the theoretical analysis and convergence acceleration of a gradient-free optimizer suitable for inverse problems and machine learning tasks. In particular, Chapter 6 develops new theoretical and algorithmic results for the Ensemble Kalman Filter (EnKF) applied to inverse problems. Using a Lagrangian dual perspective, we show that EnKF can be derived from the sample average approximation (SAA) of a Lagrangian dual function. The new perspective allowed us to derive a novel non-asymptotic convergence result for the EnKF. The chapter also deals with the Ensemble Kalman Inversion Algorithm (EnKI), which is an iterative version of the EnKF for inverse problems. Motivated by the new duality perspective, two multiplicative covariance correction strategies, EnKI-MC (I) and EnKI-MC (II), are proposed to accelerate the convergence of the Ensemble Kalman Inversion algorithm. Theoretical guarantees are established via fixed-point iteration analysis, and significant convergence acceleration is demonstrated numerically. In summary, the contributions of this dissertation demonstrate that tools from computational mathematics provide a rigorous foundation for principled neural network architecture design and for advancing scientific machine learning.",
+  "year": 2026,
+  "venue": "Open MIND",
+  "authors": [
+   "Krishnanunni Chandradath Girija"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7172253115",
+  "doi": "10.26153/tsw/64372",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7172253115",
+  "published_iso": "2026-05-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Neural Network Inversion Algorithm for Geostress Field Based on Physics-Informed Constraints",
+  "title_norm": "neural network inversion algorithm for geostress field based on physics informed",
+  "abstract": "Traditional methods for geostressfield inversion face issues such as weak physical interpretability and insufficient generalization ability. This study pioneers the application of Physics-Informed Neural Network (PINN) to this problem, developing a data- and physics-driven inversion algorithm. The framework incorporates a constitutive-equation-based regularized loss function as a hard constraint during training to ensure physical consistency. To address boundary load uncertainty, two quantification approaches—Bayesian linear regression and surrogate model optimization—are proposed to establish 95% confidence intervals for boundary coefficients. Verification based on simple three-dimensional models and actual geological models of mines shows that PINN inversion achieves a mean absolute relative error as low as 0.0772%, with an error of 15.67% under sparse sampling conditions—significantly lower than the 31.07% error of the traditional Back propagation neural network. This demonstrates excellent robustness and data efficiency. In the practical engineering application of complex geological bodies, the average error of principal stress inversion is 9.35% with a minimum error of 0.137%. All inversion results fall within the permissible accuracy range of engineering, and the stress distribution conforms to basic laws, with an average error of 0.453 in the constitutive relation. Compared with BP neural network and multiple linear regression methods, it shows obvious accuracy advantages. This method provides a new solution for intelligent ground stress prediction with high accuracy, high efficiency, and strong physical interpretability, and also lays the foundation for early identification of geological disasters.",
+  "year": 2026,
+  "venue": "Geosciences",
+  "authors": [
+   "Fei Li",
+   "L. Wang",
+   "Zhifeng Liang",
+   "Jinan Wang",
+   "Chuanqi Zhu",
+   "Ruiyang Yuan"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7135022255",
+  "doi": "10.3390/geosciences16030118",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3263/16/3/118/pdf?version=1773308871",
+  "published_iso": "2026-03-12",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Physics-Informed Neural Networks in Aerospace Engineering: A Systematic Review of Architectures, Training Strategies, and Open Challenges",
+  "title_norm": "physics informed neural networks in aerospace engineering a systematic review of",
+  "abstract": "This paper provides a systematic synthesis of recent developments in physics-informed neural networks (PINNs) applied to aerospace engineering, with an emphasis on their role in physically consistent surrogate modeling, forward simulation, and inverse parameter estimation. Using a PRISMA-based methodology, the study surveys peer-reviewed works published between 2017 and 2025 across aviation- and space-related domains, including aerodynamics, structural mechanics, aeroelasticity, propulsion, control, structural health monitoring, satellite-orbit prediction, space-debris collision avoidance, and spacecraft radiation-impact modeling. The analysis shows that embedding governing equations, boundary conditions, and observational data into composite loss functions enables PINNs to improve predictive consistency, reduce dependence on dense simulation or experimental datasets, and support parameter identification under sparse or noisy measurements. Attention is given to architectural variants such as XPINNs, cPINNs, gPINNs, operator-learning approaches, and hybrid PINN-CFD/FEM formulations, as well as to training strategies based on adaptive sampling, domain decomposition, transfer learning, and dynamic loss weighting. Reported benefits include reduced approximation error, improved convergence in selected high-gradient or multiphysics problems, and enhanced interpretability compared with purely data-driven models. At the same time, the review identifies persistent open challenges, including scalability to large aerospace domains, sensitivity to loss-weighting and collocation strategies, limited robustness under noise and uncertainty, high computational cost, and the lack of standardized aerospace benchmarks. Overall, the review highlights PINNs as a promising but still developing framework for fast, interpretable, and physically consistent modeling of aircraft and spacecraft systems.",
+  "year": 2026,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Przemysław Gryt",
+   "Piotr Przystałka"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7165748244",
+  "doi": "10.3390/app16136282",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/16/13/6282/pdf?version=1782178597",
+  "published_iso": "2026-06-23",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Advancing Identification of Transformation Products and Predicting Their Environmental Fate: The Current State of Machine Learning and Artificial Intelligence in Antibiotic Photolysis",
+  "title_norm": "advancing identification of transformation products and predicting their environ",
+  "abstract": "The environmental persistence of antibiotic residues in aquatic systems represents a critical global challenge, with photolysis serving as a primary abiotic degradation pathway. Traditional approaches to studying antibiotic photodegradation and transformation product (TP) identification face significant limitations, including complex reaction mechanisms, multiple concurrent pathways, and analytical challenges in characterizing unknown metabolites. The integration of artificial intelligence (AI) and machine learning (ML) technologies has begun to transform this field, offering new capabilities for predicting photodegradation kinetics, elucidating transformation pathways, and identifying novel metabolites. This comprehensive review examines current applications of AI/ML in antibiotic photolysis research, analyzing developments from 2020 to 2025. Key advances include quantitative structure–activity relationship (QSAR) models for photodegradation prediction, deep learning approaches for automated mass spectrometry interpretation, and hybrid computational–experimental frameworks. Machine learning algorithms, particularly Random Forests, support vector machines, and Neural Networks, have demonstrated capabilities in handling multi-dimensional environmental datasets across diverse antibiotic classes, including fluoroquinolones, β-lactams, tetracyclines, and sulfonamides. Despite progress in this field, challenges remain in model interpretability, standardization of datasets, validation protocols, and integration with regulatory frameworks. Future directions include machine-learning-enhanced quantum dynamics for improving mechanistic understanding, real-time AI-guided experimental design, and predictive tools for environmental risk assessment.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Sultan K. Alharbi"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W7117481098",
+  "doi": "10.3390/app16010267",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/16/1/267/pdf?version=1766759277",
+  "published_iso": "2025-12-26",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Machine learning-based prediction of crack mouth opening displacement in ultra-high-performance concrete",
+  "title_norm": "machine learning based prediction of crack mouth opening displacement in ultra h",
+  "abstract": "Ultra-high-performance concrete (UHPC) has become an essential construction material due to its exceptional strength, durability, and crack-resistance properties, making it well-suited for long-span bridges, protective structures, and demanding infrastructure applications. However, accurately predicting crack mouth opening displacement (CMOD) in fiber-reinforced UHPC (FR-UHPC) presents significant challenges, as traditional empirical and physics-based models struggle to capture the complex nonlinear relationships between mix design, fiber geometry, and structural parameters. This study assembled a comprehensive experimental database containing eleven mix and material variables that control post-cracking behavior. Nine advanced machine learning algorithms were trained and evaluated using fivefold cross-validation, including kernel-based regressors, ensemble methods, deep neural networks, and the innovative tabular prior-data fitted networks (TabPFN). The modela were ensured interpretability through SHapley Additive exPlanations (SHAP), sensitivity analysis, contour mapping, and interaction diagrams. These analyses consistently showed that fiber volume (FV) and fiber length (FL) were the primary factors controlling CMOD, while silica fume content (SF), fly ash content (FA), initial notch depth (a₀), and water-to-binder ratio (w/b) had secondary effects. Feature selection improved predictive performance by narrowing the input space to the six most influential variables. With this optimized configuration, TabPFN delivered exceptional accuracy (R2 = 0.942, RMSE < 0.072 mm), surpassing ensemble methods (XGBoost, RFR, GBR) and kernel-based approaches (SVR, NuSVR, GPR). Model predictions were validated against experimental CMOD curves, and bootstrap resampling generated 95% confidence intervals, demonstrating that TabPFN provided both high precision and reliable uncertainty estimates. This research contributes three main innovations: (i) creation of a detailed experimental database for FR-UHPC fracture behavior, (ii) first application of TabPFN for CMOD prediction, and (iii) combined focus on interpretability and uncertainty quantification. The transparent, uncertainty-aware predictive framework developed here connects data-driven modeling with fracture mechanics, providing practical tools for designing and optimizing resilient UHPC structures.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Arsalan Mahmoodzadeh",
+   "Manish Kewalramani",
+   "Abdulaziz S. Alghamdi",
+   "Anwar Ahmed",
+   "Shtwai Alsubai",
+   "Abdullah Alqahtani"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4416210665",
+  "doi": "10.1038/s41598-025-23610-x",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-23610-x.pdf",
+  "published_iso": "2025-11-14",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "AI-driven virtual cell models in preclinical research: technical pathways, validation mechanisms, and clinical translation potential",
+  "title_norm": "ai driven virtual cell models in preclinical research technical pathways validat",
+  "abstract": "AI-driven virtual cell models show the potential to transform the paradigm of life sciences research by integrating multimodal omics data (e.g., single-cell transcriptomics and proteomics) with advanced algorithms such as deep generative models and graph neural networks to enable high-precision predictions of drug responses, gene perturbations, and disease progression. These models enable high-precision predictions of drug responses, gene perturbations, and disease progression. This review outlines the technical pathways and validation mechanisms of virtual cells, emphasizing a closed-loop workflow from computational evaluation to experimental verification using CRISPR assays and organoid platforms. The applications of virtual cells in personalized drug screening and disease modeling are highlighted, showcasing their potential to reduce animal testing and optimize therapy. However, challenges in regulatory acceptance, data privacy, and model interpretability remain. Global policy and standardization trends are driving clinical translation, and future advancements will involve cross-disciplinary integration and greater standardization to enhance the impact of virtual cells in precision medicine and drug discovery.",
+  "year": 2025,
+  "venue": "npj Digital Medicine",
+  "authors": [
+   "Chunyu Ma",
+   "Han Zhang",
+   "Yiwei Rao",
+   "Xinyu Jiang",
+   "Boheng Liu",
+   "Zhikang Sun"
+  ],
+  "citations": 25,
+  "source": "openalex",
+  "source_id": "W4417240226",
+  "doi": "10.1038/s41746-025-02198-6",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41746-025-02198-6_reference.pdf",
+  "published_iso": "2025-12-11",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Physics-Enforced Neural Ordinary Differential Equation for Chemical Kinetics Optimization in Reaction-Diffusion Systems",
+  "title_norm": "physics enforced neural ordinary differential equation for chemical kinetics opt",
+  "abstract": "Calibrating chemical kinetics in a reaction-diffusion system is challenging because of complex dynamics governed by tightly coupled chemistry and transport, while experimental observations are often sparse and noisy. We propose a physics consistent diffusion-chemistry coupled neural ordinary differential equation (Diff-Chem Neural ODE) that embeds Arrhenius-structured reaction neurons into a fully differentiable streamline formulation and explicitly accounts for diffusion coupling. This design enables direct gradient-based analysis of kinetic parameters without sampling-based pretraining. We validate this method on burner-stabilized flat and stagnation reacting flows using mechanisms spanning different stiffness ranges. The proposed method reproduces species profiles with near-reference accuracy, whereas a pure chemistry Neural ODE that neglects diffusion coupling may misplace ignition and generate an incorrect thin reaction zone. Diff-Chem Neural ODE is more robust than pure chemistry Neural ODE and provides substantial speedups for gradient evaluation compared with fully discretized computations. In kinetics refinement, optimizing only a limited set of \"primal\" species reduces the loss by over 98% and simultaneously recovers unobserved variables, demonstrating physically consistent global control. Finally, tests with 1-20% noise in the objective show stable convergence without local overfitting, supporting its applicability under noisy measurements.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Feixue Cai",
+   "Hua Zhou",
+   "Zhuyin Ren"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7148176775",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.28478",
+  "published_iso": "2026-03-30",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "DNS-Calibrated Physics-Informed Neural Networks with Learnable Constants for Reynolds Number Extrapolation in Turbulent Channel Flows",
+  "title_norm": "dns calibrated physics informed neural networks with learnable constants for rey",
+  "abstract": "This paper employs Physics-Informed Neural Networks (PINNs) for the reconstruction and modelling of mean velocity profiles in fully developed turbulent channel flow over a high friction Reynolds number (Reτ). The network is trained with a high-fidelity Direct Numerical Simulation (DNS) dataset from channel flows, for Reτ=395–4186, and can extrapolate up to Reτ = 10,049. The model predicts the mean velocity in terms of the inner-law variables, u+, across Reynolds numbers using the inputs η=y+/Reτ and Reτ. A key novelty is the simultaneous optimisation of the network weights alongside two fundamental turbulence parameters, i.e., the von Kármán constant (κ) and the van Driest damping constant (A+), allowing the PINN to autonomously calibrate the near-wall damping and log-law scaling directly from the physics-augmented loss function. The model performance is evaluated using profile-based metrics (R2, mean square and absolute error) and integrated quantities (V¯+, Reb, and the skin-friction coefficient Cf), with comparisons against DNS-integrated friction values and classical theoretical values. The resulting hybrid framework offers a promising foundation for real-time digital twins and the acceleration of Computational Fluid Dynamics (CFD) solvers in canonical wall-bounded flows. By establishing a physically grounded connection between sparse data and structural constraints, these models enable accurate extrapolation into high Reynolds number regimes where the computational costs of traditional high-fidelity simulations are otherwise prohibitive.",
+  "year": 2026,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Apostolos Palasis",
+   "Filippos Sofos"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7150923305",
+  "doi": "10.3390/app16073525",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/16/7/3525/pdf?version=1775225020",
+  "published_iso": "2026-04-03",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Artificial Intelligence-Driven Natural Product Discovery for Cancer Metastasis and Chemoresistance: From Computational Prediction to Preclinical Validation",
+  "title_norm": "artificial intelligence driven natural product discovery for cancer metastasis a",
+  "abstract": "Cancer metastasis and chemoresistance are primary reasons for cancer-related mortality. Current therapeutic options rely mostly on single-target drugs, which often fail to exhibit long-lasting remission of the disease progression due to the complexity of metastasis and resistance mechanisms. Natural products (NPs) possess inherent structural diversity, rendering them suitable as multi-target agents. The utilization of NPs is often impeded in treating complex diseases such as cancer, even though approximately 65% of approved anticancer drugs are NP derivatives, or synthetic derivatives containing NP-pharmacophores, due to various factors, including poor aqueous solubility and variable oral bioavailability, structural complexity, synthetic inaccessibility, and stereochemical diversity that confounds structure-activity relationship analyses. This review discusses how integrating artificial intelligence (AI) and machine learning (ML) with chemoinformatics can identify, prioritize, and experimentally validate NPs, potentially paving the way for new drugs that address intricate processes such as metastasis and resistance. We summarize the recent computational advances in the field, including graph neural networks, attention mechanisms, Siamese networks, virtual screening, and network pharmacology. These advancements address ADMET optimization, molecular representation, virtual screening, network pharmacology, and experimental validation. We emphasize how each of these approaches tackles the unique challenges associated with NPs. We contextualize our review within the specific challenges presented by the chemical space of NPs. Additionally, we analyze real-world case studies of successful AI-assisted NP discovery and categorize the quality of evidence into three levels: Level A, which includes in vivo efficacy with mechanistic details; Level B, which consists of in vitro validation of mechanisms and phenotypes; and Level C, which represents computational hypotheses that are awaiting experimental verification. Additionally, we propose an operational framework for selecting suitable AI methodologies based on available data, target characterization, and validation resources. Finally, we emphasize the limitations and future directions in AI-facilitated NP discovery.",
+  "year": 2026,
+  "venue": "Cancers",
+  "authors": [
+   "Mohamed Ali Hussein",
+   "Gnanasekar Munirathinam"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7131277386",
+  "doi": "10.3390/cancers18050719",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2072-6694/18/5/719/pdf?version=1771923633",
+  "published_iso": "2026-02-24",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Applications of Machine Learning and Artificial Intelligence in Tropospheric Ozone Research",
+  "title_norm": "applications of machine learning and artificial intelligence in tropospheric ozo",
+  "abstract": "Abstract. Machine learning (ML) is transforming atmospheric chemistry, offering powerful tools to address challenges in tropospheric ozone research, a critical area for climate resilience and public health. As in adjacent fields, ML approaches complement existing research by learning patterns from ever-increasing volumes of atmospheric and environmental data relevant to ozone. We highlight the rapid progress made in the field since Phase 1 of the Tropospheric Ozone Assessment Report (TOAR), focussing particularly on the most active areas of research, namely short-term ozone forecasting, emulation of atmospheric chemistry and the use of remote sensing for ozone estimation. This review provides a comprehensive synthesis of recent advancements, highlights critical challenges, and proposes actionable pathways to develop ML in ozone research. Further advances hinge on addressing domain-specific issues such as the dependence of ozone concentrations on several poorly observed precursor species, as well as making progress on generic ML challenges such as the definition of suitable benchmarks and developing robust, explainable models. Reaping the full potential of ML for ozone research and operational applications will require close collaborations across atmospheric chemistry, ML and computational science and vigilant pursuit of the rapid developments in adjacent fields.",
+  "year": 2025,
+  "venue": "Geoscientific model development",
+  "authors": [
+   "Sebastian Hickman",
+   "Makoto Kelp",
+   "Paul T. Griffiths",
+   "Kelsey Doerksen",
+   "Kazuyuki Miyazaki",
+   "Elyse A. Pennington"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4416390169",
+  "doi": "10.5194/gmd-18-8777-2025",
+  "arxiv_id": null,
+  "paper_url": "https://gmd.copernicus.org/articles/18/8777/2025/gmd-18-8777-2025.pdf",
+  "published_iso": "2025-11-20",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Artificial intelligence and machine learning for plasmonic and surface-enhanced sensing",
+  "title_norm": "artificial intelligence and machine learning for plasmonic and surface enhanced ",
+  "abstract": "Plasmonic sensing is a vibrant field where the optical properties of surface plasmons are exploited to create analytical sensors for biomedical, environmental and food safety applications, among others. Upon irradiation of light on a plasmon-active nanomaterial, the enhancement of the electric field leads to augmented scattering, absorption and luminescence of molecules in, respectively, surface-enhanced Raman scattering (SERS), surface-enhanced infrared absorption (SEIRA) and metal-enhanced fluorescence (MEF) and to highly sensitive refractometric sensors with surface plasmon resonance (SPR) and localised surface plasmon resonance (LSPR). The advent of a new generation of artificial intelligence (AI) and machine learning (ML) tools provides an opportunity to further advance the design, synthesis and characterisation of plasmonic materials, improve signal processing and image analysis in plasmonic sensing experiments and to design sensors with better sensitivity, selectivity and robustness. The review will first build basic knowledge in plasmonic sensing and AI/ML, before discussing opportunities for AI/ML-augmented sensor design and data analysis, and then discuss applications where AI/ML provided added benefits in plasmonic sensing. The review will conclude with a perspective on where the field is trending.",
+  "year": 2026,
+  "venue": "Chemical Society Reviews",
+  "authors": [
+   "Ailsa Geddis",
+   "Hannah Williams",
+   "Saba Bashir",
+   "Jason Malenfant",
+   "Caroline Dubois",
+   "Louis Hamlet"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W7131431758",
+  "doi": "10.1039/d5cs01522g",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.rsc.org/en/content/articlepdf/2026/cs/d5cs01522g",
+  "published_iso": "2026-01-01",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Reliable Error Estimation for PINNs: Lower and Upper A Posteriori Bounds",
+  "title_norm": "reliable error estimation for pinns lower and upper a posteriori bounds",
+  "abstract": "Physics-informed neural networks (PINNs) combine machine learning with physical laws to solve differential equations. While existing results provide rigorous \\emph{a posteriori} upper bounds for PINN prediction errors, complete certification also requires complementary lower information in order to obtain computable two-sided error enclosures. In this paper, we derive computable \\emph{a posteriori} lower bounds for PINN errors in ordinary differential equations on suitable certified state-space domains under a localized strong monotonicity condition. We combine these estimates with complementary localized upper bounds under a one-sided Lipschitz condition, which is weaker than the global Lipschitz assumption used in previous work and can yield sharper upper error bands. The resulting bounds depend only on the neural-network approximation, the ODE residual, and local monotonicity and growth constants, and therefore do not require access to the exact solution. For linear time-invariant and time-varying systems, we further derive explicit formulas in terms of the minimal and maximal eigenvalues of the symmetric part of the system matrix. We also discuss the distinction between soft and hard enforcement of initial conditions in PINNs and explain why exact enforcement can make the scalar lower certificate uninformative. To recover nontrivial lower information in the linear setting, we use a signed-residual finite-probe certificate based on coordinate unit vectors. We also formulate a certificate-informed training strategy in which the propagated upper certificate is used as an auxiliary regularizer, while lower certificates remain post-training diagnostics. Altogether, the proposed framework provides rigorous and practically computable error certificates for PINN approximations of ODEs, while making explicit the domains and model classes for which the assumptions can be verified.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Ismail Huseynov",
+   "Arzu Ahmadova",
+   "Agamirza Bashirov"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7164614256",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2606.12050",
+  "published_iso": "2026-06-10",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "A review of applications of machine learning in quantum dots research",
+  "title_norm": "a review of applications of machine learning in quantum dots research",
+  "abstract": "Machine learning (ML) is increasingly applied in quantum dot (QD) research to support data analysis, device control, materials optimization, sensing, and theoretical modeling. This review surveys recent ML-based approaches across experimental, applied, and computational QD studies, with emphasis on how data-driven methods are embedded within established physical workflows rather than treated as standalone solutions. ML techniques are examined in the context of automated device tuning, high-throughput characterization, synthesis parameter exploration, chemical and biological sensing, photonic and optoelectronic device analysis, and reduced-order modeling of interacting quantum systems. In most cases, ML serves to replace time-consuming fitting procedures, guide experimental sampling, or approximate computationally intensive simulations. Common methodological patterns include supervised learning on limited datasets, transfer learning across device instances, and hybrid approaches incorporating physical constraints into model design or training objectives. Recurrent limitations are also identified, including dataset bias, restricted cross-laboratory transferability, lack of standardized benchmarks, and limited treatment of uncertainty. Rather than positioning ML as a standalone solution, this work frames it as a complementary tool whose reliability and scientific value depend on integration with physical insight, experimental design, and validation protocols.",
+  "year": 2026,
+  "venue": "Discover Nano",
+  "authors": [
+   "Ivan Malashin",
+   "Dmitry Martysyuk",
+   "Vladimir Nelyub",
+   "А. С. Бородулин",
+   "Andrei Gantimurov",
+   "Vadim Tynchenko"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W7131789651",
+  "doi": "10.1186/s11671-026-04466-0",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s11671-026-04466-0.pdf",
+  "published_iso": "2026-02-27",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A Decade of Soft Robotic Manipulators: Advances in Design, Modeling, Control, and Emerging Challenges",
+  "title_norm": "a decade of soft robotic manipulators advances in design modeling control and em",
+  "abstract": "Abstract Soft robotic manipulators represent a rapidly evolving field characterized by inherent compliance, adaptability, and safe interactions within unstructured environments. Over the past decade (2015–2025), significant advancements have transformed their capabilities through novel designs inspired by biological systems, advanced modeling frameworks, sophisticated control strategies, and integration into diverse real-world applications. Recent innovations in multifunctional materials and emerging actuation technologies have markedly expanded manipulator performance, reliability, and dexterity. Concurrently, developments in modeling have progressed from simplified geometric methods toward highly accurate physics-based and hybrid data-driven approaches, substantially improving real-time prediction and controllability. Coupled with these developments, adaptive and robust control strategies–including learning-based techniques–have enabled unprecedented autonomy and precision in challenging application domains such as Minimally Invasive Surgery (MIS), precision agriculture, deep-sea exploration, disaster recovery, and space missions. Despite these remarkable strides, key challenges remain, notably regarding scalability, long-term material durability, robust integrated sensing, and standardized evaluation procedures. This review comprehensively synthesizes recent advances, critically evaluates state-of-the-art methodologies, and systematically identifies existing gaps to provide a clear roadmap and targeted research directions, guiding future developments toward the broader adoption and optimal utilization of soft robotic manipulators.",
+  "year": 2025,
+  "venue": "Journal of Bionic Engineering",
+  "authors": [
+   "Elsayed Atif Aner",
+   "Omar M. Shehata",
+   "Mohammed I. Awad",
+   "Nancy E. ElHady"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4417436009",
+  "doi": "10.1007/s42235-025-00819-0",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s42235-025-00819-0.pdf",
+  "published_iso": "2025-12-17",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Process Control via Electrical Impedance Tomography for Energy-Aware Industrial Systems",
+  "title_norm": "process control via electrical impedance tomography for energy aware industrial ",
+  "abstract": "Conventionally, tomography is an inspection technique in which tomographic images are intended for human perception and interpretation. In this work, we shift this paradigm by transforming tomography into an autonomous estimator of industrial reactor states, enabling fully automated process control. Alcoholic fermentation was employed as an example of a controlled process in the current study. The work presents an original concept utilizing transfer learning in conjunction with a ResNet-type artificial neural network, which converts electrical measurements into a sequence of values correlated with the conductivity of pixels constituting the cross-section of the examined biochemical reactor. The conductivity vector is transformed into a parameter determining substrate concentration, enabling dynamic process regulation in response to signals generated from EIT (Electrical Impedance Tomography). Within the scope of the described research, calibration of the conductivity vector against substrate concentrations was performed, and a Matlab/Simulink-based dynamic Monod kinetics model was developed. The obtained results demonstrate high accuracy in substrate concentration estimation relative to reference values throughout a forty-six-hour process. The same signals enable energy-efficient process control, in which cooling and mixing intensity are regulated according to energy prices and renewable energy availability. This strategy may possess particular application in facilities where fermentation installations are co-located with bioenergy production units.",
+  "year": 2025,
+  "venue": "Energies",
+  "authors": [
+   "Krzysztof Król",
+   "Grzegorz Kłosowski",
+   "Tomasz Rymarczyk",
+   "Konrad Gauda",
+   "Monika Kulisz",
+   "Ewa Golec"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416228604",
+  "doi": "10.3390/en18225956",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1996-1073/18/22/5956/pdf?version=1762999893",
+  "published_iso": "2025-11-13",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Smart material design via accelerated corrosion evaluation: convergence of high-throughput characterization and AI-driven prediction in marine engineering",
+  "title_norm": "smart material design via accelerated corrosion evaluation convergence of high t",
+  "abstract": "Traditional trial-and-error methods have hindered the rapid development of corrosion-resistant materials in the field of marine engineering. This paper provides a comprehensive review of high-throughput characterization, efficient multi-factor evaluation, and artificial intelligence prediction for metallic materials in marine environments. By integrating these three parts synergistically, this paper presents an innovative paradigm for materials corrosion research, aimed at significantly accelerating the design of next-generation smart materials suitable for harsh marine environments.",
+  "year": 2025,
+  "venue": "npj Materials Degradation",
+  "authors": [
+   "Siyu Xu",
+   "Fan Li",
+   "Congcong Du",
+   "Dianchun Ju",
+   "Yaqing Hou",
+   "Xiangyang Li"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4416001695",
+  "doi": "10.1038/s41529-025-00663-x",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41529-025-00663-x.pdf",
+  "published_iso": "2025-11-07",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "The Fluidic Connectome in Brain Disease: Integrating Aquaporin-4 Polarity with Multisystem Pathways in Neurodegeneration",
+  "title_norm": "the fluidic connectome in brain disease integrating aquaporin 4 polarity with mu",
+  "abstract": "The way in which Aquaporin-4 (AQP4) is localized on the astrocytes' surface-i.e., with AQP4 channels predominantly located on the endfeet of astrocytes near the blood vessels-represents an important structural element for maintaining brain fluid homeostasis. In addition to this structural function, AQP4 polarity also facilitates glymphatic transport, the maintenance of the blood-brain barrier (BBB) functions, ion buffering, and neurotransmitter removal, and helps regulate neurovascular communications. The growing body of literature suggests that the loss of AQP4 polarity-a loss in the organization of AQP4 channels to the perivascular membrane-is associated with increased vascular, inflammatory, and metabolic disturbances in the context of many neurological diseases. As a result, this review attempts to synthesize both experimental and clinical studies to highlight that AQP4 depolarization often occurs in conjunction with early signs of neurodegeneration and neuroinflammation; however, we are aware that the loss of AQP4 polarity is only one factor in a complex pathophysiological environment. This review examines the molecular structure responsible for maintaining the polarity of AQP4-such as dystrophin-syntrophin complexes, orthogonal particle arrays, lipid microdomains, trafficking pathways, and transcriptional regulators-and describes how the vulnerability of these systems to various types of vascular stress, inflammatory signals, energy deficits, and mechanical injury can lead to a loss of AQP4 polarity. Furthermore, we will explore how a loss of AQP4 polarity can lead to the disruption of perivascular fluid movement, changes in blood-brain barrier morphology, enhanced neuroimmune activity, changes in ionic and metabolic balance, and disruptions in the global neural network synchronization. Importantly, we recognize that each of these disruptions will likely occur in concert with other disease-specific mechanisms. Alterations in AQP4 polarity have been observed in a variety of neurological disorders including Alzheimer's disease, Parkinson's disease, multiple sclerosis, traumatic brain injury, and glioma; however, we also observe that the same alterations in fluid regulation occur across all of these different diseases, but that no single upstream event accounts for the alteration in polarity. Ultimately, we will outline emerging therapeutic avenues to restore perivascular fluid transport, and will include molecular-based therapeutic agents designed to modify the anchoring of AQP4, methods designed to modulate the state of astrocytes, biomaterials-based drug delivery systems, and therapeutic methods that leverage dynamic modulation of the neurovascular interface. Future advances in multi-omic profiling, spatial proteomics, glymphatic imaging, and artificial intelligence will allow for earlier identification of AQP4 polarity disturbances and potentially allow for the development of more personalized treatment plans. Ultimately, by linking these concepts together, this review aims to frame AQP4 polarity as a modifiable aspect of the \"fluidic connectome\", and highlight its importance in maintaining overall brain health across disease states.",
+  "year": 2025,
+  "venue": "International Journal of Molecular Sciences",
+  "authors": [
+   "Felix-Mircea Brehar",
+   "Daniel Ovidiu Costea",
+   "Călin Petru Tătaru",
+   "Mugurel Petrinel Rădoi",
+   "Alexandru Vlad Ciurea",
+   "Octavian Munteanu"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4416782409",
+  "doi": "10.3390/ijms262311536",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1422-0067/26/23/11536/pdf?version=1764321975",
+  "published_iso": "2025-11-28",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Review of Fault Detection Approaches for Large-Scale Lithium-Ion Battery Systems: A Spatio-Temporal Perspective",
+  "title_norm": "review of fault detection approaches for large scale lithium ion battery systems",
+  "abstract": "Battery fault detection is crucial for maintaining the safety and reliability of large-scale lithium-ion battery systems, especially in demanding applications like electric vehicles and energy storage power stations. However, existing research primarily addresses either temporal patterns or spatial variations in isolation. This paper presents a comprehensive review of fault detection from a spatio-temporal perspective, with a specific focus on AI-driven methods that integrate temporal dynamics with spatial sensor data. The contributions of this review include an in-depth analysis of advanced techniques such as transfer learning, foundation models, and physics-informed neural networks, emphasizing their potential for modeling complex spatio-temporal dependencies. On the engineering side, this review surveys the practical application of these methods for early fault detection and diagnostics in large-scale battery systems, supported by case studies and real-world deployment examples. The findings of this review provide a unified perspective to guide the development of robust and scalable spatio-temporal fault detection methods for EV batteries, highlighting key challenges, promising solutions, and future research directions.",
+  "year": 2025,
+  "venue": "Batteries",
+  "authors": [
+   "Qingbin Wang",
+   "Hangang Yan",
+   "Yun Yang",
+   "Xianzhong Zhao",
+   "Guoqin Huang",
+   "Zudi Huang"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4416123521",
+  "doi": "10.3390/batteries11110414",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2313-0105/11/11/414/pdf?version=1762908121",
+  "published_iso": "2025-11-12",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "The Glymphatic–Venous Axis in Brain Clearance Failure: Aquaporin-4 Dysfunction, Biomarker Imaging, and Precision Therapeutic Frontiers",
+  "title_norm": "the glymphatic venous axis in brain clearance failure aquaporin 4 dysfunction bi",
+  "abstract": "The identification of brain clearance failure as a precursor to a large variety of neurodegenerative diseases has shifted fluid dynamics from a secondary to a tertiary target of brain health. The identification of the glymphatic system, detailing cerebrospinal fluid entry along perivascular spaces and exit via perivenous and meningeal lymphatic pathways, provided a challenge to previous diffusion models and established aquaporin-4-dependent astroglial polarity as a governing principle of solute transport. Multiple lines of evidence now support a coupled glymphatic-venous axis, wherein vasomotion, venous outflow, and lymphatic drainage are functionally interrelated. Failure of any axis will cascade and affect the entire axis, linking venous congestion, aquaporin-4 disassembly, and meningeal lymphatic failure to protein aggregation, neuroinflammation, edema, and intracranial hypertension. Specific lines of evidence from diffusion tensor imaging along vascular spaces, clearance MRI, and multi-omic biomarkers can provide a measure of transport. Therapeutic strategies are rapidly advancing from experimental strategies to translational approval, including behavioral optimization, closed-loop sleep stimulation, vascular and lymphatic therapies, focused ultrasound, pharmacological polarity recoupling, and regenerative bioengineering. Novel computational approaches, such as digital twin dynamic modeling and adaptive trial designs, suggest that clearance measures may serve as endpoints to be approved by the FDA. This review is intended to bridge relevant mechanistic and translational reviews, focusing on impaired clearance as an exploitable systems defect rather than an incapacitating secondary effect. Improving our understanding of the glymphatic-venous axis Injury may lead to future target strategies that advance cognitive resilience, alleviate disease burden, and improve quality of life. By clarifying the glymphatic-venous axis, we provide a mechanistic link between impaired interstitial clearance and the pathological accumulation of amyloid-β, tau, and α-synuclein in neurodegenerative diseases. The repair of aquaporin-4 polarity, venous compliance, and lymphatic drainage might therefore open new avenues for the diagnosis and treatment of Alzheimer's and Parkinson's disease, supplying both biomarkers of disease progression and new targets for early intervention. These translational implications not only locate clearance failure as an epiphenomenon of neurodegeneration but, more importantly, as a modifiable driver of the course of neurodegeneration.",
+  "year": 2025,
+  "venue": "International Journal of Molecular Sciences",
+  "authors": [
+   "Daniel Ovidiu Costea",
+   "Nicolaie Dobrin",
+   "Cătălina-Ioana Tătaru",
+   "Corneliu Toader",
+   "Matei Șerban",
+   "Răzvan-Adrian Covache-Busuioc"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4415718748",
+  "doi": "10.3390/ijms262110546",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1422-0067/26/21/10546/pdf?version=1761811924",
+  "published_iso": "2025-10-30",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Python open-source signal processing and modeling/simulation for scientific research in structural dynamics—A review",
+  "title_norm": "python open source signal processing and modeling simulation for scientific rese",
+  "abstract": "Open-source scientific research has become indispensable, because it fosters a global collaborative environment in which knowledge is freely shared, accelerating the pace of discovery. Emphasizing transparency and reproducibility ensures the credibility of scientific findings, while democratizing access to research gives a wider community the opportunity to contribute to progress. Avoiding duplication of effort leads to faster progress and greater societal benefit. The Python programming language provides readable code and is highly collaborative, leading to a large user community. Libraries such as NumPy (i.e. numerical Python) and SciPy (i.e. scientific computing) have been developed for scientific research. The latter was crucial, for example, in the discovery of gravitational waves and the first imaging of a black hole. This review focuses on selected open-source Python libraries that support scientific development in the field of signal processing and mechanical systems. In particular, the article focuses on packages related to signal processing, experimental and operational modal analysis, vibration fatigue, image-based identification of structural dynamics, vibration control, substructuring, rotor dynamics, vibrations in pipeline systems, and machine-learning. A basic theoretical overview of the presented topics and some typical use cases for selected open-source packages are given. Finally, this review article proposes a strategy to increase collaboration among many researchers resulting in highly-related future scientific packages. The purpose of this review is to help new researchers get started in open-source-based signal processing, while those already active can learn the development principles for better and interconnected scientific packages.",
+  "year": 2025,
+  "venue": "Mechanical Systems and Signal Processing",
+  "authors": [
+   "Janko Slavič",
+   "Klemen Zaletelj",
+   "Domen Gorjup",
+   "Dag Pasquale Pasca",
+   "Angelo Aloisio",
+   "Knut Andreas Kvåle"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4415630342",
+  "doi": "10.1016/j.ymssp.2025.113465",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4415630342",
+  "published_iso": "2025-10-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Structural dynamics of plant transcription factors and their functional implications",
+  "title_norm": "structural dynamics of plant transcription factors and their functional implicat",
+  "abstract": "Transcription factor structural dynamics has emerged as a critical frontier in plant molecular biology, as many transcription factors (TFs) belong to plant-specific families with unique structural features that reveal mechanisms static structural approaches cannot capture. These advances, combining molecular dynamics simulations, NMR spectroscopy, and single-molecule techniques, have demonstrated that structural dynamics play crucial roles in driving DNA recognition, environmental responsiveness, and regulatory precision. Such computational and experimental breakthroughs have revealed rotation-coupled diffusion processes in WRKY proteins and allosteric regulation through ensemble redistribution in disordered domains. Despite these discoveries, fundamental questions remain about how plant TFs achieve specificity within complex regulatory networks and integrate multiple environmental signals. We outline current understanding of the static structures across transcription factor families before examining breakthrough discoveries in structural dynamics. These encompass the diverse architectures of DNA binding and regulatory domains, as well as the conformational flexibility and transition kinetics governing DNA binding, cofactor interactions, and environmental signal transduction. We subsequently explore how these insights are transforming biotechnological applications, from rational protein design to crop engineering strategies. Finally, we discuss remaining challenges and future directions for harnessing transcription factor dynamics in agricultural and synthetic biological applications.",
+  "year": 2026,
+  "venue": "The Plant Journal",
+  "authors": [
+   "Shaowen Wu",
+   "Wenjie Huang",
+   "Wenyang Zhang",
+   "Tingquan Wu",
+   "Shijuan Yan"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7124865009",
+  "doi": "10.1111/tpj.70693",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/tpj.70693",
+  "published_iso": "2026-01-01",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Toward Autonomous LLM-Based AI Agents for Predictive Maintenance: State of the Art, Challenges, and Future Perspectives",
+  "title_norm": "toward autonomous llm based ai agents for predictive maintenance state of the ar",
+  "abstract": "Recent advances in Large Language Models (LLMs) enable agentic systems that combine perception, reasoning, and action across the enitre Predictive Maintenance (PdM) lifecycle, including machine fault diagnosis. However, the literature on LLM-driven agents for PdM remains fragmented and lacks a unified view on contemporary frameworks such as Model Context Procotol. This paper reviews discriminative, generative, and LLM-based approaches for PdM and consolidates fragmented evidence on LLM-driven AI agents. Namely, it introduces agentic AI concepts for PdM and develops an analysis of potential applications, challenges, and risks in light of agency theory, while mapping drivers and barriers to adoption based on recent evidence from industry analysis. Findings indicate near-term value for information and decision-support agents, while higher autonomy needs stronger governance, benchmarks, and safety evidence.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Luigi Gianpio Di Maggio"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4415619553",
+  "doi": "10.3390/app152111515",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/15/21/11515/pdf?version=1761657264",
+  "published_iso": "2025-10-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Transient Reactive Grain Model with Uncertainty Quantifications and SensiTivity (TRUST) for Hydrogen Direct Reduction of Iron Ore",
+  "title_norm": "transient reactive grain model with uncertainty quantifications and sensitivity ",
+  "abstract": "Global direct reduction of iron (DRI) for steelmaking has marked production increase of over 25% over the past five years. As production increases, the need for robust computational models predicting the DRI process becomes critical. However, existing modeling approaches are deterministic, which do not account for the probability distribution of parameters. So, when these models are calibrated to specific experimental data under fixed conditions, they need extrapolations for other operating conditions. Here we present a Transient Reactive Grain Model (TRGM) with Uncertainty Quantifications and Sensitivity (TRUST) by integrating probabilistic uncertainty quantification, surrogate-based Monte Carlo propagation, and global sensitivity analysis with the TRGM. Gaussian process regression (GPR) proved effective in capturing the nonlinear model dependencies and enabling uncertainty-aware predictions. Monte Carlo simulations show that activation energies of conversion chemical kinetics in iron ore reduction dominate conversion uncertainty through the entire conversion transient, while operational variables have secondary influence, and temperature effects are mostly local. Early-stage conversion exhibits high variability, whereas later stages converge predictably, suggesting streamlined monitoring strategies. Correlation analysis further indicates redundancy in late-stage measurements, and global sensitivity analysis identifies activation energies as critical targets for calibration. TRUST provides a validated, probabilistic framework for risk-informed process optimization and experimental design, and can be generalizable to other high-temperature metallurgical and chemical systems, supporting uncertainty-aware decision-making in hydrogenbased steelmaking.",
+  "year": 2026,
+  "venue": "ChemRxiv",
+  "authors": [
+   "Rui You",
+   "Laxminarayan Raja"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7130309991",
+  "doi": "10.26434/chemrxiv.15000181/v1",
+  "arxiv_id": null,
+  "paper_url": "https://chemrxiv.org/doi/pdf/10.26434/chemrxiv.15000181/v1",
+  "published_iso": "2026-02-17",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Wearable Sensors for Precise Exercise Monitoring and Analysis",
+  "title_norm": "wearable sensors for precise exercise monitoring and analysis",
+  "abstract": "The adoption of wearable sensors for precision training has accelerated in recent years, yet most studies and reviews remain device- or feasibility-centric and lack a field-ready decision framework. This review organizes wearable sensing across four monitoring dimensions-physiological, kinematic, biochemical, and dynamic-and maps them onto three training pillars: physical, technical, and tactical. From the perspectives of athletes and coaches, we operationalize quality control, threshold, and feedback loop to translate measurement into action. We critically appraise key limitations, including signal robustness under high-intensity motion, inter-individual variability and limited model generalizability, cross-device data fusion and latency, battery life and wearability, privacy and data ownership, and limited accessibility beyond elite settings. Looking ahead, we advocate a shift from mere multidimensional measurement to a verifiable, reusable, and deployable precision-training ecosystem that delivers actionable metrics and clear decision support for practitioners.",
+  "year": 2025,
+  "venue": "Biosensors",
+  "authors": [
+   "Bo Su",
+   "Bo Su",
+   "Fengyu Li",
+   "Bingtian Su",
+   "Bingtian Su"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4415822497",
+  "doi": "10.3390/bios15110734",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-6374/15/11/734/pdf?version=1762139470",
+  "published_iso": "2025-11-03",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "AI‐Driven Decoding of Material Dynamics: From Machine Learning Potentials and Interpretability to Generative Prediction",
+  "title_norm": "ai driven decoding of material dynamics from machine learning potentials and int",
+  "abstract": "Understanding and predicting the dynamic processes that underpin material performance are crucial for designing next-generation materials capable of meeting the evolving demands of modern technologies. These processes-often occurring at atomic or molecular scales in condensed phases-remain notoriously difficult to probe experimentally. Artificial intelligence (AI) now offers a transformative framework that enables unprecedented realism in modeling, interpreting, and even generating multiscale dynamics under various external conditions. In this Review, we highlight recent advances in AI-based machine learning potentials, AI-guided interpretability, and generative AI for dynamic prediction, and demonstrate their applications to key challenges in materials science, including phase transitions in transforming materials and plastic deformation in metallic structural materials. Finally, we discuss the remaining challenges and outline future opportunities, aiming to inspire the development of AI-powered frameworks that can probe atomic-level dynamics and accelerate materials design.",
+  "year": 2025,
+  "venue": "Advanced Materials",
+  "authors": [
+   "Long Zhao",
+   "Hongxiang Zong"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4417077317",
+  "doi": "10.1002/adma.202514626",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202514626",
+  "published_iso": "2025-12-06",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A Two-stage Adaptive Lifting PINN Framework for Solving Viscous Approximations to Hyperbolic Conservation Laws",
+  "title_norm": "a two stage adaptive lifting pinn framework for solving viscous approximations t",
+  "abstract": "",
+  "year": 2026,
+  "venue": "SSRN Electronic Journal",
+  "authors": [
+   "Yameng Zhu",
+   "Weibing Deng",
+   "Ran Bi"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416026394",
+  "doi": "10.2139/ssrn.6569615",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416026394",
+  "published_iso": "2026-01-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Mapping cell dynamics in human ex vivo hair follicles suggests pulling mechanism of hair growth",
+  "title_norm": "mapping cell dynamics in human ex vivo hair follicles suggests pulling mechanism",
+  "abstract": "Homeostasis in continuously renewing organs like the gut, skin, and hair follicles relies on niche architecture and intricately orchestrated cellular dynamics, encompassing proliferation and migration. Here, we develop a 3D live imaging system to map single cell dynamics in micro-dissected human hair follicle segments during anagen phase in ex vivo culture. This approach reveals a spiral-like downward movement of outer root sheath cells entering the lower bulb region. We further mapped upwards flowing cells in the bulb, whose pathways align with differentiation patterns observed for stem cell-derived progenitors in rodent hair follicles. Cell division rates and orientation in the bulb correlate with the velocities of the adjacent upward-moving cell layers, with faster outer layer movement linked to higher mitotic rates. Integrating fluid dynamics simulations and experimental manipulation of mitosis and actin kinetics, we propose a mechanistic model, where a pulling force induced by the outer root sheath contributes to hair fiber extrusion. The authors use 3D live imaging on micro-dissected human hair follicle segments cultured ex vivo to follow cellular migration patterns with single cell resolution. They provide evidence suggesting an active pulling force implicated in hair growth.",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "authors": [
+   "Nicolas Tissot",
+   "Gaïanne Genty",
+   "Roberto Santoprete",
+   "F Baltenneck",
+   "S. Thibaut",
+   "Jean‐François Michelet"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4416466418",
+  "doi": "10.1038/s41467-025-65143-x",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-025-65143-x.pdf",
+  "published_iso": "2025-11-21",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "PINN for stiff moving-boundary PDE to predict the locking point in superheated steam drying",
+  "title_norm": "pinn for stiff moving boundary pde to predict the locking point in superheated s",
+  "abstract": "Physics-informed neural networks (PINNs) often struggle to solve stiff partial differential equations (PDEs) with moving boundaries, such as convection-dominated droplet drying with shrinking domains and related Stefan-type phase-change problems. This study investigates a physics-guided PINN formulation for nanosuspension droplet drying in superheated steam, where an accurate prediction of the locking point is important, as it marks the onset of structure formation and significantly influences particle morphology and final powder characteristics. The formulation retains the standard PINN backbone and combines two problem-specific modifications: a logarithmic state-variable transformation to compress the solution dynamic range and improve the representation of steep near-surface gradients, and a Péclet number-based scaling of the surface residual to better balance the boundary and PDE training signals across the stiffness regimes. Compared with a numerically verified Crank-Nicolson (CN) reference solution, the proposed formulation showed the greatest advantage in the high-Péclet regime, where the boundary layer steepening and training difficulty were most pronounced. In the stiffest case considered, it substantially reduced the discrepancy from the numerically verified CN reference solution compared with both the baseline PINN and the unscaled log-transformed formulation, while also improving the locking-time prediction. These results show that a physics-guided state transformation, combined with residual scaling, can improve the robustness of PINNs for this class of stiff, moving-boundary drying problems.",
+  "year": 2026,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Narjes Malekjani",
+   "Andreas Bück",
+   "Evangelos Tsotsas",
+   "Abdolreza Kharaghani"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7165632191",
+  "doi": "10.1038/s41598-026-59320-1",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-026-59320-1.pdf",
+  "published_iso": "2026-06-23",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ }
+]

@@ -1,0 +1,61 @@
+{
+  "actual_budget": {
+    "additional_qpop_runs": 0,
+    "evidence_adjudications": 1,
+    "wall_seconds": 0.031000000002677552
+  },
+  "artifacts": {
+    "author_case_manifest": "docs\\experiment\\manifests\\20260821T021330Z-smoke-g2-qpop-authorcase-001.json",
+    "environment_verification": "outputs\\environments\\qpop-cpc-v1-ubuntu-20.04-source-stack-v3\\g2-verify-resume-002\\verification.json",
+    "intent": "docs\\experiment\\intents\\20260821T033619Z-pilot-g3-qpop-qualification-001.json",
+    "native_smoke_manifest": "docs\\experiment\\manifests\\20260821T020424Z-smoke-g2-qpop-native-001.json",
+    "reference_report": "outputs\\runs\\20260821T025742Z-smoke-g3-qpop-reference-import-001\\reference_import_report.json",
+    "report": "outputs\\runs\\20260821T033619Z-pilot-g3-qpop-qualification-001\\qualification_report.json",
+    "signal_report": "outputs\\runs\\20260821T030033Z-pilot-g5-qpop-signal-001\\signal_audit.json",
+    "source_audit": "docs\\references\\qpop_physical_contract_source_audit_2026-08-21.md"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-osc-author-case",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_QUALIFICATION"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.qpop_qualification"
+  ],
+  "ended_at": "2026-08-21T03:36:31.017531Z",
+  "environment": {
+    "device": "cpu",
+    "python": "3.11.9"
+  },
+  "evaluator_id": "NOT_RUN_QUALIFICATION_ADJUDICATION",
+  "evidence_identity": "QPOP_ORACLE_QUALIFICATION_EVIDENCE_CHAIN_V1",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "g3-qpop-oracle-qualification-v1",
+  "failure_class": null,
+  "gate": "G3",
+  "gate_outcome": "INCONCLUSIVE_BUDGET_EXHAUSTED",
+  "method_id": "conjunctive-qpop-qualification-adjudicator-v1",
+  "numerical_validity": "VALID_EVIDENCE_ADJUDICATION",
+  "physical_contract_id": "NOT_FROZEN_G3_INCONCLUSIVE",
+  "planned_budget": {
+    "additional_qpop_runs": 0,
+    "evidence_adjudications": 1
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_DEVELOPMENT_ONLY_FORMAL_BLOCKED",
+  "run_id": "20260821T033619Z-pilot-g3-qpop-qualification-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_ORACLE_QUALIFICATION",
+  "started_at": "2026-08-21T03:36:30.983075Z",
+  "supersedes": null,
+  "tier": "pilot"
+}

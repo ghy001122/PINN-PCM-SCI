@@ -1,0 +1,92 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition — stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+        "main_pattern": "architectural_operator_substitution",
+        "sub_pattern": "C12 (Substitute the Operator or Representation)",
+        "tactical_failure_mode_quoted": "The recurring failure is a substitution that is mechanically valid but whose payoff is absent or unverified. Authors successfully swap the operator, wiring, or parameter-locus, then stall in one of three ways: they prove preservation with a borrowed or trivial argument that exposes no new structure; they claim the property the new slot was supposed to buy — parallelism, aggressive pruning, scalability — without actually delivering or measuring it; or they port an architecture from another domain and add a coupling mechanism without grounding it in the target problem, producing an uncoordinated assembly rather than an insight.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Proving the substitute operator preserves universal approximation via a trivial adaptation of known proofs, while never connecting that result to the practical advantage (e.g. sparsification) that motivated the swap, makes the contribution read as incremental.",
+            "candidate_match": "no",
+            "reasoning": "The exact pullback is connected to the load-bearing practical property: when the phase residual and `rτ` are small, the learned-coordinate phase slope is normalized, and downstream switching/front errors test whether that property improves learnability."
+          },
+          {
+            "lesson_quoted": "Claiming the rewired structure delivers a systems property — such as parallel forward/backward execution — that the underlying algorithm does not actually provide invites reviewers to falsify the headline claim head-on.",
+            "candidate_match": "no",
+            "reasoning": "The candidate claims neither parallel execution nor a wall-time advantage; its headline is a kinetics-specific representation effect on physical solution metrics."
+          },
+          {
+            "lesson_quoted": "A training-time re-parameterization that yields only marginal accuracy gains at higher training cost, without strong matched-baseline comparisons, reads as added overhead rather than as an insight.",
+            "candidate_match": "no",
+            "reasoning": "Steps 6–8 match total parameter allocation, samples, optimizer budget, update count, and direct coordinate-transform competitors, while the falsification rule rejects the mechanism if it does not beat both the identity and learned/analytic transform controls."
+          },
+          {
+            "lesson_quoted": "An elegant geometric reanalysis tool validated only on toy data, with no quantitative metric and an unclear delta over existing sensitivity measures, fails to show the substitution buys anything new.",
+            "candidate_match": "no",
+            "reasoning": "The proposed test uses predeclared 2D VO2 device cases, whole-case OOD, and quantitative field, switching-time, front-geometry, topology, energy-balance, and coupled-residual metrics against direct baselines."
+          },
+          {
+            "lesson_quoted": "Rewiring the dependency chain and reporting only throughput/speedup while omitting accuracy validation at scale leaves the essential preserved-property claim unverified.",
+            "candidate_match": "no",
+            "reasoning": "Accuracy and device-physics metrics are primary outcomes, while the candidate explicitly requires no wall-time or memory improvement claim."
+          },
+          {
+            "lesson_quoted": "Porting a two-component architecture from a separate domain and bolting on a cross-pathway coupling, without a unifying contribution grounded in the target task, reads as an uncoordinated assembly rather than a substitution insight.",
+            "candidate_match": "no",
+            "reasoning": "The clock rate is derived from the declared VO2 phase-kinetic right-hand side and the full electric–Joule–thermal–phase residual is pulled through the same map, so the companion prior is grounded in the target causal chain."
+          }
+        ],
+        "verdict": "clear"
+      }
+    ],
+    "verdict": "clear",
+    "reasoning": "The sole gap, under `architectural_operator_substitution`, avoids every documented C12 Reject lesson: it specifies a target-grounded bijective substitution, tests the claimed payoff head-on on 2D device cases, and includes matched same-bottleneck controls. The lesson about a higher-cost re-parameterization with only marginal gains carries the most weight, but the candidate makes failure against the identity and learned/analytic coordinate-transform arms a kill condition rather than presuming a gain."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition — stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+        "sub_pattern": "C12 (Substitute the Operator or Representation)",
+        "tactical_pattern_quoted": "Within a deep, multi-stage compositional architecture (layered network, stacked blocks, probabilistic circuit), this cluster relocates or swaps a structural slot rather than tuning weights: it moves where trainable parameters live (from nodes to inter-unit connections; from stored interaction scalars to coordinate geometry), rewires the inter-stage routing topology (skip-connection target redirected from the adjacent stage to the final aggregation point; carry-forward state pulled from two stages back; prior-unit outputs consumed as first-class inputs), or substitutes the per-stage aggregation/representation primitive (full summation → max/min extremum selection; closed-form density → bijectively equivalent characteristic function; factored dimension-matched determinant → a single overparametrized Pfaffian of arbitrary rank; deep forward passes → role-partitioned lookup tables). The substitute is repeatedly anchored to a classical theorem or a revived classical representation that fits the same slot, and the move is accompanied by a proof or a curvature/gradient-dynamics measurement showing the essential property (expressivity, required symmetry, gradient flow, capacity equivalence) survives while a cost/expressivity property changes.",
+        "instantiation_in_core_mechanism": "The candidate replaces the raw-time input slot by the forward-composed local coordinate `τψ(x,t)`, proves strict per-location monotonicity and hence bijectivity of `(x,t) → (x,τψ)`, and in Steps 4–5 evaluates every induced time, pulse, mixed-space, Hessian, and Laplacian term before enforcing the original electric, heat, and phase residuals. It also supplies a nontrivial unlocked property: if `∂tξ-Kξ=0` and `rτ=0`, then `|∂ξ/∂τ|=|Kξ|/sqrt(Kξ²+kfloor²)<1`; the raw-time slot does not impose that local kinetics-normalized network-coordinate slope, while whether it improves approximation remains explicitly empirical.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "The sole entry performs C12's distinctive representation-slot substitution rather than merely invoking the parent pattern: it gives a bijective surrogate, preserves the complete original PDE through the pullback, and identifies a conditional slope-normalization property to test against same-bottleneck transforms."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "architectural_operator_substitution",
+      "structural_prior_encoding"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "None of the three documented reject-favored compositions matches because `heterogeneous_decomposition` is absent; moreover, the same-architecture learned monotone-clock arm that omits `keff` and `rτ` isolates the structural-prior companion from the coordinate substitution rather than conflating their effects."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "openalex:W4403443387",
+    "threat_source": "collision_hits",
+    "threat_channel": "alias",
+    "subsumption_argument": "R-adaptive DeepONet already demonstrates that transforming discontinuous PDE solutions from a physical domain to an equidistributed computational domain, then learning the solution and coordinate transformation maps separately, can overcome a sharp-solution representation bottleneck; therefore a broad claim that learned adaptive coordinates themselves resolve fronts is already occupied. The candidate stands only on its narrower result: a spatially local temporal clock constrained by the endogenous phase-kinetic rate, a complete pullback of the unchanged coupled electro-thermal-phase PDE, and a kinetics-specific gain over matched generic learned and analytic transforms. The retrieved pool covered learned/adaptive coordinate transforms and moving-mesh PINNs but showed no exact `Kξ`-driven material-time or reaction-progress-coordinate PINN of this form; that absence is provisional because arXiv and OpenAlex succeeded, Semantic Scholar coverage was partial with some rate-limited queries, and OpenReview was unavailable.",
+    "addressable_via": "not_needed",
+    "parametric_family_concern": "Intrinsic-time/material-time constitutive reparameterization and reaction-progress-variable methods remain a scoop-check family; query `material time internal variable neural PDE` and `reaction progress coordinate PINN`."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "τψ(x,t), the learned accumulated kinetics clock",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph names a concrete 2D FEniCSx whole-case experiment, direct matched comparisons, multiple downstream device metrics with the required decreasing direction, one clock variable, and an identity intervention predicting those metrics return toward the raw-time baseline. It contains no numeric outcome bar."
+  },
+  "blocking_findings_disposition": [],
+  "verdict": "advance",
+  "verdict_layer": "soft_judgment",
+  "verdict_rationale": "`gap_closure_reject_check.entries[0].reject_lessons_evaluated[2].lesson_quoted` does not trigger because matched parameter, optimizer, sampling, generic-transform, and active-parameter baselines make added-overhead-only performance falsifiable, while `recipe_application_check.entries[0].verdict` is `applied` through the bijective clock, full PDE pullback, and conditional slope normalization. `anti_pattern_check.mitigation_substantively_delivered` is `n/a` because the composition lacks heterogeneous decomposition, and `paper_pointed_threat.subsumption_argument` narrows the novelty claim without exact-mechanism overlap; the candidate already includes the needed direct coordinate-transform defense. The same-bottleneck and identity controls are fair through matched heads/budgets, nominal-versus-active count reporting, and a separate widened raw-time arm, provided the bypassed identity implementation does not retain `rτ` as a penalty on fixed `τ=t`; this implementation caveat and the partial retrieval coverage should be surfaced in Phase 4, but neither requires Phase 3.3 revision.",
+  "revision_targets": []
+}

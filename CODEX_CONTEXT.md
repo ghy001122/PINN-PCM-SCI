@@ -12,19 +12,22 @@
 
 本文件是路由页，不单独授权科研动作。完整读取顺序为：
 
-`AGENTS.md` → `CODEX_CONTEXT.md` → `docs/governance/PINN_PCM_Norms_2026-08-14.md` → `rules.md` → `active_phase.md` → `PROJECT_STATE.md` → `NEXT_ACTIONS.md`
+`AGENTS.md` → `CODEX_CONTEXT.md` → `docs/README.md` → `docs/governance/PINN_PCM_Norms_2026-08-14.md` → `rules.md` → `active_phase.md` → `PROJECT_STATE.md` → `docs/plans/NEXT_ACTIONS.md`
 
 解释规则：
 
+- `docs/README.md` 负责文档分类、读取触发条件和覆盖关系，不建立新的科学权威。
 - 完整研究规范定义项目硬约束、默认偏好和冲突处理。
 - `rules.md` 仅提供日常执行摘要，不建立平行权威。
 - `active_phase.md` 决定当前允许做什么。
 - `PROJECT_STATE.md` 只记录已经核验的状态，不凭计划宣称完成。
-- `NEXT_ACTIONS.md` 给出阶段内的下一步入口，不自动扩大授权。
+- `docs/plans/NEXT_ACTIONS.md` 是唯一 live plan，给出阶段内的下一步入口，不自动扩大授权。
 
 ## 授权路由
 
-当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
+当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
+
+涉及当前研究对象、方法边界或论文措辞时读取 `CONTEXT.md`；需要决策理由时再读取 `docs/adr/`。实验事实、参考审查、研究笔记和历史归档按 `docs/README.md` 的触发条件读取。
 
 ## 状态词汇
 
@@ -41,7 +44,7 @@
 
 ## 会改变路线、需用户确认的事项
 
-- 正式学术研究的启动；
+- 新一轮数值研究或正式执行的启动；
 - 科学核心、材料/器件对象、物理拓扑或新增 PDE/动力学；
 - 原始参数唯一性或反问题主张；
 - 正式实验预算、GPU 租用或长时间运行；

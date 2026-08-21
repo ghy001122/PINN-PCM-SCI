@@ -1,0 +1,43 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition — stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+      "chosen_pattern_id": "architectural_operator_substitution",
+      "anchor_alternates": [],
+      "companion_pattern": "structural_prior_encoding",
+      "companion_rationale": "architectural_operator_substitution replaces the raw-time input slot with a named monotone local kinetics-clock coordinate τ; structural_prior_encoding acts on that coordinate by constraining its Jacobian to the prescribed phase-kinetic activity and pulling every original electro-thermal-phase derivative through the same map, producing the runnable PINN without changing the physical target.",
+      "selection_rationale": "This is the most load-bearing method gap because it asks for a representation that directly makes pulse-generated fronts and post-initial high-frequency content easier to express while retaining the coupled electric–Joule–thermal–phase residuals. C12's bijectively equivalent representation-slot substitution fits that demand, while the structural-prior companion prevents a generic learned warp: the clock is tied to phase kinetics, uses an acyclic clock-to-solution graph, and introduces neither a perturbation-coordinate bound, heterogeneous decomposition, curriculum/homotopy, nor a relabeled aggregate-residual score."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "method — the anchor's architectural_operator_substitution ships the runnable local-clock coordinate PINN, and companion structural_prior_encoding supplies its exact kinetics and pulled-back-PDE construction.",
+  "user_direction_disposition": {
+    "verdict": "adopted",
+    "user_wanted": "面向相变材料/器件的抗高频PINN",
+    "chosen": "以严格单调的局部相态动力学时钟替代原始时间输入、同时保留原坐标电—热—相态 PDE 残差的二维 VO2 器件 PINN。",
+    "why_departed": ""
+  },
+  "composition_note": "",
+  "pattern_saturation": {
+    "architectural_operator_substitution": {
+      "share": 0.13,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "structural_prior_encoding": {
+      "share": 0.36,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes that event order, front topology, and energy balance remain correct for held-out entire device geometries, material combinations, and pulse protocols that shift the spectrum and stiffness beyond training — stakes: reported gains may not transfer across devices or operating regimes, making the scientific conclusion non-general and the model unsafe as a design surrogate.",
+      "reason": "fails removal test — the anchor mechanism is independently buildable and falsifiable; whole-entity formal OOD is retained only as post-lock evaluation and does not earn a method-module seat"
+    },
+    {
+      "gap": "No retrieved frontier leaf tests whether one globally aggregated space-time objective over all coupled fields and switching regimes is necessary rather than assumed — stakes: if this shared assumption hides a fast local residual beneath slow-field averages, published accuracy conclusions can rest on the wrong certificate and principled high-frequency PINN design remains blocked.",
+      "reason": "fails removal test — the coordinate substitution leaves the original normalized coupled-residual objective unchanged, so an additional aggregation-audit leg would not be required to state or falsify the anchor claim"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "actual_budget": {
+    "cases": 0,
+    "signal_cases": 0,
+    "wall_seconds": 600.0
+  },
+  "artifacts": {
+    "intent": "docs/experiment/intents/20260821T070733Z-pilot-n3b-qpop-r3-signal-001.json",
+    "run_root": "outputs/runs/20260821T070733Z-pilot-n3b-qpop-r3-signal-001",
+    "summary": "outputs/runs/20260821T070733Z-pilot-n3b-qpop-r3-signal-001/summary.json"
+  },
+  "case_id": "qpop-r3-v1-3x3-signal-grid",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "INDEPENDENT_NUMERICAL_ORACLE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_REDUCED_ORACLE_DEVELOPMENT",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.reduced_oracle_runner",
+    "signal"
+  ],
+  "ended_at": "2026-08-21T07:16:39.285194Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1"
+  },
+  "evaluator_id": "qpop-r3-v1-event-diagnostic-v1",
+  "evidence_identity": "QPOP_R3_V1_REDUCED_SYNTHETIC_ORACLE",
+  "execution_status": "INTERRUPTED",
+  "experiment_group_id": "qpop-r3-v1-reduced-oracle",
+  "failure_class": "REDUCED_ORACLE_REPEATED_EQUILIBRIUM_SOLVE_PERFORMANCE",
+  "gate": "N3B",
+  "gate_outcome": "QPOP_R3_SIGNAL_SCREEN_INTERRUPTED_ENGINEERING",
+  "method_id": "qpop-r3-v1-signal",
+  "numerical_validity": "NOT_EVALUATED",
+  "physical_contract_id": "qpop-r3-v1",
+  "planned_budget": {
+    "cases": 9,
+    "grid": [
+      50,
+      20
+    ],
+    "time_steps_per_case": 494
+  },
+  "replay_of": null,
+  "route_disposition": "REPLAY_AFTER_BOUNDED_PERFORMANCE_FIX",
+  "run_id": "20260821T070733Z-pilot-n3b-qpop-r3-signal-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "qpop-r3-v1-development-signal-grid-v1",
+  "started_at": "2026-08-21T07:08:19.609626Z",
+  "supersedes": null,
+  "tier": "pilot"
+}

@@ -1,0 +1,926 @@
+[
+ {
+  "title": "LSTM-PINN for Steady-State Electrothermal Transport: Preserving Multi-Field Consis tency in Strongly Coupled Heat and Fluid Flow",
+  "title_norm": "lstm pinn for steady state electrothermal transport preserving multi field consi",
+  "abstract": "Steady-state electrothermal systems involve strongly coupled heat transfer, fluid flow, and electric-potential transport, creating severe numerical challenges for standard physics-informed neural networks (PINNs) due to stark disparities in gradient scales and residual stiffnesses across the physical fields. To resolve these multiphysics bottlenecks, we introduce a Long Short-Term Memory PINN (LSTM-PINN) framework that utilizes a depth-recursive memory mechanism to preserve long-range spatial feature dependencies and maintain strict cross-field consistency. The proposed architecture is rigorously evaluated against conventional and attention-based networks across a unified five-field formulation encompassing four complex convective and drag regimes: Boussinesq electrothermal flow, drift-potential gauge-constrained transport, strong buoyancy-coupled convection, and Brinkman--Forchheimer drift. Quantitative and visual analyses demonstrate that LSTM-PINN successfully suppresses non-physical artifacts and structural distortions, yielding the highest thermodynamic fidelity and consistently outperforming state-of-the-art baselines in global error metrics. Ultimately, this memory-enhanced approach provides a highly robust and accurate computational baseline for capturing localized boundary layers and complex energy-momentum feedback in advanced electrothermal energy systems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yuqing Zhou",
+   "Ze Tao",
+   "Hanxuan Wang",
+   "Fujun Liu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.14201v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.14201v1",
+  "published_iso": "2026-04-03T12:29:14Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Collocation-based Robust Physics Informed Neural Networks for time-dependent simulations of pollution propagation under thermal inversion conditions on Spitsbergen",
+  "title_norm": "collocation based robust physics informed neural networks for time dependent sim",
+  "abstract": "In this paper, we propose a Physics-Informed Neural Network framework for time-dependent simulations of pollution propagation originating from moving emission sources. We formulate a robust variational framework for the time-dependent advection-diffusion problem and establish the boundedness and inf-sup stability of the corresponding discrete weak formulation. Based on this mathematical foundation, we construct a robust loss function that is directly related to the true approximation error, defined as the difference between the neural network approximation and the (unknown) exact solution. Additionally, a collocation-based strategy is introduced to speed up neural network training. As a case study, we investigate pollution propagation caused by snowmobile traffic in Longyearbyen, Spitsbergen, supported by detailed in-field measurements collected using dedicated sensors. The proposed framework is applied to analyze the effects of thermal inversion on pollutant accumulation. Our results demonstrate that thermal inversion traps dense and humid air masses near the ground, significantly enhancing particulate matter (PM) concentration and worsening local air quality.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Leszek Siwik",
+   "Maciej Sikora",
+   "Natalia Leszczyńska",
+   "Tomasz Maciej Ciesielski",
+   "Eirik Valseth",
+   "Manuela Bastidas Olivares",
+   "Marcin Łoś",
+   "Tomasz Służalec",
+   "Jacek Leszczyński",
+   "Maciej Paszyński"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.23003v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.23003v1",
+  "published_iso": "2026-04-24T20:48:23Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Two-dimensional clay channels for tunable nanofluidic memristor",
+  "title_norm": "two dimensional clay channels for tunable nanofluidic memristor",
+  "abstract": "Dynamic reconfiguration of charge carriers in confined ion-channels under electrical stimulation produces memory effects, where the internal resistance depends on history of the electric field. Vermiculite nanofluidic devices harness this effect to store and process information within a single component. We report switching between distinct memory loops by tuning ion transport pathways, governed by asymmetrical device architecture and intrinsic surface-charge. Polarity-dependent memory switching between crossing-1 and crossing-2 loops is achieved solely by altering electrode configurations, without modifying electrolyte, channel surface chemistry or device structure: providing mechanistic insights into ionic memristors through a straightforward, experimental strategy. The memristive characteristics are demonstrated in both in-plane and out-of-plane channel configurations with channel lengths spanning from centimeters to micrometers length scales using re-stacked vermiculite membranes and further investigated for miniaturization with devices of nanometer scale channel lengths, fabricated via ultramicrotomy method. Furthermore, we demonstrate neuromorphic functionalities, including synaptic potentiation-depression and programmable memory retention, highlighting potential for bio-inspired computing systems. Cost-effective and scalable fabrication solution processed vermiculite membrane memristors pave the way for practical integration of nanofluidic memristors for neuromorphic computing applications.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Sangeeta Yadav",
+   "Raj Kumar Gogoi",
+   "Aziz Lokhandwala",
+   "Siddhi Vinayak Pandey",
+   "Ankit Bhardwaj",
+   "Sunando DasGupta",
+   "Boya Radha"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.08260v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.08260v2",
+  "published_iso": "2026-05-07T22:29:48Z",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "LIGO-PINN: Learned Initialization via Gated Optimization to Alleviate Convergence Failures in Physics Informed Neural Networks",
+  "title_norm": "ligo pinn learned initialization via gated optimization to alleviate convergence",
+  "abstract": "Physics-informed neural networks (PINNs) have had a broad research impact in modeling domains governed by partial differential equations (PDE). However, PINNs have been shown to perform poorly, sometimes even converging to trivial solutions, in challenging PDE domains, or when generalizing to unseen but related PDE domains. Previously proposed solutions detail hyperparameter tuning to reduce loss imbalance between data-driven and physics guided losses, curriculum learning based training strategies, or dynamic re-sampling of hard collocation points. These methods face certain pitfalls: hyperparameter tuning is expensive, designing a training curriculum is ambiguous in multi-parameter PDE settings, and dynamic resampling still fails in complex PDE settings. Complementary to this line of thinking, we believe the initial PINN network weights also play a crucial role in the emergence of catastrophic failures during training, yet the effect of PINN weight initialization has been surprisingly under-investigated. To this end, we propose a framework for Learned Initialization via Gated Layerwise Optimization (LIGO-PINN) to overcome PINN convergence failures. Through rigorous evaluation on 1D and 2D PDE domains, including a challenging 2D fluid dynamics setting, we demonstrate that our methodology outperforms state-of-the-art methods designed to alleviate PINN failures, achieving a 91.5% average performance improvement across six baselines and 81% over the strongest baseline. We also verify that LIGO-PINN generalizes to 3D unstructured domains. Finally, we analyze training dynamics across all three PDE domains to explain both LIGO-PINN's improvement and the convergence failure of traditional PINNs. Code: https://github.com/scailab/ligo-pinn\n  Keywords: Machine Learning, Physics-Informed Neural Networks, Deep Learning, PDE Modeling",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Nilay Anurag",
+   "Shital Adhikari",
+   "Taniya Kapoor",
+   "Nikhil Muralidhar"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.14233v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.14233v1",
+  "published_iso": "2026-07-15T18:00:44Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts",
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Automatic Differentiation from Scratch: How PyTorch Computes Gradients in Physics-Informed Neural Networks",
+  "title_norm": "automatic differentiation from scratch how pytorch computes gradients in physics",
+  "abstract": "This paper traces, with explicit numerical values, how PyTorch's automatic differentiation (AD) engine computes gradients for Physics-Informed Neural Network (PINN) training -- a setting that requires two levels of differentiation: computing the physics derivative $\\hat{y}'(t)=d\\hat{y}/dt$ through the network, and computing parameter gradients $\\nabla_θL$ of a loss that itself depends on $\\hat{y}'(t)$. Using a 1-3-3-1 multilayer perceptron and the initial value problem $y'(t)+y(t)=0$, $y(0)=1$, we trace the complete pipeline at every node: the computational graph built during the forward pass, the reverse-mode backward traversal that computes all 22 parameter gradients in a single pass, and the graph-on-graph mechanism by which \\texttt{create\\_graph=True} enables correct differentiation through the physics-informed residual. Every adjoint value is verified against the hand derivations of Tahimi (2026), connecting the $P/Q$ sensitivity framework to the vector--Jacobian products used by PyTorch's autograd engine.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Abdeladhim Tahimi"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.13042v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.13042v1",
+  "published_iso": "2026-06-13T11:24:13Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "End-to-End Modeling of a Volatile TiO2 Memristor for Neuromorphic Circuit Simulation",
+  "title_norm": "end to end modeling of a volatile tio2 memristor for neuromorphic circuit simula",
+  "abstract": "Memristors are promising devices for applications such as non-volatile memory, neuromorphic computing, logic circuits, and analog signal processing. The development of such systems requires accurate simulations based on models that reproduce the electrical behavior of real devices under both continuous and pulsed excitation. This work presents the development of a simulation environment for a volatile TiO2-based memristor. Experimental measurement data are analyzed to verify the memristive behavior of the device and to identify a suitable model. The model parameters are then optimized to match the measured characteristics. The resulting model is implemented in SPICE and validated by comparing simulation results with measurement data. The comparison shows a good agreement between simulation and experiment, demonstrating that the developed model is suitable for reproducing the electrical behavior of the investigated memristor and can be applied in circuit-level simulations, as demonstrated by a leaky integrate-and-fire neuron.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Lukas Endres",
+   "Hannes Töpfer",
+   "Michaela Blum",
+   "Hauke Honig",
+   "Peter Schaaf"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.26815v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.26815v1",
+  "published_iso": "2026-07-29T12:05:08Z",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Gradient Scaling Effects in Adaptive Spectral PINNs for Stiff Nonlinear ODEs",
+  "title_norm": "gradient scaling effects in adaptive spectral pinns for stiff nonlinear odes",
+  "abstract": "Physics-Informed Neural Networks (PINNs) often struggle to train reliably on stiff and oscillatory dynamical systems due to poor optimization conditioning. While prior work has emphasized representational remedies such as spectral parameterizations, the optimization implications of initial-condition (IC) embeddings in adaptive spectral PINNs have not been well characterized. In this work, we show that the choice of IC gating function induces explicit time-dependent gradient scaling, which interacts with spectral representations during training. Using a nonlinear stiff spring-pendulum ODE as a controlled benchmark, we compare exponential and linear IC gates in combination with fixed and adaptive Fourier spectral trunks. We observe stiffness-dependent changes in relative dominance for adaptive PINNs: at moderate stiffness ($k=20$), exponential gating often yields lower error but exhibits heterogeneous behavior across random seeds, whereas at higher stiffness ($k=60$), linear gating becomes preferable, with additional reversals observed at larger $k$. These trends hold for both relative $L^2$ error and maximum pointwise error and are confirmed by paired Wilcoxon signed-rank tests with Holm correction. Overall, our results demonstrate that IC embeddings are not a neutral design choice in PINNs: the induced gradient scaling materially shapes optimization conditioning in stiff regimes, with distinct sensitivity patterns in baseline and adaptive spectral models.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Isabela M. Yepes",
+   "Pavlos Protopapas"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.04502v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.04502v1",
+  "published_iso": "2026-05-06T05:10:20Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Elemental Germanium Phase-Change Memory",
+  "title_norm": "elemental germanium phase change memory",
+  "abstract": "Phase-change memory (PCM) is a mature technology for fast, scalable, non-volatile data storage, with applications spanning embedded memory, as well as in-memory and neuromorphic computing. PCM predominantly relies on chalcogenide alloys, with $\\mathrm{Ge_2Sb_2Te_5}$ (GST) as the industry standard. Yet in these alloys, the individual Ge, Sb, and Te atoms redistribute upon cycling, causing stochastic operation and ultimately device failure. To address this issue, elemental antimony was proposed as a PCM material, but it exhibits a metastable amorphous state that prevents reliable data retention. Moreover, tellurium and antimony can contaminate complementary metal-oxide-semiconductor (CMOS) production lines or act as unintended dopants, restricting manufacturing of PCM to dedicated fabs. Here we introduce elemental germanium (Ge) as a CMOS-native phase-change material that overcomes these fundamental limitations. In a vertical PCM cell architecture, Ge enables sub-nanosecond crystallization (240 ps, 40 times faster than GST), non-volatile data storage with excellent thermal stability ($>$110 °C for 10 years vs. $\\sim$87 °C for GST), and a resistance drift coefficient approximately 60% lower than in GST. These results establish pure Ge, a standard semiconductor, as an alternative to chalcogenide phase-change materials, achieving superior performance in key metrics and enabling phase-change memory to be fabricated in standard semiconductor facilities.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Till Zellweger",
+   "Marko Mladenović",
+   "Kevin Portner",
+   "Christoph Weilenmann",
+   "Michael Stiefel",
+   "Hanglin He",
+   "Klemens Bauer",
+   "Luiz Felipe Aguinsky",
+   "Mathieu Luisier",
+   "Alexandros Emboras"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.23709v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.23709v1",
+  "published_iso": "2026-07-26T15:09:15Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "CO$_2$ sequestration hybrid solver using isogeometric alternating-directions and collocation-based robust variational physics informed neural networks (IGA-ADS-CRVPINN)",
+  "title_norm": "co _2 sequestration hybrid solver using isogeometric alternating directions and ",
+  "abstract": "This paper presents the hybrid solver for a $CO_2$ sequestration problem. The solver uses the IGA-ADS (IsoGeometric Analysis Alternating Directions solver) to compute the saturation scalar field update using the explicit method, and CRVPINN (Collocation-based Robust Variational Physics Informed Neural Networks solver) to compute the pressure scalar field. The study focuses on simulating the physical behavior of $CO_2$ in porous structures, excluding chemical reactions. The mathematical model is based on Darcy's Law. The CRVPINN is pretrained on the initial pressure configuration, and the time step pressure updates require only 100 iterations of the Adam method per time step. We compare our hybrid IGA-ADS solver, coupled with the CRVPINN method, with a baseline of the IGA-ADS solver coupled with the MUMPS direct solver. Our hybrid solver is over 3 times faster on a single computational node from the ARES cluster of ACK CYFRONET. Future work includes extensive testing, inverse problem solving, and potential application to $H_2$ storage problems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Askold Vilkha",
+   "Tomasz Służalec",
+   "Marcin Łoś",
+   "Maciej Paszyński"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.20731v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.20731v1",
+  "published_iso": "2026-04-22T16:16:00Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Memristor-Based Pulse Width Modulation Circuit for Power Converters with Programmable Frequencies",
+  "title_norm": "memristor based pulse width modulation circuit for power converters with program",
+  "abstract": "Memristors can achieve up to a 1000-times reduction in energy consumption in neuromorphic and in-memory computing, but their integration into power converter control remains incomplete. Existing implementations either convert memristor outputs into digital signals for DSP-based pulse-width modulation (PWM), reintroducing computational overhead, or use analog PWM circuits with limited programmability. Since PWM generation is the final essential stage of power converter control, a programmable memristor-based PWM circuit is needed to fully realize the energy-efficiency benefits of memristive computing. This paper presents a programmable memristor-based PWM circuit operating at approximately two hundred kilohertz for switching power converters. The design combines digital-controller programmability with the low power consumption of analog PWM generators. Experimental validation using commercially available memristors achieves a programmable switching frequency from 144.7 kHz to 204.2 kHz. Compared with a commonly used DSP implementation in power converter control, the proposed design achieves a 92% reduction in power consumption.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Fanfu Wu",
+   "Xiaoyi Lei",
+   "Yunting Liu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.29399v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.29399v1",
+  "published_iso": "2026-07-31T13:18:15Z",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Hydrodynamic Switching Fronts Polarize Deformable Particle Trains",
+  "title_norm": "hydrodynamic switching fronts polarize deformable particle trains",
+  "abstract": "We show that propagating switching fronts mediate directional state transmission and polarity selection in a passive many-body suspension. In confined trains of slipper-shaped deformable particles in Poiseuille flow, this behavior originates from directionally biased switching between neighboring particles: owing to the fore-aft asymmetry of the slipper, an upstream particle drives switching of its downstream neighbor more effectively than in the reverse direction. A local transition from an opposite-sign pair to a same-sign pair therefore launches a streamwise front that relays the inclination sign from particle to particle. A minimal coarse-grained model with local bistability and directional coupling captures front propagation and arrest. In periodic trains, the fronts coarsen into a uniformly polarized state, whereas in long open trains they arrest and leave persistent polarized domains. Our results point to local bistability and directional coupling as a route to collective polarization in passive many-body systems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Linzheng Huang",
+   "Hengdi Zhang",
+   "Zaicheng Zhang",
+   "Zaiyi Shen"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.05925v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.05925v1",
+  "published_iso": "2026-04-07T14:27:38Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Filamentary Transport and Thermoelectric Effects in Mushroom Phase Change Memory Cells",
+  "title_norm": "filamentary transport and thermoelectric effects in mushroom phase change memory",
+  "abstract": "We performed a 2D finite-element electrothermal computational study of thermoelectric effects and filamentary electronic transport in Ge$_2$Sb$_2$Te$_5$ mushroom phase change memory cells during Reset and Set operations, accounting for spatial activation energy variations in amorphous Ge$_2$Sb$_2$Te$_5$ and phase-change dynamics. Reset operations with current going from the top electrode to the narrow 4 nm bottom electrode require $\\sim$3x less energy and power, and $\\sim$2x lower current to achieve the same Reset resistance, compared to the opposite polarity, due to thermoelectric effects. Filamentary conduction, electrical breakdown, thermal runaway, and local crystallization of amorphous Ge$_2$Sb$_2$Te$_5$ depend on current polarity and thermal boundary conditions, and determine the location, shape, and volume of the programming region, which may be significantly smaller than the semi-cylindrical mushroom region. The programming volume does not scale with contact dimensions larger than 10 nm. Larger contact areas introduce increased device-to-device and cycle-to-cycle variability due to filamentary conduction but are expected to lead to higher reliability and endurance.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Md Samzid Bin Hafiz",
+   "Helena Silva",
+   "Ali Gokirmak"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.10262v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.10262v1",
+  "published_iso": "2026-06-09T00:04:09Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Neural Architectures as Functional Priors in Physics-Informed Control Problems",
+  "title_norm": "neural architectures as functional priors in physics informed control problems",
+  "abstract": "In this work we investigate the role of neural architectures as implicit functional priors in control problems governed by ordinary differential equations. Rather than focusing on highly complex problems, our objective is to investigate architecture-dependent effects in controlled dynamical systems within the simplest physically interpretable settings possible. In particular, we study a controlled linear RLC electrical circuit and a nonlinear Duffing-type dynamical system. Both systems are analyzed first through classical optimal-control formulations and later through PINN-based approaches. We compare different combinations of multilayer perceptrons (MLPs) and Fourier-based KAN-like architectures, and analyze their influence on the resulting controls. The numerical experiments suggest that different architectural choices systematically generate qualitatively distinct controls, even under identical governing equations, loss functionals, initial and target states, training parameters and physical constraints. Significant differences appear in the spectral structure, smoothness, energy distribution, and phase-space behavior of the learned solutions. A central observation of this work is the emergence of a functional specialization phenomenon when the neural architectures are allowed sufficient freedom to shape the structure of the learned controls. More specifically, in the systems considered here, Fourier-based architectures tend to produce trajectories with richer oscillatory content, whereas smoother low-frequency-biased architectures tend to generate more regular and energetically efficient controls. This suggests that different functional components of the control problem may be handled more efficiently by different neural architectures, leading to an implicit specialization between state representation and control generation.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Sonia Rubio Herranz",
+   "Fernando Carlos López Hernández",
+   "Antonio López Montes"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.19368v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.19368v1",
+  "published_iso": "2026-06-11T10:56:00Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "MR Simulation with Phase Distribution Graphs: Off-Resonant Pulse Response and Slice-Selection",
+  "title_norm": "mr simulation with phase distribution graphs off resonant pulse response and sli",
+  "abstract": "Purpose: Phase Distribution Graphs were introduced as a powerful tool for on-resonant MRI simulations. Herein, we extend the concept beyond the assumptions of hard and on-resonant RF pulses in Phase Distribution Graph simulations, while retaining differentiability across all parameters. The extension into the frequency domain further generalizes the Phase Distribution Graph simulation framework for sequence simulation and optimization.\n  Theory and Methods: Using an effective axis rotation model, the RF operator is generalized to off-resonant rotations, originating from field inhomogeneities, chemical shift, and field gradients. Discretization of the RF pulse shape enables the modeling of the magnetization response to shaped RF pulses and thus slice selection.\n  Results: Including off-resonant pulse response into a PDG based MRI simulation enables the simulation of key MRI features, such as fat suppression, binomial pulses, or Bloch-Siegert shifts. The discretization of RF shapes enables the simulation of their respective frequency response and thus slice selective excitation, refocusing or saturation pulses, including multi-band excitation. In combination with flow, typical inflow artifacts in slice-selective MRI can be simulated.\n  Discussion and Conclusion: Extension for off-resonance removes a major limitation of phase distribution graphs and makes the simulation framework more realistic. As the method is not restricted to specific RF shapes, optimization of RF pulse shapes in amplitude, phase and frequency is now possible in the context of or jointly with specific MR sequences.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Felix Dietz",
+   "Jonathan Endres",
+   "Simon Weinmueller",
+   "Johanna Link",
+   "Moritz Zaiss"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.15164v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.15164v1",
+  "published_iso": "2026-06-13T07:27:10Z",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Causal Discovery in Action: Learning Chain-Reaction Mechanisms from Interventions",
+  "title_norm": "causal discovery in action learning chain reaction mechanisms from interventions",
+  "abstract": "Causal discovery is challenging in general dynamical systems because, without strong structural assumptions, the underlying causal graph may not be identifiable even from interventional data. However, many real-world systems exhibit directional, cascade-like structure, in which components activate sequentially and upstream failures suppress downstream effects. We study causal discovery in such chain-reaction systems and show that the causal structure is uniquely identifiable from blocking interventions that prevent individual components from activating. We propose a minimal estimator with finite-sample guarantees, achieving exponential error decay and logarithmic sample complexity. Experiments on synthetic models and diverse chain-reaction environments demonstrate reliable recovery from a few interventions, while observational heuristics fail in regimes with delayed or overlapping causal effects.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Panayiotis Panayiotou",
+   "Özgür Şimşek"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.22620v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.22620v2",
+  "published_iso": "2026-03-23T22:45:15Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Energy and Scaling Limits of Phase-Change Memory",
+  "title_norm": "energy and scaling limits of phase change memory",
+  "abstract": "Phase change memory (PCM) relies on a reversible transition between amorphous and crystalline states of a material, and stands as a promising candidate for next-generation, energy-efficient data storage and neuromorphic hardware. Here, we review key innovations that have driven PCM technology to achieve energy consumption down to only tens of femtojoules per bit, and could further advance it closer to its fundamental limits. Because PCM switching is induced thermally, we highlight improvements in energy-efficiency through two primary strategies: by minimizing the active phase change material region to sub-10 nm dimensions, and by enhancing heat confinement within PCM devices to reduce thermal dissipation into the surrounding environment. While the theoretical limits could reach single attojoules per cubic nanometer of memory material, realizing these limits in practice is significantly constrained by electrical and thermal parasitics, particularly at contacts and interfaces.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Rivka-Galya Nir-Harwood",
+   "Asir I. Khan",
+   "Emanuel Ber",
+   "Efrat Ordan",
+   "Keren Stern",
+   "Kye L. Okabe",
+   "Nicolás Wainstein",
+   "Eilam Yalon",
+   "Eric Pop"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.28336v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.28336v1",
+  "published_iso": "2026-05-27T11:40:08Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Midterm Status Report of the ILC Technology Network Activities",
+  "title_norm": "midterm status report of the ilc technology network activities",
+  "abstract": "The ILC Technology Network (ITN) was established in 2022 by the ILC International Development Team, a subcommittee of the International Committee for Future Accelerators, to advance engineering studies toward the realisation of the International Linear Collider (ILC). While the ITN work packages focus on engineering activities for the ILC, their topics are also relevant to a broad range of accelerator applications in particle physics and beyond. These work packages are being carried out now by laboratories in Asia and Europe in close collaboration. This report summarises the current status of the ITN activities.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "ILC Technology Network"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.01172v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.01172v1",
+  "published_iso": "2026-03-01T16:22:42Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Global Self-Attention with Exact Fourier Propagation for Phase-Only Far-Field Holography",
+  "title_norm": "global self attention with exact fourier propagation for phase only far field ho",
+  "abstract": "Wavefront control underpins a wide range of technologies spanning imaging, communication, and light-matter interaction, yet remains fundamentally challenging due to the globally coupled nature of Fourier optical propagation. Computer-generated holography, using phase-only spatial light modulators, provides a widely used framework for wavefront manipulation. In the Fraunhofer (far-field) regime, propagation reduces to a Fourier transform, such that each modulator element influences the entire reconstructed field, rendering hologram synthesis a non-local inverse problem [1]. This coupling fundamentally limits conventional approaches. Iterative phase-retrieval methods [2-4] can stagnate and trade computation for quality, while camera-in-the-loop strategies remain tied to iterative refinement and near-field applications [5-7]. Learning-based approaches have accelerated hologram synthesis, yet largely rely on local inductive biases and Fresnel (near-field) models, leaving the fully coupled nature of the strict Fraunhofer regime unaddressed [8]. Here we show that the globally coupled structure of Fourier propagation maps naturally onto self-attention, enabling direct modeling of long-range dependencies in hologram synthesis. We demonstrate single-shot, high-fidelity phase-only hologram generation at inference in both simulation and experiment and show that integration with camera-in-the-loop training and a learnable phase corrector enables adaptive wavefront control under real optical conditions. These results establish self-attention as a scalable framework for wavefront control in complex optical systems and introduce attention-based modeling as a general approach to inverse problems governed by long-range interactions in wave physics.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Dilawer Singh",
+   "Antoni J. Wojcik",
+   "Timothy D. Wilkinson"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.17624v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.17624v3",
+  "published_iso": "2026-02-19T18:43:23Z",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Disentangling Dynamical Systems: Causal Representation Learning Meets Local Sparse Attention",
+  "title_norm": "disentangling dynamical systems causal representation learning meets local spars",
+  "abstract": "Parametric system identification methods estimate the parameters of explicitly defined physical systems from data. Yet, they remain constrained by the need to provide an explicit function space, typically through a predefined library of candidate functions chosen via available domain knowledge. In contrast, deep learning can demonstrably model systems of broad complexity with high fidelity, but black-box function approximation typically fails to yield explicit descriptive or disentangled representations revealing the structure of a system. We develop a novel identifiability theorem, leveraging causal representation learning, to uncover disentangled representations of system parameters without structural assumptions. We derive a graphical criterion specifying when system parameters can be uniquely disentangled from raw trajectory data, up to permutation and diffeomorphism. Crucially, our analysis demonstrates that global causal structures provide a lower bound on the disentanglement guarantees achievable when considering local state-dependent causal structures. We instantiate system parameter identification as a variational inference problem, leveraging a sparsity-regularised transformer to uncover state-dependent causal structures. We empirically validate our approach across four synthetic domains, demonstrating its ability to recover highly disentangled representations that baselines fail to recover. Corroborating our theoretical analysis, our results confirm that enforcing local causal structure is often necessary for full identifiability.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Markus W. Baumgartner",
+   "Anson Lei",
+   "Joe Watson",
+   "Ingmar Posner"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.14483v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.14483v2",
+  "published_iso": "2026-03-15T17:03:34Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Exchange-Only Silicon Based Spin Qubits: Charge Noise, PINN Optimised Pulse Sequences,and Gate-Level Fidelity",
+  "title_norm": "exchange only silicon based spin qubits charge noise pinn optimised pulse sequen",
+  "abstract": "Exchange-only (EO) spin qubits in silicon realise all-electrical qubit control through pairwise Heisenberg exchange interactions, making them attractive for scalable quantum computation. Their principal vulnerability is charge noise, which couples multiplicatively to the exchange coupling and degrades gate fidelity. We present a \\emph{two-stage} Physics-Informed Neural Network (PINN) framework for per-gate pulse optimisation. In \\textbf{Stage~I} (iterations~1--100) the PINN maximises the noise-averaged gate fidelity toward a threshold of $\\Fth=0.99$; the pulse duration is held fixed at its nominal hardware value. Once the threshold is crossed, \\textbf{Stage~II} (iterations~101--250) progressively compresses the total pulse time while maintaining $F\\geq\\Fth$ via continuous fine-tuning of the pulse-shape parameters. The cost function is a Monte-Carlo ensemble mean-squared error (MSE) averaged over $N_{\\rm real}=2000$ quasi-static Gaussian noise realisations drawn fresh at every iteration. We benchmark the framework on the single-qubit gate set $\\{X,Y,Z,H\\}$ and the two-qubit set $\\{X,Y,Z,H,\\mathrm{CX}\\}$ at noise levels $\\sigmaJ/J\\in\\{1\\%,5\\%,10\\%\\}$. All single-qubit gates cross $\\Fth$ within the first 100 iterations across all noise levels; Stage~II then reduces pulse durations by 20--40\\% from their nominal values. The two-qubit gates follow the same two-phase behaviour, with the CX gate compressing from its nominal \\SI{31}{\\nano\\second} to $\\approx\\SI{22}{\\nano\\second}$ at 1\\% noise.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Rajdeep Rameshchandra Dwivedi",
+   "Amitoj Singh Miglani",
+   "Vishvendra Singh Poonia"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.03056v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.03056v1",
+  "published_iso": "2026-05-04T18:20:13Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Neural Networks and Schramm-Loewner Evolutions",
+  "title_norm": "neural networks and schramm loewner evolutions",
+  "abstract": "In this manuscript, we explore the application of neural networks to predict the natural parameter $κ\\geq 0$ of Schramm-Loewner Evolution (SLE$_κ$) theory. SLE$_κ$ is a family of random fractal curves that has significant implications in Statistical Mechanics and Conformal Field Theory. This parameter $κ\\geq 0$ plays an important role in the theory as there are models of Planar Statistical Physics that are proven to have SLE as scaling limits as well as others that are conjectured to have this limit for various choices of the parameter $κ\\geq 0$. In addition, there are three different statistical behaviors of the SLE curves as the parameter $κ$ changes in $[0, \\infty).$ Leveraging the powerful pattern recognition capabilities of neural networks, this study aims to develop a predictive model that can estimate the $κ$ parameter with good accuracy.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Neilesh Shrotri",
+   "Vlad Margarint"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.02682v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.02682v1",
+  "published_iso": "2026-06-01T17:51:45Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Mixed potential for nonlinear RLC circuits with memristors",
+  "title_norm": "mixed potential for nonlinear rlc circuits with memristors",
+  "abstract": "In two seminal articles published in 1964, Brayton and Moser introduced the concept of a mixed potential as a fundamental theoretic tool to describe and analyze a class RLC of nonlinear circuits containing resistors, capacitors and inductors. In this paper, it is shown for the first time that a mixed potential can be introduced for a class RLCM of RLC circuits containing also memristors. This is possible provided a memristor circuit is analyzed not in the traditional voltage-current domain but rather in the flux-charge domain. The flux-charge analysis method (FCAM) plays a crucial role in the extension, in particular, a key step is an equivalence principle established via FCAM between an RLCM circuit in the flux-charge domain and a nonlinear RLC circuit in the voltage-current domain. Several examples are discussed where the mixed potential is explicitly found. These include basic circuits with memristors, such as Chua's circuit with a memristor and also large-scale memristor arrays with a neural architecture. This paper is mainly devoted to the introduction of a mixed potential for memristor circuits and the study of its main theoretic properties, as the possibility to write the circuit state equations in the flux-charge domain in an effective and compact form via the mixed potential. In a companion paper [1], the mixed potential is used to obtain in a systematic way Lyapunov-like results on convergence of RLCM circuits. Those results will extend existing results on convergence that do not cover the important case where there is the simultaneous presence of capacitors and inductors in a memristor circuit.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Mauro Di Marco",
+   "Mauro Forti",
+   "Luca Pancioni",
+   "Giacomo Innocenti",
+   "Alberto Tesi"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.04638v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.04638v1",
+  "published_iso": "2026-06-03T09:09:37Z",
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Token Predictors Are Not Planners: Building Physically Grounded Causal Reasoners",
+  "title_norm": "token predictors are not planners building physically grounded causal reasoners",
+  "abstract": "Current benchmarks for embodied vision-language planning often favor linguistic next-token prediction over physically grounded next-state reasoning. This rewards models that mimic statistical language priors rather than track causal dependencies, reducing physical planning to shallow sequence modeling. We argue that reliable physical autonomy requires a shift from linguistically grounded token prediction toward physically grounded causal reasoning. To this end, we introduce Causal-Plan-Bench, a high-fidelity diagnostic suite curated through multi-stage verification to evaluate embodied planning across four causal dimensions. We also construct Causal-Plan-1M, a million-scale corpus of explicit reasoning traces produced by a four-stage annotation pipeline over egocentric videos. Extensive evaluation shows that leading models still struggle to demonstrate genuine physical agency, with Gemini 3 Pro reaching only 38.18 on our benchmark. In contrast, our training recipe enables Causal Planner, built on Qwen3-VL-8B, to internalize physical logic for more accurate next-state estimation. The model achieves strong in-domain performance and cross-benchmark generalization, and reveals a Causal Scaling Law: scaling causal training data to one million instances yields a 36.3% relative gain, from 33.22 to 45.28. Overall, our work provides a concrete step toward turning agents from superficial token predictors into physically grounded causal reasoners.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Zheng Lu",
+   "Mingqi Gao",
+   "Qinlei Xie",
+   "Wanqi Zhong",
+   "Hanwen Cui",
+   "Heng Cao",
+   "Zirui Song",
+   "Yifan Yang",
+   "Chong Luo",
+   "Bei Liu",
+   "Yiming Li"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.01810v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.01810v1",
+  "published_iso": "2026-06-01T07:27:39Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Residual Attention Physics-Informed Neural Networks for Robust Multiphysics Simulation of Steady-State Electrothermal Energy Systems",
+  "title_norm": "residual attention physics informed neural networks for robust multiphysics simu",
+  "abstract": "Efficient thermal management and precise field prediction are critical for the design of advanced energy systems, including electrohydrodynamic transport, microfluidic energy harvesters, and electrically driven thermal regulators. However, the steady-state simulation of these electrothermal coupled multiphysics systems remains challenging for physics-informed neural computation due to strong nonlinear field coupling, temperature-dependent coefficient variability, and complex interface dynamics. This study proposes a Residual Attention Physics-Informed Neural Network (RA-PINN) framework for the unified solution of coupled velocity, pressure, electric-potential, and temperature fields. By integrating a unified five-field operator formulation with residual-connected feature propagation and attention-guided channel modulation, the proposed architecture effectively captures localized coupling structures and steep gradients. We evaluate RA-PINN across four representative energy-relevant benchmarks: constant-coefficient coupling, indirect pressure-gauge constraints, temperature-dependent transport, and oblique-interface consistency. Comparative analysis against Pure-MLP, LSTM-PINN, and pLSTM-PINN demonstrates that RA-PINN achieves superior accuracy, yielding the lowest MSE, RMSE, and relative $L_2$ errors across all scenarios. Notably, RA-PINN maintains high structural fidelity in interface-dominated and variable-coefficient settings where conventional PINN backbones often fail. These results establish RA-PINN as a robust and accurate computational framework for the high-fidelity modeling and optimization of complex electrothermal multiphysics in sustainable energy applications.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yuqing Zhou",
+   "Ze Tao",
+   "Fujun Liu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.23578v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.23578v1",
+  "published_iso": "2026-03-24T13:44:46Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Numerical modeling and simulation on nanosecond laser-target interactions",
+  "title_norm": "numerical modeling and simulation on nanosecond laser target interactions",
+  "abstract": "Nanosecond lasers are widely used in industrial applications as they are relatively inexpensive, and their compactness and robustness are an advantage. Much experimental work has been carried out to understand deeper the interaction between the nanosecond laser pulses and the targets, as these are complex, transient processes with spatial inhomogeneities. Beside the experiments, the modeling and numerical simulation on the laser interaction with the target are also crucial for understanding the dynamics of laser-material interactions and for optimizing laser processing applications. In this review, the progress of numerical modeling and simulation on nanosecond laser-target interactions are summarized from the aspects of laser-target interactions and target-plasma interface, laser-plasma interactions and plasma radiation, and numerical models on different scales with artificial intelligence advancing. The laser ablation, mass and energy transfer, and mechanical coupling are discussed in the aspect of the nanosecond laser-target interactions and target-plasma interface. The plasma expansion, plasma ionization and recombination, and plasma radiation are discussed in the aspect of the nanosecond laser-plasma interactions and plasma radiation. Then the numerical advances, including microscopic approaches based on molecular dynamics, mesoscopic approaches based on kinetic and statistical physics, macroscopic approaches based on fluid dynamics, and numerical simulations with machine learning are discussed. Finally, the challenges currently being encountered by numerical modeling and simulation on nanosecond laser-target interactions and its potential development direction are considered.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Jian Wu",
+   "Ying Zhou",
+   "Minxin Chen",
+   "Xingwen Li"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2608.09969v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2608.09969v1",
+  "published_iso": "2026-07-30T03:11:37Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Causal-Audit: A Framework for Risk Assessment of Assumption Violations in Time-Series Causal Discovery",
+  "title_norm": "causal audit a framework for risk assessment of assumption violations in time se",
+  "abstract": "Time-series causal discovery methods rely on assumptions such as stationarity, regular sampling, and bounded temporal dependence. When these assumptions are violated, structure learning can produce confident but misleading causal graphs without warning. We introduce Causal-Audit, a framework that formalizes assumption validation as calibrated risk assessment. The framework computes effect-size diagnostics across five assumption families (stationarity, irregularity, persistence, nonlinearity, and confounding proxies), aggregates them into four calibrated risk scores with uncertainty intervals, and applies an abstention-aware decision policy that recommends methods (e.g., PCMCI+, VAR-based Granger causality) only when evidence supports reliable inference. The semi-automatic diagnostic stage can also be used independently for structured assumption auditing in individual studies. Evaluation on a synthetic atlas of 500 data-generating processes (DGPs) spanning 10 violation families demonstrates well-calibrated risk scores (AUROC > 0.95), a 62% false positive reduction among recommended datasets, and 78% abstention on severe-violation cases. On 21 external evaluations from TimeGraph (18 categories) and CausalTime (3 domains), recommend-or-abstain decisions are consistent with benchmark specifications in all cases. An open-source implementation of our framework is available.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Marco Ruiz",
+   "Miguel Arana-Catania",
+   "David R. Ardila",
+   "Rodrigo Ventura"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.02488v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.02488v1",
+  "published_iso": "2026-04-02T19:43:57Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Mi-Memory: A Lifecycle Memory Framework for Personal AI",
+  "title_norm": "mi memory a lifecycle memory framework for personal ai",
+  "abstract": "Personal AI is moving beyond chat-only interaction toward continuous services that span phones, cars, homes, wearables, cameras, and tools. In this setting, memory cannot remain a cache of prior conversations. It should serve as a continuity and governance substrate: preserving durable user state, grounding answers in multimodal and device evidence, supporting correction and forgetting, bounding policy evolution, and remaining deployable under latency, cost, privacy, and edge-cloud constraints. This technical report presents Mi-Memory, a lifecycle memory framework for Personal AI organized around four roles: Structure, Expansion, Evolution, and Deployment. A shared audit contract links these roles through four recurring artifact families: typed evidence payloads preserve source identity and provenance, diagnostic traces localize evidence loss across the serving pipeline, strategy artifacts make memory-policy changes explicit, and gate/rollback records bound accepted evolution. MiMemory instantiates the roles through MemStack, MemSense/MemFuse, D$^{2}$ACCI/E$^{2}$MEND, and LiteMem. In controlled-reference Structure evaluations, MemStack reaches 93.59%, 57.24%, and 87.47% on LoCoMo, PersonaMem-V2, and LongMemEval, respectively; other tracks report module-level, preliminary/internal, transfer-feasibility, or design-only evidence with explicit boundaries. MiMemory is a step toward auditable, evidence-gated, and deployment-aware memory systems for Personal AI. Project homepage: https://darwin-agent.github.io/Mi-Memory/ .",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Xule Liu",
+   "Hanlin Teng",
+   "Chao Li",
+   "Yanan Ni",
+   "Shuo Lu",
+   "Audrey Wang",
+   "Yijun Liu",
+   "Yunfei Wang",
+   "Xiaofeng Li",
+   "Xian Yi",
+   "Yuanfa Li",
+   "Kang Zhao",
+   "Jian Liang",
+   "Yuxuan Chen",
+   "Jinyuan Chen",
+   "Heng Qu",
+   "Kun Shao",
+   "Jian Luan"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.18975v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.18975v1",
+  "published_iso": "2026-07-21T11:10:38Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Physics-Informed Neural Network Digital Twin for Dynamic Tray-Wise Modeling of Distillation Columns under Transient Operating Conditions",
+  "title_norm": "physics informed neural network digital twin for dynamic tray wise modeling of d",
+  "abstract": "Digital twin technology, when combined with physics-informed machine learning with simulation results of Aspen, offers transformative capabilities for industrial process monitoring, control, and optimization. In this work, the proposed model presents a Physics-Informed Neural Network (PINN) digital twin framework for the dynamic, tray-wise modeling of binary distillation columns operating under transient conditions. The architecture of the proposed model embeds fundamental thermodynamic constraints, including vapor-liquid equilibrium (VLE) described by modified Raoult's law, tray-level mass and energy balances, and the McCabe-Thiele graphical methodology directly into the neural network loss function via physics residual terms. The model is trained and evaluated on a high-fidelity synthetic dataset of 961 timestamped measurements spanning 8 hours of transient operation, generated in Aspen HYSYS for a binary HX/TX distillation system comprising 16 sensor streams. An adaptive loss-weighting scheme balances the data fidelity and physics consistency objectives during training. Compared to five data-driven baselines (LSTM, vanilla MLP, GRU, Transformer, DeepONet), the proposed PINN achieves an RMSE of 0.00143 for HX mole fraction prediction (R^2 = 0.9887), representing a 44.6% reduction over the best data-only baseline, while strictly satisfying thermodynamic constraints. Tray-wise temperature and composition profiles predicted under transient perturbations demonstrate that the digital twin accurately captures column dynamics including feed tray responses, reflux ratio variations, and pressure transients. These results establish the proposed PINN digital twin as a robust foundation for real-time soft sensing, model-predictive control, and anomaly detection in industrial distillation processes.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Debadutta Patra",
+   "Ayush Bardhan Tripathy",
+   "Soumya Ranjan Sahu",
+   "Sucheta Panda"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.24644v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.24644v1",
+  "published_iso": "2026-03-25T14:45:35Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "A cubical formalisation of topos causal models: intervention, forcing, and a contextuality obstruction",
+  "title_norm": "a cubical formalisation of topos causal models intervention forcing and a contex",
+  "abstract": "Topos causal models recast causal inference inside a topos: a causal world is a presheaf, an intervention is a sub-model named by a characteristic map into the subobject classifier $\\Om$, and reasoning is Kripke-Joyal forcing in an intuitionistic internal language. We give the first axiom-free machine-checked account of this 1-topos core, in Cubical Agda over a previously verified probability monad and do-calculus; the framework is otherwise developed on paper, with central claims stated rather than proved. Three of our results go beyond faithful transcription. We exhibit a contextuality obstruction the programme does not treat: pairwise-consistent local causal data with no global model, detected by a degree-one holonomy class. We delimit the claim that interventions are modelled by the subobject classifier: an intervention and an observation name the same subobject, so $\\Om$ fixes the target of a do-operation but not the operation itself, which is surgery on the kernels --- where, on a confounder, the interventional and observational laws differ. And we settle the modal unit --- inflationarity is derivable from $j\\top = \\top$ and naturality, not a fourth axiom. We also machine-check the classifier of sieves with its classification theorem, the pullback collating local mechanisms, and the Kripke-Joyal forcing clauses. The development assumes no axioms and typechecks under Agda's \\texttt{--safe} flag, with the ordered field discharged at $\\mathbb{Q}$; type-level sheafification and a directed do-calculus are future work.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Karen Sargsyan"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.15629v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.15629v2",
+  "published_iso": "2026-07-17T05:05:31Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "MRMMIA: Membership Inference Attacks on Memory in Chat Agents",
+  "title_norm": "mrmmia membership inference attacks on memory in chat agents",
+  "abstract": "Membership inference attacks (MIAs) test whether a target data record belongs to a system's private data, and have become a standard tool to measure privacy leakage in machine learning systems. Prior work has primarily focused on training corpora or retrieval databases. However, MIAs against agent memory have received less attention, even though such memory can contain sensitive user-agent interactions, retrieved facts, and user preferences. Therefore, in this work, we focus on chat agent memory MIAs, where an adversary infers whether a candidate memory unit belongs to the chat agent's memory store. We propose Multi-Recall Memory MIA (MRMMIA), a unified attack that utilizes multiple recall probes to the agent to extract the membership signal across black-box, gray-box, and white-box settings. Our experiments demonstrate that MRMMIA consistently outperforms baselines. Our results expose the privacy risk in agents and provide an initial evaluation framework for membership leakage in chat-agent memory systems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Kai Chen",
+   "Yan Pang",
+   "Tianhao Wang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.27825v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.27825v1",
+  "published_iso": "2026-05-27T01:31:40Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "SOLIS: Physics-Informed Learning of Interpretable Neural Surrogates for Nonlinear Systems",
+  "title_norm": "solis physics informed learning of interpretable neural surrogates for nonlinear",
+  "abstract": "Nonlinear system identification must balance physical interpretability with model flexibility. Classical methods yield structured, control-relevant models but rely on rigid parametric forms that often miss complex nonlinearities, whereas Neural ODEs are expressive yet largely black-box. Physics-Informed Neural Networks (PINNs) sit between these extremes, but inverse PINNs typically assume a known governing equation with fixed coefficients, leading to identifiability failures when the true dynamics are unknown or state-dependent. We propose \\textbf{SOLIS}, which models unknown dynamics via a \\emph{state-conditioned second-order surrogate model} and recasts identification as learning a Quasi-Linear Parameter-Varying (Quasi-LPV) representation, recovering interpretable natural frequency, damping, and gain without presupposing a global equation. SOLIS decouples trajectory reconstruction from parameter estimation and stabilizes training with a cyclic curriculum and \\textbf{Local Physics Hints} windowed ridge-regression anchors that mitigate optimization collapse. Experiments on benchmarks show accurate parameter-manifold recovery and coherent physical rollouts from sparse data, including regimes where standard inverse methods fail.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Murat Furkan Mansur",
+   "Tufan Kumbasar"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.14879v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.14879v1",
+  "published_iso": "2026-04-16T11:12:36Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Causal Mechanism Reduction: Mechanism Replacement for Neural Network Pruning and Abstraction",
+  "title_norm": "causal mechanism reduction mechanism replacement for neural network pruning and ",
+  "abstract": "Which internal mechanisms of a neural network can be replaced while preserving the computation it performs? Structured pruning asks for smaller deployable networks; causal abstraction asks for high-level models that commute with interventions. We introduce causal mechanism reduction (CMR), a framework that treats a trained network as a deterministic structural causal model and replaces selected internal variables by constants or affine functions of retained variables. These replacements compile exactly into smaller dense networks by bias and weight folding, and induce reduced causal models testable with interchange interventions. We derive a unified second-order replacement-risk objective whose special cases recover mean replacement, variance-based pruning (VBP), logit-distortion scoring, and affine neuron merging, together with a margin-based certificate linking logit distortion to interchange-intervention agreement. The framework also exposes a basic invariance requirement: functionally identical ReLU networks should induce the same reduction. Under exact positive-scaling reparameterizations, VBP's kept set collapses to chance-level overlap while the logit-distortion score is exactly invariant. Empirically, CMR variants are competitive with VBP under matched fine-tuning of DeiT-Tiny on ImageNet-100; the clearer separation appears in the invariance and interchange tests, where the logit-distortion score preserves kept sets and consistently improves distributional fidelity. CMR thus gives pruning, compilation, and causal-abstraction verification a common object to optimize and verify.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Amir Asiaee"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.24266v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.24266v2",
+  "published_iso": "2026-02-27T18:35:10Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "MEM: Multi-Scale Embodied Memory for Vision Language Action Models",
+  "title_norm": "mem multi scale embodied memory for vision language action models",
+  "abstract": "Conventionally, memory in end-to-end robotic learning involves inputting a sequence of past observations into the learned policy. However, in complex multi-stage real-world tasks, the robot's memory must represent past events at multiple levels of granularity: from long-term memory that captures abstracted semantic concepts (e.g., a robot cooking dinner should remember which stages of the recipe are already done) to short-term memory that captures recent events and compensates for occlusions (e.g., a robot remembering the object it wants to pick up once its arm occludes it). In this work, our main insight is that an effective memory architecture for long-horizon robotic control should combine multiple modalities to capture these different levels of abstraction. We introduce Multi-Scale Embodied Memory (MEM), an approach for mixed-modal long-horizon memory in robot policies. MEM combines video-based short-horizon memory, compressed via a video encoder, with text-based long-horizon memory. Together, they enable robot policies to perform tasks that span up to fifteen minutes, like cleaning up a kitchen, or preparing a grilled cheese sandwich. Additionally, we find that memory enables MEM policies to intelligently adapt manipulation strategies in-context.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Marcel Torne",
+   "Karl Pertsch",
+   "Homer Walke",
+   "Kyle Vedder",
+   "Suraj Nair",
+   "Brian Ichter",
+   "Allen Z. Ren",
+   "Haohuan Wang",
+   "Jiaming Tang",
+   "Kyle Stachowicz",
+   "Karan Dhabalia",
+   "Michael Equi",
+   "Quan Vuong",
+   "Jost Tobias Springenberg",
+   "Sergey Levine",
+   "Chelsea Finn",
+   "Danny Driess"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.03596v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.03596v2",
+  "published_iso": "2026-03-04T00:03:02Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Geometric Quantum Physics Informed Neural Network",
+  "title_norm": "geometric quantum physics informed neural network",
+  "abstract": "Quantum physics-informed neural networks (QPINNs) have recently emerged as a promising framework for the solution of partial differential equations (PDEs), with several studies reporting improved convergence and accuracy relative to classical physics-informed neural networks (PINNs) at reduced training cost. Motivated by these advances, we introduce geometric quantum physics-informed neural networks (GQPINNs), a symmetry-aware extension of QPINNs in which the geometric structure of the underlying PDE is incorporated directly into the quantum-circuit ansatz. Building on the framework of geometric quantum machine learning, we construct parametrized circuits that encode finite-group and compact Lie-group symmetries as inductive biases through problem-specific equivariant generator sets . Using a twirling-based construction, we derive symmetry-preserving gates that ensure that the model predictions respect the symmetries of the governing equation whenever the boundary and initial data are symmetry compatible. We benchmark GQPINNs against standard QPINNs and symmetry-adapted classical PINN baselines under matched training protocols across a representative set of linear and nonlinear PDEs. Across these benchmarks, GQPINNs achieve improved solution accuracy, as quantified by lower mean absolute error, while requiring substantially fewer trainable parameters. These results identify symmetry-aware quantum-circuit design as an effective route toward improved efficiency and generalization in quantum PDE solvers and provide a systematic framework for incorporating geometric inductive biases into quantum-enhanced scientific machine learning.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Wai-Hong Tam",
+   "Reza Safari",
+   "Hiromichi Matsuyama"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.02352v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.02352v1",
+  "published_iso": "2026-05-04T08:55:29Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Optimizing Experimental Design for Causal Effect Estimation with Partial Measurements",
+  "title_norm": "optimizing experimental design for causal effect estimation with partial measure",
+  "abstract": "Instrumental variable regression quantifies causal effects between a possibly confounded treatment variable $ X_2 $ and a response variable $ X_3 $ by leveraging an instrument $ X_1 $. Our work considers the setting where some prior information of the joint distribution of $ X_{123} $ is given, potentially through an initial dataset. However, further samples must be gathered to improve the accuracy of the estimation. We show that under specific parameter configurations in a Gaussian graphical model, taking partial samples from, e.g., $ X_{12} $ can reduce the asymptotic variance of a consistent estimator. This idea is developed by adding a budget constraint over the cost per (partial) sample. The optimization problem is analytically solvable over the real numbers and gives the optimal number of requested partial and complete samples. We provide significance level, power, and sample-size calculations for detecting a non-zero causal effect under optimal budget allocation. Our method can considerably reduce the necessary budget and the number of complete samples. Finally, we showcase the advantages and applicability of adaptive causal effect estimation for automotive analytics and pharmaceutical research.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Leopold Mareis"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.26818v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.26818v1",
+  "published_iso": "2026-06-25T10:00:43Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Oracle Agent Memory as an Enterprise Memory Substrate for Long-Horizon AI Agents",
+  "title_norm": "oracle agent memory as an enterprise memory substrate for long horizon ai agents",
+  "abstract": "Agent memory is a systems problem for long-horizon agents. Practical deployments require retention of task state across extended conversations, recovery of user-specific facts and preferences across sessions, and accumulation of procedural knowledge from prior outcomes. These requirements extend beyond document retrieval: a memory layer must determine which interactions become durable state, how that state is scoped, how it is retrieved under latency constraints, and how it is revised or removed over time. This report studies Oracle Agent Memory as a database-native memory substrate built on Oracle Database. Three themes organize the discussion: memory as a lifecycle spanning ingestion, extraction, consolidation, retrieval, summarization, and revision or removal; a layered architecture that separates an active memory core from a passive memory-store interface with explicit scope control across users, agents, and threads; and evaluation methodology in which downstream task accuracy is complemented by memory-centric measures such as evidence retrieval, recall, latency, and estimated token use. The report summarizes LongMemEval results, reaching 93.8% accuracy, compares Oracle Agent Memory against flat-history baselines, using about 10.7x fewer tokens, and published or reported external baselines where available, and closes with implementation-oriented appendix material covering setup, thread lifecycle, and search semantics.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Richmond Alake",
+   "Cesare Bernardis",
+   "Paul Cayet",
+   "Luca Engel",
+   "Damien Hilloulin",
+   "Sungpack Hong",
+   "Allen Hosler",
+   "Nickolas Kavantzas",
+   "Ingo Kossyk",
+   "Son Le",
+   "Rhicheek Patra",
+   "Kartik Talamadupula",
+   "Valentin Venzin"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.13157v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.13157v1",
+  "published_iso": "2026-07-14T18:06:53Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Quantum Physics-Informed Neural Networks for Solving Integro and Fractional PDEs",
+  "title_norm": "quantum physics informed neural networks for solving integro and fractional pdes",
+  "abstract": "Quantum neural networks have emerged as powerful models for approximating nonlinear functions. Yet their use in solving integro-differential equations (IDEs) and fractional integro-partial differential equations (FIPDEs), which involve inherently nonlocal operators, remains unexplored. This work introduces a quantum physics-informed neural network (QPINN) framework that combines a quantum neural network with the governing equations of general nonlinear IDEs and FIPDEs. The proposed quantum network uses an affine feature map and variational quantum circuits to produce trial solutions with explicit trigonometric structure. We prove a quantitative $L^{2}(μ)$ universal approximation theorem for this architecture, achieving a convergence rate of $\\mathcal{O}(n^{-1/2})$. This extends classical Fourier approximation theory to quantum circuits for physics-informed learning. We propose two QPINN variants: the numerical-quadrature QPINN (N-QPINN), which handles nonlocal integrals and fractional operators via high-order numerical quadrature while computing local derivatives through automatic differentiation of quantum trial solutions; and the auxiliary-function QPINN (A-QPINN), which eliminates numerical quadrature by introducing auxiliary variables that reformulate each integro-differential equation as an equivalent coupled system of partial differential equations, enabling a multi-output quantum neural network to simultaneously represent the solution and its associated variables. A series of numerical experiments demonstrates that the proposed QPINN framework accurately captures the behavior of nonlinear IDEs and FIPDEs and outperforms classical physics-informed neural networks.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Deepak Gupta",
+   "Ratikanta Behera"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.26865v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.26865v1",
+  "published_iso": "2026-06-25T10:51:47Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Operationalising Relative Causal Knowledge: Backbone Identifiability from Private Reports on a Shared Outcome",
+  "title_norm": "operationalising relative causal knowledge backbone identifiability from private",
+  "abstract": "The Relativity of Causal Knowledge (RCK) explains how a network of agents with different structural causal models can exchange causal knowledge through a shared interventionally consistent abstraction, or backbone. We ask the prior identification question that this transport mechanism presupposes: when is that backbone determined by the agents' private causal knowledge? In the basic two-agent common-effect case, two private causes influence one shared outcome and each agent identifies only the single-cause causal marginal relevant to its own perspective. We show that, under standard compatibility, non-degeneracy, and local overlap assumptions, those local causal marginals do not identify a unique backbone. Infinitely many joint intervention kernels can induce exactly the same private reports while disagreeing on joint interventions. We then give a conditional recovery result. Additive separability removes the hidden interaction degree of freedom, but observational residual summaries remain insufficient. Identification becomes possible when agents communicate causally identified response functions. An education value-added example illustrates why this is first a communication problem, and only then a policy-composition problem.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Fabrizio Russo",
+   "Mark Somers"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2608.10664v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2608.10664v1",
+  "published_iso": "2026-08-11T08:46:18Z",
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Electrothermal control of spin-reorientation transition in Co/Fe_3GaTe_2 heterostructures",
+  "title_norm": "electrothermal control of spin reorientation transition in co fe_3gate_2 heteros",
+  "abstract": "Electrical control of magnetic anisotropy in van der Waals (vdWs) magnets is a key step toward reconfigurable two-dimensional spintronics, yet how a conventional metallic ferromagnet competes with a van der Waals magnet across a direct interface has remained largely unexplored. Here we demonstrate reversible thermal and electrothermal control of a spin-reorientation transition in Co/Fe_3GaTe_2 (FGaT) heterostructures. As Joule heating weakens the FGaT anisotropy, the heterostructure switches from an out-of-plane- to an in-plane-dominated state at a reorientation temperature of approximately 311 K, well below the Curie temperature, consistent with an exchange-mediated anisotropy competition between the Co overlayer and FGaT. An electrically driven device shows a closely matching loop evolution within an 80-100 mW power window, reversibly over five measurement cycles, consistent with an electrothermal origin. In a Co-free FGaT device, Kerr microscopy traces the switching to a power-tunable domain nucleation barrier and demonstrates power-thresholded, field-assisted magnetization reversal at a threshold near 15 mW. These results demonstrate electrothermal anisotropy competition as a route to heat-assisted and device-level control of vdWs magnetism.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Po-Wei Chen",
+   "Ming-Hsien Hsu",
+   "Cheng-Ying Hsiao",
+   "Ming-Yang Ho",
+   "Masahiro Haze",
+   "Yan-Ru Chu",
+   "Yu-Cheng Shao",
+   "Po-Chun Chang",
+   "Chen-Yu Ou",
+   "Ruei Chen",
+   "Ko-Fan Chen",
+   "Chung-Ting Ke",
+   "Chao-Hung Du",
+   "Yukio Hasegawa",
+   "Wen-Chin Lin",
+   " ."
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.15844v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.15844v1",
+  "published_iso": "2026-07-17T10:58:27Z",
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Python library supporting Discrete Variational Formulations and training solutions with Collocation-based Robust Variational Physics Informed Neural Networks (DVF-CRVPINN)",
+  "title_norm": "python library supporting discrete variational formulations and training solutio",
+  "abstract": "We explore the possibility of solving Partial Differential Equations (PDEs) using discrete weak formulations. We propose a programming environment for defining a discrete computational domain, introducing discrete functions defined over a set of points, constructing discrete inner products, and introducing discrete weak formulations employing Kronecker delta test functions. Building on this setup, we propose a discrete neural network representation, training the solution function defined over a discrete set of points and employing discrete finite difference derivatives in the automatic differentiation procedures. As a challenging computational model example, we focus on Stokes equations in two-dimensions, defined over a discrete set of points. We train the solution using the discrete weak residual and the Adamax algorithm with discrete automatic differentiation of the discrete gradients. Despite introducing the python environment, we also provide a rigorous mathematical formulation based on discrete weak formulations, proving the well-posedness and robustness of the loss function. The solution of the discrete weak formulations is based on neural network training employing a robust loss function that is related to the true error. In this way, we have a robust control of the numerical error during the training of the neural networks. Besides the Stokes formulation, we also explain the functionality of the proposed library using the Laplace problem formulation.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Tomasz Służalec",
+   "Marcin Łoś",
+   "Askold Vilkha",
+   "Maciej Paszyński"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.15398v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.15398v1",
+  "published_iso": "2026-04-16T12:08:09Z",
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ }
+]

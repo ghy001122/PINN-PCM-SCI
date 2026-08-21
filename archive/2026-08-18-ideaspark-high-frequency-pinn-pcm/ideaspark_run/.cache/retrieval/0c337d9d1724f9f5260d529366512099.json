@@ -1,0 +1,1905 @@
+[
+ {
+  "title": "Critical Review of Temperature Prediction for Lithium-Ion Batteries in Electric Vehicles",
+  "title_norm": "critical review of temperature prediction for lithium ion batteries in electric ",
+  "abstract": "This paper reviews recent advancements in predicting the temperature of lithium-ion batteries in electric vehicles. As environmental and energy concerns grow, the development of new energy vehicles, particularly electric vehicles, has become a significant trend. Lithium-ion batteries, as the core component of electric vehicles, have their performance and safety significantly impacted by temperature. This paper begins by introducing the fundamental components and operating principles of lithium-ion batteries, followed by an analysis of how temperature affects battery performance and safety. Next, the methods for measuring and predicting battery temperature are categorized and discussed, including model-based methods, data-driven methods, and hybrid approaches that combine both. Finally, the paper summarizes the application of temperature prediction in a BMS and provides an outlook on future research directions.",
+  "year": 2024,
+  "venue": "Batteries",
+  "authors": [
+   "Junting Bao",
+   "Yuan Mao",
+   "Youbing Zhang",
+   "Hao Xu",
+   "Yajie Jiang",
+   "Yun Yang"
+  ],
+  "citations": 41,
+  "source": "openalex",
+  "source_id": "W4404931206",
+  "doi": "10.3390/batteries10120421",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2313-0105/10/12/421/pdf?version=1733128730",
+  "published_iso": "2024-11-29",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Reliability Challenges, Models, and Physics of Silicon Carbide and Gallium Nitride Power Devices",
+  "title_norm": "reliability challenges models and physics of silicon carbide and gallium nitride",
+  "abstract": "Silicon Carbide (SiC) and Gallium Nitride (GaN) are revolutionizing power electronics with greater efficiency and durability than Silicon. Nevertheless, their widespread use is limited by reliability challenges, including thermal degradation, defect propagation, and charge trapping, affecting their stability and lifetime. This review explores these reliability issues, comparing empirical and physics-based models for predicting device performance and identifying practical limitations. We also examine strategies to enhance robustness, from material design improvements to advanced testing methods. We propose a demonstrative GaN power circuit topology specifically for demonstrating reliability in real-world conditions. This work highlights key challenges and opportunities in developing more reliable SiC and GaN technologies for future applications.",
+  "year": 2025,
+  "venue": "Energies",
+  "authors": [
+   "Tsuriel Avraham",
+   "Mamta Dhyani",
+   "J.B. Bernstein"
+  ],
+  "citations": 28,
+  "source": "openalex",
+  "source_id": "W4407809025",
+  "doi": "10.3390/en18051046",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1996-1073/18/5/1046/pdf?version=1740132530",
+  "published_iso": "2025-02-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Low-Power Memristor for Neuromorphic Computing: From Materials to Applications",
+  "title_norm": "low power memristor for neuromorphic computing from materials to applications",
+  "abstract": "As an emerging memory device, memristor shows great potential in neuromorphic computing applications due to its advantage of low power consumption. This review paper focuses on the application of low-power-based memristors in various aspects. The concept and structure of memristor devices are introduced. The selection of functional materials for low-power memristors is discussed, including ion transport materials, phase change materials, magnetoresistive materials, and ferroelectric materials. Two common types of memristor arrays, 1T1R and 1S1R crossbar arrays are introduced, and physical diagrams of edge computing memristor chips are discussed in detail. Potential applications of low-power memristors in advanced multi-value storage, digital logic gates, and analogue neuromorphic computing are summarized. Furthermore, the future challenges and outlook of neuromorphic computing based on memristor are deeply discussed.",
+  "year": 2025,
+  "venue": "Nano-Micro Letters",
+  "authors": [
+   "Zhipeng Xia",
+   "Xiao Wei Sun",
+   "Zhenlong Wang",
+   "Jialin Meng",
+   "Boyan Jin",
+   "Tianyu Wang"
+  ],
+  "citations": 100,
+  "source": "openalex",
+  "source_id": "W4409406251",
+  "doi": "10.1007/s40820-025-01705-4",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s40820-025-01705-4.pdf",
+  "published_iso": "2025-04-14",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Evolutionary Optimization of Physics-Informed Neural Networks: Evo-PINN Frontiers and Opportunities",
+  "title_norm": "evolutionary optimization of physics informed neural networks evo pinn frontiers",
+  "abstract": "Deep learning models trained on finite data lack a complete understanding of the physical world. On the other hand, physics-informed neural networks (PINNs) are infused with such knowledge through the incorporation of mathematically expressible laws of nature into their training loss function. By complying with physical laws, PINNs provide advantages over purely data-driven models in limited-data regimes and present as a promising route towards Physical AI. This feature has propelled them to the forefront of scientific machine learning, a domain characterized by scarce and costly data. However, the vision of accurate physics-informed learning comes with significant challenges. This work examines PINNs in terms of model optimization and generalization, shedding light on the need for new algorithmic advances to overcome issues pertaining to the training speed, precision, and generalizability of today’s PINN models. Of particular interest are gradient-free evolutionary algorithms (EAs) for optimizing the uniquely complex loss landscapes arising in PINN training. Methods synergizing gradient descent and EAs for discovering bespoke neural architectures and balancing multiple terms in physics-informed learning objectives are positioned as important avenues for future research. Another exciting track is to cast EAs as a meta-learner of generalizable PINN models. To substantiate these proposed avenues, we further highlight results from recent literature to showcase the early success of such approaches in addressing the aforementioned challenges in PINN optimization and generalization.",
+  "year": 2026,
+  "venue": "IEEE Computational Intelligence Magazine",
+  "authors": [
+   "Jian Cheng Wong",
+   "Abhishek Gupta",
+   "Chin Chun Ooi",
+   "Pao‐Hsiung Chiu",
+   "Jiao Liu",
+   "Y. J. Ong"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7124162332",
+  "doi": "10.1109/mci.2025.3607749",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2501.06572",
+  "published_iso": "2026-01-14",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Machine Learning-Driven Structural Optimization of a Bistable RF MEMS Switch for Enhanced RF Performance",
+  "title_norm": "machine learning driven structural optimization of a bistable rf mems switch for",
+  "abstract": "In the rapidly advancing digital era, the demand for miniaturized and high-performance electronic devices is increasing, particularly in applications such as wireless communication, unmanned aerial vehicles, and healthcare devices. Radio-frequency microelectromechanical systems (RF MEMS), particularly RF MEMS switches, play a crucial role in enhancing RF performance by providing low-loss, high-isolation switching and precise signal path control in reconfigurable RF front-end systems. Among different configurations, electrothermally actuated bistable lateral RF MEMS switches are preferred for their energy efficiency, requiring power only during transitions. This paper presents a novel approach to improve the RF performance of such a switch through structural modifications and machine learning (ML)-driven optimization. To enable efficient high-frequency operation, the H-clamp structure was re-engineered into various lateral configurations, among which the I-clamp exhibited superior RF characteristics. The proposed I-clamp switch was optimized using an eXtreme Gradient Boost (XGBoost) ML model to predict optimal design parameters while significantly reducing the computational overhead of conventional EM simulations. Activation functions were employed within the ML model to improve the accuracy of predicting optimal design parameters by capturing complex nonlinear relationships. The proposed methodology reduced design time by 87.7%, with the optimized I-clamp switch achieving -0.8 dB insertion loss and -70 dB isolation at 10 GHz.",
+  "year": 2025,
+  "venue": "Micromachines",
+  "authors": [
+   "J. Joslin Percy",
+   "S. Kanthamani",
+   "S. Mohamed Mansoor Roomi"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4411035259",
+  "doi": "10.3390/mi16060680",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2072-666X/16/6/680/pdf?version=1749029814",
+  "published_iso": "2025-06-04",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Charting electronic-state manifolds across molecules with multi-state learning and gap-driven dynamics via efficient and robust active learning",
+  "title_norm": "charting electronic state manifolds across molecules with multi state learning a",
+  "abstract": "Abstract We present a robust protocol for affordable learning of electronic states to accelerate photophysical and photochemical molecular simulations. The protocol solves several issues precluding the widespread use of machine learning (ML) in excited-state simulations. We introduce a novel physics-informed multi-state ML model that can learn an arbitrary number of excited states across molecules, with accuracy better or similar to the accuracy of learning ground-state energies, where information on excited-state energies improves the quality of ground-state predictions. We also present gap-driven dynamics for accelerated sampling of the small-gap regions, which proves crucial for stable surface-hopping dynamics. Together, multi-state learning and gap-driven dynamics enable efficient active learning, furnishing robust models for surface-hopping simulations and helping to uncover long-time-scale oscillations in cis -azobenzene photoisomerization. Our active-learning protocol includes sampling based on physics-informed uncertainty quantification, ensuring the quality of each adiabatic surface, low error in energy gaps, and precise calculation of the hopping probability.",
+  "year": 2025,
+  "venue": "npj Computational Materials",
+  "authors": [
+   "Mikołaj Martyka",
+   "Lina Zhang",
+   "Fuchun Ge",
+   "Yi-Fan Hou",
+   "Joanna Jankowska",
+   "Mario Barbatti"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4410340846",
+  "doi": "10.1038/s41524-025-01636-z",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41524-025-01636-z.pdf",
+  "published_iso": "2025-05-13",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Advancements in 2D layered material memristors: unleashing their potential beyond memory",
+  "title_norm": "advancements in 2d layered material memristors unleashing their potential beyond",
+  "abstract": "The scalability of two-dimensional (2D) materials down to a single monolayer offers exciting prospects for high-speed, energy-efficient, scalable memristors. This review highlights the development of 2D material-based memristors and potential applications beyond memory, including neuromorphic, in-memory, in-sensor, and complex computing. This review also encompasses potential challenges and future opportunities for advancing these materials and technologies, underscoring the transformative impact of 2D memristors on versatile and sustainable electronic devices and systems.",
+  "year": 2024,
+  "venue": "npj 2D Materials and Applications",
+  "authors": [
+   "Kiran A. Nirmal",
+   "Dhananjay D. Kumbhar",
+   "Arul Varman Kesavan",
+   "Tukaram D. Dongale",
+   "Tae Geun Kim"
+  ],
+  "citations": 104,
+  "source": "openalex",
+  "source_id": "W4405664597",
+  "doi": "10.1038/s41699-024-00522-4",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41699-024-00522-4.pdf",
+  "published_iso": "2024-12-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Scientific machine learning for closure models in multiscale problems: A review",
+  "title_norm": "scientific machine learning for closure models in multiscale problems a review",
+  "abstract": "Closure problems are omnipresent when simulating multiscale systems, where some quantities and processes cannot be fully prescribed despite their effects on the simulation's accuracy. Recently, scientific machine learning approaches have been proposed as a way to tackle the closure problem, combining traditional (physics-based) modeling with data-driven (machine-learned) techniques, typically through enriching differential equations with neural networks. This paper reviews the different reduced model forms, distinguished by the degree to which they include known physics, and the different objectives of a priori and a posteriori learning. The importance of adhering to physical laws (such as symmetries and conservation laws) in choosing the reduced model form and choosing the learning method is discussed. The effect of spatial and temporal discretization and recent trends toward discretization-invariant models are reviewed. In addition, we make the connections between closure problems and several other research disciplines: inverse problems, Mori-Zwanzig theory, and multi-fidelity methods. In conclusion, much progress has been made with scientific machine learning approaches for solving closure problems, but many challenges remain. In particular, the generalizability and interpretability of learned models is a major issue that needs to be addressed further.",
+  "year": 2024,
+  "venue": "Foundations of Data Science",
+  "authors": [
+   "Benjamin Sanderse",
+   "Panos Stinis",
+   "Romit Maulik",
+   "Shady E. Ahmed"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4403254920",
+  "doi": "10.3934/fods.2024043",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4403254920",
+  "published_iso": "2024-10-09",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Battery intelligent temperature warning model with physically-informed attention residual networks",
+  "title_norm": "battery intelligent temperature warning model with physically informed attention",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Applied Energy",
+  "authors": [
+   "Ke Xue",
+   "Lei Wang",
+   "Jun Wang",
+   "Anyang Wang",
+   "Ruilin Wang",
+   "Peng Liu"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4408258773",
+  "doi": "10.1016/j.apenergy.2025.125627",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4408258773",
+  "published_iso": "2025-03-09",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "PHYSICS-INFORMED MACHINE LEARNING FOR NANOSCALE TRANSPORT PHENOMENA: CHALLENGES, APPROACHES, AND FUTURE PERSPECTIVES",
+  "title_norm": "physics informed machine learning for nanoscale transport phenomena challenges a",
+  "abstract": "Modeling nanoscale transport phenomena presents a critical challenge in which classical continuum equations fail, and high-fidelity solvers are computationally prohibitive. Physics-Informed Machine Learning (PIML) has emerged as a transformative approach to resolve this dilemma by synergistically fusing sparse experimental data with the governing laws of first-principle transport models. This review provides a comprehensive overview of how PIML — especially physics-informed neural networks (PINNs), operator-learning methods, and multi-fidelity frameworks — accelerates nanoscale transport analyses from BTE-based phonon transport to ballistic–diffusive heat transfer and near-field radiative effects. We address persistent data bottlenecks in nanomaterial research, including noisy measurements and high-dimensional partial differential equation (PDE) formulations, and present advanced strategies such as domain decomposition and hybrid mechanistic – Machine Learning (ML) methods to enhance the flexibility and scalability of these emerging approaches. Finally, we outline the current gaps in the field, from uncertainty quantification to the development of real-time digital twins, and chart future research directions poised to unify quantum-scale simulations, experimental metrology, and deep learning. By embedding physical constraints directly into the learning workflow, these physics-informed methods offer a transformative pathway for optimizing nanoscale transport, unlocking unprecedented opportunities in material design and device engineering.",
+  "year": 2025,
+  "venue": "Cherkasy University Bulletin: Physical and Mathematical Sciences",
+  "authors": [
+   "M. V. HERKALIUK",
+   "A.V. Gilchuk"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7154681973",
+  "doi": "10.31651/2076-5851-2025-11-57",
+  "arxiv_id": null,
+  "paper_url": "https://phys-ejournal.cdu.edu.ua/article/download/5456/5694",
+  "published_iso": "2025-01-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Electrochemical ohmic memristors for continual learning",
+  "title_norm": "electrochemical ohmic memristors for continual learning",
+  "abstract": "Developing versatile and reliable memristive devices is crucial for advancing future memory and computing architectures. The years of intensive research have still not reached and demonstrated their full horizon of capabilities, and new concepts are essential for successfully using the complete spectra of memristive functionalities for industrial applications. Here, we introduce two-terminal ohmic memristor, characterized by a different type of switching defined as filament conductivity change mechanism (FCM). The operation is based entirely on localized electrochemical redox reactions, resulting in essential advantages such as ultra-stable binary and analog switching, broad voltage stability window, high temperature stability, high switching ratio and good endurance. The multifunctional properties enabled by the FCM can be effectively used to overcome the catastrophic forgetting problem in conventional deep neural networks. Our findings represent an important milestone in resistive switching fundamentals and provide an effective approach for designing memristive system, expanding the horizon of functionalities and neuroscience applications.",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "authors": [
+   "Shaochuan Chen",
+   "Zhen Yang",
+   "Heinrich Hartmann",
+   "Astrid Besmehn",
+   "Yuchao Yang",
+   "Ilia Valov"
+  ],
+  "citations": 34,
+  "source": "openalex",
+  "source_id": "W4408253605",
+  "doi": "10.1038/s41467-025-57543-w",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-025-57543-w.pdf",
+  "published_iso": "2025-03-08",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "A selective review of modern stochastic modeling: SDE/SPDE numerics, data-driven identification, and generative methods with applications in biomathematics",
+  "title_norm": "a selective review of modern stochastic modeling sde spde numerics data driven i",
+  "abstract": "This review maps 2020-2025 developments in stochastic modeling, highlighting non-standard approaches and their applications to biology and epidemiology. It brings together four strands: (1) core models for systems that evolve with randomness; (2) learning key parts of those models directly from data; (3) methods that can generate realistic synthetic data in continuous time; and (4) numerical techniques that keep simulations stable, accurate, and faithful over long runs. The objective is practical: help researchers quickly see what is new, how the pieces fit together, and where important gaps remain. We summarize tools for estimating changing infection or reaction rates under noisy and incomplete observations, modeling spatial spread, accounting for sudden jumps and heavy tails, and reporting uncertainty in a way that is useful for decisions. We also highlight open problems that deserve near-term attention: separating true dynamics from noise when data are irregular; learning spatial dynamics under random influences with guarantees of stability; aligning training with the numerical method used in applications; preserving positivity and conservation in all simulations; reducing cost while controlling error for large studies; estimating rare but important events; and adopting clear, comparable reporting standards. By organizing the field around these aims, the review offers a concise guide to current methods, their practical use, and the most promising directions for future work in biology and epidemiology.",
+  "year": 2026,
+  "venue": "Transactions on Computational Modeling and Intelligent Systems",
+  "authors": [
+   "Yassine Sabbar",
+   "Kottakkaran Sooppy Nisar"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W7119520497",
+  "doi": "10.65112/tcmis.10028",
+  "arxiv_id": null,
+  "paper_url": "https://tcmis.org/index.php/files/article/download/28/10",
+  "published_iso": "2026-01-07",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "锂离子电池温度状态：定义、检测与估计",
+  "title_norm": "锂离子电池温度状态 定义 检测与估计",
+  "abstract": "<p indent=\"0mm\">As an important carrier of new energy storage technology, the safety and reliability of lithium-ion batteries throughout their life cycle have attracted significant attention. These batteries are complex, temperature-sensitive electrochemical systems. With increasing energy density and broader applications, temperature changes from thermal effects greatly affect their performance. Unlike other metrics such as state of charge or health, the temperature state of the battery provides a clear indication of its internal and external working conditions, making it a crucial parameter for future intelligent battery management systems. This paper outlines four key temperature characteristics of batteries: surface temperature, core temperature, body average temperature, and temperature distribution. It also examines the applicability of temperature extremes and differences at the module level. Existing methods are classified into temperature detection and estimation, with a systematic description of the principles, advantages, and limitations of each approach. Finally, the paper discusses challenges in battery temperature management and suggests future directions.",
+  "year": 2024,
+  "venue": "Scientia Sinica Technologica",
+  "authors": [
+   "Bowen Yang",
+   "Silei Liu",
+   "Xuning Feng",
+   "Zhonghao Rao",
+   "Jizhen Liu",
+   "Weixiong Wu"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4403904022",
+  "doi": "10.1360/sst-2024-0124",
+  "arxiv_id": null,
+  "paper_url": "https://www.sciengine.com/doi/pdf/30034841C12E4E5DA0A77B83702DB58E",
+  "published_iso": "2024-09-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "From Microbial Switches to Metabolic Sensors: Rewiring the Gut–Brain Kynurenine Circuit",
+  "title_norm": "from microbial switches to metabolic sensors rewiring the gut brain kynurenine c",
+  "abstract": "The kynurenine (KYN) metabolic pathway sits at the crossroads of immunity, metabolism, and neurobiology, yet its clinical translation remains fragmented. Emerging spatial-omics, wearable chronobiology, and synthetic-microbiota studies reveal that tryptophan (Trp) metabolism is regulated by distinct cellular “checkpoints” along the gut–brain axis, finely modulated by sex differences, circadian rhythms, and microbiome composition. However, current interventions tackle single levers in isolation, leaving a key gap in precision control of Trp fate. To address this, we drew upon an extensive body of primary literature and databases, mapping enzyme expression across tissues at single-cell resolution and linking these profiles to clinical trials investigating dual indoleamine 2,3-dioxygenase (IDO1)/tryptophan 2,3-dioxygenase (TDO2) inhibitors, engineered probiotics, and chrono-modulated dosing strategies. We then developed decision-tree algorithms that rank therapeutic combinations against biomarker feedback loops derived from real-time saliva, plasma, and stool metabolomics. This synthesis pinpoints microglial and endothelial KP hotspots, quantifies sex-specific chronotherapeutic windows, and identifies engineered Bifidobacterium consortia and dual inhibitors as synergistic nodes capable of reducing immunosuppressive KYN while preserving neuroprotective kynurenic acid. Here we highlight a framework that couples lifestyle levers, bio-engineered microbes, and adaptive pharmaco-regimens into closed-loop “smart protocols.” By charting these intersections, the study offers a roadmap for biomarker-guided, multidisciplinary interventions that could recalibrate KYN metabolic activity across cancer, mood, neurodegeneration, and metabolic disorders, appealing to clinicians, bioengineers, and systems biologists alike.",
+  "year": 2025,
+  "venue": "Preprints.org",
+  "authors": [
+   "Masaru Tanaka",
+   "László Vécsei"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4411357947",
+  "doi": "10.20944/preprints202506.0880.v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.preprints.org/frontend/manuscript/f0973fdaf0dce1e2ca63a883d51fddbc/download_pub",
+  "published_iso": "2025-06-11",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Operating Mechanism Principles and Advancements for Halide Perovskite-Based Memristors and Neuromorphic Devices",
+  "title_norm": "operating mechanism principles and advancements for halide perovskite based memr",
+  "abstract": "With the advent of the generation of artificial intelligence (AI) based on big data-processing technologies, next-generation memristor and memristive neuromorphic devices have been actively studied with great interest to overcome the von Neumann bottleneck limits. Among various candidates, halide perovskites (HPs) have been in the spotlight as potential candidates for these devices due to their unique switching characteristics with low energy consumption and flexible integration compatibility across various sources for scalability. We outline the characteristics and operating principles of HP-based memristors and their neuromorphic devices. We explain filamentary- and interface-type switching according to the type of conducting pathway occurring inside the active HP layer and the operating mechanisms depending on the species that make up this conducting pathway. We summarize the types and mechanisms of current changes beneficial for neuromorphic device applications and finally organize various suggested analysis tools and physical models to enable experimental determination of switching mechanisms from various perspectives.",
+  "year": 2024,
+  "venue": "The Journal of Physical Chemistry Letters",
+  "authors": [
+   "Soyeon Kim",
+   "Heyi Zhang",
+   "Jenifer Rubio‐Magnieto"
+  ],
+  "citations": 49,
+  "source": "openalex",
+  "source_id": "W4402918282",
+  "doi": "10.1021/acs.jpclett.4c02170",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/acs.jpclett.4c02170?ref=article_openPDF",
+  "published_iso": "2024-09-27",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Cross-Disciplinary Research Gaps in Physical, Chemical, and Environmental Sciences: An Integrative Review from Nanotechnology to Wastewater Treatment, Renewable Energy, Artificial Intelligence, and Biomedical Engineering",
+  "title_norm": "cross disciplinary research gaps in physical chemical and environmental sciences",
+  "abstract": "The world of scientific development turns more and more towards solutions, connected with chemistry, physics, and the environmental science. This integrative review comprises evidence synthesis in the areas of nanotechnology and advanced materials, wastewater treatment and environmental chemistry, renewable energy and electrochemistry, photonics and sensors, artificial intelligence to science, and biomedical engineering. We chart gaps in research by recurring theme: understanding of mechanisms at interfaces and defects not yet understood, measuring and benchmarking against interoperable standards, scaling-up, manufacturing, and reliability under realistic load, data infrastructure, modeling, and uncertainty quantification, design-through-deployment sustainability, safety, and ethics. In each field, bottlenecks of limited characterization of operando operation linking nanoscale structure to device-level performance, lack of harmonized metrics that would allow cross-laboratory comparison, and the lack of validated multiscale models that would allow bridging electronic or molecular description with continuum behavior, are the most intractable. The main emerging opportunities in the field of physics-informed machine learning, closed-loop automated experimentation, and openly shared datasets with a sound metadata and provenance. Translators often have limited practice translation capacity due to weak process windows, sustained complex matrix permanence, and inadequate exposure, equity, and end-of-life route consideration. The review concludes with the cross-cutting roadmap, which underlines near-term interlaboratory studies and reference materials, medium term interoperable datasets and reliable surrogate models and long-term integrated pilot testbeds which links performance targets and techno-economic and life-cycle studies. The work will help align researchers, students, and sponsors with high-leverage problems and reproducible solutions that grow the scientific unders",
+  "year": 2025,
+  "venue": "Scholars Journal of Physics Mathematics and Statistics",
+  "authors": [
+   "Nisha Jabeen",
+   "Asima Naseem",
+   "Muhammad Sarfraz",
+   "Mohammed Murtaza",
+   "Tasawar Ali",
+   "Mahboob Ul Haq"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416341844",
+  "doi": "10.36347/sjpms.2025.v12i09.001",
+  "arxiv_id": null,
+  "paper_url": "https://saspublishers.com/article/23247/download/",
+  "published_iso": "2025-11-07",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Model order reduction techniques for the numerical multiscale simulation and analysis of lithium-ion batteries",
+  "title_norm": "model order reduction techniques for the numerical multiscale simulation and ana",
+  "abstract": "The increasing number of engineering applications relying on lithium-ion batteries as a primary energy source has greatly prompted research into improving electrochemical cell performance in recent years. A substantial amount of this improvement is driven by advancements in the development of design tools, particularly physics-based numerical models, which are often used to tackle problems such as the optimisation of cell energy storage and the extension of battery lifespans through minimisation of the effects of degradation mechanisms. However, the detailed numerical simulation of lithium-ion batteries can be extremely computationally expensive due to the multi-scale nature of the physic phenomena that take place in such devices. Moreover, the development of composite electrodes in which active materials consist in a blend of different types of particles, where some active material flakes of much smaller size are embedded in aggregates of a different kind of active material, introduce additional scales, new physical phenomena associated to the exchange kinetics between active materials, and require novel techniques for the characterisation of their transport properties. Hence, model order reduction techniques must be developed and effectively implemented in order to make these simulations feasible. While pre-processed reduced order models have been explored, they still present severe computational bottlenecks associated to the cost of generating databases of full numerical simulation results beforehand which, in the case of tackling design and optimisation tasks, must sufficiently represent the parameter space that wants to be explored. This thesis presents the use of time-adaptive reduced order modelling as an alternative approach, combining the use of full and reduced order models to offer significant simulation speed-ups without requiring any previous pre-processing stage. The particular challenges that the electrochemical problem poses, such as proper mode selection, treatment of non-linearities and error estimation, which prevent the adoption of a generic time-adaptive strategy, are effectively addressed and a robust and efficient implementation is presented. The initial development of the time-adaptive reduced order model strategy is carried out on a pseudo-two-dimensional implementation of the well known Doyle-Fuller-Newman model of an electrochemical cell, and is then extended to a pseudo-four-dimensional model including thermal and degradation effects. Furthermore, a homogenised model for a composite graphite-silicon anode half-cell is presented, combining reduction order techniques based on the simplification of the physics involved and the use of asymptotic methods. Particularly, this work introduces the derivation of asymptotic models for these types of electrodes in the context of galvanostatic intermittent titration technique simulations at low lithiation states. The accuracy of said asymptotic models in comparison to the complete numerical implementation is addressed, proposing a hybrid model-based parameter identification technique for silicon-graphite composite electrodes that could maximise the information extracted from current experimental methods. RESUMEN El creciente número de aplicaciones en ingeniería que emplean baterías de iones de litio como principal fuente de energía ha impulsado en gran medida la investigación enfocada a la mejora del rendimiento de las celdas electroquímicas en los últimos años. Parte sustancial de esta mejora se debe a los avances en el desarrollo de herramientas de diseño, particularmente modelos numéricos basados en principios físicos, que a menudo se utilizan para abordar problemas como la optimización de la capacidad de almacenamiento de energía de celdas y la extensión de la vida útil de baterías mediante la minimización de los efectos de los mecanismos de degradación. Sin embargo, la simulación numérica detallada de baterías de iones de litio puede ser extremadamente costosa computacionalmente debido a la naturaleza multi-escala de los fenómenos físicos que tienen lugar en tales dispositivos. Además, el desarrollo de electrodos compuestos en los que los materiales activos consisten en una mezcla de diferentes tipos de partículas, donde algunas escamas de material activo de mucho menor tamaño están incrustadas en agregados de un material activo distinto, introduce escalas adicionales y nuevos fenómenos físicos asociados a la cinética de intercambio entre materiales activos que requieren nuevas técnicas para la identificación de sus propiedades de transporte. Por lo tanto, resulta necesario desarrollar y aplicar eficazmente técnicas de modelado de orden reducido para hacer factible este tipo de simulaciones. Si bien se ha explorado el uso de modelos de orden reducido preprocesados, estos aún presentan severos cuellos de botella a nivel computacional, asociados principalmente al coste de generar bases de datos de resultados de simulaciones numéricas completas de antemano que, en el caso de abordar tareas de diseño y optimización, deben representar suficientemente el espacio de parámetros que se desea explorar. Esta tesis presenta el uso técnicas de modelado de orden reducido adaptativo en tiempo como enfoque alternativo, combinando el uso de modelos de orden completo y reducido para ofrecer mejoras significativas en la velocidad de simulación sin requerir ninguna etapa de preprocesamiento previa. Los desafíos particulares que plantea el problema electroquímico y que impiden la adopción de una estrategia de adaptación en tiempo genérica, como son la selección adecuada de modos, el tratamiento de las no linealidades y la estimación de errores, se abordan de manera efectiva y se presenta una implementación robusta y eficiente. El desarrollo inicial de la estrategia de modelado de orden reducido adaptativo en tiempo se ha llevado a cabo sobre una implementación pseudo-bidimensional del conocido modelo de Doyle-Fuller-Newman de una celda electroquímica, y luego se ha extendido a un modelo pseudo-tetradimensional incluyendo efectos térmicos y de degradación. Además, en esta tesis se presenta un modelo homogeneizado para una media celda con un ánodo compuesto de grafito-silicio, que combina técnicas de reducción de orden basadas en la simplificación de la física involucrada y el uso de métodos asintóticos. En particular, este trabajo introduce la derivación de modelos asintóticos para este tipo de electrodos en el contexto de simulaciones de la técnica de titulación galvanostática intermitente para bajos estados de litiación del electrodo. Se discute además la precisión de dichos modelos asintóticos en comparación con la implementación numérica completa, proponiendo una técnica de identificación de parámetros híbrida basada en modelos para electrodos compuestos de silicio-grafito que podría maximizar la información extraída de los métodos experimentales actuales.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Eduardo Jané"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4402851765",
+  "doi": "10.20868/upm.thesis.82328",
+  "arxiv_id": null,
+  "paper_url": "https://oa.upm.es/82328/1/EDUARDO_JANE_SOLER.pdf",
+  "published_iso": "2024-09-05",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "A Synergistic Physics–Data-Driven and Memory-Resident Computing Approach for Security Assessment in Modern Power Systems",
+  "title_norm": "a synergistic physics data driven and memory resident computing approach for sec",
+  "abstract": "Rapid N-1 security assessment in modern power systems faces a critical conflict between computational timeliness and the heavy reliance on labeled data for high-fidelity models. To mitigate this issue, a unified framework co-optimizing a physics-informed neural network (PINN) and memory-resident computing is proposed. At the algorithm level, power flow equation residuals are incorporated into the PINN formulation as physical regularization terms. This integration facilitates better alignment with electrical constraints and improves generalization capabilities under small-sample conditions. At the system level, a heterogeneity-aware asynchronous parallel computing architecture is developed. In this architecture, pull-based scheduling and lock-free memory mapping are utilized to mitigate straggler effects, thereby reducing synchronization latency and I/O overhead. Numerical case studies on the IEEE 39-bus system demonstrate that the physics mismatch is reduced by nearly two orders of magnitude compared to a baseline deep neural network (DNN), and the total execution time for scanning 20,000 contingencies is decreased by 34.0%.",
+  "year": 2026,
+  "venue": "Symmetry",
+  "authors": [
+   "Wen Hua",
+   "Wei Dong",
+   "Lebing Zhao",
+   "Ying Yang",
+   "Guanzhong Wang"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7128432092",
+  "doi": "10.3390/sym18020318",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2073-8994/18/2/318/pdf?version=1770650569",
+  "published_iso": "2026-02-09",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Localized Conduction Channels in Memristors",
+  "title_norm": "localized conduction channels in memristors",
+  "abstract": "Since the early 2000s, the impending end of Moore's scaling, as the physical limits to shrinking transistors have been approached, has fueled interest in improving the functionality and efficiency of integrated circuits by employing memristors or two-terminal resistive switches. Formation (or avoidance) of localized conducting channels in many memristors, often called \"filaments\", has been established as the basis for their operation. While we understand some qualitative aspects of the physical and thermodynamic origins of conduction localization, there are not yet quantitative models that allow us to predict when they will form or how large they will be. Here we compile observations and explanations of channel formation that have appeared in the literature since the 1930s, show how many of these seemingly unrelated pieces fit together, and outline what is needed to complete the puzzle. This understanding will be a necessary predictive component for the design and fabrication of post-Moore's-era electronics.",
+  "year": 2024,
+  "venue": "Chemical Reviews",
+  "authors": [
+   "Kyung Seok Woo",
+   "R. Stanley Williams",
+   "Suhas Kumar"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4405649561",
+  "doi": "10.1021/acs.chemrev.4c00454",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405649561",
+  "published_iso": "2024-12-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Physics-informed neural networks incorporating energy dissipation for the phase-field model of ferroelectric microstructure evolution",
+  "title_norm": "physics informed neural networks incorporating energy dissipation for the phase ",
+  "abstract": "Physics-informed neural networks (PINNs) are an emerging technique to solve partial differential equations (PDEs). In this work, we propose a simple but effective PINN approach for the phase-field model of ferroelectric microstructure evolution. This model is a time-dependent, nonlinear, and high-order PDE system of multi-physics, challenging to be solved using a baseline PINN. Considering that the acquisition of steady microstructures is one of the primary focuses in simulations of ferroelectric microstructure evolution, we simplify the time-dependent PDE system to be a static problem. This static problem, however, is ill-posed. To overcome this issue, a term originated from the law of energy dissipation is embedded into the loss function as an extra constraint for the PINN. With this modification, the PINN successfully predicts the steady ferroelectric microstructure without tracking the evolution process. In addition, although the proposed PINN approach cannot tackle the dynamic problem in a straightforward fashion, it is of benefit to the PINN prediction of the evolution process by providing labeled data. These data are crucial because they help the PINN avoid the propagation failure, a common failure mode of PINNs when predicting dynamic behaviors. The above mentioned advantages of the proposed PINN approach are demonstrated through a number of examples.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Lan Shang",
+   "Sizheng Zheng",
+   "Jin Wang",
+   "Jie Wang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4403555504",
+  "doi": "10.48550/arxiv.2409.02959",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2409.02959",
+  "published_iso": "2024-09-03",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Physics-Guided Neural Temperature Estimator for End-to-End Interpretable PMSM Thermal State Monitoring",
+  "title_norm": "physics guided neural temperature estimator for end to end interpretable pmsm th",
+  "abstract": "Accurate thermal monitoring is essential to avoid winding short-circuit and demagnetization in permanent magnet synchronous motors (PMSMs) fed by high-power voltagesource inverters (VSIs). Conventional physical model-based estimation methods demand in-depth knowledge (e.g., heat dissipation characteristics, VSI nonlinearity) and exhibit sensitivity to specific motor designs. While supervised machine learning (ML) approaches alternatively learn a black-box mapping from readily measurable quantities to temperature using empirical data without expert knowledge, their inherent lack of physical interpretability limits reliability, hindering industrial application. To bridge this gap, this paper proposes a physics-guided neural temperature estimator (PG-NTE) tailored for traction drive PMSMs fed by VSIs, built upon an encoder-decoder architecture for end-to-end estimation. Key physics, namely the dqaxis voltage equations, are embedded into the loss function to guide the encoder's latent space toward estimating temperaturesensitive electrical parameters, assisting the decoder in predicting temperatures. Furthermore, the physics-aware framework adopts a dynamic weighting scheme to balance composite loss constraints. Experimental validation on a PMSM demonstrates desirable estimation accuracy and strong physical consistency, proving its effectiveness and interpretability.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Dehui Luo",
+   "Xinghao Wang",
+   "Dianxun Xiao"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7118070993",
+  "doi": "10.36227/techrxiv.176740431.16016733/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176740431.16016733/v1",
+  "published_iso": "2026-01-03",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Machine Learning-Assisted Device Circuit Co-Optimization: A Case Study on Inverter",
+  "title_norm": "machine learning assisted device circuit co optimization a case study on inverte",
+  "abstract": "This study demonstrates a machine learning (ML)-assisted device circuit co-optimization technique. A basic CMOS inverter cell is employed to demonstrate this proof of concept. The voltage transfer and the switching characteristics are examined to observe the on- and off-state behavior while applying two short square pulses of 140 ns and 100 ps, respectively. By applying the proposed ML-based optimization method using the actor and critic neural networks, the mixed-mode simulation [i.e., technology computer-aided design (TCAD) and SPICE] outputs toward the desired behavior of the circuit, and parameters, including area factor, doping concentration, capacitance value, and width and length of the device, are optimized. Compared with the manual design case, the co-optimized design surpasses several figures of merit (FoMs), such as propagation delay and overshoot, which pave the way for future research on more complex circuit design challenges.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Electron Devices",
+  "authors": [
+   "Liyuan Xue",
+   "Ankit Dixit",
+   "Naveen Kumar",
+   "Vihar Georgiev",
+   "Bo Liu"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4403511649",
+  "doi": "10.1109/ted.2024.3476231",
+  "arxiv_id": null,
+  "paper_url": "https://eprints.gla.ac.uk/337933/2/337933.pdf",
+  "published_iso": "2024-10-17",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Flexible TiO2-WO3−x hybrid memristor with enhanced linearity and synaptic plasticity for precise weight tuning in neuromorphic computing",
+  "title_norm": "flexible tio2 wo3 x hybrid memristor with enhanced linearity and synaptic plasti",
+  "abstract": "Tungsten oxide (WO 3 )-based memristors show promising applications in neuromorphic computing. However, single-layer WO 3 memristors suffer from issues such as weak memory performance and nonlinear conductance variations. In this work, a functional layer based on the hybrids of WO 3−x and TiO 2 is proposed for constructing flexible memristors featuring outstanding synaptic characteristics. Applying diverse electrical stimulations to the memristor enables a range of synaptic functions, elucidating its conduction mechanism through the conductive filament model. The incorporation of TiO 2 not only enhances the memristor’s memory characteristics but makes its conductance more linear, symmetrical and uniform during the long-term changes. Furthermore, in view of the enhanced device performance by TiO 2 doping, the potential of this device for simple behavioral simulation and processing of complex computing problems is explored. The “learning-forgetting-relearning” characteristics and device integrability are visually demonstrated. Applying the device to a convolutional neural network, the recognition accuracy of MNIST handwritten digits reaches 98.7%.",
+  "year": 2024,
+  "venue": "npj Flexible Electronics",
+  "authors": [
+   "Jianyong Pan",
+   "Hao Kan",
+   "Zhaorui Liu",
+   "Song Gao",
+   "Enxiu Wu",
+   "Yang Li"
+  ],
+  "citations": 42,
+  "source": "openalex",
+  "source_id": "W4403632046",
+  "doi": "10.1038/s41528-024-00356-6",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41528-024-00356-6.pdf",
+  "published_iso": "2024-10-22",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Solving BDNK diffusion using physics-informed neural networks",
+  "title_norm": "solving bdnk diffusion using physics informed neural networks",
+  "abstract": "In this work, we reformulate the relativistic BDNK (Bemfica-Disconzi-Noronha-Kovtun) diffusion equation in flux-conservative form, and solve the resulting equations in $(1+1)$D using both a second-order Kurganov-Tadmor finite volume scheme and physics-informed neural networks (PINNs). In particular, we introduce the SA-PINN-ACTO framework, which combines the self-adaptive PINN technique with an exact enforcement of initial and periodic boundary conditions through an algebraic transform of the network's raw output, allowing the network to focus solely on minimizing the PDE residual. We test both approaches on smooth and discontinuous initial data, for both trivial and dynamically evolving velocity and temperature BDNK backgrounds, and for two characteristic speeds. The SA-PINN-ACTO method matches the converged Kurganov-Tadmor solutions for smooth profiles, while for discontinuous profiles the errors increase, reflecting an expected limitation of PINNs near sharp gradients.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Vicente Chomalí-Castro",
+   "Nick Clarisse",
+   "Nicki Mullins",
+   "Jorge Noronha"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7130617539",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2602.16117",
+  "published_iso": "2026-02-18",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "A review on mitigating thermal runaway propagation in battery packs: from mechanisms to modeling and design optimization",
+  "title_norm": "a review on mitigating thermal runaway propagation in battery packs from mechani",
+  "abstract": "We unify mechanisms, modelling and optimization to mitigate thermal runaway propagation in next-generation high-energy lithium-ion packs.",
+  "year": 2026,
+  "venue": "Energy Advances",
+  "authors": [
+   "Yiyue Jiang",
+   "Yuan Jiang",
+   "Pingfeng Wang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7160398056",
+  "doi": "10.1039/d5ya00351b",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.rsc.org/en/content/articlepdf/2026/ya/d5ya00351b",
+  "published_iso": "2026-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Magnetic Barkhausen Noise Sensor: A Comprehensive Review of Recent Advances in Non-Destructive Testing and Material Characterization",
+  "title_norm": "magnetic barkhausen noise sensor a comprehensive review of recent advances in no",
+  "abstract": "Magnetic Barkhausen noise (MBN) represents a powerful non-destructive testing and material characterization methodology enabling quantitative assessment of microstructural features, mechanical properties, and stress states in ferromagnetic materials. This comprehensive review synthesizes recent advances spanning theoretical foundations, sensor design, signal processing methodologies, and industrial applications. The physical basis rooted in domain wall dynamics and statistical mechanics provides rigorous frameworks for interpreting MBN signals in terms of grain structure, dislocation density, phase composition, and residual stress. Contemporary instrumentation innovations including miniaturized sensors, multi-parameter systems, and high-entropy alloy cores enable measurements in challenging environments. Advanced signal processing techniques-encompassing time-domain analysis, frequency-domain spectral methods, time-frequency transforms, and machine learning algorithms-extract comprehensive material information from raw Barkhausen signals. Deep learning approaches demonstrate superior performance for automated material classification and property prediction compared to traditional statistical methods. Industrial applications span manufacturing quality control, structural health monitoring, railway infrastructure assessment, and predictive maintenance strategies. Key achievements include establishing quantitative correlations between material properties and stress states, with measurement uncertainties of ±15-20 MPa for stress and ±20 HV for hardness. Emerging challenges include standardization imperatives, characterization of advanced materials, machine learning robustness, and autonomous system integration. Future developments prioritizing international standards, physics-informed neural networks, multimodal sensor fusion, and wireless monitoring networks will accelerate industrial adoption supporting safe, efficient engineering practice across diverse sectors.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Polyxeni Vourna",
+   "Pinelopi P. Falara",
+   "Aphrodite Ktena",
+   "Evangelos Hristoforou",
+   "Nikolaos D. Papadopoulos"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W7117740234",
+  "doi": "10.3390/s26010258",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/26/1/258/pdf?version=1767187659",
+  "published_iso": "2025-12-31",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Mott Memristors for Neuromorphics",
+  "title_norm": "mott memristors for neuromorphics",
+  "abstract": "Abstract Neuromorphic computing has emerged as a key solution for overcoming the challenge of von Neumann bottleneck, offering a pathway to more efficient and biologically inspired computing systems. A crucial advancement in this field is the utilization of Mott insulators, where the metal‐insulator transition (MIT) elicits substantial alterations in material properties, infusing renewed vigor into the progression of neuromorphic systems. This review begins by explaining the MIT mechanisms and the preparation processes of Mott insulators, followed by an introduction of Mott memristors and memristor arrays, showing different types of multidimensional integration styles. The applications of Mott memristor in neuromorphic computing are then discussed, which include artificial synapse designs and various artificial neuron architectures for sensory recognition and logic calculation. Finally, facing challenges and potential future directions are outlined for utilizing Mott memristors in the advancement of neuromorphic computing. This review aims to provide a thorough understanding of the latest advancements in Mott memristors and their applications, offering a comprehensive reference for further research in related areas, and contributing to bridging the gap between traditional silicon‐based electronics and future brain‐inspired architectures.",
+  "year": 2024,
+  "venue": "Advanced Physics Research",
+  "authors": [
+   "Zherui Zhao",
+   "Wanhong Luan",
+   "Yongbiao Zhai",
+   "Ziyu Lv",
+   "Meng Zhang",
+   "Yan Yan"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4403830314",
+  "doi": "10.1002/apxr.202400129",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/apxr.202400129",
+  "published_iso": "2024-10-28",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Overview of Monitoring, Diagnostics, Aging Analysis, and Maintenance Strategies in High-Voltage AC/DC XLPE Cable Systems",
+  "title_norm": "overview of monitoring diagnostics aging analysis and maintenance strategies in ",
+  "abstract": "High-voltage (HV) cable systems-particularly those insulated with cross-linked polyethylene (XLPE)-are increasingly deployed in both AC and DC applications due to their excellent electrical and mechanical performance. However, their long-term reliability is challenged by partial discharges (PD), insulation aging, space charge accumulation, and thermal and electrical stresses. This review provides a comprehensive survey of the state-of-the-art technologies and methodologies across several domains critical to the assessment and enhancement of cable reliability. It covers advanced condition monitoring (CM) techniques, including sensor-based PD detection, signal acquisition, and denoising methods. Aging mechanisms under various stressors and lifetime estimation approaches are analyzed, along with fault detection and localization strategies using time-domain, frequency-domain, and hybrid methods. Physics-based and data-driven models for PD behavior and space charge dynamics are discussed, particularly under DC conditions. The article also reviews the application of numerical tools such as FEM for thermal and field stress analysis. A dedicated focus is given to machine learning (ML) and deep learning (DL) models for fault classification and predictive maintenance. Furthermore, standards, testing protocols, and practical issues in sensor deployment and calibration are summarized. The review concludes by evaluating intelligent maintenance approaches-including condition-based and predictive strategies-framed within real-world asset management contexts. The paper aims to bridge theoretical developments with field-level implementation challenges, offering a roadmap for future research and practical deployment in resilient and smart power grids. This review highlights a clear gap in fully integrated AC/DC diagnostic and aging analyses for XLPE cables. We emphasize the need for unified physics-based and ML-driven frameworks to address HVDC space-charge effects and multi-stress degradation. These insights provide concise guidance for advancing reliable and scalable cable assessment.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Kazem Emdadi",
+   "Majid Gandomkar",
+   "Ali Aranizadeh",
+   "Behrooz Vahidi",
+   "Mirpouya Mirmozaffari"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4416422341",
+  "doi": "10.3390/s25227096",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/22/7096/pdf?version=1763650466",
+  "published_iso": "2025-11-20",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Review of Memristors for In‐Memory Computing and Spiking Neural Networks",
+  "title_norm": "review of memristors for in memory computing and spiking neural networks",
+  "abstract": "The convergence of in‐memory computing (IMC) and neuromorphic architectures offers a promising path toward energy‐efficient, scalable artificial intelligence, particularly for edge and real‐time applications. Memristors, resistive devices with nonvolatile, analog switching, uniquely enable this convergence by serving both as computational memory units for matrix‐vector multiplication and as synaptic elements for spike‐based learning. This review comprehensively explores the physical mechanisms, material classes, and integration strategies of memristors tailored for IMC and spiking neural networks, with emphasis on their implementation in crossbar arrays, synapse‐neuron emulation, and hybrid CMOS circuits. It discusses how memristors facilitate key biological learning rules like STDP and LTP/LTD and examine their deployment in edge artificial intelligence, adaptive robotics, and neuromorphic sensors. Despite their potential, device variability, noise, relaxation, scalability limits, and standardization remain pressing challenges. By synthesizing device‐level insights with architectural innovation and emerging applications, this work outlines a roadmap toward fully integrated, low‐power, and brain‐inspired computing systems.",
+  "year": 2025,
+  "venue": "Advanced Intelligent Systems",
+  "authors": [
+   "Mostafa Shooshtari",
+   "Teresa Serrano‐Gotarredona",
+   "Bernabé Linares‐Barranco"
+  ],
+  "citations": 27,
+  "source": "openalex",
+  "source_id": "W7108321963",
+  "doi": "10.1002/aisy.202500806",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aisy.202500806",
+  "published_iso": "2025-12-02",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Real-Time Digital Twins for Intelligent Fault Diagnosis and Condition-Based Monitoring of Electrical Machines",
+  "title_norm": "real time digital twins for intelligent fault diagnosis and condition based moni",
+  "abstract": "This article presents an overview of selected research focusing on digital real-time simulation (DRTS) in the context of digital twin (DT) realization with the primary aim of enabling the intelligent fault diagnosis (FD) and condition-based monitoring (CBM) of electrical machines. The concept of standalone DTs in conventional multiphysics digital offline simulations (DoSs) is widely utilized during the conceptualization and development phases of electrical machine manufacturing and processing, particularly for virtual testing under both standard and extreme operating conditions, as well as for aging assessments and lifecycle analysis. Recent advancements in data communication and information technologies, including virtual reality, cloud computing, parallel processing, machine learning, big data, and the Internet of Things (IoT), have facilitated the creation of real-time DTs based on physics-based (PHYB), circuit-oriented lumped-parameter (COLP), and data-driven approaches, as well as physics-informed machine learning (PIML), which is a combination of these models. These models are distinguished by their ability to enable real-time bidirectional data exchange with physical electrical machines. This article proposes a predictive-level framework with a particular emphasis on real-time multiphysics modeling to enhance the efficiency of the FD and CBM of electrical machines, which play a crucial role in various industrial applications.",
+  "year": 2025,
+  "venue": "Energies",
+  "authors": [
+   "Shahin Hedayati Kia",
+   "Larisa Dunai",
+   "Jose A. Antonino‐Daviu",
+   "Hubert Razik"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4413908572",
+  "doi": "10.3390/en18174637",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1996-1073/18/17/4637/pdf?version=1756808405",
+  "published_iso": "2025-08-31",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "High-Entropy Oxide Memristors for Neuromorphic Computing: From Material Engineering to Functional Integration",
+  "title_norm": "high entropy oxide memristors for neuromorphic computing from material engineeri",
+  "abstract": "High-entropy oxides (HEOs) have emerged as a promising class of memristive materials, characterized by entropy-stabilized crystal structures, multivalent cation coordination, and tunable defect landscapes. These intrinsic features enable forming-free resistive switching, multilevel conductance modulation, and synaptic plasticity, making HEOs attractive for neuromorphic computing. This review outlines recent progress in HEO-based memristors across materials engineering, switching mechanisms, and synaptic emulation. Particular attention is given to vacancy migration, phase transitions, and valence-state dynamics-mechanisms that underlie the switching behaviors observed in both amorphous and crystalline systems. Their relevance to neuromorphic functions such as short-term plasticity and spike-timing-dependent learning is also examined. While encouraging results have been achieved at the device level, challenges remain in conductance precision, variability control, and scalable integration. Addressing these demands a concerted effort across materials design, interface optimization, and task-aware modeling. With such integration, HEO memristors offer a compelling pathway toward energy-efficient and adaptable brain-inspired electronics.",
+  "year": 2025,
+  "venue": "Nano-Micro Letters",
+  "authors": [
+   "Jiali Yang",
+   "Xin-Gui Tang",
+   "Xuan Gu",
+   "Qi‐Jun Sun",
+   "Zhenhua Tang",
+   "Wenhua Li"
+  ],
+  "citations": 33,
+  "source": "openalex",
+  "source_id": "W4413484867",
+  "doi": "10.1007/s40820-025-01891-1",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s40820-025-01891-1.pdf",
+  "published_iso": "2025-08-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Recent advances in machine learning and coarse-grained potentials for biomolecular simulations",
+  "title_norm": "recent advances in machine learning and coarse grained potentials for biomolecul",
+  "abstract": "Biomolecular simulations played a crucial role in advancing our understanding of the complex dynamics in biological systems with applications ranging from drug discovery to the molecular characterization of virus-host interactions. Despite their success, biomolecular simulations face inherent challenges due to the multiscale nature of biological processes, which involve intricate interactions across a wide range of length scales and timescales. All-atom (AA) molecular dynamics provides detailed insights at atomistic resolution, yet it remains limited by computational constraints, capturing only short timescales and small conformational changes. In contrast, coarse-grained (CG) models extend simulations to biologically relevant time and length scales by reducing molecular complexity. However, CG models sacrifice atomic-level accuracy, making the parameterization of reliable and transferable potentials a persistent challenge. This review discusses recent advancements in machine learning (ML)-driven biomolecular simulations, including the development of ML potentials with quantum-mechanical accuracy, ML-assisted backmapping strategies from CG to AA resolutions, and widely used CG potentials. By integrating ML and CG approaches, researchers can enhance simulation accuracy while extending time and length scales, overcoming key limitations in the study of biomolecular systems.",
+  "year": 2025,
+  "venue": "Biophysical Journal",
+  "authors": [
+   "Adolfo B. Poma",
+   "Alejandra Hinostroza Caldas",
+   "Luis Fernando Cofas‐Vargas",
+   "Michael S. Jones",
+   "Andrew L. Ferguson",
+   "Leonardo Medrano Sandonas"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4411488835",
+  "doi": "10.1016/j.bpj.2025.06.019",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4411488835",
+  "published_iso": "2025-06-20",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Energy-Efficient Integrated Electro-Optic Memristors",
+  "title_norm": "energy efficient integrated electro optic memristors",
+  "abstract": "Neuromorphic photonic processors are redefining the boundaries of classical computing by enabling high-speed multidimensional information processing within the memory. Memristors, the backbone of neuromorphic processors, retain their state after programming without static power consumption. Among them, electro-optic memristors are of great interest, as they enable dual electrical-optical functionality that bridges the efficiency of electronics and the bandwidth of photonics. However, efficient, scalable, and CMOS-compatible implementations of electro-optic memristors are still lacking. Here, we devise electro-optic memristors by structuring the phase-change material as a nanoscale constriction, geometrically confining the electrically generated heat profile to overlap with the optical field, thus achieving programmability and readability in both the electrical and optical domains. We demonstrate sub-10 pJ electrical switching energy and a high electro-optical modulation efficiency of 0.15 nJ/dB. Our work opens up opportunities for high-performance and energy-efficient integrated electro-optic neuromorphic computing.",
+  "year": 2024,
+  "venue": "Nano Letters",
+  "authors": [
+   "Yuhan He",
+   "Nikolaos Farmakidis",
+   "Samarth Aggarwal",
+   "Bowei Dong",
+   "June Sang Lee",
+   "Mengyun Wang"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4405288867",
+  "doi": "10.1021/acs.nanolett.4c04567",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/acs.nanolett.4c04567?ref=article_openPDF",
+  "published_iso": "2024-12-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Roadmap for Molecular Benchmarks in Nonadiabatic Dynamics",
+  "title_norm": "roadmap for molecular benchmarks in nonadiabatic dynamics",
+  "abstract": ", was held in May 2024 to address this issue. This Perspective highlights the key challenges identified during the workshop in defining molecular benchmarks for nonadiabatic dynamics. Specifically, this work outlines some preliminary observations on essential components needed for simulations and proposes a roadmap aiming to establish, as an ultimate goal, a community-driven, standardized molecular benchmark set.",
+  "year": 2025,
+  "venue": "The Journal of Physical Chemistry A",
+  "authors": [
+   "Léon L. E. Cigrang",
+   "Basile F. E. Curchod",
+   "Rebecca A. Ingle",
+   "Aaron Kelly",
+   "Jonathan R. Mannouch",
+   "Davide Accomasso"
+  ],
+  "citations": 37,
+  "source": "openalex",
+  "source_id": "W4412440580",
+  "doi": "10.1021/acs.jpca.5c02171",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4412440580",
+  "published_iso": "2025-07-15",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Multilevel Optical Storage, Dynamic Light Modulation, and Polarization Control in Filamented Memristor System",
+  "title_norm": "multilevel optical storage dynamic light modulation and polarization control in ",
+  "abstract": "The electrochemical metallization (ECM) mechanism is emerging as a promising approach for the development of optical memristors-nonvolatile memory systems proposed for use as artificial synapses in neuromorphic computing applications. ECM memristors offer exceptional operating dynamics and power efficiency compared to other systems, but challenges with reproducible cycle-to-cycle state switching and the absence of advanced optical functionalities hinder their integration into photonic systems. In this work, an ECM free-standing memristor structure is proposed, which simultaneously offers wavelength-dependent multilevel nonvolatile optical storage, volatile light modulation, and dynamic polarization control. It is demonstrated that in the presence of a resonance, the optical readout provides noise-free, robust, and significantly more accurate information about the memristor's state than electrical measurement. The use of light allows to gain insight into the intermediate electrical levels of the device as it transitions between high and low resistance states and to recover the complete record of applied voltages even when stochastic filament ruptures occur. Finally, the investigations show that spectroscopic ellipsometry provides real-time information on the dynamics of cation movement and the corresponding permittivity changes at the interfaces between the switching layer and the electrodes, thus becoming a complementary characterization method for ECM memristors alongside state-of-the-art techniques.",
+  "year": 2024,
+  "venue": "Advanced Materials",
+  "authors": [
+   "Alexander Korneluk",
+   "Tomasz Stefaniuk"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4404544681",
+  "doi": "10.1002/adma.202411186",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202411186",
+  "published_iso": "2024-11-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Deep Learning Reaction Framework (DLRN) for kinetic modeling of time-resolved data",
+  "title_norm": "deep learning reaction framework dlrn for kinetic modeling of time resolved data",
+  "abstract": "Model-based analysis is essential for extracting information about chemical reaction kinetics in full detail from time-resolved data sets. This approach combines experimental hypotheses with mathematical and physical models, enabling a concise description of complex system dynamics and the extraction of kinetic parameters like kinetic pathways, time constants, and species amplitudes. However, building the final kinetic model requires several intermediate steps, including testing various assumptions and models across multiple experiments. In complex cases, some intermediate states may be unknown and are often simplified. This approach requires expertise in modeling and data comprehension, as poor decisions at any stage during data analysis can lead to an incorrect kinetic model, resulting in inaccurate results. Here, we introduce DLRN, a new deep learning-based framework, designed to rapidly provide a kinetic reaction network, time constants, and amplitude for the system, with comparable performance and, in part, even better than a classical fitting analysis. We demonstrate DLRN's utility in analyzing multiple timescales datasets with complex kinetics, different 2D systems such as time-resolved spectra and agarose gel electrophoresis data, experimental datasets as nitrogen vacancy and strand displacement circuit (using photoluminescence and transient absorption techniques), even in scenarios where the initial state is a hidden, non-emitting dark state.",
+  "year": 2025,
+  "venue": "Communications Chemistry",
+  "authors": [
+   "Nicolò Alagna",
+   "Brigitta Dúzs",
+   "Vincent Dietrich",
+   "Ali Tayefeh Younesi",
+   "Livia Lehmann",
+   "Ronald Ulbricht"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4410395903",
+  "doi": "10.1038/s42004-025-01541-y",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s42004-025-01541-y.pdf",
+  "published_iso": "2025-05-15",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Investigating the effect of electrical and thermal transport properties on oxide-based memristors performance and reliability",
+  "title_norm": "investigating the effect of electrical and thermal transport properties on oxide",
+  "abstract": "Achieving reliable resistive switching in oxide-based memristive devices requires precise control over conductive filament (CF) formation and behavior, yet the fundamental relationship between oxide material properties and switching uniformity remains incompletely understood. Here, we develop a comprehensive physical model to investigate how electrical and thermal conductivities influence CF dynamics in TaOx-based memristors. Our simulations reveal that higher electrical conductivity promotes oxygen vacancy generation and reduces forming voltage, while higher thermal conductivity enhances heat dissipation, leading to increased forming voltage. The uniformity of resistive switching is strongly dependent on the interplay between these transport properties. We identify two distinct pathways for achieving optimal High Resistance State (HRS) uniformity with standard deviation-to-mean ratios ( $$\\bar {\\sigma }/\\bar {\\mu }$$ ) as low as 0.045, each governed by different balances of electrical and thermal transport mechanisms. For the Low Resistance State (LRS), high uniformity ( $$\\bar {\\sigma }/\\bar {\\mu }$$ ≈ 0.009) can be maintained when either electrical or thermal conductivity is low. The resistance ratio between HRS and LRS shows a strong dependence on these conductivities, with higher ratios observed at lower conductivity values. These findings provide essential guidelines for material selection in RRAM devices, particularly for applications demanding high reliability and uniform switching characteristics.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Armin Gooran-Shoorakchaly",
+   "Safura Sharifi",
+   "Yaser Mike Banad"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W4410828447",
+  "doi": "10.1038/s41598-025-02909-9",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-02909-9.pdf",
+  "published_iso": "2025-05-28",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Protein Catalysis Through Structural Dynamics: A Comprehensive Analysis of Energy Conversion in Enzymatic Systems and Its Computational Limitations",
+  "title_norm": "protein catalysis through structural dynamics a comprehensive analysis of energy",
+  "abstract": "This review investigates the novel idea that proteins catalyze chemical reactions through conformational changes driven by energy derived from their collisions with water molecules. Recent studies have suggested that proteins in solution undergo constant deformation due to collisions with water molecules, generating potential energy that can be harnessed for catalytic functions. We detail the existing evidence supporting this idea, including how structures in proteins such as α-helices and β-sheets facilitate energy conversion, how conformational changes can affect the ways in which substrates attach, and how reactions occur. Combining information from computer-based methods-such as molecular dynamics simulations and machine learning models (e.g., AlphaFold)-we suggest a more complete model for understanding how proteins function beyond simply looking at their fixed shapes. This emerging view has implications for drug design, enzyme engineering, and our fundamental understanding of biological catalysis.",
+  "year": 2025,
+  "venue": "Pharmaceuticals",
+  "authors": [
+   "Sarfaraz K. Niazi"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4411582383",
+  "doi": "10.3390/ph18070951",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8247/18/7/951/pdf?version=1750767070",
+  "published_iso": "2025-06-24",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Lead-free halide perovskite memristors for scalable crossbar arrays",
+  "title_norm": "lead free halide perovskite memristors for scalable crossbar arrays",
+  "abstract": "Lead-free halide-perovskite memristors have advanced rapidly from initial proof-of-concept junctions to centimeter-scale selector-free crossbar arrays, maintaining full compatibility with CMOS backend processes. In these highly interconnected matrices, surface passivation, strain-relief interfaces, and non-toxic B-site substitutions successfully reduce sneak currents and stabilize resistance states. The Introduction section lays out the structural and functional basis, detailing phase behavior, bandgap tunability, and tolerance-factor-guided crystal design within Ruddlesden-Popper, Dion-Jacobson, vacancy-ordered, and double-perovskite frameworks, each of which is evaluated for its ability to confine filaments and reduce crosstalk in crossbar configurations. The following sections examine the characteristics of charge transport and the dynamics of ion migration, followed by a detailed outline of chemical and mechanical stabilization strategies in response to the high current densities and heat fluxes typical of large-area crossbars. The comparison of solution, vapor, and solid-state synthesis routes focuses on aspects such as film uniformity, grain-boundary control, and compatibility with flexible or heterogeneous substrates, all evaluated against the demanding uniformity requirements of multilevel crossbar programming. The principles of resistive switching and array architecture are elaborated upon, emphasizing the three-dimensional (3D) stacking of selector-integrated vertical nanowires and hybrid photonic-memristive layers as promising approaches to enhance bandwidth and reduce energy consumption per operation. By integrating sustainable chemistry with scalable crossbar engineering, these memories are set to provide ultra-dense, energy-efficient hardware that meets the performance demands of contemporary artificial intelligence accelerators while adhering to new regulations on hazardous materials in electronic devices.",
+  "year": 2025,
+  "venue": "Nano Convergence",
+  "authors": [
+   "Do Yeon Heo",
+   "Hyojung Kim"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4413607988",
+  "doi": "10.1186/s40580-025-00507-z",
+  "arxiv_id": null,
+  "paper_url": "https://nanoconvergencejournal.springeropen.com/counter/pdf/10.1186/s40580-025-00507-z",
+  "published_iso": "2025-08-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Toward Data-Driven Predictive Modeling of Electrocatalyst Stability and Surface Reconstruction",
+  "title_norm": "toward data driven predictive modeling of electrocatalyst stability and surface ",
+  "abstract": "Catalyst dissolution and surface restructuring are ubiquitous in electrocatalysis, often leading to formidable activity–stability trade-offs and obscure electrochemically-induced surface species that severely hinder the understanding and optimization of electrocatalysts under diverse harsh operating conditions. As even state-of-the-art characterization techniques lack the resolution and efficiency for the unambiguous elucidation of decomposition kinetics and reconstruction dynamics at electrocatalytic interfaces, many atomistic modeling approaches—following the recent advances in physics-driven machine learning—have been widely used to facilitate the atom-by-atom understanding and rational engineering of electrocatalyst stability and dynamics. This Perspective systematically assesses classical and data-driven approaches in theoretical surface science and computational catalysis, recognizing their achievements and highlighting their limitations in throughput, efficiency, accuracy, bias, transferability, and scalability toward enabling realistic and predictive modeling of electrocatalyst degradation and reconstruction. By examining different methods spanning first-principles simulations, surface sampling, neural network interatomic potentials, and generative deep learning models, it is underscored how such data-driven computational techniques help elucidate the precise nature of various key interfacial atomistic processes to address existing technical challenges in surface modeling and provide a new paradigm to optimize dissolution kinetics and restructuring dynamics for electrocatalyst design.",
+  "year": 2025,
+  "venue": "ChemRxiv",
+  "authors": [
+   "Jiayu Peng"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4410785598",
+  "doi": "10.26434/chemrxiv-2025-12mdb-v2",
+  "arxiv_id": null,
+  "paper_url": "https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/682fc6673ba0887c335ad212/original/toward-data-driven-predictive-modeling-of-electrocatalyst-stability-and-surface-reconstruction.pdf",
+  "published_iso": "2025-05-27",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Simultaneous achieving negative photoconductivity response and volatile resistive switching in Cs2CoCl4 single crystals towards artificial optoelectronic synapse",
+  "title_norm": "simultaneous achieving negative photoconductivity response and volatile resistiv",
+  "abstract": "Abstract The development of negative photoconductivity (NPC)-related devices is of great significance for numerous applications, such as optoelectronic detection, neuromorphic computing, and optoelectronic synapses. Here, an unusual but interesting NPC phenomenon in the novel cesium cobalt chlorine (Cs 2 CoCl 4 ) single crystal-based optoelectronic devices is reported, which simultaneously possess volatile resistive switching (RS) memory behavior. Joint experiment−theory characterizations reveal that the NPC behavior is derived from the intrinsic vacancy defects of Cs 2 CoCl 4 , which could trap photogenerated charge carriers and produce an internal electric field opposite to the applied electric field. Such NPC effect enables an abnormal photodetection performance with a decrease in electrical conductivity to illumination. Also, a large specific detectivity of 2.7 × 10 12 Jones and broadband NPC detection wavelength from 265 to 780 nm were achieved. In addition to the NPC response, the resulting devices demonstrate a volatile RS performance with a record-low electric field of 5 × 10 4 V m −1 . By integrating the characteristics of electric-pulse enhancement from RS and light-pulse depression from NPC, an artificial optoelectronic synapse was successfully demonstrated, and based on the simulation of artificial neural network algorithm, the recognition application of handwritten digital images was realized. These pioneer findings are anticipated to contribute significantly to the practical advancement of metal halides in the fields of in-memory technologies and artificial intelligence.",
+  "year": 2024,
+  "venue": "Light Science & Applications",
+  "authors": [
+   "Huifang Jiang",
+   "Huifang Ji",
+   "Zhuangzhuang Ma",
+   "Dongwen Yang",
+   "Jingli Ma",
+   "Mengyao Zhang"
+  ],
+  "citations": 59,
+  "source": "openalex",
+  "source_id": "W4404902101",
+  "doi": "10.1038/s41377-024-01642-8",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41377-024-01642-8.pdf",
+  "published_iso": "2024-12-02",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Visualization of High-Intensity Laser–Matter Interactions in Virtual Reality and Web Browser",
+  "title_norm": "visualization of high intensity laser matter interactions in virtual reality and",
+  "abstract": "We present the Virtual Beamline (VBL) application, an interactive web-based platform for visualizing high-intensity laser–matter interactions using particle-in-cell (PIC) simulations, with future potential for experimental data visualization. These interactions include ion acceleration, electron acceleration, γ-flash generation, electron–positron pair production, and attosecond and spiral pulse generation. Developed at the ELI Beamlines facility, VBL integrates a custom-built WebGL engine with WebXR-based Virtual Reality (VR) support, allowing users to explore complex plasma dynamics in non-VR mode on a computer screen or in fully immersive VR mode using a head-mounted display. The application runs directly in a standard web browser, ensuring broad accessibility. VBL enhances the visualization of PIC simulations by efficiently processing and rendering four main data types: point particles, 1D lines, 2D textures, and 3D volumes. By utilizing interactive 3D visualization, it overcomes the limitations of traditional 2D representations, offering enhanced spatial understanding and real-time manipulation of visualization parameters such as time steps, data layers, and colormaps. Users can interactively explore the visualized data by moving their body or using a controller for navigation, zooming, and rotation. These interactive capabilities improve data exploration and interpretation, making VBL a valuable tool for both scientific analysis and educational outreach. The visualizations are hosted online and freely accessible on our server, providing researchers, the general public, and broader audiences with an interactive tool to explore complex plasma physics simulations. By offering an intuitive and dynamic approach to large-scale datasets, VBL enhances both scientific research and knowledge dissemination in high-intensity laser–matter physics.",
+  "year": 2025,
+  "venue": "Photonics",
+  "authors": [
+   "Martin Matys",
+   "James P. Thistlewood",
+   "Mariana Kecová",
+   "Petr Valenta",
+   "M. Žáková",
+   "Martin Jirka"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4409964856",
+  "doi": "10.3390/photonics12050436",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2304-6732/12/5/436/pdf?version=1746005863",
+  "published_iso": "2025-04-30",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Defect-engineered monolayer MoS2 with enhanced memristive and synaptic functionality for neuromorphic computing",
+  "title_norm": "defect engineered monolayer mos2 with enhanced memristive and synaptic functiona",
+  "abstract": "Two-dimensional transition metal dichalcogenides (TMDs)-based memristors are promising candidates for realizing artificial synapses in next-generation computing. However, practical implementation faces several challenges, such as high non-linearity and asymmetry in synaptic weight updates, limited dynamic range, and cycle-to-cycle variability. Here, utilizing optimal-power argon plasma treatment, we significantly enhance the performance matrix of memristors fabricated from monolayer MoS2. Our approach not only improves linearity and symmetry in synaptic weight updates but also increases the number of available synaptic weight updates and enhances Spike-Time Dependent Plasticity. Notably, it broadens the switching ratio by two orders, minimizes cycle-to-cycle variability, reduces non-linear factors, and achieves an energy consumption of ~30 fJ per synaptic event. Implementation of these enhancements is demonstrated through Artificial Neural Network simulations, yielding a learning accuracy of ~97% on the MNIST hand-written digits dataset. Our findings underscore the significance of defect engineering as a powerful tool in advancing the synaptic functionality of memristors. Memristors based on 2D materials are promising candidates for realizing artificial synapses in next-generation computing. Here, utilizing optimal-power argon plasma treatment, the authors enhance the performance of memristors fabricated from monolayer MoS2, reducing non-linearity and asymmetry in synaptic weight updates and minimizing cycle-to-cycle variability.",
+  "year": 2024,
+  "venue": "Communications Materials",
+  "authors": [
+   "Manisha Rajput",
+   "Sameer Kumar Mallik",
+   "Sagnik Chatterjee",
+   "Ashutosh Kumar Shukla",
+   "Sooyeon Hwang",
+   "Satyaprakash Sahoo"
+  ],
+  "citations": 38,
+  "source": "openalex",
+  "source_id": "W4402704272",
+  "doi": "10.1038/s43246-024-00632-y",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s43246-024-00632-y.pdf",
+  "published_iso": "2024-09-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "A Streamlined Test-Oriented Lifetime Assessment Framework for Automotive Power Electronics Converters",
+  "title_norm": "a streamlined test oriented lifetime assessment framework for automotive power e",
+  "abstract": "Automotive power electronics are critical components in electric vehicles (xEVs), forming the backbone of the powertrain, where their performance and durability directly impact overall vehicle reliability. Current state-of-the-art lifetime testing and modeling methods for Power Electronics Converter (PEC)s rely on extensive experimental testing and/or high-fidelity physics-based models to assess degradation over the vehicle's lifetime, which is both resource-intensive and time-consuming. Consequently, there is increasing demand from automotive Original Equipment Manufacturers (OEM)s to incorporate reliability and lifetime evaluation in the early design phases of PECs, such as DC/DC converters and power inverters, prior to entering series production. To address this challenge, this paper proposes a streamlined methodology for testing, modeling, and lifetime assessment of a 150 kW SiC-based traction inverter. The inverter is tested on an industry-grade automotive test bench across multiple driving profiles. Accurate multiphysics modeling is performed using the test data, focusing on electro-thermal models for bond-wire degradation and thermo-mechanical models for die-attach degradation. A reliability assessment model integrates these multiphysics modeling results with statistical lifetime estimation. Lifetime assessments across various driving profiles reveal the influence of profile characteristics on reliability, highlighting that bond-wire degradation accounts for 91% of total lifetime degradation, while die-attach failure contributes only 9%. This work demonstrates that a systematic, test-driven methodology, combined with a collaborative lifetime assessment framework, significantly enhances confidence in the design of automotive power electronics. The proposed framework can be seamlessly integrated into the early design phase to optimize design outcomes and accelerate the design-to-market process. Compared to a conventional high-fidelity model-based approach, the proposed framework reduces mission-profile-based lifetime assessment effort by approximately 90%.",
+  "year": 2025,
+  "venue": "IEEE Transactions on Power Electronics",
+  "authors": [
+   "Sachin Kumar Bhoi",
+   "Sajib Chakraborty",
+   "Alireza Aghdaei",
+   "Anu Mathew",
+   "Tobias Daniel Horn",
+   "Sebastian Liebig"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416078224",
+  "doi": "10.1109/tpel.2025.3630790",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416078224",
+  "published_iso": "2025-11-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Unraveling Origin of Stochasticity in Multi‐Filamentary Memristor",
+  "title_norm": "unraveling origin of stochasticity in multi filamentary memristor",
+  "abstract": "ABSTRACT Recent advances in computing including security applications, Monte Carlo simulations, and probabilistic computing, have increased the demand for robust probabilistic elements. Ion‐motion‐mediated volatile memristors with threshold switching (TS) characteristics have emerged as promising physical entropy sources because of their stochastic conductive filament (CF) formation and rupture. However, optimizing a memristor as an entropy source requires a material system that actively promotes ion motion and the associated CF formation/rupture, along with a quantitative understanding of their coupled electrothermal behavior. In this study, by integrating a porous nanorods (NRs)‑based oxide layer that enhances ion‐motion pathways, we achieved rapid, device‑centric digital and analog random outputs without the need for post‑processing. Moreover, we directly visualized the stochastic dynamics of multiple CFs using scanning thermal microscopy (SThM) and verified our findings through electrothermal simulations, confirming the device's inherent randomness. Finally, a bimodal (digital and analog) true random number generator (TRNG) and a probabilistic computing platform demonstrated the versatility of TS memristors as tunable and robust sources of randomness for probability‐oriented applications.",
+  "year": 2026,
+  "venue": "Advanced Functional Materials",
+  "authors": [
+   "Keunho Soh",
+   "Seunghoe Koo",
+   "B.-G. Yoon",
+   "Ji Eun Kim",
+   "Suk Yeop Chun",
+   "Su In Hwang"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7125193278",
+  "doi": "10.1002/adfm.202527482",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adfm.202527482",
+  "published_iso": "2026-01-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Experimental characterization of high-strain-rate viscoelastic and damage behavior in anisotropic soft materials using laser-induced inertial cavitation",
+  "title_norm": "experimental characterization of high strain rate viscoelastic and damage behavi",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Research Square",
+  "authors": [
+   "Sicong Wang",
+   "Juliang Bao",
+   "Jingjing Chen",
+   "Samantha R. Santacruz",
+   "Jonathan B. Estrada",
+   "Donglei (Emma) Fan"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7128594460",
+  "doi": "10.21203/rs.3.rs-8840917/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.researchsquare.com/article/rs-8840917/latest.pdf",
+  "published_iso": "2026-02-11",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Two-dimensional halide perovskite memristors for resistive switching memory systems",
+  "title_norm": "two dimensional halide perovskite memristors for resistive switching memory syst",
+  "abstract": "Two-dimensional (2D) halide perovskites have emerged as a versatile platform for energy-efficient resistive switching memories.",
+  "year": 2025,
+  "venue": "Materials Advances",
+  "authors": [
+   "Hyojung Kim"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4414774031",
+  "doi": "10.1039/d5ma00686d",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.rsc.org/en/content/articlepdf/2025/ma/d5ma00686d",
+  "published_iso": "2025-10-03",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "A digital twin for predicting the solder degradation lifetime of a GaN eHEMT integrated power module under power cycling conditions",
+  "title_norm": "a digital twin for predicting the solder degradation lifetime of a gan ehemt int",
+  "abstract": "Novel packaging designs eliminate bond wires in GaN eHEMTs power modules for high-frequency applications, making solders another critical packaging failure point due to thermomechanical fatigue. This study presents a digital twin (DT) to predict the power module lifetime by considering solder degradation in power cycling (PC) tests. An in-house PC test with direct temperature measurement followed by an industrial PC test for DT validation was conducted. The power module failed when the junction temperature swing increased by 20%, caused by solder degradation coupled with device self-heating effects. The digital modeling process addressed the multiphysics and multiscale challenges, wherein the electrothermal simulation demonstrates the coupling model effectively captures the power loss increment phenomenon, while also considering different time scales in two domains. By embedding temperature-dependent power loss into the thermomechanical model, replacing the physical device model with a reduced order lumped thermal network, and modeling the thin PCB features as layers, the DT’s computational speed improved over 20 times. A model decomposition method extracted the viscoplastic dissipation density, which is incorporated into Morrow’s Model to predict power module lifetime by transforming failure criteria into a failure threshold for solder degradation ratio. The DT’s applicability and fidelity were validated experimentally, demonstrating a lifetime prediction error of 1.07% and a post-failure junction temperature prediction deviation of 4.4%. The DT offers insights into solder behavior during PC unattainable through direct measurement and servers as a valuable tool for GaN packaging design, facilitating PC performance optimization while minimizing time and cost-intensive prototype fabrication and testing. • Proposing a digital twin for predicting power cycling lifetime via solder degradation. • Considering multiphysics electro-thermo-mechanical coupling and multi-scale issues. • A lumped thermal network and PCB simplification accelerate computation over 20 times. • The solder submodel enables accurate viscoplastic dissipation and fatigue analysis. • The digital twin predicts the power cycling lifetime within 1.1% error.",
+  "year": 2025,
+  "venue": "Power Electronic Devices and Components",
+  "authors": [
+   "Zhongchao Sun",
+   "Wendi Guo",
+   "Masaki Takahashi",
+   "Angel Pena Quintal",
+   "Pearl Agyakwa",
+   "Paul Evans"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4415215811",
+  "doi": "10.1016/j.pedc.2025.100123",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4415215811",
+  "published_iso": "2025-10-15",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Spike-timing-dependent plasticity and synaptic consolidation in Hfo₂ memristors for adaptive neuromorphic computing",
+  "title_norm": "spike timing dependent plasticity and synaptic consolidation in hfo₂ memristors ",
+  "abstract": "Abstract In this work, we demonstrate the potential of HfO₂-based memristors as artificial synapses capable of reproducing biologically plausible spike-timing-dependent plasticity (STDP). W/HfO₂/Ti/TiN devices were fabricated and characterized, exhibiting reliable bipolar resistive switching, stable endurance, and reproducible resistance states across multiple cells and devices. The excitatory postsynaptic current (EPSC) response under sequential voltage pulses revealed gradual potentiation, depression, and saturation dynamics, closely resembling long-term potentiation, long-term depression, and synaptic consolidation in biological systems. Furthermore, the memristors successfully emulated higher-order learning rules, including triplet-STDP and frequency-dependent plasticity, while maintaining robust performance under biologically realistic noise conditions, exhibiting less than ±2% variation under voltage perturbations and ±2.5% under spike-timing jitter across 25 trials. A compact physical model captured the interplay between vacancy-driven filament dynamics and time-dependent weight modulation, yielding STDP curves consistent with experimental observations in neuroscience. These findings highlight HfO₂ memristors as promising candidates for neuromorphic computing, providing not only a faithful hardware realization of synaptic learning but also compatibility with large-scale, CMOS-integrated architectures for next-generation cognitive processors.",
+  "year": 2025,
+  "venue": "Neuromorphic Computing and Engineering",
+  "authors": [
+   "Mostafa Shooshtari",
+   "Saeideh Pahlavan",
+   "Teresa Serrano‐Gotarredona",
+   "B. Linares-Barranco"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4416083203",
+  "doi": "10.1088/2634-4386/ae1da1",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416083203",
+  "published_iso": "2025-11-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Multiscale Modeling and Data-Driven Life Prediction of Kinematic Interface Behaviors in Mechanical Drive Systems",
+  "title_norm": "multiscale modeling and data driven life prediction of kinematic interface behav",
+  "abstract": "The multiscale coupling characteristics of the kinematic interface behavior of mechanical transmission systems are the core factors affecting system accuracy and lifetime. In this paper, we propose an innovative framework to achieve multiscale modeling from surface topographic parameters to system-level dynamics response through four stages: microscopic topographic regulation, mesoscopic wear modeling, macroscopic gap evolution, and system vibration prediction. Through the active design of laser-textured surfaces and gradient coatings, the contact stress distribution can be regulated to keep the wear extension; combined with the multiscale physical model and joint simulation technology, the dynamic feedback mechanism of wear–gap–vibration is revealed. Aiming at the challenges of data scarcity and mechanism complexity, we integrate data enhancement and migration learning techniques to construct a hybrid mechanism–data-driven life prediction model. This paper breaks through the limitations of traditional isolated analysis and provides theoretical support for the design optimization and intelligent operation and maintenance of high-precision transmission systems.",
+  "year": 2025,
+  "venue": "Coatings",
+  "authors": [
+   "Yue Liu",
+   "Qiang Wei",
+   "Wenkui Wang",
+   "Libin Zhao",
+   "Ning Hu"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4410895393",
+  "doi": "10.3390/coatings15060660",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-6412/15/6/660/pdf?version=1748598968",
+  "published_iso": "2025-05-30",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Self-Rectifying Memristors for Beyond-CMOS Computing: Mechanisms, Materials, and Integration Prospects",
+  "title_norm": "self rectifying memristors for beyond cmos computing mechanisms materials and in",
+  "abstract": "The deceleration of Moore's law and the energy-latency drawbacks of the von Neumann bottleneck have heightened the pursuit for beyond‑CMOS designs that integrate memory and compute. Self‑rectifying memristors (SRMs) have emerged as promising building blocks for high‑performance, low‑power systems by combining resistive switching with intrinsic diode-like behavior. Their unidirectional conduction inhibits sneak‑path currents in crossbar arrays devoid of external selectors, while nonlinear I-V characteristics, adjustable conductance states, low operating voltages, and rapid switching facilitate efficient vector-matrix operations, neuromorphic plasticity, and hardware security primitives. This review synthesizes the working mechanisms of SRMs, surveys material, and structural strategies and compares device metrics relevant to array‑scale deployment (rectification ratio, nonlinearity, endurance, retention, variability, and operating voltage). We assess SRM-enabled in-memory computing and neuromorphic applications, as well as security functions such as physical unclonable functions and reconfigurable cryptographic primitives. Integration pathways toward CMOS compatibility are analyzed, including back-end-of-line thermal budgets, uniformity, write disturb mitigation, and reliability. Finally, we outline key challenges and opportunities: materials/architecture co‑design, precision analog training, stochasticity control/exploitation, 3D stacking, and standardized benchmarking that can accelerate large‑scale SRM adoption. Through the use of specialized materials and structural optimization, SRMs are set to provide selector‑free, densely integrated, and energy‑efficient hardware for future information processing.",
+  "year": 2026,
+  "venue": "Nano-Micro Letters",
+  "authors": [
+   "Guobin Zhang",
+   "Xuemeng Fan",
+   "Zijian Wang",
+   "Pengtao Li",
+   "Zhejia Zhang",
+   "Bin Yu"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W7122422819",
+  "doi": "10.1007/s40820-025-02035-1",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s40820-025-02035-1.pdf",
+  "published_iso": "2026-01-12",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "FINCHES: A Computational Framework for Predicting Intermolecular Interactions in Intrinsically Disordered Proteins",
+  "title_norm": "finches a computational framework for predicting intermolecular interactions in ",
+  "abstract": "This comprehensive review examines FINCHES (Force field-based Interaction Network for Characterizing Heterotypic and Entropic Sequences). This groundbreaking computational framework enables the rapid, sequence-based prediction of intermolecular interactions in intrinsically disordered regions (IDRs) without the need for molecular simulations. The document provides detailed comparisons with other computational methods, including their mathematical foundations, specific applications, and experimental validations. We explore both the potential for advancing our understanding of disordered protein function and the inherent challenges in computationally modeling these dynamic biological systems. Additionally, we discuss computational assessment tools for interface prediction in molecular complexes, providing a comprehensive framework for evaluating IDR interaction predictions.",
+  "year": 2025,
+  "venue": "International Journal of Molecular Sciences",
+  "authors": [
+   "Sarfaraz K. Niazi"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4411897719",
+  "doi": "10.3390/ijms26136246",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1422-0067/26/13/6246/pdf?version=1751096727",
+  "published_iso": "2025-06-28",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Enhancing Johnson-Nyquist noise for high-performance Mott memristor-based oscillatory TRNG",
+  "title_norm": "enhancing johnson nyquist noise for high performance mott memristor based oscill",
+  "abstract": "Genuine stochastic information represented by true random numbers (TRNs) is essential for entropy-associated applications such as cryptography and energy-based computing. They demand specialized hardware called true random number generators (TRNGs) capable of rapid, energy-efficient TRN generation. In this study, we enhance Johnson-Nyquist noise to demonstrate the fastest, most energy-efficient memristor-based TRNG. The TRNG comprises an NbO x -based negative resistance oscillator, a T flip-flop for digitalization, and a heater as a noise source. The heater enhances Johnson-Nyquist noise, achieving a TRNG speed of 100 kbit/s, 2.5× faster than without the heater. Furthermore, we propose a TRNG array that utilizes heat across the array for energy-efficient, parallel TRN generation. The 128-sized TRNG array is expected to achieve 0.65 μJ/bit at 1.28 Mbit/s, demonstrating significant improvements in speed and efficiency. By focusing on noise engineering rather than conventional material- or circuit-based methods, our approach enables broader applications in entropy-based computing.",
+  "year": 2025,
+  "venue": "npj Unconventional Computing",
+  "authors": [
+   "Gwangmin Kim",
+   "Jae Hyun In",
+   "Hakseung Rhee",
+   "Woojoon Park",
+   "Hanchan Song",
+   "Kyung Min Kim"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4411043135",
+  "doi": "10.1038/s44335-025-00027-3",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s44335-025-00027-3.pdf",
+  "published_iso": "2025-06-04",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Making chemistry compute with non-steady-state chemical dynamics",
+  "title_norm": "making chemistry compute with non steady state chemical dynamics",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Nature Reviews Chemistry",
+  "authors": [
+   "Xuan Ji",
+   "Y.L. Chen",
+   "Xi Yu",
+   "Christian A. Nijhuis"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7125694562",
+  "doi": "10.1038/s41570-026-00796-w",
+  "arxiv_id": null,
+  "paper_url": "https://ris.utwente.nl/ws/files/522810529/s41570-026-00796-w.pdf",
+  "published_iso": "2026-01-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Forming and compliance-free operation of low-energy, fast-switching HfO <sub> <i>x</i> </sub> S <sub> <i>y</i> </sub> /HfS <sub>2</sub> memristors",
+  "title_norm": "forming and compliance free operation of low energy fast switching hfo sub i x i",
+  "abstract": "Memristors based on partially oxidised layered semiconductors show sub-nJ resistance switching between several states with no need for electroforming or compliance, making them promising candidates for future neuromorphic computing hardware.",
+  "year": 2025,
+  "venue": "Nanoscale Horizons",
+  "authors": [
+   "Aferdita Xhameni",
+   "AbdulAziz AlMutairi",
+   "Xuyun Guo",
+   "Irina Chircă",
+   "Tianyi Wen",
+   "Stephan Hofmann"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W4406382568",
+  "doi": "10.1039/d4nh00508b",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4406382568",
+  "published_iso": "2025-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Structural dynamics of plant transcription factors and their functional implications",
+  "title_norm": "structural dynamics of plant transcription factors and their functional implicat",
+  "abstract": "Transcription factor structural dynamics has emerged as a critical frontier in plant molecular biology, as many transcription factors (TFs) belong to plant-specific families with unique structural features that reveal mechanisms static structural approaches cannot capture. These advances, combining molecular dynamics simulations, NMR spectroscopy, and single-molecule techniques, have demonstrated that structural dynamics play crucial roles in driving DNA recognition, environmental responsiveness, and regulatory precision. Such computational and experimental breakthroughs have revealed rotation-coupled diffusion processes in WRKY proteins and allosteric regulation through ensemble redistribution in disordered domains. Despite these discoveries, fundamental questions remain about how plant TFs achieve specificity within complex regulatory networks and integrate multiple environmental signals. We outline current understanding of the static structures across transcription factor families before examining breakthrough discoveries in structural dynamics. These encompass the diverse architectures of DNA binding and regulatory domains, as well as the conformational flexibility and transition kinetics governing DNA binding, cofactor interactions, and environmental signal transduction. We subsequently explore how these insights are transforming biotechnological applications, from rational protein design to crop engineering strategies. Finally, we discuss remaining challenges and future directions for harnessing transcription factor dynamics in agricultural and synthetic biological applications.",
+  "year": 2026,
+  "venue": "The Plant Journal",
+  "authors": [
+   "Shaowen Wu",
+   "Wenjie Huang",
+   "Wenyang Zhang",
+   "Tingquan Wu",
+   "Shijuan Yan"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7124865009",
+  "doi": "10.1111/tpj.70693",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/tpj.70693",
+  "published_iso": "2026-01-01",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Million‐Atom Simulation of the Set Process in Phase Change Memories at the Real Device Scale",
+  "title_norm": "million atom simulation of the set process in phase change memories at the real ",
+  "abstract": "Abstract Phase change materials are exploited in several enabling technologies such as storage class memories, neuromorphic devices and memories embedded in microcontrollers. A key functional property for these applications is the fast crystal nucleation and growth in the supercool liquid phase. Over the last decade, atomistic simulations based on density functional theory (DFT) have provided crucial insights on the early stage of this process. These simulations are, however, restricted to a few hundred atoms for at most a few ns. More recently, the scope of the DFT simulations is greatly extended by leveraging on machine learning techniques. In this study, it is showed that the exploitation of a recently devised neural network potential for the prototypical phase change compound Ge 2 Sb 2 Te 5 , allows simulating the crystallization process in a multimillion atom model at the length and time scales of the real memory devices. The simulations provide a vivid atomistic picture of the subtle interplay between crystal nucleation and crystal growth from the crystal/amorphous rim. Moreover, the simulations have allowed quantifying the distribution of point defects that controls electronic transport, in a very large crystallite grown at the real conditions of the set process of the device.",
+  "year": 2025,
+  "venue": "Advanced Electronic Materials",
+  "authors": [
+   "Omar Abou El Kheir",
+   "Marco Bernasconi"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4411147683",
+  "doi": "10.1002/aelm.202500110",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aelm.202500110",
+  "published_iso": "2025-06-09",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "On ultrafast x-ray scattering methods for magnetism",
+  "title_norm": "on ultrafast x ray scattering methods for magnetism",
+  "abstract": "With the introduction of x-ray free electron laser sources around the world, new scientific approaches for visualizing matter at fundamental length and time-scales have become possible. As it relates to magnetism and ‘magnetic-type’ systems, advanced scattering methods are being developed for studying ultrafast magnetic responses on the time-scales at which they occur. We describe three capabilities which have the potential to seed new directions in this area and presentoriginal results from each: pump-probe x-ray scattering with low energy excitation, x-ray photon fluctuation spectroscopy, and ultrafast diffuse x-ray scattering. By combining these experimental techniques with advanced modeling together with machine learning, we describe how the combination of these domains allows for a new understanding in the field of magnetism. Finally, we give an outlook for future areas of investigation and the newly developed instruments which will take us there.",
+  "year": 2024,
+  "venue": "Advances in Physics X",
+  "authors": [
+   "Rajan Plumley",
+   "Sathya R. Chitturi",
+   "Peng Cheng",
+   "Tadesse A. Assefa",
+   "Nicolas Burdet",
+   "L. Shen"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4404658346",
+  "doi": "10.1080/23746149.2024.2423935",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4404658346",
+  "published_iso": "2024-11-24",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Analog Switching in Hexagonal Boron Nitride Memristors via Multiple Nano‐Filaments Confinement",
+  "title_norm": "analog switching in hexagonal boron nitride memristors via multiple nano filamen",
+  "abstract": "Memristors have emerged as a key building block for artificial neural networks (ANNs), offering energy efficiency and high scalability for hardware-based synaptic weight updates. As device miniaturization is crucial for enhancing memristor performance, hexagonal boron nitride (h-BN) stands out as a promising resistive switching medium due to its excellent insulating characteristics even at an atomically thin scale. However, conventional h-BN memristors suffer from abrupt switching behavior by uncontrollable filament formation, limiting their potential for ANN applications. Here, h-BN-based memristors exhibiting linear and symmetric analog switching by leveraging multiple nano-filament confinement is presented. The geometric confinement between suspended h-BN films and the apexes of GaN nano-cones facilitates analog switching behavior, reducing cycle-to-cycle variation and ensuring stable consecutive operations. Electrical analyses reveal that analog switching behavior originates from the controlled formation of multiple nano-filaments within the confined geometry. ANNs implemented with these nano-filaments confined to h-BN memristors exhibit highly linear and symmetric synaptic weight updates, enabling precise training with minimal accuracy degradation. This work establishes multiple nano-filament confinement as a universal design strategy for achieving reliable and linear analog switching in memristors, paving the way for advanced neuromorphic computing.",
+  "year": 2025,
+  "venue": "Small",
+  "authors": [
+   "Jaesub Song",
+   "Seokho Moon",
+   "Jinho Byun",
+   "Jiye Kim",
+   "Jiye Kim",
+   "Junyoung Choi"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4411345460",
+  "doi": "10.1002/smll.202504507",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/smll.202504507",
+  "published_iso": "2025-06-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Revolutionizing Gas Turbine Aerodynamics: Advanced Numerical Methods for High-Fidelity Simulations, Turbulence Modeling, and Aerothermodynamic Analysis",
+  "title_norm": "revolutionizing gas turbine aerodynamics advanced numerical methods for high fid",
+  "abstract": "Gas turbine engines represent one of the most complex and sophisticated engineering systems in modern technology, with applications spanning power generation, aviation, and marine propulsion. The aerodynamic performance of these systems directly impacts their efficiency, reliability, and environmental footprint. This comprehensive review examines the revolutionary advancements in numerical methods that have transformed our understanding and analysis of gas turbine aerodynamics. The paper explores the evolution from traditional computational approaches to cutting-edge high-fidelity simulation techniques, including Direct Numerical Simulation (DNS), Large Eddy Simulation (LES), and hybrid RANS-LES methods. We provide an in-depth analysis of advanced turbulence modeling approaches, highlighting their theoretical foundations, implementation strategies, and practical applications in gas turbine environments. The review further investigates state-of-the-art aerothermodynamic analyses, focusing on conjugate heat transfer, film cooling optimization, and multi-physics coupling. Through detailed case studies and critical evaluation of current methodologies, this paper demonstrates how revolutionary numerical methods have redefined our understanding of flow physics, heat transfer mechanisms, and overall performance prediction in gas turbine systems. Finally, we discuss emerging technologies and future research directions, including exascale computing, digital twin implementation, and machine learning integration, that promise to further advance the field of gas turbine aerodynamics.",
+  "year": 2025,
+  "venue": "Preprints.org",
+  "authors": [
+   "Mohammad Yaghoub Abdollahzadeh Jamalabadi"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4411500345",
+  "doi": "10.20944/preprints202506.1588.v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.preprints.org/frontend/manuscript/6f380fef3bd1bb2f405e5d30a6927d12/download_pub",
+  "published_iso": "2025-06-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Fast-Converging Hybrid Pulse for High Precision Multilevel Phase Change Memory",
+  "title_norm": "fast converging hybrid pulse for high precision multilevel phase change memory",
+  "abstract": "We propose a hybrid pulse scheme for multilevel phase-change memory (PCM) combining partial RESET and staircase SET pulses to enable efficient and precise conductance tuning. By leveraging statistical convergence through fixed pulse sequences, this approach eliminates iterative feedback and complex control logic inherent in conventional write-and-verify (W&V) schemes. Demonstrated on a 40-nm PCM chip, the method achieves 32 reliably distinguishable conductance states with 4.11 pulses per state on average – establishing the fastest convergence at record precision (32 states) for single-cell multilevel PCM. This represents a 98% pulse reduction versus state-of-the-art methods at equivalent precision. This hardware-efficient scheme demonstrates strong inter-device consistency across unscreened devices, enabling scalable deployment for neuromorphic accelerators.",
+  "year": 2025,
+  "venue": "IEEE Electron Device Letters",
+  "authors": [
+   "Tao Hong",
+   "Xiaogang Chen",
+   "Sannian Song",
+   "Zhenhao Jiao",
+   "Xi Li",
+   "Shunfen Li"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7105852250",
+  "doi": "10.1109/led.2025.3633772",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7105852250",
+  "published_iso": "2025-11-17",
+  "oa_field": "Materials Science",
+  "semantic_recall": true,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Exploring Multilevel Properties of GeTe-Based Phase Change Memory Devices for Programmable Synaptic Activity",
+  "title_norm": "exploring multilevel properties of gete based phase change memory devices for pr",
+  "abstract": "Phase change memory (PCM) is a promising technology to emulate the synaptic behavior of neuromorphic systems. The efficient development of artificial synaptic arrays for brain-inspired neuromorphic applications is crucial for overcoming the Von Neumann bottleneck at the device level. Hence, GeTe-based PCM performance is investigated in this work for neuromorphic applications. XRD analysis of the GeTe material shows the amorphous to rhombohedral structural evolution at a 250 °C annealing temperature. The intensity of Raman spectra peaks at 250 °C increases, while FWHM decreases, indicating an improvement in the sample crystallinity. Ge 3d and Te 3d X-ray photoelectron spectroscopy core-level spectra confirmed the presence of Ge–Te bonds. A TiN/GeTe/TiN PCM device is fabricated and electrically tested to imitate its functioning as an electronic synapse. A noticeable rise in conductance is observed at a threshold voltage of ∼(2.5 ± 0.1) V on applying a DC voltage sweep from 0 to 4 V. The device also achieves a rise in conductance values from 10 to 451 μS, while a decrement of conductance from 385.8 to 13 μS reveals the potentiation and depression behavior of a biological synapse when subjected to a programmed electrical pulse. The nonlinearity (NL) is around 30.35 and 5.35 for the potentiation and depression pulse, respectively, essential for high recognition accuracy in neural networks. These findings indicate that the GeTe-based PCM device is well-suited for emulating artificial synapses and promoting efficient neuromorphic application systems.",
+  "year": 2025,
+  "venue": "ACS Applied Electronic Materials",
+  "authors": [
+   "Amiya Mishra",
+   "Anushmita Pathak",
+   "Shivendra Kumar Pandey"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4406150043",
+  "doi": "10.1021/acsaelm.4c01802",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4406150043",
+  "published_iso": "2025-01-07",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "RF Integrated Passive Devices Trimming Using Phase Change Material Switches",
+  "title_norm": "rf integrated passive devices trimming using phase change material switches",
+  "abstract": "This letter presents a phase-change material (PCM) switch-based trimming technique for an radio frequency (RF)L–Coutput matching circuit fabricated on high-resistivity silicon. By leveraging the memory properties of PCM switches, the proposed circuit enables precise postfabrication adjustments to compensating for active device variations. The measuredL–Ccircuit inductor is tuned from 1.3 to 1.6 nH by switching its parallel capacitance, while the capacitor is adjusted from 0.7 to 1.2 pF, resulting in four distinct impedance states. The measured total insertion loss ranges from −1.62 to −2.95 dB, showing good agreement with simulations. The complete circuit occupies an area of$332\\times 363~\\mu $m2, which is nearly identical to its fixed version.",
+  "year": 2025,
+  "venue": "IEEE Microwave and Wireless Technology Letters",
+  "authors": [
+   "Kariny Nunes Maia",
+   "Audrey Martin",
+   "Pierre Blondy"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4411639861",
+  "doi": "10.1109/lmwt.2025.3581156",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4411639861",
+  "published_iso": "2025-06-25",
+  "oa_field": "Materials Science",
+  "semantic_recall": true,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Ultra-Long Disturb-Free Read Operation With Low Resistance Drift in Phase Change Memory",
+  "title_norm": "ultra long disturb free read operation with low resistance drift in phase change",
+  "abstract": "Compute-in-memory requires long endurance in reading of memory device orders of magnitude higher than writing. Variations in resistance of memory cells caused by read disturbance is a critical challenge for neural networks applications of emerging memory technology. Current generated by read voltage causes localized heating in the phase change memory (PCM) cell, which results in structural displacement of active phase change volume and thus appreciable variation in cell resistance. In this work, the effects of reading on both high and low resistance states (HRS and LRS) of PCM after various writing cycles are investigated. A disturb-free read scheme is demonstrated up to 1012read cycles (~28 h) on the memory cells that experienced 108write cycles both at 27∘C and 85∘C. The reduced resistance drift by increasing the read voltage up to 0.5 V is observed which further improves the speed and accuracy of reading. This work shows that carbon-doped Ge2Sb2Te5-based PCM is a promising candidate for compute-in-memory application that requires enormous reading with high-precision.",
+  "year": 2025,
+  "venue": "IEEE Transactions on Electron Devices",
+  "authors": [
+   "R. Wang",
+   "Jia Zheng",
+   "Ruobing Wang",
+   "Chenchen Xie",
+   "Li Xie",
+   "Xi Li"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4409228460",
+  "doi": "10.1109/ted.2025.3555276",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4409228460",
+  "published_iso": "2025-04-07",
+  "oa_field": "Materials Science",
+  "semantic_recall": true,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Significant Power Consumption Reduction and Speed Boosting in Phase Change Memory with Nanocurrent Channels",
+  "title_norm": "significant power consumption reduction and speed boosting in phase change memor",
+  "abstract": "The excessive power consumption is challenging for phase change memory (PCM) on its way to becoming universal memory in complex hierarchies of memory systems. Here, from the perspective of device structure, by adding a nanocurrent-channel (NCC) layer between the electrode layer and phase change layer, a RESET power consumption reduction by more than 95% and 10 times faster SET speed were realized simultaneously. Through the first principle calculations, Au and SiO 2 were screened as the metal and insulating matrix material of NCC layer, respectively. Our PCM device with a Au-SiO 2 NCC layer shows an ultralow RESET power consumption, down to 381 fJ, and an ultrafast SET speed (8 ns). Much higher current density near NCC in the phase change layer and thermal barrier effect of insulating matrix material were confirmed by finite element analysis (FEA), and the role of Au nanochannels was revealed by transmission electron microscopy (TEM). Our NCC layer structure provides a simple and practicable method to significantly decrease PCM power consumption.",
+  "year": 2024,
+  "venue": "Nano Letters",
+  "authors": [
+   "Yuntao Zeng",
+   "Ge Ma",
+   "Han Li",
+   "Xiaomin Cheng",
+   "Xiangshui Miao"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4402816505",
+  "doi": "10.1021/acs.nanolett.4c03900",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4402816505",
+  "published_iso": "2024-09-24",
+  "oa_field": "Materials Science",
+  "semantic_recall": true,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Polarization-encodable photonic memory cells using next-generation 2D phase-change materials",
+  "title_norm": "polarization encodable photonic memory cells using next generation 2d phase chan",
+  "abstract": "Integration of phase-change materials (PCMs) created a unique opportunity to implement reconfigurable photonics devices that their performance can be tuned depending on the target application. Conventional PCMs such as Ge-Sb-Te (GST) and Ge-Sb-Se-Te (GSST) rely on melt-quench and high temperature annealing processes to change the organization of the molecules in the materials’ crystal. Such a reorganization leads to different optical, electrical, and thermal properties which can be exploited to implement photonic memory cells that are able to store the data at different resistance or optical transmission levels. Despite the great promise of conventional PCMs for realizing reconfigurable photonic memories, their slow and extremely power-hungry thermal mechanisms make scaling the systems based on such devices challenging. In addition, such materials do not offer a stable multi-level response over a long period of time. To address these shortcomings, the research carried out in this study shows the proof of concept to implement next-generation photonic memory cells based on two-dimensional (2D) birefringence PCMs such as SnSe, which offer anisotropic optical properties that can be switched ferroelectrically. We demonstrate that by leveraging the ultrafast and low-power crystallographic direction change of the material, the optical polarization state of the input optical signal can be changed. This enables the implementation of next-generation high-speed polarization-encodable photonic memory cells for future photonic computing systems. Compared to the conventional PCMs, the proposed SnSe-based photonic memory cells offer an ultrafast switching and low-loss optical response relying on ferroelectric property of SnSe to encode the data on the polarization state of the input optical signal. Such a polarization encoding scheme also reduces memory read-out errors and alleviates the scalability limitations due to the optical insertion loss often seen in optical transmission encoding.",
+  "year": 2024,
+  "venue": "Nano Research",
+  "authors": [
+   "Amin Shafiee",
+   "Linhong Chen",
+   "Mahdi Nikdast",
+   "Jie Yao"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4405475353",
+  "doi": "10.26599/nr.2025.94907198",
+  "arxiv_id": null,
+  "paper_url": "https://www.sciopen.com/local/article_pdf/10.26599/NR.2025.94907198.pdf",
+  "published_iso": "2024-12-17",
+  "oa_field": "Materials Science",
+  "semantic_recall": true,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Differentiability in unrolled training of neural physics simulators on transient dynamics",
+  "title_norm": "differentiability in unrolled training of neural physics simulators on transient",
+  "abstract": "Unrolling training trajectories over time strongly influences the inference accuracy of neural network-augmented physics simulators. We analyze these effects by studying three variants of training neural networks on discrete ground truth trajectories. In addition to commonly used one-step setups and fully differentiable unrolling, we include a third, less widely used variant: unrolling without temporal gradients. Comparing networks trained with these three modalities makes it possible to disentangle the two dominant effects of unrolling, training distribution shift and long-term gradients. We present a detailed study across physical systems, network sizes, network architectures, training setups, and test scenarios. It also encompasses two modes of computing the simulation trajectories. In prediction setups, we rely solely on neural networks to compute a trajectory. In contrast, correction setups include a numerical solver that is supported by a neural network . Spanning all these variations, our study provides the empirical basis for our main findings: A non-differentiable but unrolled training setup supported by a numerical solver in a correction setup can yield substantial improvements over a fully differentiable prediction setup not utilizing this solver. We also quantify a difference in the accuracy of models trained in a fully differentiable setup compared to their non-differentiable counterparts. Differentiable setups perform best in a direct comparison of correction networks, and the same is observed when comparing prediction setups among each other. In both cases, the accuracy of unrolling without temporal gradients comes relatively close. Furthermore, we empirically show that these behaviors are invariant to changes in the underlying physical system, the network architecture and size, and the numerical scheme . These results motivate integrating non-differentiable numerical simulators into training setups even if full differentiability is unavailable. We also observe that the convergence rate of common neural architectures is low compared to numerical algorithms. This encourages the use of correction approaches combining neural and numerical algorithms to utilize the benefits of both.",
+  "year": 2024,
+  "venue": "Computer Methods in Applied Mechanics and Engineering",
+  "authors": [
+   "Bjoern List",
+   "Liwei Chen",
+   "Kartik Bali",
+   "Nils Thuerey"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4403665378",
+  "doi": "10.1016/j.cma.2024.117441",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4403665378",
+  "published_iso": "2024-10-23",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": true,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Extended Physics-Informed Neural Networks for Parameter Identification of Switched Mode Power Converters With Undetermined Topological Durations",
+  "title_norm": "extended physics informed neural networks for parameter identification of switch",
+  "abstract": "It is challenging to perform high-precision parameter identification for switched mode power converters with undetermined topology duration because the physical information, such as switching instants and circuit state variables at topology transitions is critical for realizing this goal. In conventional physics-based solutions, additional measurement circuits are required to compensate for the absence of the unknown physical information at topology transitions, otherwise accuracy has to be compromised. To avoid the undesired additional hardware, an extended PINN (e-PINN), which integrates a pseudolabel generation network into the piecewise PINN, is proposed. This network can precisely identify key system parameters, along with the duration of each topology and system states at topology transitions. The effectiveness of thee-PINN is experimentally validated on a buck converter operating in discontinuous conduction mode (DCM), which, is a basic case of the power converter having undetermined topology duration. Compared with the traditional physics-based parameter identification methods for DCM buck converter,e-PINN can precisely estimate system parameters without necessitating high-frequency sampling or zero-current detection circuits, which increase the cost, volume, and safety risk. Besides, it can operate without disrupting system operation.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Power Electronics",
+  "authors": [
+   "Yangxiao Xiang",
+   "Hongjian Lin",
+   "Henry Shu-Hung Chung"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4403422130",
+  "doi": "10.1109/tpel.2024.3481158",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4403422130",
+  "published_iso": "2024-10-15",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "A Physics-Informed Neural Network for Unconditionally Stable Time-Domain Simulations",
+  "title_norm": "a physics informed neural network for unconditionally stable time domain simulat",
+  "abstract": "In this paper, a mesh-free method based on physicsinformed neural network (PINN) is presented for time-domain electromagnetic simulations. This PINN method employs the weighted Laguerre orthogonal polynomials (WLPs) based Maxwell's equations as governing equations, which leads to unconditional stability. A numerical example of the rectangular waveguide verifies the effectiveness of the proposed method.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Wen‐Hao Su",
+   "Wei Shao",
+   "Xi Cheng",
+   "Xiao Ding"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4415159230",
+  "doi": "10.1109/icmmt65948.2025.11188627",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4415159230",
+  "published_iso": "2025-05-19",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": true,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Spiking and bursting activities in an NLAM-based CNN cell",
+  "title_norm": "spiking and bursting activities in an nlam based cnn cell",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Chaos Solitons & Fractals",
+  "authors": [
+   "Huagan Wu",
+   "Jinxiang Gu",
+   "Ning Wang",
+   "Mo Chen",
+   "Quan Xu"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4406198433",
+  "doi": "10.1016/j.chaos.2024.115969",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4406198433",
+  "published_iso": "2025-01-09",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Spiking Flip-Flop Memory in Resonant Tunneling Diode Neurons",
+  "title_norm": "spiking flip flop memory in resonant tunneling diode neurons",
+  "abstract": "We report a spiking flip-flop memory mechanism that allows controllably switching between neural-like excitable spike-firing and quiescent dynamics in a resonant tunneling diode (RTD) neuron under low-amplitude (<150 mV pulses) and high-speed (ns rate) inputs pulses. We also show that the timing of the set-reset input pulses is critical to elicit switching responses between spiking and quiescent regimes in the system. The demonstrated flip-flop spiking memory, in which spiking regimes can be controllably excited, stored, and inhibited in RTD neurons via specific low-amplitude, high-speed signals (delivered at proper time instants) offers high promise for RTD-based spiking neural networks, with the potential to be extended further to optoelectronic implementations where RTD neurons and RTD memory elements are deployed alongside for fast and efficient photonic-electronic neuromorphic computing and artificial intelligence hardware.",
+  "year": 2024,
+  "venue": "Physical Review Letters",
+  "authors": [
+   "Giovanni Donati",
+   "Dafydd Owen-Newns",
+   "Joshua Robertson",
+   "Ekaterina Malysheva",
+   "Andrew Adair",
+   "J. M. L. Figueiredo"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4405736797",
+  "doi": "10.1103/physrevlett.133.267301",
+  "arxiv_id": null,
+  "paper_url": "https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.133.267301",
+  "published_iso": "2024-12-24",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Physics-informed neural operators for ultrafast spectroscopy data reconstruction",
+  "title_norm": "physics informed neural operators for ultrafast spectroscopy data reconstruction",
+  "abstract": "Physics-informed neural operators (PINO) combine deep learning with mesh invariance and differentiable physics to make it easier to reconstruct ultrafast spectroscopic data. This method lets scientists see excited states that only last a very short time, usually from pico- to femtoseconds. But getting great temporal resolution is hard because of the limits of the technology. Data gathering frequently leads to a diminished collection of photons at each frequency-time coordinate, hence constraining phase sweeps and complicating reconstruction endeavours. It is very important to accurately reconstruct time-domain data from a small number of frequency-time measurements since this is an ill-posed inverse issue that impacts the quality and reliability of the data. In this context, using physics-informed machine learning techniques is a promising way to improve inference and reconstruction, which will help ultrafast spectroscopy analysis move further.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Lola Rustamova",
+   "O.A. Alieva",
+   "Saodat Bayjigitova",
+   "Zarnigor Khayrullaeva",
+   "Asliddin Nurmonov"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4417467572",
+  "doi": "10.1117/12.3094134",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4417467572",
+  "published_iso": "2025-12-18",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": true,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "ATOMIC: Automatic Tool for Memristive IMPLY based Circuit-level Simulation and Validation",
+  "title_norm": "atomic automatic tool for memristive imply based circuit level simulation and va",
+  "abstract": "Memristor-based In-Memory Computation (IMC) is one of the promising candidates for the post-CMOS era, which comes in many flavors. Processing in Array (PIA) is a relatively new approach, and substantially different than traditional CMOS-based logic design. Consequently, there is a lack of publicly available CAD tools for memristive PIA design and evaluation. Here, we present ATOMIC: an Automatic Tool for Memristive IMPLY-based Circuit-level Simulation and Validation. Using our tool, a large portion of the simulation, evaluation, and validation process can be performed automatically, drastically reducing the development time for memristive PIA systems from multiple days to a few hours. With ATOMIC the effect of non-idealities can be analyzed, which is important but often unconsidered in the design phase. We evaluated Stateof-the-Art (SoA) adder algorithms and compared their stability when calculated under non-ideal conditions. The code is available at https://github.com/fabianseiler/ATOMIC.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Fabian Seiler",
+   "Peter M. Hinkel",
+   "Axel Jantsch",
+   "Nima TaheriNejad"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4413095961",
+  "doi": "10.1109/smacd65553.2025.11092103",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4413095961",
+  "published_iso": "2025-07-07",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "Design and Application of Passive Very High-Frequency Memristor Emulator",
+  "title_norm": "design and application of passive very high frequency memristor emulator",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Circuits Systems and Signal Processing",
+  "authors": [
+   "Sihao Yang",
+   "Bingchen Liu",
+   "Li Wei",
+   "Daohua Wu",
+   "Yuefeng He",
+   "Guangzhen Dai"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4405611765",
+  "doi": "10.1007/s00034-024-02956-z",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405611765",
+  "published_iso": "2024-12-19",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "A thermodynamic interpretation of the phase field method for the computational study of memristive electric conduction",
+  "title_norm": "a thermodynamic interpretation of the phase field method for the computational s",
+  "abstract": "Various methods have been proposed for the computational study of memristive thin films, including classical continuum, molecular dynamics, and first-principles. More recently, the phase field method has been investigated and validated. We examine our previous phase field method from its variational basis and give a thermodynamic interpretation of <i>current-voltage</i> hysteresis and spontaneous conducting filament formation starting from initial conditions that accurately reflect as-fabricated films. Because our phase field method does not require direct local density of states computation, it provides improved computational efficiency and scalability, enabling practical waferscale mapping, uniformity, and endurance analysis and optimization.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "John F. Sevic"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4414309803",
+  "doi": "10.1117/12.3066636",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4414309803",
+  "published_iso": "2025-09-17",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": true,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ }
+]

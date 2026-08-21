@@ -1,0 +1,52 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition — stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+      "chosen_pattern_id": "heterogeneous_decomposition",
+      "anchor_alternates": [],
+      "companion_pattern": "architectural_operator_substitution",
+      "companion_rationale": "heterogeneous_decomposition yields a field-by-regime-by-local-frequency partition of coupled residual and state blocks; architectural_operator_substitution acts on that named partition to replace one global representation with block-specific localized operators that produce the demanded runnable method while retaining the electric, Joule-heating, thermal, and phase-kinetic quantities each block must resolve.",
+      "selection_rationale": "This is the most load-bearing gap because it directly demands the method artifact committed by intake.contribution_type and closes the central failure on dynamically generated high-frequency fronts across the electric–thermal–phase chain. heterogeneous_decomposition directly separates slow bulk, fast front, and cross-field residual components for differentiated treatment; the treatment must not regress to global Fourier features, generic causal weighting, XPINN partitioning, weak residuals, or learned residual weights already occupied in method_lineage."
+    },
+    {
+      "gap": "No retrieved frontier leaf establishes that event order, front topology, and energy balance remain correct for held-out entire device geometries, material combinations, and pulse protocols that shift the spectrum and stiffness beyond training — stakes: reported gains may not transfer across devices or operating regimes, making the scientific conclusion non-general and the model unsafe as a design surrogate.",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": null,
+      "companion_rationale": "",
+      "selection_rationale": "Under shared_evaluation, this sibling uses the same anchor predictions and physical residual certificate but tests them on held-out whole entities that change spectrum and stiffness; removing it makes the anchor's transfer claim unverifiable and opens the obvious reviewer objection that the method only interpolates its training devices and protocols. controlled_diagnostic_design supplies the confound-isolating move by varying complete geometries, material combinations, and pulse protocols while grading event order, front topology, and energy balance rather than relying on aggregate loss."
+    }
+  ],
+  "coherence_thread_type": "shared_evaluation",
+  "deliverable_coverage": "method — the anchor's heterogeneous_decomposition defines the field- and regime-specific treatment, and companion architectural_operator_substitution implements the localized operators that ship the runnable anti-high-frequency PCM PINN method.",
+  "user_direction_disposition": {
+    "verdict": "adopted",
+    "user_wanted": "面向相变材料/器件的抗高频PINN",
+    "chosen": "面向相变器件内生高频移动前沿的分解式、局部算子替代 PINN，并用整器件、整几何、整材料组合和整脉冲协议的 formal OOD 诊断检验事件顺序、前沿拓扑与能量平衡。",
+    "why_departed": ""
+  },
+  "composition_note": "",
+  "pattern_saturation": {
+    "heterogeneous_decomposition": {
+      "share": 0.13,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "architectural_operator_substitution": {
+      "share": 0.13,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "controlled_diagnostic_design": {
+      "share": 0.13,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf tests whether one globally aggregated space-time objective over all coupled fields and switching regimes is necessary rather than assumed — stakes: if this shared assumption hides a fast local residual beneath slow-field averages, published accuracy conclusions can rest on the wrong certificate and principled high-frequency PINN design remains blocked.",
+      "reason": "fails removal test — anchor stands without it; the method and its entity-level OOD evaluation can be falsified without making the necessity of one global aggregate objective a separate headline claim"
+    }
+  ]
+}

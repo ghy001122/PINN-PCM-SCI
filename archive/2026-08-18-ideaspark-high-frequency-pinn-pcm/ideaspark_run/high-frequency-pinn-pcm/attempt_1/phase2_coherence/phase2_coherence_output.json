@@ -1,0 +1,431 @@
+{
+  "trace_report": {
+    "likely_fatal_first": {
+      "step_or_claim": "S6 / the conditional B_R fidelity bound",
+      "why_selected": "The text differentiates J_val with respect to a dimensionless packet gate g_b, then multiplies the gate derivative and the gate-Hessian remainder by a response-space norm delta_b. A Taylor bound must use one perturbation coordinate consistently; if this guarantee fails, the claimed error decomposition is not established.",
+      "attack_result": "executed structural counterexample: J(g)=g, delta_b=0.25, and L_g=0 satisfy the stated gate-Hessian assumption, yet removal changes J by 1.0 while the written B_R is 0.25."
+    },
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": [
+          "declared VO2 equations and constitutive parameters",
+          "geometry/pulse campaign specification"
+        ],
+        "produces": [
+          "entity e=(Omega,dOmega,mu,p)",
+          "mesh/time-grid trajectory arrays [N_e,M_e,4]",
+          "synthetic reference labels"
+        ],
+        "note": "VERBATIM: \"1. Use Gmsh and FEniCSx to generate a bounded, mesh/time-converged synthetic campaign of two-dimensional VO₂ devices governed by the declared current-continuity, Joule, heat, and phase-kinetic equations; label every output as numerical reference, not experiment.\" Mesh/time convergence is asserted procedurally but its tolerance is not a method parameter here."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "complete entity records from S1"
+        ],
+        "produces": [
+          "disjoint train/validation/controlled-pair/OOD sets of whole entities"
+        ],
+        "note": "VERBATIM: \"2. Split complete geometry/material/pulse/trajectory entities into training, validation, controlled-pair test, and joint formal-OOD groups before computing any scale or score.\""
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "training entities from S2",
+          "four PDE/constitutive equations",
+          "boundary/initial conditions"
+        ],
+        "produces": [
+          "f_theta: (e,x,t)->(V,T,phi,q)",
+          "residual tensors [4,N_train,M_train]",
+          "training-only scales s_r [4]",
+          "field/current predictions"
+        ],
+        "note": "VERBATIM: \"3. Implement in PyTorch the conditioned PINN fθ(e,x,t)→(V,T,φ,q), the four explicit residuals, boundary/initial residuals, and training-only equation scales s_r; emit physical fields and device current so switching time, topology, event order, and energy propagate from the same forward solution.\" The normalizers for the downstream errors used later in J_val are not produced as written."
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "training and validation sets from S2",
+          "PINN/residual implementation from S3",
+          "matched pilot budget"
+        ],
+        "produces": [
+          "trained overcomplete pilot",
+          "validation fields",
+          "three validation component errors",
+          "scalar J_val"
+        ],
+        "note": "VERBATIM: \"4. Train the matched-budget overcomplete uniform pilot on training entities, then evaluate its fields and downstream errors against validation-only FEniCSx references.\" J_val is the mean of normalized switching, topology, and energy errors; event-order violation belongs to the final four-vector estimand but not this routing surrogate."
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "pilot packet responses b=(r,a)",
+          "J_val from S4",
+          "a shared bulk projection subspace and rank",
+          "packet support masks m_b"
+        ],
+        "produces": [
+          "delta_b [B]",
+          "gate sensitivities [B]",
+          "I_b [B]",
+          "H/R partition",
+          "Impact-Redundancy Packet Map O"
+        ],
+        "note": "VERBATIM: \"5. Instantiate packet gates g_b over residual channel and compact mesh-time atom, compute δ_b and automatic-differentiation sensitivity |∂J_val/∂g_b|, form I_b, and select H and R with the frozen knee rule to write the Impact–Redundancy Packet Map O.\" Dual reading: 'shared bulk trunk' can mean a pilot subspace or the later hybrid f_bulk. Under the first reading its rank/subspace is unspecified before delta_b; under the second S5 depends circularly on S7. The dry run changes the score order from [b2,b4,b3,b1] at rank 1 to [b3,b1,b2,b4] at rank 2. m_b is also used in O/S7 without a producer. Revisions bind all three items before scoring."
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "R from S5",
+          "I_b and delta_b from S5",
+          "training-only gate-Hessian envelope L_g",
+          "validation references"
+        ],
+        "produces": [
+          "reported B_R",
+          "measured interaction remainder",
+          "continue/stop decision"
+        ],
+        "note": "VERBATIM: \"6. Compute B_R and the measured interaction remainder on validation entities; stop the route if no minority-forming knee exists or the decomposition does not distinguish the proposed split from uniform allocation.\" The gate-coordinate derivative/Hessian and response-coordinate delta are mixed, so the written expression is not a valid consequence of the stated assumption. This is unrepaired blocking."
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "O from S5",
+          "frozen bulk rank/subspace",
+          "matched budget"
+        ],
+        "produces": [
+          "hybrid field map f_bulk+sum_{b in H} m_b Delta f_b",
+          "matched-budget architecture"
+        ],
+        "note": "VERBATIM: \"7. Replace the pilot with the O-consuming architecture f_bulk+Σ_{b∈H}m_bΔf_b, choose r_bulk by its frozen training-only knee rule, and match total parameters, residual evaluations, updates, and GPU time to the uniform baseline.\" As written, choosing r_bulk here is too late for S5's projection. The replacement revision moves the choice before delta_b and makes S7 reuse it."
+      },
+      {
+        "step": "S8",
+        "consumes": [
+          "architecture from S7",
+          "training entities",
+          "four active residuals",
+          "matched baselines/ablations"
+        ],
+        "produces": [
+          "trained candidate and comparison models"
+        ],
+        "note": "VERBATIM: \"8. Train the candidate with all four PDE/constitutive residuals active and run the key ablations: uniform packet allocation, partition with no local correction heads, and I_b-permuted routing, alongside MLP, Fourier/adaptive-spectral, causal, NeuSA-style, and cheap residual-resampling baselines.\""
+      },
+      {
+        "step": "S9",
+        "consumes": [
+          "controlled-pair and joint OOD entities from S2",
+          "trained models from S8",
+          "FEniCSx references"
+        ],
+        "produces": [
+          "one-factor matched-pair results",
+          "joint whole-entity OOD predictions/references"
+        ],
+        "note": "VERBATIM: \"9. Build C02 matched pairs that independently vary geometry, material stiffness, or pulse spectrum while holding the remaining declared factors fixed, then evaluate a separate joint whole-entity OOD group with the independent FEniCSx oracle.\""
+      },
+      {
+        "step": "S10",
+        "consumes": [
+          "candidate/baseline outputs from S8-S9",
+          "four held-out metric definitions"
+        ],
+        "produces": [
+          "mean four-component held-out error vector",
+          "wall time",
+          "peak memory",
+          "model-bounded conclusion"
+        ],
+        "note": "VERBATIM: \"10. Report switching-time error, GUDHI front-topology distance, event-order violations, programming-energy error, wall time, and peak memory; scope every result to the synthetic VO₂ model and retain a valid negative result if the uniform or cheap alternative matches the candidate.\" The declared estimand matches this final vector if 'population' means the finite predeclared held-out campaign; it is only conditional for a superpopulation of unseen devices."
+      }
+    ],
+    "dry_run": {
+      "instance": "Four residual channels with four physical-term samples each; two validation entities; four 3-vector packet responses; two defensible bulk projections (rank 1 and rank 2); a one-packet local-head budget; and the linear gate objective J(g)=g for the bound stress test.",
+      "execution": {
+        "mode": "executed",
+        "script": "\"\"\"Stdlib-only numeric trace for IdeaSpark Phase 2.3.\"\"\"\nfrom __future__ import annotations\nimport json, math, statistics, sys\n\ndef iqr(values):\n    ordered=sorted(values); half=len(ordered)//2\n    return statistics.median(ordered[half:])-statistics.median(ordered[:half])\n\ndef residual_norm(vector,basis):\n    projected=[0.0]*len(vector)\n    for axis in basis:\n        coefficient=sum(x*y for x,y in zip(vector,axis))\n        projected=[p+coefficient*a for p,a in zip(projected,axis)]\n    return math.sqrt(sum((x-p)**2 for x,p in zip(vector,projected)))\nterm_samples={'R_V':[1.,2.,3.,4.],'R_q':[2.,2.,2.,2.],'R_T':[10.,12.,14.,16.],'R_phi':[.1,.2,.4,.8]}\nscales={n:(raw if (raw:=iqr(xs)) else sys.float_info.epsilon) for n,xs in term_samples.items()}\nvalidation={'switch':[.2,.4],'topology':[.1,.3],'energy':[.3,.5],'event_order':[0.,1.]}\nmeans={n:statistics.fmean(xs) for n,xs in validation.items()}\nj_val=statistics.fmean(means[n] for n in ('switch','topology','energy'))\nresponses={'b1':[3.,0.,0.],'b2':[0.,2.,0.],'b3':[0.,0.,1.],'b4':[1.,1.,0.]}\nsensitivities={'b1':.4,'b2':.3,'b3':.2,'b4':.5}\nbasis_r1=[[1.,0.,0.]]; basis_r2=basis_r1+[[0.,1.,0.]]\ndeltas_r1={b:residual_norm(v,basis_r1) for b,v in responses.items()}; deltas_r2={b:residual_norm(v,basis_r2) for b,v in responses.items()}\nscores_r1={b:sensitivities[b]*deltas_r1[b] for b in responses}; scores_r2={b:sensitivities[b]*deltas_r2[b] for b in responses}\ndelta=.25; gradient_gate=1.; l_gate=0.; actual_removal_change=1.; written_bound=abs(gradient_gate)*delta+(l_gate/2)*delta**2\npacket_benefits=[0.,.6,.2,.5]; mechanism_error=1.-packet_benefits[1]; naive_error=1.-sum(.25*x for x in packet_benefits); mechanism_error_r2=1.-packet_benefits[2]\nresult={'scales':scales,'validation_component_means':means,'J_val_three_component_scalar':j_val,'delta_if_r_bulk_1':deltas_r1,'delta_if_r_bulk_2':deltas_r2,'I_if_r_bulk_1':scores_r1,'I_if_r_bulk_2':scores_r2,'rank_dependent_order_r1':sorted(scores_r1,key=scores_r1.get,reverse=True),'rank_dependent_order_r2':sorted(scores_r2,key=scores_r2.get,reverse=True),'bound_counterexample':{'J(g)':'g','delta_b':delta,'gradient_wrt_gate':gradient_gate,'L_g':l_gate,'actual_removal_change':actual_removal_change,'written_B_R':written_bound,'gate_coordinate_Taylor_bound':1.,'written_bound_violated':actual_removal_change>written_bound},'degenerate_probes':{'empty_packets':'no cumulative curve; no knee; declared stop branch','k_zero_local_heads':'hybrid collapses to f_bulk; no routed minority can be tested','all_identical_scores':'cumulative curve is linear; no minority-forming curvature','tied_max_curvature':'selection is non-unique without a stated tie rule','single_packet':'no interior curvature point; declared no-knee stop'},'naive_same_budget':{'head_capacity':1.,'mechanism_allocation_r1':[0.,1.,0.,0.],'mechanism_allocation_r2':[0.,0.,1.,0.],'uniform_naive_allocation':[.25,.25,.25,.25],'mechanism_error_r1':mechanism_error,'mechanism_error_r2':mechanism_error_r2,'naive_error':naive_error,'error_difference_naive_minus_mechanism_r1':naive_error-mechanism_error,'error_difference_naive_minus_mechanism_r2':naive_error-mechanism_error_r2}}\nprint(json.dumps(result,indent=2,sort_keys=True))",
+        "output": "{\n  \"I_if_r_bulk_1\": {\"b1\": 0.0, \"b2\": 0.6, \"b3\": 0.2, \"b4\": 0.5},\n  \"I_if_r_bulk_2\": {\"b1\": 0.0, \"b2\": 0.0, \"b3\": 0.2, \"b4\": 0.0},\n  \"J_val_three_component_scalar\": 0.30000000000000004,\n  \"bound_counterexample\": {\"J(g)\": \"g\", \"L_g\": 0.0, \"actual_removal_change\": 1.0, \"delta_b\": 0.25, \"gate_coordinate_Taylor_bound\": 1.0, \"gradient_wrt_gate\": 1.0, \"written_B_R\": 0.25, \"written_bound_violated\": true},\n  \"degenerate_probes\": {\"all_identical_scores\": \"cumulative curve is linear; no minority-forming curvature\", \"empty_packets\": \"no cumulative curve; no knee; declared stop branch\", \"k_zero_local_heads\": \"hybrid collapses to f_bulk; no routed minority can be tested\", \"single_packet\": \"no interior curvature point; declared no-knee stop\", \"tied_max_curvature\": \"selection is non-unique without a stated tie rule\"},\n  \"delta_if_r_bulk_1\": {\"b1\": 0.0, \"b2\": 2.0, \"b3\": 1.0, \"b4\": 1.0},\n  \"delta_if_r_bulk_2\": {\"b1\": 0.0, \"b2\": 0.0, \"b3\": 1.0, \"b4\": 0.0},\n  \"naive_same_budget\": {\"error_difference_naive_minus_mechanism_r1\": 0.275, \"error_difference_naive_minus_mechanism_r2\": -0.125, \"head_capacity\": 1.0, \"mechanism_allocation_r1\": [0.0, 1.0, 0.0, 0.0], \"mechanism_allocation_r2\": [0.0, 0.0, 1.0, 0.0], \"mechanism_error_r1\": 0.4, \"mechanism_error_r2\": 0.8, \"naive_error\": 0.675, \"uniform_naive_allocation\": [0.25, 0.25, 0.25, 0.25]},\n  \"rank_dependent_order_r1\": [\"b2\", \"b4\", \"b3\", \"b1\"],\n  \"rank_dependent_order_r2\": [\"b3\", \"b1\", \"b2\", \"b4\"],\n  \"scales\": {\"R_T\": 4.0, \"R_V\": 2.0, \"R_phi\": 0.45000000000000007, \"R_q\": 2.220446049250313e-16},\n  \"validation_component_means\": {\"energy\": 0.4, \"event_order\": 0.5, \"switch\": 0.30000000000000004, \"topology\": 0.2}\n}"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "training-only equation scales s_r",
+          "value": "R_V=2.0, R_q=2.220446049250313e-16, R_T=4.0, R_phi=0.45000000000000007",
+          "arithmetic": "IQR=median(upper half)-median(lower half); zero R_q IQR uses machine epsilon exactly as written"
+        },
+        {
+          "quantity": "J_val",
+          "value": "0.30000000000000004",
+          "arithmetic": "mean(mean[0.2,0.4], mean[0.1,0.3], mean[0.3,0.5])=(0.3+0.2+0.4)/3"
+        },
+        {
+          "quantity": "rank-dependent packet scores",
+          "value": "r_bulk=1: {b1:0,b2:0.6,b3:0.2,b4:0.5}; r_bulk=2: {b1:0,b2:0,b3:0.2,b4:0}",
+          "arithmetic": "I_b=|dJ/dg_b| times Euclidean projection-residual norm delta_b"
+        },
+        {
+          "quantity": "written bound counterexample",
+          "value": "actual=1.0, B_R=0.25",
+          "arithmetic": "J(g)=g, removal 1->0, |dJ/dg|=1, delta=0.25, L_g=0: B_R=1*0.25+0=0.25 < 1"
+        },
+        {
+          "quantity": "same-budget naive comparison",
+          "value": "uniform naive error=0.675; mechanism error=0.4 for rank-1 reading and 0.8 for rank-2 reading",
+          "arithmetic": "one head: uniform captures 0.25*(0+0.6+0.2+0.5)=0.325; rank-1 routing captures 0.6; rank-2 routing captures 0.2"
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "The exact same four packet responses produce score order [b2,b4,b3,b1] at r_bulk=1 but [b3,b1,b2,b4] at r_bulk=2; S5 therefore cannot produce a unique O before S7 chooses the projection rank.",
+          "kind": "structural",
+          "why": "Projection residuals are functions of the projection subspace for every input; the concrete numbers expose the missing producer rather than establishing a domain magnitude."
+        },
+        {
+          "anomaly": "For J(g)=g, delta_b=0.25 and L_g=0, the actual gate-removal change is 1.0 while the written B_R is 0.25.",
+          "kind": "structural",
+          "why": "This is a counterexample satisfying the stated Hessian assumption; it proves that a gate-coordinate derivative/Hessian cannot be combined with response-coordinate delta without an additional coordinate relation."
+        },
+        {
+          "anomaly": "The naive divergence is +0.275 in favor of the mechanism under the rank-1 reading but -0.125 under the rank-2 reading.",
+          "kind": "instance_contingent",
+          "why": "Both the packet benefits and diagnostic projection are invented; the result tests depth and reading sensitivity but is not evidence about real VO2 behavior."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty packet set",
+        "behavior": "No descending cumulative curve exists; the declared no-minority branch stops the route.",
+        "finding": null
+      },
+      {
+        "probe": "k=0 local heads",
+        "behavior": "The hybrid collapses to f_bulk and no routed-minority mechanism remains to test.",
+        "finding": "If k=0 is allowed, the route must be reported as the no-local-head ablation/negative case, not as the candidate mechanism."
+      },
+      {
+        "probe": "all packets identical",
+        "behavior": "The cumulative score curve is linear and has no minority-forming curvature; declared stop branch applies.",
+        "finding": null
+      },
+      {
+        "probe": "tie at every maximum-curvature candidate",
+        "behavior": "As written H/R is non-unique.",
+        "finding": "Patch specifies normalized three-point curvature and the smallest interior index on ties."
+      },
+      {
+        "probe": "single packet",
+        "behavior": "There is no interior three-point curvature index; declared no-knee stop branch applies.",
+        "finding": null
+      },
+      {
+        "probe": "maximum allowed packet count",
+        "behavior": "No finite maximum is declared in the method, so this probe is not expressible; campaign boundedness alone does not set B.",
+        "finding": "Nonblocking implementability detail; it does not create a circularity or false guarantee by itself."
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "The PINN remains the core solver rather than a post-processor.",
+        "established_by": "S3,S8",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "No formal-OOD entity contributes to scales, scores, partition, rank, or model selection.",
+        "established_by": "S2-S5",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "the implementation preserves the declared entity IDs and performs no preprocessing before the split"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "B_R conditionally bounds downstream fidelity loss under the stated gate-Hessian envelope.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "The error decomposition, rather than the partition label, is the contribution.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "All four residuals are recomputed on summed fields, so cross-field coupling is never stitched after the fact.",
+        "established_by": "S7,S8",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The packet population has a high-impact minority and projection-redundant majority.",
+        "established_by": "S5,S6",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Total parameters, residual evaluations, optimizer updates, and GPU time are matched to the uniform baseline.",
+        "established_by": "S7,S8",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "a predeclared budget-matching tolerance and accounting rule, especially for GPU time"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "C02 isolates geometry, stiffness, and pulse-spectrum effects while joint OOD tests their combination.",
+        "established_by": "S2,S9,S10",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "matched pairs are feasible under the same declared PDE and numerical resolution",
+          "no unheld solver/discretization factor changes with the varied factor"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The population mean vector of four held-out errors is estimated.",
+        "established_by": "S10",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "'population' denotes the finite predeclared campaign; otherwise a sampling/generalization model is required"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Formal-OOD switching-time, topology, and energy errors decrease at matched compute.",
+        "established_by": "S8-S10",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Allocate the same one-head correction capacity uniformly across all packets, using the same pilot/validation information but no projection, sensitivity, knee, or routing stage.",
+      "naive_fairness": "It uses the same total local-head capacity, packet set, validation information, residual evaluations, and deployment restrictions; it is simpler because it is a fixed uniform rule with no learned score, projection choice, or extra selection pass.",
+      "instance_behavior": {
+        "naive": "error 0.675 after uniformly capturing 0.325 of the four packet benefits",
+        "mechanism": "rank-1 reading: error 0.4 by routing the head to b2; rank-2 reading: error 0.8 by routing it to b3",
+        "divergence": "naive minus mechanism = +0.275 at rank 1 and -0.125 at rank 2",
+        "kind": "instance_contingent"
+      },
+      "verdict": "confronts_obstacle",
+      "reasoning": "After the applied ordering/tie patch fixes the pre-score projection, the rank-1 execution demonstrates the declared non-exchangeability obstacle under identical budget and information. The positive verdict is instance-contingent, not empirical evidence; the pre-patch rank-2 reading reverses it and is why the missing producer had to be repaired."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "The claimed B_R fidelity bound mixes gate-coordinate derivatives/Hessian with response-coordinate norms, so it is false under its own stated assumption; repairing the score/bound coordinate would change the load-bearing Impact-Redundancy mechanism and is therefore an obstacle hole, not a wording patch.",
+      "severity": "blocking",
+      "why_not_repaired": "An honest repair must redefine either I_b and the remainder in gate coordinates or the derivative/Hessian in response coordinates. That changes the packet ordering, H/R split, and central decomposition claim, which exceeds patch-only coherence repair.",
+      "verbatim_step_quote": "Under the explicitly local assumption that J_val has gate-Hessian norm bounded by the training-only measured L_g along the replacement path, the downstream fidelity loss is conditionally bounded by B_R=Σ_{b∈R}I_b+(L_g/2)||δ_R||²; B_R and its interaction remainder are reported against the full pilot, making the error decomposition rather than the partition label the contribution.",
+      "executed_evidence": "Executed excerpt: delta=0.25; gradient_gate=1.0; L_g=0.0; J(g)=g; actual=abs(J(1)-J(0))=1.0; written_B_R=abs(gradient_gate)*delta+(L_g/2)*delta**2=0.25. J(g)=g has gate-Hessian 0 everywhere, so it satisfies the stated L_g envelope, yet 1.0 > 0.25. The gate-coordinate Taylor expression on the same instance is |gradient_gate|+(L_g/2)*1^2=1.0.",
+      "reading_dependence": "reading_robust",
+      "structural_requirement": "(a) Identifying condition: any successor must use one explicit perturbation coordinate throughout the score, first-order term, path, and Hessian remainder, and must derive the reported bound for removal in that same coordinate. (b) Available sources are the existing packet gates, autograd of J_val, validation-only pilot responses, and a predeclared replacement path; formal-OOD entities remain excluded from selection, and real-device observations are unnecessary for this algebraic condition. An exact/safely upper-bounded path Hessian may be computationally expensive; if it is not available, the bound must be dropped and the score treated as empirical rather than inheriting an unpriced guarantee. (c) Salvage the packet-gate instrument, held-out validation metrics, projection-residual diagnostic, permutation control, and matched-budget uniform baseline; discard the current mixed-coordinate I_b/B_R formula and every guarantee that depends on it. The executed evidence does not identify which replacement coordinate will perform best."
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "Execution binding: before any δ_b or I_b is computed, form the pilot feature matrix on training entities, scale the candidate index and curve ordinate to [0,1], define each maximum-curvature knee as the interior index maximizing the absolute three-point second difference with the smallest index chosen on ties, freeze r_bulk and its corresponding shared-bulk projection subspace, define m_b as the compact-support mask of atom a on the mesh-time grid, and freeze the nonzero training-only interquartile normalizers for the three J_val components with machine epsilon as the zero-scale fallback; Step 7 reuses these bindings rather than choosing them after O.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1/T2 missing-producer and dual-reading findings for r_bulk, the projection subspace, m_b, downstream normalizers, and knee ties without changing the mechanism family."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism_steps",
+      "value": "1. Use Gmsh and FEniCSx to generate a bounded, mesh/time-converged synthetic campaign of two-dimensional VO₂ devices governed by the declared current-continuity, Joule, heat, and phase-kinetic equations; label every output as numerical reference, not experiment.\n2. Split complete geometry/material/pulse/trajectory entities into training, validation, controlled-pair test, and joint formal-OOD groups before computing any scale or score.\n3. Implement in PyTorch the conditioned PINN fθ(e,x,t)→(V,T,φ,q), the four explicit residuals, boundary/initial residuals, and training-only equation scales s_r; emit physical fields and device current so switching time, topology, event order, and energy propagate from the same forward solution, and freeze the three J_val normalizers from training-only interquartile scales with machine epsilon as the zero-scale fallback.\n4. Train the matched-budget overcomplete uniform pilot on training entities, then evaluate its fields and downstream errors against validation-only FEniCSx references.\n5. From the pilot training feature matrix, select and freeze r_bulk and the shared-bulk projection subspace using the [0,1]-scaled maximum-absolute-three-point-second-difference knee with the smallest interior index on ties; define each m_b as atom a's compact-support mask, instantiate packet gates g_b, compute δ_b and |∂J_val/∂g_b|, form I_b, and select H and R by the same deterministic cumulative-score knee rule to write O.\n6. Compute B_R and the measured interaction remainder on validation entities; stop the route if no minority-forming knee exists or the decomposition does not distinguish the proposed split from uniform allocation.\n7. Replace the pilot with the O-consuming architecture f_bulk+Σ_{b∈H}m_bΔf_b using the already frozen r_bulk and projection binding, and match total parameters, residual evaluations, updates, and GPU time to the uniform baseline.\n8. Train the candidate with all four PDE/constitutive residuals active and run the key ablations: uniform packet allocation, partition with no local correction heads, and I_b-permuted routing, alongside MLP, Fourier/adaptive-spectral, causal, NeuSA-style, and cheap residual-resampling baselines.\n9. Build C02 matched pairs that independently vary geometry, material stiffness, or pulse spectrum while holding the remaining declared factors fixed, then evaluate a separate joint whole-entity OOD group with the independent FEniCSx oracle.\n10. Report switching-time error, GUDHI front-topology distance, event-order violations, programming-energy error, wall time, and peak memory; scope every result to the synthetic VO₂ model and retain a valid negative result if the uniform or cheap alternative matches the candidate.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1 circular ordering and undefined-symbol findings by producing the bulk projection/rank, m_b, and normalization bindings before S5 consumes them and by making S7 reuse the frozen rank."
+    }
+  ],
+  "final_candidate": {
+    "title": "Impact-Partitioned Local-Operator PINNs for Dynamic VO₂ Switching",
+    "hook": "The candidate predicts that, at equal compute and comparable aggregate physics loss, preserving a high-impact residual–feature minority while compressing the redundant majority will reduce formal-OOD switching-time, front-topology, and programming-energy errors. This regime split is a hypothesis, not a reported result.",
+    "hook_shape_rationale": "Shape (a), surprising empirical reveal, is admitted because the named downstream errors are predicted to improve even though most residual–feature packets receive less capacity than under the strongest uniform baseline. Shape (c) was viable under the matched-compute design but rejected because no result yet establishes a strict resource reduction; the fixed-budget error direction is the honest falsifiable claim.",
+    "gap_closure": [
+      {
+        "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition — stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+        "main_pattern": "heterogeneous_decomposition",
+        "sub_pattern": "C04 (Decompose for Differentiated Treatment)",
+        "companion_pattern": "architectural_operator_substitution",
+        "how_closed": "Corpus support is thin for oxide-PCM PINNs because C04's exemplars are compression-centric and domain-distant; C04 treats the overcomplete residual–feature bank as a downstream-error-scored high-impact minority versus a projection-redundant majority, while architectural_operator_substitution consumes the named Impact–Redundancy Packet Map to assign full-fidelity local heads to the minority and a shared low-rank bulk operator to the majority, with strongest-uniform and cheap-adaptive comparisons."
+      },
+      {
+        "gap": "No retrieved frontier leaf establishes that event order, front topology, and energy balance remain correct for held-out entire device geometries, material combinations, and pulse protocols that shift the spectrum and stiffness beyond training — stakes: reported gains may not transfer across devices or operating regimes, making the scientific conclusion non-general and the model unsafe as a design surrogate.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "companion_pattern": null,
+        "how_closed": "C02 treats training–test spectral-and-stiffness overlap as the confound, constructs FEniCSx-matched whole-entity pairs plus joint geometry/material/protocol OOD groups, and uses the independent synthetic solver oracle to score event order, front topology, and programming energy; every conclusion remains bounded to the declared VO₂ PDE model rather than experimental validation."
+      }
+    ],
+    "core_mechanism": "Each complete synthetic entity e=(Ω,dΩ,μ,p) is a two-dimensional-or-higher oxide-PCM device defined by its geometry Ω and signed-distance encoding dΩ, VO₂ constitutive parameters μ, and voltage pulse p(t); Gmsh and FEniCSx generate bounded mesh-converged reference trajectories, while a PyTorch parametric coordinate PINN outputs electric potential V, temperature T, phase field φ, and auxiliary Joule source q. The nonzero physics loss contains current-continuity residual R_V=∇·[σ(T,φ,|−∇V|;μ)∇V], Joule constitutive residual R_q=q−σ(T,φ,|−∇V|;μ)|∇V|², thermal residual R_T=ρc_p(T,φ;μ)∂tT−∇·[k(T,φ;μ)∇T]−q, and phase-kinetic residual R_φ=∂tφ+M(μ)δF(V,T,φ;μ)/δφ, together with declared boundary and initial residuals, so the PINN remains the core solver rather than a post-processor. Each residual is divided by s_r, whose default is the training-only interquartile scale of that equation's physical terms with machine epsilon as the zero-scale fallback; s_r is frozen before validation or formal OOD. An overcomplete uniform pilot exposes residual–feature packets b=(r,a), where r is one of the four residual channels and a is a compact space-time atom induced by the converged mesh hierarchy and pulse breakpoints; a scalar gate g_b multiplies that packet's local correction response. On training-validation entities, J_val is the mean of normalized switching-time error, GUDHI persistence-diagram front-topology distance, and normalized programming-energy error, where switching is the first terminally connected metallic path at φ_c and φ_c defaults to the equal-free-energy phase separator supplied by the declared VO₂ constitutive model rather than being tuned on test data. For packet b, δ_b is the norm of the response left after projection onto the shared bulk trunk and I_b=|∂J_val/∂g_b|δ_b is its downstream impact–redundancy score; the maximum-curvature knee of the descending cumulative I_b curve is the default deterministic split into high-impact minority H and redundant majority R, and absence of a minority-forming knee falsifies the premise rather than triggering a forced split. Under the explicitly local assumption that J_val has gate-Hessian norm bounded by the training-only measured L_g along the replacement path, the downstream fidelity loss is conditionally bounded by B_R=Σ_{b∈R}I_b+(L_g/2)||δ_R||²; B_R and its interaction remainder are reported against the full pilot, making the error decomposition rather than the partition label the contribution. C04 produces the named intermediate object O, the Impact–Redundancy Packet Map O={H,R,I_b,δ_b,m_b}, and the companion consumes O through f_hybrid=f_bulk+Σ_{b∈H}m_bΔf_b: the shared low-rank bulk trunk handles R, compactly supported full-fidelity correction heads handle H, and all four PDE/constitutive residuals are recomputed on the summed fields so cross-field coupling is never stitched after the fact. The bulk rank r_bulk defaults to the maximum-curvature knee of the training-only singular-value curve and is frozen before OOD; freed capacity is assigned to H while total parameters, collocation evaluations, optimizer updates, and GPU time are matched to a strongest uniform allocation baseline. Shared evaluation then compares the candidate with standard MLP-PINN, fixed/adaptive Fourier PINNs, causal PINN, a NeuSA-style global spectral causal PINN, the matched-capacity uniform packet model, and the cheap alternative of a globally nondimensionalized Fourier-feature PINN with residual-proportional resampling; full geometries, material combinations, pulse protocols, and complete trajectories remain indivisible groups, and FEniCSx outputs are synthetic numerical references only. Execution binding: before any δ_b or I_b is computed, form the pilot feature matrix on training entities, scale the candidate index and curve ordinate to [0,1], define each maximum-curvature knee as the interior index maximizing the absolute three-point second difference with the smallest index chosen on ties, freeze r_bulk and its corresponding shared-bulk projection subspace, define m_b as the compact-support mask of atom a on the mesh-time grid, and freeze the nonzero training-only interquartile normalizers for the three J_val components with machine epsilon as the zero-scale fallback; Step 7 reuses these bindings rather than choosing them after O.",
+    "core_mechanism_reasoning": "BLOCK 1 — PREMISES ledger:\nP1: A small set of residual–feature packets has a heavy-tailed effect on switching time, front topology, and programming energy in pulsed VO₂ dynamics; localized fronts and nonlinear Joule/phase coupling make this plausible, but it is untested — falsification target.\nP2: The declared FEniCSx electro-thermal-phase model and mesh/time convergence provide a consistent synthetic oracle for that model; they do not establish experimental truth, so claims are solver-model-bounded.\nP3: The local gate-Hessian envelope L_g covers the full-to-bulk replacement path sufficiently for B_R to be informative; this is untested — falsification target, and the measured interaction remainder must be reported rather than assumed away.\nOBSERVATION-MODEL premise: packet scores consume FEniCSx states and PINN residuals sampled only from pre-split training and validation entities on converged meshes and time grids; this sampling is complete only relative to the declared synthetic campaign, not unbiased over real VO₂ devices, and no formal-OOD entity contributes to s_r, φ_c, I_b, H, r_bulk, or model selection.\nESTIMAND: the target is the population mean vector of normalized switching-time error, persistence-based front-topology distance, event-order violation, and programming-energy error over the predeclared held-out whole geometry/material/protocol entities under the same FEniCSx constitutive model.\nBLOCK 2 — NAIVE-BASELINE AUDIT:\nThe runnable naive version is a single global MLP or Fourier trunk trained on the uniformly normalized sum of R_V, R_q, R_T, and R_φ with residual-proportional collocation resampling. Branch (i): it silently assumes packets are exchangeable after nondimensionalization, which is false if an endogenous front creates a sparse set of uniquely downstream-sensitive residual–feature responses; the proposed I_b decomposition confronts that premise by preserving unique high-impact responses and compressing only projection-redundant ones. Influence-aware compression is a standard tool in other fields, but here the domain-specific unresolved structure is the differentiable map from four causally coupled PDE/constitutive residual channels to moving-front event, topology, and energy errors under whole-device OOD; if that coupling yields no distinct bound or minority, the result must be declared application-grade or negative. The design explicitly avoids reducing to XPINN spatial subdomains, VPINN weak residuals, self-adaptive loss weights, implicit-Runge–Kutta stages, global Fourier features, or causal time weighting: it retains one coupled field and changes capacity only through O.\nBLOCK 3 — design rationale:\nThe anchor and OOD sibling share one measurement framework because the same downstream error vector defines I_b and grades formal OOD, while C02 remains a separate controlled instrument rather than a second training module. Pure residual reweighting was rejected as the occupied self-adaptive node, global NeuSA/Fourier representations do not localize t>0 generated fronts, and independent XPINN subnetworks would introduce moving-interface stitching; the bulk-plus-sparse-correction operator is the smallest mechanism that consumes O without those regressions.",
+    "core_mechanism_steps": "1. Use Gmsh and FEniCSx to generate a bounded, mesh/time-converged synthetic campaign of two-dimensional VO₂ devices governed by the declared current-continuity, Joule, heat, and phase-kinetic equations; label every output as numerical reference, not experiment.\n2. Split complete geometry/material/pulse/trajectory entities into training, validation, controlled-pair test, and joint formal-OOD groups before computing any scale or score.\n3. Implement in PyTorch the conditioned PINN fθ(e,x,t)→(V,T,φ,q), the four explicit residuals, boundary/initial residuals, and training-only equation scales s_r; emit physical fields and device current so switching time, topology, event order, and energy propagate from the same forward solution, and freeze the three J_val normalizers from training-only interquartile scales with machine epsilon as the zero-scale fallback.\n4. Train the matched-budget overcomplete uniform pilot on training entities, then evaluate its fields and downstream errors against validation-only FEniCSx references.\n5. From the pilot training feature matrix, select and freeze r_bulk and the shared-bulk projection subspace using the [0,1]-scaled maximum-absolute-three-point-second-difference knee with the smallest interior index on ties; define each m_b as atom a's compact-support mask, instantiate packet gates g_b, compute δ_b and |∂J_val/∂g_b|, form I_b, and select H and R by the same deterministic cumulative-score knee rule to write O.\n6. Compute B_R and the measured interaction remainder on validation entities; stop the route if no minority-forming knee exists or the decomposition does not distinguish the proposed split from uniform allocation.\n7. Replace the pilot with the O-consuming architecture f_bulk+Σ_{b∈H}m_bΔf_b using the already frozen r_bulk and projection binding, and match total parameters, residual evaluations, updates, and GPU time to the uniform baseline.\n8. Train the candidate with all four PDE/constitutive residuals active and run the key ablations: uniform packet allocation, partition with no local correction heads, and I_b-permuted routing, alongside MLP, Fourier/adaptive-spectral, causal, NeuSA-style, and cheap residual-resampling baselines.\n9. Build C02 matched pairs that independently vary geometry, material stiffness, or pulse spectrum while holding the remaining declared factors fixed, then evaluate a separate joint whole-entity OOD group with the independent FEniCSx oracle.\n10. Report switching-time error, GUDHI front-topology distance, event-order violations, programming-energy error, wall time, and peak memory; scope every result to the synthetic VO₂ model and retain a valid negative result if the uniform or cheap alternative matches the candidate.",
+    "falsification_prediction": "On the bounded FEniCSx synthetic two-dimensional VO₂ campaign, train the candidate and all matched baselines with complete geometry/material/pulse entities held out for formal OOD, then measure normalized switching-time error, GUDHI front-topology distance, event-order violations, and programming-energy error. If the mechanism works, the candidate's three headline downstream errors decrease relative to the matched-capacity uniform packet baseline and the cheap residual-resampling alternative, while the partition-without-local-head ablation yields a smaller improvement. The single load-bearing variable is I_b, the packetwise downstream impact–redundancy score; the negative control randomly permutes I_b across packets before the frozen H/R split while preserving the number of local heads, parameter count, collocation budget, optimizer, seeds, and GPU time. The prediction is that this permutation returns switching-time, front-topology, and programming-energy errors toward the strongest uniform baseline; failure to do so falsifies the claimed routing mechanism without relying on an invented numeric threshold.",
+    "compute_budget": "Future MVE estimate: 9 GPU-days on one 80GB-class GPU for the uniform pilot, candidate, matched baselines, key ablations, and repeated seeds, plus bounded CPU-side Gmsh/FEniCSx reference generation; paid API cost: $0. This fits the user ceiling of at most 10 GPU-days, and execution remains explicitly unauthorized.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "arxiv:2509.04966v2",
+        "delta": "NeuSA projects a smooth initial-value PDE onto one truncated global Fourier basis and advances all coefficients through a NODE, whereas this candidate constructs a training-only downstream-impact packet map and uses it to place sparse local correction operators on endogenous VO₂ fronts while testing whole-entity geometry/material/protocol OOD."
+      },
+      {
+        "paper_id": "arxiv:2605.04502v1",
+        "delta": "The adaptive-spectral study isolates how two initial-condition gates rescale gradients in a single stiff ODE, whereas this candidate decomposes coupled electric, Joule, thermal, and phase residual–feature responses by their measured contribution to switching-time, topology, and energy error in spatial device dynamics."
+      },
+      {
+        "paper_id": "openalex:W4403555504",
+        "delta": "The energy-embedded phase-field PINN removes temporal evolution and solves a static equilibrium with an added free-energy term, whereas this candidate retains current continuity, Joule heating, heat propagation, and phase kinetics throughout the switching trajectory and grades causal events and moving fronts."
+      },
+      {
+        "paper_id": "semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+        "delta": "The VO₂ work measures operando electro-thermo-mechanical domain dynamics and supports a phase-field interpretation in one suspended geometry, whereas this candidate builds a physics-residual PINN and a synthetic whole-entity OOD diagnostic without presenting solver output as experimental validation."
+      }
+    ],
+    "almost_prior_paper_id": "arxiv:2509.04966v2",
+    "what_step_was_missed": "NeuSA would have needed to replace its single global spectral coefficient flow with a downstream-error-derived high-impact packet map, sparse front-local correction operators, and a coupled residual fidelity decomposition validated on held-out complete VO₂ devices and pulse protocols.",
+    "signature_terms": [
+      "impact partitioned residual packet PINN",
+      "local operator VO2 switching PINN",
+      "endogenous high frequency phase fronts",
+      "whole device protocol OOD PINN",
+      "downstream error decomposed multiphysics PINN"
+    ],
+    "alias_terms": [
+      "XPINN space time domain decomposition",
+      "VPINN variational residual formulation",
+      "self adaptive residual weights PINN",
+      "discrete time implicit Runge Kutta PINN",
+      "influence guided mixed precision routing",
+      "sensitivity weighted sparse expert routing",
+      "conditional computation local expert allocation"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

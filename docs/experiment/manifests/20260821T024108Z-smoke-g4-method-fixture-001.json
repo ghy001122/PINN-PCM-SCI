@@ -1,0 +1,77 @@
+{
+  "actual_budget": {
+    "collocation_points": 27,
+    "optimizer_updates": 3,
+    "updates": {
+      "identity": {
+        "loss_before": 28.22458266266166,
+        "parameter_delta_l2": 0.01063014431871848
+      },
+      "kc": {
+        "loss_before": 28.184934067812826,
+        "parameter_delta_l2": 0.011832127902079811
+      },
+      "raw": {
+        "loss_before": 28.22458266266166,
+        "parameter_delta_l2": 0.01063014431871848
+      }
+    },
+    "wall_seconds": 16.875
+  },
+  "artifacts": {
+    "identity_checkpoint": "outputs\\runs\\20260821T024108Z-smoke-g4-method-fixture-001\\checkpoints\\identity.pt",
+    "intent": "docs\\experiment\\intents\\20260821T024108Z-smoke-g4-method-fixture-001.json",
+    "kc_checkpoint": "outputs\\runs\\20260821T024108Z-smoke-g4-method-fixture-001\\checkpoints\\kc.pt",
+    "metrics": "outputs\\runs\\20260821T024108Z-smoke-g4-method-fixture-001\\metrics.json",
+    "predictions": "outputs\\runs\\20260821T024108Z-smoke-g4-method-fixture-001\\predictions.h5",
+    "raw_checkpoint": "outputs\\runs\\20260821T024108Z-smoke-g4-method-fixture-001\\checkpoints\\raw.pt",
+    "run_root": "outputs\\runs\\20260821T024108Z-smoke-g4-method-fixture-001"
+  },
+  "case_id": "manufactured-2d-diffusion-pullback-fixture-v1",
+  "checkpoint": {
+    "id": "one-update-each",
+    "selection": "NOT_APPLICABLE_SMOKE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.method_smoke",
+    "run"
+  ],
+  "ended_at": "2026-08-21T02:41:47.048517Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "python": "3.11.9",
+    "torch": "2.5.1+cpu"
+  },
+  "evaluator_id": "frozen-project-method-smoke-evaluator-v1",
+  "evidence_identity": "ENGINEERING_METHOD_CONTROL_FLOW_ONLY",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "g4-method-engineering-smoke-v1",
+  "failure_class": null,
+  "gate": "G4",
+  "gate_outcome": "G4_METHOD_SMOKE_PASS",
+  "method_id": "raw-identity-kc-one-update-smoke-v1",
+  "numerical_validity": "VALID_ENGINEERING_SMOKE",
+  "physical_contract_id": "NON_SCIENTIFIC_MANUFACTURED_PULLBACK_FIXTURE",
+  "planned_budget": {
+    "methods": 3,
+    "optimizer_updates_per_method": 1
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_G3_G4",
+  "run_id": "20260821T024108Z-smoke-g4-method-fixture-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "pipeline",
+  "seed": 7,
+  "split_id": "NON_SCIENTIFIC_FIXED_COLLOCATION_GRID_V1",
+  "started_at": "2026-08-21T02:41:30.180282Z",
+  "supersedes": null,
+  "tier": "smoke"
+}

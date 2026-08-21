@@ -1,0 +1,85 @@
+{
+  "actual_budget": {
+    "candidate_points": 24,
+    "optimizer_updates": 4,
+    "selected_points_per_method": 4,
+    "updates": {
+      "fourier_global": {
+        "loss_before": 3.0,
+        "parameter_delta_l2": 0.001992052331732541
+      },
+      "pha_capacity": {
+        "loss_before": 3.0,
+        "parameter_delta_l2": 0.001992065734920771
+      },
+      "pha_sampling": {
+        "loss_before": 3.0,
+        "parameter_delta_l2": 0.00199239512239827
+      },
+      "pha_shared": {
+        "loss_before": 3.0,
+        "parameter_delta_l2": 0.0019923969958931067
+      }
+    },
+    "wall_seconds": 9.14100000000326
+  },
+  "artifacts": {
+    "checkpoint_fourier_global": "outputs\\runs\\20260821T041202Z-smoke-g6-pha-method-002\\checkpoints\\fourier_global.pt",
+    "checkpoint_pha_capacity": "outputs\\runs\\20260821T041202Z-smoke-g6-pha-method-002\\checkpoints\\pha_capacity.pt",
+    "checkpoint_pha_sampling": "outputs\\runs\\20260821T041202Z-smoke-g6-pha-method-002\\checkpoints\\pha_sampling.pt",
+    "checkpoint_pha_shared": "outputs\\runs\\20260821T041202Z-smoke-g6-pha-method-002\\checkpoints\\pha_shared.pt",
+    "evaluator_stderr": "outputs\\runs\\20260821T041202Z-smoke-g6-pha-method-002\\evaluator.stderr.log",
+    "evaluator_stdout": "outputs\\runs\\20260821T041202Z-smoke-g6-pha-method-002\\evaluator.stdout.log",
+    "intent": "docs\\experiment\\intents\\20260821T041202Z-smoke-g6-pha-method-002.json",
+    "metrics": "outputs\\runs\\20260821T041202Z-smoke-g6-pha-method-002\\metrics.json",
+    "predictions": "outputs\\runs\\20260821T041202Z-smoke-g6-pha-method-002\\predictions.h5",
+    "run_root": "outputs\\runs\\20260821T041202Z-smoke-g6-pha-method-002"
+  },
+  "case_id": "qpop-cpc-v1-equations-non-oracle-smoke-v1",
+  "checkpoint": {
+    "id": "one-update-each",
+    "selection": "NOT_APPLICABLE_SMOKE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.pha_method_smoke",
+    "run"
+  ],
+  "ended_at": "2026-08-21T04:12:15.711146Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "python": "3.11.9",
+    "torch": "2.5.1+cpu"
+  },
+  "evaluator_id": "frozen-project-pha-method-smoke-evaluator-v1",
+  "evidence_identity": "QPOP_PHYSICS_METHOD_CONTROL_FLOW_ONLY",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "g6-pha-method-engineering-smoke-v1",
+  "failure_class": null,
+  "gate": "G6_PHA",
+  "gate_outcome": "G6_PHA_METHOD_SMOKE_PASS",
+  "method_id": "fourier-pha-capacity-sampling-shared-one-update-smoke-v1",
+  "numerical_validity": "VALID_ENGINEERING_SMOKE",
+  "physical_contract_id": "PROVISIONAL_G3_QPOP_CPC_V1_IMT_CONTRACT",
+  "planned_budget": {
+    "methods": 4,
+    "optimizer_updates_per_method": 1
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_PHA_DEVELOPMENT_ONLY",
+  "run_id": "20260821T041202Z-smoke-g6-pha-method-002",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "pipeline",
+  "seed": 13,
+  "split_id": "NON_SCIENTIFIC_FIXED_PHA_SMOKE_COORDINATES_V1",
+  "started_at": "2026-08-21T04:12:06.564528Z",
+  "supersedes": "20260821T035933Z-smoke-g6-pha-method-001",
+  "tier": "smoke"
+}

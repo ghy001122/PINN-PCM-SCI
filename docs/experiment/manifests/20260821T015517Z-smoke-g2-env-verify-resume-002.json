@@ -1,0 +1,89 @@
+{
+  "actual_budget": {
+    "build_status": "BUILT_NOT_YET_VERIFIED",
+    "preflight_status": "PREFLIGHT_PASS",
+    "qpop_processes_started": 0,
+    "resolve_status": "RESOLVED",
+    "verify_status": "ENVIRONMENT_VERIFIED",
+    "wall_budget_exhausted": false,
+    "wall_seconds_from_intent": 132.2753395
+  },
+  "artifacts": {
+    "build_manifest": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-002/build.manifest.json",
+    "evidence_root": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-002",
+    "intent": "outputs/runs/20260821T015517Z-smoke-g2-env-verify-resume-002/environment_intent.json",
+    "preflight": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-002/preflight.json",
+    "resolution_lock": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-002/resolution.lock.json",
+    "run_record": "outputs/runs/20260821T015517Z-smoke-g2-env-verify-resume-002/environment_attempt.json",
+    "verification": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-verify-resume-002/verification.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-oscillation-environment",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_ENVIRONMENT_VERIFY"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "builder_sha256": "858a71f46bbf44d599709a240034dc556cb6f3b72ab85c655eece8908d3e1923",
+    "dirty": true,
+    "g2_smoke_runner_sha256": "46b4cb34d2800d38008957c81e1ff210d48d18c88ec733bb460194999906e58b",
+    "git_revision": "29e35ae5dd5165e5e15586312ee92cf940e8ad7f",
+    "kind": "working-tree-uncommitted",
+    "legacy_test_sha256": "0aac7294f9256e4eb389ca8624e641bfc8cd78bb992cb89e827d3edac1e4e328",
+    "smoke_test_sha256": "646bc25a83f2cc9cc21188d91663f25bef3ce604b3678c07f1b80eb9c8a3c601",
+    "stack_spec_sha256": "e1f74ca4cedf864169d4814412e01e510df7b272a541ad8350e7b35990ce4fce"
+  },
+  "command": [
+    "wsl.exe",
+    "-d",
+    "PINN-PCM-SCI-Ubuntu-20.04",
+    "-u",
+    "root",
+    "--",
+    "/usr/bin/python3",
+    "/mnt/e/Python demo/PINN-PCM-SCI/pinn_pcm_sci/qpop_legacy_stack.py",
+    "verify",
+    "--execute"
+  ],
+  "ended_at": "2026-08-21T01:57:29.740825Z",
+  "environment": {
+    "build_manifest_sha256": "69aa55488e74e58c6236dccf92bd86ed0118a3446e64d6bfd65dd89d917595b1",
+    "install_prefix": "/opt/qpop-cpc-v1-env-g2-final-002",
+    "preflight_sha256": "29be066291258325021b98e76ad9f1257d48b216782ff6f2b7df8f7e3f8a7d89",
+    "resolution_lock_sha256": "54c61d8454b48fb18644abcafe4bf5fe0034923276d3dc03bc2de13667c71547",
+    "runtime": "CPU",
+    "stage": "verify",
+    "verification_sha256": "7c88879cec07d34eaf3a3a77142473ad6827e3dae85cb2ac73b19fcc15b7cf6c",
+    "wsl_distribution": "PINN-PCM-SCI-Ubuntu-20.04"
+  },
+  "evaluator_id": "NOT_RUN_ENVIRONMENT_INTEGRATION",
+  "evidence_identity": "ENVIRONMENT_INTEGRATION_ONLY",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "g2-qpop-legacy-environment-resolution-v1",
+  "failure_class": null,
+  "gate": "G2",
+  "gate_outcome": "G2_ENVIRONMENT_VERIFY_PASS",
+  "method_id": "qpop-legacy-stack-integration-v3-verified",
+  "numerical_validity": "NOT_APPLICABLE_ENVIRONMENT_VERIFY",
+  "physical_contract_id": "NOT_YET_FROZEN_G2_ENVIRONMENT_INTEGRATION",
+  "planned_budget": {
+    "environment_wall_timeout_seconds": 1800,
+    "stages": [
+      "resolve",
+      "preflight",
+      "build",
+      "verify",
+      "conditional_native_smoke"
+    ]
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_G2_NATIVE_SMOKE",
+  "run_id": "20260821T015517Z-smoke-g2-env-verify-resume-002",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_ENVIRONMENT_INTEGRATION",
+  "started_at": "2026-08-21T01:55:17.4654855Z",
+  "supersedes": "20260821T014727Z-smoke-g2-env-verify-resume-001",
+  "tier": "smoke"
+}

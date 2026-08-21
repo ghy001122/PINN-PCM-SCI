@@ -1,0 +1,90 @@
+{
+  "actual_budget": {
+    "attempt_number": 6,
+    "build_status": "FAILED",
+    "qpop_processes_started": 0,
+    "resolve_status": "RESOLVED",
+    "verify_status": "NOT_RUN",
+    "wall_seconds_from_intent": 928.134075
+  },
+  "artifacts": {
+    "build_failure": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-006/build.failure.json",
+    "dolfin_build_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-006/logs/dolfin-build.log",
+    "dolfin_cmake_cache": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-006/dolfin-CMakeCache.txt",
+    "dolfin_configure_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-006/logs/dolfin-configure.log",
+    "intent": "outputs/runs/20260819T120218Z-smoke-g2-env-resolve-attempt-006/environment_intent.json",
+    "petsc_build_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-006/logs/petsc-build.log",
+    "resolution_lock": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-006/resolution.lock.json",
+    "run_record": "outputs/runs/20260819T120218Z-smoke-g2-env-resolve-attempt-006/environment_attempt.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-oscillation-environment",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_ENVIRONMENT_BUILD"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "dirty": true,
+    "exact_worktree_snapshot": "NOT_AVAILABLE",
+    "kind": "working-tree-uncommitted",
+    "revision": "29e35ae5dd5165e5e15586312ee92cf940e8ad7f"
+  },
+  "command": [
+    "wsl.exe",
+    "-d",
+    "PINN-PCM-SCI-Ubuntu-20.04",
+    "-u",
+    "root",
+    "--",
+    "/usr/bin/python3",
+    "/mnt/e/Python demo/PINN-PCM-SCI/pinn_pcm_sci/qpop_legacy_stack.py",
+    "build",
+    "--spec",
+    "/mnt/e/Python demo/PINN-PCM-SCI/configs/qpop/legacy-stack-ubuntu-20.04/stack_spec.json",
+    "--evidence-root",
+    "/mnt/e/Python demo/PINN-PCM-SCI/outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v1/attempt-006",
+    "--execute"
+  ],
+  "ended_at": "2026-08-19T12:17:46.671979Z",
+  "environment": {
+    "dolfin_build": "FAILED_AT_4_PERCENT",
+    "environment_id": "qpop-cpc-v1-ubuntu-20.04-source-stack-v1",
+    "execution_spec_sha256": "59d2b8442df0587808cbd66ef0340f23b3a7b24415ddb39213e25d84b292fe36",
+    "mumps_archive_sha256": "9cf89fcb5232560e807b7b1cc2adb7d0c280cbdfd3aa480de1d0b431a87187d3",
+    "os": "Ubuntu 20.04",
+    "petsc_build": "COMPLETED",
+    "resolution_lock_sha256": "00a659a6b6cbd16a50bae16b9805da596a15f7984009d2ed086f467df6dbbe46",
+    "runtime": "cpu",
+    "wsl_distribution": "PINN-PCM-SCI-Ubuntu-20.04"
+  },
+  "evaluator_id": "NOT_RUN_ENVIRONMENT_PREFLIGHT",
+  "evidence_identity": "ENVIRONMENT_PREFLIGHT_ONLY",
+  "execution_status": "FAILED",
+  "experiment_group_id": "g2-qpop-legacy-environment-resolution-v1",
+  "failure_class": "DOLFIN_WINDOWS_ANACONDA_HDF5_PATH_CONTAMINATION",
+  "gate": "G2",
+  "gate_outcome": "G2_ENVIRONMENT_BLOCKED",
+  "method_id": "qpop-legacy-stack-build-v1",
+  "numerical_validity": "NOT_EVALUATED",
+  "physical_contract_id": "NOT_YET_FROZEN_G2_ENVIRONMENT_PREFLIGHT",
+  "planned_budget": {
+    "attempt_number": 6,
+    "build_jobs": 2,
+    "stages": [
+      "resolve",
+      "build_if_resolve_passes",
+      "verify_if_build_passes",
+      "one_native_qpop_smoke_if_verify_passes"
+    ]
+  },
+  "replay_of": "20260819T110859Z-smoke-g2-env-resolve-attempt-005",
+  "route_disposition": "BLOCKED",
+  "run_id": "20260819T120218Z-smoke-g2-env-resolve-attempt-006",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_ENVIRONMENT_PREFLIGHT",
+  "started_at": "2026-08-19T12:02:18.5379039Z",
+  "supersedes": null,
+  "tier": "smoke"
+}

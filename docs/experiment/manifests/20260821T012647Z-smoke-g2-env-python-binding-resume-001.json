@@ -1,0 +1,87 @@
+{
+  "actual_budget": {
+    "build_status": "NOT_RUN",
+    "preflight_status": "FAILED_REUSE_ORDER",
+    "qpop_processes_started": 0,
+    "resolve_status": "RESOLVED",
+    "verify_status": "NOT_RUN",
+    "wall_budget_exhausted": false,
+    "wall_seconds_from_intent": 105.7300806
+  },
+  "artifacts": {
+    "evidence_root": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-python-binding-resume-001",
+    "intent": "outputs/runs/20260821T012647Z-smoke-g2-env-python-binding-resume-001/environment_intent.json",
+    "preflight_failure": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-python-binding-resume-001/preflight.failure.json",
+    "resolution_lock": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-python-binding-resume-001/resolution.lock.json",
+    "run_record": "outputs/runs/20260821T012647Z-smoke-g2-env-python-binding-resume-001/environment_attempt.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-oscillation-environment",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_ENVIRONMENT_PREFLIGHT"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "builder_sha256": "b951a2930b9bfbd066da4103e1d23d54e1b970ef0671e327d430e5cff0afa76f",
+    "dirty": true,
+    "g2_smoke_runner_sha256": "46b4cb34d2800d38008957c81e1ff210d48d18c88ec733bb460194999906e58b",
+    "git_revision": "29e35ae5dd5165e5e15586312ee92cf940e8ad7f",
+    "kind": "working-tree-uncommitted",
+    "legacy_test_sha256": "0e324508684fc6694e6a8cf8c0eba65b468ebabb27e29fc8ea78cf63de0e6197",
+    "smoke_test_sha256": "646bc25a83f2cc9cc21188d91663f25bef3ce604b3678c07f1b80eb9c8a3c601",
+    "stack_spec_sha256": "e1f74ca4cedf864169d4814412e01e510df7b272a541ad8350e7b35990ce4fce"
+  },
+  "command": [
+    "wsl.exe",
+    "-d",
+    "PINN-PCM-SCI-Ubuntu-20.04",
+    "-u",
+    "root",
+    "--",
+    "/usr/bin/python3",
+    "/mnt/e/Python demo/PINN-PCM-SCI/pinn_pcm_sci/qpop_legacy_stack.py",
+    "preflight",
+    "--execute"
+  ],
+  "ended_at": "2026-08-21T01:28:33.116548Z",
+  "environment": {
+    "failure_message": "Python environment drifted after first resolution",
+    "install_prefix": "/opt/qpop-cpc-v1-env-g2-final-002",
+    "preflight_failure_sha256": "6ba817cd1cf57d0f29ea8f5bad9ff893ad9b1040a9016b53aec93453aaabc6e5",
+    "resolution_lock_sha256": "54c61d8454b48fb18644abcafe4bf5fe0034923276d3dc03bc2de13667c71547",
+    "runtime": "CPU",
+    "stage": "preflight",
+    "wsl_distribution": "PINN-PCM-SCI-Ubuntu-20.04"
+  },
+  "evaluator_id": "NOT_RUN_ENVIRONMENT_INTEGRATION",
+  "evidence_identity": "ENVIRONMENT_INTEGRATION_ONLY",
+  "execution_status": "FAILED",
+  "experiment_group_id": "g2-qpop-legacy-environment-resolution-v1",
+  "failure_class": "PREFLIGHT_REUSE_ORDER_REJECTS_VALID_BUILD_STATE",
+  "gate": "G2",
+  "gate_outcome": "G2_ENVIRONMENT_PREFLIGHT_FAILED_CONTRACT",
+  "method_id": "qpop-legacy-stack-integration-v3-dolfin-python-two-job-resume",
+  "numerical_validity": "NOT_EVALUATED",
+  "physical_contract_id": "NOT_YET_FROZEN_G2_ENVIRONMENT_INTEGRATION",
+  "planned_budget": {
+    "build_jobs": 2,
+    "environment_wall_timeout_seconds": 3600,
+    "stages": [
+      "resolve",
+      "preflight",
+      "build",
+      "verify",
+      "conditional_native_smoke"
+    ]
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_MINIMAL_PREFLIGHT_REUSE_FIX",
+  "run_id": "20260821T012647Z-smoke-g2-env-python-binding-resume-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_ENVIRONMENT_INTEGRATION",
+  "started_at": "2026-08-21T01:26:47.3864674Z",
+  "supersedes": "20260821T004250Z-smoke-g2-env-ptscotch-continuation-001",
+  "tier": "smoke"
+}

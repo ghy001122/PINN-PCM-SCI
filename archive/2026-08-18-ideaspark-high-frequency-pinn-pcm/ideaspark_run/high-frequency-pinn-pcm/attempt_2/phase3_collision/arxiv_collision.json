@@ -1,0 +1,797 @@
+[
+ {
+  "title": "Enhancing PINN Accuracy for the RLW Equation: Adaptive and Conservative Approaches",
+  "title_norm": "enhancing pinn accuracy for the rlw equation adaptive and conservative approache",
+  "abstract": "Standard physics-informed neural network implementations have produced large error rates when using these models to solve the regularized long wave (RLW) equation. Two improved PINN approaches were developed in this research: an adaptive approach with self-adaptive loss weighting and a conservative approach enforcing explicit conservation laws. Three benchmark tests were used to demonstrate how effective PINN's are as they relate to the type of problem being solved (i.e., time dependent RLW equation). The first was a single soliton traveling along a line (propagation), the second was the interaction between two solitons, and the third was the evolution of an undular bore over the course of $t=250$. The results demonstrated that the effectiveness of PINNs are problem specific. The adaptive PINN was significantly better than both the conservative PINN and the standard PINN at solving problems involving complex nonlinear interactions such as colliding two solitons. The conservative approach was significantly better at solving problems involving long term behavior of single solitons and undular bores. However, the most important finding from this research is that explicitly enforcing conservation laws may be harmful to optimizing the solution of highly nonlinear systems of equations and therefore requires special training methods. The results from our adaptive and conservative approaches were within $O(10^{-5})$ of established numerical solutions for the same problem, thus demonstrating that PINNs can provide accurate solutions to complex systems of partial differential equations without the need for a discretization of space or time (mesh free). Moreover, the finding from this research challenges the assumptions that conservation enforcement will always improve the performance of a PINN and provides researchers with guidelines for designing PINNs for use on specific types of problems.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Aamir Shehzad"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2511.11638v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2511.11638v1",
+  "published_iso": "2025-11-08T22:19:41Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior",
+  "title_norm": "sae interventions are unreliable post intervention recovery of suppressed behavi",
+  "abstract": "Sparse Autoencoders (SAEs) decompose residual-stream activations into interpretable features. Recent latent-space defenses increasingly rely on these decompositions, assuming that identified \"unsafe\" SAE features serve as actionable handles for monitoring and intervention. In this paradigm, clamping a specific harmful feature is expected to reliably prevent model misbehavior. However, we show that this success may hide a recoverable failure mode: the clamp may block one visible route to a behavior without eliminating the behavior itself. We formulate this vulnerability as post-intervention recovery, a constrained residual-space optimization problem. Starting from the post-intervention residual state, we optimize residual perturbations to recover the pre-intervention behavior while preserving the post-intervention values of the targeted SAE features. Even under a strong threat model where the intervention remains active throughout optimization and generation, recovery remains possible. To rule out that recovery simply undoes the intervention, we use encoder-orthogonal updates for single-layer interventions and the corresponding feature-map Jacobian in the cross-layer setting. Across TPP, unlearning, IOI, and refusal steering experiments, this stress test reveals recoverable behavior despite successful feature-level intervention. Especially in the safety-critical refusal-steering setting, we achieve a 95.8% recovery rate on valid samples while keeping defended-feature relative drift to 0.131, substantially below suffix-based baselines. A recovery-path attribution analysis further localizes this recovery to the SAE reconstruction residual, the component left unexplained by the SAE. These results expose a gap between feature-level control and behavioral completeness: SAE features can support causal intervention, but controlling them does not guarantee control over the underlying behavior.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Mingyue Cui",
+   "Linghui Shen",
+   "Xingyi Yang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.18322v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.18322v1",
+  "published_iso": "2026-06-16T15:04:17Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "Optimizing Explicit Unit-Distance Lower-Bound Certificates",
+  "title_norm": "optimizing explicit unit distance lower bound certificates",
+  "abstract": "The 2026 disproof of Erdős's unit-distance conjecture and Sawin's quantitative refinement show that the maximum number $u(n)$ of unit distances among $n$ planar points can exceed $n^{1+\\varepsilon}$ for a fixed positive $\\varepsilon$. Sawin's explicit bound gives more than $n^{1.014}$ unit distances for arbitrarily large $n$ and exposes integer parameters whose choice is not fully optimized. This report treats Sawin's parameter selection as a nonlinear integer optimization problem and develops an open-source Python optimization and verification pipeline for certificates involving prime sets $T$ and $S_Q$, integer multiplicities $k(p)$, and a rationally encoded real parameter $R$. After reproducing Sawin's certificate with $δ=0.014114\\ldots$, the pipeline yields improved certificates with the same $T$. We develop a tailored integer evolution strategy achieving a certificate with $δ=0.015263\\ldots$ and supporting the cautious statement $u(n)>n^{1.0152}$ for arbitrarily large $n$. For extended ramified prime ranges, the Emmerich--Cordella certificate obtained with the same framework reports $u(n)>n^{1.031}$ for $\\#T=67$, illustrating the importance of enlarging $T$. Very recent MathOverflow discussions, brought to the author's attention as of version~4, report further improvements, including certificates above $δ>0.035$ and beyond $δ>0.036$. Some of these improvements may rely not only on larger prime ranges but also on modified constraint systems and additional degrees of freedom that deviate from Sawin's original formulation. Beyond this application, the work illustrates how randomized optimization heuristics can improve, verify, and refine explicit certificates for combinatorial geometry through nonlinear integer optimization.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Michael T. M. Emmerich"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.03419v5",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.03419v5",
+  "published_iso": "2026-06-02T10:05:23Z",
+  "from_query": [
+   "coupled moving-front certificate"
+  ]
+ },
+ {
+  "title": "Tuning Out-of-Distribution (OOD) Detectors Without Given OOD Data",
+  "title_norm": "tuning out of distribution ood detectors without given ood data",
+  "abstract": "Existing out-of-distribution (OOD) detectors are often tuned by a separate dataset deemed OOD with respect to the training distribution of a neural network (NN). OOD detectors process the activations of NN layers and score the output, where parameters of the detectors are determined by fitting to an in-distribution (training) set and the aforementioned dataset chosen adhocly. At detector training time, this adhoc dataset may not be available or difficult to obtain, and even when it's available, it may not be representative of actual OOD data, which is often ''unknown unknowns.\" Current benchmarks may specify some left-out set from test OOD sets. We show that there can be significant variance in performance of detectors based on the adhoc dataset chosen in current literature, and thus even if such a dataset can be collected, the performance of the detector may be highly dependent on the choice. In this paper, we introduce and formalize the often neglected problem of tuning OOD detectors without a given ``OOD'' dataset. To this end, we present strong baselines as an attempt to approach this problem. Furthermore, we propose a new generic approach to OOD detector tuning that does not require any extra data other than those used to train the NN. We show that our approach improves over baseline methods consistently across higher-parameter OOD detector families, while being comparable across lower-parameter families.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Sudeepta Mondal",
+   "Xinyi Mary Xie",
+   "Ruxiao Duan",
+   "Alex Wong",
+   "Ganesh Sundaramoorthi"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.05935v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.05935v1",
+  "published_iso": "2026-02-05T17:46:40Z",
+  "from_query": [
+   "whole-device spectrum-stiffness OOD"
+  ]
+ },
+ {
+  "title": "Phase-Transition-Driven Hyperbolic Optical Response and Directional Polaritons in Epitaxial VO2 Thin Films",
+  "title_norm": "phase transition driven hyperbolic optical response and directional polaritons i",
+  "abstract": "Optical anisotropy in crystalline solids enables direction-dependent light-matter interactions and underpins a variety of advanced photonic functionalities. In this context, Vanadium dioxide (VO2) represents a prototypical material that undergoes a reversible MIT near 67°C, accompanied by pronounced electronic, structural, and optical modifications. The MIT not only dramatically modifies the VO2 electrical conductivity but also reshapes its anisotropic optical response, making VO2 an exceptional platform for dynamically tunable photonic and optoelectronic devices. In this work, we investigate how the intrinsic crystalline anisotropy of VO2 induces a hyperbolic optical behavior in the metallic rutile phase. We study two epitaxial VO2 thin films of different thicknesses grown on (110) oriented MgF2 substrates. Broadband polarized spectroscopic measurements, spanning the infrared to UV spectral range, are employed to independently investigate the optical response in both the monoclinic and rutile phases. From these measurements, we extract the optical conductivity and the dielectric function, revealing a pronounced anisotropy in the rutile metallic phase, with an enhanced free-carrier response along the rutile c axis. Our data show that, within a narrow near-infrared spectral window, the real parts of the dielectric tensor components along the two principal axes acquire opposite signs, indicating the emergence of a hyperbolic type-II dispersion. The hyperbolic response is quantitatively evaluated through the quality factor and the degree of dielectric anisotropy, enabling a systematic assessment of VO2 as a thermally switchable, hyperbolic optical medium. These findings expand the understanding of anisotropy-driven optical phenomena in phase-change materials and highlight VO2 thin films as a promising platform for tunable and reconfigurable photonic applications.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Maria Chiara Paolozzi",
+   "Annalisa D Arco",
+   "Ilaria Martinelli",
+   "Lorenzo Mosesso",
+   "Jacopo Sera",
+   "Alessandro D Elia",
+   "Augusto Marcelli",
+   "Yingxue Chen",
+   "Chongwen Zou",
+   "Maria Cristina Larciprete",
+   "Marco Centini",
+   "Stefano Lupi",
+   "Salvatore Macis"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.27005v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.27005v1",
+  "published_iso": "2026-04-29T08:53:46Z",
+  "from_query": [
+   "VO2 electrothermal phase kinetics"
+  ]
+ },
+ {
+  "title": "LIGO-PINN: Learned Initialization via Gated Optimization to Alleviate Convergence Failures in Physics Informed Neural Networks",
+  "title_norm": "ligo pinn learned initialization via gated optimization to alleviate convergence",
+  "abstract": "Physics-informed neural networks (PINNs) have had a broad research impact in modeling domains governed by partial differential equations (PDE). However, PINNs have been shown to perform poorly, sometimes even converging to trivial solutions, in challenging PDE domains, or when generalizing to unseen but related PDE domains. Previously proposed solutions detail hyperparameter tuning to reduce loss imbalance between data-driven and physics guided losses, curriculum learning based training strategies, or dynamic re-sampling of hard collocation points. These methods face certain pitfalls: hyperparameter tuning is expensive, designing a training curriculum is ambiguous in multi-parameter PDE settings, and dynamic resampling still fails in complex PDE settings. Complementary to this line of thinking, we believe the initial PINN network weights also play a crucial role in the emergence of catastrophic failures during training, yet the effect of PINN weight initialization has been surprisingly under-investigated. To this end, we propose a framework for Learned Initialization via Gated Layerwise Optimization (LIGO-PINN) to overcome PINN convergence failures. Through rigorous evaluation on 1D and 2D PDE domains, including a challenging 2D fluid dynamics setting, we demonstrate that our methodology outperforms state-of-the-art methods designed to alleviate PINN failures, achieving a 91.5% average performance improvement across six baselines and 81% over the strongest baseline. We also verify that LIGO-PINN generalizes to 3D unstructured domains. Finally, we analyze training dynamics across all three PDE domains to explain both LIGO-PINN's improvement and the convergence failure of traditional PINNs. Code: https://github.com/scailab/ligo-pinn\n  Keywords: Machine Learning, Physics-Informed Neural Networks, Deep Learning, PDE Modeling",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Nilay Anurag",
+   "Shital Adhikari",
+   "Taniya Kapoor",
+   "Nikhil Muralidhar"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.14233v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.14233v1",
+  "published_iso": "2026-07-15T18:00:44Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "Stochastic Intervention",
+  "title_norm": "stochastic intervention",
+  "abstract": "This article discusses the application of stochastic intervention to find the optimal treatment distribution yielding a high value of expected potential outcome under the setting where the number of treatments is allowed to vary with $n$. The primary motivation is to obtain a novel summarization of the effect of various treatments which would guide practitioners towards better decision regarding which intervention to choose.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Rohit Chaudhuri"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.19352v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.19352v1",
+  "published_iso": "2026-04-21T11:34:00Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "Signature Placement in Post-Quantum TLS Certificate Hierarchies: An Experimental Study of ML-DSA and SLH-DSA in TLS 1.3 Authentication",
+  "title_norm": "signature placement in post quantum tls certificate hierarchies an experimental ",
+  "abstract": "Post-quantum migration in TLS 1.3 couples signature-algorithm choice with certificate-hierarchy structure, chain exposure during the handshake, and role-dependent cryptographic cost. In certificate-based authentication, the practical effect of a signature family depends on where it appears in the certification hierarchy, how much of that hierarchy is exposed during the handshake, and how the resulting cryptographic cost is distributed across client and server roles. Post-quantum TLS migration must therefore be evaluated as cryptographic design within authenticated key establishment, with algorithm selection assessed in its deployment context. This paper presents a local experimental study of TLS 1.3 authentication strategies implemented with OpenSSL 3 and oqsprovider. Using a reproducible laboratory setting, it compares ML-DSA and SLH-DSA across multiple certificate placements, hierarchy depths, and key-exchange modes, including classical, hybrid, and pure post-quantum configurations. The analysis is organized into four complementary campaigns: a leaf-only comparison, a full hierarchy strategy matrix, a depth comparison, and a key-exchange exploration. Across the experimental matrix, the main discontinuity appears when SLH-DSA is placed in the server leaf certificate. In that configuration, handshake latency and server-side compute cost increase by orders of magnitude, whereas strategies that confine SLH-DSA to upper trust layers and preserve ML-DSA in the interactive leaf remain within a more plausible operational range. The results also show that transport size alone does not explain the heavy regime: outside leaf-SLH scenarios, transferred bytes and observed chain size track latency closely, but once SLH-DSA reaches the leaf, server-side cryptographic cost becomes dominant.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "José Luis Delgado Jiménez"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.06100v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.06100v3",
+  "published_iso": "2026-04-07T17:13:10Z",
+  "from_query": [
+   "coupled moving-front certificate"
+  ]
+ },
+ {
+  "title": "Localization of quantum systems at Liouville tori",
+  "title_norm": "localization of quantum systems at liouville tori",
+  "abstract": "We consider a collection of pairwise commuting quantum observables in the setting of Berezin--Toeplitz quantization of a closed Kähler manifold and assume that the Arnold--Liouville theorem applies to their principal symbols. We use joint eigensections of these observables to define isometric embeddings of the quantum spaces into $L^2(Λ_{a_0})$, where $Λ_{a_0}$ is a fixed Liouville torus. These embeddings allow a broad class of quantum observables, including some defined by discontinuous functions, to be realized as sequences of operators on $L^2(Λ_{a_0})$ that converge strongly to multiplication operators. We discuss the spectral implications of this convergence and give applications to contractions of Lie algebra representations and to pairs of spectral projections of quantum observables.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Ood Shabtai"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.23864v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.23864v1",
+  "published_iso": "2026-07-26T22:14:43Z",
+  "from_query": [
+   "whole-device spectrum-stiffness OOD"
+  ]
+ },
+ {
+  "title": "Electrically steered conduction topologies and period-doubling phase dynamics in VO2",
+  "title_norm": "electrically steered conduction topologies and period doubling phase dynamics in",
+  "abstract": "The insulator-to-metal transition (IMT) in strongly correlated materials, such as vanadium dioxide (VO2), offers a transformative platform for next-generation adaptive electronics and neuromorphic computing. However, harnessing this non-equilibrium phase transition for deterministic device operation is fundamentally hindered by the inability to disentangle electric-field effects from Joule heating, owing to a lack of operando techniques capable of resolving phase dynamics at nanoscale spatial and sub-nanosecond temporal scales. Here, using a newly developed electrical-pulse-pump ultrafast transmission electron microscope (E-UTEM), we directly visualize the multi-scale electro-thermo-mechanical dynamics of the IMT in suspended VO2 devices. Our results reveal that electric-field-induced Poole-Frenkel (PF) emission, localized by patterned oxygen vacancies, plays a decisive role in redistributing the internal electric field to trigger a deterministic Mott transition. The extreme non-linearity of this PF effect enables the formation of dynamically reconfigurable connectivity topologies that bypass conventional thermal limits. Furthermore, we observe that the coupling of thermal and elastic energies governs a discrete domain evolution, characterized by step-wise and period-doubling configurational resets, which is a hallmark of non-equilibrium phase dynamics in constrained geometries. By integrating experimental imaging with phase-field simulations, we establish a comprehensive framework for the electrically-driven IMT and predict sub-100-ps switching kinetics. These findings provide a fundamental basis for the rational design of ultrafast, low-energy functional devices through nanoscale defect and strain engineering in correlated systems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Siyuan Huang",
+   "Shuaishuai Sun",
+   "Yin Shi",
+   "Wentao Wang",
+   "Chunhui Zhu",
+   "Huanfang Tian",
+   "Huaixin Yang",
+   "Jun Li",
+   "Jianqi Li"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.19329v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.19329v1",
+  "published_iso": "2026-04-21T10:57:07Z",
+  "from_query": [
+   "VO2 electrothermal phase kinetics"
+  ]
+ },
+ {
+  "title": "Robust Physics Discovery from Highly Corrupted Data: A PINN Framework Applied to the Nonlinear Schrödinger Equation",
+  "title_norm": "robust physics discovery from highly corrupted data a pinn framework applied to ",
+  "abstract": "We demonstrate a deep learning framework capable of recovering physical parameters from the Nonlinear Schrodinger Equation (NLSE) under severe noise conditions. By integrating Physics-Informed Neural Networks (PINNs) with automatic differentiation, we achieve reconstruction of the nonlinear coefficient beta with less than 0.2 percent relative error using only 500 sparse, randomly sampled data points corrupted by 20 percent additive Gaussian noise, a regime where traditional finite difference methods typically fail due to noise amplification in numerical derivatives. We validate the method's generalization capabilities across different physical regimes (beta between 0.5 and 2.0) and varying data availability (between 100 and 1000 training points), demonstrating consistent sub-1 percent accuracy. Statistical analysis over multiple independent runs confirms robustness (standard deviation less than 0.15 percent for beta equals 1.0). The complete pipeline executes in approximately 80 minutes on modest cloud GPU resources (NVIDIA Tesla T4), making the approach accessible for widespread adoption. Our results indicate that physics-based regularization acts as an effective filter against high measurement uncertainty, positioning PINNs as a viable alternative to traditional optimization methods for inverse problems in spatiotemporal dynamics where experimental data is scarce and noisy. All code is made publicly available to facilitate reproducibility.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Pietro de Oliveira Esteves"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2601.04176v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2601.04176v1",
+  "published_iso": "2026-01-07T18:43:11Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "The Saturation Trap and the Subjectivity of Intervention Timing: Why Affect-Based Triggers and LLM Judges Fail to Time Interventions on Autonomous Agents",
+  "title_norm": "the saturation trap and the subjectivity of intervention timing why affect based",
+  "abstract": "As autonomous AI agents move from conversational systems to long-horizon software execution, runtime safety layers that decide when to interrupt an agent have become essential. We study this timing problem using a continuous 18-dimensional affective-dynamics engine (HEART) as a diagnostic probe, evaluating four intervention trigger families - absolute state thresholds, composite state-action patterns, regex reasoning-feature extraction, and zero-shot LLM-as-judge - against human-annotated intervention points on SWE-bench-Verified debugging traces. We report three findings. First, a State Saturation Trap: agents show no recovery signal under sustained difficulty, so modeled frustration quickly crosses the threshold and stays at its maximum, converting threshold-on-state triggers from moment detectors into near-constant indicators that fire on 39-83% of actions across five trajectories. Second, a capability-and-context floor for LLM judges: a small model (gpt-5.4-mini) never fires, while frontier and cross-vendor models escape the zero-firing floor only with full-trajectory context, and even then reach only F1 0.17-0.40 at up to 90x the cost. Third, and most importantly, the supervised target is not reproducible among humans: three trained annotators using one rubric on a 56-action trajectory agree on where to intervene only slightly above chance (location Krippendorff's alpha = +0.047; best pairwise Cohen's kappa = +0.349) and not at all on intervention type (pause degenerate; clarify below chance; reflect only alpha = +0.226). We conclude that intervention timing is a low-reliability construct, making single-annotator F1 an unsuitable optimization target. Our contribution is the joint mapping of this problem across human inter-rater reliability, four detector architectures, a cross-model LLM-judge sweep, and a reproduced saturation effect, rather than any single detector's accuracy.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Manvendra Modgil"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.04296v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.04296v1",
+  "published_iso": "2026-06-02T23:54:27Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "Choric Masking in Ambient Release Systems: A Finite Certificate Calculus for Trace Indistinguishability under Bounded Audiences",
+  "title_norm": "choric masking in ambient release systems a finite certificate calculus for trac",
+  "abstract": "This paper develops a finite certificate calculus for ambient release systems, staged probabilistic environments in which a protected coordinate is not observed directly but can remain statistically readable through visible roles, timing, repeated movement, bounded attention, linked rooms, and post-release state. The security notion, choric masking, requires the trace law induced by a protected locus to lie inside or near the convex hull of admissible cover traces under the tests available to a specified audience. For finite horizons, trace laws form polytopes, audiences induce measurement operators, and masking becomes intersection in the projected measurement space. Exposure is certified by separating hyperplanes, kernel obstructions, hypothesis-testing bounds, Fano-type localization lower bounds, and support separation in downstream rooms. The calculus distinguishes trace residue from carrier localization, full-trace exposure from attention-filtered exposure, first-room masking from delayed post-release exposure, and unresolved system pressure from carrier hazard. It proves measurement-polytope equivalence for exact and approximate masks, dual separation certificates, data-processing laws for attention lenses, aperture identities for gaze-thinned observation, lower bounds for mandatory unique gestures, composition rules for linked releases, and a repeated-room debt theorem showing how unresolved pressure can broaden selection and shift cost onto cover populations without localizing the source. The result is a finite, checkable language for auditing privacy, unlinkability, side-channel leakage, and accountability in public-facing release systems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Faruk Alpay",
+   "Taylan Alpay"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.13967v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.13967v1",
+  "published_iso": "2026-06-11T23:17:08Z",
+  "from_query": [
+   "coupled moving-front certificate"
+  ]
+ },
+ {
+  "title": "AP-OOD: Attention Pooling for Out-of-Distribution Detection",
+  "title_norm": "ap ood attention pooling for out of distribution detection",
+  "abstract": "Out-of-distribution (OOD) detection, which maps high-dimensional data into a scalar OOD score, is critical for the reliable deployment of machine learning models. A key challenge in recent research is how to effectively leverage and aggregate token embeddings from language models to obtain the OOD score. In this work, we propose AP-OOD, a novel OOD detection method for natural language that goes beyond simple average-based aggregation by exploiting token-level information. AP-OOD is a semi-supervised approach that flexibly interpolates between unsupervised and supervised settings, enabling the use of limited auxiliary outlier data. Empirically, AP-OOD sets a new state of the art in OOD detection for text: in the unsupervised setting, it reduces the FPR95 (false positive rate at 95% true positives) from 27.84% to 4.67% on XSUM summarization, and from 77.08% to 70.37% on WMT15 En-Fr translation.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Claus Hofmann",
+   "Christian Huber",
+   "Bernhard Lehner",
+   "Daniel Klotz",
+   "Sepp Hochreiter",
+   "Werner Zellinger"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.06031v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.06031v1",
+  "published_iso": "2026-02-05T18:59:01Z",
+  "from_query": [
+   "whole-device spectrum-stiffness OOD"
+  ]
+ },
+ {
+  "title": "Study of Meta-Fibonacci Integer Sequences by Continuous Self-Referential Functional Equations",
+  "title_norm": "study of meta fibonacci integer sequences by continuous self referential functio",
+  "abstract": "I propose and investigate the use of continuous functional equations for the study of meta-Fibonacci integer sequences. This exploratory study includes three sequences with quite different behavior: Conway's famous sequence $A(n)= A(A(n-1))+A(n-A(n-1))$, the sequence $D(n)= D(D(n-1))+D(n-1-D(n-2))$ introduced by the present author more than 25 years ago, and Hofstadter's well-known $Q(n)= Q(n-Q(n-1))+Q(n-Q(n-2))$. The sequences are studied in their equivalent detrended forms $(a,d,q)(n)=2\\,(A,D,Q)(n)-n$. For $a(n)$ and $d(n)$, a highly symmetric functional equation admits exact continuous solutions that nicely model the global behavior (backbone) of the sequences. For the Hofstadter sequence, a continuous functional model is developed that leads to a random matrix approach for the generation and study of fractal solutions. Two remarkable properties of the Q-sequence are reproduced by the model: the anomalous scaling of the generation length, which scales $\\sim (2-η)^k$, and the anomalous amplitude growth that scales like $2^{αk}$.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Klaus Pinn"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.17509v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.17509v1",
+  "published_iso": "2026-03-18T09:12:54Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "EditCLEVR: A Paired-Scene Intervention Benchmark for Compositional Faithfulness of Object-Centric Representations",
+  "title_norm": "editclevr a paired scene intervention benchmark for compositional faithfulness o",
+  "abstract": "Object-centric learning aims to represent scenes as objects whose properties can be reused in new combinations. Existing evaluations usually score segmentation, single-image factor prediction, or downstream accuracy, but these tests do not directly ask whether a per-object representation behaves correctly under a controlled semantic edit. We introduce EditCLEVR, a paired-scene intervention benchmark in which each example contains a before/after pair of CLEVR-style renders with the same object indices and scene layout, and either exactly one known attribute change on one known object or a no-edit re-render for drift measurement. The protocol includes probe-free diagnostics for representation-change localization and stability, together with probe-decoded semantic faithfulness metrics that test whether the predicted scene change matches the intended intervention across in-distribution and compositional out-of-distribution (OOD) suites, allowing code-space movement and decoded object-attribute correctness to be evaluated separately. We introduce the semantic metric Scene-Graph Intervention Accuracy (SGIA), which requires the full after-scene prediction to be correct and the only predicted before-to-after semantic change to be the intended object-factor edit. We also establish Delta-SGIA as a companion diagnostic that checks the single-site change pattern without requiring the full after-scene graph to be correct. Baseline evaluations on ground-truth-mask backbones, learned-slot models, SAM 2 + frozen-ViT models, and one mask-feature hybrid indicate that CoGenT-OOD-core degradation can persist under ground-truth instance masks, that mask source accounts for part but not all of native performance, and that locality or stability alone can overstate semantic faithfulness. Code is available at https://github.com/torux-bughunter/EditCLEVR.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Anuraag Gadehothur Karnam",
+   "Tarunesh Sathish"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.22705v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.22705v1",
+  "published_iso": "2026-07-19T16:11:43Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "Exact Nonnegative Matrix Factorization via Cone-Ray Witnesses: Certificates, a One-Sided Solver, and a Findability Phase Transition",
+  "title_norm": "exact nonnegative matrix factorization via cone ray witnesses certificates a one",
+  "abstract": "We study exact nonnegative matrix factorization (NMF) of small exact-rank-r matrices via the polyhedral cones of nonnegative preimages of the truncated SVD. Restricting each factor to an r-subset of a cone's extreme rays collapses the factorization constraint to entrywise nonnegativity of a single r x r witness matrix; witness feasibility is a certificate that an exact size-r NMF exists, decided in one matrix inverse. A completeness theorem shows every size-r NMF is representable this way, for every m, and a one-sided relaxation gives a closed-form solver that provably dominates the two-sided witness. Our main result concerns findability: at fixed search budget, witness recoverability undergoes a sharp conic phase transition whose width collapses to a step as r grows. We rule out a universal-constant explanation (Goemans-Williamson) and a statistical-dimension one: the statistical dimension is flat across the transition, while the intrinsic-volume profile's variance tracks it. The transition is not an existence boundary; by completeness a ray-economical witness always exists and persists past the threshold, so what decays with m is its density among r-subsets. The threshold is thus budget-relative, moving logarithmically as the pool grows, and combinatorial rather than smooth-conic; one budget law bridges it to the budget-free existence limit. A two-sided union of one-sided relaxations returns an exact, machine-precision factorization with a decidable certificate. That search is itself budget-limited, so its recovery obeys the transition we study: competitive with heuristics on small instances, it needs a budget growing with m as density decays, while a well-initialized coordinate-descent solver, not subject to this threshold, recovers more at larger sizes and faster. Our contribution is the certificate and the transition it exposes, not a faster general-purpose solver.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Mithil Ramteke"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.22451v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.22451v3",
+  "published_iso": "2026-06-21T11:51:35Z",
+  "from_query": [
+   "coupled moving-front certificate"
+  ]
+ },
+ {
+  "title": "Out-of-Distribution (OOD) Detectors for Open-Set RF Fingerprinting",
+  "title_norm": "out of distribution ood detectors for open set rf fingerprinting",
+  "abstract": "Radio-frequency (RF) fingerprinting systems must operate in open-world environments where signals from unknown transmitters and temporal drift introduce distribution shift at test time. Out-of-distribution (OOD) detection provides a natural framework for this problem, yet its application to RF fingerprinting (RFF) remains limited. A key barrier to their adoption is that most OOD detectors require auxiliary OOD data for parameter tuning, an assumption that is difficult to satisfy in RF environments where representative OOD data is impractical to collect. In this work, we introduce a promising set of OOD detection methods from the machine learning literature to open-set RFF domain. We present these methods within a unified mathematical framework based on information theory, which is a natural framework for communication systems. Our framework allows for the systematic analysis of methods and development of new methods. We further demonstrate the applicability of recent work on tuning OOD detectors without given OOD tuning data for open-set RFF. We evaluate on the POWDER RF fingerprinting dataset, showing that detectors tuned without any given OOD data achieve performance comparable to baselines with access to true OOD tuning data and greatly out-perform baseline approaches without access to true OOD tuning data, showcasing the practical viability for the RFF problem.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Sudeepta Mondal",
+   "Ganesh Sundaramoorthi"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.12718v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.12718v1",
+  "published_iso": "2026-06-10T22:09:47Z",
+  "from_query": [
+   "whole-device spectrum-stiffness OOD"
+  ]
+ },
+ {
+  "title": "PINNs in PDE Constrained Optimal Control Problems: Direct vs Indirect Methods",
+  "title_norm": "pinns in pde constrained optimal control problems direct vs indirect methods",
+  "abstract": "We study physics-informed neural networks (PINNs) as numerical tools for the optimal control of semilinear partial differential equations. We first recall the classical direct and indirect viewpoints for optimal control of PDEs, and then present two PINN formulations: a direct formulation based on minimizing the objective under the state constraint, and an indirect formulation based on the first-order optimality system. For a class of semilinear parabolic equations, we derive the state equation, the adjoint equation, and the stationarity condition in a form consistent with continuous-time Pontryagin-type optimality conditions. We then specialize the framework to an Allen-Cahn control problem and compare three numerical approaches: (i) a discretize-then-optimize adjoint method, (ii) a direct PINN, and (iii) an indirect PINN. Numerical results show that the PINN parameterization has an implicit regularizing effect, in the sense that it tends to produce smoother control profiles. They also indicate that the indirect PINN more faithfully preserves the PDE contraint and optimality structure and yields a more accurate neural approximation than the direct PINN.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Zhen Zhang",
+   "Shanqing Liu",
+   "Alessandro Alla",
+   "Jerome Darbon",
+   "George Em Karniadakis"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.04920v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.04920v1",
+  "published_iso": "2026-04-06T17:57:53Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "The Geometry of Learning to Avoid Interventions",
+  "title_norm": "the geometry of learning to avoid interventions",
+  "abstract": "Human interventions are a common source of supervision in autonomous systems during deployment. Many existing approaches are based on avoiding interventions, yet the consequences of this objective are not well understood. We develop a geometric perspective on intervention learning that characterizes intervention avoidance as constraining policies to a face of the occupancy measure polytope. This view reveals that the effectiveness of intervention learning depends on the informativeness of the intervention strategy: highly informative interventions uniquely determine the solution, while weak interventions leave a large set of feasible policies, many of which are suboptimal. Motivated by this under-specification, we define Robust Intervention Learning (RIL) as the problem of learning policies that perform well under varying levels of intervention informativeness. From the geometric formulation, we derive Residual Intervention Fine-Tuning (RIFT), which combines interventions with a prior policy to select among feasible solutions. We show that RIFT provides provable improvement over the prior and corresponds to solving a constrained reinforcement learning problem with an induced reward. Empirically, RIFT yields consistent policy improvement across a range of intervention settings, particularly when interventions are sparse or weakly informative. These results highlight the importance of accounting for intervention informativeness and suggest a principled path toward robust learning from human feedback.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Ethan Pronovost",
+   "Khimya Khetarpal",
+   "Siddhartha Srinivasa"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.03825v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.03825v2",
+  "published_iso": "2026-02-03T18:33:21Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "Unconditional Primality Certificates for the Hexagonal 3-smooth Family p = 3m(m+1) + 1: Deterministic Pocklington Witnesses and Arithmetic Filters",
+  "title_norm": "unconditional primality certificates for the hexagonal 3 smooth family p 3m m 1 ",
+  "abstract": "We study the parametric subfamily $p = 3m(m+1) + 1$ with $m = 2^a 3^b - 1$, $a,b \\in \\mathbb{N}^*$, a 3-smooth slice of the centred hexagonal numbers $3m^2 + 3m + 1 = (m+1)^3 - m^3,$ from the point of view of unconditional primality certification via the Pocklington-Lehmer criterion. The 3-smoothness of $m+1 = 2^a 3^b$ yields, for every $(a,b)$, a fully factored divisor $F = 2^a 3^(b+1)$ of $p-1$ satisfying $F > \\sqrt(p)$ unconditionally, reducing the certificate to two witnesses, for $q = 2$ and $q = 3$.\n  Our main new contribution is a complete, deterministic characterisation of the two canonical witnesses. We prove that $w_2 = 5$ is a valid witness if and only if $a - b$ = 1, 2 (mod 4), by quadratic reciprocity; and that $w_3 = 7$ is a valid witness if and only if $m$ is not congruent to 2 (mod 7), by cubic reciprocity in $\\mathbb{Z}[omega]$ using the explicit Eisenstein factorisation $p = ((1+m) - m ω)((1+m) - m ω^2)$. These two results turn the heuristic \"5 and 7 always work\" (which is in fact false) into exact congruence conditions, and yield a deterministic witness-selection rule. Alongside, three elementary arithmetic filters (mod 6, a (-3) quadratic-residue sieve, and a mod-7 forbidden-class test) remove about 87% of candidates at negligible cost. As a demonstration, a multi-core implementation produced four unconditional certificates on consumer hardware, the largest a prime of 29998 decimal digits.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Hassane Bakkaoui"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.18859v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.18859v1",
+  "published_iso": "2026-06-17T09:41:36Z",
+  "from_query": [
+   "coupled moving-front certificate"
+  ]
+ },
+ {
+  "title": "CURE-OOD: Benchmarking Out-of-Distribution Detection for Survival Prediction",
+  "title_norm": "cure ood benchmarking out of distribution detection for survival prediction",
+  "abstract": "``How long can I live and remain free of cancer?'' is often the first question a patient asks after receiving a cancer diagnosis and treatment. Accurate survival prediction helps alleviate psychological distress and supports risk stratification and personalized treatment planning. Recent survival prediction frameworks have shown strong performance using computed tomography (CT) images. However, variations in imaging acquisition introduce out-of-distribution (OOD) samples caused by covariate shifts that undermine model reliability. Despite this challenge, to our knowledge, no existing benchmark systematically studies OOD detection in cancer survival prediction. To address this gap, we introduce the Cancer sURvival bEnchmark for OOD Detection (CURE-OOD), the first benchmark for systematically evaluating OOD detection in survival prediction under controlled acquisition-induced distribution shifts. CURE-OOD defines scanner-parameter-based training, in-distribution (ID), and OOD test splits across four survival prediction tasks. Our experiments show that covariate shifts notably reduce survival prediction performance. It also shows that mainstream classification-oriented OOD detectors can fail in survival prediction. Finally, we include HazardDev as a simple survival-aware reference baseline for OOD detection. CURE-OOD enables systematic analysis of how distribution shifts affect both downstream survival performance and OOD detectability.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Wenjie Zhao",
+   "Jia Li",
+   "Mingrui Liu",
+   "Jing Wang",
+   "Yunhui Guo"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.00350v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.00350v1",
+  "published_iso": "2026-05-01T02:17:47Z",
+  "from_query": [
+   "whole-device spectrum-stiffness OOD"
+  ]
+ },
+ {
+  "title": "PINNs for Electromagnetic Wave Propagation",
+  "title_norm": "pinns for electromagnetic wave propagation",
+  "abstract": "Physics-Informed Neural Networks (PINNs) solve physical systems by incorporating governing partial differential equations directly into neural network training. In electromagnetism, where well-established methodologies such as FDTD and FEM already exist, new methodologies are expected to provide clear advantages to be accepted. Despite their mesh-free nature and applicability to inverse problems, PINNs can exhibit deficiencies in accuracy and energy metrics compared to FDTD. This study demonstrates that hybrid training strategies can bring PINNs closer to FDTD-level accuracy and energy consistency. A hybrid methodology addressing common challenges in wave propagation is presented. Causality collapse in time-dependent PINN training is addressed via time marching and causality-aware weighting. To mitigate discontinuities introduced by time marching, a two stage interface continuity loss is applied. To suppress cumulative energy drift in electromagnetic waves, a local Poynting-based regularizer is developed. In the developed PINN model, high field accuracy is achieved with an average 0.09% NRMSE and 1.01% $L^2$ error over time. Energy conservation is achieved with only a 0.02% relative energy mismatch in the 2D PEC cavity scenario. Training is performed without labeled field data, using only physics-based residual losses; FDTD is used solely for post-training evaluation. The results demonstrate that PINNs can achieve competitive results with FDTD in canonical electromagnetic examples and are a viable alternative.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Nilufer K. Bulut"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.23396v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.23396v2",
+  "published_iso": "2025-12-29T11:36:26Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "FPT Approximations for Fair Sum of Radii with Outliers and General Norm Objectives",
+  "title_norm": "fpt approximations for fair sum of radii with outliers and general norm objectiv",
+  "abstract": "The sum of radii problem is a classical clustering problem in which, given a set $X$ of points and an integer $k$, the goal is to place $k$ balls that cover $X$ while minimizing the sum of their radii. Recent work has focused on incorporating modern constraints such as fairness and robustness, motivated by biased and noisy data. We study the fair sum of radii with outliers problem, where the chosen centers must satisfy group-based representation constraints while allowing up to $z$ points to be excluded.\n  We present a $(3+ε)$-approximation algorithm that runs in fixed-parameter tractable time parameterized by $k$. Our framework extends to the more general setting where the objective is a monotone symmetric norm of the radii, achieving a $(3+ε)$-approximation for any fixed norm; this guarantee is tight under Gap-ETH. Moreover, the algorithm is oblivious to the choice of norm: it outputs a small list of candidate solutions such that, for every monotone symmetric norm $f$, the list contains a $(3+ε)$-approximate solution under $f$.\n  Our approach is based on a novel iterative ball-finding framework that uncovers a structural trichotomy in the optimal clustering, enabling us to directly construct fair solutions while handling outliers. Finally, we extend our techniques to the more general fair-range setting, where each group is subject to both lower and upper bounds.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Ameet Gadekar"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.05476v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.05476v2",
+  "published_iso": "2026-02-05T09:29:09Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "Concurrent Image Understanding and Generation: Self-Correcting Coupled Markov Jump Processes",
+  "title_norm": "concurrent image understanding and generation self correcting coupled markov jum",
+  "abstract": "Human cognition does not separate understanding and generation. A teacher at a whiteboard speaks and draws $\\textit{together}$, each modality reshapes the other. In this paper, we bring this coupled loop to artificial systems. Masked Diffusion Models (MDMs) are ideally suited to this task, yet existing samplers either decode text and image interleavedly or independently update them in parallel branches that share only previous-step history, but not the other modality's latest decisions $\\textit{within}$ the same step; combined with MDMs' inability to remask, cross-modal contradictions are neither detected nor repaired. We introduce $\\textbf{Self-Correcting Coupled Markov Jump Processes (SC-CMJP)}$, a framework in which one modality's transition rates are functionals of the other modality's confidence score, as weighted by cross-modal attention. Furthermore, a remasking jump retracts commitments the moment cross-modal evidence turns against them. In conjunction with SC-CMJP, we introduce $\\texttt{CO}_\\texttt{2}\\texttt{Jump}$ (Self-$\\underline{\\text{CO}}$rrecting $\\underline{\\text{CO}}$upled $\\underline{\\text{Jump}}$), a novel training-free single-pass sampler for joint multimodal geneneration. For training and evaluation purposes, we have created and will release three large-scale joint multimodal generation corpora: $\\text{JEdit-1M}$, $\\text{JMaze-200K}$, $\\text{JNono-200K}$, with matching in- and out-of-distribution benchmarks. $\\texttt{CO}_\\texttt{2}\\texttt{Jump}$ achieves best joint performance for image understanding and editing as well as visual reasoning (maze and nonogram solving). The performance of the sampler scales monotonically with the number of denoising steps, evidence that the benefits of cross-modal coupling $\\textit{compound}$ across the trajectory. Project page: https://coupled-jump.github.io",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Minh-Quan Le",
+   "Armand Comas",
+   "Alexandros Lattas",
+   "Stylianos Moschoglou",
+   "Pedro Vélez",
+   "Amit Raj",
+   "Aaron Germuth",
+   "Thabo Beeler",
+   "Dimitris Samaras",
+   "Di Qiu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.13188v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.13188v1",
+  "published_iso": "2026-07-14T18:39:29Z",
+  "from_query": [
+   "coupled moving-front certificate"
+  ]
+ },
+ {
+  "title": "TTL: Test-time Textual Learning for OOD Detection with Pretrained Vision-Language Models",
+  "title_norm": "ttl test time textual learning for ood detection with pretrained vision language",
+  "abstract": "Vision-language models (VLMs) such as CLIP exhibit strong Out-of-distribution (OOD) detection capabilities by aligning visual and textual representations. Recent CLIP-based test-time adaptation methods further improve detection performance by incorporating external OOD labels. However, such labels are finite and fixed, while the real OOD semantic space is inherently open-ended. Consequently, fixed labels fail to represent the diverse and evolving OOD semantics encountered in test streams. To address this limitation, we introduce Test-time Textual Learning (TTL), a framework that dynamically learns OOD textual semantics from unlabeled test streams, without relying on external OOD labels. TTL updates learnable prompts using pseudo-labeled test samples to capture emerging OOD knowledge. To suppress noise introduced by pseudo-labels, we introduce an OOD knowledge purification strategy that selects reliable OOD samples for adaptation while suppressing noise. In addition, TTL maintains an OOD Textual Knowledge Bank that stores high-quality textual features, providing stable score calibration across batches. Extensive experiments on two standard benchmarks with nine OOD datasets demonstrate that TTL consistently achieves state-of-the-art performance, highlighting the value of textual adaptation for robust test-time OOD detection. Our code is available at https://github.com/figec/TTL.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Jinlun Ye",
+   "Jiang Liao",
+   "Runhe Lai",
+   "Xinhua Lu",
+   "Jiaxin Zhuang",
+   "Zhiyong Gan",
+   "Ruixuan Wang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.15756v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.15756v1",
+  "published_iso": "2026-04-17T06:59:50Z",
+  "from_query": [
+   "whole-device spectrum-stiffness OOD"
+  ]
+ },
+ {
+  "title": "Fast PINN Eigensolvers via Biconvex Reformulation",
+  "title_norm": "fast pinn eigensolvers via biconvex reformulation",
+  "abstract": "Eigenvalue problems have a distinctive forward-inverse structure and are fundamental to characterizing a system's thermal response, stability, and natural modes. Physics-Informed Neural Networks (PINNs) offer a mesh-free alternative for solving such problems but are often orders of magnitude slower than classical numerical schemes. In this paper, we introduce a reformulated PINN approach that casts the search for eigenpairs as a biconvex optimization problem, enabling fast and provably convergent alternating convex search (ACS) over eigenvalues and eigenfunctions using analytically optimal updates. Numerical experiments show that PINN-ACS attains high accuracy with convergence speeds up to 500$\\times$ faster than gradient-based PINN training. We release our codes at https://github.com/NeurIPS-ML4PS-2025/PINN_ACS_CODES.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Akshay Sai Banderwaar",
+   "Abhishek Gupta"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2511.00792v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2511.00792v1",
+  "published_iso": "2025-11-02T04:04:54Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "Adversarial Causal Intervention Falsification",
+  "title_norm": "adversarial causal intervention falsification",
+  "abstract": "Generative models can reproduce an observational distribution while encoding an incorrect causal structure. We study a sequential game in which a structural causal generator proposes observational and interventional distributions, while an adversarial experimentalist selects interventions intended to maximally falsify the generator. The discriminator is therefore not merely a real-versus-synthetic classifier: it is indexed by an intervention and tests whether the generator reproduces the corresponding post-intervention law. We introduce Adversarial Causal Intervention Falsification (ACIF), formulate oracle and implementable versions of the game, and distinguish three objects that are often conflated: observational fit, interventional equivalence over an admissible query class, and point identification of a structural causal model. For finite model and intervention classes, we prove: (i) an exact reduction of the adversarial objective to a worst-intervention integral probability metric; (ii) identification up to interventional equivalence, with point identification under a separating intervention family; (iii) existence of mixed-strategy equilibria; (iv) finite-sample uniform convergence and margin-based model-selection guarantees; and (v) a logarithmic elimination guarantee for a disagreement-driven sequential design under a balanced-separation condition. We also give a complete linear-Gaussian example in which two observationally indistinguishable causal directions are separated by a single well-chosen intervention. The framework clarifies what an adversarial causal discriminator can and cannot certify, and provides a principled bridge between causal generative modeling, active causal discovery, and experimental design.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Mojtaba Eslami"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2608.06427v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2608.06427v1",
+  "published_iso": "2026-08-05T20:01:26Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "On the uniqueness of the coupled entropy",
+  "title_norm": "on the uniqueness of the coupled entropy",
+  "abstract": "The coupled entropy, $H_κ,$ is proven to uniquely satisfy the requirement that a generalized entropy be a measure of the uncertainty at the scale, $σ,$ for a class of non-exponential distributions. The coupled stretched exponential distributions, including the generalized Pareto and Student's t distributions, are uniquely parameterized to quantify linear uncertainty with the scale and nonlinear uncertainty with the tail shape for a broad class of complex systems. Thereby, the coupled entropy optimizes the representation of the uncertainty due to linear sources. Lemmas for the composability and extensivity of the coupled entropy are proven. The uniqueness of the coupled entropy is further supported by demonstrating consistent thermodynamic relationships, which correspond to a model used for the momentum of high-energy particle collisions. Applications of the coupled entropy in measuring statistical complexity, training variational inference algorithms, and designing communication channels are reviewed.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Kenric P. Nelson"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2511.17684v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2511.17684v2",
+  "published_iso": "2025-11-21T10:50:21Z",
+  "from_query": [
+   "coupled moving-front certificate"
+  ]
+ },
+ {
+  "title": "Loss-Conditional PINNs for Parametric PDE Families",
+  "title_norm": "loss conditional pinns for parametric pde families",
+  "abstract": "Physics-informed neural networks (PINNs) approximate solutions of ODEs and PDEs by minimising a weighted combination of residual, boundary, initial, and data losses. Their performance is often dominated by the choice of loss weights: a poor weighting can drive training to a degenerate solution in which one physical constraint is satisfied while another is ignored. Existing methods select or adapt a single good set of weights. We take a different view: instead of tuning one weight vector, we explore the entire weight space during training.\n  We introduce LC-PINN, which adapts the loss-conditional training of Dosovitskiy and Djolonga (2020) to the PDE-residual setting: the conditioning vector (either the loss weights or a scalar physical coefficient) is treated as a network input and sampled from a simple prior at every optimisation step. This turns PINN training into learning a continuous family of solutions indexed by that vector, with no solver-generated paired data. LC-PINN thus lies between classical PINNs and operator learning: it stays fully physics-informed but amortises training over a parametric family. Our contribution is not the loss-conditional construction itself, but its extension to PINNs, the unification of the loss-weight and parametric-coefficient regimes under one architecture (concatenation for loss weights, FiLM for coefficients), and a fixed-quadrature L-BFGS finishing protocol that makes the parametric-coefficient regime trainable.\n  We give a lambda-invariance result for the conditional optimum and study LC-PINN on parametric Helmholtz, Schrodinger, viscous Burgers, and Buckley-Leverett equations. A single LC-PINN matches or improves retrained per-weight PINN baselines while parameterising the full family in one model, at a total cost that amortises favourably against per-instance retraining.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Anna Lazareva",
+   "Alexander Tarakanov"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.04420v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.04420v1",
+  "published_iso": "2026-06-03T04:02:10Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "Interventional Score Geometry for Causal Inference",
+  "title_norm": "interventional score geometry for causal inference",
+  "abstract": "Let $p(x)$ be the joint density of variables $X$, and let $ψ(x)=\\nabla_x\\log p(x)$ be its score field. Geometry constructed from $p$ and $ψ$ alone cannot identify causal direction: structural models with the same observational distribution have the same score geometry. I develop an interventional analogue. A hard intervention $\\operatorname{do}(X_k=ξ)$ does not merely reweight the joint law; it restricts the distribution to the submanifold ${x_k=ξ}$. Its score should therefore be defined on the remaining $d-1$ free coordinates. I define causal influence $X_k\\rightsquigarrow X_j$ as variation of the interventional marginal distribution of $X_j$ with $ξ$, and show that the corresponding derivative of the marginal interventional score gives a local sufficient condition for influence. Projecting the observational score onto admissible intervention directions does not generally recover causal response: two models may share the same observational score and admissible set yet respond differently. I therefore introduce an interventional response field supplied by structural information. A causal metric is defined as the Fisher information metric on a family of interventions with a common target, avoiding ill-posed comparisons across targets. The framework yields a geometric dictionary for randomized trials, instrumental variables, and conditional-independence designs, clarifying what each does and does not identify. A bivariate Gaussian example gives two models with the same observational score but different interventional score derivatives. The framework organizes relations among designs, interventions, and score fields, but adds no identification beyond the underlying assumptions. In Pearl's Ladder of Causation, observational score geometry belongs to association, intervention-indexed score fields to intervention, and unit-level counterfactual geometry is left for future work.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Mojtaba Eslami"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.21914v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.21914v1",
+  "published_iso": "2026-07-24T02:42:05Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "Interpolation-Inspired Closure Certificates",
+  "title_norm": "interpolation inspired closure certificates",
+  "abstract": "Barrier certificates, a form of state invariants, provide an automated approach to the verification of the safety of dynamical systems. Similarly to barrier certificates, recent works explore the notion of closure certificates, a form of transition invariants, to verify dynamical systems against $ω$-regular properties including safety. A closure certificate, defined over state pairs of a dynamical system, is a real-valued function whose zero superlevel set characterizes an inductive transition invariant of the system. The search for such a certificate can be effectively automated by assuming it to be within a specific template class, e.g. a polynomial of a fixed degree, and then using optimization techniques such as sum-of-squares (SOS) programming to find it. Unfortunately, one may not be able to find such a certificate for a fixed template. In such a case, one must change the template, e.g. increase the degree of the polynomial. In this paper, we consider a notion of multiple closure certificates dubbed interpolation-inspired closure certificates. An interpolation-inspired closure certificate consists of a set of functions which jointly over-approximate a transition invariant by first considering one-step transitions, then two, and so on until a transition invariant is obtained. The advantage of interpolation-inspired closure certificates is that they allow us to prove properties even when a single function for a fixed template cannot be found using standard approaches. We present SOS programming and a scenario program to find these sets of functions and demonstrate the effectiveness of our proposed method to verify persistence and general $ω$-regular specifications in some case studies.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Mohammed Adib Oumer",
+   "Vishnu Murali",
+   "Majid Zamani"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.12436v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.12436v1",
+  "published_iso": "2026-02-12T21:48:41Z",
+  "from_query": [
+   "coupled moving-front certificate"
+  ]
+ },
+ {
+  "title": "Comparison of Trefftz-Based PINNs and Standard PINNs Focusing on Structure Preservation",
+  "title_norm": "comparison of trefftz based pinns and standard pinns focusing on structure prese",
+  "abstract": "In this study, we investigate the capability of physics-informed neural networks (PINNs) to preserve global physical structures by comparing standard PINNs with a Trefftz-based PINN (Trefftz-PINN). The target problem is the reproduction of mag-netic field-line structures in a helical fusion reactor configuration. Using identical training data sampled from exact solutions, we perform comparisons under matched mean squared error (MSE) levels. Visualization of magnetic field lines reveals that standard PINNs may exhibit structural collapse across magnetic surfaces even when the MSE is sufficiently small, whereas Trefftz-PINNs successfully preserve the global topology of magnetic field lines. Furthermore, the proposed framework is extended to computational fluid dynamics (CFD) problems, where streamline structures of veloc-ity fields are analyzed. Similar tendencies are observed, demonstrating that Trefftz-PINNs provide superior structure preservation compared to standard PINNs. These results indicate that minimizing numerical error alone does not guarantee physical consistency, and that constraining the solution space prior to learning is an effective strategy for physics-consistent surrogate modeling.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Koji Koyamada"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.02779v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.02779v3",
+  "published_iso": "2026-02-02T20:34:51Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "Steady State Covariance Steering via Sparse Intervention",
+  "title_norm": "steady state covariance steering via sparse intervention",
+  "abstract": "This paper addresses the steady state covariance steering for linear dynamical systems via structural intervention on the system matrix. We formulate the covariance steering problem as the minimization of the Kullback-Leibler (KL) divergence between the steady state and target Gaussian distributions. To solve the problem, we develop a solution method, hereafter referred to as the proximal gradient-based algorithm, of promoting sparsity in the structural intervention by integrating the objective into a proximal gradient framework with L1 regularization. The main contribution of this paper lies in the analytical expression of the KL divergence gradient with respect to the intervention matrix: the gradient is characterized by the solutions to two Lyapunov equations related to the state covariance equation and its adjoint. Numerical simulations demonstrate that the proximal gradient-based algorithm effectively identifies sparse, structurally-constrained interventions to achieve precise covariance steering.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yosuke Inoue",
+   "Masaki Inoue"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.22939v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.22939v1",
+  "published_iso": "2026-02-26T12:29:43Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "Multivariate Cryptography-Based Anonymous Certificate Scheme",
+  "title_norm": "multivariate cryptography based anonymous certificate scheme",
+  "abstract": "As quantum computing technology continues to mature, the US National Institute of Standards and Technology (NIST) has outlined a migration timeline for Post-Quantum Cryptography (PQC), recommending the deprecation of certain elliptic curve cryptography (ECC) by 2030. Furthermore, privacy-sensitive application scenarios, such as vehicular communications, require the use of anonymous certificates. However, existing anonymous certificate schemes are still largely based on ECC. Therefore, this study proposes a multivariate cryptography-based anonymous certificate scheme, aiming to design quantum-safe anonymous certificates suitable for privacy-sensitive application services. The proposed multivariate cryptography-based anonymous certificate scheme is supported by rigorous mathematical proofs and illustrated with computational cases.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Abel C. H. Chen"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.13554v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.13554v1",
+  "published_iso": "2026-07-15T07:57:49Z",
+  "from_query": [
+   "coupled moving-front certificate"
+  ]
+ },
+ {
+  "title": "PINNs in More General Geometry",
+  "title_norm": "pinns in more general geometry",
+  "abstract": "Neural architectures trained with losses inspired by differential conditions are the basis for PINN models. Since many constructions in differential geometry may be framed as minimisation of a differential functional, these functionals can be coded as loss functions to align the AI loss-minimisation goal with that of solving the geometric problem. This contribution to the Recent Progress in Computational String Geometry workshop proceedings introduces the PINN architecture defining principles, motivates how they are well suited for problems in differential geometry, and demonstrates their use via summaries of three works at this intersection.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Edward Hirst"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.25020v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.25020v1",
+  "published_iso": "2026-04-27T21:46:53Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ },
+ {
+  "title": "Prediction-Intervention Games and Invariant Sets",
+  "title_norm": "prediction intervention games and invariant sets",
+  "abstract": "We consider the following two-player game: using observational data, the leader chooses a prediction function for a response variable $Y$ from given covariates. The follower then reacts with an intervention on some covariates in the underlying structural causal model to maximize their own objective. The leader knows the intervention targets, but may have limited knowledge of the follower's objective. We call this setup a prediction-intervention game, a special case of a Stackelberg game. Finding an optimal strategy for the leader is generally difficult. To avoid severe performance loss, the leader may base their prediction on the causal parents of $Y$, or more generally on an invariant subset of covariates. We prove, for two common classes of follower objectives, that predictors based on the stable blanket, a specific invariant subset, are always better or as good as those based on the causal parents. We further upper bound the leader's post-intervention risk by a worst-case risk over allowed interventions and strengthen existing distribution generalization results to analyze this bound: we give sufficient conditions under which stable-blanket predictors are worst-case optimal, and show by examples that these conditions cannot in general be dropped. Finally, we discuss practical strategies for settings with known and unknown graph, and test them on simulated and real-world data.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Linus Kühne",
+   "Felix Schur",
+   "Jonas Peters"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.16828v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.16828v1",
+  "published_iso": "2026-05-16T06:15:41Z",
+  "from_query": [
+   "same-coordinate objective intervention"
+  ]
+ },
+ {
+  "title": "AdamFLIP: Adaptive Momentum Feedback Linearization Optimization for Hard Constrained PINN Training",
+  "title_norm": "adamflip adaptive momentum feedback linearization optimization for hard constrai",
+  "abstract": "Physics-informed neural networks (PINNs) provide a flexible framework for solving forward and inverse problems governed by partial differential equations (PDEs), but standard PINN training typically relies on soft penalty formulations that combine PDE residuals, data mismatch, and initial/boundary conditions using manually chosen weights. This often leads to ill-conditioning, sensitivity to loss weights, and poor constraint satisfaction. In this work, we reformulate PINN training as an equality-constrained optimization problem and propose a novel Adaptive Momentum Feedback Linearization Optimization for Hard Constrained PINN (AdamFLIP). The key idea is to view the constraint residuals as the output of a controlled dynamical system and to compute the Lagrange multiplier as a feedback input that locally drives these residuals toward stable linear contraction dynamics. AdamFLIP then applies Adam-style first- and second-moment adaptation to the resulting feedback-linearized Lagrangian gradient, combining principled constraint handling with the scalability and robustness of adaptive neural-network optimization. We test AdamFLIP on a range of benchmark forward and inverse PDE problem, and it consistently outperforms both the standard soft-constrained PINN and state-of-the-art constrained optimizers. Specifically, on the Navier--Stokes equations benchmark, AdamFLIP \\textbf{reduces relative $L_2$ error by more than two thirds} for the predicted solution compared to the next best method. Our AdamFLIP framework provides an effective and computationally scalable hard constraint optimization method for PINN training.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Binghang Lu",
+   "Runyu Zhang",
+   "Changhong Mou",
+   "Na Li",
+   "Guang Lin"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.08408v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.08408v1",
+  "published_iso": "2026-05-08T19:13:15Z",
+  "from_query": [
+   "residual-feasibility continuation PINN"
+  ]
+ }
+]

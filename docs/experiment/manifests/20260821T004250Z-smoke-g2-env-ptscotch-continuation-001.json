@@ -1,0 +1,98 @@
+{
+  "actual_budget": {
+    "build_status": "FAILED_DOLFIN_PYTHON_BINDING",
+    "preflight_status": "PREFLIGHT_PASS",
+    "qpop_processes_started": 0,
+    "resolve_status": "RESOLVED",
+    "verify_status": "NOT_RUN",
+    "wall_budget_exhausted": false,
+    "wall_seconds_from_intent": 1573.3966624
+  },
+  "artifacts": {
+    "build_failure": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-continuation-001/build.failure.json",
+    "dolfin_build_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-continuation-001/logs/dolfin-build.log",
+    "dolfin_install_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-continuation-001/logs/dolfin-install.log",
+    "dolfin_python_install_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-continuation-001/logs/dolfin-python-install.log",
+    "evidence_root": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-continuation-001",
+    "intent": "outputs/runs/20260821T004250Z-smoke-g2-env-ptscotch-continuation-001/environment_intent.json",
+    "petsc_build_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-continuation-001/logs/petsc-build.log",
+    "petsc_check_log": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-continuation-001/logs/petsc-check.log",
+    "preflight": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-continuation-001/preflight.json",
+    "resolution_lock": "outputs/environments/qpop-cpc-v1-ubuntu-20.04-source-stack-v3/g2-continuation-001/resolution.lock.json",
+    "run_record": "outputs/runs/20260821T004250Z-smoke-g2-env-ptscotch-continuation-001/environment_attempt.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-oscillation-environment",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_ENVIRONMENT_BUILD"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "builder_sha256": "0c430acb2894cf52480e04db12b2b513e83b6cccf5ef06009b3a44a907275ca7",
+    "dirty": true,
+    "g2_smoke_runner_sha256": "46b4cb34d2800d38008957c81e1ff210d48d18c88ec733bb460194999906e58b",
+    "git_revision": "29e35ae5dd5165e5e15586312ee92cf940e8ad7f",
+    "kind": "working-tree-uncommitted",
+    "legacy_test_sha256": "0d4ae21daf7df229844607277a435809c99392d808d35abfb237aa9ceb72c5a3",
+    "smoke_test_sha256": "646bc25a83f2cc9cc21188d91663f25bef3ce604b3678c07f1b80eb9c8a3c601",
+    "stack_spec_sha256": "e1f74ca4cedf864169d4814412e01e510df7b272a541ad8350e7b35990ce4fce"
+  },
+  "command": [
+    "wsl.exe",
+    "-d",
+    "PINN-PCM-SCI-Ubuntu-20.04",
+    "-u",
+    "root",
+    "--",
+    "/usr/bin/python3",
+    "/mnt/e/Python demo/PINN-PCM-SCI/pinn_pcm_sci/qpop_legacy_stack.py",
+    "build",
+    "--execute"
+  ],
+  "ended_at": "2026-08-21T01:09:04.194005Z",
+  "environment": {
+    "build_failure_sha256": "e103683bfd662787930d7ba59c3f5074d47adf32f2adac534e0ff6ae2f3ca66e",
+    "dolfin_cpp_build": "PASS",
+    "dolfin_python_parallelism_observed": 11,
+    "failure_message": "DOLFIN Python binding setup.py selected -j11; cc1plus was killed under the 4 GB WSL memory budget",
+    "install_prefix": "/opt/qpop-cpc-v1-env-g2-final-002",
+    "petsc_build": "PASS",
+    "petsc_check": "PASS",
+    "preflight_sha256": "29be066291258325021b98e76ad9f1257d48b216782ff6f2b7df8f7e3f8a7d89",
+    "resolution_lock_sha256": "54c61d8454b48fb18644abcafe4bf5fe0034923276d3dc03bc2de13667c71547",
+    "runtime": "CPU",
+    "stage": "build",
+    "wsl_distribution": "PINN-PCM-SCI-Ubuntu-20.04"
+  },
+  "evaluator_id": "NOT_RUN_ENVIRONMENT_INTEGRATION",
+  "evidence_identity": "ENVIRONMENT_INTEGRATION_ONLY",
+  "execution_status": "FAILED",
+  "experiment_group_id": "g2-qpop-legacy-environment-resolution-v1",
+  "failure_class": "DOLFIN_PYTHON_BINDING_UNBOUNDED_PARALLEL_OOM",
+  "gate": "G2",
+  "gate_outcome": "G2_ENVIRONMENT_BUILD_FAILED_RESOURCE",
+  "method_id": "qpop-legacy-stack-integration-v3-ptscotch-tree-lock",
+  "numerical_validity": "NOT_EVALUATED",
+  "physical_contract_id": "NOT_YET_FROZEN_G2_ENVIRONMENT_INTEGRATION",
+  "planned_budget": {
+    "build_jobs": 2,
+    "environment_wall_timeout_seconds": 7200,
+    "stages": [
+      "resolve",
+      "preflight",
+      "build",
+      "verify",
+      "conditional_native_smoke"
+    ]
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_MINIMAL_RESOURCE_FIX",
+  "run_id": "20260821T004250Z-smoke-g2-env-ptscotch-continuation-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_ENVIRONMENT_INTEGRATION",
+  "started_at": "2026-08-21T00:42:50.7973426Z",
+  "supersedes": "20260820T160113Z-smoke-g2-env-provider-final-002",
+  "tier": "smoke"
+}

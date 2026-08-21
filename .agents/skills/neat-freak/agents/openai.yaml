@@ -1,0 +1,7 @@
+interface:
+  display_name: "Neat Freak (Project-Gated)"
+  short_description: "Explicit project knowledge and governance closeout"
+  default_prompt: "Use $neat-freak to reconcile only the project knowledge affected by this task under the repository authority chain."
+
+policy:
+  allow_implicit_invocation: false

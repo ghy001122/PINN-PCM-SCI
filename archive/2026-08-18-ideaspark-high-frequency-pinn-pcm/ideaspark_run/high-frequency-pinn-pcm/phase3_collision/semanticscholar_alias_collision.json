@@ -1,0 +1,1440 @@
+[
+ {
+  "title": "Virtual Sensing Model for Power Prediction of Satellite Solar Array: J₂ Perturbation Dynamics Resolution via Dual-Coordinate Transformation and Adaptive Runge–Kutta",
+  "title_norm": "virtual sensing model for power prediction of satellite solar array j₂ perturbat",
+  "abstract": "This model resolves ${J} _{{2}}$ perturbation orbital dynamics equations via dual-coordinate transformation, utilizing the Earth-centered inertial (ECI) coordinate system for orbital dynamics and the geocentric solar ecliptic (GSE) system for solar vector alignment. Adaptive Runge–Kutta integral solution for ordinary differential equations (ODEs) converts initial orbital parameters into continuous power profiles to achieve high-precision and long-term forecasting for satellite solar arrays with replacing physical measurements. To mitigate the error accumulation issue inherent in conventional methods that overlook orbital perturbations, the proposed model integrates ${J} _{{2}}$ perturbation effects to refine orbital parameters and utilizes an adaptive Runge–Kutta algorithm to effectively resolve satellite attitude dynamics. The use of dual-coordinate transformation and decoupled dynamics analysis substantially reduces computational complexity. Additionally, an equivalent power model for solar array under illumination and eclipse conditions is developed based on a cylindrical projection method, enabling rapid calculations in complex lighting environments. The experimental results indicate that the proposed method achieves long-term power forecasting using only initial orbital parameters, obviating the need for professional tools or frequent data updates. Compared to traditional two-body models, this approach demonstrates significant advantages in computational efficiency (requiring only one-third of STK’s runtime) and prediction accuracy (achieving a 60% reduction in mean squared error), thereby providing reliable theoretical support for dynamic power management and mission planning in satellite energy systems.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Sensors Journal",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Wenhao Geng",
+   "Maoyuan Li",
+   "Xianrui Zeng",
+   "He Liu",
+   "Peng Ying",
+   "Shuyu Duan"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "6cf4005324bffdf4b5cf24899ab1138ebb8434e6",
+  "paper_id": "doi:10.1109/JSEN.2025.3596233",
+  "doi": "10.1109/JSEN.2025.3596233",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/6cf4005324bffdf4b5cf24899ab1138ebb8434e6",
+  "published_iso": "2025-10-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Research on 3D coordinate transformation model based on adaptive M-estimator",
+  "title_norm": "research on 3d coordinate transformation model based on adaptive m estimator",
+  "abstract": "To guarantee both efficiency and robustness of coordinate transformation, a 3D coordinate transformation model based on adaptive M-estimator is proposed. With the influence of the variance factor on the M-estimator in the coordinate transformation scene analyzed, the RW algorithm is improved to determine global optimal solution of variance factor, and the outliers are eliminated through the adaptive adjustment of the factor. Through the simulation experiment of a control network of mining area, it is indicated that the outliers are located by the adaptive model even under the high rate of outlier. In terms of accuracy, M-estimator is improved to reach or even exceed RANSAC algorithm by this method. As for efficiency, the performance of M-estimator is basically preserved, which is far better than RANSAC algorithm.",
+  "tldr": "To guarantee both efficiency and robustness of coordinate transformation, a 3D coordinate transformation model based on adaptive M-estimator is proposed, and it is indicated that the outliers are located by the adaptive model even under the high rate of outlier.",
+  "year": 2024,
+  "venue": "Other Conferences",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Jun He",
+   "Mingfeng Li",
+   "Ding Tan",
+   "Junsheng Liu",
+   "Yefei Ge",
+   "Xingke Cao"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "26e76e63ea95e671dd5cbbca589c84c53f2fe2ba",
+  "paper_id": "doi:10.1117/12.3019613",
+  "doi": "10.1117/12.3019613",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/26e76e63ea95e671dd5cbbca589c84c53f2fe2ba",
+  "published_iso": "2024-01-23",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Robust 3D coordinate transformation based on genetic algorithm intelligent weighting",
+  "title_norm": "robust 3d coordinate transformation based on genetic algorithm intelligent weigh",
+  "abstract": "In order to improve the solution quality of 3D coordinate transformation parameters, a robust optimization model is obtained by integrating the 3D coordinate transformation model within the overall framework of the genetic algorithm in this paper. The minimum of the weighted sum of squares of the point residuals of the common points is taken as the objective function for optimization, and the parallel search is started from the initial population, and the updating process of the solution set is used to generate new and better individuals, and the adaptive weight combination corresponding to the optimum of the fitness function is obtained at the end of the generation iteration. The generated simulated data and measured data were analyzed using the Hefei Light Source tunnel control network as an application scenario. The results show that the method in this paper can automatically reduce the influence of low-quality data on the model, and compared with the two robust conversion models of IGG III iterative weighting, the method in this paper is not affected by the empirical parameters in determining the weight combinations and the weighted sum of squares of the residuals of the solved points are smaller, so it can effectively improve the quality of the solved conversion parameters.",
+  "tldr": "The results show that the method in this paper can automatically reduce the influence of low-quality data on the model, and compared with the two robust conversion models of IGG III iterative weighting, the method can effectively improve the quality of the solved conversion parameters.",
+  "year": 2024,
+  "venue": "Physica Scripta",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Qiuyu Zhang",
+   "Xiaoye He",
+   "Wei Wang",
+   "Enchen Wu",
+   "Xiao Li",
+   "T. Ding"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "bdc908c7fc4da1eee2c0fcf7b73cd9fdf7722564",
+  "paper_id": "doi:10.1088/1402-4896/ad3e34",
+  "doi": "10.1088/1402-4896/ad3e34",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://iopscience.iop.org/article/10.1088/1402-4896/ad3e34/pdf",
+  "published_iso": "2024-04-12",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "R-adaptive DeepONet: Learning Solution Operators for PDEs with Discontinuous Solutions Using an R-adaptive Strategy",
+  "title_norm": "r adaptive deeponet learning solution operators for pdes with discontinuous solu",
+  "abstract": "DeepONet has recently been proposed as a representative framework for learning nonlinear mappings between function spaces. However, when it comes to approximating solution operators of partial differential equations (PDEs) with discontinuous solutions, DeepONet poses a foundational approximation lower bound due to its linear reconstruction property. Inspired by the moving mesh (R-adaptive) method, we propose an R-adaptive DeepONet method, which contains the following components: (1) the output data representation is transformed from the physical domain to the computational domain using the equidistribution principle; (2) the maps from input parameters to the solution and the coordinate transformation function over the computational domain are learned using DeepONets separately; (3) the solution over the physical domain is obtained via post-processing methods such as the (linear) interpolation method. Additionally, we introduce a solution-dependent weighting strategy in the training process to reduce the final error. We establish an upper bound for the reconstruction error based on piecewise linear interpolation and show that the introduced R-adaptive DeepONet can reduce this bound. Moreover, for two prototypical PDEs with sharp gradients or discontinuities, we prove that the approximation error decays at a superlinear rate with respect to the trunk basis size, unlike the linear decay observed in vanilla DeepONets. Therefore, the R-adaptive DeepONet overcomes the limitations of DeepONet, and can reduce the approximation error for problems with discontinuous solutions. Numerical experiments on PDEs with discontinuous solutions, including the linear advection equation, the Burgers' equation with low viscosity, and the compressible Euler equations of gas dynamics, are conducted to verify the advantages of the R-adaptive DeepONet over available variants of DeepONet.",
+  "tldr": "The R-adaptive DeepONet overcomes the limitations of DeepONet, and can reduce the approximation error for problems with discontinuous solutions.",
+  "year": 2024,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yameng Zhu",
+   "Jingrun Chen",
+   "Weibing Deng"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "aff88ac2b64ef7105c13fe86279c98bcf14ac206",
+  "paper_id": "dblp:journals/corr/abs-2408-04157",
+  "doi": "10.48550/arXiv.2408.04157",
+  "arxiv_id": "2408.04157",
+  "dblp_key": "journals/corr/abs-2408-04157",
+  "paper_url": "https://www.semanticscholar.org/paper/aff88ac2b64ef7105c13fe86279c98bcf14ac206",
+  "published_iso": "2024-08-08",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Resilient Adaptive Stabilization for Nonlinear CPSs Dealing With Deception Attacks",
+  "title_norm": "resilient adaptive stabilization for nonlinear cpss dealing with deception attac",
+  "abstract": "It is still an open problem to output feedback stabilization with input quantizations and deception attacks for nonlinear cyber-physical systems subject to mismatched parametric uncertainties via backstepping design. This is because: first, the system contains mismatched uncertainties; second the output is corrupted by an additional attack signal, making the conventional recursive control design strategy using traditional error surfaces unsuitable; and third, since only the compromised output signal is available, the impacts of nonlinear items related to unknown attack weights become difficult to be explicitly addressed in the existing available output feedback control results. In this article, we present a solution to circumvent these obstacles by constructing a set of new $K$-filters using compromised output only, which, together with a coordinate transformation involving the attacked output and filter variables, allow a new form of state-observer-based resilient adaptive control scheme to be developed. Meanwhile, a novel compensation term is incorporated into the real controller to eliminate the effect of quantization on the system stability. It is shown that, by establishing Lyapunov functions appropriately, the original output of the system converges to zero, and all the signals in the closed-loop system are globally uniformly bounded. A practice example is provided to confirm the effectiveness of the proposed strategy.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Transactions on Control of Network Systems",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xinjun Wang",
+   "Ye Cao",
+   "Ben Niu",
+   "Huanqing Wang",
+   "Guangdeng Zong",
+   "Xudong Zhao"
+  ],
+  "citations": 24,
+  "source": "semanticscholar",
+  "source_id": "859c62102a70909e53a2b1adaeff9b3d9f54c162",
+  "paper_id": "dblp:journals/tcns/WangCNWZZ25",
+  "doi": "10.1109/TCNS.2024.3433968",
+  "arxiv_id": "",
+  "dblp_key": "journals/tcns/WangCNWZZ25",
+  "paper_url": "https://www.semanticscholar.org/paper/859c62102a70909e53a2b1adaeff9b3d9f54c162",
+  "published_iso": "2025-03-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Finite-Time Adaptive Bipartite Consensus Tracking Control for Constrained Nonlinear MASs: A Locally Optimal Bipartition Strategy",
+  "title_norm": "finite time adaptive bipartite consensus tracking control for constrained nonlin",
+  "abstract": "This article introduces a finite-time adaptive bipartite consensus tracking control algorithm leveraging an improved nonlinear mapping (NM), capable of implementing the prescribed asymmetric full-state constraint requirements for nonlinear heterogeneous multiagent systems (MASs) under actuator deception attacks. First, a locally optimal bipartition strategy is proposed in this article to enable bipartite consensus tracking control within unbalanced directed graph. Unlike most previous full-state-constrained controls employing the barrier Lyapunov function (BLF), the proposed algorithm is derived from building a state-dependent NM function that can achieve one-to-one mapping for the original function and constructing a new coordinate transformation, leading to the solution of full-state-constrained performance control without the feasibility conditions on the control signals. By means of the proposed practical finite-time stability criterion, the novel design aims at constructing finite-time controllers that can ensure the existence and nonsingularity of the finite-time term in each control signal, which are oblivious in the existing results on finite time control. What’s more, the designed controller even under actuator deception attack achieves that: 1) the bipartite consensus tracking errors converge to a small area containing zero in a finite time; 2) the prescribed asymmetric full-state constraints are obeyed. At last, the availability of the proposed design solution is clarified by virtue of single-link robot systems.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xiaomei Wang",
+   "Ben Niu",
+   "Xudong Zhao",
+   "Yingying Liu",
+   "Ding Wang"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "f48fcf94e6b31980ba3d6a7635046b0f14b9f373",
+  "paper_id": "dblp:journals/tsmc/WangNZLW25",
+  "doi": "10.1109/TSMC.2025.3575184",
+  "arxiv_id": "",
+  "dblp_key": "journals/tsmc/WangNZLW25",
+  "paper_url": "https://www.semanticscholar.org/paper/f48fcf94e6b31980ba3d6a7635046b0f14b9f373",
+  "published_iso": "2025-09-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "PAS-Net: Physics-informed Adaptive Scale Deep Operator Network",
+  "title_norm": "pas net physics informed adaptive scale deep operator network",
+  "abstract": "Nonlinear physical phenomena often show complex multiscale interactions; motivated by the principles of multiscale modeling in scientific computing, we propose PAS-Net, a physics-informed Adaptive-Scale Deep Operator Network for learning solution operators of nonlinear and singularly perturbed evolution PDEs with small parameters and localized features. Specifically, PAS-Net augments the trunk input in the physics informed Deep Operator Network (PI-DeepONet) with a prescribed (or learnable) locally rescaled coordinate transformation centered at reference points. This addition introduces a multiscale feature embedding that acts as an architecture-independent preconditioner which improves the representation of localized, stiff, and multiscale dynamics. From an optimization perspective, the adaptive-scale embedding in PAS-Net modifies the geometry of the Neural Tangent Kernel (NTK) associated with the neural network by increasing its smallest eigenvalue, which in turn improves spectral conditioning and accelerates gradient-based convergence. We further show that this adaptive-scale mechanism explicitly accelerates neural network training in approximating functions with steep transitions and strong asymptotic behavior, and we provide a rigorous proof of this function-approximation result within the finite-dimensional NTK matrix framework. We test the proposed PAS-Net on three different problems: (i) the one-dimensional viscous Burgers equation, (ii) a nonlinear diffusion-reaction system with sharp spatial gradients, and (iii) a two-dimensional eikonal equation. The numerical results show that PAS-Net consistently achieves higher accuracy and faster convergence than the standard DeepONet and PI-DeepONet models under a similar training cost.",
+  "tldr": "PAS-Net is proposed, a physics-informed Adaptive-Scale Deep Operator Network for learning solution operators of nonlinear and singularly perturbed evolution PDEs with small parameters and localized features that consistently achieves higher accuracy and faster convergence than the standard DeepONet and PI-DeepONet models under a similar training cost.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Changhong Mou",
+   "Yeyu Zhang",
+   "Xuewen Zhu",
+   "Zhuang Qiao"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "10e53930fef24588789b135a8031237e1231ed61",
+  "paper_id": "dblp:journals/corr/abs-2511-14925",
+  "doi": "10.48550/arXiv.2511.14925",
+  "arxiv_id": "2511.14925",
+  "dblp_key": "journals/corr/abs-2511-14925",
+  "paper_url": "https://www.semanticscholar.org/paper/10e53930fef24588789b135a8031237e1231ed61",
+  "published_iso": "2025-11-18",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Research on vehicle trajectory planning algorithm integrating spatiotemporal constraints and adaptive curvature",
+  "title_norm": "research on vehicle trajectory planning algorithm integrating spatiotemporal con",
+  "abstract": "The trajectory planning method based on the Frenet coordinate transformation effectively reduces computational complexity and enhances planning accuracy. However, in complex road scenarios involving multiple intelligent agents, the singular Frenet coordinate transformation is incapable of handling the variations in road curvature and vehicle posture among multiple target vehicles. This limitation leads to a reduced planning solution space, making it difficult to approximate the optimal path. To address this challenge, this study proposes a curvature-adaptive trajectory planning framework combined with spatiotemporal integration. This method involves three key innovations: (1) A road segmentation algorithm that discretizes complex curved roads into a set of quasi-straight segments through adaptive spatial discretization; (2) A multi-coordinate system adaptive transformation based on the predicted vehicle center in the temporal domain, which integrates temporal constraints with spatial Bézier curve optimization in a hierarchical planning architecture; (3) A multi-objective cost function is designed to comprehensively evaluate heuristic features such as path smoothness, efficiency, and safety, and candidate paths are optimized and ranked through weight configuration. Experimental results demonstrate that, compared with the benchmark method, the proposed framework achieves a 100% planning success rate in 135 complex road scenarios, with a 6.15% improvement in planning robustness and a 9.41% increase in trajectory smoothness. These findings confirm that the proposed framework has certain advantages in terms of smoothness and safety in complex road scenarios.",
+  "tldr": "Experimental results demonstrate that the proposed curvature-adaptive trajectory planning framework combined with spatiotemporal integration achieves a 100% planning success rate in 135 complex road scenarios, and confirm that the proposed framework has certain advantages in terms of smoothness and safety in complex road scenarios.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yatao Zhao",
+   "Jiangfeng Wang",
+   "Peikun Li",
+   "Hao Wang"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "0b522f352ad108a41e997f8b6bd19bc4bd88cc83",
+  "paper_id": "doi:10.1038/s41598-025-28018-1",
+  "doi": "10.1038/s41598-025-28018-1",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/0b522f352ad108a41e997f8b6bd19bc4bd88cc83",
+  "published_iso": "2025-11-21",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "ARMOR: High-Performance Semi-Structured Pruning via Adaptive Matrix Factorization",
+  "title_norm": "armor high performance semi structured pruning via adaptive matrix factorization",
+  "abstract": "Large language models (LLMs) present significant deployment challenges due to their immense computational and memory requirements. While semi-structured pruning, particularly 2:4 sparsity, offers a path to practical hardware acceleration, existing methods often incur substantial performance degradation. To bridge this gap, we introduce ARMOR: (Adaptive Representation with Matrix-factORization), a novel one-shot post-training pruning algorithm. Instead of directly pruning weights, ARMOR factorizes each weight matrix into a 2:4 sparse core wrapped by two low-overhead, block diagonal matrices. These wrappers act as efficient pre and post-transformation error correctors, offering greater flexibility to preserve model quality compared to conventional 2:4 pruning techniques. The sparse core and block diagonal wrappers are chosen through a block coordinate descent algorithm that minimizes a layer-wise proxy loss. We theoretically prove this optimization is guaranteed to converge to a solution with a proxy loss less than or equal to state-of-the-art pruning algorithms. Experiments on Llama (Touvron et al., 2023; Dubey et al., 2024) and Qwen (Yang et al., 2025) model families demonstrate that ARMOR consistently and significantly outperforms state-of-the-art 2:4 pruning methods across a wide range of downstream tasks and perplexity evaluations. ARMOR achieves this superior performance while retaining the inference speedups and substantial memory usage reductions of 2:4 pruning, establishing a more effective trade-off between model compression and task accuracy",
+  "tldr": "ARMOR (Adaptive Representation with Matrix-factORization), a novel one-shot post-training pruning algorithm that achieves superior performance while retaining the inference speedups and substantial memory usage reductions of 2:4 pruning.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Lawrence Liu",
+   "Alexander Liu",
+   "Mengdi Wang",
+   "Tuo Zhao",
+   "Lin F. Yang"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "c497a42b38b1269f4a9eac857b2d93a02b2b4a69",
+  "paper_id": "dblp:journals/corr/abs-2510-05528",
+  "doi": "10.48550/arXiv.2510.05528",
+  "arxiv_id": "2510.05528",
+  "dblp_key": "journals/corr/abs-2510-05528",
+  "paper_url": "https://www.semanticscholar.org/paper/c497a42b38b1269f4a9eac857b2d93a02b2b4a69",
+  "published_iso": "2025-10-07",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Calculating free-energy differences using an average force: A tutorial for adaptive biasing force simulations",
+  "title_norm": "calculating free energy differences using an average force a tutorial for adapti",
+  "abstract": "The purpose of this tutorial is to get the reader familiarized with the calculation of a free-energy change along a reaction-coordinate (RC) model through a number of applications of variants of the importance-sampling adaptive biasing force algorithm. The reversible sodium-chloride ion pairing in aqueous solution serves as an introductory example, wherein the RC model is defined as the distance separating the ions. For the reversible folding of the short peptide deca-alanine, alternative collective variables are considered to map the conformational free-energy landscape. The importance-sampling algorithm is then applied to the transfer of an ethanol molecule across the water liquid-vapor interface to estimate its hydration free-energy. The results are compared to those of an alchemical transformation, using free-energy perturbation calculations. In the final application, the Ramachandran free-energy surface underlying the conformational equilibrium of N–methyl–N’–acetylalanylamide is determined in two dimensions, comparing single- and multiple-walker strategies.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of Physical Chemistry B",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "R. Talmazan",
+   "Haohao Fu",
+   "Mengchen Zhou",
+   "J. Hénin",
+   "James C. Gumbart",
+   "Christophe Chipot"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "d60f7a2f6ab89f44ffda4cc4061773bdcbc1876c",
+  "paper_id": "doi:10.1021/acs.jpcb.5c04333",
+  "doi": "10.1021/acs.jpcb.5c04333",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/d60f7a2f6ab89f44ffda4cc4061773bdcbc1876c",
+  "published_iso": "2025-09-23",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Fast and spectrally accurate construction of adaptive diagonal basis sets for electronic structure.",
+  "title_norm": "fast and spectrally accurate construction of adaptive diagonal basis sets for el",
+  "abstract": "In this article, we combine the periodic sinc basis set with a curvilinear coordinate system for electronic structure calculations. This extension allows for variable resolution across the computational domain, with higher resolution close to the nuclei and lower resolution in the inter-atomic regions. We address two key challenges that arise while using basis sets obtained by such a coordinate transformation. First, we use pseudospectral methods to evaluate the integrals needed to construct the Hamiltonian in this basis. Second, we demonstrate how to construct an appropriate coordinate transformation by solving the Monge-Ampére equation using a new approach that we call the cyclic Knothe-Rosenblatt flow. The solution of both of these challenges enables mean-field calculations at a cost that is log-linear in the number of basis functions. We demonstrate that our method approaches the complete basis set limit faster than basis sets with uniform resolution. We also emphasize how these basis sets satisfy the diagonal approximation, which is shown to be a consequence of the pseudospectral method. The diagonal approximation is highly desirable for the solution of the electronic structure problem in many frameworks, including mean field theories, tensor network methods, quantum computing, and quantum Monte Carlo.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Journal of Chemical Physics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Michael Lindsey",
+   "Sandeep Sharma"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "fb03637398a9c562f67b19a70315a51b0e38eb57",
+  "paper_id": "arxiv:2407.06171",
+  "doi": "10.1063/5.0232181",
+  "arxiv_id": "2407.06171",
+  "dblp_key": "",
+  "paper_url": "http://arxiv.org/pdf/2407.06171",
+  "published_iso": "2024-07-08",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "An Inverse Kinematics Solution for Mobile Manipulators in Textile Workshops Based on an Improved Particle Swarm Optimization",
+  "title_norm": "an inverse kinematics solution for mobile manipulators in textile workshops base",
+  "abstract": "To enhance the operational performance of mobile manipulators in textile workshops and address the difficulty of inverse kinematics (IK) for this class of redundant manipulators, this paper leverages the robot’s structural symmetries and proposes a chaotic-mutation particle swarm optimization (CMPSO)-based IK algorithm for mobile manipulators, thus simplifying the solution process and ensuring balanced exploration of the search space. First, the coordinate–transformation relationships of the mobile manipulator are analyzed to establish its forward kinematic model. Then, a multi-objective constrained IK model is formulated according to the manipulator’s operating characteristics. The model incorporates a pose-error function, the ‘compliance’ principle, and joint-limit avoidance. To solve this model accurately, we refine the population initialization and boundary-violation handling of the particle swarm algorithm and introduce an asymmetric mechanism via an adaptive mutation strategy, culminating in a CMPSO-based IK solver. On this basis, single-pose IK tests and trajectory-planning experiments are conducted, and simulation results verify the effectiveness and stability of the proposed algorithm.",
+  "tldr": "The robot’s structural symmetries are leveraged and a chaotic-mutation particle swarm optimization (CMPSO)-based IK algorithm for mobile manipulators is proposed, thus simplifying the solution process and ensuring balanced exploration of the search space.",
+  "year": 2025,
+  "venue": "Symmetry",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Wei Xie",
+   "Zhong Wang",
+   "Jiachen Ma",
+   "Jun Chen",
+   "Xin Xie"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "cf01858af3e9d37cd4818a7989dec49451c1c622",
+  "paper_id": "dblp:journals/symmetry/XieWMCX25",
+  "doi": "10.3390/sym17111980",
+  "arxiv_id": "",
+  "dblp_key": "journals/symmetry/XieWMCX25",
+  "paper_url": "https://www.mdpi.com/2073-8994/17/11/1980/pdf?version=1763281450",
+  "published_iso": "2025-11-16",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Adaptive Moving Mesh Methods for Solving Partial Differential Equations and Applications",
+  "title_norm": "adaptive moving mesh methods for solving partial differential equations and appl",
+  "abstract": "The solutions to certain partial differential equations may exhibit large variations in small regions in the physical domain. When numerical methods are applied to solve these equations, overly fine meshes are often necessary to accurately resolve the solution behaviors, resulting in significant increases in computational expenses. In such cases, mesh refinement methods can be employed to generate nonuniform meshes, where the mesh resolutions are higher only in the areas with significant solution variations. This can help reduce computational costs while maintaining the accuracy of numerical solutions. The adaptive moving mesh method (also called r-refinement) is a mesh refinement method that seeks to find a coordinate transformation between the computational and the physical domain based on specific criteria. In this thesis, we explore the theories and techniques of the adaptive moving mesh method and propose two applications. First, we develop a moving mesh finite element method for the minimum compliance problem in topology optimization. Our numerical experiments demonstrate that using a coarser mesh alongside the moving mesh technique can yield desirable output configurations while also enhancing computational efficiency. Second",
+  "tldr": "This thesis develops a moving mesh finite element method for the minimum compliance problem in topology optimization and demonstrates that using a coarser mesh alongside the moving mesh technique can yield desirable output configurations while also enhancing computational efficiency.",
+  "year": 2023,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Zheyu Fang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "63ff67b997843e1b20768003eff101f2bf3f9404",
+  "paper_id": "doi:10.14711/thesis-991013222951403412",
+  "doi": "10.14711/thesis-991013222951403412",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/63ff67b997843e1b20768003eff101f2bf3f9404",
+  "published_iso": null,
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "GeoClip: Geometry-Aware Clipping for Differentially Private SGD",
+  "title_norm": "geoclip geometry aware clipping for differentially private sgd",
+  "abstract": "Differentially private stochastic gradient descent (DP-SGD) is the most widely used method for training machine learning models with provable privacy guarantees. A key challenge in DP-SGD is setting the per-sample gradient clipping threshold, which significantly affects the trade-off between privacy and utility. While recent adaptive methods improve performance by adjusting this threshold during training, they operate in the standard coordinate system and fail to account for correlations across the coordinates of the gradient. We propose GeoClip, a geometry-aware framework that clips and perturbs gradients in a transformed basis aligned with the geometry of the gradient distribution. GeoClip adaptively estimates this transformation using only previously released noisy gradients, incurring no additional privacy cost. We provide convergence guarantees for GeoClip and derive a closed-form solution for the optimal transformation that minimizes the amount of noise added while keeping the probability of gradient clipping under control. Experiments on both tabular and image datasets demonstrate that GeoClip consistently outperforms existing adaptive clipping methods under the same privacy budget.",
+  "tldr": "GeoClip is proposed, a geometry-aware framework that clips and perturbs gradients in a transformed basis aligned with the geometry of the gradient distribution and consistently outperforms existing adaptive clipping methods under the same privacy budget.",
+  "year": 2025,
+  "venue": "Advances in Neural Information Processing Systems 38",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Atefeh Gilani",
+   "Naima Tasnim",
+   "L. Sankar",
+   "O. Kosut"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "d40ae1c6c10475c0fd455239fd2a1dd93f2982ad",
+  "paper_id": "dblp:journals/corr/abs-2506-06549",
+  "doi": "10.48550/arXiv.2506.06549",
+  "arxiv_id": "2506.06549",
+  "dblp_key": "journals/corr/abs-2506-06549",
+  "paper_url": "https://www.semanticscholar.org/paper/d40ae1c6c10475c0fd455239fd2a1dd93f2982ad",
+  "published_iso": "2025-06-06",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Nodal Hybrid Neural Solvers for Parametric PDE Systems",
+  "title_norm": "nodal hybrid neural solvers for parametric pde systems",
+  "abstract": "The numerical solution of partial differential equations (PDEs) is fundamental to scientific and engineering computing. In the presence of strong anisotropy, material heterogeneity, and complex geometries, however, classical iterative solvers often suffer from reduced efficiency and require substantial problem-dependent tuning. The Fourier neural solver (FNS) is a learning-based hybrid iterative solver for such problems without extensive manual parameter tuning, but its original design is primarily effective for scalar PDEs on structured meshes and is difficult to extend directly to unstructured meshes or strongly coupled PDE systems. Building on the FNS framework, we introduce block smoothing operators and graph neural networks to construct a solver for unstructured systems, termed the graph Fourier neural solver (G-FNS). We further incorporate a coordinate transformation network to develop the adaptive graph Fourier neural solver (AG-FNS), and then extend this formulation to a frequency-domain multilevel variant, ML-AG-FNS. Rigorous analysis shows that, under suitable mathematical assumptions, the proposed method achieves mesh-independent convergence rate. Error-spectrum visualizations further indicate that AG-FNS can capture complex multiscale error modes. Extensive experiments on two-dimensional anisotropic diffusion and on two- and three-dimensional isotropic/anisotropic linear elasticity problems over unstructured meshes demonstrate strong robustness and efficiency. The proposed framework can be used either as a solver or as a preconditioner for Krylov subspace methods. Overall, it substantially extends the original FNS methodology and broadens the applicability of this class of neural solvers.",
+  "tldr": "This work substantially extends the original FNS methodology and broadens the applicability of this class of neural solvers, and incorporates a coordinate transformation network to develop the adaptive graph Fourier neural solver (AG-FNS).",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Yun Liu",
+   "Chen Cui",
+   "Shi Shu",
+   "Zhen Wang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "f6f678533c85920e474ac6082ddf26a37733e305",
+  "paper_id": "arxiv:2511.21491",
+  "doi": "",
+  "arxiv_id": "2511.21491",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f6f678533c85920e474ac6082ddf26a37733e305",
+  "published_iso": "2025-11-26",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Harmonic detection technology based on ant colony optimization BP neural network",
+  "title_norm": "harmonic detection technology based on ant colony optimization bp neural network",
+  "abstract": "At present, ip-iq algorithm based on instantaneous reactive power theory is the most widely used in the field of harmonic detection.However, the ip-iq algorithm based on instantaneous reactive power has coordinate transformation and inverse transformation, which leads to cumbersome calculation.the existence of low-pass filter leads to delay and poor dynamic performance of the algorithm.The harmonic detection based on BP neural network has the advantages of simple calculation, fast detection speed, strong adaptive ability and good dynamic performance.However, the initial weights and thresholds are random, so it is easy for the network to fall into local optimal solution during training, resulting in low detection accuracy. This paper presents a harmonic detection method based on ant colony algorithm optimized BP neural network. ACO-BP, BP and ip-iq algorithms are compared by Simulink simulation. The results show that ACO-BP harmonic detection algorithm is feasible and superior",
+  "tldr": "The results show that ACO-BP harmonic detection algorithm is feasible and superior and compared to ip-iq algorithms are compared by Simulink simulation.",
+  "year": 2022,
+  "venue": "Journal of Physics, Conference Series",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Jianyu Wu",
+   "Hairong Zou"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "2e414e38a4d4aa36fbe4b3de6afa7f135877a569",
+  "paper_id": "doi:10.1088/1742-6596/2221/1/012058",
+  "doi": "10.1088/1742-6596/2221/1/012058",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://iopscience.iop.org/article/10.1088/1742-6596/2221/1/012058/pdf",
+  "published_iso": "2022-05-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Nussbaum-Based Adaptive Fault-Tolerant Control for Nonlinear CPSs With Deception Attacks: A New Coordinate Transformation Technology",
+  "title_norm": "nussbaum based adaptive fault tolerant control for nonlinear cpss with deception",
+  "abstract": "In this article, two novel adaptive fault-tolerant control schemes for a class of nonlinear strict-feedback cyber–physical systems (CPSs) with deception attacks are presented. Deception attacks, such as false data-injection attacks, which destroy sensor networks, make the outputs and states of the CPSs unavailable. It is very difficult and challenging for a designer to achieve the tracking control under the circumstance of cyberattacks. To realize the tracking control for the studied CPSs, we propose a new coordinate transformation technology without precedent, where it takes the attack gains into account and uses the compromised states to design the corresponding controllers. In the backstepping design process, Nussbaum functions are presented to alleviate the influence of the unknown attack gains. Furthermore, we consider the actuator faults problem, which includes the loss of effectiveness and the bias fault. By skillfully designing the adaptive laws, the effect of actuator faults is completely eliminated. It is theoretically proved that the first proposed tracking control scheme can guarantee all signals in the closed-loop system are bounded and the output can track the desired reference signal. In addition, the second adaptive control scheme is also developed for the CPSs under the actuator faults and a more general assumption on the deception attacks is proposed simultaneously. Finally, the feasibility of the new proposed methods is verified by MATLAB simulation analysis.",
+  "tldr": "",
+  "year": 2022,
+  "venue": "IEEE Transactions on Cybernetics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Wendi Chen",
+   "Yuanxin Li",
+   "Lei Liu",
+   "Xudong Zhao",
+   "Ben Niu",
+   "Lizhu Han"
+  ],
+  "citations": 44,
+  "source": "semanticscholar",
+  "source_id": "9f1c92b2753cd0d9a494579749fbf3621d299b76",
+  "paper_id": "dblp:journals/tcyb/ChenLLZNH24",
+  "doi": "10.1109/TCYB.2022.3206861",
+  "arxiv_id": "",
+  "dblp_key": "journals/tcyb/ChenLLZNH24",
+  "paper_url": "https://www.semanticscholar.org/paper/9f1c92b2753cd0d9a494579749fbf3621d299b76",
+  "published_iso": "2022-09-28",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Adaptive Segmented Coordinate Transformation Method for Long-Distance Strip Topographic Maps",
+  "title_norm": "adaptive segmented coordinate transformation method for long distance strip topo",
+  "abstract": "For long-distance strip topographic maps, applying a single set of four- or seven-parameter transformation parameters globally leads to uneven accumulation of projection distortion along the route, resulting in excessive residual errors at the edges. To solve this problem, this paper proposes an adaptive segmented four-parameter transformation method based on residual constraints. Using the transformation residuals of control points as constraints, the method adopts an iterative subdivision strategy to dynamically divide the route into optimal transformation intervals, ensuring uniform projection distortion within each segment. A four-parameter model is then solved independently for each segment, followed by entity-level graphic transformation and boundary clipping. A tolerance-based edge-matching algorithm automatically aligns adjacent map sheets and evaluates quality. The method is validated on a 101.9 km highway strip topographic map. Compared with conventional global transformation, the proposed method reduces the maximum residual from 0.347 m to 0.048 m and improves the root mean square error (RMSE) from 0.121 m to 0.018 m, with all control point residuals meeting the 0.05 m tolerance. The approach effectively enhances the overall accuracy of coordinate transformation for long-span strip topographic maps and resolves the practical issue of excessive edge residuals.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "2026 6th International Conference on Artificial Intelligence, Big Data and Algorithms (CAIBDA)",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Chaoqun Liu",
+   "Gang Lei",
+   "Min Liu",
+   "Rudong Duan",
+   "Zilai Lu",
+   "Zhen Li"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "c1d56d0a1788010f64854ac41da5d9ba1f9b6d8d",
+  "paper_id": "doi:10.1109/CAIBDA70336.2026.11621787",
+  "doi": "10.1109/CAIBDA70336.2026.11621787",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c1d56d0a1788010f64854ac41da5d9ba1f9b6d8d",
+  "published_iso": "2026-06-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Robust solution of coordinate transformation parameters with a high breakdown point",
+  "title_norm": "robust solution of coordinate transformation parameters with a high breakdown po",
+  "abstract": "Because the M estimation method may lead to poor robustness or even failure owing to excessive outliers, a robust algorithm with a high breakdown point was proposed and applied to the estimation of coordinate transformation parameters. Firstly, the sampling method was used to calculate multiple sets of model parameters, and some sampling results were sifted according to posterior information. Then, the samples were sorted according to their number in the sampling results, and the F-test was adopted to screen and reserve valid information. Finally, the initial values of the reliable parameters were computed using the valid information, and the final parameters were obtained by the Institute of Geodesy and Geophysics III scheme. Monte Carlo method was adopted for the simulation test, and a case analysis was chosen for verification. The results show that the proposed method can identify and process outliers more accurately than those of Rousseeuw and Hubert (2011 Wires Data Min. Knowl. 1 73–79) and Tao et al (2016 Acta Geod. Cartogr. Sin. 45 297–301). When the proportion of outliers exceeded 50%, the proposed algorithm maintained a strong robustness and had a high breakdown point.",
+  "tldr": "The results show that the proposed method can identify and process outliers more accurately than those of Rousseeuw and Hubert and Tao et al.",
+  "year": 2023,
+  "venue": "Measurement science and technology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhonghe Liu",
+   "Zongchun Li",
+   "Huabin He",
+   "Yongjian Fu",
+   "Jiahuan Ran"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "c140d0bbb9f9bc7013bfee37e347533f7dea1d87",
+  "paper_id": "doi:10.1088/1361-6501/acdd89",
+  "doi": "10.1088/1361-6501/acdd89",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://iopscience.iop.org/article/10.1088/1361-6501/acdd89/pdf",
+  "published_iso": "2023-06-21",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Robust Solution for Coordinate Transformation Based on Coordinate Component Weighting",
+  "title_norm": "robust solution for coordinate transformation based on coordinate component weig",
+  "abstract": "",
+  "tldr": "",
+  "year": 2023,
+  "venue": "Journal of Surveying Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhonghe Liu",
+   "Zongchun Li",
+   "Jiahuan Ran"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "e9404cbcb3b6a887a2270be447b7740252a6f646",
+  "paper_id": "doi:10.1061/jsued2.sueng-1399",
+  "doi": "10.1061/jsued2.sueng-1399",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://ascelibrary.org/doi/pdf/10.1061/JSUED2.SUENG-1399",
+  "published_iso": null,
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Fine-tuning physics-informed neural networks for cavity flows using coordinate transformation",
+  "title_norm": "fine tuning physics informed neural networks for cavity flows using coordinate t",
+  "abstract": "Physics-informed neural networks (PINNs) have attracted attention as an alternative approach to solve partial differential equations using a deep neural network (DNN). Their simplicity and capability allow them to solve inverse problems for many applications. Despite the versatility of PINNs, it remains challenging to reduce their training cost. Using a DNN pre-trained with an arbitrary dataset with transfer learning or fine-tuning is a potential solution. However, a pre-trained model using a different geometry and flow condition than the target may not produce suitable results. This paper proposes a fine-tuning approach for PINNs with coordinate transformation, modelling lid-driven cavity flows with various shapes. We formulate the inverse problem, where the reference data inside the domain and wall boundary conditions are given. A pre-trained PINN model with an arbitrary Reynolds number and shape is used to initialize a target DNN. To reconcile the reference shape with different targets, governing equations as a loss of the PINNs are given with coordinate transformation using a deformation gradient tensor. Numerical examples for various cavity flows with square, rectangular, shear deformed and inflated geometries demonstrate that the proposed fine-tuning approach improves the training convergence compared with a randomly-initialized model. A pre-trained model with a similar geometry to the target further increases training efficiency. These findings are useful for real-world applications such as modelling intra-aneurysmal blood flows in clinical use.",
+  "tldr": "A fine-tuning approach for PINNs with coordinate transformation, modelling lid-driven cavity flows with various shapes and shows that the proposed fine-tuning approach improves the training convergence compared with a randomly-initialized model.",
+  "year": 2025,
+  "venue": "Computers &amp; Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ryuta Takao",
+   "Satoshi Ii"
+  ],
+  "citations": 10,
+  "source": "semanticscholar",
+  "source_id": "509282c42d55d4041f034bc4d8f9ef9a58496c0f",
+  "paper_id": "arxiv:2508.01122",
+  "doi": "10.1016/j.compfluid.2025.106957",
+  "arxiv_id": "2508.01122",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.compfluid.2025.106957",
+  "published_iso": "2025-08-02",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "An adaptive coordinate systems for constrained differential evolution",
+  "title_norm": "an adaptive coordinate systems for constrained differential evolution",
+  "abstract": "",
+  "tldr": "ACSCDE introduces two specialized coordinate systems: one focuses on guiding the search to the objective space, while the other directs the search toward feasible solutions, highlighting ACSCDE as a promising approach for improving the performance of evolutionary algorithms in constrained optimization tasks.",
+  "year": 2024,
+  "venue": "Cluster Computing",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "S. Boualem",
+   "B. Meftah",
+   "F. Debbat"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "ee4a42917a09119cc5965986dab1bd9fcf178cb9",
+  "paper_id": "dblp:journals/cluster/BoualemMD25",
+  "doi": "10.1007/s10586-024-04698-8",
+  "arxiv_id": "",
+  "dblp_key": "journals/cluster/BoualemMD25",
+  "paper_url": "https://www.semanticscholar.org/paper/ee4a42917a09119cc5965986dab1bd9fcf178cb9",
+  "published_iso": "2024-10-23",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "A Reliable DBH Estimation Method Using Terrestrial LiDAR Points through Polar Coordinate Transformation and Progressive Outlier Removal",
+  "title_norm": "a reliable dbh estimation method using terrestrial lidar points through polar co",
+  "abstract": "Diameter at breast height (DBH) is a crucial parameter for forest inventory. However, accurately estimating DBH remains challenging due to the noisy and incomplete cross-sectional points. To address this, this paper proposed a reliable DBH estimation method using terrestrial LiDAR points through polar coordinate transformation and progressive outlier removal. In this paper, the initial center was initially detected by rasterizing the convex hull, and then the Cartesian coordinates were transformed into polar coordinates. In the polar coordinate system, the outliers were classified as low and high outliers according to the distribution of polar radius difference. Both types of outliers were then removed using adaptive thresholds and the moving least squares algorithm. Finally, DBH was estimated by calculating the definite integral of arc length in the polar coordinate system. Twenty publicly available individual trees were adopted for the test. Experimental results indicated that the proposed method performs better than the other four classical DBH estimation methods. Furthermore, several extreme cases scanned using terrestrial LiDAR in practice, such as cross-sectional points with lots of outliers or larger data gaps, were also tested. Experimental results demonstrate that the proposed method accurately calculates DBH even in these challenging cases.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Forests",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Z. Hui",
+   "Lei Lin",
+   "Shuanggen Jin",
+   "Yuanping Xia",
+   "Yao Yevenyo Ziggah"
+  ],
+  "citations": 12,
+  "source": "semanticscholar",
+  "source_id": "8fee5abc9589ea5991249768f22b874342181ae6",
+  "paper_id": "doi:10.3390/f15061031",
+  "doi": "10.3390/f15061031",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/1999-4907/15/6/1031/pdf?version=1718288835",
+  "published_iso": "2024-06-13",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Technical solutions to coordinate transformation in computer vision for port environments",
+  "title_norm": "technical solutions to coordinate transformation in computer vision for port env",
+  "abstract": "As computer vision technology continues to advance, the development of smart ports is increasingly utilizing visual technology for object positioning in large-scale scenarios. The conversion of image coordinates identified by computer vision into the world coordinates necessary for port applications is considered a challenging task, due to the complexity of technical solutions and the difficulties associated with engineering implementation. This paper proposes an \"end-to-end\" standardized process for converting image pixel coordinates to world coordinate system. This mapping solution provides a standardized implementation process. It is highly operable and can adapt to the complex visual monitoring scenarios in ports. The implementation of this solution reduces the difficulty of deploying object positioning technology, thereby facilitating the widespread application of computer vision technology in smart port construction and enhancing their sensing capabilities.",
+  "tldr": "An \"end-to-end\" standardized process for converting image pixel coordinates to world coordinate system is proposed that provides a standardized implementation process that is highly operable and can adapt to the complex visual monitoring scenarios in ports.",
+  "year": 2025,
+  "venue": "Conference on Image, Signal Processing, and Pattern Recognition",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Guangyu Li",
+   "Jingling Zhu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "f2bffcf4123f0823867a0faeb0b0924a0f65e6ac",
+  "paper_id": "doi:10.1117/12.3070676",
+  "doi": "10.1117/12.3070676",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f2bffcf4123f0823867a0faeb0b0924a0f65e6ac",
+  "published_iso": "2025-07-16",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Convergence theory for Hermite approximations under adaptive coordinate transformations",
+  "title_norm": "convergence theory for hermite approximations under adaptive coordinate transfor",
+  "abstract": "Recent work has shown that parameterizing and optimizing coordinate transformations using normalizing flows, i.e., invertible neural networks, can significantly accelerate the convergence of spectral approximations. We present the first error estimates for approximating functions using Hermite expansions composed with adaptive coordinate transformations. Our analysis establishes an equivalence principle: approximating a function $f$ in the span of the transformed basis is equivalent to approximating the pullback of $f$ in the span of Hermite functions. This allows us to leverage the classical approximation theory of Hermite expansions to derive error estimates in transformed coordinates in terms of the regularity of the pullback. We present an example demonstrating how a nonlinear coordinate transformation can enhance the convergence of Hermite expansions. Focusing on smooth functions decaying along the real axis, we construct a monotone transport map that aligns the decay of the target function with the Hermite basis. This guarantees spectral convergence rates for the corresponding Hermite expansion. Our analysis provides theoretical insight into the convergence behavior of adaptive Hermite approximations based on normalizing flows, as recently explored in the computational quantum physics literature.",
+  "tldr": "This work presents the first error estimates for approximating functions using Hermite expansions composed with adaptive coordinate transformations, and establishes an equivalence principle: approximating a function in the span of the transformed basis is equivalent to approximating the pullback in the span of Hermite functions.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yahya Saleh"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "bf9bf2633c004739268aebd2c3cce1ee83aab972",
+  "paper_id": "dblp:journals/corr/abs-2604-16975",
+  "doi": "10.48550/arXiv.2604.16975",
+  "arxiv_id": "2604.16975",
+  "dblp_key": "journals/corr/abs-2604-16975",
+  "paper_url": "https://www.semanticscholar.org/paper/bf9bf2633c004739268aebd2c3cce1ee83aab972",
+  "published_iso": "2026-04-18",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Adaptive Coordinate Transforms for Neural Operators",
+  "title_norm": "adaptive coordinate transforms for neural operators",
+  "abstract": "Neural operators have achieved promising performance on partial differential equations (PDEs), but most existing models are built on fixed Eulerian coordinates. This mismatch between evolving physical structures and static coordinates creates spatial misalignment, leading to unnecessarily non-local operator mappings and reinforcing a smoothness preference near sharp transitions. Inspired by adaptive coordinate transformations in classical PDE analysis, we propose the Adaptive Coordinate Transform (ACT) block, a plug-and-play module for data-driven geometric adaptation in neural operators. ACT blocks resolve this structural limitation by learning adaptive coordinate systems within the operator learning pipeline. Specifically, given an input feature, the ACT block learns a coordinate transformation and represents the same feature under the transformed coordinates via differentiable sampling. This operation preserves the underlying signal while changing its spatial representation, equivalent to expressing the same physical quantity in different coordinate systems. By adapting the coordinate system to the data, ACT allows the network to better track evolving structures, reduce operator complexity, and dynamically focus on critical features to improve learning. We evaluate the proposed approach across diverse PDE benchmarks and multiple neural operator architectures. Experimental results demonstrate consistent and significant improvements in predictive accuracy, indicating that learning coordinate systems provides a powerful mechanism for enhancing operator learning.",
+  "tldr": "Experimental results demonstrate consistent and significant improvements in predictive accuracy, indicating that learning coordinate systems provides a powerful mechanism for enhancing operator learning.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chaoyu Liu",
+   "Zhong Li",
+   "Gaohang Chen",
+   "Zakhar Shumaylov",
+   "Zhongying Deng",
+   "Qian Zhang"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "fa3da877fbce89bb9c805c0bfa74b20756346a98",
+  "paper_id": "dblp:journals/corr/abs-2605-06203",
+  "doi": "10.48550/arXiv.2605.06203",
+  "arxiv_id": "2605.06203",
+  "dblp_key": "journals/corr/abs-2605-06203",
+  "paper_url": "https://www.semanticscholar.org/paper/fa3da877fbce89bb9c805c0bfa74b20756346a98",
+  "published_iso": "2026-05-07",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Symmetric similarity 3D coordinate transformation based on dual quaternion algorithm",
+  "title_norm": "symmetric similarity 3d coordinate transformation based on dual quaternion algor",
+  "abstract": "Nowadays, dual quaternion algorithms are used in 3D coordinate transformation problems due to their advantages. The 3D coordinate transformation problem is one of the important problems in geodesy. This transformation problem is encountered in many application areas other than geodesy. Although there are many coordinate transformation methods (similarity, affine, projective, etc.), similarity transformation is used because of its simplicity. Asymmetric transformation is preferred over symmetric coordinate transformation because of its ease of use. In terms of error theory, the symmetric transformation should be preferred. This study discusses the topic of symmetric similarity 3D coordinate transformation based on the dual quaternion algorithm, as well as the bottlenecks encountered in solving the problem and using the solution method. A new iterative algorithm based on the dual quaternion is presented. The solution is implemented in two models: with and without constraint equations. The advantages and disadvantages of the two models compared to each other are also evaluated. Not only the transformation parameters but also the errors of the transformation parameters are determined. The detailed derivation of the formulas for estimating the symmetric similarity of 3D transformation parameters is presented step by step. Since symmetric transformation is the general form of asymmetric transformation, we can also obtain asymmetric transformation results with a simple modification of the model we developed for symmetric transformation. The proposed algorithm can perform both 2D and 3D symmetric and asymmetric similarity transformations. For the 2D transformation, replacing the z and Z coordinates in both systems with zero is sufficient.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Acta Geodaetica et Geophysica",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "S. Bektaş"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "df1664fa5c84a8e9f83f29a323642322db92a40e",
+  "paper_id": "dblp:journals/corr/abs-2410-21217",
+  "doi": "10.1007/s40328-025-00466-1",
+  "arxiv_id": "2410.21217",
+  "dblp_key": "journals/corr/abs-2410-21217",
+  "paper_url": "https://arxiv.org/pdf/2410.21217",
+  "published_iso": "2024-10-28",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Determination of Optimum Coordinate Transformation Parameters for GNSS and LiDAR-Based Localization in Automated Vehicles",
+  "title_norm": "determination of optimum coordinate transformation parameters for gnss and lidar",
+  "abstract": "Localization is one of the most critical components of automated vehicles (AVs). Although the positioning process in AVs is commonly carried out with global navigation satellite systems (GNSS), which offer a global solution, supportive or alternative location determination methods are needed due to the low accuracy of GNSS systems in urban areas, tunnels, etc. Laser Detection and Ranging - Simultaneous Localization and Mapping (LiDAR-SLAM) is an alternative localization method that provides the AV’s local coordinates. This work aimed to verify the AV’s localization by finding the accurate coordinate transformation parameters (CTPs) of trajectories acquired using the GNSS and LiDAR-SLAM technologies. We used the Conditional Adjustment with an Unknown Model (CAUM), Total Least Square (TLS), and Umeyama (UM) transformation methods to find the CTPs between the two sets of data. In order to address insoluble scenarios and enhance the efficiency of transformation, the voxel-based approach was developed, including the CAUM, TLS, and UM methods for each voxel. The results are discussed in terms of the performance comparison of the methods, the success of the voxel-based approach, and usability in real-time scenarious.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "IEEE transactions on intelligent transportation systems (Print)",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Veli Ilçi",
+   "Mert Yavuz",
+   "Yasemin Şişman",
+   "Kerem Par",
+   "Ali Ufuk Peker"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "aa633458d1b786d901e885a3ae35520a140f78c0",
+  "paper_id": "dblp:journals/tits/IlciYSPP24",
+  "doi": "10.1109/TITS.2024.3408309",
+  "arxiv_id": "",
+  "dblp_key": "journals/tits/IlciYSPP24",
+  "paper_url": "https://www.semanticscholar.org/paper/aa633458d1b786d901e885a3ae35520a140f78c0",
+  "published_iso": "2024-10-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "An Adaptive Coordinate-Stretched Spectral Collocation–QLM Scheme for Singularly Perturbed Boundary-Layer Problems",
+  "title_norm": "an adaptive coordinate stretched spectral collocation qlm scheme for singularly ",
+  "abstract": "An adaptive coordinate-stretched spectral collocation algorithm with the quasilinearization technique is developed in this paper for the numerical solution of singularly perturbed boundary value problems. The method uses a stretching parameter in the computational domain, determined adaptively by a residual-based spectral criterion, thereby obviating the need for manual control over boundary layers. The approach is tested on a benchmark set of problems, including linear and nonlinear boundary-layer models. The scheme's accuracy is close to machine precision for the well-posed test cases. It remains stable and high-order accurate for strong singular perturbation regimes when sharp boundary layers are resolved using a modest degree of polynomials. Comparisons with the classical spectral collocation and fixed-mapped strategies are also presented, which show that the adaptive procedure both achieves node clustering results as good as those methods and yields competitive performance without the need for any specific ad hoc parameter tuning. Numerical results indicate the possibility of a simple and reliable alternative method for solving nonlinear boundary-layer problems.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Al-Qadisiyah for Computer Science and Mathematics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "A. Jabbar",
+   "Ouda Al-Nasrawi"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "66146f6e71a7dafe2d4245bce6e5ac499990dc65",
+  "paper_id": "doi:10.29304/jqcsm.2026.18.12524",
+  "doi": "10.29304/jqcsm.2026.18.12524",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.29304/jqcsm.2026.18.12524",
+  "published_iso": "2026-03-30",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Coordinate Transformation Techniques for Improved Co-Simulation in the Maritime Industry",
+  "title_norm": "coordinate transformation techniques for improved co simulation in the maritime ",
+  "abstract": "Co-simulation is the modular and flexible coupling of stand-alone simulation models. It promises to help unlock the maritime industry’s digitalization potential, but the correct and efficient handling of coordinate systems between models is one of the unsolved challenges that stand in the way of wide-spread adoption. Here, we give a brief introduction to the problem and describe what makes it especially difficult for co-simulations. We introduce a few of the most common models and provide a list of coordinate systems and reference frames used in maritime co-simulations. Focusing on hull and gangway models, we explore general solution approaches and provide practical advice for how to handle coordinate systems in co-simulations using a vessel–gangway simulation case for illustration.",
+  "tldr": "Focusing on hull and gangway models, general solution approaches are explored and practical advice for how to handle coordinate systems in co-simulations is provided using a vessel–gangway simulation case for illustration.",
+  "year": 2024,
+  "venue": "Journal of Physics, Conference Series",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Severin Sadjina",
+   "E. Wille",
+   "U. Jørgensen",
+   "Stian Skjong"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "15ab30fce80894e776de11f0dae90f406bd8a6eb",
+  "paper_id": "doi:10.1088/1742-6596/2867/1/012052",
+  "doi": "10.1088/1742-6596/2867/1/012052",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1088/1742-6596/2867/1/012052",
+  "published_iso": "2024-10-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "MambaPan3D: Mamba-Transformer for 3D LiDAR Panoptic Segmentation with Adaptive Coordinate Fusion",
+  "title_norm": "mambapan3d mamba transformer for 3d lidar panoptic segmentation with adaptive co",
+  "abstract": "With the advent of autonomous intelligent systems, such as humanoid robots, environmental perception should require rapid and accurate real-time 3D scene interpretation. LiDAR sensors are core and accurate distance measuring components, but it is complicated to process the unstructured, sparse, and unevenly distributed nature of LiDAR point cloud data while meeting the real-time object classification needs. To address the limitations of current 3D LiDAR-based panoptic segmentation methods, we propose a MambaPan3D design. It is a hybrid architecture that integrates Mamba and Transformer models for efficient and accurate 3D point cloud understanding. Our framework solves two key challenges: 1) geometric ambiguity caused by sparse and irregular LiDAR point cloud distributions, and 2) inefficient long-range dependency modeling in largescale scenes. Specifically, CartPolar-KAN embedding, a novel positional encoding strategy, is introduced to interpret between Cartesian and polar coordinates by adding a Kolmogorov-Arnold network (KAN) with learnable B-spline basis functions. The module dynamically fuses multi-coordinate features to overcome the limitations of fixed Bird's-Eye View (BEV) quantization. Additionally, our Mamba-Transformer Decoder combines the global attention capabilities of the Transformer and the linear computational efficiency of the Mamba state-space model to achieve real-time inference while maintaining the global receptive field. Extensive experiments on SemanticKITTI dataset demonstrated state-of-the-art performance. The panoptic quality (PQ) could reach 63.3 % in complex urban scenes, i.e., 1.3 % higher than the current optimal baseline method. The proposed framework provides a powerful solution for real-time situational awareness in autonomous driving systems, balancing accuracy, efficiency, and scalability. Our MambaPan3D model offers a robust solution for real-time situational awareness in autonomous systems through balancing accuracy, efficiency, and scalability.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE International Conference on Tools with Artificial Intelligence",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Ruishen Zhou",
+   "K. L. E. Law"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "9043376f111c20dfa097f3f8ba67f16533f81df0",
+  "paper_id": "dblp:conf/ictai/ZhouL25",
+  "doi": "10.1109/ICTAI66417.2025.00080",
+  "arxiv_id": "",
+  "dblp_key": "conf/ictai/ZhouL25",
+  "paper_url": "https://www.semanticscholar.org/paper/9043376f111c20dfa097f3f8ba67f16533f81df0",
+  "published_iso": "2025-11-03",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "A coordinate transformation based barycentric interpolation collocation method and its application in bending, free vibration and buckling analysis of irregular Kirchhoff plates",
+  "title_norm": "a coordinate transformation based barycentric interpolation collocation method a",
+  "abstract": "In this article, a meshless barycentric interpolation collocation method (BICM) with coordinate transformation is proposed to solve the governing partial differential equations (PDEs) for bending, free vibration and buckling problems of irregular plates. First, the coordinate transformation equations for first to fourth derivatives are introduced. Then the PDEs and boundary conditions defined in a physical domain are transformed into a rectangular domain (reference domain) with the derived differential interpolation matrices. The presented BICM can solve the PDEs based on the reference domain and is adaptive to irregular problem domains. Finally, the bending, free vibration and buckling problems of Kirchhoff plates with irregular shapes are studied with the proposed method. To illustrate the effectiveness of the proposed method, the results are compared with those given by theoretical solutions, finite element methods and literature.",
+  "tldr": "",
+  "year": 2023,
+  "venue": "International Journal for Numerical Methods in Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Z. Huang",
+   "L. Peng"
+  ],
+  "citations": 11,
+  "source": "semanticscholar",
+  "source_id": "1c390e3793f100a94e755d1323d5c18a1f029ef4",
+  "paper_id": "doi:10.1002/nme.7338",
+  "doi": "10.1002/nme.7338",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/nme.7338",
+  "published_iso": "2023-08-09",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Modulation format recognition in a UVLC system based on reservoir computing with coordinate transformation and folding algorithm.",
+  "title_norm": "modulation format recognition in a uvlc system based on reservoir computing with",
+  "abstract": "Modulation format recognition (MFR) is one of the key technologies in adaptive optical systems and widely used in both commercial and civil applications. With the rapid development of deep learning, MFR algorithm based on neural networks (NN) has achieved impressive success. Due to the high complexity of underwater channels, to gain better performance of MFR tasks in underwater visible light communication (UVLC), the NN tend to be designed with a complex structure, which is costly in computation and hinders fast allocation and real-time processing. In this paper, we propose a lightweight and efficient method based on reservoir computing (RC), whose trainable parameters are only 0.3% of common NN-based methods. To improve the performance of RC in MFR tasks, we propose powerful feature extraction algorithms including coordinate transformation and folding algorithm. The proposed RC-based methods are implemented for six modulation formats, including OOK, 4QAM, 8QAM-DIA, 8QAM-CIR, 16APSK, and 16QAM. The experimental results show that our RC-based methods take only a few seconds for training process and under different pin voltages of LED, the accuracy for almost all exceeds 90%, and the highest is close to 100%. Analysis on how to design a well-performed RC to strike a balance between accuracy and time cost is also investigated, providing a useful guide for RC implementations in MFR.",
+  "tldr": "This paper proposes a lightweight and efficient method based on reservoir computing (RC), whose trainable parameters are only 0.3% of common NN-based methods, and proposes powerful feature extraction algorithms including coordinate transformation and folding algorithm to improve the performance of RC in MFR tasks.",
+  "year": 2023,
+  "venue": "Optics Express",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Fujie Li",
+   "Xianhao Lin",
+   "Jianyang Shi",
+   "Ziwei Li",
+   "Nan Chi"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "daf1851d0a65e3de3dec9280987e636b016ae17a",
+  "paper_id": "doi:10.1364/oe.491377",
+  "doi": "10.1364/oe.491377",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1364/oe.491377",
+  "published_iso": "2023-04-27",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Fast Current Control of Grid-Tied Converter Using Asynchronous Coordinate Transformation Under Unbalanced Grid Voltage Condition",
+  "title_norm": "fast current control of grid tied converter using asynchronous coordinate transf",
+  "abstract": "Fast transient response is a desirable feature for grid-tied converters, especially when suffering grid faults. While, the symmetrical component decomposition (SCD) in control loop will slow down the response under unbalanced voltage conditions. This paper therefore proposes a current control method with the asynchronous dq-transformation to extract the fundamental frequency component with less delay cost. The detailed implementation issues are fully investigated. The steady state error related to the sampling of the SCD is investigated. Based on the understanding of the mechanism, a frequency adaptive approach is developed. This approach is fully utilized the flexibility of the asynchronous coordinate transformation (ACT) on adjusting the relation between the sampling and the grid frequency, which yield a steady state error-free outcome.",
+  "tldr": "",
+  "year": 2023,
+  "venue": "IEEE International Conference on Power System Technology",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "H. Ding",
+   "Tianqu Hao",
+   "Shunxing Han"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "c3b5f08247d0e0c1c40342d71338dfd61875f106",
+  "paper_id": "doi:10.1109/PowerCon58120.2023.10330981",
+  "doi": "10.1109/PowerCon58120.2023.10330981",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c3b5f08247d0e0c1c40342d71338dfd61875f106",
+  "published_iso": "2023-09-21",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "An Improved Adam Optimization Algorithm Combining Adaptive Coefficients and Composite Gradients Based on Randomized Block Coordinate Descent",
+  "title_norm": "an improved adam optimization algorithm combining adaptive coefficients and comp",
+  "abstract": "An improved Adam optimization algorithm combining adaptive coefficients and composite gradients based on randomized block coordinate descent is proposed to address issues of the Adam algorithm such as slow convergence, the tendency to miss the global optimal solution, and the ineffectiveness of processing high-dimensional vectors. The adaptive coefficient is used to adjust the gradient deviation value and correct the search direction firstly. Then, the predicted gradient is introduced, and the current gradient and the first-order momentum are combined to form a composite gradient to improve the global optimization ability. Finally, the random block coordinate method is used to determine the gradient update mode, which reduces the computational overhead. Simulation experiments on two standard datasets for classification show that the convergence speed and accuracy of the proposed algorithm are higher than those of the six gradient descent methods, and the CPU and memory utilization are significantly reduced. In addition, based on logging data, the BP neural networks optimized by six algorithms, respectively, are used to predict reservoir porosity. Results show that the proposed method has lower system overhead, higher accuracy, and stronger stability, and the absolute error of more than 86% data is within 0.1%, which further verifies its effectiveness.",
+  "tldr": null,
+  "year": 2023,
+  "venue": "Computational Intelligence and Neuroscience",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Miaomiao Liu",
+   "Dan Yao",
+   "Zhigang Liu",
+   "Jingfeng Guo",
+   "Jing Chen"
+  ],
+  "citations": 62,
+  "source": "semanticscholar",
+  "source_id": "bd7ecf17dbc0ee0cb2afe55545bf8f8345d02775",
+  "paper_id": "doi:10.1155/2023/4765891",
+  "doi": "10.1155/2023/4765891",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://downloads.hindawi.com/journals/cin/2023/4765891.pdf",
+  "published_iso": "2023-01-10",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "SCTBEM: A scaled coordinate transformation boundary element method with 99-line MATLAB code",
+  "title_norm": "sctbem a scaled coordinate transformation boundary element method with 99 line m",
+  "abstract": "This paper introduces the Scaled Coordinate Transformation Boundary Element Method (SCTBEM), a novel boundary-type method for solving 3D potential problems. To address the challenges of applying the Boundary Element Method (BEM) to complex problems, it is common practice to use the fundamental solution corresponding to the partial governing equation operator to establish the integral equation. However, this approach introduces domain integral, which may jeopardize the dimensionality reduction advantages of BEM. To preserve the benefits of dimensionality reduction, this paper proposes a novel domain integral transformation method known as the Scaled Coordinate Transformation (SCT). The SCT is purely a mathematical operation that does not rely on particular solution of operators, which requires only discretization on the structure's surface while remaining analytical in the radial direction. An even better novelty is that the lower-order singularity can be eliminated by coordinate translation technique. To facilitate the wider adoption of BEM, the authors present 99-line MATLAB code. Numerical results confirm that the SCTBEM exhibits high numerical accuracy even when dealing with complex model.",
+  "tldr": "This paper introduces the Scaled Coordinate Transformation Boundary Element Method (SCTBEM), a novel boundary-type method for solving 3D potential problems that requires only discretization on the structure's surface while remaining analytical in the radial direction.",
+  "year": 2023,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Bo Yu",
+   "Ruijiang Jing"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "772b5538babeee168b51d52b5b5f375c19ba7939",
+  "paper_id": "dblp:journals/corr/abs-2308-07681",
+  "doi": "10.48550/arXiv.2308.07681",
+  "arxiv_id": "2308.07681",
+  "dblp_key": "journals/corr/abs-2308-07681",
+  "paper_url": "https://arxiv.org/pdf/2308.07681",
+  "published_iso": "2023-08-15",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Novel Coordinate Transformations Combined Adaptive Robust Control for Two-Order Nonlinear Systems with Input and State Constraints",
+  "title_norm": "novel coordinate transformations combined adaptive robust control for two order ",
+  "abstract": "",
+  "tldr": "",
+  "year": 2023,
+  "venue": "Nonlinear dynamics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jinna Fu",
+   "Fanghao Huang",
+   "Zhenxiong Luo",
+   "Zheng-hong Chen"
+  ],
+  "citations": 9,
+  "source": "semanticscholar",
+  "source_id": "668d911d1ffaf185489de41947801fc044dd8be1",
+  "paper_id": "doi:10.1007/s11071-023-08795-y",
+  "doi": "10.1007/s11071-023-08795-y",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/668d911d1ffaf185489de41947801fc044dd8be1",
+  "published_iso": "2023-08-05",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Efficient Three-Dimensional Marine Controlled-Source Electromagnetic Modeling Using Coordinate Transformations and Adaptive High-Order Finite Elements",
+  "title_norm": "efficient three dimensional marine controlled source electromagnetic modeling us",
+  "abstract": "Efficient and accurate forward modeling of electromagnetic fields is essential for advancing geophysical exploration in complex marine environments. However, realistic survey conditions characterized by low-frequency spectra, fine sedimentary strata, irregular bathymetry, and anisotropic materials pose significant challenges for conventional numerical methods. To address these issues, this work presents a parallel modeling framework that combines coordinate transformations with an adaptive high-order finite-element approach for 3D marine controlled-source electromagnetic (MCSEM) simulations. The algorithm exploits the form invariance of Maxwell’s equations to map the original boundary value problem over the physical domain to one defined over a computationally favorable domain filled with anisotropic media. The transformed model is then discretized and solved using a parallel high-order finite-element scheme enhanced with a goal-oriented adaptive mesh refinement strategy. We examine the performance of the proposed framework using both synthetic models and the realistic Marlim R3D benchmark dataset. The results demonstrate that the proposed approach can effectively reduce computational costs while maintaining high accuracy across a wide frequency range and varying water depths. These findings highlight the framework’s potential for large-scale, high-resolution CSEM exploration of offshore resources.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Feiyan Wang",
+   "Song Cheng"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "53c6170b16f545b9ba494a19cf7f657ad6388815",
+  "paper_id": "doi:10.3390/app15179626",
+  "doi": "10.3390/app15179626",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2076-3417/15/17/9626/pdf?version=1756777129",
+  "published_iso": "2025-09-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Robust and Efficient Curvilinear Coordinate Transformation with Guaranteed Map Coverage for Motion Planning",
+  "title_norm": "robust and efficient curvilinear coordinate transformation with guaranteed map c",
+  "abstract": "Curvilinear coordinate frames are a widespread representation for motion planners of automated vehicles. In structured environments, the required reference path is often extracted from map data, e.g., by linearly interpolating the center points of lanes. Often, these reference paths are not directly suited for curvilinear frames, as the representation of points is not guaranteed to be unique for relevant parts of the road. Artifacts arising from faulty coordinate conversions can impede the robustness of downstream planning tasks and may result in safety-critical situations. We present an iterative procedure to adapt a reference path, ensuring a unique representation of all points within a provided subset of a map. Our numerical experiments demonstrate the efficacy of our method when combined with two motion planning tasks: Computing the reachable set of the ego vehicle and planning trajectories using a sampling-based approach.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "2024 IEEE Intelligent Vehicles Symposium (IV)",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Gerald Würsching",
+   "Matthias Althoff"
+  ],
+  "citations": 16,
+  "source": "semanticscholar",
+  "source_id": "72370d8ae946e736bc8dea521e840a1dacec3bd8",
+  "paper_id": "dblp:conf/ivs/WurschingA24",
+  "doi": "10.1109/IV55156.2024.10588590",
+  "arxiv_id": "",
+  "dblp_key": "conf/ivs/WurschingA24",
+  "paper_url": "https://mediatum.ub.tum.de/doc/1740514/document.pdf",
+  "published_iso": "2024-06-02",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "A Harmonic Suppression Strategy Based on Adaptive Synchronous Rotating Frame Transformation for Improving the Estimation Accuracy of Sensorless Drivers With Small Capacitors",
+  "title_norm": "a harmonic suppression strategy based on adaptive synchronous rotating frame tra",
+  "abstract": "The small capacitor drivers use film capacitors instead of electrolytic capacitors in the dc-link, which will improve the life and reliability of the drivers. However, the dc-link voltage of the small capacitor drivers fluctuates seriously, and the ac component in it causes |(ω+6kωg)/ω|th and |(ω−6kωg)/ω|th harmonics in the extended back electromotive force. These harmonics will increase the estimated position error in the sensorless driver. A harmonic suppression method based on adaptive synchronous rotating frame transformation (ASRFT) is presented in this article to improve the control accuracy of sensorless drivers with small capacitors. First, the motor current harmonics caused by harmonics in the dc-link voltage are analyzed, and the relationship between these harmonics and the estimated sensorless position error was derived. Second, ASRFT and fixed synchronous rotation frame transformations can be used to extract current harmonics in corresponding harmonic coordinate systems. Then, the voltage compensation component generated by the harmonic compensation link will be injected into the driver to suppress the current harmonics extracted in the corresponding coordinate system. Finally, the controller parameters of the proposed method are designed. Using a 2 kW permanent magnet synchronous motor sensorless driver with a small capacitor, the proposed method is demonstrated to be effective.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "IEEE transactions on power electronics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yuehan Li",
+   "Zhonggang Yin",
+   "Yanping Zhang",
+   "Yixuan Gao",
+   "Jing Liu",
+   "Pinjia Zhang"
+  ],
+  "citations": 9,
+  "source": "semanticscholar",
+  "source_id": "05db08fc22b5dce3d1e8a964581f12b68392e19f",
+  "paper_id": "doi:10.1109/TPEL.2023.3340748",
+  "doi": "10.1109/TPEL.2023.3340748",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/05db08fc22b5dce3d1e8a964581f12b68392e19f",
+  "published_iso": "2024-03-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Neural Approach to Coordinate Transformation for LiDAR–Camera Data Fusion in Coastal Observation",
+  "title_norm": "neural approach to coordinate transformation for lidar camera data fusion in coa",
+  "abstract": "The paper presents research related to coastal observation using a camera and LiDAR (Light Detection and Ranging) mounted on an unmanned surface vehicle (USV). Fusion of data from these two sensors can provide wider and more accurate information about shore features, utilizing the synergy effect and combining the advantages of both systems. Fusion is used in autonomous cars and robots, despite many challenges related to spatiotemporal alignment or sensor calibration. Measurements from various sensors with different timestamps have to be aligned, and the measurement systems need to be calibrated to avoid errors related to offsets. When using data from unstable, moving platforms, such as surface vehicles, it is more difficult to match sensors in time and space, and thus, data acquired from different devices will be subject to some misalignment. In this article, we try to overcome these problems by proposing the use of a point matching algorithm for coordinate transformation for data from both systems. The essence of the paper is to verify algorithms based on selected basic neural networks, namely the multilayer perceptron (MLP), the radial basis function network (RBF), and the general regression neural network (GRNN) for the alignment process. They are tested with real recorded data from the USV and verified against numerical methods commonly used for coordinate transformation. The results show that the proposed approach can be an effective solution as an alternative to numerical calculations, due to process improvement. The image data can provide information for identifying characteristic objects, and the obtained accuracies for platform dynamics in the water environment are satisfactory (root mean square error—RMSE—smaller than 1 m in many cases). The networks provided outstanding results for the training set; however, they did not perform as well as expected, in terms of the generalization capability of the model. This leads to the conclusion that processing algorithms cannot overcome the limitations of matching point accuracy. Further research will extend the approach to include information on the position and direction of the vessel.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Italian National Conference on Sensors",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ilona Garczyńska-Cyprysiak",
+   "W. Kazimierski",
+   "M. Włodarczyk-Sielicka"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "54d68c60a6a667aeb28e472d29b6613dd6ed36a5",
+  "paper_id": "doi:10.3390/s24206766",
+  "doi": "10.3390/s24206766",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3390/s24206766",
+  "published_iso": "2024-10-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "A Direct Contour Control Method for Free-Form Surface Machining Trajectories Based on Coordinate Transformation",
+  "title_norm": "a direct contour control method for free form surface machining trajectories bas",
+  "abstract": "The requirement for high-speed and high-precision contouring with free-form surfaces in the CNC machining process is increasing. The contour error is an essential criterion for the quality of CNC machining. For the problem of contour error control, the present research is mainly based on position tracking, and the control method directly aiming at contour control has not been well studied. This paper proposed a new type of coordinate transformation-based direct contour control method (CT-DCC) for free-form surface machining trajectories. By real-time monitoring of the contour error and the foot point of the free-form parametric trajectory, the contouring task is decomposed into the contour error control task in the normal direction and the velocity control problem in the feed direction. Using coordinate transformation, the output commands of the two tasks are converted to the axial motion command. CT-DCC completely eliminates position tracking in the traditional control to achieve direct control of the contour error, which provides a new solution for the contour control problem of free-form surface machining. Both the axial velocity control and the axial torque control-based CT-DCC scheme were studied, and the two-axis and three-axis direct contour controllers were tested. The simulation and experiment results show the feasibility of the proposed method.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Actuators",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhe Liu",
+   "Tao Cui",
+   "Jiqing Zhang",
+   "Chunyu Qi",
+   "Peng Zhang",
+   "Wanjin Wang"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "c6d52732e6ff4dc573bfd415dfcd19ca37a6ca78",
+  "paper_id": "doi:10.3390/act13090335",
+  "doi": "10.3390/act13090335",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2076-0825/13/9/335/pdf?version=1725354349",
+  "published_iso": "2024-09-03",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Analysis on n-level quantum systems by means of a coordinate transformation",
+  "title_norm": "analysis on n level quantum systems by means of a coordinate transformation",
+  "abstract": "The structural decomposition of two-level quantum systems has recently been established, related to various applications in quantum information science. As an extension to previous work on two-level quantum systems, this paper aims to investigate the structural properties of n-level quantum systems. We develop algebraic conditions under which the attainment of quantum back-action evading (BAE) measurements, the generation of decoherence-free (DF) subspaces and quantum non-demolition (QND) variables, as well as the existence of steadystate solutions for the Lindblad equations, can be realized. In particular, a specific coordinate transformation is explicitly constructed to facilitate the achievement of above-mentioned objectives, accompanied by an illustrative numerical example.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "IEEE Conference on Decision and Control",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Huilong Xu",
+   "Zibo Miao",
+   "Qing Gao"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "f68fda7f7544a2ab22aa10049bfb935bd2dd7928",
+  "paper_id": "dblp:conf/cdc/XuM024",
+  "doi": "10.1109/CDC56724.2024.10886673",
+  "arxiv_id": "",
+  "dblp_key": "conf/cdc/XuM024",
+  "paper_url": "https://www.semanticscholar.org/paper/f68fda7f7544a2ab22aa10049bfb935bd2dd7928",
+  "published_iso": "2024-12-16",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Stochastic dual coordinate descent with adaptive heavy ball momentum for linearly constrained convex optimization",
+  "title_norm": "stochastic dual coordinate descent with adaptive heavy ball momentum for linearl",
+  "abstract": "The problem of finding a solution to the linear system $Ax = b$ with certain minimization properties arises in numerous scientific and engineering areas. In the era of big data, the stochastic optimization algorithms become increasingly significant due to their scalability for problems of unprecedented size. This paper focuses on the problem of minimizing a strongly convex function subject to linear constraints. We consider the dual formulation of this problem and adopt the stochastic coordinate descent to solve it. The proposed algorithmic framework, called adaptive stochastic dual coordinate descent, utilizes sampling matrices sampled from user-defined distributions to extract gradient information. Moreover, it employs Polyak's heavy ball momentum acceleration with adaptive parameters learned through iterations, overcoming the limitation of the heavy ball momentum method that it requires prior knowledge of certain parameters, such as the singular values of a matrix. With these extensions, the framework is able to recover many well-known methods in the context, including the randomized sparse Kaczmarz method, the randomized regularized Kaczmarz method, the linearized Bregman iteration, and a variant of the conjugate gradient (CG) method. Additionally, we introduce an equivalent formulation that, in certain cases, substantially reduces the need for full-dimensional vector operations introduced by the momentum term. We prove that, with strongly admissible objective function, the proposed method converges linearly in expectation. Numerical experiments are provided to confirm our results.",
+  "tldr": "An equivalent formulation that, in certain cases, substantially reduces the need for full-dimensional vector operations introduced by the momentum term is introduced, and it is proved that, with strongly admissible objective function, the proposed method converges linearly in expectation.",
+  "year": 2023,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Yun-Bo Zeng",
+   "Deren Han",
+   "Yan-Hui Su",
+   "Jiaxin Xie"
+  ],
+  "citations": 9,
+  "source": "semanticscholar",
+  "source_id": "35be99ffeb384c53293b9ce8adc4f5b4415019f9",
+  "paper_id": "arxiv:2307.16702",
+  "doi": "",
+  "arxiv_id": "2307.16702",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/35be99ffeb384c53293b9ce8adc4f5b4415019f9",
+  "published_iso": "2023-07-31",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Coordinate-Adaptive Integration of PDEs on Tensor Manifolds",
+  "title_norm": "coordinate adaptive integration of pdes on tensor manifolds",
+  "abstract": "We introduce a new tensor integration method for time-dependent partial differential equations (PDEs) that controls the tensor rank of the PDE solution via time-dependent smooth coordinate transformations. Such coordinate transformations are obtained by solving a sequence of convex optimization problems that minimize the component of the PDE operator responsible for increasing the tensor rank of the PDE solution. The new algorithm improves upon the non-convex algorithm we recently proposed in Dektor and Venturi (2023) which has no guarantee of producing globally optimal rank-reducing coordinate transformations. Numerical applications demonstrating the effectiveness of the new coordinate-adaptive tensor integration method are presented and discussed for prototype Liouville and Fokker-Planck equations.",
+  "tldr": "A new tensor integration method for time-dependent partial differential equations (PDEs) that controls the tensor rank of the PDE solution via time-dependent smooth coordinate transformations via time-dependent smooth coordinate transformations is introduced.",
+  "year": 2023,
+  "venue": "Communication on Applied Mathematics and Computation",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Alec Dektor",
+   "D. Venturi"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "39c4dfc576460163ece3d791e7d99cc67115eb73",
+  "paper_id": "dblp:journals/corr/abs-2308-02659",
+  "doi": "10.1007/s42967-023-00357-8",
+  "arxiv_id": "2308.02659",
+  "dblp_key": "journals/corr/abs-2308-02659",
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s42967-023-00357-8.pdf",
+  "published_iso": "2023-08-04",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "An Unstructured Mesh Coordinate Transformation‐Based FDTD Method",
+  "title_norm": "an unstructured mesh coordinate transformation based fdtd method",
+  "abstract": "We propose a novel unstructured mesh finite‐difference time‐domain (FDTD) method for solving electromagnetics problems with complicated geometries. The method, which solves the TE‐mode reduced form of Maxwell's equations, can handle both material interfaces and anisotropic material. Using the transformation optics principle, which describes how fields and material tensors change under coordinate transformations, we locally transform each cell in the mesh to a reference unit‐square computational domain where the usual FDTD update is performed. This comes at a cost: employing unstructured grids and coordinate transformations requires more complicated data structures, a mesh orientation process, and potentially introduces an anisotropic material tensor at every mesh cell. Nonetheless, we find that the method maintains the same desirable properties of the classic FDTD method (explicit, divergence‐free B‐field, nondissapative, and second‐order accuracy) while also gaining conforming material interfaces and boundaries in complicated geometry. Even further, we prove that the method is stable under a Courant condition and a fairly nonrestrictive mesh condition, hence defeating the late‐time stability issue plaguing prior nonorthogonal FDTD methods. To verify the method, we conduct convergence studies on three electromagnetic cavity problems with known exact solutions. For these numerical studies, we find that the method maintains second‐order convergence and stability.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "International journal of numerical modelling",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Armando Albornoz-Basto",
+   "Bud Denny",
+   "M. Brio"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "a05036a32dfb18f432d68e6c36643502085cb906",
+  "paper_id": "doi:10.1002/jnm.3307",
+  "doi": "10.1002/jnm.3307",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/jnm.3307",
+  "published_iso": "2024-11-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Application of Three-Dimensional Unbalanced Coordinate Transformation to Stand-Alone Four-Leg Voltage-Source Inverter",
+  "title_norm": "application of three dimensional unbalanced coordinate transformation to stand a",
+  "abstract": "Three-phase four-leg voltage-source inverter has been extensively investigated in recent years for its compactness, small size, and high efficiency, and it has been proved to be the best solution for providing transformer-less neutral connection to three-phase asymmetric loads. The main purpose of this article is to apply 3-D unbalanced coordinate transformation to the four-leg inverter, which supplies stand-alone asymmetric loads, to maintain the balance of the output capacitor voltages, and obtain simpler control structure and better control performance. First, a double closed-loop PI control structure can be designed based on the Clarke and Park transformations. Second, the phases and amplitudes of the capacitor voltages are locked based on the 3-D unbalanced coordinate transformation. Furthermore, the Clarke transformation oriented on the inductor currents is replaced by a 3-D unbalanced coordinate transformation, and the corresponding unbalance indices are continuously adjusted according to the unbalance indices of the capacitor voltages, so as to recover the capacitor voltages to the balanced condition. The simulation and experimental results of the whole control system for the four-leg inverter are provided in the end, so as to verify the feasibility and effectiveness of the 3-D unbalanced coordinate transformation for application to the power electronic systems.",
+  "tldr": "",
+  "year": 2022,
+  "venue": "IEEE transactions on power electronics",
+  "publication_types": [],
+  "authors": [
+   "Guangjun Tan",
+   "Jinlong Wei",
+   "Wei Zhao",
+   "Lei Qi",
+   "Xiaofeng Sun"
+  ],
+  "citations": 22,
+  "source": "semanticscholar",
+  "source_id": "c535d19304bcb67a8a95431a8f4c09d92a0c02ab",
+  "paper_id": "doi:10.1109/TPEL.2022.3173396",
+  "doi": "10.1109/TPEL.2022.3173396",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c535d19304bcb67a8a95431a8f4c09d92a0c02ab",
+  "published_iso": "2022-10-01",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Mitigating Coordinate Transformation for Solving Partial Differential Equations with Physic-Informed Neural Networks",
+  "title_norm": "mitigating coordinate transformation for solving partial differential equations ",
+  "abstract": "In this work, we investigate some coordinate systems to solve partial differential equations (PDEs) using a neural network. We approximate the solution using physics-informed neural networks (PINNs) both before and after the coordinate transformation for two cases: a coordinate system with periodicity and without periodicity. We demonstrate that PINNs with Cartesian coordinate shows better approximation accuracy. This implies in PINNs training the Cartesian coordinate system is superior to the other coordinate systems derived by coordinate transformation. To the best of our knowledge, this is the first work to test training of PINNs by modifying PDEs according to the boundary shape.",
+  "tldr": "",
+  "year": 2022,
+  "venue": "International Conference on Ubiquitous and Future Networks",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Hyo-Seok Hwang",
+   "Suhan Son",
+   "Yoojoong Kim",
+   "Junhee Seok"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "2ead1eecb7c4e42a18107393f00e58358bf6879c",
+  "paper_id": "dblp:conf/icufn/HwangSKS22",
+  "doi": "10.1109/icufn55119.2022.9829676",
+  "arxiv_id": "",
+  "dblp_key": "conf/icufn/HwangSKS22",
+  "paper_url": "https://www.semanticscholar.org/paper/2ead1eecb7c4e42a18107393f00e58358bf6879c",
+  "published_iso": "2022-07-05",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Finding All DC Operating Points of Nonlinear Circuits Based on Interval Linearization and Coordinate Transformation",
+  "title_norm": "finding all dc operating points of nonlinear circuits based on interval lineariz",
+  "abstract": "The interval branch and bound algorithm based on interval Newton (IN) operator has been applied to the problem of finding all direct current operating points of nonlinear circuits. Many techniques and modifications have been proposed to enhance its computational performance. In this work, the method has been modified by replacing the IN operator used for sharpening interval solution box by the contraction operator based on interval linearization with coordinate transformation. A prototype of the proposed method has been implemented in MATLAB environment. Its performance has been evaluated by testing with some test nonlinear circuits containing diode and bipolar transistors. The results indicate that the proposed technique can considerably reduce the number of search boxes and improve the computation time.",
+  "tldr": "",
+  "year": 2022,
+  "venue": "International Electrical Engineering Congress",
+  "publication_types": [],
+  "authors": [
+   "S. Uatrongjit",
+   "B. Kaewkham-ai",
+   "K. Prakobwaitayakitt"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "d17e9af1482f5fb89f542e3f5dc7b6396194aae2",
+  "paper_id": "doi:10.1109/iEECON53204.2022.9741625",
+  "doi": "10.1109/iEECON53204.2022.9741625",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/d17e9af1482f5fb89f542e3f5dc7b6396194aae2",
+  "published_iso": "2022-03-09",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ },
+ {
+  "title": "Coordinate-transformation iteration algorithm for phase modulation of arbitrary axial light distribution.",
+  "title_norm": "coordinate transformation iteration algorithm for phase modulation of arbitrary ",
+  "abstract": "Axial light distribution modulation is widely applied in optical tweezers, hard-brittle material cutting, multilayer laser direct writing, etc. To generate arbitrary axial light distribution, the coordinate-transformation iteration (CTI) algorithm is presented. The CTI algorithm unifies equations in low and high numerical aperture (NA) scenarios, using the same iterative algorithm to produce phase computer-generated holograms. In a low NA scenario, twin-foci, flattop, and sin2 distributions have been achieved. In high NA scenarios, multirings, multifoci, and needle-like distributions have been realized in simulation with specific polarized incident beams. Since the CTI algorithm is inherently an efficient one-dimensional phase retrieval algorithm that is not limited by NA, this method has the potential to become a well-received solution for axial light distribution modulation.",
+  "tldr": "",
+  "year": 2022,
+  "venue": "Applied Optics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hengyang Li",
+   "Jiaming Xu",
+   "Huaizhi Zhang",
+   "W. Cheng",
+   "Gang-Gang Xu",
+   "Xiahui Tang"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "5986b3094607594cbcd88b21d98d1a1201368cee",
+  "paper_id": "doi:10.1364/ao.468805",
+  "doi": "10.1364/ao.468805",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/5986b3094607594cbcd88b21d98d1a1201368cee",
+  "published_iso": "2022-08-11",
+  "from_query": [
+   "solution-adaptive coordinate transformation"
+  ]
+ }
+]

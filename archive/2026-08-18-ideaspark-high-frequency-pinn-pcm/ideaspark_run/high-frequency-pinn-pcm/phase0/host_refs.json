@@ -1,0 +1,14 @@
+[
+  {
+    "paper_id": "arxiv:2602.19265v1",
+    "title": "Spectral bias in physics-informed and operator learning: Analysis and mitigation guidelines",
+    "retrieved_via": "host_web",
+    "why": "直接给出频率分辨误差诊断，并比较架构、激活、损失与优化器对高频学习动力学的影响，可用于定义“抗高频”的可检验合同与强基线。"
+  },
+  {
+    "paper_id": "arxiv:2509.04966v2",
+    "title": "Neuro-Spectral Architectures for Causal Physics-Informed Networks",
+    "retrieved_via": "host_web",
+    "why": "同时处理谱偏置与时间因果，对高频脉冲驱动、强瞬态 PCM 状态演化尤其承重，可防止只改善空间频谱却破坏时间推进。"
+  }
+]

@@ -1,0 +1,19 @@
+# Local credentials and machine-specific environment files
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Local Python environments and caches
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Raw run packages stay local; compact manifests remain under docs/experiment/.
+outputs/
+
+# Runtime coordination files are recreated locally and are not evidence.
+docs/experiment/.ledger.lock
+docs/experiment/leases/*.lock

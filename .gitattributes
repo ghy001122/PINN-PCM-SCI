@@ -1,0 +1,4 @@
+# Preserve vendored skills and archived retrieval evidence byte-for-byte.
+# Their upstream/generated whitespace is not a project source-style failure.
+.agents/** -text -whitespace
+archive/2026-08-18-ideaspark-high-frequency-pinn-pcm/** -text -whitespace

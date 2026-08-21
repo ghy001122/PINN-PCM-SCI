@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "resistance_ohm": 500000.0,
+      "voltage_v": 9.0
+    },
+    {
+      "resistance_ohm": 300000.0,
+      "voltage_v": 10.5
+    },
+    {
+      "resistance_ohm": 700000.0,
+      "voltage_v": 7.5
+    }
+  ],
+  "end_time_ns": 494.0,
+  "gate": "R4-S1",
+  "grid": [
+    50,
+    20
+  ],
+  "pulse_protocol": "four-60ns-on-60ns-off-5ns-edge",
+  "run_id": "20260821T082826Z-pilot-r4-dynamic-order-signal-002",
+  "schema_version": "qpop-r4-v1-intent-v1",
+  "scientific_role": "oracle_qualification",
+  "signal_gate": {
+    "max_balance_violation": 0.01,
+    "nondegenerate_cycle_count_min": 2,
+    "phase_fraction_range_min": 0.05,
+    "required_case_count": 2
+  },
+  "started_at": "2026-08-21T08:29:20.059991Z",
+  "structure_threshold": 0.5595005728407872,
+  "supersedes": "20260821T082444Z-pilot-r4-dynamic-order-signal-001",
+  "tier": "pilot",
+  "time_step_ns": 1.0,
+  "wall_minutes": 30
+}

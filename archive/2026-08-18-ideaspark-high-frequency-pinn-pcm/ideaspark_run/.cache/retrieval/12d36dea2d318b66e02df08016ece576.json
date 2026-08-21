@@ -1,0 +1,2525 @@
+[
+ {
+  "title": "Adaptive Space-Time Domain Decomposition for Multiphase Flow in Porous Media with Bound Constraints",
+  "title_norm": "adaptive space time domain decomposition for multiphase flow in porous media wit",
+  "abstract": ".This paper proposes an adaptive space-time algorithm based on domain decomposition for the large-scale simulation of a recently developed thermodynamically consistent reservoir problem. In the approach, the bound constraints are represented by means of a minimum-type complementarity function to enforce the positivity of the reservoir model, and a space-time mixed finite element method is applied for the parallel-in-time monolithic discretization. In particular, we propose a time-adaptive strategy using the improved backward differencing formula of second order, to take full advantage of the high degree of space-time parallelism. Moreover, the complicated dynamics with higher nonlinearity of space-time discretization require some innovative nonlinear and linear solution strategies. Therefore, we present a class of modified semismooth Newton algorithms to enhance the convergence rate of nonlinear iterations. Multilevel space-time restricted additive Schwarz algorithms, whose subdomains cover both space and time variables, are also studied for domain decomposition-based preconditioning. Numerical experiments demonstrate the robustness and parallel scalability of the proposed adaptive space-time algorithm on a supercomputer with tens of thousands of processor cores.Keywordsreservoir simulationspace-time algorithmsdomain decompositionsemismooth Newtonparallel computingMSC codes76S0565F0865M5568W1065Y05",
+  "year": 2024,
+  "venue": "SIAM Journal on Scientific Computing",
+  "authors": [
+   "Tianpei Cheng",
+   "Haijian Yang",
+   "Jizu Huang",
+   "Chao Yang"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4396677266",
+  "doi": "10.1137/23m1578139",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4396677266",
+  "published_iso": "2024-05-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Deep Residual Learning for Image Recognition: A Survey",
+  "title_norm": "deep residual learning for image recognition a survey",
+  "abstract": "Deep Residual Networks have recently been shown to significantly improve the performance of neural networks trained on ImageNet, with results beating all previous methods on this dataset by large margins in the image classification task. However, the meaning of these impressive numbers and their implications for future research are not fully understood yet. In this survey, we will try to explain what Deep Residual Networks are, how they achieve their excellent results, and why their successful implementation in practice represents a significant advance over existing techniques. We also discuss some open questions related to residual learning as well as possible applications of Deep Residual Networks beyond ImageNet. Finally, we discuss some issues that still need to be resolved before deep residual learning can be applied on more complex problems.",
+  "year": 2022,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Muhammad Shafiq",
+   "Zhaoquan Gu"
+  ],
+  "citations": 994,
+  "source": "openalex",
+  "source_id": "W4295122555",
+  "doi": "10.3390/app12188972",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/12/18/8972/pdf?version=1662547655",
+  "published_iso": "2022-09-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Guiding Pseudo-labels with Uncertainty Estimation for Source-free Unsupervised Domain Adaptation",
+  "title_norm": "guiding pseudo labels with uncertainty estimation for source free unsupervised d",
+  "abstract": "Standard Unsupervised Domain Adaptation (UDA) methods assume the availability of both source and target data during the adaptation. In this work, we investigate Source-free Unsupervised Domain Adaptation (SF-UDA), a specific case of UDA where a model is adapted to a target domain without access to source data. We propose a novel approach for the SF-UDA setting based on a loss reweighting strategy that brings robustness against the noise that inevitably affects the pseudo-labels. The classification loss is reweighted based on the reliability of the pseudo-labels that is measured by estimating their uncertainty. Guided by such reweighting strategy, the pseudo-labels are progressively refined by aggregating knowledge from neighbouring samples. Furthermore, a self-supervised contrastive framework is leveraged as a target space regulariser to enhance such knowledge aggregation. A novel negative pairs exclusion strategy is proposed to identify and exclude negative pairs made of samples sharing the same class, even in presence of some noise in the pseudo-labels. Our method outperforms previous methods on three major benchmarks by a large margin. We set the new SF-UDA state-of-the-art on VisDA-C and DomainNet with a performance gain of + 1.8% on both benchmarks and on PACS with + 12.3% in the single-source setting and +6.6% in multi-target adaptation. Additional analyses demonstrate that the proposed approach is robust to the noise, which results in significantly more accurate pseudo-labels compared to state-of-the-art approaches.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Mattia Litrico",
+   "Alessio Del Bue",
+   "Pietro Morerio"
+  ],
+  "citations": 129,
+  "source": "openalex",
+  "source_id": "W4386057716",
+  "doi": "10.1109/cvpr52729.2023.00738",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4386057716",
+  "published_iso": "2023-06-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Fractional Order Runge–Kutta Methods",
+  "title_norm": "fractional order runge kutta methods",
+  "abstract": "This paper presents a new class of fractional order Runge–Kutta (FORK) methods for numerically approximating the solution of fractional differential equations (FDEs). We construct explicit and implicit FORK methods for FDEs by using the Caputo generalized Taylor series formula. Due to the dependence of fractional derivatives on a fixed base point, in the proposed method, we had to modify the right-hand side of the given equation in all steps of the FORK methods. Some coefficients for explicit and implicit FORK schemes are presented. The convergence analysis of the proposed method is also discussed. Numerical experiments are presented to clarify the effectiveness and robustness of the method.",
+  "year": 2023,
+  "venue": "Fractal and Fractional",
+  "authors": [
+   "F. Ghoreishi",
+   "Rezvan Ghaffari",
+   "Nasser Saad"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4323663892",
+  "doi": "10.3390/fractalfract7030245",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2504-3110/7/3/245/pdf?version=1678368047",
+  "published_iso": "2023-03-08",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Finite basis physics-informed neural networks (FBPINNs): a scalable domain decomposition approach for solving differential equations",
+  "title_norm": "finite basis physics informed neural networks fbpinns a scalable domain decompos",
+  "abstract": "Abstract Recently, physics-informed neural networks (PINNs) have offered a powerful new paradigm for solving problems relating to differential equations. Compared to classical numerical methods, PINNs have several advantages, for example their ability to provide mesh-free solutions of differential equations and their ability to carry out forward and inverse modelling within the same optimisation problem. Whilst promising, a key limitation to date is that PINNs have struggled to accurately and efficiently solve problems with large domains and/or multi-scale solutions, which is crucial for their real-world application. Multiple significant and related factors contribute to this issue, including the increasing complexity of the underlying PINN optimisation problem as the problem size grows and the spectral bias of neural networks. In this work, we propose a new, scalable approach for solving large problems relating to differential equations called finite basis physics-informed neural networks (FBPINNs) . FBPINNs are inspired by classical finite element methods, where the solution of the differential equation is expressed as the sum of a finite set of basis functions with compact support. In FBPINNs, neural networks are used to learn these basis functions, which are defined over small, overlapping subdomains. FBINNs are designed to address the spectral bias of neural networks by using separate input normalisation over each subdomain and reduce the complexity of the underlying optimisation problem by using many smaller neural networks in a parallel divide-and-conquer approach. Our numerical experiments show that FBPINNs are effective in solving both small and larger, multi-scale problems, outperforming standard PINNs in both accuracy and computational resources required, potentially paving the way to the application of PINNs on large, real-world problems.",
+  "year": 2023,
+  "venue": "Advances in Computational Mathematics",
+  "authors": [
+   "Ben Moseley",
+   "Andrew Markham",
+   "Tarje Nissen‐Meyer"
+  ],
+  "citations": 328,
+  "source": "openalex",
+  "source_id": "W3184908771",
+  "doi": "10.1007/s10444-023-10065-9",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10444-023-10065-9.pdf",
+  "published_iso": "2023-07-31",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Robust Variational Physics-Informed Neural Networks",
+  "title_norm": "robust variational physics informed neural networks",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Computer Methods in Applied Mechanics and Engineering",
+  "authors": [
+   "Sergio Rojas",
+   "Paweł Maczuga",
+   "Judit Muñoz‐Matute",
+   "David Pardo",
+   "Maciej Paszyński"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4392905622",
+  "doi": "10.1016/j.cma.2024.116904",
+  "arxiv_id": null,
+  "paper_url": "https://bird.bcamath.org/bitstream/20.500.11824/1818/1/Robust_VPINNs.pdf",
+  "published_iso": "2024-03-18",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Improving Adversarial Robustness with Self-Paced Hard-Class Pair Reweighting",
+  "title_norm": "improving adversarial robustness with self paced hard class pair reweighting",
+  "abstract": "Deep Neural Networks are vulnerable to adversarial attacks. Among many defense strategies, adversarial training with untargeted attacks is one of the most effective methods. Theoretically, adversarial perturbation in untargeted attacks can be added along arbitrary directions and the predicted labels of untargeted attacks should be unpredictable. However, we find that the naturally imbalanced inter-class semantic similarity makes those hard-class pairs become virtual targets of each other. This study investigates the impact of such closely-coupled classes on adversarial attacks and develops a self-paced reweighting strategy in adversarial training accordingly. Specifically, we propose to upweight hard-class pair losses in model optimization, which prompts learning discriminative features from hard classes. We further incorporate a term to quantify hard-class pair consistency in adversarial training, which greatly boosts model robustness. Extensive experiments show that the proposed adversarial training method achieves superior robustness performance over state-of-the-art defenses against a wide range of adversarial attacks. The code of the proposed SPAT is published at https://github.com/puerrrr/Self-Paced-Adversarial-Training.",
+  "year": 2023,
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "authors": [
+   "Pengyue Hou",
+   "Jie Han",
+   "Xingyu Li"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4382464093",
+  "doi": "10.1609/aaai.v37i12.26738",
+  "arxiv_id": null,
+  "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/download/26738/26510",
+  "published_iso": "2023-06-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "An artificial neural network based deep collocation method for the solution of transient linear and nonlinear partial differential equations",
+  "title_norm": "an artificial neural network based deep collocation method for the solution of t",
+  "abstract": "Abstract A combined deep machine learning (DML) and collocation based approach to solve the partial differential equations using artificial neural networks is proposed. The developed method is applied to solve problems governed by the Sine–Gordon equation (SGE), the scalar wave equation and elasto-dynamics. Two methods are studied: one is a space-time formulation and the other is a semi-discrete method based on an implicit Runge–Kutta (RK) time integration. The methodology is implemented using the Tensorflow framework and it is tested on several numerical examples. Based on the results, the relative normalized error was observed to be less than 5% in all cases.",
+  "year": 2024,
+  "venue": "Frontiers of Structural and Civil Engineering",
+  "authors": [
+   "Abhishek Mishra",
+   "Cosmin Anitescu",
+   "P. R. Budarapu",
+   "Sundararajan Natarajan",
+   "Pandu R. Vundavilli",
+   "Timon Rabczuk"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4402172185",
+  "doi": "10.1007/s11709-024-1011-4",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11709-024-1011-4.pdf",
+  "published_iso": "2024-08-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Exploiting Generative AI to Scale up Intelligent Tutoring Systems",
+  "title_norm": "exploiting generative ai to scale up intelligent tutoring systems",
+  "abstract": "As a present to Mizar on its 50th anniversary, we develop an AI/TP system that automatically proves about 60% of the Mizar theorems in the hammer setting. We also automatically prove 75% of the Mizar theorems when the automated provers are helped by using only the premises used in the human-written Mizar proofs. We describe the methods and large-scale experiments leading to these results. This includes in particular the E and Vampire provers, their ENIGMA and Deepire learning modifications, a number of learning-based premise selection methods, and the incremental loop that interleaves growing a corpus of millions of ATP proofs with training increasingly strong AI/TP systems on them. We also present a selection of Mizar problems that were proved automatically.",
+  "year": 2023,
+  "venue": "DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)",
+  "authors": [
+   "Jakubův, Jan",
+   "Chvalovský, Karel",
+   "Goertzel, Zarathustra",
+   "Kaliszyk, Cezary",
+   "Olšák, Mirek",
+   "Piotrowski, Bartosz"
+  ],
+  "citations": 79073,
+  "source": "openalex",
+  "source_id": "W4385245566",
+  "doi": "10.4230/lipics.itp.2023.19",
+  "arxiv_id": null,
+  "paper_url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol268-itp2023/LIPIcs.ITP.2023.19/LIPIcs.ITP.2023.19.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "The molecular basis for cellular function of intrinsically disordered protein regions",
+  "title_norm": "the molecular basis for cellular function of intrinsically disordered protein re",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Nature Reviews Molecular Cell Biology",
+  "authors": [
+   "Alex S. Holehouse",
+   "Birthe B. Kragelund"
+  ],
+  "citations": 718,
+  "source": "openalex",
+  "source_id": "W4388630765",
+  "doi": "10.1038/s41580-023-00673-0",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11459374/pdf/nihms-2020074.pdf",
+  "published_iso": "2023-11-13",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Learning to Reweight for Generalizable Graph Neural Network",
+  "title_norm": "learning to reweight for generalizable graph neural network",
+  "abstract": "Graph Neural Networks (GNNs) show promising results for graph tasks. However, existing GNNs' generalization ability will degrade when there exist distribution shifts between testing and training graph data. The fundamental reason for the severe degeneration is that most GNNs are designed based on the I.I.D hypothesis. In such a setting, GNNs tend to exploit subtle statistical correlations existing in the training set for predictions, even though it is a spurious correlation. In this paper, we study the problem of the generalization ability of GNNs on Out-Of-Distribution (OOD) settings. To solve this problem, we propose the Learning to Reweight for Generalizable Graph Neural Network (L2R-GNN) to enhance the generalization ability for achieving satisfactory performance on unseen testing graphs that have different distributions with training graphs. We propose a novel nonlinear graph decorrelation method, which can substantially improve the out-of-distribution generalization ability and compares favorably to previous methods in restraining the over-reduced sample size. The variables of graph representation are clustered based on the stability of their correlations, and graph decorrelation method learns weights to remove correlations between the variables of different clusters rather than any two variables. Besides, we introduce an effective stochastic algorithm based on bi-level optimization for the L2R-GNN framework, which enables simultaneously learning the optimal weights and GNN parameters, and avoids the over-fitting issue. Experiments show that L2R-GNN greatly outperforms baselines on various graph prediction benchmarks under distribution shifts.",
+  "year": 2024,
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "authors": [
+   "Zhengyu Chen",
+   "Teng Xiao",
+   "Kun Kuang",
+   "Zheqi Lv",
+   "Min Zhang",
+   "J. Joshua Yang"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4393156463",
+  "doi": "10.1609/aaai.v38i8.28673",
+  "arxiv_id": null,
+  "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/download/28673/29307",
+  "published_iso": "2024-03-24",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Implicit Runge–Kutta Schemes for Optimal Control Problems with Evolution Equations",
+  "title_norm": "implicit runge kutta schemes for optimal control problems with evolution equatio",
+  "abstract": "Abstract In this paper we discuss the use of implicit Runge–Kutta schemes for the time discretization of optimal control problems with evolution equations. The specialty of the considered discretizations is that the discretizations schemes for the state and adjoint state are chosen such that discretization and optimization commute. It is well known that for Runge–Kutta schemes with this property additional order conditions are necessary. We give sufficient conditions for which class of schemes these additional order condition are automatically fulfilled. The focus is especially on implicit Runge–Kutta schemes of Gauss, Radau IA, Radau IIA, Lobatto IIIA, Lobatto IIIB and Lobatto IIIC collocation type up to order six. Furthermore, we also use a SDIRK (singly diagonally implicit Runge–Kutta) method to demonstrate, that for general implicit Runge–Kutta methods the additional order conditions are not automatically fulfilled. Numerical examples illustrate the predicted convergence rates.",
+  "year": 2023,
+  "venue": "Computational Methods in Applied Mathematics",
+  "authors": [
+   "Thomas G. Flaig"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W1918432447",
+  "doi": "10.1515/cmam-2022-0097",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W1918432447",
+  "published_iso": "2023-03-31",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Finite-difference time-domain methods",
+  "title_norm": "finite difference time domain methods",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Nature Reviews Methods Primers",
+  "authors": [
+   "Fernando L. Teixeira",
+   "Costas D. Sarris",
+   "Yisong Zhang",
+   "Dong-Yeop Na",
+   "Jean-Pierre Bérenger",
+   "Yuanzhe Su"
+  ],
+  "citations": 158,
+  "source": "openalex",
+  "source_id": "W4387373688",
+  "doi": "10.1038/s43586-023-00257-4",
+  "arxiv_id": null,
+  "paper_url": "https://www.osti.gov/servlets/purl/2349428",
+  "published_iso": "2023-10-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Why residual emissions matter right now",
+  "title_norm": "why residual emissions matter right now",
+  "abstract": "Abstract Net-zero targets imply that continuing residual emissions will be balanced by carbon dioxide removal. However, residual emissions are typically not well defined, conceptually or quantitatively. We analysed governments’ long-term strategies submitted to the UNFCCC to explore projections of residual emissions, including amounts and sectors. We found substantial levels of residual emissions at net-zero greenhouse gas emissions, on average 18% of current emissions for Annex I countries. The majority of strategies were imprecise about which sectors residual emissions would originate from, and few offered specific projections of how residual emissions could be balanced by carbon removal. Our findings indicate the need for a consistent definition of residual emissions, as well as processes that standardize and compare expectations about residual emissions across countries. This is necessary for two reasons: to avoid projections of excessive residuals and correspondent unsustainable or unfeasible carbon-removal levels and to send clearer signals about the temporality of fossil fuel use.",
+  "year": 2023,
+  "venue": "Nature Climate Change",
+  "authors": [
+   "Holly Jean Buck",
+   "Wim Carton",
+   "Jens Friis Lund",
+   "Nils Markusson"
+  ],
+  "citations": 184,
+  "source": "openalex",
+  "source_id": "W4323659932",
+  "doi": "10.1038/s41558-022-01592-2",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41558-022-01592-2.pdf",
+  "published_iso": "2023-03-09",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Dynamical Reweighting for Biased Rare Event Simulations",
+  "title_norm": "dynamical reweighting for biased rare event simulations",
+  "abstract": "Dynamical reweighting techniques aim to recover the correct molecular dynamics from a simulation at a modified potential energy surface. They are important for unbiasing enhanced sampling simulations of molecular rare events. Here, we review the theoretical frameworks of dynamical reweighting for modified potentials. Based on an overview of kinetic models with increasing level of detail, we discuss techniques to reweight two-state dynamics, multistate dynamics, and path integrals. We explore the natural link to transition path sampling and how the effect of nonequilibrium forces can be reweighted. We end by providing an outlook on how dynamical reweighting integrates with techniques for optimizing collective variables and with modern potential energy surfaces.",
+  "year": 2024,
+  "venue": "Annual Review of Physical Chemistry",
+  "authors": [
+   "Bettina G. Keller",
+   "Peter G. Bolhuis"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4400163576",
+  "doi": "10.1146/annurev-physchem-083122-124538",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4400163576",
+  "published_iso": "2024-06-28",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Stage‐parallel preconditioners for implicit Runge–Kutta methods of arbitrarily high order, linear problems",
+  "title_norm": "stage parallel preconditioners for implicit runge kutta methods of arbitrarily h",
+  "abstract": "Abstract Fully implicit Runge–Kutta methods offer the possibility to use high order accurate time discretization to match space discretization accuracy, an issue of significant importance for many large scale problems of current interest, where we may have fine space resolution with many millions of spatial degrees of freedom and long time intervals. In this work, we consider strongly A‐stable implicit Runge–Kutta methods of arbitrary order of accuracy, based on Radau quadratures. For the arising large algebraic systems we introduce efficient preconditioners, that (1) use only real arithmetic, (2) demonstrate robustness with respect to problem and discretization parameters, and (3) allow for fully stage‐parallel solution. The preconditioners are based on the observation that the lower‐triangular part of the coefficient matrices in the Butcher tableau has larger in magnitude values, compared to the corresponding strictly upper‐triangular part. We analyze the spectrum of the corresponding preconditioned systems and illustrate their performance with numerical experiments. Even though the observation has been made some time ago, its impact on constructing stage‐parallel preconditioners has not yet been done and its systematic study constitutes the novelty of this article.",
+  "year": 2023,
+  "venue": "Numerical Linear Algebra with Applications",
+  "authors": [
+   "Owe Axelsson",
+   "Ivo Dravins",
+   "Maya Neytcheva"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4386893548",
+  "doi": "10.1002/nla.2532",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/nla.2532",
+  "published_iso": "2023-09-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "A fast anisotropic decoupled operator of elastic wave propagation in the space domain for P-/S-wave-mode decomposition and angle calculation, with its application to elastic reverse time migration in a TI medium",
+  "title_norm": "a fast anisotropic decoupled operator of elastic wave propagation in the space d",
+  "abstract": "ABSTRACT The conventional anisotropic P-/S-wave-mode decomposition and angle calculation usually are performed in the wavenumber domain and require multiple Fourier transforms and rely on strong model assumptions. Therefore, it is difficult to use in production due to the prohibitively high computational cost. To tackle this problem, we develop a fast anisotropic P-/S-wave-mode decomposition approach in the space domain and further apply this decomposition to the vertical transversely isotropic (VTI)/tilted transversely isotropic (TTI) elastic reverse time migration (ERTM) and the associated angle-domain common-image gathers (ADCIGs). To start with, we solve the Christoffel equation of the VTI media and obtain an anisotropic-Helmholtz (AH) operator that represents the P- and S-wave polarizations in the wavenumber domain. The decoupled operators for the P-/S-wave decomposition are then derived in terms of the AH operator. To improve the efficiency and model adaptability, we convert the decoupled operators from the wavenumber domain to the space domain as a function of the model parameters and phase angle. By further eliminating the phase-angle term, such space-domain decoupled operators lead to the approximate P- and S-wave components which are proven to achieve the same effect as the accurate P and S wavefields applied in the angle calculation and ERTM images. A fast space-domain AH decomposition approach is thus obtained and can be used for P-/S-wave-mode decomposition, ADCIGs, and ERTM. In addition, we extend our approach to the TTI media by using the coordinate transform. Three examples are used to demonstrate the effectiveness and feasibility of our method.",
+  "year": 2023,
+  "venue": "Geophysics",
+  "authors": [
+   "Lele Zhang",
+   "Yang Zhao",
+   "Lu Liu",
+   "Ke Chen",
+   "Yixin Wang",
+   "Jiahui Zuo"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4320486606",
+  "doi": "10.1190/geo2022-0477.1",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4320486606",
+  "published_iso": "2023-02-13",
+  "oa_field": "Earth and Planetary Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "ERROR ESTIMATES OF RESIDUAL MINIMIZATION USING NEURAL NETWORKS FOR LINEAR PDES",
+  "title_norm": "error estimates of residual minimization using neural networks for linear pdes",
+  "abstract": "We propose an abstract framework for analyzing the convergence of least-squares methods based on residual minimization when feasible solutions are neural networks. With the norm relations and compactness arguments, we derive error estimates for both continuous and discrete formulations of residual minimization in strong and weak forms. The formulations cover recently developed physicsinformed neural networks based on strong and variational formulations.",
+  "year": 2023,
+  "venue": "Journal of Machine Learning for Modeling and Computing",
+  "authors": [
+   "Yeonjong Shin",
+   "Zhongqiang Zhang",
+   "George Em Karniadakis"
+  ],
+  "citations": 54,
+  "source": "openalex",
+  "source_id": "W4387197380",
+  "doi": "10.1615/jmachlearnmodelcomput.2023050411",
+  "arxiv_id": null,
+  "paper_url": "https://www.dl.begellhouse.com/download/forthcoming_article/50411/JMachLearnModelComput2023050411.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "An auto-regulated universal domain adaptation network for uncertain diagnostic scenarios of rotating machinery",
+  "title_norm": "an auto regulated universal domain adaptation network for uncertain diagnostic s",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Expert Systems with Applications",
+  "authors": [
+   "Jipu Li",
+   "Jipu Li",
+   "Xiaoge Zhang",
+   "Ke Yue",
+   "Zhuyun Chen",
+   "Junbin Chen"
+  ],
+  "citations": 34,
+  "source": "openalex",
+  "source_id": "W4393131663",
+  "doi": "10.1016/j.eswa.2024.123836",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4393131663",
+  "published_iso": "2024-03-24",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Non-linear Manifold Reduced-Order Models with Convolutional Autoencoders and Reduced Over-Collocation Method",
+  "title_norm": "non linear manifold reduced order models with convolutional autoencoders and red",
+  "abstract": "Abstract Non-affine parametric dependencies, nonlinearities and advection-dominated regimes of the model of interest can result in a slow Kolmogorov n-width decay, which precludes the realization of efficient reduced-order models based on linear subspace approximations. Among the possible solutions, there are purely data-driven methods that leverage autoencoders and their variants to learn a latent representation of the dynamical system, and then evolve it in time with another architecture. Despite their success in many applications where standard linear techniques fail, more has to be done to increase the interpretability of the results, especially outside the training range and not in regimes characterized by an abundance of data. Not to mention that none of the knowledge on the physics of the model is exploited during the predictive phase. In order to overcome these weaknesses, we implement the non-linear manifold method introduced by Lee and Carlberg (J Comput Phys 404:108973, 2020) with hyper-reduction achieved through reduced over-collocation and teacher–student training of a reduced decoder. We test the methodology on a 2d non-linear conservation law and a 2d shallow water models, and compare the results obtained with a purely data-driven method for which the dynamics is evolved in time with a long-short term memory network.",
+  "year": 2023,
+  "venue": "Journal of Scientific Computing",
+  "authors": [
+   "Francesco Romor",
+   "Giovanni Stabile",
+   "Gianluigi Rozza"
+  ],
+  "citations": 65,
+  "source": "openalex",
+  "source_id": "W4320728490",
+  "doi": "10.1007/s10915-023-02128-2",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10915-023-02128-2.pdf",
+  "published_iso": "2023-02-14",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Modified space‐time radial basis function collocation method for long‐time simulation of transient heat conduction in<scp>3D</scp>anisotropic composite materials",
+  "title_norm": "modified space time radial basis function collocation method for long time simul",
+  "abstract": "Abstract In this paper, the standard and the localized space‐time radial basis function (RBF) collocation methods are modified and combined with the time‐marching scheme and space‐time domain decomposition technique for simulating the long‐time transient heat conduction in 3D anisotropic composite materials. In the proposed approaches, we set the source points outside the whole space‐time domain in the standard space‐time RBF collocation method or outside the established subdomain in the localized approach by introducing the space and time magnification factors, instead of distributing them inside the original domain. In addition, the space‐time regulating factor is defined and added to the conventional schemes to improve the stability of numerical methods. The modified approaches are resulted in a simple and effective time‐marching process which can achieve long‐time simulation, resting on the property that the coefficient matrices generated by these two methods are only related to the space‐time distance between the collocation points and source points. Our ultimate aim is to develop a computing system for resolving dynamic problems in composite materials by designing a space‐time domain decomposition technique. Numerical experiments are conducted to demonstrate the accuracy, efficiency and stability of the presented methodologies.",
+  "year": 2023,
+  "venue": "International Journal for Numerical Methods in Engineering",
+  "authors": [
+   "Lin Qiu",
+   "Fajie Wang",
+   "Yan Gu",
+   "Qing‐Hua Qin"
+  ],
+  "citations": 27,
+  "source": "openalex",
+  "source_id": "W4383878108",
+  "doi": "10.1002/nme.7327",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/nme.7327",
+  "published_iso": "2023-07-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "A Systematic Review of Advanced Sensor Technologies for Non-Destructive Testing and Structural Health Monitoring",
+  "title_norm": "a systematic review of advanced sensor technologies for non destructive testing ",
+  "abstract": "This paper reviews recent advances in sensor technologies for non-destructive testing (NDT) and structural health monitoring (SHM) of civil structures. The article is motivated by the rapid developments in sensor technologies and data analytics leading to ever-advancing systems for assessing and monitoring structures. Conventional and advanced sensor technologies are systematically reviewed and evaluated in the context of providing input parameters for NDT and SHM systems and for their suitability to determine the health state of structures. The presented sensing technologies and monitoring systems are selected based on their capabilities, reliability, maturity, affordability, popularity, ease of use, resilience, and innovation. A significant focus is placed on evaluating the selected technologies and associated data analytics, highlighting limitations, advantages, and disadvantages. The paper presents sensing techniques such as fiber optics, laser vibrometry, acoustic emission, ultrasonics, thermography, drones, microelectromechanical systems (MEMS), magnetostrictive sensors, and next-generation technologies.",
+  "year": 2023,
+  "venue": "Sensors",
+  "authors": [
+   "Sahar Hassani",
+   "Ulrike Dackermann"
+  ],
+  "citations": 455,
+  "source": "openalex",
+  "source_id": "W4321099465",
+  "doi": "10.3390/s23042204",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/23/4/2204/pdf?version=1677141796",
+  "published_iso": "2023-02-15",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Digital twin-assisted imbalanced fault diagnosis framework using subdomain adaptive mechanism and margin-aware regularization",
+  "title_norm": "digital twin assisted imbalanced fault diagnosis framework using subdomain adapt",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Reliability Engineering & System Safety",
+  "authors": [
+   "Shen Yan",
+   "Xiang Zhong",
+   "Haidong Shao",
+   "Yuhang Ming",
+   "Chao Liu",
+   "Bin Liu"
+  ],
+  "citations": 152,
+  "source": "openalex",
+  "source_id": "W4385156563",
+  "doi": "10.1016/j.ress.2023.109522",
+  "arxiv_id": null,
+  "paper_url": "https://strathprints.strath.ac.uk/87133/1/Yan-etal-RESS-2023-Digital-twin-assisted-imbalanced-fault-diagnosis-framework-using-subdomain-adaptive-mechanism-and-margin-aware-regularization.pdf",
+  "published_iso": "2023-07-23",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Unconditionally Maximum-Principle-Preserving Parametric Integrating Factor Two-Step Runge-Kutta Schemes for Parabolic Sine-Gordon Equations",
+  "title_norm": "unconditionally maximum principle preserving parametric integrating factor two s",
+  "abstract": "We present a systematic two-step approach to derive temporal up to the eighth-order, unconditionally maximum-principle-preserving schemes for a semilinear parabolic sine-Gordon equation and its conservative modification.By introducing a stabilization term to an explicit integrating factor approach, and designing suitable approximations to the exponential functions, we propose a unified parametric twostep Runge-Kutta framework to conserve the linear invariant of the original system.To preserve the maximum principle unconditionally, we develop parametric integrating factor two-step Runge-Kutta schemes by enforcing the non-negativeness of the Butcher coefficients and non-decreasing constraint of the abscissas.The order conditions, linear stability, and convergence in the L ∞ -norm are analyzed.Theoretical and numerical results demonstrate that the proposed framework, which is explicit and free of limiters, cut-off post-processing, or exponential effects, offers a concise, and effective approach to develop high-order inequality-preserving and linear-invariant-conserving algorithms.",
+  "year": 2023,
+  "venue": "CSIAM Transactions on Applied Mathematics",
+  "authors": [
+   "Hong Zhang Hong Zhang",
+   "Xu Qian Xu Qian",
+   "Jun Xia",
+   "Songhe Song"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4313800144",
+  "doi": "10.4208/csiam-am.so-2022-0019",
+  "arxiv_id": null,
+  "paper_url": "https://global-sci.org/intro/article_detail/auth/21340.html",
+  "published_iso": "2023-01-08",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Papers and patents are becoming less disruptive over time",
+  "title_norm": "papers and patents are becoming less disruptive over time",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Nature",
+  "authors": [
+   "Michael Park",
+   "Erin Leahey",
+   "Russell J. Funk"
+  ],
+  "citations": 866,
+  "source": "openalex",
+  "source_id": "W4313545395",
+  "doi": "10.1038/s41586-022-05543-x",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41586-022-05543-x.pdf",
+  "published_iso": "2023-01-04",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "A Review of the Residual Stress Generation in Metal Additive Manufacturing: Analysis of Cause, Measurement, Effects, and Prevention",
+  "title_norm": "a review of the residual stress generation in metal additive manufacturing analy",
+  "abstract": "Metal additive manufacturing (AM) is capable of producing complex parts, using a wide range of functional metals that are otherwise very difficult to make and involve multiple manufacturing processes. However, because of the involvement of thermal energy in the fabrication of metallic AM parts, residual stress remains one of the major concerns in metal AM. This residual stress has negative effects on part quality, dimensional accuracy, and part performance. This study aims to carry out a comprehensive review and analysis of different aspects of residual stress, including the causes and mechanisms behind the generation of residual stress during metal AM, the state-of-the-art measurement techniques for measuring residual stress, various factors influencing residual stress, its effect on part quality and performance, and ways of minimizing or overcoming residual stress in metal AM parts. Residual stress formation mechanisms vary, based on the layer-by-layer deposition mechanism of the 3D printing process. For example, the residual stress formation for wire-arc additive manufacturing is different from that of selective laser sintering, direct energy deposition, and powder bed fusion processes. Residual stress formation mechanisms also vary based on the scale (i.e., macro, micro, etc.) at which the printing is performed. In addition, there are correlations between printing parameters and the formation of residual stress. For example, the printing direction, layer thickness, internal structure, etc., influence both the formation mechanism and quantitative values of residual stress. The major effect residual stress has on the quality of a printed part is in the distortion of the part. In addition, the dimensional accuracy, surface finish, and fatigue performance of printed parts are influenced by residual stress. This review paper provides a qualitative and quantitative analysis of the formation, distribution, and evolution of residual stress for different metal AM processes. This paper also discusses and analyzes both in situ and ex situ measurement techniques for measuring residual stress. Microstructural evolution and its effect on the formation of residual stress are analyzed. Various pre- and post-processing techniques used to countermeasure residual stress are discussed in detail. Finally, this study aims to present both a qualitative and quantitative analysis of the existing data and techniques in the literature related to residual stress, as well as to provide a critical analysis and guidelines for future research directions, to prevent or overcome residual stress formation in metal AM processes.",
+  "year": 2023,
+  "venue": "Micromachines",
+  "authors": [
+   "Nabin Bastola",
+   "Muhammad P. Jahan",
+   "Nithin Rangasamy",
+   "Chandra Sekhar Rakurty"
+  ],
+  "citations": 171,
+  "source": "openalex",
+  "source_id": "W4385212941",
+  "doi": "10.3390/mi14071480",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2072-666X/14/7/1480/pdf?version=1690179731",
+  "published_iso": "2023-07-24",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Sensory reweighting and self-motion perception for postural control under single-sensory and multisensory perturbations in older Tai Chi practitioners",
+  "title_norm": "sensory reweighting and self motion perception for postural control under single",
+  "abstract": "Purpose Impairment in perception and sensory reweighting could predispose older adults to falls. This exploratory study aimed to investigate the differences in sensory reweighting and self-motion perception for postural control under single-sensory and multisensory perturbations between older Tai Chi (TC) practitioners and healthy active older controls. Methods Twenty-four TC practitioners and 23 age-matched non-practitioners were recruited in this observational study. Participants stood on a force plate with or without a foam surface (baseline), followed by 36 s of visual rotation stimuli, vestibular rotation stimuli, or reduced somatosensory input (adaptation), and then continued standing for 44 s (reintegration). The center-of-pressure (COP) trajectories and self-motion perception were recorded. COP signals were analyzed using traditional sway, multiscale entropy, and wavelet analysis methods and the time-window-of-integration model to examine the postural balance performance and the flexibility and speed of sensory reweighting. Results Significant interaction effects of group with sensory perturbation and group with time window on COP parameters were observed ( p &amp;lt; 0.05). Compared with non-practitioners, TC practitioners exhibited higher postural stability and complexity as the difficulty of standing tasks increased and smaller time windows to return to baseline levels as disturbance time evolved. Moreover, TC practitioners exhibited significantly greater weighting on unperturbed sensory systems, lower weighting on perturbed sensory systems for postural control, and higher self-motion perception ability under visual, vestibular, and visual-vestibular perturbations ( p &amp;lt; 0.05). Conclusion Long-term TC practitioners exhibited superior postural stability and adaptability under challenging sensory perturbations, and smaller amplitudes and shorter durations of postural aftereffects over time during adaptation and reintegration. These improvements may be partly attributed to more rapid and flexible sensory reweighting and improved self-motion perception for postural control.",
+  "year": 2024,
+  "venue": "Frontiers in Human Neuroscience",
+  "authors": [
+   "Xiaoxia Liu",
+   "Guozheng Wang",
+   "Ruixuan Zhang",
+   "Zhuying Ren",
+   "Di Wang",
+   "Jun Liu"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4403980363",
+  "doi": "10.3389/fnhum.2024.1482752",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2024.1482752/pdf",
+  "published_iso": "2024-11-01",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Quantifying and eliminating the time delay in stabilization exponential time differencing Runge–Kutta schemes for the Allen–Cahn equation",
+  "title_norm": "quantifying and eliminating the time delay in stabilization exponential time dif",
+  "abstract": "Although the stabilization technique is favorable in designing unconditionally energy stable or maximum-principle-preserving schemes for gradient flow systems, the induced time delay is intractable in computations. In this paper, we propose a class of delay-free stabilization schemes for the Allen–Cahn gradient flow system. Considering the Fourier pseudo-spectral spatial discretization for the Allen–Cahn equation with either the polynomial or the logarithmic potential, we establish a semi-discrete, mesh-dependent maximum principle by adopting a stabilization technique. To unconditionally preserve the mesh-dependent maximum principle and energy stability, we investigate a family of exponential time differencing Runge–Kutta (ETDRK) integrators up to the second-order. After reformulating the ETDRK schemes as a class of parametric Runge–Kutta integrators, we quantify the lagging effect brought by stabilization, and eliminate delayed convergence using a relaxation technique. The temporal error estimate of the relaxation ETDRK integrators in the maximum norm topology is analyzed under a fixed spatial mesh. Numerical experiments demonstrate the delay-free and structure-preserving properties of the proposed schemes.",
+  "year": 2023,
+  "venue": "ESAIM Mathematical Modelling and Numerical Analysis",
+  "authors": [
+   "Hong Zhang",
+   "Lele Liu",
+   "Qian Xu",
+   "Songhe Song"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4389473729",
+  "doi": "10.1051/m2an/2023101",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4389473729",
+  "published_iso": "2023-12-08",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Multilevel domain decomposition-based architectures for physics-informed neural networks",
+  "title_norm": "multilevel domain decomposition based architectures for physics informed neural ",
+  "abstract": "Physics-informed neural networks (PINNs) are a powerful approach for solving problems involving differential equations, yet they often struggle to solve problems with high frequency and/or multi-scale solutions. Finite basis physics-informed neural networks (FBPINNs) improve the performance of PINNs in this regime by combining them with an overlapping domain decomposition approach. In this work, FBPINNs are extended by adding multiple levels of domain decompositions to their solution ansatz, inspired by classical multilevel Schwarz domain decomposition methods (DDMs). Analogous to typical tests for classical DDMs, we assess how the accuracy of PINNs, FBPINNs and multilevel FBPINNs scale with respect to computational effort and solution complexity by carrying out strong and weak scaling tests. Our numerical results show that the proposed multilevel FBPINNs consistently and significantly outperform PINNs across a range of problems with high frequency and multi-scale solutions. Furthermore, as expected in classical DDMs, we show that multilevel FBPINNs improve the accuracy of FBPINNs when using large numbers of subdomains by aiding global communication between subdomains.",
+  "year": 2024,
+  "venue": "Computer Methods in Applied Mechanics and Engineering",
+  "authors": [
+   "Victorita Dolean",
+   "Alexander Heinlein",
+   "Siddhartha Mishra",
+   "Ben Moseley"
+  ],
+  "citations": 89,
+  "source": "openalex",
+  "source_id": "W4399840403",
+  "doi": "10.1016/j.cma.2024.117116",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4399840403",
+  "published_iso": "2024-06-20",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Photon ring test of the Kerr hypothesis: Variation in the ring shape",
+  "title_norm": "photon ring test of the kerr hypothesis variation in the ring shape",
+  "abstract": "Context. The Event Horizon Telescope (EHT) collaboration recently released horizon-scale images of the supermassive black hole M87*. These images are consistently described by an optically thin, lensed accretion flow in the Kerr spacetime. General relativity (GR) predicts that higher-resolution images of such a flow would present thin, ring-shaped features produced by photons on extremely bent orbits. Recent theoretical work suggests that these “photon rings” produce clear interferometric signatures that depend very little on the astrophysical configuration and whose observation could therefore provide a stringent consistency test of the Kerr hypothesis. Aims. We wish to understand how the photon rings of a Kerr black hole vary with its surrounding emission. Gralla, Lupsasca, and Marrone (GLM) found that the shape of high-order photon rings follows a specific functional form that is insensitive to the details of the astrophysical source, and proposed a method for measuring this GR-predicted shape via space-based interferometry. We wish to assess the robustness of this prediction by checking it for a variety of astrophysical profiles, black hole spins, and observer inclinations. Methods. We use the ray tracing code Gyoto to simulate images of thin equatorial disks accreting onto a Kerr black hole. We extract the shape of the resulting photon rings from their interferometric signatures using a refinement of the method developed by GLM. We repeat this analysis for hundreds of models with different emission profiles, black hole spins, and observer inclinations. Results. We identify the width of the photon ring and its angular variation as a main obstacle to the method’s success. We qualitatively describe how this width varies with the emission profile, black hole spin, and observer inclination. At low inclinations, our improved method is robust enough to confirm the shape prediction for a variety of emission profiles; however, the choice of baseline is critical to the method’s success. At high inclinations, we encounter qualitatively new effects that are caused by the ring’s non-uniform width and require further refinements to the method. We also explore how the photon ring shape could constrain black hole spin and inclination.",
+  "year": 2022,
+  "venue": "Astronomy and Astrophysics",
+  "authors": [
+   "Hadrien Paugnat",
+   "Alexandru Lupsasca",
+   "F. Vincent",
+   "Maciek Wielgus"
+  ],
+  "citations": 58,
+  "source": "openalex",
+  "source_id": "W4283204800",
+  "doi": "10.1051/0004-6361/202244216",
+  "arxiv_id": null,
+  "paper_url": "https://www.aanda.org/articles/aa/pdf/2022/12/aa44216-22.pdf",
+  "published_iso": "2022-09-13",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Dynamic Loss Reweighting Method Based on Cumulative Classification Scores for Long-Tailed Remote Sensing Image Classification",
+  "title_norm": "dynamic loss reweighting method based on cumulative classification scores for lo",
+  "abstract": "Convolutional neural networks have been widely used in remote sensing classification and achieved quite good results. Most of these methods are based on datasets with relatively balanced samples, but such ideal datasets are rare in applications. Long-tailed datasets are very common in practice, and the number of samples among categories in most datasets is often severely uneven and leads to bad results, especially in the category with a small sample number. To address this problem, a novel remote sensing image classification method based on loss reweighting for long-tailed data is proposed in this paper to improve the classification accuracy of samples from the tail categories. Firstly, abandoning the general weighting approach, the cumulative classification scores are proposed to construct category weights instead of the number of samples from each category. The cumulative classification score can effectively combine the number of samples and the difficulty of classification. Then, the imbalanced information of samples from each category contained in the relationships between the rows and columns of the cumulative classification score matrix is effectively extracted and used to construct the required classification weights for samples from different categories. Finally, the traditional cross-entropy loss function is improved and combined with the category weights generated in the previous step to construct a new loss reweighting mechanism for long-tailed data. Extensive experiments with different balance ratios are conducted on several public datasets, such as HistAerial, SIRI-WHU, NWPU-RESISC45, PatternNet, and AID, to verify the effectiveness of the proposed method. Compared with other similar methods, our method achieved higher classification accuracy and stronger robustness.",
+  "year": 2023,
+  "venue": "Remote Sensing",
+  "authors": [
+   "Jiahang Liu",
+   "Ruilei Feng",
+   "Peng Chen",
+   "Xiaozhen Wang",
+   "Yue Ni"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4313827544",
+  "doi": "10.3390/rs15020394",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2072-4292/15/2/394/pdf?version=1673251467",
+  "published_iso": "2023-01-09",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Implicit Runge Kutta physics informed neural network for parameter identification of structural systems",
+  "title_norm": "implicit runge kutta physics informed neural network for parameter identificatio",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Computers & Structures",
+  "authors": [
+   "Nikhil Mahar",
+   "Subhamoy Sen",
+   "Laurent Mevel"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7130524369",
+  "doi": "10.1016/j.compstruc.2026.108157",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7130524369",
+  "published_iso": "2026-02-19",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "VMamba: Visual State Space Model",
+  "title_norm": "vmamba visual state space model",
+  "abstract": "Designing computationally efficient network architectures remains an ongoing necessity in computer vision. In this paper, we adapt Mamba, a state-space language model, into VMamba, a vision backbone with linear time complexity. At the core of VMamba is a stack of Visual State-Space (VSS) blocks with the 2D Selective Scan (SS2D) module. By traversing along four scanning routes, SS2D bridges the gap between the ordered nature of 1D selective scan and the non-sequential structure of 2D vision data, which facilitates the collection of contextual information from various sources and perspectives. Based on the VSS blocks, we develop a family of VMamba architectures and accelerate them through a succession of architectural and implementation enhancements. Extensive experiments demonstrate VMamba's promising performance across diverse visual perception tasks, highlighting its superior input scaling efficiency compared to existing benchmark models. Source code is available at https://github.com/MzeroMiko/VMamba.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yue Liu",
+   "Yunjie Tian",
+   "Yuzhong Zhao",
+   "Hongtian Yu",
+   "Lingxi Xie",
+   "Yaowei Wang"
+  ],
+  "citations": 374,
+  "source": "openalex",
+  "source_id": "W4391047432",
+  "doi": "10.48550/arxiv.2401.10166",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2401.10166",
+  "published_iso": "2024-01-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Single test-based diagnosis of multiple cancer types using Exosome-SERS-AI for early stage cancers",
+  "title_norm": "single test based diagnosis of multiple cancer types using exosome sers ai for e",
+  "abstract": "Early cancer detection has significant clinical value, but there remains no single method that can comprehensively identify multiple types of early-stage cancer. Here, we report the diagnostic accuracy of simultaneous detection of 6 types of early-stage cancers (lung, breast, colon, liver, pancreas, and stomach) by analyzing surface-enhanced Raman spectroscopy profiles of exosomes using artificial intelligence in a retrospective study design. It includes classification models that recognize signal patterns of plasma exosomes to identify both their presence and tissues of origin. Using 520 test samples, our system identified cancer presence with an area under the curve value of 0.970. Moreover, the system classified the tumor organ type of 278 early-stage cancer patients with a mean area under the curve of 0.945. The final integrated decision model showed a sensitivity of 90.2% at a specificity of 94.4% while predicting the tumor organ of 72% of positive patients. Since our method utilizes a non-specific analysis of Raman signatures, its diagnostic scope could potentially be expanded to include other diseases.",
+  "year": 2023,
+  "venue": "Nature Communications",
+  "authors": [
+   "Hyunku Shin",
+   "Byeong Hyeon Choi",
+   "On Shim",
+   "Jihee Kim",
+   "Yong Park",
+   "Suk Ki Cho"
+  ],
+  "citations": 377,
+  "source": "openalex",
+  "source_id": "W4360826436",
+  "doi": "10.1038/s41467-023-37403-1",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-023-37403-1.pdf",
+  "published_iso": "2023-03-24",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "On the Effectiveness of Sampled Softmax Loss for Item Recommendation",
+  "title_norm": "on the effectiveness of sampled softmax loss for item recommendation",
+  "abstract": "The learning objective plays a fundamental role to build a recommender system. Most methods routinely adopt either pointwise (e.g., binary cross-entropy) or pairwise (e.g., BPR) loss to train the model parameters, while rarely pay attention to softmax loss, which assumes the probabilities of all classes sum up to 1, due to its computational complexity when scaling up to large datasets or intractability for streaming data where the complete item space is not always available. The sampled softmax (SSM) loss emerges as an efficient substitute for softmax loss. Its special case, InfoNCE loss, has been widely used in self-supervised learning and exhibited remarkable performance for contrastive learning. Nonetheless, limited recommendation work uses the SSM loss as the learning objective. Worse still, none of them explores its properties thoroughly and answers “Does SSM loss suit for item recommendation?” and “What are the conceptual advantages of SSM loss, as compared with the prevalent losses?”, to the best of our knowledge. In this work, we aim at offering a better understanding of SSM for item recommendation. Specifically, we first theoretically reveal three model-agnostic advantages: (1) mitigating popularity bias, which is beneficial to long-tail recommendation; (2) mining hard negative samples, which offers informative gradients to optimize model parameters; and (3) maximizing the ranking metric, which facilitates top- K performance. However, based on our empirical studies, we recognize that the default choice of cosine similarity function in SSM limits its ability in learning the magnitudes of representation vectors. As such, the combinations of SSM with the models that also fall short in adjusting magnitudes (e.g., matrix factorization) may result in poor representations. One step further, we provide mathematical proof that message passing schemes in graph convolution networks can adjust representation magnitude according to node degree, which naturally compensates for the shortcoming of SSM. Extensive experiments on four benchmark datasets justify our analyses, demonstrating the superiority of SSM for item recommendation. Our implementations are available in both TensorFlow 1 and PyTorch. 2",
+  "year": 2023,
+  "venue": "ACM Transactions on Information Systems",
+  "authors": [
+   "Jiancan Wu",
+   "Xiang Wang",
+   "Xingyu Gao",
+   "Jiawei Chen",
+   "Hongcheng Fu",
+   "Tianyu Qiu"
+  ],
+  "citations": 68,
+  "source": "openalex",
+  "source_id": "W4389675217",
+  "doi": "10.1145/3637061",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3637061",
+  "published_iso": "2023-12-13",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Physics-informed deep learning for three-dimensional transient heat transfer analysis of functionally graded materials",
+  "title_norm": "physics informed deep learning for three dimensional transient heat transfer ana",
+  "abstract": "Abstract We present a physics-informed deep learning model for the transient heat transfer analysis of three-dimensional functionally graded materials (FGMs) employing a Runge–Kutta discrete time scheme. Firstly, the governing equation, associated boundary conditions and the initial condition for transient heat transfer analysis of FGMs with exponential material variations are presented. Then, the deep collocation method with the Runge–Kutta integration scheme for transient analysis is introduced. The prior physics that helps to generalize the physics-informed deep learning model is introduced by constraining the temperature variable with discrete time schemes and initial/boundary conditions. Further the fitted activation functions suitable for dynamic analysis are presented. Finally, we validate our approach through several numerical examples on FGMs with irregular shapes and a variety of boundary conditions. From numerical experiments, the predicted results with PIDL demonstrate well agreement with analytical solutions and other numerical methods in predicting of both temperature and flux distributions and can be adaptive to transient analysis of FGMs with different shapes, which can be the promising surrogate model in transient dynamic analysis.",
+  "year": 2023,
+  "venue": "Computational Mechanics",
+  "authors": [
+   "Hongwei Guo",
+   "Xiaoying Zhuang",
+   "Xiaolong Fu",
+   "Yunzheng Zhu",
+   "Timon Rabczuk"
+  ],
+  "citations": 68,
+  "source": "openalex",
+  "source_id": "W4362673252",
+  "doi": "10.1007/s00466-023-02287-x",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s00466-023-02287-x.pdf",
+  "published_iso": "2023-04-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Interpretable convolutional neural network with multilayer wavelet for Noise-Robust Machinery fault diagnosis",
+  "title_norm": "interpretable convolutional neural network with multilayer wavelet for noise rob",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Mechanical Systems and Signal Processing",
+  "authors": [
+   "Huan Wang",
+   "Zhiliang Liu",
+   "Dandan Peng",
+   "Ming J. Zuo"
+  ],
+  "citations": 255,
+  "source": "openalex",
+  "source_id": "W4361294415",
+  "doi": "10.1016/j.ymssp.2023.110314",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4361294415",
+  "published_iso": "2023-03-29",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Critical Review on Bromate Formation during Ozonation and Control Options for Its Minimization",
+  "title_norm": "critical review on bromate formation during ozonation and control options for it",
+  "abstract": "Ozone is a commonly applied disinfectant and oxidant in drinking water and has more recently been implemented for enhanced municipal wastewater treatment for potable reuse and ecosystem protection. One drawback is the potential formation of bromate, a possible human carcinogen with a strict drinking water standard of 10 μg/L. The formation of bromate from bromide during ozonation is complex and involves reactions with both ozone and secondary oxidants formed from ozone decomposition, i.e., hydroxyl radical. The underlying mechanism has been elucidated over the past several decades, and the extent of many parallel reactions occurring with either ozone or hydroxyl radicals depends strongly on the concentration, type of dissolved organic matter (DOM), and carbonate. On the basis of mechanistic considerations, several approaches minimizing bromate formation during ozonation can be applied. Removal of bromate after ozonation is less feasible. We recommend that bromate control strategies be prioritized in the following order: (1) control bromide discharge at the source and ensure optimal ozone mass-transfer design to minimize bromate formation, (2) minimize bromate formation during ozonation by chemical control strategies, such as ammonium with or without chlorine addition or hydrogen peroxide addition, which interfere with specific bromate formation steps and/or mask bromide, (3) implement a pretreatment strategy to reduce bromide and/or DOM prior to ozonation, and (4) assess the suitability of ozonation altogether or utilize a downstream treatment process that may already be in place, such as reverse osmosis, for post-ozone bromate abatement. A one-size-fits-all approach to bromate control does not exist, and treatment objectives, such as disinfection and micropollutant abatement, must also be considered.",
+  "year": 2023,
+  "venue": "Environmental Science & Technology",
+  "authors": [
+   "Christina M. Morrison",
+   "Samantha Hogard",
+   "Robert Pearce",
+   "Aarthi Mohan",
+   "Aleksey N. Pisarenko",
+   "Eric Dickenson"
+  ],
+  "citations": 143,
+  "source": "openalex",
+  "source_id": "W4382050169",
+  "doi": "10.1021/acs.est.3c00538",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/acs.est.3c00538",
+  "published_iso": "2023-06-26",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Improve the performance of CT-based pneumonia classification via source data reweighting",
+  "title_norm": "improve the performance of ct based pneumonia classification via source data rew",
+  "abstract": "Pneumonia is a life-threatening disease. Computer tomography (CT) imaging is broadly used for diagnosing pneumonia. To assist radiologists in accurately and efficiently detecting pneumonia from CT scans, many deep learning methods have been developed. These methods require large amounts of annotated CT scans, which are difficult to obtain due to privacy concerns and high annotation costs. To address this problem, we develop a three-level optimization based method which leverages CT data from a source domain to mitigate the lack of labeled CT scans in a target domain. Our method automatically identifies and downweights low-quality source CT data examples which are noisy or have large domain discrepancy with target data, by minimizing the validation loss of a target model trained on reweighted source data. On a target dataset with 2218 CT scans and a source dataset with 349 CT images, our method achieves an F1 score of 91.8% in detecting pneumonia and an F1 score of 92.4% in detecting other types of pneumonia, which are significantly better than those achieved by state-of-the-art baseline methods.",
+  "year": 2023,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Pengtao Xie",
+   "Xingchen Zhao",
+   "Xuehai He"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4380090823",
+  "doi": "10.1038/s41598-023-35938-3",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-023-35938-3.pdf",
+  "published_iso": "2023-06-09",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Runge–Kutta convolution quadrature based on Gauss methods",
+  "title_norm": "runge kutta convolution quadrature based on gauss methods",
+  "abstract": "Abstract An error analysis of Runge–Kutta convolution quadrature based on Gauss methods applied to hyperbolic operators is given. Order reduction is observed, with the order of convergence depending heavily on the parity of the number of stages, a more favourable situation arising for the odd cases than the even ones. An exception is observed when the associated kernel exhibits exponential decay. In this case, for the 2-stage Gauss method full order is obtained. For particular situations the order of convergence is higher than for Radau IIA or Lobatto IIIC methods when using the same number of odd stages. We investigate an application to transient acoustic scattering where, for certain scattering obstacles, the favourable situation occurs in the important case of the exterior Dirichlet-to-Neumann map. Numerical experiments and comparisons illustrate the performance of the method.",
+  "year": 2024,
+  "venue": "Numerische Mathematik",
+  "authors": [
+   "Lehel Banjai",
+   "Matteo Ferrari"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4401486536",
+  "doi": "10.1007/s00211-024-01429-4",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s00211-024-01429-4.pdf",
+  "published_iso": "2024-08-10",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Space‐for‐time substitutions in climate change ecology and evolution",
+  "title_norm": "space for time substitutions in climate change ecology and evolution",
+  "abstract": "In an epoch of rapid environmental change, understanding and predicting how biodiversity will respond to a changing climate is an urgent challenge. Since we seldom have sufficient long-term biological data to use the past to anticipate the future, spatial climate-biotic relationships are often used as a proxy for predicting biotic responses to climate change over time. These 'space-for-time substitutions' (SFTS) have become near ubiquitous in global change biology, but with different subfields largely developing methods in isolation. We review how climate-focussed SFTS are used in four subfields of ecology and evolution, each focussed on a different type of biotic variable - population phenotypes, population genotypes, species' distributions, and ecological communities. We then examine the similarities and differences between subfields in terms of methods, limitations and opportunities. While SFTS are used for a wide range of applications, two main approaches are applied across the four subfields: spatial in situ gradient methods and transplant experiments. We find that SFTS methods share common limitations relating to (i) the causality of identified spatial climate-biotic relationships and (ii) the transferability of these relationships, i.e. whether climate-biotic relationships observed over space are equivalent to those occurring over time. Moreover, despite widespread application of SFTS in climate change research, key assumptions remain largely untested. We highlight opportunities to enhance the robustness of SFTS by addressing key assumptions and limitations, with a particular emphasis on where approaches could be shared between the four subfields.",
+  "year": 2023,
+  "venue": "Biological reviews/Biological reviews of the Cambridge Philosophical Society",
+  "authors": [
+   "Rebecca S. L. Lovell",
+   "Sinéad Collins",
+   "Simon H. Martin",
+   "Alex L. Pigot",
+   "Albert B. Phillimore"
+  ],
+  "citations": 169,
+  "source": "openalex",
+  "source_id": "W4385688205",
+  "doi": "10.1111/brv.13004",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/brv.13004",
+  "published_iso": "2023-08-09",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Cell subtype-specific effects of genetic variation in the Alzheimer’s disease brain",
+  "title_norm": "cell subtype specific effects of genetic variation in the alzheimer s disease br",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Nature Genetics",
+  "authors": [
+   "Masashi Fujita",
+   "Zongmei Gao",
+   "Lu Zeng",
+   "Cristin McCabe",
+   "Charles C. White",
+   "Bernard Ng"
+  ],
+  "citations": 182,
+  "source": "openalex",
+  "source_id": "W4393043838",
+  "doi": "10.1038/s41588-024-01685-y",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12288883/pdf/nihms-2096868.pdf",
+  "published_iso": "2024-03-21",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Reweighting Clicks with Dwell Time in Recommendation",
+  "title_norm": "reweighting clicks with dwell time in recommendation",
+  "abstract": "The click behavior is the most widely-used user positive feedback in recommendation. However, simply considering each click equally in training may suffer from clickbaits and title-content mismatching, and thus fail to precisely capture users’ real satisfaction on items. Dwell time could be viewed as a high-quality quantitative indicator of user preferences on each click, while existing recommendation models do not fully explore the modeling of dwell time. In this work, we focus on reweighting clicks with dwell time in recommendation. Precisely, we first define a new behavior named valid read, which helps to select high-quality click instances for different users and items via dwell time. Next, we propose a normalized dwell time function to reweight click signals in training for recommendation. The Click reweighting model achieves significant improvements on both offline and online evaluations in real-world systems.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Ruobing Xie",
+   "Lin Ma",
+   "Shao‐Liang Zhang",
+   "Feng Xia",
+   "Leyu Lin"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4367310110",
+  "doi": "10.1145/3543873.3584624",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3543873.3584624",
+  "published_iso": "2023-04-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Direct multiple shooting and direct collocation perform similarly in biomechanical predictive simulations",
+  "title_norm": "direct multiple shooting and direct collocation perform similarly in biomechanic",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Computer Methods in Applied Mechanics and Engineering",
+  "authors": [
+   "Pierre Puchaud",
+   "François Bailly",
+   "Mickaël Begon"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4381995713",
+  "doi": "10.1016/j.cma.2023.116162",
+  "arxiv_id": null,
+  "paper_url": "https://inria.hal.science/hal-04151816/document",
+  "published_iso": "2023-06-24",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Mapping cells through time and space with moscot",
+  "title_norm": "mapping cells through time and space with moscot",
+  "abstract": "Abstract Single-cell genomic technologies enable the multimodal profiling of millions of cells across temporal and spatial dimensions. However, experimental limitations hinder the comprehensive measurement of cells under native temporal dynamics and in their native spatial tissue niche. Optimal transport has emerged as a powerful tool to address these constraints and has facilitated the recovery of the original cellular context 1–4 . Yet, most optimal transport applications are unable to incorporate multimodal information or scale to single-cell atlases. Here we introduce multi-omics single-cell optimal transport (moscot), a scalable framework for optimal transport in single-cell genomics that supports multimodality across all applications. We demonstrate the capability of moscot to efficiently reconstruct developmental trajectories of 1.7 million cells from mouse embryos across 20 time points. To illustrate the capability of moscot in space, we enrich spatial transcriptomic datasets by mapping multimodal information from single-cell profiles in a mouse liver sample and align multiple coronal sections of the mouse brain. We present moscot.spatiotemporal, an approach that leverages gene-expression data across both spatial and temporal dimensions to uncover the spatiotemporal dynamics of mouse embryogenesis. We also resolve endocrine-lineage relationships of delta and epsilon cells in a previously unpublished mouse, time-resolved pancreas development dataset using paired measurements of gene expression and chromatin accessibility. Our findings are confirmed through experimental validation of NEUROD2 as a regulator of epsilon progenitor cells in a model of human induced pluripotent stem cell islet cell differentiation. Moscot is available as open-source software, accompanied by extensive documentation.",
+  "year": 2025,
+  "venue": "Nature",
+  "authors": [
+   "Dominik Klein",
+   "Giovanni Palla",
+   "Marius Lange",
+   "Michal Klein",
+   "Zoe Piran",
+   "Manuel Gander"
+  ],
+  "citations": 141,
+  "source": "openalex",
+  "source_id": "W4406715779",
+  "doi": "10.1038/s41586-024-08453-2",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41586-024-08453-2.pdf",
+  "published_iso": "2025-01-22",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "A Deep Double Ritz Method (D<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\" id=\"d1e3266\" altimg=\"si244.svg\"><mml:msup><mml:mrow/><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math>RM) for solving Partial Differential Equations using Neural Networks",
+  "title_norm": "a deep double ritz method d mml math xmlns mml http www w3 org 1998 math mathml ",
+  "abstract": "Residual minimization is a widely used technique for solving Partial Differential Equations in variational form. It minimizes the dual norm of the residual, which naturally yields a saddle-point (min–max) problem over the so-called trial and test spaces. In the context of neural networks, we can address this min–max approach by employing one network to seek the trial minimum, while another network seeks the test maximizers. However, the resulting method is numerically unstable as we approach the trial solution. To overcome this, we reformulate the residual minimization as an equivalent minimization of a Ritz functional fed by optimal test functions computed from another Ritz functional minimization. We call the resulting scheme the Deep Double Ritz Method (D2RM), which combines two neural networks for approximating trial functions and optimal test functions along a nested double Ritz minimization strategy. Numerical results on different diffusion and convection problems support the robustness of our method, up to the approximation properties of the networks and the training capacity of the optimizers.",
+  "year": 2023,
+  "venue": "Computer Methods in Applied Mechanics and Engineering",
+  "authors": [
+   "Carlos Uriarte",
+   "David Pardo",
+   "Ignacio Muga",
+   "Judit Muñoz‐Matute"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4317033828",
+  "doi": "10.1016/j.cma.2023.115892",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4317033828",
+  "published_iso": "2023-01-17",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Universal Test-time Adaptation through Weight Ensembling, Diversity Weighting, and Prior Correction",
+  "title_norm": "universal test time adaptation through weight ensembling diversity weighting and",
+  "abstract": "Since distribution shifts are likely to occur during testtime and can drastically decrease the model’s performance, online test-time adaptation (TTA) continues to update the model after deployment, leveraging the current test data. Clearly, a method proposed for online TTA has to perform well for all kinds of environmental conditions. By introducing the variable factors domain non-stationarity and temporal correlation, we first unfold all practically relevant settings and define the entity as universal TTA. We want to highlight that this is the first work that covers such a broad spectrum, which is indispensable for the use in practice. To tackle the problem of universal TTA, we identify and highlight several challenges a self-training based method has to deal with: 1) model bias and the occurrence of trivial solutions when performing entropy minimization on varying sequence lengths with and without multiple domain shifts, 2) loss of generalization which exacerbates the adaptation to multiple domain shifts and the occurrence of catastrophic forgetting, and 3) performance degradation due to shifts in class prior. To prevent the model from becoming biased, we leverage a dataset and model-agnostic certainty and diversity weighting. In order to maintain generalization and prevent catastrophic forgetting, we propose to continually weightaverage the source and adapted model. To compensate for disparities in the class prior during test-time, we propose an adaptive prior correction scheme that reweights the model’s predictions. We evaluate our approach, named ROID, on a wide range of settings, datasets, and models, setting new standards in the field of universal TTA. Code is available at: https://github.com/mariodoebler/testtime-adaptation",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Robert A. Marsden",
+   "Mario Döbler",
+   "Bin Yang"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4394625772",
+  "doi": "10.1109/wacv57701.2024.00254",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4394625772",
+  "published_iso": "2024-01-03",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Many-Stage Optimal Stabilized Runge–Kutta Methods for Hyperbolic Partial Differential Equations",
+  "title_norm": "many stage optimal stabilized runge kutta methods for hyperbolic partial differe",
+  "abstract": "Abstract A novel optimization procedure for the generation of stability polynomials of stabilized explicit Runge–Kutta methods is devised. Intended for semidiscretizations of hyperbolic partial differential equations, the herein developed approach allows the optimization of stability polynomials with more than hundred stages. A potential application of these high degree stability polynomials are problems with locally varying characteristic speeds as found for non-uniformly refined meshes and spatially varying wave speeds. To demonstrate the applicability of the stability polynomials we construct 2 N -storage many-stage Runge–Kutta methods that match their designed second order of accuracy when applied to a range of linear and nonlinear hyperbolic PDEs with smooth solutions. These methods are constructed to reduce the amplification of round off errors which becomes a significant concern for these many-stage methods.",
+  "year": 2024,
+  "venue": "Journal of Scientific Computing",
+  "authors": [
+   "Daniel Doehring",
+   "Gregor J. Gassner",
+   "Manuel Torrilhon"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4392019330",
+  "doi": "10.1007/s10915-024-02478-5",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10915-024-02478-5.pdf",
+  "published_iso": "2024-03-16",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Deep Learning for Time Series Anomaly Detection: A Survey",
+  "title_norm": "deep learning for time series anomaly detection a survey",
+  "abstract": "Time series anomaly detection is important for a wide range of research fields and applications, including financial markets, economics, earth sciences, manufacturing, and healthcare. The presence of anomalies can indicate novel or unexpected events, such as production faults, system defects, and heart palpitations, and is therefore of particular interest. The large size and complexity of patterns in time series data have led researchers to develop specialised deep learning models for detecting anomalous patterns. This survey provides a structured and comprehensive overview of state-of-the-art deep learning for time series anomaly detection. It provides a taxonomy based on anomaly detection strategies and deep learning models. Aside from describing the basic anomaly detection techniques in each category, their advantages and limitations are also discussed. Furthermore, this study includes examples of deep anomaly detection in time series across various application domains in recent years. Finally, it summarises open issues in research and challenges faced while adopting deep anomaly detection models to time series data.",
+  "year": 2024,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Zahra Zamanzadeh Darban",
+   "Geoffrey I. Webb",
+   "Shirui Pan",
+   "Charų C. Aggarwal",
+   "Mahsa Salehi"
+  ],
+  "citations": 495,
+  "source": "openalex",
+  "source_id": "W4402056503",
+  "doi": "10.1145/3691338",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3691338",
+  "published_iso": "2024-08-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Review Paper: Residual Stresses in Deposited Thin-Film Material Layers for Micro- and Nano-Systems Manufacturing",
+  "title_norm": "review paper residual stresses in deposited thin film material layers for micro ",
+  "abstract": "This review paper covers a topic of significant importance in micro- and nano-systems development and manufacturing, specifically the residual stresses in deposited thin-film material layers and methods to control or mitigate their impact on device behavior. A residual stress is defined as the presence of a state of stress in a thin-film material layer without any externally applied forces wherein the residual stress can be compressive or tensile. While many material properties of deposited thin-film layers are dependent on the specific processing conditions, the residual stress often exhibits the most variability. It is not uncommon for residual stresses in deposited thin-film layers to vary over extremely large ranges of values (100% percent or more) and even exhibit changes in the sign of the stress state. Residual stresses in deposited layers are known to be highly dependent on a number of factors including: processing conditions used during the deposition; type of material system (thin-films and substrate materials); and other processing steps performed after the thin-film layer has been deposited, particularly those involving exposure to elevated temperatures. The origins of residual stress can involve a number of complex and interrelated factors. As a consequence, there is still no generally applicable theory to predict residual stresses in thin-films. Hence, device designers usually do not have sufficient information about the residual stresses values when they perform the device design. Obviously, this is a far less than ideal situation. The impact of this is micro- and nano-systems device development takes longer, is considerably more expensive, and presents higher risk levels. The outline of this paper is as follows: a discussion of the origins of residual stresses in deposited thin-film layers is given, followed by an example demonstrating the impact on device behavior. This is followed by a review of thin-film deposition methods outlining the process parameters known to affect the resultant residual stress in the deposited layers. Then, a review of the reported methods used to measure residual stresses in thin-films are described. A review of some of the literature to illustrate the level of variations in residual stresses depending on processing conditions is then provided. Methods which can be used to control the stresses and mitigate the impact of residual stresses in micro- and nano-systems device design and fabrication are then covered, followed by some recent development of interest.",
+  "year": 2022,
+  "venue": "Micromachines",
+  "authors": [
+   "Michael Huff"
+  ],
+  "citations": 138,
+  "source": "openalex",
+  "source_id": "W4310224720",
+  "doi": "10.3390/mi13122084",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2072-666X/13/12/2084/pdf?version=1669713245",
+  "published_iso": "2022-11-26",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Balancing sensory inputs: somatosensory reweighting from proprioception to tactile sensation in maintaining postural stability among older adults with sensory deficits",
+  "title_norm": "balancing sensory inputs somatosensory reweighting from proprioception to tactil",
+  "abstract": "Background Sensory deficits increase the risk of falls among older adults. The purpose of this study was to investigate the correlations of lower extremity muscle strength, proprioception, and tactile sensation to postural stability among older adults with and without sensory deficits, to understand the contribution of each factor to postural stability, and to explore sensory reweighting among the two populations. Methods A total of 103 participants were recruited and divided into two older adult groups with (female = 24, male = 26, age = 69.1 ± 3.15 years, height = 162.72 ± 6.94 cm, body mass = 64.05 ± 9.82 kg) and without sensory deficits (female = 26, male = 27, age = 70.02 ± 4.9 years, height = 163.76 ± 7.60 cm, body mass = 65.83 ± 10.31 kg), based on whether a 5.07 Semmes–Weinstein monofilament could be detected at foot soles. Their Berg Balance Scale (BBS), lower extremity muscle strength, proprioception, and tactile sensation were tested and compared between the two groups. Pearson's or Spearman's correlations were used to explore the relationships between the BBS and each variable. Factor analysis and multivariate linear regression were used to verify the degrees of correlation between the generated factors and the postural stability. Results Low BBS ( p = 0.003, η 2 = 0.088) scores and higher proprioception thresholds (knee flexion: p = 0.015, η 2 = 0.059; knee extension: p = 0.011, η 2 = 0.065; ankle plantarflexion: p = 0.006, η 2 = 0.075; ankle dorsiflexion: p = 0.001, η 2 = 0.106) were detected among older adults with sensory deficits compared with those without sensory deficits. Lower extremity muscle strength (ankle plantarflexion: r = 0.342, p = 0.002; hip abduction: r = 0.303, p = 0.041) and proprioception (knee flexion: r = −0.419, p = 0.004; knee extension: r = −0.292, p = 0.049; ankle plantarflexion: r = −0.450, p = 0.002; ankle dorsiflexion: r = −0.441, p = 0.002) were correlated with BBS among older adults without sensory deficits, while lower extremity muscle strength (ankle plantarflexion: r = 0.501, p&amp;lt;0.001; hip abduction: r = 0.302, p = 0.041) and tactile sensation (great toe: r = −0.388, p = 0.008; 5th metatarsal: r = −0.301, p = 0.042) were correlated with BBS among older adults with sensory deficits. Conclusion Older adults with sensory deficits have poorer proprioception and postural stability. Somatosensory reweighting occurs from proprioception to tactile sensation among older adults with sensory deficits in maintaining postural stability.",
+  "year": 2023,
+  "venue": "Frontiers in Public Health",
+  "authors": [
+   "Liu Ziyin",
+   "Qi Wang",
+   "Wei Sun",
+   "Qipeng Song"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4377221210",
+  "doi": "10.3389/fpubh.2023.1165010",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/articles/10.3389/fpubh.2023.1165010/pdf",
+  "published_iso": "2023-05-04",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Derivation of Five-Stage Implicit Runge-Kutta Method of Order 10 via Gauss-Legendre Quadrature for Ordinary Differential Equations",
+  "title_norm": "derivation of five stage implicit runge kutta method of order 10 via gauss legen",
+  "abstract": "This paper presents developing and implementing a five-stage implicit Runge-Kutta method of order ten via Gauss-Legendre quadrature for stiff or oscillatory first-order initial value problems (IVPs) of ordinary differential equations (ODEs). Using continuous collocation and interpolation techniques, the implicit Runge-Kutta method was developed by combining Legendre polynomials and exponential functions as the basis function. The properties of the method were investigated, and it was shown that it is consistent and A-stable. The new method was evaluated on two sampled problems involving stiffness and oscillation. The numerical results demonstrate that the new implicit Runge-Kutta is computationally efficient and outperforms previous methods of similar derivations.",
+  "year": 2023,
+  "venue": "International Journal of Science for Global Sustainability",
+  "authors": [
+   "Hycienth O. Orapine",
+   "Joshua OLADELE",
+   "Ali Audu Baidu",
+   "Nyamtswam Elija Vafa"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4385762286",
+  "doi": "10.57233/ijsgs.v9i2.458",
+  "arxiv_id": null,
+  "paper_url": "https://www.fugus-ijsgs.com.ng/index.php/ijsgs/article/download/458/335",
+  "published_iso": "2023-08-09",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Scalability analysis of a two level domain decomposition approach in space and time solving data assimilation models",
+  "title_norm": "scalability analysis of a two level domain decomposition approach in space and t",
+  "abstract": "Summary We are concerned with the mapping on high performance hybrid architectures of a parallel software implementing a two level overlapping domain decomposition, that is, along space and time directions, of the four dimensional variational data assimilation model. The reference architecture belongs to the SCoPE (Sistema Cooperativo Per Elaborazioni scientifiche multidisciplinari) data center, located at University of Naples Federico II. We consider the initial boundary problem of the shallow water equation and analyse both strong and weak scaling. Keeping the efficiency always greater than and about in most cases, we experimentally find that the isoefficiency function grows a little more than linearly with respect to the number of processes. Results, obtained by using the parallel computing toolbox of MATLABR2013a, are in agreement with the algorithm's performance prevision based on the scale up factor, confirming the appropriate mapping of the algorithm on the hybrid architecture.",
+  "year": 2023,
+  "venue": "Concurrency and Computation Practice and Experience",
+  "authors": [
+   "Rosalba Cacciapuoti",
+   "Luisa D’Amore"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4388478174",
+  "doi": "10.1002/cpe.7937",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cpe.7937",
+  "published_iso": "2023-11-07",
+  "oa_field": "Earth and Planetary Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Reducing Immunogenicity by Design: Approaches to Minimize Immunogenicity of Monoclonal Antibodies",
+  "title_norm": "reducing immunogenicity by design approaches to minimize immunogenicity of monoc",
+  "abstract": "Monoclonal antibodies (mAbs) have transformed therapeutic strategies for various diseases. Their high specificity to target antigens makes them ideal therapeutic agents for certain diseases. However, a challenge to their application in clinical practice is their potential risk to induce unwanted immune response, termed immunogenicity. This challenge drives the continued efforts to deimmunize these protein therapeutics while maintaining their pharmacokinetic properties and therapeutic efficacy. Because mAbs hold a central position in therapeutic strategies against an array of diseases, the importance of conducting comprehensive immunogenicity risk assessment during the drug development process cannot be overstated. Such assessment necessitates the employment of in silico, in vitro, and in vivo strategies to evaluate the immunogenicity risk of mAbs. Understanding the intricacies of the mechanisms that drive mAb immunogenicity is crucial to improving their therapeutic efficacy and safety and developing the most effective strategies to determine and mitigate their immunogenic risk. This review highlights recent advances in immunogenicity prediction strategies, with a focus on protein engineering strategies used throughout development to reduce immunogenicity.",
+  "year": 2024,
+  "venue": "BioDrugs",
+  "authors": [
+   "Chantal T. Harris",
+   "Sivan Cohen"
+  ],
+  "citations": 122,
+  "source": "openalex",
+  "source_id": "W4391145040",
+  "doi": "10.1007/s40259-023-00641-2",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s40259-023-00641-2.pdf",
+  "published_iso": "2024-01-23",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Pseudo Features-Guided Self-Training for Domain Adaptive Semantic Segmentation of Satellite Images",
+  "title_norm": "pseudo features guided self training for domain adaptive semantic segmentation o",
+  "abstract": "Semantic segmentation is a fundamental and crucial task that is of great importance to real-world satellite image-based applications. Yet a widely acknowledged issue that occurs when applying the semantic segmentation models to unseen scenery is that the model will perform much poorer than when it was applied to scenery similar to the training data. This phenomenon is usually termed as the domain shift problem. To tackle it, this article presents a self-training-based unsupervised domain adaptation (UDA) method. Different from the previous self-training approaches which focus on rectifying and improving the quality of the pseudo labels, we instead seek to exploit feature-level relation among neighboring pixels to structure and regularize the prediction of the adapted model. Based on the assumption that spatial topological relation is maintained despite the impact of the domain shift, we propose a novel self-training mechanism to perform DA by exploiting local relation in the feature space spanned by the teacher model, from which the pseudo labels are generated. Quantitative experiments on four different public benchmarks demonstrate that the proposed method can outperform the other UDA methods. Besides, analytical experiments also intuitively verify the proposed assumption. Codes will be publicly available athttps://github.com/zhu-xlab/PFST.",
+  "year": 2023,
+  "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+  "authors": [
+   "Fahong Zhang",
+   "Yilei Shi",
+   "Zhitong Xiong",
+   "Wei Huang",
+   "Xiao Xiang Zhu"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4378908320",
+  "doi": "10.1109/tgrs.2023.3281503",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/36/10006360/10141556.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Fractional Clique Collocation Technique for Numerical Simulations of Fractional-Order Brusselator Chemical Model",
+  "title_norm": "fractional clique collocation technique for numerical simulations of fractional ",
+  "abstract": "The primary focus of this research study is in the development of an effective hybrid matrix method to solve a class of nonlinear systems of equations of fractional order arising in the modeling of autocatalytic chemical reaction problems. The fractional operator is considered in the sense of Liouville–Caputo. The proposed approach relies on the combination of the quasi-linearization technique and the spectral collocation strategy based on generalized clique bases. The main feature of the hybrid approach is that it converts the governing nonlinear fractional-order systems into a linear algebraic system of equations, which is solved in each iteration. In a weighted L2 norm, we prove the error and convergence analysis of the proposed algorithm. By using various model parameters in the numerical examples, we show the computational efficacy as well as the accuracy of our approach. Comparisons with existing available schemes show the high accuracy and robustness of the designed hybrid matrix collocation technique.",
+  "year": 2022,
+  "venue": "Axioms",
+  "authors": [
+   "Mohammad Izadi",
+   "H. M. Srivastava"
+  ],
+  "citations": 30,
+  "source": "openalex",
+  "source_id": "W4309737137",
+  "doi": "10.3390/axioms11110654",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-1680/11/11/654/pdf?version=1670981839",
+  "published_iso": "2022-11-18",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Terahertz Nonlinear Ghost Imaging via Plane Decomposition: Toward Near-Field Micro-Volumetry",
+  "title_norm": "terahertz nonlinear ghost imaging via plane decomposition toward near field micr",
+  "abstract": "Terahertz time-domain imaging targets the reconstruction of the full electromagnetic morphology of an object. In this spectral range, the near-field propagation strongly affects the information in the space-time domain in items with microscopic features. While this often represents a challenge, as the information needs to be disentangled to obtain high image fidelity, here, we show that such a phenomenon can enable three-dimensional microscopy. Specifically, we investigate the capability of the time-resolved nonlinear ghost imaging methodology to implement field-sensitive micro-volumetry by plane decomposition. We leverage the temporally resolved, field-sensitive detection to \"refocus\" an image plane at an arbitrary distance from the source, which defines the near-field condition, and within a microscopic sample. Since space-time coupling rapidly evolves and diffuses within subwavelength length scales, our technique can separate and discriminate the information originating from different planes at different depths. Our approach is particularly suitable for objects with sparse micrometric details. Building upon this principle, we demonstrate complex, time-domain volumetry resolving internal object planes with subwavelength resolution, discussing the range of applicability of our technique.",
+  "year": 2023,
+  "venue": "ACS Photonics",
+  "authors": [
+   "Luana Olivieri",
+   "Luke Peters",
+   "Vittorio Cecconi",
+   "Antonio Cutrona",
+   "Maxwell Rowley",
+   "Juan Sebastian Totero Gongora"
+  ],
+  "citations": 51,
+  "source": "openalex",
+  "source_id": "W4323824510",
+  "doi": "10.1021/acsphotonics.2c01727",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.2c01727",
+  "published_iso": "2023-03-10",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "ResMorCNN Model: Hyperspectral Images Classification Using Residual-Injection Morphological Features and 3DCNN Layers",
+  "title_norm": "resmorcnn model hyperspectral images classification using residual injection mor",
+  "abstract": "Hyperspectral imagery is widely used for analyzing substances and objects, specifically focusing on their classification. The advancement of processing capabilities and the emergence of cloud computing platforms have made deep learning (DL) models increasingly popular for accurately and efficiently hyperspectral images (HSI) classification. In addition, utilizing image-processing techniques that employ specific mathematical operations for feature extraction and noise reduction further improves the precision of HSI classification. This study introduces the ResMorCNN model, which utilizes 3-D convolutional layers and morphology mathematics to extract structural information, shapes, and interregional interactions from HSIs. These features are then incorporated into the model's layers using residual connections. This approach significantly enhances the classification accuracy of datasets with different characteristics. In fact, the proposed model achieves an average accuracy higher than the top-performing DL method in a competition. To evaluate the overall effectiveness of the proposed method, it was tested on four distinct and comprehensive datasets, Indian Pines, Pavia University, Houston University, and Salinas. These datasets were carefully selected, taking into account factors such as scale, dispersion, and sample size. The overall accuracy results obtained for each evaluated dataset were 97.81%, 99.33%, 98.67%, and 99.71%, respectively. This demonstrates an average improvement of 3.37% compared to the results of the best-performing method. The results demonstrate the effectiveness of the proposed ResMorCNN model for various applications that require accurate and efficient classification of HSI.",
+  "year": 2023,
+  "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+  "authors": [
+   "Mohammad Esmaeili",
+   "Dariush Abbasi‐Moghadam",
+   "Alireza Sharifi",
+   "Aqil Tariq",
+   "Qingting Li"
+  ],
+  "citations": 116,
+  "source": "openalex",
+  "source_id": "W4388104185",
+  "doi": "10.1109/jstars.2023.3328389",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/4609443/10330207/10301532.pdf",
+  "published_iso": "2023-10-30",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "ProDepth: Boosting Self-supervised Multi-frame Monocular Depth with Probabilistic Fusion",
+  "title_norm": "prodepth boosting self supervised multi frame monocular depth with probabilistic",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Sungmin Woo",
+   "Won Joon Lee",
+   "Woo Jin Kim",
+   "Dogyoon Lee",
+   "Sangyoun Lee"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4403844112",
+  "doi": "10.1007/978-3-031-72646-0_12",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4403844112",
+  "published_iso": "2024-10-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Stage-Parallel Implicit Runge–Kutta Methods Via Low-Rank Matrix Equation Corrections",
+  "title_norm": "stage parallel implicit runge kutta methods via low rank matrix equation correct",
+  "abstract": "Abstract Implicit Runge–Kutta (IRK) methods are highly effective for solving stiff ordinary differential equations (ODEs) but can be computationally expensive for large-scale problems due to the need of solving coupled algebraic equations at each step. This study improves IRK efficiency by leveraging parallelism to decouple stage computations and reduce communication overhead, specifically we stably decouple a perturbed version of the stage system of equations and recover the exact solution by solving a Sylvester matrix equation with an explicitly known low-rank right-hand side. Two IRK families—symmetric methods and collocation methods—are analyzed, with extensions to nonlinear problems using a simplified Newton method. Implementation details, shared memory parallel code, and numerical examples, particularly for ODEs from spatially discretized PDEs, demonstrate the efficiency of the proposed IRK technique.",
+  "year": 2026,
+  "venue": "Journal of Scientific Computing",
+  "authors": [
+   "Fabio Durastante",
+   "Mariarosa Mazza"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7130397787",
+  "doi": "10.1007/s10915-026-03185-z",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10915-026-03185-z.pdf",
+  "published_iso": "2026-02-18",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "TimeMixer: Decomposable Multiscale Mixing for Time Series Forecasting",
+  "title_norm": "timemixer decomposable multiscale mixing for time series forecasting",
+  "abstract": "Time series forecasting is widely used in extensive applications, such as traffic planning and weather forecasting. However, real-world time series usually present intricate temporal variations, making forecasting extremely challenging. Going beyond the mainstream paradigms of plain decomposition and multiperiodicity analysis, we analyze temporal variations in a novel view of multiscale-mixing, which is based on an intuitive but important observation that time series present distinct patterns in different sampling scales. The microscopic and the macroscopic information are reflected in fine and coarse scales respectively, and thereby complex variations can be inherently disentangled. Based on this observation, we propose TimeMixer as a fully MLP-based architecture with Past-Decomposable-Mixing (PDM) and Future-Multipredictor-Mixing (FMM) blocks to take full advantage of disentangled multiscale series in both past extraction and future prediction phases. Concretely, PDM applies the decomposition to multiscale series and further mixes the decomposed seasonal and trend components in fine-to-coarse and coarse-to-fine directions separately, which successively aggregates the microscopic seasonal and macroscopic trend information. FMM further ensembles multiple predictors to utilize complementary forecasting capabilities in multiscale observations. Consequently, TimeMixer is able to achieve consistent state-of-the-art performances in both long-term and short-term forecasting tasks with favorable run-time efficiency.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Shiyu Wang",
+   "Haixu Wu",
+   "Xiaoming Shi",
+   "Tengge Hu",
+   "Huakun Luo",
+   "Lintao Ma"
+  ],
+  "citations": 90,
+  "source": "openalex",
+  "source_id": "W4398836644",
+  "doi": "10.48550/arxiv.2405.14616",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2405.14616",
+  "published_iso": "2024-05-23",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Pathway decisions for reuse and recycling of retired lithium-ion batteries considering economic and environmental functions",
+  "title_norm": "pathway decisions for reuse and recycling of retired lithium ion batteries consi",
+  "abstract": "Reuse and recycling of retired electric vehicle (EV) batteries offer a sustainable waste management approach but face decision-making challenges. Based on the process-based life cycle assessment method, we present a strategy to optimize pathways of retired battery treatments economically and environmentally. The strategy is applied to various reuse scenarios with capacity configurations, including energy storage systems, communication base stations, and low-speed vehicles. Hydrometallurgical, pyrometallurgical, and direct recycling considering battery residual values are evaluated at the end-of-life stage. For the optimized pathway, lithium iron phosphate (LFP) batteries improve profits by 58% and reduce emissions by 18% compared to hydrometallurgical recycling without reuse. Lithium nickel manganese cobalt oxide (NMC) batteries boost profit by 19% and reduce emissions by 18%. Despite NMC batteries exhibiting higher immediate recycling returns, LFP batteries provide superior long-term benefits through reuse before recycling. Our strategy features an accessible evaluation framework for pinpointing optimal pathways of retired EV batteries. Reuse and recycling of retired electric vehicle batteries offer sustainable waste management but face decision challenges. Ma et al. present a strategy with an accessible economic and environmental evaluation framework for treating these batteries.",
+  "year": 2024,
+  "venue": "Nature Communications",
+  "authors": [
+   "Ruifei Ma",
+   "Shengyu Tao",
+   "Xin Sun",
+   "Yifang Ren",
+   "Chongbo Sun",
+   "Guanjun Ji"
+  ],
+  "citations": 211,
+  "source": "openalex",
+  "source_id": "W4402125701",
+  "doi": "10.1038/s41467-024-52030-0",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-024-52030-0.pdf",
+  "published_iso": "2024-09-02",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Dual Adaptive Representation Alignment for Cross-Domain Few-Shot Learning",
+  "title_norm": "dual adaptive representation alignment for cross domain few shot learning",
+  "abstract": "Few-shot learning aims to recognize novel queries with limited support samples by learning from base knowledge. Recent progress in this setting assumes that the base knowledge and novel query samples are distributed in the same domains, which are usually infeasible for realistic applications. Toward this issue, we propose to address the cross-domain few-shot learning problem where only extremely few samples are available in target domains. Under this realistic setting, we focus on the fast adaptation capability of meta-learners by proposing an effective dual adaptive representation alignment approach. In our approach, a prototypical feature alignment is first proposed to recalibrate support instances as prototypes and reproject these prototypes with a differentiable closed-form solution. Therefore feature spaces of learned knowledge can be adaptively transformed to query spaces by the cross-instance and cross-prototype relations. Besides the feature alignment, we further present a normalized distribution alignment module, which exploits prior statistics of query samples for solving the covariant shifts among the support and query samples. With these two modules, a progressive meta-learning framework is constructed to perform the fast adaptation with extremely few-shot samples while maintaining its generalization capabilities. Experimental evidence demonstrates our approach achieves new state-of-the-art results on 4 CDFSL benchmarks and 4 fine-grained cross-domain benchmarks.",
+  "year": 2023,
+  "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+  "authors": [
+   "Yifan Zhao",
+   "Tong Zhang",
+   "Jia Li",
+   "Yonghong Tian"
+  ],
+  "citations": 57,
+  "source": "openalex",
+  "source_id": "W4367834670",
+  "doi": "10.1109/tpami.2023.3272697",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2306.10511",
+  "published_iso": "2023-05-03",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "An Eighth-Stage Implicit Runge-Kutta Type Scheme for First-Order Ordinary Differential Equations",
+  "title_norm": "an eighth stage implicit runge kutta type scheme for first order ordinary differ",
+  "abstract": "We develop an eighth-stage implicit Runge-Kutta (EIRK) type scheme for solving first-order initial-value problems (IVPs) in ordinary differential equations (ODEs). Through the multistep collocation approach, we obtain a one-step continuous hybrid solution, which is evaluated at certain points of interest to generate seven discrete schemes that are used to formulate a block hybrid method. The resultant block method is then reformulated into the new EIRK scheme. Analysis of the basic properties of the novel EIRK indicates that the method is of order eight, hence consistent, indicating an improvement over methods of lower orders, leading to better accuracy. Furthermore, linear stability analysis reveals that this method is A-stable, as such is a viable candidate for stiff IVPs. The numerical examples considered using the EIRK show that this proposed method yielded smaller absolute errors, implying better accuracy, as the tables reveal when compared with similar existing methods in the literature, hence should be preferred for such a class of problems",
+  "year": 2025,
+  "venue": "International Journal of Development Mathematics (IJDM)",
+  "authors": [
+   "Solomon O. Adee",
+   "Mohd. Sahar Yahya",
+   "Briskila Yari"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4411764528",
+  "doi": "10.62054/ijdm/0202.04",
+  "arxiv_id": null,
+  "paper_url": "https://ijdm.org.ng/index.php/Journals/article/download/199/180",
+  "published_iso": "2025-06-29",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "STD: A Seasonal-Trend-Dispersion Decomposition of Time Series",
+  "title_norm": "std a seasonal trend dispersion decomposition of time series",
+  "abstract": "The decomposition of a time series is an essential task that helps to understand its very nature. It facilitates the analysis and forecasting of complex time series expressing various hidden components such as the trend, seasonal components, cyclic components and irregular fluctuations. Therefore, it is crucial in many fields for forecasting and decision-making processes. In recent years, many methods of time series decomposition have been developed, which extract and reveal different time series properties. Unfortunately, they neglect a very important property, i.e., time series variance. To deal with heteroscedasticity in time series, the method proposed in this work – a seasonal-trend-dispersion decomposition (STD) – extracts the trend, seasonal component and component related to the dispersion of the time series. We define STD decomposition in two ways: with and without an irregular component. We show how STD can be used for time series analysis and forecasting.",
+  "year": 2023,
+  "venue": "IEEE Transactions on Knowledge and Data Engineering",
+  "authors": [
+   "Grzegorz Dudek"
+  ],
+  "citations": 86,
+  "source": "openalex",
+  "source_id": "W4366448064",
+  "doi": "10.1109/tkde.2023.3268125",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/69/4358933/10105521.pdf",
+  "published_iso": "2023-04-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "The giant diploid faba genome unlocks variation in a global protein crop",
+  "title_norm": "the giant diploid faba genome unlocks variation in a global protein crop",
+  "abstract": "Abstract Increasing the proportion of locally produced plant protein in currently meat-rich diets could substantially reduce greenhouse gas emissions and loss of biodiversity 1 . However, plant protein production is hampered by the lack of a cool-season legume equivalent to soybean in agronomic value 2 . Faba bean ( Vicia faba L.) has a high yield potential and is well suited for cultivation in temperate regions, but genomic resources are scarce. Here, we report a high-quality chromosome-scale assembly of the faba bean genome and show that it has expanded to a massive 13 Gb in size through an imbalance between the rates of amplification and elimination of retrotransposons and satellite repeats. Genes and recombination events are evenly dispersed across chromosomes and the gene space is remarkably compact considering the genome size, although with substantial copy number variation driven by tandem duplication. Demonstrating practical application of the genome sequence, we develop a targeted genotyping assay and use high-resolution genome-wide association analysis to dissect the genetic basis of seed size and hilum colour. The resources presented constitute a genomics-based breeding platform for faba bean, enabling breeders and geneticists to accelerate the improvement of sustainable protein production across the Mediterranean, subtropical and northern temperate agroecological zones.",
+  "year": 2023,
+  "venue": "Nature",
+  "authors": [
+   "Murukarthick Jayakodi",
+   "Agnieszka A. Golicz",
+   "Jonathan Kreplak",
+   "Lavinia Ioana Fechete",
+   "Deepti Angra",
+   "Petr Bednář"
+  ],
+  "citations": 172,
+  "source": "openalex",
+  "source_id": "W4323543028",
+  "doi": "10.1038/s41586-023-05791-5",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41586-023-05791-5.pdf",
+  "published_iso": "2023-03-08",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Towards Federated Learning against Noisy Labels via Local Self-Regularization",
+  "title_norm": "towards federated learning against noisy labels via local self regularization",
+  "abstract": "Federated learning (FL) aims to learn joint knowledge from a large scale of decentralized devices with labeled data in a privacy-preserving manner. However, data with noisy labels are ubiquitous in reality since high-quality labeled data require expensive human efforts, which cause severe performance degradation. Although a lot of methods are proposed to directly deal with noisy labels, these methods either require excessive computation overhead or violate the privacy protection principle of FL. To this end, we focus on this issue in FL with the purpose of alleviating performance degradation yielded by noisy labels meanwhile guaranteeing data privacy. Specifically, we propose a Local Self-Regularization method, which effectively regularizes the local training process via implicitly hindering the model from memorizing noisy labels and explicitly narrowing the model output discrepancy between original and augmented instances using self distillation. Experimental results demonstrate that our proposed method can achieve notable resistance against noisy labels in various noise levels on three benchmark datasets. In addition, we integrate our method with existing state-of-the-arts and achieve superior performance on the real-world dataset Clothing1M.The code is available at https://github.com/Sprinter1999.",
+  "year": 2022,
+  "venue": "Proceedings of the 31st ACM International Conference on Information &amp; Knowledge Management",
+  "authors": [
+   "Xuefeng Jiang",
+   "Sheng Sun",
+   "Yuwei Wang",
+   "Min Liu"
+  ],
+  "citations": 60,
+  "source": "openalex",
+  "source_id": "W4293791267",
+  "doi": "10.1145/3511808.3557475",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3511808.3557475",
+  "published_iso": "2022-10-16",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Calculation of Four-Dimensional Unsteady Gas Flow via Different Quadrature Schemes and Runge-Kutta 4th Order Method",
+  "title_norm": "calculation of four dimensional unsteady gas flow via different quadrature schem",
+  "abstract": "In this study, a (3+1) dimensional unstable gas flow system is applied and solved successfully via differential quadrature techniques based on various shape functions. The governing system of nonlinear four-dimensional unsteady Navier–Stokes equations of gas dynamics is reduced to the system of nonlinear ordinary differential equations using different quadrature techniques. Then, Runge-Kutta 4th order method is employed to solve the resulting system of equations. To obtain the solution of this equation, a MATLAB code is designed. The validity of these techniques is achieved by the comparison with the exact solution where the error reach to $≤ 1×10^{−5}.$ Also, these solutions are discussed by seven various statistical analysis. Then, a parametric analysis is presented to discuss the effect of adiabatic index parameter on the velocity, pressure, and density profiles. From these computations, it is found that Discrete singular convolution based on Regularized Shannon kernels is a stable, efficient numerical technique and its strength has been appeared in this application. Also, this technique can be able to solve higher dimensional nonlinear problems in various regions of physical and numerical sciences.",
+  "year": 2023,
+  "venue": "Advances in Applied Mathematics and Mechanics",
+  "authors": [
+   "Mohamed Salah",
+   "M. S. Matbuly",
+   "Ömer Cívalek",
+   "Ola Ragb"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4386442890",
+  "doi": "10.4208/aamm.oa-2021-0373",
+  "arxiv_id": null,
+  "paper_url": "https://global-sci.org/intro/online/preview?online_id=2060&pdf=https://doc.global-sci.org/uploads/admin/article_pdf/20230905/aa2ceb3336263f502b7687e588ed9e97.pdf",
+  "published_iso": "2023-09-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Multiscale Space-Time Ansatz for Correlation Functions of Quantum Systems Based on Quantics Tensor Trains",
+  "title_norm": "multiscale space time ansatz for correlation functions of quantum systems based ",
+  "abstract": "The correlation functions of quantum systems—central objects in quantum field theories—are defined in high-dimensional space-time domains. Their numerical treatment thus suffers from the curse of dimensionality, which hinders the application of sophisticated many-body theories to interesting problems. Here, we propose a multiscale space-time ansatz for correlation functions of quantum systems based on quantics tensor trains (QTTs), “qubits” describing exponentially different length scales. The ansatz then assumes a separation of length scales by decomposing the resulting high-dimensional tensors into tensor trains (also known as matrix product states). We numerically verify the ansatz for various equilibrium and nonequilibrium systems and demonstrate compression ratios of several orders of magnitude for challenging cases. Essential building blocks of diagrammatic equations, such as convolutions or Fourier transforms, are formulated in the compressed form. We numerically demonstrate the stability and efficiency of the proposed methods for the Dyson and Bethe-Salpeter equations. The QTT representation provides a unified framework for implementing efficient computations of quantum field theories.",
+  "year": 2023,
+  "venue": "Physical Review X",
+  "authors": [
+   "Hiroshi Shinaoka",
+   "Markus Wallerberger",
+   "Yuta Murakami",
+   "Kosuke Nogaki",
+   "Rihito Sakurai",
+   "Philipp Werner"
+  ],
+  "citations": 51,
+  "source": "openalex",
+  "source_id": "W4367179339",
+  "doi": "10.1103/physrevx.13.021015",
+  "arxiv_id": null,
+  "paper_url": "http://link.aps.org/pdf/10.1103/PhysRevX.13.021015",
+  "published_iso": "2023-04-27",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Identifying behavioral structure from deep variational embeddings of animal motion",
+  "title_norm": "identifying behavioral structure from deep variational embeddings of animal moti",
+  "abstract": "Quantification and detection of the hierarchical organization of behavior is a major challenge in neuroscience. Recent advances in markerless pose estimation enable the visualization of high-dimensional spatiotemporal behavioral dynamics of animal motion. However, robust and reliable technical approaches are needed to uncover underlying structure in these data and to segment behavior into discrete hierarchically organized motifs. Here, we present an unsupervised probabilistic deep learning framework that identifies behavioral structure from deep variational embeddings of animal motion (VAME). By using a mouse model of beta amyloidosis as a use case, we show that VAME not only identifies discrete behavioral motifs, but also captures a hierarchical representation of the motif's usage. The approach allows for the grouping of motifs into communities and the detection of differences in community-specific motif usage of individual mouse cohorts that were undetectable by human visual observation. Thus, we present a robust approach for the segmentation of animal motion that is applicable to a wide range of experimental setups, models and conditions without requiring supervised or a-priori human interference.",
+  "year": 2022,
+  "venue": "Communications Biology",
+  "authors": [
+   "Kevin Luxem",
+   "Petra Mocellin",
+   "Falko Fuhrmann",
+   "Johannes Kürsch",
+   "Stephanie R. Miller",
+   "Jorge J. Palop"
+  ],
+  "citations": 171,
+  "source": "openalex",
+  "source_id": "W4309473115",
+  "doi": "10.1038/s42003-022-04080-7",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s42003-022-04080-7.pdf",
+  "published_iso": "2022-11-18",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Loss Functions and Metrics in Deep Learning",
+  "title_norm": "loss functions and metrics in deep learning",
+  "abstract": "This paper presents a comprehensive review of loss functions and performance metrics in deep learning, highlighting key developments and practical insights across diverse application areas. We begin by outlining fundamental considerations in classic tasks such as regression and classification, then extend our analysis to specialized domains like computer vision and natural language processing including retrieval-augmented generation. In each setting, we systematically examine how different loss functions and evaluation metrics can be paired to address task-specific challenges such as class imbalance, outliers, and sequence-level optimization. Key contributions of this work include: (1) a unified framework for understanding how losses and metrics align with different learning objectives, (2) an in-depth discussion of multi-loss setups that balance competing goals, and (3) new insights into specialized metrics used to evaluate modern applications like retrieval-augmented generation, where faithfulness and context relevance are pivotal. Along the way, we highlight best practices for selecting or combining losses and metrics based on empirical behaviors and domain constraints. Finally, we identify open problems and promising directions, including the automation of loss-function search and the development of robust, interpretable evaluation measures for increasingly complex deep learning tasks. Our review aims to equip researchers and practitioners with clearer guidance in designing effective training pipelines and reliable model assessments for a wide spectrum of real-world applications.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Juan Terven",
+   "Diana‐Margarita Córdova‐Esparza",
+   "Ramirez-Pedraza, Alfonso",
+   "Edgar Arturo Chávez‐Urbiola",
+   "Romero-Gonzalez, Julio A."
+  ],
+  "citations": 43,
+  "source": "openalex",
+  "source_id": "W4383604608",
+  "doi": "10.48550/arxiv.2307.02694",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2307.02694",
+  "published_iso": "2023-07-05",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Implicit and semi-implicit well-balanced finite-volume methods for systems of balance laws",
+  "title_norm": "implicit and semi implicit well balanced finite volume methods for systems of ba",
+  "abstract": "The aim of this work is to design implicit and semi-implicit high-order well-balanced finite-volume numerical methods for 1D systems of balance laws. The strategy introduced by two of the authors in some previous papers for explicit schemes based on the application of a well-balanced reconstruction operator is applied. The well-balanced property is preserved when quadrature formulas are used to approximate the averages and the integral of the source term in the cells. Concerning the time evolution, this technique is combined with a time discretization method of type RK-IMEX or RK-implicit. The methodology will be applied to several systems of balance laws.",
+  "year": 2022,
+  "venue": "Applied Numerical Mathematics",
+  "authors": [
+   "Irene Gómez-Bueno",
+   "Sebastiano Boscarino",
+   "Manuel J. Castro",
+   "Carlos Parés",
+   "Giovanni Russo"
+  ],
+  "citations": 23,
+  "source": "openalex",
+  "source_id": "W4298149851",
+  "doi": "10.1016/j.apnum.2022.09.016",
+  "arxiv_id": null,
+  "paper_url": "https://www.sciencedirect.com/science/article/pii/S0168927422002562/pdf",
+  "published_iso": "2022-09-30",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "2D Off-Grid Decomposition and SBL Combination for OTFS Channel Estimation",
+  "title_norm": "2d off grid decomposition and sbl combination for otfs channel estimation",
+  "abstract": "Orthogonal time-frequency space (OTFS) is a promising technique for high mobility wireless communications, as it approaches a sparse representation of doubly-selective fading channel and can obtain delay-Doppler (DD) diversity gain. However, in practical OTFS systems, fractional channel parameter is a great challenge and will seriously deteriorates the sparsity and the performance of channel estimation. In this paper, we propose a novel channel estimation scheme for doubly selective channel in the presence of both fractional Doppler and fractional delay. First, we analyze the input-output relationship of single-input single-output (SISO) OTFS system based on the integer sampling DD grid, then extend it to the fractional DD grid. Compared with the integer DD domain, the model in the fractional DD domain is sparser and more accurate. Based on our analysis, two kinds of off-grid models, i.e., doubly fractional model and mixed one- and two-dimensional (1&2D) fractional models are proposed and compared. The mixed 1&2D fractional model has an advantage of low complexity, but encounters a tandem off-grid distortion. To tackle this distortion problem, as well as to balance the accuracy and the computational workload, a novel two dimensional off-grid decomposition and combination scheme is proposed based on the doubly and mixed 1&2D fractional model. Simulation results demonstrate the effectiveness and superiority of the proposed channel estimation schemes, compared with the existing work for OTFS systems under doubly selective channels.",
+  "year": 2022,
+  "venue": "IEEE Transactions on Wireless Communications",
+  "authors": [
+   "Qianli Wang",
+   "Yu Liang",
+   "Zhengquan Zhang",
+   "Pingzhi Fan"
+  ],
+  "citations": 66,
+  "source": "openalex",
+  "source_id": "W4312992516",
+  "doi": "10.1109/twc.2022.3215991",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4312992516",
+  "published_iso": "2022-11-04",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Surface chemical polishing and passivation minimize non-radiative recombination for all-perovskite tandem solar cells",
+  "title_norm": "surface chemical polishing and passivation minimize non radiative recombination ",
+  "abstract": "All-perovskite tandem solar cells have shown great promise in breaking the Shockley–Queisser limit of single-junction solar cells. However, the efficiency improvement of all-perovskite tandem solar cells is largely hindered by the surface defects induced non-radiative recombination loss in Sn–Pb mixed narrow bandgap perovskite films. Here, we report a surface reconstruction strategy utilizing a surface polishing agent, 1,4-butanediamine, together with a surface passivator, ethylenediammonium diiodide, to eliminate Sn-related defects and passivate organic cation and halide vacancy defects on the surface of Sn–Pb mixed perovskite films. Our strategy not only delivers high-quality Sn–Pb mixed perovskite films with a close-to-ideal stoichiometric ratio surface but also minimizes the non-radiative energy loss at the perovskite/electron transport layer interface. As a result, our Sn–Pb mixed perovskite solar cells with bandgaps of 1.32 and 1.25 eV realize power conversion efficiencies of 22.65% and 23.32%, respectively. Additionally, we further obtain a certified power conversion efficiency of 28.49% of two-junction all-perovskite tandem solar cells. The efficiency of all-perovskite tandem solar cells is impacted by the nonradiative recombination loss in Sn–Pb mixed narrow bandgap perovskite films. Here, the authors utilize a surface polishing agent with surface passivator to deliver films with a close-to-ideal stoichiometric ratio surface.",
+  "year": 2024,
+  "venue": "Nature Communications",
+  "authors": [
+   "Yongyan Pan",
+   "Jianan Wang",
+   "Zhenxing Sun",
+   "Jiaqi Zhang",
+   "Zheng Zhou",
+   "Chenyang Shi"
+  ],
+  "citations": 154,
+  "source": "openalex",
+  "source_id": "W4401882708",
+  "doi": "10.1038/s41467-024-51703-0",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-024-51703-0.pdf",
+  "published_iso": "2024-08-26",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Adaptive Popularity Debiasing Aggregator for Graph Collaborative Filtering",
+  "title_norm": "adaptive popularity debiasing aggregator for graph collaborative filtering",
+  "abstract": "The graph neural network-based collaborative filtering (CF) models user-item interactions as a bipartite graph and performs iterative aggregation to enhance performance. Unfortunately, the aggregation process may amplify the popularity bias, which impedes user engagement with niche (unpopular) items. While some efforts have studied the popularity bias in CF, they often focus on modifying loss functions, which can not fully address the popularity bias in GNN-based CF models. This is because the debiasing loss can be falsely backpropagated to non-target nodes during the backward pass of the aggregation.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Huachi Zhou",
+   "Hao Chen",
+   "Junnan Dong",
+   "Daochen Zha",
+   "C. E. Zhou",
+   "Xiao Huang"
+  ],
+  "citations": 27,
+  "source": "openalex",
+  "source_id": "W4384642367",
+  "doi": "10.1145/3539618.3591635",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3539618.3591635",
+  "published_iso": "2023-07-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Novel High-Order Mass- and Energy-Conservative Runge-Kutta Integrators for the Regularized Logarithmic Schrödinger Equation",
+  "title_norm": "novel high order mass and energy conservative runge kutta integrators for the re",
+  "abstract": "We develop a class of conservative integrators for the regularized logarithmic Schrdinger equation (RLogSE) using the quadratization technique and symplectic Runge-Kutta schemes. To preserve the highly nonlinear energy functional, the regularized equation is first transformed into an equivalent system that admits two quadratic invariants by adopting the invariant energy quadratization approach. The reformulation is then discretized using the Fourier pseudo-spectral method in the space direction, and integrated in the time direction by a class of diagonally implicit Runge-Kutta schemes that conserve both quadratic invariants to round-off errors. For comparison purposes, a class of multi-symplectic integrators are developed for RLogSE to conserve the multi-symplectic conservation law and global mass conservation law in the discrete level. Numerical experiments illustrate the convergence, efficiency, and conservative properties of the proposed methods.",
+  "year": 2023,
+  "venue": "Numerical Mathematics Theory Methods and Applications",
+  "authors": [
+   "Qian Xu",
+   "Hong Zhang",
+   "Jingye Yan null",
+   "Songhe Song"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4387337630",
+  "doi": "10.4208/nmtma.oa-2022-0185",
+  "arxiv_id": null,
+  "paper_url": "https://global-sci.org/intro/online/preview?online_id=2086&pdf=https://doc.global-sci.org/uploads/admin/article_pdf/20231004/4218eb1c39619a32185f320c7ace4580.pdf",
+  "published_iso": "2023-06-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Non-intrusive residential electricity load decomposition via low-resource model transferring",
+  "title_norm": "non intrusive residential electricity load decomposition via low resource model ",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Journal of Building Engineering",
+  "authors": [
+   "Lin Lin",
+   "Jiancheng Shi",
+   "Changwen Ma",
+   "Shi Zuo",
+   "Jie Zhang",
+   "Cheng Chen"
+  ],
+  "citations": 57,
+  "source": "openalex",
+  "source_id": "W4375851241",
+  "doi": "10.1016/j.jobe.2023.106799",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4375851241",
+  "published_iso": "2023-05-08",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Machine learning in point-of-care testing: innovations, challenges, and opportunities",
+  "title_norm": "machine learning in point of care testing innovations challenges and opportuniti",
+  "abstract": "The landscape of diagnostic testing is undergoing a significant transformation, driven by the integration of artificial intelligence (AI) and machine learning (ML) into decentralized, rapid, and accessible sensor platforms for point-of-care testing (POCT). The COVID-19 pandemic has accelerated the shift from centralized laboratory testing but also catalyzed the development of next-generation POCT platforms that leverage ML to enhance the accuracy, sensitivity, and overall efficiency of point-of-care sensors. This Perspective explores how ML is being embedded into various POCT modalities, including lateral flow assays, vertical flow assays, nucleic acid amplification tests, and imaging-based sensors, illustrating their impact through different applications. We also discuss several challenges, such as regulatory hurdles, reliability, and privacy concerns, that must be overcome for the widespread adoption of ML-enhanced POCT in clinical settings and provide a comprehensive overview of the current state of ML-driven POCT technologies, highlighting their potential impact in the future of healthcare. Recent years have seen an increasing shift from centralized laboratory diagnostics to decentralized point-of-care testing, a shift which has the potential to increase health equity. Here the authors provide their perspective on how the integration of machine learning and artificial intelligence with point-of-care technologies can - and could - support this transition",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "authors": [
+   "Gyeo‐Re Han",
+   "Artem Goncharov",
+   "Merve Eryılmaz",
+   "Shun Ye",
+   "Barath Palanisamy",
+   "Rajesh Ghosh"
+  ],
+  "citations": 211,
+  "source": "openalex",
+  "source_id": "W4409147844",
+  "doi": "10.1038/s41467-025-58527-6",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-025-58527-6.pdf",
+  "published_iso": "2025-04-02",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "DRMSpell: dynamically reweighting multimodality for Chinese spelling correction",
+  "title_norm": "drmspell dynamically reweighting multimodality for chinese spelling correction",
+  "abstract": "Chinese spelling correction (CSC) is a task that aims to detect and correct the spelling errors that may occur in Chinese texts. However, the Chinese language exhibits a high degree of complexity, characterized by the presence of multiple phonetic representations known as pinyin, which possess distinct tonal variations that can correspond to various characters. Given the complexity inherent in the Chinese language, the CSC task becomes imperative for ensuring the accuracy and clarity of written communication. Recent research has included external knowledge into the model using phonological and visual modalities. However, these methods do not effectively target the utilization of modality information to address the different types of errors. In this paper, we propose a multimodal pretrained language model called DRMSpell for CSC, which takes into consideration the interaction between the modalities. A dynamically reweighting multimodality (DRM) module is introduced to reweight various modalities for obtaining more multimodal information. To fully use the multimodal information obtained and to further strengthen the model, an independent-modality masking strategy (IMS) is proposed to independently mask three modalities of a token in the pretraining stage. Our method achieves state-of-the-art performance on most metrics constituting widely used benchmarks. The findings of the experiments demonstrate that our method is capable of modeling the interactive information between modalities and is also robust to incorrect modal information.",
+  "year": 2025,
+  "venue": "Frontiers of Information Technology & Electronic Engineering",
+  "authors": [
+   "Yinghao Li",
+   "Heyan Huang",
+   "Baojun Wang",
+   "Yang Gao"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4409204162",
+  "doi": "10.1631/fitee.2300816",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1631/FITEE.2300816.pdf",
+  "published_iso": "2025-03-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "A-stable optimal hybrid linear multistep formulas in Runge-Kutta form and their application to dynamical systems",
+  "title_norm": "a stable optimal hybrid linear multistep formulas in runge kutta form and their ",
+  "abstract": "A-stable optimal hybrid Linear Multistep Formulas (LMFs) are developed and reformulated as Runge�Kutta-type schemes because of their excellent properties in handling the numerical solution of stiff differentialequations. The LMFs are obtained using collocation and interpolation techniques and are reformulated asRunge-Kutta-type schemes via Butcher tableau. The resulting methods, when analyzed, have algebraic ordersix, and the A-stability characteristics of the proposed schemes are established. Newton’s algorithm wasadopted to handle the implicit nature of the suggested methods. The reformulated schemes are applied toLorenz, Chau, Rossler, and Chen systems and four other standard stiff problems in the cited literature. Acomparative study between the new method and the Dormand Prince scheme, popularly called ode45 inMatrix Laboratory (MatLab), is presented. The experiments demonstrate the latest methods’ performance,indicating their potential for high accuracy and competitiveness with other established codes.",
+  "year": 2024,
+  "venue": "Journal of Mathematical Analysis and Modeling",
+  "authors": [
+   "B. T. Olabode",
+   "Lukuman Momoh"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416929929",
+  "doi": "10.48185/jmam.v5i2.1111",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416929929",
+  "published_iso": "2024-06-28",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis",
+  "title_norm": "timesnet temporal 2d variation modeling for general time series analysis",
+  "abstract": "Time series analysis is of immense importance in extensive applications, such as weather forecasting, anomaly detection, and action recognition. This paper focuses on temporal variation modeling, which is the common key problem of extensive analysis tasks. Previous methods attempt to accomplish this directly from the 1D time series, which is extremely challenging due to the intricate temporal patterns. Based on the observation of multi-periodicity in time series, we ravel out the complex temporal variations into the multiple intraperiod- and interperiod-variations. To tackle the limitations of 1D time series in representation capability, we extend the analysis of temporal variations into the 2D space by transforming the 1D time series into a set of 2D tensors based on multiple periods. This transformation can embed the intraperiod- and interperiod-variations into the columns and rows of the 2D tensors respectively, making the 2D-variations to be easily modeled by 2D kernels. Technically, we propose the TimesNet with TimesBlock as a task-general backbone for time series analysis. TimesBlock can discover the multi-periodicity adaptively and extract the complex temporal variations from transformed 2D tensors by a parameter-efficient inception block. Our proposed TimesNet achieves consistent state-of-the-art in five mainstream time series analysis tasks, including short- and long-term forecasting, imputation, classification, and anomaly detection. Code is available at this repository: https://github.com/thuml/TimesNet.",
+  "year": 2022,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Haixu Wu",
+   "Tengge Hu",
+   "Yong Liu",
+   "Hang Zhou",
+   "Jianmin Wang",
+   "Mingsheng Long"
+  ],
+  "citations": 439,
+  "source": "openalex",
+  "source_id": "W4303438998",
+  "doi": "10.48550/arxiv.2210.02186",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2210.02186",
+  "published_iso": "2022-10-05",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Climate Stress Testing",
+  "title_norm": "climate stress testing",
+  "abstract": "We explore the design of climate stress tests to assess and manage macroprudential risks from climate change in the financial sector. We review the climate stress scenarios currently employed by regulators, highlighting the need to ( a) consider many transition risks as dynamic policy choices, ( b) better understand and incorporate feedback loops between climate change and the economy, and ( c) further explore compound risk scenarios in which climate risks co-occur with other risks. We discuss how the process of mapping climate stress scenarios into financial firm outcomes can incorporate existing evidence on the effects of various climate-related risks on credit and market outcomes. We argue that more research is required to ( a) identify channels through which plausible scenarios can lead to meaningful short-run impact on credit risks given typical bank loan maturities, ( b) incorporate bank-lending responses to climate risks, ( c) assess the adequacy of climate risk pricing in financial markets, and ( d) better understand how market participants form climate risk expectations and how that affects financial stability. Finally, we discuss the advantages and disadvantages of using market-based climate stress tests that can be conducted with publicly available data to complement existing stress-testing frameworks.",
+  "year": 2023,
+  "venue": "Annual Review of Financial Economics",
+  "authors": [
+   "Viral V. Acharya",
+   "Richard Berner",
+   "Robert F. Engle",
+   "Hyeyoon Jung",
+   "Johannes Stroebel",
+   "Xuran Zeng"
+  ],
+  "citations": 130,
+  "source": "openalex",
+  "source_id": "W4387312830",
+  "doi": "10.1146/annurev-financial-110921-101555",
+  "arxiv_id": null,
+  "paper_url": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-financial-110921-101555",
+  "published_iso": "2023-10-03",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Few-Shot Object Detection Based on Contrastive Class-Attention Feature Reweighting for Remote Sensing Images",
+  "title_norm": "few shot object detection based on contrastive class attention feature reweighti",
+  "abstract": "Remote sensing image object detection with deep neural networks has been highly successful, but it heavily relies on a large number of labeled samples for optimal performance. Unfortunately, when faced with limited labeled samples, the performance of object detection deteriorates. In order to overcome these limitations, we propose a few-shot object detection (FSOD) method based on the reweighting of contrastive class-attention features for remote sensing images. A Siamese representation embedding model based on contrastive learning with a distinguishing operator is proposed to deal with inter-class feature ambiguity between base classes and novel classes under complex backgrounds. At the same time, the attention class weights method on Region of Interest (ROI) features is utilized to boost the discrimination of the novel class features. We conducted comprehensive experiments on two widely used remote sensing object detection datasets, RSOD and DIOR. The proposed FSOD model demonstrated superior performance compared to MM-RCNN, achieving an improvement of approximately 4.7% in terms of mAP on the DIOR dataset. Additionally, in comparison to SAAN, the FSOD model exhibited an improvement of approximately 3.4% in mAP on the RSOD dataset.",
+  "year": 2023,
+  "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+  "authors": [
+   "Miao Wang",
+   "Zihao Zhao",
+   "Jie Geng",
+   "Wen Jiang"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4390284877",
+  "doi": "10.1109/jstars.2023.3347561",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/4609443/4609444/10375080.pdf",
+  "published_iso": "2023-12-27",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "High order linearly implicit methods for semilinear evolution PDEs",
+  "title_norm": "high order linearly implicit methods for semilinear evolution pdes",
+  "abstract": "This paper considers the numerical integration of semilinear evolution PDEs using the high order linearly implicit methods developped in a previous paper in the ODE setting. These methods use a collocation Runge--Kutta method as a basis, and additional variables that are updated explicitly and make the implicit part of the collocation Runge--Kutta method only linearly implicit. In this paper, we introduce several notions of stability for the underlying Runge--Kutta methods as well as for the explicit step on the additional variables necessary to fit the context of evolution PDE. We prove a main theorem about the high order of convergence of these linearly implicit methods in this PDE setting, using the stability hypotheses introduced before. We use nonlinear Schr\\''odinger equations and heat equations as main examples but our results extend beyond these two classes of evolution PDEs. We illustrate our main result numerically in dimensions 1 and 2, and we compare the efficiency of the linearly implicit methods with other methods from the litterature. We also illustrate numerically the necessity of the stability conditions of our main result.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Guillaume Dujardin",
+   "Ingrid Lacroix–Violet"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4324105799",
+  "doi": "10.48550/arxiv.2303.05823",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2303.05823",
+  "published_iso": "2023-03-10",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Decomposition of Monolith Applications Into Microservices Architectures: A Systematic Review",
+  "title_norm": "decomposition of monolith applications into microservices architectures a system",
+  "abstract": "Microservices architecture has gained significant traction, in part owing to its potential to deliver scalable, robust, agile, and failure-resilient software products. Consequently, many companies that use large and complex software systems are actively looking for automated solutions to decompose their monolith applications into microservices. This paper rigorously examines 35 research papers selected from well-known databases using a Systematic Literature Review (SLR) protocol and snowballing method, extracting data to answer the research questions, and presents the following four contributions. First, the Monolith to Microservices Decomposition Framework (M2MDF) which identifies the major phases and key elements of decomposition. Second, a detailed analysis of existing decomposition approaches, tools and methods. Third, we identify the metrics and datasets used to evaluate and validate monolith to microservice decomposition processes. Fourth, we propose areas for future research. Overall, the findings suggest that monolith decomposition into microservices remains at an early stage and there is an absence of methods for combining static, dynamic, and evolutionary data. Insufficient tool support is also in evidence. Furthermore, standardised metrics, datasets, and baselines have yet to be established. These findings can assist practitioners seeking to understand the various dimensions of monolith decomposition and the community's current capabilities in that endeavour. The findings are also of value to researchers looking to identify areas to further extend research in the monolith decomposition space.",
+  "year": 2023,
+  "venue": "IEEE Transactions on Software Engineering",
+  "authors": [
+   "Yalemisew Abgaz",
+   "Andrew McCarren",
+   "Peter Elger",
+   "David Solan",
+   "Neil Lapuz",
+   "Marin Bivol"
+  ],
+  "citations": 131,
+  "source": "openalex",
+  "source_id": "W4381803634",
+  "doi": "10.1109/tse.2023.3287297",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/32/4359463/10160171.pdf",
+  "published_iso": "2023-06-23",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "A novel Swin transformer approach utilizing residual multi-layer perceptron for diagnosing brain tumors in MRI images",
+  "title_norm": "a novel swin transformer approach utilizing residual multi layer perceptron for ",
+  "abstract": "Abstract Serious consequences due to brain tumors necessitate a timely and accurate diagnosis. However, obstacles such as suboptimal imaging quality, issues with data integrity, varying tumor types and stages, and potential errors in interpretation hinder the achievement of precise and prompt diagnoses. The rapid identification of brain tumors plays a pivotal role in ensuring patient safety. Deep learning-based systems hold promise in aiding radiologists to make diagnoses swiftly and accurately. In this study, we present an advanced deep learning approach based on the Swin Transformer. The proposed method introduces a novel Hybrid Shifted Windows Multi-Head Self-Attention module (HSW-MSA) along with a rescaled model. This enhancement aims to improve classification accuracy, reduce memory usage, and simplify training complexity. The Residual-based MLP (ResMLP) replaces the traditional MLP in the Swin Transformer, thereby improving accuracy, training speed, and parameter efficiency. We evaluate the Proposed-Swin model on a publicly available brain MRI dataset with four classes, using only test data. Model performance is enhanced through the application of transfer learning and data augmentation techniques for efficient and robust training. The Proposed-Swin model achieves a remarkable accuracy of 99.92%, surpassing previous research and deep learning models. This underscores the effectiveness of the Swin Transformer with HSW-MSA and ResMLP improvements in brain tumor diagnosis. This method introduces an innovative diagnostic approach using HSW-MSA and ResMLP in the Swin Transformer, offering potential support to radiologists in timely and accurate brain tumor diagnosis, ultimately improving patient outcomes and reducing risks.",
+  "year": 2024,
+  "venue": "International Journal of Machine Learning and Cybernetics",
+  "authors": [
+   "İshak Paçal"
+  ],
+  "citations": 122,
+  "source": "openalex",
+  "source_id": "W4392465065",
+  "doi": "10.1007/s13042-024-02110-w",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s13042-024-02110-w.pdf",
+  "published_iso": "2024-03-05",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "The Liver Tumor Segmentation Benchmark (LiTS)",
+  "title_norm": "the liver tumor segmentation benchmark lits",
+  "abstract": "In this work, we report the set-up and results of the Liver Tumor Segmentation Benchmark (LiTS), which was organized in conjunction with the IEEE International Symposium on Biomedical Imaging (ISBI) 2017 and the International Conferences on Medical Image Computing and Computer-Assisted Intervention (MICCAI) 2017 and 2018. The image dataset is diverse and contains primary and secondary tumors with varied sizes and appearances with various lesion-to-background levels (hyper-/hypo-dense), created in collaboration with seven hospitals and research institutions. Seventy-five submitted liver and liver tumor segmentation algorithms were trained on a set of 131 computed tomography (CT) volumes and were tested on 70 unseen test images acquired from different patients. We found that not a single algorithm performed best for both liver and liver tumors in the three events. The best liver segmentation algorithm achieved a Dice score of 0.963, whereas, for tumor segmentation, the best algorithms achieved Dices scores of 0.674 (ISBI 2017), 0.702 (MICCAI 2017), and 0.739 (MICCAI 2018). Retrospectively, we performed additional analysis on liver tumor detection and revealed that not all top-performing segmentation algorithms worked well for tumor detection. The best liver tumor detection method achieved a lesion-wise recall of 0.458 (ISBI 2017), 0.515 (MICCAI 2017), and 0.554 (MICCAI 2018), indicating the need for further research. LiTS remains an active benchmark and resource for research, e.g., contributing the liver-related segmentation tasks in http://medicaldecathlon.com/. In addition, both data and online evaluation are accessible via https://competitions.codalab.org/competitions/17094.",
+  "year": 2022,
+  "venue": "Medical Image Analysis",
+  "authors": [
+   "Patrick Bilic",
+   "Patrick Ferdinand Christ",
+   "Hongwei Li",
+   "Eugene Vorontsov",
+   "Avi Ben-Cohen",
+   "Georgios Kaissis"
+  ],
+  "citations": 1206,
+  "source": "openalex",
+  "source_id": "W2910094941",
+  "doi": "10.1016/j.media.2022.102680",
+  "arxiv_id": null,
+  "paper_url": "https://linkinghub.elsevier.com/science/article/pii/S1361841522003085/pdfft?md5=42606dbee21641af7f9e50655c0fdff2&pid=1-s2.0-S1361841522003085-main.pdf",
+  "published_iso": "2022-11-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Discontinuous Galerkin and Related Methods for ODE",
+  "title_norm": "discontinuous galerkin and related methods for ode",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Journal of Scientific Computing",
+  "authors": [
+   "H. T. Huynh"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4382283899",
+  "doi": "10.1007/s10915-023-02233-2",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4382283899",
+  "published_iso": "2023-06-27",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Physics-informed neural networks with domain decomposition for the incompressible Navier–Stokes equations",
+  "title_norm": "physics informed neural networks with domain decomposition for the incompressibl",
+  "abstract": "Physics-informed neural network (PINN) has emerged as a promising approach for solving differential equations in recent years. However, their application to large-scale complex problems has faced challenges regarding accuracy and efficiency. To address these limitations, domain decomposition has gained popularity as an effective strategy. This paper studies a domain decomposition PINN method for solving incompressible Navier–Stokes equations. We assess the method's predicted accuracy, convergence, and the impact of different strategies on performance. In the domain decomposition PINN method, individual PINN is employed for each subdomain to compute local solutions, which are seamlessly connected by enforcing additional continuity conditions at the interfaces. To improve the method's performance, we investigate various continuity conditions at the interfaces and analyze their influence on the predictive accuracy and interface continuity. Furthermore, we introduce two approaches: the dynamic weight method and a novel neural network architecture incorporating attention mechanisms, both aimed at mitigating gradient pathologies commonly encountered in PINN methods. To demonstrate the effectiveness of the proposed method, we apply it to a range of forward and inverse problems involving diverse incompressible Navier–Stokes flow scenarios. This includes solving benchmark problems such as the two-dimensional (2D) Kovasznay flow, the three-dimensional (3D) Beltrami flow, the 2D lid-driven cavity flow, and the 2D cylinder wake. Additionally, we conduct 3D blood flow simulations for synthetic flow geometries and real blood vessels. The experimental results demonstrate the capability and versatility of the domain decomposition PINN method in accurately solving incompressible Navier–Stokes flow problems.",
+  "year": 2024,
+  "venue": "Physics of Fluids",
+  "authors": [
+   "Linyan Gu",
+   "Shanlin Qin",
+   "Lei Xu",
+   "Rongliang Chen"
+  ],
+  "citations": 54,
+  "source": "openalex",
+  "source_id": "W4392246147",
+  "doi": "10.1063/5.0188830",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.aip.org/aip/pof/article-pdf/doi/10.1063/5.0188830/19699194/021914_1_5.0188830.pdf",
+  "published_iso": "2024-02-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Few-Shot Object Detection via Variational Feature Aggregation",
+  "title_norm": "few shot object detection via variational feature aggregation",
+  "abstract": "As few-shot object detectors are often trained with abundant base samples and fine-tuned on few-shot novel examples, the learned models are usually biased to base classes and sensitive to the variance of novel examples. To address this issue, we propose a meta-learning framework with two novel feature aggregation schemes. More precisely, we first present a Class-Agnostic Aggregation (CAA) method, where the query and support features can be aggregated regardless of their categories. The interactions between different classes encourage class-agnostic representations and reduce confusion between base and novel classes. Based on the CAA, we then propose a Variational Feature Aggregation (VFA) method, which encodes support examples into class-level support features for robust feature aggregation. We use a variational autoencoder to estimate class distributions and sample variational features from distributions that are more robust to the variance of support examples. Besides, we decouple classification and regression tasks so that VFA is performed on the classification branch without affecting object localization. Extensive experiments on PASCAL VOC and COCO demonstrate that our method significantly outperforms a strong baseline (up to 16%) and previous state-of-the-art methods (4% in average).",
+  "year": 2023,
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "authors": [
+   "Jiaming Han",
+   "Yuqiang Ren",
+   "Jian Ding",
+   "Ke Yan",
+   "Gui-Song Xia"
+  ],
+  "citations": 134,
+  "source": "openalex",
+  "source_id": "W4382466690",
+  "doi": "10.1609/aaai.v37i1.25153",
+  "arxiv_id": null,
+  "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/download/25153/24925",
+  "published_iso": "2023-06-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "TFNet: Transformer-Based Multi-Scale Feature Fusion Forest Fire Image Detection Network",
+  "title_norm": "tfnet transformer based multi scale feature fusion forest fire image detection n",
+  "abstract": "Forest fires pose a severe threat to ecological environments and the safety of human lives and property, making real-time forest fire monitoring crucial. This study addresses challenges in forest fire image object detection, including small fire targets, sparse smoke, and difficulties in feature extraction, by proposing TFNet, a Transformer-based multi-scale feature fusion detection network. TFNet integrates several components: SRModule, CG-MSFF Encoder, Decoder and Head, and WIOU Loss. The SRModule employs a multi-branch structure to learn diverse feature representations of forest fire images, utilizing 1 × 1 convolutions to generate redundant feature maps and enhance feature diversity. The CG-MSFF Encoder introduces a context-guided attention mechanism combined with adaptive feature fusion (AFF), enabling effective multi-scale feature fusion by reweighting features across layers and extracting both local and global representations. The Decoder and Head refine the output by iteratively optimizing target queries using self- and cross-attention, improving detection accuracy. Additionally, the WIOU Loss assigns varying weights to the IoU metric for predicted versus ground truth boxes, thereby balancing positive and negative samples and improving localization accuracy. Experimental results on two publicly available datasets, D-Fire and M4SFWD, demonstrate that TFNet outperforms comparative models in terms of precision, recall, F1-Score, mAP50, and mAP50–95. Specifically, on the D-Fire dataset, TFNet achieved metrics of 81.6% precision, 74.8% recall, an F1-Score of 78.1%, mAP50 of 81.2%, and mAP50–95 of 46.8%. On the M4SFWD dataset, these metrics improved to 86.6% precision, 83.3% recall, an F1-Score of 84.9%, mAP50 of 89.2%, and mAP50–95 of 52.2%. The proposed TFNet offers technical support for developing efficient and practical forest fire monitoring systems.",
+  "year": 2025,
+  "venue": "Fire",
+  "authors": [
+   "Hongying Liu",
+   "Fuquan Zhang",
+   "Yiqing Xu",
+   "Junling Wang",
+   "Hong Lu",
+   "Wei Wei"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4406985121",
+  "doi": "10.3390/fire8020059",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4406985121",
+  "published_iso": "2025-01-30",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "Stability of Spectral Collocation Schemes with Explicit-Implicit-Null Time-Marching for Convection-Diffusion and Convection-Dispersion Equations",
+  "title_norm": "stability of spectral collocation schemes with explicit implicit null time march",
+  "abstract": "In this paper, we discuss the Fourier collocation and Chebyshev collocation schemes coupled with two specific high order explicit-implicit-null (EIN) time-marching methods for solving the convection-diffusion and convection-dispersion equations. The basic idea of the EIN method discussed in this paper is to add and subtract an appropriate large linear highest derivative term on one side of the considered equation, and then apply the implicit-explicit time-marching method to the equivalent equation. The EIN method so designed does not need any nonlinear iterative solver, and the severe time step restriction for explicit methods can be removed. We give stability analysis for the proposed EIN Fourier collocation schemes on simplified linear equations by the aid of the Fourier method. We show rigorously that the resulting schemes are stable with particular emphasis on the use of large time steps if appropriate stabilization parameters are chosen. Even though the analysis is only performed on the EIN Fourier collocation schemes, numerical results show that the stability criteria can also be extended to the EIN Chebyshev collocation schemes. Numerical experiments are given to demonstrate the stability, accuracy and performance of the EIN schemes for both one-dimensional and two-dimensional linear and nonlinear equations.",
+  "year": 2023,
+  "venue": "East Asian Journal on Applied Mathematics",
+  "authors": [
+   "Meiqi Tan",
+   "Juan Cheng Juan Cheng",
+   "Chi‐Wang Shu"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4362736653",
+  "doi": "10.4208/eajam.2022-271.090123",
+  "arxiv_id": null,
+  "paper_url": "https://global-sci.org/intro/article_detail/auth/21719.html",
+  "published_iso": "2023-04-09",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "A Data Science Platform to Enable Time-domain Astronomy",
+  "title_norm": "a data science platform to enable time domain astronomy",
+  "abstract": "Abstract SkyPortal is an open-source software package designed to discover interesting transients efficiently, manage follow-up, perform characterization, and visualize the results. By enabling fast access to archival and catalog data, crossmatching heterogeneous data streams, and the triggering and monitoring of on-demand observations for further characterization, a SkyPortal -based platform has been operating at scale for &gt;2 yr for the Zwicky Transient Facility Phase II community, with hundreds of users, containing tens of millions of time-domain sources, interacting with dozens of telescopes, and enabling community reporting. While SkyPortal emphasizes rich user experiences across common front-end workflows, recognizing that scientific inquiry is increasingly performed programmatically, SkyPortal also surfaces an extensive and well-documented application programming interface system. From back-end and front-end software to data science analysis tools and visualization frameworks, the SkyPortal design emphasizes the reuse and leveraging of best-in-class approaches, with a strong extensibility ethos. For instance, SkyPortal now leverages ChatGPT large language models to generate and surface source-level human-readable summaries automatically. With the imminent restart of the next generation of gravitational-wave detectors, SkyPortal now also includes dedicated multimessenger features addressing the requirements of rapid multimessenger follow-up: multitelescope management, team/group organizing interfaces, and crossmatching of multimessenger data streams with time-domain optical surveys, with interfaces sufficiently intuitive for newcomers to the field. This paper focuses on the detailed implementations, capabilities, and early science results that establish SkyPortal as a community software package ready to take on the data science challenges and opportunities presented by this next chapter in the multimessenger era.",
+  "year": 2023,
+  "venue": "The Astrophysical Journal Supplement Series",
+  "authors": [
+   "M. W. Coughlin",
+   "J. S. Bloom",
+   "Guy Nir",
+   "S. Antier",
+   "Theophile Jegou du Laz",
+   "Stéfan van der Walt"
+  ],
+  "citations": 87,
+  "source": "openalex",
+  "source_id": "W4376125561",
+  "doi": "10.3847/1538-4365/acdee1",
+  "arxiv_id": null,
+  "paper_url": "https://iopscience.iop.org/article/10.3847/1538-4365/acdee1/pdf",
+  "published_iso": "2023-07-31",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "A Review of Magnetic Flux Leakage Nondestructive Testing",
+  "title_norm": "a review of magnetic flux leakage nondestructive testing",
+  "abstract": "Magnetic flux leakage (MFL) testing is a widely used nondestructive testing (NDT) method for the inspection of ferromagnetic materials. This review paper presents the basic principles of MFL testing and summarizes the recent advances in MFL. An analytical expression for the leakage magnetic field based on the 3D magnetic dipole model is provided. Based on the model, the effects of defect size, defect orientation, and liftoff distance have been analyzed. Other influencing factors, such as magnetization strength, testing speed, surface roughness, and stress, have also been introduced. As the most important steps of MFL, the excitation method (a permanent magnet, DC, AC, pulsed) and sensing methods (Hall element, GMR, TMR, etc.), have been introduced in detail. Finally, the algorithms for the quantification of defects and the applications of MFL have been introduced.",
+  "year": 2022,
+  "venue": "Materials",
+  "authors": [
+   "Bo Feng",
+   "Jianbo Wu",
+   "Hongming Tu",
+   "Jian Tang",
+   "Yihua Kang"
+  ],
+  "citations": 159,
+  "source": "openalex",
+  "source_id": "W4306951134",
+  "doi": "10.3390/ma15207362",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1996-1944/15/20/7362/pdf?version=1666678321",
+  "published_iso": "2022-10-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "DGRec: Graph Neural Network for Recommendation with Diversified Embedding Generation",
+  "title_norm": "dgrec graph neural network for recommendation with diversified embedding generat",
+  "abstract": "Graph Neural Network (GNN) based recommender systems have been attracting more and more attention in recent years due to their excellent performance in accuracy. Representing user-item interactions as a bipartite graph, a GNN model generates user and item representations by aggregating embeddings of their neighbors. However, such an aggregation procedure often accumulates information purely based on the graph structure, overlooking the redundancy of the aggregated neighbors and resulting in poor diversity of the recommended list. In this paper, we propose diversifying GNN-based recommender systems by directly improving the embedding generation procedure. Particularly, we utilize the following three modules: submodular neighbor selection to find a subset of diverse neighbors to aggregate for each GNN node, layer attention to assign attention weights for each layer, and loss reweighting to focus on the learning of items belonging to long-tail categories. Blending the three modules into GNN, we present DGRec (Diversified GNN-based Recommender System) for diversified recommendation. Experiments on real-world datasets demonstrate that the proposed method can achieve the best diversity while keeping the accuracy comparable to state-of-the-art GNN-based recommender systems. We open source DGRec at https://github.com/YangLiangwei/DGRec.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Liangwei Yang",
+   "Shengjie Wang",
+   "Yunzhe Tao",
+   "Jiankai Sun",
+   "Xiaolong Liu",
+   "Philip S. Yu"
+  ],
+  "citations": 131,
+  "source": "openalex",
+  "source_id": "W4309795480",
+  "doi": "10.1145/3539597.3570472",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3539597.3570472",
+  "published_iso": "2023-02-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "A new continuous hybrid block method with one optimal intrastep point through interpolation and collocation",
+  "title_norm": "a new continuous hybrid block method with one optimal intrastep point through in",
+  "abstract": "Abstract Implicit block approaches are used by a number of numerical analyzers to model mild, medium, and hard differential systems. Their excellent stability characteristics, self-starting nature, quick convergence, and large decrease in computing cost all contribute to their widespread application. With these numerical benefits in mind, a new one-step implicit block method with three intrastep grid points has been created. The major term of the local truncation error is minimized to determine which of these points is optimal. The reformulation of the suggested technique leads to a significant decrease in computing cost while maintaining the same consistency, zero-stability, $\\mathcal{A}$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mi>A</mml:mi> </mml:math> -stability, and convergence. Several sorts of error are calculated, together with CPU time and efficiency plot, to determine which is superior. Differential models from the fields of heat transfer, population dynamics, and chemical engineering show that the suggested method does a better job than some of the current hybrid block and implicit Radau methods with similar properties.",
+  "year": 2022,
+  "venue": "Fixed Point Theory and Algorithms for Sciences and Engineering",
+  "authors": [
+   "Asifa Tassaddiq",
+   "Sania Qureshi",
+   "Amanullah Soomro",
+   "Evren Hınçal",
+   "Asif Ali Shaikh"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4308894000",
+  "doi": "10.1186/s13663-022-00733-8",
+  "arxiv_id": null,
+  "paper_url": "https://fixedpointtheoryandalgorithms.springeropen.com/counter/pdf/10.1186/s13663-022-00733-8",
+  "published_iso": "2022-11-14",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ },
+ {
+  "title": "Machine learning and domain decomposition methods - a survey",
+  "title_norm": "machine learning and domain decomposition methods a survey",
+  "abstract": "Abstract Hybrid algorithms, which combine black-box machine learning methods with experience from traditional numerical methods and domain expertise from diverse application areas, are progressively gaining importance in scientific machine learning and various industrial domains, especially in computational science and engineering. In the present survey, several promising avenues of research will be examined which focus on the combination of machine learning (ML) and domain decomposition methods (DDMs). The aim of this survey is to provide an overview of existing work within this field and to structure it into domain decomposition for machine learning and machine learning-enhanced domain decomposition, including: domain decomposition for classical machine learning, domain decomposition to accelerate the training of physics-aware neural networks, machine learning to enhance the convergence properties or computational efficiency of DDMs, and machine learning as a discretization method in a DDM for the solution of PDEs. In each of these fields, we summarize existing work and key advances within a common framework and, finally, discuss ongoing challenges and opportunities for future research.",
+  "year": 2024,
+  "venue": "Computational Science and Engineering",
+  "authors": [
+   "Axel Klawonn",
+   "Martin Lanser",
+   "Janine Weber"
+  ],
+  "citations": 35,
+  "source": "openalex",
+  "source_id": "W4402773124",
+  "doi": "10.1007/s44207-024-00003-y",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s44207-024-00003-y.pdf",
+  "published_iso": "2024-09-23",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "space-time domain decomposition"
+  ]
+ },
+ {
+  "title": "Adaptive Deep Fourier Residual method via overlapping domain decomposition",
+  "title_norm": "adaptive deep fourier residual method via overlapping domain decomposition",
+  "abstract": "The Deep Fourier Residual (DFR) method is a specific type of variational physics-informed neural network (VPINN). It provides a robust neural network-based solution to partial differential equations (PDEs). The DFR strategy is based on minimizing the dual norm of the weak residual of a PDE, which is equivalent to minimizing the energy norm of the error. To compute the dual norm of the weak residual, the DFR method employs an orthonormal spectral basis of the test space, known for rectangles or cuboids for multiple function spaces. In this work, we extend the DFR method with ideas of traditional domain decomposition (DD). This enables two improvements: (a) to solve problems in more general polygonal domains and (b) to develop an adaptive refinement technique in the test space using a Döfler marking algorithm. In the former case, we retain the desirable equivalence between the employed loss function and the H1 error under non-restrictive assumptions, numerically demonstrating adherence to explicit bounds in the case of the L-shaped domain problem. In the latter, we show how refinement strategies lead to potentially significant improvements against a reference, classical DFR implementation with a test function space of significantly lower dimensionality, allowing us to better approximate singular solutions at a more reasonable computational cost.",
+  "year": 2024,
+  "venue": "Computer Methods in Applied Mechanics and Engineering",
+  "authors": [
+   "Jamie M. Taylor",
+   "Manuela Bastidas Olivares",
+   "Victor M. Calo",
+   "David Pardo"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4396216597",
+  "doi": "10.1016/j.cma.2024.116997",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4396216597",
+  "published_iso": "2024-04-29",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "variational test-function residual minimization"
+  ]
+ },
+ {
+  "title": "Bridging the Sim2Real gap with CARE: Supervised Detection Adaptation with Conditional Alignment and Reweighting",
+  "title_norm": "bridging the sim2real gap with care supervised detection adaptation with conditi",
+  "abstract": "Sim2Real domain adaptation (DA) research focuses on the constrained setting of adapting from a labeled synthetic source domain to an unlabeled or sparsely labeled real target domain. However, for high-stakes applications (e.g. autonomous driving), it is common to have a modest amount of human-labeled real data in addition to plentiful auto-labeled source data (e.g. from a driving simulator). We study this setting of supervised sim2real DA applied to 2D object detection. We propose Domain Translation via Conditional Alignment and Reweighting (CARE) a novel algorithm that systematically exploits target labels to explicitly close the sim2real appearance and content gaps. We present an analytical justification of our algorithm and demonstrate strong gains over competing methods on standard benchmarks.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Viraj Prabhu",
+   "David Acuna",
+   "Andrew Liao",
+   "Rafid Mahmood",
+   "Marc T. Law",
+   "Judy Hoffman"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4320343031",
+  "doi": "10.48550/arxiv.2302.04832",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2302.04832",
+  "published_iso": "2023-02-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "self-adaptive loss reweighting"
+  ]
+ },
+ {
+  "title": "<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" altimg=\"si1.svg\"><mml:mover accent=\"true\"><mml:mrow><mml:mi>A</mml:mi></mml:mrow><mml:mrow><mml:mo stretchy=\"false\">ˆ</mml:mo></mml:mrow></mml:mover></mml:math>- and <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" altimg=\"si168.svg\"><mml:mover accent=\"true\"><mml:mrow><mml:mi>I</mml:mi></mml:mrow><mml:mrow><mml:mo stretchy=\"false\">ˆ</mml:mo></mml:mrow></mml:mover></mml:math>-stability of Runge–Kutta collocation methods",
+  "title_norm": "mml math xmlns mml http www w3 org 1998 math mathml altimg si1 svg mml mover acc",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Applied Numerical Mathematics",
+  "authors": [
+   "Guillaume Dujardin",
+   "Ingrid Lacroix–Violet"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4396856498",
+  "doi": "10.1016/j.apnum.2024.05.007",
+  "arxiv_id": null,
+  "paper_url": "https://inria.hal.science/hal-04074151/document",
+  "published_iso": "2024-05-13",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "implicit Runge Kutta collocation"
+  ]
+ }
+]

@@ -1,0 +1,65 @@
+{
+  "actual_budget": {
+    "cases": 0,
+    "time_steps_per_completed_case": 494,
+    "wall_seconds": 0.13999999999941792
+  },
+  "artifacts": {
+    "intent": "docs\\experiment\\intents\\20260821T082444Z-pilot-r4-dynamic-order-signal-001.json",
+    "run_root": "outputs\\runs\\20260821T082444Z-pilot-r4-dynamic-order-signal-001",
+    "summary": "outputs\\runs\\20260821T082444Z-pilot-r4-dynamic-order-signal-001\\summary.json"
+  },
+  "case_id": "qpop-r4-v1-fixed-three-case-gate",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "INDEPENDENT_NUMERICAL_ORACLE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_REDUCED_ORACLE_DEVELOPMENT",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.dynamic_order_oracle_runner",
+    "signal"
+  ],
+  "ended_at": "2026-08-21T08:25:17.795849Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1"
+  },
+  "evaluator_id": "qpop-r4-v1-event-diagnostic-v1",
+  "evidence_identity": "QPOP_R4_V1_DYNAMIC_ORDER_REDUCED_SYNTHETIC_ORACLE",
+  "execution_status": "FAILED",
+  "experiment_group_id": "qpop-r4-v1-dynamic-order-reduced-oracle",
+  "failure_class": "RuntimeError",
+  "gate": "R4-S1",
+  "gate_outcome": "R4_EXECUTION_FAILED",
+  "method_id": "qpop-r4-v1-dynamic-order-signal",
+  "numerical_validity": "NOT_EVALUATED",
+  "physical_contract_id": "qpop-r4-v1",
+  "planned_budget": {
+    "cases": 3,
+    "grid": [
+      50,
+      20
+    ],
+    "time_steps_per_case": 494,
+    "wall_minutes": 30
+  },
+  "replay_of": null,
+  "route_disposition": "R4_NO_SIGNAL",
+  "run_id": "20260821T082444Z-pilot-r4-dynamic-order-signal-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "qpop-r4-v1-development-fixed-three-case-gate-v1",
+  "started_at": "2026-08-21T08:25:17.666524Z",
+  "supersedes": null,
+  "tier": "pilot"
+}

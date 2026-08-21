@@ -1,0 +1,7 @@
+interface:
+  display_name: "ResearchStudio Scoop Check"
+  short_description: "Explicit-only, project-gated novelty collision check"
+  default_prompt: "Use $scoop-check only after active_phase.md explicitly authorizes novelty checking."
+
+policy:
+  allow_implicit_invocation: false

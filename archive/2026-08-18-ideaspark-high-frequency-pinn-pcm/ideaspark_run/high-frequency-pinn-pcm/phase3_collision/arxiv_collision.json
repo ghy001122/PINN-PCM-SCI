@@ -1,0 +1,688 @@
+[
+ {
+  "title": "Collocation-based Robust Physics Informed Neural Networks for time-dependent simulations of pollution propagation under thermal inversion conditions on Spitsbergen",
+  "title_norm": "collocation based robust physics informed neural networks for time dependent sim",
+  "abstract": "In this paper, we propose a Physics-Informed Neural Network framework for time-dependent simulations of pollution propagation originating from moving emission sources. We formulate a robust variational framework for the time-dependent advection-diffusion problem and establish the boundedness and inf-sup stability of the corresponding discrete weak formulation. Based on this mathematical foundation, we construct a robust loss function that is directly related to the true approximation error, defined as the difference between the neural network approximation and the (unknown) exact solution. Additionally, a collocation-based strategy is introduced to speed up neural network training. As a case study, we investigate pollution propagation caused by snowmobile traffic in Longyearbyen, Spitsbergen, supported by detailed in-field measurements collected using dedicated sensors. The proposed framework is applied to analyze the effects of thermal inversion on pollutant accumulation. Our results demonstrate that thermal inversion traps dense and humid air masses near the ground, significantly enhancing particulate matter (PM) concentration and worsening local air quality.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Leszek Siwik",
+   "Maciej Sikora",
+   "Natalia Leszczyńska",
+   "Tomasz Maciej Ciesielski",
+   "Eirik Valseth",
+   "Manuela Bastidas Olivares",
+   "Marcin Łoś",
+   "Tomasz Służalec",
+   "Jacek Leszczyński",
+   "Maciej Paszyński"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.23003v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.23003v1",
+  "published_iso": "2026-04-24T20:48:23Z",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Enhancing PINN Accuracy for the RLW Equation: Adaptive and Conservative Approaches",
+  "title_norm": "enhancing pinn accuracy for the rlw equation adaptive and conservative approache",
+  "abstract": "Standard physics-informed neural network implementations have produced large error rates when using these models to solve the regularized long wave (RLW) equation. Two improved PINN approaches were developed in this research: an adaptive approach with self-adaptive loss weighting and a conservative approach enforcing explicit conservation laws. Three benchmark tests were used to demonstrate how effective PINN's are as they relate to the type of problem being solved (i.e., time dependent RLW equation). The first was a single soliton traveling along a line (propagation), the second was the interaction between two solitons, and the third was the evolution of an undular bore over the course of $t=250$. The results demonstrated that the effectiveness of PINNs are problem specific. The adaptive PINN was significantly better than both the conservative PINN and the standard PINN at solving problems involving complex nonlinear interactions such as colliding two solitons. The conservative approach was significantly better at solving problems involving long term behavior of single solitons and undular bores. However, the most important finding from this research is that explicitly enforcing conservation laws may be harmful to optimizing the solution of highly nonlinear systems of equations and therefore requires special training methods. The results from our adaptive and conservative approaches were within $O(10^{-5})$ of established numerical solutions for the same problem, thus demonstrating that PINNs can provide accurate solutions to complex systems of partial differential equations without the need for a discretization of space or time (mesh free). Moreover, the finding from this research challenges the assumptions that conservation enforcement will always improve the performance of a PINN and provides researchers with guidelines for designing PINNs for use on specific types of problems.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Aamir Shehzad"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2511.11638v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2511.11638v1",
+  "published_iso": "2025-11-08T22:19:41Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Decidability of MSO Reparameterization over Countable Chains",
+  "title_norm": "decidability of mso reparameterization over countable chains",
+  "abstract": "Interpretations are a fundamental tool in mathematical logic, allowing structures to be encoded within other structures via logical definitions. We study $\\MSO$ \\emph{multidimensional point interpretations}, where elements of an interpreted structure are represented by tuples of elements of the host structure, and address the problem of simplifying such interpretations by reducing their representation dimension.\n  To formalize simplification, we use the notion of \\emph{reparameterization}. Our main result shows that, over the class of countable labelled linear orders, it is decidable whether a given $\\MSO$ formula admits a $d$-dimensional reparameterization. As a consequence, every interpretation whose domain admits such a reparameterization is equivalent to a $d$-dimensional point interpretation.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Alexander Rabinovich"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.18248v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.18248v2",
+  "published_iso": "2026-05-18T11:48:23Z",
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "A General Metric-Space Formulation of the Time Warp Edit Distance (TWED)",
+  "title_norm": "a general metric space formulation of the time warp edit distance twed",
+  "abstract": "This short technical note presents a formal generalization of the Time Warp Edit Distance (TWED) proposed by Marteau (2009) to arbitrary metric spaces. By viewing both the observation and temporal domains as metric spaces $(X, d)$ and $(T, Δ)$, we define a Generalized TWED (GTWED) that remains a true metric under mild assumptions. We provide self-contained proofs of its metric properties and show that the classical TWED is recovered as a special case when $X = \\mathbb{R}^d$, $T \\subset \\mathbb{R}$, and $g(x) = x$. This note focuses on the theoretical structure of GTWED and its implications for extending elastic distances beyond time series, which enables the use of TWED-like metrics on sequences over arbitrary domains such as symbolic data, manifolds, or embeddings.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Zhen Yi Lau"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2601.05263v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2601.05263v1",
+  "published_iso": "2025-11-06T13:25:23Z",
+  "from_query": [
+   "VO2 multiphysics time warp"
+  ]
+ },
+ {
+  "title": "Automatic Differentiation from Scratch: How PyTorch Computes Gradients in Physics-Informed Neural Networks",
+  "title_norm": "automatic differentiation from scratch how pytorch computes gradients in physics",
+  "abstract": "This paper traces, with explicit numerical values, how PyTorch's automatic differentiation (AD) engine computes gradients for Physics-Informed Neural Network (PINN) training -- a setting that requires two levels of differentiation: computing the physics derivative $\\hat{y}'(t)=d\\hat{y}/dt$ through the network, and computing parameter gradients $\\nabla_θL$ of a loss that itself depends on $\\hat{y}'(t)$. Using a 1-3-3-1 multilayer perceptron and the initial value problem $y'(t)+y(t)=0$, $y(0)=1$, we trace the complete pipeline at every node: the computational graph built during the forward pass, the reverse-mode backward traversal that computes all 22 parameter gradients in a single pass, and the graph-on-graph mechanism by which \\texttt{create\\_graph=True} enables correct differentiation through the physics-informed residual. Every adjoint value is verified against the hand derivations of Tahimi (2026), connecting the $P/Q$ sensitivity framework to the vector--Jacobian products used by PyTorch's autograd engine.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Abdeladhim Tahimi"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.13042v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.13042v1",
+  "published_iso": "2026-06-13T11:24:13Z",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "LIGO-PINN: Learned Initialization via Gated Optimization to Alleviate Convergence Failures in Physics Informed Neural Networks",
+  "title_norm": "ligo pinn learned initialization via gated optimization to alleviate convergence",
+  "abstract": "Physics-informed neural networks (PINNs) have had a broad research impact in modeling domains governed by partial differential equations (PDE). However, PINNs have been shown to perform poorly, sometimes even converging to trivial solutions, in challenging PDE domains, or when generalizing to unseen but related PDE domains. Previously proposed solutions detail hyperparameter tuning to reduce loss imbalance between data-driven and physics guided losses, curriculum learning based training strategies, or dynamic re-sampling of hard collocation points. These methods face certain pitfalls: hyperparameter tuning is expensive, designing a training curriculum is ambiguous in multi-parameter PDE settings, and dynamic resampling still fails in complex PDE settings. Complementary to this line of thinking, we believe the initial PINN network weights also play a crucial role in the emergence of catastrophic failures during training, yet the effect of PINN weight initialization has been surprisingly under-investigated. To this end, we propose a framework for Learned Initialization via Gated Layerwise Optimization (LIGO-PINN) to overcome PINN convergence failures. Through rigorous evaluation on 1D and 2D PDE domains, including a challenging 2D fluid dynamics setting, we demonstrate that our methodology outperforms state-of-the-art methods designed to alleviate PINN failures, achieving a 91.5% average performance improvement across six baselines and 81% over the strongest baseline. We also verify that LIGO-PINN generalizes to 3D unstructured domains. Finally, we analyze training dynamics across all three PDE domains to explain both LIGO-PINN's improvement and the convergence failure of traditional PINNs. Code: https://github.com/scailab/ligo-pinn\n  Keywords: Machine Learning, Physics-Informed Neural Networks, Deep Learning, PDE Modeling",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Nilay Anurag",
+   "Shital Adhikari",
+   "Taniya Kapoor",
+   "Nikhil Muralidhar"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.14233v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.14233v1",
+  "published_iso": "2026-07-15T18:00:44Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Categorical Reparameterization with Denoising Diffusion models",
+  "title_norm": "categorical reparameterization with denoising diffusion models",
+  "abstract": "Learning models with categorical variables requires optimizing expectations over discrete distributions, a setting in which stochastic gradient-based optimization is challenging due to the non-differentiability of categorical sampling. A common workaround is to replace the discrete distribution with a continuous relaxation, yielding a smooth surrogate that admits reparameterized gradient estimates via the reparameterization trick. Building on this idea, we introduce ReDGE, a novel and efficient diffusion-based soft reparameterization method for categorical distributions. Our approach defines a flexible class of gradient estimators that includes the Straight-Through estimator as a special case. Experiments spanning latent variable models and inference-time reward guidance in discrete diffusion models demonstrate that ReDGE consistently matches or outperforms existing gradient-based methods. The code will be made available at https://github.com/samsongourevitch/redge.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Samson Gourevitch",
+   "Alain Durmus",
+   "Eric Moulines",
+   "Jimmy Olsson",
+   "Yazid Janati"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2601.00781v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2601.00781v2",
+  "published_iso": "2026-01-02T18:30:05Z",
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "WARP: Weight-Space Analysis for Recovering Training Data Portfolios",
+  "title_norm": "warp weight space analysis for recovering training data portfolios",
+  "abstract": "Foundation models are routinely released to the public, yet the data recipes used to train them -- such as domain mixture weights that determine how different sources are sampled -- are rarely disclosed. This creates an access asymmetry: researchers study the resulting models but lack visibility into the training distribution that produces them. Prior works for inferring training data, such as membership inference, detect at the level of individual samples and thus cannot characterize the global composition of the training corpus. We introduce WARP, a framework that recovers a fine-tuned model's training mixtures directly from its released weights. WARP interpolates between the base and fine-tuned models using model merging, generating pseudo-checkpoints that approximate the missing training trajectory and expose a geometric footprint of the training data in the weight space. From these simulated footprints, WARP extracts geometric features and maps them to domain proportions using either a parameter-free softmax readout or an MLP projector trained on synthetic mixtures. In controlled experiments with BERT and GPT-2, WARP recovers domain mixtures with an average MAE as low as 0.046 and 0.104 respectively, outperforming membership inference and a variant with access to the true training trajectory.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Tzu-Heng Huang",
+   "Aditya Goyal",
+   "John Cooper",
+   "Frederic Sala"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2607.01686v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2607.01686v1",
+  "published_iso": "2026-07-02T04:27:45Z",
+  "from_query": [
+   "VO2 multiphysics time warp"
+  ]
+ },
+ {
+  "title": "Physics-Informed Machine Learning for Transformer Condition Monitoring -- Part II: Physics-Informed Neural Networks and Uncertainty Quantification",
+  "title_norm": "physics informed machine learning for transformer condition monitoring part ii p",
+  "abstract": "The integration of physics-based knowledge with machine learning models is increasingly shaping the monitoring, diagnostics, and prognostics of electrical transformers. In this two-part series, the first paper introduced the foundations of Neural Networks (NNs) and their variants for health assessment tasks. This second paper focuses on integrating physics and uncertainty into the learning process. We begin with the fundamentals of Physics-Informed Neural Networks (PINNs), applied to spatiotemporal thermal modeling and solid insulation ageing. Building on this, we present Bayesian PINNs as a principled framework to quantify epistemic uncertainty and deliver robust predictions under sparse data. Finally, we outline emerging research directions that highlight the potential of physics-aware and trustworthy machine learning for critical power assets.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Jose I. Aizpurua"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.22189v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.22189v1",
+  "published_iso": "2025-12-20T10:09:21Z",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Robust Physics Discovery from Highly Corrupted Data: A PINN Framework Applied to the Nonlinear Schrödinger Equation",
+  "title_norm": "robust physics discovery from highly corrupted data a pinn framework applied to ",
+  "abstract": "We demonstrate a deep learning framework capable of recovering physical parameters from the Nonlinear Schrodinger Equation (NLSE) under severe noise conditions. By integrating Physics-Informed Neural Networks (PINNs) with automatic differentiation, we achieve reconstruction of the nonlinear coefficient beta with less than 0.2 percent relative error using only 500 sparse, randomly sampled data points corrupted by 20 percent additive Gaussian noise, a regime where traditional finite difference methods typically fail due to noise amplification in numerical derivatives. We validate the method's generalization capabilities across different physical regimes (beta between 0.5 and 2.0) and varying data availability (between 100 and 1000 training points), demonstrating consistent sub-1 percent accuracy. Statistical analysis over multiple independent runs confirms robustness (standard deviation less than 0.15 percent for beta equals 1.0). The complete pipeline executes in approximately 80 minutes on modest cloud GPU resources (NVIDIA Tesla T4), making the approach accessible for widespread adoption. Our results indicate that physics-based regularization acts as an effective filter against high measurement uncertainty, positioning PINNs as a viable alternative to traditional optimization methods for inverse problems in spatiotemporal dynamics where experimental data is scarce and noisy. All code is made publicly available to facilitate reproducibility.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Pietro de Oliveira Esteves"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2601.04176v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2601.04176v1",
+  "published_iso": "2026-01-07T18:43:11Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Hydrodynamic Switching Fronts Polarize Deformable Particle Trains",
+  "title_norm": "hydrodynamic switching fronts polarize deformable particle trains",
+  "abstract": "We show that propagating switching fronts mediate directional state transmission and polarity selection in a passive many-body suspension. In confined trains of slipper-shaped deformable particles in Poiseuille flow, this behavior originates from directionally biased switching between neighboring particles: owing to the fore-aft asymmetry of the slipper, an upstream particle drives switching of its downstream neighbor more effectively than in the reverse direction. A local transition from an opposite-sign pair to a same-sign pair therefore launches a streamwise front that relays the inclination sign from particle to particle. A minimal coarse-grained model with local bistability and directional coupling captures front propagation and arrest. In periodic trains, the fronts coarsen into a uniformly polarized state, whereas in long open trains they arrest and leave persistent polarized domains. Our results point to local bistability and directional coupling as a route to collective polarization in passive many-body systems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Linzheng Huang",
+   "Hengdi Zhang",
+   "Zaicheng Zhang",
+   "Zaiyi Shen"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.05925v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.05925v1",
+  "published_iso": "2026-04-07T14:27:38Z",
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Warp-as-History: Generalizable Camera-Controlled Video Generation from One Training Video",
+  "title_norm": "warp as history generalizable camera controlled video generation from one traini",
+  "abstract": "Camera-controlled video generation has made substantial progress, enabling generated videos to follow prescribed viewpoint trajectories. However, existing methods usually learn camera-specific conditioning through camera encoders, control branches, or attention and positional-encoding modifications, which often require post-training on large-scale camera-annotated videos. Training-free alternatives avoid such post-training, but often shift the cost to test-time optimization or extra denoising-time guidance. We propose Warp-as-History, a simple interface that turns camera-induced warps into camera-warped pseudo-history with target-frame positional alignment and visible-token selection. Given a target camera trajectory, we construct camera-warped pseudo-history from past observations and feed it through the model's visual-history pathway. Crucially, we align its positional encoding with the target frames being denoised and remove warped-history tokens without valid source observations. Without any training, architectural modification, or test-time optimization, this interface reveals a non-trivial zero-shot capability of a frozen video generation model to follow camera trajectories. Moreover, lightweight offline LoRA finetuning on only one camera-annotated video further improves this capability and generalizes to unseen videos, improving camera adherence, visual quality, and motion dynamics without test-time optimization or target-video adaptation. Extensive experiments on diverse datasets confirm the effectiveness of our method.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yifan Wang",
+   "Tong He"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.15182v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.15182v1",
+  "published_iso": "2026-05-14T17:58:26Z",
+  "from_query": [
+   "VO2 multiphysics time warp"
+  ]
+ },
+ {
+  "title": "CO$_2$ sequestration hybrid solver using isogeometric alternating-directions and collocation-based robust variational physics informed neural networks (IGA-ADS-CRVPINN)",
+  "title_norm": "co _2 sequestration hybrid solver using isogeometric alternating directions and ",
+  "abstract": "This paper presents the hybrid solver for a $CO_2$ sequestration problem. The solver uses the IGA-ADS (IsoGeometric Analysis Alternating Directions solver) to compute the saturation scalar field update using the explicit method, and CRVPINN (Collocation-based Robust Variational Physics Informed Neural Networks solver) to compute the pressure scalar field. The study focuses on simulating the physical behavior of $CO_2$ in porous structures, excluding chemical reactions. The mathematical model is based on Darcy's Law. The CRVPINN is pretrained on the initial pressure configuration, and the time step pressure updates require only 100 iterations of the Adam method per time step. We compare our hybrid IGA-ADS solver, coupled with the CRVPINN method, with a baseline of the IGA-ADS solver coupled with the MUMPS direct solver. Our hybrid solver is over 3 times faster on a single computational node from the ARES cluster of ACK CYFRONET. Future work includes extensive testing, inverse problem solving, and potential application to $H_2$ storage problems.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Askold Vilkha",
+   "Tomasz Służalec",
+   "Marcin Łoś",
+   "Maciej Paszyński"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.20731v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.20731v1",
+  "published_iso": "2026-04-22T16:16:00Z",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "An adaptive wavelet-based PINN for problems with localized high-magnitude source",
+  "title_norm": "an adaptive wavelet based pinn for problems with localized high magnitude source",
+  "abstract": "In recent years, physics-informed neural networks (PINNs) have gained significant attention for solving differential equations, although they suffer from two fundamental limitations, namely, spectral bias inherent in neural networks and loss imbalance arising from multiscale phenomena. This paper proposes an adaptive wavelet-based PINN (AW-PINN) to address the extreme loss imbalance characteristic of problems with localized high-magnitude source terms. Such problems frequently arise in various physical applications, such as thermal processing, electro-magnetics, impact mechanics, and fluid dynamics involving localized forcing. The proposed framework dynamically adjusts the wavelet basis function based on residual and supervised loss. This adaptive nature makes AW-PINN handle problems with high-scale features effectively without being memory-intensive. Additionally, AW-PINN does not rely on automatic differentiation to obtain derivatives involved in the loss function, which accelerates the training process. The method operates in two stages, an initial short pre-training phase with fixed bases to select physically relevant wavelet families, followed by an adaptive refinement that adapts scales and translations without populating high-resolution bases across entire domains. Theoretically, we show that under certain assumptions, AW-PINN admits a Gaussian process limit and derive its associated NTK structure. We evaluate AW-PINN on several challenging PDEs featuring localized high-magnitude source terms with extreme loss imbalances having ratios up to $10^{10}:1$. Across these PDEs, including transient heat conduction, highly localized Poisson problems, oscillatory flow equations, and Maxwell equations with a point charge source, AW-PINN consistently outperforms existing methods in its class.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Himanshu Pandey",
+   "Ratikanta Behera"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.28180v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.28180v1",
+  "published_iso": "2026-04-30T17:57:22Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Reparameterization through Coverings and Topological Weight Priors",
+  "title_norm": "reparameterization through coverings and topological weight priors",
+  "abstract": "We generalise the reparameterization trick applied in variational autoencoders (VAEs) letting these have latent spaces of non-trivial topology - i.e. that of base manifolds covered with other ones, on which some technique for RT is available. That is possible since covering maps are measurable - moreover, in case of particular measure preservation property holding for the covering, one can establish an inequality on KL-divergence between pushforward (PF) densities on the base latent manifold, making the KL-term of VAE's ELBO analytically tractable, despite the topological non-triviality of the supporting latent manifold. Our development follows a route close but somewhat alternative to reparameterization on Lie groups, the latest proposal for which is to reparameterize PFs of normal densities from the Lie algebra - \"through\" the exponential map, seen by us as sometimes a particular case of what we propose to call reparameterization through a covering. Covering maps need not be global diffeomorphisms (although Lie-exp maps, in general, need not either, but, to date only smooth ones were considered in this context, to the best of our knowledge), which makes many non-trivial topologies tamable to our proposed technique, that we detail on a particular such example. We demonstrate the working of our approach by constructing a VAE with the latent space of Klein bottle (not a Lie group) topology, which we call KleinVAE, successfully learning an appropriate artificial dataset. We discuss potential applicability of such topology-informed generative models as weight priors in Bayesian learning, particularly for convolutional vision models, where said manifold was peculiarly shown to have some relevance.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Maxim Beketov",
+   "Pavel Snopov"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.23804v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.23804v1",
+  "published_iso": "2026-04-26T17:01:34Z",
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "A time-nonlocal multiphysics finite element method with Crank-Nicolson scheme for poroelasticity model with secondary consolidation",
+  "title_norm": "a time nonlocal multiphysics finite element method with crank nicolson scheme fo",
+  "abstract": "The paper studies a time-nonlocal multiphysics finite element method with Crank-Nicolson scheme for poroelasticity model with secondary consolidation. For the case where the physical parameters $λ,λ^*$ and $c_0$ are all finite positive constants, by introducing two auxiliary variables-the fluid content $η$ and the generalized pressure $ξ$ -- the original strongly coupled poroelasticity model is reformulated into a generalized Stokes equation with time integral terms and a diffusion equation. The reformulated model not only reveals the underlying multiphysics processes in the original model, but also exhibits time-nonlocal characteristics. A time-nonlocal multiphysics finite element method is designed for the reformulated model: the spatial discretization employs high order Taylor-Hood mixed finite element method, and the temporal discretization adopts the Crank-Nicolson scheme. The time integral terms are approximated using the composite trapezoidal rule, and the integral terms $J_ξ^n$ and $J_η^n$ are introduced for real-time updates, which not only avoids repeated calculations and improves efficiency, but also maintains second-order temporal accuracy. The existence and uniqueness of weak solutions for the reformulated model are proved via energy estimate methods, the stability of the fully discrete time-nonlocal multiphysics finite element method is established, and optimal-order error estimates are derived using projection operator techniques. Finally, numerical example verified the theoretical results and compared the long-time convergence of the Crank-Nicolson scheme and the backward Euler scheme.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Yanan He",
+   "Zhihao Ge"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.06815v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.06815v2",
+  "published_iso": "2026-04-08T08:31:46Z",
+  "from_query": [
+   "VO2 multiphysics time warp"
+  ]
+ },
+ {
+  "title": "Neural Architectures as Functional Priors in Physics-Informed Control Problems",
+  "title_norm": "neural architectures as functional priors in physics informed control problems",
+  "abstract": "In this work we investigate the role of neural architectures as implicit functional priors in control problems governed by ordinary differential equations. Rather than focusing on highly complex problems, our objective is to investigate architecture-dependent effects in controlled dynamical systems within the simplest physically interpretable settings possible. In particular, we study a controlled linear RLC electrical circuit and a nonlinear Duffing-type dynamical system. Both systems are analyzed first through classical optimal-control formulations and later through PINN-based approaches. We compare different combinations of multilayer perceptrons (MLPs) and Fourier-based KAN-like architectures, and analyze their influence on the resulting controls. The numerical experiments suggest that different architectural choices systematically generate qualitatively distinct controls, even under identical governing equations, loss functionals, initial and target states, training parameters and physical constraints. Significant differences appear in the spectral structure, smoothness, energy distribution, and phase-space behavior of the learned solutions. A central observation of this work is the emergence of a functional specialization phenomenon when the neural architectures are allowed sufficient freedom to shape the structure of the learned controls. More specifically, in the systems considered here, Fourier-based architectures tend to produce trajectories with richer oscillatory content, whereas smoother low-frequency-biased architectures tend to generate more regular and energetically efficient controls. This suggests that different functional components of the control problem may be handled more efficiently by different neural architectures, leading to an implicit specialization between state representation and control generation.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Sonia Rubio Herranz",
+   "Fernando Carlos López Hernández",
+   "Antonio López Montes"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.19368v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.19368v1",
+  "published_iso": "2026-06-11T10:56:00Z",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Bitwise Triangular Coordinates for Central Products of Quaternion Groups: Floretion Base Vectors, Digitwise S3-Actions, and Centralizer Tiles",
+  "title_norm": "bitwise triangular coordinates for central products of quaternion groups floreti",
+  "abstract": "We give a self-contained and systematic treatment of the floretion coordinate model for the central product of (n) copies of the quaternion group (Q_8). Positive basis elements are words of length (n) in the alphabet ({1,2,4,7}), identified with (i,j,k,e), and the resulting real algebra is (\\mathbb H^{\\otimes n}). In these coordinates, Boolean multiplication, recursive triangular tilings, digitwise (S_3)-actions, reflection anti-automorphisms, centralizer tiles, and axis-landing phenomena admit a common description. A local XNOR/AND rule recovers quaternionic basis multiplication and gives a table-free digitwise rule in every order. The centroid map associated with the recursive triangular tiling intertwines the digitwise (S_3)-action with the dihedral action on the triangle. Odd digit permutations reverse multiplication order, yielding ordinary and twisted commutation criteria for products symmetric about triangular axes. Synchronized cyclic changes in selected coordinates produce equilateral centroid triangles. Their oriented vertex product equals an explicit symbolic center with a determined sign, while their Euclidean center is obtained directly from the unchanged coordinates; a parity criterion characterizes exactly when the symbolic and Euclidean centers coincide. For every non-unit basis word, the centralizer in the signed group has cardinality (4^n), and its positive tile set occupies exactly one half of the order-(n) tiling. A parity-dependent family derived from the signed centralizer decomposition shows that products symmetric about one triangular axis may land on another axis, lose all triangular reflection symmetry in odd orders, or acquire enhanced symmetry in order two.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Creighton Dement"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.20265v5",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.20265v5",
+  "published_iso": "2026-05-18T19:06:36Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Reparameterization Flow Policy Optimization",
+  "title_norm": "reparameterization flow policy optimization",
+  "abstract": "Reparameterization Policy Gradient (RPG) has emerged as a powerful paradigm for model-based reinforcement learning, enabling high sample efficiency by backpropagating gradients through differentiable dynamics. However, prior RPG approaches have been predominantly restricted to Gaussian policies, limiting their performance and failing to leverage recent advances in generative models. In this work, we identify that flow policies, which generate actions via differentiable ODE integration, naturally align with the RPG framework, a connection not established in prior work. However, naively exploiting this synergy proves ineffective, often suffering from training instability and a lack of exploration. We propose Reparameterization Flow Policy Optimization (RFO). RFO computes policy gradients by backpropagating jointly through the flow generation process and system dynamics, unlocking high sample efficiency without requiring intractable log-likelihood calculations. RFO includes two tailored regularization terms for stability and exploration. We also propose a variant of RFO with action chunking. Extensive experiments on diverse locomotion and manipulation tasks, involving both rigid and soft bodies with state or visual inputs, demonstrate the effectiveness of RFO. Notably, on a challenging locomotion task controlling a soft-body quadruped, RFO achieves almost $2\\times$ the reward of the state-of-the-art baseline.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Hai Zhong",
+   "Zhuoran Li",
+   "Xun Wang",
+   "Longbo Huang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.03501v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.03501v1",
+  "published_iso": "2026-02-03T13:22:08Z",
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Midterm Status Report of the ILC Technology Network Activities",
+  "title_norm": "midterm status report of the ilc technology network activities",
+  "abstract": "The ILC Technology Network (ITN) was established in 2022 by the ILC International Development Team, a subcommittee of the International Committee for Future Accelerators, to advance engineering studies toward the realisation of the International Linear Collider (ILC). While the ITN work packages focus on engineering activities for the ILC, their topics are also relevant to a broad range of accelerator applications in particle physics and beyond. These work packages are being carried out now by laboratories in Asia and Europe in close collaboration. This report summarises the current status of the ITN activities.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "ILC Technology Network"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.01172v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.01172v1",
+  "published_iso": "2026-03-01T16:22:42Z",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "An improved PINN framework integrating localized collocation scheme and PIKF",
+  "title_norm": "an improved pinn framework integrating localized collocation scheme and pikf",
+  "abstract": "We propose a localized physics-informed kernel function neural network (LPIKFNN), which is an improved physics-informed neural network (PINN) based on physics-informed kernel function (PIKF). In the LPIKFNN framework, the localized collocation scheme discretizes the physical quantities within the local domain, where the physical field is represented as a linear combination of PIKFs. Based on this representation, the multilayer perceptron is trained to iteratively learn the physical quantities. To overcome the computational challenges of conventional PINN in higher-order derivative and high wavenumber problems, the LPIKFNN constructs the loss function using the PIKF and a localized collocation scheme rather than relying on automatic differentiation. As a result, the costly derivative evaluations required to enforce governing equations during iterative training are eliminated, leading to significantly improved computational efficiency and training performance. Moreover, incorporating PIKFs into the loss function enables the proposed LPIKFNN to significantly improve computational accuracy in high-wavenumber problems characterized by highly oscillatory physical fields. To overcome the computational bottleneck of the physics-informed kernel function neural network (PIKFNN) in heterogeneous problems, the LPIKFNN introduces a localized collocation scheme that removes reliance on global PIKFs, enabling accurate predictions where global PIKFs are unavailable. The feasibility and accuracy of the proposed LPIKFNN are demonstrated through a series of benchmark studies, including high wavenumber problems, higher-order derivative problems, nonlinear problems, heterogeneous problems, and potential-based inverse electromyography. The numerical predictions obtained by LPIKFNN show excellent agreement with available analytical solutions and experimental measurements.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Qiang Xi",
+   "Wenzhi Xu",
+   "Mario Cvetkovic",
+   "Dragan Poljak",
+   "Timon Rabczuk",
+   "Zhuojia Fu"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.02585v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.02585v1",
+  "published_iso": "2026-05-05T10:10:40Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Boosting Neural Video Representation via Online Structural Reparameterization",
+  "title_norm": "boosting neural video representation via online structural reparameterization",
+  "abstract": "Neural Video Representation~(NVR) is a promising paradigm for video compression, showing great potential in improving video storage and transmission efficiency. While recent advances have made efforts in architectural refinements to improve representational capability, these methods typically involve complex designs, which may incur increased computational overhead and lack the flexibility to integrate into other frameworks. Moreover, the inherent limitation in model capacity restricts the expressiveness of NVR networks, resulting in a performance bottleneck. To overcome these limitations, we propose Online-RepNeRV, a NVR framework based on online structural reparameterization. Specifically, we propose a universal reparameterization block named ERB, which incorporates multiple parallel convolutional paths to enhance the model capacity. To mitigate the overhead, an online reparameterization strategy is adopted to dynamically fuse the parameters during training, and the multi-branch structure is equivalently converted into a single-branch structure after training. As a result, the additional computational and parameter complexity is confined to the encoding stage, without affecting the decoding efficiency. Extensive experiments on mainstream video datasets demonstrate that our method achieves an average PSNR gain of 0.37-2.7 dB over baseline methods, while maintaining comparable training time and decoding speed.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Ziyi Li",
+   "Qingyu Mao",
+   "Shuai Liu",
+   "Qilei Li",
+   "Fanyang Meng",
+   "Yongsheng Liang"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2511.11071v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2511.11071v1",
+  "published_iso": "2025-11-14T08:44:31Z",
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "Neural Networks and Schramm-Loewner Evolutions",
+  "title_norm": "neural networks and schramm loewner evolutions",
+  "abstract": "In this manuscript, we explore the application of neural networks to predict the natural parameter $κ\\geq 0$ of Schramm-Loewner Evolution (SLE$_κ$) theory. SLE$_κ$ is a family of random fractal curves that has significant implications in Statistical Mechanics and Conformal Field Theory. This parameter $κ\\geq 0$ plays an important role in the theory as there are models of Planar Statistical Physics that are proven to have SLE as scaling limits as well as others that are conjectured to have this limit for various choices of the parameter $κ\\geq 0$. In addition, there are three different statistical behaviors of the SLE curves as the parameter $κ$ changes in $[0, \\infty).$ Leveraging the powerful pattern recognition capabilities of neural networks, this study aims to develop a predictive model that can estimate the $κ$ parameter with good accuracy.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Neilesh Shrotri",
+   "Vlad Margarint"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.02682v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.02682v1",
+  "published_iso": "2026-06-01T17:51:45Z",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Reliable Error Estimation for PINNs: Lower and Upper A Posteriori Bounds",
+  "title_norm": "reliable error estimation for pinns lower and upper a posteriori bounds",
+  "abstract": "Physics-informed neural networks (PINNs) combine machine learning with physical laws to solve differential equations. While existing results provide rigorous \\emph{a posteriori} upper bounds for PINN prediction errors, complete certification also requires complementary lower information in order to obtain computable two-sided error enclosures. In this paper, we derive computable \\emph{a posteriori} lower bounds for PINN errors in ordinary differential equations on suitable certified state-space domains under a localized strong monotonicity condition. We combine these estimates with complementary localized upper bounds under a one-sided Lipschitz condition, which is weaker than the global Lipschitz assumption used in previous work and can yield sharper upper error bands. The resulting bounds depend only on the neural-network approximation, the ODE residual, and local monotonicity and growth constants, and therefore do not require access to the exact solution. For linear time-invariant and time-varying systems, we further derive explicit formulas in terms of the minimal and maximal eigenvalues of the symmetric part of the system matrix. We also discuss the distinction between soft and hard enforcement of initial conditions in PINNs and explain why exact enforcement can make the scalar lower certificate uninformative. To recover nontrivial lower information in the linear setting, we use a signed-residual finite-probe certificate based on coordinate unit vectors. We also formulate a certificate-informed training strategy in which the propagated upper certificate is used as an auxiliary regularizer, while lower certificates remain post-training diagnostics. Altogether, the proposed framework provides rigorous and practically computable error certificates for PINN approximations of ODEs, while making explicit the domains and model classes for which the assumptions can be verified.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Ismail Huseynov",
+   "Arzu Ahmadova",
+   "Agamirza Bashirov"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2606.12050v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2606.12050v1",
+  "published_iso": "2026-06-10T13:15:32Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "On the Reparameterization Between Cartesian Position-Velocity Vectors and Orbital Elements in the Kepler Problem",
+  "title_norm": "on the reparameterization between cartesian position velocity vectors and orbita",
+  "abstract": "Reparameterization from the standard set of orbital elements to Cartesian position-velocity vectors can be computationally advantageous for orbit inference problems, particularly when orbital elements are weakly constrained. Here we present compact analytic expressions for the Jacobian determinants of this transformation and its variants, which enable consistent transformation of prior probability densities under reparameterization and are therefore useful for a Bayesian treatment of such problems. We then use these results to clarify the application of this reparameterization in microlensing and astrometric contexts. We first revisit the widely used formulation of lens orbital motion during binary microlensing events presented by Skowron et al (2011). We show that their parameterization inadvertently adopts an incorrect definition of the longitude of the ascending node with respect to the sky-projected binary axis at a reference epoch, which renders the intermediate Jacobian formally singular. Using our closed-form expression, we provide a corrected analytic derivation of the Jacobian for this transformation and show that the resulting formula remains effectively unchanged when the longitude of the ascending node is properly defined with respect to an axis independent of the binary orbit. We also perform an explicit quantitative comparison of astrometric orbit fitting using a gradient-based Markov Chain Monte Carlo algorithm under the two parameterizations, and find that reparameterizing to Cartesian state vectors improves sampling efficiency and robustness relative to orbital-element sampling.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Kento Masuda",
+   "Kansuke Nunota"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.12982v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.12982v1",
+  "published_iso": "2026-05-13T04:25:12Z",
+  "from_query": [
+   "endogenous switching-front reparameterization"
+  ]
+ },
+ {
+  "title": "A physics-informed U-Net-LSTM network for nonlinear structural response under seismic excitation",
+  "title_norm": "a physics informed u net lstm network for nonlinear structural response under se",
+  "abstract": "Accurate and efficient seismic response prediction is essential for the design of resilient structures. While the Finite Element Method (FEM) remains the standard for nonlinear seismic analysis, its high computational demands limit its scalability and real-time applicability. Recent developments in deep learning - particularly Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and Long Short-Term Memory (LSTM) models - have shown promise in reducing the computational cost of the nonlinear seismic analysis of structures. However, these data-driven models often struggle to generalize and capture the underlying physics, leading to reduced reliability. We propose a novel Physics-Informed U-Net-LSTM framework that integrates physical laws with deep learning to enhance both accuracy and efficiency. The proposed 1D U-Net captures the underlying latent features of the long-term input sequences. By embedding domain-specific constraints into the learning process, the proposed model achieves improved predictive performance over conventional Machine Learning (ML) architectures. This approach bridges the gap between purely data-driven methods and physics-based modeling, offering a robust and computationally efficient alternative for predicting the seismic response of structures.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Sutirtha Biswas",
+   "Kshitij Kumar Yadav"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2511.21276v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2511.21276v2",
+  "published_iso": "2025-11-26T11:05:42Z",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "PINNs for Electromagnetic Wave Propagation",
+  "title_norm": "pinns for electromagnetic wave propagation",
+  "abstract": "Physics-Informed Neural Networks (PINNs) solve physical systems by incorporating governing partial differential equations directly into neural network training. In electromagnetism, where well-established methodologies such as FDTD and FEM already exist, new methodologies are expected to provide clear advantages to be accepted. Despite their mesh-free nature and applicability to inverse problems, PINNs can exhibit deficiencies in accuracy and energy metrics compared to FDTD. This study demonstrates that hybrid training strategies can bring PINNs closer to FDTD-level accuracy and energy consistency. A hybrid methodology addressing common challenges in wave propagation is presented. Causality collapse in time-dependent PINN training is addressed via time marching and causality-aware weighting. To mitigate discontinuities introduced by time marching, a two stage interface continuity loss is applied. To suppress cumulative energy drift in electromagnetic waves, a local Poynting-based regularizer is developed. In the developed PINN model, high field accuracy is achieved with an average 0.09% NRMSE and 1.01% $L^2$ error over time. Energy conservation is achieved with only a 0.02% relative energy mismatch in the 2D PEC cavity scenario. Training is performed without labeled field data, using only physics-based residual losses; FDTD is used solely for post-training evaluation. The results demonstrate that PINNs can achieve competitive results with FDTD in canonical electromagnetic examples and are a viable alternative.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Nilufer K. Bulut"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.23396v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.23396v2",
+  "published_iso": "2025-12-29T11:36:26Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Partial Information Decomposition of Electronic Observables Along a Reaction Coordinate",
+  "title_norm": "partial information decomposition of electronic observables along a reaction coo",
+  "abstract": "A reaction-coordinate--resolved information-theoretic analysis of chemical reactivity is developed using mutual information and partial information decomposition (PID). Along an intrinsic reaction coordinate (IRC), a local empirical distribution is constructed at each position $s$ that couples a coarse-grained geometric progress variable (target) to two electronic readouts (sources), and the joint mutual information $I(T;X,Y)$ is decomposed into redundant, unique, and synergistic contributions using the Williams--Beer PID formalism. In the numerical demonstrations, the target is a binned bond-asymmetry coordinate $ξ=d_{\\mathrm{C}\\!-\\!\\mathrm{nuc}}-d_{\\mathrm{C}\\!-\\!\\mathrm{LG}}$, while the sources are DDEC6 net atomic charges on the nucleophile and leaving-group centres. Application to three prototypical S$_\\mathrm{N}$2 reactions (identity exchange $\\mathrm{F^-+CH_3F}$, halide substitution $\\mathrm{F^-+CH_3Br}$, and hydroxide substitution $\\mathrm{OH^-+CH_3CH_2Br}$) yields compact, symmetry-sensitive signatures of bonding evolution: the identity reaction exhibits mirror-related information profiles with exchange of unique-information contributions between equivalent centres, whereas asymmetric reactions show shifted, centre-specific redistribution among redundancy and synergy as C--X cleavage couples to C--Nu formation. This Supplementary Information provides the formal construction, chemically motivated limiting toy models, a solvable analytic symmetric-transfer model, and the computational protocol used to obtain IRC-resolved PID curves.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Kyunghoon Han",
+   "Miguel Gallegos"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2603.05672v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2603.05672v1",
+  "published_iso": "2026-03-05T20:58:29Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Fast PINN Eigensolvers via Biconvex Reformulation",
+  "title_norm": "fast pinn eigensolvers via biconvex reformulation",
+  "abstract": "Eigenvalue problems have a distinctive forward-inverse structure and are fundamental to characterizing a system's thermal response, stability, and natural modes. Physics-Informed Neural Networks (PINNs) offer a mesh-free alternative for solving such problems but are often orders of magnitude slower than classical numerical schemes. In this paper, we introduce a reformulated PINN approach that casts the search for eigenpairs as a biconvex optimization problem, enabling fast and provably convergent alternating convex search (ACS) over eigenvalues and eigenfunctions using analytically optimal updates. Numerical experiments show that PINN-ACS attains high accuracy with convergence speeds up to 500$\\times$ faster than gradient-based PINN training. We release our codes at https://github.com/NeurIPS-ML4PS-2025/PINN_ACS_CODES.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Akshay Sai Banderwaar",
+   "Abhishek Gupta"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2511.00792v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2511.00792v1",
+  "published_iso": "2025-11-02T04:04:54Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "Comparison of Trefftz-Based PINNs and Standard PINNs Focusing on Structure Preservation",
+  "title_norm": "comparison of trefftz based pinns and standard pinns focusing on structure prese",
+  "abstract": "In this study, we investigate the capability of physics-informed neural networks (PINNs) to preserve global physical structures by comparing standard PINNs with a Trefftz-based PINN (Trefftz-PINN). The target problem is the reproduction of mag-netic field-line structures in a helical fusion reactor configuration. Using identical training data sampled from exact solutions, we perform comparisons under matched mean squared error (MSE) levels. Visualization of magnetic field lines reveals that standard PINNs may exhibit structural collapse across magnetic surfaces even when the MSE is sufficiently small, whereas Trefftz-PINNs successfully preserve the global topology of magnetic field lines. Furthermore, the proposed framework is extended to computational fluid dynamics (CFD) problems, where streamline structures of veloc-ity fields are analyzed. Similar tendencies are observed, demonstrating that Trefftz-PINNs provide superior structure preservation compared to standard PINNs. These results indicate that minimizing numerical error alone does not guarantee physical consistency, and that constraining the solution space prior to learning is an effective strategy for physics-consistent surrogate modeling.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Koji Koyamada"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2602.02779v3",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2602.02779v3",
+  "published_iso": "2026-02-02T20:34:51Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "PINNs in PDE Constrained Optimal Control Problems: Direct vs Indirect Methods",
+  "title_norm": "pinns in pde constrained optimal control problems direct vs indirect methods",
+  "abstract": "We study physics-informed neural networks (PINNs) as numerical tools for the optimal control of semilinear partial differential equations. We first recall the classical direct and indirect viewpoints for optimal control of PDEs, and then present two PINN formulations: a direct formulation based on minimizing the objective under the state constraint, and an indirect formulation based on the first-order optimality system. For a class of semilinear parabolic equations, we derive the state equation, the adjoint equation, and the stationarity condition in a form consistent with continuous-time Pontryagin-type optimality conditions. We then specialize the framework to an Allen-Cahn control problem and compare three numerical approaches: (i) a discretize-then-optimize adjoint method, (ii) a direct PINN, and (iii) an indirect PINN. Numerical results show that the PINN parameterization has an implicit regularizing effect, in the sense that it tends to produce smoother control profiles. They also indicate that the indirect PINN more faithfully preserves the PDE contraint and optimality structure and yields a more accurate neural approximation than the direct PINN.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Zhen Zhang",
+   "Shanqing Liu",
+   "Alessandro Alla",
+   "Jerome Darbon",
+   "George Em Karniadakis"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2604.04920v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2604.04920v1",
+  "published_iso": "2026-04-06T17:57:53Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "AdamFLIP: Adaptive Momentum Feedback Linearization Optimization for Hard Constrained PINN Training",
+  "title_norm": "adamflip adaptive momentum feedback linearization optimization for hard constrai",
+  "abstract": "Physics-informed neural networks (PINNs) provide a flexible framework for solving forward and inverse problems governed by partial differential equations (PDEs), but standard PINN training typically relies on soft penalty formulations that combine PDE residuals, data mismatch, and initial/boundary conditions using manually chosen weights. This often leads to ill-conditioning, sensitivity to loss weights, and poor constraint satisfaction. In this work, we reformulate PINN training as an equality-constrained optimization problem and propose a novel Adaptive Momentum Feedback Linearization Optimization for Hard Constrained PINN (AdamFLIP). The key idea is to view the constraint residuals as the output of a controlled dynamical system and to compute the Lagrange multiplier as a feedback input that locally drives these residuals toward stable linear contraction dynamics. AdamFLIP then applies Adam-style first- and second-moment adaptation to the resulting feedback-linearized Lagrangian gradient, combining principled constraint handling with the scalability and robustness of adaptive neural-network optimization. We test AdamFLIP on a range of benchmark forward and inverse PDE problem, and it consistently outperforms both the standard soft-constrained PINN and state-of-the-art constrained optimizers. Specifically, on the Navier--Stokes equations benchmark, AdamFLIP \\textbf{reduces relative $L_2$ error by more than two thirds} for the predicted solution compared to the next best method. Our AdamFLIP framework provides an effective and computationally scalable hard constraint optimization method for PINN training.",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Binghang Lu",
+   "Runyu Zhang",
+   "Changhong Mou",
+   "Na Li",
+   "Guang Lin"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2605.08408v1",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2605.08408v1",
+  "published_iso": "2026-05-08T19:13:15Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ },
+ {
+  "title": "A Critical Assessment of PINNs and Operator Learning for Geotechnical Engineering",
+  "title_norm": "a critical assessment of pinns and operator learning for geotechnical engineerin",
+  "abstract": "Scientific machine learning (SciML) offers neural-network alternatives to numerical workflows in geotechnical engineering. This paper benchmarks multi-layer perceptrons (MLPs), physics-informed neural networks (PINNs), deep operator networks (DeepONet), and graph network simulators (GNS) against finite-difference and particle-based references on geotechnical benchmarks, and compares PINN inversion with automatic differentiation (AD) through a conventional solver. We evaluate each method for extrapolation, training, and inference cost, transfer across problem instances, and physics accuracy. An MLP trained on two years of Terzaghi consolidation fits the data, but at year ten predicts ~290 mm with ReLU and ~60 mm with tanh or sigmoid, against a reference of 99.3 mm. A PINN on a damped oscillator with a time domain inside [0,1] matches the closed form within that interval but fails outside, since the residual constrains the fit only where it is sampled. For the 1D wave equation, PINN training is ~96,000 times slower than finite-difference methods and less accurate. DeepONet avoids PINN retraining, yet for the beam on elastic foundation, its training cost equals ~1.8 million finite-difference solves, and inference is slower per query than the direct solver. GNS improves geometric transfer through local particle interactions, though formulations still need trajectories, large training sets, and substantial memory. In the inverse wave benchmark, AD through the finite-difference solver recovers the material profile in seconds with ~1% error. The results support a cautious role for SciML. Neural networks suit interpolation and pattern recognition inside validated domains, while inverse analysis should first try differentiable physics-based solvers when a reliable forward solver exists.",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Krishna Kumar"
+  ],
+  "citations": null,
+  "source": "arxiv",
+  "source_id": "2512.24365v2",
+  "doi": "",
+  "paper_url": "https://arxiv.org/abs/2512.24365v2",
+  "published_iso": "2025-12-30T17:23:02Z",
+  "from_query": [
+   "local reaction-progress coordinate PINN"
+  ]
+ }
+]

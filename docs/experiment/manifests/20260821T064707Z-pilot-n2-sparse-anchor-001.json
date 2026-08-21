@@ -1,0 +1,66 @@
+{
+  "actual_budget": {
+    "label_count": 328,
+    "optimizer_updates": 1000,
+    "wall_seconds": 133.21900000001187
+  },
+  "artifacts": {
+    "anchor_contract": "outputs\\runs\\20260821T064707Z-pilot-n2-sparse-anchor-001\\anchor_contract.json",
+    "checkpoint": "outputs\\runs\\20260821T064707Z-pilot-n2-sparse-anchor-001\\checkpoint-anchor.pt",
+    "intent": "docs\\experiment\\intents\\20260821T064707Z-pilot-n2-sparse-anchor-001.json",
+    "metrics": "outputs\\runs\\20260821T064707Z-pilot-n2-sparse-anchor-001\\metrics-anchor.json",
+    "prediction": "outputs\\runs\\20260821T064707Z-pilot-n2-sparse-anchor-001\\prediction-anchor.h5",
+    "run_root": "outputs\\runs\\20260821T064707Z-pilot-n2-sparse-anchor-001",
+    "summary": "outputs\\runs\\20260821T064707Z-pilot-n2-sparse-anchor-001\\anchor_summary.json",
+    "training": "outputs\\runs\\20260821T064707Z-pilot-n2-sparse-anchor-001\\training-anchor.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-osc-bundled-reference-through-512.0793ns",
+  "checkpoint": {
+    "id": "solver-assisted-diagnostic-anchor-best",
+    "selection": "physics max <= 1.25, then anchor loss, physics max, sum, earliest"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_DIAGNOSTIC_ONLY",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.qpop_raw_event",
+    "anchor"
+  ],
+  "ended_at": "2026-08-21T06:49:34.652431Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "python": "3.11.9",
+    "torch": "2.5.1+cpu"
+  },
+  "evaluator_id": "frozen-project-development-evaluator-qpop-reference-v1",
+  "evidence_identity": "QPOP_CPC_V1_BUNDLED_REFERENCE_UNQUALIFIED_SOLVER_ASSISTED",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "n2-sparse-eta-anchor-diagnostic-v1",
+  "failure_class": null,
+  "gate": "N2",
+  "gate_outcome": "REPRESENTATION_OR_RESIDUAL_BOTTLENECK",
+  "method_id": "qpop-raw-r1-grouped-joint-sparse-eta-anchor-diagnostic-v1",
+  "numerical_validity": "VALID_DEVELOPMENT_DIAGNOSTIC",
+  "physical_contract_id": "PROVISIONAL_G3_QPOP_CPC_V1_IMT_CONTRACT",
+  "planned_budget": {
+    "nodes_per_snapshot": 82,
+    "optimizer_updates": 1000,
+    "snapshot_count": 4,
+    "wall_seconds": 5400
+  },
+  "replay_of": null,
+  "route_disposition": "CLOSE_QPOP_PINN_CONTINUE_N3B_REDUCED_ORACLE",
+  "run_id": "20260821T064707Z-pilot-n2-sparse-anchor-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "bottleneck_audit",
+  "seed": 17,
+  "split_id": "qpop-cpc-v1-bundled-reference-development-only-v1",
+  "started_at": "2026-08-21T06:47:21.426532Z",
+  "supersedes": null,
+  "tier": "pilot"
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "qpop-conversion-spec-v1",
+  "conversion_spec_id": "qpop-cpc-v1-imt-intrinsic-voltage-osc-author-case-v1",
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-osc-author-case-endtime-2e3ns",
+  "physical_contract_id": "PROVISIONAL_G3_QPOP_CPC_V1_IMT_CONTRACT",
+  "evidence_identity": "QPOP_CPC_V1_AUTHOR_CASE_UNQUALIFIED",
+  "source_identity": {
+    "cpc_doi": "10.17632/p3395559s6.1",
+    "cpc_archive_sha256": "9e0814d5cc0d01a554152d04e68b565d0b54260430d883b4b5ada0f0f7bced16",
+    "qpop_git_commit": "6047117bb9f40355db260aae59ec427de2050b94",
+    "script_sha256": "753dec7c0333b29ffd85da4f3899373b00009759e0e8c338d6b2f161f99f5b5f",
+    "license": "MIT"
+  },
+  "required_source_files": {
+    "source/qpop-imt.py": "753dec7c0333b29ffd85da4f3899373b00009759e0e8c338d6b2f161f99f5b5f",
+    "source/customSolver.py": "7c6db46dca83181d894e5e5976a413a593663cef13d342305f2a131d52a5c472"
+  },
+  "canonical_input_path": "canonical_input.xml",
+  "canonical_input_sha256": "d7df895ff51dd061f514224a7518cfcb0c4430e547969285420794f1a20a6bd7",
+  "expected_input_sha256": "d7df895ff51dd061f514224a7518cfcb0c4430e547969285420794f1a20a6bd7",
+  "allowed_input_differences": [],
+  "solution_directory": "solution",
+  "mesh": {
+    "coordinate_unit": "nm",
+    "dimension": 2,
+    "drop_axis": 2,
+    "drop_tolerance": 0.0,
+    "allowed_cell_types": [5]
+  },
+  "time_unit": "ns",
+  "field_log_alignment": {
+    "rtol": 5.1e-7,
+    "atol": 5.1e-13,
+    "auto_saveperiod": 20,
+    "basis": "qpop source log uses scientific notation with six digits after the decimal"
+  },
+  "protocol_breakpoints": [10.0],
+  "field_registry": {
+    "eta": {
+      "pvd": "eta.pvd",
+      "source_name": "eta",
+      "physical_symbol": "eta",
+      "quantity_label": "structural_order_parameter",
+      "unit": "1",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "SOURCE_EMISSION_ONLY_G3_UNQUALIFIED"
+    },
+    "psi": {
+      "pvd": "mu.pvd",
+      "source_name": "mu",
+      "physical_symbol": "psi",
+      "quantity_label": "electronic_order_parameter_source_mu",
+      "unit": "1",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "SOURCE_EMISSION_ONLY_G3_UNQUALIFIED"
+    },
+    "electron_occupancy": {
+      "pvd": "n.pvd",
+      "source_name": "n",
+      "physical_symbol": "n",
+      "quantity_label": "qpop_native_electron_occupancy",
+      "unit": "1",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "SOURCE_EMISSION_ONLY_G3_UNQUALIFIED"
+    },
+    "hole_occupancy": {
+      "pvd": "p.pvd",
+      "source_name": "p",
+      "physical_symbol": "p",
+      "quantity_label": "qpop_native_hole_occupancy",
+      "unit": "1",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "SOURCE_EMISSION_ONLY_G3_UNQUALIFIED"
+    },
+    "electric_potential": {
+      "pvd": "phi.pvd",
+      "source_name": "phi",
+      "physical_symbol": "phi",
+      "quantity_label": "electric_potential",
+      "unit": "V",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "SOURCE_EMISSION_ONLY_G3_UNQUALIFIED"
+    },
+    "temperature": {
+      "pvd": "T.pvd",
+      "source_name": "T",
+      "physical_symbol": "T",
+      "quantity_label": "temperature",
+      "unit": "K",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "SOURCE_EMISSION_ONLY_G3_UNQUALIFIED"
+    }
+  },
+  "deferred_static_fields": {
+    "Tcvar": {
+      "pvd": "Tcvar.pvd",
+      "reason": "G3_PHYSICAL_SEMANTICS_QUALIFICATION_REQUIRED"
+    }
+  },
+  "log_profile": {
+    "profile_id": "qpop-cpc-v1-embedded-6047117-imt-11-column",
+    "normalized_header": "#Step Time Time step Tfail Nfail Other fail Av. EOP norm Av. SOP norm Av. T (K) V (V) R (Ohm)",
+    "column_keys": [
+      "step",
+      "time",
+      "dt",
+      "tfail",
+      "nfail",
+      "otherfail",
+      "eop_norm",
+      "sop_norm",
+      "average_temperature",
+      "reported_voltage_drop",
+      "reported_resistance"
+    ]
+  },
+  "circuit_registry": {
+    "qpop_cpc_v1_reported_voltage_drop": {
+      "source_column": "reported_voltage_drop",
+      "unit": "V",
+      "qualification_status": "SOURCE_EMISSION_ONLY_G3_POSTPROCESSING_UNQUALIFIED"
+    },
+    "qpop_cpc_v1_reported_resistance": {
+      "source_column": "reported_resistance",
+      "unit": "Ohm",
+      "qualification_status": "SOURCE_EMISSION_ONLY_G3_POSTPROCESSING_UNQUALIFIED"
+    }
+  },
+  "evaluator_audit": {
+    "status": "ABSENT",
+    "disposition": "OFFICIAL_EVALUATOR_NOT_PROVIDED"
+  }
+}

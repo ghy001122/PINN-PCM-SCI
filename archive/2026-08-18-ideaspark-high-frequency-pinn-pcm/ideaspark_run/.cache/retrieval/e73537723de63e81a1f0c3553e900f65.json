@@ -1,0 +1,150 @@
+[
+ {
+  "title": "Synergetic properties of advanced materials for high-power and high-temperature applications",
+  "title_norm": "synergetic properties of advanced materials for high power and high temperature ",
+  "abstract": "This paper explores the advancements, applications, and challenges of advanced thermal and magnetic materials in high-power and high-temperature environments. These materials, including high-temperature superconductors, ferromagnetic materials, and magnetic alloys, are crucial for industries such as energy, aerospace, automotive, and electronics. They are crucial for managing heat, converting energy, and storing it, which boosts the efficiency and dependability of renewable energy systems, electric vehicles, and aerospace technologies. Nonetheless, they encounter major obstacles, such as material breakdown under harsh conditions, expensive production, and sustain- ability issues. The study explores essential thermal properties like heat capacity, thermal conductivity, thermal expansion, and thermal stress, highlighting the significance of ceramics, composites, metals, carbon nanotubes, and phase-change materials. It also investigates magnetic properties like permeability, coercivity, and remanence, essential for high-power applications. Emerging technologies such as nanotechnology, additive manufacturing, and machine learning offer promising solutions to overcome existing limitations. The review highlights the need for interdisciplinary research to develop sustainable and cost-effective materials capable of withstanding extreme conditions while maintaining performance. It underscores the importance of continuing research and development to address global energy and environmental challenges, paving the way for next-generation technologies. In summary, cutting-edge thermal and magnetic materials are set to transform industries, paving the way for more efficient and dependable technological advancements.",
+  "year": 2026,
+  "venue": "Discover Nano",
+  "authors": [
+   "Wubshet Getachew Mengesha",
+   "Kaveer Nagessar"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7153277229",
+  "doi": "10.1186/s11671-026-04479-9",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s11671-026-04479-9.pdf",
+  "published_iso": "2026-04-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "Automated, physics-guided AI framework for asymmetry-aware ferroelectric compact models",
+  "title_norm": "automated physics guided ai framework for asymmetry aware ferroelectric compact ",
+  "abstract": "Despite rapid progress in HfO₂-based ferroelectrics, asymmetry-aware characterization and its reflection in compact models remain insufficiently explored. Also, parameter extraction (PE) is still manual and inconsistent, particularly when asymmetric hysteresis and staged FeCAP (ferroelectric capacitor) to FeFET (ferroelectric field-effect transistor) calibration needs to be captured. To address this, we present an asymmetry-aware ferroelectric compact model and a physics-guided neural PE framework that automate this workflow. For FeCAPs, we generate P-V datasets parameterized by ferroelectric film thickness (tFE) and train a Transformer-encoder PE model to infer target Electrical Parameters (EPs), embedding light physics priors and filtering abnormal loops. For FeFETs, we form ID-VG datasets parameterized by gate length (Lg) and train a one-dimensional convolutional neural network–Transformer (1D-CNN–Transformer) encoder with a hierarchical multilayer perceptron (MLP) head network, regularized by a soft physics prior. In verification process using group-blocked test split, the FeCAP/FeFET PE achieves near-unity correlation and sub-5% error across both device types including interpolation/extrapolation tFE/Lg region. The proposed workflow reduces manual effort and inter-operator variance, enabling rapid and stable held-out interpolation/extrapolation generalization within the anchor-calibrated compact-model domain and thereby accelerating compact-model library generation, process design kit (PDK) enablement, and Design Technology Co-Optimization (DTCO) workflows for FeCAP/FeFET technologies.",
+  "year": 2026,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Joonhan Kim",
+   "Joonhyeok Lee",
+   "Juhwan Park",
+   "Minseop Kim",
+   "H. J. Kim",
+   "Jaeweon Kang"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7154613740",
+  "doi": "10.1038/s41598-026-48536-w",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-026-48536-w_reference.pdf",
+  "published_iso": "2026-04-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ },
+ {
+  "title": "Diffusive memristors in the edge of chaos",
+  "title_norm": "diffusive memristors in the edge of chaos",
+  "abstract": "Biological nervous systems are theorized to operate in the edge of chaos (EOC), a stable and locally active regime enabling energy-efficient information processing. Electronic implementations of such behavior have mainly relied on electrothermal phase transitions, which are power-intensive and unlike biological dynamics. Diffusive memristors, by contrast, harness ionic drift and diffusion resembling biological dynamics, yet their potential for EOC operation has remained unexplored. Here, we experimentally demonstrate ionically moderated EOC behavior in diffusive memristors. At the hundred-nanoampere level, the device exhibits sharp negative differential resistance (NDR) enhanced by a Ridley entropy production minimization transition, noise amplification and spontaneous oscillatory dynamics consistent with operation near the EOC. These emergent behaviors arise from coupled ionic transport, filament evolution and circuit dynamics, as confirmed by compact modeling. This system achieves power efficiency over three orders of magnitude greater than electrothermal EOC devices, introducing low-power neuromorphic elements that emulate brain-like dynamics through nanoionics. Biological nervous systems operate at the edge of chaos for efficient information processing. Kim et al. realize such biological dynamics in diffusive memristors, achieving three orders of magnitude higher power efficiency than other devices with comparable functionalities.",
+  "year": 2026,
+  "venue": "Nature Communications",
+  "authors": [
+   "Seung Ju Kim",
+   "Tong Wang",
+   "Ruoyu Zhao",
+   "Davide Rossetti",
+   "Yichun Xu",
+   "Jian Zhao"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7165788766",
+  "doi": "10.1038/s41467-026-74640-6",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-026-74640-6_reference.pdf",
+  "published_iso": "2026-06-24",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "memristor phase-field Joule-heating pulse simulation"
+  ]
+ },
+ {
+  "title": "A practitioner’s guide to Kolmogorov–Arnold networks",
+  "title_norm": "a practitioner s guide to kolmogorov arnold networks",
+  "abstract": "Kolmogorov-Arnold Networks (KANs), whose design is inspired-rather than dictated-by the Kolmogorov superposition theorem, have emerged as a structured alternative to MLPs. This review provides a systematic and comprehensive overview of the rapidly expanding KAN literature. The review is organized around three core themes: (i) clarifying the relationships between KANs and Kolmogorov superposition theory (KST), MLPs, and classical kernel methods; (ii) analyzing basis functions as a central design axis; and (iii) summarizing recent advances in accuracy, efficiency, regularization, and convergence. Finally, we provide a practical \"Choose-Your-KAN\" guide and outline open research challenges and future directions. The accompanying GitHub repository serves as a structured reference for ongoing KAN research.",
+  "year": 2026,
+  "venue": "Computer Science Review",
+  "authors": [
+   "Amir Noorizadegan",
+   "Sifan Wang",
+   "Leevan Ling",
+   "Juan P. Dominguez-Morales"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W7160944501",
+  "doi": "10.1016/j.cosrev.2026.100991",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7160944501",
+  "published_iso": "2026-05-12",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "causal Fourier-feature PINN stiff switching fronts"
+  ]
+ },
+ {
+  "title": "Intelligent Optimization in Power Electronics: Methods, Applications, and Practical Limits",
+  "title_norm": "intelligent optimization in power electronics methods applications and practical",
+  "abstract": "Power electronic converters are being pushed toward higher power density and switching frequency, turning both design and operation into multi-objective, multi-physics optimization problems. While analytical rules and gradient-based methods remain essential, they often struggle with non-convex, mixed-integer trade-offs that include thermal behavior, Electromagnetic Interference/Electromagnetic Compatibility (EMI/EMC), and reliability constraints. This review surveys intelligent optimization approaches for power electronics across design-time, commissioning-time, and run-time horizons. We propose a deployment-oriented taxonomy of intelligent optimization approaches covering metaheuristics, surrogate-assisted and learning-guided design, constrained optimization via model predictive control, reinforcement learning-based supervisory policies, and hybrid physics-informed methods. For each family, we summarize typical tasks, computational and data requirements, robustness, interpretability, and validation maturity, highlighting where intelligent methods provide clear benefits and where classical approaches remain preferable. Reliability- and diagnostics-oriented optimization is discussed with emphasis on residual-based monitoring, stress-aware operation, and lifetime proxies. Practical adoption barriers—model–reality mismatch, data scarcity, real-time determinism, and certification—are synthesized into recurring design patterns that improve deployability. Finally, a conceptual cognitive design framework is proposed that couples virtual engineering, physics-informed surrogates, human-in-the-loop validation, and knowledge reuse in a closed-loop workflow, offering a structured perspective on how intelligent optimization may be integrated more reliably into industrial design practice.",
+  "year": 2026,
+  "venue": "Electronics",
+  "authors": [
+   "Nikolay Hinov"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7136254111",
+  "doi": "10.3390/electronics15061216",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-9292/15/6/1216/pdf",
+  "published_iso": "2026-03-14",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "phase-change memory electrothermal pulse PINN"
+  ]
+ },
+ {
+  "title": "DSpinGNN: A Physics-Informed Equivariant Graph Neural Network for Dynamic Magnetic Exchange Prediction in Strain-Deformed Monolayer CrI$_3$",
+  "title_norm": "dspingnn a physics informed equivariant graph neural network for dynamic magneti",
+  "abstract": "Resolving the instantaneous, position-dependent isotropic magnetic exchange coupling $J_{ij}$ across a dynamically deforming crystal lattice requires a computational approach that simultaneously handles structural forces and magnetic interactions at length scales inaccessible to first-principles methods. Here we introduce DSpinGNN, a bifurcated machine-learning architecture comprising an $E(3)$-equivariant graph neural network (E-GNN) for classical Langevin structural dynamics and a physics-informed $Δ$-MLP that maps instantaneous local Cr-I-Cr bond geometry to isotropic exchange couplings, with the Goodenough-Kanamori superexchange relationship embedded as an analytical inductive bias. Trained on 345 DFT+U configurations of monolayer CrI$_3$ and evaluated on a strictly withheld 61-configuration test set, DSpinGNN simultaneously achieves an energy MAE of $1.1$ meV/atom, a force MAE of $6.5$ meV/Å, and an exchange coupling MAE of $0.18$ meV ($R^2 = 0.91$). Deployed at 400$\\times$ scale in a 3,200-atom supercell under a collinear Ising-constrained adiabatic approximation at $5$ K, the model maps the local exchange response to a propagating biaxial strain wave. Wave reflection at periodic boundaries generates transient constructive interference regions where local compressive strain exceeds the DFT-established FM-to-AFM threshold, producing spatially heterogeneous exchange coupling textures that damp as the wave dissipates. Quantitative analysis yields a domain wall width of $ξ= 1.7 \\pm 0.3$~nm and a constructive-interference oscillation period of $τ= 0.27$~ps -- mesoscopic observables inaccessible to direct DFT and constituting testable predictions for cryogenic magnetic force microscopy. DSpinGNN provides a reproducible, transferable framework for mesoscale exchange mapping in strain-driven 2D magnetic materials.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Isam A. Balghari",
+   "M. Faryad",
+   "M. Sabieh Anwar"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7164614307",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2606.11685",
+  "published_iso": "2026-06-10",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "physics-informed neural network nanosecond switching transients"
+  ]
+ }
+]

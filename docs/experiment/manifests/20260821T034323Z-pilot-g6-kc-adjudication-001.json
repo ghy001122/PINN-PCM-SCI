@@ -1,0 +1,61 @@
+{
+  "actual_budget": {
+    "kc_optimizer_updates": 4000,
+    "kc_protocol_arms": 4,
+    "paired_raw_optimizer_updates": 1000,
+    "wall_seconds": 0.014999999999417923
+  },
+  "artifacts": {
+    "full-gradient+identity-warm-up_summary": "outputs\\runs\\20260821T033252Z-pilot-g6-kc-full-warmup-001\\pilot_summary.json",
+    "full-gradient+joint_summary": "outputs\\runs\\20260821T033252Z-pilot-g6-kc-full-joint-001\\pilot_summary.json",
+    "intent": "docs\\experiment\\intents\\20260821T034323Z-pilot-g6-kc-adjudication-001.json",
+    "qualification_report": "outputs\\runs\\20260821T033619Z-pilot-g3-qpop-qualification-001\\qualification_report.json",
+    "report": "outputs\\runs\\20260821T034323Z-pilot-g6-kc-adjudication-001\\protocol_adjudication.json",
+    "stop-gradient+identity-warm-up_summary": "outputs\\runs\\20260821T033252Z-pilot-g6-kc-stop-warmup-001\\pilot_summary.json",
+    "stop-gradient+joint_summary": "outputs\\runs\\20260821T032527Z-pilot-g6-qpop-method-003\\pilot_summary.json"
+  },
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-osc-bundled-reference-through-512.0793ns",
+  "checkpoint": {
+    "id": "oracle-blind-physics-audit-best-per-arm",
+    "selection": "max normalized physics violation, then sum"
+  },
+  "claim_status": "NO_POSITIVE_KC_CLAIM",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.kc_protocol_adjudication"
+  ],
+  "ended_at": "2026-08-21T03:43:32.310832Z",
+  "environment": {
+    "device": "cpu",
+    "python": "3.11.9"
+  },
+  "evaluator_id": "frozen-project-development-evaluator-qpop-reference-v1",
+  "evidence_identity": "QPOP_CPC_V1_BUNDLED_REFERENCE_UNQUALIFIED",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "g6-kc-protocol-adjudication-v1",
+  "failure_class": null,
+  "gate": "G6",
+  "gate_outcome": "DEVELOPMENT_KC_SCIENTIFIC_NO_GO_UNQUALIFIED_ORACLE",
+  "method_id": "kc-frozen-2x2-protocol-adjudication-v1",
+  "numerical_validity": "VALID_DEVELOPMENT_PROTOCOL_ADJUDICATION",
+  "physical_contract_id": "NOT_FROZEN_G3_INCONCLUSIVE",
+  "planned_budget": {
+    "kc_protocol_arms": 4,
+    "updates_per_arm": 1000
+  },
+  "replay_of": null,
+  "route_disposition": "DEVELOPMENT_KC_ROUTE_CLOSED",
+  "run_id": "20260821T034323Z-pilot-g6-kc-adjudication-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "protocol_selection",
+  "seed": 17,
+  "split_id": "qpop-cpc-v1-bundled-reference-development-only-v1",
+  "started_at": "2026-08-21T03:43:32.284873Z",
+  "supersedes": null,
+  "tier": "pilot"
+}

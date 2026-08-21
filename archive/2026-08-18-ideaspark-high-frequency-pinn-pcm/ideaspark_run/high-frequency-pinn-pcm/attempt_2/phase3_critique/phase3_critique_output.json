@@ -1,0 +1,165 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition 鈥?stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+        "main_pattern": "generative_process_redesign",
+        "sub_pattern": "C23 (Liberate a Fixed Generative Component)",
+        "tactical_failure_mode_quoted": "The recurring failure is treating \"I re-specified component X\" as self-evident novelty: a single local swap is made (a context-derived starting distribution, one x0-approximation traded for another, a seed reparameterization) that is locally reasonable but neither re-derives the chain nor demonstrates a regime the dominant accelerated alternative cannot already reach. These attempts consistently fail to beat — or even compare against — the strongest existing fast-sampling method (consistency models, distillation, fast solvers), so the contribution reads as dominated rather than enabling.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Re-specifying the chain's starting distribution is sound but worthless if a dominant accelerator already reaches one or two steps — failing to beat the strongest fast-sampling alternative dooms the move regardless of its elegance.",
+            "candidate_match": "yes",
+            "reasoning": "The analogous strongest alternatives for this transferred tactic are direct continuation or curriculum PINNs, hard-constrained AdamFLIP, and self-adaptive or loss-conditional weighting, yet `core_mechanism_steps` names only global-sum, Fourier/adaptive, causal, and NeuSA arms."
+          },
+          {
+            "lesson_quoted": "Substituting one in-support approximation for another without theoretical depth or a failure-regime analysis reads as a narrow heuristic swap rather than a contribution.",
+            "candidate_match": "yes",
+            "reasoning": "The candidate gives an explicit bisection schedule but neither derives why that schedule preserves the correct coupled-PDE target nor includes the declared direct-`s=1` failure regime as an experimental arm, leaving a solver-floor-branded curriculum rather than a re-derived chain."
+          },
+          {
+            "lesson_quoted": "A redesign that silently depends on an extra artifact — access to a simulator/dynamics model, or a separately trained auxiliary network — has its claimed efficiency cancelled by the hidden cost once a reviewer surfaces it.",
+            "candidate_match": "no",
+            "reasoning": "FEniCSx trajectories and convergence floors are explicit dependencies, solver preprocessing is to be reported, and the comparison contract grants matched solver data rather than hiding this artifact."
+          },
+          {
+            "lesson_quoted": "Collapsing a staged procedure into a single differentiable mapping is technically clean but gets rejected when the novelty is thin against recent methods and the gains are demonstrated only on weak or dated benchmarks.",
+            "candidate_match": "no",
+            "reasoning": "The method retains an explicit staged continuation controller and proposes current PINN competitors on a coupled two-dimensional VO2 model rather than collapsing the procedure into one mapping."
+          }
+        ],
+        "verdict": "triggered"
+      },
+      {
+        "gap": "No retrieved frontier leaf tests whether one globally aggregated space-time objective over all coupled fields and switching regimes is necessary rather than assumed 鈥?stakes: if this shared assumption hides a fast local residual beneath slow-field averages, published accuracy conclusions can rest on the wrong certificate and principled high-frequency PINN design remains blocked.",
+        "main_pattern": "assumption_audit_and_pivot",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "tactical_failure_mode_quoted": "The recurring failure is a successful relocation that is demonstrated but not adversarially closed: the paper shows its new-locus attack or defense beats a fixed, non-adaptive baseline, yet never stress-tests against an informed adversary who also operates at the new locus, so stealthiness, evasion, or robustness claims are asserted rather than proven. A second shape is a novelty-boundary collapse — the \"new\" locus turns out to be one a prior paper already used (normalization statistics, activation-similarity alignment, pre-encoded semantic concepts), and the work fails to quantify what is genuinely different.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Claiming a relocated signal is 'stealthier' or 'harder to remove' without defeating an adaptive defender who searches the same new locus leaves the central claim unverified.",
+            "candidate_match": "no",
+            "reasoning": "The candidate makes no security, stealth, or adversarial-robustness claim."
+          },
+          {
+            "lesson_quoted": "Relocating to a locus already exploited by published work — normalization statistics, activation-similarity losses, semantic concept triggers — collapses the novelty boundary unless the difference is made explicit and measured.",
+            "candidate_match": "borderline",
+            "reasoning": "`M(s)` remains a worst-block aggregation of normalized residuals, while the supplied pool already contains residual certification and hard-constraint methods, so the claimed new locus is not yet distinguished from existing residual-space certificates."
+          },
+          {
+            "lesson_quoted": "A defense whose relocation silently depends on a clean reference model or a known anomaly distribution reintroduces precisely the strong assumption the move was supposed to eliminate.",
+            "candidate_match": "no",
+            "reasoning": "The independent FEniCSx oracle is declared as part of the synthetic scope and the pivot does not claim to remove reference-solver access."
+          },
+          {
+            "lesson_quoted": "Demonstrating the new locus only on fixed, non-adaptive or outdated baselines while omitting any account of why it works reads as a stacked pipeline of existing components rather than a principled shift.",
+            "candidate_match": "yes",
+            "reasoning": "The proposal does not compare against the supplied pool's hard-constrained AdamFLIP, loss-conditional PINN, or explicit self-adaptive weighting competitor, and its premise that `M(s)` predicts downstream fidelity is merely named as an untested target rather than mechanistically derived."
+          },
+          {
+            "lesson_quoted": "Wiring off-the-shelf generators or tools into a new attack setting without a structural reason for the locus change gets judged as engineering integration, not insight.",
+            "candidate_match": "no",
+            "reasoning": "The candidate gives a domain reason for inspecting simultaneous coupled residual feasibility and does not frame FEniCSx as an attack tool."
+          }
+        ],
+        "verdict": "triggered"
+      },
+      {
+        "gap": "No retrieved frontier leaf establishes that event order, front topology, and energy balance remain correct for held-out entire device geometries, material combinations, and pulse protocols that shift the spectrum and stiffness beyond training 鈥?stakes: reported gains may not transfer across devices or operating regimes, making the scientific conclusion non-general and the model unsafe as a design surrogate.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail most often when the constructed instrument isolates the confound only inside an artificial regime and never demonstrates that the isolated signal transfers to real deployment conditions — the synthetic-to-real gap is asserted rather than shown. A second recurring shape is circularity: the diagnostic is validated against the same definition, assumption, or system population it was built to interrogate (using the evaluated models as their own oracle, or hardcoding a contested definition of the target property), so it cannot independently confirm what it claims.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "A diagnostic that only re-confirms a shortcut already known in advance, surfacing no previously unmeasurable failure, is read as confirmatory rather than as a contribution.",
+            "candidate_match": "borderline",
+            "reasoning": "Residual imbalance is already documented, while the proposed event/topology/energy divergence in coupled PCM devices could still be a previously unmeasured downstream consequence."
+          },
+          {
+            "lesson_quoted": "Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and undermines the central claim.",
+            "candidate_match": "borderline",
+            "reasoning": "All oracle and OOD arms remain inside the synthetic FEniCSx model, although the candidate explicitly restricts its claim to that model and disclaims real-device validation."
+          },
+          {
+            "lesson_quoted": "Building the instrument around one contested definition of the target property means it cannot independently confirm that the definition is correct, and reviewers flag the resulting circularity.",
+            "candidate_match": "no",
+            "reasoning": "Event order, topology, and energy are scored against an independent FEniCSx trajectory rather than by the PINN or by `M(s)` itself."
+          },
+          {
+            "lesson_quoted": "Resting an unsupervised evaluation on the unverified premise that the systems under test can reliably judge one another stakes the entire method on an assumption that collapses under scrutiny.",
+            "candidate_match": "no",
+            "reasoning": "The trained PINNs do not judge one another; a separately generated numerical trajectory supplies the oracle."
+          },
+          {
+            "lesson_quoted": "Pairing a single-task or small-sample instrument with broad capability claims triggers a scope-mismatch rejection, and assembling retrieval or engineering blocks without an isolating scientific insight reads as application rather than research.",
+            "candidate_match": "no",
+            "reasoning": "The claims are explicitly bounded to a synthetic two-dimensional VO2 campaign and the matched interventions isolate geometry, material stiffness, and pulse spectrum."
+          }
+        ],
+        "verdict": "borderline"
+      }
+    ],
+    "verdict": "triggered",
+    "reasoning": "The anchor gap under `generative_process_redesign` triggers C23's strongest-alternative and narrow-heuristic lessons because it omits direct continuation/curriculum, hard-constraint, and self-adaptive competitors and does not re-derive target correctness. The assumption-audit gap also triggers C01's lesson about fixed or non-adaptive baselines without a mechanistic account of why the relocated signal works."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition 鈥?stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+        "sub_pattern": "C23 (Liberate a Fixed Generative Component)",
+        "tactical_pattern_quoted": "Reach inside an iterative refinement (diffusion/flow) chain and re-specify one of its conventionally-frozen internal components, then re-derive the chain around the new choice. The swap is licensed by a structural property of the task rather than by mere \"we can vary it.\"",
+        "instantiation_in_core_mechanism": "Step 5 re-specifies the fixed aggregate-loss endpoint as a solver-floor schedule and adds a bracket controller, but even under the thin-corpus abstract-move exception it does not re-derive why this new chain targets the correct coupled solution or show a regime unavailable to direct continuation, curriculum, hard-constraint, or self-adaptive alternatives; it is a specialized generic curriculum.",
+        "verdict": "bypassed"
+      },
+      {
+        "gap": "No retrieved frontier leaf tests whether one globally aggregated space-time objective over all coupled fields and switching regimes is necessary rather than assumed 鈥?stakes: if this shared assumption hides a fast local residual beneath slow-field averages, published accuracy conclusions can rest on the wrong certificate and principled high-frequency PINN design remains blocked.",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "tactical_pattern_quoted": "Across this cluster the audited assumption is always about the representational locus at which a security, detection, provenance, or safety property is presumed to be enforced — and the tactical move is to relocate the attack or defense to a different locus the field treated as irrelevant or invariant. The unifying verbs are \"relocate the signal,\" \"re-anchor enforcement,\" and \"demonstrate exploitability/robustness at the new locus.\"",
+        "instantiation_in_core_mechanism": "The candidate replaces a scalar sum of residuals with `M(s)`, another scalar computed from the same residual-space objects, so it changes aggregation and certification rather than relocating enforcement to a distinct representational locus; the downstream correlation test does not itself supply the card's mechanistic invariance or root-cause account.",
+        "verdict": "bypassed"
+      },
+      {
+        "gap": "No retrieved frontier leaf establishes that event order, front topology, and energy balance remain correct for held-out entire device geometries, material combinations, and pulse protocols that shift the spectrum and stiffness beyond training 鈥?stakes: reported gains may not transfer across devices or operating regimes, making the scientific conclusion non-general and the model unsafe as a design surrogate.",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_pattern_quoted": "The shared move is to construct a controlled set of evaluation instances in which exactly one named confound is either structurally blocked or independently varied, then report the divergence between apparent and de-confounded performance as the primary result rather than an aggregate leaderboard score. The load-bearing artifact is always the controlled instance set paired with an oracle independent of the system under test.",
+        "instantiation_in_core_mechanism": "Step 8 freezes the method, independently varies geometry, material stiffness, or pulse spectrum in matched whole-entity pairs, and uses an independent FEniCSx oracle before a joint OOD split, which performs the cluster's confound-isolating move."
+        ,"verdict": "applied"
+      }
+    ],
+    "verdict": "bypassed",
+    "reasoning": "C23 is bypassed because an explicit schedule is not the card's required chain re-derivation against dominant alternatives, and C01 is bypassed because `M(s)` remains at the residual-aggregation locus. C02 is applied through matched single-axis whole-entity interventions scored by an independent oracle."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "generative_process_redesign",
+      "assumption_audit_and_pivot",
+      "controlled_diagnostic_design"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "No reject-favored composition matches because `heterogeneous_decomposition` is absent from both the main and companion pattern set."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "arxiv:2605.08408v1",
+    "threat_source": "collision_hits",
+    "threat_channel": "signature",
+    "subsumption_argument": "Within the supplied retrieval-bounded pool, AdamFLIP is the most specific competitor: it already reframes PINN residual satisfaction as a hard-constrained controlled dynamical system and uses adaptive feedback to contract constraint residuals, directly attacking the candidate's global-weighting and simultaneous-feasibility bottleneck. The candidate's contribution therefore stands or falls on a matched-budget comparison showing that solver-derived floors plus the one-coordinate continuation add downstream event, topology, and energy value beyond feedback-linearized hard constraints; this is a competing, not exact, mechanism. Coverage is limited because arXiv and OpenAlex succeeded, Semantic Scholar was rate-limited, and OpenReview was unavailable, so this conclusion applies only to the supplied pool.",
+    "addressable_via": "Add matched-budget AdamFLIP, direct final-floor optimization, a direct continuation or curriculum PINN, and explicit self-adaptive or loss-conditional weighting to `core_mechanism_steps` and the falsification comparison, then narrow the claimed delta to what solver-floor continuation uniquely adds.",
+    "parametric_family_concern": "Homotopy or penalty-continuation PINN training remains incompletely retrieved; a bounded follow-up should query 'PINN homotopy continuation residual constraints' and 'curriculum PINN adaptive loss schedule'."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "M(s)",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The residual-identity permutation predicts independent event, topology, energy, and worst-block errors returning toward the global-sum baseline, so it is non-tautological at the structure level rather than merely predicting a change in `M(s)`. It remains a potentially confounded mechanism control because permuting floor identities also changes blockwise constraint semantics, but that does not make its stated downstream target tautological."
+  },
+  "blocking_findings_disposition": [],
+  "verdict": "abandon",
+  "verdict_layer": "hard_floor",
+  "verdict_rationale": "`gap_closure_reject_check.entries[0]` matches the C23 lesson \"Re-specifying the chain's starting distribution is sound but worthless if a dominant accelerator already reaches one or two steps — failing to beat the strongest fast-sampling alternative dooms the move regardless of its elegance\" because the mapped direct continuation, curriculum, hard-constraint, and self-adaptive competitors are absent. `recipe_application_check.entries[0].verdict` and `recipe_application_check.entries[1].verdict` are both `bypassed`: the anchor is a generic specialized curriculum without chain re-derivation, and `M(s)` does not relocate the certificate to a distinct locus; AdamFLIP additionally poses an addressable but unresolved direct threat within the retrieval-limited pool.",
+  "revision_targets": []
+}

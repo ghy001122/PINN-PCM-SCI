@@ -1,0 +1,1501 @@
+[
+ {
+  "title": "A physics-informed neural network framework for laminated composite plates under bending",
+  "title_norm": "a physics informed neural network framework for laminated composite plates under",
+  "abstract": ". The use of machine learning techniques in the field of structural engineering is becoming more common. However, the high dependence of traditional purely data-driven algorithms on the size and quality of the database has hindered the practical application of machine learning in engineering. Applying physics-informed machine learning can achieve accurate predictions while reducing the need for extensive input data by incorporating established principles of mechanics into the construction of the model loss function. This study develops a physics-informed neural network (PINN) framework to predict the bending behaviour of clamped laminated composite plates. In the training process of this framework, the classic laminated plates theory (CLPT) is adopted, and the model loss function is formulated based on the energy method. The comparisons between the machine learning prediction results with the CLPT analytical solutions and finite elements (FE) results reveal that the physics-informed neural network framework can achieve satisfactory predictions while offering improved computational efficiency.",
+  "tldr": "Comparisons between the machine learning prediction results with the CLPT analytical solutions and finite elements results reveal that the physics-informed neural network framework can achieve satisfactory predictions while offering improved computational efficiency.",
+  "year": 2025,
+  "venue": "Thin-walled structures",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Weixin Wang",
+   "H. Thai"
+  ],
+  "citations": 43,
+  "source": "semanticscholar",
+  "source_id": "606be9420c6bfe7d9cc72ba25fefad016b5acc56",
+  "paper_id": "doi:10.1016/j.tws.2025.113014",
+  "doi": "10.1016/j.tws.2025.113014",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.tws.2025.113014",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "ST-GPINN: a spatio-temporal graph physics-informed neural network for enhanced water quality prediction in water distribution systems",
+  "title_norm": "st gpinn a spatio temporal graph physics informed neural network for enhanced wa",
+  "abstract": "Data-driven models often neglect the underlying physical principles, limiting generalization capabilities in water distribution systems (WDSs). This study presents a novel spatio-temporal graph physics-informed neural network (ST-GPINN) for water quality prediction in WDSs, integrating hydraulic simulations, physics-informed neural networks (PINNs), and graph neural networks (GNNs) to capture dynamics and graph-based network connectivity while approximating partial differential equations (PDEs). ST-GPINN discretizes WDSs using virtual nodes to enhance spatial granularity, employs an Encoder-Processor-Decoder architecture for predictions. Validated on Network A (a small-scale network with 9 junctions and 11 pipes) and Network B (a real large-scale WDS with 920 junctions and 1032 pipes), ST-GPINN outperforms others, achieving a MAE of 0.0073 mg/L, RMSE of 0.0121 mg/L, and R2 of 88.91% in Network A, and a MAE of 0.008 mg/L, RMSE of 0.0098 mg/L, and R² of 98.91% in Network B. Its scalability and accuracy highlight ST-GPINN’s potential for water quality predictions.",
+  "tldr": "A novel spatio-temporal graph physics-informed neural network (ST-GPINN) for water quality prediction in WDSs, integrating hydraulic simulations, physics-informed neural networks (PINNs), and graph neural networks (GNNs) to capture dynamics and graph-based network connectivity while approximating partial differential equations (PDEs).",
+  "year": 2025,
+  "venue": "npj Clean Water",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tianwei Mu",
+   "Feiyu Duan",
+   "Baokuan Ning",
+   "Bo Zhou",
+   "Junyu Liu",
+   "Manhong Huang"
+  ],
+  "citations": 30,
+  "source": "semanticscholar",
+  "source_id": "2923de433a458afec50f8392c6e91b427a939539",
+  "paper_id": "doi:10.1038/s41545-025-00499-7",
+  "doi": "10.1038/s41545-025-00499-7",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.nature.com/articles/s41545-025-00499-7.pdf",
+  "published_iso": "2025-08-07",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A physics-informed neural network for modeling fracture without gradient damage: Formulation, application, and assessment",
+  "title_norm": "a physics informed neural network for modeling fracture without gradient damage ",
+  "abstract": "Accurate computational modeling of damage and fracture remains a central challenge in solid mechanics. The finite element method (FEM) is widely used for numerical modeling of fracture problems; however, classical damage models without gradient regularization yield mesh-dependent and usually inaccurate predictions. The use of gradient damage with FEM improves numerical robustness but introduces significant mathematical and numerical implementation complexities. Physics-informed neural networks (PINNs) can encode the governing partial differential equations, boundary conditions, and constitutive models into the loss functions, offering a new method for fracture modeling. Prior applications of PINNs have been limited to small-strain problems and have incorporated gradient damage formulation without a critical evaluation of its necessity. Since PINNs in their basic form are meshless, this work presents a PINN framework for modeling fracture in elastomers undergoing large deformation without the gradient damage formulation. The PINN implementation here does not require training data and utilizes the collocation method to formulate physics-informed loss functions. We have validated the PINN's predictions for various defect configurations using benchmark solutions obtained from FEM with gradient damage formulation. The crack paths obtained using the PINN are approximately insensitive to the collocation point distribution. This study offers new insights into the feasibility of using PINNs without gradient damage and suggests a simplified and efficient computational modeling strategy for fracture problems. The PINN's performance has been evaluated through systematic variations in key neural network parameters to provide an assessment and guidance for future applications. The results motivate the extension of PINN-based approaches to a broader class of materials and damage models in mechanics.",
+  "tldr": "This work presents a PINN framework for modeling fracture in elastomers undergoing large deformation without the gradient damage formulation and suggests a simplified and efficient computational modeling strategy for fracture problems.",
+  "year": 2025,
+  "venue": "Journal of the mechanics and physics of solids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Aditya Konale",
+   "Vikas Srivastava"
+  ],
+  "citations": 17,
+  "source": "semanticscholar",
+  "source_id": "5f730a9ce767d96d938788a405deb011fac7c888",
+  "paper_id": "arxiv:2507.07272",
+  "doi": "10.1016/j.jmps.2025.106395",
+  "arxiv_id": "2507.07272",
+  "dblp_key": "",
+  "paper_url": "https://arxiv.org/pdf/2507.07272",
+  "published_iso": "2025-07-09",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network-based discovery of hyperelastic constitutive models from extremely scarce data",
+  "title_norm": "physics informed neural network based discovery of hyperelastic constitutive mod",
+  "abstract": "The discovery of constitutive models for hyperelastic materials is essential yet challenging due to their nonlinear behavior and the limited availability of experimental data. Traditional methods typically require extensive stress-strain or full-field measurements, which are often difficult to obtain in practical settings. To overcome these challenges, we propose a physics-informed neural network (PINN)-based framework that enables the discovery of constitutive models using only sparse measurement data - such as displacement and reaction force - that can be acquired from a single material test. By integrating PINNs with finite element discretization, the framework reconstructs full-field displacement and identifies the underlying strain energy density from predefined candidates, while ensuring consistency with physical laws. A two-stage training process is employed: the Adam optimizer jointly updates neural network parameters and model coefficients to obtain an initial solution, followed by L-BFGS refinement and sparse regression with l_p regularization to extract a parsimonious constitutive model. Validation on benchmark hyperelastic models demonstrates that the proposed method can accurately recover constitutive laws and displacement fields, even when the input data are limited and noisy. These findings highlight the applicability of the proposed framework to experimental scenarios where measurement data are both scarce and noisy.",
+  "tldr": "Validation on benchmark hyperelastic models demonstrates that the proposed PINN-based framework can accurately recover constitutive laws and displacement fields, even when the input data are limited and noisy, and highlights the applicability of the proposed framework to experimental scenarios where measurement data are both scarce and noisy.",
+  "year": 2025,
+  "venue": "Computer Methods in Applied Mechanics and Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hyeonbin Moon",
+   "Dong-Oh Park",
+   "Hanbin Cho",
+   "Hong-Kyun Noh",
+   "Jae Hyuk Lim",
+   "S. Ryu"
+  ],
+  "citations": 20,
+  "source": "semanticscholar",
+  "source_id": "c67046bde74e28d097d595db5dd69a729a868e88",
+  "paper_id": "arxiv:2504.19494",
+  "doi": "10.1016/j.cma.2025.118258",
+  "arxiv_id": "2504.19494",
+  "dblp_key": "",
+  "paper_url": "https://arxiv.org/pdf/2504.19494",
+  "published_iso": "2025-04-28",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Multistage physics informed neural network for solving coupled multiphysics problems in material degradation and fluid dynamics",
+  "title_norm": "multistage physics informed neural network for solving coupled multiphysics prob",
+  "abstract": "Physics Informed Neural Networks (PINNs) have been rarely applied to solve multiphysics systems due to the inherent challenges in optimizing their complex loss functions, which typically incorporate multiple physics-based terms. This study presents a multistage PINN approach designed to efficiently solve coupled multiphysics systems with strong interdependencies. The multistage PINN progressively increases the complexity of the physical system being modeled, enabling more effective capture of coupling between different physics. The computational merits of this approach are demonstrated through two illustrative applications: prediction of asphalt aging and modeling of lid-driven cavity flow. Quantitative and qualitative comparisons with standard PINN and adaptive weight PINN approaches demonstrate the enhanced precision and computational efficiency of the proposed algorithm. The multistage PINN achieves a reduction in training time of more than 90% compared to standard PINNs while maintaining better alignment with the finite element method (FEM) solutions. The improvement in computational efficiency, coupled with enhanced accuracy, positions the multistage PINN as a powerful tool for addressing complex multiphysics problems across various engineering disciplines. The method’s ability to handle interactions between multiple physical processes, such as diffusion, chemical reactions, and fluid dynamics, makes it suitable for simulating long-term material behavior and complex fluid systems.",
+  "tldr": "The multistage PINN achieves a reduction in training time of more than 90% compared to standard PINNs while maintaining better alignment with the finite element method (FEM) solutions, and places the method as a powerful tool for addressing complex multiphysics problems across various engineering disciplines.",
+  "year": 2025,
+  "venue": "Engineering computations",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mahmoud Khadijeh",
+   "Veronica Cerqueglini",
+   "C. Kasbergen",
+   "S. Erkens",
+   "A. Varveri"
+  ],
+  "citations": 17,
+  "source": "semanticscholar",
+  "source_id": "ec7a7c48e5e211e80044ee86a2518cf592350930",
+  "paper_id": "dblp:journals/ewc/KhadijehCKEV25",
+  "doi": "10.1007/s00366-025-02174-4",
+  "arxiv_id": "",
+  "dblp_key": "journals/ewc/KhadijehCKEV25",
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s00366-025-02174-4.pdf",
+  "published_iso": "2025-06-29",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A fatigue life prediction framework of laser-directed energy deposition Ti-6Al-4V based on physics-informed neural network",
+  "title_norm": "a fatigue life prediction framework of laser directed energy deposition ti 6al 4",
+  "abstract": "PurposePores are the primary cause of fatigue failure in laser-directed energy deposition (L-DED) titanium alloys, which are largely determined by their location, size and shape. It is crucial for promoting the application of L-DED titanium alloys and ensuring their safety that establishing a fatigue life prediction method induced by pores, resulting in a proposed fatigue life prediction framework for L-DED Ti-6Al-4V based on a physics-informed neural network (PINN) algorithm.Design/methodology/approachIn this study, a novel fatigue life prediction framework for L-DED Ti-6Al-4V based on a PINN algorithm was proposed. The influence patterns of various fatigue-sensitive parameters were revealed. The paper also included validation and analysis of the method, such as hyperparameter analysis of the PINN, efficacy analysis driven by physical information and comparative analysis of different methods.FindingsThe proposed method demonstrated high accuracy, with a correlation coefficient of 0.99 with experimental life. The coefficient of determination was 0.95 and the mean squared error was 0.06.Originality/valueThe results indicate that the proposed fatigue life prediction framework was of strong generalization capability and robustness.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "International Journal of Structural Integrity",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Linwei Dang",
+   "Xiaofan He",
+   "Dingcheng Tang",
+   "Hao Xin",
+   "Bin Wu"
+  ],
+  "citations": 19,
+  "source": "semanticscholar",
+  "source_id": "2871bd1e10e671ccf782a89750c86c188d252bd4",
+  "paper_id": "doi:10.1108/ijsi-10-2024-0170",
+  "doi": "10.1108/ijsi-10-2024-0170",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/2871bd1e10e671ccf782a89750c86c188d252bd4",
+  "published_iso": "2025-02-04",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network approach to analyze the onset of oscillatory and stationary convections in chemically triggered Navier-Stokes-Voigt fluid layer heated and salted from below",
+  "title_norm": "physics informed neural network approach to analyze the onset of oscillatory and",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Applied Mathematics and Mechanics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "B. Sanju",
+   "R. Naveen Kumar",
+   "R. S. Varun Kumar",
+   "A. Abdulrahman"
+  ],
+  "citations": 18,
+  "source": "semanticscholar",
+  "source_id": "2d9b45eebd95af52437cd9be1d91d0ce7f042e9d",
+  "paper_id": "doi:10.1007/s10483-025-3316-7",
+  "doi": "10.1007/s10483-025-3316-7",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/2d9b45eebd95af52437cd9be1d91d0ce7f042e9d",
+  "published_iso": "2025-10-28",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network with symbolic regression for deriving analytical approximate solutions to nonlinear partial differential equations",
+  "title_norm": "physics informed neural network with symbolic regression for deriving analytical",
+  "abstract": "This work explores an interpretable approach based on physics-informed neural networks (PINNs) combined with symbolic regression (SR) to determine mathematical expressions for the predicted solutions of nonlinear partial differential equations that describe arterial blood flow influenced by external magnetic fields. PINNs are excellent at capturing the underlying physics, but can be computationally intensive and hard to interpret. The predictive power of PINN has been combined with evolutionary symbolic regression using PySR, an open-source Python module that employs genetic programming and customizable mathematical operators, including trigonometric, exponential, and arithmetic functions. This hybrid approach enables the derivation of concise, transparent mathematical expressions that closely replicate the behavior of these complex systems. This blend of PINNs and symbolic regression helps us to better understand how pulsatile blood flow and magnetic fields interact in the viscoelastic arterial circulation. The comparison graphs of the SR model and the PINN-predicted data at different time scales signify a better fit for the discovered mathematical expressions with data. As illustrated by the low mean squared error and statistical validation on residual losses, the symbolic expressions are extremely accurate and quick enough for real-time execution. Additionally, the solutions provided by the PINN are validated numerically to demonstrate the effectiveness of the proposed method. Our results demonstrate that combining symbolic regression with PINNs provides practical and interpretable solutions in biofluid mechanics, offering a more transparent and reliable alternative to traditional methods.",
+  "tldr": "The results demonstrate that combining symbolic regression with PINNs provides practical and interpretable solutions in biofluid mechanics, offering a more transparent and reliable alternative to traditional methods.",
+  "year": 2025,
+  "venue": "Neural computing & applications (Print)",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Joyabrata Das",
+   "B. Bhaumik",
+   "S. De",
+   "Satyasaran Changdar"
+  ],
+  "citations": 19,
+  "source": "semanticscholar",
+  "source_id": "0dbb85bd162ae4cc32720d287127bb4a0417b46d",
+  "paper_id": "dblp:journals/nca/DasBDC25",
+  "doi": "10.1007/s00521-025-11450-9",
+  "arxiv_id": "",
+  "dblp_key": "journals/nca/DasBDC25",
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s00521-025-11450-9.pdf",
+  "published_iso": "2025-07-06",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Inverse Design Method for Electromagnetic Periodic Structures Based on Physics-Informed Neural Network With Embedded Analytical Models",
+  "title_norm": "inverse design method for electromagnetic periodic structures based on physics i",
+  "abstract": "To achieve an efficient inverse design method for electromagnetic devices, this article introduces the physics-informed neural network with embedded analytical models (EAM-PINN). This approach combines embedded physical knowledge and external physical constraints and is applied to the inverse design of electromagnetic periodic structures. In EAM-PINN, we embed the physical knowledge of periodic structures into neural networks, specifically by replacing ordinary neurons with periodic neurons containing Floquet mode solutions to form neural networks and output electromagnetic fields. Then, we use the mode matching method to link the electromagnetic field with the structures, integrating them into the loss function as external physical constraints. Through EAM-PINN, we successfully perform inverse design of artificial magnetic conductors (AMCs) and frequency-selective surfaces (FSSs), demonstrating its effectiveness in designing electromagnetic periodic structures. Compared with traditional neural networks, EAM-PINN inherits the benefits of traditional PINN, requiring fewer training data or even no data at all, and achieves faster inverse design. Moreover, EAM-PINN exhibits stronger learning capabilities and easier convergence compared with the traditional PINN.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE transactions on microwave theory and techniques",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yu-Hang Liu",
+   "Jing-Cheng Liang",
+   "Bing-Zhong Wang",
+   "Ren Wang"
+  ],
+  "citations": 23,
+  "source": "semanticscholar",
+  "source_id": "5f3b82dd16ac2811af8494d64026da334a6a6bdd",
+  "paper_id": "doi:10.1109/TMTT.2024.3435970",
+  "doi": "10.1109/TMTT.2024.3435970",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/5f3b82dd16ac2811af8494d64026da334a6a6bdd",
+  "published_iso": "2025-02-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-Informed Neural Network for Satellite Battery Degradation Estimation Based on an Extreme Segment Data Within 2 Min",
+  "title_norm": "physics informed neural network for satellite battery degradation estimation bas",
+  "abstract": "Accurately estimating the state of health (SOH) of satellite batteries is crucial for reliable satellite operation and safe decision-making. However, the complex degradation processes of batteries in space, coupled with limited labeled data, pose challenges for existing SOH estimation methods. We propose a physics-informed neural network (PINN) for satellite battery SOH estimation using only an extreme segment data within 2 min. To address battery degradation complexity, we model degradation attributes from an empirical and state-space perspective. We combine neural networks with physical principles to capture the degradation dynamics of batteries, enabling accurate SOH estimation. To tackle limited and inconsistent data acquisition per cycle, health features are constructed from relaxation voltage data within 2 min, ensuring independence from charging/discharging strategies. Unique factors specific to satellite operations are also considered. To validate the proposed method, the battery degradation experiments simulating a geostationary earth orbit (GEO) satellite are conducted, and an aging dataset is generated. The proposed method achieves a mean absolute percentage error (MAPE) of 1.33% for SOH estimation using a 2-min extreme data segment. Our studies provide valuable insights into battery prognosis and health management for space missions, aiding in optimizing battery performance and longevity in satellite operations.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE transactions on industrial electronics (1982. Print)",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Fujin Wang",
+   "Zhi Zhai",
+   "Yi Di",
+   "Zhibin Zhao",
+   "Xuefeng Chen"
+  ],
+  "citations": 21,
+  "source": "semanticscholar",
+  "source_id": "87aa216a88deef8294245d0dc78a393064e9e54a",
+  "paper_id": "dblp:journals/tie/WangZDZC25",
+  "doi": "10.1109/TIE.2025.3546350",
+  "arxiv_id": "",
+  "dblp_key": "journals/tie/WangZDZC25",
+  "paper_url": "https://www.semanticscholar.org/paper/87aa216a88deef8294245d0dc78a393064e9e54a",
+  "published_iso": "2025-09-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A pseudo-time stepping and parameterized physics-informed neural network framework for Navier–Stokes equations",
+  "title_norm": "a pseudo time stepping and parameterized physics informed neural network framewo",
+  "abstract": "Physics-informed neural networks (PINNs) have emerged as a popular approach in scientific machine learning for solving both forward and inverse problems of partial differential equations (PDEs). However, complex physical systems are often characterized by parameters, such as viscosity and Reynolds number in fluid dynamics, which pose significant challenges for parameterized PDE solutions. The inherent limitations of PINNs include the need for repeated and time-consuming training under varying parameter conditions, and the minimization of PDE residuals with PDE-based soft constraints, which makes the “ill-conditioned” problem. To address these issues, this paper proposes an innovative framework: the pseudo-time stepping and parameterized physics-informed neural network (P2PINN). P2PINN leverages the explicit encoding of only two PDE parameters' latent representations to enable efficient interpolation and extrapolation across a wide range of parameters. By integrating the pseudo-time stepping method with deep learning, the framework significantly alleviates the ill-conditioned problem. We validated our method in the context of the Navier–Stokes equations, and experimental results demonstrate that P2PINN achieves solution speedups of up to 2–4 orders of magnitude compared to baseline PINNs and their variants, while also surpassing them in accuracy.",
+  "tldr": "P2PINN leverages the explicit encoding of only two PDE parameters' latent representations to enable efficient interpolation and extrapolation across a wide range of parameters, and integrates the pseudo-time stepping method with deep learning, significantly alleviates the ill-conditioned problem.",
+  "year": 2025,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhuo Zhang",
+   "Xiong Xiong",
+   "Sen Zhang",
+   "Wei Wang",
+   "Xi Yang",
+   "Shilin Zhang"
+  ],
+  "citations": 19,
+  "source": "semanticscholar",
+  "source_id": "e0209a312ffb08d3dd1723d4b959b301c738ab79",
+  "paper_id": "doi:10.1063/5.0259583",
+  "doi": "10.1063/5.0259583",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/e0209a312ffb08d3dd1723d4b959b301c738ab79",
+  "published_iso": "2025-03-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Uniform Physics Informed Neural Network Framework for Microgrid and Its Application in Voltage Stability Analysis",
+  "title_norm": "uniform physics informed neural network framework for microgrid and its applicat",
+  "abstract": "This paper focus on the application of Physics Informed Neural Network (PINN) for extracting parameters of photovoltaic (PV), wind, and energy storage equipment models. Accurately extracting the parameters of these models is essential for effectively controlling and optimizing the overall stability of Chongqing power system (CPS). Despite numerous algorithms proposed to tackle this issue, accurately and reliably extracting the parameters of these remains a significant challenge. This paper proposed an improved PINN, named Uniform Physics Informed Neural Network (UPINN), with Proximal Policy Optimization (PPO) based reinforcement learning, for extortion of parameters of these models. The PINN difficulty is overcome in UPINN by configuring four strategies: feedback operator, GRU gating mechanisms, transfer operator with historic population, and modification factor with PPO aided reinforcement learning. UPINN models are trained iteratively to maximize parameters and reduce RMSE. UPINN accurately extracts parameters and describes the behavior of PV, wind, and energy storage equipment models as it converges towards optimal solutions through parameter adjustments and RMSE evaluations. The UPINN was implemented for real-time voltage stability monitoring of CPS. The results show that UPINN performs better than other neural network models in respect of accuracy and stability, demonstrating the effectiveness of improved strategies. Moreover, its emphasis the importance of computed and estimated indices obtained through UPINN for predicting voltage collapse occurrences within the system.",
+  "tldr": "An improved PINN is proposed, named Uniform Physics Informed Neural Network (UPINN), with Proximal Policy Optimization (PPO) based reinforcement learning, for extortion of parameters of these models.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Renhai Feng",
+   "Khan Wajid",
+   "Muhammad Faheem",
+   "Jiang Wang",
+   "Fazal E. Subhan",
+   "Muhammad Shoaib Bhutta"
+  ],
+  "citations": 19,
+  "source": "semanticscholar",
+  "source_id": "8a4752170c279f9bfd5af503568426bf7d4a1b43",
+  "paper_id": "dblp:journals/access/FengWFWSB25",
+  "doi": "10.1109/ACCESS.2025.3527047",
+  "arxiv_id": "",
+  "dblp_key": "journals/access/FengWFWSB25",
+  "paper_url": "https://doi.org/10.1109/access.2025.3527047",
+  "published_iso": null,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "DeepONet-embedded physics-informed neural network for production prediction of multiscale shale matrix–fracture system",
+  "title_norm": "deeponet embedded physics informed neural network for production prediction of m",
+  "abstract": "As a rising method for reservoir-scale production analysis, machine learning (ML) models possess high computational efficiency with robust capability of nonlinear mapping. However, their accuracy and interpretability are commonly limited owing to the absence of intrinsic physical mechanisms, solely by the data fitting. This work proposes a novel DeepONet-embedded physics-informed neural network (DE-PINN), which comprises a forward network to connect the matrix/fracture characteristics and production performance, and a sampling network to acquire the location of sampling points within shale reservoirs. DeepONets are constructed by the selected layers of these networks to output the field variables in governing equations that include mass/momentum conservation equations coupled with multiscale transport mechanisms. Through the automatic differentiation method, these equations are solved by the obtained field variables, and the residuals generated during the solution are integrated into the loss function as physical constraints. Compared with traditional data-driven machine learning models, the DE-PINN exhibits better performance in forecasting the production rate and cumulative production, achieving the mean absolute percentage error (MAPE) of approximately 3% and adjusted R2 values in the test set exceeding 0.98. This model demonstrates the advantage by realizing superior predictive precision with fewer production data samples under complex geological conditions of the shale reservoirs.",
+  "tldr": "A novel DeepONet-embedded physics-informed neural network (DE-PINN), which comprises a forward network to connect the matrix/fracture characteristics and production performance, and a sampling network to acquire the location of sampling points within shale reservoirs, is proposed.",
+  "year": 2025,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "JiaXuan Chen",
+   "Hao Yu",
+   "Bo Li",
+   "Houlin Zhang",
+   "Xu Jin",
+   "Siwei Meng"
+  ],
+  "citations": 25,
+  "source": "semanticscholar",
+  "source_id": "434cd8d96bf4814fa4bc9d97662fe9246df3d665",
+  "paper_id": "doi:10.1063/5.0245212",
+  "doi": "10.1063/5.0245212",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/434cd8d96bf4814fa4bc9d97662fe9246df3d665",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "FFV-PINN: A Fast Physics-Informed Neural Network with Simplified Finite Volume Discretization and Residual Correction",
+  "title_norm": "ffv pinn a fast physics informed neural network with simplified finite volume di",
+  "abstract": "Physics-informed neural networks (PINNs) have emerged as a major research focus. However, today's PINNs encounter several limitations. Firstly, during the construction of the loss function using automatic differentiation, PINNs often neglect information from neighboring points, which hinders their ability to enforce physical constraints and diminishes their accuracy. Furthermore, issues such as instability and poor convergence persist during PINN training, limiting their applicability to complex fluid dynamics problems. To address these challenges, a fast physics-informed neural network framework that integrates a simplified finite volume method (FVM) and residual correction loss term has been proposed, referred to as Fast Finite Volume PINN (FFV-PINN). FFV-PINN utilizes a simplified FVM discretization for the convection term, with an accompanying improvement in the dispersion and dissipation behavior. Unlike traditional FVM, the FFV-PINN outputs can be simply and directly harnessed to approximate values on control surfaces, thereby simplifying the discretization process. Moreover, a residual correction loss term is introduced to significantly accelerates convergence and improves training efficiency. To validate the performance, we solve a series of challenging problems -- including flow in the two-dimensional steady and unsteady lid-driven cavity, three-dimensional steady lid-driven cavity, backward-facing step flows, and natural convection at high Reynolds number and Rayleigh number. Notably, the FFV-PINN can achieve data-free solutions for the lid-driven cavity flow at Re = 10000 and natural convection at Ra = 1e8 for the first time in PINN literature, even while requiring only 680s and 231s. It further highlights the effectiveness of FFV-PINN in improving both speed and accuracy, marking another step forward in the progression of PINNs as competitive neural PDE solvers.",
+  "tldr": "The FFV-PINN can achieve data-free solutions for the lid-driven cavity flow at Re = 10000 and natural convection at Ra = 1e8 for the first time in PINN literature, even while requiring only 680s and 231s, and highlights the effectiveness of FFV-PINN in improving both speed and accuracy.",
+  "year": 2025,
+  "venue": "Computer Methods in Applied Mechanics and Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chang Wei",
+   "Yuchen Fan",
+   "Jian Cheng Wong",
+   "C. Ooi",
+   "Heyang Wang",
+   "P. Chiu"
+  ],
+  "citations": 26,
+  "source": "semanticscholar",
+  "source_id": "3b3dd47d418e8d38fc93d94a0608fbcce9cac934",
+  "paper_id": "dblp:journals/corr/abs-2603-24114",
+  "doi": "10.1016/j.cma.2025.118139",
+  "arxiv_id": "2603.24114",
+  "dblp_key": "journals/corr/abs-2603-24114",
+  "paper_url": "https://arxiv.org/pdf/2603.24114",
+  "published_iso": "2025-09-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A physics-informed neural network for turbulent wake simulations behind wind turbines",
+  "title_norm": "a physics informed neural network for turbulent wake simulations behind wind tur",
+  "abstract": "Fast simulations of wind turbine wakes are crucial during the design phase of optimal wind farm layouts. Wind turbine wakes affect the performance of downstream turbines. Physics-informed neural networks (PINNs), a deep learning approach to simulate dynamical systems governed by partial differential equations, are gaining traction in computational fluid dynamics due to their fast inference capability. We developed a PINN model using the 2-equation k−ε model and the actuator disk method to simulate the wakes behind the wind turbines. Crucially, training of the developed PINN model does not rely on high-fidelity simulation data, thus reducing the end-to-end training time by saving simulation data generation time. We tested the model against traditional solvers and field data to simulate the turbulent wake behind the HOLEC WPS 30/3 Wind Turbine from Sexbierum and a three-blade 630-kW Nibe-B wind turbine. Detailed computational studies are completed to establish convergence properties with increasing sampling collocation points and the number of graphical processing units. A transfer learning strategy is introduced to accelerate training for new scenarios resulting in a 5× speedup. Our results establish the efficacy of the PINN model in simulating turbulent flows. Compared to field data, our PINN model and traditional Reynolds-averaged Navier–Stokes (RANS) numerical solvers, such as the shear stress transport k −ω and Reynolds stress model have similar errors, suggesting its utility as a replacement to these RANS solvers. The model architecture, trained weights, and code are available in https://github.com/quest-lab-iisc/PINN_WakeTurbulenceModel.",
+  "tldr": "A physics-informed neural networks model using the 2-equation k−ε model and the actuator disk method to simulate the wakes behind the wind turbines, establishing the efficacy of the PINN model in simulating turbulent flows.",
+  "year": 2025,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Azhar Gafoor CTP",
+   "Sumanth Kumar Boya",
+   "Rishi Jinka",
+   "Abhineet Gupta",
+   "Ankit Tyagi",
+   "Suranjan Sarkar"
+  ],
+  "citations": 22,
+  "source": "semanticscholar",
+  "source_id": "a4c7107407320a26651f3bfb0932c6e5f700d179",
+  "paper_id": "doi:10.1063/5.0245113",
+  "doi": "10.1063/5.0245113",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/a4c7107407320a26651f3bfb0932c6e5f700d179",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "ReVeal: A Physics-Informed Neural Network for High-Fidelity Radio Environment Mapping",
+  "title_norm": "reveal a physics informed neural network for high fidelity radio environment map",
+  "abstract": "Accurately mapping the radio environment (e.g., identifying wireless signal strength at specific frequency bands and geographic locations) is crucial for efficient spectrum sharing, enabling Secondary Users (SUs) to access underutilized spectrum bands while protecting Primary Users (PUs). However, existing models either lack generalization due to shadowing, interference, and fading, or are computationally expensive, limiting real-world applicability. To address such shortcomings, we derive a second-order Partial Differential Equation (PDE) for the Received Signal Strength Indicator (RSSI) based on an established statistical model. We then propose ReVeal (Reconstructor and Visualizer of Spectrum Landscape), a novel Physics-Informed Neural Network (PINN) that integrates the PDE residual into a neural network loss function to accurately model the radio environment using sparse Radio Frequency (RF) sensor measurements. ReVeal is validated using real-world measurement data from rural and suburban areas of the ARA testbed and benchmarked against existing methods. ReVeal outperforms traditional approaches in radio environment prediction; for example, with a Root Mean Square Error (RMSE) of only 1.95 dB, ReVeal achieves an accuracy of the order of magnitude higher than existing methods, including 3GPP and ITU-R channel models, ray tracing, and neural networks. In addition, ReVeal achieves high accuracy with low computational complexity while requiring only sparse RF sampling—for instance, just 30 training sample points across a 514-square-kilometer area. The promising results demonstrate ReVeal's potential to advance spectrum management by enabling precise interference management between PUs and SUs.",
+  "tldr": "A novel Physics-Informed Neural Network that integrates the PDE residual into a neural network loss function to accurately model the radio environment using sparse Radio Frequency (RF) sensor measurements is proposed, demonstrating ReVeal's potential to advance spectrum management by enabling precise interference management between PUs and SUs.",
+  "year": 2025,
+  "venue": "International Symposium on Dynamic Spectrum Access Networks",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "M. Shahid",
+   "Kunal Das",
+   "Hadia Ushaq",
+   "Hongwei Zhang",
+   "Jiming Song",
+   "D. Qiao"
+  ],
+  "citations": 16,
+  "source": "semanticscholar",
+  "source_id": "c823c46682bd42e53111dae200a5077d637fcb4d",
+  "paper_id": "dblp:conf/dyspan/ShahidDUZSQBGZA25",
+  "doi": "10.1109/DySPAN64764.2025.11115911",
+  "arxiv_id": "2502.19646",
+  "dblp_key": "conf/dyspan/ShahidDUZSQBGZA25",
+  "paper_url": "https://www.semanticscholar.org/paper/c823c46682bd42e53111dae200a5077d637fcb4d",
+  "published_iso": "2025-02-27",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Interpretable Physics-Informed Neural Network for Reliable Humidity Forecasting in Contrasting Climates of Sindh.",
+  "title_norm": "interpretable physics informed neural network for reliable humidity forecasting ",
+  "abstract": "Reliable forecasting of humidity is fundamental to effective climate monitoring, agricultural scheduling, and public health planning. Traditional machine learning frameworks, however, struggle to mirror the largely nonlinear climatological processes governing moisture distribution and rarely satisfy governing physical laws. This work introduces a physics-informed neural network (PINN) explicitly tailored to forecast daily mean humidity, embedding thermodynamic principles and smaller-scale climatological knowledge to bolster generalization and interpretability. The analysis is based on a comprehensive dataset of meteorological measurements from three climatically contrasting districts in Sindh, encompassing temperature, wind velocity, cumulative rainfall, and derived interaction terms. The PINN topology augments the mean squared error loss with a physically grounded rainfall–humidity relationship, thereby constraining the output to physically realizable humidity profiles. To decode the model’s inner operation, we employed SHAP and LIME, providing affected stakeholders with a transparent rationale for predictions. Comparative benchmarks reveal that the physics-informed architecture exceeds the forecast skill of conventional regression, ensemble methods, and standard feed-forward neural networks, securing R² metrics greater than 0.99 and uniformly low mean squared error across all three locales. Sensitivity assessments based on SHAP and LIME indicate that seasonal modulation and the interaction between wind and humidity are the predominant drivers of the forecasts, whereas the contribution of rainfall-derived predictors remains negligible. The combination of PINN with contemporary interpretability methodologies yields a forecasting paradigm for meteorology that is both transparent and governed by established physical laws.\n ",
+  "tldr": "A physics-informed neural network explicitly tailored to forecast daily mean humidity, embedding thermodynamic principles and smaller-scale climatological knowledge to bolster generalization and interpretability is introduced.",
+  "year": 2025,
+  "venue": "VAWKUM Transactions on Computer Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Syed Azeem Inam",
+   "Hassan Hashim",
+   "Asif Mehmood Awan",
+   "Haider Rajput",
+   "Saddam Umer"
+  ],
+  "citations": 20,
+  "source": "semanticscholar",
+  "source_id": "878541a1f92dbb36fa8cdba5ca8ec7999614680b",
+  "paper_id": "doi:10.21015/vtcs.v13i2.2229",
+  "doi": "10.21015/vtcs.v13i2.2229",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://vfast.org/journals/index.php/VTCS/article/download/2229/1767",
+  "published_iso": "2025-10-10",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Hybrid physics‐informed neural network with parametric identification for modeling bridge temperature distribution",
+  "title_norm": "hybrid physics informed neural network with parametric identification for modeli",
+  "abstract": "This paper introduces a novel hybrid multi‐model thermo‐temporal physics‐informed neural network (TT‐PINN) framework for thermal loading prediction in composite bridge decks. Unlike the existing PINN applications in heat transfer that focus on simple geometries, this framework uniquely addresses multi‐material domains and realistic boundary conditions through a dual‐network architecture designed for composite structures. The framework further incorporates the environmental boundary conditions of natural convection and solar radiation into the loss function and employs transfer learning for efficient adaptation to varying conditions. Moreover, a transfer learning mechanism enables rapid adaptation to new environmental states, thus markedly reducing the computations as compared to the conventional finite element method (FEM). Through noise‐augmented training and parameter identification, the TT‐PINN effectively handles the real‐world monitoring data uncertainties and allows material property calibration with limited sensor data. The framework's ability to capture complex thermal behavior is validated by studying a cable‐stayed bridge. It significantly reduces the computational costs as compared to the traditional FEM approaches.",
+  "tldr": "This paper introduces a novel hybrid multi‐model thermo‐temporal physics‐informed neural network framework for thermal loading prediction in composite bridge decks that significantly reduces the computational costs as compared to the traditional finite element method.",
+  "year": 2025,
+  "venue": "Comput. Aided Civ. Infrastructure Eng.",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yanjia Wang",
+   "Dong-shuang Yang",
+   "Ye Yuan",
+   "Jing Zhang",
+   "Francis T. K. Au"
+  ],
+  "citations": 20,
+  "source": "semanticscholar",
+  "source_id": "b6d795ac7d98c4365c3eff8f52ed55f53877fd85",
+  "paper_id": "dblp:journals/cacie/WangYYZA25",
+  "doi": "10.1111/mice.13436",
+  "arxiv_id": "",
+  "dblp_key": "journals/cacie/WangYYZA25",
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/mice.13436",
+  "published_iso": "2025-02-18",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "AI-driven Physics Informed Neural Network for Daily Temperature Forecasting with Constraint Aware Learning and Explainable Feature Attribution",
+  "title_norm": "ai driven physics informed neural network for daily temperature forecasting with",
+  "abstract": "The daily mean temperature prediction is essential to implement agricultural adaptation and disaster risk reduction strategies in countries with varied climatic regions like Pakistan. Traditional machine learning methods often had difficulty complying with thermodynamic constraints, limiting their practicality for temperature estimation. The study proposed a Physics-Informed Neural Network (PINN), which integrates data and governing thermal principles to overcome these limitations. Integrating thermal equilibrium conditions within the loss function inherently consolidates the thermodynamic coherence of the construction. The high-resolution meteorological data from the Badin, Dadu and Rohri observation networks are used to build domain-specific features. These include diurnal excursions of temperature and humidity, a cyclic year encoding and wind-humidity ratios that capture the nonlinear mesoscale thermodynamics of the system. The PINN shows strong predictive ability as compared to a benchmark linear regression, some ensemble algorithms, and feedforward networks (R2 = 0.9975 Badin, 0.9974 Dadu, 0.9949 Rohri). SHAP and LIME, used in feature importance quantification, help to identify temperature drivers. In Badin, wind regimes have the most influence, whereas in Dadu and Rohri, lingering time trends have the most impact. With a focus on physical plausibility and explainable AI, the proposed methodology combines the probabilistic advantages of statistical learning with the constraint-based approach of atmospheric physics. This leads to resilient and spatially flexible predictions of temperature in data-scarce regions. As the study shows, PINNs could become a game-changing operational meteorological forecast technology when observational networks are weak or lacking altogether.",
+  "tldr": "The study proposed a Physics-Informed Neural Network (PINN), which integrates data and governing thermal principles to overcome limitations in traditional machine learning methods and could become a game-changing operational meteorological forecast technology when observational networks are weak or lacking altogether.",
+  "year": 2025,
+  "venue": "VFAST Transactions on Software Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Syed Azeem Inam",
+   "Hassan Hashim",
+   "Syeda Nazia Ashraf",
+   "Syeda Wajiha Naim",
+   "Haider Rajput",
+   "Saddam Umer"
+  ],
+  "citations": 22,
+  "source": "semanticscholar",
+  "source_id": "512af30ced93092a110a426635c11fa8c8ca6c98",
+  "paper_id": "doi:10.21015/vtse.v13i4.2231",
+  "doi": "10.21015/vtse.v13i4.2231",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://vfast.org/journals/index.php/VTSE/article/download/2231/1781",
+  "published_iso": "2025-11-18",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "An enhanced hybrid adaptive physics-informed neural network for forward and inverse PDE problems",
+  "title_norm": "an enhanced hybrid adaptive physics informed neural network for forward and inve",
+  "abstract": "",
+  "tldr": "A hybrid adaptive (HA) sampling method and a feature embedding layer for PINN are proposed, which significantly improve the accuracy and efficiency of PINN with reduced reliance on the number of sampling points.",
+  "year": 2025,
+  "venue": "Applied intelligence (Boston)",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Kuang Luo",
+   "Shaolin Liao",
+   "Zhong Guan",
+   "Baiquan Liu"
+  ],
+  "citations": 17,
+  "source": "semanticscholar",
+  "source_id": "5f16ad69ed0f935fe0a603ce01ce1a66daa5f26e",
+  "paper_id": "dblp:journals/apin/LuoLGL25",
+  "doi": "10.1007/s10489-024-06195-2",
+  "arxiv_id": "",
+  "dblp_key": "journals/apin/LuoLGL25",
+  "paper_url": "https://www.semanticscholar.org/paper/5f16ad69ed0f935fe0a603ce01ce1a66daa5f26e",
+  "published_iso": "2025-01-02",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Ocean Surface Wind Speed Estimation From GNSS-R Data Using Physics-Informed Attention-Aided Convolutional Neural Network",
+  "title_norm": "ocean surface wind speed estimation from gnss r data using physics informed atte",
+  "abstract": "Accurate global ocean surface wind speed estimation is crucial for weather forecasting and maritime transportation. Traditional retrieval methods based on Global Navigation Satellite System Reflectometry (GNSS-R) data and deep learning techniques often struggle to capture the complex, nonlinear relationships between GNSS-R observables and wind speed. This challenge is further exacerbated by imbalanced data distributions, which lead to significant underestimation under high wind conditions (15–30 m/s, here). To mitigate these issues, this study proposes a novel Physics-Informed Attention-Aided Convolutional Neural Network (PA-CNN). The proposed model incorporates an attention mechanism into the CNN architecture to adaptively focus on the most informative features. In addition, geophysical principles related to GNSS-R signal scattering are integrated with data-driven learning, improving both the interpretability and generalization capability of the network. Moreover, a spatial–temporal smoothing postprocessing step is designed to enhance consistency in wind speed retrieval. Extensive experiments using Cyclone GNSS (CYGNSS) datasets demonstrate that PA-CNN with smoothing outperforms existing deep learning approaches, achieving an overall root mean square difference (RMSD) of 1.38 m/s compared with ERA5 reanalysis data and 1.56 m/s against buoy measurements, highlighting the potential of combining physics-informed modeling with advanced deep-learning techniques for improved ocean surface wind speed retrieval.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xin Qiao",
+   "Weimin Huang"
+  ],
+  "citations": 19,
+  "source": "semanticscholar",
+  "source_id": "9118cc7b7df11ce6a22cd6b2d38b4d4dff44eb18",
+  "paper_id": "dblp:journals/tgrs/QiaoH25",
+  "doi": "10.1109/TGRS.2025.3594633",
+  "arxiv_id": "",
+  "dblp_key": "journals/tgrs/QiaoH25",
+  "paper_url": "https://www.semanticscholar.org/paper/9118cc7b7df11ce6a22cd6b2d38b4d4dff44eb18",
+  "published_iso": null,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed radial basis function neural network for efficiently modeling oil–water two-phase Darcy flow",
+  "title_norm": "physics informed radial basis function neural network for efficiently modeling o",
+  "abstract": "Physics-informed neural networks (PINNs) improve the accuracy and generalization ability of prediction by introducing physical constraints in the training process. As a model combining physical laws and deep learning, it has attracted wide attention. However, the training cost of PINNs is high, especially for the simulation of more complex two-phase Darcy flow. In this study, a physics-informed radial basis function neural network (PIRBFNN) is proposed to simulate two-phase Darcy flow of oil and water efficiently. Specifically, in each time step, oil phase and water phase equations are discretized based on the finite volume method, and then, the physics-informed loss is constructed according to the residual of their coupling equations, and the pressure is approximated by RBFNN. Based on the obtained pressure, another physics-informed loss is constructed according to the residual of discrete water phase equation and the water saturation is approximated by another RBFNN. For boundary conditions, we use “hard constraints” to speed up the training of PIRBFNN. The straightforward structure of PIRBFNN also contributes to an efficient training process. In addition, we have simply proved the ability of RBFNN to fit continuous functions. Finally, the experimental results also verify the computational efficiency of PIRBFNN. Compared with physics-informed convolutional neural network, the training time of PIRBFNN is reduced by more than three times.",
+  "tldr": "A physics-informed radial basis function neural network (PIRBFNN) is proposed to simulate two-phase Darcy flow of oil and water efficiently and the training time of PIRBFNN is reduced by more than three times.",
+  "year": 2025,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shuaijun Lv",
+   "Daolun Li",
+   "Wen-shu Zha",
+   "Yan Xing"
+  ],
+  "citations": 20,
+  "source": "semanticscholar",
+  "source_id": "ce64307a53c373e2a21777098f8e6544a29dd788",
+  "paper_id": "doi:10.1063/5.0249560",
+  "doi": "10.1063/5.0249560",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/ce64307a53c373e2a21777098f8e6544a29dd788",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed Modularized Neural Network for Advanced Building Control by Deep Reinforcement Learning",
+  "title_norm": "physics informed modularized neural network for advanced building control by dee",
+  "abstract": "Physics-informed machine learning (PIML) provides a promising solution for building energy modeling and can serve as a virtual environment to enable reinforcement learning (RL) agents to interact and learn. However, challenges remain in efficiently integrating physics priors, evaluating the effectiveness of physics constraints, balancing model accuracy and physics consistency, and enabling real-world implementation. To address these gaps, this study introduces a Physics-Informed Modularized Neural Network (PI-ModNN), which incorporates physics priors through a physics-informed model structure, loss functions, and hard constraints. A new evaluation metric called\"temperature response violation\"is developed to quantify the physical consistency of data-driven building dynamic models under varying control inputs and training data sizes. Additionally, a physics prior evaluation framework based on rule importance is proposed to assess the contribution of each individual physics prior, offering guidance on selecting appropriate PIML techniques. Results indicate that incorporating physical priors does not always improve model performance; inappropriate priors may decrease model accuracy and consistency. However, hard constraints are effective in enforcing model consistency. Furthermore, we present a general workflow for developing control-oriented PIML models and integrating them with deep reinforcement learning (DRL). Following this framework, a case study implementing DRL in an office space over three months demonstrates potential energy savings of 31.4%. Finally, we provide a general guideline for integrating data-driven models with advanced building control through a four-step evaluation framework, paving the way for reliable and scalable deployment of advanced building controls.",
+  "tldr": "A Physics-Informed Modularized Neural Network (PI-ModNN) is introduced, which incorporates physics priors through a physics-informed model structure, loss functions, and hard constraints, and provides a general guideline for integrating data-driven models with advanced building control through a four-step evaluation framework.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zixin Jiang",
+   "Xuezheng Wang",
+   "Bing Dong"
+  ],
+  "citations": 18,
+  "source": "semanticscholar",
+  "source_id": "a0d11cf47bd03c7584b9a9a1360373d7b6d13807",
+  "paper_id": "dblp:journals/corr/abs-2504-05397",
+  "doi": "10.1016/j.adapen.2025.100237",
+  "arxiv_id": "2504.05397",
+  "dblp_key": "journals/corr/abs-2504-05397",
+  "paper_url": "https://doi.org/10.1016/j.adapen.2025.100237",
+  "published_iso": "2025-04-07",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A Novel Method for Estimating the State of Health of Lithium-Ion Batteries Based on Physics-Informed Neural Network",
+  "title_norm": "a novel method for estimating the state of health of lithium ion batteries based",
+  "abstract": "An accurate state of health (SOH) assessment of lithium-ion batteries is essential for ensuring the reliability and safety of electric vehicles (EVs). Data-driven SOH estimation methods have shown promise but face challenges in generalizing across diverse battery types and variable operating conditions. To address this, this study integrates physical information into data-driven approaches, enabling physically consistent inferences and a rapid adaptation to different battery chemistries and usage scenarios. Specifically, physical features correlated with battery degradation, such as the link between incremental capacity (IC) peaks and SOH, are used as constraints to guide model learning. A fully connected layer within a back-propagation neural network (BPNN) is employed to capture battery aging dynamics effectively. Experimental results on two datasets show that the proposed model outperforms traditional neural networks, reducing the RMSE by at least 1.1% and demonstrating strong generalizability in both single-dataset and transfer learning tasks.",
+  "tldr": "Physical features correlated with battery degradation, such as the link between incremental capacity (IC) peaks and SOH, are used as constraints to guide model learning and show strong generalizability in both single-dataset and transfer learning tasks.",
+  "year": 2025,
+  "venue": "Batteries",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yuxuan Deng",
+   "Changqing Du",
+   "Zhong Ren"
+  ],
+  "citations": 25,
+  "source": "semanticscholar",
+  "source_id": "75a1d7d177bbd3766c69267a3668441553fa69ce",
+  "paper_id": "doi:10.3390/batteries11020049",
+  "doi": "10.3390/batteries11020049",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3390/batteries11020049",
+  "published_iso": "2025-01-26",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural networks with hybrid Kolmogorov-Arnold network and augmented Lagrangian function for solving partial differential equations",
+  "title_norm": "physics informed neural networks with hybrid kolmogorov arnold network and augme",
+  "abstract": "Physics-informed neural networks (PINNs) have emerged as a fundamental approach within deep learning for the resolution of partial differential equations (PDEs). Nevertheless, conventional multilayer perceptrons (MLPs) are characterized by a lack of interpretability and encounter the spectral bias problem, which diminishes their accuracy and interpretability when used as an approximation function within the diverse forms of PINNs. Moreover, these methods are susceptible to the over-inflation of penalty factors during optimization, potentially leading to pathological optimization with an imbalance between various constraints. In this study, we are inspired by the Kolmogorov-Arnold network (KAN) to address mathematical physics problems and introduce a hybrid encoder-decoder model to tackle these challenges, termed AL-PKAN. Specifically, the proposed model initially encodes the interdependencies of input sequences into a high-dimensional latent space through the gated recurrent unit (GRU) module. Subsequently, the KAN module is employed to disintegrate the multivariate function within the latent space into a set of trainable univariate activation functions, formulated as linear combinations of B-spline functions for the purpose of spline interpolation of the estimated function. Furthermore, we formulate an augmented Lagrangian function to redefine the loss function of the proposed model, which incorporates initial and boundary conditions into the Lagrangian multiplier terms, rendering the penalty factors and Lagrangian multipliers as learnable parameters that facilitate the dynamic modulation of the balance among various constraint terms. Ultimately, the proposed model exhibits remarkable accuracy and generalizability in a series of benchmark experiments, thereby highlighting the promising capabilities and application horizons of KAN within PINNs.",
+  "tldr": "This study is inspired by the Kolmogorov-Arnold network (KAN) to address mathematical physics problems and introduces a hybrid encoder-decoder model to tackle these challenges, termed AL-PKAN.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhaoyang Zhang",
+   "Qingwang Wang",
+   "Yinxing Zhang",
+   "Tao Shen",
+   "Weiyi Zhang"
+  ],
+  "citations": 40,
+  "source": "semanticscholar",
+  "source_id": "c1098ffd3c621ff3d23513c1e40e88e4eac2c014",
+  "paper_id": "doi:10.1038/s41598-025-92900-1",
+  "doi": "10.1038/s41598-025-92900-1",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.nature.com/articles/s41598-025-92900-1.pdf",
+  "published_iso": "2025-03-27",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A systematic resilience assessment framework for multi-state systems based on physics-informed neural network",
+  "title_norm": "a systematic resilience assessment framework for multi state systems based on ph",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Reliability Engineering & System Safety",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yuxuan He",
+   "Enrico Zio",
+   "Zhaoming Yang",
+   "Qiqi Xiang",
+   "Lin Fan",
+   "Qian He"
+  ],
+  "citations": 78,
+  "source": "semanticscholar",
+  "source_id": "75835acbe7833e6ab6126dcabd0db4ac73e9f7fc",
+  "paper_id": "dblp:journals/ress/HeZYXFHPZSZ25",
+  "doi": "10.1016/j.ress.2025.110866",
+  "arxiv_id": "",
+  "dblp_key": "journals/ress/HeZYXFHPZSZ25",
+  "paper_url": "https://www.semanticscholar.org/paper/75835acbe7833e6ab6126dcabd0db4ac73e9f7fc",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A lightweight two-stage physics-informed neural network for SOH estimation of lithium-ion batteries with different chemistries",
+  "title_norm": "a lightweight two stage physics informed neural network for soh estimation of li",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of Energy Chemistry",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chunsong Lin",
+   "Longxing Wu",
+   "Xianguo Tuo",
+   "Chunhui Liu",
+   "Wei Zhang",
+   "Zebo Huang"
+  ],
+  "citations": 66,
+  "source": "semanticscholar",
+  "source_id": "4b598b496297e58b9502b74cb1d1ceca9b80deb5",
+  "paper_id": "doi:10.1016/j.jechem.2025.01.057",
+  "doi": "10.1016/j.jechem.2025.01.057",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/4b598b496297e58b9502b74cb1d1ceca9b80deb5",
+  "published_iso": "2025-02-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network supported wiener process for degradation modeling and reliability prediction",
+  "title_norm": "physics informed neural network supported wiener process for degradation modelin",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Reliability Engineering & System Safety",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhongze He",
+   "Shaoping Wang",
+   "Jian Shi",
+   "Di Liu",
+   "Xiaochuan Duan",
+   "Yaoxing Shang"
+  ],
+  "citations": 67,
+  "source": "semanticscholar",
+  "source_id": "64f171ec92fd6c8aa8009de5fd06ed24e6bfe4d1",
+  "paper_id": "dblp:journals/ress/HeWSLDS25",
+  "doi": "10.1016/j.ress.2025.110906",
+  "arxiv_id": "",
+  "dblp_key": "journals/ress/HeWSLDS25",
+  "paper_url": "https://www.semanticscholar.org/paper/64f171ec92fd6c8aa8009de5fd06ed24e6bfe4d1",
+  "published_iso": "2025-06-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network for long-term prognostics of proton exchange membrane fuel cells",
+  "title_norm": "physics informed neural network for long term prognostics of proton exchange mem",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Applied Energy",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Taehwan Ko",
+   "Dukyong Kim",
+   "Jaewoong Park",
+   "Seung Hwan Lee"
+  ],
+  "citations": 63,
+  "source": "semanticscholar",
+  "source_id": "85447c1484a779fafbc70cf918b78a5e503ca51b",
+  "paper_id": "doi:10.1016/j.apenergy.2025.125318",
+  "doi": "10.1016/j.apenergy.2025.125318",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/85447c1484a779fafbc70cf918b78a5e503ca51b",
+  "published_iso": "2025-03-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network for co-estimation of state of health, remaining useful life, and short-term degradation path in Lithium-ion batteries",
+  "title_norm": "physics informed neural network for co estimation of state of health remaining u",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Applied Energy",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Li Yang",
+   "Mingjian He",
+   "Yatao Ren",
+   "Baohai Gao",
+   "Hong Qi"
+  ],
+  "citations": 66,
+  "source": "semanticscholar",
+  "source_id": "5f7be2c28a7374cc589307e48bbd74fd95c7c22e",
+  "paper_id": "doi:10.1016/j.apenergy.2025.126427",
+  "doi": "10.1016/j.apenergy.2025.126427",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/5f7be2c28a7374cc589307e48bbd74fd95c7c22e",
+  "published_iso": null,
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A novel frequency-domain physics-informed neural network for accurate prediction of 3D Spatio-temporal wind fields in wind turbine applications",
+  "title_norm": "a novel frequency domain physics informed neural network for accurate prediction",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Applied Energy",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shaopeng Li",
+   "Xin Li",
+   "Yan Jiang",
+   "Qingshan Yang",
+   "Min Lin",
+   "Liuliu Peng"
+  ],
+  "citations": 68,
+  "source": "semanticscholar",
+  "source_id": "9b1ac21c9f07a936488ed3f2d3806673df01b1a2",
+  "paper_id": "doi:10.1016/j.apenergy.2025.125526",
+  "doi": "10.1016/j.apenergy.2025.125526",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/9b1ac21c9f07a936488ed3f2d3806673df01b1a2",
+  "published_iso": "2025-05-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Automatic network structure discovery of physics informed neural networks via knowledge distillation",
+  "title_norm": "automatic network structure discovery of physics informed neural networks via kn",
+  "abstract": "Partial differential equations (PDEs) are fundamental for modeling complex physical processes, often exhibiting structural features such as symmetries and conservation laws. While physics-informed neural networks (PINNs) can simulate and invert PDEs, they mainly rely on external loss functions for physical constraints, making it difficult to automatically discover and embed physically consistent network structures. We propose a physics structure-informed neural network discovery method based on physics-informed distillation, which decouples physical and parameter regularization via staged optimization in teacher and student networks. After distillation, clustering and parameter reconstruction are used to extract and embed physically meaningful structures. Numerical experiments on Laplace, Burgers, and Poisson equations, as well as fluid mechanics, show that the method can automatically extract relevant structures, improve accuracy and training efficiency, and enhance structural adaptability and transferability. This approach offers a new perspective for efficient modeling and automatic discovery of structured neural networks. Here, the authors propose a physics-informed distillation framework that automatically discovers physically consistent network structures, improving accuracy, efficiency, and transferability across diverse PDE problems.",
+  "tldr": "A physics structure-informed neural network discovery method based on physics-informed distillation that automatically discovers physically consistent network structures, improving accuracy, efficiency, and transferability across diverse PDE problems is proposed.",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ziti Liu",
+   "Yang Liu",
+   "Xunshi Yan",
+   "Wen Liu",
+   "Han Nie",
+   "Shuaiqi Guo"
+  ],
+  "citations": 25,
+  "source": "semanticscholar",
+  "source_id": "a97839ce370bbcf646d0e5da68f307605b924e1f",
+  "paper_id": "doi:10.1038/s41467-025-64624-3",
+  "doi": "10.1038/s41467-025-64624-3",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.nature.com/articles/s41467-025-64624-3.pdf",
+  "published_iso": "2025-10-29",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-Informed Neural Network for modeling and predicting temperature fluctuations in proton exchange membrane electrolysis",
+  "title_norm": "physics informed neural network for modeling and predicting temperature fluctuat",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Energy and AI",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Islam Zerrougui",
+   "Zhongliang Li",
+   "Daniel Hissel"
+  ],
+  "citations": 55,
+  "source": "semanticscholar",
+  "source_id": "ffe023fb9daac9d0154a85a03116c2ba31d3de59",
+  "paper_id": "doi:10.1016/j.egyai.2025.100474",
+  "doi": "10.1016/j.egyai.2025.100474",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.egyai.2025.100474",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A physics-informed neural network-based method for predicting degradation trajectories and remaining useful life of supercapacitors",
+  "title_norm": "a physics informed neural network based method for predicting degradation trajec",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Green Energy and Intelligent Transportation",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "L. E",
+   "Jun Wang",
+   "Ruixin Yang",
+   "Chenxu Wang",
+   "Hailong Li",
+   "Rui Xiong"
+  ],
+  "citations": 52,
+  "source": "semanticscholar",
+  "source_id": "50c51255f50229ad27d7a0cbe228378a753975d6",
+  "paper_id": "doi:10.1016/j.geits.2025.100291",
+  "doi": "10.1016/j.geits.2025.100291",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.geits.2025.100291",
+  "published_iso": "2025-03-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A generic physics-informed neural network framework for lithium-ion batteries state of health estimation",
+  "title_norm": "a generic physics informed neural network framework for lithium ion batteries st",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Energy",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Aina Tian",
+   "Luyao He",
+   "Tao Ding",
+   "Kailang Dong",
+   "Yuqin Wang",
+   "Jiuchun Jiang"
+  ],
+  "citations": 49,
+  "source": "semanticscholar",
+  "source_id": "f9a2948631bf5a5de4c91fe464db0b798c6f394b",
+  "paper_id": "doi:10.1016/j.energy.2025.137215",
+  "doi": "10.1016/j.energy.2025.137215",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f9a2948631bf5a5de4c91fe464db0b798c6f394b",
+  "published_iso": "2025-09-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network compression mechanism for airfoil flow field prediction",
+  "title_norm": "physics informed neural network compression mechanism for airfoil flow field pre",
+  "abstract": "Deep learning has shown great potential in improving the efficiency of airfoil flow field prediction by reducing the computational cost compared to traditional numerical methods. However, the large number of parameters in deep learning models can lead to excessive resource consumption, hurting their performance in real-time applications. To address these challenges, we propose a novel compression mechanism called Physics-Informed Neural Network Compression Mechanism (PINNCoM) to reduce model size and improve efficiency. PINNCoM consists of two stages: knowledge distillation and self-adaptive pruning. The knowledge distillation extracts key parameters from a given teacher model, i.e., a neural network model for airfoil flow field prediction, to construct a student model. By designing a physical information loss term based on the Navier–Stokes equations during the knowledge distillation, the student model can maintain fewer parameters and accurately predict the flow field in the meantime. The second stage is self-adaptive pruning, which further compresses the student model by removing redundant channels in the network while preserving its accuracy. Specifically, a reward function is designed to incorporate both physical and channel information to ensure the prediction results align with physical laws while prioritizing critical channels for retention, enabling a flexible and efficient pruning mechanism. Experimental results on airfoil flow field prediction datasets demonstrate that PINNCoM effectively reduces computational complexity with minimal accuracy loss. The proposed PINNCoM mechanism innovatively integrates physical knowledge distillation with adaptive pruning to ensure both model efficiency and physical consistency, providing a new paradigm for physically constrained neural network compression in fluid dynamics applications.",
+  "tldr": "The proposed PINNCoM mechanism innovatively integrates physical knowledge distillation with adaptive pruning to ensure both model efficiency and physical consistency, providing a new paradigm for physically constrained neural network compression in fluid dynamics applications.",
+  "year": 2025,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hongyu Huang",
+   "Yiyang Ye",
+   "Bohan Zhang",
+   "Zhijiang Xie",
+   "Fei Xu",
+   "Chao Chen"
+  ],
+  "citations": 13,
+  "source": "semanticscholar",
+  "source_id": "197ba6e19867b1df6c3bd20f6c59b85eac0aaf85",
+  "paper_id": "doi:10.1063/5.0255692",
+  "doi": "10.1063/5.0255692",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/197ba6e19867b1df6c3bd20f6c59b85eac0aaf85",
+  "published_iso": "2025-03-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network for elastic–plastic mesh-free modelling of tunnelling-induced deformation",
+  "title_norm": "physics informed neural network for elastic plastic mesh free modelling of tunne",
+  "abstract": "The complexity of engineering problems generally makes it challenging to obtain explicit physical formulations and sufficient monitoring data. For the issue of shallow tunnelling-induced deformation, it is difficult to obtain an explicit analytical solution due to the anisotropy of in situ stress, asymmetric free surface boundary, and complicated elastic–plastic response. Physics-informed neural networks (PINNs) have demonstrated excellent capability in resolving boundary value problems. In this context, a data-driven and physics-informed neural network is developed to predict tunnelling-induced deformation. The underlying elastic–plastic governing equations and boundary constraints of a shallow-buried tunnel are encoded into a deep neural network framework, which is divided into two independent regions according to the Mohr–Coulomb yield criterion, ensuring that constitutive relations are executed in elastic and plastic regions separately. To mitigate nonlinearity and stress concentration effects, a global adaptive sampling strategy guided by probability distributions is introduced, which ensures a more efficient approach to enforcing physics laws. Comparisons between the analytical and PINN-based solutions of deformation induced by deep tunnel excavation demonstrate the robust performance of the proposed model, especially with the implementation of a global adaptive sampling strategy. For the solution of shallow tunnelling-induced ground deformation, the adaptive PINN model can accurately reproduce the elastic–plastic ground settlement fields with sparse labelled data. The data mining and physical information exchange character of the proposed adaptive PINN model demonstrates the promising potential of the scientific machine learning method in addressing engineering issues.",
+  "tldr": "Comparisons between the analytical and PINN-based solutions of deformation induced by deep tunnel excavation demonstrate the robust performance of the proposed model, especially with the implementation of a global adaptive sampling strategy.",
+  "year": 2025,
+  "venue": "Acta Geotechnica",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zilong Zhang",
+   "D. Dias",
+   "C. Anitescu",
+   "Qiujing Pan",
+   "T. Rabczuk"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "08023d84172112989881af99ee0d4fb696e37c16",
+  "paper_id": "doi:10.1007/s11440-025-02788-4",
+  "doi": "10.1007/s11440-025-02788-4",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11440-025-02788-4.pdf",
+  "published_iso": "2025-10-18",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network coupled with semi-analytical hybrid modeling of micropolar magnetohydrodynamic channel flow with heat and mass transport in a porous medium",
+  "title_norm": "physics informed neural network coupled with semi analytical hybrid modeling of ",
+  "abstract": "The present study explores the steady magnetohydrodynamic (MHD) flow of a micropolar fluid within a porous channel, considering the effects of microrotation, spin-gradient viscosity, micro-inertia, and convective heat and mass transfer. A hybrid computational approach is developed by integrating a physics-informed neural network (PINN) with the semi-analytical Akbari–Ganji method (AGM), aiming to efficiently solve the highly nonlinear and coupled boundary value problem. The PINN model is trained directly on the governing equations and boundary conditions, while AGM serves as a benchmark for validation. A comprehensive parametric analysis is performed to investigate the influence of key nondimensional parameters, including magnetic field strength, micropolar coupling, and transport numbers. The findings reveal that magnetic forces tend to suppress microrotation and reduce thermal and solutal transport, whereas micropolar parameters enhance rotational motion and mass diffusion. The proposed PINN framework demonstrates high accuracy and strong agreement with the semi-analytical results, validating its effectiveness in modeling complex MHD flows. These results provide valuable insight into controlling microstructural effects for improved heat and mass transfer in porous media systems.",
+  "tldr": "The findings reveal that magnetic forces tend to suppress microrotation and reduce thermal and solutal transport, whereas micropolar parameters enhance rotational motion and mass diffusion, whereas micropolar parameters enhance rotational motion and mass diffusion in porous media systems.",
+  "year": 2025,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ali Mirzagoli Ganji",
+   "Amirali Shateri",
+   "D. Ganji",
+   "P. Jalili",
+   "B. Jalili"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "87e95e7637e7a972acf539620196752eeaf305c8",
+  "paper_id": "doi:10.1063/5.0301887",
+  "doi": "10.1063/5.0301887",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/87e95e7637e7a972acf539620196752eeaf305c8",
+  "published_iso": "2025-11-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Data-driven machine learning approach based on physics-informed neural network for population balance model",
+  "title_norm": "data driven machine learning approach based on physics informed neural network f",
+  "abstract": "Population balance models (PBM) are a fundamental tool in the field of process engineering and materials science for understanding and forecasting particulate system dynamics. These models are essential for the design and optimization of a wide range of industrial processes because they capture the evolution of particle size distribution in response to different phenomena such as nucleation, growth, aggregation, and breakage. The complex and non-linear nature of these models makes it difficult to find the analytical solution and even sometimes the approximate solution. This paper introduces a novel machine learning approach based on physics-informed neural network (PINN) for the approximate solution of PBM. Our strategy utilizes the use of a customized neural network framework that has been developed and trained on data generated from simulated PBM by using a finite difference method for the differential operators to identify the underlying dynamics and patterns controlling the evolution of particle distribution. In general, PINN uses automatic differentiation for the computation of differential operators, which is based on the chain rule and needs several matrix operations for computing, which reduces the processing efficiency during the training. The PINN approach provides a flexible, effective and highly adaptable solution framework by utilizing neural networks to approximate the solution and defining the loss function as the sum of the differential equation’s residuals at specific random or regular points inside the domain, as well as the residuals of the initial and boundary conditions. It is shown numerically that this approach does not need a diffusion term for a stable solution, which is often needed in most numerical methods for solving these models. For further validation, we compare the results with the exact solution and find them with a very good agreement with each other.",
+  "tldr": "A novel machine learning approach based on physics-informed neural network (PINN) for the approximate solution of PBM and it is shown numerically that this approach does not need a diffusion term for a stable solution, which is often needed in most numerical methods for solving these models.",
+  "year": 2025,
+  "venue": "Advances in Continuous and Discrete Models",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ishtiaq Ali"
+  ],
+  "citations": 13,
+  "source": "semanticscholar",
+  "source_id": "e25f5c7c7eff4cf40414e1bf801e3b908e9ef7d0",
+  "paper_id": "doi:10.1186/s13662-025-03876-1",
+  "doi": "10.1186/s13662-025-03876-1",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1186/s13662-025-03876-1",
+  "published_iso": "2025-01-22",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A framework of parallel physics-informed neural network with Laplace transform for well testing interpretation",
+  "title_norm": "a framework of parallel physics informed neural network with laplace transform f",
+  "abstract": "The application of machine learning methodologies offers a novel perspective for more convenient and efficient well test interpretation. In this study, we propose a novel approach, La-PPINN (parallel physics-informed neural network based on Laplace transform), which incorporates the physical model of fluid flow in Laplace space, as well as well testing observed data for parameters inversion of reservoir and wellbore. In order to validate the proposed methodology, a classical vertical well problem in a single porous medium with an analytical solution has been employed. This has enabled us to present a comparison between the robustness and accuracy of our proposed model and those of models that do not consider the Laplace transform or parallel neural networks. Moreover, the stability of the model was tested by introducing different levels of Gaussian noise. The results demonstrate that incorporating the Laplace space representations of physical equations into the model reduces the computational complexity. Furthermore, the parallel neural network enhances the computational efficiency and accuracy. Additionally, the La-PPINN network is also shown to accurately fit the bottom-hole pressure curve and precisely invert parameters, even when a Gaussian noise is introduced, for three different reservoir types, including dual-porosity, triple-porosity, and composite reservoirs.",
+  "tldr": "A novel approach, La-PPINN (parallel physics-informed neural network based on Laplace transform), which incorporates the physical model of fluid flow in Laplace space, as well as well testing observed data for parameters inversion of reservoir and wellbore is proposed.",
+  "year": 2025,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "D. Fan",
+   "Can Yang",
+   "Hai Sun",
+   "Jun Yao",
+   "Lei Zhang",
+   "Cunqi Jia"
+  ],
+  "citations": 13,
+  "source": "semanticscholar",
+  "source_id": "046663615af406ccbd2dd765621784833826fc7d",
+  "paper_id": "doi:10.1063/5.0245547",
+  "doi": "10.1063/5.0245547",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/046663615af406ccbd2dd765621784833826fc7d",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A physics-informed neural network-based aerodynamic parameter identification method for aircraft",
+  "title_norm": "a physics informed neural network based aerodynamic parameter identification met",
+  "abstract": "The precise identification of aerodynamic parameters for aircraft is increasingly critical in aircraft design endeavors, particularly for furnishing accurate dynamic models for ground and flight simulation. To mitigate the dependence on traditional identification methods that rely heavily on aircraft models, this work introduces an aerodynamic parameters identification methodology based on Physics-informed Neural Networks (PINNs). By utilizing the six degrees of freedom motion equation as the physical constraint with the neural network, and the aerodynamic parameters to be identified as the neural network variables, the neural network model is trained to serve as a surrogate for the aircraft model. As a case study, the longitudinal motion of the aircraft is employed to identify and analyze the aerodynamic parameters. A comprehensive comparison is conducted among a method based on the genetic algorithm, a conventional neural network-based approach, and the proposed PINN-based methodology. The results obtained demonstrate that the proposed method can effectively mitigate system and data errors, exhibiting high precision in parameter identification and anti-interference capabilities with regard to noise in data. This innovative approach holds the potential to substantially decrease the reliance on flight test data for parameter identification purposes.",
+  "tldr": "This work introduces an aerodynamic parameters identification methodology based on Physics-informed Neural Networks (PINNs) that can effectively mitigate system and data errors, exhibiting high precision in parameter identification and anti-interference capabilities with regard to noise in data.",
+  "year": 2025,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jie Lin",
+   "Shu-sheng Chen",
+   "Hua Yang",
+   "Quan-feng Jiang",
+   "Jie Liu"
+  ],
+  "citations": 13,
+  "source": "semanticscholar",
+  "source_id": "2faf4700410c0142373f482c96fb50c8f42afade",
+  "paper_id": "doi:10.1063/5.0249130",
+  "doi": "10.1063/5.0249130",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/2faf4700410c0142373f482c96fb50c8f42afade",
+  "published_iso": "2025-02-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network for predicting multi-row film cooling superposition using Fourier transform and attention mechanism",
+  "title_norm": "physics informed neural network for predicting multi row film cooling superposit",
+  "abstract": "Film cooling superposition prediction is a critical technique in cooling system design and plays a vital role in the thermal protection of aero-engine nozzles and turbines. This study develops a physics-informed neural network to address the Sellers prediction deviation in film cooling superposition, which is primarily caused by flow and diffusion effects. The proposed model comprises three main branches. The first branch, the time-domain branch, extracts input features from multiple perspectives using successive convolution operations. The second branch, the frequency-domain branch, employs the discrete Fourier transform to identify error-prone regions in the frequency domain and integrates an attention mechanism to enhance learning and focus on key information. The third branch, the residual branch, processes parameters related to hole type, hole-row structure, and aerodynamics through a multi-layer fully connected network, serving as a residual correction term to improve the prediction accuracy of the spanwise-averaged film cooling effectiveness (η¯). Furthermore, to address the larger prediction errors observed in the downstream region of Sellers superposition prediction, a loss function is designed with increased weighting in the downstream region. The trained model exhibits strong extrapolation capability, with prediction deviations of η¯ within 5% at most locations. The maximum local error reaches up to 8% for the fan-shaped hole in the downstream region when the blowing ratio is 2.0, while the deviation of the area-averaged η remains below 3%.",
+  "tldr": "A physics-informed neural network is developed to address the Sellers prediction deviation in film cooling superposition, which is primarily caused by flow and diffusion effects and exhibits strong extrapolation capability.",
+  "year": 2025,
+  "venue": "The Physics of Fluids",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Haojun Yan",
+   "Lin Ye",
+   "Tian-liang Zhou",
+   "Zihang Li",
+   "Tong Ye",
+   "Fan Zhang"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "4908b93c562589072ef7d56f81b943def7ae47a4",
+  "paper_id": "doi:10.1063/5.0274462",
+  "doi": "10.1063/5.0274462",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/4908b93c562589072ef7d56f81b943def7ae47a4",
+  "published_iso": "2025-06-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed Neural Implicit Flow neural network for parametric PDEs",
+  "title_norm": "physics informed neural implicit flow neural network for parametric pdes",
+  "abstract": "The Physics-informed Neural Network (PINN) has been a popular method for solving partial differential equations (PDEs) due to its flexibility. However, PINN still faces challenges in characterizing spatio-temporal correlations when solving parametric PDEs due to network limitations. To address this issue, we propose a Physics-Informed Neural Implicit Flow (PINIF) framework, which enables a meshless low-rank representation of the parametric spatio-temporal field based on the expressiveness of the Neural Implicit Flow (NIF), enabling a meshless low-rank representation. In particular, the PINIF framework utilizes the Polynomial Chaos Expansion (PCE) method to quantify the uncertainty in the presence of noise, allowing for a more robust representation of the solution. In addition, PINIF introduces a novel transfer learning framework to speed up the inference of parametric PDEs significantly. The performance of PINIF and PINN is compared on various PDEs especially with variable coefficients and Kolmogorov flow. The comparative results indicate that PINIF outperforms PINN in terms of accuracy and efficiency.",
+  "tldr": "A Physics-Informed Neural Implicit Flow (PINIF) framework, which enables a meshless low-rank representation of the parametric spatio-temporal field based on the expressiveness of the Neural Implicit Flow (NIF), enabling a meshless low-rank representation of the solution.",
+  "year": 2025,
+  "venue": "Neural Networks",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zixue Xiang",
+   "Wei Peng",
+   "Wenyan Yao",
+   "Xu Liu",
+   "Xiaoya Zhang"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "e47ce708c6a3a8d6fc845f1405889b337604406f",
+  "paper_id": "dblp:journals/nn/XiangPYLZ25",
+  "doi": "10.1016/j.neunet.2025.107166",
+  "arxiv_id": "",
+  "dblp_key": "journals/nn/XiangPYLZ25",
+  "paper_url": "https://www.semanticscholar.org/paper/e47ce708c6a3a8d6fc845f1405889b337604406f",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "An advanced physics-informed neural network-based framework for nonlinear and complex topology optimization",
+  "title_norm": "an advanced physics informed neural network based framework for nonlinear and co",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Engineering structures",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "H. Jeong",
+   "C. Batuwatta-Gamage",
+   "Jinshuai Bai",
+   "C. Rathnayaka",
+   "Ying Zhou",
+   "YuanTong Gu"
+  ],
+  "citations": 29,
+  "source": "semanticscholar",
+  "source_id": "d8dc5c47a7c32854c350083ec00778263db287d7",
+  "paper_id": "doi:10.1016/j.engstruct.2024.119194",
+  "doi": "10.1016/j.engstruct.2024.119194",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.engstruct.2024.119194",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Hybrid physics-data-driven model for temperature field prediction of asphalt pavement based on physics-informed neural network",
+  "title_norm": "hybrid physics data driven model for temperature field prediction of asphalt pav",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Construction and Building Materials",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Weiwen Quan",
+   "Xianyong Ma",
+   "Zekun Shang",
+   "Kaiwen Zhao",
+   "Manman Su",
+   "Zejiao Dong"
+  ],
+  "citations": 27,
+  "source": "semanticscholar",
+  "source_id": "6243283784b3ca62044dc0a818a547a65afaff89",
+  "paper_id": "doi:10.1016/j.conbuildmat.2025.142179",
+  "doi": "10.1016/j.conbuildmat.2025.142179",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/6243283784b3ca62044dc0a818a547a65afaff89",
+  "published_iso": "2025-08-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Physics-informed neural network for chiller plant optimal control with structure-type and trend-type prior knowledge",
+  "title_norm": "physics informed neural network for chiller plant optimal control with structure",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Applied Energy",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xinbin Liang",
+   "Ying Liu",
+   "Siliang Chen",
+   "Xilin Li",
+   "Xin-qiao Jin",
+   "Zhimin Du"
+  ],
+  "citations": 25,
+  "source": "semanticscholar",
+  "source_id": "240961f65072e35e9c2b5245424a5fc3f620a559",
+  "paper_id": "doi:10.1016/j.apenergy.2025.125857",
+  "doi": "10.1016/j.apenergy.2025.125857",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/240961f65072e35e9c2b5245424a5fc3f620a559",
+  "published_iso": "2025-07-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A generalizable physics-informed neural network for lithium-ion battery SOH estimation utilizing partial charging segments",
+  "title_norm": "a generalizable physics informed neural network for lithium ion battery soh esti",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of Energy Chemistry",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Sijing Wang",
+   "Ruoyu Zhou",
+   "Yijia Ren",
+   "Honglai Liu",
+   "Yiting Lin",
+   "Cheng Lian"
+  ],
+  "citations": 26,
+  "source": "semanticscholar",
+  "source_id": "4c3b43be5f7c4c1b2d76d1ca0f0214bef82e2a6f",
+  "paper_id": "doi:10.1016/j.jechem.2025.08.093",
+  "doi": "10.1016/j.jechem.2025.08.093",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/4c3b43be5f7c4c1b2d76d1ca0f0214bef82e2a6f",
+  "published_iso": "2025-09-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Probabilistic fatigue life prediction in additive manufacturing materials with a physics-informed neural network framework",
+  "title_norm": "probabilistic fatigue life prediction in additive manufacturing materials with a",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Expert systems with applications",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Feng Feng",
+   "Tao Zhu",
+   "Bing Yang",
+   "Zhe Zhang",
+   "Shuwei Zhou",
+   "Shoune Xiao"
+  ],
+  "citations": 24,
+  "source": "semanticscholar",
+  "source_id": "d89f2f770f6b191d859f328ae510ae38d204d773",
+  "paper_id": "dblp:journals/eswa/FengZYZZX25",
+  "doi": "10.1016/j.eswa.2025.127098",
+  "arxiv_id": "",
+  "dblp_key": "journals/eswa/FengZYZZX25",
+  "paper_url": "https://www.semanticscholar.org/paper/d89f2f770f6b191d859f328ae510ae38d204d773",
+  "published_iso": "2025-03-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "A general physics-informed neural network framework for fatigue life prediction of metallic materials",
+  "title_norm": "a general physics informed neural network framework for fatigue life prediction ",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Engineering Fracture Mechanics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shuwei Zhou",
+   "Manuel Henrich",
+   "Zhichao Wei",
+   "Feng Feng",
+   "Bing Yang",
+   "Sebastian Münstermann"
+  ],
+  "citations": 27,
+  "source": "semanticscholar",
+  "source_id": "db80fec7b3cd1ea44af430ac783a2475dac6c665",
+  "paper_id": "doi:10.1016/j.engfracmech.2025.111136",
+  "doi": "10.1016/j.engfracmech.2025.111136",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.engfracmech.2025.111136",
+  "published_iso": "2025-04-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ },
+ {
+  "title": "Barrier option pricing and volatility surface predicting with an extended physics-informed neural network",
+  "title_norm": "barrier option pricing and volatility surface predicting with an extended physic",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Expert systems with applications",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yu Chen",
+   "Xing Lü",
+   "Xiaoqi Jia",
+   "Hao Tian"
+  ],
+  "citations": 16,
+  "source": "semanticscholar",
+  "source_id": "408075361b43412bd5c4723a0e7ff42c9bf19c52",
+  "paper_id": "dblp:journals/eswa/ChenLJT25",
+  "doi": "10.1016/j.eswa.2025.128279",
+  "arxiv_id": "",
+  "dblp_key": "journals/eswa/ChenLJT25",
+  "paper_url": "https://www.semanticscholar.org/paper/408075361b43412bd5c4723a0e7ff42c9bf19c52",
+  "published_iso": "2025-05-01",
+  "from_query": [
+   "kinetics-clock physics-informed neural network"
+  ]
+ }
+]

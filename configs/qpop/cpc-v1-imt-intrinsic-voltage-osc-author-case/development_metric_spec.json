@@ -1,0 +1,15 @@
+{
+  "schema_version": "metric-spec-v1",
+  "evaluator_id": "frozen-project-development-evaluator-qpop-reference-v1",
+  "scientific_use": "DEVELOPMENT_ONLY_UNQUALIFIED_ORACLE",
+  "structure_field": "eta",
+  "structure_threshold": 0.5595005728407872,
+  "device_channel": "qpop_cpc_v1_reported_voltage_drop",
+  "device_scale": 5.671677016,
+  "cycle_windows": [
+    [0.0, 130.0],
+    [130.0, 260.0],
+    [260.0, 390.0],
+    [390.0, 494.0]
+  ]
+}

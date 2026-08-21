@@ -1,0 +1,19 @@
+{
+  "baseline_run_root": "outputs\\runs\\20260821T032527Z-pilot-g6-qpop-method-003",
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_UNQUALIFIED_ORACLE",
+  "clock_gradient_mode": "full",
+  "gate": "G6",
+  "kc_warmup_updates": 0,
+  "methods": [
+    "kc"
+  ],
+  "run_id": "20260821T033252Z-pilot-g6-kc-full-joint-001",
+  "schema_version": "qpop-method-development-pilot-intent-v1",
+  "scientific_role": "protocol_selection",
+  "seed": 17,
+  "started_at": "2026-08-21T03:33:35.077911Z",
+  "supersedes": null,
+  "tier": "pilot",
+  "training_uses_qpop_transient_labels": false,
+  "updates_per_method": 1000
+}

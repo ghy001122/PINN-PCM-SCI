@@ -1,0 +1,89 @@
+{
+  "schema_version": "qpop-reference-import-spec-v1",
+  "reference_spec_id": "qpop-cpc-v1-bundled-intrinsic-voltage-osc-reference-v1",
+  "case_id": "qpop-cpc-v1-imt-intrinsic-voltage-osc-bundled-reference-through-512.0793ns",
+  "physical_contract_id": "PROVISIONAL_G3_QPOP_CPC_V1_IMT_CONTRACT",
+  "evidence_identity": "QPOP_CPC_V1_BUNDLED_REFERENCE_UNQUALIFIED",
+  "input_path": "input.xml",
+  "input_sha256": "d7df895ff51dd061f514224a7518cfcb0c4430e547969285420794f1a20a6bd7",
+  "log_path": "output/log.txt",
+  "log_sha256": "ba26577b403e2fd1ca912f6c1829da226e45563d8382b1701c7c490ab7c849ba",
+  "solution_directory": "output",
+  "configured_terminal_time_ns": 2000.0,
+  "expected_observed_extent": {
+    "last_step": 757,
+    "last_time_ns": 512.0793,
+    "field_snapshots": 38,
+    "last_field_time_ns": 493.97457924636973
+  },
+  "protocol_breakpoints": [10.0],
+  "mesh": {
+    "coordinate_unit": "nm",
+    "dimension": 2,
+    "drop_axis": 2,
+    "drop_tolerance": 0.0,
+    "allowed_cell_types": [5]
+  },
+  "field_registry": {
+    "eta": {
+      "pvd": "eta.pvd",
+      "source_name": "eta",
+      "physical_symbol": "eta",
+      "quantity_label": "structural_order_parameter",
+      "unit": "1",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "CPC_BUNDLED_REFERENCE_UNQUALIFIED"
+    },
+    "psi": {
+      "pvd": "mu.pvd",
+      "source_name": "mu",
+      "physical_symbol": "psi",
+      "quantity_label": "electronic_order_parameter_source_mu",
+      "unit": "1",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "CPC_BUNDLED_REFERENCE_UNQUALIFIED"
+    },
+    "electron_occupancy": {
+      "pvd": "n.pvd",
+      "source_name": "n",
+      "physical_symbol": "n",
+      "quantity_label": "qpop_native_electron_occupancy",
+      "unit": "1",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "CPC_BUNDLED_REFERENCE_UNQUALIFIED"
+    },
+    "hole_occupancy": {
+      "pvd": "p.pvd",
+      "source_name": "p",
+      "physical_symbol": "p",
+      "quantity_label": "qpop_native_hole_occupancy",
+      "unit": "1",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "CPC_BUNDLED_REFERENCE_UNQUALIFIED"
+    },
+    "electric_potential": {
+      "pvd": "phi.pvd",
+      "source_name": "phi",
+      "physical_symbol": "phi",
+      "quantity_label": "electric_potential",
+      "unit": "V",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "CPC_BUNDLED_REFERENCE_UNQUALIFIED"
+    },
+    "temperature": {
+      "pvd": "T.pvd",
+      "source_name": "T",
+      "physical_symbol": "T",
+      "quantity_label": "temperature",
+      "unit": "K",
+      "association": "point",
+      "temporal_kind": "dynamic",
+      "qualification_status": "CPC_BUNDLED_REFERENCE_UNQUALIFIED"
+    }
+  }
+}

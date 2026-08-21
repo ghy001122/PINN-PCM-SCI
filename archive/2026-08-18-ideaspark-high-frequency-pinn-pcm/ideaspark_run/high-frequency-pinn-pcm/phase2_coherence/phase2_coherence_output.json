@@ -1,0 +1,457 @@
+{
+  "trace_report": {
+    "likely_fatal_step": {
+      "step": "S2",
+      "claim": "The nq=16 differentiable quadrature realizes an everywhere strictly-positive, invertible clock.",
+      "why_selected_first": "The continuous integral is monotone, but the network consumes its finite numerical approximation; independent interval rescaling can destroy monotonicity and therefore the claimed coordinate map before any PDE pullback is evaluated."
+    },
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": [
+          "device case",
+          "constitutive functions",
+          "pulse protocol"
+        ],
+        "produces": [
+          "declared PDE/IBVP",
+          "pulse-edge locations",
+          "reference trajectories"
+        ],
+        "note": "Verbatim: 1. Freeze one nondimensional 2D VO2 electric–Joule–thermal–phase initial-boundary-value model, its σ(T,ξ), κ(T,ξ), ρc(T,ξ), and Kξ constitutive functions, and a FEniCSx reference implementation; output the declared equations, units, pulse interfaces, and reference trajectories for scoring only. Formalization: The original step produces edge locations but not the edge jump/continuity conditions later consumed by S4-S5."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "x∈R²",
+          "t∈[0,tf]",
+          "εdtype",
+          "positive kref"
+        ],
+        "produces": [
+          "τψ∈R",
+          "τt∈R",
+          "∇xτ∈R²",
+          "D²xτ∈R²×²",
+          "τtt∈R"
+        ],
+        "note": "Verbatim: 2. Implement qψ(x,t) and the integrated monotone clock gψ with τψ(x,0)=0, kfloor=√εdtype·kref, and nq-point differentiable quadrature; input physical coordinates and time, output one scalar τψ and its automatic-differentiation derivatives. Formalization: Likely-fatal step attacked first. 'differentiable quadrature' has two defensible readings: independently rescaled finite quadrature (executed and non-monotone) or a cumulative/analytic monotone realization (sound). 'stable' has no named tolerance or terminating rule. The patch selects the sound analytic-positive-basis reading and removes quadrature."
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "x∈R²",
+          "τψ∈R",
+          "pulse p(t)∈R^m"
+        ],
+        "produces": [
+          "V,T,ξ∈R",
+          "E,J∈R²",
+          "QJ∈R"
+        ],
+        "note": "Verbatim: 3. Implement the capacity-matched solution head hθ(x,τψ,p(t)); input position, the already-produced clock, and the known pulse value, output V, T, and ξ, then compute E, J, and QJ deterministically from those fields. Formalization: The direct pulse input makes one-sided edge traces necessary for dynamic states."
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "hθ",
+          "τ derivatives",
+          "p,ṗ,p̈ inside a smooth interval"
+        ],
+        "produces": [
+          "ft,ftt∈R",
+          "∇xf∈R²",
+          "D²xf∈R²×²",
+          "Δf∈R"
+        ],
+        "note": "Verbatim: 4. Build one pullback routine that returns all physical-time first and second derivatives and all physical-space first and second derivatives, including τ–x and τ–p cross terms; input hθ, gψ, and p(t), output derivatives expressed in original coordinates. Formalization: The original ∇² notation admits Hessian and Laplacian readings. The executed tensor formula matches finite differences; the patch names D² and trace explicitly."
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "fields",
+          "pulled-back derivatives",
+          "constitutive data",
+          "collocation sets"
+        ],
+        "produces": [
+          "electric/heat/phase/clock/interface residual scalars",
+          "joint loss"
+        ],
+        "note": "Verbatim: 5. Evaluate the original electric, heat, and phase residuals with the pulled-back derivatives plus rτ, initial, boundary, and constitutive residuals; normalize exactly as in the unmodified-coordinate arm and jointly optimize ψ and θ from the first update, with no staged curriculum, continuation, or solver-floor schedule. Formalization: The computational graph is acyclic even though the loss couples gψ and hθ. Original pulse-interface behavior and nonempty-set requirement were underdefined; patched explicitly."
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "parameter counts",
+          "sample counts",
+          "optimizer budget",
+          "validation criterion"
+        ],
+        "produces": [
+          "capacity-matched checkpoints"
+        ],
+        "note": "Verbatim: 6. Enforce matched total parameters and matched collocation/optimizer budgets by reallocating hidden units from hθ to gψ; output checkpoints selected only by the predeclared in-distribution validation criterion. Formalization: Main-arm accounting is arithmetically expressible once architectures are frozen; identity-control accounting needed separate nominal and active counts."
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "frozen cases",
+          "same budgets",
+          "baseline definitions"
+        ],
+        "produces": [
+          "baseline checkpoints and metrics"
+        ],
+        "note": "Verbatim: 7. Train the mandatory same-bottleneck arms: an unmodified-coordinate MLP-PINN; analytic and generic learned coordinate-transform PINNs; fixed-Fourier and adaptive-spectral PINNs; causal PINN and NeuSA; self-adaptive and loss-conditional residual weighting; and hard-constraint/AdamFLIP, all under matched budgets. Formalization: A fair naive coordinate arm must retain the same clock/head allocation and information and omit only kinetics supervision; patched explicitly."
+      },
+      {
+        "step": "S8",
+        "consumes": [
+          "identity τ=t",
+          "same h architecture",
+          "budget"
+        ],
+        "produces": [
+          "identity-control predictions and metrics"
+        ],
+        "note": "Verbatim: 8. Run the single mechanism negative control by fixing gψ(x,t)=t in nondimensional units while retaining the same hθ pathway, total parameter budget, samples, pulled-back residual code, and optimizer; output downstream fields and device metrics, not merely a clock statistic. Formalization: Strict 'same h' plus equal active-trainable count is impossible when the clock is removed: executed count 160 versus 120. The patch preserves nominal allocation with frozen/bypassed clock tensors and reports active count."
+      },
+      {
+        "step": "S9",
+        "consumes": [
+          "training/validation checkpoints",
+          "reference trajectories"
+        ],
+        "produces": [
+          "locked choices",
+          "ID metrics"
+        ],
+        "note": "Verbatim: 9. On training-validation cases, report field error, switching-time error, phase-front Hausdorff and topology error, energy-balance error, worst normalized coupled residual, wall time, and memory; freeze every choice before opening formal-OOD whole geometries, material combinations, and pulse protocols. Formalization: Metric computation is empirical and cannot be validated by the synthetic trace; the lock order is procedurally acyclic."
+      },
+      {
+        "step": "S10",
+        "consumes": [
+          "locked procedure",
+          "unopened whole OOD cases"
+        ],
+        "produces": [
+          "OOD metrics",
+          "bounded synthetic claim"
+        ],
+        "note": "Verbatim: 10. Apply the locked solver procedure independently to each formal-OOD case and compare the same metrics without using OOD outcomes to alter gψ, hθ, baselines, thresholds, or stopping; output a bounded synthetic-numerical result rather than an experimental claim. Formalization: No OOD result flows backward into S2-S9; no circular dependency was found."
+      }
+    ],
+    "dry_run": {
+      "instance": "2D point x=(0.2,-0.1), t=0.6 with scalar pulse p=t²+0.1t; a smooth scalar head with τ/p/x cross terms for pullback shapes; a positive narrow clock rate kfloor+80 exp(-((s-0.537)/0.0028)²), kfloor=0.001, evaluated by nq=16 rescaled Gauss-Legendre quadrature; a manufactured V/T/ξ residual point; K=20 for the naive comparison; parameter counts Ph=120,Pg=40.",
+      "execution": {
+        "mode": "executed",
+        "script": "\"\"\"Stdlib-only execution evidence for IdeaSpark Phase 2.3 T2-T5.\"\"\"\n\nfrom __future__ import annotations\n\nimport math\nfrom collections import defaultdict, deque\n\n\ndef legendre_nodes_weights(n: int):\n    \"\"\"Gauss-Legendre nodes/weights on [-1, 1], computed with stdlib math.\"\"\"\n    nodes = [0.0] * n\n    weights = [0.0] * n\n    half = (n + 1) // 2\n    for i in range(half):\n        z = math.cos(math.pi * (i + 0.75) / (n + 0.5))\n        for _ in range(100):\n            p0, p1 = 1.0, z\n            for k in range(2, n + 1):\n                p0, p1 = p1, ((2 * k - 1) * z * p1 - (k - 1) * p0) / k\n            pn = p1 if n > 1 else z\n            pnm1 = p0 if n > 1 else 1.0\n            dp = n * (z * pn - pnm1) / (z * z - 1.0)\n            z_next = z - pn / dp\n            if abs(z_next - z) < 1e-15:\n                z = z_next\n                break\n            z = z_next\n        p0, p1 = 1.0, z\n        for k in range(2, n + 1):\n            p0, p1 = p1, ((2 * k - 1) * z * p1 - (k - 1) * p0) / k\n        pn = p1 if n > 1 else z\n        pnm1 = p0 if n > 1 else 1.0\n        dp = n * (z * pn - pnm1) / (z * z - 1.0)\n        w = 2.0 / ((1.0 - z * z) * dp * dp)\n        nodes[i], nodes[n - 1 - i] = -z, z\n        weights[i] = weights[n - 1 - i] = w\n    return nodes, weights\n\n\nNQ = 16\nKFLOOR = 1.0e-3\nNODES, WEIGHTS = legendre_nodes_weights(NQ)\n\n\ndef positive_rate(s: float) -> float:\n    # A positive rate representable as kfloor + softplus(q(s)); the narrow peak\n    # exposes non-monotonicity in independently rescaled finite quadrature.\n    return KFLOOR + 80.0 * math.exp(-((s - 0.537) / 0.0028) ** 2)\n\n\ndef rescaled_gauss_tau(t: float) -> float:\n    return 0.5 * t * sum(\n        w * positive_rate(0.5 * t * (z + 1.0))\n        for z, w in zip(NODES, WEIGHTS)\n    )\n\n\ndef find_quadrature_counterexample():\n    grid = [0.50 + i * (0.20 / 20000) for i in range(20001)]\n    vals = [rescaled_gauss_tau(t) for t in grid]\n    i = min(range(len(grid) - 1), key=lambda j: vals[j + 1] - vals[j])\n    dt = grid[i + 1] - grid[i]\n    slope = (vals[i + 1] - vals[i]) / dt\n    return grid[i], vals[i], grid[i + 1], vals[i + 1], slope\n\n\ndef analytic_positive_basis_tau(t: float) -> float:\n    # One local repair: exact integral of a positive Gaussian-basis rate.\n    c, width, amplitude = 0.537, 0.0028, 80.0\n    primitive = 0.5 * width * math.sqrt(math.pi) * (\n        math.erf((t - c) / width) - math.erf(-c / width)\n    )\n    return KFLOOR * t + amplitude * primitive\n\n\ndef analytic_positive_basis_rate(t: float) -> float:\n    return positive_rate(t)\n\n\ndef h_partial(x1: float, x2: float, tau: float, pulse: float) -> float:\n    return (\n        x1 * x1\n        + x1 * x2 * tau\n        + math.sin(tau)\n        + tau * pulse\n        + 0.5 * pulse * pulse\n        + x2 * pulse\n    )\n\n\ndef tau_map(x1: float, x2: float, t: float) -> float:\n    return (1.0 + 0.2 * x1) * t + 0.1 * x2 * t * t + 0.05 * x1 * x2 * t\n\n\ndef pulse(t: float) -> float:\n    return t * t + 0.1 * t\n\n\ndef composed_f(x1: float, x2: float, t: float) -> float:\n    return h_partial(x1, x2, tau_map(x1, x2, t), pulse(t))\n\n\ndef pullback_check():\n    x1, x2, t = 0.2, -0.1, 0.6\n    tau = tau_map(x1, x2, t)\n    p = pulse(t)\n    tau_t = 1.0 + 0.2 * x1 + 0.2 * x2 * t + 0.05 * x1 * x2\n    tau_tt = 0.2 * x2\n    p_t, p_tt = 2.0 * t + 0.1, 2.0\n    h_tau = x1 * x2 + math.cos(tau) + p\n    h_p = tau + p + x2\n    h_tautau = -math.sin(tau)\n    h_taup = 1.0\n    h_pp = 1.0\n    formula_tt = (\n        h_tautau * tau_t * tau_t\n        + h_tau * tau_tt\n        + 2.0 * h_taup * tau_t * p_t\n        + h_pp * p_t * p_t\n        + h_p * p_tt\n    )\n    ht = 2.0e-4\n    finite_tt = (\n        composed_f(x1, x2, t + ht)\n        - 2.0 * composed_f(x1, x2, t)\n        + composed_f(x1, x2, t - ht)\n    ) / (ht * ht)\n\n    grad_tau = [0.2 * t + 0.05 * x2 * t, 0.1 * t * t + 0.05 * x1 * t]\n    hess_tau = [[0.0, 0.05 * t], [0.05 * t, 0.0]]\n    grad_x_h_tau = [x2, x1]\n    hess_x_h = [[2.0, tau], [tau, 0.0]]\n    formula_hess = [[0.0, 0.0], [0.0, 0.0]]\n    for i in range(2):\n        for j in range(2):\n            formula_hess[i][j] = (\n                hess_x_h[i][j]\n                + grad_x_h_tau[i] * grad_tau[j]\n                + grad_tau[i] * grad_x_h_tau[j]\n                + h_tautau * grad_tau[i] * grad_tau[j]\n                + h_tau * hess_tau[i][j]\n            )\n    hx = 2.0e-4\n    f00 = composed_f(x1, x2, t)\n    fpp_x1 = composed_f(x1 + hx, x2, t)\n    fmm_x1 = composed_f(x1 - hx, x2, t)\n    fpp_x2 = composed_f(x1, x2 + hx, t)\n    fmm_x2 = composed_f(x1, x2 - hx, t)\n    fd11 = (fpp_x1 - 2.0 * f00 + fmm_x1) / (hx * hx)\n    fd22 = (fpp_x2 - 2.0 * f00 + fmm_x2) / (hx * hx)\n    fd12 = (\n        composed_f(x1 + hx, x2 + hx, t)\n        - composed_f(x1 + hx, x2 - hx, t)\n        - composed_f(x1 - hx, x2 + hx, t)\n        + composed_f(x1 - hx, x2 - hx, t)\n    ) / (4.0 * hx * hx)\n    finite_hess = [[fd11, fd12], [fd12, fd22]]\n    max_hess_error = max(\n        abs(formula_hess[i][j] - finite_hess[i][j])\n        for i in range(2)\n        for j in range(2)\n    )\n    return tau, p, formula_tt, finite_tt, formula_hess, finite_hess, max_hess_error\n\n\ndef acyclic_check():\n    nodes = [\"q\", \"tau\", \"pulse\", \"h\", \"fields\", \"K\", \"keff\", \"r_tau\", \"pde\", \"loss\"]\n    edges = [\n        (\"q\", \"tau\"), (\"tau\", \"h\"), (\"pulse\", \"h\"), (\"h\", \"fields\"),\n        (\"fields\", \"K\"), (\"K\", \"keff\"), (\"tau\", \"r_tau\"),\n        (\"keff\", \"r_tau\"), (\"fields\", \"pde\"), (\"r_tau\", \"loss\"),\n        (\"pde\", \"loss\"),\n    ]\n    indegree = {node: 0 for node in nodes}\n    outgoing = defaultdict(list)\n    for src, dst in edges:\n        outgoing[src].append(dst)\n        indegree[dst] += 1\n    queue = deque(node for node in nodes if indegree[node] == 0)\n    order = []\n    while queue:\n        node = queue.popleft()\n        order.append(node)\n        for dst in outgoing[node]:\n            indegree[dst] -= 1\n            if indegree[dst] == 0:\n                queue.append(dst)\n    return len(order) == len(nodes), order\n\n\ndef pulse_edge_check():\n    edge = 0.5\n    left_p, right_p = 0.0, 1.0\n    tau = edge\n    # A legal head under the written spec can return T=tau+p, hence jump.\n    left_t = tau + left_p\n    right_t = tau + right_p\n    return left_t, right_t, right_t - left_t\n\n\ndef control_budget_check():\n    p_head, p_clock = 120, 40\n    candidate_active = p_head + p_clock\n    strict_identity_same_head_active = p_head\n    identity_with_nominal_frozen_clock = p_head + p_clock\n    return candidate_active, strict_identity_same_head_active, identity_with_nominal_frozen_clock\n\n\ndef naive_comparison():\n    # Same h/g parameter allocation and information; naive deletes only r_tau.\n    k_value = 20.0\n    naive_tau_t = 1.0\n    kinetics_tau_t = math.sqrt(k_value * k_value + KFLOOR * KFLOOR)\n    naive_dxi_dtau = k_value / naive_tau_t\n    kinetics_dxi_dtau = k_value / kinetics_tau_t\n    return k_value, naive_tau_t, kinetics_tau_t, naive_dxi_dtau, kinetics_dxi_dtau\n\n\ndef manufactured_residual_point():\n    \"\"\"One complete scalar-point pass through fields, constitutive terms, and residuals.\"\"\"\n    x1, x2, t = 0.2, -0.1, 0.6\n    tau = tau_map(x1, x2, t)\n    p = pulse(t)\n    tau_t = 1.0 + 0.2 * x1 + 0.2 * x2 * t + 0.05 * x1 * x2\n    tau_x1 = 0.2 * t + 0.05 * x2 * t\n    tau_x2 = 0.1 * t * t + 0.05 * x1 * t\n    lap_tau = 0.0\n    p_t = 2.0 * t + 0.1\n    v = x1 + 2.0 * x2 + 0.1 * tau\n    temp = 1.0 + 0.5 * tau + p\n    xi = 0.2 + 0.1 * tau\n    e = (-(1.0 + 0.1 * tau_x1), -(2.0 + 0.1 * tau_x2))\n    sigma, kappa, rho_c = 2.0, 1.0, 1.0\n    current = (sigma * e[0], sigma * e[1])\n    q_joule = current[0] * e[0] + current[1] * e[1]\n    electric_residual = -sigma * 0.1 * lap_tau\n    temp_t = 0.5 * tau_t + p_t\n    heat_residual = rho_c * temp_t - kappa * 0.5 * lap_tau - q_joule\n    xi_t = 0.1 * tau_t\n    k_xi = xi_t  # manufactured constitutive value; phase residual zero is forced.\n    phase_residual = xi_t - k_xi\n    k_eff = math.sqrt(k_xi * k_xi + KFLOOR * KFLOOR)\n    clock_residual = tau_t - k_eff\n    return v, temp, xi, e, current, q_joule, electric_residual, heat_residual, phase_residual, clock_residual\n\n\ndef main():\n    t0, v0, t1, v1, slope = find_quadrature_counterexample()\n    repair_grid = [0.50 + i * (0.20 / 20000) for i in range(20001)]\n    repair_slopes = [\n        (analytic_positive_basis_tau(repair_grid[i + 1]) - analytic_positive_basis_tau(repair_grid[i]))\n        / (repair_grid[i + 1] - repair_grid[i])\n        for i in range(len(repair_grid) - 1)\n    ]\n    tau, p, formula_tt, finite_tt, formula_hess, finite_hess, max_hess_error = pullback_check()\n    is_dag, topo = acyclic_check()\n    edge_left, edge_right, edge_jump = pulse_edge_check()\n    cand_p, identity_active, identity_nominal = control_budget_check()\n    k_value, naive_rate, kinetics_rate, naive_slope, kinetics_slope = naive_comparison()\n    manufactured = manufactured_residual_point()\n\n    print(f\"Q16_COUNTEREXAMPLE t0={t0:.5f} tau0={v0:.9f} t1={t1:.5f} tau1={v1:.9f} slope={slope:.6f}\")\n    print(f\"Q16_POSITIVE_INTEGRAND sampled_min_lower_bound={KFLOOR:.6f}\")\n    print(f\"ANALYTIC_POSITIVE_BASIS min_grid_slope={min(repair_slopes):.6f} min_exact_rate={min(analytic_positive_basis_rate(t) for t in repair_grid):.6f}\")\n    print(f\"PULLBACK_POINT tau={tau:.9f} pulse={p:.9f}\")\n    print(f\"TIME_SECOND formula={formula_tt:.9f} finite_difference={finite_tt:.9f} abs_error={abs(formula_tt-finite_tt):.3e}\")\n    print(f\"SPACE_HESSIAN formula={formula_hess}\")\n    print(f\"SPACE_HESSIAN finite_difference={finite_hess} max_abs_error={max_hess_error:.3e}\")\n    print(f\"ACYCLIC is_dag={is_dag} topological_order={topo}\")\n    print(f\"PULSE_EDGE left_T={edge_left:.6f} right_T={edge_right:.6f} unregulated_jump={edge_jump:.6f}\")\n    print(f\"IDENTITY_CONTROL candidate_active={cand_p} same_head_identity_active={identity_active} nominal_with_frozen_clock={identity_nominal}\")\n    print(f\"NAIVE_SAME_BUDGET K={k_value:.3f} naive_tau_t={naive_rate:.6f} kinetics_tau_t={kinetics_rate:.6f} naive_abs_dxi_dtau={naive_slope:.6f} kinetics_abs_dxi_dtau={kinetics_slope:.6f}\")\n    print(\"MANUFACTURED_POINT V={:.6f} T={:.6f} xi={:.6f} E={} J={} QJ={:.6f} r_e={:.6f} r_T={:.6f} r_xi={:.6f} r_tau={:.6f}\".format(*manufactured))\n\n\nif __name__ == \"__main__\":\n    main()\n\r\n",
+        "output": "Q16_COUNTEREXAMPLE t0=0.66628 tau0=2.419592301 t1=0.66629 tau1=2.409748402 slope=-984.389906\nQ16_POSITIVE_INTEGRAND sampled_min_lower_bound=0.001000\nANALYTIC_POSITIVE_BASIS min_grid_slope=0.001000 min_exact_rate=0.001000\nPULLBACK_POINT tau=0.619800000 pulse=0.420000000\nTIME_SECOND formula=5.602857170 finite_difference=5.602857209 abs_error=3.903e-08\nSPACE_HESSIAN formula=[[1.9686484380829044, 0.6725654325804545], [0.6725654325804545, 0.01577534113362871]]\nSPACE_HESSIAN finite_difference=[[1.9686484359349166, 0.6725654325134833], [0.6725654325134833, 0.015775350470370597]] max_abs_error=9.337e-09\nACYCLIC is_dag=True topological_order=['q', 'pulse', 'tau', 'h', 'fields', 'K', 'pde', 'keff', 'r_tau', 'loss']\nPULSE_EDGE left_T=0.500000 right_T=1.500000 unregulated_jump=1.000000\nIDENTITY_CONTROL candidate_active=160 same_head_identity_active=120 nominal_with_frozen_clock=160\nNAIVE_SAME_BUDGET K=20.000 naive_tau_t=1.000000 kinetics_tau_t=20.000000 naive_abs_dxi_dtau=20.000000 kinetics_abs_dxi_dtau=1.000000\nMANUFACTURED_POINT V=0.061980 T=1.729900 xi=0.261980 E=(-1.0117, -2.0042) J=(-2.0234, -4.0084) QJ=10.080709 r_e=-0.000000 r_T=-8.267209 r_xi=0.000000 r_tau=0.924295"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "finite-quadrature clock increment",
+          "value": "-0.009843899 over Δt=0.00001; slope -984.389906",
+          "arithmetic": "2.409748402 - 2.419592301"
+        },
+        {
+          "quantity": "analytic positive-basis repair lower slope",
+          "value": "0.001000",
+          "arithmetic": "minimum of 20,000 adjacent grid slopes; exact rate minimum also 0.001000"
+        },
+        {
+          "quantity": "time second-order pullback",
+          "value": "formula 5.602857170; finite difference 5.602857209; error 3.903e-08",
+          "arithmetic": "all hττ,hτ,hτp,hpp,hp contractions evaluated"
+        },
+        {
+          "quantity": "spatial Hessian pullback",
+          "value": "max component error 9.337e-09",
+          "arithmetic": "2×2 analytic pullback compared with centered finite differences"
+        },
+        {
+          "quantity": "forward dependency graph",
+          "value": "DAG=True",
+          "arithmetic": "topological order q,pulse,τ,h,fields,K,pde,keff,rτ,loss"
+        },
+        {
+          "quantity": "unconstrained pulse-edge state jump",
+          "value": "T+ - T- = 1.0",
+          "arithmetic": "legal head T=τ+p with p- =0,p+=1"
+        },
+        {
+          "quantity": "identity-control active count",
+          "value": "candidate 160; identical-head identity 120; nominal with frozen clock 160",
+          "arithmetic": "Ph+Pg=120+40; identity active=Ph"
+        },
+        {
+          "quantity": "same-budget naive versus kinetics clock",
+          "value": "|dξ/dτ| 20.0 versus 1.0",
+          "arithmetic": "K/τt with K=20, naive τt=1, kinetics τt=sqrt(20²+0.001²)"
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "A positive integrand does not make the independently rescaled nq=16 numerical clock monotone: τ fell by 0.009843899 as t increased by 1e-5.",
+          "kind": "structural",
+          "why": "This is a constructive counterexample to the algorithmic guarantee, independent of real VO2 magnitudes; the failure comes from the finite quadrature map, not the chosen physical data. It is reading-dependent because a cumulative analytic-positive realization avoids it."
+        },
+        {
+          "anomaly": "Without explicit edge conditions, a legal direct-pulse head produced a unit jump in T while open-interval residuals never see the impulse.",
+          "kind": "instance_contingent",
+          "why": "The numeric jump uses the chosen head, but it exposes a structural missing constraint; other heads might happen to be continuous."
+        },
+        {
+          "anomaly": "An identical-head identity control has 120 active parameters versus the candidate's 160, despite the original simultaneous same-head and total-trainable-budget wording.",
+          "kind": "structural",
+          "why": "Removing or freezing a 40-parameter clock while holding a 120-parameter head fixed changes the active count for every dataset."
+        },
+        {
+          "anomaly": "The manufactured point gives rξ=0 only because Kξ was defined as ξt, while rT=-8.267209 and rτ=0.924295.",
+          "kind": "instance_contingent",
+          "why": "These values depend on the manufactured fields; the forced zero is explicitly not evidence of physical correctness."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty interior collocation set",
+        "behavior": "a normalized empirical residual mean has no denominator and S5 cannot produce a training scalar",
+        "finding": "Original text did not require nonempty sets; patched in S1/S5."
+      },
+      {
+        "probe": "nq=0",
+        "behavior": "the original quadrature sum yields τ=0 and loses invertibility",
+        "finding": "Outside the stated default/doubling path, but confirms that an admissible range was missing; quadrature is removed by the patch."
+      },
+      {
+        "probe": "all-identical collocation points",
+        "behavior": "the code halts but estimates one point rather than the declared uniform domain integral",
+        "finding": "No coherence blocker because the premises already require independent uniform sampling; detect and reject such a sampler realization in implementation."
+      },
+      {
+        "probe": "ties in architecture validation",
+        "behavior": "original selection did not define a winner",
+        "finding": "Patched: choose the smaller Mτ."
+      },
+      {
+        "probe": "single spatial-time point",
+        "behavior": "g→τ→h and all scalar/tensor derivative shapes remain defined",
+        "finding": null
+      },
+      {
+        "probe": "unbounded nq doubling",
+        "behavior": "'until stable' has neither a quantitative stable predicate nor a maximum, so termination is not specified",
+        "finding": "Patched by eliminating finite quadrature and using a finite predeclared basis grid."
+      },
+      {
+        "probe": "Kξ=0 everywhere",
+        "behavior": "keff=kfloor while softplus-based excess rate is strictly positive for finite logits, so exact rτ=0 is approached but not attained",
+        "finding": "Note only: the candidate does not guarantee exact zero clock residual; no patch-around is needed."
+      },
+      {
+        "probe": "pulse edge with p-=0,p+=1",
+        "behavior": "open-interval derivatives are finite but an unconstrained T head can jump by 1",
+        "finding": "Patched with one-sided evaluation and T/ξ continuity."
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "gψ→τψ→hθ is acyclic although rτ couples both networks in the loss",
+        "established_by": "S2-S5",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "gψ never reads predicted fields and p enters only hθ",
+        "established_by": "S2-S3",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "τψ(x,0)=0",
+        "established_by": "S2",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the finite-quadrature τ has ∂tτ>0 and is strictly invertible by construction",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "executed counterexample slope -984.389906"
+      },
+      {
+        "claim": "keff is strictly positive",
+        "established_by": "S5",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "kref>0",
+          "finite Kξ"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the displayed time and spatial second-order pullbacks omit no chain-rule term",
+        "established_by": "S4",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "time error 3.903e-08; Hessian max error 9.337e-09"
+      },
+      {
+        "claim": "the pulled-back system is an exact change of coordinate rather than replacement physics",
+        "established_by": "S4-S5",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "the implemented clock, not only its continuous idealization, is C² with τt>0",
+          "all dynamic-state pulse-edge conditions are imposed",
+          "constitutive coefficient derivatives are retained when divergences are formed"
+        ],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "where |Kξ| is large, τ advances rapidly and the transition widens in τ",
+        "established_by": "S5",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "original residual normalizations and total main-arm trainable parameters are unchanged",
+        "established_by": "S5-S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "frozen architecture counts and shared normalization implementation"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "identity control retains the same h pathway and total trainable budget",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "160 candidate active parameters versus 120 with identical h and fixed identity clock"
+      },
+      {
+        "claim": "formal OOD cannot steer the clock or choices",
+        "established_by": "S9-S10",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the local clock is bijective in gap_closure.how_closed",
+        "established_by": "S2",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "original finite-quadrature counterexample; repaired analytic-positive map has minimum exact rate 0.001"
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Use the same analytic monotone clock architecture, hθ architecture, parameter allocation, information, samples, and full pullback, but remove keff and rτ so the warp is learned only through the original PDE loss.",
+      "naive_fairness": "It respects identical parameter, collocation, optimizer, information-at-training, and deployment budgets and is simpler by one constitutive activity computation and one residual; it neither adds a pass nor accesses solver labels.",
+      "instance_behavior": {
+        "naive": "with K=20 and τt=1, |dξ/dτ|=20",
+        "mechanism": "with rτ=0 and phase residual zero, τt=sqrt(20²+0.001²)=20.000000025 and |dξ/dτ|≈1",
+        "divergence": "19 in |dξ/dτ|",
+        "kind": "instance_contingent"
+      },
+      "verdict": "confronts_obstacle",
+      "reasoning": "On the executed instance the naive warp leaves the sharp slope unchanged, while kinetics supervision normalizes it. The particular naive learned rate is instance-contingent, but conditional on rτ=0 and the phase equation, |dξ/dτ|=|K|/sqrt(K²+kfloor²)≤1 is the structural reason the added residual confronts the declared obstacle."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism",
+      "value": "For each predeclared two-dimensional VO2 device case, write u=(V,T,ξ), E=-∇V, J=σ(T,ξ)E, QJ=J·E, and let Kξ(T,E,ξ,∇ξ,Δξ) be the signed right-hand side of the chosen phase-kinetic constitutive equation, all in the same nondimensionalization used by the FEniCSx reference model. Use the acyclic forward graph gψ(x,t)→τψ followed by hθ(x,τψ,p(t))→(V,T,ξ): gψ is evaluated first and never reads a predicted field, while the known pulse p(t) enters only the solution head. Realize the local clock without finite quadrature: on the nondimensional interval [0,tf], a coefficient network aψ(x) produces Mτ coefficients and τψ(x,t)=kfloor·t+Σj softplus(aψ,j(x))Bj(t), where bj(t)=exp(-((t-cj)/w)²), Bj(t)=∫0^t bj(s)ds is evaluated by its analytic erf expression, cj are uniformly fixed knots, w is their spacing, and kfloor=√εdtype·kref with kref>0. Thus τψ(x,0)=0 and ∂tτψ=kfloor+Σj softplus(aψ,j(x))bj(t)>0 exactly for the implemented map, so t↦τψ is strictly invertible at every x. Use Mτ=16 by default; select only from the predeclared training-validation grid {8,16,32}, with ties resolved toward the smaller Mτ, before formal OOD is opened. Define keff=√(Kξ²+kfloor²)>0 and add rτ=∂tτψ-keff(T,E,ξ,∇ξ,Δξ); although rτ couples gψ and hθ in the loss, the forward graph remains acyclic. For each scalar component f=hθ(x,τψ,p(t)), automatic differentiation evaluates ∂tf=fττt+fp·ṗ and ∂ttf=fτττt²+fττtt+2(fτp·ṗ)τt+fpp[ṗ,ṗ]+fp·p̈ on each open pulse-smooth interval, where the juxtaposed factors are contractions, not subscripts. It also evaluates the spatial Hessian D²xf=hxx+hxτ⊗∇τ+∇τ⊗hτx+fττ∇τ⊗∇τ+fτD²xτ, and Δf=tr(D²xf); this fixes the tensor shape rather than using ∇² for both a Hessian and a Laplacian. Substitute these derivatives into the original electric residual ∇·J=0, heat residual ρc∂tT-∇·(κ∇T)-QJ=0, phase residual ∂tξ-Kξ=0, and unchanged nonempty initial, boundary, and constitutive residual sets. At each declared pulse edge te, use one-sided pulse values, never differentiate through the jump, enforce T(x,te-)=T(x,te+) and ξ(x,te-)=ξ(x,te+), and enforce the electric boundary-value problem separately on both sides so V may follow an imposed electrical step; τ is continuous by its analytic construction. Conditional on the displayed differentiability and interface assumptions, this is an exact change of independent coordinate rather than replacement physics. The learnability claim remains empirical: if rτ is driven small where |Kξ| is large, τ advances rapidly and |∂ξ/∂τ| is normalized, but no approximation bound is claimed. All original residual normalizations, nonempty collocation counts, optimizer settings, and total parameter allocation are held fixed by shrinking hθ to pay for gψ, and formal OOD entities are touched only after architecture, hyperparameters, and stopping rule are locked.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1/T2/T3/T4 findings by replacing non-monotonic finite quadrature with an analytic strictly-positive clock, making second-order tensor contractions explicit, and specifying pulse-edge continuity."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism_steps",
+      "value": "1. Freeze one nondimensional 2D VO2 electric–Joule–thermal–phase initial-boundary-value model, its σ(T,ξ), κ(T,ξ), ρc(T,ξ), and Kξ constitutive functions, nonempty initial/boundary/interior sample sets, and a FEniCSx reference implementation; output the declared equations, units, pulse interfaces, one-sided interface conditions, and reference trajectories for scoring only.\n2. Implement aψ(x) and the analytic positive-basis clock gψ with τψ(x,0)=0, kfloor=√εdtype·kref, fixed Gaussian bases bj, and analytic primitives Bj; use Mτ=16 by default and choose from {8,16,32} on training-validation only, breaking ties toward smaller Mτ. Input x and t; output scalar τψ plus exact automatic-differentiation derivatives, with ∂tτψ>0 by the displayed formula and no numerical quadrature.\n3. Implement the capacity-matched solution head hθ(x,τψ,p(t)); input position, the already-produced clock, and the known pulse value, output V, T, and ξ, then compute E, J, and QJ deterministically from those fields.\n4. Build one pullback routine that returns physical-time first and second derivatives, the 2×2 physical-space Hessian for each scalar field, and its trace when a Laplacian is required, including all τ–x and τ–p contractions; input hθ, gψ, and the one-sided p(t), and output derivatives in original coordinates.\n5. Evaluate the original electric, heat, and phase residuals plus rτ on open pulse-smooth intervals; at every pulse edge enforce one-sided electric boundary conditions and continuity of T and ξ, while never differentiating p through its jump. Add the nonempty initial, boundary, and constitutive residuals, preserve the unmodified-coordinate normalizations, and jointly optimize ψ and θ from the first update.\n6. Enforce matched total parameter allocation and matched nonempty collocation/optimizer budgets by reallocating hidden units from hθ to gψ; output checkpoints selected only by the predeclared in-distribution validation criterion.\n7. Train mandatory same-bottleneck arms under matched budgets, including a same-architecture, same-parameter-allocation naive coordinate transform that uses the analytic monotone clock and full pullback but omits keff and rτ; also train the unmodified-coordinate MLP-PINN, analytic coordinate transforms, fixed-Fourier and adaptive-spectral PINNs, causal PINN and NeuSA, self-adaptive and loss-conditional weighting, and hard-constraint/AdamFLIP.\n8. Run the identity negative control with the identical hθ architecture and nominal parameter/memory allocation by instantiating the same gψ tensors but freezing and bypassing them with τ=t; report both nominal and active-trainable counts, keep samples, pullback code, update count, wall-time cap, and optimizer fixed, and compare downstream fields/device metrics. The widened unmodified-coordinate arm in Step 7 separately reallocates the clock parameters to hθ and is the active-parameter-matched performance baseline.\n9. On training-validation cases, report field error, switching-time error, phase-front Hausdorff and topology error, energy-balance error, worst normalized coupled residual, wall time, and memory; freeze every choice before opening formal-OOD whole geometries, material combinations, and pulse protocols.\n10. Apply the locked solver procedure independently to each formal-OOD case and compare the same metrics without using OOD outcomes to alter gψ, hθ, baselines, thresholds, or stopping; output a bounded synthetic-numerical result rather than an experimental claim.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1/T3/T5 findings by binding the finite clock-capacity selection, defining nonempty/interface producers, adding the same-budget naive transform, and separating nominal from active identity-control capacity."
+    }
+  ],
+  "final_candidate": {
+    "title": "Kinetics-Clock PINNs for Endogenous High-Frequency VO2 Switching Fronts",
+    "hook": "A two-dimensional VO2 PINN may not need more spectral capacity to resolve a pulse-created switching front: at matched total parameter count, a physically constrained local kinetics clock can make the same front slower in the network coordinate while preserving the original electro-thermal-phase equations. The claim is deliberately narrower than a general coordinate-warp advantage and is tested against learned and analytic coordinate transforms as well as the strongest spectral, causal, weighting, and hard-constraint alternatives.",
+    "hook_shape_rationale": "Shape (c), counter-intuitive minimalism: the candidate is no larger in total trainable parameters than the strongest matched solution network and adds no Fourier band, modal truncation, residual curriculum, or OOD-trained module; it reallocates capacity to one local coordinate map. Shape (a) was viable because switching-time and front-topology errors could fall sharply, but it was rejected as the hook because no measured magnitude exists yet.",
+    "gap_closure": [
+      {
+        "gap": "No retrieved frontier leaf establishes whether a 2D-or-higher PCM PINN can keep the electric, Joule-heating, thermal, and phase-kinetic residuals simultaneously accurate when a pulse creates moving fronts and new high-frequency modes after the initial condition — stakes: device researchers can accept the wrong switching time, programming energy, or phase topology despite a small aggregate loss, wasting compute and misdirecting device design.",
+        "main_pattern": "architectural_operator_substitution",
+        "sub_pattern": "C12 (Substitute the Operator or Representation)",
+        "companion_pattern": "structural_prior_encoding",
+        "how_closed": "C12 replaces the raw nondimensional time slot by the bijective local clock τψ, while structural_prior_encoding constrains ∂tτψ to the prescribed phase-kinetic activity and pulls the complete original-coordinate PDE through that map; corpus support is thin in PINN/PCM, and the closest C12 exemplars are deep-network representation or operator swaps rather than coupled phase-front solvers."
+      }
+    ],
+    "core_mechanism": "For each predeclared two-dimensional VO2 device case, write u=(V,T,ξ), E=-∇V, J=σ(T,ξ)E, QJ=J·E, and let Kξ(T,E,ξ,∇ξ,Δξ) be the signed right-hand side of the chosen phase-kinetic constitutive equation, all in the same nondimensionalization used by the FEniCSx reference model. Use the acyclic forward graph gψ(x,t)→τψ followed by hθ(x,τψ,p(t))→(V,T,ξ): gψ is evaluated first and never reads a predicted field, while the known pulse p(t) enters only the solution head. Realize the local clock without finite quadrature: on the nondimensional interval [0,tf], a coefficient network aψ(x) produces Mτ coefficients and τψ(x,t)=kfloor·t+Σj softplus(aψ,j(x))Bj(t), where bj(t)=exp(-((t-cj)/w)²), Bj(t)=∫0^t bj(s)ds is evaluated by its analytic erf expression, cj are uniformly fixed knots, w is their spacing, and kfloor=√εdtype·kref with kref>0. Thus τψ(x,0)=0 and ∂tτψ=kfloor+Σj softplus(aψ,j(x))bj(t)>0 exactly for the implemented map, so t↦τψ is strictly invertible at every x. Use Mτ=16 by default; select only from the predeclared training-validation grid {8,16,32}, with ties resolved toward the smaller Mτ, before formal OOD is opened. Define keff=√(Kξ²+kfloor²)>0 and add rτ=∂tτψ-keff(T,E,ξ,∇ξ,Δξ); although rτ couples gψ and hθ in the loss, the forward graph remains acyclic. For each scalar component f=hθ(x,τψ,p(t)), automatic differentiation evaluates ∂tf=fττt+fp·ṗ and ∂ttf=fτττt²+fττtt+2(fτp·ṗ)τt+fpp[ṗ,ṗ]+fp·p̈ on each open pulse-smooth interval, where the juxtaposed factors are contractions, not subscripts. It also evaluates the spatial Hessian D²xf=hxx+hxτ⊗∇τ+∇τ⊗hτx+fττ∇τ⊗∇τ+fτD²xτ, and Δf=tr(D²xf); this fixes the tensor shape rather than using ∇² for both a Hessian and a Laplacian. Substitute these derivatives into the original electric residual ∇·J=0, heat residual ρc∂tT-∇·(κ∇T)-QJ=0, phase residual ∂tξ-Kξ=0, and unchanged nonempty initial, boundary, and constitutive residual sets. At each declared pulse edge te, use one-sided pulse values, never differentiate through the jump, enforce T(x,te-)=T(x,te+) and ξ(x,te-)=ξ(x,te+), and enforce the electric boundary-value problem separately on both sides so V may follow an imposed electrical step; τ is continuous by its analytic construction. Conditional on the displayed differentiability and interface assumptions, this is an exact change of independent coordinate rather than replacement physics. The learnability claim remains empirical: if rτ is driven small where |Kξ| is large, τ advances rapidly and |∂ξ/∂τ| is normalized, but no approximation bound is claimed. All original residual normalizations, nonempty collocation counts, optimizer settings, and total parameter allocation are held fixed by shrinking hθ to pay for gψ, and formal OOD entities are touched only after architecture, hyperparameters, and stopping rule are locked.",
+    "core_mechanism_reasoning": "BLOCK 1 — PREMISES ledger:\nP1. The prescribed 2D VO2 electro-thermal-phase model has a well-defined signed phase-rate Kξ whose high-magnitude regions mark the pulse-created switching activity; this is physically motivated by the constitutive closure but the claim that it identifies the representation bottleneck is untested — falsification target.\nP2. Accumulated activity τψ is a useful local independent coordinate because ∂tτψ is strictly positive and therefore t↦τψ is invertible at each spatial point; positivity is by construction, while improved learnability is untested — falsification target.\nP3. Conditional on gψ and hθ being twice differentiable between pulse edges and on retaining every displayed chain-rule term, the pulled-back residuals represent the same declared PDE case; pulse jumps are handled as interfaces rather than differentiated through.\nP4. The synthetic FEniCSx reference is an oracle only for scoring within the declared constitutive model and is not experimental validation.\nOBSERVATION-MODEL premise. Interior collocation points are sampled independently from the same predeclared uniform space-time distribution for every arm, with separate fixed initial and boundary samples; thus each Monte Carlo residual term targets the same domain integral, and neither solver labels nor formal-OOD outcomes steer the clock.\nESTIMAND. For each locked device case, the estimand is the unique numerical solution u*(x,t)=(V*,T*,ξ*) of the declared electro-thermal-phase initial-boundary-value problem; τψ is a nuisance coordinate, and the reported switching-time, phase-front Hausdorff, topology, energy-balance, field-error, and residual metrics are functionals of u* and the PINN solution over the predeclared case population.\nBLOCK 2 — NAIVE-BASELINE AUDIT:\nThe runnable naive version is an equal-parameter PINN with an unconstrained learned monotone warp τ=g(x,t) and the original residual evaluated through automatic differentiation. Branch (i): it silently assumes an arbitrary smooth warp will place resolution where endogenous switching occurs, which is false because the front location and rate arise only after the coupled V→QJ→T→ξ solution develops; the candidate confronts that failure with rτ=∂tτ-keff and the complete original-coordinate pullback. Coordinate transformation is a standard tool, but this instance is not a textbook fixed warp because the useful clock rate depends on the unknown, spatially coupled phase kinetics while the electric elliptic equation, Joule source, parabolic heat equation, and phase equation must remain mutually consistent under one space-dependent map; learned and analytic coordinate-transform PINNs are therefore mandatory direct baselines, not omitted ancestors.\nBLOCK 3 — design rationale:\nThe anchor stands alone: whole-entity OOD remains post-lock evaluation and neither residual-objective auditing nor a second method module is needed to make the coordinate claim falsifiable. Alternatives based on field/regime decomposition plus operator stacking, packet perturbation scores or bounds, solver-floor curricula or homotopy, and residual-space relabeling were rejected because they do not directly change how the endogenous front is represented; adaptive spectral/Fourier, causal/NeuSA, self-adaptive or loss-conditional weighting, and hard-constraint/AdamFLIP remain competitors rather than ingredients.",
+    "core_mechanism_steps": "1. Freeze one nondimensional 2D VO2 electric–Joule–thermal–phase initial-boundary-value model, its σ(T,ξ), κ(T,ξ), ρc(T,ξ), and Kξ constitutive functions, nonempty initial/boundary/interior sample sets, and a FEniCSx reference implementation; output the declared equations, units, pulse interfaces, one-sided interface conditions, and reference trajectories for scoring only.\n2. Implement aψ(x) and the analytic positive-basis clock gψ with τψ(x,0)=0, kfloor=√εdtype·kref, fixed Gaussian bases bj, and analytic primitives Bj; use Mτ=16 by default and choose from {8,16,32} on training-validation only, breaking ties toward smaller Mτ. Input x and t; output scalar τψ plus exact automatic-differentiation derivatives, with ∂tτψ>0 by the displayed formula and no numerical quadrature.\n3. Implement the capacity-matched solution head hθ(x,τψ,p(t)); input position, the already-produced clock, and the known pulse value, output V, T, and ξ, then compute E, J, and QJ deterministically from those fields.\n4. Build one pullback routine that returns physical-time first and second derivatives, the 2×2 physical-space Hessian for each scalar field, and its trace when a Laplacian is required, including all τ–x and τ–p contractions; input hθ, gψ, and the one-sided p(t), and output derivatives in original coordinates.\n5. Evaluate the original electric, heat, and phase residuals plus rτ on open pulse-smooth intervals; at every pulse edge enforce one-sided electric boundary conditions and continuity of T and ξ, while never differentiating p through its jump. Add the nonempty initial, boundary, and constitutive residuals, preserve the unmodified-coordinate normalizations, and jointly optimize ψ and θ from the first update.\n6. Enforce matched total parameter allocation and matched nonempty collocation/optimizer budgets by reallocating hidden units from hθ to gψ; output checkpoints selected only by the predeclared in-distribution validation criterion.\n7. Train mandatory same-bottleneck arms under matched budgets, including a same-architecture, same-parameter-allocation naive coordinate transform that uses the analytic monotone clock and full pullback but omits keff and rτ; also train the unmodified-coordinate MLP-PINN, analytic coordinate transforms, fixed-Fourier and adaptive-spectral PINNs, causal PINN and NeuSA, self-adaptive and loss-conditional weighting, and hard-constraint/AdamFLIP.\n8. Run the identity negative control with the identical hθ architecture and nominal parameter/memory allocation by instantiating the same gψ tensors but freezing and bypassing them with τ=t; report both nominal and active-trainable counts, keep samples, pullback code, update count, wall-time cap, and optimizer fixed, and compare downstream fields/device metrics. The widened unmodified-coordinate arm in Step 7 separately reallocates the clock parameters to hθ and is the active-parameter-matched performance baseline.\n9. On training-validation cases, report field error, switching-time error, phase-front Hausdorff and topology error, energy-balance error, worst normalized coupled residual, wall time, and memory; freeze every choice before opening formal-OOD whole geometries, material combinations, and pulse protocols.\n10. Apply the locked solver procedure independently to each formal-OOD case and compare the same metrics without using OOD outcomes to alter gψ, hθ, baselines, thresholds, or stopping; output a bounded synthetic-numerical result rather than an experimental claim.",
+    "falsification_prediction": "Generate a predeclared bank of 2D VO2 pulse-switching trajectories with the named FEniCSx model, then train the kinetics-clock PINN and all matched baselines on the training cases, select only on in-distribution validation, and score locked whole-case OOD afterward. If the mechanism works, switching-time absolute error, phase-front Hausdorff/topology error, energy-balance error, worst normalized coupled residual, and V/T/ξ field error should decrease relative to the unmodified-coordinate arm without a wall-time or memory claim being required. The one load-bearing variable is τψ(x,t), the learned accumulated kinetics clock; the sole negative-control intervention fixes gψ(x,t)=t in nondimensional units while leaving the head, budget, samples, and residual implementation unchanged, and predicts those downstream device metrics return toward the unmodified-coordinate PINN baseline. Failure of the clock arm to beat both that identity control and the learned/analytic coordinate-transform competitors, or failure of the identity intervention to remove the downstream gain, falsifies the claimed kinetics-specific mechanism.",
+    "compute_budget": "9.5 80GB-class GPU-days on one GPU for the bounded 2D FEniCSx data generation, matched training arms, three-seed replication, and locked post-selection OOD scoring; $0 paid API.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "arxiv:2509.04966v2",
+        "delta": "NeuSA constructs a global truncated spectral state evolved by a NODE for canonical wave problems, whereas this candidate constructs a spatially local, strictly monotone kinetics coordinate jointly constrained by the phase-rate law and evaluates the unchanged VO2 electro-thermal-phase residuals through its full pullback."
+      },
+      {
+        "paper_id": "arxiv:2605.04502v1",
+        "delta": "The adaptive-spectral study varies Fourier frequencies and initial-condition gates for one stiff ODE, whereas this candidate changes the independent coordinate of a 2D coupled device PDE and retains every time- and space-derivative cross term induced by that local map."
+      },
+      {
+        "paper_id": "openalex:W4403555504",
+        "delta": "The energy-embedded phase-field PINN obtains steady microstructures by replacing dynamic evolution with a static problem, whereas this candidate retains and scores the full pulse-driven switching trajectory, event timing, moving topology, and energy balance."
+      },
+      {
+        "paper_id": "semanticscholar:a1448fd2600739b73894f3b8d467bf9a9e9630b2",
+        "delta": "The operando VO2 work reveals sub-nanosecond electro-thermo-phase topology dynamics and supplies a physical target regime, whereas this candidate constructs a physics-residual neural coordinate solver whose claim is bounded to synthetic numerical closure rather than experimental validation."
+      }
+    ],
+    "almost_prior_paper_id": "arxiv:2509.04966v2",
+    "what_step_was_missed": "NeuSA would have needed to replace its single global physical-time coefficient flow with a spatially local monotone clock whose rate is coupled to the endogenous phase-kinetic right-hand side, then re-express the complete electric, heat, and phase residuals under that map rather than assuming a fixed global spectral evolution.",
+    "signature_terms": [
+      "kinetics-clock physics-informed neural network",
+      "local reaction-progress coordinate PINN",
+      "endogenous switching-front reparameterization",
+      "VO2 multiphysics time warp"
+    ],
+    "alias_terms": [
+      "space-time domain decomposition PINN",
+      "variational weak residual PINN",
+      "self-adaptive residual weighting PINN",
+      "implicit Runge-Kutta stage PINN",
+      "material-time internal clock",
+      "reaction-progress variable reparameterization",
+      "solution-adaptive coordinate transformation",
+      "moving-mesh temporal equidistribution"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}
