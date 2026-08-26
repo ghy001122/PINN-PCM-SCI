@@ -1,0 +1,78 @@
+{
+  "actual_budget": {
+    "calibration": {
+      "drive_voltage_v": 2.4,
+      "evaluations": [
+        {
+          "drive_voltage_v": 0.6,
+          "formation_time_ns": Infinity
+        },
+        {
+          "drive_voltage_v": 2.4,
+          "formation_time_ns": Infinity
+        }
+      ],
+      "formation_time_ns": Infinity,
+      "passed": false
+    },
+    "drive_evaluations": 2,
+    "maximum_balance_violation": Infinity,
+    "reference_cases": 0,
+    "wall_seconds": 3.514999999999418
+  },
+  "artifacts": {
+    "drive_calibration": "outputs\\runs\\20260821T141230Z-pilot-eaf-f3-front-nucleation-correction-002\\drive_calibration.json",
+    "intent": "docs\\experiment\\intents\\20260821T141230Z-pilot-eaf-f3-front-nucleation-correction-002.json",
+    "run_root": "outputs\\runs\\20260821T141230Z-pilot-eaf-f3-front-nucleation-correction-002",
+    "source_map": "configs\\eaf_kc_v1\\source_map.json"
+  },
+  "case_id": "eaf-kc-v1-f3-reference-front",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NUMERICAL_ORACLE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_DEVELOPMENT_PILOT",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.experiment_anchored_front_runner",
+    "f3-pilot"
+  ],
+  "ended_at": "2026-08-21T14:12:36.921016Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1"
+  },
+  "evaluator_id": "eaf-kc-v1-event-competence-v1",
+  "evidence_identity": "EXPERIMENT_TIMESCALE_CONSTRAINED_ELECTROTHERMAL_FRONT_PILOT",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "eaf-kc-v1",
+  "failure_class": null,
+  "gate": "F3",
+  "gate_outcome": "FINAL_FRONT_BENCHMARK_NO_GO",
+  "method_id": "eaf-kc-v1-deterministic-oracle",
+  "numerical_validity": "INVALID_EAF_NUMERICS",
+  "physical_contract_id": "eaf-kc-v1",
+  "planned_budget": {
+    "adjustable_parameters": 1,
+    "maximum_drive_evaluations": 8,
+    "reference_cases": 1
+  },
+  "replay_of": null,
+  "route_disposition": "FINAL_FRONT_BENCHMARK_NO_GO",
+  "run_id": "20260821T141230Z-pilot-eaf-f3-front-nucleation-correction-002",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "bottleneck_audit",
+  "seed": 0,
+  "split_id": "eaf-kc-v1-development-reference-v1",
+  "started_at": "2026-08-21T14:12:33.415248Z",
+  "supersedes": "20260821T140900Z-pilot-eaf-f3-front-001",
+  "tier": "pilot"
+}

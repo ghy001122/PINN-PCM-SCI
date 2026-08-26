@@ -1,0 +1,56 @@
+{
+  "convergence_rule": "MID_FINE_LE_0.8_COARSE_MID_OR_EVALUATOR_RESOLUTION",
+  "end_time_ns": 480.0,
+  "gate": "K2Q",
+  "matrix": [
+    {
+      "case_id": "space-50x20",
+      "dt": 1.0,
+      "nx": 50,
+      "ny": 20,
+      "save_every": 1
+    },
+    {
+      "case_id": "space-75x30",
+      "dt": 1.0,
+      "nx": 75,
+      "ny": 30,
+      "save_every": 1
+    },
+    {
+      "case_id": "space-100x40",
+      "dt": 1.0,
+      "nx": 100,
+      "ny": 40,
+      "save_every": 1
+    },
+    {
+      "case_id": "time-dt0.5",
+      "dt": 0.5,
+      "nx": 50,
+      "ny": 20,
+      "save_every": 2
+    },
+    {
+      "case_id": "time-dt0.25",
+      "dt": 0.25,
+      "nx": 50,
+      "ny": 20,
+      "save_every": 4
+    }
+  ],
+  "reference_voltage_multiplier": 1.0,
+  "resolutions": {
+    "device_voltage": 0.001,
+    "phase_fraction": 0.002079002079002079,
+    "temperature": 0.005
+  },
+  "run_id": "20260821T124512Z-pilot-etpf-k2q-qualification-002",
+  "saved_interval_ns": 1.0,
+  "schema_version": "etpf-kc-v1-intent-v1",
+  "scientific_role": "oracle_qualification",
+  "series_resistance_ratio": 0.3,
+  "started_at": "2026-08-21T12:45:22.563646Z",
+  "supersedes": "20260821T123848Z-pilot-etpf-k2q-qualification-001",
+  "tier": "pilot"
+}

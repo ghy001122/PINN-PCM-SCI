@@ -1,0 +1,100 @@
+{
+  "actual_budget": {
+    "cases": 5,
+    "wall_seconds": 145.20300000000861
+  },
+  "artifacts": {
+    "case_01": "outputs\\runs\\20260821T124512Z-pilot-etpf-k2q-qualification-002\\case-space-50x20.h5",
+    "case_02": "outputs\\runs\\20260821T124512Z-pilot-etpf-k2q-qualification-002\\case-space-75x30.h5",
+    "case_03": "outputs\\runs\\20260821T124512Z-pilot-etpf-k2q-qualification-002\\case-space-100x40.h5",
+    "case_04": "outputs\\runs\\20260821T124512Z-pilot-etpf-k2q-qualification-002\\case-time-dt0.5.h5",
+    "case_05": "outputs\\runs\\20260821T124512Z-pilot-etpf-k2q-qualification-002\\case-time-dt0.25.h5",
+    "intent": "docs\\experiment\\intents\\20260821T124512Z-pilot-etpf-k2q-qualification-002.json",
+    "run_root": "outputs\\runs\\20260821T124512Z-pilot-etpf-k2q-qualification-002",
+    "summary": "outputs\\runs\\20260821T124512Z-pilot-etpf-k2q-qualification-002\\summary.json"
+  },
+  "case_id": "etpf-kc-v1-reference-m1.00-r0.30",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NUMERICAL_ORACLE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_ETPF_DEVELOPMENT",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.tilted_phase_field_runner",
+    "qualify"
+  ],
+  "ended_at": "2026-08-21T12:47:47.776356Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1"
+  },
+  "evaluator_id": "etpf-kc-v1-project-evaluator-v1",
+  "evidence_identity": "ELECTROTHERMAL_TILTED_PHASE_FIELD_MECHANISM_BENCHMARK",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "etpf-kc-v1",
+  "failure_class": null,
+  "gate": "K2Q",
+  "gate_outcome": "ETPF_QUALIFICATION_INVALID",
+  "method_id": "etpf-kc-v1-grid-time-qualification",
+  "numerical_validity": "VALID_ETPF_NUMERICS",
+  "physical_contract_id": "etpf-kc-v1",
+  "planned_budget": {
+    "cases": 5,
+    "matrix": [
+      {
+        "case_id": "space-50x20",
+        "dt": 1.0,
+        "nx": 50,
+        "ny": 20,
+        "save_every": 1
+      },
+      {
+        "case_id": "space-75x30",
+        "dt": 1.0,
+        "nx": 75,
+        "ny": 30,
+        "save_every": 1
+      },
+      {
+        "case_id": "space-100x40",
+        "dt": 1.0,
+        "nx": 100,
+        "ny": 40,
+        "save_every": 1
+      },
+      {
+        "case_id": "time-dt0.5",
+        "dt": 0.5,
+        "nx": 50,
+        "ny": 20,
+        "save_every": 2
+      },
+      {
+        "case_id": "time-dt0.25",
+        "dt": 0.25,
+        "nx": 50,
+        "ny": 20,
+        "save_every": 4
+      }
+    ]
+  },
+  "replay_of": null,
+  "route_disposition": "ETPF_QUALIFICATION_INVALID",
+  "run_id": "20260821T124512Z-pilot-etpf-k2q-qualification-002",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "etpf-kc-v1-qualification-v1",
+  "started_at": "2026-08-21T12:45:22.563646Z",
+  "supersedes": "20260821T123848Z-pilot-etpf-k2q-qualification-001",
+  "tier": "pilot"
+}

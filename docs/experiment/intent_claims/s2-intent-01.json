@@ -1,0 +1,17 @@
+{
+  "disposition_if_unfinalized": "ORPHAN_S2_INTENT_RECONCILIATION_REQUIRED_NO_AUTOMATIC_REPLAY",
+  "ladder": {
+    "case": "Q0",
+    "control": "FULL",
+    "intent": 1,
+    "space": "coarse",
+    "time": "coarse"
+  },
+  "physical_contract_id": "SYN_EDT_2D_V1_PHYSICS_V1",
+  "run_id": "20260826T113638Z-goal-paper-one-shot-v1-s2-intent-01-q0",
+  "s0_sha256": "947E737A255D27A7BB2553286809ADB98219FD4E48B932B170CB06608A2E3A75",
+  "s2_sha256": "D059AA2261CC227C3B16B7965A75C461AD64110C2A20C3700B62E54FDE25E8E6",
+  "schema_version": "syn-edt-s2-intent-claim-v1",
+  "split_id": "syn-edt-2d-v1-s2-q-only-v1",
+  "started_at": "2026-08-26T11:36:49.381316Z"
+}

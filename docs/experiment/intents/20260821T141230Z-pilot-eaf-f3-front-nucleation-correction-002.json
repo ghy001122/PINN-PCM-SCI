@@ -1,0 +1,31 @@
+{
+  "adjustable_parameters": [
+    "drive_voltage_v"
+  ],
+  "calibration_end_time_ns": 90.0,
+  "calibration_grid": [
+    30,
+    30
+  ],
+  "calibration_time_step_ns": 1.0,
+  "drive_bracket_v": [
+    0.6,
+    2.4
+  ],
+  "gate": "F3",
+  "maximum_drive_evaluations": 8,
+  "reference_end_time_ns": 260.0,
+  "reference_grid": [
+    40,
+    40
+  ],
+  "reference_time_step_ns": 1.0,
+  "run_id": "20260821T141230Z-pilot-eaf-f3-front-nucleation-correction-002",
+  "schema_version": "eaf-kc-v1-intent-v1",
+  "scientific_role": "bottleneck_audit",
+  "source_map": "configs\\eaf_kc_v1\\source_map.json",
+  "started_at": "2026-08-21T14:12:33.415248Z",
+  "supersedes": "20260821T140900Z-pilot-eaf-f3-front-001",
+  "target_formation_ns": 36.0,
+  "tier": "pilot"
+}

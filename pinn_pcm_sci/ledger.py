@@ -313,7 +313,11 @@ class ExperimentLedger:
                 "{case_id} | {seed} | {execution_status} | {gate_outcome} | "
                 "[{manifest}]({manifest}) |".format(**row)
             )
-        self.human_index_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        self.human_index_path.write_text(
+            "\n".join(lines) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
 
     def validate(self) -> None:
         with _exclusive_ledger_lock(self.lock_path):

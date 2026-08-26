@@ -1,0 +1,22 @@
+dimension,route,label,category_code
+Research-use / executable rights,route_1,NOT ESTABLISHED,-2
+Research-use / executable rights,route_2,UNKNOWN / NOT PASS,-1
+Research-use / executable rights,route_3,N/A — synthetic,0
+2D device-field topology,route_1,DOCUMENTED,1
+2D device-field topology,route_2,FAIL — point device,-2
+2D device-field topology,route_3,ENGINEERING-SPECIFIED,2
+Conservative defect field,route_1,IDENTITY-SCOPED,1
+Conservative defect field,route_2,FAIL,-2
+Conservative defect field,route_3,ENGINEERING-SPECIFIED,2
+Complete IC / BC / interfaces,route_1,PARTIAL,-1
+Complete IC / BC / interfaces,route_2,FAIL,-2
+Complete IC / BC / interfaces,route_3,ENGINEERING-SPECIFIED,2
+Absolute waveform,route_1,DOCUMENTED,1
+Absolute waveform,route_2,FAIL after compliance,-2
+Absolute waveform,route_3,ENGINEERING-SPECIFIED,2
+Machine-readable reference fields,route_1,FAIL,-2
+Machine-readable reference fields,route_2,FAIL,-2
+Machine-readable reference fields,route_3,LOCAL OUTPUTS ONLY*,2
+S1 route disposition,route_1,FAIL,-2
+S1 route disposition,route_2,FAIL,-2
+S1 route disposition,route_3,ACTIVATED AT S1*,2

@@ -1,0 +1,5 @@
+# Frozen SYN_EDT_2D_V1 CPU oracle dependency closure for CPython 3.11 on Windows x86-64.
+# Direct requirements originate in syn-edt-oracle-cpu.in; no transitive packages are required.
+h5py==3.12.1
+numpy==2.1.1
+scipy==1.14.1

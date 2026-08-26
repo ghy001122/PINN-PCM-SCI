@@ -1,0 +1,10 @@
+guard,value,unit,passed
+mass drift,0.0,relative,True
+no-flux,0.0,scaled,True
+heat balance,0.0,relative,True
+terminal current mismatch,0.0,relative,True
+state lower bound,0.5,fraction,True
+state upper bound,0.5,fraction,True
+temperature minimum,299.9999999999985,K,True
+temperature maximum,300.00000000000034,K,True
+event,N/A,Q0 zero drive,True

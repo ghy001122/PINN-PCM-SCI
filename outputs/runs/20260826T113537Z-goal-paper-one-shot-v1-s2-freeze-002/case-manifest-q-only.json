@@ -1,0 +1,32 @@
+{
+  "cases": {
+    "Q0": {
+      "pool": "Q",
+      "qualification_case": "Q0",
+      "qualification_id": "Q0",
+      "role": "zero_drive_guard"
+    },
+    "QH": {
+      "pool": "Q",
+      "qualification_case": "QH",
+      "qualification_id": "QH",
+      "role": "nonvoting_high_bracket"
+    },
+    "QL": {
+      "pool": "Q",
+      "qualification_case": "QL",
+      "qualification_id": "QL",
+      "role": "nonvoting_low_bracket"
+    },
+    "QN": {
+      "pool": "Q",
+      "qualification_case": "QN",
+      "qualification_id": "QN",
+      "role": "sole_event_qualification_vote"
+    }
+  },
+  "physical_contract_id": "SYN_EDT_2D_V1_PHYSICS_V1",
+  "schema_version": "split-manifest-v1",
+  "scope": "S2_Q_ONLY",
+  "split_id": "syn-edt-2d-v1-s2-q-only-v1"
+}

@@ -138,3 +138,23 @@ HERO 是可被更高优先级指令覆盖的自然语言约束，不是强制执
 - 未安装 Python、Node、系统或全局依赖，未写入凭据，未访问外部研究数据库，未创建 Codex goal，未修改记忆，未运行文献检索、idea 筛选、建模、训练或实验。
 
 以上安装只证明项目级 Skill 文件、来源、许可和适配状态，不构成任何学术研究成果或科学结论。正式使用时仍以当次用户指令和 `active_phase.md` 为准。
+
+## Matt Pocock engineering skills：本轮最小对账
+
+- `reconciliation_scope`: `RESEARCH_AND_DOMAIN_MODELING_ONLY`
+- `installation_state`: `PROJECT_LOCAL_LOCKFILE_MANAGED`
+- `activation_state`: `TASK_TRIGGERED_AND_PHASE_GATED`
+- `runtime_state`: `PROMPT_ONLY_NO_DEPENDENCIES`
+- `scientific_claim_status`: `NO_SCIENTIFIC_CLAIMS`
+- 上游仓库：`https://github.com/mattpocock/skills.git`
+- 本轮固定核对提交：`6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`
+- 上游许可：MIT，`Copyright (c) 2026 Matt Pocock`
+- 本地许可副本：`docs/governance/licenses/mattpocock-skills-MIT.txt`
+
+本轮仅对 `.agents/skills/research/` 与 `.agents/skills/domain-modeling/` 做最小对账。`skills-lock.json` 将二者分别路由到上游 `skills/engineering/research/SKILL.md` 与 `skills/engineering/domain-modeling/SKILL.md`，并保存本地安装计算哈希。固定提交中的对应原文与本地语义一致；本地 `domain-modeling` 另保留 `CONTEXT-FORMAT.md` 与 `ADR-FORMAT.md` 作为格式附件。
+
+- `research` 只要求把一手来源阅读委派给后台 agent，并形成单一带来源 Markdown 报告；它不提供数据库 verdict、物理判断或执行授权。
+- `domain-modeling` 只用于更新项目术语和记录满足 ADR 门槛的路线决定；它不覆盖项目文档角色或权威顺序。
+- 本轮不运行上游安装器、npm、脚本或外部 LLM 命令，不安装依赖、不读取凭据，也不把 Skill 输出直接升格为科学证据；所有来源结论仍由主 agent 对原始载体独立核验。
+
+其余 lockfile 管理 Skill 仍保持 `UNRECONCILED`，本节不对其来源、许可或运行边界作补造结论。

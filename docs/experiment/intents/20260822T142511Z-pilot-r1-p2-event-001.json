@@ -1,0 +1,106 @@
+{
+  "convergence_thresholds": {
+    "maximum_centroid_distance_fraction": 0.08,
+    "maximum_event_time_relative_difference": 0.12,
+    "maximum_peak_area_absolute_difference": 0.05,
+    "maximum_port_nrmse": 0.08
+  },
+  "decision_identity": "R1_FULL_DESIGN_GRILL_2026-08-22",
+  "event_thresholds": {
+    "maximum_balance_violation": 1e-07,
+    "maximum_peak_bbox_fraction": 0.8,
+    "maximum_peak_fraction": 0.65,
+    "maximum_recovery_excess": 0.02,
+    "maximum_temperature_k": 650.0,
+    "minimum_async_saved_steps": 2.0,
+    "minimum_async_spread_ns": 1.0,
+    "minimum_formation_gain": 0.035,
+    "minimum_peak_fraction": 0.04,
+    "minimum_recovery_drop": 0.03,
+    "structure_threshold": 0.5
+  },
+  "formal_or_reserve_access": false,
+  "nondimensional_map": {
+    "lx_nm": 320.0,
+    "ly_nm": 160.0,
+    "potential_star": "phi_v / drive_voltage_v",
+    "pulse_period_ns": 80.0,
+    "t_star": "t_ns / pulse_period_ns",
+    "temperature_scale_k": 40.0,
+    "temperature_star": "(T_k - ambient_temperature_k) / temperature_scale_k",
+    "x_star": "x_nm / lx_nm",
+    "y_star": "y_nm / ly_nm"
+  },
+  "physical_contract": {
+    "ambient_temperature_k": 300.0,
+    "asymmetric_left_fraction": 0.45,
+    "asymmetric_right_fraction": 0.3,
+    "conductivity_low_s_per_m": 2000.0,
+    "conductivity_ratio": 100.0,
+    "conductivity_temperature_coefficient_per_k": 0.006,
+    "evidence_identity": "R1_DERIVED_SYNTHETIC_ELECTROTHERMAL_ALLEN_CAHN",
+    "free_energy_scale": 1.0,
+    "heterogeneity_radius_nm": 30.0,
+    "heterogeneity_transition_shift_k": -6.0,
+    "initial_eta": 0.01,
+    "interface_width_nm": 7.0,
+    "lx_nm": 320.0,
+    "ly_nm": 160.0,
+    "mobility_activation_width_k": 3.0,
+    "mobility_cold_per_ns": 0.025,
+    "mobility_hot_per_ns": 0.4,
+    "physical_contract_id": "r1-etac-derived-v1",
+    "pulse_cycles": 2,
+    "pulse_off_ns": 50.0,
+    "pulse_on_ns": 30.0,
+    "pulse_rise_ns": 2.0,
+    "seed_eta_excess": 0.04,
+    "seed_radius_nm": 22.0,
+    "series_resistance_ohm": 40000.0,
+    "source_review_id": "R1_P1_SOURCE_COLLISION_2026-08-22",
+    "thermal_diffusivity_nm2_per_ns": 100.0,
+    "thickness_nm": 20.0,
+    "transition_temperature_k": 340.0,
+    "transition_width_k": 6.0,
+    "uniform_cooling_rate_per_ns": 0.04,
+    "volumetric_heat_capacity_j_per_m3_k": 3000000.0
+  },
+  "planned_budget": {
+    "drive_candidates_v": [
+      0.65,
+      0.8,
+      0.95,
+      1.1
+    ],
+    "maximum_cpu_core_hours": 64,
+    "maximum_wall_hours": 48,
+    "minimum_fine_interface_cells": 3.0,
+    "resolutions": {
+      "coarse": {
+        "nx": 20,
+        "ny": 10,
+        "save_every": 2,
+        "time_step_ns": 0.2
+      },
+      "fine": {
+        "nx": 40,
+        "ny": 20,
+        "save_every": 8,
+        "time_step_ns": 0.05
+      },
+      "medium": {
+        "nx": 30,
+        "ny": 15,
+        "save_every": 4,
+        "time_step_ns": 0.1
+      }
+    },
+    "selection_rule": "ASCENDING_FIRST_EVENT_PASS_THEN_STOP",
+    "stage": "P2",
+    "target_cell": "A1H1"
+  },
+  "run_id": "20260822T142511Z-pilot-r1-p2-event-001",
+  "schema_version": "r1-p2-intent-v1",
+  "source_review_id": "R1_P1_SOURCE_COLLISION_2026-08-22",
+  "started_at": "2026-08-22T14:25:15.944895Z"
+}

@@ -1,0 +1,38 @@
+{
+  "case_manifest_sha256": "EF093A5C2F2E798FF05E768C3D0837CF08C3E10FD6AE79B432F26585F0FCD09C",
+  "case_pool": "Q",
+  "claim_path": "docs\\experiment\\intent_claims\\s2-intent-02.json",
+  "formal_or_reserve_access": false,
+  "freeze_run_id": "20260826T113537Z-goal-paper-one-shot-v1-s2-freeze-002",
+  "ladder": {
+    "case": "QN",
+    "control": "FULL",
+    "intent": 2,
+    "space": "coarse",
+    "time": "fine"
+  },
+  "physical_contract_id": "SYN_EDT_2D_V1_PHYSICS_V1",
+  "planned_budget": {
+    "cpu_core_hours_goal_cap": 256,
+    "cpu_solver_intents_goal_cap": 40,
+    "failed_intents_count_against_budget": true,
+    "parameter_rescue": false,
+    "planned_oracle_floor_replay": false,
+    "pool_scope": "Q_ONLY",
+    "qualification_ladder_row": {
+      "case": "QN",
+      "control": "FULL",
+      "intent": 2,
+      "space": "coarse",
+      "time": "fine"
+    },
+    "solver_intents": 1,
+    "timestep_rescue": false
+  },
+  "run_id": "20260826T113752Z-goal-paper-one-shot-v1-s2-intent-02-qn-coarse-fine",
+  "s0_sha256": "947E737A255D27A7BB2553286809ADB98219FD4E48B932B170CB06608A2E3A75",
+  "s2_sha256": "D059AA2261CC227C3B16B7965A75C461AD64110C2A20C3700B62E54FDE25E8E6",
+  "schema_version": "syn-edt-s2-case-intent-v1",
+  "split_id": "syn-edt-2d-v1-s2-q-only-v1",
+  "started_at": "2026-08-26T11:38:00.802093Z"
+}

@@ -282,6 +282,14 @@ class ExperimentLedgerContractTest(unittest.TestCase):
         for manifest in manifests:
             self.assertIn(manifest.run_id, human_index)
 
+    def test_human_index_uses_lf_line_endings_on_every_platform(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ledger = ExperimentLedger(Path(tmp) / "experiment")
+            ledger.record(_manifest(run_id="run-human-index-lf-001"))
+            human_index_bytes = ledger.human_index_path.read_bytes()
+
+        self.assertNotIn(b"\r\n", human_index_bytes)
+
     def test_threaded_records_share_one_ledger_lock_and_preserve_both_rows(self) -> None:
         first = _manifest(run_id="run-thread-001")
         second = _manifest(run_id="run-thread-002")

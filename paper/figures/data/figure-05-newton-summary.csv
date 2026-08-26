@@ -1,0 +1,14 @@
+quantity,value,unit,evidence_kind
+fixture_active_cells,12,cells,recomputed current-core fixture
+fixture_dt,0.00125,s,fixture specification
+fixture_voltage,0.01125,V,fixture specification
+initial_scaled_residual,0.0015106745331996954,1,measured fixture
+iteration_20_scaled_residual,1.4406929431366236e-09,1,measured fixture
+frozen_tolerance,1e-10,1,S2 contract
+frozen_iteration_budget,20,iterations,S2 contract
+ideal_half_step_iterations_required,24,iterations,derived analytic
+admissible_initial_residual_for_20_half_steps,0.0001048576,1,derived analytic
+observed_over_admissible,14.406915027615502,ratio,derived analytic
+jacobian_directional_relative_inf_error,1.733986128071217e-10,1,measured fixture
+outer_initial_mismatch_limit,4.096e-05,1,derived latent risk
+verified_terminal_exception,transport Newton exceeded its frozen iteration limit,exception identity,recomputed current-core fixture

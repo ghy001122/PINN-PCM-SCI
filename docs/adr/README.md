@@ -19,7 +19,42 @@
 - [0012：用有界 pilot 冻结时钟优化与可容许性](0012-freeze-clock-optimization-and-admissibility-by-bounded-pilot.md)
 - [0013：intent-to-run 与有序 KC 裁决](0013-use-intent-to-run-and-ordered-kc-adjudication.md)
 
-## 后续有界实现决定
+## 后续有界实现与路线决定
+
+- [当前 HFO-NP-v1 Q1–Q68 决策总索引](research_decisions_HFO_Q1_Q68.md) — 路由当前 HFO 编号空间的有效处置；不覆盖历史 KC Q1–Q23 或 R1 Q1–Q24，也不授权执行。
+
+ADR 0019–0025 保留旧 exact-KC、同源对象扫描及其证据合同；ADR 0026 已允许透明派生对象，ADR 0027 已撤销固定研究路线次数上限。ADR 0028–0040 保存 R1、R2、HFO 与 TaOₓ C1 的设计史和有界 No-Go。ADR 0041 冻结方法盲单链对象筛选，ADR 0042 记录该包在 3/3 家族、11/12 载体处组合级有界关闭。ADR 0043 提出的模块化主锚点路线保持历史 `PROPOSED` 身份；ADR 0044 已采纳 `GOAL-PAPER-ONE-SHOT-V1` 的一次性本地研究执行授权，并覆盖 ADR 0043 的逐包批准与无自动 fallback 语义。所有旧扫描事实和 No-Go 原样有效。
+
+- [R1 FULL_DESIGN Q1–Q24 决策合同](research_decisions_R1_FULL_DESIGN_GRILL_2026-08-22.md) — 独立于历史 KC-PINN Q1–Q23 的当前 R1 决策身份。
 
 - [0014：在 reduced oracle 中恢复动态电子序参量](0014-restore-dynamic-electronic-order-in-the-bounded-reduced-oracle.md) — 历史 R4 路线决定；执行结果已由 [R4/raw-v3 收口](../experiment/2026-08-21-r4-and-raw-v3-closeout.md) 关闭。
 - [0015：初值精确结构残差与非初始 checkpoint](0015-use-initial-condition-exact-structural-residuals-and-noninitial-checkpoints.md) — 当前保留的实现合同。
+- [0016：采用 Q‑POP 热力学对齐的三场二维相场 benchmark](0016-use-a-qpop-thermodynamics-aligned-phase-field-benchmark.md) — 历史 TAPF 科学核心与证据边界；P2 已由 [TAPF 收口](../experiment/2026-08-21-qpop-tapf-p2-closeout.md) 关闭。
+- [0017：先用电热倾斜相场 benchmark 裁决结构动力学时钟机制](0017-use-a-mechanism-first-electrothermal-tilted-phase-field-benchmark.md) — 历史 ETPF 路线；K2Q 已由终局记录关闭。
+- [0018：采用实验时间尺度约束的二维电热结构前沿 benchmark](0018-adopt-an-experiment-timescale-constrained-electrothermal-front-benchmark.md) — 历史 `EAF-KC-v1` 路线；F3 已由终局记录关闭。
+- [0019：以来源闭合对象研究空间异步局部结构相事件](0019-target-spatially-asynchronous-events-on-a-source-complete-object.md) — 旧 exact-KC 路线的事件语义与同源对象边界；当前筛选由 ADR 0026 细化。
+- [0020：未来 KC 正向研究最多消耗三条候选路线](0020-cap-future-kc-research-at-three-candidate-routes.md) — 历史计数决定，已由 ADR 0027 覆盖，不再约束后续研究。
+- [0021：第二正向模块必须同时通过独立门与组合增量门](0021-admit-a-second-positive-module-only-after-independent-and-combination-gates.md) — 旧 exact-KC 的独立正向 claim 门；当前允许联合候选设计，但主要贡献模块仍须新证据。
+- [0022：采用来源闭合一票否决的 VO₂ 优先候选组合](0022-use-a-veto-first-vo2-source-complete-candidate-portfolio.md) — 已执行并关闭的同源对象扫描合同；当前不再全局禁止派生对象或材料扩张。
+- [0023：KC 入场前必须通过收敛事件门与两级 strong-raw 门](0023-require-a-converged-event-and-bounded-strong-raw-gate-before-kc.md) — 两周期空间事件、`NO_BOTTLENECK` 与 raw 不胜任处置继续有效；全局路线槽位语义已由 ADR 0027 覆盖。
+- [0024：科学运行前冻结来源候选顺序并隔离 oracle 案例角色](0024-freeze-the-source-shortlist-and-isolate-oracle-case-roles.md) — 有界扫描、独立资格化与四类完整案例；不授权检索或执行。
+- [0025：只有 standalone formal KC_GO 才算路线突破](0025-require-standalone-formal-kc-go-before-claiming-a-breakthrough.md) — 只约束独立 KC 突破 claim；组合交互与 supporting-module 路由由 ADR 0026 细化。
+- [0026：允许透明派生对象与有界方法重组继续新 idea 筛选](0026-allow-transparent-derived-objects-and-bounded-method-recombination.md) — 用户纠正后的材料/网络/模块迁移、A/A′ 透明派生对象、组合贡献与论文故事边界；只授权 FAST_SCAN/计划，不授权科学执行。
+- [0027：撤销未来研究路线的固定次数上限](0027-remove-the-fixed-count-cap-on-future-research-routes.md) — 取消全局路线计数与剩余槽位语义；保留逐路线计划、预算、证据门和停止条件，不授权科学执行。
+- [0028：冻结 R1 四因子、六臂与四池证据设计](0028-freeze-r1-factorial-six-arm-and-four-pool-design.md) — 固定当前派生 benchmark、瓶颈准入、方法归因、案例隔离与失败计票；formal/GPU 仍不授权。
+- [0029：授权 R2 严格热耦合 FerroX 的 P0 来源门](0029-authorize-r2-strict-thermal-ferrox-p0-source-gate.md) — 接受 R2 `FULL_DESIGN`，普通批准只打开最多 12 项一手来源、零求解的 P0；该包现以 `R2_P0_SOURCE_IDENTITY_NO_GO` 终止，B–D、solver、training、formal/GPU 均未授权。
+- [0030：选择 HFO-NP-v1 规划对象与条件式 KC′/SRPG 证据路由](0030-select-hfo-np-v1-and-evidence-routed-kc-srpg.md) — 冻结下一份 G0–G1 PLAN 的透明缺陷态对象、局部协议束、双极 gap 事件和证据路由；只记录计划架构，不授权科研执行。
+- [0031：修订 HFO 来源初态、侧向信息门与方法路由](0031-revise-hfo-source-side-gate-and-method-routing.md) — 部分覆盖 ADR 0030：初态待 G0 回源、G1 单轴 TKB、fixed-slot SRPG 降级、守恒 cKC-NP 仅在未来 temporal 门后候选；不授权科研执行。
+- [0032：延后 side 方法选择并约束 HFO PINN 训练比较](0032-defer-side-method-and-bound-hfo-pinn-training-comparators.md) — 修订 Q30–Q36：side 方法不预选，cKC 只在 TEMPORAL+ 后按物理时间守恒回拉，Fourier/curriculum/weighting/sampling/optimizer 均进入分轨有界比较；不授权科研执行。
+- [0033：资格化耦合训练模式并冻结 strong-raw 裁决边界](0033-qualify-coupling-mode-and-freeze-strong-raw-adjudication.md) — 修订 Q37–Q43：不默认 monolithic joint training，允许 backbone 不可判定，要求 wider-raw/extra-work raw 双控制、预冻结 method-vote case×cycle、seed quorum 与证据式单次 supersede；不授权科研执行。
+- [0034：冻结单一方法主张与 HFO 域内 forward 论文边界](0034-freeze-single-method-headline-and-hfo-scoped-forward-claim.md) — 接受 Q44–Q48：单一 load-bearing PINN headline、HFO 来源有效完整案例 OOD、事件保真优先的计算 Pareto、forward-only 及 pilot/formal 前两次新颖性刷新；不选择方法或授权科研执行。
+- [0035：冻结因果单机制 pilot、两族 formal OOD 与碰撞否决](0035-freeze-causal-single-primitive-pilot-and-collision-veto.md) — 接受 Q49–Q53：方法必须闭合瓶颈—干预—探针/负控—事件—守卫链，首轮只含一个新可训练机制，formal 采用一个机制对齐家族加一个正交稳健家族，并以 direct-near 覆盖触发停止/收缩；不授权科研执行。
+- [0036：选择 canonical TKF 作为待身份诊断的 FULL_PLAN 靶标](0036-select-canonical-tkf-as-diagnostic-gated-full-plan-target.md) — 否决五视图不可辨识的自由 TKF-v0，只把 TKF-CANON-PINN 选为 future FULL_PLAN 条件式靶标，并要求 smooth-quartic control 与 held-out microviews 先通过身份门；不准入或授权方法。
+- [0037：在 TKF FULL_PLAN 前增加波形、保真、场身份与新颖性门](0037-require-waveform-fidelity-field-kink-identity-and-novelty-gates.md) — 接受 Q54–Q58：唯一轴改为来源锚定 fixed-duration waveform-scale A′，增加来源模型保真、`FIELD_KINK_PLUS`、独立 identity protocol 与 novelty sufficiency；FULL_PLAN 仍未定稿，方法未准入或授权。
+- [0038：将 TKF 重构为有限预算 CTH 并增加热因果、可容许性与效用门](0038-reframe-tkf-as-cth-and-require-thermal-causality-admissibility-and-utility.md) — 接受 Q59–Q63：撤回真实 kink 语义，把 CTH-PINN 仅作为有限预算 hinge 条件靶标，并要求逐系数 IC/BC、thermal-feedback-off、力学必要即止损及 independent-per-view utility kill；不授权科研执行。
+- [0039：分离 CTH 身份证据并冻结锚点、向量原语、输出变换与效用裁决](0039-separate-cth-identity-evidence-and-freeze-anchor-vector-transform-and-utility.md) — 接受 Q64–Q68：qualification 与 blind identity-development 分池，固定来源 `a0`、联合 `h=(h_c,h_J)`、共同 `C1` 变换及 `IND-5`/blind bundle/`IND-7` 双轴 Pareto；不授权科研执行。
+- [0040：新对象来源筛选后接受有界不选择对象](0040-select-new-source-complete-object.md) — 2025 Pd/Ta₂O₅/TaOₓ/Pd 论文与固定作者模型的 `a=0.32/0.16 nm` 冲突触发最早 source–model alignment 否决；记录 `NO_OBJECT_SELECTED / METHOD_NOT_REACHED`，不授权扩搜、实现或历史路线重开。
+- [0041：采用“一对象—一瓶颈—一论文”目标并授权方法盲筛选包 A](0041-adopt-one-object-one-bottleneck-goal-and-authorize-package-a.md) — 冻结首个通过即锁定、候选/组合停止量词、clean-room 来源合同、历史 No-Go 排除和 48 小时/12 载体/3 家族边界；只授权静态来源审查与治理，不授权构建、求解、训练、GPU、formal 或 Git 发布。
+- [0042：以方法盲对象组合 No-Go 关闭授权包 A](0042-close-package-a-with-method-blind-object-portfolio-no-go.md) — 三个冻结候选均在 Gate 3 合同完整性最早失败后，以 11/12 新增一手载体触发组合级有界收口；无对象锁定，CTH 与所有方法门均未到达，后续科研动作须新 PLAN 与批准。
+- [0043：提出模块化来源对齐对象到论文初稿的最短关键路径](0043-propose-modular-source-aligned-object-to-manuscript-critical-path.md) — 以一个强主锚点、最多两个兼容模块来源和最多一个二值非拓扑分支替代旧单链完整性合同；冻结 object→oracle/event→raw→CTH→formal→manuscript 路径，但保持 `PROPOSED_NOT_AUTHORIZED`。
+- [0044：采纳 GOAL-PAPER-ONE-SHOT-V1 一次性本地研究执行授权](0044-adopt-goal-paper-one-shot-v1.md) — 批准 S0–S6 与本地完整稿件连续执行、预注册 Route 1/2/3 自动切换及冻结总预算；继续禁止付费资源、凭据披露、作者联系、外部上传/投稿和 Git 远程操作。

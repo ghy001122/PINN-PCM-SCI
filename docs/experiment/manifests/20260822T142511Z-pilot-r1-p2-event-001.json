@@ -1,0 +1,98 @@
+{
+  "actual_budget": {
+    "cpu_threads_declared": 1,
+    "screened_drive_count": 4,
+    "selected_voltage_v": null,
+    "solve_count": 5,
+    "wall_seconds": 79.65600000001723
+  },
+  "artifacts": {
+    "intent": "docs\\experiment\\intents\\20260822T142511Z-pilot-r1-p2-event-001.json",
+    "run_root": "outputs\\runs\\20260822T142511Z-pilot-r1-p2-event-001",
+    "screen_case_01": "outputs\\runs\\20260822T142511Z-pilot-r1-p2-event-001\\case-r1-etac-derived-v1-a1h1-v0.65-medium.h5",
+    "screen_case_02": "outputs\\runs\\20260822T142511Z-pilot-r1-p2-event-001\\case-r1-etac-derived-v1-a1h1-v0.80-medium.h5",
+    "screen_case_03": "outputs\\runs\\20260822T142511Z-pilot-r1-p2-event-001\\case-r1-etac-derived-v1-a1h1-v0.95-medium.h5",
+    "screen_case_04": "outputs\\runs\\20260822T142511Z-pilot-r1-p2-event-001\\case-r1-etac-derived-v1-a1h1-v1.10-medium.h5",
+    "source_review": "docs\\references\\2026-08-22-r1-electrothermal-kc-irac-source-and-collision-review.md",
+    "summary": "outputs\\runs\\20260822T142511Z-pilot-r1-p2-event-001\\summary.json",
+    "zero_drive_case": "outputs\\runs\\20260822T142511Z-pilot-r1-p2-event-001\\case-r1-etac-derived-v1-a1h1-v0.00-medium.h5"
+  },
+  "case_id": "r1-etac-derived-v1-a1h1-p2-event-screen",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "INDEPENDENT_CPU_ORACLE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_R1_P2_DEVELOPMENT",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.r1_oracle_runner",
+    "p2-screen"
+  ],
+  "ended_at": "2026-08-22T14:26:35.604650Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1"
+  },
+  "evaluator_id": "r1-p2-external-event-convergence-evaluator-v1",
+  "evidence_identity": "R1_DERIVED_SYNTHETIC_ELECTROTHERMAL_ALLEN_CAHN",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "r1-package-a-derived-etac",
+  "failure_class": null,
+  "gate": "P2",
+  "gate_outcome": "R1_P2_NO_CREDIBLE_EVENT",
+  "method_id": "r1-independent-cpu-oracle-v1",
+  "numerical_validity": "VALID_R1_P2_BOUNDED_NEGATIVE_EVENT_SCREEN",
+  "physical_contract_id": "r1-etac-derived-v1",
+  "planned_budget": {
+    "drive_candidates_v": [
+      0.65,
+      0.8,
+      0.95,
+      1.1
+    ],
+    "maximum_cpu_core_hours": 64,
+    "maximum_wall_hours": 48,
+    "minimum_fine_interface_cells": 3.0,
+    "resolutions": {
+      "coarse": {
+        "nx": 20,
+        "ny": 10,
+        "save_every": 2,
+        "time_step_ns": 0.2
+      },
+      "fine": {
+        "nx": 40,
+        "ny": 20,
+        "save_every": 8,
+        "time_step_ns": 0.05
+      },
+      "medium": {
+        "nx": 30,
+        "ny": 15,
+        "save_every": 4,
+        "time_step_ns": 0.1
+      }
+    },
+    "selection_rule": "ASCENDING_FIRST_EVENT_PASS_THEN_STOP",
+    "stage": "P2",
+    "target_cell": "A1H1"
+  },
+  "replay_of": null,
+  "route_disposition": "R1_BOUNDED_NO_GO_STOP_PACKAGE_A",
+  "run_id": "20260822T142511Z-pilot-r1-p2-event-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "benchmark_development",
+  "seed": 0,
+  "split_id": "r1-four-pool-contract-pending-p3-v1",
+  "started_at": "2026-08-22T14:25:15.944895Z",
+  "supersedes": null,
+  "tier": "pilot"
+}

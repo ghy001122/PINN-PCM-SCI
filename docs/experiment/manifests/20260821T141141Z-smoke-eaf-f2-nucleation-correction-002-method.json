@@ -1,0 +1,77 @@
+{
+  "actual_budget": {
+    "collocation_points": 27,
+    "optimizer_updates": 3,
+    "updates": {
+      "identity": {
+        "loss_before": 27.56345334244013,
+        "parameter_delta_l2": 0.010630144730861518
+      },
+      "kc": {
+        "loss_before": 27.70189150915076,
+        "parameter_delta_l2": 0.01183215359509544
+      },
+      "raw": {
+        "loss_before": 27.56345334244013,
+        "parameter_delta_l2": 0.010630144730861518
+      }
+    },
+    "wall_seconds": 6.687999999994645
+  },
+  "artifacts": {
+    "identity_checkpoint": "outputs\\runs\\20260821T141141Z-smoke-eaf-f2-nucleation-correction-002-method\\checkpoints\\identity.pt",
+    "intent": "docs\\experiment\\intents\\20260821T141141Z-smoke-eaf-f2-nucleation-correction-002-method.json",
+    "kc_checkpoint": "outputs\\runs\\20260821T141141Z-smoke-eaf-f2-nucleation-correction-002-method\\checkpoints\\kc.pt",
+    "metrics": "outputs\\runs\\20260821T141141Z-smoke-eaf-f2-nucleation-correction-002-method\\metrics.json",
+    "predictions": "outputs\\runs\\20260821T141141Z-smoke-eaf-f2-nucleation-correction-002-method\\predictions.h5",
+    "raw_checkpoint": "outputs\\runs\\20260821T141141Z-smoke-eaf-f2-nucleation-correction-002-method\\checkpoints\\raw.pt",
+    "run_root": "outputs\\runs\\20260821T141141Z-smoke-eaf-f2-nucleation-correction-002-method"
+  },
+  "case_id": "manufactured-2d-diffusion-pullback-fixture-v1",
+  "checkpoint": {
+    "id": "one-update-each",
+    "selection": "NOT_APPLICABLE_SMOKE"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.method_smoke",
+    "run"
+  ],
+  "ended_at": "2026-08-21T14:11:51.081278Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "python": "3.11.9",
+    "torch": "2.5.1+cpu"
+  },
+  "evaluator_id": "frozen-project-method-smoke-evaluator-v1",
+  "evidence_identity": "ENGINEERING_METHOD_CONTROL_FLOW_ONLY",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "g4-method-engineering-smoke-v1",
+  "failure_class": null,
+  "gate": "G4",
+  "gate_outcome": "G4_METHOD_SMOKE_PASS",
+  "method_id": "raw-identity-kc-one-update-smoke-v1",
+  "numerical_validity": "VALID_ENGINEERING_SMOKE",
+  "physical_contract_id": "NON_SCIENTIFIC_MANUFACTURED_PULLBACK_FIXTURE",
+  "planned_budget": {
+    "methods": 3,
+    "optimizer_updates_per_method": 1
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_G3_G4",
+  "run_id": "20260821T141141Z-smoke-eaf-f2-nucleation-correction-002-method",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "pipeline",
+  "seed": 17,
+  "split_id": "NON_SCIENTIFIC_FIXED_COLLOCATION_GRID_V1",
+  "started_at": "2026-08-21T14:11:44.398864Z",
+  "supersedes": null,
+  "tier": "smoke"
+}

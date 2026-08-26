@@ -1,5 +1,7 @@
 # KC-PINN 研究决策总表（Q1–Q23）
 
+> 当前覆盖：表内各行保留原始决策身份。[ADR 0019](0019-target-spatially-asynchronous-events-on-a-source-complete-object.md) 覆盖 Q1 中“移动前沿是未来路线硬准入条件”的解释；[ADR 0020](0020-cap-future-kc-research-at-three-candidate-routes.md) 曾新增全局路线次数止损，现已由 [ADR 0027](0027-remove-the-fixed-count-cap-on-future-research-routes.md) 覆盖；[ADR 0021](0021-admit-a-second-positive-module-only-after-independent-and-combination-gates.md) 只在独立与组合增量双门通过时条件式覆盖 Q7/ADR 0005 的“唯一正向模块”限制；[ADR 0022](0022-use-a-veto-first-vo2-source-complete-candidate-portfolio.md) 至 [ADR 0025](0025-require-standalone-formal-kc-go-before-claiming-a-breakthrough.md) 进一步冻结来源候选、KC 入场前门、oracle/case 隔离、路线突破和模块顺序。Q13/ADR 0008 的禁止组合救援及 Q14–Q23 的其余政策保持有效。
+
 状态：**已接受并冻结政策层选择**。本表记录 2026-08-18 完成的全部 Q1–Q23 决策轮；它不把尚未执行的 Q-POP 复现、pilot 结果或数值阈值写成事实。
 
 Q1–Q3 在第一轮已被整体接受，并先分别写入 ADR-0001（Q1/Q2）和 ADR-0002（Q3）。本表最初是在最终收口 Q4–Q23 时建立，因而遗漏了前三项索引；该遗漏只影响文档完整性，不表示 Q1–Q3 未决定或失效。
@@ -39,4 +41,4 @@ Q1–Q3 在第一轮已被整体接受，并先分别写入 ADR-0001（Q1/Q2）�
 - 每池 seed 数、最小实际相关效应、非劣界、置信水平和精确计算额度；
 - 网络宽深、激活、优化器数值、配点数量和训练阶段长度。
 
-上述事实必须依次由 Q-POP 复现、论文—代码核对、离散/守恒审计和有界开发 pilot 产生，并在打开 KC 正式池前形成版本化冻结合同。询问式决策轮在 Q23 后暂停。
+上述事实必须依次由来源对象复现、论文—代码核对、离散/守恒审计和有界开发 pilot 产生，并在打开 KC 正式池前形成版本化冻结合同。历史 Q1–Q23 询问式决策轮已经结束；2026-08-21 由用户重新开启的设计访谈只通过后续 ADR 显式覆盖相应条目。

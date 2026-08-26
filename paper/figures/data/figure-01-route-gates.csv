@@ -1,0 +1,6 @@
+order,node,status,evidence,next
+0,S0 preregistration,FROZEN,route order + fallback rules,bounded S1 review
+1,Route 1: COMSOL 6.4,FAIL,legal research-use PASS not established; source contract incomplete,activate Route 2
+2,Route 2: PCMO reaction-drift,FAIL,point-device + unpublished TCAD LUT; no 2D conservative field,activate Route 3
+3,Route 3: SYN_EDT_2D_V1,ACTIVATED_SYNTHETIC,"engineering-specified, transparent, not source-aligned",freeze S2 numerics
+4,S2 numerical preregistration,FROZEN_BEFORE_RESULT,13-intent qualification ladder + hard stop/no rescue,execute in frozen order

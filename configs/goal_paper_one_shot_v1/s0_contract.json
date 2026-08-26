@@ -1,0 +1,440 @@
+{
+  "schema_version": "goal-paper-one-shot-v1-s0-v1",
+  "goal_id": "GOAL-PAPER-ONE-SHOT-V1",
+  "frozen_at": "2026-08-26T16:46:25+08:00",
+  "lifecycle_state": "FROZEN_BEFORE_FIRST_NEW_SOURCE_AUDIT_OR_SOLVE",
+  "claim_status": "PREREGISTRATION_ONLY_NO_NEW_SCIENTIFIC_EVIDENCE",
+  "route_order": [
+    "KNOWN_UNREVIEWED_S9_REFRESHED_TO_COMSOL_6_4",
+    "PCMO_REACTION_DRIFT_S6_SOURCE_ONLY_V1",
+    "SYN_EDT_2D_V1"
+  ],
+  "routes": {
+    "route_1": {
+      "candidate_id": "KNOWN_UNREVIEWED_S9_REFRESHED_TO_COMSOL_6_4",
+      "application_id": "141181",
+      "expected_build": "COMSOL_6_4_EXACT_BUILD_PENDING_S1",
+      "identity_ceiling": "COMSOL_6_4_TUTORIAL_SPECIFICATION_ALIGNED_CLEANROOM_DERIVED",
+      "prior_local_evidence": "COMSOL_6_3_TUTORIAL_PASS1_DISCOVERY_ONLY",
+      "model_file_access": "UNKNOWN_PENDING_S1",
+      "research_use_right": "UNKNOWN_PENDING_S1",
+      "result_publication_right": "UNKNOWN_PENDING_S1",
+      "mph_redistribution_right": "UNKNOWN_NOT_REQUIRED_FOR_ROUTE_PASS",
+      "independent_cleanroom_code_license": "UNKNOWN_PENDING_S1",
+      "required_source_contract": [
+        "domain_5_initial_state",
+        "all_domain_selections",
+        "electric_currents",
+        "heat_transfer",
+        "transport_of_concentrated_species",
+        "joule_heating_coupling",
+        "all_initial_boundary_interface_conditions",
+        "no_flux_axisymmetry_insulation_internal_continuity",
+        "transport_electrical_thermal_constitutive_laws",
+        "tables_interpolation_extrapolation_units",
+        "tcc_formulation_and_stabilization",
+        "port_current_sign_and_axisymmetric_integration",
+        "exact_build_asset_identity_and_model_tree",
+        "machine_readable_reference_outputs"
+      ],
+      "activation_failures": [
+        "LEGAL_RESEARCH_ACCESS_FAILURE",
+        "MPH_ACCESS_FAILURE",
+        "SOURCE_CONTRACT_FAILURE",
+        "UNRESOLVED_VERSION_CONFLICT"
+      ]
+    },
+    "route_2": {
+      "candidate_id": "PCMO_REACTION_DRIFT_S6_SOURCE_ONLY_V1",
+      "paper": "Reaction-Drift Model for Switching Transients in Pr0.7Ca0.3MnO3-Based Resistive RAM",
+      "doi": "10.1109/TED.2020.3011387",
+      "author_manuscript": "arXiv:2005.07398v1",
+      "identity": "DISCOVERY_ONLY_NOT_DEEP_REVIEWED_NOT_SOURCE_PASS",
+      "method_blind_rationale": "Accessible author-manuscript identity plus explicit charge drift-diffusion, self-heating, and reaction-drift internal-state lead; ranks above the locally recorded ceria lead, which lacks an established Joule-heated 2D closure and fixed open model/code identity.",
+      "known_fatal_risks": [
+        "two_dimensional_device_contract_not_yet_established",
+        "open_code_identity_not_yet_established",
+        "complete_ic_bc_interface_protocol_outputs_not_yet_established"
+      ],
+      "activation_rule": "ONLY_IF_ROUTE_1_HAS_AN_ACTIVATION_FAILURE",
+      "exit_rule": "PERMANENTLY_REMOVED_IF_ROUTE_1_SOURCE_CONTRACT_PASSES"
+    },
+    "route_3": {
+      "candidate_id": "SYN_EDT_2D_V1",
+      "identity": [
+        "FULLY_TRANSPARENT_SYNTHETIC",
+        "TWO_DIMENSIONAL_AXISYMMETRIC",
+        "ELECTROTHERMAL_DEFECT_TRANSPORT_BENCHMARK",
+        "NOT_SOURCE_ALIGNED",
+        "NOT_EXPERIMENTALLY_VALIDATED"
+      ],
+      "activation_rule": "IF_BOTH_SOURCE_ROUTES_FAIL_OR_A_LOCKED_SOURCE_OBJECT_FAILS_ORACLE_EVENT_QUALIFICATION",
+      "parameter_rescue_after_first_solve": false
+    }
+  },
+  "preserved_terminals": [
+    "HFO_NP_V1_WAVEFORM_TIME_NO_GO_FROZEN",
+    "TAOX_C1_0_32_0_16_NM_SOURCE_MODEL_CONFLICT_FROZEN",
+    "PORTFOLIO_NO_GO_PACKAGE_A_FROZEN_3_FAMILIES_11_CARRIERS",
+    "R1_P2_NO_CREDIBLE_EVENT",
+    "TAPF_NO_SIGNAL",
+    "ETPF_QUALIFICATION_INVALID_NO_RESOLVED_FRONT",
+    "FINAL_FRONT_BENCHMARK_NO_GO"
+  ],
+  "budgets": {
+    "new_primary_carriers": 12,
+    "deep_source_candidates": 2,
+    "source_calendar_days": 5,
+    "cpu_solver_intents": 40,
+    "cpu_core_hours": 256,
+    "development_exclusive_gpu_hours": 96,
+    "formal_exclusive_gpu_hours": 128,
+    "formal_planning_hours_after_failure_reserve": 102.4,
+    "gpu_total_hours": 224,
+    "single_method_superseding_reruns": 1,
+    "paid_compute": 0,
+    "git_or_external_publication": 0,
+    "failed_intents_count_against_budget": true,
+    "formal_reserve_may_fund_development": false
+  },
+  "provenance_roles": {
+    "A": "Direct fact from a fixed primary source.",
+    "A_PRIME": "Transparent derivation or adaptation from listed A facts.",
+    "ENGINEERING": "Pre-solve numerical or synthetic design choice; never a material constant or experimental fact.",
+    "UNKNOWN": "Unclosed quantity; fatal when it determines topology, required physics, absolute protocol, source response, or legal use."
+  },
+  "synthetic_physical_contract": {
+    "contract_id": "SYN_EDT_2D_V1_PHYSICS_V1",
+    "identity": "FULLY_TRANSPARENT_SYNTHETIC_ENGINEERING_CONTRACT",
+    "coordinate_system": "2D_AXISYMMETRIC_R_Z",
+    "domains_nm": {
+      "active_mixed_conductor": {
+        "r": [0.0, 80.0],
+        "z": [0.0, 30.0]
+      },
+      "bottom_electrode": {
+        "r": [0.0, 80.0],
+        "z": [-15.0, 0.0]
+      },
+      "top_contact": {
+        "r": [0.0, 25.0],
+        "z": [30.0, 45.0]
+      }
+    },
+    "scales": {
+      "length_m": 3e-8,
+      "time_s": 1.8,
+      "temperature_k": 300.0,
+      "thermal_voltage_v": 0.02585,
+      "concentration_m_minus_3": 1e27
+    },
+    "fields": [
+      "electric_potential_phi",
+      "electric_current_density_J_e",
+      "quasi_steady_temperature_T",
+      "normalized_defect_fraction_y",
+      "conservative_defect_flux_j_y"
+    ],
+    "equations": {
+      "electric_current": "div(J_e)=0; J_e=-sigma(y,T)*grad(phi)",
+      "defect_conservation": "partial_t(y)+div(j_y)=0",
+      "lattice_gas_nernst_planck": "j_y=-D(T)*(grad(y)+(e/(k_B*T))*y*(1-y)*grad(phi))",
+      "quasi_steady_heat": "-div(k*grad(T))=sigma(y,T)*abs(grad(phi))^2"
+    },
+    "constitutive_laws": {
+      "D": "D0*exp(-(0.18 eV/k_B)*(1/T-1/T0))",
+      "sigma_active": "500*exp(2*(y-0.50))*exp(-(0.04 eV/k_B)*(1/T-1/T0)) S/m",
+      "D0_m2_s": 5e-16,
+      "defect_charge_c": 1.602176634e-19,
+      "active_thermal_conductivity_w_m_k": 1.0,
+      "electrode_sigma_s_m": 5000000.0,
+      "electrode_thermal_conductivity_w_m_k": 20.0
+    },
+    "initial_conditions": {
+      "y": 0.5,
+      "temperature_k": 300.0,
+      "bottom_potential_v": 0.0,
+      "history": "FRESH_UNIFORM_STATE_NO_AUTHOR_RESTART"
+    },
+    "boundary_and_interface_conditions": {
+      "top_contact_potential": "V(t)",
+      "bottom_electrode_potential_v": 0.0,
+      "other_electrical_boundaries": "INSULATING",
+      "all_active_defect_boundaries": "j_y_dot_n=0",
+      "axis": "ZERO_NORMAL_FLUX_AND_GRADIENT",
+      "electrical_interfaces": "phi_continuous_and_J_e_dot_n_continuous",
+      "thermal_interfaces": "T_continuous_and_k_grad_T_dot_n_continuous",
+      "thermal_sinks": "T=300 K on bottom underside and top contact cap",
+      "other_thermal_boundaries": "ADIABATIC"
+    },
+    "absolute_waveform": {
+      "cycles": 2,
+      "cycle_duration_s": 1.0,
+      "total_duration_s": 2.0,
+      "reset_scale_axis": "lambda_R",
+      "nominal_reset_v": 0.18,
+      "fixed_set_magnitude_v": 0.15,
+      "segments_per_cycle": [
+        [0.0, 0.02, "linear_0_to_plus_lambda_R_reset"],
+        [0.02, 0.32, "hold_plus_lambda_R_reset"],
+        [0.32, 0.36, "linear_reset_to_0"],
+        [0.36, 0.46, "hold_0"],
+        [0.46, 0.48, "linear_0_to_minus_fixed_set"],
+        [0.48, 0.78, "hold_minus_fixed_set"],
+        [0.78, 0.82, "linear_set_to_0"],
+        [0.82, 1.0, "hold_0"]
+      ],
+      "state_is_carried_between_cycles": true,
+      "only_reset_amplitude_is_scaled": true
+    },
+    "qualification_cases": {
+      "Q0": {
+        "reset_v": 0.0,
+        "set_v": 0.0,
+        "role": "zero_drive_guard"
+      },
+      "QL": {
+        "reset_v": 0.144,
+        "set_v": -0.15,
+        "role": "nonvoting_low_bracket"
+      },
+      "QN": {
+        "reset_v": 0.18,
+        "set_v": -0.15,
+        "role": "sole_event_qualification_vote"
+      },
+      "QH": {
+        "reset_v": 0.216,
+        "set_v": -0.15,
+        "role": "nonvoting_high_bracket"
+      }
+    },
+    "thermal_controls": [
+      "DIRECT_T_TO_TRANSPORT_OFF",
+      "FULL_ISOTHERMAL_COUPLING_OFF"
+    ],
+    "event_contract": {
+      "field_definition": "d_k(x,t)=(y_pre_k(x)-y(x,t))/0.50",
+      "roi_nm": {
+        "r": [0.0, 25.0],
+        "z": [24.0, 30.0]
+      },
+      "required_cycles": 2,
+      "peak_roi_depletion_range": [0.12, 0.55],
+      "recovery_fraction_min": 0.7,
+      "adjacent_annulus_relative_depletion_max": 0.5,
+      "connected_depleted_thickness_fraction_range": [0.05, 0.35],
+      "cycle_relative_drift_max": 0.2,
+      "required_checks": [
+        "localization",
+        "partial_coverage",
+        "depletion_gap_thickness",
+        "recovery",
+        "cycle_drift",
+        "mass",
+        "port_response"
+      ]
+    },
+    "physical_guards": {
+      "relative_mass_drift_max": 0.0001,
+      "relative_terminal_current_mismatch_max": 0.0001,
+      "y_bounds": [1e-8, 0.99999999],
+      "temperature_k_bounds": [295.0, 450.0],
+      "relative_heat_balance_residual_max": 0.01
+    },
+    "convergence": {
+      "active_h_max_nm": [4.0, 2.0, 1.0],
+      "contact_corner_h_max_nm": [1.0, 0.5, 0.25],
+      "dt_max_s": [0.005, 0.0025, 0.00125],
+      "medium_fine_field_l2_max": 0.02,
+      "medium_fine_event_magnitude_max": 0.03,
+      "medium_fine_event_time_s_max": 0.0025,
+      "medium_fine_peak_current_temperature_max": 0.02
+    },
+    "known_risks": [
+      "contact_corner_singularity",
+      "thermal_runaway",
+      "bound_violation_without_conservative_stabilization",
+      "nominal_event_too_weak_or_too_strong",
+      "reverse_pulse_overshoot",
+      "diffusion_dominated_apparent_recovery",
+      "insufficient_axisymmetric_localization"
+    ],
+    "risk_disposition": "ANY_FAILED_HARD_GATE_CLOSES_SYN_EDT_2D_V1_V1_WITHOUT_PARAMETER_RESCUE"
+  },
+  "case_and_method_contract": {
+    "case_definition": "OBJECT*GEOMETRY*CONSTITUTIVE_OR_MATERIAL_BRANCH*INITIAL_STATE*FULL_WAVEFORM_BUNDLE*FULL_HISTORY",
+    "case_id": "SHA256_OF_CANONICAL_CASE_DEFINITION_USED_ONLY_AS_IMMUTABLE_CASE_IDENTITY",
+    "statistical_unit": "COMPLETE_CONFIGURATION_BUNDLE",
+    "seed_role": "NESTED_ALGORITHMIC_REPEAT_NOT_AN_INDEPENDENT_CASE",
+    "mesh_and_time_step_role": "NUMERICAL_CONVERGENCE_LEVEL_NOT_AN_INDEPENDENT_CASE",
+    "pool_membership": "EXACTLY_ONE_OF_Q_D_I_FA_FO_R",
+    "pool_rules": {
+      "Q": "Oracle, convergence, event, thermal controls, evaluator floors, and strong-raw qualification only; no method selection.",
+      "D": "Only pool for fitting, hyperparameter selection, early stopping, and development control selection.",
+      "I": "Pre-hash-split into I_S1 and I_S2 before results; each opened once after corresponding arms freeze.",
+      "F_A": "Sealed waveform-axis formal cases with non-waveform factors inside development support.",
+      "F_O": "Sealed formal cases holding out at least one whole geometry, constitutive, initial-state, or history factor.",
+      "R": "Untouched reserve; never opened in this GOAL."
+    },
+    "epsilon": 0.2,
+    "lambda_definition": "lambda_R=1+0.20*delta",
+    "delta_grids": {
+      "D_train": [-1.0, -0.5, 0.0, 0.5, 1.0],
+      "I_identity": [-0.75, -0.25, 0.25, 0.75],
+      "FA_FO_formal": [-0.875, -0.625, -0.375, -0.125, 0.125, 0.375, 0.625, 0.875],
+      "R_reserve": [-0.9375, -0.8125, -0.6875, -0.5625, -0.4375, -0.3125, -0.1875, -0.0625, 0.0625, 0.1875, 0.3125, 0.4375, 0.5625, 0.6875, 0.8125, 0.9375]
+    },
+    "p4_definition": "P4(delta)=(7/3)*delta^2-(4/3)*delta^4",
+    "p4_identity": "P4=abs(delta) exactly on D_train; abs-P4=+7/64 at abs(delta)=1/4 and -9/64 at abs(delta)=3/4.",
+    "source_protocol_incompatibility_rule": "DO_NOT_SHRINK_EPSILON_RESULT_ADAPTIVELY; FAIL_SOURCE_ROUTE_AND_FOLLOW_FALLBACK_TABLE",
+    "synthetic_configuration_support": {
+      "development_active_radius_nm": [75.0, 80.0, 85.0],
+      "development_top_contact_radius_nm": [23.0, 25.0, 27.0],
+      "development_initial_y": [0.48, 0.5, 0.52],
+      "orthogonal_active_radius_nm": [70.0, 90.0],
+      "orthogonal_top_contact_radius_nm": [20.0, 30.0],
+      "orthogonal_initial_y": [0.45, 0.55],
+      "reserve_active_radius_nm": [65.0, 95.0],
+      "reserve_top_contact_radius_nm": [18.0, 32.0],
+      "reserve_initial_y": [0.42, 0.58],
+      "formal_case_selection": "BALANCED_DELTA_SIGNS_AND_MAGNITUDES_THEN_ASCENDING_CASE_ID_HASH_PREFIX"
+    }
+  },
+  "endpoint_contract": {
+    "primary_components_equal_weight": [
+      "roi_concentration_field_error",
+      "defect_flux_error",
+      "event_time_error",
+      "depletion_gap_thickness_error",
+      "recovery_error",
+      "port_current_trace_error"
+    ],
+    "cycle_aggregation": "E_is_unclipped_RMS_of_six_components_per_cycle; Z=0.5*sum_over_two_cycles(E/tau_comp)",
+    "oracle_component_floor": "u_j=max(space_delta,time_delta,replay_delta,source_joint_uncertainty_if_applicable,2*declared_solver_tolerance)",
+    "tau_comp": "RMS_OF_COMPONENT_ORACLE_FLOORS_SEALED_BEFORE_NEURAL_WORK",
+    "seed_aggregation": "MEDIAN_WITHIN_CASE",
+    "paired_improvement": "D_i_c=median_seed_Z_control_i-median_seed_Z_primary_i",
+    "hard_guards_not_averaged": [
+      "current",
+      "heat",
+      "mass",
+      "no_flux",
+      "state_bounds",
+      "port_sign",
+      "event_localization",
+      "partial_coverage",
+      "recovery"
+    ]
+  },
+  "method_gates": {
+    "strong_raw_competent": {
+      "all_hard_guards_pass": true,
+      "finite_seeds_per_case_min_fraction": 0.6666666667,
+      "intent_success_fraction_min": 0.9,
+      "median_case_Z_max": 2.0,
+      "q90_case_Z_max": 4.0,
+      "correct_event_sign_localization_fraction_min": 0.9
+    },
+    "transport_parameter_bottleneck_plus": {
+      "transport_event_is_largest_subsystem_fraction_min": 0.75,
+      "paired_median_excess_floor_units_min": 0.5,
+      "one_sided_ci_level": 0.9,
+      "other_subsystem_median_Z_max": 2.0,
+      "oracle_response_deltas": [-0.25, 0.25],
+      "survive_event_time_shift_control": true
+    },
+    "stage_1_arms": [
+      "STRONG_PARAMETER_CONDITIONAL_RAW",
+      "DIRECT_RESIDUAL_TAYLOR2",
+      "EXACT_SMOOTH_P4",
+      "CTH_TRANSPORT_ONLY"
+    ],
+    "stage_1_pass": "On sealed I_S1, CTH paired improvement versus each control >=0.5 floor units and every simultaneous one-sided 90% lower bound >0, with all guards and no compute-error domination.",
+    "stage_2_arms": [
+      "SA_DIRECT_JACOBIAN_FIRST_ORDER",
+      "SMOOTH6",
+      "PI_BSNET_LIKE_SPLINE",
+      "RANK_MATCHED_LEARNED_PARAMETER_BASIS",
+      "ALL_FIELD_OR_GENERIC_LATENT_HINGE",
+      "PARAMETER_MATCHED_WIDER_RAW",
+      "COMPUTE_MATCHED_EXTRA_WORK_RAW",
+      "MIRRORED_WRONG_KNOTS",
+      "INDEPENDENT_PER_VIEW_RAW"
+    ],
+    "stage_2_pass": "On sealed I_S2, same rule versus every eligible identity, basis, placement, capacity, and compute challenger; independent-per-view raw may be met by noninferiority within 0.5 plus at least 20% lower CTH gross compute.",
+    "cth_identity": "CONDITIONAL_APPLICATION_SPECIFIC_TRANSPORT_ARCHITECTURE_ADAPTATION_NOT_A_GENERIC_NEW_PINN_PRIMITIVE"
+  },
+  "formal_contract": {
+    "arms": [
+      "CTH_IF_BOTH_STAGES_PASS_ELSE_FROZEN_LOWEST_MEAN_ELIGIBLE_NON_RAW_METHOD",
+      "STRONG_RAW",
+      "BEST_REMAINING_NON_PRIMARY_CHALLENGER"
+    ],
+    "challenger_tie_break": [
+      "hard_guard_pass",
+      "mean_Z",
+      "q90_Z",
+      "gross_compute",
+      "fixed_arm_id"
+    ],
+    "seeds_per_complete_case": 3,
+    "cross_configuration_warm_start": false,
+    "estimand": "MEAN_PAIRED_D_ACROSS_COMPLETE_CONFIGURATION_CASES",
+    "ci": "SHARED_RESAMPLE_CASE_LEVEL_STUDENTIZED_BOOTSTRAP",
+    "one_sided_alpha_each_of_four_gates": 0.0125,
+    "superiority_margin_floor_units": 0.5,
+    "noninferiority_margin_floor_units": 0.5,
+    "aligned_gate": "LOWER_CI_GREATER_THAN_PLUS_0_5_VERSUS_BOTH_CONTROLS",
+    "orthogonal_gate": "LOWER_CI_GREATER_THAN_MINUS_0_5_VERSUS_BOTH_CONTROLS",
+    "power_min": 0.8,
+    "balanced_n_candidates_each_family": [8, 12, 16, 20, 24, 32],
+    "power_sd_source": "MAX_PAIRED_SD_FROM_Q_AND_I_CONTROLS_BEFORE_FORMAL_OPEN",
+    "compute_gate": "PROJECTED_3_ARM_3_SEED_P90_GROSS_TIME_MUST_NOT_EXCEED_102_4_GPU_HOURS",
+    "insufficient_power_disposition": "FORMAL_POWER_BUDGET_INSUFFICIENT_AND_BENCHMARK_MANUSCRIPT",
+    "failure_score": "POSITIVE_INFINITY_FOR_NAN_OOM_TIMEOUT_DIVERGENCE_OR_HARD_GUARD_FAILURE",
+    "external_interruption_replay": "ONE_EXACT_REPLAY_ONLY_BEFORE_METRICS_ARE_READ",
+    "replacement_seed_or_case": false,
+    "post_open_tuning": false,
+    "formal_peeking_or_reseal": false
+  },
+  "compute_accounting_fields": [
+    "intent_id",
+    "method_id",
+    "case_id",
+    "seed",
+    "parameter_count",
+    "forward_calls",
+    "automatic_differentiation_work",
+    "optimizer_closures_or_updates",
+    "wall_clock_seconds",
+    "peak_ram_bytes",
+    "peak_vram_bytes",
+    "hardware_identity",
+    "gross_compute",
+    "failure_identity",
+    "superseding_rerun_eligibility"
+  ],
+  "manuscript_endpoints": [
+    "POSITIVE_METHOD_MANUSCRIPT",
+    "NEGATIVE_COMPARATIVE_PINN_MANUSCRIPT",
+    "CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT",
+    "SYNTHETIC_DEVICE_PINN_BENCHMARK_MANUSCRIPT"
+  ],
+  "goal_complete_requires": [
+    "FULL_MANUSCRIPT",
+    "ACTUAL_RESULTS",
+    "FINAL_FIGURES_AND_TABLES",
+    "REFERENCES",
+    "SUPPLEMENT",
+    "REPRODUCIBILITY_PACKAGE",
+    "CLAIM_BOUNDARY_AUDIT"
+  ],
+  "user_pause_reasons_only": [
+    "NEED_USER_ONLY_CREDENTIAL_OR_LICENSE_ACTION",
+    "MACHINE_SECURITY_BOUNDARY",
+    "DESTRUCTIVE_ACTION_OUTSIDE_WORKSPACE",
+    "PAID_SPEND_REQUIRED",
+    "LEGAL_OR_ETHICAL_CONFLICT"
+  ]
+}

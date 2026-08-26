@@ -1,0 +1,58 @@
+{
+  "actual_budget": {
+    "solver_runs": 0,
+    "source_maps": 1,
+    "wall_seconds": 0.01600000000325963
+  },
+  "artifacts": {
+    "front_feasibility": "outputs\\runs\\20260821T134653Z-smoke-eaf-f1-feasibility-001\\front_feasibility.json",
+    "intent": "docs\\experiment\\intents\\20260821T134653Z-smoke-eaf-f1-feasibility-001.json",
+    "run_root": "outputs\\runs\\20260821T134653Z-smoke-eaf-f1-feasibility-001",
+    "source_map": "configs\\eaf_kc_v1\\source_map.json"
+  },
+  "case_id": "pofelski-2026-eaf-kc-v1-source-freeze",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "NOT_APPLICABLE_F1"
+  },
+  "claim_status": "NO_SCIENTIFIC_CLAIMS_FEASIBILITY_ONLY",
+  "code_identity": {
+    "dirty": true,
+    "kind": "working-tree"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.experiment_anchored_front_runner"
+  ],
+  "ended_at": "2026-08-21T13:46:56.608269Z",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "python": "3.11.9"
+  },
+  "evaluator_id": "NOT_RUN_SCALE_FEASIBILITY",
+  "evidence_identity": "EXPERIMENT_TIMESCALE_CONSTRAINED_SCALE_AUDIT",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "eaf-kc-v1",
+  "failure_class": null,
+  "gate": "F1",
+  "gate_outcome": "FRONT_FEASIBILITY_PASS",
+  "method_id": "eaf-kc-v1-scale-feasibility",
+  "numerical_validity": "NOT_APPLICABLE_SCALE_FEASIBILITY",
+  "physical_contract_id": "NOT_YET_FROZEN_EAF_F1",
+  "planned_budget": {
+    "solver_runs": 0,
+    "source_maps": 1
+  },
+  "replay_of": null,
+  "route_disposition": "CONTINUE_EAF_F2",
+  "run_id": "20260821T134653Z-smoke-eaf-f1-feasibility-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "bottleneck_audit",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_EAF_F1",
+  "started_at": "2026-08-21T13:46:56.595266Z",
+  "supersedes": null,
+  "tier": "smoke"
+}

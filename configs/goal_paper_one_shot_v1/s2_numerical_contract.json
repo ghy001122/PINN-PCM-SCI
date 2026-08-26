@@ -1,0 +1,197 @@
+{
+  "schema_version": "goal-paper-one-shot-v1-s2-numerics-v1",
+  "goal_id": "GOAL-PAPER-ONE-SHOT-V1",
+  "physical_contract_id": "SYN_EDT_2D_V1_PHYSICS_V1",
+  "derived_from_s0_sha256": "947E737A255D27A7BB2553286809ADB98219FD4E48B932B170CB06608A2E3A75",
+  "frozen_at": "2026-08-26T17:42:12+08:00",
+  "lifecycle_state": "FROZEN_BEFORE_FIRST_SYN_EDT_2D_NUMERICAL_RESULT",
+  "claim_status": "NUMERICAL_PREREGISTRATION_ONLY_NO_ORACLE_EVENT_OR_METHOD_EVIDENCE",
+  "discretization": {
+    "coordinate_system": "2D_AXISYMMETRIC_R_Z",
+    "method": "CELL_CENTERED_MASKED_NONUNIFORM_FINITE_VOLUME",
+    "common_2pi_factor_omitted_in_dimensionless_assembly": true,
+    "radial_cell_volume": "0.5*(rho_outer^2-rho_inner^2)*delta_zeta",
+    "radial_face_area": "rho_face*delta_zeta",
+    "axial_face_area": "0.5*(rho_outer^2-rho_inner^2)",
+    "internal_face_conductance": "area/(distance_i/a_i+distance_j/a_j)",
+    "internal_face_joule_partition": "TOTAL_FACE_JOULE_POWER_G_TIMES_DELTA_PSI_SQUARED_IS_SPLIT_BETWEEN_THE_TWO_CELLS_IN_PROPORTION_TO_THEIR_HALF_FACE_RESISTANCES_DISTANCE_I_OVER_SIGMA_I_AND_DISTANCE_J_OVER_SIGMA_J",
+    "saved_cell_flux_reconstruction": "AREA_WEIGHTED_GLOBAL_R_AND_Z_FACE_NORMAL_FLUX_AVERAGE_WITH_ALL_EXTERIOR_ACTIVE_BOUNDARY_FACES_INCLUDED_AS_EXACT_ZERO_NORMAL_FLUX_IN_THE_DENOMINATOR",
+    "axis_treatment": "RHO_ZERO_FACE_AREA_EXACTLY_ZERO",
+    "masked_domains": [
+      "ACTIVE_MIXED_CONDUCTOR",
+      "BOTTOM_ELECTRODE",
+      "TOP_CONTACT"
+    ],
+    "exact_mesh_faces_nm": {
+      "r": [0.0, 25.0, 50.0, 80.0],
+      "z": [-15.0, 0.0, 24.0, 30.0, 45.0]
+    },
+    "contact_corner_refinement_patch_nm": {
+      "r": [21.0, 29.0],
+      "z": [26.0, 34.0]
+    },
+    "level_max_spacing_nm": {
+      "coarse": {"active": 4.0, "contact_corner": 1.0},
+      "medium": {"active": 2.0, "contact_corner": 0.5},
+      "fine": {"active": 1.0, "contact_corner": 0.25}
+    },
+    "level_dt_max_s": {
+      "coarse": 0.005,
+      "medium": 0.0025,
+      "fine": 0.00125
+    }
+  },
+  "nondimensionalization": {
+    "rho": "r/L0",
+    "zeta": "z/L0",
+    "tau": "t/t0",
+    "psi": "phi/V_T",
+    "theta": "T/T0",
+    "length_m": 3e-8,
+    "time_s": 1.8,
+    "temperature_k": 300.0,
+    "thermal_voltage_v": 0.02585,
+    "active_sigma_scale_s_m": 500.0,
+    "active_thermal_conductivity_scale_w_m_k": 1.0,
+    "joule_heat_beta": 0.0011137083333333334
+  },
+  "nonlinear_scheme": {
+    "time_integrator": "BACKWARD_EULER_DEFECT_WITH_QUASISTATIC_ELECTROTHERMAL_BLOCK_ITERATION",
+    "defect_variable": "LOGIT_W_WITH_Y_SIGMOID_W_NO_CLIPPING",
+    "defect_face_flux": "LOGARITHMIC_MEAN_LATTICE_GAS_MOBILITY",
+    "electric_solver": "SPARSE_DIRECT_LU_EACH_BLOCK_ITERATION",
+    "thermal_solver": "CONSTANT_SPARSE_DIRECT_FACTORIZATION",
+    "block_max_iterations": 12,
+    "block_relative_change_tolerance": 1e-8,
+    "block_scaled_residual_tolerance": 1e-9,
+    "block_relaxation": 0.5,
+    "accepted_relaxed_state_check": "AFTER_RELAXATION_RECOMPUTE_THE_ELECTRIC_FIELD_AND_THE_SCALED_TRANSPORT_RESIDUAL_ON_THE_RETURNED_Y_PSI_THETA_STATE_AND_REJECT_UNLESS_THE_RESIDUAL_IS_AT_MOST_BLOCK_SCALED_RESIDUAL_TOLERANCE",
+    "transport_newton_max_iterations": 20,
+    "transport_scaled_residual_tolerance": 1e-10,
+    "transport_newton_initial_step": 0.5,
+    "transport_newton_min_step": 0.0009765625,
+    "linear_relative_residual_tolerance": 1e-10,
+    "timestep_rescue": false,
+    "parameter_rescue": false,
+    "post_result_solver_threshold_change": false
+  },
+  "control_semantics": {
+    "FULL": "Frozen S0 temperature dependence in D, electromigration factor, and conductivity with quasi-steady heat solve.",
+    "DIRECT_T_TO_TRANSPORT_OFF": "Retain heat and temperature-dependent conductivity; set D_star=1 and replace 1/theta by 1 only in defect transport.",
+    "FULL_ISOTHERMAL_COUPLING_OFF": "Set theta=1, remove all temperature dependence, and omit the heat solve."
+  },
+  "event_evaluator": {
+    "axisymmetric_volume_weighting": true,
+    "time_weighting": "TRAPEZOIDAL_IN_ABSOLUTE_SECONDS_WITHIN_EACH_CYCLE_OR_SEARCH_WINDOW",
+    "cycle_peak_search_relative_time_s": [0.0, 0.46],
+    "event_time": "FIRST_UPWARD_ROI_MEAN_DEPLETION_CROSSING_OF_0_12_WITH_LINEAR_TIME_INTERPOLATION",
+    "adjacent_annulus_nm": {
+      "r_open_closed": [25.0, 50.0],
+      "z_closed": [24.0, 30.0]
+    },
+    "depleted_component": "FACE_CONNECTED_TO_Z_30_NM_AND_LOCAL_D_AT_LEAST_0_5_TIMES_CYCLE_ROI_MEAN_PEAK",
+    "depleted_thickness": "MAXIMUM_AXIAL_DEPTH_OF_CONNECTED_COMPONENT_DIVIDED_BY_30_NM",
+    "annulus_and_connected_component_evaluation_time": "THE_DISCRETE_FIELD_TIME_AT_THE_FIRST_MAXIMUM_ROI_MEAN_DEPLETION_IN_THE_FROZEN_SEARCH_WINDOW",
+    "partial_coverage": "CONNECTED_COMPONENT_AXISYMMETRIC_VOLUME_DIVIDED_BY_ACTIVE_VOLUME",
+    "partial_coverage_fraction_range": [0.0025, 0.2],
+    "port_response": "DURING_POSITIVE_RESET_FULL_HOLD_TOP_CURRENT_IS_POSITIVE_AND_CONDUCTANCE_DECREASE_FROM_HOLD_START_TO_HOLD_END_IS_AT_LEAST_0_01_RELATIVE",
+    "negative_pulse_port_sign": "TOP_CURRENT_NEGATIVE_WHEN_APPLIED_VOLTAGE_IS_NEGATIVE",
+    "recovery_evaluation_time": "EXACT_CYCLE_END_T_EQUALS_K_PLUS_1_SECONDS_WITH_LINEAR_INTERPOLATION_IF_NEEDED",
+    "cycle_relative_drift": "ABSOLUTE_DIFFERENCE_OF_THE_TWO_CYCLE_ROI_MEAN_PEAK_DEPLETIONS_DIVIDED_BY_THEIR_MAXIMUM",
+    "zero_drive_heat_residual": "IF_JOULE_POWER_IS_AT_MOST_1E_MINUS_24_DIMENSIONLESS_REQUIRE_MAX_ABS_THETA_MINUS_1_AT_MOST_1E_MINUS_12_AND_DEFINE_RELATIVE_HEAT_RESIDUAL_ZERO"
+  },
+  "endpoint_and_floor_contract": {
+    "components_in_fixed_order": [
+      "roi_concentration_field_error",
+      "defect_flux_error",
+      "event_time_error",
+      "depletion_gap_thickness_error",
+      "recovery_error",
+      "port_current_trace_error"
+    ],
+    "roi_concentration_field_error": "TRAPEZOID_TIME_AND_AXISYMMETRIC_VOLUME_RMS_OF_PREDICTION_MINUS_ORACLE_Y_IN_ROI_DIVIDED_BY_0_5",
+    "defect_flux_error": "TRAPEZOID_TIME_AND_AXISYMMETRIC_VOLUME_RMS_VECTOR_ERROR_OVER_ACTIVE_DOMAIN_DIVIDED_BY_S_J_CASE_CYCLE",
+    "event_time_error": "ABSOLUTE_FIRST_UPWARD_D_EQUALS_0_12_CROSSING_TIME_ERROR_DIVIDED_BY_1_SECOND",
+    "depletion_gap_thickness_error": "ABSOLUTE_ERROR_IN_TOP_CONNECTED_DEPLETED_THICKNESS_FRACTION",
+    "recovery_error": "ABSOLUTE_ERROR_IN_UNCLIPPED_RECOVERY_FRACTION_AT_EXACT_CYCLE_END",
+    "port_current_trace_error": "TRAPEZOID_TIME_RMS_TOP_TERMINAL_CURRENT_ERROR_OVER_CYCLE_DIVIDED_BY_S_I_CASE_CYCLE",
+    "flux_normalizer": "S_J_CASE_CYCLE_EQUALS_MAX_OF_ORACLE_VECTOR_FLUX_RMS_OVER_ACTIVE_DOMAIN_AND_CYCLE_AND_0_01_TIMES_CMAX_D0_OVER_L0",
+    "current_normalizer": "S_I_CASE_CYCLE_EQUALS_MAX_OF_ORACLE_TOP_CURRENT_RMS_OVER_CYCLE_AND_1E_MINUS_6_TIMES_2PI_SIGMA0_L0_VT",
+    "characteristic_particle_flux_m_minus_2_s_minus_1": 1.6666666666666666e19,
+    "characteristic_current_a": 2.4363051028588846e-6,
+    "cycle_component_aggregation": "E_EQUALS_UNCLIPPED_SQRT_OF_MEAN_OF_SIX_SQUARED_COMPONENT_ERRORS",
+    "case_endpoint": "Z_EQUALS_0_5_TIMES_SUM_OVER_TWO_CYCLES_OF_E_DIVIDED_BY_TAU_COMP",
+    "floor_source": "GLOBAL_QN_COMPONENT_BY_CYCLE_FLOORS_TRANSFERRED_TO_ALL_CASES_USING_THE_SAME_FINE_SOLVER_PROTOCOL",
+    "space_delta": "SAME_SIX_COMPONENT_FORMULAS_COMPARING_QN_MEDIUM_SPACE_FINE_TIME_TO_QN_FINE_SPACE_FINE_TIME",
+    "time_delta": "SAME_SIX_COMPONENT_FORMULAS_COMPARING_QN_FINE_SPACE_MEDIUM_TIME_TO_QN_FINE_SPACE_FINE_TIME",
+    "replay_delta": "SAME_SIX_COMPONENT_FORMULAS_COMPARING_TWO_EXACT_QN_FINE_SPACE_FINE_TIME_RUNS_FROM_INDEPENDENT_PROCESSES",
+    "source_joint_uncertainty": 0.0,
+    "declared_solver_tolerance_each_dimensionless_component": 1e-6,
+    "component_floor": "U_J_EQUALS_MAX_OF_SPACE_DELTA_TIME_DELTA_REPLAY_DELTA_SOURCE_JOINT_UNCERTAINTY_AND_2E_MINUS_6",
+    "tau_comp": "SQRT_OF_MEAN_OF_THE_SIX_SQUARED_U_J_VALUES_FOR_EACH_CYCLE",
+    "seal_rule": "NORMALIZERS_COMPONENT_DELTAS_U_J_AND_TAU_COMP_ARE_WRITTEN_ONCE_AND_HASHED_BEFORE_ANY_NEURAL_WORK",
+    "nonestimable_component_disposition": "ORACLE_NONESTIMABLE_CLOSES_OBJECT; METHOD_NONESTIMABLE_IS_A_HARD_FAILURE_WITH_POSITIVE_INFINITY_SEMANTICS",
+    "positive_infinity_json_encoding": {
+      "finite": false,
+      "value": null,
+      "semantics": "POSITIVE_INFINITY"
+    }
+  },
+  "thermal_effect_gate": {
+    "nominal_reference_intent": 6,
+    "direct_transport_off_intent": 10,
+    "full_isothermal_off_intent": 12,
+    "nominal_uncertainty_comparisons": [
+      "space_medium_fine",
+      "time_medium_fine",
+      "independent_process_replay"
+    ],
+    "direct_control_uncertainty_comparison": "direct_transport_medium_fine",
+    "isothermal_control_uncertainty_comparison": "isothermal_medium_fine",
+    "effect_components": [
+      "cycle_peak_roi_depletion_absolute_difference",
+      "cycle_event_time_absolute_difference_divided_by_1_second",
+      "cycle_top_current_trace_rms_difference_divided_by_the_frozen_current_normalizer"
+    ],
+    "component_uncertainty": "MAX_OF_CORRESPONDING_NOMINAL_SPACE_TIME_REPLAY_DELTA_CONTROL_MEDIUM_FINE_DELTA_AND_2E_MINUS_6",
+    "finite_effect_pass": "FOR_EACH_CONTROL_AT_LEAST_ONE_SHARED_COMPONENT_MUST_EXCEED_ITS_COMPONENT_UNCERTAINTY_IN_BOTH_CYCLES",
+    "sign_consistency": "IF_PEAK_DEPLETION_OR_EVENT_TIME_IS_THE_SHARED_PASSING_COMPONENT_ITS_SIGNED_FULL_MINUS_CONTROL_EFFECT_MUST_HAVE_THE_SAME_NONZERO_SIGN_IN_BOTH_CYCLES",
+    "censored_event_pass": "IF_NOMINAL_QN_PASSES_AND_A_CONTROL_HAS_ALL_NON_EVENT_HARD_GUARDS_PASS_BUT_NO_D_EQUALS_0_12_CROSSING_IN_EITHER_CYCLE_THE_MISSING_CONTROL_EVENT_COUNTS_AS_A_CENSORED_THERMAL_EFFECT_PASS",
+    "mixed_or_single_cycle_censoring": "FAIL",
+    "temperature_difference_alone_is_not_sufficient": true,
+    "post_result_threshold_change": false
+  },
+  "field_convergence_metric": {
+    "projection": "CONSERVATIVE_FINE_TO_COARSE_AXISYMMETRIC_CELL_AVERAGE",
+    "common_times": "LINEAR_INTERPOLATION_TO_COARSER_SAVED_TIME_AXIS",
+    "fields": ["defect_fraction", "electric_potential", "temperature"],
+    "fixed_scales": {
+      "defect_fraction": 0.5,
+      "electric_potential_v": 0.18,
+      "temperature_k": 50.0
+    },
+    "aggregation": "VOLUME_WEIGHTED_RMS_OVER_FIELDS_SPACE_AND_TIME",
+    "medium_fine_max": 0.02
+  },
+  "qualification_ladder": [
+    {"intent": 1, "case": "Q0", "space": "coarse", "time": "coarse", "control": "FULL"},
+    {"intent": 2, "case": "QN", "space": "coarse", "time": "fine", "control": "FULL"},
+    {"intent": 3, "case": "QN", "space": "medium", "time": "fine", "control": "FULL"},
+    {"intent": 4, "case": "QN", "space": "fine", "time": "coarse", "control": "FULL"},
+    {"intent": 5, "case": "QN", "space": "fine", "time": "medium", "control": "FULL"},
+    {"intent": 6, "case": "QN", "space": "fine", "time": "fine", "control": "FULL"},
+    {"intent": 7, "case": "QL", "space": "medium", "time": "medium", "control": "FULL"},
+    {"intent": 8, "case": "QH", "space": "medium", "time": "medium", "control": "FULL"},
+    {"intent": 9, "case": "QN", "space": "medium", "time": "fine", "control": "DIRECT_T_TO_TRANSPORT_OFF"},
+    {"intent": 10, "case": "QN", "space": "fine", "time": "fine", "control": "DIRECT_T_TO_TRANSPORT_OFF"},
+    {"intent": 11, "case": "QN", "space": "medium", "time": "fine", "control": "FULL_ISOTHERMAL_COUPLING_OFF"},
+    {"intent": 12, "case": "QN", "space": "fine", "time": "fine", "control": "FULL_ISOTHERMAL_COUPLING_OFF"},
+    {"intent": 13, "case": "QN", "space": "fine", "time": "fine", "control": "FULL", "role": "INDEPENDENT_PROCESS_EXACT_REPLAY_FOR_ORACLE_FLOOR"}
+  ],
+  "qualification_order": "STOP_ON_EXECUTION_INVALIDITY; OTHERWISE_COMPLETE_QN_BEFORE_QL_QH_AND_CONTROLS",
+  "saved_field_interval_s": 0.0025,
+  "circuit_interval": "EVERY_TIME_STEP",
+  "replay_policy": "INTENT_13_IS_A_PLANNED_ORACLE_UNCERTAINTY_AUDIT_NOT_A_REPLACEMENT_OR_SUPERSEDING_RERUN; ANY_EXTERNAL_INTERRUPTION_REPLAY_REMAINS_GOVERNED_SEPARATELY_BY_S0",
+  "hard_failure_policy": "ANY_FROZEN_OR_S2_NUMERICAL_HARD_GATE_FAILURE_CLOSES_SYN_EDT_2D_V1_WITHOUT_PARAMETER_OR_TIMESTEP_RESCUE",
+  "fixture_policy": "UNIT_TEST_FIXTURES_MAY_USE_SMALLER_DOMAINS_OR_SHORTER_TIMES_BUT_HAVE_NON_SCIENTIFIC_IDENTITY_AND_NEVER_ENTER_THE_LEDGER"
+}
