@@ -1,6 +1,6 @@
 # 项目状态
 
-更新时间：2026-08-26
+更新时间：2026-08-27
 
 - `phase_id`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE`
 - `lifecycle_state`: `COMPLETE`
@@ -29,6 +29,7 @@
 
 ## 当前已核验事实
 
+- `VERIFIED_SELECTED_GITHUB_SYNC_COMPLETE`：用户于 2026-08-27 明确批准将 182 个精选变更文件推送至 `ghy001122/PINN-PCM-SCI` 的 `main`，并接受仓库当前或未来公开的披露风险。快照提交 `0cd40eb` 与安全接入远端既有历史的合并提交 `cad644c` 已推送；未使用 force push，未包含剩余旧路线实现、IdeaSpark 工作目录、缓存、虚拟环境、商业 `.mph`、凭据或无关输出。见[同步记录](docs/governance/2026-08-27-selected-github-sync.md)。该工程事实不改变任何科学 claim。
 - `VERIFIED_GOAL_PAPER_ONE_SHOT_V1_LOCAL_DELIVERABLES_COMPLETE`：[最终本地论文包](paper/README.md)已经交付完整正文、实际结果、六幅最终图的 PNG/PDF、主表、13 项参考文献、补充材料、复现说明、claim–evidence mapping 与 reviewer-risk 自检。[包清单](paper/package-manifest.json)覆盖除自身外 32 个文件，其信息性 SHA256 为 `1EA96E3B9019F3D7F5419805E0C4E7CBE999F5E270B2340C54CD695ED26AA36A`。一次性执行授权因此消费并关闭；该交付事实不建立 oracle、event、PINN、GPU、OOD、formal 或实验主张。
 - `VERIFIED_SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`：[S2 终局收口](docs/experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)固定 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`。生效 freeze `20260826T113537Z-goal-paper-one-shot-v1-s2-freeze-002` 绑定 S0 SHA256 `947E737A255D27A7BB2553286809ADB98219FD4E48B932B170CB06608A2E3A75`、S2 SHA256 `D059AA2261CC227C3B16B7965A75C461AD64110C2A20C3700B62E54FDE25E8E6` 与 Q-only case-manifest SHA256 `EF093A5C2F2E798FF05E768C3D0837CF08C3E10FD6AE79B432F26585F0FCD09C`，并显式 supersede `freeze-001`。
 - `VERIFIED_SYN_EDT_Q0_ZERO_DRIVE_GUARD_ONLY`：intent `20260826T113638Z-goal-paper-one-shot-v1-s2-intent-01-q0` 完成 400 个时间步；质量漂移、无通量残差、热平衡残差和端口电流不匹配均为 `0.0`，`y_min=y_max=0.5`，全部 hard guards 通过。其 manifest 保持 `PENDING_S2_CROSS_RUN_ADJUDICATION / NO_ORACLE_EVENT_OR_METHOD_CLAIM_SINGLE_CASE_ONLY`；这是零驱动实现与产物链守卫，不是 oracle 或 event evidence。
@@ -138,7 +139,7 @@
 - 2026-08-24 的 `neat-freak` 收尾曾把候选入口路由到 SRPG 综合审查；本轮又显式路由到 HFO-NP-v1 对抗性整合并归档旧 SRPG 等待计划。两次动作都只证明文档同步，不构成科学证据。
 - 文档一致性门禁为 `.venv\Scripts\python.exe -m pinn_pcm_sci.document_consistency --root .`；权威状态、唯一 live plan、文档角色、ADR 索引、本地链接、ledger 和运行锁 ignore 必须同时通过。
 - 外部 Skill 中本轮实际使用的 `research` 与 `domain-modeling` 已完成固定上游提交、MIT 许可和 prompt-only 运行边界的最小对账；其余 lockfile 管理 Skill 仍为 `UNRECONCILED`。该状态只影响治理可追溯性，不构成科学证据。
-- 当前未推送、未开 PR；GPU/formal 虽曾在一次性 GOAL 中获得条件授权，但未到达科学前门、从未启动，且该授权现已随 GOAL 完成而消费关闭。
+- 2026-08-27 的一次性精选 GitHub 同步已经完成且授权已消费；未开 PR、未建 release，后续 Git 远程动作仍需新授权。GPU/formal 虽曾在一次性 GOAL 中获得条件授权，但未到达科学前门、从未启动，且该授权现已随 GOAL 完成而消费关闭。
 
 ## 历史事实入口
 
