@@ -1,7 +1,7 @@
 # 当前阶段
 
 - `phase_id`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE`
-- `phase_name`: GOAL-PAPER-ONE-SHOT-V1 clean-room benchmark 与方法边界论文本地交付完成
+- `phase_name`: GOAL-PAPER-ONE-SHOT-V1 failure-preserving reference-qualification 论文包完成
 - `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
 - `authorization_scope`: `ONE_SHOT_LOCAL_RESEARCH_EXECUTION_CONSUMED_AND_CLOSED`
@@ -18,10 +18,10 @@
 - `implementation_authorization`: `CLOSED_GOAL_COMPLETE_MAINTENANCE_ONLY`
 - `formal_or_gpu_authorization`: `NOT_REACHED_CLOSED_BY_S2_GATE`
 - `manuscript_local_write_authorization`: `COMPLETED`
-- `git_or_external_publication_authorization`: `ONE_TIME_SELECTED_GITHUB_SYNC_CONSUMED_AND_CLOSED`
+- `git_or_external_publication_authorization`: `SELECTED_SYNC_AND_MANUSCRIPT_POLISH_SYNC_CONSUMED_AND_CLOSED`
 - `next_research_execution_authorized`: `false`
-- `current_stage`: `GOAL_COMPLETE_LOCAL_DELIVERABLES_READY`
-- `effective_date`: `2026-08-26`
+- `current_stage`: `GOAL_COMPLETE_POLISHED_DELIVERABLES_READY`
+- `effective_date`: `2026-08-27`
 
 ## 当前允许
 
@@ -57,8 +57,9 @@
 - 首个受驱动 QN intent 在 `0.0984956999309361 s` 后以 `transport Newton exceeded its frozen iteration limit` 失败；失败 intent 已计账，没有 rescue、生产重跑或替代阈值运行，intent `3–13` 未启动。
 - 显式 `NON_SCIENTIFIC_DIAGNOSTIC` 在所测状态与方向未发现大的 Jacobian directional mismatch，并显示冻结 inner `0.5 / 20 / 1e-10` 与 latent outer `0.5 / 12 / 1e-8` 阻尼—上限组合不相容；它不排除未测试方向或状态的实现错误，只定位本次数值合同终止，不是生产 oracle 或一般物理结论。
 - 最终裁决为 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`；oracle、事件、strong raw、PINN/CTH development、GPU 与 formal 均未到达且没有方法证据。
-- [最终本地论文包](paper/README.md)已经交付完整正文、实际结果、六幅最终图的 PNG/PDF、主表、13 项参考文献、补充材料、复现说明、claim–evidence mapping 与 reviewer-risk 自检。[包清单](paper/package-manifest.json)覆盖除自身外 32 个文件，其信息性 SHA256 为 `1EA96E3B9019F3D7F5419805E0C4E7CBE999F5E270B2340C54CD695ED26AA36A`；这证明本地制品闭合，不提高科学证据等级。
+- [最终论文包](paper/README.md)已经交付聚焦重构后的英文正文、完整中文稿、通俗故事、实际结果、六幅最终图的 PNG/PDF、主表、13 项参考文献、补充材料、复现说明、claim–evidence mapping 与 reviewer-risk 自检。[包清单](paper/package-manifest.json)覆盖除自身外 34 个文件，其信息性 SHA256 为 `1B00038B54049B4738AB6998BF4FE4C508B1F4200BA692889066D259AFE9F7A6`；这证明制品闭合，不提高科学证据等级。
 - 用户于 2026-08-27 明确批准把 182 个精选变更文件同步至 `ghy001122/PINN-PCM-SCI` 的 `main`，并接受仓库当前或未来公开的披露风险；快照提交 `0cd40eb` 与远端历史合并提交 `cad644c` 已成功推送。同步范围和排除项见[同步记录](docs/governance/2026-08-27-selected-github-sync.md)。该动作只改善后续上下文读取，不构成科学证据、投稿或继续远程操作授权。
+- 用户随后明确授权获取外部会话 `6a8f9ed2-a678-83ee-ac63-3fc48de531f8` 的论文润色交付、选择性整合并提交云端。本次只接纳与 live evidence 核对一致的编辑判断，新增中文稿与通俗故事并更新公开可得性；不可读取的附件未冒充已导入原件。见[润色整合记录](docs/notes/2026-08-27-manuscript-polish-integration.md)。该任务不产生新科学证据，相关 Git 同步授权随交付消费并关闭。
 - HFO-NP-v1 `WAVEFORM_TIME_NO_GO_FROZEN`、TaOₓ C1 来源—模型冲突及 Package A 有界 No-Go 全部保留。
 
 `UNKNOWN`：
@@ -71,7 +72,7 @@
 - 本轮用户明确指令曾 supersede `PLAN-MSA-01` 的逐包授权语义；不改写其历史内容或旧 No-Go。
 - 执行期间 S0 通过后无需逐包或 formal 前再次批准，但每项动作仍受 live plan 的前置门、总预算和永久禁止项约束。
 - 执行期间普通科学失败、训练不收敛、对象/方法/formal No-Go 不构成暂停理由，而按切换表继续。
-- 本次一次性研究授权已随本地交付闭合而消费；2026-08-27 的一次性精选 GitHub 同步授权也已消费并关闭。任何新科学执行、投稿、额外上传或后续 Git 远程动作都必须由用户另行明确授权。
+- 本次一次性研究授权已随论文交付闭合而消费；2026-08-27 的精选 GitHub 同步与论文润色同步授权也已消费并关闭。任何新科学执行、投稿、额外上传或后续 Git 远程动作都必须由用户另行明确授权。
 
 ## 当前阶段状态
 

@@ -14,6 +14,6 @@
 
 S1 的来源与新颖性结论见[有界前审报告](docs/references/2026-08-26-goal-paper-one-shot-v1-s1-source-legal-novelty-review.md)，实际数值边界见 [S2 终局收口](docs/experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)。Q0 只证明零驱动实现与产物链守卫；没有跨分辨率 oracle、双周期事件、strong raw、PINN/CTH、GPU 或 formal 证据。该 No-Go 只约束本次冻结数值合同，不是缺陷输运物理或 PINN 的一般失败。历史 No-Go 均保持冻结。
 
-完整论文初稿、实际结果、六幅最终图的 PNG/PDF、主表、13 项参考文献、补充材料、复现说明和主张边界自检均已交付；[包清单](paper/package-manifest.json)覆盖除自身外 32 个文件。该制品完成不改变科学证据边界。2026-08-27 经用户另行明确授权，182 个精选变更文件已同步至本仓库 `main`；[同步记录](docs/governance/2026-08-27-selected-github-sync.md)列明范围与排除项。该一次性同步授权已消费，不授权投稿、额外上传、PR、release 或后续 Git 远程动作。
+完整论文包现包含聚焦重构后的英文主稿、完整中文稿、通俗故事、实际结果、六幅最终图的 PNG/PDF、主表、13 项参考文献、补充材料、复现说明和主张边界自检；[包清单](paper/package-manifest.json)覆盖除自身外 34 个文件。该制品更新不改变科学证据边界。2026-08-27 经用户另行明确授权，精选研究快照及本次论文润色更新同步至本仓库 `main`；[首次同步记录](docs/governance/2026-08-27-selected-github-sync.md)和[润色整合记录](docs/notes/2026-08-27-manuscript-polish-integration.md)列明范围与边界。相关同步授权消费后，不授权投稿、额外上传、PR、release 或后续 Git 远程动作。
 
 当前授权读 [active_phase.md](active_phase.md)，已核验事实读 [PROJECT_STATE.md](PROJECT_STATE.md)，研究与论文口径读 [CONTEXT.md](CONTEXT.md)，完整文档路由读 [docs/README.md](docs/README.md)。旧包证据见[方法盲对象筛选报告](docs/references/2026-08-26-method-blind-cleanroom-object-screen.md)与 [ADR 0042](docs/adr/0042-close-package-a-with-method-blind-object-portfolio-no-go.md)；一次性目标采纳理由见 [ADR 0044](docs/adr/0044-adopt-goal-paper-one-shot-v1.md)。

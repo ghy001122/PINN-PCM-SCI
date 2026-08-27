@@ -1,12 +1,12 @@
 {
   "schema_version": "goal-paper-one-shot-v1-package-manifest-v1",
   "package_root": "paper",
-  "generated_at_utc": "2026-08-26T12:37:59.3841284Z",
+  "generated_at_utc": "2026-08-27T03:27:19.9210920Z",
   "hash_algorithm": "SHA256",
   "path_semantics": "Forward-slash paths relative to paper/",
   "terminal_disposition": "SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO",
   "evidence_ceiling": "NO_ORACLE_EVENT_OR_PINN_EVIDENCE",
-  "entry_count": 32,
+  "entry_count": 34,
   "self_reference_exclusion": {
     "path": "package-manifest.json",
     "excluded": true,
@@ -145,18 +145,28 @@
     },
     {
       "path": "manuscript.md",
-      "bytes": 47641,
-      "sha256": "5506EF4136127A1707384D582B893A625205CD2335A87F29FE075B1F55D8A115"
+      "bytes": 48929,
+      "sha256": "791F2FC3868BC3C74742A88204D725F59FF86AE6D7D7C935A7828E3B15A770A4"
+    },
+    {
+      "path": "manuscript_zh.md",
+      "bytes": 18715,
+      "sha256": "27785589BCB359C8C2B4FED9B6E74B5A59A03170998DCFFAA6BB35B9715DBA25"
+    },
+    {
+      "path": "plain_language_story_zh.md",
+      "bytes": 8193,
+      "sha256": "9B61CE997B9BAE3848E62D116888D57EB133D442D9FC5527D6153E7114348C09"
     },
     {
       "path": "README.md",
-      "bytes": 5106,
-      "sha256": "8CEB8C3AEA79F1E0DBC3B6EDBB337B9E3323A4EB22AFB0C1AEF09CEFA31B8F43"
+      "bytes": 5424,
+      "sha256": "8A6C7469984CC116E8F1F873278FDE0E3502DB11A136267DFD570D715B87CE61"
     },
     {
       "path": "references.bib",
-      "bytes": 5635,
-      "sha256": "178CECD905F4ACEEB0D7F8C222DB2A79EA5D0581BFD4619A17A946084463A81B"
+      "bytes": 5701,
+      "sha256": "D20B2D63378269A035F5E206F17CCD1A056283A1F5DBA4F691C99413E6D58251"
     },
     {
       "path": "reproducibility.md",

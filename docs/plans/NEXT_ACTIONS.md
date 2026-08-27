@@ -277,6 +277,6 @@ COMPLETE =
 - `SUPPLEMENT`：[supplement.md](../../paper/supplement.md)固定合同、资格梯、失败计账与额外边界。
 - `REPRODUCIBILITY_PACKAGE`：[reproducibility.md](../../paper/reproducibility.md)与[包索引](../../paper/README.md)覆盖证据哈希、ledger、50 项 focused tests、Q0-only 复算、非科学诊断和图表重绘。
 - `CLAIM_BOUNDARY_AUDIT`：[claim_evidence_matrix.md](../../paper/claim_evidence_matrix.md)逐项给出载体、证据身份、禁止外推和 reviewer-risk 自检。
-- [package-manifest.json](../../paper/package-manifest.json)覆盖除自身外 32 个本地交付文件；其信息性 SHA256 为 `1EA96E3B9019F3D7F5419805E0C4E7CBE999F5E270B2340C54CD695ED26AA36A`。
+- [package-manifest.json](../../paper/package-manifest.json)覆盖除自身外 34 个交付文件；其信息性 SHA256 为 `1B00038B54049B4738AB6998BF4FE4C508B1F4200BA692889066D259AFE9F7A6`。2026-08-27 的后续编辑只重构论文叙事并新增中文/通俗派生稿，不改变本 GOAL 的冻结科学结果或 claim ceiling。
 
 最终科学边界保持 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_NO_ORACLE_EVENT_OR_METHOD_EVIDENCE`。`GOAL_COMPLETE` 只表示本地制品与预注册 fallback 已完整交付，不表示 oracle、event、PINN、GPU、OOD、formal、实验验证、期刊接收或 SOTA 成立。

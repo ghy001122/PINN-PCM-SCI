@@ -1,10 +1,12 @@
 # Paper package index
 
-This directory is the complete local manuscript package for **“Before Training the PINN: Preregistered Source and Pre-Oracle Qualification for a Synthetic Electrothermal Defect-Transport Benchmark.”** No submission or external upload has been performed.
+This directory is the complete manuscript package for **“When the Reference Solver Fails First: Failure-Preserving Qualification Before PINN Training in an Electrothermal Defect-Transport Case Study.”** The selected package is publicly mirrored in the project repository; no journal submission has been performed.
 
 ## Manuscript deliverables
 
 - [Manuscript](manuscript.md) — complete article draft.
+- [Chinese manuscript](manuscript_zh.md) — complete Chinese version with the same evidence ceiling.
+- [Plain-language Chinese story](plain_language_story_zh.md) — short and extended narratives, reviewer/mentor framing, claim limits, and one-slide story.
 - [References](references.bib) — 13 reviewed source carriers in BibTeX form.
 - [Main tables](tables.md) — observed run values and bounded diagnostic values only.
 - [Supplementary information](supplement.md) — contracts, equations, qualification ladder, accounting, source carriers, diagnostics, and unreached gates.

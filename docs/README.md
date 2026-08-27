@@ -19,12 +19,13 @@
 
 ## 当前执行入口
 
-- 当前唯一 GOAL 合同：[GOAL-PAPER-ONE-SHOT-V1](plans/NEXT_ACTIONS.md)。状态为 `COMPLETED`；S0–S2 已按冻结链执行并以 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO` 关闭正向数值/方法分支，[CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT 全套本地交付](../paper/README.md)已完成。
+- 当前唯一 GOAL 合同：[GOAL-PAPER-ONE-SHOT-V1](plans/NEXT_ACTIONS.md)。状态为 `COMPLETED`；S0–S2 已按冻结链执行并以 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO` 关闭正向数值/方法分支，[failure-preserving reference-qualification 论文包](../paper/README.md)已完成英文聚焦重构、中文稿与通俗故事更新。
 - 当前阶段与授权：[active_phase.md](../active_phase.md)。一次性研究执行授权已消费并关闭；只允许只读审查既有论文包、历史证据和不产生新科学结果且不写 ledger 的复现检查。继续 S2、raw/PINN/CTH、GPU、formal 或任何新研究均未授权。2026-08-27 的一次性[精选 GitHub 同步](governance/2026-08-27-selected-github-sync.md)已完成并关闭；付费计算、凭据披露、作者联系、投稿、额外上传或后续 Git 远程操作均未授权。
 - 当前科研终点：[S2 终局收口](experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)。Q0 只通过零驱动守卫；首个受驱动 QN intent 按冻结 Newton 上限执行失败且已计账。没有 oracle、event 或方法证据；该 No-Go 只覆盖本次冻结数值合同。
 - 上一对象组合终点：[方法盲对象筛选报告](references/2026-08-26-method-blind-cleanroom-object-screen.md)与 [ADR 0042](adr/0042-close-package-a-with-method-blind-object-portfolio-no-go.md)。3/3 冻结家族在 Gate 3 最早失败，11/12 新载体后形成 `PORTFOLIO_NO_GO_PACKAGE_A_FROZEN_3_FAMILIES_11_CARRIERS`。
 - 新授权理由与边界：[ADR 0044](adr/0044-adopt-goal-paper-one-shot-v1.md)。它覆盖 ADR 0043 的逐包批准与无自动 fallback 语义，但不撤销任何旧 No-Go。
 - 本轮全库文档状态审计：[2026-08-26 工作区文档状态对齐](governance/2026-08-26-workspace-document-state-alignment.md)。它记录全量机器巡检、当前权威面逐项审查、状态漂移和链接修复，不构成科学证据。
+- 本轮论文润色整合：[2026-08-27 外部会话论文润色整合记录](notes/2026-08-27-manuscript-polish-integration.md)。它记录可读会话结论的逐项核对、接纳/拒绝边界和派生稿件身份，不构成新的科学 evidence。
 - 当前论文口径与规范术语：[CONTEXT.md](../CONTEXT.md)；当前已核验事实：[PROJECT_STATE.md](../PROJECT_STATE.md)。
 
 历史 HFO/TaOₓ/R1/R2/KC/CTH 设计与 No-Go 不再逐项列作“当前入口”。需要追溯时依次读 [ADR 索引](adr/README.md)、[研究笔记索引](notes/README.md)、[实验索引](experiment/INDEX.md)、[来源审查索引](references/README.md)和[归档索引](../archive/README.md)。其中 [HFO Q1–Q68 索引](adr/research_decisions_HFO_Q1_Q68.md)只保存历史方法形成与可移植控制合同，不定义当前对象或授权。
