@@ -1,0 +1,83 @@
+{
+  "actual_budget": {
+    "process_cpu_seconds": 0.015625,
+    "source_failed_intents": 1,
+    "source_process_cpu_core_hours": 0.3663107638888889,
+    "wall_clock_seconds": 0.01864700000078301
+  },
+  "artifacts": {
+    "object_contract": "E:\\Python demo\\PINN-PCM-SCI\\configs\\phk_v2\\object_numerical_contract.json",
+    "object_contract_sha256": "3B3B9A369F4AFDFFB201394DD294E7196BAF04E5B36BAFE126291CA9CB3EA157",
+    "program_contract": "E:\\Python demo\\PINN-PCM-SCI\\configs\\phk_v2\\program_contract.json",
+    "program_contract_sha256": "0E1D89DD23F93C90160AC82ECE60ADA154410F4DDC33578CB892207FE8B445A8",
+    "split_manifest": "E:\\Python demo\\PINN-PCM-SCI\\configs\\phk_v2\\case_split_manifest.json",
+    "split_manifest_sha256": "EBFDA2D59049AC989E8AA6C9622D92CF077D4B808961AB5807D178BF09DF57ED",
+    "summary": "outputs\\runs\\20260827T-phk-v2-s2-q-terminal-summary\\summary.json",
+    "summary_sha256": "8964ACB687F1BDB4F03C2E0D33891EE3705D4C2ABD271085D0C82A2B4469EA78"
+  },
+  "case_id": "phk-v2-q-terminal-bundle-intents-01-through-09",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "Q_BUNDLE"
+  },
+  "claim_status": "PHK_V2_ORACLE_NO_GO_NO_PINN_OR_PHA_OR_KC_OR_FORMAL_EVIDENCE",
+  "code_identity": {
+    "kind": "working-tree",
+    "phk_benchmark_sha256": "B18AFA4F9005735EF46E3958F325C5BC40CECD0BF5E419854B140FAF76DF9645",
+    "phk_evaluator_sha256": "167C03985CF06A8D33E01B131A2BEEF782E513DCEE45F479EA9BC0F1EC6638F1",
+    "phk_runner_sha256": "16678642D1CC4283BE4D6B36DBB842F10FD9D771EE5AB475D7F6F469E6E5A50E"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_runner",
+    "summarize-q"
+  ],
+  "ended_at": "2026-08-27T09:06:58.389797+00:00",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1"
+  },
+  "evaluator_id": "phk-v2-q-adjudication-v1",
+  "evidence_identity": "TRANSPARENT_DIMENSIONLESS_REDUCED_BENCHMARK",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "phk-v2-q-terminal-adjudication",
+  "failure_class": null,
+  "gate": "PHK_V2_S2_ORACLE_GATE",
+  "gate_outcome": "PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE",
+  "method_id": "phk-v2-q-bundle-adjudicator-v1",
+  "numerical_validity": "VALID_BOUNDED_SYNTHETIC_NEGATIVE_QUALIFICATION",
+  "physical_contract_id": "PHK_REDUCED_WALL_CELL_2D_V1_NUMERICAL_V1",
+  "planned_budget": {
+    "method_pool_access": false,
+    "not_reached_after_failure": [
+      10,
+      11,
+      12
+    ],
+    "source_intents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "replay_of": null,
+  "route_disposition": "STOP_BEFORE_PINN_TRAINING_BEGIN_V2_NEGATIVE_CLOSEOUT",
+  "run_id": "20260827T-phk-v2-s2-q-terminal-summary",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_gate_terminal_adjudication",
+  "seed": 0,
+  "split_id": "phk-v2-complete-case-split-v1",
+  "started_at": "2026-08-27T09:06:58.372797+00:00",
+  "supersedes": null,
+  "tier": "qualification_summary"
+}

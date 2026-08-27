@@ -32,6 +32,7 @@
 | [`2026-08-26-new-object-source-complete-terminal-plan.md`](2026-08-26-new-object-source-complete-terminal-plan.md) | 上一轮把 TaOₓ C1 候选失败写成组合终止的旧 terminal live plan | TaOₓ C1 的来源负证据继续有效；组合级停止量词和当前授权已由 [ADR 0041](../docs/adr/0041-adopt-one-object-one-bottleneck-goal-and-authorize-package-a.md)及[唯一 live plan](../docs/plans/NEXT_ACTIONS.md)覆盖。 |
 | [`2026-08-26-one-object-package-a-portfolio-no-go-terminal-plan.md`](2026-08-26-one-object-package-a-portfolio-no-go-terminal-plan.md) | 方法盲 Package A 在 3/3 家族、11/12 载体处组合级 No-Go 的完成版旧 live plan | 科学终点继续由 [来源报告](../docs/references/2026-08-26-method-blind-cleanroom-object-screen.md)与 [ADR 0042](../docs/adr/0042-close-package-a-with-method-blind-object-portfolio-no-go.md)保持；下一路线只读当前 [GOAL-PAPER-ONE-SHOT-V1](../docs/plans/NEXT_ACTIONS.md)。 |
 | [`2026-08-26-plan-msa-01-review-superseded.md`](2026-08-26-plan-msa-01-review-superseded.md) | 尚未获批的 `PLAN-MSA-01` 模块化来源对齐逐包执行草案 | 用户随后批准一次性 [GOAL-PAPER-ONE-SHOT-V1](../docs/plans/NEXT_ACTIONS.md)；ADR 0044 覆盖其逐包批准与无自动 fallback 语义，旧科学门和历史 No-Go 不被改写。 |
+| [`2026-08-27-goal-paper-one-shot-v1-complete.md`](2026-08-27-goal-paper-one-shot-v1-complete.md) | 已完整交付 failure-preserving reference-qualification 论文包的旧 GOAL live plan | 用户随后批准独立的 [PLAN-PHK-V2-V1](../docs/plans/NEXT_ACTIONS.md)；ADR 0045 只覆盖当前授权语义，旧 S0/S2、失败 intent、No-Go、论文和复现包保持原样。 |
 
 该包中的主要入口：
 

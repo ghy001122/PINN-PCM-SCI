@@ -1,0 +1,237 @@
+{
+  "schema_id": "phk-v2-program-contract-v1",
+  "contract_id": "PLAN_PHK_V2_V1",
+  "effective_date": "2026-08-27",
+  "status": "PRE_RESULT_PROGRAM_CONTRACT",
+  "source_plan": {
+    "path_external": "E:/PINN-PCM/后续研究总规划.md",
+    "sha256": "3A178D7F98D4333B1AB76AC226A7816209053525D6477A37AF2DAD47A85F3C70",
+    "role": "USER_APPROVED_PLANNING_INPUT_CORRECTED_BY_PRIMARY_SOURCE_AUDIT"
+  },
+  "preserves": [
+    "GOAL_PAPER_ONE_SHOT_V1_COMPLETE",
+    "SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO",
+    "ALL_PRIOR_FAILED_INTENTS_AND_NO_GO",
+    "V1_FAILURE_PRESERVING_MANUSCRIPT"
+  ],
+  "authorization": {
+    "scope": "BOUNDED_LOCAL_RESEARCH_S0_TO_S7",
+    "automatic_gate_progression": true,
+    "paid_or_cloud_compute": false,
+    "local_gpu_only": true,
+    "external_upload_or_git_remote": false,
+    "author_contact_or_submission": false,
+    "credential_disclosure": false
+  },
+  "baseline_identities": [
+    {
+      "id": "SHARP_PINNS_PAPER_REPLICATION_V1",
+      "role": "PRIMARY_PHASE_FIELD_DOMAIN_ANCHOR",
+      "paper_doi": "10.1016/j.cma.2025.118346",
+      "modules": [
+        "STAGGERED_AC_CH",
+        "RANDOM_FOURIER_FEATURES",
+        "MODIFIED_MLP",
+        "HARD_OUTPUT_CONSTRAINT",
+        "GRADIENT_NORM_WEIGHTING"
+      ],
+      "excludes_unless_separately_identified": [
+        "CAUSAL_WEIGHTING",
+        "RAR",
+        "REPO_LONG_EPOCH_RECIPE"
+      ]
+    },
+    {
+      "id": "SHARP_PINNS_REPO_RECIPE_4B7029E",
+      "role": "SEPARATE_REPO_BEST_METHOD_RECIPE",
+      "repository": "https://github.com/NanxiiChen/sharp-pinns",
+      "commit": "4b7029e3e1e0b82482d245ba12e3ec0945d87ed9",
+      "license": "GPL-3.0",
+      "integration": "ISOLATED_COMPARATOR_OR_CLEAN_ROOM_FORMULA_REIMPLEMENTATION_ONLY"
+    },
+    {
+      "id": "PF_PINNS_SUPPORT_COMPARATOR_A25F75B",
+      "role": "NTK_INTERFACE_SAMPLING_RAR_SUPPORT_COMPARATOR",
+      "repository": "https://github.com/ChuanjieCui/PF-PINNs",
+      "commit": "a25f75b5fd40657e5ce98467d7afd0d0052464d1",
+      "license": "GPL-3.0",
+      "integration": "ISOLATED_COMPARATOR_OR_CLEAN_ROOM_FORMULA_REIMPLEMENTATION_ONLY"
+    },
+    {
+      "id": "JAXPI2_ADAPTIVE_PSEUDOTIME_77A5C13",
+      "role": "MANDATORY_GENERAL_STRONG_AND_KC_FALSIFICATION_CONTROL",
+      "repository": "https://github.com/sifanexisted/jaxpi2",
+      "commit": "77a5c1315a056388271822c35ad512a5a192b60d",
+      "license": "Apache-2.0",
+      "integration": "PINNED_EXTERNAL_REPRODUCTION_THEN_SELECTIVE_PROVENANCE_CHECKED_ADAPTATION"
+    },
+    {
+      "id": "PIRATENET_PAPER_SPEC_CONTROL",
+      "role": "GENERAL_ARCHITECTURE_CONTROL",
+      "paper_url": "https://www.jmlr.org/papers/v25/24-0313.html",
+      "code_license": "PENN_NONCOMMERCIAL_RESEARCH_NO_UNAPPROVED_REDISTRIBUTION",
+      "integration": "PAPER_SPEC_CLEAN_ROOM_ONLY_NO_SOURCE_REDISTRIBUTION"
+    },
+    {
+      "id": "CAUSALITY_RBAR_PAPER_SPEC_ONLY",
+      "role": "BEST_METHOD_SAMPLING_CONTROL",
+      "paper_url": "https://arxiv.org/abs/2410.20212",
+      "official_code_status": "URL_404_AS_OF_2026_08_27",
+      "integration": "PAPER_SPEC_ONLY_NO_OFFICIAL_REPRODUCTION_CLAIM"
+    }
+  ],
+  "physical_object": {
+    "id": "PHK_REDUCED_WALL_CELL_2D_V1",
+    "status": "NUMERICAL_CONTRACT_PENDING_PRE_FIRST_SOLVE_FREEZE",
+    "identity": [
+      "TWO_DIMENSIONAL",
+      "ELECTROTHERMAL_PHASE_FIELD",
+      "LITERATURE_INSPIRED",
+      "TRANSPARENT_REDUCED_BENCHMARK",
+      "NOT_AUTHOR_MODEL_REPRODUCTION",
+      "NOT_EXPERIMENTALLY_CALIBRATED_OR_VALIDATED"
+    ],
+    "required_causal_chain": [
+      "ELECTRIC_CURRENT_CONTINUITY",
+      "JOULE_HEATING",
+      "THERMAL_TRANSPORT_WITH_LATENT_HEAT",
+      "DYNAMIC_PHASE_FIELD",
+      "PHASE_AND_TEMPERATURE_FEEDBACK_TO_CONDUCTIVITY"
+    ],
+    "pre_result_contract_path": "configs/phk_v2/object_numerical_contract.json"
+  },
+  "case_identity_fields": [
+    "geometry",
+    "material_or_synthetic_constitutive_branch",
+    "initial_state",
+    "full_waveform",
+    "full_history"
+  ],
+  "case_pools": {
+    "Q": "ORACLE_EVENT_GUARD_QUALIFICATION_ONLY",
+    "D": "BACKBONE_HYPERPARAMETER_CHECKPOINT_DEVELOPMENT",
+    "I1": "SINGLE_MODULE_IDENTITY_AND_ATTRIBUTION_OPEN_ONCE",
+    "I2": "COMBINATION_AND_BEST_METHOD_CONFIRMATION_OPEN_ONCE",
+    "F_A": "SEALED_COMPLETE_WAVEFORM_PROTOCOL_AXIS_FORMAL",
+    "F_O": "SEALED_WHOLE_ORTHOGONAL_FACTOR_FORMAL",
+    "R": "UNOPENED_RESERVE_IN_THIS_GOAL"
+  },
+  "primary_endpoint": {
+    "id": "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+    "symbol": "E_GAMMA",
+    "phase_threshold": 0.5,
+    "direction": "LOWER_IS_BETTER",
+    "normalization": "PRESEALED_ORACLE_FLOOR_UNITS"
+  },
+  "important_secondary_endpoints": [
+    "INTERFACE_HAUSDORFF_DISTANCE",
+    "EVENT_OR_SWITCHING_DELAY",
+    "RECOVERY_TIME",
+    "HOTSPOT_PEAK_TEMPERATURE",
+    "HOTSPOT_CENTROID",
+    "HOTSPOT_FWHM_OR_AREA",
+    "TERMINAL_CURRENT_TRACE",
+    "PROGRAMMED_RESISTANCE",
+    "PHASE_VOLUME",
+    "PULSE_ENERGY",
+    "PEAK_TEMPERATURE"
+  ],
+  "hard_guards": [
+    "PDE_AND_CONSTITUTIVE_RESIDUAL",
+    "LATENT_HEAT_AND_THERMAL_BALANCE",
+    "PHASE_RANGE",
+    "TERMINAL_CURRENT_BALANCE",
+    "INITIAL_BOUNDARY_INTERFACE_RESIDUAL",
+    "FINITE_OUTPUTS",
+    "EVENT_LOCALIZATION_COVERAGE_AND_RESOLUTION"
+  ],
+  "method_arms": {
+    "attribution": [
+      "A0_STRONGEST_ELIGIBLE_RAW",
+      "A1_GLOBAL_MULTI_FREQUENCY",
+      "A2_PHA_MF_V2",
+      "A3_FIELD_SELECTIVE_KC_V2",
+      "A4_PHA_MF_V2_PLUS_KC_V2",
+      "A5_PARAMETER_MATCHED_WIDER_RAW",
+      "A6_COMPUTE_MATCHED_EXTRA_WORK_RAW"
+    ],
+    "pha_kill_controls": [
+      "PHASE_ONLY_GATE",
+      "JOULE_ONLY_GATE",
+      "GENERIC_LEARNED_GATE",
+      "SHUFFLED_WRONG_LOCATION_GATE",
+      "GATE_OFF_PARAMETER_MATCHED",
+      "GLOBAL_MULTI_FREQUENCY",
+      "WIDER_RAW",
+      "EXTRA_WORK_RAW"
+    ],
+    "kc_kill_controls": [
+      "IDENTITY_CLOCK",
+      "PARAMETER_MATCHED_GENERIC_MONOTONE_CLOCK",
+      "RANDOM_FIXED_MONOTONE_CLOCK",
+      "ALL_FIELD_TIME_WARP",
+      "WRONG_SEGMENT_CENTERS",
+      "SMOOTH_DYNAMICS_CASE",
+      "RESPACING_STYLE_MAPPING",
+      "ADAPTIVE_PSEUDOTIME"
+    ]
+  },
+  "formal_statistics": {
+    "scientific_unit": "COMPLETE_CASE",
+    "algorithmic_repeat": "SEED_NESTED_WITHIN_CASE",
+    "case_level_estimator": "SEED_MEDIAN_THEN_PAIRED_CASE_DIFFERENCE",
+    "interval": "SHARED_RESAMPLE_CASE_LEVEL_STUDENTIZED_BOOTSTRAP",
+    "one_sided_confidence": 0.95,
+    "superiority_margin_floor_units": 0.5,
+    "noninferiority_margin_floor_units": 0.5,
+    "candidate_case_counts": [
+      8,
+      12,
+      16,
+      20,
+      24,
+      32
+    ],
+    "minimum_power": 0.8,
+    "selection_data": "D_I_CONTROLS_ONLY_BEFORE_FORMAL_OPEN",
+    "if_power_not_feasible": "FORMAL_POWER_BUDGET_INSUFFICIENT"
+  },
+  "budgets": {
+    "additional_primary_carriers_after_r0": 4,
+    "cpu_core_hours": 128.0,
+    "development_gpu_exclusive_hours": 64.0,
+    "formal_gpu_exclusive_hours": 64.0,
+    "total_gpu_exclusive_hours": 128.0,
+    "paid_compute": 0,
+    "external_publication_or_git_remote": 0,
+    "failed_intents_count_against_budget": true,
+    "maximum_formal_superseding_reruns_per_method": 1
+  },
+  "stage_order": [
+    "S0_SOURCE_AND_MACHINE_CONTRACT",
+    "S1_ORIGINAL_DOMAIN_REPRODUCTION",
+    "S2_MECHANISM_BENCHMARK_AND_ORACLE_QUALIFICATION",
+    "S3_STRONG_RAW_QUALIFICATION",
+    "S4_SINGLE_MODULE_ATTRIBUTION",
+    "S5_FULL_COMBINATION_AND_BEST_METHOD",
+    "S6_SEALED_FORMAL",
+    "S7_V2_MANUSCRIPT_AND_REPRODUCIBILITY"
+  ],
+  "failure_semantics": {
+    "retain_all_failed_intents": true,
+    "nan_oom_timeout_divergence_or_guard_failure": "METHOD_OR_EXECUTION_FAILURE_AS_APPLICABLE",
+    "no_seed_or_case_replacement": true,
+    "no_formal_peeking_or_resealing": true,
+    "no_result_adaptive_physics_or_margin_changes": true,
+    "single_module_failure_cannot_be_hidden_by_combination": true
+  },
+  "completion_requires": [
+    "ACTUAL_QUALIFIED_OR_BOUNDARY_PRESERVING_RESULTS",
+    "V2_ENGLISH_AND_CHINESE_MANUSCRIPTS",
+    "FINAL_FIGURES_AND_TABLES",
+    "REFERENCES_AND_ANATOMY_CARDS",
+    "SUPPLEMENT",
+    "REPRODUCIBILITY_PACKAGE",
+    "CLAIM_EVIDENCE_AND_REVIEWER_RISK_AUDIT"
+  ]
+}

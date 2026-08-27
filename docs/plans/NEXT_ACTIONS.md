@@ -1,282 +1,301 @@
-# GOAL-PAPER-ONE-SHOT-V1：一次性自主执行到完整论文初稿
+# PLAN-PHK-V2-V1：强基线复现、二维相变对象与 PHK-PINN 第二版论文
 
-- `phase_id`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V2_COMPLETE_ORACLE_NO_GO`
+- `lifecycle_state`: `COMPLETED`
 - `blocker_id`: `NONE`
-- `claim_status`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_NO_ORACLE_EVENT_OR_METHOD_EVIDENCE`
-- `authorization_state`: `ONE_SHOT_LOCAL_RESEARCH_EXECUTION_CONSUMED_AND_CLOSED`
-- `authorization_package`: `S0_TO_S6_AND_LOCAL_MANUSCRIPT_CONSUMED`
-- `plan_status`: `COMPLETED`
-- `object_selection_status`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_FROZEN`
-- `method_selection_status`: `NOT_REACHED_CTH_DIAGNOSTIC_ONLY_NO_TRAINING`
-- `current_stage`: `GOAL_COMPLETE_LOCAL_DELIVERABLES_READY`
+- `claim_status`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE_NO_PINN_METHOD_EVIDENCE`
+- `authorization_state`: `PHK_V2_EXECUTION_AND_CLOSEOUT_CONSUMED_CLOSED`
+- `authorization_package`: `S0_TO_S7_LOCAL_RESEARCH_AND_V2_MANUSCRIPT_CONSUMED`
+- `plan_status`: `COMPLETED_BOUNDARY_PRESERVING_ORACLE_NO_GO`
+- `object_selection_status`: `PHK_REDUCED_WALL_CELL_2D_V1_FROZEN_ORACLE_NO_GO`
+- `method_selection_status`: `NOT_ENTERED_ORACLE_GATE_NO_GO`
+- `current_stage`: `COMPLETE`
 - `next_research_execution_authorized`: `false`
-- `supersedes`: `PLAN_MSA_01`
-- `preserves`: `ALL_HISTORICAL_NO_GO_AND_NEGATIVE_EVIDENCE`
-- `effective_date`: `2026-08-26`
+- `supersedes`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE_AUTHORIZATION_SEMANTICS_ONLY`
+- `preserves`: `ALL_PRIOR_NO_GO_FAILED_INTENTS_AND_V1_MANUSCRIPT`
+- `source_plan_sha256`: `3A178D7F98D4333B1AB76AC226A7816209053525D6477A37AF2DAD47A85F3C70`
+- `effective_date`: `2026-08-27`
 
-## 1. 目标与完成条件
+## 0. S2 终局裁决与当前唯一剩余工作
 
-用户已明确批准 `GOAL-PAPER-ONE-SHOT-V1`，本文件是其项目内唯一 live plan。Agent 从当前真实状态开始，按本文件的预注册门和切换表连续执行；门通过后无需逐阶段、逐包或 sealed formal 前再次申请批准。
+本计划的 S2 Oracle Gate 已按预注册停止条件终止正向方法路线。terminal run `20260827T-phk-v2-s2-q-terminal-summary` 固定 `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`：intents 1–8 完成，intent 9 以 `PHK phase Newton line search reached its frozen minimum step` 失败并消费，intents 10–12 `NOT_REACHED`。nominal coarse/medium/fine/half-dt/replay 运行通过数值 hard guards，exact replay 六分量全为零，但第一周期 recovery 仅约 `0.22–0.24`，第二周期没有新的阈值上穿，cycle-peak drift 约 `1.41–1.59`，不满足两周期 event/recovery 合同。
 
-执行已于 2026-08-26 按冻结 fallback 在 `CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT` 终点闭合。[最终本地论文包](../../paper/README.md)与[包清单](../../paper/package-manifest.json)满足第 10 节的完整交付条件；一次性授权已经消费并关闭。以下原始门、预算、定义与停止条件继续保留为已执行合同，不授权新研究。
+因此没有 neural floor，S3–S6 的 strong raw、PHA-MF、KC、组合、GPU、formal 和 OOD 均未进入。S7 已交付 [benchmark/numerical-limits V2 完整包](../../paper_v2/README.md)：英文/中文正文、通俗故事、六幅双格式图、图源 CSV、最终表格/参考文献、baseline anatomy cards、补充材料、复现说明与 claim–evidence 自检。下文第 1–10 节保留为预结果冻结合同和历史执行边界，不再授权任何新科学计算。
 
-优先终点是 PINN 为核心、二维电—热—守恒缺陷输运闭合、具有强控制与 sealed complete-case formal 证据的正向方法论文。若正向主张失败，继续形成以下之一，而不是把分支 No-Go 当成总目标完成：
+## 1. 用户目标与授权解释
 
-1. `NEGATIVE_COMPARATIVE_PINN_MANUSCRIPT`；
-2. `CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT`；
-3. `SYNTHETIC_DEVICE_PINN_BENCHMARK_MANUSCRIPT`。
+用户要求沿用《后续研究总规划》，全面剖析并复现相关 PINN 工作，提取真实创新与方法模块，识别局限和可改空间，迁移到相变器件领域，从可行性开始分层验证，在强 baseline 上进行有界、可归因的组合与改进，最终交付重要指标不劣于最强合格 baseline、至少一个预声明主指标实质改善的 PHK-PINN 组合和第二版论文初稿。
 
-只有同时交付完整论文正文、实际结果、最终图表和主表、参考文献、补充材料、复现说明/包、claim–evidence mapping 与 reviewer-risk/主张边界自检，才可记 `GOAL_COMPLETE`。来源报告、代码、oracle、pilot、负 dossier、skeleton 或带结果占位符的稿件均不是完成。
+本文件将该要求作为新的独立研究执行合同。S0 通过后，Agent 可在本文件预算与门禁内自动继续 S1–S7，不需逐阶段再次申请；普通复现失败、数值失败、训练失败或方法 No-Go 按第 8 节切换，不以降低门槛或结果导向救援换取正面结论。
 
-## 2. 当前起点与保留边界
+本授权仅覆盖项目内有界来源研究、开放代码的固定版本审计与隔离复现、clean-room 实现、CPU 求解、本地可用 GPU 训练、sealed formal、本地图表统计和第二版论文/补充/复现材料。它不授权付费或云端计算、凭据披露、作者联系、投稿、外部上传、Git push/PR/release 或破坏性机器改动。
 
-- S1 已关闭两个来源路线并按冻结切换表锁定 `SYN_EDT_2D_V1`。
-- S2 生效 freeze、Q0 与首个受驱动 QN intent 已由 [S2 终局收口](../experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)固定：Q0 只通过零驱动守卫；QN 按冻结 Newton 迭代上限失败且已计账，没有 rescue 或生产重跑。
-- 本轮有界裁决为 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`。跨分辨率 oracle、双周期 event 与 thermal-effect gate 未建立；strong raw、PINN/CTH development、GPU 与 formal 均未到达且不得用“失败”替代“未评价”。
-- 自动稿件终点 `CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT` 已完成第 10 节全部真实交付，现记 `GOAL_COMPLETE`。
-- CTH 正向架构新颖性未清除，只保留为透明诊断/比较臂；不得承担正向新架构主张。
-- HFO-NP-v1 保持 `WAVEFORM_TIME_NO_GO_FROZEN`。
-- 2025 TaOₓ C1 的 `0.32/0.16 nm` 来源—模型冲突不修补。
-- Package A 三候选的 `PORTFOLIO_NO_GO_PACKAGE_A_FROZEN_3_FAMILIES_11_CARRIERS` 保持原证据边界。
-- 本 GOAL supersede `PLAN-MSA-01` 的当前规划/授权语义，但不追溯改写 ADR、来源报告、实验记录或归档。
+## 2. 不可改写的既有边界
 
-## 3. 一次性授权与永久禁止项
+- [GOAL-PAPER-ONE-SHOT-V1](../../archive/2026-08-27-goal-paper-one-shot-v1-complete.md)保持完成态；其 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`、Q0 守卫、QN 失败、论文和复现包不回写。
+- Q-POP/KC/PHA、HFO、TaOₓ、Package A 与其他历史 No-Go 均保留原作用域。新路线不得把旧实现烟测、旧 event、旧 PHA/KC 代码存在性或旧负面结果当成 PHK-V2 的 oracle、event 或方法证据。
+- 第一版论文继续作为 reference-solver qualification / failure-preserving stop 稿。第二版是独立正向路线；若正向门失败，只能交付对应证据等级的限制/负向 V2 稿，不能把未运行模块拼接到 V1 结果中。
+- 新对象固定为透明、literature-inspired 的 reduced 2D electrothermal phase-field benchmark；不得称为 Miquel/GGST 作者模型重放、实验校准材料、真实器件验证或开放作者 oracle。
 
-在本 GOAL 执行期间，第 7 节总预算和阶段门内曾授权：有界一手来源研究、许可与 provenance 审查、合法本地 COMSOL 模型审计、项目隔离依赖、本地代码/配置、clean-room 对象、CPU solver/oracle、本地 GPU PINN development、sealed formal、统计、图表、本地论文与补充材料。该一次性授权现已随完整本地交付消费并关闭；本段保留历史授权范围，不授权新执行。
+## 3. R0 已固定的一手来源与 baseline 身份
 
-始终未授权：付费计算或服务、购买许可、披露凭据、联系作者、投稿、外部上传/发布、Git push/PR/merge/remote release、破坏性机器级改动。原始商业 `.mph` 不进入公开复现包；依赖只允许写入项目目录或项目虚拟环境。
+R0 结论以[一手来源与 baseline 审查](../references/2026-08-27-phk-pinn-primary-source-baseline-audit.md)为准。它是来源证据，不是复现或方法结果。
 
-## 4. 预注册路线树
+### 3.1 必须分开的身份
 
-路线顺序必须在任何新数值求解或 PINN 结果出现前完成 S0 冻结。
+1. `SHARP_PINNS_PAPER_REPLICATION_V1`
+   - phase-field domain anchor；
+   - 只包含论文明确声明的 staggered AC/CH、RFF、modified MLP、hard output constraint 与 gradient-norm weighting；
+   - 不把 causal weighting、RAR 或当前仓库长预算静默并入论文身份。
+2. `SHARP_PINNS_REPO_RECIPE_4B7029E`
+   - 官方仓库固定 SHA `4b7029e3e1e0b82482d245ba12e3ec0945d87ed9`；
+   - causal/RAR/长 epoch 配置作为独立 best-method recipe；
+   - GPL-3.0，只能隔离运行或按论文公式 clean-room 重实现，不能把源码直接并入主库。
+3. `PF_PINNS_SUPPORT_COMPARATOR_A25F75B`
+   - 用于 random-batch NTK、界面采样与 RAR；
+   - GPL-3.0，固定支持型 comparator 身份，不与固定 support 的架构归因混用。
+4. `JAXPI2_ADAPTIVE_PSEUDOTIME_77A5C13`
+   - Apache-2.0 仓库固定 SHA `77a5c1315a056388271822c35ad512a5a192b60d`；
+   - 作为 mandatory general strong control，检验 KC 是否只是通用 continuation/优化替代品。
+5. `PIRATENET_PAPER_SPEC_CONTROL`
+   - 只采用公开论文公式与报告身份；原 jaxpi 代码为 Penn 定制非营利研究许可且限制再分发，不进入公开主库。
+6. `CAUSALITY_RBAR_PAPER_SPEC_ONLY`
+   - 作者代码链接在 R0 核验时为 404；只做论文规格的 clean-room 控制或背景，不声称官方代码复现。
+7. `MIQUEL_GGST_TOPOLOGY_INSPIRATION_ONLY`
+   - 仅提供 wall-cell、电—热—相态因果链与多尺度困难的来源启发；保密成分、未公开物性和无代码关闭 exact reproduction/oracle 身份。
 
-### Route 1 — COMSOL64-first
+Sharp-PINNs 是唯一主 phase-field domain anchor，但不是唯一证据 baseline。最终方法必须与最强合格的 domain anchor、general strong anchor、容量/计算控制和机制负控比较。
 
-- candidate：`KNOWN_UNREVIEWED_S9_REFRESHED_TO_COMSOL_6_4`；
-- application：`COMSOL_APPLICATION_ID_141181`；
-- 身份上限：`COMSOL_6_4_TUTORIAL_SPECIFICATION_ALIGNED_CLEANROOM_DERIVED`；
-- 只允许 tutorial-specification-aligned clean-room derived 表述，不声称实验验证或作者原生重放。
+## 4. 论文问题与方法身份
 
-### Route 2 — source-only fallback
+工作名称为 `PHK-PINN`：
 
-S0 在任何新来源审计前按方法盲规则冻结一个 fallback bundle。只有 Route 1 出现 `LEGAL_RESEARCH_ACCESS_FAILURE`、`MPH_ACCESS_FAILURE`、`SOURCE_CONTRACT_FAILURE` 或 `UNRESOLVED_VERSION_CONFLICT` 时启用。Route 1 一旦通过来源合同，Route 2 永久退出，不得因 event/raw/CTH/formal 表现换对象。
+> Physics-routed spatial-frequency and kinetics-time allocation for localized electrothermal phase-change dynamics.
 
-### Route 3 — SYN_EDT_2D_V1
+只允许两个 load-bearing 主模块：
 
-若两个来源候选均无法形成合格对象，或来源对象在 oracle/event 门失败，自动进入预冻结 `SYN_EDT_2D_V1`。身份固定为 `FULLY_TRANSPARENT_SYNTHETIC / TWO_DIMENSIONAL_AXISYMMETRIC / ELECTROTHERMAL_DEFECT_TRANSPORT_BENCHMARK / NOT_SOURCE_ALIGNED / NOT_EXPERIMENTALLY_VALIDATED`。
+1. `PHA_MF_V2`：相变—热点感知的局部多频表示，回答局域界面、Joule hotspot 与窄尺度结构的空间欠分辨；
+2. `FIELD_SELECTIVE_KC_V2`：只作用于相态分支的严格单调动力学时钟，使用完整一阶、二阶与混合导数 pullback，回答脉冲相变的时间刚性与快慢尺度分离。
 
-Route 3 必须含电流连续、准稳态 Joule 热、动态守恒 Nernst–Planck 缺陷输运、温度对 transport 和/或 conductivity 的反馈、明确二维器件几何、完整 IC/BC/interface、绝对时间双极协议、可重复局部耗尽—恢复事件、传统 solver oracle、case generator 与 evaluator。参数、分支和协议必须在第一次求解前冻结，不得按 CTH 表现调对象。
+staggered scheduling、sampling/RAR、causal training、loss balancing、continuation/pseudo-time 和 optimizer recipe 是公共强协议或控制，不与 PHA/KC 并列包装为额外创新。
 
-## 5. 自动阶段链
+### 4.1 PHA 必须防止的自确认
 
-### S0 — 合同冻结（已完成）
+- 高频容量首版只投向 `T` 与 `phi`；`V` 使用共同 low/mid 表示。
+- gate 只能读取训练期可得量；不得读取 oracle 或 formal 标签。
+- prediction-derived phase/Joule gate 必须有 `g_min>0`，并分别比较 detach/no-detach。
+- 必须包含 global MF、phase-only、Joule-only、generic learned、shuffled/wrong-location、gate-off parameter-matched、wider raw 与 extra-work raw。
+- 若 PHA 只胜过 Vanilla，或收益可被 support、参数量、AD 工作或 wall time解释，则 `PHA_NO_GO`。
 
-写入并冻结：COMSOL64 来源合同；方法盲 fallback ID/来源链/排序理由；`SYN_EDT_2D_V1` 完整物理合同；`A/A_PRIME/ENGINEERING/UNKNOWN` 账本；三种稿件终点与切换规则；互斥案例池、统计单位与预算；CTH 和全部控制的实现合同。S0 通过后自动进入 S1。
+### 4.2 KC 必须防止的宽泛坐标变换叙事
 
-S0 机器合同与完整冻结理由见 [`s0_contract.json`](../../configs/goal_paper_one_shot_v1/s0_contract.json) 和 [S0 预注册记录](../governance/2026-08-26-goal-paper-one-shot-v1-s0-preregistration.md)。
+- 仅 `phi(x,t)=phi_hat(x,tau(x,t))` 使用时钟；电势和温度保持物理时间。
+- clock 严格正速率，centers 在结果前由 pulse ramp/hold/cooling 区段固定；不得根据 event time 移动。
+- 所有评价回到物理时间；Laplacian 存在时必须保留完整空间二阶 pullback。
+- 必须比较 identity、参数匹配 generic monotone、random fixed、all-field warp、wrong-segment、smooth-dynamics、RS-like mapping 与 adaptive pseudo-time。
+- 若 adaptive pseudo-time 或 generic monotone 已解释全部收益，或 smooth/stiff case 无机制交互，则不允许 kinetics-specific 正面主张。
 
-### S1 — 来源、合法性与新颖性前审（已完成）
+## 5. 深模块公共接口与 TDD 边界
 
-分别裁决 `COMSOL64_RESEARCH_USE_RIGHT`、`COMSOL64_MODEL_FILE_ACCESS`、`COMSOL64_RESULT_PUBLICATION_RIGHT`、`COMSOL64_MPH_REDISTRIBUTION_RIGHT` 与 `INDEPENDENT_CLEANROOM_CODE_LICENSE`；至少前三项 PASS 才可锁定 Route 1。
+首次实现前固定以下项目内接口；测试先于实现。避免复制 GPL/Penn 源码，也不把历史 Q-POP PHA 模块改名冒充 V2。
 
-来源合同须闭合 domain 5 初态、全部 domain selections、EC/HT/TCC/Joule Heating、IC/BC/interface、no-flux/轴对称/绝缘/内部连续、transport/电导/热本构、表格插值/外推/单位换算、TCC formulation/stabilization、端口方向/轴对称积分、精确 COMSOL build/资产身份/模型树与机器可读 reference outputs。
+1. `pinn_pcm_sci/phk_contract.py`
+   - `PhkProgramContract.load(path)`：fail-closed 读取机器合同；
+   - `PhkCaseSpec`、`PhkSplitManifest` 与完整 case SHA256；
+   - 只负责身份、单位、池和冻结常数，不求解、不训练。
+2. `pinn_pcm_sci/phk_benchmark.py`
+   - `PhkPhysicalContract`、`PhkOracleCase.solve()`、event/guard/convergence reports；
+   - 闭合 `V–T–phi` 电流连续、Joule/latent heat 与 reduced phase-field；
+   - 传统数值 solver 与 PINN 实现不共享残差 evaluator。
+3. `pinn_pcm_sci/phk_method.py`
+   - `MethodSpec` 和唯一 `build_phk_method(spec, contract)`；
+   - clean-room strong raw、PHA-MF、KC、full 与匹配控制均经同一入口；
+   - 复用现有 `PositiveGaussianClock`/pullback 只能通过新合同适配，不复活旧对象结论。
+4. `pinn_pcm_sci/phk_evaluator.py`
+   - disk-only oracle/prediction evaluator；
+   - 结构主端点、界面/热点/event/device 指标、物理硬守卫和 JSON-safe 失败语义。
+5. `pinn_pcm_sci/phk_runner.py`
+   - intent-first、immutable run root、预算/失败计账、ledger 与 sealed pool access；
+   - 只编排，不复制 solver、模型或评价逻辑。
 
-CTH 新颖性前审至少覆盖 Conditional PINN、HyperPINN、P²INNs、SA/residual sensitivity、cusp-capturing PINN、Spline-PINN、PI-BSNet 与 learned/separated parameter basis；只能陈述声明范围内的检索结果。
+任何现有未跟踪的 phase-field/R1 文件先视为用户资产和历史线索；只有通过来源、测试、物理身份与接口审查后才能选择性迁移，不能静默覆盖。
 
-实际裁决见 [S1 有界前审报告](../references/2026-08-26-goal-paper-one-shot-v1-s1-source-legal-novelty-review.md)：本轮审阅 13 个一手载体、其中 10 个首次进入项目，使用新增预算 `10/12`。Route 1 所需权利 PASS 未建立且来源合同不完整，按预注册代码记 `LEGAL_RESEARCH_ACCESS_FAILURE + SOURCE_CONTRACT_FAILURE`；Route 2 为 `SOURCE_CONTRACT_FAILURE`，因此激活 `SYN_EDT_2D_V1`。CTH 为 `POSITIVE_ARCHITECTURE_NOVELTY_NOT_CLEARED`，只保留诊断/比较身份。
+## 6. 对象、case 与评价的预结果冻结
 
-### S2–S3 — micro/full oracle、事件与案例池（已按数值合同 No-Go 终止）
+### 6.1 对象身份
 
-依次执行 zero-drive、coarse/medium、守恒/范围/no-flux、anchor case、signed local event bracket、`DIRECT_T_TO_TRANSPORT_OFF`、`FULL_ISOTHERMAL_COUPLING_OFF` 及端口—空间联合检查；随后完成独立空间/时间收敛、current/heat/mass/no-flux/范围/端口守卫、来源联合不确定性对齐或 synthetic contract verification、同一 ROI 两个连续周期的局部部分覆盖耗尽—恢复事件、thermal effect 超越各分支数值不确定性、完整 evaluator 与误差地板。
+`PHK_REDUCED_WALL_CELL_2D_V1` 至少闭合：
 
-案例池在 PINN 前互斥冻结为 `Q / D / I / F_A / F_O / R`。完整统计单位为 `GEOMETRY × CONSTITUTIVE_OR_MATERIAL_BRANCH × INITIAL_STATE × FULL_WAVEFORM × FULL_HISTORY`；mesh、time step 与 seed 不是独立 case。
+\[
+\nabla\!\cdot[\sigma(T,\phi)\nabla V]=0,
+\]
 
-实际执行只到 Q0 与首个 QN intent。Q0 为 bounded zero-drive guard；QN 在生成可评价场之前执行失败，故本节其余资格化 intent、案例池开放和误差地板均未到达。冻结合同全文保留为“原计划做什么”，不得写成“已经完成什么”。
+\[
+\rho c_p(T,\phi)\partial_tT+\rho L\partial_t\phi
+=\nabla\!\cdot[k(T,\phi)\nabla T]+\sigma(T,\phi)|\nabla V|^2,
+\]
 
-### S4 — strong raw 与方法路由（未到达）
+\[
+\tau_\phi(T)\partial_t\phi
+=\epsilon_\phi^2\nabla^2\phi-\partial_\phi W(\phi,T).
+\]
 
-先资格化 parameter-conditioned mixed first-order PINN；损失必须显式包含守恒 PDE 与本构残差。裁决为 `RAW_INCOMPETENT`、`RAW_COMPETENT_NO_ACTIONABLE_BOTTLENECK`、`RAW_COMPETENT_TRANSPORT_PARAMETER_BOTTLENECK` 或 `RAW_COMPETENT_OTHER_BOTTLENECK`。
+S0B 必须在第一次该对象求解前另行写入机器可读物理/数值合同，固定几何、单位、公开参数及其来源/工程身份、IC/BC/interface、波形、solver、离散、保存间隔、事件、守卫、qualification intents 和无救援规则。对象工程只可使用 manufactured、zero-drive、单步和 Q 池；看到 D/I/F 结果后不得改物理制造方法优势。
 
-只有 raw 胜任、存在有限预算 headroom、transport-only bottleneck、一侧有限尺度响应超越 oracle 不确定性并经 event-time-shift 控制、组合新颖性与轻量分析均通过时才训练 CTH。否则保留对象并自动转 benchmark/comparative 路线，不伪造 CTH 准入。
+### 6.2 case pool
 
-### S5 — CTH 轻量分析与 development（未到达）
+完整 case 身份为：
 
-若准入，协议轴固定为 `FIXED_DURATION_RESET_WAVEFORM_SCALE_AXIS`，`lambda_R=1` 仅为 nominal anchor，不称纯幅值、纯速率或物理 knot。CTH 只称 `CONDITIONAL_APPLICATION_SPECIFIC_TRANSPORT_ARCHITECTURE_ADAPTATION`，不得称通用新 PINN 原语。
+`geometry × public/synthetic material branch × initial state × full waveform × full history`。
 
-Stage 1 比较 strong parameter-conditional raw、direct residual Taylor2、训练节点 exact smooth P4 与 transport-only CTH，并报告 CTH/P4/Taylor2/spline basis 的 rank、singular values、condition number、basis norm 与 off-grid leverage。CTH 未同时优于三者即转 exact-control negative comparative 稿。
+mesh、time step、collocation point、checkpoint 和 seed 不是独立科学 case。所有 case 在方法结果前互斥冻结为：
 
-Stage 2 仅在 Stage 1 PASS 后运行：SA/direct Jacobian first order、smooth6、PI-BSNet-like spline、rank-matched learned basis、all-field/generic latent hinge、parameter-matched wider raw、compute-matched extra-work raw、mirrored wrong knots、independent-per-view raw。失败后不补 seed、不移动 knot、不增加第二 hinge，不隐藏结果。
+- `Q`：oracle/守卫/事件资格化；
+- `D`：backbone、超参数、checkpoint 与低预算筛选；
+- `I1`：单模块 identity/attribution；
+- `I2`：组合与 best-method development confirmation；
+- `F_A`：完整 waveform/protocol 轴 formal；
+- `F_O`：至少整族 geometry/material/initial-history 正交 holdout；
+- `R`：本 GOAL 不打开的储备池。
 
-### S6 — sealed formal 或负向确认（未到达）
+同一器件或轨迹的相邻时空点不得跨池。formal 开封后禁止调参、换 case、补 seed、移动 margin 或重封。
 
-formal 固定三臂：primary method、strong raw、开封前冻结的最强非 primary challenger。每个完整 configuration 独立训练，不跨 configuration warm-start；case 是独立统计单位，seed 仅为嵌套重复。
+### 6.3 唯一结构主端点与硬守卫
 
-正向主张要求 `F_A` 同时相对 raw 与 challenger 达到预声明 superiority，`F_O` 同时相对二者达到 noninferiority，且全部物理守卫通过、计算—误差平面不被严格支配。失败时保留 sealed 结果并转负向稿；不得重封、补 seed、换 case、改 margin、筛失败 intent 或改 primary endpoint。授权预算内 power 不足时记 `FORMAL_POWER_BUDGET_INSUFFICIENT`，收缩为明确证据等级的 benchmark 稿，不把 pilot 冒充 formal。
+唯一结构主端点为相区时空对称差：
 
-## 6. 自动切换表
+\[
+E_\Gamma=\frac1T\int
+\frac{|\Omega_{\phi,\theta}(t)\triangle\Omega_{\phi,\mathrm{ref}}(t)|}
+{|\Omega_{\phi,\mathrm{ref}}(t)|+\varepsilon}\,dt,
+\quad \Omega_\phi(t)=\{x:\phi(x,t)\ge0.5\}.
+\]
+
+预结果 normalizer/floor 把各误差写成 oracle-floor units。关键次级量为 interface Hausdorff、event/switching delay、recovery、hotspot peak/centroid/FWHM、terminal current trace、programmed resistance、phase volume、pulse energy 和 peak temperature。PDE、本构、latent/thermal balance、`phi` 范围、terminal-current balance、IC/BC/interface、非有限值和 event coverage 是分别计票的硬守卫，不能平均掩盖。
+
+## 7. 分层执行链
+
+### S0 — 来源与机器合同
+
+- R0 一手来源审查已完成；不构成可运行性或方法证据。
+- 完成本文件、ADR、机器 program contract 和对象 numerical contract。
+- 记录本机环境；本地 GPU 不存在时只启动 CPU 可行阶段，不转付费/云端。
+
+### S1 — 原域 reproduction
+
+- `SHARP_PINNS_PAPER_REPLICATION_V1`：至少一个低成本 2D 原域 case，分离 paper identity 与 repo recipe；
+- PF-PINNs 至少一个低成本官方 case；
+- jaxpi2 至少一个 CPU 可行 smoke；
+- 每项记录 source SHA、license、environment、oracle、seed、预算、失败与差异。
+
+官方 smoke 只证明可执行；R2 至少复现一个预声明主图、主指标或方法排序。若固定环境不兼容，保留失败并进入 paper-spec clean-room 路线，不无界修依赖。
+
+### S2 — 机制 benchmark 与 oracle engineering
+
+- 1D Stefan/stiff Allen–Cahn：分离 frequency、sampling 与 stiffness；
+- 2D localized-heater difficulty map：预冻结 `hotspot width × interface width`；
+- wall-cell 只在 Q 池完成 manufactured、zero-drive、守恒、空间/时间收敛、independent replay、event stability 与 thermal/Joule effect。
+
+Oracle Gate 要求局域、可解析、可重复事件；空间/时间/replay floors 可估；Joule/thermal coupling 效应超越联合不确定性。整域瞬时翻转、事件低于保存分辨率、收敛失败或 event 对网格/阈值不稳定均为 `ORACLE_NO_GO`。
+
+### S3 — strong raw
+
+先对不超过 12 个公共候选做 fractional search：低预算 3 seeds、successive halving、最多 2 个高预算候选。候选只来自有界层数/宽度、modified MLP 或 clean-room PirateNet-style、raw/RFF/anisotropic RFF、固定/gradient-norm/mini-NTK、full/causal、fixed/RAR 与 Adam→deterministic L-BFGS。
+
+Sharp-domain raw 与 jaxpi2/general strong raw 均进入候选。baseline 获得与 proposed 相同或更多调参预算。Strong Raw Gate 要求在合格 event case 上形成正确事件、全部硬守卫通过，并留有稳定非地板误差；事件都无法形成时不允许直接比较 PHA/KC。
+
+### S4 — 单模块 attribution
+
+固定 support、精度、loss、seed schedule、参数/计算预算，依次比较：
+
+- `A0` 最强合格 raw；
+- `A1` global MF；
+- `A2` PHA-MF；
+- `A3` KC；
+- `A5` wider raw；
+- `A6` extra-work raw；
+- PHA/KC 第 4 节全部 kill controls。
+
+只打开 `I1` 一次。单模块必须在预声明困难 case 上相对每个承重 control 有稳定增量，且重要次级端点非劣；失败即冻结该模块 No-Go，不用组合掩盖 standalone 失败。
+
+### S5 — 组合与 best-method
+
+只有两个 standalone 均通过才运行 `A4=A0+PHA+KC`。打开 `I2` 前冻结 full、best standalone、adaptive pseudo-time、PF/RBAR-style sampling 和 common-sampling 身份。
+
+full 必须优于最强 standalone，或通过预声明的正交交互检验；wider/extra-work、adaptive pseudo-time、generic clock、global MF 与 sampling 不能解释全部收益。
+
+### S6 — sealed formal
+
+formal 每个完整 case 独立训练，seed 在 case 内聚合，不跨 case warm-start。方法臂为：PHK full、最强 domain/general baseline、开封前冻结的最强非 primary challenger。
+
+以 paired case-level studentized bootstrap 形成区间。主端点以 oracle-floor units 计，正向 superiority margin 固定为 `+0.5 floor units`；关键次级端点 noninferiority margin 固定为 `0.5 floor units`，硬守卫必须全部通过。formal case 数从 `{8,12,16,20,24,32}` 中按 D/I 控制的最大 paired SD、至少 80% power 与剩余预算预先选择；若无可行样本量，记 `FORMAL_POWER_BUDGET_INSUFFICIENT`，不把较小运行改称 formal。
+
+`F_A` 要求相对两条控制的主端点一侧区间下界均超过 superiority margin；`F_O` 要求相对两条控制的主端点和全部关键次级量满足 noninferiority。任何 primary formal fail 关闭正面 PHK 主张。
+
+### S7 — V2 论文与复现包
+
+只有实际证据决定稿件身份。交付英文/中文第二版正文、最终图表/表格、参考文献、anatomy cards、A/A′ 表、全部配置/失败运行、oracle convergence、case/seed split、gross compute、补充材料、复现说明、claim–evidence matrix 与 reviewer-risk 自检；无结果占位符。
+
+## 8. 自动裁决与失败切换
 
 | 失败位置 | 自动动作 |
 | --- | --- |
-| COMSOL legal/source FAIL | 启用预冻结 source-only fallback |
-| source fallback FAIL | 启用 `SYN_EDT_2D_V1` |
-| 来源对象 oracle/event FAIL | 关闭来源分支，启用预冻结 synthetic route |
-| CTH novelty/admission FAIL | 保留对象，转 diagnostic/comparative benchmark |
-| CTH Stage 1 FAIL | exact-control negative comparative manuscript |
-| CTH Stage 2 attribution FAIL | basis/placement/capacity failure manuscript |
-| formal superiority FAIL | sealed negative method manuscript |
-| orthogonal noninferiority FAIL | applicability/limits manuscript |
-| formal power 不足 | 明确证据等级的 benchmark manuscript |
-| GPU 不可用 | CPU 可行范围继续，否则收缩 benchmark manuscript |
-| 总预算耗尽 | 停止新增运行，用全部真实证据完成稿件 |
+| 官方仓库环境/代码失败 | 固定失败；转 paper-spec clean-room reproduction，不声称官方复现 |
+| 开放物理合同不闭合 | 缩减为透明 synthetic reduced contract；不 source-stitch 未公开参数 |
+| Oracle Gate 失败 | 停止 PINN 方法路线；交付 benchmark/numerical-limits V2 |
+| Strong Raw Gate 失败 | 先关闭方法比较；交付 strong-baseline capability/limits 稿，不用 PHA/KC 救援 |
+| PHA standalone 失败 | 冻结 `PHA_NO_GO`；KC 可独立继续，不允许 full 正面双模块主张 |
+| KC standalone 失败 | 冻结 `KC_NO_GO`；PHA 可独立继续，不允许 full 正面双模块主张 |
+| full 不优于最强 standalone | 保留最佳 standalone，第二模块只作负向消融 |
+| formal superiority 失败 | sealed negative/limits manuscript |
+| formal OOD noninferiority 失败 | applicability-boundary manuscript |
+| GPU 不可用 | 完成 CPU R0–S2 和可行小规模训练；不得转付费/云端，GPU 阶段保持资源阻塞 |
+| 预算耗尽 | 停止新增运行，以全部真实证据完成相应等级 V2 稿 |
 
-任何单分支失败只关闭对应科学主张，不完成总 GOAL。
+任何失败 seed、timeout、OOM、NaN、divergence 或 hard-guard fail 均保留并计入 intent；不允许结果后换 seed/case、删失败、改 margin 或追加 open-ended rescue。
 
-## 7. 冻结总预算
+## 9. 冻结预算与计算公平
 
-| 资源 | 总上限 |
+| 资源 | 上限 |
 | --- | ---: |
-| 新增一手来源载体 | 12 |
-| 深审 source candidates | COMSOL64 + 1 fallback |
-| 来源阶段 | 5 日 |
-| CPU solver intents | 40 |
-| CPU core-hours | 256 |
-| development GPU | 96 exclusive GPU-hours |
-| formal GPU reserve | 128 exclusive GPU-hours |
-| GPU 总上限 | 224 exclusive GPU-hours |
-| 单方法正式 superseding rerun | 最多 1 次，且须有相关输入/实现/合同变化 |
-| paid compute | 0 |
+| 新增一手来源载体 | R0 已审 8 个对象；S1 仅允许补 4 个决定性载体 |
+| CPU oracle 与 reproduction | 128 core-hours |
+| development GPU | 64 exclusive GPU-hours |
+| sealed formal GPU | 64 exclusive GPU-hours |
+| GPU 总上限 | 128 exclusive GPU-hours，仅本地实际可用设备 |
+| paid/cloud compute | 0 |
+| 同一正式方法 superseding rerun | 最多 1 次，仅限外部执行损坏或相关输入/实现已改变 |
 | Git/external publication | 0 |
 
-未用 development 预算可在 Route 1–3 development 间转移；formal reserve 不得借给 development。所有失败运行计入预算。
+每个方法和失败 intent 记录参数量、collocation、forward、AD 工作、optimizer closure/update、wall time、CPU/GPU 型号、峰值内存/显存、gross compute、失败身份和 rerun disposition。参数量、更新数或 wall time 任一单轴都不能单独证明公平。
 
-## 8. 学术边界与自主规则
+## 10. 正面主张的充分条件
 
-禁止 fabrication、hidden source stitching、seed cherry-picking、formal peeking、post-hoc margin、压制负控、实验验证/作者原生重放/真实物理 kink/通用新 PINN 原语/世界首创/普适性/SOTA/接收保证等无证据主张。
+“关键指标不低于 baseline”只是必要条件，不是论文完成条件。PHK 正面主张必须同时满足：
 
-Agent 对普通实现、超参数、门后切换和阴性结果自主处理；每道门通过即继续，每个分支失败即按表切换，不因工期降低门或救援。只有需要用户专属凭据/许可动作、机器安全边界、工作区外破坏性动作、付费支出或法律伦理冲突时暂停。
+1. 合格 oracle、事件和 floors 已在方法训练前固定；
+2. 最强 raw 能解析事件，且 baseline 调参与 proposed 公平；
+3. PHA 相对 global MF、容量/计算和 wrong-gate controls 在局域高频/热点困难 case 上通过；
+4. KC 相对 generic monotone、RS-like 与 adaptive pseudo-time 在 stiff case 上通过，并在 smooth control 上显示机制差异；
+5. full 相对最强 standalone 有增量或预声明交互；
+6. `F_A` 主端点 superiority 与 `F_O` noninferiority 同时通过；
+7. 全部物理/器件硬守卫通过，增益超过 oracle floor、seed variability 与实际意义阈值；
+8. 失败 case/seed 和 gross compute 全量报告；
+9. claim 仅限透明 synthetic reduced electrothermal phase-field benchmark 和实际测试的 complete-case/OOD 轴，不外推到实验材料、真实器件、普适 PINN 或 SOTA。
 
-## 9. 不得省略的冻结定义与计算合同
+## 11. 当前终局状态
 
-### 9.1 signed local event
-
-对周期 (k) 的局部耗尽定义为
-
-\[
-d_k(x,t)=
-\frac{c_{\mathrm{pre},k}(x)-c(x,t)}{c_{\mathrm{scale}}}.
-\]
-
-事件资格必须同时检查 localization、partial coverage、depletion/gap thickness、recovery、cycle drift、mass 与 port response；不得用端口单曲线、一次阈值穿越或整域翻转替代同一 ROI 中两个连续周期的局部耗尽—恢复事件。
-
-### 9.2 CTH、exact smooth P4 与训练节点
-
-若且仅若 S4 准入，固定
-
-\[
-\delta=\frac{\lambda_R-1}{\epsilon},
-\qquad
-q_{\mathrm{tr}}
-=q_0+\delta q_1+\delta^2q_2+|\delta|h,
-\qquad
-(c_v,\mathbf J_v)=B(q_{\mathrm{tr}}).
-\]
-
-训练视图固定为
-
-\[
-\delta\in\{-1,-1/2,0,1/2,1\}.
-\]
-
-exact smooth kill control 固定为
-
-\[
-P_4(\delta)=\frac{7}{3}\delta^2-\frac{4}{3}\delta^4,
-\qquad
-q_{\mathrm{P4}}
-=q_0+\delta q_1+\delta^2q_2+P_4(\delta)h.
-\]
-
-在上述五个训练节点上 (P_4(\delta)=|\delta|)。因此任何 CTH 正向身份必须依靠 sealed off-grid complete cases、轻量 basis 分析和完整强控制，而不能靠 centered training grid 上的拟合差异。
-
-Stage 1 四臂严格为：
-
-1. `STRONG_PARAMETER_CONDITIONAL_RAW`；
-2. `DIRECT_RESIDUAL_TAYLOR2`；
-3. `EXACT_SMOOTH_P4`；
-4. `CTH_TRANSPORT_ONLY`。
-
-Stage 2 严格为：`SA_DIRECT_JACOBIAN_FIRST_ORDER`、`SMOOTH6`、`PI_BSNET_LIKE_SPLINE`、`RANK_MATCHED_LEARNED_PARAMETER_BASIS`、`ALL_FIELD_OR_GENERIC_LATENT_HINGE`、`PARAMETER_MATCHED_WIDER_RAW`、`COMPUTE_MATCHED_EXTRA_WORK_RAW`、`MIRRORED_WRONG_KNOTS` 与 `INDEPENDENT_PER_VIEW_RAW`。
-
-### 9.3 formal 统计单位与冻结量
-
-对方法 (m)、完整 case (i)、seed (s)，两周期等权端点为
-
-\[
-Z_{m,i,s}=\frac{1}{2}\sum_{k=1}^{2}
-\frac{E_{m,i,k,s}}{\tau_{\mathrm{comp},i,k}},
-\qquad
-\widetilde Z_{m,i}=\operatorname{median}_{s} Z_{m,i,s}.
-\]
-
-相对控制 (c) 的 paired improvement 为
-
-\[
-D_{i,c}=\widetilde Z_{c,i}-\widetilde Z_{\mathrm{primary},i}.
-\]
-
-formal 开封前冻结 primary endpoint、最小有意义效应、noninferiority margin、case/seed 数、区间方法、多重性/gatekeeping、timeout/divergence/replay 与 intent-to-run 规则、硬件吞吐和总预算。完整 case 是独立统计单位；seed 先在 case 内聚合。
-
-### 9.4 完整计算与失败记账
-
-每个方法和失败 intent 必须记录：参数量、forward 次数、自动微分工作、optimizer closure/更新、wall-clock、峰值内存/显存、实际硬件、gross compute、失败身份与是否允许唯一 superseding rerun。只有相关输入、实现或合同发生变化时，单方法最多允许一次正式 superseding rerun；不得把失败计算从公平比较中删除。
-
-## 10. 完整稿件与复现交付清单
-
-论文正文必须包含：题目、摘要、引言、相关工作、对象与来源身份、governing equations 与物理合同、PINN 与候选方法、oracle/案例划分/统计、结果、消融与计算公平、formal 或明确证据等级的负向确认、讨论、局限性和结论。
-
-最终图表至少包括：
-
-1. 来源、对象、许可与 clean-room 身份；
-2. solver 收敛和来源或 synthetic 合同验证；
-3. signed event 与两个 thermal controls；
-4. strong raw competence 与瓶颈；
-5. primary method、exact controls 与轻量分析；
-6. 全控制漏斗与 compute Pareto；
-7. sealed formal 或负向适用边界；
-8. 一张主结果表。
-
-补充与复现必须包含：全部配置和 case manifest、参数/来源账本、seed/失败 intent/gross compute、统计合同、额外场图与消融、代码和数据目录说明、复现步骤、claim–evidence mapping 与 reviewer-risk self-audit。
+R0 与 S0B 在任何 PHK 数值结果前完成；S1 只建立固定源码身份和模块级 CPU smoke，不建立论文指标复现。S2 已形成上述 Oracle No-Go 并关闭方法路线。S7 有边界的负结果论文与复现包已经完成；原执行授权全部消费并关闭，当前无 solver、PINN、GPU、formal 或论文扩展授权。
 
 ~~~text
-NOT_COMPLETE =
-    source report only
-    OR code only
-    OR oracle only
-    OR pilot only
-    OR negative dossier only
-    OR manuscript skeleton
-    OR manuscript with placeholder results
+CURRENT_EVIDENCE =
+    R0_PRIMARY_SOURCE_AUDIT_COMPLETE
+    + FIXED_SOURCE_MODULE_SMOKES_ONLY_NO_PAPER_METRIC_REPRODUCTION
+    + PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE
+    + NO_STRONG_RAW_OR_PHA_OR_KC_EVIDENCE
 
 COMPLETE =
-    FULL_MANUSCRIPT
-    + ACTUAL_RESULTS
-    + FINAL_FIGURES_AND_TABLES
-    + REFERENCES
-    + SUPPLEMENT
-    + REPRODUCIBILITY_PACKAGE
-    + CLAIM_BOUNDARY_AUDIT
+    BOUNDARY_PRESERVING_ORACLE_NO_GO
+    + V2_BENCHMARK_NUMERICAL_LIMITS_MANUSCRIPT
+    + FINAL_FIGURES_TABLES_REFERENCES_SUPPLEMENT_REPRO_AND_CLAIM_AUDIT
 ~~~
-
-## 11. GOAL 完成记录
-
-- `FULL_MANUSCRIPT`：[完整英文初稿](../../paper/manuscript.md)，包含方法、实际负向结果、证据等级、讨论、局限性与结论，无结果占位符；作者署名、机构、基金、利益冲突和致谢仍由作者在投稿前补齐。
-- `ACTUAL_RESULTS`：[S2 终局收口](../experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)与正文只报告 Q0 零驱动守卫、首个受驱动 QN 执行失败及 `NOT_REACHED` 下游门。
-- `FINAL_FIGURES_AND_TABLES`：[六幅最终图及图源](../../paper/figures/)同时提供 PNG/PDF，主表见 [tables.md](../../paper/tables.md)。
-- `REFERENCES`：[references.bib](../../paper/references.bib)固定 13 个已审载体的完整身份。
-- `SUPPLEMENT`：[supplement.md](../../paper/supplement.md)固定合同、资格梯、失败计账与额外边界。
-- `REPRODUCIBILITY_PACKAGE`：[reproducibility.md](../../paper/reproducibility.md)与[包索引](../../paper/README.md)覆盖证据哈希、ledger、50 项 focused tests、Q0-only 复算、非科学诊断和图表重绘。
-- `CLAIM_BOUNDARY_AUDIT`：[claim_evidence_matrix.md](../../paper/claim_evidence_matrix.md)逐项给出载体、证据身份、禁止外推和 reviewer-risk 自检。
-- [package-manifest.json](../../paper/package-manifest.json)覆盖除自身外 34 个交付文件；其信息性 SHA256 为 `1B00038B54049B4738AB6998BF4FE4C508B1F4200BA692889066D259AFE9F7A6`。2026-08-27 的后续编辑只重构论文叙事并新增中文/通俗派生稿，不改变本 GOAL 的冻结科学结果或 claim ceiling。
-
-最终科学边界保持 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_NO_ORACLE_EVENT_OR_METHOD_EVIDENCE`。`GOAL_COMPLETE` 只表示本地制品与预注册 fallback 已完整交付，不表示 oracle、event、PINN、GPU、OOD、formal、实验验证、期刊接收或 SOTA 成立。

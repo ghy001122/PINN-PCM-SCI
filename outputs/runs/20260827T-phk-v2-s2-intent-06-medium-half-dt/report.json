@@ -1,0 +1,85 @@
+{
+  "case_id": "PHK_Q_FULL",
+  "claim_status": "NO_ORACLE_EVENT_OR_METHOD_CLAIM_SINGLE_CASE_ONLY",
+  "event": {
+    "cycle_peak_relative_drift": 1.568862275449081,
+    "cycles": [
+      {
+        "cycle_index": 1,
+        "event_time": 0.21946666666666667,
+        "peak_full_domain_fraction": 0.10437499999999998,
+        "peak_outside_roi_fraction": 0.0,
+        "peak_roi_fraction": 0.3450413223140466,
+        "pre_roi_fraction": 0.0,
+        "recovery_fraction": 0.22155688622754208,
+        "saved_steps_at_or_above_threshold": 156
+      },
+      {
+        "cycle_index": 2,
+        "event_time": null,
+        "peak_full_domain_fraction": 0.271875,
+        "peak_outside_roi_fraction": 0.00375,
+        "peak_roi_fraction": 0.8863636363636216,
+        "pre_roi_fraction": 0.2685950413223127,
+        "recovery_fraction": 0.1204013377926422,
+        "saved_steps_at_or_above_threshold": 201
+      }
+    ],
+    "failures": [
+      "cycle_1_recovery_too_small",
+      "cycle_2_event_missing",
+      "cycle_2_recovery_too_small",
+      "cycle_peak_relative_drift_too_large"
+    ],
+    "passed": false
+  },
+  "guard": {
+    "failures": [],
+    "maximum_current_balance_relative": 4.7064955825122154e-14,
+    "maximum_linear_residual_scaled": 3.792267844664974e-15,
+    "maximum_no_flux_residual_scaled": 0.0,
+    "maximum_phase_residual_scaled": 1.2918247721538378e-10,
+    "maximum_thermal_residual_scaled": 5.035032391020877e-10,
+    "nonfinite_count": 0,
+    "passed": true,
+    "phase_range": [
+      1.582731535047253e-05,
+      0.9999744135886014
+    ],
+    "potential_range": [
+      0.0,
+      0.7441826251261179
+    ],
+    "temperature_range": [
+      0.0,
+      1.083326019058674
+    ]
+  },
+  "intent": {
+    "control": "FULL",
+    "id": "Q_NOMINAL_MEDIUM_HALF_DT",
+    "order": 6,
+    "resolution": "medium_half_dt"
+  },
+  "resolution": {
+    "dt": 0.00125,
+    "evidence_identity": "PHK_V2_FROZEN_Q_RESOLUTION",
+    "name": "medium_half_dt",
+    "nx": 80,
+    "nz": 40,
+    "save_every": 4,
+    "time_end": 2.0
+  },
+  "schema_id": "phk-v2-q-case-report-v1",
+  "single_case_adjudication": "PENDING_COMPLETE_Q_LADDER",
+  "solver_statistics": {
+    "coupled_blocks_total": 6160,
+    "electric_linear_solves_total": 7761,
+    "final_residual_evaluations_total": 1600,
+    "linear_solves_total": 21884,
+    "phase_linear_solves_total": 7963,
+    "phase_newton_iterations_total": 7963,
+    "thermal_linear_solves_total": 6160,
+    "time_steps_total": 1600
+  }
+}

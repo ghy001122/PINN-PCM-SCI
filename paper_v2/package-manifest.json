@@ -1,0 +1,262 @@
+{
+  "schema_id": "phk-v2-paper-package-manifest-v1",
+  "status": "COMPLETE_LOCAL_NEGATIVE_LIMITS_V2_PACKAGE",
+  "self_reference_policy": "package-manifest.json excluded from its own entries",
+  "claim_status": "PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE_NO_PINN_METHOD_EVIDENCE",
+  "package_file_count": 35,
+  "package_files": [
+    {
+      "path": "paper_v2/baseline_anatomy_cards.md",
+      "bytes": 8501,
+      "sha256": "4A0901937309DB8E6B666030FE7E3B6F3105B44E5F43B7B012785B58DD930F1C"
+    },
+    {
+      "path": "paper_v2/build_package_manifest.py",
+      "bytes": 2919,
+      "sha256": "4CB3745524F7DA5BA29684EEBDF4DDA3464441B150FF1A0BA193AF33CA7AABA8"
+    },
+    {
+      "path": "paper_v2/claim_evidence_matrix.md",
+      "bytes": 4997,
+      "sha256": "60CF1FD7B52B1B66F2ED632E3F8C27027A150DB722938D543F6E126942A1AA98"
+    },
+    {
+      "path": "paper_v2/figures/captions.md",
+      "bytes": 2307,
+      "sha256": "079BA27805A4FDA0B309D99963EC82E4EE107B563AE6013DF2B230EA8FEFA794"
+    },
+    {
+      "path": "paper_v2/figures/data/causal_control.csv",
+      "bytes": 21443,
+      "sha256": "3CEA113DD775857CA06C9C7DEF1563EC56FBE2C252DD417F29FD9E63736D7513"
+    },
+    {
+      "path": "paper_v2/figures/data/convergence_components.csv",
+      "bytes": 1232,
+      "sha256": "E114EA24854149CC1F86CE5890510C7257FFEC692BABDDDABABF089D36435D34"
+    },
+    {
+      "path": "paper_v2/figures/data/event_trajectories.csv",
+      "bytes": 79687,
+      "sha256": "AC24179FF9044EBBCA7CE2E5A0F507F592C98D60BC6DB7B85FD77D562DFA255A"
+    },
+    {
+      "path": "paper_v2/figures/data/qualification_ladder.csv",
+      "bytes": 390,
+      "sha256": "9E7B25557D7C2C19B0B9B7CA3EAC87B42838C01311CCA87E3F459BEE740C9DD5"
+    },
+    {
+      "path": "paper_v2/figures/data/source_anatomy.csv",
+      "bytes": 612,
+      "sha256": "592E2329B81CB0E6115AF5A2A7CB861ECE9E5523513A34A7A7AD0D7B0697002E"
+    },
+    {
+      "path": "paper_v2/figures/data/workflow.csv",
+      "bytes": 368,
+      "sha256": "44B2423A078A7F2802731784332473B3B56E95780F5C8BA19F0A12E517A138CD"
+    },
+    {
+      "path": "paper_v2/figures/figure-01-workflow.pdf",
+      "bytes": 23737,
+      "sha256": "8F167ABDFEE1E40481FB7698325ED20A6EC60960C4B5279D5A3F18AD1BA70D49"
+    },
+    {
+      "path": "paper_v2/figures/figure-01-workflow.png",
+      "bytes": 223272,
+      "sha256": "D1E7FD6938387766E21DBC71B774B57F9CCAFF598585D4DA35534B56B6D0418A"
+    },
+    {
+      "path": "paper_v2/figures/figure-02-source-anatomy.pdf",
+      "bytes": 26144,
+      "sha256": "584FFCE49F1B1BB049F8D25BA3B3489912B58056FE4BA942A27FEB684439A4CC"
+    },
+    {
+      "path": "paper_v2/figures/figure-02-source-anatomy.png",
+      "bytes": 366029,
+      "sha256": "A7BF546246888F6CE15A02D11F8B8437156B3F87AC841883529BE9D6F5FA85B0"
+    },
+    {
+      "path": "paper_v2/figures/figure-03-qualification-ladder.pdf",
+      "bytes": 27050,
+      "sha256": "1844525B8CD5F0B4589C7B5867A44148D5F58AB2C10B3C1C43BCF811EF187FB7"
+    },
+    {
+      "path": "paper_v2/figures/figure-03-qualification-ladder.png",
+      "bytes": 280521,
+      "sha256": "084AEF37AD37F3EF4789FF413A3F62B7C9FEB976421D6F4E588304176F530DDD"
+    },
+    {
+      "path": "paper_v2/figures/figure-04-event-trajectories.pdf",
+      "bytes": 33869,
+      "sha256": "D10B88F665E7D6FB742E244629328A5A349E975F0C8F48F8FCE8A4D2805C36C5"
+    },
+    {
+      "path": "paper_v2/figures/figure-04-event-trajectories.png",
+      "bytes": 408310,
+      "sha256": "D2E4ACA2D7AA6740BC59D2CB8E8B0302AA42BB75C693CCC3F5837E8015B33CFA"
+    },
+    {
+      "path": "paper_v2/figures/figure-05-convergence-controls.pdf",
+      "bytes": 23762,
+      "sha256": "0CC1252DE298EBABA637952F0B26CFA6942F6776DD79ED1BBC7E3F6AC9F9D517"
+    },
+    {
+      "path": "paper_v2/figures/figure-05-convergence-controls.png",
+      "bytes": 179390,
+      "sha256": "483EEBCE018A4C98013BC15EC71FCF53E47234634031076AB002AF4338F3C31C"
+    },
+    {
+      "path": "paper_v2/figures/figure-06-causal-and-claim-boundary.pdf",
+      "bytes": 30068,
+      "sha256": "DB7E8580DD5CC0A811393B68C83FB6D9A5BE5DC0E8258DA9541217D7CC0F9D32"
+    },
+    {
+      "path": "paper_v2/figures/figure-06-causal-and-claim-boundary.png",
+      "bytes": 331149,
+      "sha256": "A3582F486FE817FA0B93E9C2F5624DE0B8093747AB6F5E481C96A5E454BE81AD"
+    },
+    {
+      "path": "paper_v2/figures/generate_figures.py",
+      "bytes": 23757,
+      "sha256": "5805C8CD3B9FE15621F43A43ADEE244AF35165575D9BF6B8F98F43D336E135CA"
+    },
+    {
+      "path": "paper_v2/figures/requirements-figures.txt",
+      "bytes": 33,
+      "sha256": "EB063E93ADD897BF920238654E11C9539ECFC87109CDB52E2F33422E3290E3D0"
+    },
+    {
+      "path": "paper_v2/figures/source-manifest.json",
+      "bytes": 5333,
+      "sha256": "9C8CBE7A4AA1D65F1E0493E756A57FD5CCED0F1110353829D0A86AB97200FA40"
+    },
+    {
+      "path": "paper_v2/manuscript.md",
+      "bytes": 31288,
+      "sha256": "4E6393710860031E8633AFF4CBDF6BFCD68A1D60C4D6549B941578759B6DA255"
+    },
+    {
+      "path": "paper_v2/manuscript_zh.md",
+      "bytes": 16602,
+      "sha256": "75FFD8719AC3CE9CD01E039A719F6F4108257E380BB10D39A074CD832CFCC05D"
+    },
+    {
+      "path": "paper_v2/plain_language_story_zh.md",
+      "bytes": 2889,
+      "sha256": "A7EFC40EBDC2C94618027C15FCA15E813A7E66DC37C3C64FAE10C34A259B8112"
+    },
+    {
+      "path": "paper_v2/README.md",
+      "bytes": 3449,
+      "sha256": "81B3D936B1BAE45352BD9B72152CE76797B5962C10628D3A2BD474CDB91C39BD"
+    },
+    {
+      "path": "paper_v2/references.bib",
+      "bytes": 4101,
+      "sha256": "FA9BB5EF06B532CFCE5C754CF6CD56E9B75F9C27FE97B0902A117EDCB282F200"
+    },
+    {
+      "path": "paper_v2/reproducibility.md",
+      "bytes": 6013,
+      "sha256": "9925A6103BD9E77E3767BFB5F6E547C386A790FBB4FA7CD02EBE4552E42C32D9"
+    },
+    {
+      "path": "paper_v2/reviewer_risk_self_check.md",
+      "bytes": 4110,
+      "sha256": "E1953DE2195AF05AFE5E701358921317F08040523F22A5DE6BDD2CB06B957DD8"
+    },
+    {
+      "path": "paper_v2/supplement.md",
+      "bytes": 11716,
+      "sha256": "57A35ECE171107F7F7E9C14E472A083252733D111AEF3053E2A22854DB0C5B24"
+    },
+    {
+      "path": "paper_v2/tables.md",
+      "bytes": 5058,
+      "sha256": "6EF213862B5AC78AC9FC3ABE140473F7BC815FC9C926548F889EEC02DE72285F"
+    },
+    {
+      "path": "paper_v2/validate_package.py",
+      "bytes": 5916,
+      "sha256": "BF0D900D4D4872556BF75F441979B0D0AD394A4CE6FFBA06BD2F82A79AA39BF2"
+    }
+  ],
+  "evidence_dependency_count": 15,
+  "evidence_dependencies": [
+    {
+      "path": "configs/phk_v2/program_contract.json",
+      "bytes": 8077,
+      "sha256": "0E1D89DD23F93C90160AC82ECE60ADA154410F4DDC33578CB892207FE8B445A8"
+    },
+    {
+      "path": "configs/phk_v2/object_numerical_contract.json",
+      "bytes": 9186,
+      "sha256": "3B3B9A369F4AFDFFB201394DD294E7196BAF04E5B36BAFE126291CA9CB3EA157"
+    },
+    {
+      "path": "configs/phk_v2/case_split_manifest.json",
+      "bytes": 308712,
+      "sha256": "EBFDA2D59049AC989E8AA6C9622D92CF077D4B808961AB5807D178BF09DF57ED"
+    },
+    {
+      "path": "docs/references/2026-08-27-phk-pinn-primary-source-baseline-audit.md",
+      "bytes": 25341,
+      "sha256": "3F72722F844780EEA42E395C47C99568D8235AC6C0A70AB338BC74DAF6803C97"
+    },
+    {
+      "path": "docs/experiment/2026-08-27-phk-v2-s1-baseline-acquisition-and-cpu-smoke.md",
+      "bytes": 5726,
+      "sha256": "E00F3050F401A3FB28B129FCD241C25AE33F0777273F85F16620DCD24F4A5E27"
+    },
+    {
+      "path": "docs/experiment/2026-08-27-phk-v2-s2-terminal-closeout.md",
+      "bytes": 9035,
+      "sha256": "0E7F78037093DAD174832BD9D365B471D57DC4C2FD53AC1CAB729039B0F694F8"
+    },
+    {
+      "path": "outputs/runs/20260827T-phk-v2-s2-q-terminal-summary/summary.json",
+      "bytes": 11523,
+      "sha256": "8964ACB687F1BDB4F03C2E0D33891EE3705D4C2ABD271085D0C82A2B4469EA78"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_contract.py",
+      "bytes": 13691,
+      "sha256": "3D01FD699F194005E4D6395209BC0C59F0579C482DC5BC2CAA634273CAAF47BB"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_benchmark.py",
+      "bytes": 62707,
+      "sha256": "B18AFA4F9005735EF46E3958F325C5BC40CECD0BF5E419854B140FAF76DF9645"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_evaluator.py",
+      "bytes": 5453,
+      "sha256": "167C03985CF06A8D33E01B131A2BEEF782E513DCEE45F479EA9BC0F1EC6638F1"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_runner.py",
+      "bytes": 32732,
+      "sha256": "16678642D1CC4283BE4D6B36DBB842F10FD9D771EE5AB475D7F6F469E6E5A50E"
+    },
+    {
+      "path": "tests/test_phk_contract.py",
+      "bytes": 5572,
+      "sha256": "9648157B669EE01262DCD4937CFF41D355DDECBDC8D6A1D8A1E51FC8969557DB"
+    },
+    {
+      "path": "tests/test_phk_benchmark.py",
+      "bytes": 7141,
+      "sha256": "297B8B82A851102AA801B630DD7245EFEBCD8B67DD8B36242E5AC9F435279920"
+    },
+    {
+      "path": "tests/test_phk_evaluator.py",
+      "bytes": 2558,
+      "sha256": "ED2816BACA86160E7A833041CAA9B5FDF9644D87CA1285B8A82E78AF91B0C0B4"
+    },
+    {
+      "path": "tests/test_phk_runner.py",
+      "bytes": 6586,
+      "sha256": "98AAD747222CDE41267FC935C49277A8703AAC5024AFB9247122C0C8ECE84040"
+    }
+  ]
+}

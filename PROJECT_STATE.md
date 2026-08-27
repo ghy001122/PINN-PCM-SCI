@@ -2,33 +2,40 @@
 
 更新时间：2026-08-27
 
-- `phase_id`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V2_COMPLETE_ORACLE_NO_GO`
+- `lifecycle_state`: `COMPLETED`
 - `blocker_id`: `NONE`
-- `claim_status`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_NO_ORACLE_EVENT_OR_METHOD_EVIDENCE`
-- `authorization_scope`: `ONE_SHOT_LOCAL_RESEARCH_EXECUTION_CONSUMED_AND_CLOSED`
-- `authorization_package`: `S0_TO_S6_AND_LOCAL_MANUSCRIPT_CONSUMED`
-- `plan_status`: `COMPLETED`
-- `candidate_status`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_FROZEN`
-- `idea_research_status`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE`
-- `object_selection_status`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_FROZEN`
-- `method_selection_status`: `NOT_REACHED_CTH_DIAGNOSTIC_ONLY_NO_TRAINING`
-- `source_scan_status`: `S1_COMPLETE_ROUTE_1_NOT_ADMITTED_ROUTE_2_SOURCE_CONTRACT_FAIL_SYNTHETIC_ACTIVATED`
-- `fresh_primary_source_budget`: `12_NEW_PRIMARY_CARRIERS_TOTAL`
-- `deep_review_object_family_budget`: `COMSOL64_PLUS_ONE_FALLBACK`
-- `screen_timebox`: `FIVE_DAYS_AFTER_S0_FREEZE`
-- `last_completed_science_terminal`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`
+- `claim_status`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE_NO_PINN_METHOD_EVIDENCE`
+- `authorization_scope`: `PHK_V2_EXECUTION_AND_CLOSEOUT_CONSUMED_CLOSED`
+- `authorization_package`: `S0_TO_S7_LOCAL_RESEARCH_AND_V2_MANUSCRIPT_CONSUMED`
+- `plan_status`: `COMPLETED_BOUNDARY_PRESERVING_ORACLE_NO_GO`
+- `candidate_status`: `PHK_REDUCED_WALL_CELL_2D_V1_ORACLE_NO_GO`
+- `idea_research_status`: `PHK_V2_COMPLETE_ORACLE_NO_GO`
+- `object_selection_status`: `PHK_REDUCED_WALL_CELL_2D_V1_FROZEN_ORACLE_NO_GO`
+- `method_selection_status`: `NOT_ENTERED_ORACLE_GATE_NO_GO`
+- `source_scan_status`: `PHK_V2_R0_PRIMARY_SOURCE_AUDIT_COMPLETE`
+- `fresh_primary_source_budget`: `R0_EIGHT_OBJECTS_PLUS_FOUR_DECISIVE_CARRIERS_MAX`
+- `deep_review_object_family_budget`: `SHARP_PF_JAXPI2_PLUS_REDUCED_PCM_TOPOLOGY`
+- `screen_timebox`: `BOUNDED_BY_PROGRAM_CONTRACT`
+- `last_completed_science_terminal`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`
 - `prior_package_a_status`: `CONSUMED_AND_CLOSED`
-- `compute_authorization`: `CLOSED_GOAL_COMPLETE_READ_ONLY_REPRO_AUDIT_ONLY`
-- `implementation_authorization`: `CLOSED_GOAL_COMPLETE_MAINTENANCE_ONLY`
-- `formal_or_gpu_authorization`: `NOT_REACHED_CLOSED_BY_S2_GATE`
+- `compute_authorization`: `NO_FURTHER_PHK_SOLVER_PINN_GPU_OR_FORMAL_EXECUTION_AUTHORIZED`
+- `implementation_authorization`: `NONE_GOAL_COMPLETE`
+- `formal_or_gpu_authorization`: `CLOSED_ORACLE_GATE_NO_GO`
 - `next_research_execution_authorized`: `false`
-- `next_authorizable_package`: `NONE_GOAL_COMPLETE_NEW_USER_AUTHORIZATION_REQUIRED`
+- `next_authorizable_package`: `NONE_REQUIRES_NEW_EXPLICIT_AUTHORIZATION`
 - `prior_hfo_route_status`: `WAVEFORM_TIME_NO_GO_FROZEN`
 - `novelty_status`: `CTH_POSITIVE_ARCHITECTURE_NOVELTY_NOT_CLEARED_BOUNDED_REVIEW`
 
 ## 当前已核验事实
 
+- `VERIFIED_PHK_V2_ORACLE_GATE_TERMINAL_NO_GO`：terminal summary run `20260827T-phk-v2-s2-q-terminal-summary` 固定 `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`。Intents 1–8 completed，intent 9 consumed `PHK phase Newton line search reached its frozen minimum step`，intents 10–12 `NOT_REACHED`。Nominal coarse/medium/fine/half-dt/replay 均通过数值 hard guards，但第一周期 recovery 仅约 `0.22–0.24`，第二周期没有新的阈值上穿，cycle-peak drift 约 `1.41–1.59`；exact replay 六分量全为 `0.0`。该结果关闭 strong raw、PHA-MF、KC、组合、GPU 与 formal，不建立任何 PINN 方法证据。summary SHA256 `8964ACB687F1BDB4F03C2E0D33891EE3705D4C2ABD271085D0C82A2B4469EA78`。
+- `VERIFIED_PHK_V2_LOCAL_DELIVERABLES_COMPLETE`：[PHK-V2 最终包](paper_v2/README.md)已交付 4,128-word 英文稿、完整中文稿、通俗故事、六幅 PNG/PDF 图、六份图源 CSV、最终表格与参考文献、baseline anatomy cards、补充材料、复现说明、claim–evidence matrix 和 reviewer-risk 自检。figure source manifest 经两次重绘保持 SHA256 `9C8CBE7A4AA1D65F1E0493E756A57FD5CCED0F1110353829D0A86AB97200FA40`；[包清单](paper_v2/package-manifest.json)记录除自身外 35 个包内文件与 15 个外部证据依赖，SHA256 `A0BFF4D3DE95F2E10167DFC5FEB09EFDE704E62EA6D54FDE7CFE5621ABE38173`，`PHK_V2_PACKAGE_VALID` 通过。该交付保持 Oracle No-Go 与无 PINN 方法证据上限。
+
+- `VERIFIED_PRIOR_PHK_V2_R0_AND_AUTHORIZATION`：用户提供并要求执行《后续研究总规划》；经[R0 一手来源审查](docs/references/2026-08-27-phk-pinn-primary-source-baseline-audit.md)纠正后，[ADR 0045](docs/adr/0045-adopt-phk-v2-strong-baseline-and-two-module-execution.md)、[唯一 live plan](docs/plans/NEXT_ACTIONS.md)、[program contract](configs/phk_v2/program_contract.json)与[S0 预注册记录](docs/governance/2026-08-27-phk-v2-s0-program-preregistration.md)已在任何 PHK 数值结果前写入。该条记录的是 S0 时点的历史授权；现已由 Oracle Gate 终局与完成包消费并关闭。官方论文指标复现、合格 PHK oracle/event、strong raw、PHA、KC、GPU 与 formal 仍无证据。
+- `VERIFIED_PHK_V2_BASELINE_IDENTITY_BOUNDARY`：Sharp 正式论文方法与其当前仓库 causal/RAR 长预算 recipe 已固定为两个身份；Sharp 是主 phase-field domain anchor，不是唯一 evidence baseline。PF 为 sampling/NTK 支持 control，jaxpi2 adaptive pseudo-time 为 mandatory general strong/KC falsification control，PirateNet 与 Causality-RBAR 受许可/代码可用性限制而使用 paper-spec 身份。
+- `VERIFIED_PHK_V2_LOCAL_RESOURCE_STATE`：项目虚拟环境为 Python 3.11.9、PyTorch 2.5.1+cpu；CUDA unavailable、0 devices、`nvidia-smi` 不存在。历史 CPU R0/R1/oracle engineering 授权已消费；Oracle Gate No-Go 已关闭 GPU development/formal，且从未授权付费或云端替代。
+- `VERIFIED_PHK_V2_S0B_OBJECT_AND_SPLIT_FREEZE`：[S0B freeze](docs/governance/2026-08-27-phk-v2-s0b-object-and-split-freeze.md)在首个 PHK 数值结果前固定 object contract SHA256 `3B3B9A369F4AFDFFB201394DD294E7196BAF04E5B36BAFE126291CA9CB3EA157`、split file SHA256 `EBFDA2D59049AC989E8AA6C9622D92CF077D4B808961AB5807D178BF09DF57ED` 与内部 manifest hash `55261CCA82ED2B71A9D3A81E28FC957B4873086CECB09D28EEE9B73B2CD73E09`。324 个 complete cases 分入 `D=48/I1=19/I2=21/F_A=26/F_O=150/R=60`；7 项合同/runner TDD 测试通过。该项没有 solver、event 或方法证据。
 - `VERIFIED_MANUSCRIPT_POLISH_INTEGRATION_COMPLETE`：外部会话 `6a8f9ed2-a678-83ee-ac63-3fc48de531f8` 的可读审查结论已经与 live authority、S1/S2 evidence、manifests、代码和现有论文包逐项核对。英文主稿已集中为 failure-preserving reference-solver qualification 主线；新增完整中文稿与通俗故事；C12 更新为 2026 年 3 月 TMLR 主记录并保留 ICLR workshop 沿革。不可读取的 `chatgpt-content-reference` 附件未被声称为已导入原件。见[整合记录](docs/notes/2026-08-27-manuscript-polish-integration.md)。该编辑事实不改变 claim ceiling。
 - `VERIFIED_SELECTED_GITHUB_SYNC_COMPLETE`：用户于 2026-08-27 明确批准将 182 个精选变更文件推送至 `ghy001122/PINN-PCM-SCI` 的 `main`，并接受仓库当前或未来公开的披露风险。快照提交 `0cd40eb` 与安全接入远端既有历史的合并提交 `cad644c` 已推送；未使用 force push，未包含剩余旧路线实现、IdeaSpark 工作目录、缓存、虚拟环境、商业 `.mph`、凭据或无关输出。见[同步记录](docs/governance/2026-08-27-selected-github-sync.md)。该工程事实不改变任何科学 claim。
 - `VERIFIED_GOAL_PAPER_ONE_SHOT_V1_LOCAL_DELIVERABLES_COMPLETE`：[最终论文包](paper/README.md)已经交付聚焦重构后的英文正文、完整中文稿、通俗故事、实际结果、六幅最终图的 PNG/PDF、主表、13 项参考文献、补充材料、复现说明、claim–evidence mapping 与 reviewer-risk 自检。[包清单](paper/package-manifest.json)覆盖除自身外 34 个文件，其信息性 SHA256 为 `1B00038B54049B4738AB6998BF4FE4C508B1F4200BA692889066D259AFE9F7A6`。一次性执行授权已消费并关闭；该交付及编辑事实不建立 oracle、event、PINN、GPU、OOD、formal 或实验主张。

@@ -1,86 +1,77 @@
 # 当前阶段
 
-- `phase_id`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE`
-- `phase_name`: GOAL-PAPER-ONE-SHOT-V1 failure-preserving reference-qualification 论文包完成
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V2_COMPLETE_ORACLE_NO_GO`
+- `phase_name`: PHK-V2 Oracle No-Go 负结果论文与复现包完成
+- `lifecycle_state`: `COMPLETED`
 - `blocker_id`: `NONE`
-- `authorization_scope`: `ONE_SHOT_LOCAL_RESEARCH_EXECUTION_CONSUMED_AND_CLOSED`
-- `authorization_package`: `S0_TO_S6_AND_LOCAL_MANUSCRIPT_CONSUMED`
-- `plan_status`: `COMPLETED`
-- `object_selection_status`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_FROZEN`
-- `method_selection_status`: `NOT_REACHED_CTH_DIAGNOSTIC_ONLY_NO_TRAINING`
-- `last_completed_science_terminal`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`
-- `prior_package_a_status`: `CONSUMED_AND_CLOSED`
+- `authorization_scope`: `PHK_V2_EXECUTION_AND_CLOSEOUT_CONSUMED_CLOSED`
+- `authorization_package`: `S0_TO_S7_LOCAL_RESEARCH_AND_V2_MANUSCRIPT_CONSUMED`
+- `plan_status`: `COMPLETED_BOUNDARY_PRESERVING_ORACLE_NO_GO`
+- `object_selection_status`: `PHK_REDUCED_WALL_CELL_2D_V1_FROZEN_ORACLE_NO_GO`
+- `method_selection_status`: `NOT_ENTERED_ORACLE_GATE_NO_GO`
+- `last_completed_science_terminal`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`
+- `prior_goal_status`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE_PRESERVED`
 - `prior_hfo_route_status`: `WAVEFORM_TIME_NO_GO_FROZEN`
-- `novelty_status`: `CTH_POSITIVE_ARCHITECTURE_NOVELTY_NOT_CLEARED_BOUNDED_REVIEW`
-- `claim_status`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_NO_ORACLE_EVENT_OR_METHOD_EVIDENCE`
-- `compute_authorization`: `CLOSED_GOAL_COMPLETE_READ_ONLY_REPRO_AUDIT_ONLY`
-- `implementation_authorization`: `CLOSED_GOAL_COMPLETE_MAINTENANCE_ONLY`
-- `formal_or_gpu_authorization`: `NOT_REACHED_CLOSED_BY_S2_GATE`
-- `manuscript_local_write_authorization`: `COMPLETED`
-- `git_or_external_publication_authorization`: `SELECTED_SYNC_AND_MANUSCRIPT_POLISH_SYNC_CONSUMED_AND_CLOSED`
+- `claim_status`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE_NO_PINN_METHOD_EVIDENCE`
+- `compute_authorization`: `NO_FURTHER_PHK_SOLVER_PINN_GPU_OR_FORMAL_EXECUTION_AUTHORIZED`
+- `implementation_authorization`: `NONE_GOAL_COMPLETE`
+- `formal_or_gpu_authorization`: `CLOSED_ORACLE_GATE_NO_GO`
+- `manuscript_local_write_authorization`: `CONSUMED_AND_CLOSED_PACKAGE_COMPLETE`
+- `git_or_external_publication_authorization`: `NOT_AUTHORIZED`
 - `next_research_execution_authorized`: `false`
-- `current_stage`: `GOAL_COMPLETE_POLISHED_DELIVERABLES_READY`
+- `current_stage`: `COMPLETE`
 - `effective_date`: `2026-08-27`
 
 ## 当前允许
 
-- 只读检查[最终本地论文包](paper/README.md)、[包清单](paper/package-manifest.json)、S2 终局证据与历史记录；
-- 运行不产生新科学结果、也不写实验 ledger 的文档、哈希、链接和既有复现检查；
-- 在作者自行补齐署名、机构、基金、利益冲突等提交元数据后进行本地文字审阅；任何投稿或外部发布仍需新的明确授权。
+- 只读查看已完成的 [PHK-V2 论文与复现包](paper_v2/README.md)、合同、来源审查、运行产物、ledger、测试与哈希；
+- 在新的用户明确任务内执行普通、非科研的有界项目操作；任何新科学对象、求解、训练或论文扩展必须另立授权。
 
 ## 当前不允许
 
-- 付费计算、购买许可或服务；
-- 披露凭据、联系作者或投稿；除已完成的精选 GitHub 同步外，不允许其他外部上传或发布；
-- 进一步 Git push、PR、remote release 或扩大已同步文件范围；
-- 破坏性机器级改动，或把商业原始 `.mph` 放入公开复现包；
-- 重开 HFO-NP-v1、TaOₓ C1、Package A 三候选或其他历史 No-Go；
-- 修改 S0/S2 合同后救援、重跑已消费的 QN intent，或继续 S2 intent `3–13`；
-- 运行 raw/PINN/CTH development、GPU 或 formal；这些门因 S2 未建立 oracle/event 而未到达；
-- 启动任何新对象、新合同或新一轮科学执行；本次一次性授权已消费并关闭；
-- 为阳性结果移动对象、knot、case、margin，补 seed/机制/预算，筛除失败 intent，或窥视/重封 formal；
-- 把合成数值称为实验验证、作者原生重放、真实物理 kink、世界首创、普适性或无直接证据的 SOTA。
+- 付费或云端计算、购买许可/服务、凭据披露、作者联系、投稿、外部上传/发布、Git push/PR/remote release；
+- 直接复制或分发 Sharp/PF 的 GPL 源码，或 jaxpi/PirateNet 的 Penn 限制源码；这些只可隔离 comparator 或依据论文 clean-room 重实现；
+- 任何新的 PHK solver、baseline metric reproduction、PINN/strong-raw、PHA-MF、KC、组合、GPU、formal 或 OOD 执行；救援或重跑已消费的 qualification intent；
+- 用旧 Q-POP/PHA/KC、SYN-EDT、HFO、TaOₓ、Package A 或其他历史实现/事件/No-Go 冒充新路线证据，或救援/重跑已消费的旧 intent；
+- 把 literature-inspired reduced wall-cell 称为 GGST 作者模型复现、材料/实验校准、真实器件验证；
+- 为制造涨点扩大 proposed 的 support、参数、AD 工作或调参预算而不给 baseline 同等待遇，筛除失败 seed/case，或把 sampling/causal/loss balancing 包装成额外主创新；
+- 声称官方 baseline 已复现、PHK oracle/event 已资格化、PHA/KC/full 已涨点、formal/OOD 已通过、SOTA、普适性或期刊接收。
 
 ## 当前科学状态
 
 `VERIFIED`：
 
-- 本轮用户已批准 `GOAL-PAPER-ONE-SHOT-V1` 的一次性本地研究执行授权；这是授权事实，不是科学证据。
-- S0 机器合同和预注册记录已在任何新来源审计或数值求解前冻结，文档一致性门通过；这只证明执行合同已固定，不证明来源、对象、事件、raw、CTH 或 formal 成立。
-- S2 数值合同已在首个 `SYN_EDT_2D_V1` 数值结果前冻结 axisymmetric finite-volume、logit backward-Euler transport、六端点/normalizer/oracle-floor 公式、thermal controls 与含 exact replay 的 13-intent 资格化顺序；这仍是预注册事实，不是 oracle/event evidence。
-- S1 实际审阅 13 个一手载体，其中 10 个首次进入项目、使用冻结新增预算 `10/12`，并完成 `2/2` 深审对象。COMSOL Route 1 因所需权利 PASS 未建立且来源合同不完整而记预注册代码 `LEGAL_RESEARCH_ACCESS_FAILURE + SOURCE_CONTRACT_FAILURE`；PCMO Route 2 为 `SOURCE_CONTRACT_FAILURE`。因此按切换表锁定 `SYN_EDT_2D_V1`；这是来源/对象选择证据，不是数值或方法证据。
-- 临时 COMSOL 6.4 资产审计仅闭合 build `6.4.0.257`、SHA256 与 solved payload 存在性；未启动 COMSOL、未读取解场，临时 `.mph` 已从系统临时目录删除且未进入项目或复现包。
-- 有界先验审查未发现 CTH 完整 bundle 的 exact collision，但其 conditional/parameterized、absolute-value cusp、spline 与 learned/fixed-basis 等承重部件均有直接先例；CTH 正向架构新颖性未清除，只能保留为诊断/比较臂。
-- 生效 freeze `20260826T113537Z-goal-paper-one-shot-v1-s2-freeze-002` 绑定 S0、S2 与 Q-only case manifest 的精确哈希，并显式 supersede 非承重的 `freeze-001`。
-- Q0 零驱动 intent 完成 400 个时间步；质量漂移、无通量、热平衡和端口电流不匹配均为 `0.0`，`y=0.5`，全部 hard guards 通过。该结果仅是 zero-drive 实现/产物链守卫，不是 oracle 或 event evidence。
-- 首个受驱动 QN intent 在 `0.0984956999309361 s` 后以 `transport Newton exceeded its frozen iteration limit` 失败；失败 intent 已计账，没有 rescue、生产重跑或替代阈值运行，intent `3–13` 未启动。
-- 显式 `NON_SCIENTIFIC_DIAGNOSTIC` 在所测状态与方向未发现大的 Jacobian directional mismatch，并显示冻结 inner `0.5 / 20 / 1e-10` 与 latent outer `0.5 / 12 / 1e-8` 阻尼—上限组合不相容；它不排除未测试方向或状态的实现错误，只定位本次数值合同终止，不是生产 oracle 或一般物理结论。
-- 最终裁决为 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`；oracle、事件、strong raw、PINN/CTH development、GPU 与 formal 均未到达且没有方法证据。
-- [最终论文包](paper/README.md)已经交付聚焦重构后的英文正文、完整中文稿、通俗故事、实际结果、六幅最终图的 PNG/PDF、主表、13 项参考文献、补充材料、复现说明、claim–evidence mapping 与 reviewer-risk 自检。[包清单](paper/package-manifest.json)覆盖除自身外 34 个文件，其信息性 SHA256 为 `1B00038B54049B4738AB6998BF4FE4C508B1F4200BA692889066D259AFE9F7A6`；这证明制品闭合，不提高科学证据等级。
-- 用户于 2026-08-27 明确批准把 182 个精选变更文件同步至 `ghy001122/PINN-PCM-SCI` 的 `main`，并接受仓库当前或未来公开的披露风险；快照提交 `0cd40eb` 与远端历史合并提交 `cad644c` 已成功推送。同步范围和排除项见[同步记录](docs/governance/2026-08-27-selected-github-sync.md)。该动作只改善后续上下文读取，不构成科学证据、投稿或继续远程操作授权。
-- 用户随后明确授权获取外部会话 `6a8f9ed2-a678-83ee-ac63-3fc48de531f8` 的论文润色交付、选择性整合并提交云端。本次只接纳与 live evidence 核对一致的编辑判断，新增中文稿与通俗故事并更新公开可得性；不可读取的附件未冒充已导入原件。见[润色整合记录](docs/notes/2026-08-27-manuscript-polish-integration.md)。该任务不产生新科学证据，相关 Git 同步授权随交付消费并关闭。
-- HFO-NP-v1 `WAVEFORM_TIME_NO_GO_FROZEN`、TaOₓ C1 来源—模型冲突及 Package A 有界 No-Go 全部保留。
+- 用户提供并明确要求执行《后续研究总规划》，目标为复现并剖析强 phase-field/PINN 工作、迁移可改模块、从可行性开始分层验证 PHA-MF 与 field-selective KC，最终形成相对最强合格 baseline 关键指标非劣且至少一个预声明主指标实质改善的第二版论文。
+- [R0 一手来源审查](docs/references/2026-08-27-phk-pinn-primary-source-baseline-audit.md)已固定 Sharp/PF/jaxpi2/PirateNet/Causality-RBAR/phase-change heat/re-spacing/Miquel 的论文、代码、许可与可复现性身份；该审查未运行作者代码、solver、PINN 或 GPU。
+- Sharp-PINNs 正式论文身份与当前仓库 causal/RAR 长预算 recipe 已分开；Sharp 是主 phase-field anchor 而非唯一 evidence baseline。jaxpi2 adaptive pseudo-time 是 mandatory general strong/KC falsification control。
+- Sharp/PF 为 GPL-3.0；原 jaxpi/PirateNet 是 Penn 非营利研究且限制再分发的定制许可；jaxpi2 固定仓库为 Apache-2.0。Causality-RBAR 作者代码链接在本次核验时为 404。
+- [ADR 0045](docs/adr/0045-adopt-phk-v2-strong-baseline-and-two-module-execution.md)、[program contract](configs/phk_v2/program_contract.json)和[S0 预注册记录](docs/governance/2026-08-27-phk-v2-s0-program-preregistration.md)已在任何 PHK 数值结果前写入。上一 GOAL live plan 已原样归档。
+- [S0B 对象与 split freeze](docs/governance/2026-08-27-phk-v2-s0b-object-and-split-freeze.md)已固定无量纲 wall-cell 物理/数值合同、12-intent ladder 和 324 个 outcome-blind complete cases；7 项 TDD 合同测试通过。该项没有运行 solver 或训练。
+- Sharp/PF 的固定源码树已通过隔离 CPU 模块 smoke；jaxpi2 的完整依赖安装两次被 Windows 路径长度失败阻断，随后以最小 Apache-2.0 依赖完成 architecture-only PirateNet smoke。这些都不是论文指标复现。
+- PHK qualification intents 1–8 已执行；manufactured 与 zero-drive 守卫通过，nominal coarse/medium/fine/half-dt/replay 的数值硬守卫通过且 replay 六分量精确为零，但两周期 recovery/event 合同失败。intent 9 以冻结的 phase-Newton 最小线搜索步失败，intents 10–12 未到达。
+- [terminal summary](outputs/runs/20260827T-phk-v2-s2-q-terminal-summary/summary.json)固定 `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`。因此没有 neural floors，strong raw、PHA-MF、KC、组合、GPU、formal 与 OOD 均未进入。
+- 当前项目环境为 Python 3.11.9、PyTorch 2.5.1+cpu，CUDA 不可用、device count 0，`nvidia-smi` 不存在；本路线关闭的决定性原因是 Oracle Gate No-Go，而不是 GPU 资源缺失。
+- [PHK-V2 最终包](paper_v2/README.md)已交付英文/中文正文、通俗故事、六幅 PNG/PDF 图、六份派生 CSV、最终表格与参考文献、baseline anatomy cards、补充材料、复现说明、claim–evidence matrix 和 reviewer-risk 自检。[包清单](paper_v2/package-manifest.json)列出除自身外 35 个包内文件和 15 个外部证据依赖，清单 SHA256 为 `A0BFF4D3DE95F2E10167DFC5FEB09EFDE704E62EA6D54FDE7CFE5621ABE38173`；`PHK_V2_PACKAGE_VALID` 已通过。
+- 第一版论文、`SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`、旧 Q0/QN、全部历史 No-Go 和失败 intent 保持原样。
 
 `UNKNOWN`：
 
-- 改变阻尼、迭代上限、容差、时间步或求解算法后，受驱动对象能否形成合格 oracle；任何此类改变都会定义新合同，不能回写本 GOAL 的冻结结果。
-- PINN、strong raw、CTH、OOD 与 formal 的性能；它们没有跨过 oracle/event 前门。
+- 固定身份的 Sharp/PF/jaxpi2 官方论文指标能否在其完整依赖和原预算下复现；当前只有模块级 smoke；
+- strong raw、PHA-MF、field-selective KC、adaptive pseudo-time control、full 组合和 formal OOD 在任何未来合格对象上的性能；它们在本路线均未运行，不能形成正面或负面方法结论；
+- 透明 reduced wall-cell 若改变物理/数值合同后能否满足两周期 event/recovery；这将是新对象/新合同，不属于当前授权，也不能回写本 No-Go。
 
 ## 授权语义
 
-- 本轮用户明确指令曾 supersede `PLAN-MSA-01` 的逐包授权语义；不改写其历史内容或旧 No-Go。
-- 执行期间 S0 通过后无需逐包或 formal 前再次批准，但每项动作仍受 live plan 的前置门、总预算和永久禁止项约束。
-- 执行期间普通科学失败、训练不收敛、对象/方法/formal No-Go 不构成暂停理由，而按切换表继续。
-- 本次一次性研究授权已随论文交付闭合而消费；2026-08-27 的精选 GitHub 同步与论文润色同步授权也已消费并关闭。任何新科学执行、投稿、额外上传或后续 Git 远程动作都必须由用户另行明确授权。
-
-## 当前阶段状态
+- 用户当前指令 supersede 已完成 GOAL 的“不得启动新研究”语义，但不改写它的历史内容、数值合同、失败、论文或 claim ceiling。
+- S0 曾授权按预注册门自动推进；S2 Oracle Gate 的停止条件现已触发并消费后续方法执行权限。
+- S7 负结果论文与复现包已经完成，原授权已消费并关闭；禁止自动购买或调用云端，也不得把资源缺失改写为科学结果。
+- 当前证据建立 baseline 身份与模块 smoke、manufactured/zero-drive 实现守卫及冻结 PHK 数值合同的 Oracle No-Go；不建立官方 baseline 指标复现、合格 oracle/event、PINN、PHA、KC、formal 或正向论文证据。
 
 ~~~text
-PHASE_ID=GOAL_PAPER_ONE_SHOT_V1_COMPLETE
+PHASE_ID=PHK_V2_COMPLETE_ORACLE_NO_GO
 BLOCKER_ID=NONE
-OBJECT_SELECTION_STATUS=SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_FROZEN
-METHOD_SELECTION_STATUS=NOT_REACHED_CTH_DIAGNOSTIC_ONLY_NO_TRAINING
+OBJECT_SELECTION_STATUS=PHK_REDUCED_WALL_CELL_2D_V1_FROZEN_ORACLE_NO_GO
+METHOD_SELECTION_STATUS=NOT_ENTERED_ORACLE_GATE_NO_GO
 NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
-CURRENT_STAGE=GOAL_COMPLETE_LOCAL_DELIVERABLES_READY
+CURRENT_STAGE=COMPLETE
 ~~~

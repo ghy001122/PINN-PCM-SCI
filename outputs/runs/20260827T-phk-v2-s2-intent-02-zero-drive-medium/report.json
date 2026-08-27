@@ -1,0 +1,54 @@
+{
+  "case_id": "PHK_Q_ZERO_DRIVE",
+  "claim_status": "NO_ORACLE_EVENT_OR_METHOD_CLAIM_SINGLE_CASE_ONLY",
+  "event": null,
+  "guard": {
+    "failures": [],
+    "maximum_current_balance_relative": 0.0,
+    "maximum_linear_residual_scaled": 0.0,
+    "maximum_no_flux_residual_scaled": 0.0,
+    "maximum_phase_residual_scaled": 9.82033171280242e-11,
+    "maximum_thermal_residual_scaled": 5.637851296924623e-18,
+    "nonfinite_count": 0,
+    "passed": true,
+    "phase_range": [
+      8.046555141985811e-05,
+      0.029947898547040934
+    ],
+    "potential_range": [
+      0.0,
+      0.0
+    ],
+    "temperature_range": [
+      0.0,
+      0.0017030407940905085
+    ]
+  },
+  "intent": {
+    "control": "ZERO_DRIVE",
+    "id": "Q_ZERO_DRIVE_MEDIUM",
+    "order": 2,
+    "resolution": "medium"
+  },
+  "resolution": {
+    "dt": 0.0025,
+    "evidence_identity": "PHK_V2_FROZEN_Q_RESOLUTION",
+    "name": "medium",
+    "nx": 80,
+    "nz": 40,
+    "save_every": 2,
+    "time_end": 2.0
+  },
+  "schema_id": "phk-v2-q-case-report-v1",
+  "single_case_adjudication": "PENDING_COMPLETE_Q_LADDER",
+  "solver_statistics": {
+    "coupled_blocks_total": 1600,
+    "electric_linear_solves_total": 2401,
+    "final_residual_evaluations_total": 800,
+    "linear_solves_total": 5058,
+    "phase_linear_solves_total": 1057,
+    "phase_newton_iterations_total": 1057,
+    "thermal_linear_solves_total": 1600,
+    "time_steps_total": 800
+  }
+}

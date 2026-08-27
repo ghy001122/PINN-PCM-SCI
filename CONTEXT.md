@@ -1,29 +1,31 @@
 # PINN-PCM-SCI 当前研究总览与论文口径
 
-本文件是“我们到底在研究什么”的当前单一来源。用户批准的 [GOAL-PAPER-ONE-SHOT-V1](docs/plans/NEXT_ACTIONS.md) 已按预注册顺序执行并完成本地交付。S1 关闭两个来源对象后启用 `SYN_EDT_2D_V1`；S2 的 Q0 零驱动守卫通过，但首个受驱动 QN intent 按冻结 Newton 上限失败。最终 [CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT 论文包](paper/README.md)回答的问题是：如何以可审计、不可事后救援的资格化链条界定一个氧化物缺陷输运 PINN benchmark 在进入神经方法评价前的证据边界。
+本文件是“我们到底在研究什么”的当前单一来源。当前 [PLAN-PHK-V2-V1](docs/plans/NEXT_ACTIONS.md)已经按预注册在 Oracle Gate 形成终局 No-Go：透明 reduced 2D electrothermal phase-field wall-cell 的 manufactured 与 zero-drive 守卫通过，nominal 多分辨率、半时间步和 exact replay 运行保持数值硬守卫，但没有满足必需的两周期 recovery/event 合同；第 9 个 conductivity-feedback-off control 又在冻结 phase-Newton 最小线搜索步失败。因此当前研究只收口这一 benchmark/numerical-limits 证据，`PHA-MF-v2`、field-selective `KC-v2`、strong raw 和 formal 均未进入。
 
-- `lifecycle_state`: `COMPLETE_GOAL_PAPER_ONE_SHOT_V1_LOCAL_DELIVERABLES`
-- `claim_status`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_NO_ORACLE_EVENT_OR_METHOD_EVIDENCE`
-- `updated_at`: `2026-08-26`
+- `lifecycle_state`: `COMPLETED_PHK_V2_ORACLE_NO_GO`
+- `claim_status`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE_NO_PINN_METHOD_EVIDENCE`
+- `updated_at`: `2026-08-27`
 
 ## 当前研究问题
 
-`VERIFIED`：S1 在 13 个一手载体、`10/12` 个新增载体预算和 `2/2` 深审范围内，裁决 COMSOL64-first 为 `LEGAL_RESEARCH_ACCESS_FAILURE + SOURCE_CONTRACT_FAILURE`、PCMO fallback 为 `SOURCE_CONTRACT_FAILURE`，随后按冻结表激活完全透明但非来源对齐、非实验验证的 `SYN_EDT_2D_V1`。CTH 的正向架构新颖性未清除，仅保留历史诊断身份。
+`VERIFIED`：[R0 一手来源审查](docs/references/2026-08-27-phk-pinn-primary-source-baseline-audit.md)已固定 Sharp/PF/jaxpi2/PirateNet/Causality-RBAR/phase-change heat/re-spacing/Miquel 的论文、代码与许可身份。Sharp paper identity 与 repo causal/RAR 长预算 recipe 必须分开；Sharp 是主 phase-field anchor 而非唯一 evidence baseline，jaxpi2 adaptive pseudo-time 是 KC 的 mandatory general strong/falsification control。
 
-`VERIFIED`：[S2 终局收口](docs/experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)记录生效 `freeze-002`、Q0 和首个受驱动 QN intent。Q0 完成 400 个时间步，零驱动下 `y=0.5`，质量漂移、无通量、热平衡及端口电流不匹配均为零；这只验证实现与产物链守卫。QN 在产生可评价场前以 `transport Newton exceeded its frozen iteration limit` 终止，失败 intent 已计账且没有 rescue、生产重跑或替代阈值运行。
+`SUPPORTED_INTERPRETATION`：PHK 的方法假设仍是“相变状态能否决定 PINN 在何处分配空间高频容量，以及相态分支在何处重分配动力学时间分辨率”，但本路线在该假设可被测试前停止。不得把未运行模块、代码存在性或文献启发写成正面方法贡献。
 
-`SUPPORTED_INTERPRETATION`：显式非科学最小 fixture 显示，近因是冻结 inner half-step、20 次迭代与 `1e-10` residual 阈值组合不相容；在所测状态与方向未发现大的解析 Jacobian—有限差分 mismatch，但未测试方向或状态仍可能存在错误。outer half-relaxation/12-block 合同存在 latent 风险，但 production 从未到达 outer 判定。由此可以关闭“本次数值合同可形成合格 oracle”的主张，不能关闭缺陷输运 PDE、其他求解器合同或 PINN 方法类别。
+`VERIFIED`：上一 `GOAL-PAPER-ONE-SHOT-V1` 已完整归档；其 Q0、QN、`SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO` 和第一版论文保持原样。旧 PHA screen 的相同结构端点和 raw event failure 不能被新名字救援；新路线必须使用新的 event-verifiable 2D electrothermal phase-field substrate。
 
-`UNKNOWN`：改变阻尼、迭代上限、容差、时间步或算法后能否形成受驱动 oracle；双周期 event、thermal effect、strong raw、PINN/CTH、OOD 与 formal 表现。任何回答这些未知项的工作都将是新合同/新研究，不得回写本次冻结结果。
+`VERIFIED`：[S0B freeze](docs/governance/2026-08-27-phk-v2-s0b-object-and-split-freeze.md)在首个 PHK 数值结果前固定透明无量纲 wall-cell、事件/守卫/收敛、12-intent 梯与 324 个 complete-case 候选。[S2 terminal summary](outputs/runs/20260827T-phk-v2-s2-q-terminal-summary/summary.json)记录 intents 1–8 完成、intent 9 失败并消费、intents 10–12 未到达；结果为 `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`。[最终 V2 包](paper_v2/README.md)已在该边界内完成。
+
+`UNKNOWN`：官方 baseline 论文指标在完整依赖和原预算下的复现性；strong raw、PHA-MF、KC、组合、OOD 与 formal 在任何未来合格对象上的表现。当前已有 PHK 数值资格化证据，但没有合格 oracle/event，也没有任何 PHK PINN 方法证据。
 
 ## 当前授权边界
 
-- **当前状态**：`GOAL_PAPER_ONE_SHOT_V1_COMPLETE / SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_FROZEN / METHOD_NOT_REACHED / NEXT_RESEARCH_EXECUTION_AUTHORIZED=false`。
-- **当前可做动作**：只读审查[最终本地论文包](paper/README.md)、历史证据和包哈希，或运行不产生新科学结果且不写实验 ledger 的既有复现检查；作者可在投稿前自行补齐提交元数据。
-- **已关闭动作**：继续 S2 intent `3–13`、改合同救援、重跑已消费 QN、raw/PINN/CTH 训练、本地 GPU、sealed formal，以及任何新对象/新合同科学执行；它们因 oracle/event 前门未通过而 `NOT_REACHED`，一次性授权也已消费关闭。
-- **永久禁止**：付费计算/服务、购买许可、凭据披露、作者联系、投稿、外部上传/发布、Git push/PR/merge/remote release、破坏性机器级改动及商业原始 `.mph` 再分发。
-- **完成语义**：`GOAL_COMPLETE` 表示完整本地制品与冻结 fallback 已交付，不提高科学证据等级，也不授权投稿、上传、Git 远程操作或下一轮研究。
-- **历史边界**：TaOₓ C1 的 `a=0.32/0.16 nm` 冲突仍是该候选的有效 `CANDIDATE_NO_GO`；HFO-NP-v1、Package A 及所有既有 No-Go 不重开。
+- **当前状态**：`PHK_V2_COMPLETE_ORACLE_NO_GO / NO_PINN_METHOD_EVIDENCE / AUTHORIZATION_CONSUMED_CLOSED / NEXT_RESEARCH_EXECUTION_AUTHORIZED=false`。
+- **当前可做动作**：只读查看已完成的本地 V2 benchmark/numerical-limits 论文包与既有运行；任何新科学路线需用户另行明确授权。
+- **已关闭动作**：不再执行 baseline metric reproduction、PHK solver、strong raw、PHA-MF、KC、组合、GPU、formal 或 OOD；不救援 intent 9，不运行 intents 10–12。
+- **永久禁止**：付费/云端计算、购买许可、凭据披露、作者联系、投稿、外部上传/发布、Git push/PR/merge/remote release、破坏性机器级改动、商业 `.mph` 再分发及直接并入 GPL/Penn 限制源码。
+- **完成语义**：第二版以实际 Oracle No-Go 的证据边界交付最终正文/图表/表格/引用/补充/复现/claim audit；不能满足原正向稿要求，也不能把未运行的两个模块写成完成贡献。
+- **历史边界**：V1、SYN-EDT、Q-POP、HFO、TaOₓ、Package A 与所有既有 No-Go/failed intents 均保持冻结；新路线不回写或改名复活它们。
 
 ## 当前规范术语
 

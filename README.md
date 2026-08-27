@@ -4,16 +4,18 @@
 
 ## 当前状态
 
-- `phase_id`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V2_COMPLETE_ORACLE_NO_GO`
+- `lifecycle_state`: `COMPLETED`
 - `blocker_id`: `NONE`
-- `authorization_scope`: `ONE_SHOT_LOCAL_RESEARCH_EXECUTION_CONSUMED_AND_CLOSED`
-- `claim_status`: `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_NO_ORACLE_EVENT_OR_METHOD_EVIDENCE`
+- `authorization_scope`: `PHK_V2_EXECUTION_AND_CLOSEOUT_CONSUMED_CLOSED`
+- `claim_status`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE_NO_PINN_METHOD_EVIDENCE`
 
-用户批准的 [GOAL-PAPER-ONE-SHOT-V1](docs/plans/NEXT_ACTIONS.md) 一次性本地研究执行授权已经消费并关闭。S0/S2 均在新结果前冻结；S1 实际审阅 13 个一手载体（其中 10 个首次进入项目，使用新增预算 `10/12`）并完成 `2/2` 深审，两个来源对象路线均按预注册硬门关闭。透明合成路线的 Q0 零驱动守卫随后通过，但首个受驱动 QN intent 按冻结 Newton 上限执行失败且已计账；没有 rescue、生产重跑或阈值改动。最终有界裁决为 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`，并已按自动 fallback 完成 `CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT` 的[全套本地交付](paper/README.md)。
+PHK-V2 is complete at its preregistered Oracle No-Go. Manufactured operators and the zero-drive guard passed; coarse, medium, fine, half-time-step and exact-replay nominal runs remained numerically guarded but failed the required two-cycle recovery/event contract, and qualification intent 9 ended in the frozen phase-Newton line-search failure. Intents 10–12 and every PINN/PHA/KC/GPU/formal stage are therefore not reached. The evidence-bounded V2 negative/limits manuscript and reproducibility package are complete; the execution authorization is consumed and closed.
 
-S1 的来源与新颖性结论见[有界前审报告](docs/references/2026-08-26-goal-paper-one-shot-v1-s1-source-legal-novelty-review.md)，实际数值边界见 [S2 终局收口](docs/experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)。Q0 只证明零驱动实现与产物链守卫；没有跨分辨率 oracle、双周期事件、strong raw、PINN/CTH、GPU 或 formal 证据。该 No-Go 只约束本次冻结数值合同，不是缺陷输运物理或 PINN 的一般失败。历史 No-Go 均保持冻结。
+当前 [PLAN-PHK-V2-V1](docs/plans/NEXT_ACTIONS.md)已按预注册切换表完成。R0 [一手来源与 baseline 审查](docs/references/2026-08-27-phk-pinn-primary-source-baseline-audit.md)固定了 Sharp/PF/jaxpi2/PirateNet 等来源、许可和可复现身份；隔离模块 smoke 通过，但未复现论文指标。S2 [terminal summary](outputs/runs/20260827T-phk-v2-s2-q-terminal-summary/summary.json)记录 manufactured/zero-drive 通过、nominal 数值硬守卫与 exact replay 通过、两周期 recovery/event 合同失败，以及 intent 9 的冻结 phase-Newton line-search 失败。
 
-完整论文包现包含聚焦重构后的英文主稿、完整中文稿、通俗故事、实际结果、六幅最终图的 PNG/PDF、主表、13 项参考文献、补充材料、复现说明和主张边界自检；[包清单](paper/package-manifest.json)覆盖除自身外 34 个文件。该制品更新不改变科学证据边界。2026-08-27 经用户另行明确授权，精选研究快照及本次论文润色更新同步至本仓库 `main`；[首次同步记录](docs/governance/2026-08-27-selected-github-sync.md)和[润色整合记录](docs/notes/2026-08-27-manuscript-polish-integration.md)列明范围与边界。相关同步授权消费后，不授权投稿、额外上传、PR、release 或后续 Git 远程动作。
+新路线在任何 PHK 数值结果前写入 [program contract](configs/phk_v2/program_contract.json)、[S0 预注册记录](docs/governance/2026-08-27-phk-v2-s0-program-preregistration.md)、[S0B 对象/split freeze](docs/governance/2026-08-27-phk-v2-s0b-object-and-split-freeze.md)与 [ADR 0045](docs/adr/0045-adopt-phk-v2-strong-baseline-and-two-module-execution.md)。冻结的 12-intent 梯在 intent 9 消费失败后停止，intents 10–12 未到达；没有 neural floor，也没有 strong raw、PHA-MF、KC、组合、GPU、formal 或 OOD 方法证据。完整本地 [PHK-V2 论文与复现包](paper_v2/README.md)已经交付并通过清单、链接、引用键、图源与 claim-boundary 自检。
 
-当前授权读 [active_phase.md](active_phase.md)，已核验事实读 [PROJECT_STATE.md](PROJECT_STATE.md)，研究与论文口径读 [CONTEXT.md](CONTEXT.md)，完整文档路由读 [docs/README.md](docs/README.md)。旧包证据见[方法盲对象筛选报告](docs/references/2026-08-26-method-blind-cleanroom-object-screen.md)与 [ADR 0042](docs/adr/0042-close-package-a-with-method-blind-object-portfolio-no-go.md)；一次性目标采纳理由见 [ADR 0044](docs/adr/0044-adopt-goal-paper-one-shot-v1.md)。
+上一 [GOAL-PAPER-ONE-SHOT-V1 完成合同](archive/2026-08-27-goal-paper-one-shot-v1-complete.md)、`SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`、完整第一版[论文包](paper/README.md)、精选 GitHub 同步记录和所有历史 No-Go 保持原样。PHK-V2 不授权投稿、外部上传、额外 Git 远程操作、付费/云端计算或直接并入 GPL/Penn 限制源码。
+
+当前授权读 [active_phase.md](active_phase.md)，已核验事实读 [PROJECT_STATE.md](PROJECT_STATE.md)，研究与论文口径读 [CONTEXT.md](CONTEXT.md)，完整文档路由读 [docs/README.md](docs/README.md)。

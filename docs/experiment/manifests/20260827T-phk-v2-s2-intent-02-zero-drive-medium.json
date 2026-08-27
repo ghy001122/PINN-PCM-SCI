@@ -1,0 +1,101 @@
+{
+  "actual_budget": {
+    "case_id": "PHK_Q_ZERO_DRIVE",
+    "coupled_blocks_total": 1600,
+    "electric_linear_solves_total": 2401,
+    "failed_intents": 0,
+    "failure_identity": null,
+    "final_residual_evaluations_total": 800,
+    "gross_compute": {
+      "process_cpu_core_hours": 0.0112890625,
+      "single_thread_wall_upper_bound_core_hours": 0.011511932138888976
+    },
+    "intent_id": "20260827T-phk-v2-s2-intent-02-zero-drive-medium",
+    "linear_solves_total": 5058,
+    "method_id": "phk-v2-independent-cartesian-fv-v1",
+    "phase_linear_solves_total": 1057,
+    "phase_newton_iterations_total": 1057,
+    "process_cpu_seconds": 40.640625,
+    "qualification_intent": 2,
+    "seed": 0,
+    "superseding_rerun_eligibility": "NOT_APPLICABLE",
+    "thermal_linear_solves_total": 1600,
+    "time_steps_total": 800,
+    "wall_clock_seconds": 41.44295570000031
+  },
+  "artifacts": {
+    "intent": "docs\\experiment\\intents\\20260827T-phk-v2-s2-intent-02-zero-drive-medium.json",
+    "intent_claim": "docs\\experiment\\intent_claims\\phk-v2-q-intent-02.json",
+    "object_contract": "E:\\Python demo\\PINN-PCM-SCI\\configs\\phk_v2\\object_numerical_contract.json",
+    "object_contract_sha256": "3B3B9A369F4AFDFFB201394DD294E7196BAF04E5B36BAFE126291CA9CB3EA157",
+    "program_contract": "E:\\Python demo\\PINN-PCM-SCI\\configs\\phk_v2\\program_contract.json",
+    "program_contract_sha256": "0E1D89DD23F93C90160AC82ECE60ADA154410F4DDC33578CB892207FE8B445A8",
+    "report": "outputs\\runs\\20260827T-phk-v2-s2-intent-02-zero-drive-medium\\report.json",
+    "report_sha256": "E172F220167151E0DA14E14DD8A7E7BC5BC02489DA0F7F6657D12745EE39A142",
+    "result": "outputs\\runs\\20260827T-phk-v2-s2-intent-02-zero-drive-medium\\result-intent-02.npz",
+    "result_sha256": "6460C46A8856575ECCB31F8FBE8CF001CE0F6D9587842DFA8354AE2A9AD42D1C",
+    "split_manifest": "E:\\Python demo\\PINN-PCM-SCI\\configs\\phk_v2\\case_split_manifest.json",
+    "split_manifest_internal_sha256": "55261CCA82ED2B71A9D3A81E28FC957B4873086CECB09D28EEE9B73B2CD73E09",
+    "split_manifest_sha256": "EBFDA2D59049AC989E8AA6C9622D92CF077D4B808961AB5807D178BF09DF57ED"
+  },
+  "case_id": "PHK_Q_ZERO_DRIVE",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "INDEPENDENT_CPU_ORACLE"
+  },
+  "claim_status": "NO_ORACLE_EVENT_OR_METHOD_CLAIM_SINGLE_INTENT_ONLY",
+  "code_identity": {
+    "kind": "working-tree",
+    "phk_benchmark_sha256": "364C703AE4278CCE194AA2F9AD9CB83390F0E428731F1DF98F05B267EEDA4F6A",
+    "phk_runner_sha256": "CB1476EA18F7CDFE19FEBCAC32D462950044122DBF15A94D48E75ACA56C90083"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_runner",
+    "qualify",
+    "--run-id",
+    "20260827T-phk-v2-s2-intent-02-zero-drive-medium",
+    "--intent",
+    "2"
+  ],
+  "ended_at": "2026-08-27T08:28:43.808345+00:00",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1"
+  },
+  "evaluator_id": "phk-v2-q-event-guard-convergence-evaluator-v1",
+  "evidence_identity": "TRANSPARENT_DIMENSIONLESS_REDUCED_BENCHMARK",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "phk-v2-qualification",
+  "failure_class": null,
+  "gate": "PHK_V2_S2_Q",
+  "gate_outcome": "PHK_V2_Q_CASE_COMPLETED",
+  "method_id": "phk-v2-independent-cartesian-fv-v1",
+  "numerical_validity": "PENDING_COMPLETE_Q_LADDER_ADJUDICATION",
+  "physical_contract_id": "PHK_REDUCED_WALL_CELL_2D_V1_NUMERICAL_V1",
+  "planned_budget": {
+    "cpu_core_hours_total_cap": 128.0,
+    "failed_intents_count_against_budget": true,
+    "qualification_intent": {
+      "control": "ZERO_DRIVE",
+      "id": "Q_ZERO_DRIVE_MEDIUM",
+      "order": 2,
+      "resolution": "medium"
+    },
+    "result_adaptive_rescue": false
+  },
+  "replay_of": null,
+  "route_disposition": "AWAIT_COMPLETE_Q_LADDER_ADJUDICATION",
+  "run_id": "20260827T-phk-v2-s2-intent-02-zero-drive-medium",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "oracle_qualification",
+  "seed": 0,
+  "split_id": "phk-v2-complete-case-split-v1",
+  "started_at": "2026-08-27T08:28:02.365168+00:00",
+  "supersedes": null,
+  "tier": "qualification"
+}

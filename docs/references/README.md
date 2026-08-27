@@ -4,6 +4,7 @@
 
 ## 当前对象与来源终点
 
+- [2026-08-27 PHK-PINN 一手来源与主 baseline 审查](2026-08-27-phk-pinn-primary-source-baseline-audit.md)：固定 Sharp paper/repo 身份、PF/jaxpi2/PirateNet/Causality-RBAR 许可与可复现性边界，并限定 reduced PCM 对象只能是 literature-inspired transparent benchmark；这是 R0 来源证据，不是方法结果。
 - [2026-08-26 方法盲 clean-room 对象筛选](2026-08-26-method-blind-cleanroom-object-screen.md)：Package A 冻结三家族、11/12 新载体后的组合级 bounded No-Go。
 - [2026-08-25 新对象 source-complete 审查](2026-08-25-new-object-source-complete-review.md)：TaOₓ C1 paper–model 参数冲突的候选级 bounded No-Go。
 - [2026-08-25 HFO G0 来源与对象合同](2026-08-25-hfo-g0-source-and-object-contract-review.md)：HFO-NP-v1 `WAVEFORM_TIME_NO_GO`。
