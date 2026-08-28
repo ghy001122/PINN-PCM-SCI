@@ -11,11 +11,11 @@
 
 VERIFIED: the independent PHK-V2.1 GOAL is complete at its earliest preregistered terminal route. E1 repaired and selected the control solver; E2 completed a bounded 41-case search and selected one repeatable-event engineering candidate; S0 froze five scientific contracts; S1 completed 14/14 qualification intents with no solver or hard-guard failure. The event-time component then failed the frozen spatial-convergence rule, so S2-S6 were not opened.
 
-The full local terminal paper and reproducibility package is available at [paper_v21/README.md](../../paper_v21/README.md). It is a bounded negative benchmark-qualification paper, not a positive PINN-method paper.
+The full local terminal paper and reproducibility package is available at [paper/paper_v21/README.md](../../paper/paper_v21/README.md). It is a bounded negative benchmark-qualification paper, not a positive PINN-method paper.
 
 ## Final package identity
 
-- package manifest: [paper_v21/package-manifest.json](../../paper_v21/package-manifest.json)
+- package manifest: [paper/paper_v21/package-manifest.json](../../paper/paper_v21/package-manifest.json)
 - package manifest SHA256: EA350D31B5BE212C96750EDA7CD12A99C17D643C1FAFF78DF3F6F0B583977653
 - package files listed, excluding the manifest itself: 34
 - external evidence dependencies: 35

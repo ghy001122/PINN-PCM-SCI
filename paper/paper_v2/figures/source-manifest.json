@@ -1,0 +1,147 @@
+{
+  "schema_id": "phk-v2-figure-source-manifest-v1",
+  "generated_from_existing_evidence_only": true,
+  "scientific_compute_performed": false,
+  "fixed_generation_date": "2026-08-27",
+  "render_environment": {
+    "python": "3.12.4",
+    "numpy": "1.26.4",
+    "matplotlib": "3.8.4"
+  },
+  "generator": {
+    "path": "paper/paper_v2/figures/generate_figures.py",
+    "sha256": "F4232603D1EE84B5D16875CDB6BA780AB5A305404946C5E19296AD1EC8A09661"
+  },
+  "sources": [
+    {
+      "path": "outputs/runs/20260827T-phk-v2-s2-q-terminal-summary/summary.json",
+      "sha256": "8964ACB687F1BDB4F03C2E0D33891EE3705D4C2ABD271085D0C82A2B4469EA78",
+      "bytes": 11523
+    },
+    {
+      "path": "configs/phk_v2/object_numerical_contract.json",
+      "sha256": "3B3B9A369F4AFDFFB201394DD294E7196BAF04E5B36BAFE126291CA9CB3EA157",
+      "bytes": 9186
+    },
+    {
+      "path": "outputs/runs/20260827T-phk-v2-s2-intent-03-nominal-coarse/result-intent-03.npz",
+      "sha256": "2164CE3C0FDAC76FA0D71CCD6FD499D097EC574735B133EBE2C8C88B385DBBF5",
+      "bytes": 1940417
+    },
+    {
+      "path": "outputs/runs/20260827T-phk-v2-s2-intent-04-nominal-medium/result-intent-04.npz",
+      "sha256": "93D799152FF4A8BA950FCF7B6E59D7D6E3E22D09699BF4996F4B06D76EA625CC",
+      "bytes": 15714540
+    },
+    {
+      "path": "outputs/runs/20260827T-phk-v2-s2-intent-05-nominal-fine/result-intent-05.npz",
+      "sha256": "07575FE5D09EF9C4403C886A70EEBE7DB8C09FDCB51ACA68A03EC18FD4D3EA1A",
+      "bytes": 71253554
+    },
+    {
+      "path": "outputs/runs/20260827T-phk-v2-s2-intent-06-medium-half-dt/result-intent-06.npz",
+      "sha256": "17A9877B16C19AA6C084897B057397B3528054EB52E54BD453C01D5439190690",
+      "bytes": 15961630
+    },
+    {
+      "path": "outputs/runs/20260827T-phk-v2-s2-intent-08-joule-off-medium/result-intent-08.npz",
+      "sha256": "97EF54EF736FDFAC708CDDB6EEA552BB1400F21D75461D50ECC88F6C5844F7F8",
+      "bytes": 14499278
+    }
+  ],
+  "derived_data": [
+    {
+      "path": "paper/paper_v2/figures/data/causal_control.csv",
+      "sha256": "3CEA113DD775857CA06C9C7DEF1563EC56FBE2C252DD417F29FD9E63736D7513",
+      "bytes": 21443
+    },
+    {
+      "path": "paper/paper_v2/figures/data/convergence_components.csv",
+      "sha256": "E114EA24854149CC1F86CE5890510C7257FFEC692BABDDDABABF089D36435D34",
+      "bytes": 1232
+    },
+    {
+      "path": "paper/paper_v2/figures/data/event_trajectories.csv",
+      "sha256": "AC24179FF9044EBBCA7CE2E5A0F507F592C98D60BC6DB7B85FD77D562DFA255A",
+      "bytes": 79687
+    },
+    {
+      "path": "paper/paper_v2/figures/data/qualification_ladder.csv",
+      "sha256": "9E7B25557D7C2C19B0B9B7CA3EAC87B42838C01311CCA87E3F459BEE740C9DD5",
+      "bytes": 390
+    },
+    {
+      "path": "paper/paper_v2/figures/data/source_anatomy.csv",
+      "sha256": "592E2329B81CB0E6115AF5A2A7CB861ECE9E5523513A34A7A7AD0D7B0697002E",
+      "bytes": 612
+    },
+    {
+      "path": "paper/paper_v2/figures/data/workflow.csv",
+      "sha256": "44B2423A078A7F2802731784332473B3B56E95780F5C8BA19F0A12E517A138CD",
+      "bytes": 368
+    }
+  ],
+  "outputs": [
+    {
+      "path": "paper/paper_v2/figures/figure-01-workflow.pdf",
+      "sha256": "4ECEA042084D63E9288DA22273208B30F158659BDB6A467A5B56CB15959E9A71",
+      "bytes": 23743
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-01-workflow.png",
+      "sha256": "D1E7FD6938387766E21DBC71B774B57F9CCAFF598585D4DA35534B56B6D0418A",
+      "bytes": 223272
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-02-source-anatomy.pdf",
+      "sha256": "E7DFFF9BD765037CF006942C1F28C19B223A773F1639BAAA43960DC776B3CB03",
+      "bytes": 26150
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-02-source-anatomy.png",
+      "sha256": "A7BF546246888F6CE15A02D11F8B8437156B3F87AC841883529BE9D6F5FA85B0",
+      "bytes": 366029
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-03-qualification-ladder.pdf",
+      "sha256": "090902C0FAF9DDE40137A443D3B2F9CB75E6BF23DD15696BE687F6D9A2F5F9D1",
+      "bytes": 27056
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-03-qualification-ladder.png",
+      "sha256": "084AEF37AD37F3EF4789FF413A3F62B7C9FEB976421D6F4E588304176F530DDD",
+      "bytes": 280521
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-04-event-trajectories.pdf",
+      "sha256": "0CC502ADF9931A70CB6459993C7633AD870B54D79E59EA24BA193B3423BEB5D4",
+      "bytes": 33875
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-04-event-trajectories.png",
+      "sha256": "D2E4ACA2D7AA6740BC59D2CB8E8B0302AA42BB75C693CCC3F5837E8015B33CFA",
+      "bytes": 408310
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-05-convergence-controls.pdf",
+      "sha256": "93C4C755CA4A0C09AFC675B1827B4DE207D0AD671FC77AA2464A35929C0ECEB0",
+      "bytes": 23768
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-05-convergence-controls.png",
+      "sha256": "483EEBCE018A4C98013BC15EC71FCF53E47234634031076AB002AF4338F3C31C",
+      "bytes": 179390
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-06-causal-and-claim-boundary.pdf",
+      "sha256": "CC95ABE64E9E8B3259DC265B0C7D18112C75801944FCBBAAD824923E3DB6FE91",
+      "bytes": 30074
+    },
+    {
+      "path": "paper/paper_v2/figures/figure-06-causal-and-claim-boundary.png",
+      "sha256": "A3582F486FE817FA0B93E9C2F5624DE0B8093747AB6F5E481C96A5E454BE81AD",
+      "bytes": 331149
+    }
+  ],
+  "claim_ceiling": "PHK_V2_ORACLE_NO_GO_NO_PINN_METHOD_OR_EXPERIMENTAL_EVIDENCE"
+}

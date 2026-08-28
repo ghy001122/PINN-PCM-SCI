@@ -1,0 +1,222 @@
+{
+  "claim_guards": [
+    "Q0 is zero-drive guard evidence only",
+    "QN intent 2 failed before case/evaluation/report fields existed",
+    "Newton figure is explicitly NON_SCIENTIFIC_DIAGNOSTIC",
+    "Newton trace invokes private core seams only on the 12-cell non-scientific fixture and is never ledgered",
+    "no oracle, event, PINN, OOD, formal, reserve, or experimental result is plotted"
+  ],
+  "documentation": {
+    "path": "paper/paper_v1/figures/captions.md",
+    "sha256": "13206E9E97B18566D8742ECFCA898D6F59F4296AE62AE167C2F057494B55D29E"
+  },
+  "evidence_ceiling": "NO_ORACLE_EVENT_OR_PINN_EVIDENCE",
+  "figures": [
+    {
+      "bytes": 270589,
+      "path": "paper/paper_v1/figures/figure-01-route-gates.png",
+      "sha256": "3F1205C4C82E592051FCD1817358488680FBE3D075721BCC7665175B44E32B36"
+    },
+    {
+      "bytes": 26154,
+      "path": "paper/paper_v1/figures/figure-01-route-gates.pdf",
+      "sha256": "0D71C366581791B593044696A91B9CD3204DA96F8F198C2557BC940E170E9C1B"
+    },
+    {
+      "bytes": 306904,
+      "path": "paper/paper_v1/figures/figure-02-source-matrix.png",
+      "sha256": "1AD68E8A222D448D4616DB57C1A8514D3D9C982CFF8932B70DEE3B9B3B4B6694"
+    },
+    {
+      "bytes": 31453,
+      "path": "paper/paper_v1/figures/figure-02-source-matrix.pdf",
+      "sha256": "1AB6CE9DF9244D5622848A10E4F5B4DD61CF6A48F437D7FD7FE49A34823AB9C4"
+    },
+    {
+      "bytes": 205589,
+      "path": "paper/paper_v1/figures/figure-03-s2-ladder.png",
+      "sha256": "51452C44FED2A758DDA674188B95F32785A885C9A57E99177FDE8CBC36D9BC46"
+    },
+    {
+      "bytes": 27514,
+      "path": "paper/paper_v1/figures/figure-03-s2-ladder.pdf",
+      "sha256": "A8041C8462A89F80FD46C1A636A8BDB13C6DD10FCB9D5A759391C2204AF33BB5"
+    },
+    {
+      "bytes": 396358,
+      "path": "paper/paper_v1/figures/figure-04-q0-guard.png",
+      "sha256": "602904D23111AE5D5A880C69F73A9A3142A73762CB454FA7BCE27F866149B744"
+    },
+    {
+      "bytes": 28049,
+      "path": "paper/paper_v1/figures/figure-04-q0-guard.pdf",
+      "sha256": "B041FB10FBF2C2E5BA5A0C41D925BA657865AFBF1A4E91189074C5AB36F48E58"
+    },
+    {
+      "bytes": 456740,
+      "path": "paper/paper_v1/figures/figure-05-newton-diagnostic.png",
+      "sha256": "50FEA1633AF47F7ED41706E313F7712E60F710F08B2B78DAE1DE01AFB26091A8"
+    },
+    {
+      "bytes": 39638,
+      "path": "paper/paper_v1/figures/figure-05-newton-diagnostic.pdf",
+      "sha256": "95192D8FEF1DE5B0BF1AE3548C0090BD1B287983FA3B8F30FD4EC3723E469598"
+    },
+    {
+      "bytes": 397414,
+      "path": "paper/paper_v1/figures/figure-06-claim-boundary.png",
+      "sha256": "3E2C73488781F442A442F2671B2657D22159A5686BDE2B35BFB1A1C279B6DD30"
+    },
+    {
+      "bytes": 29145,
+      "path": "paper/paper_v1/figures/figure-06-claim-boundary.pdf",
+      "sha256": "765A86100DE68E74FBE7922DF3B34C1F861AA1F2EB7B5C6DBFA27B452B3945A2"
+    }
+  ],
+  "generator": {
+    "path": "paper/paper_v1/figures/generate_figures.py",
+    "sha256": "1BD1D96991ECA36CEA793597445C6B07FC15EE2475F11E2F95FEA353BDD68DA7"
+  },
+  "post_render_checks": [
+    "all PNG files decode and have nonzero dimensions",
+    "all PDF files have PDF header and EOF marker",
+    "all figure and source-data hashes match the manifest",
+    "generator and captions hashes match the manifest",
+    "captions cover all six stable figure stems"
+  ],
+  "render_environment": {
+    "h5py": "3.11.0",
+    "matplotlib": "3.8.4",
+    "numpy": "1.26.4",
+    "python": "3.12.4"
+  },
+  "reproduction": {
+    "command": "python paper/figures/generate_figures.py",
+    "non_scientific_fixture_diagnostic_invoked": true,
+    "production_scientific_solver_invoked": false,
+    "required_imports": [
+      "numpy",
+      "h5py",
+      "matplotlib"
+    ],
+    "working_directory": "."
+  },
+  "schema_version": "goal-paper-one-shot-v1-figure-source-manifest-v1",
+  "source_data": [
+    {
+      "path": "paper/paper_v1/figures/data/figure-01-route-gates.csv",
+      "sha256": "224BE4CA5FB05703CE714337205DE83D3AF967FAD7AFB65B3B923FE511D07598"
+    },
+    {
+      "path": "paper/paper_v1/figures/data/figure-02-source-matrix.csv",
+      "sha256": "E0293A0D14AC3391DC8AFA010312FF6763ED99574C8FAC111CA96DA07E3765E0"
+    },
+    {
+      "path": "paper/paper_v1/figures/data/figure-03-s2-ladder.csv",
+      "sha256": "34C2CF5D9DAF93D81775BCC3EAA632798456542B33B3BE8EFDAE28D6698F53E3"
+    },
+    {
+      "path": "paper/paper_v1/figures/data/figure-04-q0-circuit.csv",
+      "sha256": "02A023262A46EA981394A3FA13BBC4562E4785C01EAA5D0E4416D192F507A305"
+    },
+    {
+      "path": "paper/paper_v1/figures/data/figure-04-q0-field.csv",
+      "sha256": "24EEA95B2F3488DA3158918A14D7BBAB3888827D62BD7DF3A5C3D5E44D854163"
+    },
+    {
+      "path": "paper/paper_v1/figures/data/figure-04-q0-guard-summary.csv",
+      "sha256": "0DD255BDD5589AB16F39FDAC9A3B89E5DADF65D6A8A71D23744B004751940CAB"
+    },
+    {
+      "path": "paper/paper_v1/figures/data/figure-05-newton-summary.csv",
+      "sha256": "562810D09B5241E8F1B9837FC15BF3176063ED039743B483C1A840FB1549B108"
+    },
+    {
+      "path": "paper/paper_v1/figures/data/figure-05-newton-trajectory.csv",
+      "sha256": "67492074E457B6C9243BFB09BD9EBFE79D138B7BE628D146FEB545980E597566"
+    },
+    {
+      "path": "paper/paper_v1/figures/data/figure-06-claim-boundary.csv",
+      "sha256": "5E2D3DBBCBEE22026AE01037814E50DBAD72E01907856B6C79534863F363C1A7"
+    },
+    {
+      "path": "paper/paper_v1/figures/data/figure-06-compute-accounting.csv",
+      "sha256": "4A2F94C9DFD4AE5FCBF203C2FE0CBF2E9D7822DD14C3B4EFEE68A8D8FB8C0FDC"
+    }
+  ],
+  "sources": [
+    {
+      "expected_sha256": "947E737A255D27A7BB2553286809ADB98219FD4E48B932B170CB06608A2E3A75",
+      "path": "configs/goal_paper_one_shot_v1/s0_contract.json",
+      "role": "route order, synthetic identity, budgets",
+      "sha256": "947E737A255D27A7BB2553286809ADB98219FD4E48B932B170CB06608A2E3A75"
+    },
+    {
+      "expected_sha256": "D059AA2261CC227C3B16B7965A75C461AD64110C2A20C3700B62E54FDE25E8E6",
+      "path": "configs/goal_paper_one_shot_v1/s2_numerical_contract.json",
+      "role": "frozen numerical ladder and no-rescue contract",
+      "sha256": "D059AA2261CC227C3B16B7965A75C461AD64110C2A20C3700B62E54FDE25E8E6"
+    },
+    {
+      "expected_sha256": null,
+      "path": "docs/references/2026-08-26-goal-paper-one-shot-v1-s1-source-legal-novelty-review.md",
+      "role": "bounded source/legal/novelty route adjudication",
+      "sha256": "1CCEFFFCF743B2B0781AA004F096AFD49C07E79C27CB5D9D339FCF99EE79AF1C"
+    },
+    {
+      "expected_sha256": null,
+      "path": "docs/experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md",
+      "role": "terminal S2 status and non-scientific diagnostic facts",
+      "sha256": "C780D66347A21D9DFD6495A7DFE7ECF9D3E9A6DA1DF9683AEE5F34855B8127B2"
+    },
+    {
+      "expected_sha256": "74B5CD92A5271FD481A134DD52A80DD22FC65DC6784F761C5B8B74B880AB2F35",
+      "path": "docs/experiment/manifests/20260826T113537Z-goal-paper-one-shot-v1-s2-freeze-002.json",
+      "role": "effective Q-only freeze identity",
+      "sha256": "74B5CD92A5271FD481A134DD52A80DD22FC65DC6784F761C5B8B74B880AB2F35"
+    },
+    {
+      "expected_sha256": "EF093A5C2F2E798FF05E768C3D0837CF08C3E10FD6AE79B432F26585F0FCD09C",
+      "path": "outputs/runs/20260826T113537Z-goal-paper-one-shot-v1-s2-freeze-002/case-manifest-q-only.json",
+      "role": "Q0/QL/QN/QH roles",
+      "sha256": "EF093A5C2F2E798FF05E768C3D0837CF08C3E10FD6AE79B432F26585F0FCD09C"
+    },
+    {
+      "expected_sha256": "6451DFC6C1E331A0AF86997FDCC74083CD4C8C781C96C2C2A156EB149504205E",
+      "path": "docs/experiment/manifests/20260826T113638Z-goal-paper-one-shot-v1-s2-intent-01-q0.json",
+      "role": "Q0 execution and compute accounting",
+      "sha256": "6451DFC6C1E331A0AF86997FDCC74083CD4C8C781C96C2C2A156EB149504205E"
+    },
+    {
+      "expected_sha256": "01F5DCF28E25A75E74C5EDBE612456A542ECA36EFFCB8CAFEC196AE4994F7A01",
+      "path": "outputs/runs/20260826T113638Z-goal-paper-one-shot-v1-s2-intent-01-q0/case-q0-intent-01-coarse-coarse-full.h5",
+      "role": "actual Q0 zero-drive traces",
+      "sha256": "01F5DCF28E25A75E74C5EDBE612456A542ECA36EFFCB8CAFEC196AE4994F7A01"
+    },
+    {
+      "expected_sha256": "0964E3B55431AA49CDE158FFF7F98F3478288865A6DE670CC88ABD9B7BF3D1A8",
+      "path": "outputs/runs/20260826T113638Z-goal-paper-one-shot-v1-s2-intent-01-q0/report.json",
+      "role": "Q0 guard summary and event non-applicability",
+      "sha256": "0964E3B55431AA49CDE158FFF7F98F3478288865A6DE670CC88ABD9B7BF3D1A8"
+    },
+    {
+      "expected_sha256": "A1806D03A1D5F8687FCE252F66BA2CCE921DA78902EADA149B5A84C42CE0ECB8",
+      "path": "docs/experiment/manifests/20260826T113752Z-goal-paper-one-shot-v1-s2-intent-02-qn-coarse-fine.json",
+      "role": "first driven QN failure and compute accounting",
+      "sha256": "A1806D03A1D5F8687FCE252F66BA2CCE921DA78902EADA149B5A84C42CE0ECB8"
+    },
+    {
+      "expected_sha256": null,
+      "path": "pinn_pcm_sci/syn_edt_2d.py",
+      "role": "current private residual/Jacobian/line-search seam for non-scientific diagnostic",
+      "sha256": "D501E0E0A7AA376987F8652279660E6A9A1CCCA73B9573540B3AA914A7198E91"
+    },
+    {
+      "expected_sha256": null,
+      "path": "tests/test_syn_edt_2d.py",
+      "role": "fixture identity and explicit NON_SCIENTIFIC_DIAGNOSTIC boundary",
+      "sha256": "2386D963DEE93D0D61369BD95FC19B67094E679F93BDBBC576031FEF7F6A7F0D"
+    }
+  ],
+  "terminal_disposition": "SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO"
+}

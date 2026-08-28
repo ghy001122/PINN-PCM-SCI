@@ -14,7 +14,7 @@
 
 `VERIFIED`：上一 `GOAL-PAPER-ONE-SHOT-V1` 已完整归档；其 Q0、QN、`SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO` 和第一版论文保持原样。旧 PHA screen 的相同结构端点和 raw event failure 不能被新名字救援；新路线必须使用新的 event-verifiable 2D electrothermal phase-field substrate。
 
-`VERIFIED`：[S0B freeze](docs/governance/2026-08-27-phk-v2-s0b-object-and-split-freeze.md)在首个 PHK 数值结果前固定透明无量纲 wall-cell、事件/守卫/收敛、12-intent 梯与 324 个 complete-case 候选。[S2 terminal summary](outputs/runs/20260827T-phk-v2-s2-q-terminal-summary/summary.json)记录 intents 1–8 完成、intent 9 失败并消费、intents 10–12 未到达；结果为 `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`。[最终 V2 包](paper_v2/README.md)已在该边界内完成。
+`VERIFIED`：[S0B freeze](docs/governance/2026-08-27-phk-v2-s0b-object-and-split-freeze.md)在首个 PHK 数值结果前固定透明无量纲 wall-cell、事件/守卫/收敛、12-intent 梯与 324 个 complete-case 候选。[S2 terminal summary](outputs/runs/20260827T-phk-v2-s2-q-terminal-summary/summary.json)记录 intents 1–8 完成、intent 9 失败并消费、intents 10–12 未到达；结果为 `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`。[最终 V2 包](paper/paper_v2/README.md)已在该边界内完成。
 
 `VERIFIED`：用户已批准《总体审查结论》末尾 PHK-V2.1 GOAL；新 program/engineering contracts 固定了非投票 solver/object engineering、预算和停止路由。旧 intent-9 failure 已压缩到确定性 2×2 snapshot；方向有限差分未显示 Jacobian mismatch，真实根位于 `[0,1]` 但被旧人工上界排除。logit analytic Newton 已通过 full-duration control、nominal/Joule-off sentinels 和 exact replay，现仅作为 E2 工程搜索的固定求解方案。
 
@@ -24,7 +24,7 @@
 
 `VERIFIED`：[S1 terminal closeout](docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)固定 Oracle No-Go：14/14 intents 完成且 nominal event、controls、guards 与 replay 可评价，但 event-time 空间差未单调收敛。候选 floor 不能作为 neural floor，Sharp/PF、PINN、PHA-MF、KC、OOD 与 formal 均未到达。
 
-`VERIFIED`：[PHK-V2.1 最终包](paper_v21/README.md)与 [S7 closeout](docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)已完成英文/中文正文、通俗故事、六幅图、图源、表格、引用、补充、复现、baseline anatomy、claim matrix、reviewer-risk audit 与 byte-level manifest。该交付形成完整 bounded negative qualification paper，不形成正向 PINN 方法论文。
+`VERIFIED`：[PHK-V2.1 最终包](paper/paper_v21/README.md)与 [S7 closeout](docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)已完成英文/中文正文、通俗故事、六幅图、图源、表格、引用、补充、复现、baseline anatomy、claim matrix、reviewer-risk audit 与 byte-level manifest。论文版本目录统一位于 `paper/paper_vxx/`；该交付形成完整 bounded negative qualification paper，不形成正向 PINN 方法论文。
 
 `UNKNOWN`：在另一份前瞻冻结的数值合同下能否恢复 event-time 收敛，以及任何 neural 方法的表现。本 GOAL 不修改合同或运行这些下游。
 

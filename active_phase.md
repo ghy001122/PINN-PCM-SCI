@@ -24,7 +24,7 @@
 
 ## 当前允许
 
-- 读取、审查与复现既有 [PHK-V2.1 最终包](paper_v21/README.md)、[S1 terminal closeout](docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)及 [S7 package closeout](docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)；
+- 读取、审查与复现既有 [PHK-V2.1 最终包](paper/paper_v21/README.md)、[S1 terminal closeout](docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)及 [S7 package closeout](docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)；
 - 运行不改变科学输入的只读验证、文档一致性、包清单核验和既有图表重绘；
 - 保留全部 14 个 intent、两项 implementation reconciliation、候选 floor carrier 与 NOT_REACHED 计账；
 - 提出新的研究计划，但任何 solver、baseline、PINN、GPU 或 formal 执行必须先获得新的明确用户授权。
@@ -46,7 +46,7 @@
 
 - 用户提供并批准执行《总体审查结论》末尾 PHK-V2.1 GOAL；[ADR 0046](docs/adr/0046-adopt-phk-v21-independent-engineering-science-contract.md)与[S0 预注册](docs/governance/2026-08-27-phk-v21-s0-program-and-engineering-preregistration.md)已建立独立工程—科学双阶段路线。它只覆盖旧 PHK-V2 “不再执行”的授权语义，不改写旧 Oracle No-Go、失败 intent 或论文。
 - [S1 terminal closeout](docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)固定 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`：14/14 intents 完成且 nominal event、controls、guards、replay 均可评价，但 event-time 空间分量未单调收敛。Sharp/PF、neural floor、PINN、PHA、KC、GPU 与 formal 均未到达。
-- [S7 package closeout](docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)固定本轮最终交付：[paper_v21](paper_v21/README.md)已包含英文/中文正文、通俗故事、六幅 PNG/PDF 图、六份 CSV、表格、参考文献、补充、复现、baseline anatomy、claim matrix、reviewer-risk audit 与 package manifest；`PHK_V21_PACKAGE_VALID`、31/31 full tests（含 20/20 focused subset）、ledger 和 document consistency 均通过。该完成事实不提升 Oracle No-Go 的 claim ceiling。
+- [S7 package closeout](docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)固定本轮最终交付：[paper_v21](paper/paper_v21/README.md)已包含英文/中文正文、通俗故事、六幅 PNG/PDF 图、六份 CSV、表格、参考文献、补充、复现、baseline anatomy、claim matrix、reviewer-risk audit 与 package manifest；`PHK_V21_PACKAGE_VALID`、31/31 full tests（含 20/20 focused subset）、ledger 和 document consistency 均通过。该完成事实不提升 Oracle No-Go 的 claim ceiling。
 
 - 用户提供并明确要求执行《后续研究总规划》，目标为复现并剖析强 phase-field/PINN 工作、迁移可改模块、从可行性开始分层验证 PHA-MF 与 field-selective KC，最终形成相对最强合格 baseline 关键指标非劣且至少一个预声明主指标实质改善的第二版论文。
 - [R0 一手来源审查](docs/references/2026-08-27-phk-pinn-primary-source-baseline-audit.md)已固定 Sharp/PF/jaxpi2/PirateNet/Causality-RBAR/phase-change heat/re-spacing/Miquel 的论文、代码、许可与可复现性身份；该审查未运行作者代码、solver、PINN 或 GPU。
@@ -58,7 +58,7 @@
 - PHK qualification intents 1–8 已执行；manufactured 与 zero-drive 守卫通过，nominal coarse/medium/fine/half-dt/replay 的数值硬守卫通过且 replay 六分量精确为零，但两周期 recovery/event 合同失败。intent 9 以冻结的 phase-Newton 最小线搜索步失败，intents 10–12 未到达。
 - [terminal summary](outputs/runs/20260827T-phk-v2-s2-q-terminal-summary/summary.json)固定 `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`。因此没有 neural floors，strong raw、PHA-MF、KC、组合、GPU、formal 与 OOD 均未进入。
 - 当前项目环境为 Python 3.11.9、PyTorch 2.5.1+cpu，CUDA 不可用、device count 0，`nvidia-smi` 不存在；本路线关闭的决定性原因是 Oracle Gate No-Go，而不是 GPU 资源缺失。
-- [PHK-V2 最终包](paper_v2/README.md)已交付英文/中文正文、通俗故事、六幅 PNG/PDF 图、六份派生 CSV、最终表格与参考文献、baseline anatomy cards、补充材料、复现说明、claim–evidence matrix 和 reviewer-risk 自检。[包清单](paper_v2/package-manifest.json)列出除自身外 35 个包内文件和 15 个外部证据依赖，清单 SHA256 为 `A0BFF4D3DE95F2E10167DFC5FEB09EFDE704E62EA6D54FDE7CFE5621ABE38173`；`PHK_V2_PACKAGE_VALID` 已通过。
+- [PHK-V2 最终包](paper/paper_v2/README.md)已交付英文/中文正文、通俗故事、六幅 PNG/PDF 图、六份派生 CSV、最终表格与参考文献、baseline anatomy cards、补充材料、复现说明、claim–evidence matrix 和 reviewer-risk 自检。[包清单](paper/paper_v2/package-manifest.json)列出除自身外 35 个包内文件和 15 个外部证据依赖；目录迁移后重新生成的清单哈希以该文件当前字节为准，`PHK_V2_PACKAGE_VALID` 已通过。
 - 第一版论文、`SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`、旧 Q0/QN、全部历史 No-Go 和失败 intent 保持原样。
 
 `UNKNOWN`：

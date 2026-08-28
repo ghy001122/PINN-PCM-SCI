@@ -1,0 +1,187 @@
+{
+  "schema_version": "goal-paper-one-shot-v1-package-manifest-v1",
+  "package_root": "paper/paper_v1",
+  "generated_at_utc": "2026-08-27T03:27:19.9210920Z",
+  "hash_algorithm": "SHA256",
+  "path_semantics": "Forward-slash paths relative to paper/paper_v1/",
+  "terminal_disposition": "SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO",
+  "evidence_ceiling": "NO_ORACLE_EVENT_OR_PINN_EVIDENCE",
+  "entry_count": 34,
+  "self_reference_exclusion": {
+    "path": "package-manifest.json",
+    "excluded": true,
+    "reason": "The manifest excludes itself because embedding its own byte length and digest would create an unresolved recursive self-reference."
+  },
+  "files": [
+    {
+      "path": "claim_evidence_matrix.md",
+      "bytes": 11418,
+      "sha256": "E7F6910B8A9B275F8CAF2729194738B5187BCBB65CF45D2F41ED9A1A5375221C"
+    },
+    {
+      "path": "figures/captions.md",
+      "bytes": 6141,
+      "sha256": "13206E9E97B18566D8742ECFCA898D6F59F4296AE62AE167C2F057494B55D29E"
+    },
+    {
+      "path": "figures/data/figure-01-route-gates.csv",
+      "bytes": 584,
+      "sha256": "224BE4CA5FB05703CE714337205DE83D3AF967FAD7AFB65B3B923FE511D07598"
+    },
+    {
+      "path": "figures/data/figure-02-source-matrix.csv",
+      "bytes": 1116,
+      "sha256": "E0293A0D14AC3391DC8AFA010312FF6763ED99574C8FAC111CA96DA07E3765E0"
+    },
+    {
+      "path": "figures/data/figure-03-s2-ladder.csv",
+      "bytes": 782,
+      "sha256": "34C2CF5D9DAF93D81775BCC3EAA632798456542B33B3BE8EFDAE28D6698F53E3"
+    },
+    {
+      "path": "figures/data/figure-04-q0-circuit.csv",
+      "bytes": 64925,
+      "sha256": "02A023262A46EA981394A3FA13BBC4562E4785C01EAA5D0E4416D192F507A305"
+    },
+    {
+      "path": "figures/data/figure-04-q0-field.csv",
+      "bytes": 19245,
+      "sha256": "24EEA95B2F3488DA3158918A14D7BBAB3888827D62BD7DF3A5C3D5E44D854163"
+    },
+    {
+      "path": "figures/data/figure-04-q0-guard-summary.csv",
+      "bytes": 344,
+      "sha256": "0DD255BDD5589AB16F39FDAC9A3B89E5DADF65D6A8A71D23744B004751940CAB"
+    },
+    {
+      "path": "figures/data/figure-05-newton-summary.csv",
+      "bytes": 896,
+      "sha256": "562810D09B5241E8F1B9837FC15BF3176063ED039743B483C1A840FB1549B108"
+    },
+    {
+      "path": "figures/data/figure-05-newton-trajectory.csv",
+      "bytes": 2826,
+      "sha256": "67492074E457B6C9243BFB09BD9EBFE79D138B7BE628D146FEB545980E597566"
+    },
+    {
+      "path": "figures/data/figure-06-claim-boundary.csv",
+      "bytes": 673,
+      "sha256": "5E2D3DBBCBEE22026AE01037814E50DBAD72E01907856B6C79534863F363C1A7"
+    },
+    {
+      "path": "figures/data/figure-06-compute-accounting.csv",
+      "bytes": 358,
+      "sha256": "4A2F94C9DFD4AE5FCBF203C2FE0CBF2E9D7822DD14C3B4EFEE68A8D8FB8C0FDC"
+    },
+    {
+      "path": "figures/figure-01-route-gates.pdf",
+      "bytes": 26154,
+      "sha256": "0D71C366581791B593044696A91B9CD3204DA96F8F198C2557BC940E170E9C1B"
+    },
+    {
+      "path": "figures/figure-01-route-gates.png",
+      "bytes": 270589,
+      "sha256": "3F1205C4C82E592051FCD1817358488680FBE3D075721BCC7665175B44E32B36"
+    },
+    {
+      "path": "figures/figure-02-source-matrix.pdf",
+      "bytes": 31453,
+      "sha256": "1AB6CE9DF9244D5622848A10E4F5B4DD61CF6A48F437D7FD7FE49A34823AB9C4"
+    },
+    {
+      "path": "figures/figure-02-source-matrix.png",
+      "bytes": 306904,
+      "sha256": "1AD68E8A222D448D4616DB57C1A8514D3D9C982CFF8932B70DEE3B9B3B4B6694"
+    },
+    {
+      "path": "figures/figure-03-s2-ladder.pdf",
+      "bytes": 27514,
+      "sha256": "A8041C8462A89F80FD46C1A636A8BDB13C6DD10FCB9D5A759391C2204AF33BB5"
+    },
+    {
+      "path": "figures/figure-03-s2-ladder.png",
+      "bytes": 205589,
+      "sha256": "51452C44FED2A758DDA674188B95F32785A885C9A57E99177FDE8CBC36D9BC46"
+    },
+    {
+      "path": "figures/figure-04-q0-guard.pdf",
+      "bytes": 28049,
+      "sha256": "B041FB10FBF2C2E5BA5A0C41D925BA657865AFBF1A4E91189074C5AB36F48E58"
+    },
+    {
+      "path": "figures/figure-04-q0-guard.png",
+      "bytes": 396358,
+      "sha256": "602904D23111AE5D5A880C69F73A9A3142A73762CB454FA7BCE27F866149B744"
+    },
+    {
+      "path": "figures/figure-05-newton-diagnostic.pdf",
+      "bytes": 39638,
+      "sha256": "95192D8FEF1DE5B0BF1AE3548C0090BD1B287983FA3B8F30FD4EC3723E469598"
+    },
+    {
+      "path": "figures/figure-05-newton-diagnostic.png",
+      "bytes": 456740,
+      "sha256": "50FEA1633AF47F7ED41706E313F7712E60F710F08B2B78DAE1DE01AFB26091A8"
+    },
+    {
+      "path": "figures/figure-06-claim-boundary.pdf",
+      "bytes": 29145,
+      "sha256": "765A86100DE68E74FBE7922DF3B34C1F861AA1F2EB7B5C6DBFA27B452B3945A2"
+    },
+    {
+      "path": "figures/figure-06-claim-boundary.png",
+      "bytes": 397414,
+      "sha256": "3E2C73488781F442A442F2671B2657D22159A5686BDE2B35BFB1A1C279B6DD30"
+    },
+    {
+      "path": "figures/generate_figures.py",
+      "bytes": 57160,
+      "sha256": "1BD1D96991ECA36CEA793597445C6B07FC15EE2475F11E2F95FEA353BDD68DA7"
+    },
+    {
+      "path": "figures/source-manifest.json",
+      "bytes": 9689,
+      "sha256": "1F0A2BD8C20355CF8A2CA3BAFE3C4DF23C2A06EF0DE763BC36D5A87B74BBE164"
+    },
+    {
+      "path": "manuscript.md",
+      "bytes": 48929,
+      "sha256": "791F2FC3868BC3C74742A88204D725F59FF86AE6D7D7C935A7828E3B15A770A4"
+    },
+    {
+      "path": "manuscript_zh.md",
+      "bytes": 18715,
+      "sha256": "27785589BCB359C8C2B4FED9B6E74B5A59A03170998DCFFAA6BB35B9715DBA25"
+    },
+    {
+      "path": "plain_language_story_zh.md",
+      "bytes": 8193,
+      "sha256": "9B61CE997B9BAE3848E62D116888D57EB133D442D9FC5527D6153E7114348C09"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5424,
+      "sha256": "8A6C7469984CC116E8F1F873278FDE0E3502DB11A136267DFD570D715B87CE61"
+    },
+    {
+      "path": "references.bib",
+      "bytes": 5701,
+      "sha256": "D20B2D63378269A035F5E206F17CCD1A056283A1F5DBA4F691C99413E6D58251"
+    },
+    {
+      "path": "reproducibility.md",
+      "bytes": 12656,
+      "sha256": "87A944AADD07D7E8CF6A5CED70A04312065D9444BC7CD0480013025C1B459F07"
+    },
+    {
+      "path": "supplement.md",
+      "bytes": 17061,
+      "sha256": "5277A94C566D876DFB7ACCB744A5CBA8CF850C465AE61A5E17AEBD92A98941CD"
+    },
+    {
+      "path": "tables.md",
+      "bytes": 4806,
+      "sha256": "41AD046350AF917F751E3EA0E8F6415BF52F412276DB51A75F029B1F350B23C0"
+    }
+  ]
+}

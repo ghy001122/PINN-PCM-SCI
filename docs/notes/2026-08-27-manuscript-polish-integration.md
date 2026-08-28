@@ -24,11 +24,11 @@
 
 ## 新增或更新文件
 
-- `paper/manuscript.md`：英文主稿的聚焦重构；
+- `paper/paper_v1/manuscript.md`：英文主稿的聚焦重构；
 - `paper/references.bib`：C12 主记录更新；
 - `paper/manuscript_zh.md`：与英文证据边界一致的完整中文稿；
 - `paper/plain_language_story_zh.md`：30 秒故事、完整叙事、导师/审稿人/cover-letter 口径、可说/不可说清单和单页 PPT；
-- `paper/README.md` 与 `paper/package-manifest.json`：包路由和内容寻址更新。
+- `paper/paper_v1/README.md` 与 `paper/paper_v1/package-manifest.json`：包路由和内容寻址更新。
 
 ## 未接纳或未改变
 

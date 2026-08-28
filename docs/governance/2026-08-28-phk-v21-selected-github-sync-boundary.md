@@ -14,7 +14,7 @@
 - E1/E2/S0/S1/S7 记录、14 个 qualification intents、intent claims、manifests 与 append-only 实验索引；
 - PHK-V2.1 solver、design、benchmark、evaluator、runner 代码及对应测试；
 - terminal summary、candidate floor carrier、E2 summary/case records 和每个 S1 intent 的小型 report；
-- 完整 `paper_v21/`：英文/中文正文、通俗故事、补充、复现、表格、引用、claim audit、六份 CSV、六幅 PNG/PDF 及 package/figure manifests。
+- 完整 PHK-V2.1 论文包：该次同步时路径为 `paper_v21/`；后由 [paper version layout sync](2026-08-28-paper-version-layout-github-sync.md)迁移至当前规范路径 `paper/paper_v21/`。内容包括英文/中文正文、通俗故事、补充、复现、表格、引用、claim audit、六份 CSV、六幅 PNG/PDF 及 package/figure manifests。
 
 ## 明确排除
 
