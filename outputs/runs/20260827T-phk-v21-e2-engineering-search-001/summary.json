@@ -1,0 +1,1888 @@
+{
+  "accepted_for_new_scientific_freeze": true,
+  "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN",
+  "control_outcomes": [
+    {
+      "case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573_ZERO_DRIVE",
+      "control": "ZERO_DRIVE",
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "numerical_guard_passed": true
+    },
+    {
+      "case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573_JOULE_GAIN_ZERO",
+      "control": "JOULE_GAIN_ZERO",
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "numerical_guard_passed": true
+    },
+    {
+      "case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573_CONDUCTIVITY_PHASE_RATIO_ONE",
+      "control": "CONDUCTIVITY_PHASE_RATIO_ONE",
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "numerical_guard_passed": true
+    },
+    {
+      "case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573_LATENT_RATIO_ZERO",
+      "control": "LATENT_RATIO_ZERO",
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "numerical_guard_passed": true
+    },
+    {
+      "case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573_HEATER_WIDTH_0_50",
+      "control": "HEATER_WIDTH_0_50",
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "numerical_guard_passed": true
+    },
+    {
+      "case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573_INTERFACE_WIDTH_0_025",
+      "control": "INTERFACE_WIDTH_0_025",
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "numerical_guard_passed": true
+    }
+  ],
+  "controls_not_reached": [],
+  "e1_solver_selection_sha256": "A452D4E387A2C2E2AD0924D7CECD0E941A68088A48070F2F105AE81BF978A2DC",
+  "engineering_contract_sha256": "DF835E701660E4BC91F585F4DFAA22075DBCAAA754B7716921E766066BD7605A",
+  "evidence_identity": "NON_VOTING_ENGINEERING_ONLY",
+  "gate_outcome": "PHK_V21_E2_ENGINEERING_OBJECT_CANDIDATE_SELECTED",
+  "gross_compute": {
+    "case_records": 41,
+    "failed_case_records": 0,
+    "process_cpu_core_hours": 0.44276475694444445,
+    "process_cpu_seconds": 1593.953125,
+    "wall_clock_seconds": 1612.5088280000055
+  },
+  "medium_outcomes": [
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.05,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "0A1813B1D968F573764DBDBD0FFF149AA0A6F265AEAB08E5140741205EAF16AF",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.05882352941176469,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2378,
+          "peak_full_domain_fraction": 0.021249999999999995,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07024793388429754,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 92
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4942000000000002,
+          "peak_full_domain_fraction": 0.019999999999999993,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06611570247933886,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 87
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 123.46875
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_288E149BA54FD892",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "288E149BA54FD892CC33F115A1C4484CC350DC1E2635EDE710FF6675F5BCCAF5",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.12903225806451613,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2392,
+          "peak_full_domain_fraction": 0.019374999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06404958677685951,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 84
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4992,
+          "peak_full_domain_fraction": 0.016874999999999994,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05578512396694216,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 78
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 122.484375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_3DD735A420D0ED6A",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.22,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "3DD735A420D0ED6A856154D88513F54841080FEE1F7B40A1035EC50F52BBBC9A",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.31578947368421056,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2392,
+          "peak_full_domain_fraction": 0.011874999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.039256198347107446,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 50
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.5284,
+          "peak_full_domain_fraction": 0.008124999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.02685950413223141,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 22
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 119.40625
+    }
+  ],
+  "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+  "run_id": "20260827T-phk-v21-e2-engineering-search-001",
+  "schema_id": "phk-v21-engineering-campaign-summary-v1",
+  "scientific_claim_status": "NO_OBJECT_ORACLE_EVENT_PINN_METHOD_OR_FORMAL_EVIDENCE",
+  "selected_medium_promotions": [
+    "PHK_V21_E2_STAGE2_0A1813B1D968F573",
+    "PHK_V21_E2_STAGE2_288E149BA54FD892",
+    "PHK_V21_E2_STAGE2_3DD735A420D0ED6A"
+  ],
+  "selected_nominal_case": {
+    "overrides": {
+      "case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573",
+      "heater_width_fraction": 0.35,
+      "interface_width": 0.04,
+      "latent_ratio": 0.05,
+      "mobility_cold": 0.5,
+      "mobility_hot": 5.0,
+      "period": 1.25,
+      "pulse_hold_end": 0.27,
+      "thermal_drive": 6.0,
+      "volumetric_cooling": 4.0,
+      "waveform_amplitude": 0.72
+    },
+    "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+    "physical_identity_sha256": "0A1813B1D968F573764DBDBD0FFF149AA0A6F265AEAB08E5140741205EAF16AF",
+    "stage": "STAGE2"
+  },
+  "selected_stage_1_parents": [
+    "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+    "PHK_V21_E2_STAGE1_62BE195D96A0A388"
+  ],
+  "stage_1_outcomes": [
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_F523B69AA0691CC3",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 2.5,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "F523B69AA0691CC3F37C4292106915B785DE119C0EFA43749E93A6A32C6A50E5",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.20000000000000012,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.22710000000000002,
+          "peak_full_domain_fraction": 0.04999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.16528925619834714,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.8000000000000002,
+          "saved_steps_at_or_above_threshold": 102
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.3921000000000001,
+          "peak_full_domain_fraction": 0.059999999999999984,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.1983471074380166,
+          "pre_roi_fraction": 0.03305785123966941,
+          "recovery_fraction": 0.9,
+          "saved_steps_at_or_above_threshold": 114
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.8000000000000002,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 21.5625
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_CAD0AC0AF6704B95",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 2.5,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "CAD0AC0AF6704B95F75F0750E0DFD1B3F961E2A1CFDC8FD9C6D2102D3FADC325",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.07692307692307691,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.19710000000000003,
+          "peak_full_domain_fraction": 0.06499999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.21487603305785127,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.9230769230769231,
+          "saved_steps_at_or_above_threshold": 100
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.3947333333333334,
+          "peak_full_domain_fraction": 0.06999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.23140495867768598,
+          "pre_roi_fraction": 0.008264462809917352,
+          "recovery_fraction": 0.962962962962963,
+          "saved_steps_at_or_above_threshold": 108
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.9230769230769231,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 21.78125
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_C06BB2D7DA361ADD",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 1.0,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 2.5,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "C06BB2D7DA361ADDCE0806A40ED067CB8A249253C92077AA145ED0898AC9FF6E",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.16666666666666663,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2321,
+          "peak_full_domain_fraction": 0.044999999999999984,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.14876033057851243,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 74
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4542,
+          "peak_full_domain_fraction": 0.052499999999999984,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.1735537190082645,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 82
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 22.171875
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_6DEAB194283EFD3A",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 1.0,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 2.5,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "6DEAB194283EFD3AAD9BEEEFBC06017FFE32978EA7A2E5CA24DA65E1A5BCFA92",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.03846153846153846,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.19710000000000003,
+          "peak_full_domain_fraction": 0.06499999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.21487603305785127,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 74
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4471,
+          "peak_full_domain_fraction": 0.06749999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.22314049586776863,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 77
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 22.15625
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_E57A38DB9C621079",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "E57A38DB9C621079943243B1CD4DBAAA80DCB71BF743D05D500821AAA918FD90",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.2222222222222224,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.24710000000000001,
+          "peak_full_domain_fraction": 0.022499999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0743801652892562,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 63
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4721,
+          "peak_full_domain_fraction": 0.02749999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09090909090909093,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 66
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 19.78125
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "5F35AFC141AD7800B280204471554755DD841500DCDF5D8E4B998C72DEF4D425",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2121,
+          "peak_full_domain_fraction": 0.032499999999999994,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.10743801652892564,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 65
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4521,
+          "peak_full_domain_fraction": 0.032499999999999994,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.10743801652892564,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 65
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 20.765625
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_D7BDDEA14A316CAF",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 1.0,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "D7BDDEA14A316CAFB712BDA8B37802BDAF1D36DA242536DA52DD22F21A71637C",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.2222222222222222,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.25420000000000004,
+          "peak_full_domain_fraction": 0.022499999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0743801652892562,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 44
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.5371000000000001,
+          "peak_full_domain_fraction": 0.017499999999999995,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05785123966942149,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 35
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 19.71875
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_10F1D04596A11E84",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 1.0,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "10F1D04596A11E84331BD997D117165F55DE2E5710A9D8524B4C2368E40D1F6E",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.07692307692307691,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.21710000000000002,
+          "peak_full_domain_fraction": 0.032499999999999994,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.10743801652892564,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 49
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.5047333333333333,
+          "peak_full_domain_fraction": 0.029999999999999992,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09917355371900828,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 41
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 19.96875
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_74EE8A80A5754D1E",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 2.5,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "74EE8A80A5754D1E7B541AE875E16D0815B126155422086F31055C13F005DF0C",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.22710000000000002,
+          "peak_full_domain_fraction": 0.04999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.16528925619834714,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 105
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.6742,
+          "peak_full_domain_fraction": 0.04999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.16528925619834714,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 116
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 23.09375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_2AE88735F714502C",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 2.5,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "2AE88735F714502CE3C3A3A463CD52439180BB1FD09E2070A87F2495173C20B9",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.07692307692307691,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.19710000000000003,
+          "peak_full_domain_fraction": 0.06499999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.21487603305785127,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 100
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.6771,
+          "peak_full_domain_fraction": 0.06999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.23140495867768598,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 103
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 25.09375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_FF2576CBC46FC481",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 1.0,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 2.5,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "FF2576CBC46FC4810A5E72971215F57AE5133ED1C7A8FC195876450120570D6F",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.055555555555555546,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2321,
+          "peak_full_domain_fraction": 0.044999999999999984,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.14876033057851243,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 74
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.7471,
+          "peak_full_domain_fraction": 0.04249999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.14049586776859507,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 71
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 24.234375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_485DA7A97C4D0873",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 1.0,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 2.5,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "485DA7A97C4D087305EE4755605D6006FF3E71B109CC54B881D55C572DA29BF8",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.07692307692307679,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.19710000000000003,
+          "peak_full_domain_fraction": 0.06499999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.21487603305785127,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 74
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.7321,
+          "peak_full_domain_fraction": 0.059999999999999984,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.1983471074380166,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 69
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 24.203125
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_62BE195D96A0A388",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "62BE195D96A0A3889323BD76891C5DAF068923ACF17B32CB93C0E7E61CF2D5DF",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.24710000000000001,
+          "peak_full_domain_fraction": 0.022499999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0743801652892562,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 63
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.7471,
+          "peak_full_domain_fraction": 0.022499999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0743801652892562,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 63
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 21.953125
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_04DBB36D06E760F8",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "04DBB36D06E760F84C0AA545EC9451591581A7748A12FBA33D072896EEDE1C4D",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2121,
+          "peak_full_domain_fraction": 0.032499999999999994,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.10743801652892564,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 65
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.7271,
+          "peak_full_domain_fraction": 0.032499999999999994,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.10743801652892564,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 62
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 22.890625
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_1C61A3F2CAD39386",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 1.0,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "1C61A3F2CAD393863766EDB9523509608D6F717C31AB9D44E29245975C9382DE",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.5555555555555557,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.25420000000000004,
+          "peak_full_domain_fraction": 0.022499999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0743801652892562,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 44
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.8342,
+          "peak_full_domain_fraction": 0.009999999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.03305785123966941,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 17
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 21.65625
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE1_272C38226B728EA1",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 1.0,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.3,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.75
+        },
+        "parent_case_id": null,
+        "physical_identity_sha256": "272C38226B728EA1432117B5F9830D06510BE5C3FA50019C4EC787FA7C0F4D30",
+        "stage": "STAGE1"
+      },
+      "cycle_peak_drift": 0.23076923076923087,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.21710000000000002,
+          "peak_full_domain_fraction": 0.032499999999999994,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.10743801652892564,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 49
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.7871000000000001,
+          "peak_full_domain_fraction": 0.024999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.08264462809917356,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 33
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 21.90625
+    }
+  ],
+  "stage_2_outcomes": [
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_134B469F608A4833",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.05,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.22,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.65
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "134B469F608A48338100AA59875D36EB13116A7115102D26BF804C0637EE0915",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 1.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.002499999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.008264462809917352,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 14.078125
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_6E6EB3F7812D3D92",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.22,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.65
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "6E6EB3F7812D3D92524641252EB2F8ABA75869AD35D283E2A036D460ECC98FEA",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 1.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.002499999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.008264462809917352,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 14.15625
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_83259B6D8AAECCC3",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.05,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.65
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "83259B6D8AAECCC35BA3DA79E0E34C9FA0BE4417903AFA8274B1BE591FD3E9A2",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 1.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.004999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.016528925619834704,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 16.375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_D10B5880E091360D",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.65
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "D10B5880E091360DE481B446CB6FD4352BBDA0AE41B430FD3452C1FDE788CF61",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 1.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.004999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.016528925619834704,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 16.609375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_EA85CF859F371E35",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.05,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.22,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "EA85CF859F371E3533F1F29BB70BEC7CBD149BE7C290EC591A3189DC121DE006",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.33333333333333354,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.22710000000000002,
+          "peak_full_domain_fraction": 0.014999999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.04958677685950413,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 32
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.5071,
+          "peak_full_domain_fraction": 0.009999999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.03305785123966941,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 23
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 17.84375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_3DD735A420D0ED6A",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.22,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "3DD735A420D0ED6A856154D88513F54841080FEE1F7B40A1035EC50F52BBBC9A",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.2000000000000002,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2371,
+          "peak_full_domain_fraction": 0.012499999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.04132231404958677,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 28
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.5071,
+          "peak_full_domain_fraction": 0.009999999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.03305785123966941,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 19
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 18.484375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.05,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "0A1813B1D968F573764DBDBD0FFF149AA0A6F265AEAB08E5140741205EAF16AF",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.22710000000000002,
+          "peak_full_domain_fraction": 0.022499999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0743801652892562,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 49
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4871,
+          "peak_full_domain_fraction": 0.022499999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0743801652892562,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 46
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 18.9375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_288E149BA54FD892",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.25,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 6.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_5F35AFC141AD7800",
+        "physical_identity_sha256": "288E149BA54FD892CC33F115A1C4484CC350DC1E2635EDE710FF6675F5BCCAF5",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.142857142857143,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2371,
+          "peak_full_domain_fraction": 0.017499999999999995,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05785123966942149,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 44
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4921,
+          "peak_full_domain_fraction": 0.014999999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.04958677685950413,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 42
+        }
+      ],
+      "event_and_locality_guards_passed_count": 15,
+      "event_contract_passed": true,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 22.203125
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_7884136CD4FA47CF",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.05,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.22,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.65
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_62BE195D96A0A388",
+        "physical_identity_sha256": "7884136CD4FA47CFC4D674733573C185EBB4A0AC40693027FFB1A9F8537570A9",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 16.90625
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_05D06729E9AE1916",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.22,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.65
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_62BE195D96A0A388",
+        "physical_identity_sha256": "05D06729E9AE1916A9E0B498E0A0C5A232F66FEF694E754EEDB6A802848DD3A1",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 17.609375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_5B0DC090FF2C27B7",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.05,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.65
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_62BE195D96A0A388",
+        "physical_identity_sha256": "5B0DC090FF2C27B732214550B9E11BF22C0043D83C106C84A610FBF28AF3C061",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 19.15625
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_C886B2A0B0B29DAD",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.65
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_62BE195D96A0A388",
+        "physical_identity_sha256": "C886B2A0B0B29DADFCE0983ED3AA16EF76B38FA7F9D01A0AF0660F01565BA702",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 19.359375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_0C9D30EA11BFD5D2",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.05,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.22,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_62BE195D96A0A388",
+        "physical_identity_sha256": "0C9D30EA11BFD5D259F49FBF6DF5FE1AAF212EF15C4B72A01AC45C5CD3A9FA33",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 1.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.004999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.016528925619834704,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 22.546875
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_A8A5D21F7687DD32",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.22,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_62BE195D96A0A388",
+        "physical_identity_sha256": "A8A5D21F7687DD32E170FCDD9028FB4E421E8949014BABAF6A2FE308AA93F825",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 1.0,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.004999999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.016528925619834704,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "event_and_locality_guards_passed_count": 5,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 0.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 22.34375
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_0AAEF95443F04EE2",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.05,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_62BE195D96A0A388",
+        "physical_identity_sha256": "0AAEF95443F04EE278DA9B272BD19C9E55B9CC64D0413AFFCDEA393952E1A67F",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.2000000000000002,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.27420000000000005,
+          "peak_full_domain_fraction": 0.012499999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.04132231404958677,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 35
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.7971000000000001,
+          "peak_full_domain_fraction": 0.009999999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.03305785123966941,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 21
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 24.3125
+    },
+    {
+      "case": {
+        "overrides": {
+          "case_id": "PHK_V21_E2_STAGE2_0079F1371DF96151",
+          "heater_width_fraction": 0.35,
+          "interface_width": 0.04,
+          "latent_ratio": 0.15,
+          "mobility_cold": 0.5,
+          "mobility_hot": 5.0,
+          "period": 1.5,
+          "pulse_hold_end": 0.27,
+          "thermal_drive": 4.0,
+          "volumetric_cooling": 4.0,
+          "waveform_amplitude": 0.72
+        },
+        "parent_case_id": "PHK_V21_E2_STAGE1_62BE195D96A0A388",
+        "physical_identity_sha256": "0079F1371DF96151C5CF058A9DB20D9E225A39DB70CDB3068E8079D4C5DEDB68",
+        "stage": "STAGE2"
+      },
+      "cycle_peak_drift": 0.2000000000000002,
+      "cycle_records": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2771,
+          "peak_full_domain_fraction": 0.012499999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.04132231404958677,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 31
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.8042,
+          "peak_full_domain_fraction": 0.009999999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.03305785123966941,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 15
+        }
+      ],
+      "event_and_locality_guards_passed_count": 14,
+      "event_contract_passed": false,
+      "execution_status": "COMPLETED",
+      "failure_identity": null,
+      "minimum_cycle_recovery": 1.0,
+      "numerical_guard_passed": true,
+      "outside_roi_peak": 0.0,
+      "process_cpu_seconds": 25.28125
+    }
+  ]
+}

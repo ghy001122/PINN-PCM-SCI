@@ -1,45 +1,52 @@
 # 当前阶段
 
-- `phase_id`: `PHK_V2_COMPLETE_ORACLE_NO_GO`
-- `phase_name`: PHK-V2 Oracle No-Go 负结果论文与复现包完成
+- `phase_id`: `PHK_V21_COMPLETE_ORACLE_NO_GO`
+- `phase_name`: PHK-V2.1 Oracle No-Go 完成态
 - `lifecycle_state`: `COMPLETED`
 - `blocker_id`: `NONE`
-- `authorization_scope`: `PHK_V2_EXECUTION_AND_CLOSEOUT_CONSUMED_CLOSED`
-- `authorization_package`: `S0_TO_S7_LOCAL_RESEARCH_AND_V2_MANUSCRIPT_CONSUMED`
-- `plan_status`: `COMPLETED_BOUNDARY_PRESERVING_ORACLE_NO_GO`
-- `object_selection_status`: `PHK_REDUCED_WALL_CELL_2D_V1_FROZEN_ORACLE_NO_GO`
-- `method_selection_status`: `NOT_ENTERED_ORACLE_GATE_NO_GO`
-- `last_completed_science_terminal`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`
+- `authorization_scope`: `PHK_V21_EXECUTION_CONSUMED_AND_CLOSED`
+- `authorization_package`: `E0_TO_S7_AUTOMATIC_GATED_LOCAL_EXECUTION`
+- `plan_status`: `COMPLETED_AT_S1_ORACLE_NO_GO`
+- `object_selection_status`: `ORACLE_QUALIFICATION_NO_GO_FROZEN`
+- `method_selection_status`: `NOT_REACHED_ORACLE_GATE_NO_GO`
+- `last_completed_science_terminal`: `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`
 - `prior_goal_status`: `GOAL_PAPER_ONE_SHOT_V1_COMPLETE_PRESERVED`
 - `prior_hfo_route_status`: `WAVEFORM_TIME_NO_GO_FROZEN`
-- `claim_status`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE_NO_PINN_METHOD_EVIDENCE`
-- `compute_authorization`: `NO_FURTHER_PHK_SOLVER_PINN_GPU_OR_FORMAL_EXECUTION_AUTHORIZED`
-- `implementation_authorization`: `NONE_GOAL_COMPLETE`
-- `formal_or_gpu_authorization`: `CLOSED_ORACLE_GATE_NO_GO`
-- `manuscript_local_write_authorization`: `CONSUMED_AND_CLOSED_PACKAGE_COMPLETE`
+- `claim_status`: `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN_NO_BASELINE_OR_METHOD_EVIDENCE`
+- `compute_authorization`: `CONSUMED_AND_CLOSED`
+- `implementation_authorization`: `CONSUMED_AND_CLOSED`
+- `formal_or_gpu_authorization`: `NOT_AUTHORIZED_ORACLE_GATE_NO_GO`
+- `manuscript_local_write_authorization`: `COMPLETED_TERMINAL_EVIDENCE_BOUNDED_PACKAGE`
 - `git_or_external_publication_authorization`: `NOT_AUTHORIZED`
 - `next_research_execution_authorized`: `false`
 - `current_stage`: `COMPLETE`
-- `effective_date`: `2026-08-27`
+- `effective_date`: `2026-08-28`
 
 ## 当前允许
 
-- 只读查看已完成的 [PHK-V2 论文与复现包](paper_v2/README.md)、合同、来源审查、运行产物、ledger、测试与哈希；
-- 在新的用户明确任务内执行普通、非科研的有界项目操作；任何新科学对象、求解、训练或论文扩展必须另立授权。
+- 读取、审查与复现既有 [PHK-V2.1 最终包](paper_v21/README.md)、[S1 terminal closeout](docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)及 [S7 package closeout](docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)；
+- 运行不改变科学输入的只读验证、文档一致性、包清单核验和既有图表重绘；
+- 保留全部 14 个 intent、两项 implementation reconciliation、候选 floor carrier 与 NOT_REACHED 计账；
+- 提出新的研究计划，但任何 solver、baseline、PINN、GPU 或 formal 执行必须先获得新的明确用户授权。
 
 ## 当前不允许
 
+- 未经新明确授权启动任何 fresh research execution，包括更改 event threshold、grid、time step、interpolator、object、solver contract、baseline 或 neural method 后重跑；
 - 付费或云端计算、购买许可/服务、凭据披露、作者联系、投稿、外部上传/发布、Git push/PR/remote release；
 - 直接复制或分发 Sharp/PF 的 GPL 源码，或 jaxpi/PirateNet 的 Penn 限制源码；这些只可隔离 comparator 或依据论文 clean-room 重实现；
-- 任何新的 PHK solver、baseline metric reproduction、PINN/strong-raw、PHA-MF、KC、组合、GPU、formal 或 OOD 执行；救援或重跑已消费的 qualification intent；
+- 救援、重跑或改写已消费的 PHK-V2 qualification intent；把 PHK-V2.1 工程输出回填为旧路线证据；
 - 用旧 Q-POP/PHA/KC、SYN-EDT、HFO、TaOₓ、Package A 或其他历史实现/事件/No-Go 冒充新路线证据，或救援/重跑已消费的旧 intent；
 - 把 literature-inspired reduced wall-cell 称为 GGST 作者模型复现、材料/实验校准、真实器件验证；
 - 为制造涨点扩大 proposed 的 support、参数、AD 工作或调参预算而不给 baseline 同等待遇，筛除失败 seed/case，或把 sampling/causal/loss balancing 包装成额外主创新；
-- 声称官方 baseline 已复现、PHK oracle/event 已资格化、PHA/KC/full 已涨点、formal/OOD 已通过、SOTA、普适性或期刊接收。
+- 声称官方 baseline 已复现、PHK-V2.1 oracle 已资格化、PHA/KC/full 已涨点、formal/OOD 已通过、SOTA、普适性或期刊接收。
 
 ## 当前科学状态
 
 `VERIFIED`：
+
+- 用户提供并批准执行《总体审查结论》末尾 PHK-V2.1 GOAL；[ADR 0046](docs/adr/0046-adopt-phk-v21-independent-engineering-science-contract.md)与[S0 预注册](docs/governance/2026-08-27-phk-v21-s0-program-and-engineering-preregistration.md)已建立独立工程—科学双阶段路线。它只覆盖旧 PHK-V2 “不再执行”的授权语义，不改写旧 Oracle No-Go、失败 intent 或论文。
+- [S1 terminal closeout](docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)固定 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`：14/14 intents 完成且 nominal event、controls、guards、replay 均可评价，但 event-time 空间分量未单调收敛。Sharp/PF、neural floor、PINN、PHA、KC、GPU 与 formal 均未到达。
+- [S7 package closeout](docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)固定本轮最终交付：[paper_v21](paper_v21/README.md)已包含英文/中文正文、通俗故事、六幅 PNG/PDF 图、六份 CSV、表格、参考文献、补充、复现、baseline anatomy、claim matrix、reviewer-risk audit 与 package manifest；`PHK_V21_PACKAGE_VALID`、31/31 full tests（含 20/20 focused subset）、ledger 和 document consistency 均通过。该完成事实不提升 Oracle No-Go 的 claim ceiling。
 
 - 用户提供并明确要求执行《后续研究总规划》，目标为复现并剖析强 phase-field/PINN 工作、迁移可改模块、从可行性开始分层验证 PHA-MF 与 field-selective KC，最终形成相对最强合格 baseline 关键指标非劣且至少一个预声明主指标实质改善的第二版论文。
 - [R0 一手来源审查](docs/references/2026-08-27-phk-pinn-primary-source-baseline-audit.md)已固定 Sharp/PF/jaxpi2/PirateNet/Causality-RBAR/phase-change heat/re-spacing/Miquel 的论文、代码、许可与可复现性身份；该审查未运行作者代码、solver、PINN 或 GPU。
@@ -62,16 +69,16 @@
 
 ## 授权语义
 
-- 用户当前指令 supersede 已完成 GOAL 的“不得启动新研究”语义，但不改写它的历史内容、数值合同、失败、论文或 claim ceiling。
-- S0 曾授权按预注册门自动推进；S2 Oracle Gate 的停止条件现已触发并消费后续方法执行权限。
-- S7 负结果论文与复现包已经完成，原授权已消费并关闭；禁止自动购买或调用云端，也不得把资源缺失改写为科学结果。
-- 当前证据建立 baseline 身份与模块 smoke、manufactured/zero-drive 实现守卫及冻结 PHK 数值合同的 Oracle No-Go；不建立官方 baseline 指标复现、合格 oracle/event、PINN、PHA、KC、formal 或正向论文证据。
+- 用户当前指令 supersede 已完成 PHK-V2 的“不得启动新研究”语义，但不改写它的历史内容、数值合同、失败、论文或 claim ceiling。
+- PHK-V2.1 可在冻结预算与门内自动推进；工程沙盒结果不投票，scientific freeze 后禁止结果导向改约。
+- 禁止自动购买或调用云端，也不得把资源缺失、实现完成或工程 PASS 改写为科学结果。
+- 本轮授权已经由 Oracle No-Go 终局包消费并关闭；不建立官方 baseline 指标复现、合格 oracle、PINN、PHA、KC、formal 或正向方法论文证据。
 
 ~~~text
-PHASE_ID=PHK_V2_COMPLETE_ORACLE_NO_GO
+PHASE_ID=PHK_V21_COMPLETE_ORACLE_NO_GO
 BLOCKER_ID=NONE
-OBJECT_SELECTION_STATUS=PHK_REDUCED_WALL_CELL_2D_V1_FROZEN_ORACLE_NO_GO
-METHOD_SELECTION_STATUS=NOT_ENTERED_ORACLE_GATE_NO_GO
+OBJECT_SELECTION_STATUS=ORACLE_QUALIFICATION_NO_GO_FROZEN
+METHOD_SELECTION_STATUS=NOT_REACHED_ORACLE_GATE_NO_GO
 NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
 CURRENT_STAGE=COMPLETE
 ~~~

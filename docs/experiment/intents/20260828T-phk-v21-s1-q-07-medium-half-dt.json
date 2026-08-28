@@ -1,0 +1,20 @@
+{
+  "implementation_amendment_sha256": "B50BBADEC521F435EA1AFA923146237851D0B8F8C87922A97C3CBD974C98B6AE",
+  "method_pool_access": false,
+  "object_contract_sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD",
+  "oracle_contract_sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB",
+  "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+  "qualification_intent": {
+    "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN",
+    "control": "FULL",
+    "intent_id": "Q_NOMINAL_MEDIUM_HALF_DT",
+    "order": 7,
+    "resolution": "medium_half_dt"
+  },
+  "result_adaptive_rescue": false,
+  "run_id": "20260828T-phk-v21-s1-q-07-medium-half-dt",
+  "schema_version": "phk-v21-qualification-intent-v1",
+  "split_file_sha256": "FC4F27D92618BBDF222961340C7BDA3FA8CB3FEF918D0CF343A48A5387F4BAB7",
+  "split_manifest_sha256": "8ECC41A76972F302A5456FFE3643C22E1FB68963E8A4BD4B272B46960FB99931",
+  "started_at": "2026-08-27T17:22:50.502451+00:00"
+}

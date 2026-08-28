@@ -1,0 +1,233 @@
+{
+  "schema_id": "phk-v21-baseline-replication-contract-v1",
+  "contract_id": "PHK_V21_SHARP_PF_REPLICATION_V1",
+  "status": "PRE_FIRST_AUTHOR_METRIC_RUN_FREEZE",
+  "effective_date": "2026-08-28",
+  "evidence_identity": "ORIGINAL_DOMAIN_METRIC_REPRODUCTION_AND_SEPARATE_PHK_ADAPTATION_QUALIFICATION",
+  "bindings": {
+    "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+    "object_contract_sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD",
+    "split_file_sha256": "FC4F27D92618BBDF222961340C7BDA3FA8CB3FEF918D0CF343A48A5387F4BAB7",
+    "split_manifest_sha256": "8ECC41A76972F302A5456FFE3643C22E1FB68963E8A4BD4B272B46960FB99931",
+    "oracle_and_floor_contract_sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB",
+    "source_identity_audit_sha256": "EDA89F42F357C5CA156F702D4343D8097B02A8590B80F0D6E8A5EB4ACE0E34BD"
+  },
+  "evidence_labels_are_mutually_exclusive": [
+    "OFFICIAL_PAPER_METRIC_REPRODUCTION",
+    "PINNED_REPO_RECIPE_REPLICATION",
+    "CLEAN_ROOM_COMPARATOR_ADAPTATION"
+  ],
+  "common_execution": {
+    "isolated_root": ".tmp/phk_v21_baselines",
+    "python_major_minor": "3.11",
+    "seeds": [17, 29, 43],
+    "minimum_finite_seeds_per_configuration": 3,
+    "author_point_estimate_is_not_a_seed_distribution": true,
+    "metric_tolerance_relative": 0.50,
+    "metric_tolerance_rule": "ABS(LOCAL_SEED_MEDIAN-AUTHOR_POINT)/MAX(ABS(AUTHOR_POINT),1E-14)<=0.50",
+    "source_archive_transport_retries_before_any_metric_run": 2,
+    "source_archive_transport_retry_changes_identity": false,
+    "network_logging": false,
+    "credentials": false,
+    "external_upload": false,
+    "paid_or_cloud_compute": false,
+    "official_baseline_cpu_process_core_hour_cap": 24.0,
+    "failed_runs_count_against_budget": true,
+    "replacement_seed_or_configuration": false,
+    "projection_rule": "IF_EXACT_FROZEN_CONFIG_PROJECTS_OVER_REMAINING_CPU_CAP_STOP_WITH_BASELINE_POWER_BUDGET_INSUFFICIENT;DO_NOT_SCALE_AND_RELABEL_OFFICIAL"
+  },
+  "license_and_source_isolation": {
+    "sharp_and_pf_license": "GPL-3.0",
+    "sharp_and_pf_code_location": "ISOLATED_TEMP_COMPARATOR_ONLY",
+    "sharp_and_pf_code_may_enter_main_repository": false,
+    "jaxpi2_license": "Apache-2.0",
+    "every_archive_requires": [
+      "PINNED_COMMIT",
+      "ARCHIVE_SHA256",
+      "LICENSE_SHA256",
+      "REFERENCE_DATA_SHA256_INVENTORY",
+      "DEPENDENCY_LOCK",
+      "NO_UNNECESSARY_RUNTIME_OUTBOUND_CONNECTION"
+    ],
+    "missing_pinned_data_or_code": "UNKNOWN_NOT_PASS_NO_CROSS_REPOSITORY_SUBSTITUTION"
+  },
+  "sharp_paper_replication": {
+    "identity": "SHARP_PAPER_2D_2PITS_V1",
+    "evidence_label": "OFFICIAL_PAPER_METRIC_REPRODUCTION",
+    "paper_doi": "10.1016/j.cma.2025.118346",
+    "repository": "https://github.com/NanxiiChen/sharp-pinns",
+    "commit": "4b7029e3e1e0b82482d245ba12e3ec0945d87ed9",
+    "entrypoint": "main-2d-2pits.py",
+    "case": {
+      "domain_um": [[-50.0, 50.0], [0.0, 50.0]],
+      "time_s": [0.0, 10.0],
+      "initial_pit_radius_um": 5.0,
+      "pit_center_separation_um": 30.0,
+      "evaluation_times_s": [0.0, 2.273, 4.803, 9.528]
+    },
+    "paper_configuration": {
+      "rff_dimension": 64,
+      "space_frequency_scale": 2.0,
+      "time_frequency_scale": 0.4,
+      "hidden_width": 128,
+      "hidden_layers": 6,
+      "interior_grid": [40, 20, 30],
+      "boundary_points": 500,
+      "initial_points": 800,
+      "stagger_period": 25,
+      "adam_updates": 1000,
+      "initial_learning_rate": 0.0005,
+      "learning_rate_multiply_every_100_updates": 0.9,
+      "causal_weighting": false,
+      "rar": false
+    },
+    "six_arms_author_absolute_l2": {
+      "SHARP_FULL": 0.0006066,
+      "NO_STAGGERED_TRAINING": 0.03974,
+      "NO_HARD_CONSTRAINT": 0.008494,
+      "NO_MODIFIED_MLP": 0.01554,
+      "NO_FOURIER_FEATURES": 0.01671,
+      "PLAIN_PINN": 0.2006
+    },
+    "figure_4_author_max_error_at_4_803_s": 0.004516,
+    "metric_definition": "AUTHOR_ABSOLUTE_L2_RECOMPUTED_FROM_PINNED_REFERENCE_AND_PREDICTION_ON_IDENTICAL_POINTS;NO_RELATIVE_L2_SUBSTITUTION",
+    "pass_gate": {
+      "all_six_seed_medians_within_relative_tolerance": true,
+      "full_method_beats_every_ablation_for_each_of_three_seeds": true,
+      "spearman_rank_correlation_local_vs_author_at_least": 0.80,
+      "figure_4_max_error_seed_median_within_relative_tolerance": true,
+      "all_fields_finite": true
+    },
+    "repo_recipe_separate_identity": {
+      "identity": "SHARP_REPO_2D_2PITS_4B7029E",
+      "input_dimension": 256,
+      "hidden_width": 200,
+      "hidden_layers": 6,
+      "causal_segments": 32,
+      "epochs": 800000,
+      "interior_grid": [20, 20, 50],
+      "boundary_points": 200,
+      "initial_points": 500,
+      "rar_base": 40000,
+      "rar_add": 6000,
+      "causal_weighting": true,
+      "role": "OPTIONAL_SEPARATE_REPO_RECIPE_EVIDENCE_NEVER_RESCUES_PAPER_METRIC_FAILURE"
+    }
+  },
+  "pf_paper_replication": {
+    "repository": "https://github.com/ChuanjieCui/PF-PINNs",
+    "commit": "a25f75b5fd40657e5ce98467d7afd0d0052464d1",
+    "evidence_label": "OFFICIAL_PAPER_METRIC_REPRODUCTION",
+    "paper_doi": "10.1016/j.jcp.2025.113843",
+    "one_dimensional_activation": {
+      "identity": "PF_PAPER_1D_ACTIVATION_V1",
+      "network": [2, 16, 16, 16, 16, 2],
+      "learning_rate": 0.001,
+      "interior_grid_approximate": [15, 15],
+      "rar_candidate_points": 5000,
+      "rar_added_points": 512,
+      "initial_points": 128,
+      "boundary_points": 64,
+      "updates": 7000,
+      "weight_update_interval": 100,
+      "author_metrics": {
+        "NO_WEIGHTING": {"mse": 0.04351, "r2": -0.299},
+        "RANDOM_BATCH_NTK_64": {"mse": 0.0005801, "r2": 0.971},
+        "RANDOM_BATCH_NTK_128": {"mse": 0.0004182, "r2": 0.979},
+        "RANDOM_BATCH_NTK_256": {"mse": 0.00001923, "r2": 0.999},
+        "RANDOM_BATCH_NTK_512": {"mse": 0.00007565, "r2": 0.997},
+        "MINI_BATCH_NTK_512": {"mse": 0.0003917, "r2": 0.980},
+        "FULL_GRADIENT_WEIGHTING": {"mse": 0.01937, "r2": -0.244}
+      },
+      "pass_gate": {
+        "all_seven_seed_median_mse_values_within_relative_tolerance": true,
+        "random_batch_256_beats_no_weighting_and_full_gradient_each_seed": true,
+        "random_batch_256_is_best_random_batch_size_for_seed_median": true,
+        "spearman_rank_correlation_local_vs_author_at_least": 0.70,
+        "all_fields_finite": true
+      }
+    },
+    "two_dimensional_semicircle": {
+      "identity": "PF_PAPER_2D_SEMICIRCLE_V1",
+      "domain_um": [[-50.0, 50.0], [0.0, 50.0]],
+      "time_s": [0.0, 50.0],
+      "initial_pit_radius_um": 5.0,
+      "network": [3, 16, 16, 16, 16, 16, 16, 16, 16, 2],
+      "interior_points": 3375,
+      "boundary_points": 256,
+      "initial_points": 512,
+      "rar_candidate_points": 60000,
+      "rar_added_points": 8000,
+      "random_batch_ntk": 512,
+      "updates": 300000,
+      "learning_rate": 0.001,
+      "learning_rate_halving_interval": 50000,
+      "evaluation_times_s": [0.0, 5.12, 10.24, 20.48, 40.96],
+      "author_average_mse": 0.0006658,
+      "author_radius_sqrt_time_r2": 0.988,
+      "metric_definition": "MEAN_OF_FIELD_MSE_AT_FIVE_FROZEN_TIMES_PLUS_INTERFACE_CONTOUR_AND_MEAN_RADIUS_TRAJECTORY",
+      "pass_gate": {
+        "seed_median_average_mse_within_relative_tolerance": true,
+        "each_seed_radius_sqrt_time_r2_at_least": 0.958,
+        "seed_median_radius_r2_absolute_difference_from_author_at_most": 0.03,
+        "interface_absolute_error_q99_at_most": 0.55,
+        "all_fields_finite": true
+      }
+    },
+    "repo_recipe_drift": {
+      "one_dimensional_repo_ntk_batch": 32,
+      "one_dimensional_repo_interior_grid": [10, 10],
+      "two_dimensional_repo_updates": 800000,
+      "role": "SEPARATE_PINNED_REPO_RECIPE_ONLY_NEVER_MIX_WITH_PAPER_METRIC_IDENTITY"
+    }
+  },
+  "overall_original_domain_gate": {
+    "sharp_paper_gate_must_pass": true,
+    "pf_1d_gate_must_pass": true,
+    "pf_2d_gate_must_pass": true,
+    "one_identity_may_not_rescue_another": true,
+    "failure_outcome": "PHK_V21_BASELINE_REPLICATION_NO_GO_STOP_BEFORE_METHOD_CLAIM",
+    "pass_outcome": "PHK_V21_SHARP_PF_METRIC_REPLICATION_PASS_CONTINUE_TO_PHK_STRONG_RAW"
+  },
+  "phk_clean_room_adaptation_boundary": {
+    "label": "CLEAN_ROOM_COMPARATOR_ADAPTATION",
+    "formula_level_modules_only": true,
+    "shared_oracle_split_evaluator_and_seeds": true,
+    "direct_gpl_source_copy": false,
+    "paper_metric_pass_does_not_imply_phk_competence": true,
+    "phk_competence_is_a_separate_gate": true
+  },
+  "neural_floor_protocol": {
+    "timing": "AFTER_ALL_ELIGIBLE_PHK_BASELINE_ARMS_FINISH_D_VALIDATION_AND_BEFORE_I1_OPENS",
+    "d_partition": "SORT_D_CASE_IDS_ASCENDING;FIRST_18_D_TRAIN;LAST_6_D_VALIDATION",
+    "eligible_arms": [
+      "STRONG_RAW",
+      "SHARP_FORMULA_DERIVED_PHK_A_PRIME",
+      "PF_FORMULA_DERIVED_PHK_A_PRIME",
+      "ADAPTIVE_PSEUDOTIME_PHK_CLEANROOM_V1"
+    ],
+    "minimum_finite_seeds": 3,
+    "eligibility": "ALL_HARD_GUARDS_PASS_AND_EVENT_ENDPOINTS_ESTIMABLE_ON_ALL_SIX_D_VALIDATION_CASES",
+    "selection": "LOWEST_SEED_MEDIAN_AGGREGATE_FLOOR_SCORE_Z_THEN_LOWEST_Q90_Z_THEN_GROSS_COMPUTE_THEN_FIXED_ARM_ID",
+    "sealed_values": [
+      "SELECTED_ARM_ID",
+      "PER_COMPONENT_D_VALIDATION_SEED_MEDIAN_ERROR",
+      "PER_COMPONENT_SEED_UNCERTAINTY",
+      "AGGREGATE_Z",
+      "PARAMETER_COUNT",
+      "OPTIMIZER_UPDATES",
+      "FORWARD_AD_WORK",
+      "WALL_AND_CPU_TIME"
+    ],
+    "single_best_seed_is_ineligible": true,
+    "author_original_domain_point_estimate_is_ineligible": true
+  },
+  "prohibitions": [
+    "NO_METRIC_IDENTITY_SWITCH_AFTER_RUN",
+    "NO_PAPER_REPO_OR_SEED_STITCHING",
+    "NO_AUTHOR_TIME_AS_CROSS_HARDWARE_GATE",
+    "NO_SCALED_RUN_RELABELLED_AS_FULL_OFFICIAL_REPRODUCTION",
+    "NO_GPL_SOURCE_MERGE_INTO_MAIN_REPOSITORY",
+    "NO_BASELINE_REPLICATION_AS_ORACLE_OR_METHOD_SUPERIORITY_EVIDENCE"
+  ]
+}

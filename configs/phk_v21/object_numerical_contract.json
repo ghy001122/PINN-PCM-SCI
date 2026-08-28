@@ -1,0 +1,167 @@
+{
+  "schema_id": "phk-v21-object-overlay-contract-v1",
+  "contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "status": "PRE_FIRST_VOTING_SOLVE_FREEZE",
+  "effective_date": "2026-08-27",
+  "evidence_identity": "TRANSPARENT_DIMENSIONLESS_LITERATURE_INSPIRED_SYNTHETIC_BENCHMARK",
+  "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+  "base_identity": {
+    "legacy_program_path": "configs/phk_v2/program_contract.json",
+    "legacy_program_sha256": "0E1D89DD23F93C90160AC82ECE60ADA154410F4DDC33578CB892207FE8B445A8",
+    "legacy_object_path": "configs/phk_v2/object_numerical_contract.json",
+    "legacy_object_sha256": "3B3B9A369F4AFDFFB201394DD294E7196BAF04E5B36BAFE126291CA9CB3EA157",
+    "legacy_operator_implementation_path": "pinn_pcm_sci/phk_benchmark.py",
+    "legacy_operator_implementation_sha256": "B18AFA4F9005735EF46E3958F325C5BC40CECD0BF5E419854B140FAF76DF9645",
+    "inheritance": "ALL_KEYS_INHERITED_EXCEPT_EXPLICIT_MATERIALIZATION_OVERRIDES_BELOW",
+    "legacy_evidence_disposition": "PRESERVED_NOT_REWRITTEN_OR_RERUN"
+  },
+  "engineering_bindings": {
+    "engineering_contract_sha256": "DF835E701660E4BC91F585F4DFAA22075DBCAAA754B7716921E766066BD7605A",
+    "e1_selection_sha256": "A452D4E387A2C2E2AD0924D7CECD0E941A68088A48070F2F105AE81BF978A2DC",
+    "e2_run_id": "20260827T-phk-v21-e2-engineering-search-001",
+    "e2_summary_sha256": "DAC816914ABFC686CD26D93EC643F642031F4AB62B85E4CBE6B52496E2613E19",
+    "selected_engineering_case_id": "PHK_V21_E2_STAGE2_0A1813B1D968F573",
+    "selected_physical_identity_sha256": "0A1813B1D968F573764DBDBD0FFF149AA0A6F265AEAB08E5140741205EAF16AF"
+  },
+  "materialization_overrides": {
+    "schema_id": "phk-v21-materialized-object-numerical-contract-v1",
+    "contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+    "status": "PRE_FIRST_VOTING_SOLVE_FREEZE",
+    "evidence_identity": "TRANSPARENT_DIMENSIONLESS_LITERATURE_INSPIRED_SYNTHETIC_BENCHMARK",
+    "coordinates": {
+      "time_period": 1.25,
+      "time_end": 2.5,
+      "pulse_cycles": 2
+    },
+    "geometry": {
+      "nominal_heater_width_fraction_of_total_x": 0.35
+    },
+    "coefficients": {
+      "volumetric_cooling": 4.0,
+      "latent_ratio": 0.05,
+      "interface_width": 0.04,
+      "thermal_drive": 6.0,
+      "mobility_cold": 0.5,
+      "mobility_hot": 5.0
+    },
+    "waveform": {
+      "amplitude": 0.72,
+      "hold_end": 0.27
+    },
+    "fields": {
+      "phase_fraction_range_guard": [0.0, 1.0]
+    }
+  },
+  "fixed_solver": {
+    "primary_algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN",
+    "crosscheck_algorithm": "PSEUDO_TRANSIENT_NEWTON",
+    "dynamic_switching": false,
+    "output_clipping": false,
+    "phase_bounds": [0.0, 1.0],
+    "residual_tolerance": 1.0e-10,
+    "maximum_iterations": 30,
+    "logit_initial_step": 1.0,
+    "line_search_reduction": 0.5,
+    "line_search_min_step": 9.5367431640625e-7,
+    "coupled_max_blocks": 30,
+    "coupled_relative_change_tolerance": 1.0e-8,
+    "coupled_residual_tolerance": 1.0e-9,
+    "coupled_relaxation": 1.0,
+    "failed_intent_is_consumed": true,
+    "result_adaptive_rescue": false
+  },
+  "resolutions": {
+    "coarse": {"nx": 40, "nz": 20, "dt": 0.005, "save_every": 2},
+    "medium": {"nx": 80, "nz": 40, "dt": 0.0025, "save_every": 2},
+    "fine": {"nx": 120, "nz": 60, "dt": 0.00125, "save_every": 2},
+    "extra_fine": {"nx": 160, "nz": 80, "dt": 0.000625, "save_every": 4},
+    "medium_half_dt": {"nx": 80, "nz": 40, "dt": 0.00125, "save_every": 4}
+  },
+  "qualification_event": {
+    "inherit_exactly_from_legacy_object": true,
+    "phase_threshold": 0.5,
+    "event_threshold_roi_fraction": 0.02,
+    "minimum_peak_roi_fraction": 0.02,
+    "minimum_peak_minus_pre_fraction": 0.02,
+    "minimum_recovery_fraction": 0.70,
+    "maximum_cycle_peak_relative_drift": 0.20,
+    "maximum_peak_full_domain_fraction": 0.45,
+    "maximum_peak_outside_roi_fraction": 0.10,
+    "minimum_event_saved_steps": 3,
+    "two_new_upward_crossings_required": true
+  },
+  "qualification_intents": [
+    {"order": 1, "id": "Q_MANUFACTURED_OPERATORS", "role": "MANUFACTURED_NO_SCIENTIFIC_FIELD_RESULT"},
+    {"order": 2, "id": "Q_ZERO_DRIVE_MEDIUM", "control": "ZERO_DRIVE", "resolution": "medium"},
+    {"order": 3, "id": "Q_NOMINAL_COARSE", "control": "FULL", "resolution": "coarse"},
+    {"order": 4, "id": "Q_NOMINAL_MEDIUM", "control": "FULL", "resolution": "medium"},
+    {"order": 5, "id": "Q_NOMINAL_FINE", "control": "FULL", "resolution": "fine"},
+    {"order": 6, "id": "Q_NOMINAL_EXTRA_FINE", "control": "FULL", "resolution": "extra_fine"},
+    {"order": 7, "id": "Q_NOMINAL_MEDIUM_HALF_DT", "control": "FULL", "resolution": "medium_half_dt"},
+    {"order": 8, "id": "Q_NOMINAL_FINE_EXACT_REPLAY", "control": "EXACT_REPLAY", "resolution": "fine", "replay_of": 5},
+    {"order": 9, "id": "Q_JOULE_GAIN_ZERO_MEDIUM", "control": "JOULE_GAIN_ZERO", "resolution": "medium"},
+    {"order": 10, "id": "Q_CONDUCTIVITY_PHASE_RATIO_ONE_MEDIUM", "control": "CONDUCTIVITY_PHASE_RATIO_ONE", "resolution": "medium"},
+    {"order": 11, "id": "Q_LATENT_RATIO_ZERO_MEDIUM", "control": "LATENT_RATIO_ZERO", "resolution": "medium"},
+    {"order": 12, "id": "Q_HEATER_WIDTH_0_50_MEDIUM", "control": "HEATER_WIDTH_0_50", "resolution": "medium"},
+    {"order": 13, "id": "Q_INTERFACE_WIDTH_0_025_MEDIUM", "control": "INTERFACE_WIDTH_0_025", "resolution": "medium"},
+    {"order": 14, "id": "Q_PSEUDO_TRANSIENT_SOLVER_CROSSCHECK_MEDIUM", "control": "FULL", "resolution": "medium", "algorithm": "PSEUDO_TRANSIENT_NEWTON"}
+  ],
+  "complete_case_factors": {
+    "nominal_geometry": {
+      "heater_width_fraction": [0.35],
+      "interface_width": [0.04]
+    },
+    "protocol_and_state_support": {
+      "waveform_amplitude": [0.68, 0.72, 0.76],
+      "pulse_hold_end": [0.24, 0.27, 0.30],
+      "period": [1.15, 1.25, 1.35],
+      "volumetric_cooling": [3.5, 4.0, 4.5],
+      "initial_phase_background": [0.015, 0.02, 0.025]
+    },
+    "fixed": {
+      "mobility_cold": 0.5,
+      "mobility_hot": 5.0,
+      "thermal_drive": 6.0,
+      "latent_ratio": 0.05,
+      "constitutive_branch": "NOMINAL",
+      "pulse_cycles": 2
+    },
+    "formal_orthogonal_axes": {
+      "heater_width_fraction": [0.30, 0.40],
+      "interface_width": [0.035, 0.045]
+    }
+  },
+  "split_generation": {
+    "case_id": "SHA256_CANONICAL_JSON_OF_GEOMETRY_CONSTITUTIVE_INITIAL_STATE_FULL_WAVEFORM_AND_FULL_HISTORY",
+    "nominal_candidate_universe_size": 243,
+    "nominal_selection": "SORT_BY_FULL_SHA256_ASCENDING_THEN_ASSIGN_D_24_I1_12_I2_12_FA_32_R_16",
+    "nominal_selected_count": 96,
+    "formal_orthogonal_selection": "FOR_EACH_OF_FOUR_WHOLE_FACTOR_VALUES_SELECT_EIGHT_LOWEST_FULL_SHA256_PROTOCOL_STATE_COMBINATIONS",
+    "formal_orthogonal_count": 32,
+    "pool_counts": {"D": 24, "I1": 12, "I2": 12, "F_A": 32, "F_O": 32, "R": 16},
+    "same_case_never_crosses_pool": true,
+    "reserve_never_opened_in_this_goal": true,
+    "engineering_cases_never_enter_scientific_pools": true
+  },
+  "hard_guard_policy": {
+    "inherit_legacy_numerical_thresholds_except_phase_range": true,
+    "event_guard_is_hard": true,
+    "method_failure_is_positive_infinity": true,
+    "failed_case_or_seed_replacement": false
+  },
+  "implementation_bindings": {
+    "phk_v21_benchmark_sha256": "2CA60CCB157EA2B5F06C887F363C9D21BEC221225CE67D9A1352B73ED446822D",
+    "phk_v21_solver_sha256": "A4A70BE2F580EF7AAACBEBD0E3735B703E4E4045DD297B3B1BFC7B8A93B879FA",
+    "tests_sha256": "F2D8F7AC2755DF1C569943F0273691B3622BF81A0CE86C2D6EF00D223F058629"
+  },
+  "prohibitions": [
+    "NO_PHK_V2_RESULT_REWRITE",
+    "NO_DYNAMIC_SOLVER_SWITCHING",
+    "NO_TIME_STEP_RESCUE",
+    "NO_OUTPUT_CLIPPING_AS_ACCEPTANCE",
+    "NO_RESULT_ADAPTIVE_EVENT_THRESHOLD_OR_FACTOR_SUPPORT",
+    "NO_CASE_OR_SEED_REPLACEMENT",
+    "NO_ENGINEERING_RESULT_AS_ORACLE_OR_METHOD_EVIDENCE",
+    "NO_MATERIAL_CALIBRATION_OR_EXPERIMENTAL_VALIDATION_CLAIM"
+  ]
+}

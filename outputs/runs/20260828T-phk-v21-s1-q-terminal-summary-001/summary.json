@@ -1,0 +1,678 @@
+{
+  "adjudication": {
+    "claim_ceiling": "TRANSPARENT_SYNTHETIC_BENCHMARK_QUALIFICATION_ONLY_NO_PINN_METHOD_MATERIAL_OR_EXPERIMENTAL_EVIDENCE",
+    "event_failure_intents": [],
+    "execution_failure_intents": [],
+    "floor_sealed_and_converged": false,
+    "hard_guard_failure_intents": [],
+    "joule_off_no_event": true,
+    "manufactured_pass": true,
+    "method_route": "STOP_BEFORE_PINN_TRAINING",
+    "not_reached_intents": [],
+    "oracle_qualified": false,
+    "outcome": "PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN",
+    "reasons": [
+      "CONVERGENCE_OR_FLOOR_GATE_FAILED"
+    ],
+    "replay_limit": 1e-12,
+    "replay_max_array_difference": 0.0,
+    "replay_pass": true,
+    "replay_value_finite": true,
+    "schema_id": "phk-v21-q-adjudication-v1",
+    "terminal_intent": 14,
+    "zero_drive_no_event": true
+  },
+  "claim_status": "PHK_V21_ORACLE_NO_GO_NO_PINN_OR_METHOD_EVIDENCE",
+  "comparisons": {
+    "fine_extra_fine": {
+      "component_deltas": [
+        0.0045916542647892284,
+        0.001256919148376367,
+        0.0012107207785293857,
+        0.0016486829760616161,
+        0.000145,
+        0.0
+      ],
+      "component_order": [
+        "PHASE_FIELD_ROI_RMS",
+        "TEMPERATURE_FIELD_ROI_RMS",
+        "TERMINAL_CURRENT_TRACE_RMS",
+        "TWO_CYCLE_EVENT_TIME_RMS",
+        "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+        "TWO_CYCLE_RECOVERY_RMS"
+      ],
+      "finite": true
+    },
+    "fine_replay": {
+      "component_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "component_order": [
+        "PHASE_FIELD_ROI_RMS",
+        "TEMPERATURE_FIELD_ROI_RMS",
+        "TERMINAL_CURRENT_TRACE_RMS",
+        "TWO_CYCLE_EVENT_TIME_RMS",
+        "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+        "TWO_CYCLE_RECOVERY_RMS"
+      ],
+      "finite": true
+    },
+    "medium_fine": {
+      "component_deltas": [
+        0.009164723390798192,
+        0.0025375404500889136,
+        0.002326069016938981,
+        0.0012067679515502204,
+        0.00030374999999999993,
+        0.0
+      ],
+      "component_order": [
+        "PHASE_FIELD_ROI_RMS",
+        "TEMPERATURE_FIELD_ROI_RMS",
+        "TERMINAL_CURRENT_TRACE_RMS",
+        "TWO_CYCLE_EVENT_TIME_RMS",
+        "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+        "TWO_CYCLE_RECOVERY_RMS"
+      ],
+      "finite": true
+    },
+    "medium_half_dt": {
+      "component_deltas": [
+        0.0031039861641693036,
+        0.0017839022220207273,
+        0.0020456785528971074,
+        0.0007919595949289245,
+        7.749999999999995e-05,
+        0.0
+      ],
+      "component_order": [
+        "PHASE_FIELD_ROI_RMS",
+        "TEMPERATURE_FIELD_ROI_RMS",
+        "TERMINAL_CURRENT_TRACE_RMS",
+        "TWO_CYCLE_EVENT_TIME_RMS",
+        "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+        "TWO_CYCLE_RECOVERY_RMS"
+      ],
+      "finite": true
+    },
+    "medium_solver_crosscheck": {
+      "component_deltas": [
+        5.181708174605719e-10,
+        1.8524677211466086e-10,
+        3.279064671528001e-10,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "component_order": [
+        "PHASE_FIELD_ROI_RMS",
+        "TEMPERATURE_FIELD_ROI_RMS",
+        "TERMINAL_CURRENT_TRACE_RMS",
+        "TWO_CYCLE_EVENT_TIME_RMS",
+        "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+        "TWO_CYCLE_RECOVERY_RMS"
+      ],
+      "finite": true
+    }
+  },
+  "control_outcomes": {
+    "joule_gain_zero_no_event": true,
+    "other_control_event_status_is_recorded_not_forced": true,
+    "zero_drive_no_event": true
+  },
+  "event_reports": {
+    "10": {
+      "cycle_peak_relative_drift": 0.0,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2328,
+          "peak_full_domain_fraction": 0.02749999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09090909090909093,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 115
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4771,
+          "peak_full_domain_fraction": 0.02749999999999999,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09090909090909093,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 117
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "11": {
+      "cycle_peak_relative_drift": 0.08108108108108115,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.23420000000000002,
+          "peak_full_domain_fraction": 0.023124999999999993,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07644628099173556,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 98
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4892,
+          "peak_full_domain_fraction": 0.021249999999999995,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07024793388429754,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 93
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "12": {
+      "cycle_peak_relative_drift": 0.9090909090909091,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.3092,
+          "peak_full_domain_fraction": 0.006874999999999997,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.02272727272727273,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 14
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0006249999999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.002066115702479338,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_excursion_too_small",
+        "cycle_2_event_under_resolved",
+        "cycle_peak_relative_drift_too_large"
+      ],
+      "passed": false
+    },
+    "13": {
+      "cycle_peak_relative_drift": 0.03571428571428571,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.24113333333333334,
+          "peak_full_domain_fraction": 0.017499999999999995,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.057851239669421496,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 108
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4784,
+          "peak_full_domain_fraction": 0.016874999999999994,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05578512396694216,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 113
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "14": {
+      "cycle_peak_relative_drift": 0.05882352941176469,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2378,
+          "peak_full_domain_fraction": 0.021249999999999995,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07024793388429754,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 92
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4942000000000002,
+          "peak_full_domain_fraction": 0.019999999999999993,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06611570247933886,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 87
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "2": {
+      "cycle_peak_relative_drift": 0.0,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "failures": [
+        "cycle_1_event_missing",
+        "cycle_1_roi_peak_below_minimum",
+        "cycle_1_excursion_too_small",
+        "cycle_1_recovery_too_small",
+        "cycle_1_event_under_resolved",
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_excursion_too_small",
+        "cycle_2_recovery_too_small",
+        "cycle_2_event_under_resolved"
+      ],
+      "passed": false
+    },
+    "3": {
+      "cycle_peak_relative_drift": 0.0,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.22710000000000002,
+          "peak_full_domain_fraction": 0.022499999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0743801652892562,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 49
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4871,
+          "peak_full_domain_fraction": 0.022499999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0743801652892562,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 46
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "4": {
+      "cycle_peak_relative_drift": 0.05882352941176469,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2378,
+          "peak_full_domain_fraction": 0.021249999999999995,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07024793388429754,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 92
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4942000000000002,
+          "peak_full_domain_fraction": 0.019999999999999993,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06611570247933886,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 87
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "5": {
+      "cycle_peak_relative_drift": 0.05405405405405436,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.23898333333333333,
+          "peak_full_domain_fraction": 0.020555555555555556,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06795224977043154,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 181
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.495975,
+          "peak_full_domain_fraction": 0.019444444444444445,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06427915518824603,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 169
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "6": {
+      "cycle_peak_relative_drift": 0.09774436090225402,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.24059999999999998,
+          "peak_full_domain_fraction": 0.020781249999999998,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06869834710743765,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 178
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4984,
+          "peak_full_domain_fraction": 0.018749999999999996,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.061983471074379945,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 167
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "7": {
+      "cycle_peak_relative_drift": 0.05882352941176469,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.2392,
+          "peak_full_domain_fraction": 0.021249999999999995,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07024793388429754,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 93
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.4942000000000002,
+          "peak_full_domain_fraction": 0.019999999999999993,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06611570247933886,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 88
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "8": {
+      "cycle_peak_relative_drift": 0.05405405405405436,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": 0.23898333333333333,
+          "peak_full_domain_fraction": 0.020555555555555556,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06795224977043154,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 181
+        },
+        {
+          "cycle_index": 2,
+          "event_time": 1.495975,
+          "peak_full_domain_fraction": 0.019444444444444445,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06427915518824603,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "saved_steps_at_or_above_threshold": 169
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "9": {
+      "cycle_peak_relative_drift": 0.0,
+      "cycles": [
+        {
+          "cycle_index": 1,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        },
+        {
+          "cycle_index": 2,
+          "event_time": null,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "saved_steps_at_or_above_threshold": 0
+        }
+      ],
+      "failures": [
+        "cycle_1_event_missing",
+        "cycle_1_roi_peak_below_minimum",
+        "cycle_1_excursion_too_small",
+        "cycle_1_recovery_too_small",
+        "cycle_1_event_under_resolved",
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_excursion_too_small",
+        "cycle_2_recovery_too_small",
+        "cycle_2_event_under_resolved"
+      ],
+      "passed": false
+    }
+  },
+  "execution_status_by_intent": {
+    "1": "COMPLETED",
+    "2": "COMPLETED",
+    "3": "COMPLETED",
+    "4": "COMPLETED",
+    "5": "COMPLETED",
+    "6": "COMPLETED",
+    "7": "COMPLETED",
+    "8": "COMPLETED",
+    "9": "COMPLETED",
+    "10": "COMPLETED",
+    "11": "COMPLETED",
+    "12": "COMPLETED",
+    "13": "COMPLETED",
+    "14": "COMPLETED"
+  },
+  "failure_records": [],
+  "floor_seal": {
+    "component_deltas": {
+      "fine_extra_fine": [
+        0.0045916542647892284,
+        0.001256919148376367,
+        0.0012107207785293857,
+        0.0016486829760616161,
+        0.000145,
+        0.0
+      ],
+      "fine_replay": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "medium_fine": [
+        0.009164723390798192,
+        0.0025375404500889136,
+        0.002326069016938981,
+        0.0012067679515502204,
+        0.00030374999999999993,
+        0.0
+      ],
+      "medium_half_dt": [
+        0.0031039861641693036,
+        0.0017839022220207273,
+        0.0020456785528971074,
+        0.0007919595949289245,
+        7.749999999999995e-05,
+        0.0
+      ],
+      "medium_solver_crosscheck": [
+        5.181708174605719e-10,
+        1.8524677211466086e-10,
+        3.279064671528001e-10,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "component_floors_U": [
+      0.0045916542647892284,
+      0.0017839022220207273,
+      0.0020456785528971074,
+      0.0016486829760616161,
+      0.000145,
+      1e-06
+    ],
+    "component_order": [
+      "PHASE_FIELD_ROI_RMS",
+      "TEMPERATURE_FIELD_ROI_RMS",
+      "TERMINAL_CURRENT_TRACE_RMS",
+      "TWO_CYCLE_EVENT_TIME_RMS",
+      "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+      "TWO_CYCLE_RECOVERY_RMS"
+    ],
+    "convergence_gate_passed": false,
+    "declared_component_solver_tolerance": [
+      1e-08,
+      1e-08,
+      1e-08,
+      1e-06,
+      1e-06,
+      1e-06
+    ],
+    "oracle_contract_id": "PHK_V21_ORACLE_FLOOR_V1",
+    "oracle_contract_sha256": "4905C85B0A78DCE05A642FE97433BD62C3532A6E2C4833E2C1CA3ACC48923893",
+    "prediction_score_formula": "Z=sqrt(mean((component_error_j/U_j)^2))",
+    "schema_id": "phk-v21-oracle-floor-seal-v1",
+    "seal_sha256": "2A3BBE335264D397BBD0862F4E820F4592F72D6589BBF3E74FCB1AF262D3F633",
+    "seal_status": "SEALED_BEFORE_NEURAL_WORK",
+    "source_joint_uncertainty": 0.0,
+    "source_run_ids": [
+      "20260828T-phk-v21-s1-q-01-manufactured",
+      "20260828T-phk-v21-s1-q-02-zero-drive",
+      "20260828T-phk-v21-s1-q-03-nominal-coarse",
+      "20260828T-phk-v21-s1-q-04-nominal-medium",
+      "20260828T-phk-v21-s1-q-05-nominal-fine",
+      "20260828T-phk-v21-s1-q-06-nominal-extra-fine",
+      "20260828T-phk-v21-s1-q-07-medium-half-dt",
+      "20260828T-phk-v21-s1-q-08-fine-exact-replay",
+      "20260828T-phk-v21-s1-q-09-joule-gain-zero",
+      "20260828T-phk-v21-s1-q-10-conductivity-ratio-one",
+      "20260828T-phk-v21-s1-q-11-latent-ratio-zero",
+      "20260828T-phk-v21-s1-q-12-wide-heater",
+      "20260828T-phk-v21-s1-q-13-narrow-interface",
+      "20260828T-phk-v21-s1-q-14-pseudo-crosscheck"
+    ],
+    "space_monotonic_by_component": [
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    "strict_contraction_by_component": [
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    "strict_contraction_count": 5,
+    "tau": 0.0022799699677271404
+  },
+  "gross_compute": {
+    "failed_intents": 0,
+    "process_cpu_core_hours": 1.128515625,
+    "process_cpu_seconds": 4062.65625,
+    "sum_single_thread_wall_seconds": 4113.6542242
+  },
+  "implementation_amendment": {
+    "adjudication_amendment": {
+      "amendment_file_sha256": "CEF8764CC58C69BB94B95E790E2D147CF41CDFE3A3A4215E9611187708A99648",
+      "amendment_id": "PHK_V21_S1_COMPONENT_LABEL_CANONICALIZATION_002",
+      "component_values_reordered": false,
+      "solver_rerun": false
+    },
+    "amendment_file_sha256": "B50BBADEC521F435EA1AFA923146237851D0B8F8C87922A97C3CBD974C98B6AE",
+    "amendment_id": "PHK_V21_S1_NO_EVENT_CARRIER_TYPE_AMENDMENT_001",
+    "reconciled_intent": 2,
+    "solver_rerun": false
+  },
+  "not_reached_intents": [],
+  "object_contract_sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD",
+  "oracle_contract_sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB",
+  "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+  "replay_max_array_difference": 0.0,
+  "schema_id": "phk-v21-q-terminal-summary-v1",
+  "source_run_ids": [
+    "20260828T-phk-v21-s1-q-01-manufactured",
+    "20260828T-phk-v21-s1-q-02-zero-drive",
+    "20260828T-phk-v21-s1-q-03-nominal-coarse",
+    "20260828T-phk-v21-s1-q-04-nominal-medium",
+    "20260828T-phk-v21-s1-q-05-nominal-fine",
+    "20260828T-phk-v21-s1-q-06-nominal-extra-fine",
+    "20260828T-phk-v21-s1-q-07-medium-half-dt",
+    "20260828T-phk-v21-s1-q-08-fine-exact-replay",
+    "20260828T-phk-v21-s1-q-09-joule-gain-zero",
+    "20260828T-phk-v21-s1-q-10-conductivity-ratio-one",
+    "20260828T-phk-v21-s1-q-11-latent-ratio-zero",
+    "20260828T-phk-v21-s1-q-12-wide-heater",
+    "20260828T-phk-v21-s1-q-13-narrow-interface",
+    "20260828T-phk-v21-s1-q-14-pseudo-crosscheck"
+  ],
+  "split_file_sha256": "FC4F27D92618BBDF222961340C7BDA3FA8CB3FEF918D0CF343A48A5387F4BAB7",
+  "split_manifest_sha256": "8ECC41A76972F302A5456FFE3643C22E1FB68963E8A4BD4B272B46960FB99931"
+}

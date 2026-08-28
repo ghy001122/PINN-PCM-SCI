@@ -1,0 +1,185 @@
+{
+  "generator_sha256": "714B9659CF22D510B522060C15E4F979D1D07387A036D76268E7C5F8922C1214",
+  "inputs": [
+    {
+      "bytes": 21130,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json",
+      "sha256": "5E6343D3E8DFE63C1C3F2F031FCF04B455E8C53B5BF454F8AFA013D33C33A9C9"
+    },
+    {
+      "bytes": 10088,
+      "path": "configs/phk_v21/oracle_and_floor_contract.json",
+      "sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB"
+    },
+    {
+      "bytes": 7915,
+      "path": "configs/phk_v21/object_numerical_contract.json",
+      "sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD"
+    },
+    {
+      "bytes": 7640,
+      "path": "docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md",
+      "sha256": "6566A89F7255BA0758871E1DE6201F66F1A9FC542CF153D07C930020B148D35E"
+    },
+    {
+      "bytes": 3048,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-02-zero-drive/report.json",
+      "sha256": "5E3350F8C56F88BEAA7B67F2F09CFEEF731903865F41904B3CF6C1CCAE9EFD0A"
+    },
+    {
+      "bytes": 2795,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-03-nominal-coarse/report.json",
+      "sha256": "2C0F5970110719626856E6623EF99441CCBA89FDAA0084D3E65EB2874F1B3A73"
+    },
+    {
+      "bytes": 2816,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/report.json",
+      "sha256": "49D218AB4676275F5FF4D74C490C5E0823C7407E490963F76A883286C77F44C2"
+    },
+    {
+      "bytes": 2816,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-05-nominal-fine/report.json",
+      "sha256": "8607F386BA038AE937960FDF73788B038562B6E3635DA3E0B4312B085926BF38"
+    },
+    {
+      "bytes": 2842,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-06-nominal-extra-fine/report.json",
+      "sha256": "F016D94B92AB6D1C39BA45F5B29B3E2406A35597AF0929558508D3C6DABFB62B"
+    },
+    {
+      "bytes": 2843,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-07-medium-half-dt/report.json",
+      "sha256": "37BD7C38D60560283997573F4E6CD6A10A721915F29A1D2F06E4B6690E803A91"
+    },
+    {
+      "bytes": 2907,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-08-fine-exact-replay/report.json",
+      "sha256": "1EC98EED341C6AD52A9DD7477DD2A349034308D13DDD821A5164559F0196D625"
+    },
+    {
+      "bytes": 3116,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-09-joule-gain-zero/report.json",
+      "sha256": "346A0C6C14407F35193C707E38117B2D7BBEA518E43AC68E05B6D0E67F3FD185"
+    },
+    {
+      "bytes": 2856,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-10-conductivity-ratio-one/report.json",
+      "sha256": "B431682B056CA5ECA0CA68EBA4FE828039FAAC1C5C968277E87B6886D9A0A1E9"
+    },
+    {
+      "bytes": 2852,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-11-latent-ratio-zero/report.json",
+      "sha256": "1D33493F07D9E3FC2A9BAB8DA4A705173EA57EF0F4C7B80A7593CB780DEB9CF4"
+    },
+    {
+      "bytes": 3036,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-12-wide-heater/report.json",
+      "sha256": "A54A77F0F729C034741E70D71CD6A3DB612E6DD031C36FFA24EC03D3CE09420C"
+    },
+    {
+      "bytes": 2869,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-13-narrow-interface/report.json",
+      "sha256": "CBD6D192132543D99E1AE3908911EB254DB764E8040CF23FC467E93E5990960E"
+    },
+    {
+      "bytes": 2831,
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-14-pseudo-crosscheck/report.json",
+      "sha256": "C9663ABACED3694C2A2CADAF57E541FACBE6FABEDF68DE420B0567A63D17B380"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 224,
+      "path": "paper_v21/figures/data/claim_boundary.csv",
+      "sha256": "101D28190C408F9170ED346E8D2BD9F7D87152D9095A10F34AC4D3963D9E1456"
+    },
+    {
+      "bytes": 581,
+      "path": "paper_v21/figures/data/control_events.csv",
+      "sha256": "0E7C74EBDD8997537B40B6EB00AD6DB8F4A621C88D44C9DA0616F27978774FE9"
+    },
+    {
+      "bytes": 467,
+      "path": "paper_v21/figures/data/convergence_components.csv",
+      "sha256": "F3EEC51B7F36011D7AB2EDAA08DD2B507549F2405C64D900F26402F5D326EEE1"
+    },
+    {
+      "bytes": 431,
+      "path": "paper_v21/figures/data/nominal_events.csv",
+      "sha256": "05F99582B228F105AED93AC8F0425A44EC5817E38D1265951106252197F50684"
+    },
+    {
+      "bytes": 530,
+      "path": "paper_v21/figures/data/qualification_ladder.csv",
+      "sha256": "D7AD3E5B6A80502D4071C56D0AC02A4F092C3F9B3C836E29BCB717F9B86ACD5A"
+    },
+    {
+      "bytes": 262,
+      "path": "paper_v21/figures/data/workflow.csv",
+      "sha256": "F4756A5E29DA8576482467E3E20983158318750EAB4D7F5C378C49C74B2A4E5D"
+    },
+    {
+      "bytes": 123642,
+      "path": "paper_v21/figures/figure-01-route-outcome.png",
+      "sha256": "5E76245DA51F3A3F7B60FA7A9E5E78D97891360E741AF5D9EC08F015FBCAB396"
+    },
+    {
+      "bytes": 148035,
+      "path": "paper_v21/figures/figure-02-qualification-ladder.png",
+      "sha256": "FB3DA893D3C723D5D4C9FE1204E8C7121FEB5F66678B57C81A51BE0A882C6504"
+    },
+    {
+      "bytes": 206506,
+      "path": "paper_v21/figures/figure-03-nominal-events.png",
+      "sha256": "57E7278A49632BD4E05CFAA5AA56C1FFA20B39952242B0507B769CCA76206748"
+    },
+    {
+      "bytes": 156297,
+      "path": "paper_v21/figures/figure-04-controls.png",
+      "sha256": "407FED4334D1D14AA8F5EF228F7D43ABCAD614DB67F6A573F6ECED550E708EE5"
+    },
+    {
+      "bytes": 150498,
+      "path": "paper_v21/figures/figure-05-convergence-gate.png",
+      "sha256": "21F95E1349D45C7F7100ADEA12227F4271EF116A2C155F351F113AA4A83EBB74"
+    },
+    {
+      "bytes": 189596,
+      "path": "paper_v21/figures/figure-06-claim-boundary.png",
+      "sha256": "116F3676356273AE8C044EEE53A532F337190BB111ACD97593E190A7B975A4F6"
+    },
+    {
+      "bytes": 26589,
+      "path": "paper_v21/figures/figure-01-route-outcome.pdf",
+      "sha256": "FF4B6079F3F0C96CC56E117230C47E75B78CF19903F9025B3DF7EDFADE87872D"
+    },
+    {
+      "bytes": 28308,
+      "path": "paper_v21/figures/figure-02-qualification-ladder.pdf",
+      "sha256": "5417B689A068CD1EB2C948118C3E7564688C2DD2326D1023BBA1FDFD2D575488"
+    },
+    {
+      "bytes": 23514,
+      "path": "paper_v21/figures/figure-03-nominal-events.pdf",
+      "sha256": "BFCA9D0F75EA0A19E0B6EBF68E850189EA0F25524AFCB195A62ED049AC4BF9DD"
+    },
+    {
+      "bytes": 21086,
+      "path": "paper_v21/figures/figure-04-controls.pdf",
+      "sha256": "B6DF1808E14A690B8CDE97B3CABCCE2B26EB44D89373A77583CD32741835BA80"
+    },
+    {
+      "bytes": 23221,
+      "path": "paper_v21/figures/figure-05-convergence-gate.pdf",
+      "sha256": "6C1A21E709DBACD625D19CA6B3974982832CB54A94C7EBE1C5B487A36ADAE353"
+    },
+    {
+      "bytes": 26592,
+      "path": "paper_v21/figures/figure-06-claim-boundary.pdf",
+      "sha256": "71989E7EB6E1F6FDD4B1559C1D0D54314BCCAE52C8FB5C4974A9FD761F0C3F9F"
+    }
+  ],
+  "schema_id": "phk-v21-figure-source-manifest-v1",
+  "solver_or_training_executed": false,
+  "terminal_outcome": "PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN"
+}

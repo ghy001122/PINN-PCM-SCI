@@ -1,0 +1,130 @@
+{
+  "schema_id": "phk-v21-e1-solver-selection-v1",
+  "selection_id": "PHK_V21_E1_LOGIT_NEWTON_SELECTION_V1",
+  "status": "COMPLETED_NON_VOTING_ENGINEERING_SELECTION",
+  "evidence_identity": "NON_VOTING_ENGINEERING_ONLY",
+  "effective_date": "2026-08-27",
+  "contract_bindings": {
+    "program_contract_path": "configs/phk_v21/program_contract.json",
+    "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+    "engineering_contract_path": "configs/phk_v21/engineering_contract.json",
+    "engineering_contract_sha256_before_e2_clarification": "04F91EB90876773300426B80BEA5D6976E96545503C1642D47FC4870283124DA",
+    "engineering_contract_sha256_current": "DF835E701660E4BC91F585F4DFAA22075DBCAAA754B7716921E766066BD7605A",
+    "legacy_phk_v2_implementation_path": "pinn_pcm_sci/phk_benchmark.py",
+    "legacy_phk_v2_implementation_sha256": "B18AFA4F9005735EF46E3958F325C5BC40CECD0BF5E419854B140FAF76DF9645",
+    "legacy_disposition": "BYTE_PRESERVED_NO_RERUN_OR_REWRITE"
+  },
+  "diagnosis": {
+    "legacy_error": "PHK phase Newton line search reached its frozen minimum step",
+    "initial_residual_inf": 1.7833059863850628e-8,
+    "directional_fd_relative_l2": 6.698358367618657e-10,
+    "jacobian_condition_2": 1.1014977808058877,
+    "root_cause": "ARTIFICIAL_INTERIOR_UPPER_GUARD_EXCLUDES_A_PHYSICALLY_ADMISSIBLE_ROOT",
+    "legacy_upper_guard": 0.99999999,
+    "resolved_root_phase_min": 0.999999955003354,
+    "resolved_root_phase_max": 0.9999999911341139,
+    "physical_range": [0.0, 1.0],
+    "governing_equation_changed": false
+  },
+  "minimized_fixture_results": {
+    "TRUST_REGION_REFLECTIVE_PHASE": {
+      "iterations": 5,
+      "linear_solves": 5,
+      "residual_evaluations": 7,
+      "final_residual_inf": 5.4763789411913104e-17,
+      "phase_min": 0.999999955003354,
+      "phase_max": 0.9999999911341139,
+      "output_clipping_count": 0
+    },
+    "LOGIT_NEWTON_ANALYTIC_JACOBIAN": {
+      "iterations": 2,
+      "linear_solves": 2,
+      "residual_evaluations": 5,
+      "final_residual_inf": 3.021812361644421e-11,
+      "phase_min": 0.9999999549803609,
+      "phase_max": 0.999999991133704,
+      "output_clipping_count": 0
+    },
+    "PSEUDO_TRANSIENT_NEWTON": {
+      "iterations": 1,
+      "linear_solves": 1,
+      "residual_evaluations": 3,
+      "final_residual_inf": 1.3625229759141687e-11,
+      "phase_min": 0.9999999549929264,
+      "phase_max": 0.9999999911328502,
+      "output_clipping_count": 0
+    }
+  },
+  "coarse_conductivity_off_screen": {
+    "TRUST_REGION_REFLECTIVE_PHASE": {
+      "execution": "COMPLETED",
+      "numerical_guard_passed": true,
+      "phase_linear_solves": 8724,
+      "process_cpu_seconds_rounded": 132.08
+    },
+    "LOGIT_NEWTON_ANALYTIC_JACOBIAN": {
+      "execution": "COMPLETED",
+      "numerical_guard_passed": true,
+      "phase_linear_solves": 3155,
+      "process_cpu_seconds_rounded": 16.98
+    },
+    "PSEUDO_TRANSIENT_NEWTON": {
+      "execution": "COMPLETED",
+      "numerical_guard_passed": true,
+      "phase_linear_solves": 3550,
+      "process_cpu_seconds_rounded": 18.31
+    }
+  },
+  "selected_scheme_qualification": {
+    "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN",
+    "fixed_bounds": [0.0, 1.0],
+    "dynamic_switching_allowed": false,
+    "output_clipping_allowed": false,
+    "medium_conductivity_off": {
+      "execution": "COMPLETED_TWICE_FOR_EXACT_REPLAY",
+      "process_cpu_seconds": [96.61491609999939, 113.19418810000207],
+      "phase_calls_total": 3233,
+      "phase_linear_solves_total": 4989,
+      "maximum_phase_residual_inf": 9.9929e-11,
+      "phase_min": 9.14785e-6,
+      "phase_max": 0.999999999176671,
+      "numerical_guard_passed": true,
+      "event_passed": false,
+      "event_interpretation": "EXPECTED_HISTORICAL_OBJECT_EVENT_FAILURE_NOT_A_V21_OBJECT_RESULT"
+    },
+    "exact_replay_max_absolute_differences": {
+      "time": 0.0,
+      "potential": 0.0,
+      "temperature": 0.0,
+      "phase": 0.0,
+      "top_current": 0.0,
+      "bottom_current": 0.0,
+      "joule_power": 0.0,
+      "current_balance_history": 0.0,
+      "thermal_residual_history": 0.0,
+      "phase_residual_history": 0.0,
+      "coupled_change_history": 0.0,
+      "linear_residual_history": 0.0
+    },
+    "coarse_nominal_sentinel": {
+      "execution": "COMPLETED",
+      "process_cpu_seconds": 20.809262800001306,
+      "numerical_guard_passed": true,
+      "event_passed": false
+    },
+    "coarse_joule_off_sentinel": {
+      "execution": "COMPLETED",
+      "process_cpu_seconds": 8.218556799998623,
+      "numerical_guard_passed": true,
+      "event_passed": false
+    }
+  },
+  "unselected_candidates": {
+    "SMALLER_TIME_STEP_DIAGNOSTIC": "INELIGIBLE_AND_NOT_NEEDED_AFTER_ROOT_CAUSE_WAS_IDENTIFIED",
+    "ANDERSON_OUTER_COUPLING": "NOT_PROMOTED_BECAUSE_THE_FAILURE_WAS_INNER_BOUND_EXCLUSION_AND_THE_SELECTED_INNER_SCHEME_COMPLETED_THE_FROZEN_OUTER_FIXED_POINT_WITH_EXACT_REPLAY",
+    "TRUST_REGION_REFLECTIVE_PHASE": "ELIGIBLE_BUT_HIGHER_COARSE_LINEAR_SOLVES_AND_CPU",
+    "PSEUDO_TRANSIENT_NEWTON": "ELIGIBLE_BUT_HIGHER_COARSE_LINEAR_SOLVES_AND_CPU_THAN_LOGIT"
+  },
+  "selection_verdict": "PHK_V21_E1_PASS_LOGIT_NEWTON_FIXED_FOR_ENGINEERING_OBJECT_SEARCH",
+  "scientific_claim_status": "NO_OBJECT_ORACLE_EVENT_PINN_METHOD_OR_FORMAL_EVIDENCE"
+}

@@ -1,0 +1,103 @@
+{
+  "case_id": "PHK_V21_Q_ZERO_DRIVE_996DC4F95A39AC36",
+  "claim_status": "NO_ORACLE_OR_METHOD_CLAIM_SINGLE_CASE_ONLY",
+  "event": {
+    "cycle_peak_relative_drift": 0.0,
+    "cycles": [
+      {
+        "cycle_index": 1,
+        "event_time": null,
+        "peak_full_domain_fraction": 0.0,
+        "peak_outside_roi_fraction": 0.0,
+        "peak_roi_fraction": 0.0,
+        "pre_roi_fraction": 0.0,
+        "recovery_fraction": 0.0,
+        "saved_steps_at_or_above_threshold": 0
+      },
+      {
+        "cycle_index": 2,
+        "event_time": null,
+        "peak_full_domain_fraction": 0.0,
+        "peak_outside_roi_fraction": 0.0,
+        "peak_roi_fraction": 0.0,
+        "pre_roi_fraction": 0.0,
+        "recovery_fraction": 0.0,
+        "saved_steps_at_or_above_threshold": 0
+      }
+    ],
+    "failures": [
+      "cycle_1_event_missing",
+      "cycle_1_roi_peak_below_minimum",
+      "cycle_1_excursion_too_small",
+      "cycle_1_recovery_too_small",
+      "cycle_1_event_under_resolved",
+      "cycle_2_event_missing",
+      "cycle_2_roi_peak_below_minimum",
+      "cycle_2_excursion_too_small",
+      "cycle_2_recovery_too_small",
+      "cycle_2_event_under_resolved"
+    ],
+    "passed": false
+  },
+  "expected_no_event_passed": false,
+  "guard": {
+    "failures": [],
+    "maximum_current_balance_relative": 0.0,
+    "maximum_linear_residual_scaled": 0.0,
+    "maximum_no_flux_residual_scaled": 0.0,
+    "maximum_phase_residual_scaled": 9.936610857184008e-11,
+    "maximum_thermal_residual_scaled": 1.951563910473908e-18,
+    "nonfinite_count": 0,
+    "passed": true,
+    "phase_range": [
+      2.875188825717295e-09,
+      0.029947898547040934
+    ],
+    "potential_range": [
+      0.0,
+      0.0
+    ],
+    "temperature_range": [
+      0.0,
+      0.0006791145574816896
+    ]
+  },
+  "immediate_gate_passed": false,
+  "immediate_gate_reason": "CONTROL_FALSE_EVENT",
+  "intent": {
+    "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN",
+    "control": "ZERO_DRIVE",
+    "intent_id": "Q_ZERO_DRIVE_MEDIUM",
+    "order": 2,
+    "resolution": "medium"
+  },
+  "phase_algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN",
+  "resolution": {
+    "dt": 0.0025,
+    "evidence_identity": "PHK_V21_FROZEN_Q_RESOLUTION",
+    "name": "medium",
+    "nx": 80,
+    "nz": 40,
+    "save_every": 2,
+    "time_end": 2.5
+  },
+  "schema_id": "phk-v21-q-case-report-v1",
+  "single_case_adjudication": "PENDING_COMPLETE_Q_LADDER",
+  "solver_statistics": {
+    "coupled_blocks_total": 1753,
+    "electric_linear_solves_total": 2754,
+    "final_residual_evaluations_total": 1000,
+    "linear_solves_total": 5945,
+    "maximum_phase_candidate_residual_inf": 9.945138557620158e-11,
+    "output_clipping_count": 0,
+    "phase_bound_rejections_total": 0,
+    "phase_decrease_rejections_total": 0,
+    "phase_iterations_total": 1438,
+    "phase_jacobian_evaluations_total": 3191,
+    "phase_linear_solves_total": 1438,
+    "phase_residual_evaluations_total": 4629,
+    "phase_solver_calls_total": 1753,
+    "thermal_linear_solves_total": 1753,
+    "time_steps_total": 1000
+  }
+}

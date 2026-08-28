@@ -34,6 +34,9 @@
 | [`2026-08-26-plan-msa-01-review-superseded.md`](2026-08-26-plan-msa-01-review-superseded.md) | 尚未获批的 `PLAN-MSA-01` 模块化来源对齐逐包执行草案 | 用户随后批准一次性 [GOAL-PAPER-ONE-SHOT-V1](../docs/plans/NEXT_ACTIONS.md)；ADR 0044 覆盖其逐包批准与无自动 fallback 语义，旧科学门和历史 No-Go 不被改写。 |
 | [`2026-08-27-goal-paper-one-shot-v1-complete.md`](2026-08-27-goal-paper-one-shot-v1-complete.md) | 已完整交付 failure-preserving reference-qualification 论文包的旧 GOAL live plan | 用户随后批准独立的 [PLAN-PHK-V2-V1](../docs/plans/NEXT_ACTIONS.md)；ADR 0045 只覆盖当前授权语义，旧 S0/S2、失败 intent、No-Go、论文和复现包保持原样。 |
 
+| [2026-08-27-plan-phk-v2-v1-complete-pointer.md](2026-08-27-plan-phk-v2-v1-complete-pointer.md) | PHK-V2 完成态与冻结 Git 快照指针 | 后续 PHK-V2.1 只覆盖其“不再执行”的授权语义，不改写 PHK-V2 Oracle No-Go、失败 intent 与 `paper_v2/`。 |
+| [2026-08-28-plan-phk-v21-v1-complete.md](2026-08-28-plan-phk-v21-v1-complete.md) | 独立 PHK-V2.1 工程—科学双阶段 GOAL 的完成指针 | S1 以 event-time 不单调触发 PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN，S2-S6 未到达；当前完成态、证据与论文包由 [active_phase.md](../active_phase.md)、[S1 closeout](../docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)、[S7 closeout](../docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)和 [paper_v21](../paper_v21/README.md)固定。 |
+
 该包中的主要入口：
 
 - [旧综合审查报告](2026-08-18-ideaspark-high-frequency-pinn-pcm/docs/ideaspark_comprehensive_audit_report.md)

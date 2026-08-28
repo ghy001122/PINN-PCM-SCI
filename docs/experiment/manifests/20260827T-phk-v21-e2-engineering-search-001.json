@@ -1,0 +1,80 @@
+{
+  "actual_budget": {
+    "case_records": 41,
+    "failed_case_records": 0,
+    "process_cpu_core_hours": 0.44276475694444445,
+    "process_cpu_seconds": 1593.953125,
+    "wall_clock_seconds": 1612.5088280000055
+  },
+  "artifacts": {
+    "case_records": "outputs\\runs\\20260827T-phk-v21-e2-engineering-search-001\\case-records.jsonl",
+    "case_records_sha256": "440024389FF5C16D20C4316D6D6AABB20EE5874095E9BB19366536E8B8CD0F28",
+    "e1_solver_selection": "configs\\phk_v21\\e1_solver_selection.json",
+    "e1_solver_selection_sha256": "A452D4E387A2C2E2AD0924D7CECD0E941A68088A48070F2F105AE81BF978A2DC",
+    "engineering_contract": "configs\\phk_v21\\engineering_contract.json",
+    "engineering_contract_sha256": "DF835E701660E4BC91F585F4DFAA22075DBCAAA754B7716921E766066BD7605A",
+    "intent": "docs\\experiment\\intents\\20260827T-phk-v21-e2-engineering-search-001.json",
+    "intent_sha256": "545225053FBB94B547D9F53FBD132AAA00F9FB0DF8D88FA2534645D93265E0B3",
+    "program_contract": "configs\\phk_v21\\program_contract.json",
+    "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+    "summary": "outputs\\runs\\20260827T-phk-v21-e2-engineering-search-001\\summary.json",
+    "summary_sha256": "DAC816914ABFC686CD26D93EC643F642031F4AB62B85E4CBE6B52496E2613E19"
+  },
+  "case_id": "phk-v21-e2-preregistered-16-plus-16-plus-3-plus-controls",
+  "checkpoint": {
+    "id": "NOT_APPLICABLE",
+    "selection": "E2_ENGINEERING_CAMPAIGN"
+  },
+  "claim_status": "NO_OBJECT_ORACLE_EVENT_PINN_METHOD_OR_FORMAL_EVIDENCE",
+  "code_identity": {
+    "design_sha256": "91A7DBAA37B3C4CFBE3DF02287E2903C038B02BFFC9C2DFBAA8E26FD8AD4E1A9",
+    "engineering_sha256": "672049C1D9E3047DFC09203A0460323AC46F3D74CD21CDF99754BFD953F0D1FD",
+    "kind": "working-tree",
+    "legacy_phk_v2_sha256": "B18AFA4F9005735EF46E3958F325C5BC40CECD0BF5E419854B140FAF76DF9645",
+    "runner_sha256": "1129C5FE58D8F985D92C6D1DEB84A53C08A9EAFA79E0466F9038CE0E44423BBE",
+    "solver_sha256": "A4A70BE2F580EF7AAACBEBD0E3735B703E4E4045DD297B3B1BFC7B8A93B879FA"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_v21_design_runner",
+    "run"
+  ],
+  "ended_at": "2026-08-27T15:18:45.078892+00:00",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1"
+  },
+  "evaluator_id": "phk-v21-engineering-event-locality-ranking-v1",
+  "evidence_identity": "NON_VOTING_ENGINEERING_ONLY",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "phk-v21-engineering-object-search",
+  "failure_class": null,
+  "gate": "PHK_V21_E2",
+  "gate_outcome": "PHK_V21_E2_ENGINEERING_OBJECT_CANDIDATE_SELECTED",
+  "method_id": "phk-v21-logit-newton-independent-engineering-v1",
+  "numerical_validity": "NON_VOTING_ENGINEERING_SCREEN_COMPLETE",
+  "physical_contract_id": "PHK_V21_ENGINEERING_CANDIDATE_UNIVERSE_V1",
+  "planned_budget": {
+    "failed_intents_count": true,
+    "maximum_cpu_process_core_hours": 24.0,
+    "maximum_medium_controls": 6,
+    "medium_promotions": 3,
+    "replacement_case": false,
+    "stage_1_cases": 16,
+    "stage_2_cases": 16
+  },
+  "replay_of": null,
+  "route_disposition": "FREEZE_NEW_SCIENTIFIC_CONTRACT_BEFORE_ORACLE",
+  "run_id": "20260827T-phk-v21-e2-engineering-search-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "benchmark_engineering_non_voting",
+  "seed": 0,
+  "split_id": "NOT_APPLICABLE_NON_VOTING_ENGINEERING_SEARCH",
+  "started_at": "2026-08-27T14:51:52.563030+00:00",
+  "supersedes": null,
+  "tier": "engineering"
+}

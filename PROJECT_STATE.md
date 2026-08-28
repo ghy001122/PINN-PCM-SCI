@@ -1,33 +1,41 @@
 # 项目状态
 
-更新时间：2026-08-27
+更新时间：2026-08-28
 
-- `phase_id`: `PHK_V2_COMPLETE_ORACLE_NO_GO`
+- `phase_id`: `PHK_V21_COMPLETE_ORACLE_NO_GO`
 - `lifecycle_state`: `COMPLETED`
 - `blocker_id`: `NONE`
-- `claim_status`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE_NO_PINN_METHOD_EVIDENCE`
-- `authorization_scope`: `PHK_V2_EXECUTION_AND_CLOSEOUT_CONSUMED_CLOSED`
-- `authorization_package`: `S0_TO_S7_LOCAL_RESEARCH_AND_V2_MANUSCRIPT_CONSUMED`
-- `plan_status`: `COMPLETED_BOUNDARY_PRESERVING_ORACLE_NO_GO`
-- `candidate_status`: `PHK_REDUCED_WALL_CELL_2D_V1_ORACLE_NO_GO`
-- `idea_research_status`: `PHK_V2_COMPLETE_ORACLE_NO_GO`
-- `object_selection_status`: `PHK_REDUCED_WALL_CELL_2D_V1_FROZEN_ORACLE_NO_GO`
-- `method_selection_status`: `NOT_ENTERED_ORACLE_GATE_NO_GO`
-- `source_scan_status`: `PHK_V2_R0_PRIMARY_SOURCE_AUDIT_COMPLETE`
-- `fresh_primary_source_budget`: `R0_EIGHT_OBJECTS_PLUS_FOUR_DECISIVE_CARRIERS_MAX`
-- `deep_review_object_family_budget`: `SHARP_PF_JAXPI2_PLUS_REDUCED_PCM_TOPOLOGY`
-- `screen_timebox`: `BOUNDED_BY_PROGRAM_CONTRACT`
-- `last_completed_science_terminal`: `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`
+- `claim_status`: `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN_NO_BASELINE_OR_METHOD_EVIDENCE`
+- `authorization_scope`: `PHK_V21_EXECUTION_CONSUMED_AND_CLOSED`
+- `authorization_package`: `E0_TO_S7_AUTOMATIC_GATED_LOCAL_EXECUTION`
+- `plan_status`: `COMPLETED_AT_S1_ORACLE_NO_GO`
+- `candidate_status`: `PHK_V21_ORACLE_QUALIFICATION_NO_GO`
+- `idea_research_status`: `PHK_V21_TERMINAL_ORACLE_NO_GO_PACKAGE_COMPLETE`
+- `object_selection_status`: `ORACLE_QUALIFICATION_NO_GO_FROZEN`
+- `method_selection_status`: `NOT_REACHED_ORACLE_GATE_NO_GO`
+- `source_scan_status`: `PHK_V21_BASELINE_REPRODUCTION_IDENTITY_REFRESH_COMPLETE_PRE_REPLICATION`
+- `fresh_primary_source_budget`: `MAX_6_NEW_PRIMARY_CARRIERS`
+- `deep_review_object_family_budget`: `SHARP_PF_JAXPI2_AND_REPEATABLE_EVENT_CONTRACT`
+- `screen_timebox`: `PHK_V21_PROGRAM_BUDGET`
+- `last_completed_science_terminal`: `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`
 - `prior_package_a_status`: `CONSUMED_AND_CLOSED`
-- `compute_authorization`: `NO_FURTHER_PHK_SOLVER_PINN_GPU_OR_FORMAL_EXECUTION_AUTHORIZED`
-- `implementation_authorization`: `NONE_GOAL_COMPLETE`
-- `formal_or_gpu_authorization`: `CLOSED_ORACLE_GATE_NO_GO`
+- `compute_authorization`: `CONSUMED_AND_CLOSED`
+- `implementation_authorization`: `CONSUMED_AND_CLOSED`
+- `formal_or_gpu_authorization`: `NOT_AUTHORIZED_ORACLE_GATE_NO_GO`
 - `next_research_execution_authorized`: `false`
-- `next_authorizable_package`: `NONE_REQUIRES_NEW_EXPLICIT_AUTHORIZATION`
+- `next_authorizable_package`: `FRESH_EXPLICIT_USER_AUTHORIZATION_REQUIRED`
 - `prior_hfo_route_status`: `WAVEFORM_TIME_NO_GO_FROZEN`
 - `novelty_status`: `CTH_POSITIVE_ARCHITECTURE_NOVELTY_NOT_CLEARED_BOUNDED_REVIEW`
 
 ## 当前已核验事实
+
+- `VERIFIED_PHK_V21_LOCAL_DELIVERABLES_COMPLETE`：[PHK-V2.1 最终包](paper_v21/README.md)已交付 3,298-word 英文稿、完整中文稿、通俗故事、六幅 PNG/PDF 图、六份图源 CSV、最终表格与参考文献、baseline anatomy cards、补充材料、复现说明、claim-evidence matrix 和 reviewer-risk 自检。[包清单](paper_v21/package-manifest.json)记录除自身外 34 个包内文件与 35 个外部证据依赖，SHA256 `EA350D31B5BE212C96750EDA7CD12A99C17D643C1FAFF78DF3F6F0B583977653`；`PHK_V21_PACKAGE_VALID`、31/31 full tests（含 20/20 focused subset）、ledger 与 document consistency 均通过。该完成事实保持 Oracle No-Go 与无 PINN 方法证据上限。
+- `VERIFIED_PHK_V21_S1_ORACLE_GATE_TERMINAL_NO_GO`：[terminal summary](outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)与 [S1 closeout](docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)固定 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`。14/14 intents 完成、0 execution/guard failures，nominal 两周期 event、zero/Joule-off no-event 与 exact replay 均通过；但 event-time 空间差 `0.00120677→0.00164868` 不单调，故 floor 不合格并停止全部 neural 下游。总计 `4062.65625` CPU 秒；summary SHA256 `5E6343D3...3A9C9`。
+- `VERIFIED_PHK_V21_S0_SCIENTIFIC_CONTRACT_FREEZE`：[S0 freeze record](docs/governance/2026-08-28-phk-v21-s0-scientific-contract-freeze.md)已在首个 voting solve 前固定 object、128-case complete-case split、14-intent oracle/floor、Sharp/PF replication 与 PHA×KC method contracts。五份文件 SHA256 分别为 `BDC86AE4...9CBDD`、`FC4F27D9...4BAB7`、`E596A5D5...E5FB`、`195C039C...EBC4` 与 `F1E918E6...A001D`；当前仅授权进入 S1，不建立 qualified oracle/event、floor、baseline 或方法证据。
+- `VERIFIED_PHK_V21_S1_INTENT_02_CARRIER_RECONCILIATION`：intent 02 的 1000 步 zero-drive 数值守卫通过且两个周期均无事件，但 tuple-only runtime carrier 被 list-only helper 错判为 false event。[最小修复记录](docs/experiment/2026-08-28-phk-v21-s1-intent-02-carrier-reconciliation.md)绑定原 manifest/report/result 哈希，保留原产物和 CPU 计账、不重跑 solver，只更正 no-event Boolean 并要求 intents 03–14 显式绑定 amendment；这不是 oracle PASS。
+- `VERIFIED_PHK_V21_AUTHORIZATION_AND_PREFREEZE`：用户已批准执行《总体审查结论》末尾 PHK-V2.1 GOAL。新 [program contract](configs/phk_v21/program_contract.json)、[engineering contract](configs/phk_v21/engineering_contract.json)、[ADR 0046](docs/adr/0046-adopt-phk-v21-independent-engineering-science-contract.md)与[S0 预注册](docs/governance/2026-08-27-phk-v21-s0-program-and-engineering-preregistration.md)把非投票工程与后续 scientific freeze 分开；PHK-V2 Oracle No-Go、intent 9 失败、intents 10–12 未到达和 `paper_v2/` 均保持原样。
+- `VERIFIED_PHK_V21_E1_SOLVER_SELECTION`：旧 conductivity-off control 的 phase-Newton failure 已从 80×40 full trajectory 压缩到固定 2×2 snapshot。方向有限差分误差为 `6.698358367618657e-10`，根位于物理 `[0,1]` 内但越过旧人工上界 `0.99999999`。trust-region、logit 与 pseudo-transient 均解开该 snapshot；logit 在同一 coarse full-duration conductivity-off screen 上以 `3155` 次 phase linear solves 领先，并进一步完成两次 medium exact replay、nominal/Joule-off sentinels 与全部数值守卫，故固定为 E2 工程求解方案。该 PASS 只支持非投票对象搜索，不建立 object/oracle/event/method evidence。见 [E1 selection](docs/experiment/2026-08-27-phk-v21-e1-control-solver-selection.md)。
+- `VERIFIED_PHK_V21_E2_ENGINEERING_CANDIDATE_SELECTION`：固定 16+16 coarse、3 medium 与 6 controls 的 campaign 完成 `41/41` case records、`0` execution failures，选择 `PHK_V21_E2_STAGE2_0A1813B1D968F573`。nominal medium 两周期 event、recovery、drift、locality 与数值守卫通过；zero/Joule-off 均无 event；全部 controls 可执行且守卫通过。wide-heater control 没有第二周期 event，故不构成几何稳健性。该结果仅准许 S0 新合同冻结，尚不是 scientific object/oracle PASS。见 [E2 selection](docs/experiment/2026-08-27-phk-v21-e2-engineering-object-selection.md)。
 
 - `VERIFIED_PHK_V2_ORACLE_GATE_TERMINAL_NO_GO`：terminal summary run `20260827T-phk-v2-s2-q-terminal-summary` 固定 `PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE`。Intents 1–8 completed，intent 9 consumed `PHK phase Newton line search reached its frozen minimum step`，intents 10–12 `NOT_REACHED`。Nominal coarse/medium/fine/half-dt/replay 均通过数值 hard guards，但第一周期 recovery 仅约 `0.22–0.24`，第二周期没有新的阈值上穿，cycle-peak drift 约 `1.41–1.59`；exact replay 六分量全为 `0.0`。该结果关闭 strong raw、PHA-MF、KC、组合、GPU 与 formal，不建立任何 PINN 方法证据。summary SHA256 `8964ACB687F1BDB4F03C2E0D33891EE3705D4C2ABD271085D0C82A2B4469EA78`。
 - `VERIFIED_PHK_V2_LOCAL_DELIVERABLES_COMPLETE`：[PHK-V2 最终包](paper_v2/README.md)已交付 4,128-word 英文稿、完整中文稿、通俗故事、六幅 PNG/PDF 图、六份图源 CSV、最终表格与参考文献、baseline anatomy cards、补充材料、复现说明、claim–evidence matrix 和 reviewer-risk 自检。figure source manifest 经两次重绘保持 SHA256 `9C8CBE7A4AA1D65F1E0493E756A57FD5CCED0F1110353829D0A86AB97200FA40`；[包清单](paper_v2/package-manifest.json)记录除自身外 35 个包内文件与 15 个外部证据依赖，SHA256 `A0BFF4D3DE95F2E10167DFC5FEB09EFDE704E62EA6D54FDE7CFE5621ABE38173`，`PHK_V2_PACKAGE_VALID` 通过。该交付保持 Oracle No-Go 与无 PINN 方法证据上限。

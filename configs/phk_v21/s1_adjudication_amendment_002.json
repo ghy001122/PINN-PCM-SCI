@@ -1,0 +1,62 @@
+{
+  "schema_id": "phk-v21-s1-adjudication-amendment-v1",
+  "amendment_id": "PHK_V21_S1_COMPONENT_LABEL_CANONICALIZATION_002",
+  "status": "FROZEN_BEFORE_FIRST_SUCCESSFUL_TERMINAL_SUMMARY_NO_SOLVER_RERUN",
+  "effective_date": "2026-08-28",
+  "defect_identity": "LEGACY_COMPARATOR_LABELS_NOT_CANONICAL_V21_ENDPOINT_LABELS",
+  "original_oracle_contract_sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB",
+  "prior_implementation_amendment_sha256": "B50BBADEC521F435EA1AFA923146237851D0B8F8C87922A97C3CBD974C98B6AE",
+  "previous_runner_sha256": "F801B9F1EA89D2B09364BBC9AEDDBDED8FEDF8DAD125A6C6DB7F569192274E1F",
+  "amended_runner_sha256": "82F300E002CDA045A307508EF4C9DF820A1A4F9132EFDBA1508221552277E501",
+  "amended_runner_test_sha256": "15403FCA8E038D5FF66B5219F3D4BBEE58D3FCD2D6C2825B5187904494D3141A",
+  "changes_component_values_formulas_order_physics_or_results": false,
+  "solver_rerun_authorized": false,
+  "failed_summary_attempt": {
+    "run_id_requested": "20260828T-phk-v21-s1-q-terminal-summary-001",
+    "failure_identity": "ValueError: medium_fine component order mismatch",
+    "summary_directory_created": false,
+    "summary_or_floor_written": false,
+    "intent_or_manifest_written": false,
+    "ledger_row_written": false
+  },
+  "label_mapping": {
+    "legacy_component_order": [
+      "PHASE_FIELD_ROI_RMS",
+      "TEMPERATURE_FIELD_ROI_RMS",
+      "CURRENT_TRACE_RMS",
+      "EVENT_TIME",
+      "PHASE_REGION_SYMMETRIC_DIFFERENCE",
+      "RECOVERY"
+    ],
+    "canonical_component_order": [
+      "PHASE_FIELD_ROI_RMS",
+      "TEMPERATURE_FIELD_ROI_RMS",
+      "TERMINAL_CURRENT_TRACE_RMS",
+      "TWO_CYCLE_EVENT_TIME_RMS",
+      "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+      "TWO_CYCLE_RECOVERY_RMS"
+    ],
+    "mapping_is_position_preserving": true,
+    "component_values_reordered": false,
+    "component_values_recomputed": false
+  },
+  "formula_identity": [
+    "POSITION_1_PHASE_FIELD_ROI_RMS_UNCHANGED",
+    "POSITION_2_TEMPERATURE_FIELD_ROI_RMS_UNCHANGED",
+    "POSITION_3_CURRENT_TRACE_RMS_EQUALS_TERMINAL_CURRENT_TRACE_RMS",
+    "POSITION_4_EVENT_TIME_EQUALS_TWO_CYCLE_EVENT_TIME_RMS",
+    "POSITION_5_PHASE_REGION_SYMMETRIC_DIFFERENCE_EQUALS_TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+    "POSITION_6_RECOVERY_EQUALS_TWO_CYCLE_RECOVERY_RMS"
+  ],
+  "allowed_effects": [
+    "CANONICALIZE_ONLY_THE_SIX_PERSISTED_COMPARATOR_LABELS_BY_POSITION",
+    "RUN_THE_FIRST_SUCCESSFUL_TERMINAL_SUMMARY_FROM_THE_EXISTING_14_RESULTS"
+  ],
+  "forbidden_effects": [
+    "RERUN_ANY_OF_THE_14_SOLVER_INTENTS",
+    "CHANGE_OR_REORDER_COMPONENT_VALUES",
+    "CHANGE_ENDPOINT_FORMULAS_FLOOR_RULES_OR_CONVERGENCE_THRESHOLDS",
+    "MUTATE_ANY_EXISTING_RESULT_REPORT_OR_MANIFEST",
+    "CLAIM_ORACLE_PASS_FROM_THIS_AMENDMENT_ALONE"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_id": "phk-v21-engineering-contract-v1",
+  "contract_id": "PHK_V21_ENGINEERING_SANDBOX_V1",
+  "status": "PRE_ENGINEERING_RESULT_FIXED_SEARCH_AND_SELECTION",
+  "evidence_identity": "NON_VOTING_ENGINEERING_ONLY",
+  "legacy_inputs": {
+    "program_contract": "configs/phk_v2/program_contract.json",
+    "program_sha256": "0E1D89DD23F93C90160AC82ECE60ADA154410F4DDC33578CB892207FE8B445A8",
+    "object_contract": "configs/phk_v2/object_numerical_contract.json",
+    "object_sha256": "3B3B9A369F4AFDFFB201394DD294E7196BAF04E5B36BAFE126291CA9CB3EA157",
+    "failed_intent": "20260827T-phk-v2-s2-intent-09-phase-conductivity-off-medium",
+    "legacy_result_disposition": "PRESERVED_NO_RERUN_OR_REWRITE"
+  },
+  "p0_red_fixture": {
+    "id": "PHK_V21_INTENT9_PHASE_NEWTON_2X2_RED_V1",
+    "role": "MINIMIZED_NON_SCIENTIFIC_REGRESSION",
+    "grid": {"nx": 2, "nz": 2, "x_min": -0.275, "x_max": -0.225, "z_min": 0.0, "z_max": 0.05},
+    "dt": 0.0025,
+    "phase_old": [0.9999999888693563, 0.9999999897806473, 0.9999999413676408, 0.9999999483406704],
+    "initial_guess": [0.9999999888693563, 0.9999999897806473, 0.9999999413676408, 0.9999999483406704],
+    "temperature": [1.2982636930121974, 1.2607816160010978, 1.2814285316274592, 1.2483397391836972],
+    "expected_legacy_failure": "PHK phase Newton line search reached its frozen minimum step",
+    "legacy_upper_guard": 0.99999999
+  },
+  "p0_solver_candidates": [
+    {"order": 1, "id": "LEGACY_DAMPED_NEWTON", "eligible_for_science": false, "bounds": [1.0e-8, 0.99999999]},
+    {"order": 2, "id": "TRUST_REGION_REFLECTIVE_PHASE", "eligible_for_science": true, "bounds": [0.0, 1.0], "residual_scaling": "DIVIDE_BY_FROZEN_TOLERANCE", "x_scale": "JAC", "maximum_function_evaluations": 120},
+    {"order": 3, "id": "LOGIT_NEWTON_ANALYTIC_JACOBIAN", "eligible_for_science": true, "bounds": [0.0, 1.0], "initial_step": 1.0, "line_search_reduction": 0.5, "line_search_min_step": 9.5367431640625e-7, "maximum_iterations": 30},
+    {"order": 4, "id": "PSEUDO_TRANSIENT_NEWTON", "eligible_for_science": true, "bounds": [0.0, 1.0], "initial_diagonal_shift": 0.001, "accepted_shift_factor": 0.3, "rejected_shift_factor": 10.0, "minimum_shift": 1.0e-12, "maximum_shift": 1000000000000.0, "maximum_iterations": 30},
+    {"order": 5, "id": "SMALLER_TIME_STEP_DIAGNOSTIC", "eligible_for_science": false},
+    {"order": 6, "id": "ANDERSON_OUTER_COUPLING", "eligible_for_science": true, "history_depth": 5, "mixing": 1.0, "inner_phase_solver": "SELECTED_FROM_ORDERS_2_TO_4"}
+  ],
+  "p0_selection": {
+    "mandatory_checks": [
+      "RED_FIXTURE_RESIDUAL_LE_1E_10",
+      "PHASE_PHYSICAL_RANGE_0_TO_1_WITHOUT_OUTPUT_CLIPPING",
+      "DIRECTIONAL_JACOBIAN_RELATIVE_L2_LE_2E_7",
+      "FULL_DURATION_CONDUCTIVITY_OFF_ENGINEERING_CONTROL_COMPLETES",
+      "NOMINAL_AND_JOULE_OFF_ENGINEERING_SENTINELS_COMPLETE",
+      "DETERMINISTIC_EXACT_REPLAY"
+    ],
+    "ranking": [
+      "ALL_MANDATORY_CHECKS_PASS",
+      "NO_GOVERNING_EQUATION_MODIFICATION",
+      "LOWEST_FAILURE_COUNT",
+      "LOWEST_LINEAR_SOLVES",
+      "LOWEST_PROCESS_CPU_SECONDS",
+      "CANDIDATE_ORDER"
+    ],
+    "one_fixed_scheme_only": true,
+    "no_dynamic_switching_in_scientific_runs": true
+  },
+  "p1_search": {
+    "route": "REPEATABLE_LOCALIZED_EVENT_ONLY",
+    "stage_1_full_factorial": {
+      "case_count": 16,
+      "period": [1.25, 1.50],
+      "volumetric_cooling": [2.5, 4.0],
+      "mobility_cold": [0.5, 1.0],
+      "thermal_drive": [4.0, 6.0],
+      "fixed": {"amplitude": 0.75, "hold_end": 0.30, "latent_ratio": 0.15, "mobility_hot": 5.0}
+    },
+    "stage_2_predeclared_refinement": {
+      "parents": 2,
+      "children_per_parent": 8,
+      "case_count": 16,
+      "amplitude": [0.65, 0.72],
+      "hold_end": [0.22, 0.27],
+      "latent_ratio": [0.05, 0.15]
+    },
+    "coarse_case_count_total": 32,
+    "medium_promotions": 3,
+    "parent_ranking": [
+      "EVENT_AND_LOCALITY_GUARDS_PASSED_COUNT",
+      "MINIMUM_CYCLE_RECOVERY_DESCENDING",
+      "CYCLE_PEAK_DRIFT_ASCENDING",
+      "OUTSIDE_ROI_PEAK_ASCENDING",
+      "PROCESS_CPU_SECONDS_ASCENDING",
+      "CANONICAL_CASE_ID_ASCENDING"
+    ],
+    "final_candidate_controls": [
+      "ZERO_DRIVE",
+      "JOULE_GAIN_ZERO",
+      "CONDUCTIVITY_PHASE_RATIO_ONE",
+      "LATENT_RATIO_ZERO",
+      "HEATER_WIDTH_0_50",
+      "INTERFACE_WIDTH_0_025"
+    ],
+    "ranking_metric_definitions": {
+      "event_and_locality_guards_passed_count": "COUNT_OF_PER_CYCLE_ATOMIC_PASSES_FOR_EVENT_PRESENT_MINIMUM_PEAK_MINIMUM_EXCURSION_RECOVERY_FULL_DOMAIN_LOCALITY_OUTSIDE_ROI_LOCALITY_AND_MINIMUM_SAVED_STEPS_PLUS_ONE_GLOBAL_CYCLE_DRIFT_PASS",
+      "event_and_locality_maximum_count": 15,
+      "numerical_guard_failure_count": -1,
+      "execution_failure_count": -2,
+      "minimum_cycle_recovery": "MINIMUM_OF_THE_TWO_UNCLIPPED_CYCLE_RECOVERY_FRACTIONS_OR_NEGATIVE_INFINITY_IF_TWO_CYCLES_ARE_NOT_AVAILABLE",
+      "cycle_peak_drift": "UNCLIPPED_ABSOLUTE_CYCLE_PEAK_DIFFERENCE_DIVIDED_BY_MAX_ABS_FIRST_PEAK_1E_14_OR_POSITIVE_INFINITY_IF_TWO_CYCLES_ARE_NOT_AVAILABLE",
+      "outside_roi_peak": "MAXIMUM_OF_THE_TWO_CYCLE_PEAK_OUTSIDE_ROI_FRACTIONS_OR_POSITIVE_INFINITY_IF_TWO_CYCLES_ARE_NOT_AVAILABLE",
+      "failed_execution_rank": "FAILED_CASES_SORT_AFTER_ALL_FINITE_COMPLETED_CASES_WITHOUT_REPLACEMENT"
+    },
+    "medium_selection": {
+      "promotion_source": "TOP_THREE_STAGE_2_COARSE_CHILDREN_BY_FROZEN_PARENT_RANKING",
+      "selected_nominal": "HIGHEST_RANKED_MEDIUM_PROMOTION_WITH_ALL_NUMERICAL_GUARDS_AND_FULL_EVENT_CONTRACT_PASS",
+      "if_no_medium_passes": "TERMINAL_NO_ADMISSIBLE_OBJECT",
+      "control_replacement_after_selection": false
+    },
+    "control_acceptance": {
+      "all_six_controls_must_execute_and_pass_numerical_guards": true,
+      "zero_drive_must_have_no_event": true,
+      "joule_gain_zero_must_have_no_event": true,
+      "other_controls_are_engineering_causal_probes_not_required_to_preserve_the_nominal_event": true,
+      "failed_selected_control_does_not_trigger_candidate_replacement": true
+    }
+  },
+  "engineering_acceptance": {
+    "two_new_upward_events": true,
+    "minimum_recovery_fraction_each_cycle": 0.70,
+    "maximum_cycle_peak_relative_drift": 0.20,
+    "maximum_peak_full_domain_fraction": 0.45,
+    "maximum_peak_outside_roi_fraction": 0.10,
+    "minimum_event_saved_steps_each_cycle": 3,
+    "joule_off_has_no_event": true,
+    "all_control_branches_execute": true,
+    "all_numerical_guards_pass": true,
+    "threshold_changes_after_results": false
+  },
+  "engineering_budget": {
+    "maximum_solver_probe_intents": 24,
+    "maximum_coarse_object_cases": 32,
+    "maximum_medium_promotions": 3,
+    "maximum_medium_control_cases": 6,
+    "maximum_cpu_process_core_hours": 24.0,
+    "failed_intents_count": true,
+    "scientific_claims_from_engineering": false
+  },
+  "terminal_if_no_candidate": "PHK_V21_ENGINEERING_NO_ADMISSIBLE_REPEATABLE_EVENT_OBJECT"
+}

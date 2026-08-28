@@ -1,0 +1,37 @@
+{
+  "schema_id": "phk-v21-s1-implementation-amendment-v1",
+  "amendment_id": "PHK_V21_S1_NO_EVENT_CARRIER_TYPE_AMENDMENT_001",
+  "status": "FROZEN_BEFORE_CONTINUING_INTENT_03_NO_SOLVER_RERUN",
+  "effective_date": "2026-08-28",
+  "defect_identity": "DATACLASS_ASDICT_TUPLE_REJECTED_BY_LIST_ONLY_NO_EVENT_CHECK",
+  "original_oracle_contract_sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB",
+  "original_runner_sha256": "179C4C8EFF3541AB61B975515499DF5E89EA77F83CBAFCF9975EF903CBECF35C",
+  "amended_runner_sha256": "F801B9F1EA89D2B09364BBC9AEDDBDED8FEDF8DAD125A6C6DB7F569192274E1F",
+  "amended_runner_test_sha256": "9150282EBA9250E6918E84C6C9E91B74E91323976E72B75E7DB07F286247DC9D",
+  "changes_physics_numerics_thresholds_cases_or_results": false,
+  "solver_rerun_authorized": false,
+  "correction": {
+    "qualification_intent": 2,
+    "run_id": "20260828T-phk-v21-s1-q-02-zero-drive",
+    "manifest_sha256": "971D30AD94B4659648925DC271982B09408CD276752ADD02BA2977936526C95B",
+    "report_sha256": "5E3350F8C56F88BEAA7B67F2F09CFEEF731903865F41904B3CF6C1CCAE9EFD0A",
+    "result_sha256": "A4135C71CC10B86E04DA49F85114EF3DE595CB0CFCB2FDAAB840200C7AAD032C",
+    "stored_expected_no_event_passed": false,
+    "corrected_expected_no_event_passed": true,
+    "derivation": "Both persisted cycles have event_time=null and peak_roi_fraction=0.0. The production event dataclass was converted by dataclasses.asdict to a tuple before the list-only helper ran; JSON serialization later converted that same tuple to a list.",
+    "solver_rerun": false
+  },
+  "allowed_effects": [
+    "ACCEPT_LIST_OR_TUPLE_AS_THE_TWO_CYCLE_CARRIER",
+    "RECOMPUTE_ONLY_THE_NO_EVENT_BOOLEAN_FROM_IMMUTABLE_INTENT_02_REPORT",
+    "CONTINUE_WITH_INTENT_03_WHILE_PRESERVING_ORIGINAL_INTENT_REPORT_MANIFEST_AND_RESULT"
+  ],
+  "forbidden_effects": [
+    "CHANGE_PHYSICS_OR_NUMERICAL_CONTRACT",
+    "CHANGE_EVENT_THRESHOLD_OR_CASE_IDENTITY",
+    "MUTATE_OR_REPLACE_INTENT_02_ARTIFACTS",
+    "RERUN_INTENT_02_SOLVER",
+    "DISCARD_RECORDED_COMPUTE",
+    "CLAIM_ORACLE_PASS_FROM_THIS_AMENDMENT"
+  ]
+}

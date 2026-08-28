@@ -23,7 +23,7 @@
 
 - [当前 HFO-NP-v1 Q1–Q68 决策总索引](research_decisions_HFO_Q1_Q68.md) — 路由当前 HFO 编号空间的有效处置；不覆盖历史 KC Q1–Q23 或 R1 Q1–Q24，也不授权执行。
 
-ADR 0019–0025 保留旧 exact-KC、同源对象扫描及其证据合同；ADR 0026 已允许透明派生对象，ADR 0027 已撤销固定研究路线次数上限。ADR 0028–0040 保存 R1、R2、HFO 与 TaOₓ C1 的设计史和有界 No-Go。ADR 0041 冻结方法盲单链对象筛选，ADR 0042 记录该包在 3/3 家族、11/12 载体处组合级有界关闭。ADR 0043 提出的模块化主锚点路线保持历史 `PROPOSED` 身份；ADR 0044 已采纳并完成 `GOAL-PAPER-ONE-SHOT-V1`。ADR 0045 采纳独立的 `PHK-V2` 强基线复现、透明二维相变对象与 PHA/KC 双模块执行合同；该授权已由 Oracle Gate No-Go 与 V2 完成包消费关闭，所有旧扫描事实、失败 intent、论文和 No-Go 原样有效。
+ADR 0019–0025 保留旧 exact-KC、同源对象扫描及其证据合同；ADR 0026 已允许透明派生对象，ADR 0027 已撤销固定研究路线次数上限。ADR 0028–0040 保存 R1、R2、HFO 与 TaOₓ C1 的设计史和有界 No-Go。ADR 0041 冻结方法盲单链对象筛选，ADR 0042 记录该包在 3/3 家族、11/12 载体处组合级有界关闭。ADR 0043 提出的模块化主锚点路线保持历史 `PROPOSED` 身份；ADR 0044 已采纳并完成 `GOAL-PAPER-ONE-SHOT-V1`。ADR 0045 采纳的 `PHK-V2` 已由 Oracle Gate No-Go 与 V2 完成包消费关闭。ADR 0046 新建不回写旧终局的 `PHK-V2.1` 工程—科学双阶段合同；所有旧扫描事实、失败 intent、论文和 No-Go 原样有效。
 
 - [R1 FULL_DESIGN Q1–Q24 决策合同](research_decisions_R1_FULL_DESIGN_GRILL_2026-08-22.md) — 独立于历史 KC-PINN Q1–Q23 的当前 R1 决策身份。
 
@@ -59,3 +59,4 @@ ADR 0019–0025 保留旧 exact-KC、同源对象扫描及其证据合同；ADR 
 - [0043：提出模块化来源对齐对象到论文初稿的最短关键路径](0043-propose-modular-source-aligned-object-to-manuscript-critical-path.md) — 以一个强主锚点、最多两个兼容模块来源和最多一个二值非拓扑分支替代旧单链完整性合同；冻结 object→oracle/event→raw→CTH→formal→manuscript 路径，但保持 `PROPOSED_NOT_AUTHORIZED`。
 - [0044：采纳 GOAL-PAPER-ONE-SHOT-V1 一次性本地研究执行授权](0044-adopt-goal-paper-one-shot-v1.md) — 批准 S0–S6 与本地完整稿件连续执行、预注册 Route 1/2/3 自动切换及冻结总预算；继续禁止付费资源、凭据披露、作者联系、外部上传/投稿和 Git 远程操作。
 - [0045：采纳 PHK-V2 强基线复现与双模块正向研究执行](0045-adopt-phk-v2-strong-baseline-and-two-module-execution.md) — 固定 Sharp paper/repo 双身份、general strong controls、transparent reduced wall-cell、PHA/KC 独立门、complete-case formal 与本地有界预算；实际在 Oracle Gate 以 event/control No-Go 收口，方法阶段未到达，授权已消费关闭。
+- [0046：采纳 PHK-V2.1 独立工程—科学双阶段合同](0046-adopt-phk-v21-independent-engineering-science-contract.md) — 先在非投票沙盒固定 control solver 与可恢复两周期对象，再另行冻结新 oracle/baseline/method/formal；只覆盖旧完成态的授权语义，不改写 PHK-V2 No-Go。

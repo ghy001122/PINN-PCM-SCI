@@ -1,0 +1,110 @@
+{
+  "component_deltas": {
+    "fine_extra_fine": [
+      0.0045916542647892284,
+      0.001256919148376367,
+      0.0012107207785293857,
+      0.0016486829760616161,
+      0.000145,
+      0.0
+    ],
+    "fine_replay": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "medium_fine": [
+      0.009164723390798192,
+      0.0025375404500889136,
+      0.002326069016938981,
+      0.0012067679515502204,
+      0.00030374999999999993,
+      0.0
+    ],
+    "medium_half_dt": [
+      0.0031039861641693036,
+      0.0017839022220207273,
+      0.0020456785528971074,
+      0.0007919595949289245,
+      7.749999999999995e-05,
+      0.0
+    ],
+    "medium_solver_crosscheck": [
+      5.181708174605719e-10,
+      1.8524677211466086e-10,
+      3.279064671528001e-10,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "component_floors_U": [
+    0.0045916542647892284,
+    0.0017839022220207273,
+    0.0020456785528971074,
+    0.0016486829760616161,
+    0.000145,
+    1e-06
+  ],
+  "component_order": [
+    "PHASE_FIELD_ROI_RMS",
+    "TEMPERATURE_FIELD_ROI_RMS",
+    "TERMINAL_CURRENT_TRACE_RMS",
+    "TWO_CYCLE_EVENT_TIME_RMS",
+    "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+    "TWO_CYCLE_RECOVERY_RMS"
+  ],
+  "convergence_gate_passed": false,
+  "declared_component_solver_tolerance": [
+    1e-08,
+    1e-08,
+    1e-08,
+    1e-06,
+    1e-06,
+    1e-06
+  ],
+  "oracle_contract_id": "PHK_V21_ORACLE_FLOOR_V1",
+  "oracle_contract_sha256": "4905C85B0A78DCE05A642FE97433BD62C3532A6E2C4833E2C1CA3ACC48923893",
+  "prediction_score_formula": "Z=sqrt(mean((component_error_j/U_j)^2))",
+  "schema_id": "phk-v21-oracle-floor-seal-v1",
+  "seal_sha256": "2A3BBE335264D397BBD0862F4E820F4592F72D6589BBF3E74FCB1AF262D3F633",
+  "seal_status": "SEALED_BEFORE_NEURAL_WORK",
+  "source_joint_uncertainty": 0.0,
+  "source_run_ids": [
+    "20260828T-phk-v21-s1-q-01-manufactured",
+    "20260828T-phk-v21-s1-q-02-zero-drive",
+    "20260828T-phk-v21-s1-q-03-nominal-coarse",
+    "20260828T-phk-v21-s1-q-04-nominal-medium",
+    "20260828T-phk-v21-s1-q-05-nominal-fine",
+    "20260828T-phk-v21-s1-q-06-nominal-extra-fine",
+    "20260828T-phk-v21-s1-q-07-medium-half-dt",
+    "20260828T-phk-v21-s1-q-08-fine-exact-replay",
+    "20260828T-phk-v21-s1-q-09-joule-gain-zero",
+    "20260828T-phk-v21-s1-q-10-conductivity-ratio-one",
+    "20260828T-phk-v21-s1-q-11-latent-ratio-zero",
+    "20260828T-phk-v21-s1-q-12-wide-heater",
+    "20260828T-phk-v21-s1-q-13-narrow-interface",
+    "20260828T-phk-v21-s1-q-14-pseudo-crosscheck"
+  ],
+  "space_monotonic_by_component": [
+    true,
+    true,
+    true,
+    false,
+    true,
+    true
+  ],
+  "strict_contraction_by_component": [
+    true,
+    true,
+    true,
+    false,
+    true,
+    true
+  ],
+  "strict_contraction_count": 5,
+  "tau": 0.0022799699677271404
+}

@@ -1,0 +1,180 @@
+{
+  "schema_id": "phk-v21-oracle-and-floor-contract-v1",
+  "contract_id": "PHK_V21_ORACLE_FLOOR_V1",
+  "status": "PRE_FIRST_VOTING_SOLVE_FREEZE",
+  "effective_date": "2026-08-27",
+  "evidence_identity": "PRE_NEURAL_INDEPENDENT_CPU_ORACLE_QUALIFICATION",
+  "bindings": {
+    "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+    "object_contract_sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD",
+    "split_file_sha256": "FC4F27D92618BBDF222961340C7BDA3FA8CB3FEF918D0CF343A48A5387F4BAB7",
+    "split_manifest_sha256": "8ECC41A76972F302A5456FFE3643C22E1FB68963E8A4BD4B272B46960FB99931",
+    "benchmark_implementation_sha256": "2CA60CCB157EA2B5F06C887F363C9D21BEC221225CE67D9A1352B73ED446822D",
+    "phase_solver_implementation_sha256": "A4A70BE2F580EF7AAACBEBD0E3735B703E4E4045DD297B3B1BFC7B8A93B879FA",
+    "evaluator_implementation_sha256": "0BCE2837094B208B3A6E5080655416ED908C36CAC3D5DB5018A2DF83E09596FC",
+    "runner_implementation_sha256": "179C4C8EFF3541AB61B975515499DF5E89EA77F83CBAFCF9975EF903CBECF35C",
+    "qualification_tests_sha256": "74108DA25341248031BEF48CFB962826205BC878B1D4866F47CF52B715E85DCC"
+  },
+  "qualification_test_members": {
+    "bundle_formula": "SHA256_CANONICAL_JSON_PATH_TO_FILE_SHA256",
+    "tests/test_phk_v21_benchmark.py": "F2D8F7AC2755DF1C569943F0273691B3622BF81A0CE86C2D6EF00D223F058629",
+    "tests/test_phk_v21_evaluator.py": "85DBBE6663F344FD439519611DA486E22035DA1C2EC802426B2DB7A7714AF9D7",
+    "tests/test_phk_v21_runner.py": "3E008BED6F8E1EED8BE1CB67AF50041E38BA178752116A2117527992E7FEB943"
+  },
+  "oracle_identity": {
+    "method_id": "PHK_V21_INDEPENDENT_CARTESIAN_FV_LOGIT_NEWTON_V1",
+    "primary_phase_algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN",
+    "crosscheck_phase_algorithm": "PSEUDO_TRANSIENT_NEWTON",
+    "float_dtype": "float64",
+    "process": "LOCAL_CPU_ONLY",
+    "cross_configuration_warm_start": false,
+    "dynamic_solver_switching": false,
+    "time_step_rescue": false,
+    "output_clipping": false,
+    "failed_intent_is_consumed": true
+  },
+  "qualification_ladder": [
+    {"order": 1, "intent_id": "Q_MANUFACTURED_OPERATORS", "role": "MANUFACTURED_NO_SCIENTIFIC_FIELD_RESULT"},
+    {"order": 2, "intent_id": "Q_ZERO_DRIVE_MEDIUM", "control": "ZERO_DRIVE", "resolution": "medium", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 3, "intent_id": "Q_NOMINAL_COARSE", "control": "FULL", "resolution": "coarse", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 4, "intent_id": "Q_NOMINAL_MEDIUM", "control": "FULL", "resolution": "medium", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 5, "intent_id": "Q_NOMINAL_FINE", "control": "FULL", "resolution": "fine", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 6, "intent_id": "Q_NOMINAL_EXTRA_FINE", "control": "FULL", "resolution": "extra_fine", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 7, "intent_id": "Q_NOMINAL_MEDIUM_HALF_DT", "control": "FULL", "resolution": "medium_half_dt", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 8, "intent_id": "Q_NOMINAL_FINE_EXACT_REPLAY", "control": "EXACT_REPLAY_OF_Q_NOMINAL_FINE", "resolution": "fine", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN", "replay_of_order": 5},
+    {"order": 9, "intent_id": "Q_JOULE_GAIN_ZERO_MEDIUM", "control": "JOULE_GAIN_ZERO", "resolution": "medium", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 10, "intent_id": "Q_CONDUCTIVITY_PHASE_RATIO_ONE_MEDIUM", "control": "CONDUCTIVITY_PHASE_RATIO_ONE", "resolution": "medium", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 11, "intent_id": "Q_LATENT_RATIO_ZERO_MEDIUM", "control": "LATENT_RATIO_ZERO", "resolution": "medium", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 12, "intent_id": "Q_HEATER_WIDTH_0_50_MEDIUM", "control": "HEATER_WIDTH_0_50", "resolution": "medium", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 13, "intent_id": "Q_INTERFACE_WIDTH_0_025_MEDIUM", "control": "INTERFACE_WIDTH_0_025", "resolution": "medium", "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"},
+    {"order": 14, "intent_id": "Q_PSEUDO_TRANSIENT_SOLVER_CROSSCHECK_MEDIUM", "control": "FULL", "resolution": "medium", "algorithm": "PSEUDO_TRANSIENT_NEWTON"}
+  ],
+  "execution_order_and_accounting": {
+    "strict_order": true,
+    "intent_written_before_compute": true,
+    "immutable_result_and_report": true,
+    "one_exact_replay_only": true,
+    "orphan_intent_blocks_later_compute": true,
+    "no_replacement_case_or_intent": true,
+    "all_cpu_wall_linear_and_nonlinear_work_counted": true,
+    "oracle_cpu_process_core_hour_cap": 32.0,
+    "failure_disposition": "STOP_WITH_PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN"
+  },
+  "numerical_guard_policy": {
+    "all_field_intents_must_complete": true,
+    "all_legacy_hard_numerical_guards_must_pass": true,
+    "phase_range": [0.0, 1.0],
+    "maximum_nonfinite_count": 0,
+    "maximum_current_balance_relative": 1.0e-8,
+    "maximum_thermal_balance_relative": 1.0e-6,
+    "maximum_phase_equation_residual_scaled": 1.0e-9,
+    "maximum_no_flux_residual_scaled": 1.0e-8,
+    "maximum_exact_replay_array_difference": 1.0e-12,
+    "primary_and_crosscheck_output_clipping_count": 0
+  },
+  "event_and_control_policy": {
+    "nominal_event_required_on": [
+      "Q_NOMINAL_COARSE",
+      "Q_NOMINAL_MEDIUM",
+      "Q_NOMINAL_FINE",
+      "Q_NOMINAL_EXTRA_FINE",
+      "Q_NOMINAL_MEDIUM_HALF_DT",
+      "Q_NOMINAL_FINE_EXACT_REPLAY",
+      "Q_PSEUDO_TRANSIENT_SOLVER_CROSSCHECK_MEDIUM"
+    ],
+    "zero_drive_required_no_event": true,
+    "joule_gain_zero_required_no_event": true,
+    "zero_and_joule_off_maximum_roi_peak_fraction": 0.0,
+    "conductivity_latent_and_geometry_controls": "MUST_COMPLETE_AND_PASS_NUMERICAL_GUARDS; EVENT_STATUS_IS_RECORDED_NOT_FORCED",
+    "allowed_causal_interpretation": "JOULE_HEATING_IS_NECESSARY_WITHIN_THIS_SYNTHETIC_OBJECT_IF_AND_ONLY_IF_NOMINAL_EVENTS_AND_JOULE_OFF_NO_EVENT_BOTH_PASS",
+    "disallowed_interpretations": [
+      "MATERIAL_CALIBRATION",
+      "EXPERIMENTAL_VALIDATION",
+      "UNIVERSAL_PHASE_CHANGE_CAUSALITY",
+      "ROBUSTNESS_OUTSIDE_FROZEN_FACTOR_SUPPORT"
+    ]
+  },
+  "component_endpoint": {
+    "component_order": [
+      "PHASE_FIELD_ROI_RMS",
+      "TEMPERATURE_FIELD_ROI_RMS",
+      "TERMINAL_CURRENT_TRACE_RMS",
+      "TWO_CYCLE_EVENT_TIME_RMS",
+      "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+      "TWO_CYCLE_RECOVERY_RMS"
+    ],
+    "spatial_measure": "CELL_VOLUME_WEIGHTED_ON_TARGET_GRID",
+    "temporal_measure": "TRAPEZOIDAL_ON_ORACLE_SAVED_TIMES_AFTER_LINEAR_TIME_INTERPOLATION",
+    "phase_field_formula": "sqrt(int_time_sum_roi(V*(phi_hat-phi)^2)/int_time_sum_roi(V))/0.5",
+    "temperature_formula": "sqrt(int_time_sum_roi(V*(theta_hat-theta)^2)/int_time_sum_roi(V))/0.45",
+    "terminal_current_formula": "sqrt(int_time((I_hat-I)^2)/duration)/max(sqrt(int_time(I^2)/duration),1e-12)",
+    "event_time_formula": "sqrt(mean_cycles(((t_hat_event-t_event)/case_period)^2))",
+    "phase_region_formula": "int_time(volume_symmetric_difference(phi_hat_ge_0.5,phi_ge_0.5)/domain_volume)/duration",
+    "recovery_formula": "sqrt(mean_cycles((R_hat-R)^2))",
+    "missing_prediction_event": "HARD_FAILURE_POSITIVE_INFINITY",
+    "aggregate_raw_error": "sqrt(mean(component_error_j^2))",
+    "component_floor_units": "component_error_j/U_j",
+    "aggregate_floor_score_Z": "sqrt(mean((component_error_j/U_j)^2))",
+    "unclipped": true
+  },
+  "oracle_floor": {
+    "reference_resolution": "extra_fine",
+    "space_delta": "ABS_COMPONENT_DELTA_FINE_VS_EXTRA_FINE",
+    "time_delta": "ABS_COMPONENT_DELTA_MEDIUM_VS_MEDIUM_HALF_DT",
+    "replay_delta": "ABS_COMPONENT_DELTA_FINE_VS_EXACT_FINE_REPLAY",
+    "solver_delta": "ABS_COMPONENT_DELTA_MEDIUM_LOGIT_VS_MEDIUM_PSEUDO_TRANSIENT",
+    "source_joint_uncertainty": 0.0,
+    "declared_component_solver_tolerance": {
+      "PHASE_FIELD_ROI_RMS": 1.0e-8,
+      "TEMPERATURE_FIELD_ROI_RMS": 1.0e-8,
+      "TERMINAL_CURRENT_TRACE_RMS": 1.0e-8,
+      "TWO_CYCLE_EVENT_TIME_RMS": 1.0e-6,
+      "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE": 1.0e-6,
+      "TWO_CYCLE_RECOVERY_RMS": 1.0e-6
+    },
+    "component_floor_formula": "U_j=max(space_delta_j,time_delta_j,replay_delta_j,solver_delta_j,declared_component_solver_tolerance_j)",
+    "tau_formula": "sqrt(mean(U_j^2))",
+    "must_be_finite_and_positive": true,
+    "seal_before_any_neural_training": true
+  },
+  "convergence_gate": {
+    "space_pairs": [
+      ["Q_NOMINAL_MEDIUM", "Q_NOMINAL_FINE"],
+      ["Q_NOMINAL_FINE", "Q_NOMINAL_EXTRA_FINE"]
+    ],
+    "time_pair": ["Q_NOMINAL_MEDIUM", "Q_NOMINAL_MEDIUM_HALF_DT"],
+    "replay_pair": ["Q_NOMINAL_FINE", "Q_NOMINAL_FINE_EXACT_REPLAY"],
+    "solver_pair": ["Q_NOMINAL_MEDIUM", "Q_PSEUDO_TRANSIENT_SOLVER_CROSSCHECK_MEDIUM"],
+    "all_six_components_finite": true,
+    "space_monotonic_rule": "FOR_EACH_COMPONENT_FINE_EXTRA_DELTA_LE_MAX(MEDIUM_FINE_DELTA,DECLARED_COMPONENT_SOLVER_TOLERANCE)",
+    "strict_contraction_rule": "AT_LEAST_FOUR_OF_SIX_COMPONENTS_FINE_EXTRA_DELTA_LE_0.90_TIMES_MEDIUM_FINE_DELTA_OR_BOTH_AT_DECLARED_TOLERANCE",
+    "co_primary_space_components_must_satisfy_both_rules": true,
+    "time_delta_must_be_finite": true,
+    "solver_crosscheck_delta_must_be_finite": true
+  },
+  "qualification_outputs": {
+    "per_intent": [
+      "IMMUTABLE_RESULT_OR_MANUFACTURED_REPORT",
+      "EVENT_REPORT",
+      "NUMERICAL_GUARD_REPORT",
+      "SOLVER_STATISTICS",
+      "INTENT_AND_FINAL_MANIFEST",
+      "SHA256_FOR_EVERY_CARRIER"
+    ],
+    "terminal_summary": [
+      "COVERAGE_AND_FAILURE_ACCOUNTING",
+      "CONTROL_OUTCOMES",
+      "SPACE_TIME_REPLAY_SOLVER_DELTAS",
+      "SEALED_ORACLE_FLOOR_WITH_SHA256",
+      "GATE_VERDICT"
+    ]
+  },
+  "prohibitions": [
+    "NO_NEURAL_TRAINING_BEFORE_FLOOR_SEAL",
+    "NO_RESULT_ADAPTIVE_THRESHOLD_RESOLUTION_OR_SOLVER_CHANGE",
+    "NO_FAILED_INTENT_REPLACEMENT",
+    "NO_USE_OF_ENGINEERING_E2_FIELDS_AS_ORACLE",
+    "NO_PHK_V2_RESULT_REWRITE",
+    "NO_ORACLE_CLAIM_FROM_MANUFACTURED_OR_ZERO_DRIVE_ONLY"
+  ]
+}

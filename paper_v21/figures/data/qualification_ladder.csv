@@ -1,0 +1,15 @@
+intent,label,outcome,execution
+1,Manufactured,operator pass,COMPLETED
+2,Zero drive,no-event pass,COMPLETED
+3,Coarse,event pass,COMPLETED
+4,Medium,event pass,COMPLETED
+5,Fine,event pass,COMPLETED
+6,Extra-fine,event pass,COMPLETED
+7,Half-dt,event pass,COMPLETED
+8,Replay,exact 0,COMPLETED
+9,Joule off,no-event pass,COMPLETED
+10,Conductivity,guard pass,COMPLETED
+11,Latent off,guard pass,COMPLETED
+12,Wide heater,cycle 2 absent,COMPLETED
+13,Narrow interface,guard pass,COMPLETED
+14,Solver x-check,event pass,COMPLETED

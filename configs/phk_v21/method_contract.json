@@ -1,0 +1,382 @@
+{
+  "schema_id": "phk-v21-method-contract-v1",
+  "contract_id": "PHK_V21_PHA_KC_METHOD_V1",
+  "status": "PRE_FIRST_NEURAL_TRAINING_FREEZE",
+  "effective_date": "2026-08-28",
+  "evidence_identity": "PARAMETRIC_PINN_WITH_PDE_AND_CONSTITUTIVE_RESIDUALS",
+  "bindings": {
+    "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+    "object_contract_sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD",
+    "split_file_sha256": "FC4F27D92618BBDF222961340C7BDA3FA8CB3FEF918D0CF343A48A5387F4BAB7",
+    "split_manifest_sha256": "8ECC41A76972F302A5456FFE3643C22E1FB68963E8A4BD4B272B46960FB99931",
+    "oracle_and_floor_contract_sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB",
+    "baseline_replication_contract_sha256": "195C039C181DCF012F94B77DA5D03EFF3244CDCA2F4A63FF5DEDB6FD7747EBC4"
+  },
+  "entry_gates": {
+    "oracle_gate": "PHK_V21_ORACLE_GATE_PASS",
+    "oracle_floor_sealed_before_neural_work": true,
+    "sharp_pf_original_domain_gate": "PHK_V21_SHARP_PF_METRIC_REPLICATION_PASS_CONTINUE_TO_PHK_STRONG_RAW",
+    "entry_failure_is_terminal": true,
+    "no_module_smoke_may_substitute": true
+  },
+  "data_and_case_protocol": {
+    "scientific_unit": "COMPLETE_PHYSICAL_CASE",
+    "q_never_used_for_neural_training": true,
+    "d_partition": "SORT_D_CASE_IDS_ASCENDING;FIRST_18_D_TRAIN;LAST_6_D_VALIDATION",
+    "i1_open": "ONCE_AFTER_STRONG_RAW_AND_FOUR_BOTTLENECK_ARMS_ARE_BYTE_FROZEN",
+    "i2_open": "ONCE_AFTER_PHA_KC_FACTORIAL_AND_REQUIRED_CHALLENGERS_ARE_BYTE_FROZEN",
+    "f_a_open": "ONCE_AFTER_FORMAL_ARMS_POWER_AND_ALL_HASHES_ARE_SEALED",
+    "f_o_open": "TOGETHER_WITH_F_A_AFTER_FORMAL_SEAL",
+    "r_open": false,
+    "oracle_reference_resolution": "extra_fine",
+    "oracle_fields_may_be_used_for": [
+      "D_HYPERPARAMETER_SELECTION",
+      "D_VALIDATION_NEURAL_FLOOR",
+      "I_AND_FORMAL_EVALUATION"
+    ],
+    "oracle_fields_may_not_be_used_as_supervised_training_labels": true,
+    "training_signal": [
+      "ELECTRIC_PDE_RESIDUAL",
+      "THERMAL_PDE_RESIDUAL",
+      "PHASE_PDE_RESIDUAL",
+      "INITIAL_CONDITION_RESIDUAL",
+      "ELECTRICAL_BOUNDARY_RESIDUAL",
+      "THERMAL_BOUNDARY_RESIDUAL",
+      "PHASE_NO_FLUX_BOUNDARY_RESIDUAL"
+    ],
+    "case_or_seed_replacement": false
+  },
+  "common_inputs_outputs": {
+    "normalized_inputs": [
+      "x",
+      "z",
+      "physical_time",
+      "applied_voltage",
+      "waveform_amplitude",
+      "pulse_hold_end",
+      "period",
+      "volumetric_cooling",
+      "initial_phase_background",
+      "heater_width_fraction",
+      "interface_width"
+    ],
+    "outputs": ["potential", "reduced_temperature", "phase_fraction"],
+    "phase_hard_initial_and_bound_transform": "phi=sigmoid(logit(phi_initial)+t_normalized*raw_phi)",
+    "temperature_hard_initial_transform": "theta=t_normalized*softplus(raw_theta)",
+    "potential_and_boundary_conditions": "RAW_POTENTIAL_WITH_EXACT_RECORDED_DIRICHLET_AND_NO_FLUX_BOUNDARY_LOSSES",
+    "physical_time_derivatives": true,
+    "float_dtype": "float32_TRAIN_FLOAT64_EVALUATION",
+    "autodiff": "PYTORCH_REVERSE_MODE_WITH_EXPLICIT_SECOND_DERIVATIVES",
+    "oracle_evaluator": "PHK_V21_ORACLE_FLOOR_V1_SIX_COMPONENT_ENDPOINT_AND_HARD_GUARDS"
+  },
+  "strong_raw": {
+    "arm_id": "STRONG_RAW",
+    "architecture": "PARAMETRIC_MODIFIED_MLP_V1",
+    "hidden_width": 96,
+    "hidden_blocks": 4,
+    "activation": "tanh",
+    "modified_mlp_two_encoder_gates": true,
+    "random_fourier_features": false,
+    "phase_hotspot_router": false,
+    "kinetics_clock": false,
+    "loss_balancing": "GRADIENT_NORM_EXPONENTIAL_MOVING_AVERAGE",
+    "loss_weight_update_interval": 100,
+    "loss_weight_ema": 0.9,
+    "causal_time_segments": 8,
+    "causal_tolerance": 1.0,
+    "rar_interval": 500,
+    "rar_candidate_count": 4096,
+    "rar_add_count": 128,
+    "rar_max_added_points": 1024,
+    "hard_initial_constraints": true,
+    "paper_module_provenance": [
+      "SHARP_MODIFIED_MLP_HARD_CONSTRAINT_STAGGERED_IDEA_A_PRIME",
+      "PF_GRADIENT_NORM_AND_INTERFACE_SAMPLING_IDEA_A_PRIME"
+    ]
+  },
+  "d_only_hyperparameter_selection": {
+    "screen_seed": 17,
+    "screen_updates": 2000,
+    "candidate_order": [
+      {"id": "RAW_HP_01", "width": 64, "blocks": 4, "learning_rate": 0.001},
+      {"id": "RAW_HP_02", "width": 96, "blocks": 4, "learning_rate": 0.0005},
+      {"id": "RAW_HP_03", "width": 96, "blocks": 6, "learning_rate": 0.0005},
+      {"id": "RAW_HP_04", "width": 128, "blocks": 4, "learning_rate": 0.0003}
+    ],
+    "selection": "ALL_D_VALIDATION_HARD_GUARDS_THEN_LOWEST_AGGREGATE_Z_THEN_LOWEST_Q90_Z_THEN_GROSS_COMPUTE_THEN_CANDIDATE_ORDER",
+    "failed_candidate_is_retained": true,
+    "selected_public_protocol_is_frozen_before_FULL_D_THREE_SEED_RUN": true,
+    "no_i_or_formal_access": true
+  },
+  "common_equal_budget_training": {
+    "seeds": [17, 29, 43],
+    "optimizer": "ADAM",
+    "optimizer_updates": 8000,
+    "initial_learning_rate": 0.0005,
+    "learning_rate_schedule": "COSINE_TO_5E_6_AFTER_500_LINEAR_WARMUP_UPDATES",
+    "interior_collocation_per_update": 1024,
+    "boundary_collocation_per_update": 256,
+    "initial_collocation_per_update": 256,
+    "complete_cases_per_update": 8,
+    "case_sampling": "UNIFORM_WITHOUT_OUTCOME_WEIGHTING_FROM_D_TRAIN",
+    "fixed_candidate_pool_seed_offset": 100000,
+    "maximum_gradient_norm": 1.0,
+    "parameter_count_match_relative_tolerance": 0.02,
+    "same_optimizer_updates_and_collocation_counts": true,
+    "primary_budget_axis": "TOTAL_REVERSE_MODE_AUTODIFF_COLLLOCATION_EVALUATIONS",
+    "also_report": [
+      "PARAMETER_COUNT",
+      "OPTIMIZER_UPDATES",
+      "FORWARD_EVALUATIONS",
+      "FIRST_AND_SECOND_DERIVATIVE_EVALUATIONS",
+      "CPU_PROCESS_SECONDS",
+      "WALL_SECONDS",
+      "PEAK_RAM",
+      "FAILED_SEEDS"
+    ],
+    "early_stopping": false,
+    "checkpoint_selection": "FINAL_UPDATE_ONLY",
+    "cross_arm_warm_start": false,
+    "cross_case_warm_start": false
+  },
+  "strong_raw_competence_gate": {
+    "evaluation_pool": "I1",
+    "all_three_seeds_finite": true,
+    "all_prediction_hard_guards_pass": true,
+    "event_estimable_case_fraction_at_least": 0.90,
+    "seed_median_case_Z_median_at_most": 4.0,
+    "seed_median_case_Z_q90_at_most": 8.0,
+    "each_co_primary_seed_median_error_at_most_floor_units": 6.0,
+    "failure_outcome": "PHK_V21_RAW_INCOMPETENT_METHOD_NOT_ESTIMABLE"
+  },
+  "bottleneck_diagnosis": {
+    "pool": "I1",
+    "arms": [
+      "STRONG_RAW",
+      "GLOBAL_MULTI_FREQUENCY",
+      "PHASE_AWARE_SAMPLING",
+      "GLOBAL_MULTI_FREQUENCY_PLUS_PHASE_AWARE_SAMPLING"
+    ],
+    "global_multi_frequency": {
+      "fixed_scales_cycles_per_normalized_axis": [1.0, 2.0, 4.0, 8.0],
+      "axes": ["x", "z", "physical_time"],
+      "sine_and_cosine": true,
+      "trainable_frequencies": false,
+      "parameter_match_by_hidden_width": true
+    },
+    "phase_aware_sampling": {
+      "candidate_pool_is_fixed_before_training": true,
+      "score": "1+4*(4*phi_pilot*(1-phi_pilot))+4*(J_proxy/(1+J_proxy))",
+      "phi_pilot": "DETACHED_CURRENT_MODEL_PREDICTION",
+      "joule_proxy": "conductivity(theta_pilot,phi_pilot)*norm(grad(v_pilot))^2",
+      "resample_interval": 500,
+      "same_total_collocation_count": true,
+      "detached_selection_no_gradient_through_sampling": true
+    },
+    "paired_case_benefit": "B_case=seed_median(Z_STRONG_RAW)-seed_median(Z_ARM)",
+    "positive_component_gate": "ONE_SIDED_90_PERCENT_CASE_BOOTSTRAP_LOWER_CI_GREATER_THAN_0.5_FLOOR_UNITS_AND_ALL_CO_PRIMARY_LOWER_CI_GREATER_THAN_MINUS_0.5",
+    "diagnosis_rules": {
+      "SUPPORT_SCARCITY": "PHASE_AWARE_SAMPLING_PASSES_AND_GLOBAL_MF_DOES_NOT",
+      "REPRESENTATION_BOTTLENECK": "GLOBAL_MF_PASSES_AND_PHASE_AWARE_SAMPLING_DOES_NOT",
+      "MIXED_SUPPORT_REPRESENTATION": "BOTH_STANDALONES_PASS_OR_COMBINATION_HAS_POSITIVE_INTERACTION_LOWER_CI_GREATER_THAN_ZERO",
+      "STIFFNESS_OR_OPTIMIZATION": "NO_ARM_PASSES_AND_LOSS_OR_GRADIENT_IMBALANCE_GUARDS_TRIGGER",
+      "NO_IDENTIFIED_BOTTLENECK": "NO_ARM_PASSES_WITHOUT_A_PREDECLARED_STIFFNESS_GUARD"
+    },
+    "pha_headline_admission": [
+      "REPRESENTATION_BOTTLENECK",
+      "MIXED_SUPPORT_REPRESENTATION"
+    ],
+    "otherwise": "PHK_V21_NO_BOTTLENECK_HEADLINE_NO_GO"
+  },
+  "pha_mf": {
+    "arm_id": "PHA_MF_ONLY",
+    "architecture": "PILOT_TRUNK_PLUS_LOW_MID_HIGH_FREQUENCY_EXPERTS",
+    "pilot": "CAPACITY_MATCHED_LOW_FREQUENCY_MODIFIED_MLP",
+    "expert_scales": {
+      "LOW": [0.0],
+      "MID": [1.0, 2.0],
+      "HIGH": [4.0, 8.0]
+    },
+    "phase_indicator": "g_phi=4*phi_pilot*(1-phi_pilot)",
+    "hotspot_indicator": "g_J=sigmoid(8*(abs(applied_voltage)*exp(-distance_to_bottom_heater/0.20)-0.25))",
+    "combined_route": "g=1-(1-g_phi)*(1-g_J)",
+    "expert_weights": "normalize([1-g,4*g*(1-g),g^2])",
+    "pilot_values_are_detached_for_route": true,
+    "same_route_used_for_all_three_output_expert_corrections": true,
+    "required_controls": {
+      "PHASE_ONLY_GATE": "g=g_phi",
+      "JOULE_ONLY_GATE": "g=g_J",
+      "GENERIC_GATE": "PARAMETER_MATCHED_MLP_GATE_WITH_NO_PHASE_OR_HEATER_FEATURE",
+      "SHUFFLED_WRONG_LOCATION_GATE": "DETERMINISTIC_X_SHIFT_BY_0.60_WITH_PERIODIC_WRAP_BEFORE_G_J"
+    },
+    "claim": "PHYSICS_ROUTED_FREQUENCY_ALLOCATION_ONLY_IF_ALL_CONTROLS_AND_CAPACITY_GATES_PASS"
+  },
+  "field_selective_kc": {
+    "arm_id": "FIELD_SELECTIVE_KC_ONLY",
+    "physical_time_is_never_replaced_in_pde_or_evaluator": true,
+    "warped_input_applies_only_to_phase_branch": true,
+    "clock_knots_each_cycle": [
+      "0",
+      "waveform_ramp_up_end",
+      "case_pulse_hold_end",
+      "waveform_ramp_down_end",
+      "case_period"
+    ],
+    "clock_slopes": "softplus(case_conditioner_output_8_slopes)+0.05",
+    "cycle_endpoint_normalization": "RENORMALIZE_FOUR_POSITIVE_SLOPES_SO_INTEGRAL_OVER_EACH_CYCLE_EQUALS_CASE_PERIOD",
+    "clock": "CONTINUOUS_PIECEWISE_LINEAR_INTEGRAL_OF_POSITIVE_NORMALIZED_SLOPES",
+    "strict_monotonicity": true,
+    "endpoint_preserving_each_cycle": true,
+    "collocation_at_clock_knots": false,
+    "physical_chain_rule": "AUTODIFF_DPHI_DT_INCLUDES_DS_DT",
+    "case_conditioner_inputs": [
+      "waveform_amplitude",
+      "pulse_hold_end",
+      "period",
+      "volumetric_cooling",
+      "initial_phase_background"
+    ],
+    "conditioner": "TWO_LAYER_TANH_WIDTH_16",
+    "required_controls": {
+      "IDENTITY_CLOCK": "ALL_SLOPES_ONE",
+      "GENERIC_MONOTONE_CLOCK": "SAME_CONDITIONER_AND_PARAMETER_COUNT_WITH_UNIFORM_QUARTER_PERIOD_KNOTS",
+      "RANDOM_FIXED_CLOCK": "POSITIVE_SLOPES_FROM_SEED_PLUS_700000_FIXED_WITHOUT_TRAINING",
+      "ALL_FIELD_WARP": "SAME_CLOCK_INPUT_TO_POTENTIAL_TEMPERATURE_AND_PHASE_BRANCHES",
+      "WRONG_SEGMENT_CLOCK": "WAVEFORM_KNOTS_SHIFTED_BY_HALF_PERIOD_WITH_ENDPOINT_PRESERVATION",
+      "ADAPTIVE_PSEUDOTIME": "JAXPI2_FORMULA_DERIVED_RESIDUAL_RELAXATION_AND_RESAMPLING_WITH_NO_INPUT_TIME_WARP",
+      "SMOOTH_DYNAMICS_CONTROL": "D_VALIDATION_CASES_WITH_MOBILITY_HOT_SET_EQUAL_TO_MOBILITY_COLD_AS_SEPARATE_PREHASHED_MECHANISM_CONTROLS"
+    },
+    "smooth_control_identity": "SHA256_OF_EACH_SORTED_D_VALIDATION_CASE_PHYSICS_IDENTITY_AFTER_ONLY_MOBILITY_HOT_EQUALS_MOBILITY_COLD_OVERRIDE",
+    "smooth_control_pool": "METHOD_MECHANISM_CONTROL_NEVER_TRAINING_I_OR_FORMAL",
+    "claim": "KINETICS_SPECIFIC_FIELD_SELECTIVE_CLOCK_ONLY_IF_ALL_CHALLENGERS_PASS_AND_SMOOTH_CONTROL_SHOWS_NO_GENERIC_GAIN"
+  },
+  "factorial_attribution": {
+    "pool": "I2",
+    "arms": [
+      {"id": "STRONG_RAW", "pha": 0, "kc": 0},
+      {"id": "PHA_MF_ONLY", "pha": 1, "kc": 0},
+      {"id": "FIELD_SELECTIVE_KC_ONLY", "pha": 0, "kc": 1},
+      {"id": "PHA_MF_PLUS_FIELD_SELECTIVE_KC", "pha": 1, "kc": 1}
+    ],
+    "pha_standalone_primary": "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+    "kc_standalone_primary": "TWO_CYCLE_EVENT_TIME_RMS",
+    "pha_gate": "PHA_PRIMARY_PAIRED_BENEFIT_ONE_SIDED_90_PERCENT_LOWER_CI_GREATER_THAN_0.5_AND_ALL_OTHER_COMPONENTS_GREATER_THAN_MINUS_0.5_FLOOR_UNITS",
+    "kc_gate": "KC_PRIMARY_PAIRED_BENEFIT_ONE_SIDED_90_PERCENT_LOWER_CI_GREATER_THAN_0.5_AND_BOTH_CO_PRIMARY_AND_OTHER_COMPONENTS_GREATER_THAN_MINUS_0.5_FLOOR_UNITS",
+    "full_increment_gate": "FULL_VS_BEST_STANDALONE_AGGREGATE_BENEFIT_LOWER_CI_GREATER_THAN_0_AND_AT_LEAST_ONE_CO_PRIMARY_GREATER_THAN_0.5_WITH_OTHER_CO_PRIMARY_GREATER_THAN_MINUS_0.5",
+    "interaction": "I_case=E_PHA_ONLY+E_KC_ONLY-E_STRONG_RAW-E_FULL;POSITIVE_IS_SUPERADDITIVE_ERROR_REDUCTION",
+    "interaction_gate": "ONE_SIDED_90_PERCENT_LOWER_CI_GREATER_THAN_ZERO",
+    "single_module_failure_cannot_be_hidden_by_full": true
+  },
+  "capacity_compute_and_mechanism_challengers": {
+    "required_capacity_compute": {
+      "WIDER_RAW": "MATCH_FULL_PARAMETER_COUNT_WITHIN_2_PERCENT_SAME_8000_UPDATES",
+      "EXTRA_WORK_RAW": "STRONG_RAW_16000_UPDATES_SAME_ARCHITECTURE_AND_COLLLOCATION_PER_UPDATE",
+      "GLOBAL_MULTI_FREQUENCY": "BOTTLE_NECK_ARM_SAME_8000_UPDATES"
+    },
+    "required_pha": [
+      "PHASE_ONLY_GATE",
+      "JOULE_ONLY_GATE",
+      "GENERIC_GATE",
+      "SHUFFLED_WRONG_LOCATION_GATE"
+    ],
+    "required_kc": [
+      "IDENTITY_CLOCK",
+      "GENERIC_MONOTONE_CLOCK",
+      "RANDOM_FIXED_CLOCK",
+      "ALL_FIELD_WARP",
+      "WRONG_SEGMENT_CLOCK",
+      "ADAPTIVE_PSEUDOTIME",
+      "SMOOTH_DYNAMICS_CONTROL"
+    ],
+    "primary_must_beat_each_eligible_challenger": "AT_LEAST_ONE_CO_PRIMARY_BENEFIT_LOWER_CI_GREATER_THAN_0.5_AND_OTHER_CO_PRIMARY_NONINFERIOR_AT_MINUS_0.5_FLOOR_UNITS",
+    "adaptive_pseudotime_matches_or_beats_kc": "KC_KINETICS_SPECIFIC_CLAIM_FAILS_OR_IS_NARROWED",
+    "failure_outcome": "PHK_V21_METHOD_NO_GO"
+  },
+  "neural_floor_seal": {
+    "consume_protocol": "PHK_V21_SHARP_PF_REPLICATION_V1.neural_floor_protocol",
+    "seal_before_i1": true,
+    "seed_uncertainty": "HALF_WIDTH_OF_CENTRAL_90_PERCENT_SEED_BOOTSTRAP_ON_SIX_D_VALIDATION_COMPLETE_CASES",
+    "no_reseal_after_i1": true,
+    "no_best_seed_floor": true
+  },
+  "formal_protocol": {
+    "entry": "ALL_I1_I2_FACTORIAL_CAPACITY_COMPUTE_AND_MECHANISM_GATES_PASS",
+    "primary_arm": "PHA_MF_PLUS_FIELD_SELECTIVE_KC",
+    "baseline_arm": "LOWEST_I2_SEED_MEDIAN_AGGREGATE_Z_ELIGIBLE_NONPRIMARY_BASELINE",
+    "challenger_arm": "LOWEST_I2_SEED_MEDIAN_AGGREGATE_Z_REMAINING_ELIGIBLE_CHALLENGER",
+    "selection_tiebreak": [
+      "ALL_HARD_GUARDS",
+      "MEAN_Z",
+      "Q90_Z",
+      "GROSS_COMPUTE",
+      "FIXED_ARM_ID"
+    ],
+    "seeds": [17, 29, 43],
+    "formal_case_counts_candidates": [8, 12, 16, 20, 24, 32],
+    "same_balanced_count_for_f_a_and_f_o": true,
+    "power_input": "MAXIMUM_COMPLETE_CASE_PAIRED_SD_ACROSS_I1_AND_I2_FOR_TWO_CO_PRIMARY_COMPARISONS",
+    "minimum_power": 0.80,
+    "power_alpha_each_co_primary_one_sided": 0.025,
+    "choose": "SMALLEST_CANDIDATE_COUNT_MEETING_POWER_AND_80_PERCENT_OF_REMAINING_FORMAL_COMPUTE_BUDGET",
+    "if_none": "PHK_V21_FORMAL_POWER_BUDGET_INSUFFICIENT",
+    "scientific_unit": "COMPLETE_CASE",
+    "case_estimator": "SEED_MEDIAN",
+    "paired_difference": "BASELINE_ERROR_MINUS_PROPOSED_ERROR",
+    "interval": "SHARED_RESAMPLE_COMPLETE_CASE_STUDENTIZED_BOOTSTRAP",
+    "bootstrap_resamples": 20000,
+    "bootstrap_seed": 20260828,
+    "co_primary_alpha_each_one_sided": 0.025,
+    "important_endpoint_alpha_each_one_sided": 0.007142857142857143,
+    "superiority_margin_raw_component_j": "max(2*U_oracle_j,2*U_seed_j,0.5*U_oracle_j)",
+    "noninferiority_margin_raw_component_j": "0.5*U_oracle_j",
+    "positive_gate": {
+      "at_least_one_co_primary_lower_ci_exceeds_superiority_margin": true,
+      "other_co_primary_lower_ci_exceeds_negative_noninferiority_margin": true,
+      "all_important_physical_endpoints_lower_ci_exceed_negative_noninferiority_margin": true,
+      "at_least_one_f_o_whole_factor_family_has_positive_median_benefit_and_noninferiority": true,
+      "all_prediction_hard_guards_pass": true
+    },
+    "failed_method_case_or_seed": "POSITIVE_INFINITY_ERROR_RETAINED_NO_REPLACEMENT",
+    "nonestimable_comparison": "POSITIVE_FORMAL_CLAIM_CLOSED",
+    "f_a_pool": "SEALED_PROTOCOL_AND_INITIAL_STATE_CASES",
+    "f_o_pool": "SEALED_WHOLE_HEATER_WIDTH_OR_INTERFACE_WIDTH_FACTOR_FAMILIES",
+    "r_pool": "NEVER_OPEN"
+  },
+  "budgets_and_stop": {
+    "development_gpu_exclusive_hour_cap_if_available": 64.0,
+    "formal_gpu_exclusive_hour_cap_if_available": 64.0,
+    "method_and_package_cpu_process_core_hour_cap": 48.0,
+    "current_preflight_cuda_available": false,
+    "cpu_execution_is_authorized": true,
+    "cloud_or_paid_fallback": false,
+    "all_failed_updates_and_seeds_count": true,
+    "no_case_seed_arm_or_margin_replacement": true,
+    "stop_outcomes": {
+      "RAW": "PHK_V21_RAW_INCOMPETENT_METHOD_NOT_ESTIMABLE",
+      "BOTTLENECK": "PHK_V21_NO_BOTTLENECK_HEADLINE_NO_GO",
+      "FACTORIAL_OR_CHALLENGER": "PHK_V21_METHOD_NO_GO",
+      "FORMAL_POWER": "PHK_V21_FORMAL_POWER_BUDGET_INSUFFICIENT",
+      "FORMAL_GATE": "PHK_V21_FORMAL_NO_GO"
+    }
+  },
+  "required_artifacts": [
+    "EVERY_INTENT_AND_MANIFEST",
+    "ORACLE_AND_PREDICTION_CARRIER_HASHES",
+    "CHECKPOINT_AND_CONFIG_HASHES",
+    "NEURAL_FLOOR_SEAL",
+    "PER_CASE_PER_SEED_SIX_COMPONENT_ERRORS",
+    "HARD_GUARD_REPORTS",
+    "PARAMETER_UPDATE_FORWARD_AD_CPU_WALL_RAM_ACCOUNTING",
+    "BOTTLENECK_AND_FACTORIAL_STATISTICS",
+    "FORMAL_POWER_AND_BOOTSTRAP_RECORD",
+    "FAILED_AND_NOT_REACHED_ACCOUNTING"
+  ],
+  "claim_boundaries": [
+    "SYNTHETIC_DIMENSIONLESS_BENCHMARK_ONLY",
+    "NO_MATERIAL_CALIBRATION",
+    "NO_EXPERIMENTAL_VALIDATION",
+    "NO_AUTHOR_MODEL_REPRODUCTION_FOR_PHK_ADAPTATIONS",
+    "NO_POSITIVE_METHOD_CLAIM_BEFORE_FORMAL_GATE",
+    "NO_ACCEPTANCE_OR_Q2_JOURNAL_PROMISE"
+  ]
+}

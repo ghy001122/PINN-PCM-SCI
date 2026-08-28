@@ -1,0 +1,7 @@
+stage,status,evidence
+E1 solver,PASS,logit Newton selected
+E2 object,PASS,41/41 engineering cases
+S0 freeze,PASS,5 contracts + 128 cases
+S1 intents,PASS,14/14 completed
+S1 convergence,NO-GO,event-time nonmonotonic
+PINN/formal,NOT REACHED,stopped upstream

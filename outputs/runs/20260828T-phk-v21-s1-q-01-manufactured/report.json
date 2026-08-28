@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "electric_current_balance_relative": 2.516505522483684e-15,
+    "electric_linear_max_abs_error": 7.216449660063518e-16,
+    "electric_power_identity_abs_error": 4.440892098500626e-16,
+    "phase_jacobian_directional_relative_l2": 6.245763998786798e-11,
+    "phase_neumann_integral_abs_error": 2.777292285038868e-15,
+    "phase_residual_probe_linf": 0.0035212427319924458,
+    "thermal_boundary_integral_abs_error": 3.552713678800501e-15
+  },
+  "evidence_identity": "MANUFACTURED_NO_SCIENTIFIC_FIELD_RESULT",
+  "grid": {
+    "nx": 10,
+    "nz": 6
+  },
+  "inherited_operator_identity": "PHK_V2_BYTE_FROZEN_FINITE_VOLUME_OPERATORS",
+  "object_contract_sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD",
+  "passed": true,
+  "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+  "schema_id": "phk-v21-manufactured-operator-report-v1",
+  "selected_phase_algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN"
+}

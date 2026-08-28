@@ -1,0 +1,357 @@
+{
+  "schema_id": "phk-v21-paper-package-manifest-v1",
+  "status": "COMPLETE_LOCAL_ORACLE_NO_GO_PACKAGE",
+  "self_reference_policy": "package-manifest.json excluded from its own entries",
+  "claim_status": "PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN_NO_BASELINE_OR_METHOD_EVIDENCE",
+  "package_file_count": 34,
+  "package_files": [
+    {
+      "path": "paper_v21/baseline_anatomy_cards.md",
+      "bytes": 6720,
+      "sha256": "924B05F8C99BC72FA5D749F5DDBF5250638F8CDBFCB00137FB79C1F24C75D507"
+    },
+    {
+      "path": "paper_v21/build_package_manifest.py",
+      "bytes": 4480,
+      "sha256": "477BBC9228ED138B4287144E94DCB7B3BED4FCD9E9B8ABEB69E9F9C8072B513D"
+    },
+    {
+      "path": "paper_v21/claim_evidence_matrix.md",
+      "bytes": 4953,
+      "sha256": "8F02BAAE53086D15843658AFE84E83A47223692504B7F648DA11AAD9989B0CF6"
+    },
+    {
+      "path": "paper_v21/figures/captions.md",
+      "bytes": 2649,
+      "sha256": "319FD9D1B81D097EEBA2DCC8C380E49738AE0367D03EAED6F006EB4C67C8AF59"
+    },
+    {
+      "path": "paper_v21/figures/data/claim_boundary.csv",
+      "bytes": 224,
+      "sha256": "101D28190C408F9170ED346E8D2BD9F7D87152D9095A10F34AC4D3963D9E1456"
+    },
+    {
+      "path": "paper_v21/figures/data/control_events.csv",
+      "bytes": 581,
+      "sha256": "0E7C74EBDD8997537B40B6EB00AD6DB8F4A621C88D44C9DA0616F27978774FE9"
+    },
+    {
+      "path": "paper_v21/figures/data/convergence_components.csv",
+      "bytes": 467,
+      "sha256": "F3EEC51B7F36011D7AB2EDAA08DD2B507549F2405C64D900F26402F5D326EEE1"
+    },
+    {
+      "path": "paper_v21/figures/data/nominal_events.csv",
+      "bytes": 431,
+      "sha256": "05F99582B228F105AED93AC8F0425A44EC5817E38D1265951106252197F50684"
+    },
+    {
+      "path": "paper_v21/figures/data/qualification_ladder.csv",
+      "bytes": 530,
+      "sha256": "D7AD3E5B6A80502D4071C56D0AC02A4F092C3F9B3C836E29BCB717F9B86ACD5A"
+    },
+    {
+      "path": "paper_v21/figures/data/workflow.csv",
+      "bytes": 262,
+      "sha256": "F4756A5E29DA8576482467E3E20983158318750EAB4D7F5C378C49C74B2A4E5D"
+    },
+    {
+      "path": "paper_v21/figures/figure-01-route-outcome.pdf",
+      "bytes": 26589,
+      "sha256": "FF4B6079F3F0C96CC56E117230C47E75B78CF19903F9025B3DF7EDFADE87872D"
+    },
+    {
+      "path": "paper_v21/figures/figure-01-route-outcome.png",
+      "bytes": 123642,
+      "sha256": "5E76245DA51F3A3F7B60FA7A9E5E78D97891360E741AF5D9EC08F015FBCAB396"
+    },
+    {
+      "path": "paper_v21/figures/figure-02-qualification-ladder.pdf",
+      "bytes": 28308,
+      "sha256": "5417B689A068CD1EB2C948118C3E7564688C2DD2326D1023BBA1FDFD2D575488"
+    },
+    {
+      "path": "paper_v21/figures/figure-02-qualification-ladder.png",
+      "bytes": 148035,
+      "sha256": "FB3DA893D3C723D5D4C9FE1204E8C7121FEB5F66678B57C81A51BE0A882C6504"
+    },
+    {
+      "path": "paper_v21/figures/figure-03-nominal-events.pdf",
+      "bytes": 23514,
+      "sha256": "BFCA9D0F75EA0A19E0B6EBF68E850189EA0F25524AFCB195A62ED049AC4BF9DD"
+    },
+    {
+      "path": "paper_v21/figures/figure-03-nominal-events.png",
+      "bytes": 206506,
+      "sha256": "57E7278A49632BD4E05CFAA5AA56C1FFA20B39952242B0507B769CCA76206748"
+    },
+    {
+      "path": "paper_v21/figures/figure-04-controls.pdf",
+      "bytes": 21086,
+      "sha256": "B6DF1808E14A690B8CDE97B3CABCCE2B26EB44D89373A77583CD32741835BA80"
+    },
+    {
+      "path": "paper_v21/figures/figure-04-controls.png",
+      "bytes": 156297,
+      "sha256": "407FED4334D1D14AA8F5EF228F7D43ABCAD614DB67F6A573F6ECED550E708EE5"
+    },
+    {
+      "path": "paper_v21/figures/figure-05-convergence-gate.pdf",
+      "bytes": 23221,
+      "sha256": "6C1A21E709DBACD625D19CA6B3974982832CB54A94C7EBE1C5B487A36ADAE353"
+    },
+    {
+      "path": "paper_v21/figures/figure-05-convergence-gate.png",
+      "bytes": 150498,
+      "sha256": "21F95E1349D45C7F7100ADEA12227F4271EF116A2C155F351F113AA4A83EBB74"
+    },
+    {
+      "path": "paper_v21/figures/figure-06-claim-boundary.pdf",
+      "bytes": 26592,
+      "sha256": "71989E7EB6E1F6FDD4B1559C1D0D54314BCCAE52C8FB5C4974A9FD761F0C3F9F"
+    },
+    {
+      "path": "paper_v21/figures/figure-06-claim-boundary.png",
+      "bytes": 189596,
+      "sha256": "116F3676356273AE8C044EEE53A532F337190BB111ACD97593E190A7B975A4F6"
+    },
+    {
+      "path": "paper_v21/figures/generate_figures.py",
+      "bytes": 14704,
+      "sha256": "714B9659CF22D510B522060C15E4F979D1D07387A036D76268E7C5F8922C1214"
+    },
+    {
+      "path": "paper_v21/figures/source-manifest.json",
+      "bytes": 7096,
+      "sha256": "30650CDE0B7F9218EA8AFC223488992F927CF6113652766543F866FBAE6EEF57"
+    },
+    {
+      "path": "paper_v21/manuscript.md",
+      "bytes": 25497,
+      "sha256": "BE25DDA7DF54168E23C6974B31E11557239890B73798EA1CC54B05D562A82118"
+    },
+    {
+      "path": "paper_v21/manuscript_zh.md",
+      "bytes": 17403,
+      "sha256": "A5DD2F50296B1DFCFD279115090A18B96DD5BEB6B1782C94366BF96C8BBADF77"
+    },
+    {
+      "path": "paper_v21/plain_language_story_zh.md",
+      "bytes": 4431,
+      "sha256": "D0B73F29985D662E62145A0CEA9D1A48984F25168AC34C97C01C53F49B11F638"
+    },
+    {
+      "path": "paper_v21/README.md",
+      "bytes": 4273,
+      "sha256": "899C537164CB2A4F393DBDDB36FAC7FE441EE1046C6FFEE48006D1301F6246E9"
+    },
+    {
+      "path": "paper_v21/references.bib",
+      "bytes": 4661,
+      "sha256": "850FCC043475DBC64BD81AEACF66797CF7049D014ECF6C09FD17CB4A7264A943"
+    },
+    {
+      "path": "paper_v21/reproducibility.md",
+      "bytes": 5194,
+      "sha256": "D007229EDECF7330B83165AF336C7516F956771C4E1AC1D8EE19BE6B2E29BF55"
+    },
+    {
+      "path": "paper_v21/reviewer_risk_self_check.md",
+      "bytes": 5761,
+      "sha256": "5472A9BF4D90BA20F1A27D42AF864441FC288D9A613B95CDCD461AAE2189229A"
+    },
+    {
+      "path": "paper_v21/supplement.md",
+      "bytes": 10478,
+      "sha256": "6FEC98DE6DBEDDD60CDB6C1A154DC8B333227ED70AF05476BBD450F2922D763E"
+    },
+    {
+      "path": "paper_v21/tables.md",
+      "bytes": 5973,
+      "sha256": "634BB0592094E6D4827BB5373EF7416A1469B6B3A0E2EB239897DBB2352012B6"
+    },
+    {
+      "path": "paper_v21/validate_package.py",
+      "bytes": 7981,
+      "sha256": "D6B6401DCCD87B0BE0166C3102BBC386CB71DD375617FBD30D3E630468BBAD76"
+    }
+  ],
+  "evidence_dependency_count": 35,
+  "evidence_dependencies": [
+    {
+      "path": "configs/phk_v21/program_contract.json",
+      "bytes": 7185,
+      "sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2"
+    },
+    {
+      "path": "configs/phk_v21/engineering_contract.json",
+      "bytes": 6887,
+      "sha256": "DF835E701660E4BC91F585F4DFAA22075DBCAAA754B7716921E766066BD7605A"
+    },
+    {
+      "path": "configs/phk_v21/e1_solver_selection.json",
+      "bytes": 5286,
+      "sha256": "A452D4E387A2C2E2AD0924D7CECD0E941A68088A48070F2F105AE81BF978A2DC"
+    },
+    {
+      "path": "configs/phk_v21/object_numerical_contract.json",
+      "bytes": 7915,
+      "sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD"
+    },
+    {
+      "path": "configs/phk_v21/case_split_manifest.json",
+      "bytes": 135422,
+      "sha256": "FC4F27D92618BBDF222961340C7BDA3FA8CB3FEF918D0CF343A48A5387F4BAB7"
+    },
+    {
+      "path": "configs/phk_v21/oracle_and_floor_contract.json",
+      "bytes": 10088,
+      "sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB"
+    },
+    {
+      "path": "configs/phk_v21/baseline_replication_contract.json",
+      "bytes": 9886,
+      "sha256": "195C039C181DCF012F94B77DA5D03EFF3244CDCA2F4A63FF5DEDB6FD7747EBC4"
+    },
+    {
+      "path": "configs/phk_v21/method_contract.json",
+      "bytes": 17595,
+      "sha256": "F1E918E6C71557BF7ABBAE11519208BD3D042D04AC6AF04471F33CCB046A001D"
+    },
+    {
+      "path": "configs/phk_v21/s1_implementation_amendment_001.json",
+      "bytes": 2088,
+      "sha256": "B50BBADEC521F435EA1AFA923146237851D0B8F8C87922A97C3CBD974C98B6AE"
+    },
+    {
+      "path": "configs/phk_v21/s1_adjudication_amendment_002.json",
+      "bytes": 2787,
+      "sha256": "CEF8764CC58C69BB94B95E790E2D147CF41CDFE3A3A4215E9611187708A99648"
+    },
+    {
+      "path": "docs/references/2026-08-27-phk-v2-1-baseline-reproduction-identity-audit.md",
+      "bytes": 21059,
+      "sha256": "EDA89F42F357C5CA156F702D4343D8097B02A8590B80F0D6E8A5EB4ACE0E34BD"
+    },
+    {
+      "path": "docs/governance/2026-08-27-phk-v21-s0-program-and-engineering-preregistration.md",
+      "bytes": 2977,
+      "sha256": "FB32BBAC0536F0EEC7B94B92214C21D60B017192AF3E135B308BDD8F778F4AB8"
+    },
+    {
+      "path": "docs/governance/2026-08-28-phk-v21-s0-scientific-contract-freeze.md",
+      "bytes": 4988,
+      "sha256": "CB41E3330DF884A04AA48514545B267C2DB5A1981AECF0525E6B2EB545F30A53"
+    },
+    {
+      "path": "docs/experiment/2026-08-27-phk-v21-e1-control-solver-selection.md",
+      "bytes": 4421,
+      "sha256": "68514052ECA92E62C153E86CAE8E9EC7D820C18BBE521A6361A3097C130E7AD7"
+    },
+    {
+      "path": "docs/experiment/2026-08-27-phk-v21-e2-engineering-object-selection.md",
+      "bytes": 4777,
+      "sha256": "91361B1AD89901263CDA98C4E7DCCAD1A1C8664FFC2EDC70D0B5C2B7B925A16D"
+    },
+    {
+      "path": "docs/experiment/2026-08-28-phk-v21-s1-intent-02-carrier-reconciliation.md",
+      "bytes": 2511,
+      "sha256": "3CF6C9A48E5A3E0F7CB07A569E72469E84958390AB072CA785F2514092F29D71"
+    },
+    {
+      "path": "docs/experiment/2026-08-28-phk-v21-s1-adjudication-label-reconciliation.md",
+      "bytes": 1864,
+      "sha256": "BA255B32E1D01A235DCA16DBCF288A7A62DB7BBD17CB20809BFFEFD1D9018E8D"
+    },
+    {
+      "path": "docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md",
+      "bytes": 7640,
+      "sha256": "6566A89F7255BA0758871E1DE6201F66F1A9FC542CF153D07C930020B148D35E"
+    },
+    {
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json",
+      "bytes": 21130,
+      "sha256": "5E6343D3E8DFE63C1C3F2F031FCF04B455E8C53B5BF454F8AFA013D33C33A9C9"
+    },
+    {
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/oracle-floor-seal.json",
+      "bytes": 2790,
+      "sha256": "3B71753CBAC720C1CF5F7937741FCF605693C5580988C848113AC9378F1A01F7"
+    },
+    {
+      "path": "docs/experiment/manifests/20260828T-phk-v21-s1-q-terminal-summary-001.json",
+      "bytes": 3950,
+      "sha256": "607CF2F5B58715F6B9335A4CF41379A311DAA9DF1C7CEA880F0A534AF5923455"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_v21_solver.py",
+      "bytes": 15741,
+      "sha256": "A4A70BE2F580EF7AAACBEBD0E3735B703E4E4045DD297B3B1BFC7B8A93B879FA"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_v21_engineering.py",
+      "bytes": 8771,
+      "sha256": "672049C1D9E3047DFC09203A0460323AC46F3D74CD21CDF99754BFD953F0D1FD"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_v21_design.py",
+      "bytes": 13117,
+      "sha256": "91A7DBAA37B3C4CFBE3DF02287E2903C038B02BFFC9C2DFBAA8E26FD8AD4E1A9"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_v21_design_runner.py",
+      "bytes": 20185,
+      "sha256": "1129C5FE58D8F985D92C6D1DEB84A53C08A9EAFA79E0466F9038CE0E44423BBE"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_v21_benchmark.py",
+      "bytes": 63543,
+      "sha256": "2CA60CCB157EA2B5F06C887F363C9D21BEC221225CE67D9A1352B73ED446822D"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_v21_evaluator.py",
+      "bytes": 15092,
+      "sha256": "0BCE2837094B208B3A6E5080655416ED908C36CAC3D5DB5018A2DF83E09596FC"
+    },
+    {
+      "path": "pinn_pcm_sci/phk_v21_runner.py",
+      "bytes": 50450,
+      "sha256": "82F300E002CDA045A307508EF4C9DF820A1A4F9132EFDBA1508221552277E501"
+    },
+    {
+      "path": "tests/test_phk_v21_solver.py",
+      "bytes": 4814,
+      "sha256": "CFEEE7C18163116E8463D6E0FC2B7A804B2FEF057DFCB9078BF602F0DA7BF4AA"
+    },
+    {
+      "path": "tests/test_phk_v21_engineering.py",
+      "bytes": 2578,
+      "sha256": "D17FB2196809B18E253FDD8AB43D40513E236D6EABB6CC79810F892A0501C0FA"
+    },
+    {
+      "path": "tests/test_phk_v21_design.py",
+      "bytes": 4548,
+      "sha256": "D5D1EFE6D935AA1F4BFF0ECBA5C6B3359BA31736AD9B20E76DFF14E7D111720B"
+    },
+    {
+      "path": "tests/test_phk_v21_design_runner.py",
+      "bytes": 5252,
+      "sha256": "C9547EEAFEB27809B83DA79BA7A44C09352D166B27D64A1C49889CB1E4A2B1BD"
+    },
+    {
+      "path": "tests/test_phk_v21_benchmark.py",
+      "bytes": 11494,
+      "sha256": "F2D8F7AC2755DF1C569943F0273691B3622BF81A0CE86C2D6EF00D223F058629"
+    },
+    {
+      "path": "tests/test_phk_v21_evaluator.py",
+      "bytes": 5951,
+      "sha256": "85DBBE6663F344FD439519611DA486E22035DA1C2EC802426B2DB7A7714AF9D7"
+    },
+    {
+      "path": "tests/test_phk_v21_runner.py",
+      "bytes": 11711,
+      "sha256": "15403FCA8E038D5FF66B5219F3D4BBEE58D3FCD2D6C2825B5187904494D3141A"
+    }
+  ]
+}
