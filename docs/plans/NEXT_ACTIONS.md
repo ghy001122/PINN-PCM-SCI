@@ -5,8 +5,8 @@
 - `blocker_id`: `NONE`
 - `claim_status`: `IMPLEMENTATION_VERIFIED_NEURAL_METHOD_RESULT_NOT_YET_ESTABLISHED`
 - `authorization_state`: `PHK_V22R_EXPLICIT_EXECUTION_AUTHORIZED`
-- `plan_status`: `ACTIVE_D0_CORE_VERIFIED_REFERENCE_SEALING`
-- `current_stage`: `D0_CORE_VERIFIED_STRESS_REFERENCES_RUNNING_GPU_HANDOFF_PENDING`
+- `plan_status`: `ACTIVE_D0_CORE_AND_REFERENCE_SEALS_VERIFIED`
+- `current_stage`: `D0_CORE_AND_REFERENCES_VERIFIED_GPU_HANDOFF_PENDING`
 - `next_research_execution_authorized`: `true`
 - `supersedes`: `PLAN_PHK_V21_V1_COMPLETED_AT_S1_ORACLE_NO_GO`
 - `preserves`: `PHK_V21_ORACLE_NO_GO_AND_ALL_PRIOR_EVIDENCE`
@@ -23,19 +23,19 @@
 3. 实现四窗口等额 replay、physics-aware mixture、reference-blind training、
    checkpoint、prediction carrier、本地 evaluator、stress access gate、nominal
    adjudicator、candidate freeze writer 和云预算 ledger。
-4. 12 项聚焦测试全部通过；document consistency 在核心实现前已通过。
-5. 两个 stress reference 的 pre-compute intent 已写入，唯一 solve 已并行启动。
+4. 13 项聚焦测试全部通过；旧 V2.1 与新 V2.2R 组合回归 33 项通过。
+5. 两个 stress extra-fine 唯一 solve 均已完成，carrier 与 byte seal 的 SHA256
+   独立复核一致；两者仍未读取场或指标。
 
 ## 现在执行
 
-1. 等待两个 solver 完成，只核验退出状态、carrier 字节哈希和 seal，不读场或指标。
-2. 用户账号创建 AutoDL V100 32 GB（次选 A100）实例并提供 SSH 登录端点后，立即运行
+1. 用户账号创建 AutoDL V100 32 GB（次选 A100）实例并提供 SSH 登录端点后，立即运行
    四臂 100-update profile 与一次 strict-PHA probe；记录平台显示的实时单价。
-3. 若 profile 有限且预算投影通过，执行 nominal 四臂 1000–2000 updates pilot；
+2. 若 profile 有限且预算投影通过，执行 nominal 四臂 1000–2000 updates pilot；
    下载 checkpoint/prediction/log，所有 reference comparison 留在本地。
-4. 用 nominal evaluator 和 machine decision 在 2026-08-30 23:59 前选择：
+3. 用 nominal evaluator 和 machine decision 在 2026-08-30 23:59 前选择：
    `MF_PLUS_SAMPLER`、单次 B 或 `MVP_NO_GO_NO_ATTRIBUTABLE_GAIN`。
-5. 只有正向 nominal 决策才写 `candidate_freeze.json` 并打开 stress carrier；随后执行
+4. 只有正向 nominal 决策才写 `candidate_freeze.json` 并打开 stress carrier；随后执行
    两 case × 一 seed × selected/strongest/equal-compute-raw。
 
 ## 硬停止

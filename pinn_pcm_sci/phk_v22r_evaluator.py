@@ -68,6 +68,44 @@ def _portable_path(path: Path) -> str:
         return str(resolved)
 
 
+def _training_trend(prediction_path: Path) -> dict[str, Any]:
+    log_path = Path(prediction_path).parent / "training-log.jsonl"
+    if not log_path.is_file():
+        return {
+            "available": False,
+            "decreasing_pde_loss": False,
+            "rule": "FINAL_LE_0_98_TIMES_FIRST",
+        }
+    records = []
+    try:
+        for line in log_path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                records.append(json.loads(line))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"invalid training log beside prediction: {log_path}") from exc
+    if len(records) < 2 or any("pde_loss" not in item for item in records):
+        return {
+            "available": False,
+            "decreasing_pde_loss": False,
+            "rule": "FINAL_LE_0_98_TIMES_FIRST",
+        }
+    first = float(records[0]["pde_loss"])
+    final = float(records[-1]["pde_loss"])
+    minimum = min(float(item["pde_loss"]) for item in records)
+    finite = all(math.isfinite(value) for value in (first, final, minimum))
+    return {
+        "available": finite,
+        "first_logged_pde_loss": first,
+        "final_logged_pde_loss": final,
+        "minimum_logged_pde_loss": minimum,
+        "final_to_first_ratio": final / max(first, 1.0e-30),
+        "decreasing_pde_loss": finite and final <= 0.98 * first,
+        "rule": "FINAL_LE_0_98_TIMES_FIRST",
+        "training_log_path": _portable_path(log_path),
+        "training_log_sha256": _sha256_path(log_path),
+    }
+
+
 def _physical_contract():
     return load_phk_v21_physical(
         program_path=ROOT / "configs" / "phk_v21" / "program_contract.json",
@@ -545,6 +583,7 @@ def evaluate_prediction(
         "training_config_sha256": prediction_metadata["training_config_sha256"],
         "confirmation_role": confirmation_role,
         "architecture": prediction_metadata["architecture"],
+        "training_trend": _training_trend(prediction_path),
         "metrics": {
             "time_averaged_phase_region_symmetric_difference": primary,
             "phase_roi_continuous_rms": phase_roi_rms,

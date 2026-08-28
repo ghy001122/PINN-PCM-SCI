@@ -27,10 +27,10 @@
     "multifrequency_arms": ["MF_ONLY", "MF_PLUS_SAMPLER", "STRICT_PHA_PROBE"],
     "field_transformations": {
       "potential": "waveform(t)*sigmoid(latent_v)",
-      "temperature": "2.5*(1-exp(-(t/0.10)^2))*(1-z_fraction)*sigmoid(latent_theta)",
-      "phase": "sigmoid(logit(phi_initial)+8*(1-exp(-(t/0.10)^2))*latent_phi)"
+      "temperature": "2.5*(1-exp(-t/0.35))*(1-z_fraction)*sigmoid(latent_theta)",
+      "phase": "sigmoid(logit(phi_initial)+8*(1-exp(-t/0.35))*latent_phi)"
     },
-    "hard_ic_startup_time": 0.10,
+    "hard_ic_startup_time": 0.35,
     "band_a_all": {
       "x": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
       "z": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
@@ -106,6 +106,7 @@
       "TWO_REFERENCE_ALIGNED_PHASE_EVENTS",
       "PHASE_RANGE_AND_LOCALITY_GUARDS"
     ],
+    "decreasing_pde_trend": "FINAL_LOGGED_PDE_LOSS_LE_0.98_TIMES_FIRST_LOGGED_PDE_LOSS",
     "strongest_component_selection": "MINIMUM_GEOMETRIC_MEAN_OF_PRIMARY_AND_CO_PRIMARY_RATIOS_AMONG_ELIGIBLE_MF_ONLY_AND_SAMPLER_ONLY",
     "combined_gain_vs_strongest_component": {
       "primary_maximum_ratio": 0.98,

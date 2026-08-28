@@ -9,10 +9,10 @@
 - `authorization_scope`: `PHK_V22R_EXPLICIT_EXECUTION_AUTHORIZED`
 - `candidate_status`: `NOT_FROZEN`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED`
-- `reference_status`: `NOMINAL_DEVELOPMENT_AVAILABLE_TWO_STRESS_EXTRA_FINE_SOLVES_RUNNING_SEALED`
+- `reference_status`: `THREE_EXTRA_FINE_REFERENCES_AVAILABLE_TWO_STRESS_UNREAD_SEALED`
 - `implementation_status`: `THREE_FIELD_PINN_SAMPLER_PREDICTION_EVALUATOR_AND_DECISION_CORE_VERIFIED`
 - `method_selection_status`: `NOT_YET_SELECTED_S_FIRST`
-- `compute_status`: `LOCAL_CPU_ACTIVE_CUDA_UNAVAILABLE_AUTODL_AUTHORIZED_NOT_PROVISIONED`
+- `compute_status`: `LOCAL_CPU_REFERENCE_WORK_COMPLETE_CUDA_UNAVAILABLE_AUTODL_AUTHORIZED_NOT_PROVISIONED`
 - `cloud_budget_cny_hard_cap`: `150`
 - `next_research_execution_authorized`: `true`
 - `final_deadline`: `2026-09-04T23:59:00+08:00`
@@ -30,7 +30,7 @@
 - 已实现 reference-blind 训练、四窗口等额 replay、0.35/0.25/0.25/0.15
   Sobol/残差/phase/Joule 采样、checkpoint、prediction carrier、本地 evaluator、
   stress fail-closed gate、nominal machine adjudicator 和 cloud budget ledger。
-- `tests/test_phk_v22r_pinn.py` 当前 12/12 通过；覆盖物理导数、全臂有限反传、
+- `tests/test_phk_v22r_pinn.py` 当前 13/13 通过；覆盖物理导数、全臂有限反传、
   strict gate 全导数、采样语义、边界、真实一步优化、reference-blind prediction、
   stress 封存和候选裁决。
 - paper_v22r 已预写 Abstract、Introduction、Physical Model、Method、Evaluation、
@@ -39,19 +39,23 @@
 - nominal extra-fine 仍仅为 development-only reference，SHA256 为
   `0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE`，
   从未进入 V2.2R 训练或 sampler。
+- narrow-interface extra-fine 已完成唯一 solve：154,751,976 bytes，SHA256
+  `C2C01F31E23869DB1E54A5938F5DFCFC6491EA6583D49B8635C56678F09BD0CD`；
+  wide-heater extra-fine 已完成唯一 solve：155,426,149 bytes，SHA256
+  `1A72CD23B10E6E048BC72936A43A41F165A9B37758E012CD296574D50D27422A`。
+  两者独立字节复核通过并保持 `SEALED_UNREAD_PENDING_CANDIDATE_FREEZE`；没有
+  读取场或计算事件/误差指标。
 
 ## IN PROGRESS
 
-- narrow-interface 和 wide-heater extra-fine 正由既有固定 solver 各执行唯一一次
-  生成；当前只写 intent，完成后只允许写 carrier byte seal，不读取场或指标。
 - 在可用 AutoDL SSH 实例建立前，GPU profile 和 nominal pilot 尚不能启动。
 
 ## UNKNOWN
 
 - 四个 physics-only arms 的 nominal competence、排序和可归因增益尚未测量。
 - strict PHA 的实际 GPU 成本与 100-update 增益尚未测量。
-- 两份 stress solver 是否成功完成、候选能否冻结、stress confirmation 是否通过
-  均未知；不得提前写正面结果。
+- 候选能否冻结、stress fields 开封后的事件身份和 confirmation 是否通过均未知；
+  不得从成功生成 carrier 推断正面方法结果。
 - Route B 尚未触发；只有所有 route-A arms 都缺乏基本 competence 才允许实现并执行。
 
 ## 交付路由

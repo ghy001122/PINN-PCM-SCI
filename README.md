@@ -15,7 +15,8 @@
 第七天终点是包含完整方法主体和有限真实单-seed结果的导师评审稿，不是 formal OOD、多 seed、实验材料校准或 SOTA 证据。任何正向主张仍由实际 nominal 与 sealed-case 运行决定。
 
 三场强残差、四个 primary arms、physics sampler、prediction/evaluator、stress
-封存门和 machine decision 已实现并通过 12 项聚焦测试；这只建立实现证据，尚未
+封存门和 machine decision 已实现并通过 13 项聚焦测试；两份 stress extra-fine
+也已成功生成、通过字节哈希复核并保持未开封。这只建立实现和 reference 身份，尚未
 建立方法效果。用户已授权本轮代码/求解/PINN、两份 stress extra-fine、AutoDL
 总额不超过人民币 150 元、论文制品以及当前仓库 commit/push；作者联系和期刊投稿
 未授权。边界见 [program contract](configs/phk_v22r/program_contract.json) 与

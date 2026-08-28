@@ -6,7 +6,7 @@
 - `blocker_id`: `NONE`
 - `authorization_scope`: `PHK_V22R_EXPLICIT_EXECUTION_AUTHORIZED`
 - `authorization_package`: `LOCAL_CPU_SOLVER_PINN_GPU_AUTODL_150CNY_GIT_PUSH_AND_MANUSCRIPT`
-- `plan_status`: `ACTIVE_D0_CORE_VERIFIED_REFERENCE_SEALING`
+- `plan_status`: `ACTIVE_D0_CORE_AND_REFERENCE_SEALS_VERIFIED`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_OBJECT_REUSED_WITHOUT_CONTINUUM_ORACLE_CLAIM`
 - `method_selection_status`: `NOT_YET_SELECTED_S_FIRST`
 - `claim_status`: `IMPLEMENTATION_VERIFIED_NEURAL_METHOD_RESULT_NOT_YET_ESTABLISHED`
@@ -14,7 +14,7 @@
 - `formal_or_gpu_authorization`: `BOUNDED_SINGLE_SEED_METHOD_MVP_AUTHORIZED`
 - `git_or_external_publication_authorization`: `CURRENT_REPOSITORY_COMMIT_AND_PUSH_AUTHORIZED_SUBMISSION_NOT_AUTHORIZED`
 - `next_research_execution_authorized`: `true`
-- `current_stage`: `D0_CORE_VERIFIED_STRESS_REFERENCES_RUNNING_GPU_HANDOFF_PENDING`
+- `current_stage`: `D0_CORE_AND_REFERENCES_VERIFIED_GPU_HANDOFF_PENDING`
 - `route_selection_deadline`: `2026-08-30T23:59:00+08:00`
 - `experiment_axis_freeze_deadline`: `2026-09-02T23:59:00+08:00`
 - `final_deadline`: `2026-09-04T23:59:00+08:00`
@@ -43,10 +43,11 @@
 
 `VERIFIED`：V2.2R 三场强残差、混合 IC/BC、对角 AD、四臂、strict routing
 全导数、采样、训练、prediction/evaluator、sealed gate 与 decision core 已实现，
-12 项聚焦测试通过。实现存在与测试通过不是方法效果证据。
+13 项聚焦测试通过。实现存在与测试通过不是方法效果证据。
 
-`VERIFIED`：两份 stress solve 已写入 pre-compute intent 并运行；候选冻结前不得打开
-其 carrier。nominal extra-fine 从未作为训练标签、anchor 或 sampler feature。
+`VERIFIED`：两份 stress extra-fine 唯一 solve 已完成并通过声明值—实际值 SHA256
+复核。两者仍为 `SEALED_UNREAD_PENDING_CANDIDATE_FREEZE`，尚未打开场或指标；
+nominal extra-fine 从未作为训练标签、anchor 或 sampler feature。
 
 `UNKNOWN`：尚无 GPU profile、nominal arm 排序、可归因增益或 sealed confirmation，
 因此任何正面方法结论仍未建立。
@@ -58,5 +59,5 @@ PHASE_ID=PHK_V22_ONE_WEEK_SPRINT_ACTIVE
 BLOCKER_ID=NONE
 METHOD_SELECTION_STATUS=NOT_YET_SELECTED_S_FIRST
 NEXT_RESEARCH_EXECUTION_AUTHORIZED=true
-CURRENT_STAGE=D0_CORE_VERIFIED_STRESS_REFERENCES_RUNNING_GPU_HANDOFF_PENDING
+CURRENT_STAGE=D0_CORE_AND_REFERENCES_VERIFIED_GPU_HANDOFF_PENDING
 ~~~

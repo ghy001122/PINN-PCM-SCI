@@ -88,8 +88,9 @@ arms、strict-PHA 全导数 probe、physics sampler、训练、prediction/evalua
 sealed access gate 和 machine decision 已实现并通过 12 项聚焦测试；训练 API
 没有 reference field 入口。该状态仅是实现证据，不是方法效果证据。
 
-`IN PROGRESS`：两份 stress extra-fine 已各写 pre-compute intent 并执行唯一一次
-solve；候选冻结前只允许生成与字节封存，禁止读取场或指标。
+`VERIFIED`：两份 stress extra-fine 已各完成唯一一次 solve，carrier 声明 SHA256
+与独立文件复核一致；两者保持 `SEALED_UNREAD_PENDING_CANDIDATE_FREEZE`。这只建立
+reference 字节身份，不建立 event、误差或方法证据。
 
 `UNKNOWN`：GPU profile、nominal 方法 competence、方法增量、stress confirmation
 与最终论文分支尚待实际运行；不得从实现或测试预写科学结论。

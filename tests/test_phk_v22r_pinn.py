@@ -129,8 +129,7 @@ class PhkV22RPinnTests(unittest.TestCase):
         event_time = 0.2378
         event_z = 0.12
         temperature_envelope = model.temperature_scale * (
-            1.0
-            - torch.exp(torch.tensor(-((event_time / model.startup_time) ** 2)))
+            1.0 - torch.exp(torch.tensor(-(event_time / model.startup_time)))
         ) * (1.0 - event_z)
         self.assertGreater(
             float(temperature_envelope), self.physics.theta_transition
@@ -347,6 +346,7 @@ class PhkV22RPinnTests(unittest.TestCase):
                 "case_control": PhkControl.FULL.value,
                 "architecture": {"arm": arm.value},
                 "hard_guards": {"passed": passed},
+                "training_trend": {"decreasing_pde_loss": True},
                 "metrics": {
                     "time_averaged_phase_region_symmetric_difference": primary,
                     "phase_roi_continuous_rms": co_primary,
@@ -448,6 +448,13 @@ class PhkV22RPinnTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             placeholder = Path(directory) / "prediction.npz"
             placeholder.write_bytes(b"fixture")
+            (placeholder.parent / "training-log.jsonl").write_text(
+                json.dumps({"pde_loss": 1.0})
+                + "\n"
+                + json.dumps({"pde_loss": 0.5})
+                + "\n",
+                encoding="utf-8",
+            )
             with mock.patch(
                 "pinn_pcm_sci.phk_v22r_evaluator.read_prediction_carrier",
                 return_value=(metadata, prediction),
@@ -465,6 +472,7 @@ class PhkV22RPinnTests(unittest.TestCase):
         )
         self.assertEqual(report["metrics"]["phase_roi_continuous_rms"], 0.0)
         self.assertTrue(report["hard_guards"]["passed"])
+        self.assertTrue(report["training_trend"]["decreasing_pde_loss"])
 
 
 if __name__ == "__main__":

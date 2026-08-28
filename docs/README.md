@@ -28,6 +28,9 @@
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 使用 PHK-V2.1 fixed-discretization carrier，不宣称 continuum oracle；默认 S-first，strict PHA 仅探针，A→B 只有一次。
 - 当前证据入口：[PHK-V2.1 terminal summary](../outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)、[S1 terminal closeout](experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)、[S7 package closeout](experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)、[最终 paper_v21 包](../paper/paper_v21/README.md)、[S0 scientific freeze](governance/2026-08-28-phk-v21-s0-scientific-contract-freeze.md)、[baseline identity audit](references/2026-08-27-phk-v2-1-baseline-reproduction-identity-audit.md)、[E1 solver selection](experiment/2026-08-27-phk-v21-e1-control-solver-selection.md)与 [E2 object selection](experiment/2026-08-27-phk-v21-e2-engineering-object-selection.md)。它们固定 Oracle No-Go、完整终局包与 neural 下游未到达。
 - 当前 V2.2R 决定入口：[ADR 0047](adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md)。它只前瞻授权新 Method-MVP，不改写上述 V2.1 terminal evidence。
+- 当前 V2.2R stress reference 字节封存记录：
+  [2026-08-29 PHK-V2.2R stress extra-fine seal](experiment/2026-08-29-phk-v22r-stress-reference-byte-seal.md)。
+  它只记录生成身份、大小和 SHA256；候选冻结前没有读取场或指标。
 - 当前 PHK-V2 制品入口：[完整论文与复现包](../paper/paper_v2/README.md)与 [S2 终局收口](experiment/2026-08-27-phk-v2-s2-terminal-closeout.md)。包内清单、图源、链接、引用键和 claim boundary 已验证，不改变科学证据上限。
 - 上一科研终点：[S2 终局收口](experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)与[归档 GOAL](../archive/2026-08-27-goal-paper-one-shot-v1-complete.md)。Q0 只通过零驱动守卫；首个受驱动 QN intent 失败且已计账。该 No-Go、V1 论文和全部历史证据保持原样。
 - 上一对象组合终点：[方法盲对象筛选报告](references/2026-08-26-method-blind-cleanroom-object-screen.md)与 [ADR 0042](adr/0042-close-package-a-with-method-blind-object-portfolio-no-go.md)。3/3 冻结家族在 Gate 3 最早失败，11/12 新载体后形成 `PORTFOLIO_NO_GO_PACKAGE_A_FROZEN_3_FAMILIES_11_CARRIERS`。

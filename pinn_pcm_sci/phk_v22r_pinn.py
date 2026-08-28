@@ -325,7 +325,7 @@ class PhkV22RModel(nn.Module):
         temperature_scale: float = 2.5,
         phase_latent_scale: float = 8.0,
         gate_floor: float = 0.05,
-        startup_time: float = 0.10,
+        startup_time: float = 0.35,
     ) -> None:
         super().__init__()
         self.physics = physics
@@ -437,10 +437,7 @@ class PhkV22RModel(nn.Module):
         assert self.high_phase is not None
         physical = self._physical_coordinates(normalized)
         startup = 1.0 - torch.exp(
-            -(
-                (physical[:, 2:3] - self.physics.time_start)
-                / self.startup_time
-            ).square()
+            -(physical[:, 2:3] - self.physics.time_start) / self.startup_time
         )
         initial = self.physics.initial_phase(physical).clamp(1.0e-8, 1.0 - 1.0e-8)
         initial_logit = torch.logit(initial)
@@ -487,7 +484,7 @@ class PhkV22RModel(nn.Module):
             self.physics.z_max - self.physics.z_min
         )
         startup = 1.0 - torch.exp(
-            -((time - self.physics.time_start) / self.startup_time).square()
+            -(time - self.physics.time_start) / self.startup_time
         )
         potential = self.physics.waveform(time) * torch.sigmoid(latent["potential"])
         temperature = (

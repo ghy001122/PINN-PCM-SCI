@@ -54,7 +54,13 @@ def _metrics(record: Mapping[str, Any]) -> Mapping[str, float]:
 
 def _eligible(record: Mapping[str, Any]) -> bool:
     hard = record.get("hard_guards")
-    return bool(isinstance(hard, dict) and hard.get("passed") is True)
+    trend = record.get("training_trend")
+    return bool(
+        isinstance(hard, dict)
+        and hard.get("passed") is True
+        and isinstance(trend, dict)
+        and trend.get("decreasing_pde_loss") is True
+    )
 
 
 def _geometric_error(primary: float, co_primary: float) -> float:
