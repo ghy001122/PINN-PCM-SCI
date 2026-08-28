@@ -60,6 +60,14 @@ def _sha256_path(path: Path) -> str:
     return digest.hexdigest().upper()
 
 
+def _portable_path(path: Path) -> str:
+    resolved = Path(path).resolve()
+    try:
+        return str(resolved.relative_to(ROOT))
+    except ValueError:
+        return str(resolved)
+
+
 def _physical_contract():
     return load_phk_v21_physical(
         program_path=ROOT / "configs" / "phk_v21" / "program_contract.json",
@@ -219,7 +227,7 @@ def load_reference(
 
 def _time_rms(trace: np.ndarray, time: np.ndarray) -> float:
     duration = float(time[-1] - time[0])
-    return float(math.sqrt(np.trapz(trace * trace, time) / duration))
+    return float(math.sqrt(np.trapezoid(trace * trace, time) / duration))
 
 
 def _event_summary(
@@ -417,7 +425,7 @@ def evaluate_prediction(
     pred_active = prediction["phase"] >= float(event["phase_threshold"])
     ref_active = reference.phase >= float(event["phase_threshold"])
     symmetric_fraction = np.mean(np.logical_xor(pred_active, ref_active), axis=1)
-    primary = float(np.trapz(symmetric_fraction, time) / duration)
+    primary = float(np.trapezoid(symmetric_fraction, time) / duration)
     phase_roi_mse = np.mean(
         (prediction["phase"][:, roi] - reference.phase[:, roi]) ** 2,
         axis=1,
@@ -430,18 +438,18 @@ def evaluate_prediction(
         (prediction["potential"] - reference.potential) ** 2,
         axis=1,
     )
-    phase_roi_rms = float(math.sqrt(np.trapz(phase_roi_mse, time) / duration))
+    phase_roi_rms = float(math.sqrt(np.trapezoid(phase_roi_mse, time) / duration))
     temperature_roi_rms = float(
-        math.sqrt(np.trapz(temperature_roi_mse, time) / duration)
+        math.sqrt(np.trapezoid(temperature_roi_mse, time) / duration)
     )
-    potential_rms = float(math.sqrt(np.trapz(potential_mse, time) / duration))
+    potential_rms = float(math.sqrt(np.trapezoid(potential_mse, time) / duration))
     current_rms = _time_rms(prediction["top_current"] - reference.top_current, time)
     current_reference_rms = _time_rms(reference.top_current, time)
     current_nrmse = current_rms / max(current_reference_rms, 1.0e-12)
     pulse_energy_error = abs(
-        float(np.trapz(prediction["joule_power"], time))
-        - float(np.trapz(reference.joule_power, time))
-    ) / max(abs(float(np.trapz(reference.joule_power, time))), 1.0e-12)
+        float(np.trapezoid(prediction["joule_power"], time))
+        - float(np.trapezoid(reference.joule_power, time))
+    ) / max(abs(float(np.trapezoid(reference.joule_power, time))), 1.0e-12)
 
     prediction_event = _event_summary(
         prediction["phase"],
@@ -524,7 +532,7 @@ def evaluate_prediction(
         "schema_id": "phk-v22r-evaluation-v1",
         "status": "EVALUATED_LOCAL_REFERENCE_ONLY",
         "case_control": selected.value,
-        "prediction_path": str(Path(prediction_path).resolve().relative_to(ROOT)),
+        "prediction_path": _portable_path(prediction_path),
         "prediction_sha256": _sha256_path(prediction_path),
         "reference_path": str(
             (NOMINAL_REFERENCE if selected is PhkControl.FULL else STRESS_REFERENCES[selected])

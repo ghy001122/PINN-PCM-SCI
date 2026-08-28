@@ -12,11 +12,13 @@ import numpy as np
 import torch
 from torch import nn
 
-from pinn_pcm_sci.phk_benchmark import PhkControl
+from pinn_pcm_sci.phk_benchmark import PhkControl, PhkGrid, PhkResolution
+from pinn_pcm_sci.phk_v21_benchmark import PhkV21CaseSpec, PhkV21OracleResult
 from pinn_pcm_sci.phk_v22r_evaluator import (
     METHOD_CONTRACT,
     PROGRAM_CONTRACT,
     load_reference,
+    evaluate_prediction,
     validate_candidate_freeze,
 )
 from pinn_pcm_sci.phk_v22r_decision import adjudicate_nominal
@@ -374,6 +376,95 @@ class PhkV22RPinnTests(unittest.TestCase):
         decision = adjudicate_nominal(failing)
         self.assertEqual(decision["status"], "MVP_NO_GO_NO_ATTRIBUTABLE_GAIN")
         self.assertFalse(decision["stress_unseal_authorized"])
+
+    def test_evaluator_returns_zero_error_for_an_identical_small_fixture(self) -> None:
+        grid = PhkGrid.build(
+            nx=8, nz=4, x_min=-1.0, x_max=1.0, z_min=0.0, z_max=1.0
+        )
+        time = np.asarray(
+            [0.0, 0.10, 0.25, 0.40, 1.00, 1.25, 1.35, 1.50, 1.70, 2.50],
+            dtype=np.float64,
+        )
+        shape = (time.size, grid.cell_count)
+        potential = np.zeros(shape, dtype=np.float64)
+        temperature = np.zeros(shape, dtype=np.float64)
+        phase = np.full(shape, 0.02, dtype=np.float64)
+        active_cell = int(np.argmin(grid.cell_x**2 + grid.cell_z**2))
+        phase[2, active_cell] = 0.8
+        phase[7, active_cell] = 0.8
+        temperature[2, active_cell] = 0.6
+        temperature[7, active_cell] = 0.6
+        from pinn_pcm_sci.phk_v22r_training import ROOT
+        from pinn_pcm_sci.phk_v21_benchmark import load_phk_v21_physical
+
+        physical_contract = load_phk_v21_physical(
+            program_path=ROOT / "configs/phk_v21/program_contract.json",
+            object_path=ROOT / "configs/phk_v21/object_numerical_contract.json",
+            legacy_program_path=ROOT / "configs/phk_v2/program_contract.json",
+            legacy_object_path=ROOT / "configs/phk_v2/object_numerical_contract.json",
+        )
+        case = PhkV21CaseSpec.nominal(physical_contract, control=PhkControl.FULL)
+        zeros = np.zeros(time.size, dtype=np.float64)
+        reference = PhkV21OracleResult(
+            physical_contract_id=physical_contract.contract_id,
+            program_contract_sha256=physical_contract.program.sha256,
+            object_contract_sha256=physical_contract.object.sha256,
+            case=case,
+            resolution=PhkResolution.non_scientific_fixture(
+                nx=8, nz=4, dt=0.1, time_end=2.5, save_every=1
+            ),
+            phase_algorithm="FIXTURE",
+            grid=grid,
+            time=time,
+            potential=potential,
+            temperature=temperature,
+            phase=phase,
+            top_current=zeros,
+            bottom_current=zeros,
+            joule_power=zeros,
+            current_balance_history=zeros,
+            thermal_residual_history=zeros,
+            phase_residual_history=zeros,
+            coupled_change_history=zeros,
+            linear_residual_history=zeros,
+            solver_statistics={},
+            evidence_identity="NON_SCIENTIFIC_TEST_FIXTURE",
+        )
+        prediction = {
+            "x": grid.x_centers.copy(),
+            "z": grid.z_centers.copy(),
+            "time": time.copy(),
+            "potential": potential.copy(),
+            "temperature": temperature.copy(),
+            "phase": phase.copy(),
+            "top_current": zeros.copy(),
+            "joule_power": zeros.copy(),
+        }
+        metadata = {
+            "training_config": {"case_control": PhkControl.FULL.value},
+            "training_config_sha256": "A" * 64,
+            "architecture": {"arm": PhkV22RArm.STRONG_RAW.value},
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            placeholder = Path(directory) / "prediction.npz"
+            placeholder.write_bytes(b"fixture")
+            with mock.patch(
+                "pinn_pcm_sci.phk_v22r_evaluator.read_prediction_carrier",
+                return_value=(metadata, prediction),
+            ), mock.patch(
+                "pinn_pcm_sci.phk_v22r_evaluator.load_reference",
+                return_value=(reference, "B" * 64),
+            ):
+                report = evaluate_prediction(
+                    prediction_path=placeholder,
+                    control=PhkControl.FULL,
+                )
+        self.assertEqual(
+            report["metrics"]["time_averaged_phase_region_symmetric_difference"],
+            0.0,
+        )
+        self.assertEqual(report["metrics"]["phase_roi_continuous_rms"], 0.0)
+        self.assertTrue(report["hard_guards"]["passed"])
 
 
 if __name__ == "__main__":

@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import asdict
 from datetime import datetime, timezone
+import hashlib
 import json
 import math
 from pathlib import Path
@@ -16,6 +17,7 @@ from typing import Any, Iterable
 import torch
 
 from .phk_v22r_pinn import PhkV22RArm
+from .phk_v22r_prediction import write_prediction_carrier
 from .phk_v22r_training import PhkTrainingConfig, train
 
 
@@ -25,6 +27,14 @@ PRIMARY_ARMS = (
     PhkV22RArm.SAMPLER_ONLY,
     PhkV22RArm.MF_PLUS_SAMPLER,
 )
+
+
+def _sha256_path(path: Path) -> str:
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest().upper()
 
 
 def environment_report(device_name: str) -> dict[str, Any]:
@@ -132,6 +142,24 @@ def run_matrix(
             checkpoint_every=updates,
         )
         outcome = train(config, run_directory=root / arm.value.lower())
+        prediction_record = None
+        if mode == "pilot":
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+            prediction_start = time.perf_counter()
+            prediction_path = outcome.run_directory / "prediction-extra-fine-axes.npz"
+            write_prediction_carrier(
+                checkpoint_path=outcome.checkpoint_path,
+                output_path=prediction_path,
+                device_name=device,
+            )
+            prediction_record = {
+                "path": str(prediction_path),
+                "sha256": _sha256_path(prediction_path),
+                "size_bytes": prediction_path.stat().st_size,
+                "wall_seconds": time.perf_counter() - prediction_start,
+                "reference_fields_read": False,
+            }
         records.append(
             {
                 "arm": arm.value,
@@ -145,6 +173,7 @@ def run_matrix(
                 "minimum_loss": outcome.minimum_loss,
                 "run_directory": str(outcome.run_directory),
                 "checkpoint": str(outcome.checkpoint_path),
+                "prediction": prediction_record,
                 "estimated_phase_spend_cny_at_completion": _spent_cny(
                     start, hourly_price_cny
                 ),

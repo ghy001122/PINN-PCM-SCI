@@ -44,10 +44,10 @@ python -m pinn_pcm_sci.phk_v22r_sprint \
   --prior-spend-cny "$PROFILE_SPEND_CNY"
 ```
 
-Download each checkpoint, training log, manifest, environment report, and cost
-ledger. Generate predictions on the GPU with
-`python -m pinn_pcm_sci.phk_v22r_prediction`; predictions may be downloaded, but
-all comparison to finite-volume fields must run locally.
+The pilot automatically writes a reference-blind extra-fine-axis prediction next
+to each checkpoint. Download each checkpoint, prediction, training log, manifest,
+environment report, and cost ledger. Predictions may be downloaded, but all
+comparison to finite-volume fields must run locally.
 
 The runner caps profile spend at 20% of the CNY 150 total and pilot spend at
 30%. Enter the completed profile ledger value as `PROFILE_SPEND_CNY`; at least
