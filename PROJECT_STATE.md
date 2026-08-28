@@ -4,7 +4,7 @@
 
 - `phase_id`: `PHK_V22_ONE_WEEK_SPRINT_ACTIVE`
 - `lifecycle_state`: `ACTIVE`
-- `blocker_id`: `NONE`
+- `blocker_id`: `AUTODL_INSTANCE_ENDPOINT_PENDING_USER_ACTION`
 - `claim_status`: `IMPLEMENTATION_VERIFIED_NEURAL_METHOD_RESULT_NOT_YET_ESTABLISHED`
 - `authorization_scope`: `PHK_V22R_EXPLICIT_EXECUTION_AUTHORIZED`
 - `candidate_status`: `NOT_FROZEN`
@@ -12,7 +12,7 @@
 - `reference_status`: `THREE_EXTRA_FINE_REFERENCES_AVAILABLE_TWO_STRESS_UNREAD_SEALED`
 - `implementation_status`: `THREE_FIELD_PINN_SAMPLER_PREDICTION_EVALUATOR_AND_DECISION_CORE_VERIFIED`
 - `method_selection_status`: `NOT_YET_SELECTED_S_FIRST`
-- `compute_status`: `LOCAL_CPU_REFERENCE_WORK_COMPLETE_CUDA_UNAVAILABLE_AUTODL_AUTHORIZED_NOT_PROVISIONED`
+- `compute_status`: `LOCAL_CPU_FULLSHAPE_PREFLIGHT_COMPLETE_CUDA_UNAVAILABLE_AUTODL_AUTHORIZED_NOT_PROVISIONED`
 - `cloud_budget_cny_hard_cap`: `150`
 - `next_research_execution_authorized`: `true`
 - `final_deadline`: `2026-09-04T23:59:00+08:00`
@@ -32,7 +32,7 @@
   stress fail-closed gate、nominal machine adjudicator 和 cloud budget ledger。
 - `tests/test_phk_v22r_pinn.py` 当前 13/13 通过；覆盖物理导数、全臂有限反传、
   strict gate 全导数、采样语义、边界、真实一步优化、reference-blind prediction、
-  stress 封存和候选裁决。
+  stress 封存和候选裁决；V2.1 与 V2.2R 扩展组合回归共 44/44 通过。
 - paper_v22r 已预写 Abstract、Introduction、Physical Model、Method、Evaluation、
   conditional Results、Limitations、References 和 claim-to-artifact registry。
 - PHK-V2.1 的 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN` 与所有旧证据保持不变。
@@ -45,10 +45,14 @@
   `1A72CD23B10E6E048BC72936A43A41F165A9B37758E012CD296574D50D27422A`。
   两者独立字节复核通过并保持 `SEALED_UNREAD_PENDING_CANDIDATE_FREEZE`；没有
   读取场或计算事件/误差指标。
+- 五个冻结方法臂均在 FP64、seed 17、完整 `512/128/128` 点形状下完成一次真实 CPU
+  优化更新，所有 loss、残差、梯度、checkpoint 与 manifest 均有限且完整；该并发
+  一步运行仅为非投票工程预检，不能用于方法排序或 strict-PHA 成本判断。
 
 ## IN PROGRESS
 
-- 在可用 AutoDL SSH 实例建立前，GPU profile 和 nominal pilot 尚不能启动。
+- 本地可执行工作已交接到 GPU 边界；在用户账号创建 AutoDL 实例并提供 SSH 端点及
+  页面实时单价前，GPU profile 和 nominal pilot 不能启动。
 
 ## UNKNOWN
 

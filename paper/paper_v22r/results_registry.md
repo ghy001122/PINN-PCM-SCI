@@ -14,9 +14,10 @@ Status: `IMPLEMENTATION_EVIDENCE_INDEXED_NO_NEURAL_METHOD_RESULT`
 | `STRESS_FIGURE` | Indexed stress-case field/QoI panels | `NOT_YET_MEASURED` |
 | `SUPPORTED_CLAIM` | Machine adjudication from frozen decision contract | `UNKNOWN` |
 
-Implementation-only evidence: `tests/test_phk_v22r_pinn.py` passes 12 focused
-tests, including one real optimizer update and reference-blind prediction-carrier
-generation. This does not populate any result token above.
+Implementation-only evidence: `tests/test_phk_v22r_pinn.py` passes 13 focused
+tests. In addition, all five arms completed one finite full-shape FP64 CPU update
+with reference-blind manifests. These checks do not populate any result token
+above and cannot rank methods or enforce the strict-routing cost gate.
 
 No manuscript result may be populated from terminal output, memory, or an
 unindexed scratch run. Every numeric statement must point to an immutable run ID,

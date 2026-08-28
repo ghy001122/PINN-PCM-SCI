@@ -3,10 +3,10 @@
 - `phase_id`: `PHK_V22_ONE_WEEK_SPRINT_ACTIVE`
 - `phase_name`: PHK-V2.2R 极速方法抢救与正向证据冲刺
 - `lifecycle_state`: `ACTIVE`
-- `blocker_id`: `NONE`
+- `blocker_id`: `AUTODL_INSTANCE_ENDPOINT_PENDING_USER_ACTION`
 - `authorization_scope`: `PHK_V22R_EXPLICIT_EXECUTION_AUTHORIZED`
 - `authorization_package`: `LOCAL_CPU_SOLVER_PINN_GPU_AUTODL_150CNY_GIT_PUSH_AND_MANUSCRIPT`
-- `plan_status`: `ACTIVE_D0_CORE_AND_REFERENCE_SEALS_VERIFIED`
+- `plan_status`: `ACTIVE_D0_FULLSHAPE_PREFLIGHT_VERIFIED_GPU_PROFILE_PENDING`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_OBJECT_REUSED_WITHOUT_CONTINUUM_ORACLE_CLAIM`
 - `method_selection_status`: `NOT_YET_SELECTED_S_FIRST`
 - `claim_status`: `IMPLEMENTATION_VERIFIED_NEURAL_METHOD_RESULT_NOT_YET_ESTABLISHED`
@@ -14,7 +14,7 @@
 - `formal_or_gpu_authorization`: `BOUNDED_SINGLE_SEED_METHOD_MVP_AUTHORIZED`
 - `git_or_external_publication_authorization`: `CURRENT_REPOSITORY_COMMIT_AND_PUSH_AUTHORIZED_SUBMISSION_NOT_AUTHORIZED`
 - `next_research_execution_authorized`: `true`
-- `current_stage`: `D0_CORE_AND_REFERENCES_VERIFIED_GPU_HANDOFF_PENDING`
+- `current_stage`: `D0_LOCAL_HANDOFF_COMPLETE_AUTODL_PROFILE_PENDING`
 - `route_selection_deadline`: `2026-08-30T23:59:00+08:00`
 - `experiment_axis_freeze_deadline`: `2026-09-02T23:59:00+08:00`
 - `final_deadline`: `2026-09-04T23:59:00+08:00`
@@ -49,6 +49,10 @@
 复核。两者仍为 `SEALED_UNREAD_PENDING_CANDIDATE_FREEZE`，尚未打开场或指标；
 nominal extra-fine 从未作为训练标签、anchor 或 sampler feature。
 
+`VERIFIED`：五个方法臂已在完整 `512/128/128` 点形状、FP64、seed 17 下各完成一次
+真实 CPU 优化更新；loss、残差、梯度、checkpoint 和 manifest 均有限且完整。该并发
+一步预检为 `ENGINEERING_PREFLIGHT_NON_VOTING`，不得据此比较臂排序或成本。
+
 `UNKNOWN`：尚无 GPU profile、nominal arm 排序、可归因增益或 sealed confirmation，
 因此任何正面方法结论仍未建立。
 
@@ -56,8 +60,8 @@ nominal extra-fine 从未作为训练标签、anchor 或 sampler feature。
 
 ~~~text
 PHASE_ID=PHK_V22_ONE_WEEK_SPRINT_ACTIVE
-BLOCKER_ID=NONE
+BLOCKER_ID=AUTODL_INSTANCE_ENDPOINT_PENDING_USER_ACTION
 METHOD_SELECTION_STATUS=NOT_YET_SELECTED_S_FIRST
 NEXT_RESEARCH_EXECUTION_AUTHORIZED=true
-CURRENT_STAGE=D0_CORE_AND_REFERENCES_VERIFIED_GPU_HANDOFF_PENDING
+CURRENT_STAGE=D0_LOCAL_HANDOFF_COMPLETE_AUTODL_PROFILE_PENDING
 ~~~

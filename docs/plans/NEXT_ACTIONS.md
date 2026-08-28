@@ -2,11 +2,11 @@
 
 - `phase_id`: `PHK_V22_ONE_WEEK_SPRINT_ACTIVE`
 - `lifecycle_state`: `ACTIVE`
-- `blocker_id`: `NONE`
+- `blocker_id`: `AUTODL_INSTANCE_ENDPOINT_PENDING_USER_ACTION`
 - `claim_status`: `IMPLEMENTATION_VERIFIED_NEURAL_METHOD_RESULT_NOT_YET_ESTABLISHED`
 - `authorization_state`: `PHK_V22R_EXPLICIT_EXECUTION_AUTHORIZED`
-- `plan_status`: `ACTIVE_D0_CORE_AND_REFERENCE_SEALS_VERIFIED`
-- `current_stage`: `D0_CORE_AND_REFERENCES_VERIFIED_GPU_HANDOFF_PENDING`
+- `plan_status`: `ACTIVE_D0_FULLSHAPE_PREFLIGHT_VERIFIED_GPU_PROFILE_PENDING`
+- `current_stage`: `D0_LOCAL_HANDOFF_COMPLETE_AUTODL_PROFILE_PENDING`
 - `next_research_execution_authorized`: `true`
 - `supersedes`: `PLAN_PHK_V21_V1_COMPLETED_AT_S1_ORACLE_NO_GO`
 - `preserves`: `PHK_V21_ORACLE_NO_GO_AND_ALL_PRIOR_EVIDENCE`
@@ -23,9 +23,11 @@
 3. 实现四窗口等额 replay、physics-aware mixture、reference-blind training、
    checkpoint、prediction carrier、本地 evaluator、stress access gate、nominal
    adjudicator、candidate freeze writer 和云预算 ledger。
-4. 13 项聚焦测试全部通过；旧 V2.1 与新 V2.2R 组合回归 33 项通过。
+4. 13 项 V2.2R 聚焦测试全部通过；扩展后的 V2.1 与 V2.2R 组合回归 44 项通过。
 5. 两个 stress extra-fine 唯一 solve 均已完成，carrier 与 byte seal 的 SHA256
    独立复核一致；两者仍未读取场或指标。
+6. 五个方法臂均以冻结的完整批量形状完成一次 FP64 CPU 优化更新；全部有限并写出
+   checkpoint/log/manifest。该并发一步运行仅关闭工程尺寸风险，不参与方法裁决。
 
 ## 现在执行
 

@@ -20,7 +20,7 @@
 ## 当前执行入口
 
 - 当前唯一 live plan：[PLAN-PHK-V2.2R-V1](plans/NEXT_ACTIONS.md)。状态为
-  `ACTIVE_D0_CORE_VERIFIED_REFERENCE_SEALING`；执行边界见
+  `ACTIVE_D0_FULLSHAPE_PREFLIGHT_VERIFIED_GPU_PROFILE_PENDING`；执行边界见
   [`program_contract.json`](../configs/phk_v22r/program_contract.json)，方法、损失、
   采样、公平性与增益门见
   [`method_contract.json`](../configs/phk_v22r/method_contract.json)。
@@ -31,6 +31,9 @@
 - 当前 V2.2R stress reference 字节封存记录：
   [2026-08-29 PHK-V2.2R stress extra-fine seal](experiment/2026-08-29-phk-v22r-stress-reference-byte-seal.md)。
   它只记录生成身份、大小和 SHA256；候选冻结前没有读取场或指标。
+- 当前 V2.2R 全形状工程预检：
+  [2026-08-29 PHK-V2.2R full-shape CPU preflight](experiment/2026-08-29-phk-v22r-fullshape-cpu-preflight.md)。
+  五臂均有限并写出完整训练产物，但该一步并发运行不参与排序或成本裁决。
 - 当前 PHK-V2 制品入口：[完整论文与复现包](../paper/paper_v2/README.md)与 [S2 终局收口](experiment/2026-08-27-phk-v2-s2-terminal-closeout.md)。包内清单、图源、链接、引用键和 claim boundary 已验证，不改变科学证据上限。
 - 上一科研终点：[S2 终局收口](experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)与[归档 GOAL](../archive/2026-08-27-goal-paper-one-shot-v1-complete.md)。Q0 只通过零驱动守卫；首个受驱动 QN intent 失败且已计账。该 No-Go、V1 论文和全部历史证据保持原样。
 - 上一对象组合终点：[方法盲对象筛选报告](references/2026-08-26-method-blind-cleanroom-object-screen.md)与 [ADR 0042](adr/0042-close-package-a-with-method-blind-object-portfolio-no-go.md)。3/3 冻结家族在 Gate 3 最早失败，11/12 新载体后形成 `PORTFOLIO_NO_GO_PACKAGE_A_FROZEN_3_FAMILIES_11_CARRIERS`。
