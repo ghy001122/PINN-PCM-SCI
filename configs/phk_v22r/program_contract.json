@@ -1,0 +1,264 @@
+{
+  "schema_id": "phk-v22r-program-contract-v1",
+  "contract_id": "PHK_V22R_RAPID_METHOD_RESCUE_V1",
+  "effective_date": "2026-08-29",
+  "status": "ACTIVE_PRE_CANDIDATE_FREEZE",
+  "phase_id": "PHK_V22_ONE_WEEK_SPRINT_ACTIVE",
+  "user_authorization": {
+    "source_conversation_id": "6a8f9ed2-a678-83ee-ac63-3fc48de531f8",
+    "execution_command": "EXECUTE PHK-V2.2R RAPID METHOD-RESCUE AND POSITIVE-EVIDENCE SPRINT",
+    "current_task_reconfirms_execution": true,
+    "planning_confirmation_is_not_required_again": true
+  },
+  "deadlines_asia_shanghai": {
+    "route_selection": "2026-08-30T23:59:00+08:00",
+    "no_new_experiment_axis_after": "2026-09-02T23:59:00+08:00",
+    "final_delivery": "2026-09-04T23:59:00+08:00"
+  },
+  "preserves_without_rewrite": [
+    "PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN",
+    "PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN_NO_BASELINE_OR_METHOD_EVIDENCE",
+    "PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE",
+    "GOAL_PAPER_ONE_SHOT_V1_COMPLETE",
+    "ALL_PRIOR_NO_GO_FAILED_INTENTS_AND_PAPER_PACKAGES"
+  ],
+  "paper_goal": {
+    "identity": "SUBMISSION_SHAPED_ADVISOR_REVIEWABLE_METHOD_MVP",
+    "target_story": "LOCALIZED_PHASE_AND_JOULE_SUPPORT_SCARCITY_ADDRESSED_BY_FIELD_SELECTIVE_ANISOTROPIC_MULTI_FREQUENCY_REPRESENTATION_AND_PHYSICS_AWARE_COLLOCATION",
+    "target_journal_story": "ENGINEERING_WITH_COMPUTERS_METHOD_PAPER_SUBJECT_TO_CURRENT_OFFICIAL_QUARTILE_RECHECK",
+    "minimum_day7_evidence": "TWO_SEALED_STRESS_CASES_BY_ONE_SEED_BY_THREE_NEURAL_ARMS",
+    "not_claimed": [
+      "CONTINUUM_TRUTH",
+      "EXPERIMENTAL_OR_MATERIAL_CALIBRATION",
+      "FORMAL_OOD_GENERALIZATION",
+      "STATISTICAL_SIGNIFICANCE_OR_RANDOM_SEED_ROBUSTNESS",
+      "STATE_OF_THE_ART_OR_SOLVER_REPLACEMENT"
+    ]
+  },
+  "fixed_physical_object": {
+    "identity": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+    "object_contract": "configs/phk_v21/object_numerical_contract.json",
+    "object_contract_sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD",
+    "program_contract": "configs/phk_v21/program_contract.json",
+    "program_contract_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+    "identity_language": "TRANSPARENT_DIMENSIONLESS_LITERATURE_INSPIRED_SYNTHETIC_WALL_CELL_FIXED_DISCRETIZATION_BENCHMARK",
+    "new_physics_or_oracle_refinement": false
+  },
+  "reference_roles": {
+    "nominal_development": {
+      "carrier": "outputs/runs/20260828T-phk-v21-s1-q-06-nominal-extra-fine/result-intent-06.npz",
+      "sha256": "0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE",
+      "resolution": "extra_fine",
+      "allowed": [
+        "DEVELOPMENT_SCORING",
+        "ARCHITECTURE_AND_HYPERPARAMETER_SELECTION",
+        "CHECKPOINT_SELECTION",
+        "A_TO_B_COMPETENCE_DECISION",
+        "DEVELOPMENT_FIGURES"
+      ],
+      "forbidden": [
+        "TRAINING_LABEL_OR_ANCHOR",
+        "SAMPLER_FEATURE",
+        "INDEPENDENT_CONFIRMATION_CLAIM"
+      ]
+    },
+    "narrow_interface_confirmation": {
+      "case_control": "INTERFACE_WIDTH_0_025",
+      "medium_anchor_source": "outputs/runs/20260828T-phk-v21-s1-q-13-narrow-interface/result-intent-13.npz",
+      "sealed_extra_fine_target": "outputs/sealed/phk_v22r/narrow_interface_extra_fine/reference.npz",
+      "access_before_candidate_freeze": false,
+      "one_formal_solver_intent": true
+    },
+    "wide_heater_confirmation": {
+      "case_control": "HEATER_WIDTH_0_50",
+      "medium_anchor_source": "outputs/runs/20260828T-phk-v21-s1-q-12-wide-heater/result-intent-12.npz",
+      "sealed_extra_fine_target": "outputs/sealed/phk_v22r/wide_heater_extra_fine/reference.npz",
+      "access_before_candidate_freeze": false,
+      "one_formal_solver_intent": true
+    },
+    "candidate_freeze": "configs/phk_v22r/candidate_freeze.json",
+    "stress_open_rule": "BOTH_REFERENCES_MAY_BE_GENERATED_EARLY_BUT_NO_FIELD_OR_METRIC_READ_UNTIL_CANDIDATE_FREEZE_STATUS_IS_FROZEN"
+  },
+  "method_route": {
+    "default_method_name": "FS_PJAMF_PINN",
+    "default_identity": "FIELD_SELECTIVE_PHASE_JOULE_AWARE_ANISOTROPIC_MULTI_FREQUENCY_PINN",
+    "development_seed": 17,
+    "confirmation_seed": 17,
+    "dtype": "FLOAT64",
+    "primary_arms": [
+      "STRONG_RAW",
+      "MF_ONLY",
+      "SAMPLER_ONLY",
+      "MF_PLUS_SAMPLER"
+    ],
+    "strict_pha_probe": {
+      "updates": 100,
+      "single_probe_only": true,
+      "output_gate_inputs": [
+        "PILOT_PHASE_INDICATOR",
+        "DIFFERENTIABLE_HEATER_DISTANCE_AND_PULSE_PROXY"
+      ],
+      "actual_joule_field_in_output_gate": false,
+      "gate_stop_gradient": false,
+      "maximum_cost_ratio_to_mf": 1.8,
+      "required_primary_improvement_vs_mf_plus_sampler": 0.10,
+      "co_primary_maximum_degradation": 0.02,
+      "failure_action": "DELETE_ROUTING_FROM_CRITICAL_PATH_WITHOUT_GATE_TUNING"
+    },
+    "anisotropic_frequency_candidates": [
+      {
+        "id": "BAND_A",
+        "x": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
+        "z": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
+        "t": [1.0, 2.0, 4.0, 8.0]
+      },
+      {
+        "id": "BAND_B_CONSERVATIVE",
+        "x": [1.0, 2.0, 4.0, 8.0, 12.0],
+        "z": [1.0, 2.0, 4.0, 8.0, 12.0],
+        "t": [1.0, 2.0, 4.0]
+      }
+    ],
+    "maximum_frequency_configurations": 2,
+    "collocation_mixture": {
+      "uniform_sobol": 0.35,
+      "residual": 0.25,
+      "phase": 0.25,
+      "joule": 0.15,
+      "uniform_floor_strictly_positive": true,
+      "candidate_pool_multiplier": 4,
+      "refresh_updates": 250
+    },
+    "causal_windows": [
+      [0.0, 0.35],
+      [0.35, 1.25],
+      [1.25, 1.60],
+      [1.60, 2.50]
+    ],
+    "active_window_sampling": "EQUAL_STRATIFIED_REPLAY_ACROSS_ALL_OPEN_WINDOWS",
+    "optimizer": {
+      "adam_learning_rate": 0.001,
+      "gradient_clip_norm": 10.0,
+      "profile_updates": 100,
+      "pilot_updates_target": 1500,
+      "pilot_updates_minimum": 1000,
+      "pilot_updates_maximum": 2000,
+      "interior_points": 512,
+      "boundary_points": 128,
+      "initial_points": 128,
+      "optional_lbfgs": "SHORT_FIXED_TARGET_ONLY_AFTER_COLLOCATION_FREEZE"
+    },
+    "development_search": {
+      "maximum_configuration_identities": 6,
+      "maximum_first_round_short_configurations": 4,
+      "maximum_promoted_configurations": 2,
+      "maximum_functional_pivots": 2,
+      "allowed_pivots": [
+        "FOURIER_TO_SIREN_INTERFACE_BRANCH_OR_BACKGROUND_INTERFACE_RESIDUAL_BRANCH",
+        "PHASE_JOULE_MIXTURE_TO_GRADIENT_PHASE_JOULE_MIXTURE",
+        "COMMON_CONTINUATION_OR_STAGGERED_TRAINING_OR_SAME_ARM_NOMINAL_TO_STRESS_WARM_START"
+      ]
+    }
+  },
+  "a_to_b": {
+    "route_a": "PDE_IC_BC_ONLY",
+    "route_b": "ONE_PERCENT_MEDIUM_SOBOL_STRATIFIED_ALL_FIELD_ANCHORS_PLUS_PDE_IC_BC",
+    "b_trigger": "ALL_ROUTE_A_ARMS_LACK_BASIC_COMPETENCE",
+    "basic_incompetence": [
+      "NONFINITE_PDE_OR_LOSS",
+      "NO_REFERENCE_EVENT_TOPOLOGY",
+      "PHASE_COLLAPSE",
+      "GROSSLY_WRONG_PHASE_TOPOLOGY",
+      "NO_DECREASING_FIELD_ERROR_TREND"
+    ],
+    "a_competent_but_no_gain": "MVP_NO_GO_NO_ATTRIBUTABLE_GAIN",
+    "anchor_fraction_unique_space_time_coordinates": 0.01,
+    "same_coordinate_supplies": ["POTENTIAL", "TEMPERATURE", "PHASE"],
+    "anchor_strata": ["FOUR_CAUSAL_WINDOWS", "ROI", "BULK"],
+    "anchor_density_sweep": false,
+    "lambda_data_candidates_once_on_nominal": [0.1, 1.0, 10.0],
+    "mandatory_b_controls": [
+      "SAME_ANCHOR_COMPUTE_MATCHED_SPARSE_RAW",
+      "SAME_ANCHOR_DATA_ONLY",
+      "MEDIUM_INTERPOLATION"
+    ],
+    "b_failure": "MVP_NO_GO_NO_PHYSICS_INFORMED_INCREMENT",
+    "route_c": "PROHIBITED_THIS_SPRINT"
+  },
+  "evaluation": {
+    "primary": "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+    "co_primary": "PHASE_ROI_CONTINUOUS_FIELD_RMS",
+    "hard_guards": [
+      "FINITE_VALUES",
+      "PHASE_RANGE",
+      "REFERENCE_EVENT_EXISTENCE_VECTOR",
+      "RECOVERY",
+      "LOCALITY",
+      "NO_FALSE_GLOBAL_TRANSITION"
+    ],
+    "noninferiority": [
+      "TEMPERATURE_ROI_RMS",
+      "TERMINAL_CURRENT_TRACE_RMS"
+    ],
+    "secondary": [
+      "EVENT_TIME",
+      "INTERFACE_HAUSDORFF_DISTANCE",
+      "HOTSPOT_LOCATION_AND_FWHM",
+      "HIGH_K_ERROR",
+      "PULSE_ENERGY",
+      "WALL_TIME",
+      "PEAK_MEMORY"
+    ],
+    "resolution_language": "U_J_IS_RESOLUTION_SENSITIVITY_MARGIN_NOT_CONTINUUM_ERROR_BOUND",
+    "all_adverse_cases_and_metrics_disclosed": true
+  },
+  "confirmation_matrix": {
+    "cases": ["NARROW_INTERFACE", "WIDE_HEATER"],
+    "seed": 17,
+    "neural_arms": [
+      "SELECTED_METHOD",
+      "STRONGEST_NONPROPOSED_COMPARATOR",
+      "EQUAL_COMPUTE_RAW"
+    ],
+    "stress_result_may_only_decide": ["PASS", "NO_GO", "BOUNDED_REGIME_AWARE_OR_PARETO_CLAIM"],
+    "stress_result_may_not_trigger": ["R_TO_S_ROUTE_CHANGE", "S_TO_R_ROUTE_CHANGE", "A_TO_B_RESCUE", "HYPERPARAMETER_CHANGE", "SEED_REPLACEMENT"]
+  },
+  "compute_and_external_authorization": {
+    "local_cpu_and_gpu": true,
+    "provider": "AUTODL",
+    "paid_cloud_budget_cny_hard_cap": 150.0,
+    "preferred_gpu_order": ["V100_32GB", "A100_40GB"],
+    "debug_and_profile_budget_fraction_max": 0.20,
+    "nominal_pilot_budget_fraction_max": 0.30,
+    "sealed_confirmation_budget_fraction_min": 0.50,
+    "stop_cloud_debug_if_fraction_exceeds": 0.30,
+    "cloud_upload_allowed": [
+      "SOURCE_CODE",
+      "CONFIGURATION",
+      "MEDIUM_ANCHORS",
+      "COORDINATES_AND_BOUNDARY_DEFINITIONS",
+      "EVALUATION_COORDINATES_WITHOUT_REFERENCE_VALUES"
+    ],
+    "cloud_upload_forbidden": [
+      "NOMINAL_EXTRA_FINE_FIELD",
+      "NARROW_INTERFACE_EXTRA_FINE_FIELD",
+      "WIDE_HEATER_EXTRA_FINE_FIELD",
+      "LOCAL_REFERENCE_COMPARISON_OUTPUT"
+    ],
+    "download_allowed": ["CHECKPOINT", "PREDICTION", "TRAINING_LOG"],
+    "reference_evaluation_location": "LOCAL_ONLY",
+    "git_commit_and_push_current_repository": true,
+    "journal_submission_or_external_submission_system": false,
+    "credential_disclosure": false
+  },
+  "prohibitions": [
+    "NO_KC_SRPG_C_SYNCNET_OR_NEW_PHYSICAL_OBJECT",
+    "NO_NEW_ORACLE_REFINEMENT_OR_EXTRA_EXTRA_FINE",
+    "NO_STRESS_REFERENCE_READ_BEFORE_CANDIDATE_FREEZE",
+    "NO_RESULT_FABRICATION_OR_SOURCE_ERASURE",
+    "NO_THRESHOLD_METRIC_CASE_SEED_OR_BUDGET_MOVEMENT_AFTER_FREEZE",
+    "NO_UNFAVORABLE_RESULT_SUPPRESSION",
+    "NO_DIRECT_GPL_OR_PENN_RESTRICTED_SOURCE_MERGE",
+    "NO_NEW_LARGE_NEGATIVE_PAPER_PACKAGE"
+  ]
+}

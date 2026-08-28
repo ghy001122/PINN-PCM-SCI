@@ -1,0 +1,166 @@
+{
+  "schema_id": "phk-v22r-method-contract-v1",
+  "contract_id": "PHK_V22R_FS_PJAMF_METHOD_V1",
+  "status": "FROZEN_BEFORE_NOMINAL_NEURAL_RESULT",
+  "effective_date": "2026-08-29",
+  "program_contract": "configs/phk_v22r/program_contract.json",
+  "reference_blind_training": {
+    "route_a_inputs": [
+      "PHYSICAL_COORDINATES",
+      "PDE_AND_CONSTITUTIVE_PARAMETERS",
+      "IC_BC_AND_WAVEFORM",
+      "MODEL_PREDICTED_FIELDS_AND_RESIDUALS"
+    ],
+    "forbidden_inputs": [
+      "FINITE_VOLUME_FIELD_VALUE",
+      "REFERENCE_EVENT_TIME",
+      "REFERENCE_PHASE_MASK",
+      "REFERENCE_ERROR_OR_GRADIENT"
+    ]
+  },
+  "architecture": {
+    "shared_family": "THREE_INDEPENDENT_MODIFIED_GATED_MLP_FIELD_HEADS",
+    "hidden_width": 64,
+    "hidden_layers": 4,
+    "activation": "TANH_WITH_SIGMOID_FEATURE_MIXING_GATE",
+    "raw_arms": ["STRONG_RAW", "SAMPLER_ONLY"],
+    "multifrequency_arms": ["MF_ONLY", "MF_PLUS_SAMPLER", "STRICT_PHA_PROBE"],
+    "field_transformations": {
+      "potential": "waveform(t)*sigmoid(latent_v)",
+      "temperature": "2.5*(1-exp(-(t/0.10)^2))*(1-z_fraction)*sigmoid(latent_theta)",
+      "phase": "sigmoid(logit(phi_initial)+8*(1-exp(-(t/0.10)^2))*latent_phi)"
+    },
+    "hard_ic_startup_time": 0.10,
+    "band_a_all": {
+      "x": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
+      "z": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
+      "t": [1.0, 2.0, 4.0, 8.0]
+    },
+    "field_allocation": {
+      "potential": "FIRST_4_X_FIRST_4_Z_FIRST_2_T",
+      "temperature": "FIRST_5_X_FIRST_5_Z_FIRST_3_T",
+      "phase": "ALL_FROZEN_BAND_FREQUENCIES"
+    },
+    "parameter_counts_at_width_64_layers_4": {
+      "STRONG_RAW": 39939,
+      "MF_ONLY": 54915,
+      "SAMPLER_ONLY": 39939,
+      "MF_PLUS_SAMPLER": 54915,
+      "STRICT_PHA_PROBE": 62277
+    },
+    "derivatives": "PHYSICAL_COORDINATES_DIAGONAL_XX_ZZ_ONLY_PLUS_REQUIRED_FIRST_DERIVATIVES",
+    "electric_residual": "SIGMA_LAPLACIAN_V_PLUS_GRAD_SIGMA_DOT_GRAD_V",
+    "strict_pha": {
+      "gate_floor": 0.05,
+      "gate_formula": "floor+(1-floor)*sigmoid(6*(4*pilot_phi*(1-pilot_phi)+heater_pulse_proxy-0.65))",
+      "gate_stop_gradient": false,
+      "high_frequency_correction_fields": ["TEMPERATURE", "PHASE"]
+    }
+  },
+  "loss": {
+    "group_weights": {
+      "pde": 1.0,
+      "boundary": 5.0,
+      "initial": 1.0
+    },
+    "aggregation": "MEAN_OF_FIXED_SCALE_NORMALIZED_COMPONENT_MSE_WITHIN_GROUP_THEN_WEIGHTED_SUM",
+    "pde_scales": {
+      "electric": 1.0,
+      "thermal": 4.0,
+      "phase": 5.0
+    },
+    "boundary_scales": {
+      "potential_dirichlet": 0.72,
+      "electric_flux": 1.0,
+      "temperature": 1.0,
+      "phase_flux": 1.0
+    },
+    "initial_scales": {
+      "potential": 0.72,
+      "temperature": 1.0,
+      "phase": 0.03
+    },
+    "optimizer": "ADAM",
+    "learning_rate": 0.001,
+    "gradient_clip_norm": 10.0,
+    "dtype": "FLOAT64"
+  },
+  "sampling": {
+    "causal_windows": [[0.0, 0.35], [0.35, 1.25], [1.25, 1.60], [1.60, 2.50]],
+    "window_open_update_fractions": [0.0, 0.15, 0.35, 0.55],
+    "replay": "EQUAL_POINT_COUNT_ACROSS_ALL_OPEN_WINDOWS",
+    "physics_mixture": {
+      "uniform_sobol": 0.35,
+      "pde_residual": 0.25,
+      "predicted_phase_interface": 0.25,
+      "predicted_joule_density": 0.15
+    },
+    "candidate_pool_multiplier": 4,
+    "refresh_updates": 250,
+    "candidate_ranking_gradient": "DETACHED_AFTER_STRONG_RESIDUAL_EVALUATION"
+  },
+  "development_decision": {
+    "basic_competence_requires": [
+      "FINITE_TRAINING_AND_PREDICTION",
+      "DECREASING_PDE_OR_FIELD_ERROR_TREND",
+      "TWO_REFERENCE_ALIGNED_PHASE_EVENTS",
+      "PHASE_RANGE_AND_LOCALITY_GUARDS"
+    ],
+    "strongest_component_selection": "MINIMUM_GEOMETRIC_MEAN_OF_PRIMARY_AND_CO_PRIMARY_RATIOS_AMONG_ELIGIBLE_MF_ONLY_AND_SAMPLER_ONLY",
+    "combined_gain_vs_strongest_component": {
+      "primary_maximum_ratio": 0.98,
+      "co_primary_maximum_ratio": 0.98,
+      "geometric_mean_maximum_ratio": 0.95
+    },
+    "combined_gain_vs_strong_raw": {
+      "geometric_mean_maximum_ratio": 0.90
+    },
+    "noninferiority_vs_strongest_component": {
+      "temperature_nrmse_maximum_ratio": 1.10,
+      "temperature_nrmse_absolute_floor": 0.05,
+      "current_nrmse_maximum_ratio": 1.10,
+      "current_nrmse_absolute_floor": 0.15
+    },
+    "strict_pha_probe": {
+      "updates": 100,
+      "cost_ratio_maximum": 1.8,
+      "primary_improvement_minimum": 0.10,
+      "co_primary_degradation_maximum": 0.02,
+      "failure_action": "DELETE_WITHOUT_GATE_TUNING"
+    },
+    "competent_but_no_combined_gain": "MVP_NO_GO_NO_ATTRIBUTABLE_GAIN",
+    "all_a_arms_incompetent": "ALLOW_SINGLE_ROUTE_B_ACTIVATION"
+  },
+  "evaluation": {
+    "phase_threshold": 0.5,
+    "roi": {"abs_x_max": 0.55, "z_min": 0.0, "z_max": 0.55},
+    "event_roi_fraction": 0.02,
+    "minimum_recovery": 0.70,
+    "maximum_full_domain_phase_fraction": 0.45,
+    "maximum_outside_roi_phase_fraction": 0.10,
+    "primary": "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+    "co_primary": "UNNORMALIZED_PHASE_ROI_CONTINUOUS_RMS",
+    "temperature_guard": "TEMPERATURE_ROI_NRMSE_BY_0_45",
+    "current_guard": "TERMINAL_CURRENT_TRACE_NRMSE"
+  },
+  "fairness": {
+    "fixed_update_track": true,
+    "measured_compute_ledger": ["WALL_SECONDS", "SECONDS_PER_UPDATE", "PEAK_GPU_MEMORY_BYTES", "TRAINABLE_PARAMETER_COUNT"],
+    "equal_compute_raw": {
+      "rule": "SMALLEST_INTEGER_WIDTH_WITH_PARAMETER_COUNT_AT_LEAST_MF_PLUS_SAMPLER_AND_WITHIN_FIVE_PERCENT",
+      "hidden_width": 76,
+      "hidden_layers": 4,
+      "trainable_parameter_count": 55635,
+      "parameter_ratio_to_mf_plus_sampler": 1.0131111718109806
+    },
+    "same_seed": 17,
+    "same_dtype": "FLOAT64",
+    "same_points_updates_optimizer_and_loss_contract": true
+  },
+  "sealed_confirmation": {
+    "cases": ["INTERFACE_WIDTH_0_025", "HEATER_WIDTH_0_50"],
+    "seed": 17,
+    "arms": ["SELECTED_METHOD", "STRONGEST_COMPONENT", "EQUAL_COMPUTE_RAW"],
+    "stress_feedback_to_method": false
+  }
+}

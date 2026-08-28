@@ -4,18 +4,24 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V21_COMPLETE_ORACLE_NO_GO`
-- `lifecycle_state`: `COMPLETED`
+- `phase_id`: `PHK_V22_ONE_WEEK_SPRINT_ACTIVE`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `authorization_scope`: `PHK_V21_EXECUTION_CONSUMED_AND_CLOSED`
-- `claim_status`: `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN_NO_BASELINE_OR_METHOD_EVIDENCE`
+- `authorization_scope`: `PHK_V22R_EXPLICIT_EXECUTION_AUTHORIZED`
+- `claim_status`: `IMPLEMENTATION_VERIFIED_NEURAL_METHOD_RESULT_NOT_YET_ESTABLISHED`
 
-PHK-V2 remains complete at its preregistered Oracle No-Go. In the independent PHK-V2.1 route, E1 repaired the control solver, E2 selected a repeatable-event engineering candidate, and S1 completed all 14 frozen qualification intents. Nominal event, hard guards, controls and exact replay were valid, but the event-time component did not contract monotonically from fine to extra-fine. The route therefore stopped before Sharp/PF replication or any PINN training. The complete bounded terminal package is now fixed without rewriting PHK-V2.
+当前执行 [PHK-V2.2R 极速方法抢救冲刺](docs/plans/NEXT_ACTIONS.md)：保留 PHK-V2.1 Oracle No-Go，以现有 nominal extra-fine 为 development-only fixed-discretization reference，默认实现 `FS-PJAMF-PINN` 的 strong raw、各向异性多频和 phase/Joule-aware sampling；两个 stress extra-fine 在候选冻结前密封。
 
-当前 [PLAN-PHK-V2.1-V1](docs/plans/NEXT_ACTIONS.md)已按最早停止门完成。[S1 terminal closeout](docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)与 [terminal summary](outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)固定 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`；[S7 closeout](docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)和[最终 paper_v21 包](paper/paper_v21/README.md)固定完整英文/中文论文、图表、补充、复现和主张边界。当前没有新的 research execution 授权。
+第七天终点是包含完整方法主体和有限真实单-seed结果的导师评审稿，不是 formal OOD、多 seed、实验材料校准或 SOTA 证据。任何正向主张仍由实际 nominal 与 sealed-case 运行决定。
 
-[ADR 0046](docs/adr/0046-adopt-phk-v21-independent-engineering-science-contract.md)只覆盖旧完成态“不得开始新执行”的授权语义。[PHK-V2 terminal summary](outputs/runs/20260827T-phk-v2-s2-q-terminal-summary/summary.json)、[旧 S0B freeze](docs/governance/2026-08-27-phk-v2-s0b-object-and-split-freeze.md)和[PHK-V2 论文包](paper/paper_v2/README.md)继续证明旧路线没有 neural floor、strong raw、PHA-MF、KC、组合、GPU、formal 或 OOD 方法证据。
+三场强残差、四个 primary arms、physics sampler、prediction/evaluator、stress
+封存门和 machine decision 已实现并通过 12 项聚焦测试；这只建立实现证据，尚未
+建立方法效果。用户已授权本轮代码/求解/PINN、两份 stress extra-fine、AutoDL
+总额不超过人民币 150 元、论文制品以及当前仓库 commit/push；作者联系和期刊投稿
+未授权。边界见 [program contract](configs/phk_v22r/program_contract.json) 与
+[method contract](configs/phk_v22r/method_contract.json)，决定理由见
+[ADR 0047](docs/adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md)。
 
-上一 [GOAL-PAPER-ONE-SHOT-V1 完成合同](archive/2026-08-27-goal-paper-one-shot-v1-complete.md)、`SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`、完整第一版[论文包](paper/paper_v1/README.md)、精选 GitHub 同步记录和所有历史 No-Go 保持原样。所有论文版本统一由 [paper 版本索引](paper/README.md)路由；PHK-V2.1 完成态不授权新求解/训练、投稿、外部上传、额外 Git 远程操作、付费/云端计算或直接并入 GPL/Penn 限制源码。
+历史 PHK-V2.1 仍固定为 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`，无 Sharp/PF/PINN/PHA/KC/formal 方法证据；其 [terminal summary](outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)与 [paper_v21](paper/paper_v21/README.md)保持原样。V2、V1 和全部更早 No-Go 同样不回写。
 
 当前授权读 [active_phase.md](active_phase.md)，已核验事实读 [PROJECT_STATE.md](PROJECT_STATE.md)，研究与论文口径读 [CONTEXT.md](CONTEXT.md)，完整文档路由读 [docs/README.md](docs/README.md)。
