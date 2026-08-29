@@ -52,7 +52,7 @@ qualified object
 
 ## 4. E0–E2：非投票工程阶段
 
-机器边界见 [program contract](../../configs/phk_v21/program_contract.json)与 [engineering contract](../../configs/phk_v21/engineering_contract.json)。工程输出只能决定后续 scientific contract，不能作为论文方法结果。
+机器边界见 [program contract](../configs/phk_v21/program_contract.json)与 [engineering contract](../configs/phk_v21/engineering_contract.json)。工程输出只能决定后续 scientific contract，不能作为论文方法结果。
 
 ### E1 控制分支求解
 
@@ -178,6 +178,6 @@ PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN
 PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN_NO_BASELINE_OR_METHOD_EVIDENCE
 ~~~
 
-[S1 terminal closeout](../experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)和 [terminal summary](../../outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)固定科学结果；[S7 package closeout](../experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)和[最终 paper_v21 包](../../paper/paper_v21/README.md)完成英文/中文正文、通俗故事、六图、图源、表格、参考文献、补充、复现、baseline anatomy、claim matrix、reviewer-risk audit 与 package manifest。
+[S1 terminal closeout](../docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)和 [terminal summary](../outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)固定科学结果；[S7 package closeout](../docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)和[最终 paper_v21 包](../paper/paper_v21/README.md)完成英文/中文正文、通俗故事、六图、图源、表格、参考文献、补充、复现、baseline anatomy、claim matrix、reviewer-risk audit 与 package manifest。
 
 Sharp/PF、合格 neural floor、strong raw、四臂 bottleneck、PHA-MF、field-selective KC、2×2、GPU 与 formal/OOD 均为 `NOT_REACHED`，不是负面方法结果。本地 E0-S7 授权已经消费并关闭；任何新的研究执行必须获得新的明确用户授权，并保持本 No-Go 不回写。

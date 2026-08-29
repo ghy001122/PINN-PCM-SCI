@@ -13,6 +13,7 @@
 
 当前笔记：
 
+- [PHK-V2.2R 近期研究策略整合](2026-08-29-phk-v22r-recent-research-strategy-integration.md)：把实时会话中的一周冲刺、模块组合、四类结果故事和十类止损思路映射到当前冻结合同；它是非授权解释入口，不改变 blocker、预算、sealed 规则或历史 No-Go。
 - [Structural Kinetics-Clock PINN 有界负面研究报告](2026-08-21-structural-clock-bounded-negative-report.md)：汇总 strong-raw、稀疏锚点与 QPOP-R3-v1 的 development-only 负证据；终局事实仍以实验 closeout 和 ledger 为准，不是 formal 方法结论。
 - [HFO-NP-v1 后 G1 PINN 研究路线整合](2026-08-24-hfo-post-g1-pinn-roadmap-integration.md)：把引用会话中的 G2–G6 建议与实时权威链对齐；它是非授权 future roadmap，不是第二份 live plan。
 - [HFO-NP-v1 Q30–Q36 PINN 方法与训练合同整合](2026-08-25-hfo-q30-q36-pinn-training-contract-integration.md)：记录用户经 ADR 0032 接受的 future-stage 方法与训练边界；本笔记解释具体合同，但不覆盖 ADR、live plan 或授权。

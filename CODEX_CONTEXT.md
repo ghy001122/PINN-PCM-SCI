@@ -27,7 +27,7 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-涉及当前研究对象、方法边界或论文措辞时读取 `CONTEXT.md`；需要决策理由时再读取 `docs/adr/`。实验事实、参考审查、研究笔记和历史归档按 `docs/README.md` 的触发条件读取。
+涉及当前研究对象、方法边界或论文措辞时读取 `CONTEXT.md`；需要决策理由时再读取 `docs/adr/`。处理 V2.2R 的方法替换、止损、故事分支或稿后升级时，在当前合同之后读取 `docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md`；该笔记不授权动作。实验事实、参考审查、其他研究笔记和历史归档按 `docs/README.md` 的触发条件读取。
 
 ## 状态词汇
 

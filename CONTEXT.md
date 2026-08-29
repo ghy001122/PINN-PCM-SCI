@@ -1,9 +1,8 @@
 # PINN-PCM-SCI 当前研究总览与论文口径
 
-本文件是当前研究设定与论文表述的单一来源。当前路线为 `PHK-V2.2R / RAPID METHOD-RESCUE AND POSITIVE-EVIDENCE SPRINT`；它是独立于 PHK-V2.1 Oracle No-Go 的 fixed-discretization Method-MVP，不改写任何历史证据。
+本文件是当前研究设定、规范术语与论文表述的单一来源，不承载授权、行动清单或易过期的运行结果。当前路线为 `PHK-V2.2R / RAPID METHOD-RESCUE AND POSITIVE-EVIDENCE SPRINT`；它是独立于 PHK-V2.1 Oracle No-Go 的 fixed-discretization Method-MVP，不改写任何历史证据。
 
-- `lifecycle_state`: `ACTIVE_PHK_V22_ONE_WEEK_SPRINT`
-- `claim_status`: `IMPLEMENTATION_VERIFIED_NEURAL_METHOD_RESULT_NOT_YET_ESTABLISHED`
+- `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
 - `updated_at`: `2026-08-29`
 
 ## 当前研究问题
@@ -71,33 +70,25 @@ B 必须比较 same-anchor sparse raw、same-anchor data-only 和 medium interpo
 
 真实结果可路由为四种有限正向故事：主要精度、sharp-transition regime 条件优势、accuracy–cost Pareto、或 sparse-data physics-informed increment。若均不成立，则保存最小 No-Go，不制造正结论或第四套大型负结果包。
 
+## 规范术语与研究纪律
+
+- **fixed-discretization numerical reference**：固定网格、时间步与输出采样下的数值参考；不得写成 continuum oracle、ground truth 或实验真值。
+- **development case**：允许在冻结预算内选路、调参和做功能等价替换的 nominal case；其 reference 只参与本地评分，不进入 Route A 的训练信号或 sampler feature。
+- **sealed confirmation case**：候选、阈值、损失、预算与评价口径冻结后才可开封的 stress case；开封结果只能决定 PASS、No-Go、regime-aware 或 Pareto 边界，不能反馈调参。
+- **functional pivot**：在同一科学问题和合同预算内替换一个功能槽位，例如表示、采样或共同训练协议；不是新增物理对象、移动指标、换 seed 或无界救援。
+- **candidate freeze**：结束开发并固定方法身份、训练合同、评价合同和确认矩阵的不可逆边界。
+- **Method-MVP**：包含可运行方法主体、强 comparator、关键消融、真实有限结果和可复现入口的导师评审稿；不等于可直接投稿的完整多-seed/formal-OOD 证据包。
+- **device-level QoI**：由预测场按冻结公式确定性计算的端电流、Joule energy、phase area、peak temperature、event topology 与 recovery；不是另一个可训练标签。
+- **A→A′ adaptation**：透明保留底层模块来源，同时把 PCM 定向接口、场选择、轴向频带、物理采样配比和联合预算分工明确为本项目适配贡献。
+
+开发阶段允许在 program contract 的配置数、功能 pivot 数和预算内进行结果导向的调参、模块迁移和结构替换；确认阶段必须冻结。任何故事包装都只能在已测证据支持的四个结果分支中选择，不得编造结果、隐藏不利 case、抹除来源或在开封后移动标准。
+
 ## 论文故事
 
 普通 PINN 像平均分配清晰度的相机：大范围平滑背景很快学好，却把决定器件状态的小相区和热点拍糊。全局 Fourier 相当于全域一直开高倍镜，可能浪费容量并加重二阶 AD。FS-PJAMF-PINN 为不同物理场和方向分配不同频带，再用 phase/Joule physics 分配训练点；预测场确定性地产生端电流、Joule energy、phase area、peak temperature、event topology 与 recovery，从而检验局部场改善是否传递到器件输出。
 
 底层 Fourier、多尺度表示、Sobol、RAR、causal/staggered/continuation 均有先例。可主张的项目贡献只能是透明的 PCM 定向 A→A′ 接口、联合预算分配、机制归因和真实固定预算增量；不得隐藏来源或声称底层模块首创。
 
-## 当前证据边界
+## 权威与状态路由
 
-`VERIFIED`：V2.1 已给出稳定的二维对象与 nominal extra-fine carrier，但 event-time 空间细化不单调，因此其 continuum-oracle route 为 No-Go，PINN 方法阶段未到达。
-
-`VERIFIED`：用户已授权当前 V2.2R 代码、两份 stress extra-fine、AutoDL 150 元上限、当前仓库 commit/push 和完整 Method-MVP 稿；投稿未授权。
-
-`VERIFIED`：V2.2R 三场 strong residual、IC/BC、所需对角 AD、四个 primary
-arms、strict-PHA 全导数 probe、physics sampler、训练、prediction/evaluator、
-sealed access gate 和 machine decision 已实现并通过 12 项聚焦测试；训练 API
-没有 reference field 入口。该状态仅是实现证据，不是方法效果证据。
-
-`VERIFIED`：两份 stress extra-fine 已各完成唯一一次 solve，carrier 声明 SHA256
-与独立文件复核一致；两者保持 `SEALED_UNREAD_PENDING_CANDIDATE_FREEZE`。这只建立
-reference 字节身份，不建立 event、误差或方法证据。
-
-`UNKNOWN`：GPU profile、nominal 方法 competence、方法增量、stress confirmation
-与最终论文分支尚待实际运行；不得从实现或测试预写科学结论。
-
-当前执行细节见 [live plan](docs/plans/NEXT_ACTIONS.md)、
-[program contract](configs/phk_v22r/program_contract.json) 和
-[method contract](configs/phk_v22r/method_contract.json)；决定理由见
-[ADR 0047](docs/adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md)。历史
-V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和
-`paper/paper_v1/` 路由。
+当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。执行边界见 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json)，决定理由见 [ADR 0047](docs/adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md)，近期研究策略的受约束整合见 [2026-08-29 strategy integration](docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。

@@ -28,3 +28,4 @@
 历史 PHK-V2.1 仍固定为 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`，无 Sharp/PF/PINN/PHA/KC/formal 方法证据；其 [terminal summary](outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)与 [paper_v21](paper/paper_v21/README.md)保持原样。V2、V1 和全部更早 No-Go 同样不回写。
 
 当前授权读 [active_phase.md](active_phase.md)，已核验事实读 [PROJECT_STATE.md](PROJECT_STATE.md)，研究与论文口径读 [CONTEXT.md](CONTEXT.md)，完整文档路由读 [docs/README.md](docs/README.md)。
+V2.2R 的近期方法替换、止损和论文故事讨论已按当前合同收录为[研究策略整合笔记](docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)；该笔记不改变授权或科学状态。

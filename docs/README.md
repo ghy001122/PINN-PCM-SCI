@@ -28,6 +28,7 @@
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 使用 PHK-V2.1 fixed-discretization carrier，不宣称 continuum oracle；默认 S-first，strict PHA 仅探针，A→B 只有一次。
 - 当前证据入口：[PHK-V2.1 terminal summary](../outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)、[S1 terminal closeout](experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)、[S7 package closeout](experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)、[最终 paper_v21 包](../paper/paper_v21/README.md)、[S0 scientific freeze](governance/2026-08-28-phk-v21-s0-scientific-contract-freeze.md)、[baseline identity audit](references/2026-08-27-phk-v2-1-baseline-reproduction-identity-audit.md)、[E1 solver selection](experiment/2026-08-27-phk-v21-e1-control-solver-selection.md)与 [E2 object selection](experiment/2026-08-27-phk-v21-e2-engineering-object-selection.md)。它们固定 Oracle No-Go、完整终局包与 neural 下游未到达。
 - 当前 V2.2R 决定入口：[ADR 0047](adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md)。它只前瞻授权新 Method-MVP，不改写上述 V2.1 terminal evidence。
+- 当前 V2.2R 近期研究策略入口：[2026-08-29 研究策略整合](notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。它把实时会话中的模块组合、结果故事和止损思路映射到冻结合同，只提供解释和稿后路由，不新增授权或证据。
 - 当前 V2.2R stress reference 字节封存记录：
   [2026-08-29 PHK-V2.2R stress extra-fine seal](experiment/2026-08-29-phk-v22r-stress-reference-byte-seal.md)。
   它只记录生成身份、大小和 SHA256；候选冻结前没有读取场或指标。
@@ -38,7 +39,8 @@
 - 上一科研终点：[S2 终局收口](experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)与[归档 GOAL](../archive/2026-08-27-goal-paper-one-shot-v1-complete.md)。Q0 只通过零驱动守卫；首个受驱动 QN intent 失败且已计账。该 No-Go、V1 论文和全部历史证据保持原样。
 - 上一对象组合终点：[方法盲对象筛选报告](references/2026-08-26-method-blind-cleanroom-object-screen.md)与 [ADR 0042](adr/0042-close-package-a-with-method-blind-object-portfolio-no-go.md)。3/3 冻结家族在 Gate 3 最早失败，11/12 新载体后形成 `PORTFOLIO_NO_GO_PACKAGE_A_FROZEN_3_FAMILIES_11_CARRIERS`。
 - 当前授权理由与边界：[ADR 0046](adr/0046-adopt-phk-v21-independent-engineering-science-contract.md)。它建立独立工程—科学双阶段合同，只覆盖旧完成态的不再执行语义；[ADR 0045](adr/0045-adopt-phk-v2-strong-baseline-and-two-module-execution.md)、PHK-V2 No-Go、失败 intent 与论文保持原样。
-- 本轮全库文档状态审计：[2026-08-26 工作区文档状态对齐](governance/2026-08-26-workspace-document-state-alignment.md)。它记录全量机器巡检、当前权威面逐项审查、状态漂移和链接修复，不构成科学证据。
+- 当前全库文档与研究策略审计：[2026-08-29 工作区文档与研究策略对齐](governance/2026-08-29-workspace-document-and-strategy-alignment.md)。它记录当前权威面、近期实时会话整合、角色漂移和归档链接修复，不构成科学证据。
+- 上一轮全库文档状态审计：[2026-08-26 工作区文档状态对齐](governance/2026-08-26-workspace-document-state-alignment.md)。它保存当时的状态漂移、链接修复和机器巡检快照，不再代表当前 phase。
 - 本轮论文润色整合：[2026-08-27 外部会话论文润色整合记录](notes/2026-08-27-manuscript-polish-integration.md)。它记录可读会话结论的逐项核对、接纳/拒绝边界和派生稿件身份，不构成新的科学 evidence。
 - 当前论文目录规范与一次性云端同步边界：[2026-08-28 paper version layout GitHub sync](governance/2026-08-28-paper-version-layout-github-sync.md)。它固定 `paper/paper_vxx/` 为后续版本路径，只改变工程组织，不改变科学主张。
 - 当前论文口径与规范术语：[CONTEXT.md](../CONTEXT.md)；当前已核验事实：[PROJECT_STATE.md](../PROJECT_STATE.md)。

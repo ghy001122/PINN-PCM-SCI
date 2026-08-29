@@ -19,7 +19,7 @@
 
 用户已明确批准 `GOAL-PAPER-ONE-SHOT-V1`，本文件是其项目内唯一 live plan。Agent 从当前真实状态开始，按本文件的预注册门和切换表连续执行；门通过后无需逐阶段、逐包或 sealed formal 前再次申请批准。
 
-执行已于 2026-08-26 按冻结 fallback 在 `CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT` 终点闭合。[最终本地论文包](../../paper/README.md)与[包清单](../../paper/package-manifest.json)满足第 10 节的完整交付条件；一次性授权已经消费并关闭。以下原始门、预算、定义与停止条件继续保留为已执行合同，不授权新研究。
+执行已于 2026-08-26 按冻结 fallback 在 `CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT` 终点闭合。[最终本地论文包](../paper/paper_v1/README.md)与[包清单](../paper/paper_v1/package-manifest.json)满足第 10 节的完整交付条件；一次性授权已经消费并关闭。以下原始门、预算、定义与停止条件继续保留为已执行合同，不授权新研究。
 
 优先终点是 PINN 为核心、二维电—热—守恒缺陷输运闭合、具有强控制与 sealed complete-case formal 证据的正向方法论文。若正向主张失败，继续形成以下之一，而不是把分支 No-Go 当成总目标完成：
 
@@ -32,7 +32,7 @@
 ## 2. 当前起点与保留边界
 
 - S1 已关闭两个来源路线并按冻结切换表锁定 `SYN_EDT_2D_V1`。
-- S2 生效 freeze、Q0 与首个受驱动 QN intent 已由 [S2 终局收口](../experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)固定：Q0 只通过零驱动守卫；QN 按冻结 Newton 迭代上限失败且已计账，没有 rescue 或生产重跑。
+- S2 生效 freeze、Q0 与首个受驱动 QN intent 已由 [S2 终局收口](../docs/experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)固定：Q0 只通过零驱动守卫；QN 按冻结 Newton 迭代上限失败且已计账，没有 rescue 或生产重跑。
 - 本轮有界裁决为 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`。跨分辨率 oracle、双周期 event 与 thermal-effect gate 未建立；strong raw、PINN/CTH development、GPU 与 formal 均未到达且不得用“失败”替代“未评价”。
 - 自动稿件终点 `CLEANROOM_BENCHMARK_AND_METHOD_LIMITS_MANUSCRIPT` 已完成第 10 节全部真实交付，现记 `GOAL_COMPLETE`。
 - CTH 正向架构新颖性未清除，只保留为透明诊断/比较臂；不得承担正向新架构主张。
@@ -74,7 +74,7 @@ Route 3 必须含电流连续、准稳态 Joule 热、动态守恒 Nernst–Plan
 
 写入并冻结：COMSOL64 来源合同；方法盲 fallback ID/来源链/排序理由；`SYN_EDT_2D_V1` 完整物理合同；`A/A_PRIME/ENGINEERING/UNKNOWN` 账本；三种稿件终点与切换规则；互斥案例池、统计单位与预算；CTH 和全部控制的实现合同。S0 通过后自动进入 S1。
 
-S0 机器合同与完整冻结理由见 [`s0_contract.json`](../../configs/goal_paper_one_shot_v1/s0_contract.json) 和 [S0 预注册记录](../governance/2026-08-26-goal-paper-one-shot-v1-s0-preregistration.md)。
+S0 机器合同与完整冻结理由见 [`s0_contract.json`](../configs/goal_paper_one_shot_v1/s0_contract.json) 和 [S0 预注册记录](../docs/governance/2026-08-26-goal-paper-one-shot-v1-s0-preregistration.md)。
 
 ### S1 — 来源、合法性与新颖性前审（已完成）
 
@@ -84,7 +84,7 @@ S0 机器合同与完整冻结理由见 [`s0_contract.json`](../../configs/goal_
 
 CTH 新颖性前审至少覆盖 Conditional PINN、HyperPINN、P²INNs、SA/residual sensitivity、cusp-capturing PINN、Spline-PINN、PI-BSNet 与 learned/separated parameter basis；只能陈述声明范围内的检索结果。
 
-实际裁决见 [S1 有界前审报告](../references/2026-08-26-goal-paper-one-shot-v1-s1-source-legal-novelty-review.md)：本轮审阅 13 个一手载体、其中 10 个首次进入项目，使用新增预算 `10/12`。Route 1 所需权利 PASS 未建立且来源合同不完整，按预注册代码记 `LEGAL_RESEARCH_ACCESS_FAILURE + SOURCE_CONTRACT_FAILURE`；Route 2 为 `SOURCE_CONTRACT_FAILURE`，因此激活 `SYN_EDT_2D_V1`。CTH 为 `POSITIVE_ARCHITECTURE_NOVELTY_NOT_CLEARED`，只保留诊断/比较身份。
+实际裁决见 [S1 有界前审报告](../docs/references/2026-08-26-goal-paper-one-shot-v1-s1-source-legal-novelty-review.md)：本轮审阅 13 个一手载体、其中 10 个首次进入项目，使用新增预算 `10/12`。Route 1 所需权利 PASS 未建立且来源合同不完整，按预注册代码记 `LEGAL_RESEARCH_ACCESS_FAILURE + SOURCE_CONTRACT_FAILURE`；Route 2 为 `SOURCE_CONTRACT_FAILURE`，因此激活 `SYN_EDT_2D_V1`。CTH 为 `POSITIVE_ARCHITECTURE_NOVELTY_NOT_CLEARED`，只保留诊断/比较身份。
 
 ### S2–S3 — micro/full oracle、事件与案例池（已按数值合同 No-Go 终止）
 
@@ -270,13 +270,13 @@ COMPLETE =
 
 ## 11. GOAL 完成记录
 
-- `FULL_MANUSCRIPT`：[完整英文初稿](../../paper/manuscript.md)，包含方法、实际负向结果、证据等级、讨论、局限性与结论，无结果占位符；作者署名、机构、基金、利益冲突和致谢仍由作者在投稿前补齐。
-- `ACTUAL_RESULTS`：[S2 终局收口](../experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)与正文只报告 Q0 零驱动守卫、首个受驱动 QN 执行失败及 `NOT_REACHED` 下游门。
-- `FINAL_FIGURES_AND_TABLES`：[六幅最终图及图源](../../paper/figures/)同时提供 PNG/PDF，主表见 [tables.md](../../paper/tables.md)。
-- `REFERENCES`：[references.bib](../../paper/references.bib)固定 13 个已审载体的完整身份。
-- `SUPPLEMENT`：[supplement.md](../../paper/supplement.md)固定合同、资格梯、失败计账与额外边界。
-- `REPRODUCIBILITY_PACKAGE`：[reproducibility.md](../../paper/reproducibility.md)与[包索引](../../paper/README.md)覆盖证据哈希、ledger、50 项 focused tests、Q0-only 复算、非科学诊断和图表重绘。
-- `CLAIM_BOUNDARY_AUDIT`：[claim_evidence_matrix.md](../../paper/claim_evidence_matrix.md)逐项给出载体、证据身份、禁止外推和 reviewer-risk 自检。
-- [package-manifest.json](../../paper/package-manifest.json)覆盖除自身外 34 个交付文件；其信息性 SHA256 为 `1B00038B54049B4738AB6998BF4FE4C508B1F4200BA692889066D259AFE9F7A6`。2026-08-27 的后续编辑只重构论文叙事并新增中文/通俗派生稿，不改变本 GOAL 的冻结科学结果或 claim ceiling。
+- `FULL_MANUSCRIPT`：[完整英文初稿](../paper/paper_v1/manuscript.md)，包含方法、实际负向结果、证据等级、讨论、局限性与结论，无结果占位符；作者署名、机构、基金、利益冲突和致谢仍由作者在投稿前补齐。
+- `ACTUAL_RESULTS`：[S2 终局收口](../docs/experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)与正文只报告 Q0 零驱动守卫、首个受驱动 QN 执行失败及 `NOT_REACHED` 下游门。
+- `FINAL_FIGURES_AND_TABLES`：[六幅最终图及图源](../paper/paper_v1/figures/)同时提供 PNG/PDF，主表见 [tables.md](../paper/paper_v1/tables.md)。
+- `REFERENCES`：[references.bib](../paper/paper_v1/references.bib)固定 13 个已审载体的完整身份。
+- `SUPPLEMENT`：[supplement.md](../paper/paper_v1/supplement.md)固定合同、资格梯、失败计账与额外边界。
+- `REPRODUCIBILITY_PACKAGE`：[reproducibility.md](../paper/paper_v1/reproducibility.md)与[包索引](../paper/paper_v1/README.md)覆盖证据哈希、ledger、50 项 focused tests、Q0-only 复算、非科学诊断和图表重绘。
+- `CLAIM_BOUNDARY_AUDIT`：[claim_evidence_matrix.md](../paper/paper_v1/claim_evidence_matrix.md)逐项给出载体、证据身份、禁止外推和 reviewer-risk 自检。
+- [package-manifest.json](../paper/paper_v1/package-manifest.json)覆盖除自身外 34 个交付文件；其信息性 SHA256 为 `1B00038B54049B4738AB6998BF4FE4C508B1F4200BA692889066D259AFE9F7A6`。2026-08-27 的后续编辑只重构论文叙事并新增中文/通俗派生稿，不改变本 GOAL 的冻结科学结果或 claim ceiling。
 
 最终科学边界保持 `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO_NO_ORACLE_EVENT_OR_METHOD_EVIDENCE`。`GOAL_COMPLETE` 只表示本地制品与预注册 fallback 已完整交付，不表示 oracle、event、PINN、GPU、OOD、formal、实验验证、期刊接收或 SOTA 成立。
