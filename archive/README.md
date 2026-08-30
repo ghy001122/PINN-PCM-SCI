@@ -37,6 +37,7 @@
 | [2026-08-27-plan-phk-v2-v1-complete-pointer.md](2026-08-27-plan-phk-v2-v1-complete-pointer.md) | PHK-V2 完成态与冻结 Git 快照指针 | 后续 PHK-V2.1 只覆盖其“不再执行”的授权语义，不改写 PHK-V2 Oracle No-Go、失败 intent 与 `paper/paper_v2/`。 |
 | [2026-08-28-plan-phk-v21-v1-complete.md](2026-08-28-plan-phk-v21-v1-complete.md) | 独立 PHK-V2.1 工程—科学双阶段 GOAL 的完成指针 | S1 以 event-time 不单调触发 PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN，S2-S6 未到达；当前完成态、证据与论文包由 [active_phase.md](../active_phase.md)、[S1 closeout](../docs/experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)、[S7 closeout](../docs/experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)和 [paper_v21](../paper/paper_v21/README.md)固定。 |
 | [2026-08-29-plan-phk-v21-completed.md](2026-08-29-plan-phk-v21-completed.md) | 被 V2.2R 替换时保存的 PHK-V2.1 完整旧 live plan 原文 | 当前行动由 [PLAN-PHK-V2.2R-V1](../docs/plans/NEXT_ACTIONS.md) 与 [ADR 0047](../docs/adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md) 决定；该归档不改写 V2.1 No-Go。 |
+| [2026-08-30-plan-phk-v22r-v11-terminal-no-go.md](2026-08-30-plan-phk-v22r-v11-terminal-no-go.md) | V2.2R v1.1 四臂 terminal No-Go 与导师初稿收口旧 live plan | 当前行动由 [PLAN-PHK-V2.3-R0A](../docs/plans/NEXT_ACTIONS.md) 与 [ADR 0049](../docs/adr/0049-activate-phk-v23-r0a-cpu-diagnostics.md) 决定；该归档、V2.2R run/decision/closeout/paper 均不被 R0A 改写。 |
 
 该包中的主要入口：
 

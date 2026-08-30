@@ -311,6 +311,16 @@ class PhkModelOutput:
     heater_pulse_proxy: torch.Tensor | None
 
 
+@dataclass(frozen=True)
+class PhkReadOnlyOutputDiagnostics:
+    """Read-only transform observables; no parameter or sampler state is changed."""
+
+    output: PhkModelOutput
+    latents: Mapping[str, torch.Tensor]
+    raw_latent_sigmoid_derivatives: Mapping[str, torch.Tensor]
+    analytic_output_jacobians: Mapping[str, torch.Tensor]
+
+
 class PhkV22RModel(nn.Module):
     """Field-selective raw/MF model with an optional strict routed probe."""
 
@@ -476,7 +486,11 @@ class PhkV22RModel(nn.Module):
         )
         return lower + 0.5 * (normalized + 1.0) * (upper - lower)
 
-    def diagnostics(self, coordinates: torch.Tensor) -> PhkModelOutput:
+    def read_only_output_diagnostics(
+        self, coordinates: torch.Tensor
+    ) -> PhkReadOnlyOutputDiagnostics:
+        """Expose latent fields and analytic transform Jacobians for diagnostics."""
+
         normalized = self.physics.normalize(coordinates)
         latent, gate, pilot_phase, heater_proxy = self._latent_fields(normalized)
         time = coordinates[:, 2:3]
@@ -486,24 +500,47 @@ class PhkV22RModel(nn.Module):
         startup = 1.0 - torch.exp(
             -(time - self.physics.time_start) / self.startup_time
         )
-        potential = self.physics.waveform(time) * torch.sigmoid(latent["potential"])
+        sigmoid_latent = {name: torch.sigmoid(value) for name, value in latent.items()}
+        sigmoid_derivative = {
+            name: value * (1.0 - value) for name, value in sigmoid_latent.items()
+        }
+        waveform = self.physics.waveform(time)
+        potential = waveform * sigmoid_latent["potential"]
         temperature = (
             self.temperature_scale
             * startup
             * (1.0 - z_fraction)
-            * torch.sigmoid(latent["temperature"])
+            * sigmoid_latent["temperature"]
         )
         initial = self.physics.initial_phase(coordinates).clamp(1.0e-8, 1.0 - 1.0e-8)
         phase = torch.sigmoid(
             torch.logit(initial)
             + self.phase_latent_scale * startup * latent["phase"]
         )
-        return PhkModelOutput(
+        output = PhkModelOutput(
             fields=torch.cat((potential, temperature, phase), dim=1),
             gate=gate,
             pilot_phase=pilot_phase,
             heater_pulse_proxy=heater_proxy,
         )
+        return PhkReadOnlyOutputDiagnostics(
+            output=output,
+            latents=latent,
+            raw_latent_sigmoid_derivatives=sigmoid_derivative,
+            analytic_output_jacobians={
+                "potential": waveform * sigmoid_derivative["potential"],
+                "temperature": (
+                    self.temperature_scale
+                    * startup
+                    * (1.0 - z_fraction)
+                    * sigmoid_derivative["temperature"]
+                ),
+                "phase": self.phase_latent_scale * startup * phase * (1.0 - phase),
+            },
+        )
+
+    def diagnostics(self, coordinates: torch.Tensor) -> PhkModelOutput:
+        return self.read_only_output_diagnostics(coordinates).output
 
     def forward(self, coordinates: torch.Tensor) -> torch.Tensor:
         return self.diagnostics(coordinates).fields
@@ -562,10 +599,10 @@ def evaluate_fields(
     )
 
 
-def interior_residuals(
+def interior_diagnostic_terms(
     model: PhkV22RModel, coordinates: torch.Tensor
 ) -> dict[str, torch.Tensor]:
-    """Evaluate the exact three strong-form residuals and sampler diagnostics."""
+    """Decompose the exact strong-form residuals without changing model state."""
 
     bundle = evaluate_fields(model, coordinates)
     values = bundle.values
@@ -582,30 +619,72 @@ def interior_residuals(
         gradients["potential"][:, 0:1].square()
         + gradients["potential"][:, 1:2].square()
     )
+    electric_conductivity_laplacian = conductivity * lap_potential
+    electric_gradient_x = (
+        conductivity_gradient[:, 0:1] * gradients["potential"][:, 0:1]
+    )
+    electric_gradient_z = (
+        conductivity_gradient[:, 1:2] * gradients["potential"][:, 1:2]
+    )
     electric = (
-        conductivity * lap_potential
-        + conductivity_gradient[:, 0:1] * gradients["potential"][:, 0:1]
-        + conductivity_gradient[:, 1:2] * gradients["potential"][:, 1:2]
+        electric_conductivity_laplacian + electric_gradient_x + electric_gradient_z
     )
+    thermal_time = gradients["temperature"][:, 2:3]
+    thermal_latent = physics.latent_ratio * gradients["phase"][:, 2:3]
+    thermal_diffusion = -physics.thermal_diffusivity * lap_temperature
+    thermal_cooling = physics.volumetric_cooling * values["temperature"]
+    thermal_joule = -physics.joule_gain * joule
     thermal = (
-        gradients["temperature"][:, 2:3]
-        + physics.latent_ratio * gradients["phase"][:, 2:3]
-        - physics.thermal_diffusivity * lap_temperature
-        + physics.volumetric_cooling * values["temperature"]
-        - physics.joule_gain * joule
+        thermal_time
+        + thermal_latent
+        + thermal_diffusion
+        + thermal_cooling
+        + thermal_joule
     )
-    phase = gradients["phase"][:, 2:3] - physics.mobility(
-        values["temperature"]
-    ) * (
-        physics.interface_width**2 * lap_phase
-        - physics.potential_derivative(values["temperature"], values["phase"])
+    phase_time = gradients["phase"][:, 2:3]
+    phase_diffusion = physics.interface_width**2 * lap_phase
+    potential_derivative = physics.potential_derivative(
+        values["temperature"], values["phase"]
     )
+    phase_reaction = -potential_derivative
+    mobility = physics.mobility(values["temperature"])
+    phase_kinetic_rhs = mobility * (phase_diffusion - potential_derivative)
+    phase = phase_time - phase_kinetic_rhs
     return {
-        "electric": electric,
-        "thermal": thermal,
-        "phase": phase,
+        "electric_conductivity_laplacian": electric_conductivity_laplacian,
+        "electric_conductivity_gradient_x": electric_gradient_x,
+        "electric_conductivity_gradient_z": electric_gradient_z,
+        "electric_residual": electric,
+        "thermal_time": thermal_time,
+        "thermal_latent": thermal_latent,
+        "thermal_diffusion": thermal_diffusion,
+        "thermal_cooling": thermal_cooling,
+        "thermal_joule": thermal_joule,
+        "thermal_residual": thermal,
+        "phase_time": phase_time,
+        "phase_diffusion": phase_diffusion,
+        "phase_reaction": phase_reaction,
+        "phase_kinetic_rhs": phase_kinetic_rhs,
+        "phase_residual": phase,
         "joule_density": joule,
+        "conductivity": conductivity,
+        "mobility": mobility,
         "phase_indicator": 4.0 * values["phase"] * (1.0 - values["phase"]),
+    }
+
+
+def interior_residuals(
+    model: PhkV22RModel, coordinates: torch.Tensor
+) -> dict[str, torch.Tensor]:
+    """Evaluate the exact three strong-form residuals and sampler diagnostics."""
+
+    terms = interior_diagnostic_terms(model, coordinates)
+    return {
+        "electric": terms["electric_residual"],
+        "thermal": terms["thermal_residual"],
+        "phase": terms["phase_residual"],
+        "joule_density": terms["joule_density"],
+        "phase_indicator": terms["phase_indicator"],
     }
 
 
@@ -938,12 +1017,14 @@ __all__ = [
     "PhkCollocationSampler",
     "PhkFieldBundle",
     "PhkModelOutput",
+    "PhkReadOnlyOutputDiagnostics",
     "PhkV22RArm",
     "PhkV22RModel",
     "PhkV22RPhysics",
     "boundary_residuals",
     "evaluate_fields",
     "initial_residuals",
+    "interior_diagnostic_terms",
     "interior_residuals",
     "normalized_residual_loss",
 ]

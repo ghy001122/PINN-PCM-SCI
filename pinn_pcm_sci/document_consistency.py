@@ -11,7 +11,13 @@ from typing import Sequence
 from .ledger import ExperimentLedger, LedgerValidationError
 
 
-STATUS_FIELDS = ("phase_id", "lifecycle_state", "blocker_id", "claim_status")
+STATUS_FIELDS = (
+    "phase_id",
+    "lifecycle_state",
+    "blocker_id",
+    "claim_status",
+    "next_research_execution_authorized",
+)
 STATUS_SURFACES = (
     Path("active_phase.md"),
     Path("README.md"),
@@ -29,6 +35,14 @@ LINK_SURFACES = (
     Path("archive/README.md"),
 )
 _FIELD_PATTERN = re.compile(r"^- `(?P<name>[a-z_]+)`: `(?P<value>[^`]+)`$", re.MULTILINE)
+_MACHINE_FIELD_PATTERN = re.compile(
+    r"^(?P<name>[A-Z_]+)=(?P<value>[^\r\n]*)$", re.MULTILINE
+)
+_MACHINE_STATUS_FIELDS = {
+    "PHASE_ID": "phase_id",
+    "BLOCKER_ID": "blocker_id",
+    "NEXT_RESEARCH_EXECUTION_AUTHORIZED": "next_research_execution_authorized",
+}
 _LINK_PATTERN = re.compile(r"\[[^\]]+\]\((?P<target>[^)]+)\)")
 _STALE_README_MARKERS = (
     "尚无求解器实现",
@@ -55,6 +69,17 @@ def _status_fields(path: Path) -> dict[str, str]:
     }
 
 
+def _machine_status_fields(path: Path) -> dict[str, str]:
+    if not path.is_file():
+        return {}
+    text = path.read_text(encoding="utf-8")
+    return {
+        _MACHINE_STATUS_FIELDS[match.group("name")]: match.group("value")
+        for match in _MACHINE_FIELD_PATTERN.finditer(text)
+        if match.group("name") in _MACHINE_STATUS_FIELDS
+    }
+
+
 def audit_repository(root: Path) -> list[DocumentIssue]:
     """Return every current authority-chain inconsistency found under *root*."""
 
@@ -62,6 +87,19 @@ def audit_repository(root: Path) -> list[DocumentIssue]:
     issues: list[DocumentIssue] = []
     reference_path = root / STATUS_SURFACES[0]
     reference = _status_fields(reference_path)
+    machine_reference = _machine_status_fields(reference_path)
+    for field, value in machine_reference.items():
+        if value != reference.get(field):
+            issues.append(
+                DocumentIssue(
+                    code="MACHINE_STATUS_FIELD_MISMATCH",
+                    path="active_phase.md",
+                    message=(
+                        f"machine {field}={value!r} differs from "
+                        f"metadata={reference.get(field)!r}"
+                    ),
+                )
+            )
     for relative_path in STATUS_SURFACES:
         path = root / relative_path
         fields = _status_fields(path)

@@ -12,12 +12,13 @@ def _write(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
-def _metadata(*, lifecycle: str = "AWAITING") -> str:
+def _metadata(*, lifecycle: str = "AWAITING", next_authorized: str = "false") -> str:
     return (
         "- `phase_id`: `PHASE_A`\n"
         f"- `lifecycle_state`: `{lifecycle}`\n"
         "- `blocker_id`: `BLOCKER_A`\n"
         "- `claim_status`: `NO_FORMAL_EVIDENCE`\n"
+        f"- `next_research_execution_authorized`: `{next_authorized}`\n"
     )
 
 
@@ -36,6 +37,47 @@ class DocumentConsistencyTests(unittest.TestCase):
             issues = audit_repository(root)
 
             self.assertIn("STATUS_FIELD_MISMATCH", {issue.code for issue in issues})
+
+    def test_research_authorization_divergence_is_reported(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            _write(root / "active_phase.md", "# Phase\n\n" + _metadata())
+            _write(root / "README.md", "# Project\n\n" + _metadata())
+            _write(root / "PROJECT_STATE.md", "# State\n\n" + _metadata())
+            _write(
+                root / "docs" / "plans" / "NEXT_ACTIONS.md",
+                "# Plan\n\n" + _metadata(next_authorized="true"),
+            )
+
+            issues = audit_repository(root)
+
+            self.assertIn("STATUS_FIELD_MISMATCH", {issue.code for issue in issues})
+
+    def test_active_phase_machine_block_divergence_is_reported(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            _write(
+                root / "active_phase.md",
+                "# Phase\n\n"
+                + _metadata()
+                + "\n~~~text\n"
+                + "PHASE_ID=RETIRED_PHASE\n"
+                + "BLOCKER_ID=BLOCKER_A\n"
+                + "NEXT_RESEARCH_EXECUTION_AUTHORIZED=false\n"
+                + "~~~\n",
+            )
+            _write(root / "README.md", "# Project\n\n" + _metadata())
+            _write(root / "PROJECT_STATE.md", "# State\n\n" + _metadata())
+            _write(
+                root / "docs" / "plans" / "NEXT_ACTIONS.md",
+                "# Plan\n\n" + _metadata(),
+            )
+
+            issues = audit_repository(root)
+
+            self.assertIn(
+                "MACHINE_STATUS_FIELD_MISMATCH", {issue.code for issue in issues}
+            )
 
     def test_duplicate_or_historical_live_plan_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

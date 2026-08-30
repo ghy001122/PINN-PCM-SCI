@@ -1,43 +1,45 @@
-# PLAN-PHK-V2.2R-V1.1：终局 No-Go 与导师初稿收口
+# PLAN-PHK-V2.3-R0A：STRONG_RAW 本地 CPU 只读失效诊断
 
-- `phase_id`: `PHK_V22_ONE_WEEK_SPRINT_TERMINAL_NO_GO`
+- `phase_id`: `PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT`
 - `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `MVP_NO_GO_NO_BASIC_COMPETENCE_ADVISOR_DRAFT_COMPLETE`
-- `authorization_state`: `TERMINAL_CLOSEOUT_AND_SELECTIVE_GIT_PUSH_ONLY`
-- `plan_status`: `TERMINAL_NO_GO_ADVISOR_DRAFT_COMPLETE`
-- `current_stage`: `TERMINAL_CLOSEOUT_COMPLETE`
+- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0A_INCONCLUSIVE_NO_METHOD_EVIDENCE`
 - `next_research_execution_authorized`: `false`
-- `supersedes`: `PLAN_PHK_V22R_V1_FORWARD_EXECUTION_AFTER_PROFILE`
-- `preserves`: `PHK_V21_ORACLE_NO_GO_AND_ALL_PRIOR_EVIDENCE`
-- `terminal_record`: `docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md`
-- `paper_package`: `paper/paper_v22r/`
+- `authorization_state`: `R0A_CONSUMED_CLOSEOUT_AND_SELECTIVE_GIT_ONLY`
+- `plan_status`: `R0A_INCONCLUSIVE_COMPLETE`
+- `current_stage`: `R0A_CLOSEOUT_COMPLETE`
+- `supersedes`: `PLAN_PHK_V22R_V11_TERMINAL_NO_GO`
+- `preserves`: `PHK_V22R_TERMINAL_NO_GO_RUN_DECISION_CLOSEOUT_AND_PAPER`
+- `program_contract`: `configs/phk_v23/program_contract.json`
+- `method_contract`: `configs/phk_v23/method_contract.json`
+- `diagnostic_contract`: `configs/phk_v23/r0a_diagnostic_contract.json`
+
+## 唯一执行项
+
+在 `HEAD=3dac71ed9197f565c470ab229b039e086615d678`、三份 R0A 合同、focused tests、legacy 回归与文档一致性门全部通过后，只允许执行一次：
+
+1. 在本地 CPU/FP64 加载既有 seed-17 `STRONG_RAW` final checkpoint；
+2. 使用不读取 reference 的 2048 点四窗均衡 Sobol pool 和 512 点梯度子集；
+3. 记录 latent、解析输出 Jacobian、PDE 分项、六 loss × 三 head 梯度矩阵与状态校验；
+4. 释放模型计算图后，只在本地读取 nominal development reference，做离散/代数与单场 teacher substitution；
+5. 输出 `R0A_ROOT_CAUSE_IDENTIFIED` 或 `R0A_INCONCLUSIVE`，写入机器产物、实验 ledger 与 closeout；
+6. 立即停止，不自动进入任何后续阶段。
+
+## 硬边界
+
+- GPU、AutoDL 与新增付费均为 0；CPU wall time 不得超过 4 小时。
+- 不构造 optimizer、不调用 `optimizer.step`、不更新参数、不改 checkpoint、不训练。
+- nominal reference 不得进入 loss、初始化、gate、sampler、collocation、阈值、超参、checkpoint selection 或 early stop。
+- 两份 stress reference 继续 `SEALED_UNREAD`，在任何 R0A 数据流中均不可达。
+- 不实施 R0B、R1、PJGR、recovery intervention、seed/预算/阈值搜索。
+- V2.2R terminal No-Go、英文 bounded-negative 稿和全部历史证据保持原样。
+
+## 停止条件
+
+任何身份漂移、stress 可达、状态字节变化、测试失败、非有限值、超过 4 小时或需要 GPU/云端，均立即以相应 blocker 收口。正常完成后 `next_research_execution_authorized=false`；若 `R0A_INCONCLUSIVE`，只允许记录且不执行一个后续建议。
 
 ## 当前处置
 
-本计划已经达到冻结终点：P0 对齐、四臂 nominal、产物回收、本地评价、机器裁决、实例关闭、五图与英文导师初稿均已完成。终局为
-`MVP_NO_GO_NO_BASIC_COMPETENCE`，不是正向 Method-MVP。
+唯一 R0A 已完成并返回 `R0A_INCONCLUSIVE`。机器 artifact、实验 manifest 与 closeout 已写入；V2.2R terminal No-Go 保持不变。当前只允许结果复核、验证与本次选择性 Git 交付。
 
-当前没有获授权的科研执行项。只允许复核已有证据、修复真实的稿件/复现错误、运行测试与一致性门禁，以及选择性 commit/push 本次收口文件。
-
-## 硬停止保持有效
-
-| 冻结事实 | 当前动作 |
-|---|---|
-| 四臂均未通过事件 competence | 不排序、不选 candidate、不计算 combined gain |
-| nominal decision 为 terminal No-Go | 不换 seed、不延长、不加 optimizer/module/route |
-| confirmation 未获授权 | 不做 raw timing calibration，不生成六份 stress predictions |
-| candidate freeze 不存在 | 不读取两份 stress reference |
-| 实例已关闭 | 不重新启动云端或产生新费用 |
-| 投稿未授权 | 不联系作者、不投稿、不上传投稿系统 |
-
-## 稿后研究路线
-
-`paper/paper_v22r/research_decision_log_zh.md` 中的 R0–R4 仅为
-`PROPOSED_NOT_AUTHORIZED`：先诊断 phase gradient/窗口/loss 的 competence 失败，再以单一干预恢复 strong raw competence，之后才可能重建多 seed 四臂归因与 sealed confirmation。任何一步都需要新的版本化合同、预算和用户明确授权；不得覆盖当前 run、decision 或 No-Go 初稿。
-
-## 下一次用户决策点
-
-- 若只做内部评阅：可继续文字润色、版式转换和导师反馈整合，不产生新科学证据。
-- 若要启动新研究：先审批 R0 诊断合同、单一不确定性、预算与停止条件。
-- 若要投稿或联系外部人员：需要单独明确授权，并先补齐作者信息与投稿定位。
+唯一未执行建议为 `R0B_FIRST_SWITCH_175`，因为它在保持 schedule denominator `1000` 时覆盖首次 causal switch。该建议不构成授权；任何 R0B、R1、PJGR 或 GPU 动作都需要新的版本化合同和用户明确批准。

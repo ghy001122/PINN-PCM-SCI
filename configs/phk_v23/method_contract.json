@@ -1,0 +1,89 @@
+{
+  "schema_id": "phk-v23-method-contract-r0a-v1",
+  "contract_id": "PHK_V23_R0A_STRONG_RAW_READ_ONLY_DIAGNOSTIC_V1",
+  "effective_date": "2026-08-30",
+  "program_contract": "configs/phk_v23/program_contract.json",
+  "status": "FROZEN_FOR_ONE_CPU_R0A_DIAGNOSTIC",
+  "legacy_source": {
+    "run_id": "20260830T112225-phk-v22r-v11-nominal-69109cd",
+    "source_commit": "69109cd324a6d5bf4690fe981086dc2f987eceed",
+    "arm": "STRONG_RAW",
+    "checkpoint": "outputs/runs/20260830T112225-phk-v22r-v11-nominal-69109cd/strong_raw/checkpoint-final.pt",
+    "checkpoint_sha256": "F3496D6DC8EDDAF6D9B9B505CAA05ED9E3304ED358CBBBACD9039FED50ABA705",
+    "manifest": "outputs/runs/20260830T112225-phk-v22r-v11-nominal-69109cd/strong_raw/manifest-final.json",
+    "training_log": "outputs/runs/20260830T112225-phk-v22r-v11-nominal-69109cd/strong_raw/training-log.jsonl",
+    "prediction_carrier": "outputs/runs/20260830T112225-phk-v22r-v11-nominal-69109cd/strong_raw/prediction-extra-fine-axes.npz",
+    "prediction_carrier_sha256": "4BC26A06D9FA702C8E470BBB0B8513B6E03D03BFC70E1A01C9098C818CB487F2",
+    "v22r_program_contract": "configs/phk_v22r/program_contract.json",
+    "v22r_program_contract_sha256": "A413F56A2317CEFF15FFF2D3BD183C11D990F2E47E8BA33F7316F11567275272",
+    "v22r_method_contract": "configs/phk_v22r/method_contract.json",
+    "v22r_method_contract_sha256": "FEEFB36A4D86CACFA6CBAA8C263E7071421415CE88B4F7FBF6BA5F31B9B71D4F",
+    "physical_program_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+    "physical_object_sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD"
+  },
+  "legacy_training_identity": {
+    "case_control": "FULL",
+    "seed": 17,
+    "dtype": "FLOAT64",
+    "hidden_width": 64,
+    "hidden_layers": 4,
+    "frequency_band": "BAND_A",
+    "updates": 1000,
+    "interior_points": 512,
+    "boundary_points": 128,
+    "initial_points": 128,
+    "temperature_scale": 2.5,
+    "phase_latent_scale": 8.0,
+    "hard_ic_startup_time": 0.35,
+    "optimizer_state_loaded": false
+  },
+  "diagnostic_pool": {
+    "algorithm": "PhkCollocationSampler.interior_uniform",
+    "sobol_dimension": 3,
+    "sobol_scramble": true,
+    "seed": 17,
+    "active_windows": 4,
+    "windows": [
+      [0.0, 0.35],
+      [0.35, 1.25],
+      [1.25, 1.6],
+      [1.6, 2.5]
+    ],
+    "scalar_points_per_window": 512,
+    "scalar_points_total": 2048,
+    "gradient_subset_rule": "FIRST_128_POINTS_OF_EACH_WINDOW_BLOCK",
+    "gradient_points_per_window": 128,
+    "gradient_points_total": 512,
+    "pool_sha256_float64_bytes": "4AF7927C2C577EFA2AFABC26C3A31EE139D2D9C572C2C3F22EA51A51021B2F8F",
+    "gradient_indices_sha256_int64_bytes": "28A31A9BEA9F98FA43AB596EB1F56FEB72A2D3F46E5AB18E7154882D66DF84F5",
+    "gradient_subset_sha256_float64_bytes": "F3E092406B41074F1CCCD1515686788CC56C20394AB59082CF58B9FD4B99335E",
+    "boundary_pool_seed": 1701,
+    "boundary_points_per_side": 128
+  },
+  "loss_head_gradient_matrix": {
+    "loss_rows": [
+      "ELECTRIC_PDE",
+      "THERMAL_PDE",
+      "PHASE_PDE",
+      "ELECTRIC_BC",
+      "THERMAL_BC",
+      "PHASE_BC"
+    ],
+    "head_columns": [
+      "potential",
+      "temperature",
+      "phase"
+    ],
+    "use_existing_effective_weights": true,
+    "same_head_pairwise_cosines": true,
+    "autograd_grad_only": true,
+    "optimizer_construction_forbidden": true
+  },
+  "physics_api_single_source": [
+    "PhkV22RPhysics.conductivity",
+    "PhkV22RPhysics.mobility",
+    "PhkV22RPhysics.potential_derivative",
+    "pinn_pcm_sci.phk_v22r_pinn.interior_residuals"
+  ],
+  "training_semantics_changed": false
+}

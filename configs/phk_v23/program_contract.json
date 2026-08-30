@@ -1,0 +1,73 @@
+{
+  "schema_id": "phk-v23-program-contract-r0a-v1",
+  "contract_id": "PHK_V23_BOUNDED_COMPETENCE_RECOVERY_R0A_V1",
+  "effective_date": "2026-08-30",
+  "phase_id": "PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT",
+  "status": "R0A_CPU_DIAGNOSTIC_EXPLICITLY_AUTHORIZED_ONCE",
+  "authorization": {
+    "source": "CURRENT_USER_EXECUTE_PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT",
+    "expected_base_commit": "3dac71ed9197f565c470ab229b039e086615d678",
+    "r0a_cpu_diagnostic_authorized": true,
+    "selective_commit_and_push_authorized": true,
+    "optimizer_or_parameter_update_authorized": false,
+    "gpu_or_cloud_authorized": false,
+    "r0b_authorized": false,
+    "r1_authorized": false,
+    "r2_or_pjgr_authorized": false,
+    "stress_reference_access_authorized": false,
+    "submission_or_external_contact_authorized": false
+  },
+  "preserves_without_rewrite": [
+    "PHK_V22_ONE_WEEK_SPRINT_TERMINAL_NO_GO",
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "PHK_V22R_V11_NOMINAL_RUN_DECISION_CLOSEOUT_AND_PAPER",
+    "ALL_PRIOR_NO_GO_EVIDENCE_AND_CONTRACTS"
+  ],
+  "execution_budget": {
+    "local_cpu_wall_hours_hard_cap": 4.0,
+    "gpu_hours": 0.0,
+    "incremental_cloud_cost_cny": 0.0,
+    "device": "CPU",
+    "dtype": "FLOAT64",
+    "maximum_scientific_runs": 1
+  },
+  "parent_v23_global_stop": {
+    "gpu_hours_hard_cap": 34.0,
+    "estimated_incremental_cost_cny_hard_cap": 95.0,
+    "calendar_days_from_execute_hard_cap": 14,
+    "balances_may_not_fund_extra_seed_module_or_rescue": true
+  },
+  "reference_roles": {
+    "nominal": "LOCAL_DEVELOPMENT_DIAGNOSTIC_ONLY",
+    "nominal_forbidden_uses": [
+      "LOSS",
+      "INITIALIZATION",
+      "GATE",
+      "SAMPLER",
+      "COLLOCATION",
+      "THRESHOLD_SELECTION",
+      "CHECKPOINT_SELECTION",
+      "EARLY_STOP",
+      "HYPERPARAMETER_SELECTION",
+      "CLOUD_UPLOAD"
+    ],
+    "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD_AND_INACCESSIBLE"
+  },
+  "record_only_not_authorized": {
+    "r0b_early_only": {
+      "executed_post_updates": 149,
+      "scientific_schedule_denominator": 1000,
+      "covers_first_causal_switch": false
+    },
+    "r0b_first_switch": {
+      "executed_post_updates": 175,
+      "scientific_schedule_denominator": 1000,
+      "covers_first_causal_switch": true
+    }
+  },
+  "terminal_outcomes": [
+    "R0A_ROOT_CAUSE_IDENTIFIED",
+    "R0A_INCONCLUSIVE"
+  ],
+  "completion_does_not_authorize_any_next_stage": true
+}

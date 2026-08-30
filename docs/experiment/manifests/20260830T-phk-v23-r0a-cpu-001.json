@@ -1,0 +1,82 @@
+{
+  "actual_budget": {
+    "cloud_cost_cny": 0.0,
+    "cpu_wall_seconds": 9.321134999976493,
+    "gpu_hours": 0.0,
+    "scientific_runs": 1
+  },
+  "artifacts": {
+    "diagnostic_artifact": "artifacts/20260830T-phk-v23-r0a-cpu-001.json",
+    "diagnostic_artifact_sha256": "5B767A6E2FB1C64C6EE0FE5B5552DD3546C586944B55DDADF07D4B0277F31843"
+  },
+  "case_id": "PHK_V23_R0A_STRONG_RAW_NOMINAL_FULL",
+  "checkpoint": {
+    "modified": false,
+    "path": "outputs/runs/20260830T112225-phk-v22r-v11-nominal-69109cd/strong_raw/checkpoint-final.pt",
+    "sha256": "F3496D6DC8EDDAF6D9B9B505CAA05ED9E3304ED358CBBBACD9039FED50ABA705"
+  },
+  "claim_status": "NO_METHOD_OR_COMPETENCE_CLAIM_DIAGNOSTIC_ONLY",
+  "code_identity": {
+    "expected_base_commit": "3dac71ed9197f565c470ab229b039e086615d678",
+    "legacy_training_source_commit": "69109cd324a6d5bf4690fe981086dc2f987eceed",
+    "v23_contracts": {
+      "diagnostic": {
+        "path": "configs/phk_v23/r0a_diagnostic_contract.json",
+        "sha256": "24A34F95A5EC8B92182205569208B4560AB77FD5D7EA366D0FD07855ABD46E33"
+      },
+      "method": {
+        "path": "configs/phk_v23/method_contract.json",
+        "sha256": "9F3EAAC62E189AACEFE239759E32D4BF11D50044679BC93AEA55D6A3A1AB0EF8"
+      },
+      "program": {
+        "path": "configs/phk_v23/program_contract.json",
+        "sha256": "C7F3D4D558E59FDFD450FFA01CF14FB2642CA2A84E6B9BF236F8AAFB059B9346"
+      }
+    }
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_v23_diagnostics",
+    "--checkpoint",
+    "outputs/runs/20260830T112225-phk-v22r-v11-nominal-69109cd/strong_raw/checkpoint-final.pt",
+    "--output",
+    "docs/experiment/artifacts/20260830T-phk-v23-r0a-cpu-001.json"
+  ],
+  "ended_at": "2026-08-30T11:15:16.735989+00:00",
+  "environment": {
+    "cuda_visible_devices": "",
+    "device": "CPU",
+    "dtype": "FLOAT64",
+    "numpy": "2.1.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9 | packaged by Anaconda, Inc. | (main, Apr 19 2024, 16:40:41) [MSC v.1916 64 bit (AMD64)]",
+    "torch": "2.5.1+cpu"
+  },
+  "evaluator_id": "phk-v23-r0a-diagnostic-contract-v1",
+  "evidence_identity": "NOMINAL_LOCAL_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "PHK_V23_R0A_CPU_DIAGNOSTICS",
+  "failure_class": "R0A_INCONCLUSIVE",
+  "gate": "PHK_V23_R0A",
+  "gate_outcome": "R0A_INCONCLUSIVE",
+  "method_id": "phk-v23-r0a-strong-raw-read-only-diagnostic-v1",
+  "numerical_validity": "VALID_SCIENTIFIC_MEASUREMENTS_WITH_NONSCIENTIFIC_ENTRY_RNG_DEVIATION",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "cloud_cost_cny": 0.0,
+    "cpu_wall_seconds_hard_cap": 14400.0,
+    "gpu_hours": 0.0,
+    "scientific_runs": 1
+  },
+  "replay_of": null,
+  "route_disposition": "STOP_R0A_RECOMMEND_R0B_FIRST_SWITCH_175_NOT_AUTHORIZED",
+  "run_id": "20260830T-phk-v23-r0a-cpu-001",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "failure_root_cause_diagnostic",
+  "seed": 17,
+  "split_id": "NOMINAL_DEVELOPMENT_SINGLE_FIXED_CASE",
+  "started_at": "2026-08-30T11:15:07.413107+00:00",
+  "supersedes": null,
+  "tier": "diagnostic"
+}

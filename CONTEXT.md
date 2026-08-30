@@ -5,6 +5,8 @@
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
 - `updated_at`: `2026-08-30`
 
+在不改写 PHK-V2.2R terminal No-Go 的前提下，`PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT` 已完成一次既有 STRONG_RAW final checkpoint 的本地 CPU/FP64 只读诊断，结果为 `R0A_INCONCLUSIVE`。nominal reference 只以本地 development evaluation/teacher-substitution 角色读取，未进入 loss、初始化、gate、sampler、collocation、阈值、超参、checkpoint selection 或 early stop；两份 stress reference 继续 sealed/unread。R0A 不构成 competence 恢复或方法增益，也不自动授权 R0B、R1 或 PJGR。
+
 ## 当前研究问题
 
 `HYPOTHESIS_TESTED_NEGATIVE_UNDER_V11`：二维电—热—相态 wall-cell 的关键相区和 Joule hotspot 只占小测度区域。场选择性各向异性多频表示与 phase/Joule-aware sampling 原拟在固定预算下改善相区形貌；实际四臂均未产生事件，因此本合同没有建立该组合的 competence 或增益。

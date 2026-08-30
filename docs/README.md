@@ -19,16 +19,17 @@
 
 ## 当前执行入口
 
-- 当前唯一 live plan：[PLAN-PHK-V2.2R-V1.1](plans/NEXT_ACTIONS.md)。状态为
-  `TERMINAL_NO_GO_ADVISOR_DRAFT_COMPLETE`；当前没有获授权的科研执行项。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。四臂 nominal 已终局为
-  `MVP_NO_GO_NO_BASIC_COMPETENCE`；只保留证据复核、稿件验证与本次收口的选择性
-  commit/push。新训练、confirmation、stress 解封和投稿均未授权。
+- 当前唯一 live plan：[PLAN-PHK-V2.3-R0A](plans/NEXT_ACTIONS.md)。一次本地 CPU/FP64
+  只读诊断已完成并返回 `R0A_INCONCLUSIVE`；当前不再授权新的科研执行。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R 四臂 nominal 的
+  `MVP_NO_GO_NO_BASIC_COMPETENCE` 保持冻结；stress、R0B、R1、PJGR 和投稿均未授权。
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 是 fixed-discretization
   单 seed 负面 Method-MVP；PDE loss 下降没有建立局域事件 competence，不能外推为 PINN
   全局失败、continuum truth、formal OOD 或实验结论。
 - 当前证据入口：[PHK-V2.1 terminal summary](../outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)、[S1 terminal closeout](experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)、[S7 package closeout](experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)、[最终 paper_v21 包](../paper/paper_v21/README.md)、[S0 scientific freeze](governance/2026-08-28-phk-v21-s0-scientific-contract-freeze.md)、[baseline identity audit](references/2026-08-27-phk-v2-1-baseline-reproduction-identity-audit.md)、[E1 solver selection](experiment/2026-08-27-phk-v21-e1-control-solver-selection.md)与 [E2 object selection](experiment/2026-08-27-phk-v21-e2-engineering-object-selection.md)。它们固定 Oracle No-Go、完整终局包与 neural 下游未到达。
 - 当前 V2.2R 决定入口：[ADR 0048](adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)。它在 profile 后激活 v1.1 四臂冲刺并只覆盖 [ADR 0047](adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md) 的后续执行语义，不改写 V2.1 terminal evidence 或既有 profile 事实。
+- 当前 PHK-V2.3 R0A 决定入口：[ADR 0049](adr/0049-activate-phk-v23-r0a-cpu-diagnostics.md)。它只激活一次 CPU 诊断，保留 V2.2R terminal No-Go，并明确禁止 GPU、训练、stress、R0B、R1 与 PJGR。
+- 当前 PHK-V2.3 R0A 结果入口：[2026-08-30 R0A CPU diagnostics closeout](experiment/2026-08-30-phk-v23-r0a-cpu-diagnostics-closeout.md)。机器裁决为 `R0A_INCONCLUSIVE`；artifact 和 manifest 分别固定完整诊断量与运行身份。
 - 当前 V2.2R 近期研究策略入口：[2026-08-29 研究策略整合](notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。它把实时会话中的模块组合、结果故事和止损思路映射到冻结合同，只提供解释和稿后路由，不新增授权或证据。
 - 当前 V2.2R stress reference 字节封存记录：
   [2026-08-29 PHK-V2.2R stress extra-fine seal](experiment/2026-08-29-phk-v22r-stress-reference-byte-seal.md)。
