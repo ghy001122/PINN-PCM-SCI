@@ -603,6 +603,37 @@ def _git_head() -> str:
     ).strip()
 
 
+def _assert_deployed_source_identity(source_identity: str) -> None:
+    """Bind either a Git checkout or a minimal deployment bundle to one commit."""
+
+    try:
+        if _git_head() == source_identity:
+            return
+    except (OSError, subprocess.CalledProcessError):
+        pass
+    manifest_path = (
+        ROOT / "cloud" / "phk_v23_r0b_autodl" / "deployed-source-manifest.json"
+    )
+    if not manifest_path.is_file():
+        raise ValueError("R0B deployment has neither matching Git HEAD nor source manifest")
+    manifest = _read_json(manifest_path)
+    if manifest.get("schema_id") != "phk-v23-r0b-deployed-source-manifest-v1":
+        raise ValueError("unsupported R0B deployed source manifest")
+    if manifest.get("source_identity") != source_identity:
+        raise ValueError("R0B deployed source manifest commit mismatch")
+    files = manifest.get("files")
+    if not isinstance(files, dict) or not files:
+        raise ValueError("R0B deployed source manifest has no file identities")
+    for relative, expected in files.items():
+        exact = (ROOT / relative).resolve()
+        try:
+            exact.relative_to(ROOT.resolve())
+        except ValueError as exc:
+            raise PermissionError("R0B deployed source path escaped the project") from exc
+        if not exact.is_file() or _sha256_path(exact) != expected:
+            raise ValueError(f"R0B deployed source file drift: {relative}")
+
+
 def _strong_raw_config(device: str) -> PhkTrainingConfig:
     return PhkTrainingConfig(
         arm=PhkV22RArm.STRONG_RAW.value,
@@ -673,8 +704,7 @@ def run_reference_blind_gpu_replay(
     hourly_price_cny: float,
 ) -> dict[str, Any]:
     contracts = load_r0b_contracts()
-    if _git_head() != source_identity:
-        raise ValueError("R0B source identity differs from Git HEAD")
+    _assert_deployed_source_identity(source_identity)
     output = Path(output_root).resolve()
     if output.exists():
         raise FileExistsError(f"R0B output already exists: {output}")
