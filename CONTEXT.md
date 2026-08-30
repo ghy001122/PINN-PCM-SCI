@@ -1,15 +1,15 @@
 # PINN-PCM-SCI 当前研究总览与论文口径
 
-本文件是当前研究设定、规范术语与论文表述的单一来源，不承载授权、行动清单或易过期的运行结果。当前路线为 `PHK-V2.2R / RAPID METHOD-RESCUE AND POSITIVE-EVIDENCE SPRINT`；它是独立于 PHK-V2.1 Oracle No-Go 的 fixed-discretization Method-MVP，不改写任何历史证据。
+本文件是当前研究设定、规范术语与论文表述的单一来源，不承载授权或行动清单。当前路线为已终局的 `PHK-V2.2R / V1.1 FOUR-ARM METHOD-MVP`；它是独立于 PHK-V2.1 Oracle No-Go 的 fixed-discretization 单-seed 负面结果，不改写任何历史证据。
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
 - `updated_at`: `2026-08-30`
 
 ## 当前研究问题
 
-`HYPOTHESIS`：二维电—热—相态 wall-cell 的关键相区和 Joule hotspot 只占小测度区域。普通强 PINN 倾向先学习平滑背景，因 representation bandwidth 与 collocation support 分配不匹配而欠分辨局域相区。场选择性各向异性多频表示与 phase/Joule-aware sampling 可能在固定预算下改善相区形貌，同时保持温度、端电流和事件拓扑非劣。
+`HYPOTHESIS_TESTED_NEGATIVE_UNDER_V11`：二维电—热—相态 wall-cell 的关键相区和 Joule hotspot 只占小测度区域。场选择性各向异性多频表示与 phase/Joule-aware sampling 原拟在固定预算下改善相区形貌；实际四臂均未产生事件，因此本合同没有建立该组合的 competence 或增益。
 
-默认候选方法为：
+本轮被检验的方法为：
 
 > **FS-PJAMF-PINN: Field-Selective Phase–Joule-Aware Anisotropic Multi-Frequency Physics-Informed Neural Network**
 
@@ -22,6 +22,10 @@
 `MF_PLUS_SAMPLER`。只有完整组合可以作为 proposed method 晋级。Strict PHA 已完成唯一
 100-update profile；成本门通过但增益门失败，按预声明规则退出关键路径且不得调 gate。
 generic-RAR 的 P0 截止已过且未形成稳定实现，因此本周采用四臂 fallback，不再新增该控制。
+
+`VERIFIED`：四臂均完成 1000 updates 且 PDE loss 下降，但相场始终未超过 0.5 阈值，
+两次参考事件全部缺失。冻结结论为 `MVP_NO_GO_NO_BASIC_COMPETENCE`；没有 candidate、
+confirmation 或 stress 解封。
 
 ## 物理对象
 
@@ -53,11 +57,12 @@ generic-RAR 的 P0 截止已过且未形成稳定实现，因此本周采用四�
 
 三个 case 只能支持 case-specific robustness 或 bounded regime evidence，不能称 formal OOD、device/material generalization。
 
-## 当前冲刺路线
+## 当前终局路线
 
-四臂训练信号只含 PDE、IC 和 BC residual，论文身份为 physics-only PINN。Route B/C 本周
-停用；若 strong raw 不具基本 competence，或完整组合没有预声明的可归因增益，则按真实
-No-Go 收口，不得借 sparse anchors、新架构、换 seed、延长训练或新模块继续寻找正结果。
+四臂训练信号只含 PDE、IC 和 BC residual，论文身份为 physics-only PINN。strong raw 与
+其余三臂均不具基本 event competence，因此路线已按真实 No-Go 收口。不得借 sparse
+anchors、新架构、换 seed、延长训练或新模块回头寻找正结果；任何新诊断必须成为独立、
+重新授权的研究版本。
 
 ## 评价与可写主张
 
@@ -69,8 +74,8 @@ No-Go 收口，不得借 sparse anchors、新架构、换 seed、延长训练或
 
 (U_j) 统一称 resolution-sensitivity margin。小于该敏感范围的改善只允许表述为“更好逼近固定离散参考”，不得写成超过数值不确定性或 continuum accuracy。
 
-真实结果只可路由为三种有限正向故事：主要精度、sharp-transition regime 条件优势或
-accuracy–cost Pareto。若均不成立，则保存最小 No-Go 并完成证据一致的初稿，不制造正结论。
+当前真实结果只允许路由为 No-Go：PDE loss 收敛和相同的 0.00515 primary 不能覆盖事件
+完全缺失。stress 未读，因此不存在主要精度、regime-aware、Pareto 或 sealed robustness 故事。
 
 ## 规范术语与研究纪律
 
@@ -83,16 +88,16 @@ accuracy–cost Pareto。若均不成立，则保存最小 No-Go 并完成证据
 - **device-level QoI**：由预测场按冻结公式确定性计算的端电流、Joule energy、phase area、peak temperature、event topology 与 recovery；不是另一个可训练标签。
 - **A→A′ adaptation**：透明保留底层模块来源，同时把 PCM 定向接口、场选择、轴向频带、物理采样配比和联合预算分工明确为本项目适配贡献。
 
-P0 已把合同、实现、runner、评价与稿件对齐到批准的 v1.1；门禁通过后，方法、更新数、
-seed、指标、阈值、比较臂和预算已经冻结，不再结果导向调参。任何故事包装只能在已测证据
-支持的预声明分支中选择，不得编造结果、隐藏不利 case、抹除来源或在开封后移动标准。
+P0 已把合同、实现、runner、评价与稿件对齐到批准的 v1.1；随后四臂 nominal 按冻结身份
+执行并触发 terminal No-Go。方法、更新数、seed、指标、阈值、比较臂和预算不再结果导向
+修改。不得编造结果、隐藏不利 metric、抹除来源或把未执行 stress 写入论文。
 
 ## 论文故事
 
-普通 PINN 像平均分配清晰度的相机：大范围平滑背景很快学好，却把决定器件状态的小相区和热点拍糊。全局 Fourier 相当于全域一直开高倍镜，可能浪费容量并加重二阶 AD。FS-PJAMF-PINN 为不同物理场和方向分配不同频带，再用 phase/Joule physics 分配训练点；预测场确定性地产生端电流、Joule energy、phase area、peak temperature、event topology 与 recovery，从而检验局部场改善是否传递到器件输出。
+当前论文故事不是“新方法成功”，而是“平均误差掩盖了稀疏事件完全漏检”。四臂都像只学到平滑背景的相机：PDE loss 下降，但决定器件状态的小相区始终没有出现。全域 primary 因事件占比小而只有 0.00515；event guard 先于 scalar ranking，阻止了把漏检包装成高精度。
 
-底层 Fourier、多尺度表示、Sobol、RAR、causal/staggered/continuation 均有先例。可主张的项目贡献只能是透明的 PCM 定向 A→A′ 接口、联合预算分配、机制归因和真实固定预算增量；不得隐藏来源或声称底层模块首创。
+底层 Fourier、多尺度表示、Sobol、RAR、causal/staggered/continuation 均有先例。本轮不能主张 PCM 定向组合带来增量；只可报告透明接口、预注册 competence gate 与真实固定预算负面结果。不得隐藏来源或声称底层模块首创。
 
 ## 权威与状态路由
 
-当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。profile 后的 v1.1 决定见 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)；当前冻结机器身份由 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json) 定义，P0 闭合事实见 [alignment closeout](docs/experiment/2026-08-30-phk-v22r-v11-alignment-closeout.md)。近期研究策略的受约束整合见 [2026-08-29 strategy integration](docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。
+当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。终局证据见 [nominal terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)，稿件见 [paper_v22r](paper/paper_v22r/README.md)。profile 后的 v1.1 决定见 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)；冻结机器身份由 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json) 定义。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。

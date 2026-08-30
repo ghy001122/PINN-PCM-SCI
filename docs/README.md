@@ -20,12 +20,13 @@
 ## 当前执行入口
 
 - 当前唯一 live plan：[PLAN-PHK-V2.2R-V1.1](plans/NEXT_ACTIONS.md)。状态为
-  `P0_COMPLETE_P1_NOMINAL_ACTIVE`。v1.1
-  [`program_contract.json`](../configs/phk_v22r/program_contract.json) 与
-  [`method_contract.json`](../configs/phk_v22r/method_contract.json) 已冻结，runner、run card、
-  聚焦测试、组合回归和文档门禁已对齐；四臂 nominal 已获授权但尚无结果入库。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。用户已在 2026-08-30 明确解除等待并批准从 v1.1 对齐连续推进四臂 nominal、条件性 sealed confirmation 和论文初稿；AutoDL 150 元上限、稿件和当前仓库选择性 commit/push 保持授权，投稿仍未授权。
-- 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 使用 PHK-V2.1 fixed-discretization carrier，不宣称 continuum oracle；本周采用四臂 fallback，strict PHA、generic RAR 与 Route B/C 均不再进入实验轴。
+  `TERMINAL_NO_GO_ADVISOR_DRAFT_COMPLETE`；当前没有获授权的科研执行项。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。四臂 nominal 已终局为
+  `MVP_NO_GO_NO_BASIC_COMPETENCE`；只保留证据复核、稿件验证与本次收口的选择性
+  commit/push。新训练、confirmation、stress 解封和投稿均未授权。
+- 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 是 fixed-discretization
+  单 seed 负面 Method-MVP；PDE loss 下降没有建立局域事件 competence，不能外推为 PINN
+  全局失败、continuum truth、formal OOD 或实验结论。
 - 当前证据入口：[PHK-V2.1 terminal summary](../outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)、[S1 terminal closeout](experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)、[S7 package closeout](experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)、[最终 paper_v21 包](../paper/paper_v21/README.md)、[S0 scientific freeze](governance/2026-08-28-phk-v21-s0-scientific-contract-freeze.md)、[baseline identity audit](references/2026-08-27-phk-v2-1-baseline-reproduction-identity-audit.md)、[E1 solver selection](experiment/2026-08-27-phk-v21-e1-control-solver-selection.md)与 [E2 object selection](experiment/2026-08-27-phk-v21-e2-engineering-object-selection.md)。它们固定 Oracle No-Go、完整终局包与 neural 下游未到达。
 - 当前 V2.2R 决定入口：[ADR 0048](adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)。它在 profile 后激活 v1.1 四臂冲刺并只覆盖 [ADR 0047](adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md) 的后续执行语义，不改写 V2.1 terminal evidence 或既有 profile 事实。
 - 当前 V2.2R 近期研究策略入口：[2026-08-29 研究策略整合](notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。它把实时会话中的模块组合、结果故事和止损思路映射到冻结合同，只提供解释和稿后路由，不新增授权或证据。
@@ -43,6 +44,10 @@
   [2026-08-30 PHK-V2.2R v1.1 alignment closeout](experiment/2026-08-30-phk-v22r-v11-alignment-closeout.md)。
   它记录机器合同、四臂 runner、decision/freeze、云端 run card 和验证门禁已经闭合；不把
   工程通过表述为 nominal 结果。
+- 当前 V2.2R nominal 终局收口：
+  [2026-08-30 PHK-V2.2R v1.1 nominal terminal closeout](experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)。
+  它记录四臂完整运行、本地评价、`MVP_NO_GO_NO_BASIC_COMPETENCE`、预算和关机事实；
+  [paper_v22r](../paper/paper_v22r/README.md) 保存英文导师初稿、五图与复现包。
 - 当前冲刺跨工具协作与数据路由：
   [2026-08-30 sprint collaboration and data routing](governance/2026-08-30-sprint-collaboration-and-data-routing.md)。
   它规定本地、AutoDL、GitHub、Codex、ChatGPT、VSCode 与 PowerShell 的职责和文件去向，
@@ -71,6 +76,7 @@
 | [`../paper/paper_v1/`](../paper/paper_v1/README.md) | GOAL-PAPER-ONE-SHOT-V1 第一版论文包在哪里？ | 英文/中文正文、图表、补充和复现材料；保持原 numerical-contract No-Go 边界。 |
 | [`../paper/paper_v2/`](../paper/paper_v2/README.md) | PHK-V2 的 Oracle No-Go 第二版论文与复现包在哪里？ | 英文/中文正文、图表、表格、引用、补充、复现、方法剖析和 claim audit；保持无 PINN 方法证据边界。 |
 | [`../paper/paper_v21/`](../paper/paper_v21/README.md) | PHK-V2.1 的 Oracle convergence No-Go 终局论文与复现包在哪里？ | 英文/中文正文、通俗故事、六图、表格、引用、补充、复现、baseline anatomy、claim audit 和 package manifest；保持 Sharp/PF/PINN/PHA/KC/formal 未到达边界。 |
+| [`../paper/paper_v22r/`](../paper/paper_v22r/README.md) | PHK-V2.2R 四臂 nominal 负面 Method-MVP 初稿在哪里？ | 英文正文、五图、表格、补充、复现、claim audit 与研究决策记录；保持 no candidate、no confirmation、stress sealed/unread 边界。 |
 | [`adr/README.md`](adr/README.md) | 为什么接受某项研究决定？ | 保存已接受决定及理由；计划和笔记不能覆盖 ADR。编号 ADR 必须进入该索引。 |
 | [`plans/NEXT_ACTIONS.md`](plans/NEXT_ACTIONS.md) | 当前或最近一次 GOAL 合同是什么状态？ | 唯一 current plan；当前记录本轮完成与原冻结合同，不能产生新授权或重新定义研究。 |
 | [`experiment/`](experiment/) | 某次运行实际上做了什么、得到什么？ | 只记已执行事实。记录按日期新增，不追溯改写；新解释用新记录的 `supersedes` 指向旧记录。 |
