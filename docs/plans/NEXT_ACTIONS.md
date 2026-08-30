@@ -14,6 +14,8 @@
 - `method_contract`: `configs/phk_v22r/method_contract.json`
 - `decision_record`: `docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md`
 - `profile_record`: `docs/experiment/2026-08-30-phk-v22r-gpu-profile-closeout.md`
+- `alignment_record`: `docs/experiment/2026-08-30-phk-v22r-v11-alignment-closeout.md`
+- `workflow_record`: `docs/governance/2026-08-30-sprint-collaboration-and-data-routing.md`
 - `route_selection_deadline`: `2026-08-30T23:59:00+08:00`
 - `experiment_axis_freeze_deadline`: `2026-09-02T23:59:00+08:00`
 - `final_deadline`: `2026-09-04T23:59:00+08:00`
@@ -34,7 +36,7 @@
 
 ## 现在执行
 
-1. **P1 nominal 四臂**：立即在当前 V100 上执行 `STRONG_RAW`、`MF_ONLY`、
+1. **P1 nominal 四臂**：先实时复查实例、GPU、tmux 和重复进程，再在已配置的 V100 上执行 `STRONG_RAW`、`MF_ONLY`、
    `SAMPLER_ONLY`、`MF_PLUS_SAMPLER`；FP64、Band A、`512/128/128`、Adam、1000
    updates。无 early stop、warm start、L-BFGS、续训或事后救援。
 2. **P2 本地裁决**：下载 checkpoint/prediction/log/manifest，保持云端 reference-blind；

@@ -12,7 +12,7 @@
 - `reference_status`: `THREE_EXTRA_FINE_REFERENCES_AVAILABLE_TWO_STRESS_UNREAD_SEALED`
 - `implementation_status`: `V11_FOUR_ARM_EXECUTION_STACK_VERIFIED`
 - `method_selection_status`: `NOT_YET_SELECTED_FOUR_ARM_FALLBACK`
-- `compute_status`: `AUTODL_V100_PROFILE_COMPLETE_GPU_ON_IDLE_NOMINAL_NEXT`
+- `compute_status`: `AUTODL_V100_PROFILE_COMPLETE_NOMINAL_NOT_RUN`
 - `contract_status`: `V11_FOUR_ARM_FROZEN_NOMINAL_GATE_PASSED`
 - `cloud_budget_cny_hard_cap`: `150`
 - `cloud_estimated_cumulative_spend_cny_at_profile_closeout`: `3.6619446915`
@@ -25,8 +25,9 @@
   对齐开始，按冻结门连续推进 nominal、条件性 sealed confirmation、图表、复现材料和论文
   初稿；不需要 routine 再批准。AutoDL 150 元硬上限及当前仓库选择性 commit/push 授权保持，
   作者联系、凭据披露和投稿系统操作仍未授权。
-- AutoDL 实例当前为 `Tesla V100-PCIE-32GB`，Python 3.11.9、PyTorch 2.5.1+cu118、
-  CUDA 11.8 与 FP64 probe 有效；GPU 已上线且核验时空闲，无训练进程。
+- GPU profile 收口时的 AutoDL 环境为 `Tesla V100-PCIE-32GB`，Python 3.11.9、
+  PyTorch 2.5.1+cu118、CUDA 11.8，且 FP64 probe 有效；当时 GPU 空闲且无训练进程。
+  这是历史时间点快照，不表示此刻实例、tmux 或 GPU 的实时状态。
 - run `20260830T0122-phk-v22r-d1-gpu-profile-cf372713` 已完成五臂 100-update
   profile。五臂均 `COMPLETE` 且有限；四个 primary arms 的速度为
   0.5203–0.5673 s/update，峰值显存为 0.302–1.158 GB。
@@ -49,8 +50,8 @@
 
 ## IN PROGRESS
 
-- 立即在当前 V100 上执行四臂 nominal；训练前显式设置有效的
-  `OMP_NUM_THREADS`，消除现有交互 shell 的 libgomp 警告。
+- P1 四臂 nominal 已激活但尚无结果入库；实际启动前先复查实例、GPU、tmux 与重复进程，
+  并显式设置有效的 `OMP_NUM_THREADS`，再按冻结 run card 执行。
 
 ## UNKNOWN
 
@@ -65,6 +66,9 @@
 - 唯一 live plan：`docs/plans/NEXT_ACTIONS.md`
 - 当前决策：`docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md`
 - profile 事实：`docs/experiment/2026-08-30-phk-v22r-gpu-profile-closeout.md`
+- P0 v1.1 对齐事实：`docs/experiment/2026-08-30-phk-v22r-v11-alignment-closeout.md`
+- 跨工具协作与数据路由：
+  `docs/governance/2026-08-30-sprint-collaboration-and-data-routing.md`
 - 当前 v1.1 机器合同：`configs/phk_v22r/program_contract.json` 与
   `configs/phk_v22r/method_contract.json`
 - 历史 V2.1：`paper/paper_v21/`

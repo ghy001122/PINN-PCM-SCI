@@ -1,6 +1,6 @@
 # PHK-V2.2R Claim-to-Artifact Registry
 
-Status: `V11_PROFILE_INDEXED_FOUR_ARM_NOMINAL_PENDING`
+Status: `V11_ALIGNMENT_VERIFIED_FOUR_ARM_NOMINAL_PENDING`
 
 | Claim or manuscript token | Required artifact | Current status |
 |---|---|---|

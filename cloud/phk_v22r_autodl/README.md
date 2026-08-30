@@ -41,9 +41,12 @@ executes, in order, `STRONG_RAW`, `MF_ONLY`, `SAMPLER_ONLY`, and
 Each arm emits its checkpoint, training log, start/final manifests, ledger, and
 reference-blind prediction carrier.
 
-Run the command in the existing `phk_train` tmux session with a launcher whose
-exit trap calls `/usr/bin/shutdown`. Success, failure, or interruption must all
-end in shutdown after allowed artifacts are recovered.
+Before launch, inspect `tmux ls`, the process list and `nvidia-smi`. Attach to
+`phk_train` if it exists; create it only when it does not, and never start a
+second nominal process. Use a launcher whose exit trap calls `/usr/bin/shutdown`.
+Success, failure, or interruption must all end in shutdown after allowed
+artifacts are recovered. A prior tmux/GPU snapshot is never proof of current
+state.
 
 ## Nominal adjudication boundary
 

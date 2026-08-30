@@ -17,11 +17,14 @@
 三场强残差、四个 primary arms、physics sampler、prediction/evaluator、stress 封存门和
 decision core 已实现；两份 stress extra-fine 已完成字节 seal 且未开封。V100 五臂
 100-update profile 均有限，四个 primary arms 为 0.5203–0.5673 s/update；profile 只支持
-工程成本与 strict-PHA 路由裁决，不支持方法排序。用户现已明确批准完整后续冲刺；第一步必须
-完成 v1.1 合同/runner/run-card 对齐并通过门禁，之后才运行四臂 nominal。AutoDL 总额仍不
-超过人民币 150 元，当前仓库可选择性 commit/push；作者联系和期刊投稿未授权。当前决定见
+工程成本与 strict-PHA 路由裁决，不支持方法排序。用户现已明确批准完整后续冲刺；P0 v1.1
+合同、runner、run card 与文档已对齐，聚焦测试 16/16、组合回归 47/47 和文档一致性门禁
+通过，当前进入尚未产生结果的四臂 nominal 阶段。AutoDL 总额仍不超过人民币 150 元，当前
+仓库可选择性 commit/push；作者联系和期刊投稿未授权。当前决定见
 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)，
-profile 事实见[收口记录](docs/experiment/2026-08-30-phk-v22r-gpu-profile-closeout.md)。
+profile 事实见[收口记录](docs/experiment/2026-08-30-phk-v22r-gpu-profile-closeout.md)，P0
+事实见[对齐收口](docs/experiment/2026-08-30-phk-v22r-v11-alignment-closeout.md)，跨工具协作与
+数据位置见[冲刺工作流](docs/governance/2026-08-30-sprint-collaboration-and-data-routing.md)。
 
 历史 PHK-V2.1 仍固定为 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`，无 Sharp/PF/PINN/PHA/KC/formal 方法证据；其 [terminal summary](outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)与 [paper_v21](paper/paper_v21/README.md)保持原样。V2、V1 和全部更早 No-Go 同样不回写。
 

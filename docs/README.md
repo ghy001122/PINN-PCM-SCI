@@ -20,10 +20,10 @@
 ## 当前执行入口
 
 - 当前唯一 live plan：[PLAN-PHK-V2.2R-V1.1](plans/NEXT_ACTIONS.md)。状态为
-  `ACTIVE_P0_V11_ALIGNMENT_AUTHORIZED`。旧
+  `P0_COMPLETE_P1_NOMINAL_ACTIVE`。v1.1
   [`program_contract.json`](../configs/phk_v22r/program_contract.json) 与
-  [`method_contract.json`](../configs/phk_v22r/method_contract.json) 只保留 v1 profile
-  身份；在 v1.1 合同、runner、run card、测试和文档门禁全部对齐前不得启动 nominal。
+  [`method_contract.json`](../configs/phk_v22r/method_contract.json) 已冻结，runner、run card、
+  聚焦测试、组合回归和文档门禁已对齐；四臂 nominal 已获授权但尚无结果入库。
 - 当前阶段与授权：[active_phase.md](../active_phase.md)。用户已在 2026-08-30 明确解除等待并批准从 v1.1 对齐连续推进四臂 nominal、条件性 sealed confirmation 和论文初稿；AutoDL 150 元上限、稿件和当前仓库选择性 commit/push 保持授权，投稿仍未授权。
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 使用 PHK-V2.1 fixed-discretization carrier，不宣称 continuum oracle；本周采用四臂 fallback，strict PHA、generic RAR 与 Route B/C 均不再进入实验轴。
 - 当前证据入口：[PHK-V2.1 terminal summary](../outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)、[S1 terminal closeout](experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)、[S7 package closeout](experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)、[最终 paper_v21 包](../paper/paper_v21/README.md)、[S0 scientific freeze](governance/2026-08-28-phk-v21-s0-scientific-contract-freeze.md)、[baseline identity audit](references/2026-08-27-phk-v2-1-baseline-reproduction-identity-audit.md)、[E1 solver selection](experiment/2026-08-27-phk-v21-e1-control-solver-selection.md)与 [E2 object selection](experiment/2026-08-27-phk-v21-e2-engineering-object-selection.md)。它们固定 Oracle No-Go、完整终局包与 neural 下游未到达。
@@ -39,6 +39,14 @@
   [2026-08-30 PHK-V2.2R GPU profile closeout](experiment/2026-08-30-phk-v22r-gpu-profile-closeout.md)。
   五臂均有限；strict PHA 成本门通过但增益门失败，按冻结规则退出关键路径。该 profile
   不建立四臂排序、candidate freeze 或正向方法结果。
+- 当前 V2.2R P0 v1.1 对齐收口：
+  [2026-08-30 PHK-V2.2R v1.1 alignment closeout](experiment/2026-08-30-phk-v22r-v11-alignment-closeout.md)。
+  它记录机器合同、四臂 runner、decision/freeze、云端 run card 和验证门禁已经闭合；不把
+  工程通过表述为 nominal 结果。
+- 当前冲刺跨工具协作与数据路由：
+  [2026-08-30 sprint collaboration and data routing](governance/2026-08-30-sprint-collaboration-and-data-routing.md)。
+  它规定本地、AutoDL、GitHub、Codex、ChatGPT、VSCode 与 PowerShell 的职责和文件去向，
+  不产生科研授权或科学证据。
 - 当前 PHK-V2 制品入口：[完整论文与复现包](../paper/paper_v2/README.md)与 [S2 终局收口](experiment/2026-08-27-phk-v2-s2-terminal-closeout.md)。包内清单、图源、链接、引用键和 claim boundary 已验证，不改变科学证据上限。
 - 上一科研终点：[S2 终局收口](experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)与[归档 GOAL](../archive/2026-08-27-goal-paper-one-shot-v1-complete.md)。Q0 只通过零驱动守卫；首个受驱动 QN intent 失败且已计账。该 No-Go、V1 论文和全部历史证据保持原样。
 - 上一对象组合终点：[方法盲对象筛选报告](references/2026-08-26-method-blind-cleanroom-object-screen.md)与 [ADR 0042](adr/0042-close-package-a-with-method-blind-object-portfolio-no-go.md)。3/3 冻结家族在 Gate 3 最早失败，11/12 新载体后形成 `PORTFOLIO_NO_GO_PACKAGE_A_FROZEN_3_FAMILIES_11_CARRIERS`。

@@ -77,14 +77,14 @@ accuracy–cost Pareto。若均不成立，则保存最小 No-Go 并完成证据
 - **fixed-discretization numerical reference**：固定网格、时间步与输出采样下的数值参考；不得写成 continuum oracle、ground truth 或实验真值。
 - **development case**：允许在冻结预算内选路、调参和做功能等价替换的 nominal case；其 reference 只参与本地评分，不进入 Route A 的训练信号或 sampler feature。
 - **sealed confirmation case**：候选、阈值、损失、预算与评价口径冻结后才可开封的 stress case；开封结果只能决定 PASS、No-Go、regime-aware 或 Pareto 边界，不能反馈调参。
-- **functional pivot**：仅保留为历史 v1 术语；v1.1 nominal 前不再允许 functional pivot。
+- **functional pivot**：仅保留为历史 v1 术语；v1.1 nominal 及其后续确认阶段不允许 functional pivot。
 - **candidate freeze**：结束开发并固定方法身份、训练合同、评价合同和确认矩阵的不可逆边界。
 - **Method-MVP**：包含可运行方法主体、强 comparator、关键消融、真实有限结果和可复现入口的导师评审稿；不等于可直接投稿的完整多-seed/formal-OOD 证据包。
 - **device-level QoI**：由预测场按冻结公式确定性计算的端电流、Joule energy、phase area、peak temperature、event topology 与 recovery；不是另一个可训练标签。
 - **A→A′ adaptation**：透明保留底层模块来源，同时把 PCM 定向接口、场选择、轴向频带、物理采样配比和联合预算分工明确为本项目适配贡献。
 
-P0 只允许把合同、实现、runner、评价与稿件对齐到已批准的 v1.1；P0 门禁后方法、更新数、
-seed、指标、阈值、比较臂和预算立即冻结，不再结果导向调参。任何故事包装只能在已测证据
+P0 已把合同、实现、runner、评价与稿件对齐到批准的 v1.1；门禁通过后，方法、更新数、
+seed、指标、阈值、比较臂和预算已经冻结，不再结果导向调参。任何故事包装只能在已测证据
 支持的预声明分支中选择，不得编造结果、隐藏不利 case、抹除来源或在开封后移动标准。
 
 ## 论文故事
@@ -95,4 +95,4 @@ seed、指标、阈值、比较臂和预算立即冻结，不再结果导向调�
 
 ## 权威与状态路由
 
-当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。profile 后的 v1.1 决定见 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)；旧 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json) 必须在 nominal 前完成版本化对齐。近期研究策略的受约束整合见 [2026-08-29 strategy integration](docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。
+当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。profile 后的 v1.1 决定见 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)；当前冻结机器身份由 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json) 定义，P0 闭合事实见 [alignment closeout](docs/experiment/2026-08-30-phk-v22r-v11-alignment-closeout.md)。近期研究策略的受约束整合见 [2026-08-29 strategy integration](docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。

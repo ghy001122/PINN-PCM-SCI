@@ -11,6 +11,11 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
+# Regenerable local research/tool scratch trees
+.tmp/
+.j2/
+ideaspark_run/
+
 # Raw run packages stay local; compact manifests remain under docs/experiment/.
 outputs/
 

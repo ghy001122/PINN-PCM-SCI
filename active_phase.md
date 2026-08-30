@@ -24,7 +24,8 @@
 
 ## 当前允许
 
-- P0 v1.1 已闭合；现在在已上线的 AutoDL V100 32 GB 上以 FP64、seed 17、Band A、
+- P0 v1.1 已闭合；P1 每次先实时核验实例、GPU 与重复进程，再在已配置的 AutoDL V100
+  32 GB 上以 FP64、seed 17、Band A、
   `512/128/128` 点和 scratch start 执行固定 1000 updates 的
   `STRONG_RAW`、`MF_ONLY`、`SAMPLER_ONLY`、`MF_PLUS_SAMPLER` nominal 比较。
 - nominal extra-fine 只在本地用于 development scoring 与预注册裁决；云端保持
@@ -51,9 +52,9 @@
 
 ## 当前证据
 
-`VERIFIED`：AutoDL 实例已上线并再次核验为 Tesla V100-PCIE-32GB；Python 3.11.9、
-PyTorch 2.5.1+cu118、CUDA 11.8 与 FP64 probe 有效。当前 GPU 空闲、没有重复训练进程，
-`phk_train` tmux 会话存在。
+`VERIFIED`：GPU profile 收口时，AutoDL 实例核验为 Tesla V100-PCIE-32GB；Python 3.11.9、
+PyTorch 2.5.1+cu118、CUDA 11.8 与 FP64 probe 有效。当时 GPU 空闲、没有重复训练进程且
+`phk_train` tmux 会话存在；这些是时间点快照，不能替代 nominal 启动前的实时复查。
 
 `VERIFIED`：五臂 100-update GPU profile 已完成，五臂均有限。四个 primary arms 的
 seconds/update 为 0.5203–0.5673，峰值显存不超过 1.158 GB；按 1.88 元/小时估算的
@@ -69,7 +70,8 @@ strict-PHA 路由，不是四臂 nominal 排序或正向方法证据。
 reference 评价两份允许的 profile prediction，没有读取任何 stress field 或指标。
 
 `VERIFIED`：用户在 2026-08-30 当前任务中明确解除“等待再次授权”，批准执行完整后续冲刺，
-并要求持续推进至论文初稿；当前不再存在用户授权或 GPU 上线 blocker。
+并要求持续推进至论文初稿；当前不再存在用户授权 blocker。实例、tmux、进程与 GPU 的
+实时状态必须在每次云端执行前复查，不从旧快照推断。
 
 `VERIFIED`：P0 v1.1 已完成版本化 program/method contracts、四臂-only runner、full-only
 decision、两阶段 confirmation/final-freeze schema、cloud run card、manuscript 与 claim
