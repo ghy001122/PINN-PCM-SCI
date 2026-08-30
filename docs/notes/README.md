@@ -13,6 +13,7 @@
 
 当前笔记：
 
+- [PHK-V2.3 R0B FIRST_SWITCH_175 精确执行计划](2026-08-30-phk-v23-r0b-first-switch-175-plan.md)：基于已完成的 `R0A_INCONCLUSIVE` 提出 175-step 首次切窗诊断的拟议冻结草案，覆盖 schedule、observer、A–H 时间先后与候选机制裁决、V100 回收与全局止损；全文为 `PROPOSED_NOT_AUTHORIZED`，不是 live plan、合同或执行授权。
 - [PHK-V2.3 P0 只读审计与拟议合同](2026-08-30-phk-v23-p0-read-only-audit.md)：沿正式 strong-raw 调用链核验输出变换、三场残差、loss、causal sampler、checkpoint、carrier、evaluator 与 decision，分类现有和缺失的 R0 证据，并给出仍为 `PROPOSED_NOT_AUTHORIZED` 的 PHK-V2.3 合同、最小 patch 与测试计划；不启动 R0A/GPU，不改变 V2.2R 终局 No-Go 或 stress seal。
 - [PHK-V2.2R 近期研究策略整合](2026-08-29-phk-v22r-recent-research-strategy-integration.md)：把实时会话中的一周冲刺、模块组合、四类结果故事和十类止损思路映射到当前冻结合同；它是非授权解释入口，不改变 blocker、预算、sealed 规则或历史 No-Go。
 - [Structural Kinetics-Clock PINN 有界负面研究报告](2026-08-21-structural-clock-bounded-negative-report.md)：汇总 strong-raw、稀疏锚点与 QPOP-R3-v1 的 development-only 负证据；终局事实仍以实验 closeout 和 ledger 为准，不是 formal 方法结论。
