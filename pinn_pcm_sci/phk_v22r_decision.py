@@ -1,4 +1,4 @@
-"""Machine adjudication and one-way candidate freeze for PHK-V2.2R."""
+"""Machine adjudication and two-stage confirmation freeze for PHK-V2.2R v1.1."""
 
 from __future__ import annotations
 
@@ -13,10 +13,20 @@ from typing import Any, Mapping
 from .phk_benchmark import PhkControl
 from .phk_v22r_evaluator import METHOD_CONTRACT, PROGRAM_CONTRACT
 from .phk_v22r_pinn import PhkV22RArm
+from .phk_v22r_prediction import read_prediction_carrier
 from .phk_v22r_reference import TARGETS
 
 
 ROOT = Path(__file__).resolve().parents[1]
+CONFIRMATION_CASES = (
+    PhkControl.INTERFACE_WIDTH_0_025,
+    PhkControl.HEATER_WIDTH_0_50,
+)
+CONFIRMATION_ROLES = (
+    "SELECTED_METHOD",
+    "STRONGEST_COMPARATOR",
+    "PARAMETER_MATCHED_MEASURED_TIME_BUDGET_RAW_CONTROL",
+)
 
 
 def _sha256_path(path: Path) -> str:
@@ -27,6 +37,14 @@ def _sha256_path(path: Path) -> str:
     return digest.hexdigest().upper()
 
 
+def _portable_path(path: Path) -> str:
+    resolved = Path(path).resolve()
+    try:
+        return str(resolved.relative_to(ROOT))
+    except ValueError:
+        return str(resolved)
+
+
 def _load_json(path: Path) -> dict[str, Any]:
     try:
         payload = json.loads(Path(path).read_text(encoding="utf-8"))
@@ -35,6 +53,21 @@ def _load_json(path: Path) -> dict[str, Any]:
     if not isinstance(payload, dict):
         raise ValueError(f"JSON artifact is not an object: {path}")
     return payload
+
+
+def _write_json_exclusive(path: Path, payload: Mapping[str, Any]) -> None:
+    exact = Path(path)
+    exact.parent.mkdir(parents=True, exist_ok=True)
+    serialized = json.dumps(
+        payload,
+        indent=2,
+        sort_keys=True,
+        ensure_ascii=False,
+        allow_nan=False,
+    )
+    with exact.open("x", encoding="utf-8", newline="\n") as handle:
+        handle.write(serialized)
+        handle.write("\n")
 
 
 def _metrics(record: Mapping[str, Any]) -> Mapping[str, float]:
@@ -67,10 +100,29 @@ def _geometric_error(primary: float, co_primary: float) -> float:
     return math.sqrt(max(primary, 1.0e-15) * max(co_primary, 1.0e-15))
 
 
+def _terminal_nominal_decision(
+    *,
+    status: str,
+    reason: str,
+    eligible: Mapping[str, bool],
+) -> dict[str, Any]:
+    return {
+        "schema_id": "phk-v22r-nominal-decision-v1-1",
+        "status": status,
+        "eligible": dict(eligible),
+        "selected_arm": None,
+        "strongest_comparator": None,
+        "confirmation_training_authorized": False,
+        "stress_unseal_authorized": False,
+        "reason": reason,
+        "terminal_no_rescue": True,
+    }
+
+
 def adjudicate_nominal(
     evaluations: Mapping[str, Mapping[str, Any]],
 ) -> dict[str, Any]:
-    """Apply the frozen physics-only route-A decision without rescue tuning."""
+    """Apply the frozen four-arm decision; only the full arm may advance."""
 
     required_arms = {
         PhkV22RArm.STRONG_RAW.value,
@@ -79,7 +131,7 @@ def adjudicate_nominal(
         PhkV22RArm.MF_PLUS_SAMPLER.value,
     }
     if set(evaluations) != required_arms:
-        raise ValueError("nominal adjudication requires exactly the four primary arms")
+        raise ValueError("nominal adjudication requires exactly the four v1.1 arms")
     for arm, report in evaluations.items():
         if report.get("case_control") != PhkControl.FULL.value:
             raise ValueError(f"{arm} is not a nominal-case evaluation")
@@ -90,44 +142,40 @@ def adjudicate_nominal(
 
     eligible = {arm: _eligible(report) for arm, report in evaluations.items()}
     if not any(eligible.values()):
-        return {
-            "schema_id": "phk-v22r-nominal-decision-v1",
-            "status": "ROUTE_A_ALL_ARMS_INCOMPETENT_ALLOW_SINGLE_ROUTE_B",
-            "eligible": eligible,
-            "selected_arm": None,
-            "stress_unseal_authorized": False,
-            "reason": "ALL_ROUTE_A_ARMS_FAILED_HARD_COMPETENCE_GUARDS",
-        }
+        return _terminal_nominal_decision(
+            status="MVP_NO_GO_NO_BASIC_COMPETENCE",
+            reason="ALL_FOUR_ARMS_FAILED_FROZEN_COMPETENCE_GUARDS",
+            eligible=eligible,
+        )
+
     combined_arm = PhkV22RArm.MF_PLUS_SAMPLER.value
     if not eligible[combined_arm]:
-        return {
-            "schema_id": "phk-v22r-nominal-decision-v1",
-            "status": "MVP_NO_GO_NO_ATTRIBUTABLE_GAIN",
-            "eligible": eligible,
-            "selected_arm": None,
-            "stress_unseal_authorized": False,
-            "reason": "COMBINED_ARM_FAILED_HARD_GUARDS_WHILE_ROUTE_A_HAS_COMPETENT_ARM",
-        }
+        return _terminal_nominal_decision(
+            status="MVP_NO_GO_NO_ATTRIBUTABLE_GAIN",
+            reason="FULL_ARM_FAILED_COMPETENCE_WHILE_ANOTHER_ARM_WAS_COMPETENT",
+            eligible=eligible,
+        )
+
     component_arms = [
         arm
         for arm in (PhkV22RArm.MF_ONLY.value, PhkV22RArm.SAMPLER_ONLY.value)
         if eligible[arm]
     ]
     if not component_arms:
-        return {
-            "schema_id": "phk-v22r-nominal-decision-v1",
-            "status": "MVP_NO_GO_NO_ATTRIBUTABLE_GAIN",
-            "eligible": eligible,
-            "selected_arm": None,
-            "stress_unseal_authorized": False,
-            "reason": "NO_COMPETENT_COMPONENT_COMPARATOR_FOR_ATTRIBUTION",
-        }
+        return _terminal_nominal_decision(
+            status="MVP_NO_GO_NO_ATTRIBUTABLE_GAIN",
+            reason="NO_COMPETENT_COMPONENT_COMPARATOR_FOR_ATTRIBUTION",
+            eligible=eligible,
+        )
+
     strongest = min(
         component_arms,
         key=lambda arm: _geometric_error(
-            float(_metrics(evaluations[arm])[
-                "time_averaged_phase_region_symmetric_difference"
-            ]),
+            float(
+                _metrics(evaluations[arm])[
+                    "time_averaged_phase_region_symmetric_difference"
+                ]
+            ),
             float(_metrics(evaluations[arm])["phase_roi_continuous_rms"]),
         ),
     )
@@ -174,7 +222,7 @@ def adjudicate_nominal(
     }
     passed = all(gates.values())
     return {
-        "schema_id": "phk-v22r-nominal-decision-v1",
+        "schema_id": "phk-v22r-nominal-decision-v1-1",
         "status": (
             "SELECTED_PHYSICS_ONLY_MF_PLUS_SAMPLER"
             if passed
@@ -182,12 +230,13 @@ def adjudicate_nominal(
         ),
         "eligible": eligible,
         "selected_arm": combined_arm if passed else None,
-        "strongest_component": strongest,
-        "stress_unseal_authorized": passed,
+        "strongest_comparator": strongest,
+        "confirmation_training_authorized": passed,
+        "stress_unseal_authorized": False,
         "ratios": {
-            "primary_vs_strongest_component": primary_ratio,
-            "co_primary_vs_strongest_component": co_primary_ratio,
-            "joint_vs_strongest_component": joint_ratio,
+            "primary_vs_strongest_comparator": primary_ratio,
+            "co_primary_vs_strongest_comparator": co_primary_ratio,
+            "joint_vs_strongest_comparator": joint_ratio,
             "joint_vs_strong_raw": raw_joint_ratio,
         },
         "noninferiority_limits": {
@@ -195,9 +244,12 @@ def adjudicate_nominal(
             "current": current_limit,
         },
         "gates": gates,
-        "reason": "ALL_FROZEN_GAIN_AND_NONINFERIORITY_GATES_PASS"
-        if passed
-        else "ONE_OR_MORE_FROZEN_GAIN_OR_NONINFERIORITY_GATES_FAILED",
+        "reason": (
+            "ALL_FROZEN_COMPETENCE_GAIN_AND_NONINFERIORITY_GATES_PASS"
+            if passed
+            else "ONE_OR_MORE_FROZEN_GAIN_OR_NONINFERIORITY_GATES_FAILED"
+        ),
+        "terminal_no_rescue": not passed,
     }
 
 
@@ -215,7 +267,7 @@ def write_nominal_decision(
         "method_contract_sha256": _sha256_path(METHOD_CONTRACT),
         "evaluation_artifacts": {
             arm: {
-                "path": str(source.resolve().relative_to(ROOT)),
+                "path": _portable_path(source),
                 "sha256": _sha256_path(source),
                 "training_config_sha256": evaluations[arm][
                     "training_config_sha256"
@@ -224,50 +276,61 @@ def write_nominal_decision(
             for arm, source in evaluation_paths.items()
         },
     }
-    exact = Path(path)
-    exact.parent.mkdir(parents=True, exist_ok=True)
-    with exact.open("x", encoding="utf-8", newline="\n") as handle:
-        json.dump(payload, handle, indent=2, sort_keys=True, ensure_ascii=False)
-        handle.write("\n")
+    _write_json_exclusive(path, payload)
     return payload
 
 
-def freeze_selected_candidate(
-    path: Path,
-    *,
-    nominal_decision_path: Path,
-    selected_training_manifest_path: Path,
-    equal_compute_raw_identity: Mapping[str, Any],
-) -> dict[str, Any]:
-    """Write the one-way candidate freeze and bind both unread stress byte seals."""
-
-    decision = _load_json(nominal_decision_path)
-    if decision.get("status") != "SELECTED_PHYSICS_ONLY_MF_PLUS_SAMPLER":
-        raise ValueError("only a passing frozen nominal decision can unseal stress cases")
-    manifest = _load_json(selected_training_manifest_path)
+def _complete_manifest(path: Path) -> dict[str, Any]:
+    manifest = _load_json(path)
+    if manifest.get("schema_id") != "phk-v22r-training-run-manifest-v1-1":
+        raise ValueError("training manifest is not a v1.1 artifact")
+    if manifest.get("status") != "COMPLETE":
+        raise ValueError("training manifest is not complete")
+    if manifest.get("reference_fields_read") is not False:
+        raise ValueError("training manifest is not reference blind")
+    if manifest.get("training_labels_used") is not False:
+        raise ValueError("training manifest used labels")
+    if manifest.get("initialization") != "SCRATCH_START":
+        raise ValueError("training manifest is not a scratch start")
+    if manifest.get("checkpoint_policy") != "FINAL_ONLY":
+        raise ValueError("training manifest did not preserve final-checkpoint only")
+    if manifest.get("program_contract_sha256") != _sha256_path(PROGRAM_CONTRACT):
+        raise ValueError("training manifest program contract drift")
+    if manifest.get("method_contract_sha256") != _sha256_path(METHOD_CONTRACT):
+        raise ValueError("training manifest method contract drift")
     config = manifest.get("training_config")
     architecture = manifest.get("architecture")
     if not isinstance(config, dict) or not isinstance(architecture, dict):
-        raise ValueError("selected training manifest lacks config or architecture")
-    if config.get("arm") != PhkV22RArm.MF_PLUS_SAMPLER.value:
-        raise ValueError("selected training manifest is not the combined arm")
-    if manifest.get("status") != "COMPLETE":
-        raise ValueError("selected training run is not complete")
-    method_contract = _load_json(METHOD_CONTRACT)
-    expected_equal_raw = method_contract["fairness"]["equal_compute_raw"]
-    required_equal_raw = {
-        "arm": PhkV22RArm.STRONG_RAW.value,
-        "hidden_width": int(expected_equal_raw["hidden_width"]),
-        "hidden_layers": int(expected_equal_raw["hidden_layers"]),
-        "trainable_parameter_count": int(
-            expected_equal_raw["trainable_parameter_count"]
-        ),
-    }
-    for key, expected in required_equal_raw.items():
-        if equal_compute_raw_identity.get(key) != expected:
-            raise ValueError(f"equal-compute raw identity mismatch: {key}")
+        raise ValueError("training manifest lacks config or architecture")
+    if manifest.get("training_config_sha256") is None:
+        raise ValueError("training manifest lacks a configuration hash")
+    return manifest
 
-    stress_seals = {}
+
+def _assert_common_v11_config(config: Mapping[str, Any]) -> None:
+    required = {
+        "case_control": PhkControl.FULL.value,
+        "seed": 17,
+        "frequency_band": "BAND_A",
+        "learning_rate": 1.0e-3,
+        "gradient_clip_norm": 10.0,
+        "interior_points": 512,
+        "boundary_points": 128,
+        "initial_points": 128,
+        "candidate_pool_multiplier": 4,
+        "refresh_updates": 250,
+        "pde_weight": 1.0,
+        "boundary_weight": 5.0,
+        "initial_weight": 1.0,
+        "dtype": "float64",
+    }
+    for key, expected in required.items():
+        if config.get(key) != expected:
+            raise ValueError(f"training manifest changed frozen v1.1 key: {key}")
+
+
+def _stress_seals() -> dict[str, Any]:
+    seals: dict[str, Any] = {}
     for control, directory in TARGETS.items():
         byte_seal_path = directory / "byte-seal.json"
         seal = _load_json(byte_seal_path)
@@ -278,66 +341,299 @@ def freeze_selected_candidate(
             raise ValueError(f"{control.value} sealed carrier hash mismatch")
         if seal.get("field_or_metric_read_after_write") is not False:
             raise ValueError(f"{control.value} seal does not preserve unread status")
-        stress_seals[control.value] = {
-            "byte_seal_path": str(byte_seal_path.resolve().relative_to(ROOT)),
+        seals[control.value] = {
+            "byte_seal_path": _portable_path(byte_seal_path),
             "byte_seal_sha256": _sha256_path(byte_seal_path),
             "carrier_sha256": seal["carrier_sha256"],
             "carrier_size_bytes": seal["carrier_size_bytes"],
         }
+    return seals
 
+
+def write_confirmation_plan(
+    path: Path,
+    *,
+    nominal_decision_path: Path,
+    selected_training_manifest_path: Path,
+    comparator_training_manifest_path: Path,
+    raw_timing_manifest_path: Path,
+) -> dict[str, Any]:
+    """Freeze the three confirmation roles without authorizing reference access."""
+
+    decision = _load_json(nominal_decision_path)
+    if decision.get("status") != "SELECTED_PHYSICS_ONLY_MF_PLUS_SAMPLER":
+        raise ValueError("only a passing v1.1 nominal decision may plan confirmation")
+    if decision.get("confirmation_training_authorized") is not True:
+        raise ValueError("nominal decision did not authorize confirmation training")
+    if decision.get("stress_unseal_authorized") is not False:
+        raise ValueError("nominal decision incorrectly authorized stress unsealing")
+
+    selected = _complete_manifest(selected_training_manifest_path)
+    comparator = _complete_manifest(comparator_training_manifest_path)
+    raw_timing = _complete_manifest(raw_timing_manifest_path)
+    selected_config = dict(selected["training_config"])
+    comparator_config = dict(comparator["training_config"])
+    raw_timing_config = dict(raw_timing["training_config"])
+    for config in (selected_config, comparator_config, raw_timing_config):
+        _assert_common_v11_config(config)
+
+    if selected_config.get("arm") != PhkV22RArm.MF_PLUS_SAMPLER.value:
+        raise ValueError("selected manifest is not MF_PLUS_SAMPLER")
+    if int(selected_config.get("updates", -1)) != 1000:
+        raise ValueError("selected manifest does not use 1000 updates")
+    strongest = decision.get("strongest_comparator")
+    if strongest not in {
+        PhkV22RArm.MF_ONLY.value,
+        PhkV22RArm.SAMPLER_ONLY.value,
+    }:
+        raise ValueError("nominal decision lacks a valid strongest comparator")
+    if comparator_config.get("arm") != strongest:
+        raise ValueError("comparator manifest differs from the nominal decision")
+    if int(comparator_config.get("updates", -1)) != 1000:
+        raise ValueError("comparator manifest does not use 1000 updates")
+
+    method = _load_json(METHOD_CONTRACT)
+    raw_rule = method["fairness"][
+        "parameter_matched_measured_time_budget_raw_control"
+    ]
+    expected_raw = {
+        "arm": PhkV22RArm.STRONG_RAW.value,
+        "hidden_width": int(raw_rule["hidden_width"]),
+        "hidden_layers": int(raw_rule["hidden_layers"]),
+        "updates": int(raw_rule["timing_calibration_updates"]),
+    }
+    for key, expected in expected_raw.items():
+        if raw_timing_config.get(key) != expected:
+            raise ValueError(f"raw timing calibration identity mismatch: {key}")
+    if int(raw_timing["architecture"].get("trainable_parameter_count", -1)) != int(
+        raw_rule["trainable_parameter_count"]
+    ):
+        raise ValueError("raw timing calibration is not parameter matched")
+
+    selected_seconds = float(selected.get("wall_seconds", math.nan))
+    raw_seconds_per_update = float(raw_timing.get("seconds_per_update", math.nan))
+    if not math.isfinite(selected_seconds) or selected_seconds <= 0.0:
+        raise ValueError("selected nominal manifest lacks finite measured wall time")
+    if not math.isfinite(raw_seconds_per_update) or raw_seconds_per_update <= 0.0:
+        raise ValueError("raw timing manifest lacks finite seconds/update")
+    raw_updates = math.floor(selected_seconds / raw_seconds_per_update)
+    if raw_updates < int(raw_rule["minimum_updates"]):
+        raise ValueError("measured-time raw update budget is below the frozen minimum")
+
+    selected_template = {**selected_config, "case_control": "<STRESS_CASE>"}
+    comparator_template = {**comparator_config, "case_control": "<STRESS_CASE>"}
+    raw_template = {
+        **raw_timing_config,
+        "case_control": "<STRESS_CASE>",
+        "updates": raw_updates,
+        "log_every": 25,
+        "checkpoint_every": raw_updates,
+    }
     payload = {
-        "schema_id": "phk-v22r-candidate-freeze-v1",
-        "status": "FROZEN",
+        "schema_id": "phk-v22r-confirmation-plan-v1-1",
+        "status": "IDENTITIES_FROZEN_PREDICTIONS_PENDING",
         "frozen_at_utc": datetime.now(timezone.utc).isoformat(),
         "program_contract_sha256": _sha256_path(PROGRAM_CONTRACT),
         "method_contract_sha256": _sha256_path(METHOD_CONTRACT),
         "nominal_decision": {
-            "path": str(Path(nominal_decision_path).resolve().relative_to(ROOT)),
+            "path": _portable_path(nominal_decision_path),
             "sha256": _sha256_path(nominal_decision_path),
             "status": decision["status"],
         },
-        "selected_candidate": {
-            "arm": config["arm"],
-            "training_config_sha256": manifest["training_config_sha256"],
-            "seed": config["seed"],
-            "updates": config["updates"],
-            "architecture": architecture,
-            "training_config": config,
-            "decision_status": decision["status"],
-            "training_manifest_path": str(
-                Path(selected_training_manifest_path).resolve().relative_to(ROOT)
-            ),
-            "training_manifest_sha256": _sha256_path(
-                selected_training_manifest_path
-            ),
+        "roles": {
+            "SELECTED_METHOD": {
+                "arm": selected_config["arm"],
+                "training_config_template": selected_template,
+                "nominal_training_manifest_path": _portable_path(
+                    selected_training_manifest_path
+                ),
+                "nominal_training_manifest_sha256": _sha256_path(
+                    selected_training_manifest_path
+                ),
+            },
+            "STRONGEST_COMPARATOR": {
+                "arm": comparator_config["arm"],
+                "training_config_template": comparator_template,
+                "nominal_training_manifest_path": _portable_path(
+                    comparator_training_manifest_path
+                ),
+                "nominal_training_manifest_sha256": _sha256_path(
+                    comparator_training_manifest_path
+                ),
+            },
+            "PARAMETER_MATCHED_MEASURED_TIME_BUDGET_RAW_CONTROL": {
+                "arm": PhkV22RArm.STRONG_RAW.value,
+                "training_config_template": raw_template,
+                "trainable_parameter_count": int(
+                    raw_rule["trainable_parameter_count"]
+                ),
+                "parameter_ratio_to_selected": float(
+                    raw_rule["parameter_ratio_to_mf_plus_sampler"]
+                ),
+                "selected_nominal_training_wall_seconds": selected_seconds,
+                "raw_calibration_seconds_per_update": raw_seconds_per_update,
+                "derived_updates": raw_updates,
+                "update_rule": raw_rule["update_rule"],
+                "raw_timing_manifest_path": _portable_path(raw_timing_manifest_path),
+                "raw_timing_manifest_sha256": _sha256_path(raw_timing_manifest_path),
+            },
         },
-        "strongest_component": decision["strongest_component"],
-        "equal_compute_raw_identity": required_equal_raw,
-        "stress_reference_seals": stress_seals,
+        "confirmation_cases": [control.value for control in CONFIRMATION_CASES],
+        "required_prediction_count": 6,
+        "stress_reference_seals": _stress_seals(),
+        "stress_reference_access_authorized": False,
+        "final_freeze_rule": "VERIFY_ALL_SIX_REFERENCE_BLIND_PREDICTION_IDENTITIES_AND_HASHES_BEFORE_WRITING_CANDIDATE_FREEZE",
+        "immutable_after_this_plan": [
+            "ROLE_IDENTITIES",
+            "ARCHITECTURES",
+            "SEED",
+            "LOSS_AND_SAMPLING",
+            "SELECTED_AND_COMPARATOR_UPDATES",
+            "RAW_TIME_BUDGET_AND_DERIVED_UPDATES",
+            "METRICS_AND_THRESHOLDS",
+        ],
+    }
+    _write_json_exclusive(path, payload)
+    return payload
+
+
+def _expected_prediction_keys() -> set[tuple[str, str]]:
+    return {
+        (control.value, role)
+        for control in CONFIRMATION_CASES
+        for role in CONFIRMATION_ROLES
+    }
+
+
+def freeze_selected_candidate(
+    path: Path,
+    *,
+    confirmation_plan_path: Path,
+    prediction_paths: Mapping[tuple[str, str], Path],
+) -> dict[str, Any]:
+    """Write the final freeze only after six blind carriers pass identity checks."""
+
+    plan = _load_json(confirmation_plan_path)
+    if plan.get("schema_id") != "phk-v22r-confirmation-plan-v1-1":
+        raise ValueError("confirmation plan schema is not v1.1")
+    if plan.get("status") != "IDENTITIES_FROZEN_PREDICTIONS_PENDING":
+        raise ValueError("confirmation plan is not awaiting predictions")
+    if plan.get("stress_reference_access_authorized") is not False:
+        raise ValueError("confirmation plan did not preserve the sealed boundary")
+    if plan.get("program_contract_sha256") != _sha256_path(PROGRAM_CONTRACT):
+        raise ValueError("confirmation plan is not bound to the live program contract")
+    if plan.get("method_contract_sha256") != _sha256_path(METHOD_CONTRACT):
+        raise ValueError("confirmation plan is not bound to the live method contract")
+    if set(prediction_paths) != _expected_prediction_keys():
+        raise ValueError("final freeze requires exactly two cases by three roles")
+
+    verified: dict[str, dict[str, Any]] = {}
+    for control in CONFIRMATION_CASES:
+        case_records: dict[str, Any] = {}
+        for role in CONFIRMATION_ROLES:
+            prediction_path = Path(prediction_paths[(control.value, role)])
+            metadata, arrays = read_prediction_carrier(prediction_path)
+            del arrays
+            if metadata.get("reference_fields_read") is not False:
+                raise ValueError("confirmation prediction is not reference blind")
+            if metadata.get("program_contract_sha256") != _sha256_path(
+                PROGRAM_CONTRACT
+            ):
+                raise ValueError("confirmation prediction program contract mismatch")
+            if metadata.get("method_contract_sha256") != _sha256_path(METHOD_CONTRACT):
+                raise ValueError("confirmation prediction method contract mismatch")
+            config = metadata.get("training_config")
+            if not isinstance(config, dict):
+                raise ValueError("confirmation prediction lacks a training config")
+            template = dict(plan["roles"][role]["training_config_template"])
+            template["case_control"] = control.value
+            if config != template:
+                raise ValueError(
+                    f"{control.value}/{role} changed the frozen training identity"
+                )
+            if metadata.get("checkpoint_update") != int(template["updates"]):
+                raise ValueError(f"{control.value}/{role} is not a final checkpoint")
+            architecture = metadata.get("architecture")
+            if not isinstance(architecture, dict):
+                raise ValueError("confirmation prediction lacks architecture identity")
+            if architecture.get("arm") != plan["roles"][role]["arm"]:
+                raise ValueError(f"{control.value}/{role} arm identity mismatch")
+            if role == "PARAMETER_MATCHED_MEASURED_TIME_BUDGET_RAW_CONTROL":
+                if int(architecture.get("trainable_parameter_count", -1)) != int(
+                    plan["roles"][role]["trainable_parameter_count"]
+                ):
+                    raise ValueError("confirmation raw control is not parameter matched")
+            case_records[role] = {
+                "path": _portable_path(prediction_path),
+                "sha256": _sha256_path(prediction_path),
+                "size_bytes": prediction_path.stat().st_size,
+                "training_config_sha256": metadata["training_config_sha256"],
+                "checkpoint_sha256": metadata["checkpoint_sha256"],
+                "checkpoint_update": metadata["checkpoint_update"],
+                "arm": architecture["arm"],
+                "reference_fields_read": False,
+            }
+        verified[control.value] = case_records
+
+    live_seals = _stress_seals()
+    if live_seals != plan.get("stress_reference_seals"):
+        raise ValueError("stress byte seals changed after the confirmation plan")
+    payload = {
+        "schema_id": "phk-v22r-candidate-freeze-v1-1",
+        "status": "FROZEN_SIX_PREDICTION_IDENTITIES_VERIFIED",
+        "frozen_at_utc": datetime.now(timezone.utc).isoformat(),
+        "program_contract_sha256": _sha256_path(PROGRAM_CONTRACT),
+        "method_contract_sha256": _sha256_path(METHOD_CONTRACT),
+        "confirmation_plan": {
+            "path": _portable_path(confirmation_plan_path),
+            "sha256": _sha256_path(confirmation_plan_path),
+            "status": plan["status"],
+        },
+        "roles": plan["roles"],
+        "confirmation_cases": plan["confirmation_cases"],
+        "verified_prediction_count": 6,
+        "prediction_carriers": verified,
+        "stress_reference_seals": live_seals,
+        "stress_reference_access_authorized": True,
         "immutable_after_freeze": [
-            "ARCHITECTURE",
+            "ARCHITECTURES",
             "HYPERPARAMETERS",
             "LOSS_AND_SAMPLING",
             "SEED",
-            "UPDATES",
+            "UPDATES_OR_TIME_BUDGET_RULE",
             "METRICS_AND_THRESHOLDS",
-            "ROUTE_A_OR_B",
-            "STRONGEST_COMPONENT",
-            "EQUAL_COMPUTE_RAW_IDENTITY",
+            "ROLE_IDENTITIES",
+            "PREDICTION_CARRIER_HASHES",
         ],
         "stress_results_may_not_trigger": [
             "METHOD_OR_HYPERPARAMETER_CHANGE",
-            "A_TO_B_RESCUE",
-            "SEED_REPLACEMENT",
-            "CASE_SUPPRESSION",
+            "NEW_SEED_OR_TRAINING_EXTENSION",
+            "NEW_MODULE_OR_ROUTE",
+            "CASE_OR_METRIC_SUPPRESSION",
         ],
     }
-    exact = Path(path)
-    exact.parent.mkdir(parents=True, exist_ok=True)
-    with exact.open("x", encoding="utf-8", newline="\n") as handle:
-        json.dump(payload, handle, indent=2, sort_keys=True, ensure_ascii=False)
-        handle.write("\n")
+    _write_json_exclusive(path, payload)
     return payload
+
+
+def _prediction_mapping(args: argparse.Namespace) -> dict[tuple[str, str], Path]:
+    return {
+        (PhkControl.INTERFACE_WIDTH_0_025.value, "SELECTED_METHOD"): args.narrow_selected,
+        (
+            PhkControl.INTERFACE_WIDTH_0_025.value,
+            "STRONGEST_COMPARATOR",
+        ): args.narrow_comparator,
+        (
+            PhkControl.INTERFACE_WIDTH_0_025.value,
+            "PARAMETER_MATCHED_MEASURED_TIME_BUDGET_RAW_CONTROL",
+        ): args.narrow_raw,
+        (PhkControl.HEATER_WIDTH_0_50.value, "SELECTED_METHOD"): args.wide_selected,
+        (PhkControl.HEATER_WIDTH_0_50.value, "STRONGEST_COMPARATOR"): args.wide_comparator,
+        (
+            PhkControl.HEATER_WIDTH_0_50.value,
+            "PARAMETER_MATCHED_MEASURED_TIME_BUDGET_RAW_CONTROL",
+        ): args.wide_raw,
+    }
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -349,6 +645,23 @@ def _parser() -> argparse.ArgumentParser:
     decide.add_argument("--sampler-only", type=Path, required=True)
     decide.add_argument("--combined", type=Path, required=True)
     decide.add_argument("--output", type=Path, required=True)
+
+    plan = subparsers.add_parser("plan-confirmation")
+    plan.add_argument("--nominal-decision", type=Path, required=True)
+    plan.add_argument("--selected-manifest", type=Path, required=True)
+    plan.add_argument("--comparator-manifest", type=Path, required=True)
+    plan.add_argument("--raw-timing-manifest", type=Path, required=True)
+    plan.add_argument("--output", type=Path, required=True)
+
+    freeze = subparsers.add_parser("freeze")
+    freeze.add_argument("--confirmation-plan", type=Path, required=True)
+    freeze.add_argument("--narrow-selected", type=Path, required=True)
+    freeze.add_argument("--narrow-comparator", type=Path, required=True)
+    freeze.add_argument("--narrow-raw", type=Path, required=True)
+    freeze.add_argument("--wide-selected", type=Path, required=True)
+    freeze.add_argument("--wide-comparator", type=Path, required=True)
+    freeze.add_argument("--wide-raw", type=Path, required=True)
+    freeze.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -364,21 +677,36 @@ def main(argv: list[str] | None = None) -> int:
                 PhkV22RArm.MF_PLUS_SAMPLER.value: args.combined,
             },
         )
-        print(
-            json.dumps(
-                {
-                    "status": payload["status"],
-                    "selected_arm": payload["selected_arm"],
-                    "stress_unseal_authorized": payload[
-                        "stress_unseal_authorized"
-                    ],
-                    "output": str(args.output.resolve()),
-                },
-                sort_keys=True,
-            )
+    elif args.command == "plan-confirmation":
+        payload = write_confirmation_plan(
+            args.output,
+            nominal_decision_path=args.nominal_decision,
+            selected_training_manifest_path=args.selected_manifest,
+            comparator_training_manifest_path=args.comparator_manifest,
+            raw_timing_manifest_path=args.raw_timing_manifest,
         )
-        return 0
-    raise AssertionError("unreachable command")
+    elif args.command == "freeze":
+        payload = freeze_selected_candidate(
+            args.output,
+            confirmation_plan_path=args.confirmation_plan,
+            prediction_paths=_prediction_mapping(args),
+        )
+    else:
+        raise AssertionError("unreachable command")
+    print(
+        json.dumps(
+            {
+                "status": payload["status"],
+                "stress_reference_access_authorized": payload.get(
+                    "stress_reference_access_authorized",
+                    payload.get("stress_unseal_authorized", False),
+                ),
+                "output": str(args.output.resolve()),
+            },
+            sort_keys=True,
+        )
+    )
+    return 0
 
 
 if __name__ == "__main__":
@@ -386,8 +714,11 @@ if __name__ == "__main__":
 
 
 __all__ = [
+    "CONFIRMATION_CASES",
+    "CONFIRMATION_ROLES",
     "adjudicate_nominal",
     "freeze_selected_candidate",
     "main",
+    "write_confirmation_plan",
     "write_nominal_decision",
 ]

@@ -1,14 +1,18 @@
 {
-  "schema_id": "phk-v22r-program-contract-v1",
-  "contract_id": "PHK_V22R_RAPID_METHOD_RESCUE_V1",
-  "effective_date": "2026-08-29",
-  "status": "ACTIVE_PRE_CANDIDATE_FREEZE",
+  "schema_id": "phk-v22r-program-contract-v1-1",
+  "contract_id": "PHK_V22R_FOUR_ARM_METHOD_MVP_V1_1",
+  "effective_date": "2026-08-30",
+  "status": "FROZEN_FOR_FOUR_ARM_NOMINAL",
   "phase_id": "PHK_V22_ONE_WEEK_SPRINT_ACTIVE",
-  "user_authorization": {
-    "source_conversation_id": "6a8f9ed2-a678-83ee-ac63-3fc48de531f8",
-    "execution_command": "EXECUTE PHK-V2.2R RAPID METHOD-RESCUE AND POSITIVE-EVIDENCE SPRINT",
-    "current_task_reconfirms_execution": true,
-    "planning_confirmation_is_not_required_again": true
+  "authorization": {
+    "status": "PHK_V22R_V11_FULL_SPRINT_EXPLICITLY_AUTHORIZED",
+    "source_thread_id": "01a04e83-afab-7823-9894-2e0cef35a313",
+    "routine_stage_approval_required": false,
+    "research_execution_authorized": true,
+    "cloud_training_authorized": true,
+    "local_reference_evaluation_authorized": true,
+    "selective_commit_and_push_authorized": true,
+    "submission_or_external_contact_authorized": false
   },
   "deadlines_asia_shanghai": {
     "route_selection": "2026-08-30T23:59:00+08:00",
@@ -25,8 +29,7 @@
   "paper_goal": {
     "identity": "SUBMISSION_SHAPED_ADVISOR_REVIEWABLE_METHOD_MVP",
     "target_story": "LOCALIZED_PHASE_AND_JOULE_SUPPORT_SCARCITY_ADDRESSED_BY_FIELD_SELECTIVE_ANISOTROPIC_MULTI_FREQUENCY_REPRESENTATION_AND_PHYSICS_AWARE_COLLOCATION",
-    "target_journal_story": "ENGINEERING_WITH_COMPUTERS_METHOD_PAPER_SUBJECT_TO_CURRENT_OFFICIAL_QUARTILE_RECHECK",
-    "minimum_day7_evidence": "TWO_SEALED_STRESS_CASES_BY_ONE_SEED_BY_THREE_NEURAL_ARMS",
+    "minimum_confirmation_evidence": "TWO_SEALED_STRESS_CASES_BY_ONE_SEED_BY_THREE_FROZEN_NEURAL_ROLES",
     "not_claimed": [
       "CONTINUUM_TRUTH",
       "EXPERIMENTAL_OR_MATERIAL_CALIBRATION",
@@ -50,140 +53,100 @@
       "sha256": "0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE",
       "resolution": "extra_fine",
       "allowed": [
-        "DEVELOPMENT_SCORING",
-        "ARCHITECTURE_AND_HYPERPARAMETER_SELECTION",
-        "CHECKPOINT_SELECTION",
-        "A_TO_B_COMPETENCE_DECISION",
+        "LOCAL_DEVELOPMENT_SCORING",
+        "LOCAL_ROUTE_DECISION",
         "DEVELOPMENT_FIGURES"
       ],
       "forbidden": [
         "TRAINING_LABEL_OR_ANCHOR",
         "SAMPLER_FEATURE",
+        "CLOUD_UPLOAD",
         "INDEPENDENT_CONFIRMATION_CLAIM"
       ]
     },
     "narrow_interface_confirmation": {
       "case_control": "INTERFACE_WIDTH_0_025",
-      "medium_anchor_source": "outputs/runs/20260828T-phk-v21-s1-q-13-narrow-interface/result-intent-13.npz",
       "sealed_extra_fine_target": "outputs/sealed/phk_v22r/narrow_interface_extra_fine/reference.npz",
-      "access_before_candidate_freeze": false,
+      "access_before_final_candidate_freeze": false,
       "one_formal_solver_intent": true
     },
     "wide_heater_confirmation": {
       "case_control": "HEATER_WIDTH_0_50",
-      "medium_anchor_source": "outputs/runs/20260828T-phk-v21-s1-q-12-wide-heater/result-intent-12.npz",
       "sealed_extra_fine_target": "outputs/sealed/phk_v22r/wide_heater_extra_fine/reference.npz",
-      "access_before_candidate_freeze": false,
+      "access_before_final_candidate_freeze": false,
       "one_formal_solver_intent": true
     },
+    "confirmation_plan": "configs/phk_v22r/confirmation_plan.json",
     "candidate_freeze": "configs/phk_v22r/candidate_freeze.json",
-    "stress_open_rule": "BOTH_REFERENCES_MAY_BE_GENERATED_EARLY_BUT_NO_FIELD_OR_METRIC_READ_UNTIL_CANDIDATE_FREEZE_STATUS_IS_FROZEN"
+    "stress_open_rule": "WRITE_FINAL_CANDIDATE_FREEZE_ONLY_AFTER_SELECTED_COMPARATOR_RAW_IDENTITIES_AND_ALL_SIX_REFERENCE_BLIND_PREDICTION_CARRIERS_ARE_HASH_VERIFIED"
   },
-  "method_route": {
-    "default_method_name": "FS_PJAMF_PINN",
-    "default_identity": "FIELD_SELECTIVE_PHASE_JOULE_AWARE_ANISOTROPIC_MULTI_FREQUENCY_PINN",
-    "development_seed": 17,
-    "confirmation_seed": 17,
-    "dtype": "FLOAT64",
-    "primary_arms": [
+  "nominal_matrix": {
+    "case_control": "FULL",
+    "arms_in_order": [
       "STRONG_RAW",
       "MF_ONLY",
       "SAMPLER_ONLY",
       "MF_PLUS_SAMPLER"
     ],
-    "strict_pha_probe": {
-      "updates": 100,
-      "single_probe_only": true,
-      "output_gate_inputs": [
-        "PILOT_PHASE_INDICATOR",
-        "DIFFERENTIABLE_HEATER_DISTANCE_AND_PULSE_PROXY"
-      ],
-      "actual_joule_field_in_output_gate": false,
-      "gate_stop_gradient": false,
-      "maximum_cost_ratio_to_mf": 1.8,
-      "required_primary_improvement_vs_mf_plus_sampler": 0.10,
-      "co_primary_maximum_degradation": 0.02,
-      "failure_action": "DELETE_ROUTING_FROM_CRITICAL_PATH_WITHOUT_GATE_TUNING"
-    },
-    "anisotropic_frequency_candidates": [
-      {
-        "id": "BAND_A",
-        "x": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
-        "z": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
-        "t": [1.0, 2.0, 4.0, 8.0]
-      },
-      {
-        "id": "BAND_B_CONSERVATIVE",
-        "x": [1.0, 2.0, 4.0, 8.0, 12.0],
-        "z": [1.0, 2.0, 4.0, 8.0, 12.0],
-        "t": [1.0, 2.0, 4.0]
-      }
-    ],
-    "maximum_frequency_configurations": 2,
-    "collocation_mixture": {
-      "uniform_sobol": 0.35,
-      "residual": 0.25,
-      "phase": 0.25,
-      "joule": 0.15,
-      "uniform_floor_strictly_positive": true,
-      "candidate_pool_multiplier": 4,
-      "refresh_updates": 250
-    },
-    "causal_windows": [
-      [0.0, 0.35],
-      [0.35, 1.25],
-      [1.25, 1.60],
-      [1.60, 2.50]
-    ],
-    "active_window_sampling": "EQUAL_STRATIFIED_REPLAY_ACROSS_ALL_OPEN_WINDOWS",
-    "optimizer": {
-      "adam_learning_rate": 0.001,
-      "gradient_clip_norm": 10.0,
-      "profile_updates": 100,
-      "pilot_updates_target": 1500,
-      "pilot_updates_minimum": 1000,
-      "pilot_updates_maximum": 2000,
-      "interior_points": 512,
-      "boundary_points": 128,
-      "initial_points": 128,
-      "optional_lbfgs": "SHORT_FIXED_TARGET_ONLY_AFTER_COLLOCATION_FREEZE"
-    },
-    "development_search": {
-      "maximum_configuration_identities": 6,
-      "maximum_first_round_short_configurations": 4,
-      "maximum_promoted_configurations": 2,
-      "maximum_functional_pivots": 2,
-      "allowed_pivots": [
-        "FOURIER_TO_SIREN_INTERFACE_BRANCH_OR_BACKGROUND_INTERFACE_RESIDUAL_BRANCH",
-        "PHASE_JOULE_MIXTURE_TO_GRADIENT_PHASE_JOULE_MIXTURE",
-        "COMMON_CONTINUATION_OR_STAGGERED_TRAINING_OR_SAME_ARM_NOMINAL_TO_STRESS_WARM_START"
-      ]
-    }
+    "only_advancement_arm": "MF_PLUS_SAMPLER",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "frequency_band": "BAND_A",
+    "initialization": "SCRATCH_START",
+    "optimizer": "ADAM",
+    "updates": 1000,
+    "interior_points": 512,
+    "boundary_points": 128,
+    "initial_points": 128,
+    "checkpoint_policy": "FINAL_ONLY",
+    "reference_blind_cloud_execution": true,
+    "repeat_or_extension_after_terminal_decision": false
   },
-  "a_to_b": {
-    "route_a": "PDE_IC_BC_ONLY",
-    "route_b": "ONE_PERCENT_MEDIUM_SOBOL_STRATIFIED_ALL_FIELD_ANCHORS_PLUS_PDE_IC_BC",
-    "b_trigger": "ALL_ROUTE_A_ARMS_LACK_BASIC_COMPETENCE",
-    "basic_incompetence": [
-      "NONFINITE_PDE_OR_LOSS",
-      "NO_REFERENCE_EVENT_TOPOLOGY",
-      "PHASE_COLLAPSE",
-      "GROSSLY_WRONG_PHASE_TOPOLOGY",
-      "NO_DECREASING_FIELD_ERROR_TREND"
+  "nominal_decision": {
+    "full_arm_must_pass": [
+      "FINITE_TRAINING_AND_PREDICTION",
+      "DECREASING_PDE_LOSS",
+      "TWO_REFERENCE_ALIGNED_PHASE_EVENTS",
+      "PHASE_RANGE",
+      "RECOVERY",
+      "LOCALITY",
+      "NO_FALSE_GLOBAL_TRANSITION",
+      "COMBINED_GAIN_VS_STRONGEST_COMPONENT",
+      "GAIN_VS_STRONG_RAW",
+      "TEMPERATURE_NONINFERIORITY",
+      "CURRENT_NONINFERIORITY"
     ],
-    "a_competent_but_no_gain": "MVP_NO_GO_NO_ATTRIBUTABLE_GAIN",
-    "anchor_fraction_unique_space_time_coordinates": 0.01,
-    "same_coordinate_supplies": ["POTENTIAL", "TEMPERATURE", "PHASE"],
-    "anchor_strata": ["FOUR_CAUSAL_WINDOWS", "ROI", "BULK"],
-    "anchor_density_sweep": false,
-    "lambda_data_candidates_once_on_nominal": [0.1, 1.0, 10.0],
-    "mandatory_b_controls": [
-      "SAME_ANCHOR_COMPUTE_MATCHED_SPARSE_RAW",
-      "SAME_ANCHOR_DATA_ONLY",
-      "MEDIUM_INTERPOLATION"
+    "pass_action": "FREEZE_CONFIRMATION_IDENTITIES_AND_GENERATE_SIX_REFERENCE_BLIND_STRESS_PREDICTIONS",
+    "pass_does_not_authorize_reference_open": true,
+    "failure_action": "MVP_NO_GO_WITHOUT_SEED_CHANGE_EXTENSION_OR_RESCUE_AXIS"
+  },
+  "confirmation_matrix": {
+    "cases": [
+      "INTERFACE_WIDTH_0_025",
+      "HEATER_WIDTH_0_50"
     ],
-    "b_failure": "MVP_NO_GO_NO_PHYSICS_INFORMED_INCREMENT",
-    "route_c": "PROHIBITED_THIS_SPRINT"
+    "seed": 17,
+    "roles": [
+      "SELECTED_METHOD",
+      "STRONGEST_COMPARATOR",
+      "PARAMETER_MATCHED_MEASURED_TIME_BUDGET_RAW_CONTROL"
+    ],
+    "selected_and_comparator_updates": 1000,
+    "all_runs_start_from_scratch": true,
+    "prediction_carriers_required_before_reference_open": 6,
+    "stress_result_may_only_decide": [
+      "PASS",
+      "NO_GO",
+      "BOUNDED_REGIME_AWARE_CLAIM",
+      "ACCURACY_COST_PARETO_CLAIM"
+    ],
+    "stress_result_may_not_trigger": [
+      "METHOD_OR_HYPERPARAMETER_CHANGE",
+      "NEW_SEED",
+      "TRAINING_EXTENSION",
+      "NEW_MODULE_OR_ROUTE",
+      "CASE_OR_METRIC_SUPPRESSION"
+    ]
   },
   "evaluation": {
     "primary": "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
@@ -212,32 +175,18 @@
     "resolution_language": "U_J_IS_RESOLUTION_SENSITIVITY_MARGIN_NOT_CONTINUUM_ERROR_BOUND",
     "all_adverse_cases_and_metrics_disclosed": true
   },
-  "confirmation_matrix": {
-    "cases": ["NARROW_INTERFACE", "WIDE_HEATER"],
-    "seed": 17,
-    "neural_arms": [
-      "SELECTED_METHOD",
-      "STRONGEST_NONPROPOSED_COMPARATOR",
-      "EQUAL_COMPUTE_RAW"
-    ],
-    "stress_result_may_only_decide": ["PASS", "NO_GO", "BOUNDED_REGIME_AWARE_OR_PARETO_CLAIM"],
-    "stress_result_may_not_trigger": ["R_TO_S_ROUTE_CHANGE", "S_TO_R_ROUTE_CHANGE", "A_TO_B_RESCUE", "HYPERPARAMETER_CHANGE", "SEED_REPLACEMENT"]
-  },
   "compute_and_external_authorization": {
-    "local_cpu_and_gpu": true,
     "provider": "AUTODL",
+    "validated_gpu": "TESLA_V100_PCIE_32GB",
     "paid_cloud_budget_cny_hard_cap": 150.0,
-    "preferred_gpu_order": ["V100_32GB", "A100_40GB"],
-    "debug_and_profile_budget_fraction_max": 0.20,
-    "nominal_pilot_budget_fraction_max": 0.30,
-    "sealed_confirmation_budget_fraction_min": 0.50,
-    "stop_cloud_debug_if_fraction_exceeds": 0.30,
+    "profile_closeout_cumulative_spend_cny": 3.6619446915,
+    "displayed_hourly_price_cny": 1.88,
+    "required_omp_num_threads": 1,
+    "shutdown_after_each_paid_training_or_recovery_stage": true,
     "cloud_upload_allowed": [
       "SOURCE_CODE",
-      "CONFIGURATION",
-      "MEDIUM_ANCHORS",
-      "COORDINATES_AND_BOUNDARY_DEFINITIONS",
-      "EVALUATION_COORDINATES_WITHOUT_REFERENCE_VALUES"
+      "APPROVED_CONFIGURATION",
+      "COORDINATES_AND_BOUNDARY_DEFINITIONS"
     ],
     "cloud_upload_forbidden": [
       "NOMINAL_EXTRA_FINE_FIELD",
@@ -245,20 +194,46 @@
       "WIDE_HEATER_EXTRA_FINE_FIELD",
       "LOCAL_REFERENCE_COMPARISON_OUTPUT"
     ],
-    "download_allowed": ["CHECKPOINT", "PREDICTION", "TRAINING_LOG"],
+    "download_allowed": [
+      "CHECKPOINT",
+      "PREDICTION",
+      "TRAINING_LOG",
+      "MANIFEST",
+      "ENVIRONMENT_REPORT",
+      "COST_LEDGER"
+    ],
     "reference_evaluation_location": "LOCAL_ONLY",
     "git_commit_and_push_current_repository": true,
     "journal_submission_or_external_submission_system": false,
     "credential_disclosure": false
   },
+  "disabled_for_this_sprint": [
+    "STRICT_PHA",
+    "GENERIC_RAR",
+    "ROUTE_B",
+    "ROUTE_C",
+    "FUNCTIONAL_PIVOT",
+    "SIREN",
+    "CONTINUATION",
+    "WARM_START",
+    "EARLY_STOP",
+    "LBFGS",
+    "KC",
+    "SRPG",
+    "NEW_PHYSICAL_OBJECT"
+  ],
+  "historical_dispositions": {
+    "v1_profile_run_id": "20260830T0122-phk-v22r-d1-gpu-profile-cf372713",
+    "strict_pha": "REMOVED_AFTER_FROZEN_PRIMARY_GAIN_GATE_FAILED_WITHOUT_GATE_TUNING",
+    "generic_rar": "DEADLINE_EXPIRED_FOUR_ARM_FALLBACK_ACTIVE",
+    "legacy_v1_contract": "SUPERSEDED_FOR_ALL_NEW_EXECUTION_BY_THIS_V1_1_CONTRACT"
+  },
   "prohibitions": [
-    "NO_KC_SRPG_C_SYNCNET_OR_NEW_PHYSICAL_OBJECT",
-    "NO_NEW_ORACLE_REFINEMENT_OR_EXTRA_EXTRA_FINE",
-    "NO_STRESS_REFERENCE_READ_BEFORE_CANDIDATE_FREEZE",
-    "NO_RESULT_FABRICATION_OR_SOURCE_ERASURE",
-    "NO_THRESHOLD_METRIC_CASE_SEED_OR_BUDGET_MOVEMENT_AFTER_FREEZE",
-    "NO_UNFAVORABLE_RESULT_SUPPRESSION",
-    "NO_DIRECT_GPL_OR_PENN_RESTRICTED_SOURCE_MERGE",
+    "NO_STRESS_REFERENCE_READ_BEFORE_FINAL_CANDIDATE_FREEZE",
+    "NO_STRESS_REFERENCE_OR_NOMINAL_REFERENCE_UPLOAD",
+    "NO_RESULT_FABRICATION_SOURCE_ERASURE_OR_ADVERSE_RESULT_SUPPRESSION",
+    "NO_THRESHOLD_METRIC_CASE_SEED_OR_BUDGET_MOVEMENT_AFTER_P0",
+    "NO_REPEAT_EXTENSION_OR_RESCUE_AFTER_NOMINAL_NO_GO",
     "NO_NEW_LARGE_NEGATIVE_PAPER_PACKAGE"
   ]
 }

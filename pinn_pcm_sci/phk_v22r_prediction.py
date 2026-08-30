@@ -63,7 +63,7 @@ def _load_model(
     checkpoint = torch.load(
         Path(checkpoint_path), map_location=device, weights_only=False
     )
-    if checkpoint.get("schema_id") != "phk-v22r-checkpoint-v1":
+    if checkpoint.get("schema_id") != "phk-v22r-checkpoint-v1-1":
         raise ValueError("unsupported PHK-V2.2R checkpoint schema")
     config = PhkTrainingConfig(**checkpoint["training_config"])
     config.validate()
@@ -220,7 +220,7 @@ def write_prediction_carrier(
         ) * dx
 
     metadata = {
-        "schema_id": "phk-v22r-prediction-carrier-v1",
+        "schema_id": "phk-v22r-prediction-carrier-v1-1",
         "checkpoint_sha256": _sha256_path(Path(checkpoint_path)),
         "checkpoint_update": int(checkpoint["update"]),
         "training_config": asdict(config),
@@ -276,7 +276,7 @@ def read_prediction_carrier(path: Path) -> tuple[dict[str, Any], dict[str, np.nd
             }
     except (OSError, KeyError, json.JSONDecodeError) as exc:
         raise ValueError(f"invalid PHK-V2.2R prediction carrier: {exact}") from exc
-    if metadata.get("schema_id") != "phk-v22r-prediction-carrier-v1":
+    if metadata.get("schema_id") != "phk-v22r-prediction-carrier-v1-1":
         raise ValueError("unsupported PHK-V2.2R prediction carrier schema")
     if metadata.get("reference_fields_read") is not False:
         raise ValueError("prediction carrier does not preserve reference blindness")

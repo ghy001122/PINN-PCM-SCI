@@ -1,72 +1,70 @@
 # 项目状态
 
-更新时间：2026-08-29
+更新时间：2026-08-30
 
 - `phase_id`: `PHK_V22_ONE_WEEK_SPRINT_ACTIVE`
 - `lifecycle_state`: `ACTIVE`
-- `blocker_id`: `AUTODL_INSTANCE_ENDPOINT_PENDING_USER_ACTION`
-- `claim_status`: `IMPLEMENTATION_VERIFIED_NEURAL_METHOD_RESULT_NOT_YET_ESTABLISHED`
-- `authorization_scope`: `PHK_V22R_EXPLICIT_EXECUTION_AUTHORIZED`
+- `blocker_id`: `NONE`
+- `claim_status`: `GPU_PROFILE_VERIFIED_NEURAL_METHOD_RESULT_NOT_YET_ESTABLISHED`
+- `authorization_scope`: `PHK_V22R_V11_FULL_SPRINT_EXPLICITLY_AUTHORIZED`
 - `candidate_status`: `NOT_FROZEN`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED`
 - `reference_status`: `THREE_EXTRA_FINE_REFERENCES_AVAILABLE_TWO_STRESS_UNREAD_SEALED`
-- `implementation_status`: `THREE_FIELD_PINN_SAMPLER_PREDICTION_EVALUATOR_AND_DECISION_CORE_VERIFIED`
-- `method_selection_status`: `NOT_YET_SELECTED_S_FIRST`
-- `compute_status`: `LOCAL_CPU_FULLSHAPE_PREFLIGHT_COMPLETE_CUDA_UNAVAILABLE_AUTODL_AUTHORIZED_NOT_PROVISIONED`
+- `implementation_status`: `V11_FOUR_ARM_EXECUTION_STACK_VERIFIED`
+- `method_selection_status`: `NOT_YET_SELECTED_FOUR_ARM_FALLBACK`
+- `compute_status`: `AUTODL_V100_PROFILE_COMPLETE_GPU_ON_IDLE_NOMINAL_NEXT`
+- `contract_status`: `V11_FOUR_ARM_FROZEN_NOMINAL_GATE_PASSED`
 - `cloud_budget_cny_hard_cap`: `150`
+- `cloud_estimated_cumulative_spend_cny_at_profile_closeout`: `3.6619446915`
 - `next_research_execution_authorized`: `true`
 - `final_deadline`: `2026-09-04T23:59:00+08:00`
 
 ## VERIFIED
 
-- 当前用户命令及 ADR 0047 已明确授权本轮代码、配置、两份 stress
-  extra-fine、PINN/GPU、AutoDL 不超过人民币 150 元、论文和当前仓库
-  commit/push；作者联系和投稿系统操作未授权。
-- `configs/phk_v22r/program_contract.json` 固定研究边界；
-  `configs/phk_v22r/method_contract.json` 在任何 nominal 神经结果前固定网络、
-  强残差、损失、采样、因果窗口、公平性和增益门。
-- 已实现 `v/theta/phi` 三场强形式 PINN、所需对角二阶 AD、完整混合 IC/BC、
-  strong-raw/MF-only/sampler-only/MF+sampler 与一次 strict-PHA probe。
-- 已实现 reference-blind 训练、四窗口等额 replay、0.35/0.25/0.25/0.15
-  Sobol/残差/phase/Joule 采样、checkpoint、prediction carrier、本地 evaluator、
-  stress fail-closed gate、nominal machine adjudicator 和 cloud budget ledger。
-- `tests/test_phk_v22r_pinn.py` 当前 13/13 通过；覆盖物理导数、全臂有限反传、
-  strict gate 全导数、采样语义、边界、真实一步优化、reference-blind prediction、
-  stress 封存和候选裁决；V2.1 与 V2.2R 扩展组合回归共 44/44 通过。
-- paper_v22r 已预写 Abstract、Introduction、Physical Model、Method、Evaluation、
-  conditional Results、Limitations、References 和 claim-to-artifact registry。
-- PHK-V2.1 的 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN` 与所有旧证据保持不变。
-- nominal extra-fine 仍仅为 development-only reference，SHA256 为
-  `0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE`，
-  从未进入 V2.2R 训练或 sampler。
-- narrow-interface extra-fine 已完成唯一 solve：154,751,976 bytes，SHA256
-  `C2C01F31E23869DB1E54A5938F5DFCFC6491EA6583D49B8635C56678F09BD0CD`；
-  wide-heater extra-fine 已完成唯一 solve：155,426,149 bytes，SHA256
-  `1A72CD23B10E6E048BC72936A43A41F165A9B37758E012CD296574D50D27422A`。
-  两者独立字节复核通过并保持 `SEALED_UNREAD_PENDING_CANDIDATE_FREEZE`；没有
-  读取场或计算事件/误差指标。
-- 五个冻结方法臂均在 FP64、seed 17、完整 `512/128/128` 点形状下完成一次真实 CPU
-  优化更新，所有 loss、残差、梯度、checkpoint 与 manifest 均有限且完整；该并发
-  一步运行仅为非投票工程预检，不能用于方法排序或 strict-PHA 成本判断。
+- 用户已在 2026-08-30 当前任务中明确批准 PHK-V2.2R 完整后续冲刺，授权从 v1.1
+  对齐开始，按冻结门连续推进 nominal、条件性 sealed confirmation、图表、复现材料和论文
+  初稿；不需要 routine 再批准。AutoDL 150 元硬上限及当前仓库选择性 commit/push 授权保持，
+  作者联系、凭据披露和投稿系统操作仍未授权。
+- AutoDL 实例当前为 `Tesla V100-PCIE-32GB`，Python 3.11.9、PyTorch 2.5.1+cu118、
+  CUDA 11.8 与 FP64 probe 有效；GPU 已上线且核验时空闲，无训练进程。
+- run `20260830T0122-phk-v22r-d1-gpu-profile-cf372713` 已完成五臂 100-update
+  profile。五臂均 `COMPLETE` 且有限；四个 primary arms 的速度为
+  0.5203–0.5673 s/update，峰值显存为 0.302–1.158 GB。
+- profile 单价为 1.88 元/小时；阶段估算支出 0.1619446910 元，含既有 3.5 元后累计估算
+  3.6619446915 元。该账本是平台单价下的运行估算，不冒充最终账单。
+- strict PHA 成本比 1.627636 小于 1.8× 上限，但相对 `MF_PLUS_SAMPLER` 的 primary
+  改善为 0，低于冻结的 10% 要求；本地裁决为
+  `STRICT_PHA_PRIMARY_GAIN_GATE_FAILED`，动作是
+  `REMOVE_STRICT_PHA_FROM_CRITICAL_PATH_WITHOUT_GATE_TUNING`。
+- 预声明 generic-RAR P0 截止已过且未形成稳定实现，因此 v1.1 使用四臂 fallback；
+  strict PHA、generic RAR、Route B/C 都不进入本周后续实验轴。
+- 三场 strong-form PINN、四个 primary arms、训练器、prediction carrier、本地 evaluator、
+  sealed gate 与 decision core 的既有实现基础保持；V2.1 与全部历史 No-Go 原样有效。
+- nominal extra-fine 仍是 local development-only reference；两份 stress extra-fine 的字节
+  seal 保持有效，且仍未读取 field 或 metric。
+- P0 v1.1 已将 program/method contracts、runner、decision machine、两阶段 freeze、cloud
+  run card、manuscript 与 claim registry 对齐。聚焦测试 16/16、PHK-V2.1+V2.2R 组合
+  回归 47/47 及 `DOCUMENT_CONSISTENCY_VALID` 已通过；nominal 入口只接受固定四臂、1000
+  updates、scratch start、seed 17、Band A、final checkpoint only。
 
 ## IN PROGRESS
 
-- 本地可执行工作已交接到 GPU 边界；在用户账号创建 AutoDL 实例并提供 SSH 端点及
-  页面实时单价前，GPU profile 和 nominal pilot 不能启动。
+- 立即在当前 V100 上执行四臂 nominal；训练前显式设置有效的
+  `OMP_NUM_THREADS`，消除现有交互 shell 的 libgomp 警告。
 
 ## UNKNOWN
 
-- 四个 physics-only arms 的 nominal competence、排序和可归因增益尚未测量。
-- strict PHA 的实际 GPU 成本与 100-update 增益尚未测量。
-- 候选能否冻结、stress fields 开封后的事件身份和 confirmation 是否通过均未知；
-  不得从成功生成 carrier 推断正面方法结果。
-- Route B 尚未触发；只有所有 route-A arms 都缺乏基本 competence 才允许实现并执行。
+- 四臂 nominal 的基本 competence、排序和 `MF_PLUS_SAMPLER` 可归因增益尚未测量。
+- candidate 能否冻结、两个 stress case 的六份 prediction 是否形成、开封后的事件身份与
+  confirmation 分支均未知；不得从 profile 通过、carrier 存在或 GPU 就绪推断正面结果。
 
 ## 交付路由
 
 - 当前稿件：`paper/paper_v22r/`
 - 当前执行入口：`active_phase.md`
 - 唯一 live plan：`docs/plans/NEXT_ACTIONS.md`
-- 机器合同：`configs/phk_v22r/program_contract.json` 与
+- 当前决策：`docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md`
+- profile 事实：`docs/experiment/2026-08-30-phk-v22r-gpu-profile-closeout.md`
+- 当前 v1.1 机器合同：`configs/phk_v22r/program_contract.json` 与
   `configs/phk_v22r/method_contract.json`
 - 历史 V2.1：`paper/paper_v21/`

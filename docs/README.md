@@ -19,15 +19,15 @@
 
 ## 当前执行入口
 
-- 当前唯一 live plan：[PLAN-PHK-V2.2R-V1](plans/NEXT_ACTIONS.md)。状态为
-  `ACTIVE_D0_FULLSHAPE_PREFLIGHT_VERIFIED_GPU_PROFILE_PENDING`；执行边界见
-  [`program_contract.json`](../configs/phk_v22r/program_contract.json)，方法、损失、
-  采样、公平性与增益门见
-  [`method_contract.json`](../configs/phk_v22r/method_contract.json)。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。用户已明确启动 V2.2R；本地代码/求解/PINN、两份 sealed stress extra-fine、AutoDL 150 元上限、稿件和当前仓库 commit/push 已授权，投稿仍未授权。
-- 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 使用 PHK-V2.1 fixed-discretization carrier，不宣称 continuum oracle；默认 S-first，strict PHA 仅探针，A→B 只有一次。
+- 当前唯一 live plan：[PLAN-PHK-V2.2R-V1.1](plans/NEXT_ACTIONS.md)。状态为
+  `ACTIVE_P0_V11_ALIGNMENT_AUTHORIZED`。旧
+  [`program_contract.json`](../configs/phk_v22r/program_contract.json) 与
+  [`method_contract.json`](../configs/phk_v22r/method_contract.json) 只保留 v1 profile
+  身份；在 v1.1 合同、runner、run card、测试和文档门禁全部对齐前不得启动 nominal。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。用户已在 2026-08-30 明确解除等待并批准从 v1.1 对齐连续推进四臂 nominal、条件性 sealed confirmation 和论文初稿；AutoDL 150 元上限、稿件和当前仓库选择性 commit/push 保持授权，投稿仍未授权。
+- 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 使用 PHK-V2.1 fixed-discretization carrier，不宣称 continuum oracle；本周采用四臂 fallback，strict PHA、generic RAR 与 Route B/C 均不再进入实验轴。
 - 当前证据入口：[PHK-V2.1 terminal summary](../outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/summary.json)、[S1 terminal closeout](experiment/2026-08-28-phk-v21-s1-terminal-closeout.md)、[S7 package closeout](experiment/2026-08-28-phk-v21-s7-terminal-package-closeout.md)、[最终 paper_v21 包](../paper/paper_v21/README.md)、[S0 scientific freeze](governance/2026-08-28-phk-v21-s0-scientific-contract-freeze.md)、[baseline identity audit](references/2026-08-27-phk-v2-1-baseline-reproduction-identity-audit.md)、[E1 solver selection](experiment/2026-08-27-phk-v21-e1-control-solver-selection.md)与 [E2 object selection](experiment/2026-08-27-phk-v21-e2-engineering-object-selection.md)。它们固定 Oracle No-Go、完整终局包与 neural 下游未到达。
-- 当前 V2.2R 决定入口：[ADR 0047](adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md)。它只前瞻授权新 Method-MVP，不改写上述 V2.1 terminal evidence。
+- 当前 V2.2R 决定入口：[ADR 0048](adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)。它在 profile 后激活 v1.1 四臂冲刺并只覆盖 [ADR 0047](adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md) 的后续执行语义，不改写 V2.1 terminal evidence 或既有 profile 事实。
 - 当前 V2.2R 近期研究策略入口：[2026-08-29 研究策略整合](notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。它把实时会话中的模块组合、结果故事和止损思路映射到冻结合同，只提供解释和稿后路由，不新增授权或证据。
 - 当前 V2.2R stress reference 字节封存记录：
   [2026-08-29 PHK-V2.2R stress extra-fine seal](experiment/2026-08-29-phk-v22r-stress-reference-byte-seal.md)。
@@ -35,6 +35,10 @@
 - 当前 V2.2R 全形状工程预检：
   [2026-08-29 PHK-V2.2R full-shape CPU preflight](experiment/2026-08-29-phk-v22r-fullshape-cpu-preflight.md)。
   五臂均有限并写出完整训练产物，但该一步并发运行不参与排序或成本裁决。
+- 当前 V2.2R GPU profile 收口：
+  [2026-08-30 PHK-V2.2R GPU profile closeout](experiment/2026-08-30-phk-v22r-gpu-profile-closeout.md)。
+  五臂均有限；strict PHA 成本门通过但增益门失败，按冻结规则退出关键路径。该 profile
+  不建立四臂排序、candidate freeze 或正向方法结果。
 - 当前 PHK-V2 制品入口：[完整论文与复现包](../paper/paper_v2/README.md)与 [S2 终局收口](experiment/2026-08-27-phk-v2-s2-terminal-closeout.md)。包内清单、图源、链接、引用键和 claim boundary 已验证，不改变科学证据上限。
 - 上一科研终点：[S2 终局收口](experiment/2026-08-26-goal-paper-one-shot-v1-s2-terminal-closeout.md)与[归档 GOAL](../archive/2026-08-27-goal-paper-one-shot-v1-complete.md)。Q0 只通过零驱动守卫；首个受驱动 QN intent 失败且已计账。该 No-Go、V1 论文和全部历史证据保持原样。
 - 上一对象组合终点：[方法盲对象筛选报告](references/2026-08-26-method-blind-cleanroom-object-screen.md)与 [ADR 0042](adr/0042-close-package-a-with-method-blind-object-portfolio-no-go.md)。3/3 冻结家族在 Gate 3 最早失败，11/12 新载体后形成 `PORTFOLIO_NO_GO_PACKAGE_A_FROZEN_3_FAMILIES_11_CARRIERS`。

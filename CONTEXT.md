@@ -3,7 +3,7 @@
 本文件是当前研究设定、规范术语与论文表述的单一来源，不承载授权、行动清单或易过期的运行结果。当前路线为 `PHK-V2.2R / RAPID METHOD-RESCUE AND POSITIVE-EVIDENCE SPRINT`；它是独立于 PHK-V2.1 Oracle No-Go 的 fixed-discretization Method-MVP，不改写任何历史证据。
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
-- `updated_at`: `2026-08-29`
+- `updated_at`: `2026-08-30`
 
 ## 当前研究问题
 
@@ -18,7 +18,10 @@
 1. (v) 采用轻量低/中频表示，θ 与 φ 使用面向 (x,z,t) 不同尺度的各向异性多频表示；
 2. collocation 预算由 Sobol uniform、residual、phase indicator 和 Joule density 四池共同分配，且 uniform quota 始终大于零。
 
-Strict PHA 不是必需结论，只允许一次 100-update 探针。若保留，输出 gate 使用 phase pilot 与可微 heater/pulse proxy，复合输出的 gate 导数完整进入 strong-form PDE；实际 (Q_J=\sigma|\nabla v|^2) 只用于 sampler 和评价，避免输出 gate 引入不必要的更高阶导数。
+当前冲刺采用四臂固定比较：`STRONG_RAW`、`MF_ONLY`、`SAMPLER_ONLY` 与
+`MF_PLUS_SAMPLER`。只有完整组合可以作为 proposed method 晋级。Strict PHA 已完成唯一
+100-update profile；成本门通过但增益门失败，按预声明规则退出关键路径且不得调 gate。
+generic-RAR 的 P0 截止已过且未形成稳定实现，因此本周采用四臂 fallback，不再新增该控制。
 
 ## 物理对象
 
@@ -46,17 +49,15 @@ Strict PHA 不是必需结论，只允许一次 100-update 探针。若保留，
 - **nominal extra-fine**：development-only fixed-discretization reference，可用于超参数/选路/checkpoint/图表；不得成为 A 的标签、anchor 或 sampler feature。
 - **narrow-interface extra-fine**：sealed confirmation；候选冻结前不可读。
 - **wide-heater extra-fine**：sealed confirmation；候选冻结前不可读；逐周期 event vector 由该 reference 开封后自动确定。
-- **medium carriers**：只有触发 B 后，才可按固定 1% 时空坐标生成 all-field sparse anchors；同一 medium 不得兼作最终测试真值。
+- **medium carriers**：保留为历史/稿后研究资产；本周 v1.1 不启用 Route B，不生成训练 anchors。
 
 三个 case 只能支持 case-specific robustness 或 bounded regime evidence，不能称 formal OOD、device/material generalization。
 
-## A→B 身份
+## 当前冲刺路线
 
-Route A 的训练信号只含 PDE、IC 和 BC residual，论文身份为 physics-only PINN。
-
-Route B 仅在所有 A arms 都不具基本 competence 时触发。它加入 1% medium、因果窗口与 ROI/bulk 分层 Sobol、同坐标 (v/\theta/\phi) anchors，身份必须写成 sparse-reference-assisted PINN。若 A 已具 competence但 proposed 无增量，直接 `MVP_NO_GO_NO_ATTRIBUTABLE_GAIN`；不得借 B 继续寻找正结果。
-
-B 必须比较 same-anchor sparse raw、same-anchor data-only 和 medium interpolation。未同时建立 physics-informed increment 时停止；multi-fidelity correction C 本周禁止。
+四臂训练信号只含 PDE、IC 和 BC residual，论文身份为 physics-only PINN。Route B/C 本周
+停用；若 strong raw 不具基本 competence，或完整组合没有预声明的可归因增益，则按真实
+No-Go 收口，不得借 sparse anchors、新架构、换 seed、延长训练或新模块继续寻找正结果。
 
 ## 评价与可写主张
 
@@ -68,20 +69,23 @@ B 必须比较 same-anchor sparse raw、same-anchor data-only 和 medium interpo
 
 (U_j) 统一称 resolution-sensitivity margin。小于该敏感范围的改善只允许表述为“更好逼近固定离散参考”，不得写成超过数值不确定性或 continuum accuracy。
 
-真实结果可路由为四种有限正向故事：主要精度、sharp-transition regime 条件优势、accuracy–cost Pareto、或 sparse-data physics-informed increment。若均不成立，则保存最小 No-Go，不制造正结论或第四套大型负结果包。
+真实结果只可路由为三种有限正向故事：主要精度、sharp-transition regime 条件优势或
+accuracy–cost Pareto。若均不成立，则保存最小 No-Go 并完成证据一致的初稿，不制造正结论。
 
 ## 规范术语与研究纪律
 
 - **fixed-discretization numerical reference**：固定网格、时间步与输出采样下的数值参考；不得写成 continuum oracle、ground truth 或实验真值。
 - **development case**：允许在冻结预算内选路、调参和做功能等价替换的 nominal case；其 reference 只参与本地评分，不进入 Route A 的训练信号或 sampler feature。
 - **sealed confirmation case**：候选、阈值、损失、预算与评价口径冻结后才可开封的 stress case；开封结果只能决定 PASS、No-Go、regime-aware 或 Pareto 边界，不能反馈调参。
-- **functional pivot**：在同一科学问题和合同预算内替换一个功能槽位，例如表示、采样或共同训练协议；不是新增物理对象、移动指标、换 seed 或无界救援。
+- **functional pivot**：仅保留为历史 v1 术语；v1.1 nominal 前不再允许 functional pivot。
 - **candidate freeze**：结束开发并固定方法身份、训练合同、评价合同和确认矩阵的不可逆边界。
 - **Method-MVP**：包含可运行方法主体、强 comparator、关键消融、真实有限结果和可复现入口的导师评审稿；不等于可直接投稿的完整多-seed/formal-OOD 证据包。
 - **device-level QoI**：由预测场按冻结公式确定性计算的端电流、Joule energy、phase area、peak temperature、event topology 与 recovery；不是另一个可训练标签。
 - **A→A′ adaptation**：透明保留底层模块来源，同时把 PCM 定向接口、场选择、轴向频带、物理采样配比和联合预算分工明确为本项目适配贡献。
 
-开发阶段允许在 program contract 的配置数、功能 pivot 数和预算内进行结果导向的调参、模块迁移和结构替换；确认阶段必须冻结。任何故事包装都只能在已测证据支持的四个结果分支中选择，不得编造结果、隐藏不利 case、抹除来源或在开封后移动标准。
+P0 只允许把合同、实现、runner、评价与稿件对齐到已批准的 v1.1；P0 门禁后方法、更新数、
+seed、指标、阈值、比较臂和预算立即冻结，不再结果导向调参。任何故事包装只能在已测证据
+支持的预声明分支中选择，不得编造结果、隐藏不利 case、抹除来源或在开封后移动标准。
 
 ## 论文故事
 
@@ -91,4 +95,4 @@ B 必须比较 same-anchor sparse raw、same-anchor data-only 和 medium interpo
 
 ## 权威与状态路由
 
-当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。执行边界见 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json)，决定理由见 [ADR 0047](docs/adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md)，近期研究策略的受约束整合见 [2026-08-29 strategy integration](docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。
+当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。profile 后的 v1.1 决定见 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)；旧 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json) 必须在 nominal 前完成版本化对齐。近期研究策略的受约束整合见 [2026-08-29 strategy integration](docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。

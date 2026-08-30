@@ -1,6 +1,6 @@
 # PHK-V2.2R Method-MVP Paper Package
 
-Status: `METHOD_CORE_VERIFIED_RESULTS_PENDING`
+Status: `V11_METHOD_CORE_FROZEN_NOMINAL_RESULTS_PENDING`
 
 This package is the live manuscript workspace for the seven-day
 `PHK-V2.2R RAPID METHOD-RESCUE AND POSITIVE-EVIDENCE SPRINT`.
@@ -28,10 +28,12 @@ This package is the live manuscript workspace for the seven-day
 
 The nominal extra-fine carrier may be used only by the local evaluator for
 development scoring and route selection. It is prohibited as a training label,
-anchor, or sampler feature. The two stress extra-fine carriers remain sealed until
-the candidate contract is frozen; opening them may adjudicate the frozen method
-but may not trigger hyperparameter, architecture, A-to-B, or route changes.
+anchor, sampler feature, or cloud artifact. The two stress extra-fine carriers
+remain sealed until the three confirmation roles and all six reference-blind
+prediction carriers are frozen and hash verified; opening them may adjudicate the frozen method
+but may not trigger hyperparameter, architecture, seed, budget, or rescue-route changes.
 
 The Day-7 confirmation matrix is bounded to two sealed stress cases, one frozen
-seed, and three neural arms: selected method, strongest comparator, and
-equal-compute raw. Multi-seed confirmation is post-draft work.
+seed, and three neural roles: selected method, strongest comparator, and a
+parameter-matched, measured-time-budget raw control. Multi-seed confirmation is
+post-draft work.

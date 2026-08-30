@@ -90,7 +90,7 @@ def _write_json_exclusive(path: Path, payload: Mapping[str, Any]) -> None:
 class PhkTrainingConfig:
     arm: str
     case_control: str = "FULL"
-    updates: int = 1500
+    updates: int = 1000
     seed: int = 17
     hidden_width: int = 64
     hidden_layers: int = 4
@@ -103,7 +103,7 @@ class PhkTrainingConfig:
     candidate_pool_multiplier: int = 4
     refresh_updates: int = 250
     log_every: int = 25
-    checkpoint_every: int = 250
+    checkpoint_every: int = 1000
     pde_weight: float = 1.0
     boundary_weight: float = 5.0
     initial_weight: float = 1.0
@@ -257,7 +257,7 @@ def _checkpoint_payload(
     physical_object_sha256: str,
 ) -> dict[str, Any]:
     return {
-        "schema_id": "phk-v22r-checkpoint-v1",
+        "schema_id": "phk-v22r-checkpoint-v1-1",
         "update": int(update),
         "training_config": asdict(config),
         "training_config_sha256": config.identity,
@@ -315,7 +315,7 @@ def train(
         seed=config.seed,
     )
     manifest = {
-        "schema_id": "phk-v22r-training-run-manifest-v1",
+        "schema_id": "phk-v22r-training-run-manifest-v1-1",
         "status": "RUNNING",
         "started_at_utc": datetime.now(timezone.utc).isoformat(),
         "training_config": asdict(config),
@@ -330,6 +330,12 @@ def train(
         "reference_fields_read": False,
         "training_labels_used": False,
         "anchor_fields_used": False,
+        "initialization": "SCRATCH_START",
+        "checkpoint_policy": (
+            "FINAL_ONLY"
+            if config.checkpoint_every >= config.updates
+            else "PERIODIC_PLUS_FINAL"
+        ),
         "sampler_inputs": ["SOBOL", "PDE_RESIDUAL", "PREDICTED_PHASE", "PREDICTED_JOULE"],
         "pde_scales": dict(PDE_SCALES),
         "boundary_scales": dict(BOUNDARY_SCALES),
@@ -516,7 +522,7 @@ def _parser() -> argparse.ArgumentParser:
         default=PhkControl.FULL.value,
     )
     parser.add_argument("--run-directory", type=Path, required=True)
-    parser.add_argument("--updates", type=int, default=1500)
+    parser.add_argument("--updates", type=int, default=1000)
     parser.add_argument("--seed", type=int, default=17)
     parser.add_argument("--hidden-width", type=int, default=64)
     parser.add_argument("--hidden-layers", type=int, default=4)
@@ -532,7 +538,7 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--candidate-pool-multiplier", type=int, default=4)
     parser.add_argument("--refresh-updates", type=int, default=250)
     parser.add_argument("--log-every", type=int, default=25)
-    parser.add_argument("--checkpoint-every", type=int, default=250)
+    parser.add_argument("--checkpoint-every", type=int, default=1000)
     parser.add_argument("--device", default="cpu")
     return parser
 

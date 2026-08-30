@@ -1,61 +1,86 @@
-# PHK-V2.2R AutoDL run card
+# PHK-V2.2R v1.1 AutoDL run card
 
-This run card executes only reference-blind PINN work. Do not upload any file
-under `outputs/runs/*extra-fine*` or `outputs/sealed/phk_v22r/` to the instance.
+- `status`: `V11_FOUR_ARM_NOMINAL_ENTRYPOINT_FROZEN`
+- `profile_run_id`: `20260830T0122-phk-v22r-d1-gpu-profile-cf372713`
+- `current_route`: `FOUR_ARM_FALLBACK`
+- `nominal_updates`: `1000`
 
-## Required instance
+This card governs reference-blind cloud work. Never upload the nominal
+extra-fine carrier, either sealed stress reference, a local evaluation, or any
+file below `outputs/sealed/phk_v22r/`.
 
-- Preferred: V100 32 GB; fallback: A100 40 GB.
-- Python 3.11 and a CUDA-enabled PyTorch build with float64 support.
-- Record the price displayed by AutoDL as `HOURLY_PRICE_CNY` before starting.
-- The total instance ledger must stay at or below CNY 150.
+## Closed profile
 
-## Environment check and 100-update profiles
+The legacy five-arm profile is complete and must not be repeated. Strict PHA
+passed only its cost gate and failed its frozen development gain gate; generic
+RAR missed its P0 deadline. Neither appears in the v1.1 executable matrix.
 
-From the repository root on the instance:
+## Exact nominal command
 
-```bash
-python -c "import torch, numpy, scipy; assert torch.cuda.is_available(); print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0))"
-python -m pinn_pcm_sci.phk_v22r_sprint \
-  --mode profile \
-  --output-root outputs/cloud/phk-v22r-profile-001 \
-  --device cuda:0 \
-  --hourly-price-cny "$HOURLY_PRICE_CNY" \
-  --budget-cny 150 \
-  --prior-spend-cny 0
-```
-
-The profile runs the four primary arms and exactly one strict-PHA 100-update
-probe. It records seconds/update and peak allocated GPU memory. If strict PHA is
-nonfinite, out of memory, or exceeds 1.8 times the MF cost, remove it from the
-critical path without tuning its gate.
-
-## Nominal pilot
-
-After checking the profile projection:
+Run only after the local focused tests, combined regression, and document
+consistency gate all pass. Replace `<RUN_ID>` and `<SOURCE_IDENTITY>` with the
+predeclared immutable run ID and the selective P0 commit identity.
 
 ```bash
-python -m pinn_pcm_sci.phk_v22r_sprint \
-  --mode pilot \
-  --output-root outputs/cloud/phk-v22r-nominal-pilot-001 \
+cd /root/autodl-tmp/PINN-PCM-SCI
+OMP_NUM_THREADS=1 /root/autodl-tmp/envs/pinn-pcm-sci-py311/bin/python \
+  -m pinn_pcm_sci.phk_v22r_sprint \
+  --mode nominal \
+  --output-root /root/autodl-tmp/PINN-PCM-SCI/outputs/runs/<RUN_ID> \
   --device cuda:0 \
-  --hourly-price-cny "$HOURLY_PRICE_CNY" \
+  --hourly-price-cny 1.88 \
   --budget-cny 150 \
-  --prior-spend-cny "$PROFILE_SPEND_CNY"
+  --prior-spend-cny 3.6619446915 \
+  --source-identity <SOURCE_IDENTITY>
 ```
 
-The pilot automatically writes a reference-blind extra-fine-axis prediction next
-to each checkpoint. Download each checkpoint, prediction, training log, manifest,
-environment report, and cost ledger. Predictions may be downloaded, but all
-comparison to finite-volume fields must run locally.
+The runner accepts no arm override and no legacy `profile` or `pilot` mode. It
+executes, in order, `STRONG_RAW`, `MF_ONLY`, `SAMPLER_ONLY`, and
+`MF_PLUS_SAMPLER`, all from scratch in FP64 with seed 17, Band A,
+`512/128/128` points, Adam, exactly 1000 updates, and final checkpoint only.
+Each arm emits its checkpoint, training log, start/final manifests, ledger, and
+reference-blind prediction carrier.
 
-The runner caps profile spend at 20% of the CNY 150 total and pilot spend at
-30%. Enter the completed profile ledger value as `PROFILE_SPEND_CNY`; at least
-50% of the total budget remains reserved for sealed confirmation.
+Run the command in the existing `phk_train` tmux session with a launcher whose
+exit trap calls `/usr/bin/shutdown`. Success, failure, or interruption must all
+end in shutdown after allowed artifacts are recovered.
 
-## Upload allowlist
+## Nominal adjudication boundary
 
-- repository source and configuration;
-- physical coordinates, boundary definitions, and evaluation axes;
-- medium anchors only if route B is machine-authorized;
-- no extra-fine field, metric, mask, event time, or local comparison output.
+Download the complete run directory and compare the four predictions with the
+nominal development reference locally. A nominal PASS authorizes only the next
+reference-blind confirmation preparations; it does not authorize stress
+reference access.
+
+If nominal is positive:
+
+1. run one 100-update, width-76 parameter-matched raw timing calibration on the
+   nominal physical case without a reference;
+2. write `confirmation_plan.json`, freezing the selected method, strongest
+   comparator, and raw update count derived by
+   `floor(selected nominal wall seconds / raw calibration seconds per update)`;
+3. train the three frozen roles from scratch on each of the two stress physical
+   cases and generate six prediction carriers without any reference file;
+4. download all six carriers and verify their config, checkpoint, contract, and
+   byte identities locally;
+5. only then write `candidate_freeze.json` and open the two sealed references
+   once for local evaluation.
+
+Nominal No-Go stops the cloud route immediately: no seed change, extension,
+strict PHA, generic RAR, Route B/C, functional pivot, warm start, SIREN,
+continuation, L-BFGS, or new module.
+
+## Instance and budget
+
+- Validated device: Tesla V100-PCIE-32GB.
+- Environment: Python 3.11.9, PyTorch 2.5.1+cu118, CUDA 11.8.
+- Displayed price: CNY 1.88/hour.
+- Estimated cumulative spend at profile closeout: CNY 3.6619446915.
+- Hard cumulative cap: CNY 150.
+- `OMP_NUM_THREADS` must be explicitly set to a positive integer; use `1`.
+- Stop new cloud work if actual or projected cumulative cost approaches the cap.
+- Shut down after every paid training or recovery stage.
+
+Allowed download: checkpoint, prediction, training log, manifest, environment
+report, and cost ledger. Every comparison with nominal or sealed finite-volume
+fields remains local.

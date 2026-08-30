@@ -118,7 +118,7 @@ def _physical_contract():
 def validate_candidate_freeze(
     path: Path = CANDIDATE_FREEZE,
 ) -> dict[str, Any]:
-    """Validate the one-way method freeze before any stress carrier is opened."""
+    """Validate the final six-carrier freeze before any stress reference is opened."""
 
     exact = Path(path)
     try:
@@ -127,38 +127,39 @@ def validate_candidate_freeze(
         raise PermissionError(
             "stress references are sealed until candidate_freeze.json exists"
         ) from exc
-    if payload.get("schema_id") != "phk-v22r-candidate-freeze-v1":
+    if payload.get("schema_id") != "phk-v22r-candidate-freeze-v1-1":
         raise PermissionError("unsupported V2.2R candidate freeze schema")
-    if payload.get("status") != "FROZEN":
-        raise PermissionError("stress references remain sealed before FROZEN status")
+    if payload.get("status") != "FROZEN_SIX_PREDICTION_IDENTITIES_VERIFIED":
+        raise PermissionError("stress references remain sealed before six carriers freeze")
+    if payload.get("stress_reference_access_authorized") is not True:
+        raise PermissionError("candidate freeze did not authorize local stress access")
     if payload.get("program_contract_sha256") != _sha256_path(PROGRAM_CONTRACT):
         raise PermissionError("candidate freeze is not bound to the live V2.2R contract")
     if payload.get("method_contract_sha256") != _sha256_path(METHOD_CONTRACT):
         raise PermissionError("candidate freeze is not bound to the live method contract")
-    selected = payload.get("selected_candidate")
-    if not isinstance(selected, dict):
-        raise PermissionError("candidate freeze lacks a selected candidate")
-    required_candidate = {
-        "arm",
-        "training_config_sha256",
-        "seed",
-        "updates",
-        "architecture",
-        "training_config",
-        "decision_status",
+    roles = payload.get("roles")
+    expected_roles = {
+        "SELECTED_METHOD",
+        "STRONGEST_COMPARATOR",
+        "PARAMETER_MATCHED_MEASURED_TIME_BUDGET_RAW_CONTROL",
     }
-    if not required_candidate.issubset(selected):
-        raise PermissionError("candidate freeze is missing selected-candidate identity")
-    if int(selected["seed"]) != 17:
-        raise PermissionError("candidate freeze changed the confirmation seed")
-    if payload.get("strongest_component") not in {
+    if not isinstance(roles, dict) or set(roles) != expected_roles:
+        raise PermissionError("candidate freeze lacks the frozen three-role identity")
+    if roles["SELECTED_METHOD"].get("arm") != PhkV22RArm.MF_PLUS_SAMPLER.value:
+        raise PermissionError("candidate freeze selected an unauthorized method arm")
+    if roles["STRONGEST_COMPARATOR"].get("arm") not in {
         PhkV22RArm.MF_ONLY.value,
         PhkV22RArm.SAMPLER_ONLY.value,
     }:
-        raise PermissionError("candidate freeze lacks a valid strongest component")
-    equal_raw = payload.get("equal_compute_raw_identity")
-    if not isinstance(equal_raw, dict) or equal_raw.get("arm") != PhkV22RArm.STRONG_RAW.value:
-        raise PermissionError("candidate freeze lacks the equal-compute raw identity")
+        raise PermissionError("candidate freeze lacks a valid strongest comparator")
+    if roles["PARAMETER_MATCHED_MEASURED_TIME_BUDGET_RAW_CONTROL"].get(
+        "arm"
+    ) != PhkV22RArm.STRONG_RAW.value:
+        raise PermissionError("candidate freeze lacks the measured-time raw control")
+    for role in expected_roles:
+        template = roles[role].get("training_config_template")
+        if not isinstance(template, dict) or int(template.get("seed", -1)) != 17:
+            raise PermissionError(f"candidate freeze has invalid {role} config")
     seals = payload.get("stress_reference_seals")
     if not isinstance(seals, dict):
         raise PermissionError("candidate freeze lacks stress reference byte seals")
@@ -169,69 +170,51 @@ def validate_candidate_freeze(
         sha = item.get("carrier_sha256")
         if not isinstance(sha, str) or len(sha) != 64:
             raise PermissionError(f"candidate freeze has invalid {control.value} hash")
+    predictions = payload.get("prediction_carriers")
+    if not isinstance(predictions, dict) or payload.get("verified_prediction_count") != 6:
+        raise PermissionError("candidate freeze lacks six verified predictions")
+    for control in STRESS_REFERENCES:
+        case_records = predictions.get(control.value)
+        if not isinstance(case_records, dict) or set(case_records) != expected_roles:
+            raise PermissionError(f"candidate freeze lacks three {control.value} roles")
+        for role in expected_roles:
+            record = case_records[role]
+            if not isinstance(record, dict):
+                raise PermissionError(f"candidate freeze has invalid {control.value}/{role}")
+            sha = record.get("sha256")
+            if not isinstance(sha, str) or len(sha) != 64:
+                raise PermissionError(f"candidate freeze has invalid {control.value}/{role} hash")
+            if record.get("reference_fields_read") is not False:
+                raise PermissionError(f"candidate freeze has non-blind {control.value}/{role}")
     return payload
 
 
 def _validate_stress_prediction_identity(
-    metadata: Mapping[str, Any], freeze: Mapping[str, Any]
+    metadata: Mapping[str, Any],
+    freeze: Mapping[str, Any],
+    *,
+    prediction_path: Path,
+    control: PhkControl,
 ) -> str:
     config = metadata.get("training_config")
     if not isinstance(config, dict):
         raise ValueError("stress prediction lacks a training configuration")
-    selected = freeze["selected_candidate"]
-    selected_config = selected["training_config"]
-    strongest = freeze["strongest_component"]
-    equal_raw = freeze["equal_compute_raw_identity"]
-    arm = config.get("arm")
-    if arm == selected["arm"]:
-        role = "SELECTED_METHOD"
-        template = selected_config
-    elif arm == strongest:
-        role = "STRONGEST_COMPONENT"
-        template = {
-            **selected_config,
-            "arm": strongest,
-            "hidden_width": 64,
-            "hidden_layers": 4,
-        }
-    elif (
-        arm == PhkV22RArm.STRONG_RAW.value
-        and int(config.get("hidden_width", -1))
-        == int(equal_raw.get("hidden_width", -2))
+    matches = []
+    for role, identity in freeze["roles"].items():
+        template = dict(identity["training_config_template"])
+        template["case_control"] = control.value
+        if config == template:
+            matches.append(role)
+    if len(matches) != 1:
+        raise ValueError("stress prediction is outside the unique frozen three-role matrix")
+    role = matches[0]
+    frozen_record = freeze["prediction_carriers"][control.value][role]
+    if frozen_record.get("sha256") != _sha256_path(prediction_path):
+        raise ValueError("stress prediction byte hash differs from the final freeze")
+    if frozen_record.get("training_config_sha256") != metadata.get(
+        "training_config_sha256"
     ):
-        role = "EQUAL_COMPUTE_RAW"
-        template = {
-            **selected_config,
-            "arm": PhkV22RArm.STRONG_RAW.value,
-            "hidden_width": int(equal_raw["hidden_width"]),
-            "hidden_layers": int(equal_raw["hidden_layers"]),
-        }
-    else:
-        raise ValueError("stress prediction is outside the frozen three-arm matrix")
-    frozen_keys = (
-        "arm",
-        "updates",
-        "seed",
-        "hidden_width",
-        "hidden_layers",
-        "frequency_band",
-        "learning_rate",
-        "gradient_clip_norm",
-        "interior_points",
-        "boundary_points",
-        "initial_points",
-        "candidate_pool_multiplier",
-        "refresh_updates",
-        "pde_weight",
-        "boundary_weight",
-        "initial_weight",
-        "dtype",
-    )
-    for key in frozen_keys:
-        if config.get(key) != template.get(key):
-            raise ValueError(f"stress prediction changed frozen training key: {key}")
-    if config.get("case_control") not in STRESS_REFERENCES_BY_VALUE:
-        raise ValueError("stress prediction is not a frozen stress case")
+        raise ValueError("stress prediction configuration hash differs from the freeze")
     return role
 
 
@@ -327,9 +310,9 @@ def _event_summary(
             failures.append(f"cycle_{cycle_index + 1}_recovery_failure")
     return {
         "cycles": cycles,
-        "roi_fraction": roi_fraction,
-        "full_fraction": full_fraction,
-        "outside_fraction": outside_fraction,
+        "roi_fraction": roi_fraction.tolist(),
+        "full_fraction": full_fraction.tolist(),
+        "outside_fraction": outside_fraction.tolist(),
         "failures": failures,
         "passed": not failures,
     }
@@ -433,7 +416,10 @@ def evaluate_prediction(
     if selected in STRESS_REFERENCES:
         freeze = validate_candidate_freeze(candidate_freeze_path)
         confirmation_role = _validate_stress_prediction_identity(
-            prediction_metadata, freeze
+            prediction_metadata,
+            freeze,
+            prediction_path=prediction_path,
+            control=selected,
         )
     reference, reference_sha = load_reference(
         selected, candidate_freeze_path=candidate_freeze_path
@@ -567,7 +553,7 @@ def evaluate_prediction(
         hard_guard_failures.append("phase_range_failure")
 
     return {
-        "schema_id": "phk-v22r-evaluation-v1",
+        "schema_id": "phk-v22r-evaluation-v1-1",
         "status": "EVALUATED_LOCAL_REFERENCE_ONLY",
         "case_control": selected.value,
         "prediction_path": _portable_path(prediction_path),
@@ -615,8 +601,9 @@ def evaluate_prediction(
 def write_evaluation(path: Path, report: Mapping[str, Any]) -> None:
     exact = Path(path)
     exact.parent.mkdir(parents=True, exist_ok=True)
+    serialized = json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False)
     with exact.open("x", encoding="utf-8", newline="\n") as handle:
-        json.dump(report, handle, indent=2, sort_keys=True, ensure_ascii=False)
+        handle.write(serialized)
         handle.write("\n")
 
 

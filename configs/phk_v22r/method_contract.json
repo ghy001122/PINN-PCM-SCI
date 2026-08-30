@@ -1,11 +1,11 @@
 {
-  "schema_id": "phk-v22r-method-contract-v1",
-  "contract_id": "PHK_V22R_FS_PJAMF_METHOD_V1",
-  "status": "FROZEN_BEFORE_NOMINAL_NEURAL_RESULT",
-  "effective_date": "2026-08-29",
+  "schema_id": "phk-v22r-method-contract-v1-1",
+  "contract_id": "PHK_V22R_FS_PJAMF_FOUR_ARM_METHOD_V1_1",
+  "status": "FROZEN_FOR_NOMINAL_AND_CONDITIONAL_CONFIRMATION",
+  "effective_date": "2026-08-30",
   "program_contract": "configs/phk_v22r/program_contract.json",
   "reference_blind_training": {
-    "route_a_inputs": [
+    "inputs": [
       "PHYSICAL_COORDINATES",
       "PDE_AND_CONSTITUTIVE_PARAMETERS",
       "IC_BC_AND_WAVEFORM",
@@ -19,43 +19,62 @@
     ]
   },
   "architecture": {
-    "shared_family": "THREE_INDEPENDENT_MODIFIED_GATED_MLP_FIELD_HEADS",
+    "family": "THREE_INDEPENDENT_MODIFIED_GATED_MLP_FIELD_HEADS",
+    "shared_trunk": false,
     "hidden_width": 64,
     "hidden_layers": 4,
     "activation": "TANH_WITH_SIGMOID_FEATURE_MIXING_GATE",
-    "raw_arms": ["STRONG_RAW", "SAMPLER_ONLY"],
-    "multifrequency_arms": ["MF_ONLY", "MF_PLUS_SAMPLER", "STRICT_PHA_PROBE"],
+    "raw_arms": [
+      "STRONG_RAW",
+      "SAMPLER_ONLY"
+    ],
+    "multifrequency_arms": [
+      "MF_ONLY",
+      "MF_PLUS_SAMPLER"
+    ],
     "field_transformations": {
       "potential": "waveform(t)*sigmoid(latent_v)",
       "temperature": "2.5*(1-exp(-t/0.35))*(1-z_fraction)*sigmoid(latent_theta)",
       "phase": "sigmoid(logit(phi_initial)+8*(1-exp(-t/0.35))*latent_phi)"
     },
     "hard_ic_startup_time": 0.35,
-    "band_a_all": {
-      "x": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
-      "z": [1.0, 2.0, 4.0, 8.0, 12.0, 24.0],
-      "t": [1.0, 2.0, 4.0, 8.0]
+    "fixed_band_a": {
+      "x": [
+        1.0,
+        2.0,
+        4.0,
+        8.0,
+        12.0,
+        24.0
+      ],
+      "z": [
+        1.0,
+        2.0,
+        4.0,
+        8.0,
+        12.0,
+        24.0
+      ],
+      "t": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ]
     },
     "field_allocation": {
       "potential": "FIRST_4_X_FIRST_4_Z_FIRST_2_T",
       "temperature": "FIRST_5_X_FIRST_5_Z_FIRST_3_T",
-      "phase": "ALL_FROZEN_BAND_FREQUENCIES"
+      "phase": "ALL_FIXED_BAND_A_FREQUENCIES"
     },
     "parameter_counts_at_width_64_layers_4": {
       "STRONG_RAW": 39939,
       "MF_ONLY": 54915,
       "SAMPLER_ONLY": 39939,
-      "MF_PLUS_SAMPLER": 54915,
-      "STRICT_PHA_PROBE": 62277
+      "MF_PLUS_SAMPLER": 54915
     },
     "derivatives": "PHYSICAL_COORDINATES_DIAGONAL_XX_ZZ_ONLY_PLUS_REQUIRED_FIRST_DERIVATIVES",
-    "electric_residual": "SIGMA_LAPLACIAN_V_PLUS_GRAD_SIGMA_DOT_GRAD_V",
-    "strict_pha": {
-      "gate_floor": 0.05,
-      "gate_formula": "floor+(1-floor)*sigmoid(6*(4*pilot_phi*(1-pilot_phi)+heater_pulse_proxy-0.65))",
-      "gate_stop_gradient": false,
-      "high_frequency_correction_fields": ["TEMPERATURE", "PHASE"]
-    }
+    "electric_residual": "SIGMA_LAPLACIAN_V_PLUS_GRAD_SIGMA_DOT_GRAD_V"
   },
   "loss": {
     "group_weights": {
@@ -86,8 +105,30 @@
     "dtype": "FLOAT64"
   },
   "sampling": {
-    "causal_windows": [[0.0, 0.35], [0.35, 1.25], [1.25, 1.60], [1.60, 2.50]],
-    "window_open_update_fractions": [0.0, 0.15, 0.35, 0.55],
+    "causal_windows": [
+      [
+        0.0,
+        0.35
+      ],
+      [
+        0.35,
+        1.25
+      ],
+      [
+        1.25,
+        1.6
+      ],
+      [
+        1.6,
+        2.5
+      ]
+    ],
+    "window_open_update_fractions": [
+      0.0,
+      0.15,
+      0.35,
+      0.55
+    ],
     "replay": "EQUAL_POINT_COUNT_ACROSS_ALL_OPEN_WINDOWS",
     "physics_mixture": {
       "uniform_sobol": 0.35,
@@ -99,69 +140,121 @@
     "refresh_updates": 250,
     "candidate_ranking_gradient": "DETACHED_AFTER_STRONG_RESIDUAL_EVALUATION"
   },
+  "nominal_training": {
+    "case_control": "FULL",
+    "arms_in_order": [
+      "STRONG_RAW",
+      "MF_ONLY",
+      "SAMPLER_ONLY",
+      "MF_PLUS_SAMPLER"
+    ],
+    "only_advancement_arm": "MF_PLUS_SAMPLER",
+    "seed": 17,
+    "dtype": "FLOAT64",
+    "frequency_band": "BAND_A",
+    "initialization": "SCRATCH_START",
+    "optimizer": "ADAM",
+    "updates": 1000,
+    "interior_points": 512,
+    "boundary_points": 128,
+    "initial_points": 128,
+    "checkpoint_policy": "FINAL_ONLY"
+  },
   "development_decision": {
     "basic_competence_requires": [
       "FINITE_TRAINING_AND_PREDICTION",
-      "DECREASING_PDE_OR_FIELD_ERROR_TREND",
+      "DECREASING_PDE_LOSS",
       "TWO_REFERENCE_ALIGNED_PHASE_EVENTS",
       "PHASE_RANGE_AND_LOCALITY_GUARDS"
     ],
     "decreasing_pde_trend": "FINAL_LOGGED_PDE_LOSS_LE_0.98_TIMES_FIRST_LOGGED_PDE_LOSS",
-    "strongest_component_selection": "MINIMUM_GEOMETRIC_MEAN_OF_PRIMARY_AND_CO_PRIMARY_RATIOS_AMONG_ELIGIBLE_MF_ONLY_AND_SAMPLER_ONLY",
-    "combined_gain_vs_strongest_component": {
+    "strongest_comparator_selection": "MINIMUM_GEOMETRIC_MEAN_OF_PRIMARY_AND_CO_PRIMARY_AMONG_ELIGIBLE_MF_ONLY_AND_SAMPLER_ONLY",
+    "combined_gain_vs_strongest_comparator": {
       "primary_maximum_ratio": 0.98,
       "co_primary_maximum_ratio": 0.98,
       "geometric_mean_maximum_ratio": 0.95
     },
     "combined_gain_vs_strong_raw": {
-      "geometric_mean_maximum_ratio": 0.90
+      "geometric_mean_maximum_ratio": 0.9
     },
-    "noninferiority_vs_strongest_component": {
-      "temperature_nrmse_maximum_ratio": 1.10,
+    "noninferiority_vs_strongest_comparator": {
+      "temperature_nrmse_maximum_ratio": 1.1,
       "temperature_nrmse_absolute_floor": 0.05,
-      "current_nrmse_maximum_ratio": 1.10,
+      "current_nrmse_maximum_ratio": 1.1,
       "current_nrmse_absolute_floor": 0.15
     },
-    "strict_pha_probe": {
-      "updates": 100,
-      "cost_ratio_maximum": 1.8,
-      "primary_improvement_minimum": 0.10,
-      "co_primary_degradation_maximum": 0.02,
-      "failure_action": "DELETE_WITHOUT_GATE_TUNING"
-    },
-    "competent_but_no_combined_gain": "MVP_NO_GO_NO_ATTRIBUTABLE_GAIN",
-    "all_a_arms_incompetent": "ALLOW_SINGLE_ROUTE_B_ACTIVATION"
+    "pass_status": "SELECTED_PHYSICS_ONLY_MF_PLUS_SAMPLER",
+    "all_arms_incompetent_status": "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "competent_but_no_combined_gain_status": "MVP_NO_GO_NO_ATTRIBUTABLE_GAIN",
+    "no_rescue_after_failure": true
   },
   "evaluation": {
     "phase_threshold": 0.5,
-    "roi": {"abs_x_max": 0.55, "z_min": 0.0, "z_max": 0.55},
+    "roi": {
+      "abs_x_max": 0.55,
+      "z_min": 0.0,
+      "z_max": 0.55
+    },
     "event_roi_fraction": 0.02,
-    "minimum_recovery": 0.70,
+    "minimum_recovery": 0.7,
     "maximum_full_domain_phase_fraction": 0.45,
-    "maximum_outside_roi_phase_fraction": 0.10,
+    "maximum_outside_roi_phase_fraction": 0.1,
     "primary": "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
     "co_primary": "UNNORMALIZED_PHASE_ROI_CONTINUOUS_RMS",
     "temperature_guard": "TEMPERATURE_ROI_NRMSE_BY_0_45",
     "current_guard": "TERMINAL_CURRENT_TRACE_NRMSE"
   },
   "fairness": {
-    "fixed_update_track": true,
-    "measured_compute_ledger": ["WALL_SECONDS", "SECONDS_PER_UPDATE", "PEAK_GPU_MEMORY_BYTES", "TRAINABLE_PARAMETER_COUNT"],
-    "equal_compute_raw": {
-      "rule": "SMALLEST_INTEGER_WIDTH_WITH_PARAMETER_COUNT_AT_LEAST_MF_PLUS_SAMPLER_AND_WITHIN_FIVE_PERCENT",
+    "fixed_update_attribution_track": true,
+    "measured_compute_ledger": [
+      "WALL_SECONDS",
+      "SECONDS_PER_UPDATE",
+      "PEAK_GPU_MEMORY_BYTES",
+      "TRAINABLE_PARAMETER_COUNT"
+    ],
+    "parameter_matched_measured_time_budget_raw_control": {
+      "arm": "STRONG_RAW",
       "hidden_width": 76,
       "hidden_layers": 4,
       "trainable_parameter_count": 55635,
-      "parameter_ratio_to_mf_plus_sampler": 1.0131111718109806
+      "parameter_ratio_to_mf_plus_sampler": 1.0131111718109806,
+      "parameter_match_maximum_relative_difference": 0.05,
+      "timing_calibration_case": "FULL",
+      "timing_calibration_updates": 100,
+      "timing_calibration_is_reference_blind": true,
+      "update_rule": "FLOOR_SELECTED_NOMINAL_TRAINING_WALL_SECONDS_DIVIDED_BY_RAW_CALIBRATION_SECONDS_PER_UPDATE",
+      "minimum_updates": 1,
+      "same_gpu_dtype_points_optimizer_loss_seed_and_band": true,
+      "stress_specific_recalibration": false
     },
     "same_seed": 17,
-    "same_dtype": "FLOAT64",
-    "same_points_updates_optimizer_and_loss_contract": true
+    "same_dtype": "FLOAT64"
   },
   "sealed_confirmation": {
-    "cases": ["INTERFACE_WIDTH_0_025", "HEATER_WIDTH_0_50"],
+    "cases": [
+      "INTERFACE_WIDTH_0_025",
+      "HEATER_WIDTH_0_50"
+    ],
     "seed": 17,
-    "arms": ["SELECTED_METHOD", "STRONGEST_COMPONENT", "EQUAL_COMPUTE_RAW"],
+    "roles": [
+      "SELECTED_METHOD",
+      "STRONGEST_COMPARATOR",
+      "PARAMETER_MATCHED_MEASURED_TIME_BUDGET_RAW_CONTROL"
+    ],
+    "candidate_freeze_requires_all_six_prediction_identities": true,
     "stress_feedback_to_method": false
-  }
+  },
+  "disabled_legacy_axes": [
+    "STRICT_PHA",
+    "GENERIC_RAR",
+    "ROUTE_B",
+    "ROUTE_C",
+    "FUNCTIONAL_PIVOT",
+    "BAND_B",
+    "WARM_START",
+    "EARLY_STOP",
+    "LBFGS",
+    "SIREN",
+    "CONTINUATION"
+  ]
 }

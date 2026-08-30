@@ -1,6 +1,6 @@
 # Field-Selective Phase–Joule-Aware Multi-Frequency PINNs for Localized Electro-Thermal Phase Dynamics
 
-> Live Method-MVP manuscript. Status: `METHOD_PREWRITTEN_RESULTS_PENDING`.
+> Live Method-MVP manuscript. Status: `V11_METHOD_FROZEN_NOMINAL_PENDING`.
 > Bracketed result tokens are machine-fill targets and must not be replaced without
 > an indexed run artifact.
 
@@ -18,8 +18,9 @@ collocation policy retains a nonzero quasi-random floor and combines residual,
 phase-interface, and Joule-density scores, preventing the localized region from
 being missed without using reference labels. Four causal windows preserve both
 driven and recovery dynamics across two pulses. We evaluate the method against a
-strong raw PINN, frequency-only and sampler-only ablations, and an equal-compute
-raw control using fixed finite-volume reference carriers. [RESULT_SUMMARY]. The
+strong raw PINN, frequency-only and sampler-only ablations, and a
+parameter-matched, measured-time-budget raw control using fixed finite-volume
+reference carriers. [RESULT_SUMMARY]. The
 study establishes [SUPPORTED_CLAIM], while explicitly limiting its evidence to
 case-specific numerical robustness rather than experimental or continuum-level
 validation.
@@ -63,8 +64,8 @@ Our contributions are:
    full-domain sampling floor;
 3. a causal replay schedule aligned with pulse drive and recovery windows; and
 4. an attribution-oriented evaluation against representation-only,
-   sampling-only, strong raw, and equal-compute controls on development and sealed
-   stress cases.
+    sampling-only, strong raw, and parameter-matched measured-time controls on
+    development and sealed stress cases.
 
 The claims are conditional on measured evidence. If the combined method does not
 beat its strongest component under the frozen decision rule, the paper reports no
@@ -138,7 +139,8 @@ solver with harmonic face conductivity. The nominal extra-fine trajectory is a
 development-only target: it may score a candidate but is never provided to the
 training loss, adaptive sampler, or network input. Narrow-interface and
 wide-heater extra-fine trajectories are generated and hash-sealed before method
-selection, then remain unread until the candidate and decision rule are frozen.
+selection, then remain unread until the three confirmation roles and all six
+reference-blind stress prediction carriers are frozen and hash verified.
 
 This protocol prevents stress-case feedback into architecture or hyperparameters.
 Because the cases are preselected perturbations rather than samples from a
@@ -149,19 +151,20 @@ out-of-distribution generalization.
 
 ### 3.1 Field-selective anisotropic multi-frequency representation
 
-Let \(\xi=(x,z,t)\) denote normalized coordinates. A shared low-frequency trunk
-produces a base feature vector. The potential head receives low-to-mid-frequency
+Let \(\xi=(x,z,t)\) denote normalized coordinates. Potential, temperature, and
+phase are represented by three independent modified gated MLP heads; the method
+does not use a shared trunk. The potential head receives low-to-mid-frequency
 features because the elliptic field is spatially smooth away from material
-transitions. Temperature and phase heads additionally receive anisotropic Fourier
-features
+transitions. The independent temperature and phase heads receive broader
+anisotropic Fourier features
 
 \[
 \Gamma_f(\xi)=
 \left[\sin(2\pi B_f\xi),\cos(2\pi B_f\xi)\right],
 \]
 
-where the spatial and temporal scales in \(B_f\) are selected from a small,
-predeclared candidate set. The phase head receives the broadest band; the thermal
+where the spatial and temporal scales in \(B_f\) are frozen to Band A before the
+nominal run. The phase head receives the broadest band; the thermal
 head receives an intermediate band. This allocation is field-selective: a
 high-frequency correction is not broadcast to all physical outputs.
 
@@ -214,33 +217,28 @@ Windows are introduced causally, but earlier windows retain an equal stratified
 replay quota. This avoids the dilution of the first event when the time ceiling
 expands.
 
-### 3.5 Optional strict routed correction
+### 3.5 Frozen v1.1 method identity
 
-A strict routed high-frequency correction is only a bounded feasibility probe,
-not part of the critical path. Its differentiable gate combines a phase pilot
-with a smooth heater-distance and pulse proxy. If used, the gate is part of the
-reported predictor and its derivatives remain inside automatic differentiation;
-no stop-gradient surrogate residual is permitted. The route is deleted if it
-exceeds the predeclared cost ratio, becomes nonfinite, or fails its development
-gain threshold.
+The active method is exactly the combination of field-selective Band-A features
+and the phase--Joule-aware sampler. No routed correction, generic residual
+adaptive refinement, sparse-label route, functional pivot, warm start,
+continuation, early stopping, SIREN, or L-BFGS stage is present. These exclusions
+are part of the executable contract rather than choices made after viewing the
+nominal result.
 
 ## 4. Experimental protocol
 
 ### 4.1 Arms and route decision
 
-The nominal development comparison contains: strong raw PINN, multi-frequency
-only, physics sampler only, and multi-frequency plus physics sampler. The
-sampler-only arm uses the raw representation, making representation and sampling
-increments identifiable. A widened or update-matched raw network provides the
-equal-compute fairness control. At most six nominal configuration identities and
-two functional pivots are permitted.
-
-Route A is physics-only. Sparse-reference route B is allowed only if every route-A
-arm lacks basic physical competence. If route A is competent but the proposed
-combination lacks attributable gain, the terminal status is
-`MVP_NO_GO_NO_ATTRIBUTABLE_GAIN`; labels cannot rescue the story. If activated,
-route B uses the same frozen 1% medium-grid anchors for all methods and reports
-sparse-raw, data-only, and medium-interpolation controls.
+The nominal development comparison contains exactly four scratch-start,
+physics-only arms: strong raw PINN, multi-frequency only, physics sampler only,
+and multi-frequency plus physics sampler. The sampler-only arm uses the raw
+representation, making representation and sampling increments identifiable.
+All use FP64, seed 17, Band A, 512 interior, 128 boundary, and 128 initial points,
+Adam for 1000 updates, and the final checkpoint only. Only the combined arm may
+advance. If it lacks competence, attributable component gain, raw gain, or
+temperature/current non-inferiority, the nominal route terminates without a seed
+change, extension, labels, or another method axis.
 
 ### 4.2 Metrics
 
@@ -259,8 +257,12 @@ in an arbitrary secondary metric alone is not success.
 
 The nominal case is used for bounded development and route freezing. The Day-7
 confirmation matrix contains the two sealed stress cases, one frozen seed, and
-three neural arms: the selected method, its strongest component comparator, and
-equal-compute raw. Stress results can support, qualify, or reject the frozen claim
+three neural roles: the selected method, its strongest component comparator, and
+a width-76 parameter-matched raw control. The raw update count is fixed from a
+reference-blind timing calibration as the floor of selected-method nominal wall
+time divided by raw seconds per update. All six predictions are produced and
+hash-verified before either sealed reference is opened. Stress results can
+support, qualify, or reject the frozen claim
 but cannot trigger rescue tuning. Three-seed confirmation is reserved for work
 after the advisor draft.
 
@@ -268,7 +270,21 @@ after the advisor draft.
 
 ### 5.1 Computational profile and route selection
 
-[PROFILE_TABLE]
+All five legacy profile arms completed 100 FP64 updates on a Tesla V100-PCIE-32GB
+without nonfinite loss or out-of-memory failure. The four active arms required
+0.520--0.567 s/update and at most 1.16 GB peak allocated memory. The one-time
+strict-routed probe required 0.898 s/update and 1.46 GB. Its cost ratio to MF-only
+was 1.6276, below the frozen 1.8 ceiling, but its primary improvement over the
+combined arm was zero rather than the required 10%. The probe was therefore
+removed without gate tuning and contributes no method claim.
+
+| profile arm | seconds/update | peak GPU memory (GB) | final loss |
+|---|---:|---:|---:|
+| strong raw | 0.5497 | 0.302 | 0.0964 |
+| MF only | 0.5517 | 0.317 | 0.1523 |
+| sampler only | 0.5203 | 1.103 | 0.0975 |
+| MF + sampler | 0.5673 | 1.158 | 0.1837 |
+| strict routed probe (removed) | 0.8980 | 1.462 | 0.1972 |
 
 [NOMINAL_ROUTE_RESULT]
 
