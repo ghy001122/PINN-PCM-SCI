@@ -3,9 +3,9 @@
 本文件是当前研究设定、规范术语与论文表述的单一来源，不承载授权或行动清单。当前路线为已终局的 `PHK-V2.2R / V1.1 FOUR-ARM METHOD-MVP`；它是独立于 PHK-V2.1 Oracle No-Go 的 fixed-discretization 单-seed 负面结果，不改写任何历史证据。
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
-- `updated_at`: `2026-08-30`
+- `updated_at`: `2026-08-31`
 
-在不改写 PHK-V2.2R terminal No-Go 的前提下，`PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT` 已完成一次既有 STRONG_RAW final checkpoint 的本地 CPU/FP64 只读诊断，结果为 `R0A_INCONCLUSIVE`。nominal reference 只以本地 development evaluation/teacher-substitution 角色读取，未进入 loss、初始化、gate、sampler、collocation、阈值、超参、checkpoint selection 或 early stop；两份 stress reference 继续 sealed/unread。R0A 不构成 competence 恢复或方法增益，也不自动授权 R0B、R1 或 PJGR。
+在不改写 PHK-V2.2R terminal No-Go 的前提下，`PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT` 已完成一次既有 STRONG_RAW final checkpoint 的本地 CPU/FP64 只读诊断，结果为 `R0A_INCONCLUSIVE`。当前 `PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2` 只研究 scratch 训练至首次 W1→W1+W2 切换期间的 temporal precursor；它不实施 recovery 或 proposed method，输出不得写成 competence 恢复、方法增益或因果 root。两份 stress reference 继续 sealed/unread。
 
 ## 当前研究问题
 
@@ -52,7 +52,7 @@ confirmation 或 stress 解封。
 
 ## 参考与数据角色
 
-- **nominal extra-fine**：development-only fixed-discretization reference，可用于超参数/选路/checkpoint/图表；不得成为 A 的标签、anchor 或 sampler feature。
+- **nominal extra-fine**：既有 development-only fixed-discretization reference；R0B 中只能在云端回收关机、reference-blind machine decision 不可变写入后用于本地 non-voting appendix，不得进入 loss、初始化、gate、sampler、collocation、阈值、超参、checkpoint selection、early stop 或 intervention selection。
 - **narrow-interface extra-fine**：sealed confirmation；候选冻结前不可读。
 - **wide-heater extra-fine**：sealed confirmation；候选冻结前不可读；逐周期 event vector 由该 reference 开封后自动确定。
 - **medium carriers**：保留为历史/稿后研究资产；本周 v1.1 不启用 Route B，不生成训练 anchors。

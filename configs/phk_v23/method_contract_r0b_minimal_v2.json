@@ -1,0 +1,112 @@
+{
+  "schema_id": "phk-v23-method-contract-r0b-minimal-v2",
+  "contract_id": "PHK_V23_R0B_STRONG_RAW_FIRST_SWITCH_175_MINIMAL_V2",
+  "effective_date": "2026-08-31",
+  "program_contract": "configs/phk_v23/program_contract_r0b_minimal_v2.json",
+  "status": "FROZEN_FOR_ONE_REFERENCE_BLIND_GPU_REPLAY",
+  "legacy_identity": {
+    "v22r_program_contract": "configs/phk_v22r/program_contract.json",
+    "v22r_program_contract_sha256": "A413F56A2317CEFF15FFF2D3BD183C11D990F2E47E8BA33F7316F11567275272",
+    "v22r_method_contract": "configs/phk_v22r/method_contract.json",
+    "v22r_method_contract_sha256": "FEEFB36A4D86CACFA6CBAA8C263E7071421415CE88B4F7FBF6BA5F31B9B71D4F",
+    "physical_program_sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",
+    "physical_object_sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD",
+    "arm": "STRONG_RAW",
+    "case_control": "FULL",
+    "initialization": "SCRATCH_START",
+    "seed": 17,
+    "dtype": "FLOAT64",
+    "hidden_width": 64,
+    "hidden_layers": 4,
+    "frequency_band": "BAND_A",
+    "learning_rate": 0.001,
+    "gradient_clip_norm": 10.0,
+    "interior_points": 512,
+    "boundary_points": 128,
+    "initial_points": 128,
+    "candidate_pool_multiplier": 4,
+    "refresh_updates": 250,
+    "checkpoint_every": 1000,
+    "loss_weights": {
+      "pde": 1.0,
+      "boundary": 5.0,
+      "initial": 1.0
+    }
+  },
+  "execution_identity": {
+    "scientific_schedule_denominator": 1000,
+    "canonical_optimizer_steps": 175,
+    "first_window_switch_optimizer_step": 151,
+    "first_window_switch_zero_based_update": 150,
+    "active_windows_steps_1_through_150": 1,
+    "active_windows_steps_151_through_175": 2,
+    "refresh_optimizer_steps_within_prefix": [1, 151],
+    "checkpoint_policy": "FINAL_STEP_175_ONLY",
+    "checkpoint_selectable": false,
+    "prediction_grid": "CONTRACT_DERIVED_EXTRA_FINE_AXES_WITHOUT_REFERENCE_VALUES"
+  },
+  "observer": {
+    "interface": "ONE_OPTIONAL_READ_ONLY_TRAINING_OBSERVER_SEAM",
+    "cheap_post_step_observations": [
+      0, 1, 10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 100, 110, 120,
+      125, 130, 140, 149, 150, 151, 160, 170, 175
+    ],
+    "full_gradient_observations": [
+      0, 1, 10, 25, 50, 75, 100, 125, 140, 149, 150, 151, 160, 175
+    ],
+    "transition_events": [
+      "PRE_151_BEFORE_REFRESH",
+      "PRE_151_AFTER_REFRESH_BEFORE_BACKWARD"
+    ],
+    "may_receive_live_sampler": false,
+    "may_receive_live_optimizer": false,
+    "may_call_backward_or_zero_grad": false,
+    "must_preserve_parameter_buffer_optimizer_rng_mode_and_existing_grad_state": true
+  },
+  "diagnostic_pool": {
+    "algorithm": "INDEPENDENT_PHK_COLLOCATION_SOBOL_ENGINE",
+    "seed": 23017,
+    "windows": [[0.0, 0.35], [0.35, 1.25]],
+    "scalar_points_per_window": 512,
+    "scalar_points_total": 1024,
+    "gradient_points_w1": 128,
+    "boundary_points_per_side_w1": 32,
+    "initial_points": 128,
+    "training_sampler_state_may_not_advance": true
+  },
+  "loss_head_gradient_matrix": {
+    "loss_rows": [
+      "ELECTRIC_PDE",
+      "THERMAL_PDE",
+      "PHASE_PDE",
+      "ELECTRIC_BC",
+      "THERMAL_BC",
+      "PHASE_BC",
+      "INITIAL",
+      "TOTAL_OBJECTIVE"
+    ],
+    "head_columns": ["potential", "temperature", "phase"],
+    "voting_rows": [
+      "ELECTRIC_PDE",
+      "THERMAL_PDE",
+      "PHASE_PDE",
+      "ELECTRIC_BC",
+      "THERMAL_BC",
+      "PHASE_BC"
+    ],
+    "autograd_grad_only": true,
+    "effective_legacy_weights_required": true
+  },
+  "transition_bundle": {
+    "allowed": true,
+    "checkpoint_selectable": false,
+    "contains": [
+      "THETA_150_MODEL_STATE",
+      "OLD_W1_INTERIOR_BOUNDARY_INITIAL_BATCHES",
+      "NEW_W1_W2_INTERIOR_BOUNDARY_INITIAL_BATCHES",
+      "CONTRACT_AND_SOURCE_IDENTITY"
+    ],
+    "optimizer_state": "NOT_REQUIRED_FOR_GRADIENT_ONLY_LOCAL_FACTORIAL",
+    "cloud_shadow_optimizer_steps": 0
+  }
+}

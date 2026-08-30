@@ -1,45 +1,46 @@
-# PLAN-PHK-V2.3-R0A：STRONG_RAW 本地 CPU 只读失效诊断
+# PLAN-PHK-V2.3-R0B：首次窗口切换 175-step 最小诊断
 
-- `phase_id`: `PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0A_INCONCLUSIVE_NO_METHOD_EVIDENCE`
-- `next_research_execution_authorized`: `false`
-- `authorization_state`: `R0A_CONSUMED_CLOSEOUT_AND_SELECTIVE_GIT_ONLY`
-- `plan_status`: `R0A_INCONCLUSIVE_COMPLETE`
-- `current_stage`: `R0A_CLOSEOUT_COMPLETE`
-- `supersedes`: `PLAN_PHK_V22R_V11_TERMINAL_NO_GO`
-- `preserves`: `PHK_V22R_TERMINAL_NO_GO_RUN_DECISION_CLOSEOUT_AND_PAPER`
-- `program_contract`: `configs/phk_v23/program_contract.json`
-- `method_contract`: `configs/phk_v23/method_contract.json`
-- `diagnostic_contract`: `configs/phk_v23/r0a_diagnostic_contract.json`
+- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0B_REFERENCE_BLIND_REPLAY_PENDING`
+- `next_research_execution_authorized`: `true`
+- `authorization_state`: `CURRENT_USER_EXPLICIT_R0B_AND_GPU_EXECUTE`
+- `plan_status`: `R0B_CONTRACT_IMPLEMENT_TEST_RUN_RECOVER_SHUTDOWN_ADJUDICATE`
+- `current_stage`: `LOCAL_IMPLEMENTATION_AND_PREFLIGHT`
+- `supersedes`: `PLAN_PHK_V23_R0A_COMPLETE`
+- `preserves`: `PHK_V23_R0A_INCONCLUSIVE_AND_PHK_V22R_TERMINAL_NO_GO`
+- `program_contract`: `configs/phk_v23/program_contract_r0b_minimal_v2.json`
+- `method_contract`: `configs/phk_v23/method_contract_r0b_minimal_v2.json`
+- `diagnostic_contract`: `configs/phk_v23/r0b_diagnostic_contract_minimal_v2.json`
+- `decision`: `docs/adr/0050-activate-phk-v23-r0b-first-switch-175-minimal-v2.md`
 
-## 唯一执行项
+## 论文去向与唯一问题
 
-在 `HEAD=3dac71ed9197f565c470ab229b039e086615d678`、三份 R0A 合同、focused tests、legacy 回归与文档一致性门全部通过后，只允许执行一次：
+本阶段只服务于论文 Discussion/Methods failure analysis：识别从 scratch 到首次 W1→W1+W2 切换期间，哪一类机制最早获得持续的 reference-blind 支持。输出是 `PRIMARY_PRECURSOR_CANDIDATE`，不是因果根因、competence 恢复或方法增益。
 
-1. 在本地 CPU/FP64 加载既有 seed-17 `STRONG_RAW` final checkpoint；
-2. 使用不读取 reference 的 2048 点四窗均衡 Sobol pool 和 512 点梯度子集；
-3. 记录 latent、解析输出 Jacobian、PDE 分项、六 loss × 三 head 梯度矩阵与状态校验；
-4. 释放模型计算图后，只在本地读取 nominal development reference，做离散/代数与单场 teacher substitution；
-5. 输出 `R0A_ROOT_CAUSE_IDENTIFIED` 或 `R0A_INCONCLUSIVE`，写入机器产物、实验 ledger 与 closeout；
-6. 立即停止，不自动进入任何后续阶段。
+当前强基线仍是旧 `STRONG_RAW`。本阶段没有 proposed method、方法消融或 formal OOD；其价值是决定未来最多一个 R1a 原子干预是否值得另立计划。两份 stress reference 保持 sealed/unread。
 
-## 硬边界
+## 唯一执行链
 
-- GPU、AutoDL 与新增付费均为 0；CPU wall time 不得超过 4 小时。
-- 不构造 optimizer、不调用 `optimizer.step`、不更新参数、不改 checkpoint、不训练。
-- nominal reference 不得进入 loss、初始化、gate、sampler、collocation、阈值、超参、checkpoint selection 或 early stop。
-- 两份 stress reference 继续 `SEALED_UNREAD`，在任何 R0A 数据流中均不可达。
-- 不实施 R0B、R1、PJGR、recovery intervention、seed/预算/阈值搜索。
-- V2.2R terminal No-Go、英文 bounded-negative 稿和全部历史证据保持原样。
+1. 冻结三份 R0B minimal-v2 合同、ADR、单一 observer seam、runner、machine adjudicator、focused tests 与 AutoDL run card。
+2. 本地运行 focused tests、受影响 legacy regression、ledger 与 `DOCUMENT_CONSISTENCY_VALID`；失败则不启动 GPU。
+3. 选择性 commit/push 白名单文件；保留工作树中其他会话/用户的全部无关变更。
+4. 远端核验 V100、环境、空进程、source commit、合同与预算；只运行一次 seed-17/FP64/STRONG_RAW scratch replay。
+5. 保持 `training_config.updates=1000` 作为科学 schedule denominator，只执行 175 个 canonical optimizer steps；step 151 必须是首次 W1+W2 refresh/update。云端 shadow optimizer steps 固定为 0。
+6. 生成 final step-175 checkpoint、reference-blind telemetry、transition diagnostic bundle、prediction、log、manifest、environment 与 summary。
+7. 下载并核对远端/本地哈希、数量、source/contract/run identity 后，立即关闭 AutoDL 实例并确认 SSH refused。
+8. 不打开任何 reference，先执行机器 A–H adjudication并不可变写入。仅当 primary 为 `SWITCH_INDUCED` 时运行本地 CPU gradient-only factorial；否则记录 `FACTORIAL_NOT_RUN_NOT_NEEDED`。
+9. reference-blind decision 固定后才允许本地打开 nominal development reference，生成 non-voting evaluation appendix；它不得改变 primary 或下一阶段授权。
+10. 写入 manifest、ledger、closeout、状态与文档门禁后停止；不自动进入 R1、PJGR、stress 或第二次 run。
 
-## 停止条件
+## 预算与停止
 
-任何身份漂移、stress 可达、状态字节变化、测试失败、非有限值、超过 4 小时或需要 GPU/云端，均立即以相应 blocker 收口。正常完成后 `next_research_execution_authorized=false`；若 `R0A_INCONCLUSIVE`，只允许记录且不执行一个后续建议。
+- V100 paid work：soft stop 45 min，hard stop 60 min；增量估算费用 hard cap 5 CNY。
+- 条件性本地 CPU factorial hard cap 2 h；不构造 optimizer、不更新参数。
+- V2.3 全局 hard caps：34 GPU-h、95 CNY、从 ADR 激活起 14 days；项目绝对云成本 hard cap 150 CNY。
+- 身份/GPU/合同漂移、reference 可达、observer state/RNG/grad 变化、非有限值、重复进程、预算超门、非 175 steps、错误 switch/refresh 或产物不完整均立即停止且不自动重跑。
 
-## 当前处置
+## 当前边界
 
-唯一 R0A 已完成并返回 `R0A_INCONCLUSIVE`。机器 artifact、实验 manifest 与 closeout 已写入；V2.2R terminal No-Go 保持不变。当前只允许结果复核、验证与本次选择性 Git 交付。
-
-唯一未执行建议为 `R0B_FIRST_SWITCH_175`，因为它在保持 schedule denominator `1000` 时覆盖首次 causal switch。该建议不构成授权；任何 R0B、R1、PJGR 或 GPU 动作都需要新的版本化合同和用户明确批准。
+R0B 只可执行一次。R0A `R0A_INCONCLUSIVE`、V2.2R `MVP_NO_GO_NO_BASIC_COMPETENCE`、bounded-negative advisor draft 与两份 stress seal 均不可改写。作者联系、投稿、投稿系统上传与凭据披露仍未授权。

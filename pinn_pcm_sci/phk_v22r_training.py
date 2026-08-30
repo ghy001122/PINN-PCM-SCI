@@ -11,7 +11,7 @@ import math
 from pathlib import Path
 import random
 import time
-from typing import Any, Mapping
+from typing import Any, Mapping, Protocol
 
 import numpy as np
 import torch
@@ -170,6 +170,28 @@ class TrainingOutcome:
     checkpoint_path: Path
 
 
+@dataclass(frozen=True)
+class TrainingObservation:
+    """Read-only view exposed at the optional training-observer seam."""
+
+    phase: str
+    optimizer_step: int
+    update_index: int | None
+    active_windows: int
+    collocation_refreshed: bool
+    model: PhkV22RModel
+    interior: torch.Tensor | None
+    boundary: Mapping[str, torch.Tensor] | None
+    initial: torch.Tensor | None
+    scalars: Mapping[str, float]
+
+
+class TrainingObserver(Protocol):
+    """Optional observer; implementations must not mutate the supplied state."""
+
+    def observe(self, observation: TrainingObservation) -> None: ...
+
+
 def load_case_physics(
     control: PhkControl | str = PhkControl.FULL,
 ) -> tuple[PhkV22RPhysics, str, str]:
@@ -276,10 +298,19 @@ def train(
     config: PhkTrainingConfig,
     *,
     run_directory: Path,
+    execution_limit: int | None = None,
+    observer: TrainingObserver | None = None,
+    execution_metadata: Mapping[str, Any] | None = None,
 ) -> TrainingOutcome:
     """Run one bounded arm from scratch and emit an immutable evidence directory."""
 
     config.validate()
+    execution_updates = (
+        config.updates if execution_limit is None else int(execution_limit)
+    )
+    if not 1 <= execution_updates <= config.updates:
+        raise ValueError("execution_limit must be within the frozen schedule")
+    diagnostic_prefix = execution_updates < config.updates
     output = Path(run_directory).resolve()
     output.mkdir(parents=True, exist_ok=False)
     program_contract_sha256 = _sha256_path(PROGRAM_CONTRACT_PATH)
@@ -316,7 +347,7 @@ def train(
     )
     manifest = {
         "schema_id": "phk-v22r-training-run-manifest-v1-1",
-        "status": "RUNNING",
+        "status": "RUNNING_DIAGNOSTIC_PREFIX" if diagnostic_prefix else "RUNNING",
         "started_at_utc": datetime.now(timezone.utc).isoformat(),
         "training_config": asdict(config),
         "training_config_sha256": config.identity,
@@ -333,7 +364,7 @@ def train(
         "initialization": "SCRATCH_START",
         "checkpoint_policy": (
             "FINAL_ONLY"
-            if config.checkpoint_every >= config.updates
+            if config.checkpoint_every >= execution_updates
             else "PERIODIC_PLUS_FINAL"
         ),
         "sampler_inputs": ["SOBOL", "PDE_RESIDUAL", "PREDICTED_PHASE", "PREDICTED_JOULE"],
@@ -347,6 +378,16 @@ def train(
         },
         "causal_window_open_fractions": [0.0, 0.15, 0.35, 0.55],
     }
+    if diagnostic_prefix:
+        manifest.update(
+            {
+                "scientific_schedule_denominator": config.updates,
+                "canonical_optimizer_steps_planned": execution_updates,
+                "execution_identity": "DIAGNOSTIC_PREFIX",
+            }
+        )
+    if execution_metadata is not None:
+        manifest["execution_metadata"] = dict(execution_metadata)
     _write_json_exclusive(output / "manifest-start.json", manifest)
 
     log_path = output / "training-log.jsonl"
@@ -358,10 +399,25 @@ def train(
     minimum_loss = math.inf
     final_loss = math.inf
     start = time.perf_counter()
-    status = "COMPLETE"
+    status = "DIAGNOSTIC_PREFIX" if diagnostic_prefix else "COMPLETE"
     try:
+        if observer is not None:
+            observer.observe(
+                TrainingObservation(
+                    phase="PRE_RUN",
+                    optimizer_step=0,
+                    update_index=None,
+                    active_windows=0,
+                    collocation_refreshed=False,
+                    model=model,
+                    interior=None,
+                    boundary=None,
+                    initial=None,
+                    scalars={},
+                )
+            )
         with log_path.open("x", encoding="utf-8", newline="\n") as log_handle:
-            for update in range(config.updates):
+            for update in range(execution_updates):
                 active_windows = _active_windows(update, config.updates)
                 needs_refresh = (
                     cached_interior is None
@@ -369,6 +425,21 @@ def train(
                     or active_windows != cached_windows
                 )
                 if needs_refresh:
+                    if observer is not None and cached_interior is not None:
+                        observer.observe(
+                            TrainingObservation(
+                                phase="PRE_REFRESH",
+                                optimizer_step=update + 1,
+                                update_index=update,
+                                active_windows=cached_windows,
+                                collocation_refreshed=True,
+                                model=model,
+                                interior=cached_interior,
+                                boundary=cached_boundary,
+                                initial=cached_initial,
+                                scalars={},
+                            )
+                        )
                     cached_interior = sampler.select_interior(
                         model,
                         count=config.interior_points,
@@ -392,6 +463,22 @@ def train(
                 assert cached_interior is not None
                 assert cached_boundary is not None
                 assert cached_initial is not None
+
+                if observer is not None:
+                    observer.observe(
+                        TrainingObservation(
+                            phase="PRE_BACKWARD",
+                            optimizer_step=update + 1,
+                            update_index=update,
+                            active_windows=active_windows,
+                            collocation_refreshed=needs_refresh,
+                            model=model,
+                            interior=cached_interior,
+                            boundary=cached_boundary,
+                            initial=cached_initial,
+                            scalars={},
+                        )
+                    )
 
                 optimizer.zero_grad(set_to_none=True)
                 interior = interior_residuals(model, cached_interior)
@@ -418,10 +505,34 @@ def train(
                 final_loss = float(total.detach().cpu())
                 minimum_loss = min(minimum_loss, final_loss)
 
+                if observer is not None:
+                    observer.observe(
+                        TrainingObservation(
+                            phase="POST_STEP",
+                            optimizer_step=update + 1,
+                            update_index=update,
+                            active_windows=active_windows,
+                            collocation_refreshed=needs_refresh,
+                            model=model,
+                            interior=cached_interior,
+                            boundary=cached_boundary,
+                            initial=cached_initial,
+                            scalars={
+                                "loss": final_loss,
+                                "pde_loss": float(pde_loss.detach().cpu()),
+                                "boundary_loss": float(bc_loss.detach().cpu()),
+                                "initial_loss": float(ic_loss.detach().cpu()),
+                                "gradient_norm_before_clip": float(
+                                    gradient_norm.detach().cpu()
+                                ),
+                            },
+                        )
+                    )
+
                 should_log = (
                     update == 0
                     or (update + 1) % config.log_every == 0
-                    or update + 1 == config.updates
+                    or update + 1 == execution_updates
                 )
                 if should_log:
                     record = {
@@ -448,7 +559,7 @@ def train(
                     log_handle.write(json.dumps(record, sort_keys=True) + "\n")
                     log_handle.flush()
                 if (update + 1) % config.checkpoint_every == 0 and (
-                    update + 1 < config.updates
+                    update + 1 < execution_updates
                 ):
                     torch.save(
                         _checkpoint_payload(
@@ -468,7 +579,7 @@ def train(
                 model=model,
                 optimizer=optimizer,
                 config=config,
-                update=config.updates,
+                update=execution_updates,
                 program_contract_sha256=program_contract_sha256,
                 method_contract_sha256=method_contract_sha256,
                 physical_program_sha256=physical_program_sha256,
@@ -491,11 +602,13 @@ def train(
             "status": status,
             "finished_at_utc": datetime.now(timezone.utc).isoformat(),
             "wall_seconds": wall_seconds,
-            "seconds_per_update": wall_seconds / max(config.updates, 1),
+            "seconds_per_update": wall_seconds / max(execution_updates, 1),
             "peak_gpu_memory_bytes": peak_memory,
             "final_loss": final_loss,
             "minimum_loss": minimum_loss,
         }
+        if diagnostic_prefix:
+            final_manifest["canonical_optimizer_steps_executed"] = execution_updates
         _write_json_exclusive(output / "manifest-final.json", final_manifest)
     return TrainingOutcome(
         run_directory=output,
@@ -503,7 +616,7 @@ def train(
         final_loss=final_loss,
         minimum_loss=minimum_loss,
         wall_seconds=wall_seconds,
-        seconds_per_update=wall_seconds / config.updates,
+        seconds_per_update=wall_seconds / execution_updates,
         peak_gpu_memory_bytes=peak_memory,
         checkpoint_path=checkpoint_path,
     )
@@ -592,6 +705,8 @@ __all__ = [
     "METHOD_CONTRACT_PATH",
     "PDE_SCALES",
     "PhkTrainingConfig",
+    "TrainingObservation",
+    "TrainingObserver",
     "TrainingOutcome",
     "load_case_physics",
     "main",

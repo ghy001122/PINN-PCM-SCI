@@ -1,58 +1,53 @@
 # 当前阶段
 
-- `phase_id`: `PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT`
-- `phase_name`: PHK-V2.3 R0A 本地 CPU 只读失效诊断
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2`
+- `phase_name`: PHK-V2.3 R0B 首次窗口切换 175-step 最小诊断
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0A_INCONCLUSIVE_NO_METHOD_EVIDENCE`
-- `authorization_scope`: `R0A_CLOSEOUT_REVIEW_AND_SELECTIVE_GIT_PUSH_ONLY`
-- `plan_status`: `R0A_INCONCLUSIVE_COMPLETE`
-- `contract_status`: `PHK_V23_R0A_CONTRACT_EXECUTED_ONCE_NO_NEXT_STAGE_AUTHORIZED`
+- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0B_REFERENCE_BLIND_REPLAY_PENDING`
+- `authorization_scope`: `ONE_R0B_V100_REPLAY_RECOVERY_SHUTDOWN_LOCAL_ADJUDICATION_AND_CLOSEOUT`
+- `plan_status`: `R0B_AUTHORIZED_ACTIVE`
+- `contract_status`: `PHK_V23_R0B_MINIMAL_V2_FROZEN_BEFORE_RESULTS`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_OBJECT_REUSED_WITHOUT_CONTINUUM_ORACLE_CLAIM`
 - `method_selection_status`: `NO_CANDIDATE_ALL_FOUR_ARMS_INELIGIBLE`
 - `candidate_status`: `NOT_FROZEN`
-- `reference_status`: `NOMINAL_LOCAL_DIAGNOSTIC_COMPLETE_TWO_STRESS_REFERENCES_SEALED_UNREAD`
-- `compute_status`: `R0A_CPU_9_321135_SECONDS_GPU_ZERO_CLOUD_COST_ZERO`
-- `diagnostic_outcome`: `R0A_INCONCLUSIVE`
-- `next_research_execution_authorized`: `false`
-- `git_authorization`: `CURRENT_CLOSEOUT_SELECTIVE_COMMIT_AND_PUSH_AUTHORIZED`
+- `reference_status`: `CLOUD_REFERENCE_BLIND_NOMINAL_LOCAL_POSTHOC_ONLY_STRESS_SEALED_UNREAD`
+- `compute_status`: `ONE_V100_175_CANONICAL_STEP_REPLAY_AUTHORIZED_NOT_YET_EXECUTED`
+- `diagnostic_outcome`: `PENDING`
+- `next_research_execution_authorized`: `true`
+- `git_authorization`: `CURRENT_R0B_SELECTIVE_COMMIT_AND_PUSH_AUTHORIZED`
 - `external_publication_authorization`: `NOT_AUTHORIZED`
-- `effective_date`: `2026-08-30`
+- `effective_date`: `2026-08-31`
 
 ## 当前允许
 
-- 复核 R0A artifact、manifest、closeout 与旧 V2.2R terminal evidence。
-- 运行不改变科学状态的 focused/legacy tests、ledger 与文档一致性门禁。
-- 选择性 commit/push 本次 R0A 白名单文件；继续排除其他会话或用户的未提交变更。
+- 为 [R0B minimal-v2 合同](configs/phk_v23/program_contract_r0b_minimal_v2.json) 完成最小代码、focused tests、run card 与权威文档对齐。
+- 在本地门禁全过后，使用当前已启动的 `Tesla V100-PCIE-32GB` 执行一次 FP64、seed-17、STRONG_RAW scratch、175 canonical-step reference-blind replay。
+- 回收并核验 checkpoint、prediction、telemetry、transition bundle、log、manifest、environment 与 summary；随后立即关闭 AutoDL 并确认不可连接。
+- 关机后先做本地 reference-blind adjudication；仅在 `SWITCH_INDUCED` 时做零 optimizer-step CPU gradient factorial；最后生成 nominal non-voting appendix。
+- 选择性 commit/push 本次 R0B 白名单文件，继续排除其他会话或用户的未提交变更。
 
 ## 当前禁止
 
-- 再次执行 R0A，或进行 optimizer 构造/step、参数更新、训练、R0B、R1、PJGR、recovery intervention、seed/预算/阈值搜索或 checkpoint 选择。
-- 使用 GPU、启动 AutoDL、产生新增云成本或超过 4 小时本地 CPU wall time。
-- 创建 confirmation plan、candidate freeze 或六份 stress prediction；nominal No-Go 未授权这些动作。
-- 读取任一 stress extra-fine field 或指标，或把 nominal/stress reference 与本地对比结果上传云端。
-- 把有限执行、PDE loss 下降、代码/测试通过或小的 domain-average error 表述为正向方法结果。
+- 第二次 R0B、seed 改动、176/1000-step 延长、warm start、checkpoint selection、early stop、recovery intervention、R1、PJGR、额外模块或结果导向调参。
+- 在云端上传或读取 nominal/stress reference、reference-derived masks/metrics/evaluation/teacher probes。
+- 打开任一 stress field/metric，创建 candidate freeze、confirmation 或 formal OOD。
+- 把 temporal precursor candidate 表述为因果 root、competence 恢复、方法增益或正向论文结果。
 - 联系作者、提交期刊、上传投稿系统或披露凭据。
 
 ## 当前主张边界
 
-- `VERIFIED`：四个冻结 nominal arms 均有限完成且 logged PDE loss 下降。
-- `VERIFIED`：四臂均未产生两次参考对齐相变事件，并触发相同的六项事件/恢复 hard-guard failure。
-- `SUPPORTED_INTERPRETATION`：在固定单 seed、1000-update 合同下，loss 收敛与小的全域平均误差没有构成局域事件 competence 证书。
-- `VERIFIED`：R0A 为 `R0A_INCONCLUSIVE`；teacher substitutions 未达到 10× 门，不能确定 primary root cause。
-- `HYPOTHESIS`：final phase-head 梯度冲突与早期/首次窗口切换动态值得后续诊断，但尚未建立训练期因果。
-- `UNKNOWN`：其他 seed、预算、优化器、loss 设计或新架构能否恢复事件；这些属于新的、尚未授权的研究。
-- `UNKNOWN`：stress robustness、formal OOD、连续体精度、材料校准和实验有效性。
+- `VERIFIED`：V2.2R 四臂 terminal No-Go 与 R0A `R0A_INCONCLUSIVE` 保持有效。
+- `SUPPORTED_INTERPRETATION`：首次窗口切换前后的动态 telemetry 是区分低电热、phase output conditioning、gradient starvation/conflict 与 switch-associated shock 的最短高信息增益路径。
+- `HYPOTHESIS`：这些机制中可能存在一个更早的 persistent precursor；本阶段尚未产生运行证据。
+- `UNKNOWN`：哪一项最早、任何 R1 干预能否恢复 competence、任何方法能否获得增量，以及 stress/formal 结果。
 
-当前 R0A 执行事实与 RNG 完整性偏差见 [R0A CPU diagnostics closeout](docs/experiment/2026-08-30-phk-v23-r0a-cpu-diagnostics-closeout.md)；
-旧 nominal terminal 事实见 [nominal terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)，
-英文初稿与复现包见 [paper_v22r](paper/paper_v22r/README.md)，唯一 live plan 见
-[NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)。
+权威决定见 [ADR 0050](docs/adr/0050-activate-phk-v23-r0b-first-switch-175-minimal-v2.md)，唯一 live plan 见 [NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)。
 
 ~~~text
-PHASE_ID=PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT
+PHASE_ID=PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2
 BLOCKER_ID=NONE
 METHOD_SELECTION_STATUS=NO_CANDIDATE_ALL_FOUR_ARMS_INELIGIBLE
-NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
-CURRENT_STAGE=R0A_INCONCLUSIVE_COMPLETE
+NEXT_RESEARCH_EXECUTION_AUTHORIZED=true
+CURRENT_STAGE=R0B_LOCAL_IMPLEMENTATION_AND_PREFLIGHT
 ~~~

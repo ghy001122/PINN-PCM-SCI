@@ -27,10 +27,12 @@ from .phk_v22r_pinn import (
     PhkV22RModel,
     boundary_residuals,
     evaluate_fields,
+    initial_residuals,
     interior_diagnostic_terms,
+    normalized_residual_loss,
 )
 from .phk_v22r_prediction import _load_model
-from .phk_v22r_training import BOUNDARY_SCALES, PDE_SCALES
+from .phk_v22r_training import BOUNDARY_SCALES, INITIAL_SCALES, PDE_SCALES
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -485,6 +487,12 @@ def summarize_model_mapping(
             },
             "conductivity": summarize_tensor(terms["conductivity"], quantiles),
             "mobility": summarize_tensor(terms["mobility"], quantiles),
+            "joule_density": summarize_tensor(terms["joule_density"], quantiles),
+            "joule_density_roi": summarize_tensor(
+                terms["joule_density"][roi], quantiles
+            )
+            if bool(torch.any(roi))
+            else None,
             "temperature_margin_to_transition": summarize_tensor(margin, quantiles),
             "temperature_above_transition_fraction": _finite_float(
                 torch.mean((margin >= 0.0).to(torch.float64))
@@ -631,8 +639,29 @@ def gradient_matrix(
     boundary: Mapping[str, torch.Tensor],
     contracts: Mapping[str, Mapping[str, Any]],
 ) -> dict[str, Any]:
+    """R0A compatibility wrapper around the observer-safe gradient probe."""
+
+    return gradient_matrix_preserving_state(
+        model,
+        gradient_pool,
+        boundary,
+        contracts,
+    )
+
+
+def gradient_matrix_preserving_state(
+    model: PhkV22RModel,
+    gradient_pool: torch.Tensor,
+    boundary: Mapping[str, torch.Tensor],
+    contracts: Mapping[str, Mapping[str, Any]],
+    *,
+    initial: torch.Tensor | None = None,
+    loss_rows: Sequence[str] | None = None,
+) -> dict[str, Any]:
+    """Measure loss-by-head gradients without touching persistent ``.grad`` state."""
+
     matrix_contract = contracts["method"]["loss_head_gradient_matrix"]
-    rows = tuple(matrix_contract["loss_rows"])
+    rows = tuple(loss_rows or matrix_contract["loss_rows"])
     heads = tuple(matrix_contract["head_columns"])
     parameter_groups = {
         head: tuple(model.heads[head].parameters()) for head in heads
@@ -649,35 +678,69 @@ def gradient_matrix(
     vectors: dict[str, dict[str, torch.Tensor]] = {head: {} for head in heads}
     norms: dict[str, dict[str, float]] = {}
     losses: dict[str, float] = {}
-    for row in rows:
-        model.zero_grad(set_to_none=True)
-        loss = _loss_for_row(model, row, gradient_pool, boundary)
-        if not bool(torch.isfinite(loss)):
-            raise FloatingPointError(f"non-finite R0A diagnostic loss: {row}")
-        gradients = torch.autograd.grad(
-            loss,
-            all_parameters,
-            create_graph=False,
-            retain_graph=False,
-            allow_unused=True,
+    saved_grads = [
+        None if parameter.grad is None else parameter.grad.detach().clone()
+        for parameter in all_parameters
+    ]
+    try:
+        for row in rows:
+            if row == "INITIAL":
+                if initial is None:
+                    raise ValueError("INITIAL diagnostic row requires a fixed initial pool")
+                loss = normalized_residual_loss(
+                    initial_residuals(model, initial), scales=INITIAL_SCALES
+                )
+            elif row == "TOTAL_OBJECTIVE":
+                if initial is None:
+                    raise ValueError(
+                        "TOTAL_OBJECTIVE diagnostic row requires a fixed initial pool"
+                    )
+                base_rows = (
+                    "ELECTRIC_PDE",
+                    "THERMAL_PDE",
+                    "PHASE_PDE",
+                    "ELECTRIC_BC",
+                    "THERMAL_BC",
+                    "PHASE_BC",
+                )
+                loss = sum(
+                    (_loss_for_row(model, item, gradient_pool, boundary) for item in base_rows),
+                    torch.zeros((), dtype=gradient_pool.dtype, device=gradient_pool.device),
+                ) + normalized_residual_loss(
+                    initial_residuals(model, initial), scales=INITIAL_SCALES
+                )
+            else:
+                loss = _loss_for_row(model, row, gradient_pool, boundary)
+            if not bool(torch.isfinite(loss)):
+                raise FloatingPointError(f"non-finite diagnostic loss: {row}")
+            gradients = torch.autograd.grad(
+                loss,
+                all_parameters,
+                create_graph=False,
+                retain_graph=False,
+                allow_unused=True,
+            )
+            losses[row] = _finite_float(loss)
+            norms[row] = {}
+            for head in heads:
+                head_slice = slices[head]
+                vector = _flatten_gradients(
+                    gradients[head_slice], parameter_groups[head]
+                ).to(device="cpu", dtype=torch.float64)
+                vectors[head][row] = vector
+                norms[row][head] = _finite_float(torch.linalg.vector_norm(vector))
+            del loss, gradients
+            gc.collect()
+    finally:
+        for parameter, saved in zip(all_parameters, saved_grads, strict=True):
+            parameter.grad = None if saved is None else saved
+    diagnostic_contract = contracts["diagnostic"]
+    if "root_cause" in diagnostic_contract:
+        epsilon = float(
+            diagnostic_contract["root_cause"]["zero_gradient_norm_epsilon"]
         )
-        losses[row] = _finite_float(loss)
-        norms[row] = {}
-        for head in heads:
-            head_slice = slices[head]
-            vector = _flatten_gradients(
-                gradients[head_slice], parameter_groups[head]
-            ).to(device="cpu", dtype=torch.float64)
-            vectors[head][row] = vector
-            norms[row][head] = _finite_float(torch.linalg.vector_norm(vector))
-        model.zero_grad(set_to_none=True)
-        if any(parameter.grad is not None for parameter in model.parameters()):
-            raise RuntimeError("R0A gradient probe left persistent parameter gradients")
-        del loss, gradients
-        gc.collect()
-    epsilon = float(
-        contracts["diagnostic"]["root_cause"]["zero_gradient_norm_epsilon"]
-    )
+    else:
+        epsilon = float(diagnostic_contract["decision"]["thresholds"]["epsilon"])
     cosines: dict[str, dict[str, Any]] = {}
     for head in heads:
         head_cosines: dict[str, Any] = {}
@@ -704,6 +767,7 @@ def gradient_matrix(
         "gradient_norms": norms,
         "same_head_pairwise_cosines": cosines,
         "persistent_parameter_gradients_after_probe": False,
+        "persistent_parameter_gradients_preserved": True,
     }
 
 
@@ -1375,6 +1439,7 @@ __all__ = [
     "assert_state_unchanged",
     "build_r0a_pool",
     "gradient_matrix",
+    "gradient_matrix_preserving_state",
     "load_contract_bundle",
     "load_legacy_source_preserving_rng",
     "load_nominal_development_reference",

@@ -4,13 +4,13 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0A_INCONCLUSIVE_NO_METHOD_EVIDENCE`
-- `next_research_execution_authorized`: `false`
+- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0B_REFERENCE_BLIND_REPLAY_PENDING`
+- `next_research_execution_authorized`: `true`
 
-PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 保持冻结。PHK-V2.3 R0A 已在本地 CPU/FP64 上完成一次只读诊断，裁决为 `R0A_INCONCLUSIVE`：final checkpoint 存在低 electrothermal state、无正 phase growth 与 phase-head 强梯度冲突，但 teacher substitutions 未达到预声明数量级门，不能确定 primary root cause。未训练、未更新参数、未使用 GPU、未读 stress，也没有正向方法结果。
+PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 PHK-V2.3 R0A `R0A_INCONCLUSIVE` 保持冻结。当前用户已授权一次 R0B minimal-v2：在 V100 上从 scratch 执行 seed-17/FP64/STRONG_RAW 的 175 个 canonical updates，观察首次 W1→W1+W2 切换。它只寻找 temporal precursor candidate；不实施 recovery/PJGR，不读 stress，也不建立正向方法结果。
 
 现有证据支持的核心表述是：在固定单 seed、1000-update、fixed-discretization nominal 协议下，physics-loss 收敛与小的全域平均误差没有构成局域事件 competence 证书。它不表示 PINN 全局失败，不支持 continuum、formal OOD、材料校准或实验主张。
 
@@ -21,6 +21,8 @@ PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 保持冻结。PHK-V2.3 R0A �
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
 - 终局运行记录：[nominal terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)
 - R0A 诊断收口：[PHK-V2.3 R0A CPU closeout](docs/experiment/2026-08-30-phk-v23-r0a-cpu-diagnostics-closeout.md)
+- 当前 R0B 决定：[ADR 0050](docs/adr/0050-activate-phk-v23-r0b-first-switch-175-minimal-v2.md)
+- R0B 云端 run card：[cloud/phk_v23_r0b_autodl](cloud/phk_v23_r0b_autodl/README.md)
 - 英文导师初稿与五图复现包：[paper/paper_v22r](paper/paper_v22r/README.md)
 - 文档地图：[docs/README.md](docs/README.md)
 - 当前研究口径：[CONTEXT.md](CONTEXT.md)

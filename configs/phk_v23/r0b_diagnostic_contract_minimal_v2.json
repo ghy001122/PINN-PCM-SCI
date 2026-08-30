@@ -1,0 +1,83 @@
+{
+  "schema_id": "phk-v23-r0b-diagnostic-contract-minimal-v2",
+  "contract_id": "PHK_V23_R0B_TEMPORAL_PRECURSOR_DIAGNOSTIC_MINIMAL_V2",
+  "effective_date": "2026-08-31",
+  "program_contract": "configs/phk_v23/program_contract_r0b_minimal_v2.json",
+  "method_contract": "configs/phk_v23/method_contract_r0b_minimal_v2.json",
+  "scientific_role": "REFERENCE_BLIND_TEMPORAL_PRECURSOR_DIAGNOSTIC_NOT_ROOT_CAUSE_PROOF",
+  "execution": {
+    "device": "TESLA_V100_PCIE_32GB",
+    "dtype": "FLOAT64",
+    "canonical_optimizer_steps": 175,
+    "cloud_shadow_optimizer_steps": 0,
+    "maximum_runs": 1,
+    "omp_num_threads": 1
+  },
+  "measurements": {
+    "quantiles": [0.05, 0.5, 0.95, 0.99],
+    "phase_activity_threshold": 0.5,
+    "roi": {
+      "abs_x_max": 0.55,
+      "z_min": 0.0,
+      "z_max": 0.55
+    },
+    "w2_zero_drive_fields_are_null_not_zero": [
+      "ACTIVE_PULSE_POTENTIAL_BOUNDARY_ERROR",
+      "INSTANTANEOUS_JOULE_LOCALIZATION_RATIO"
+    ]
+  },
+  "decision": {
+    "output_field": "PRIMARY_PRECURSOR_CANDIDATE",
+    "causal_root_claim_forbidden": true,
+    "allowed_classes": [
+      "ELECTRICAL_OR_BOUNDARY_CONDITIONING",
+      "ELECTROTHERMAL_DRIVE_DEFICIT",
+      "PHASE_OUTPUT_CONDITIONING",
+      "GRADIENT_STARVATION",
+      "GRADIENT_CONFLICT",
+      "SWITCH_INDUCED",
+      "OPTIMIZATION_UNRESOLVED",
+      "R0B_INCONCLUSIVE_STOP"
+    ],
+    "thresholds": {
+      "epsilon": 1e-18,
+      "material_relative_change": 0.1,
+      "order_of_magnitude_ratio": 10.0,
+      "conflict_cosine": -0.9,
+      "gradient_material_fraction": 0.1,
+      "phase_jacobian_floor": 0.01,
+      "low_jacobian_fraction": 0.95,
+      "low_positive_drive_fraction": 0.05,
+      "joule_localization_floor": 0.1,
+      "boundary_sigmoid_error_rms": 0.5,
+      "temperature_fraction_of_transition_floor": 0.5,
+      "minimum_persistence_optimizer_steps": 10,
+      "switch_persistence_fraction_at_step_160": 0.5
+    },
+    "predicate_support": {
+      "electrical_or_boundary": "W1_ACTIVE_PULSE_ONLY_FROM_STEP_25",
+      "electrothermal_drive": "W1_ROI_FROM_STEP_100",
+      "phase_output": "W1_FIXED_POOL_FROM_STEP_0_WITH_CAPACITY_0_1_AND_1_10",
+      "gradient_starvation": "W1_FIXED_POOL_FULL_GRADIENT_NODES_FROM_STEP_10",
+      "gradient_conflict": "W1_FIXED_POOL_FULL_GRADIENT_NODES_FROM_STEP_10",
+      "switch": "STEP_150_TO_151_SHOCK_WITH_STEP_160_PERSISTENCE",
+      "optimization_unresolved": "STEP_175_ONLY_AFTER_A_TO_F_FAIL"
+    },
+    "tie_or_insufficient_temporal_order": "R0B_INCONCLUSIVE_STOP",
+    "switch_factorial_gate": "ONLY_WHEN_PRIMARY_PRECURSOR_CANDIDATE_IS_SWITCH_INDUCED",
+    "factorial_role": "NON_VOTING_LOCAL_CPU_GRADIENT_CONTEXT"
+  },
+  "reference_boundary": {
+    "cloud_reference_fields_read": false,
+    "stress_reference_fields_or_metrics_may_be_read": false,
+    "reference_blind_decision_must_exist_before_nominal_reference_open": true,
+    "nominal_posthoc_may_not_change_primary_precursor_candidate": true
+  },
+  "terminal_outcomes": [
+    "R0B_PRECURSOR_CANDIDATE_IDENTIFIED",
+    "R0B_INCONCLUSIVE_STOP",
+    "R0B_BUDGET_STOP_INCOMPLETE",
+    "R0B_INVALID_STOP"
+  ],
+  "completion_does_not_authorize_r1_pjgr_stress_or_second_run": true
+}

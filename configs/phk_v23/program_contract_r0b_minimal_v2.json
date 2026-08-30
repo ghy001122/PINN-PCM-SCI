@@ -1,0 +1,67 @@
+{
+  "schema_id": "phk-v23-program-contract-r0b-minimal-v2",
+  "contract_id": "PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2",
+  "effective_date": "2026-08-31",
+  "phase_id": "PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2",
+  "status": "R0B_EXPLICITLY_AUTHORIZED_ONCE",
+  "authorization": {
+    "source": "CURRENT_USER_EXPLICIT_COMPLETE_R0B_AND_GPU_AUTHORIZATION",
+    "evidence_anchor_commit": "0f561b58cb019ab3eb52bb4a0795f8b64f5e7e94",
+    "contract_and_implementation_writes_authorized": true,
+    "selective_commit_and_push_authorized": true,
+    "r0b_reference_blind_gpu_replay_authorized": true,
+    "local_reference_blind_adjudication_authorized": true,
+    "conditional_local_cpu_gradient_factorial_authorized": true,
+    "local_nominal_non_voting_appendix_authorized": true,
+    "instance_shutdown_after_recovery_required": true,
+    "r1_or_recovery_intervention_authorized": false,
+    "pjgr_or_other_method_authorized": false,
+    "stress_reference_access_authorized": false,
+    "second_gpu_run_or_seed_change_authorized": false,
+    "submission_or_external_contact_authorized": false
+  },
+  "preserves_without_rewrite": [
+    "PHK_V22_ONE_WEEK_SPRINT_TERMINAL_NO_GO",
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "PHK_V23_R0A_INCONCLUSIVE",
+    "PHK_V22R_V11_NOMINAL_RUN_DECISION_CLOSEOUT_AND_PAPER",
+    "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  ],
+  "execution_budget": {
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "maximum_scientific_gpu_runs": 1,
+    "gpu_wall_hours_hard_cap": 1.0,
+    "gpu_paid_work_soft_stop_minutes": 45,
+    "estimated_incremental_cost_cny_hard_cap": 5.0,
+    "local_cpu_factorial_wall_hours_hard_cap": 2.0,
+    "displayed_hourly_price_cny_preflight": 1.88,
+    "prior_estimated_project_spend_cny": 4.81005806532574,
+    "project_absolute_cloud_cost_cny_hard_cap": 150.0
+  },
+  "parent_v23_global_stop": {
+    "phase_start_utc": "2026-08-30T16:48:19Z",
+    "calendar_days_hard_cap": 14,
+    "gpu_hours_hard_cap": 34.0,
+    "estimated_incremental_cost_cny_hard_cap": 95.0,
+    "unused_balance_may_not_fund_extra_seed_module_or_rescue": true
+  },
+  "reference_roles": {
+    "cloud": "REFERENCE_BLIND",
+    "nominal": "LOCAL_NON_VOTING_POSTHOC_ONLY_AFTER_IMMUTABLE_REFERENCE_BLIND_DECISION",
+    "nominal_forbidden_uses": [
+      "LOSS",
+      "INITIALIZATION",
+      "GATE",
+      "SAMPLER",
+      "COLLOCATION",
+      "THRESHOLD_SELECTION",
+      "CHECKPOINT_SELECTION",
+      "EARLY_STOP",
+      "INTERVENTION_SELECTION",
+      "CLOUD_UPLOAD"
+    ],
+    "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD_AND_INACCESSIBLE"
+  },
+  "completion_does_not_authorize_any_next_stage": true
+}

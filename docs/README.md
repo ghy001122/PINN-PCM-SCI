@@ -19,10 +19,10 @@
 
 ## 当前执行入口
 
-- 当前唯一 live plan：[PLAN-PHK-V2.3-R0A](plans/NEXT_ACTIONS.md)。一次本地 CPU/FP64
-  只读诊断已完成并返回 `R0A_INCONCLUSIVE`；当前不再授权新的科研执行。
+- 当前唯一 live plan：[PLAN-PHK-V2.3-R0B](plans/NEXT_ACTIONS.md)。当前只授权一次
+  V100/FP64/seed-17/STRONG_RAW scratch 175-step reference-blind replay、回收关机与本地裁决。
 - 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R 四臂 nominal 的
-  `MVP_NO_GO_NO_BASIC_COMPETENCE` 保持冻结；stress、R0B、R1、PJGR 和投稿均未授权。
+  `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A `R0A_INCONCLUSIVE` 保持冻结；R1、PJGR、stress、第二次 run 和投稿均未授权。
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 是 fixed-discretization
   单 seed 负面 Method-MVP；PDE loss 下降没有建立局域事件 competence，不能外推为 PINN
   全局失败、continuum truth、formal OOD 或实验结论。
@@ -30,6 +30,7 @@
 - 当前 V2.2R 决定入口：[ADR 0048](adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)。它在 profile 后激活 v1.1 四臂冲刺并只覆盖 [ADR 0047](adr/0047-adopt-phk-v22r-rapid-method-rescue-sprint.md) 的后续执行语义，不改写 V2.1 terminal evidence 或既有 profile 事实。
 - 当前 PHK-V2.3 R0A 决定入口：[ADR 0049](adr/0049-activate-phk-v23-r0a-cpu-diagnostics.md)。它只激活一次 CPU 诊断，保留 V2.2R terminal No-Go，并明确禁止 GPU、训练、stress、R0B、R1 与 PJGR。
 - 当前 PHK-V2.3 R0A 结果入口：[2026-08-30 R0A CPU diagnostics closeout](experiment/2026-08-30-phk-v23-r0a-cpu-diagnostics-closeout.md)。机器裁决为 `R0A_INCONCLUSIVE`；artifact 和 manifest 分别固定完整诊断量与运行身份。
+- 当前 PHK-V2.3 R0B 决定入口：[ADR 0050](adr/0050-activate-phk-v23-r0b-first-switch-175-minimal-v2.md)。它只激活一次 175-step reference-blind temporal-precursor replay，要求产物回收后立即关机，并禁止把结果写成因果 root 或方法增益。
 - 当前 V2.2R 近期研究策略入口：[2026-08-29 研究策略整合](notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。它把实时会话中的模块组合、结果故事和止损思路映射到冻结合同，只提供解释和稿后路由，不新增授权或证据。
 - 当前 V2.2R stress reference 字节封存记录：
   [2026-08-29 PHK-V2.2R stress extra-fine seal](experiment/2026-08-29-phk-v22r-stress-reference-byte-seal.md)。
