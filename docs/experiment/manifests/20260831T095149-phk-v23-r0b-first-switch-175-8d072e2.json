@@ -1,0 +1,88 @@
+{
+  "actual_budget": {
+    "canonical_optimizer_steps": 175,
+    "cloud_cost_cny_estimated": 0.09727051790253155,
+    "cloud_shadow_optimizer_steps": 0,
+    "gpu_hours": 0.05173963718219764,
+    "local_factorial_optimizer_steps": 0,
+    "scientific_runs": 1
+  },
+  "artifacts": {
+    "compact_artifact": "artifacts/20260831T095149-phk-v23-r0b-first-switch-175-8d072e2.json",
+    "compact_artifact_sha256": "154181F9764D83FCF9173F817555F70FD0A4D0AD102A8CE587457D4878E93B23",
+    "nominal_non_voting_evaluation_sha256": "A0F7166DA1A9F707D6C888D4C5E37588B9A6B3C05FB7EA27ACA7D8DB1B1FEEA1",
+    "raw_summary": "outputs/runs/20260831T095149-phk-v23-r0b-first-switch-175-8d072e2/summary.json",
+    "reference_blind_adjudication_sha256": "829855B632846DF4491C0298A6D4EFCBFD51E74D21EEE268CAF51EBE4955020C",
+    "telemetry_sha256": "CACB89EDA7F17F7F5DB7021A0C5DB689141986F236A8BCA0B4C9BB27BBA1B741"
+  },
+  "case_id": "PHK_V23_R0B_STRONG_RAW_NOMINAL_FULL_PREFIX",
+  "checkpoint": {
+    "embedded_training_config_updates": 1000,
+    "modified": false,
+    "path": "outputs/runs/20260831T095149-phk-v23-r0b-first-switch-175-8d072e2/strong_raw/checkpoint-final.pt",
+    "sha256": "77F72419DAF91D5AA96ABC6E400C9C0D737BECF69DA6A3EBDD28406E5FDE2C0E",
+    "update": 175
+  },
+  "claim_status": "V22R_TERMINAL_NO_GO_PRESERVED_R0B_GRADIENT_STARVATION_PRECURSOR_NO_METHOD_EVIDENCE",
+  "code_identity": {
+    "activation_commit": "a19a574",
+    "contracts": {
+      "diagnostic_sha256": "F23E508D87BA0337952B03DE8F0A23298A17AF27F3C2458FFC371FA582BCF5F4",
+      "method_sha256": "724EC71549E7265900531DF9A3270B70FF191FD91605E93157D4F410BD0922DD",
+      "program_sha256": "7AD60F79B44E177FB81EC98A7AD476A011DA6D6DB5A393C7BADA381F7B59952B"
+    },
+    "source_commit": "8d072e2ece0668583adad4b3cefff3e978436f05"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_v23_r0b",
+    "run",
+    "--output-root",
+    "outputs/runs/20260831T095149-phk-v23-r0b-first-switch-175-8d072e2",
+    "--device",
+    "cuda:0",
+    "--source-identity",
+    "8d072e2ece0668583adad4b3cefff3e978436f05",
+    "--hourly-price-cny",
+    "1.88"
+  ],
+  "ended_at": "2026-08-31T01:55:47.762816+00:00",
+  "environment": {
+    "autodl_shutdown_verified": true,
+    "device": "Tesla V100-PCIE-32GB",
+    "dtype": "FLOAT64",
+    "numpy": "2.1.1",
+    "omp_num_threads": "1",
+    "post_shutdown_ssh_probe": "CONNECTION_REFUSED",
+    "python": "3.11.9",
+    "torch": "2.5.1+cu118",
+    "torch_cuda": "11.8"
+  },
+  "evaluator_id": "phk-v23-r0b-reference-blind-adjudicator-v1",
+  "evidence_identity": "REFERENCE_BLIND_SINGLE_SEED_DIAGNOSTIC_PREFIX_WITH_NOMINAL_NON_VOTING_APPENDIX",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "PHK_V23_R0B_FIRST_SWITCH_175",
+  "failure_class": "GRADIENT_STARVATION_PRECURSOR_NOT_CAUSAL_ROOT",
+  "gate": "PHK_V23_R0B",
+  "gate_outcome": "R0B_PRECURSOR_CANDIDATE_IDENTIFIED",
+  "method_id": "phk-v23-r0b-strong-raw-first-switch-observer-v2",
+  "numerical_validity": "VALID_REFERENCE_BLIND_TEMPORAL_DIAGNOSTIC",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "canonical_optimizer_steps": 175,
+    "cloud_cost_cny_hard_cap": 5.0,
+    "gpu_hours_hard_cap": 1.0,
+    "scientific_runs": 1
+  },
+  "replay_of": null,
+  "route_disposition": "STOP_R0B_RECOMMEND_R1A_PHASE_HEAD_GRADIENT_MATERIALITY_PLAN_NOT_AUTHORIZED",
+  "run_id": "20260831T095149-phk-v23-r0b-first-switch-175-8d072e2",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "temporal_precursor_diagnostic",
+  "seed": 17,
+  "split_id": "NOMINAL_DEVELOPMENT_SINGLE_FIXED_CASE_REFERENCE_BLIND_TRAINING",
+  "started_at": "2026-08-31T01:52:41.497668+00:00",
+  "supersedes": null,
+  "tier": "diagnostic"
+}

@@ -1,6 +1,6 @@
 # ADR 0050：激活 PHK-V2.3 R0B 首次窗口切换最小诊断
 
-- `status`: `ACCEPTED_ACTIVE`
+- `status`: `ACCEPTED_COMPLETE`
 - `date`: `2026-08-31`
 - `phase_id`: `PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2`
 - `supersedes`: `ADR_0049_FUTURE_RESEARCH_AUTHORIZATION_ONLY`
@@ -33,3 +33,9 @@
 ## 保留结论
 
 R0A `R0A_INCONCLUSIVE` 与 V2.2R `MVP_NO_GO_NO_BASIC_COMPETENCE` 原样保留。R0B 即使识别一个 precursor candidate，也只产生下一项原子干预的计划线索，不产生正向论文方法证据。
+
+## 执行结果
+
+一次性授权已由 run `20260831T095149-phk-v23-r0b-first-switch-175-8d072e2` 消耗。V100 完成 175 canonical updates、0 cloud shadow steps，产物回收并逐哈希核验后 AutoDL 已 shutdown，SSH 复核为 `Connection refused`。
+
+reference-blind decision 为 `R0B_PRECURSOR_CANDIDATE_IDENTIFIED`，primary 是 `GRADIENT_STARVATION`（step 10/25）；后续支持 `GRADIENT_CONFLICT`（75/100）与 `ELECTROTHERMAL_DRIVE_DEFICIT`（110/120）。primary 不是 `SWITCH_INDUCED`，所以 factorial 固定为 `FACTORIAL_NOT_RUN_NOT_NEEDED`。nominal appendix 只在 decision 不可变写入后本地生成且不参与投票。完整边界见 [R0B closeout](../experiment/2026-08-31-phk-v23-r0b-first-switch-175-closeout.md)。本 ADR 不授权任何后续执行。

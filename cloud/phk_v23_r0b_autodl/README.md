@@ -1,12 +1,14 @@
 # PHK-V2.3 R0B minimal-v2 AutoDL run card
 
-- `status`: `ONE_REFERENCE_BLIND_RUN_AUTHORIZED`
+- `status`: `ONE_REFERENCE_BLIND_RUN_CONSUMED_COMPLETE_NO_RERUN`
 - `task_id`: `PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2`
 - `canonical_optimizer_steps`: `175`
 - `scientific_schedule_denominator`: `1000`
 - `cloud_shadow_optimizer_steps`: `0`
 
 本卡只允许当前用户批准的一次 V100/FP64/seed-17 `STRONG_RAW` scratch replay。不得上传 nominal/stress reference、local evaluation、teacher probe、sealed path 或历史 reference-derived artifact。
+
+该授权已由 run `20260831T095149-phk-v23-r0b-first-switch-175-8d072e2` 消耗。运行、回收、哈希核验和 AutoDL shutdown 均已完成；SSH 复核为 `Connection refused`。不得再次执行下方命令。结果见 [R0B closeout](../../docs/experiment/2026-08-31-phk-v23-r0b-first-switch-175-closeout.md)。
 
 ## 启动前
 

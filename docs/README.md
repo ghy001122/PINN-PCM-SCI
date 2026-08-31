@@ -19,8 +19,8 @@
 
 ## 当前执行入口
 
-- 当前唯一 live plan：[PLAN-PHK-V2.3-R0B](plans/NEXT_ACTIONS.md)。当前只授权一次
-  V100/FP64/seed-17/STRONG_RAW scratch 175-step reference-blind replay、回收关机与本地裁决。
+- 当前唯一 live plan：[PLAN-PHK-V2.3-R0B](plans/NEXT_ACTIONS.md)。一次性
+  V100/FP64/seed-17/STRONG_RAW scratch 175-step reference-blind replay 已完成并收口；当前不授权新的科研执行。
 - 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R 四臂 nominal 的
   `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A `R0A_INCONCLUSIVE` 保持冻结；R1、PJGR、stress、第二次 run 和投稿均未授权。
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 是 fixed-discretization
@@ -31,6 +31,7 @@
 - 当前 PHK-V2.3 R0A 决定入口：[ADR 0049](adr/0049-activate-phk-v23-r0a-cpu-diagnostics.md)。它只激活一次 CPU 诊断，保留 V2.2R terminal No-Go，并明确禁止 GPU、训练、stress、R0B、R1 与 PJGR。
 - 当前 PHK-V2.3 R0A 结果入口：[2026-08-30 R0A CPU diagnostics closeout](experiment/2026-08-30-phk-v23-r0a-cpu-diagnostics-closeout.md)。机器裁决为 `R0A_INCONCLUSIVE`；artifact 和 manifest 分别固定完整诊断量与运行身份。
 - 当前 PHK-V2.3 R0B 决定入口：[ADR 0050](adr/0050-activate-phk-v23-r0b-first-switch-175-minimal-v2.md)。它只激活一次 175-step reference-blind temporal-precursor replay，要求产物回收后立即关机，并禁止把结果写成因果 root 或方法增益。
+- 当前 PHK-V2.3 R0B 结果入口：[2026-08-31 R0B first-switch closeout](experiment/2026-08-31-phk-v23-r0b-first-switch-175-closeout.md)。机器裁决识别 `GRADIENT_STARVATION` 为最早持续前兆；AutoDL 已关闭，factorial 未触发，nominal appendix 为 non-voting，两份 stress references 继续 sealed/unread。
 - 当前 V2.2R 近期研究策略入口：[2026-08-29 研究策略整合](notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。它把实时会话中的模块组合、结果故事和止损思路映射到冻结合同，只提供解释和稿后路由，不新增授权或证据。
 - 当前 V2.2R stress reference 字节封存记录：
   [2026-08-29 PHK-V2.2R stress extra-fine seal](experiment/2026-08-29-phk-v22r-stress-reference-byte-seal.md)。

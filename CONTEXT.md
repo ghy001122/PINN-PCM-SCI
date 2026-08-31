@@ -5,7 +5,7 @@
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
 - `updated_at`: `2026-08-31`
 
-在不改写 PHK-V2.2R terminal No-Go 的前提下，`PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT` 已完成一次既有 STRONG_RAW final checkpoint 的本地 CPU/FP64 只读诊断，结果为 `R0A_INCONCLUSIVE`。当前 `PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2` 只研究 scratch 训练至首次 W1→W1+W2 切换期间的 temporal precursor；它不实施 recovery 或 proposed method，输出不得写成 competence 恢复、方法增益或因果 root。两份 stress reference 继续 sealed/unread。
+在不改写 PHK-V2.2R terminal No-Go 的前提下，`PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT` 已完成一次既有 STRONG_RAW final checkpoint 的本地 CPU/FP64 只读诊断，结果为 `R0A_INCONCLUSIVE`。`PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2` 随后完成一次 seed-17/FP64/STRONG_RAW scratch 175-step reference-blind replay：`GRADIENT_STARVATION` 是 step 10 起、step 25 确认的最早持续 temporal precursor；gradient conflict 与 electrothermal deficit 更晚出现。该结果不实施 recovery 或 proposed method，不得写成 competence 恢复、方法增益或因果 root。两份 stress reference 继续 sealed/unread，当前无后续执行授权。
 
 ## 当前研究问题
 

@@ -1,0 +1,128 @@
+{
+  "schema_id": "phk-v23-r0b-closeout-artifact-v1",
+  "task_id": "PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2",
+  "run_id": "20260831T095149-phk-v23-r0b-first-switch-175-8d072e2",
+  "status": "R0B_PRECURSOR_CANDIDATE_IDENTIFIED",
+  "source_identity": "8d072e2ece0668583adad4b3cefff3e978436f05",
+  "contracts": {
+    "program_sha256": "7AD60F79B44E177FB81EC98A7AD476A011DA6D6DB5A393C7BADA381F7B59952B",
+    "method_sha256": "724EC71549E7265900531DF9A3270B70FF191FD91605E93157D4F410BD0922DD",
+    "diagnostic_sha256": "F23E508D87BA0337952B03DE8F0A23298A17AF27F3C2458FFC371FA582BCF5F4"
+  },
+  "execution": {
+    "device": "Tesla V100-PCIE-32GB",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "arm": "STRONG_RAW",
+    "initialization": "SCRATCH_START",
+    "canonical_optimizer_steps": 175,
+    "cloud_shadow_optimizer_steps": 0,
+    "scientific_schedule_denominator": 1000,
+    "checkpoint_update": 175,
+    "checkpoint_embedded_config_updates": 1000,
+    "wall_seconds": 186.2626938559115,
+    "observer_seconds": 61.74854026455432,
+    "hourly_price_cny": 1.88,
+    "estimated_incremental_cost_cny": 0.09727051790253155,
+    "started_at_utc": "2026-08-31T01:52:41.497668+00:00",
+    "finished_at_utc": "2026-08-31T01:55:47.762816+00:00"
+  },
+  "execution_integrity": {
+    "run_status": "R0B_REFERENCE_BLIND_GPU_REPLAY_COMPLETE",
+    "manifest_status": "DIAGNOSTIC_PREFIX",
+    "telemetry_record_count": 28,
+    "all_recovered_artifact_hashes_and_sizes_match_summary": true,
+    "checkpoint_and_prediction_recovered": true,
+    "prediction_phase_finite": true,
+    "prediction_phase_shape": [1001, 12800],
+    "observer_model_state_unchanged_per_callback": true,
+    "observer_existing_grad_state_preserved_per_callback": true,
+    "observer_model_mode_preserved_per_callback": true,
+    "observer_python_numpy_torch_cpu_cuda_rng_preserved_per_callback": true,
+    "cloud_reference_fields_read": false,
+    "stress_fields_or_metrics_read": false,
+    "autodl_shutdown_command_completed": true,
+    "post_shutdown_ssh_probe": "CONNECTION_REFUSED"
+  },
+  "reference_blind_decision": {
+    "status": "R0B_PRECURSOR_CANDIDATE_IDENTIFIED",
+    "primary_precursor_candidate": "GRADIENT_STARVATION",
+    "primary_onset_step": 10,
+    "primary_confirmation_step": 25,
+    "primary_basis": "PHASE_HEAD_TOTAL_OBJECTIVE_GRADIENT_FRACTION",
+    "reason": "EARLIEST_UNIQUE_PERSISTENT_REFERENCE_BLIND_PRECURSOR",
+    "causal_root_cause_identified": false,
+    "factorial_required": false,
+    "all_supported_candidates": [
+      {
+        "candidate": "GRADIENT_STARVATION",
+        "onset_step": 10,
+        "confirmation_step": 25
+      },
+      {
+        "candidate": "GRADIENT_CONFLICT",
+        "onset_step": 75,
+        "confirmation_step": 100
+      },
+      {
+        "candidate": "ELECTROTHERMAL_DRIVE_DEFICIT",
+        "onset_step": 110,
+        "confirmation_step": 120
+      }
+    ],
+    "adjudication_sha256": "829855B632846DF4491C0298A6D4EFCBFD51E74D21EEE268CAF51EBE4955020C"
+  },
+  "selected_reference_blind_measurements": {
+    "gradient_material_fraction_threshold": 0.1,
+    "phase_to_largest_other_head_total_gradient_ratio_step_10": 0.009906072139149071,
+    "phase_to_largest_other_head_total_gradient_ratio_step_25": 0.003964568452297232,
+    "minimum_phase_head_loss_pair_cosine_step_75": -0.9909023080099246,
+    "minimum_phase_head_loss_pair_cosine_step_100": -0.9971500399648836,
+    "temperature_max_w1_step_110": 0.2109098330577297,
+    "temperature_max_w1_step_120": 0.19644048775795597,
+    "positive_growth_roi_fraction_w1_step_110": 0.0,
+    "positive_growth_roi_fraction_w1_step_120": 0.0,
+    "phase_max_w1_step_150": 0.02391266745490427,
+    "phase_max_w1_step_151": 0.02391226257120868,
+    "phase_max_w1_step_175": 0.023846781157377497,
+    "prediction_phase_max_full_history": 0.09244715333335372,
+    "prediction_phase_activity_threshold": 0.5,
+    "final_training_loss": 0.049247628390856876
+  },
+  "factorial": {
+    "status": "FACTORIAL_NOT_RUN_NOT_NEEDED",
+    "reason": "PRIMARY_PRECURSOR_CANDIDATE_IS_NOT_SWITCH_INDUCED",
+    "optimizer_steps": 0,
+    "parameter_updates": 0,
+    "status_artifact_sha256": "CA55925D8382CF8952E94105A36360A2E6AD2FDEA426BE11E4AF76E53D1514FE"
+  },
+  "nominal_non_voting_appendix": {
+    "written_after_reference_blind_decision": true,
+    "status": "EVALUATED_LOCAL_REFERENCE_ONLY",
+    "voting_role": "NON_VOTING_APPENDIX",
+    "time_averaged_phase_region_symmetric_difference": 0.00515,
+    "phase_roi_continuous_rms": 0.1111426345613131,
+    "phase_roi_continuous_nrmse_by_0_5": 0.2222852691226262,
+    "hard_guards_passed": false,
+    "hard_guard_failures": [
+      "cycle_1_event_missing",
+      "cycle_1_roi_peak_below_minimum",
+      "cycle_1_recovery_failure",
+      "cycle_2_event_missing",
+      "cycle_2_roi_peak_below_minimum",
+      "cycle_2_recovery_failure"
+    ],
+    "evaluation_sha256": "A0F7166DA1A9F707D6C888D4C5E37588B9A6B3C05FB7EA27ACA7D8DB1B1FEEA1"
+  },
+  "raw_artifact_hashes": {
+    "checkpoint": "77F72419DAF91D5AA96ABC6E400C9C0D737BECF69DA6A3EBDD28406E5FDE2C0E",
+    "prediction": "438E9F38CCB567D3DC8A556D6BB222380F052F2273386515C184C1917AB1B536",
+    "telemetry": "CACB89EDA7F17F7F5DB7021A0C5DB689141986F236A8BCA0B4C9BB27BBA1B741",
+    "transition_bundle": "F2D3C4BE24C335E600BE14377822B3F2D051B9D05FA98F4958217F333DF95EB6",
+    "training_log": "074050C7E5D47C40385E5BF4123610FB5E0E1E74BEA34E542479037E4327F2BA",
+    "final_manifest": "392E1BE084483836B878F770ABF50EC2281899058B38FB5246BC975887F60116"
+  },
+  "claim_boundary": "TEMPORAL_PRECURSOR_CANDIDATE_NOT_CAUSAL_ROOT_OR_METHOD_EVIDENCE",
+  "next_research_execution_authorized": false,
+  "stress_reference_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}
