@@ -1,13 +1,13 @@
 # PLAN-PHK-V2.3-R1A：ConFIG competence recovery
 
 - `phase_id`: `PHK_V23_R1A_CONFIG_COMPETENCE_RECOVERY`
-- `lifecycle_state`: `AWAITING`
-- `blocker_id`: `AUTODL_ENDPOINT_OR_PRICE`
-- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R1A_INFRASTRUCTURE_BLOCKED_NO_SCIENTIFIC_RUN`
+- `lifecycle_state`: `COMPLETE`
+- `blocker_id`: `NONE`
+- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R1A_CONFIG_RAW_NO_COMPETENCE_NO_METHOD_EVIDENCE`
 - `next_research_execution_authorized`: `false`
-- `authorization_state`: `ONE_R1A_CONFIG_EXECUTION_AUTHORIZED_BUT_UNCONSUMED`
-- `plan_status`: `R1A_PREFLIGHT_BLOCKED`
-- `current_stage`: `AWAIT_LIVE_AUTODL_ENDPOINT_AND_PRICE`
+- `authorization_state`: `R1A_AUTHORIZATION_CONSUMED_NO_NEXT_EXECUTION_AUTHORIZED`
+- `plan_status`: `R1A_TERMINAL_NO_GO_COMPLETE`
+- `current_stage`: `R1A_CONFIG_RAW_NO_COMPETENCE_COMPLETE`
 - `supersedes`: `PLAN_PHK_V23_R0C_COMPLETE_FUTURE_AUTHORIZATION_ONLY`
 - `preserves`: `R0C_R0B_R0A_AND_PHK_V22R_TERMINAL_EVIDENCE`
 - `program_contract`: `configs/phk_v23/program_contract_r1a_config.json`
@@ -17,11 +17,16 @@
 ## 唯一执行链
 
 1. `COMPLETED`：完成合同、单一 gradient-combiner seam、ConFIG adapter、focused tests、run card、部署 bundle 和文档一致性门。
-2. `BLOCKED`：已核验旧 SSH endpoint 连续两次 `Connection refused`；等待用户启动实例并提供当前 SSH endpoint 与页面实时价格，再核验 V100、空闲 GPU、远端环境、部署哈希与 reference-blind 边界。
-3. `PENDING`：只执行一次 FP64/seed-17/STRONG_RAW scratch 1000-update standard-ConFIG run，并写 final checkpoint、training/mechanism logs、manifests、prediction、environment 和 cost summary。
-4. `PENDING`：回收全部产物并逐文件核验 SHA-256，随后立即关闭 AutoDL；关机失败时只处理基础设施，不得本地开 reference。
-5. `PENDING`：关机确认后在本地运行冻结 nominal evaluator，裁决 `R1A_CONFIG_RAW_COMPETENCE_RECOVERED` 或 `R1A_CONFIG_RAW_NO_COMPETENCE`。
-6. `PENDING`：完成 compact artifact、manifest、ledger、closeout、claim audit、状态收口和选择性 commit/push。
+2. `COMPLETED`：用户已恢复实例；SSH、V100、空闲 GPU、远端环境和 `1.88 CNY/h` 公开实时单价已通过前检。
+3. `COMPLETED`：冻结 bundle 逐文件哈希通过；唯一一次 FP64/seed-17/STRONG_RAW scratch 1000-update standard-ConFIG run 与 reference-free prediction 完成。
+4. `COMPLETED`：全部产物回收并核验 SHA-256；AutoDL 已执行 `/usr/bin/shutdown -h now`，关机探针为 `Connection refused`。
+5. `COMPLETED`：关机后本地 frozen nominal evaluator 裁决 `R1A_CONFIG_RAW_NO_COMPETENCE`；两周期各失败 event、ROI peak 与 recovery 三项门。
+6. `COMPLETED`：compact artifact、manifest、ledger、closeout、claim audit 与状态收口完成；只余选择性 commit/push。
+
+## 终局边界
+
+- ConFIG 在 12 个冻结机制节点均产生对四组梯度正向的合成方向，但 `phase>=0.5` 活动比例仍为 0；不得写成 competence 或方法收益。
+- 本 R1a 授权已消耗。R1b、PJGR、第二 seed、训练延长、其他模块、stress 与投稿均未授权。
 
 ## 冻结停止条件
 

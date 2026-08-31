@@ -19,9 +19,9 @@
 
 ## 当前执行入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-R1A](plans/NEXT_ACTIONS.md)。R1a 合同、实现、测试与部署 bundle 已就绪，但当前 AutoDL endpoint 拒绝连接且无实时价格，唯一 V100 run 尚未消耗；恢复条件见 [preflight blocker](experiment/2026-08-31-phk-v23-r1a-config-preflight-blocked.md)。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-R1A](plans/NEXT_ACTIONS.md)。唯一 R1a V100 run 已完成并裁决 `R1A_CONFIG_RAW_NO_COMPETENCE`；AutoDL 已关闭，下一科研执行未授权。早期未消耗 run 的基础设施阻塞保存在 [preflight blocker](experiment/2026-08-31-phk-v23-r1a-config-preflight-blocked.md)。
 - 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R 四臂 nominal 的
-  `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A/R0B/R0C 证据保持冻结；除这一次 R1a 外，R1b、PJGR、stress、第二次 run 和投稿均未授权。
+  `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A/R0B/R0C 证据保持冻结；R1a 授权已消费，R1b、PJGR、stress、第二次 run 和投稿均未授权。
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 是 fixed-discretization
   单 seed 负面 Method-MVP；PDE loss 下降没有建立局域事件 competence，不能外推为 PINN
   全局失败、continuum truth、formal OOD 或实验结论。
@@ -33,6 +33,7 @@
 - 当前 PHK-V2.3 R0B 结果入口：[2026-08-31 R0B first-switch closeout](experiment/2026-08-31-phk-v23-r0b-first-switch-175-closeout.md)。机器裁决识别 `GRADIENT_STARVATION` 为最早持续前兆；AutoDL 已关闭，factorial 未触发，nominal appendix 为 non-voting，两份 stress references 继续 sealed/unread。
 - 当前 PHK-V2.3 R0C 决定入口：[ADR 0051](adr/0051-activate-phk-v23-r0c-effective-update-25-v100.md)。它只激活并已消费一次 25-step reference-blind effective-update materiality replay；禁止 reference、recovery、R1、PJGR、第二次 run 与 stress。
 - 当前 PHK-V2.3 R1a 决定入口：[ADR 0052](adr/0052-activate-phk-v23-r1a-config-competence-recovery.md)。它只激活一次 standard-ConFIG shared-solver-backbone competence-recovery run；不授权第二次 run、R1b、PJGR 或 stress。
+- 当前 PHK-V2.3 R1a 结果入口：[2026-08-31 R1a ConFIG closeout](experiment/2026-08-31-phk-v23-r1a-config-closeout.md)。ConFIG 在全部冻结机制节点产生 conflict-free direction，但两周期事件仍完全缺失，机器裁决为 `R1A_CONFIG_RAW_NO_COMPETENCE`。
 - 当前 PHK-V2.3 R0C 结果入口：[2026-08-31 R0C effective-update closeout](experiment/2026-08-31-phk-v23-r0c-effective-update-25-closeout.md)。机器裁决为 `R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT`；AutoDL 已关闭，nominal/stress reference 均未读取，结果不恢复 competence 或证明方法增益。
 - 当前 V2.2R 近期研究策略入口：[2026-08-29 研究策略整合](notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md)。它把实时会话中的模块组合、结果故事和止损思路映射到冻结合同，只提供解释和稿后路由，不新增授权或证据。
 - 当前 V2.2R stress reference 字节封存记录：

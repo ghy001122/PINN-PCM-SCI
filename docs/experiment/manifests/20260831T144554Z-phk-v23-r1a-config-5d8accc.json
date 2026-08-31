@@ -1,0 +1,93 @@
+{
+  "actual_budget": {
+    "cloud_cost_cny_estimated": 0.31647545749833805,
+    "gpu_hours": 0.16833800930762664,
+    "optimizer_updates": 1000,
+    "scientific_runs": 1
+  },
+  "artifacts": {
+    "compact_artifact": "artifacts/20260831T144554Z-phk-v23-r1a-config-5d8accc.json",
+    "compact_artifact_sha256": "68AAACC86108CAFA956BEF5AAA63D4E22835EB75D27F574D8C214D091BCA8560",
+    "local_adjudication": "outputs/runs/20260831T144554Z-phk-v23-r1a-config-5d8accc/r1a-adjudication.json",
+    "local_adjudication_sha256": "5BAF38954778B6F7560C523A9041F7D72E7C1F54CBA5F801C785CE1F65BFED4D",
+    "local_evaluation": "outputs/runs/20260831T144554Z-phk-v23-r1a-config-5d8accc/strong_raw/evaluation.json",
+    "local_evaluation_sha256": "C70D08F4BBBCE5DB5564A208743D6DBF679FAD7A0E919567993AEA892D2E2F0C",
+    "raw_summary": "outputs/runs/20260831T144554Z-phk-v23-r1a-config-5d8accc/summary.json",
+    "raw_summary_sha256": "62EBC51AB0B1065445A4823E9F78BAB2F01835B22BBC4A257BD68E6B50B4DE22",
+    "mechanism_telemetry_sha256": "82C29A0652EF9002CA0F185D8CD9646B4828D119334F6E43A00209EA0782AEF9",
+    "prediction_sha256": "347B1F47B0DE6100D81E0B286D522B360CE1244D8B725E43AE89FD55FDD205DD"
+  },
+  "case_id": "PHK_V23_R1A_STRONG_RAW_NOMINAL_FULL_CONFIG",
+  "checkpoint": {
+    "embedded_training_config_updates": 1000,
+    "modified": false,
+    "path": "outputs/runs/20260831T144554Z-phk-v23-r1a-config-5d8accc/strong_raw/checkpoint-final.pt",
+    "sha256": "35E22D1B6ECED37D303FEE8FD7957AA3E56D661DFAF1D8DF9F2A3AB6757742BF",
+    "update": 1000
+  },
+  "claim_status": "V22R_TERMINAL_NO_GO_PRESERVED_R1A_CONFIG_RAW_NO_COMPETENCE_NO_METHOD_EVIDENCE",
+  "code_identity": {
+    "execution_source_commit": "5d8accc0ac3d4bee81f696d400afac6bdd0eef32",
+    "contracts": {
+      "method_sha256": "7A5364A29275ACD2CE1D94801B3FC4B1E2A6996C8AA707AE8A04CA50B96DCDF7",
+      "program_sha256": "69635CB1E38E5F5B5FA64AA91C79DD8C2442F377AD70CB25BE28A2E92F1E7D33"
+    },
+    "deployed_source_manifest_sha256": "A487F88AEDE87E8A501FD33E547EC25A28F849953799A6F7E04E96D40FE99D26",
+    "runner_sha256": "A298CCB1DBEB57DAAFCC547BB9931B8B9938192146E1CCEAF7B4718F2D08C607",
+    "source_identity": "R1A-CONFIG-BUNDLE-D37FE6C0C044109EAF5EA583680D69A94D6F9830C687F0C330C120C4B3928244",
+    "training_seam_sha256": "49FBEA277219017FA96E5709876CBED02850AE5DACE652687F166A188C54B7DC",
+    "upstream_config_repository_commit": "94862437f451f175673bce9c85f3e14bd9182c21"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_v23_r1a_config",
+    "run",
+    "--output-root",
+    "outputs/runs/20260831T144554Z-phk-v23-r1a-config-5d8accc",
+    "--device",
+    "cuda:0",
+    "--source-identity",
+    "R1A-CONFIG-BUNDLE-D37FE6C0C044109EAF5EA583680D69A94D6F9830C687F0C330C120C4B3928244",
+    "--hourly-price-cny",
+    "1.88"
+  ],
+  "ended_at": "2026-08-31T14:58:18.237097+00:00",
+  "environment": {
+    "autodl_shutdown_verified": true,
+    "device": "Tesla V100-PCIE-32GB",
+    "dtype": "FLOAT64",
+    "numpy": "2.1.1",
+    "omp_num_threads": "1",
+    "post_shutdown_ssh_probe": "CONNECTION_REFUSED",
+    "python": "3.11.9",
+    "torch": "2.5.1+cu118",
+    "torch_cuda": "11.8"
+  },
+  "evaluator_id": "phk-v22r-frozen-local-nominal-evaluator-v1-1",
+  "evidence_identity": "REFERENCE_BLIND_SINGLE_SEED_1000_UPDATE_CONFIG_RECOVERY_RUN_WITH_LOCAL_NOMINAL_EVALUATION_AFTER_SHUTDOWN",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "PHK_V23_R1A_CONFIG_COMPETENCE_RECOVERY",
+  "failure_class": "CONFIG_CONFLICT_FREE_GRADIENT_COMBINATION_DID_NOT_RECOVER_TWO_CYCLE_EVENT_COMPETENCE",
+  "gate": "PHK_V23_R1A",
+  "gate_outcome": "R1A_CONFIG_RAW_NO_COMPETENCE",
+  "method_id": "phk-v23-r1a-strong-raw-standard-config-v1",
+  "numerical_validity": "VALID_REFERENCE_BLIND_TRAINING_AND_LOCAL_NOMINAL_EVALUATION",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "cloud_cost_cny_hard_cap": 5.0,
+    "gpu_hours_hard_cap": 1.5,
+    "optimizer_updates": 1000,
+    "scientific_runs": 1
+  },
+  "replay_of": null,
+  "route_disposition": "STOP_R1A_CONFIG_NO_COMPETENCE_NO_RESCUE_OR_NEXT_STAGE_AUTHORIZED",
+  "run_id": "20260831T144554Z-phk-v23-r1a-config-5d8accc",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "shared_solver_backbone_competence_recovery_test",
+  "seed": 17,
+  "split_id": "NOMINAL_DEVELOPMENT_SINGLE_FIXED_CASE_REFERENCE_BLIND_TRAINING_LOCAL_REFERENCE_EVALUATION",
+  "started_at": "2026-08-31T14:48:12.218931+00:00",
+  "supersedes": null,
+  "tier": "recovery"
+}

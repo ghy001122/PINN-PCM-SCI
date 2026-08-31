@@ -5,12 +5,12 @@
 ## 当前状态
 
 - `phase_id`: `PHK_V23_R1A_CONFIG_COMPETENCE_RECOVERY`
-- `lifecycle_state`: `AWAITING`
-- `blocker_id`: `AUTODL_ENDPOINT_OR_PRICE`
-- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R1A_INFRASTRUCTURE_BLOCKED_NO_SCIENTIFIC_RUN`
+- `lifecycle_state`: `COMPLETE`
+- `blocker_id`: `NONE`
+- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R1A_CONFIG_RAW_NO_COMPETENCE_NO_METHOD_EVIDENCE`
 - `next_research_execution_authorized`: `false`
 
-PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 PHK-V2.3 R0A/R0B/R0C 结果保持冻结。R1a 合同、实现、测试与部署 bundle 已就绪，但已知 AutoDL SSH endpoint 连续两次 `Connection refused`，实时页面价格也不可取得，因此唯一科学 run 尚未消耗。等待用户启动实例并提供当前 endpoint 与价格；两份 stress references 继续 sealed/unread。
+PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 PHK-V2.3 R0A/R0B/R0C 结果保持冻结。唯一一次 R1a standard-ConFIG V100 run 已完成并裁决为 `R1A_CONFIG_RAW_NO_COMPETENCE`：四组梯度合成按定义工作，但仍未重建两周期事件。实例已关机，两份 stress references 继续 sealed/unread，下一科研执行未授权。
 
 现有证据支持的核心表述是：在固定单 seed、1000-update、fixed-discretization nominal 协议下，physics-loss 收敛与小的全域平均误差没有构成局域事件 competence 证书。它不表示 PINN 全局失败，不支持 continuum、formal OOD、材料校准或实验主张。
 
@@ -29,6 +29,7 @@ PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 PHK-V2.3 R0A/R0B/R0C 结�
 - R0C 诊断收口：[PHK-V2.3 R0C closeout](docs/experiment/2026-08-31-phk-v23-r0c-effective-update-25-closeout.md)
 - 当前 R1a 决定：[ADR 0052](docs/adr/0052-activate-phk-v23-r1a-config-competence-recovery.md)
 - R1a 云端 run card：[cloud/phk_v23_r1a_config_autodl](cloud/phk_v23_r1a_config_autodl/README.md)
+- R1a 终局收口：[PHK-V2.3 R1a ConFIG closeout](docs/experiment/2026-08-31-phk-v23-r1a-config-closeout.md)
 - 英文导师初稿与五图复现包：[paper/paper_v22r](paper/paper_v22r/README.md)
 - 文档地图：[docs/README.md](docs/README.md)
 - 当前研究口径：[CONTEXT.md](CONTEXT.md)

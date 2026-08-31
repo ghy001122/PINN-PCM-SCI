@@ -1,11 +1,11 @@
 # PINN-PCM-SCI 当前研究总览与论文口径
 
-本文件是当前研究设定、规范术语与论文表述的单一来源，不承载授权或行动清单。PHK-V2.2R 仍是 fixed-discretization 单-seed 负面 Method-MVP；当前 R1a 只检验 standard-ConFIG shared solver backbone 能否恢复 STRONG_RAW competence，不改写任何历史证据。
+本文件是当前研究设定、规范术语与论文表述的单一来源，不承载授权或行动清单。PHK-V2.2R 仍是 fixed-discretization 单-seed 负面 Method-MVP；R1a 已检验 standard-ConFIG shared solver backbone，结果为 `R1A_CONFIG_RAW_NO_COMPETENCE`，不改写任何历史证据。
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
 - `updated_at`: `2026-08-31`
 
-在不改写 PHK-V2.2R terminal No-Go 的前提下，R0A 为 `R0A_INCONCLUSIVE`；R0B 把 `GRADIENT_STARVATION` 识别为最早 temporal precursor；R0C 又裁决 `R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT`，因此 raw-gradient 幅值救援不成立为首个恢复轴。当前 R1a 只把 standard ConFIG 作为透明归因的共享 solver backbone，用四组冻结损失检验方向冲突处理能否恢复 competence。ConFIG 不是本论文原创，R1a 也不是 proposed-method superiority 试验。两份 stress reference 继续 sealed/unread。
+在不改写 PHK-V2.2R terminal No-Go 的前提下，R0A 为 `R0A_INCONCLUSIVE`；R0B 把 `GRADIENT_STARVATION` 识别为最早 temporal precursor；R0C 又裁决 `R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT`，因此 raw-gradient 幅值救援不成立为首个恢复轴。R1a 随后把 standard ConFIG 作为透明归因的共享 solver backbone，用四组冻结损失检验方向冲突处理；尽管全部冻结机制节点都获得 conflict-free direction，two-cycle competence 仍未恢复。ConFIG 不是本论文原创，R1a 也不是 proposed-method superiority 试验。两份 stress reference 继续 sealed/unread。
 
 ## 当前研究问题
 
@@ -101,4 +101,4 @@ P0 已把合同、实现、runner、评价与稿件对齐到批准的 v1.1；随
 
 ## 权威与状态路由
 
-当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。终局证据见 [nominal terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)，R0C 诊断见 [R0C closeout](docs/experiment/2026-08-31-phk-v23-r0c-effective-update-25-closeout.md)，稿件见 [paper_v22r](paper/paper_v22r/README.md)。profile 后的 v1.1 决定见 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)；冻结机器身份由 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json) 定义。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。
+当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。终局证据见 [nominal terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)，R0C 诊断见 [R0C closeout](docs/experiment/2026-08-31-phk-v23-r0c-effective-update-25-closeout.md)，R1a 结果见 [R1a ConFIG closeout](docs/experiment/2026-08-31-phk-v23-r1a-config-closeout.md)，稿件见 [paper_v22r](paper/paper_v22r/README.md)。profile 后的 v1.1 决定见 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)；冻结机器身份由 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json) 定义。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。
