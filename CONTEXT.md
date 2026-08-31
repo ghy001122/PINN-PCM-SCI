@@ -1,11 +1,11 @@
 # PINN-PCM-SCI 当前研究总览与论文口径
 
-本文件是当前研究设定、规范术语与论文表述的单一来源，不承载授权或行动清单。当前路线为已终局的 `PHK-V2.2R / V1.1 FOUR-ARM METHOD-MVP`；它是独立于 PHK-V2.1 Oracle No-Go 的 fixed-discretization 单-seed 负面结果，不改写任何历史证据。
+本文件是当前研究设定、规范术语与论文表述的单一来源，不承载授权或行动清单。PHK-V2.2R 仍是 fixed-discretization 单-seed 负面 Method-MVP；当前 R1a 只检验 standard-ConFIG shared solver backbone 能否恢复 STRONG_RAW competence，不改写任何历史证据。
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
 - `updated_at`: `2026-08-31`
 
-在不改写 PHK-V2.2R terminal No-Go 的前提下，`PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT` 已完成一次既有 STRONG_RAW final checkpoint 的本地 CPU/FP64 只读诊断，结果为 `R0A_INCONCLUSIVE`。`PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2` 随后完成一次 seed-17/FP64/STRONG_RAW scratch 175-step reference-blind replay：`GRADIENT_STARVATION` 是 step 10 起、step 25 确认的最早持续 temporal precursor；gradient conflict 与 electrothermal deficit 更晚出现。`PHK_V23_R0C_EFFECTIVE_UPDATE_25_V100` 又完成一次 25-step reference-blind replay，机器裁决为 `R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT`：raw-gradient starvation 没有以同等量级延伸为 Adam-effective relative-update starvation。三项诊断均未实施 recovery 或 proposed method，不得写成 competence 恢复、方法增益或因果 root。两份 stress reference 继续 sealed/unread，当前无后续执行授权。
+在不改写 PHK-V2.2R terminal No-Go 的前提下，R0A 为 `R0A_INCONCLUSIVE`；R0B 把 `GRADIENT_STARVATION` 识别为最早 temporal precursor；R0C 又裁决 `R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT`，因此 raw-gradient 幅值救援不成立为首个恢复轴。当前 R1a 只把 standard ConFIG 作为透明归因的共享 solver backbone，用四组冻结损失检验方向冲突处理能否恢复 competence。ConFIG 不是本论文原创，R1a 也不是 proposed-method superiority 试验。两份 stress reference 继续 sealed/unread。
 
 ## 当前研究问题
 

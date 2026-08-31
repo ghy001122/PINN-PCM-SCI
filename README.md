@@ -4,13 +4,13 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_R0C_EFFECTIVE_UPDATE_25_V100`
-- `lifecycle_state`: `COMPLETE`
-- `blocker_id`: `NONE`
-- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT_NO_METHOD_EVIDENCE`
+- `phase_id`: `PHK_V23_R1A_CONFIG_COMPETENCE_RECOVERY`
+- `lifecycle_state`: `AWAITING`
+- `blocker_id`: `AUTODL_ENDPOINT_OR_PRICE`
+- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R1A_INFRASTRUCTURE_BLOCKED_NO_SCIENTIFIC_RUN`
 - `next_research_execution_authorized`: `false`
 
-PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 PHK-V2.3 R0A `R0A_INCONCLUSIVE` 保持冻结。R0B 识别 `GRADIENT_STARVATION` 为最早持续前兆；随后完成的一次性 R0C 25-step V100 reference-blind replay 表明该 raw-gradient 差异被 Adam 在有效相对参数更新上物质补偿，机器裁决为 `R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT`。因此不应直接把 gradient magnitude rescue 作为首个 R1a。该结果不是因果 root、competence 恢复或方法增益。产物核验后 AutoDL 已关闭，两份 stress references 继续 sealed/unread，下一研究执行未授权。
+PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 PHK-V2.3 R0A/R0B/R0C 结果保持冻结。R1a 合同、实现、测试与部署 bundle 已就绪，但已知 AutoDL SSH endpoint 连续两次 `Connection refused`，实时页面价格也不可取得，因此唯一科学 run 尚未消耗。等待用户启动实例并提供当前 endpoint 与价格；两份 stress references 继续 sealed/unread。
 
 现有证据支持的核心表述是：在固定单 seed、1000-update、fixed-discretization nominal 协议下，physics-loss 收敛与小的全域平均误差没有构成局域事件 competence 证书。它不表示 PINN 全局失败，不支持 continuum、formal OOD、材料校准或实验主张。
 
@@ -27,6 +27,8 @@ PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 PHK-V2.3 R0A `R0A_INCONCL
 - 当前 R0C 决定：[ADR 0051](docs/adr/0051-activate-phk-v23-r0c-effective-update-25-v100.md)
 - R0C 云端 run card：[cloud/phk_v23_r0c_autodl](cloud/phk_v23_r0c_autodl/README.md)
 - R0C 诊断收口：[PHK-V2.3 R0C closeout](docs/experiment/2026-08-31-phk-v23-r0c-effective-update-25-closeout.md)
+- 当前 R1a 决定：[ADR 0052](docs/adr/0052-activate-phk-v23-r1a-config-competence-recovery.md)
+- R1a 云端 run card：[cloud/phk_v23_r1a_config_autodl](cloud/phk_v23_r1a_config_autodl/README.md)
 - 英文导师初稿与五图复现包：[paper/paper_v22r](paper/paper_v22r/README.md)
 - 文档地图：[docs/README.md](docs/README.md)
 - 当前研究口径：[CONTEXT.md](CONTEXT.md)

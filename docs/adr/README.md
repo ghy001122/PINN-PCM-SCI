@@ -1,5 +1,7 @@
 # 架构与研究决策索引
 
+- [0052：激活 PHK-V2.3 R1a ConFIG competence recovery](0052-activate-phk-v23-r1a-config-competence-recovery.md) — 只授权一次 reference-blind STRONG_RAW/seed-17/FP64/V100 1000-update ConFIG solver-backbone 恢复实验；关机后本地 nominal 裁决，stress 继续 sealed。
+
 本目录只解释“为什么接受某项决定”。当前能否执行由 [`active_phase.md`](../../active_phase.md) 决定，已运行事实由 [`docs/experiment/`](../experiment/) 保存。
 
 ## 冻结的 Kinetics-Clock 政策合同

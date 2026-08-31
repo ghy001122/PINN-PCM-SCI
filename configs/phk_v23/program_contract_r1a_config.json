@@ -1,0 +1,63 @@
+{
+  "schema_id": "phk-v23-program-contract-r1a-config",
+  "contract_id": "PHK_V23_R1A_CONFIG_COMPETENCE_RECOVERY",
+  "effective_date": "2026-08-31",
+  "phase_id": "PHK_V23_R1A_CONFIG_COMPETENCE_RECOVERY",
+  "status": "R1A_EXPLICITLY_AUTHORIZED_ONCE",
+  "authorization": {
+    "source": "CURRENT_USER_EXPLICIT_EXECUTE_PHK_V23_R1A_CONFIG_COMPETENCE_RECOVERY_EXECUTE",
+    "evidence_anchor_commit": "2683abac82b6aec3da5c0211f28a1c3795baa210",
+    "contract_implementation_and_state_writes_authorized": true,
+    "one_r1a_reference_blind_v100_run_authorized": true,
+    "reference_free_prediction_authorized": true,
+    "local_nominal_evaluation_after_shutdown_authorized": true,
+    "instance_shutdown_after_recovery_required": true,
+    "selective_commit_and_push_authorized": true,
+    "second_r1a_run_or_seed_change_authorized": false,
+    "r1b_authorized": false,
+    "pjgr_or_other_method_authorized": false,
+    "stress_prediction_or_unseal_authorized": false,
+    "submission_or_external_contact_authorized": false
+  },
+  "scientific_question": "CAN_STANDARD_CONFIG_CONFLICT_FREE_GRADIENT_COMBINATION_RECOVER_TWO_CYCLE_STRONG_RAW_COMPETENCE_WITH_ALL_OTHER_TRAINING_SEMANTICS_FROZEN",
+  "preserves_without_rewrite": [
+    "PHK_V22_ONE_WEEK_SPRINT_TERMINAL_NO_GO",
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "PHK_V23_R0A_INCONCLUSIVE",
+    "PHK_V23_R0B_GRADIENT_STARVATION_TEMPORAL_PRECURSOR",
+    "PHK_V23_R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  ],
+  "execution_budget": {
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "maximum_scientific_gpu_runs": 1,
+    "predeclared_projected_gpu_hours": 1.25,
+    "gpu_wall_hours_hard_cap": 1.5,
+    "estimated_incremental_cost_cny_hard_cap": 5.0,
+    "r1a_plus_future_r1b_gpu_hours_hard_cap": 3.0,
+    "r1a_plus_future_r1b_cost_cny_hard_cap": 10.0,
+    "local_cpu_closeout_wall_hours_hard_cap": 2.0,
+    "prior_estimated_project_spend_cny": 4.930619,
+    "project_absolute_cloud_cost_cny_hard_cap": 150.0
+  },
+  "parent_v23_global_stop": {
+    "phase_start_utc": "2026-08-30T16:48:19Z",
+    "calendar_days_hard_cap": 14,
+    "gpu_hours_hard_cap": 34.0,
+    "estimated_incremental_cost_cny_hard_cap": 95.0,
+    "unused_balance_may_not_fund_extra_seed_module_or_rescue": true
+  },
+  "reference_roles": {
+    "cloud_training_and_prediction": "REFERENCE_BLIND",
+    "nominal": "LOCAL_EVALUATION_ONLY_AFTER_INSTANCE_SHUTDOWN",
+    "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD_AND_INACCESSIBLE"
+  },
+  "allowed_outcomes": [
+    "R1A_CONFIG_RAW_COMPETENCE_RECOVERED",
+    "R1A_CONFIG_RAW_NO_COMPETENCE",
+    "R1A_NUMERICAL_INVALID_STOP",
+    "R1A_BUDGET_OR_INFRASTRUCTURE_BLOCKED"
+  ],
+  "completion_does_not_authorize_any_next_stage": true
+}

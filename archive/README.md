@@ -6,6 +6,7 @@
 
 | 归档包 | 内容 | 当前覆盖关系 |
 |---|---|---|
+| [2026-08-31-plan-phk-v23-r0c-complete.md](2026-08-31-plan-phk-v23-r0c-complete.md) | R0C 25-step effective-update diagnostic 完成态 | 当前执行由 [R1a live plan](../docs/plans/NEXT_ACTIONS.md) 与 [ADR 0052](../docs/adr/0052-activate-phk-v23-r1a-config-competence-recovery.md) 决定；R0C 证据不回写。 |
 | [`2026-08-18-ideaspark-high-frequency-pinn-pcm/`](2026-08-18-ideaspark-high-frequency-pinn-pcm/) | IdeaSpark 完整原始运行包及当时的综合审查报告 | 历史执行事实由 [`docs/experiment/2026-08-18-ideaspark-workflow-run.md`](../docs/experiment/2026-08-18-ideaspark-workflow-run.md) 索引；当前研究设定由 [`CONTEXT.md`](../CONTEXT.md) 和已接受 ADR 覆盖。 |
 | [`2026-08-19-pre-execution-qpop-qualification-plan.md`](2026-08-19-pre-execution-qpop-qualification-plan.md) | 用户批准正式执行前、等待 Q-POP 资格化计划批准的旧 live plan | 由当前 [`docs/plans/NEXT_ACTIONS.md`](../docs/plans/NEXT_ACTIONS.md) 覆盖；不再决定授权或行动。 |
 | [`2026-08-20-g2-quota-recovery-bounded-resume-plan.md`](2026-08-20-g2-quota-recovery-bounded-resume-plan.md) | 额度恢复后获批的一次环境集成与条件 native smoke 旧 live plan | 授权已由失败 run `20260820T142429Z-smoke-g2-env-final-001` 消耗；当前状态由 [`docs/plans/NEXT_ACTIONS.md`](../docs/plans/NEXT_ACTIONS.md) 与 [`docs/experiment/2026-08-20-g2-quota-recovery-closeout.md`](../docs/experiment/2026-08-20-g2-quota-recovery-closeout.md) 覆盖。 |

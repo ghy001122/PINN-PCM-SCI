@@ -185,12 +185,27 @@ class TrainingObservation:
     initial: torch.Tensor | None
     scalars: Mapping[str, float]
     optimizer_state_summary: Mapping[str, Mapping[str, float | int]] | None = None
+    gradient_combination_diagnostics: Mapping[str, Any] | None = None
 
 
 class TrainingObserver(Protocol):
     """Optional observer; implementations must not mutate the supplied state."""
 
     def observe(self, observation: TrainingObservation) -> None: ...
+
+
+class GradientCombiner(Protocol):
+    """Single seam for replacing the legacy summed-loss backward operation."""
+
+    def combine(
+        self,
+        *,
+        model: PhkV22RModel,
+        loss_groups: Mapping[str, torch.Tensor],
+        legacy_total: torch.Tensor,
+    ) -> Mapping[str, Any]: ...
+
+    def manifest(self) -> Mapping[str, Any]: ...
 
 
 _LEGACY_OBSERVER_PHASES = frozenset(
@@ -319,6 +334,36 @@ def _boundary_loss(
     return torch.stack(losses).mean(), diagnostics
 
 
+def canonical_weighted_loss_groups(
+    *,
+    interior: Mapping[str, torch.Tensor],
+    boundary_loss: torch.Tensor,
+    initial_loss: torch.Tensor,
+    config: PhkTrainingConfig,
+) -> dict[str, torch.Tensor]:
+    """Decompose the frozen objective without changing its scalar semantics."""
+
+    required = ("electric", "thermal", "phase")
+    missing = [name for name in required if name not in interior]
+    if missing:
+        raise KeyError(f"missing canonical PDE residuals: {missing}")
+    pde_groups = {
+        f"G{index}_{name.upper()}_PDE": (
+            config.pde_weight
+            * torch.mean((interior[name] / float(PDE_SCALES[name])).square())
+            / 3.0
+        )
+        for index, name in enumerate(required, start=1)
+    }
+    return {
+        **pde_groups,
+        "G4_BOUNDARY_INITIAL": (
+            config.boundary_weight * boundary_loss
+            + config.initial_weight * initial_loss
+        ),
+    }
+
+
 def _checkpoint_payload(
     *,
     model: PhkV22RModel,
@@ -352,6 +397,7 @@ def train(
     run_directory: Path,
     execution_limit: int | None = None,
     observer: TrainingObserver | None = None,
+    gradient_combiner: GradientCombiner | None = None,
     execution_metadata: Mapping[str, Any] | None = None,
 ) -> TrainingOutcome:
     """Run one bounded arm from scratch and emit an immutable evidence directory."""
@@ -440,6 +486,8 @@ def train(
         )
     if execution_metadata is not None:
         manifest["execution_metadata"] = dict(execution_metadata)
+    if gradient_combiner is not None:
+        manifest["gradient_combiner"] = dict(gradient_combiner.manifest())
     _write_json_exclusive(output / "manifest-start.json", manifest)
 
     log_path = output / "training-log.jsonl"
@@ -548,7 +596,21 @@ def train(
                 )
                 if not bool(torch.isfinite(total)):
                     raise FloatingPointError(f"nonfinite loss at update {update + 1}")
-                total.backward()
+                gradient_combination_diagnostics: Mapping[str, Any] | None = None
+                if gradient_combiner is None:
+                    total.backward()
+                else:
+                    loss_groups = canonical_weighted_loss_groups(
+                        interior=interior,
+                        boundary_loss=bc_loss,
+                        initial_loss=ic_loss,
+                        config=config,
+                    )
+                    gradient_combination_diagnostics = gradient_combiner.combine(
+                        model=model,
+                        loss_groups=loss_groups,
+                        legacy_total=total,
+                    )
                 if observer is not None:
                     _emit_observation(
                         observer,
@@ -568,6 +630,9 @@ def train(
                                 "boundary_loss": float(bc_loss.detach().cpu()),
                                 "initial_loss": float(ic_loss.detach().cpu()),
                             },
+                            gradient_combination_diagnostics=(
+                                gradient_combination_diagnostics
+                            ),
                         ),
                     )
                 gradient_norm = torch.nn.utils.clip_grad_norm_(
@@ -595,6 +660,9 @@ def train(
                                     gradient_norm.detach().cpu()
                                 )
                             },
+                            gradient_combination_diagnostics=(
+                                gradient_combination_diagnostics
+                            ),
                         ),
                     )
                 optimizer.step()
@@ -633,6 +701,9 @@ def train(
                                 ),
                             },
                             optimizer_state_summary=optimizer_summary,
+                            gradient_combination_diagnostics=(
+                                gradient_combination_diagnostics
+                            ),
                         )
                     )
 
