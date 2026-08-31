@@ -5,7 +5,7 @@
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
 - `updated_at`: `2026-08-31`
 
-在不改写 PHK-V2.2R terminal No-Go 的前提下，`PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT` 已完成一次既有 STRONG_RAW final checkpoint 的本地 CPU/FP64 只读诊断，结果为 `R0A_INCONCLUSIVE`。`PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2` 随后完成一次 seed-17/FP64/STRONG_RAW scratch 175-step reference-blind replay：`GRADIENT_STARVATION` 是 step 10 起、step 25 确认的最早持续 temporal precursor；gradient conflict 与 electrothermal deficit 更晚出现。该结果不实施 recovery 或 proposed method，不得写成 competence 恢复、方法增益或因果 root。两份 stress reference 继续 sealed/unread，当前无后续执行授权。
+在不改写 PHK-V2.2R terminal No-Go 的前提下，`PHK_V23_R0A_CPU_DIAGNOSTICS_AND_CONTRACT` 已完成一次既有 STRONG_RAW final checkpoint 的本地 CPU/FP64 只读诊断，结果为 `R0A_INCONCLUSIVE`。`PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2` 随后完成一次 seed-17/FP64/STRONG_RAW scratch 175-step reference-blind replay：`GRADIENT_STARVATION` 是 step 10 起、step 25 确认的最早持续 temporal precursor；gradient conflict 与 electrothermal deficit 更晚出现。`PHK_V23_R0C_EFFECTIVE_UPDATE_25_V100` 又完成一次 25-step reference-blind replay，机器裁决为 `R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT`：raw-gradient starvation 没有以同等量级延伸为 Adam-effective relative-update starvation。三项诊断均未实施 recovery 或 proposed method，不得写成 competence 恢复、方法增益或因果 root。两份 stress reference 继续 sealed/unread，当前无后续执行授权。
 
 ## 当前研究问题
 
@@ -52,7 +52,7 @@ confirmation 或 stress 解封。
 
 ## 参考与数据角色
 
-- **nominal extra-fine**：既有 development-only fixed-discretization reference；R0B 中只能在云端回收关机、reference-blind machine decision 不可变写入后用于本地 non-voting appendix，不得进入 loss、初始化、gate、sampler、collocation、阈值、超参、checkpoint selection、early stop 或 intervention selection。
+- **nominal extra-fine**：既有 development-only fixed-discretization reference；R0B 中只能在云端回收关机、reference-blind machine decision 不可变写入后用于本地 non-voting appendix。R0C 完全没有读取 nominal reference fields/metrics。它不得进入 loss、初始化、gate、sampler、collocation、阈值、超参、checkpoint selection、early stop 或 intervention selection。
 - **narrow-interface extra-fine**：sealed confirmation；候选冻结前不可读。
 - **wide-heater extra-fine**：sealed confirmation；候选冻结前不可读；逐周期 event vector 由该 reference 开封后自动确定。
 - **medium carriers**：保留为历史/稿后研究资产；本周 v1.1 不启用 Route B，不生成训练 anchors。
@@ -91,8 +91,7 @@ anchors、新架构、换 seed、延长训练或新模块回头寻找正结果�
 - **A→A′ adaptation**：透明保留底层模块来源，同时把 PCM 定向接口、场选择、轴向频带、物理采样配比和联合预算分工明确为本项目适配贡献。
 
 P0 已把合同、实现、runner、评价与稿件对齐到批准的 v1.1；随后四臂 nominal 按冻结身份
-执行并触发 terminal No-Go。方法、更新数、seed、指标、阈值、比较臂和预算不再结果导向
-修改。不得编造结果、隐藏不利 metric、抹除来源或把未执行 stress 写入论文。
+执行并触发 terminal No-Go。R0C 进一步否决把 raw-gradient magnitude starvation 直接等同于 optimizer-effective update starvation；它不改变四臂终局。方法、更新数、seed、指标、阈值、比较臂和预算不再结果导向修改。不得编造结果、隐藏不利 metric、抹除来源或把未执行 stress 写入论文。
 
 ## 论文故事
 
@@ -102,4 +101,4 @@ P0 已把合同、实现、runner、评价与稿件对齐到批准的 v1.1；随
 
 ## 权威与状态路由
 
-当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。终局证据见 [nominal terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)，稿件见 [paper_v22r](paper/paper_v22r/README.md)。profile 后的 v1.1 决定见 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)；冻结机器身份由 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json) 定义。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。
+当前授权只读 [active phase](active_phase.md)，已核验实现与运行状态只读 [project state](PROJECT_STATE.md)，下一步只读 [live plan](docs/plans/NEXT_ACTIONS.md)。终局证据见 [nominal terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)，R0C 诊断见 [R0C closeout](docs/experiment/2026-08-31-phk-v23-r0c-effective-update-25-closeout.md)，稿件见 [paper_v22r](paper/paper_v22r/README.md)。profile 后的 v1.1 决定见 [ADR 0048](docs/adr/0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md)；冻结机器身份由 [program contract](configs/phk_v22r/program_contract.json) 和 [method contract](configs/phk_v22r/method_contract.json) 定义。历史 V2.1、V2 和 V1 证据分别由 `paper/paper_v21/`、`paper/paper_v2/` 和 `paper/paper_v1/` 路由。

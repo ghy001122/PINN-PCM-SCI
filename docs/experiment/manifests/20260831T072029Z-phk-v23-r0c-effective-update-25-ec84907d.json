@@ -1,0 +1,91 @@
+{
+  "actual_budget": {
+    "canonical_optimizer_steps": 25,
+    "cloud_cost_cny_estimated": 0.023290353260147903,
+    "cloud_shadow_optimizer_steps": 0,
+    "gpu_hours": 0.012388485776674417,
+    "scientific_runs": 1
+  },
+  "artifacts": {
+    "compact_artifact": "artifacts/20260831T072029Z-phk-v23-r0c-effective-update-25-ec84907d.json",
+    "compact_artifact_sha256": "14FDF57C03A1C123EF67BCDE86A01E1C7D200DF17DBEADFAC64792E09C6A1841",
+    "raw_summary": "outputs/runs/20260831T072029Z-phk-v23-r0c-effective-update-25-ec84907d/summary.json",
+    "raw_summary_sha256": "05C1D37136E79DCC8956B41655D3A4F2EA041C9C0B125E598D0DF8ED25E059E0",
+    "reference_blind_adjudication": "outputs/runs/20260831T072029Z-phk-v23-r0c-effective-update-25-ec84907d/r0c-reference-blind-adjudication.json",
+    "reference_blind_adjudication_sha256": "0F237DE2A5D645E5DA0FD7BD115E56589FB0135042C9F4DFEE808889459B6B26",
+    "telemetry_sha256": "5AFAF794310E8B2C678E075835D9A8C3C9B7F70CB0E33594ECC37C06AB0321F9"
+  },
+  "case_id": "PHK_V23_R0C_STRONG_RAW_NOMINAL_FULL_W1_PREFIX",
+  "checkpoint": {
+    "embedded_training_config_updates": 1000,
+    "modified": false,
+    "path": "outputs/runs/20260831T072029Z-phk-v23-r0c-effective-update-25-ec84907d/strong_raw/checkpoint-final.pt",
+    "sha256": "761DC2EAD5A2795AEFFA609DB9664C59ED4201980E314C02158F18ECC5B980B7",
+    "update": 25
+  },
+  "claim_status": "V22R_TERMINAL_NO_GO_PRESERVED_R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT_NO_METHOD_EVIDENCE",
+  "code_identity": {
+    "base_commit": "a935549808c879989c040e264a04a2456a057589",
+    "contracts": {
+      "diagnostic_sha256": "C1EE01DA54296E1C85FFBF21ADEED18BB9EE1F61508A17584EE2E734F60693AE",
+      "method_sha256": "F039C8602E7E54F21DF290360B90E97C8C3894B5A27D19C072E5095A31FC6B8D",
+      "program_sha256": "95C9D5692E91D672186E8B6EC3E3222D8A2A05CA61B4C6CF11D6560CC59D1223"
+    },
+    "deployed_source_manifest_sha256": "6B77A438885FB99D714520B651F71C6FCAADCBC4AB5ECB3922103EBED4BC135B",
+    "runner_sha256": "0A94D546F3308E82B2B183A06F368D9AB3CCC1CC027E29203B62411149E831AE",
+    "source_identity": "R0C-BUNDLE-EC84907DCAF8F2B57AE4BB58F46500835DACC92C2EEB3FC52377BFAC204F9F9F",
+    "training_seam_sha256": "3547F65B47C13881FB09D6DED864D81B1BE040C798880CADF6731CF52C6B43CE"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_v23_r0c",
+    "run",
+    "--output-root",
+    "outputs/runs/20260831T072029Z-phk-v23-r0c-effective-update-25-ec84907d",
+    "--device",
+    "cuda:0",
+    "--source-identity",
+    "R0C-BUNDLE-EC84907DCAF8F2B57AE4BB58F46500835DACC92C2EEB3FC52377BFAC204F9F9F",
+    "--hourly-price-cny",
+    "1.88"
+  ],
+  "ended_at": "2026-08-31T07:22:41.954918+00:00",
+  "environment": {
+    "autodl_shutdown_verified": true,
+    "device": "Tesla V100-PCIE-32GB",
+    "dtype": "FLOAT64",
+    "numpy": "2.1.1",
+    "omp_num_threads": "1",
+    "post_shutdown_ssh_probe": "CONNECTION_REFUSED",
+    "python": "3.11.9",
+    "torch": "2.5.1+cu118",
+    "torch_cuda": "11.8"
+  },
+  "evaluator_id": "phk-v23-r0c-reference-blind-adjudicator-v1",
+  "evidence_identity": "REFERENCE_BLIND_SINGLE_SEED_25_STEP_EFFECTIVE_UPDATE_DIAGNOSTIC_PREFIX_NO_PREDICTION",
+  "execution_status": "COMPLETED",
+  "experiment_group_id": "PHK_V23_R0C_EFFECTIVE_UPDATE_25",
+  "failure_class": "RAW_GRADIENT_STARVATION_COMPENSATED_BY_ADAM_EFFECTIVE_UPDATE_NOT_CAUSAL_ROOT",
+  "gate": "PHK_V23_R0C",
+  "gate_outcome": "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+  "method_id": "phk-v23-r0c-strong-raw-effective-update-observer-v1",
+  "numerical_validity": "VALID_REFERENCE_BLIND_EFFECTIVE_UPDATE_DIAGNOSTIC",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "canonical_optimizer_steps": 25,
+    "cloud_cost_cny_hard_cap": 2.0,
+    "gpu_hours_hard_cap": 0.5,
+    "scientific_runs": 1
+  },
+  "replay_of": "20260831T095149-phk-v23-r0b-first-switch-175-8d072e2",
+  "route_disposition": "STOP_R0C_REJECT_GRADIENT_MAGNITUDE_RESCUE_AS_FIRST_R1A_FUTURE_PLAN_NOT_AUTHORIZED",
+  "run_id": "20260831T072029Z-phk-v23-r0c-effective-update-25-ec84907d",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "optimizer_effective_update_materiality_diagnostic",
+  "seed": 17,
+  "split_id": "NOMINAL_DEVELOPMENT_SINGLE_FIXED_CASE_REFERENCE_BLIND_TRAINING",
+  "started_at": "2026-08-31T07:21:57.354730+00:00",
+  "supersedes": null,
+  "tier": "diagnostic"
+}

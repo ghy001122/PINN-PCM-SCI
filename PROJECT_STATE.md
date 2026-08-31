@@ -2,56 +2,40 @@
 
 更新时间：2026-08-31
 
-- `phase_id`: `PHK_V23_R0B_FIRST_SWITCH_175_MINIMAL_V2`
+- `phase_id`: `PHK_V23_R0C_EFFECTIVE_UPDATE_25_V100`
 - `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0B_GRADIENT_STARVATION_PRECURSOR_NO_METHOD_EVIDENCE`
-- `authorization_scope`: `R0B_AUTHORIZATION_CONSUMED_NO_FURTHER_RESEARCH_EXECUTION`
+- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT_NO_METHOD_EVIDENCE`
+- `authorization_scope`: `R0C_COMPLETE_FUTURE_RESEARCH_AUTHORIZATION_ONLY`
 - `candidate_status`: `NOT_FROZEN`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED`
-- `reference_status`: `CLOUD_REFERENCE_BLIND_NOMINAL_LOCAL_NON_VOTING_COMPLETE_TWO_STRESS_UNREAD_SEALED`
-- `implementation_status`: `R0B_MINIMAL_V2_IMPLEMENTED_EXECUTED_AND_CLOSED`
+- `reference_status`: `R0C_COMPLETE_NO_NOMINAL_OR_STRESS_ACCESS_TWO_STRESS_UNREAD_SEALED`
+- `implementation_status`: `R0C_IMPLEMENTATION_EXECUTION_AND_CLOSEOUT_COMPLETE`
 - `method_selection_status`: `NO_CANDIDATE_ALL_FOUR_ARMS_INELIGIBLE`
-- `compute_status`: `R0B_175_STEPS_COMPLETE_ARTIFACTS_RECOVERED_AUTODL_SHUTDOWN_CONFIRMED`
-- `contract_status`: `PHK_V23_R0B_MINIMAL_V2_CONSUMED_COMPLETE`
+- `compute_status`: `R0C_ARTIFACTS_RECOVERED_AUTODL_SHUTDOWN_VERIFIED`
+- `contract_status`: `PHK_V23_R0C_CONTRACT_CONSUMED_COMPLETE`
 - `paper_status`: `ENGLISH_BOUNDED_NEGATIVE_ADVISOR_DRAFT_FIVE_FIGURE_PACKAGE_VALID`
-- `cloud_budget_cny_hard_cap`: `150`
-- `cloud_estimated_cumulative_spend_cny_before_r0b`: `4.81005806532574`
-- `cloud_estimated_incremental_r0b_cost_cny`: `0.09727051790253155`
-- `cloud_estimated_cumulative_spend_cny_after_r0b`: `4.907328583228272`
-- `diagnostic_outcome`: `R0B_PRECURSOR_CANDIDATE_IDENTIFIED`
-- `primary_precursor_candidate`: `GRADIENT_STARVATION`
-- `root_cause_status`: `CAUSAL_ROOT_NOT_IDENTIFIED_TEMPORAL_PRECURSOR_ONLY`
-- `next_recommendation`: `R1A_PHASE_HEAD_GRADIENT_MATERIALITY_PLAN_ONLY_NOT_AUTHORIZED`
+- `diagnostic_outcome`: `R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT`
 - `next_research_execution_authorized`: `false`
 
 ## VERIFIED
 
-- source commit `8d072e2ece0668583adad4b3cefff3e978436f05` 已在 `Tesla V100-PCIE-32GB` 完成唯一一次 seed-17/FP64/STRONG_RAW scratch replay：175 canonical updates、schedule denominator 1000、cloud shadow steps 0。
-- wall time 为 `186.262694 s`，按 `1.88 CNY/h` 估算增量费用 `0.0972705 CNY`；全部受控产物已回收并逐哈希核验。checkpoint update 为 175，内嵌 training config updates 为 1000。
-- AutoDL 在回收核验后立即 shutdown，随后 SSH 探针返回 `Connection refused`。
-- reference-blind machine decision 固定 `GRADIENT_STARVATION` 为最早持续前兆（step 10/25）；gradient conflict 为 step 75/100，electrothermal deficit 为 step 110/120。未识别因果 root。
-- primary 不是 `SWITCH_INDUCED`，因此 factorial 固定 `FACTORIAL_NOT_RUN_NOT_NEEDED`。nominal reference 只在 decision 写入后本地打开，appendix 仍显示两周期 event missing，且不参与裁决。
-- R0A 仍为 `R0A_INCONCLUSIVE`，V2.2R 四臂仍为 `MVP_NO_GO_NO_BASIC_COMPETENCE`；stress references 继续 sealed/unread。
+- 唯一 R0C run 在 `Tesla V100-PCIE-32GB`、FP64、seed 17、STRONG_RAW scratch、`25/1000` 身份下完成；25 条 telemetry 与 R0B 轨迹锚点全部有效。
+- steps 10–19 的 phase raw-gradient ratio 为约 `0.01086 → 0.00619`，而 Adam-effective relative-update ratio 为约 `0.5913 → 0.5951`；机器裁决为 `R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT`。
+- 增量估算费用约 `0.0232904 CNY`，累计项目展示单价估算约 `4.930619 CNY`；产物回收与远端/本地哈希核验后 AutoDL 已关闭，SSH 探针为 `Connection refused`。
+- nominal/stress reference 均未读取；两份 stress references 继续 sealed/unread。
 
-## NEXT BUT NOT AUTHORIZED
+## 本阶段已回答的问题
 
-- 只允许只读审查或制定一个 phase-head gradient materiality/balancing 的 R1a 原子干预 `PLAN_ONLY`；训练、GPU、R1、PJGR 与 stress 均需新的用户明确授权。
-
-## UNKNOWN
-
-- gradient starvation 是否为充分因果原因，以及哪个 loss、参数化或 optimizer interaction 造成该前兆。
-- 任何 recovery/PJGR/新方法、其他 seed、更长预算、stress 或 formal OOD 的结果；这些均不在当前授权内。
+Adam 预条件后，phase head 的实际单步相对参数更新没有持续低于冻结 `0.1` 物质性门；raw-gradient starvation 被 Adam materially compensated。该结果不回答更新方向是否正确或 competence 能否恢复。
 
 ## 当前入口
 
 - [active phase](active_phase.md)
 - [live plan](docs/plans/NEXT_ACTIONS.md)
-- [ADR 0050](docs/adr/0050-activate-phk-v23-r0b-first-switch-175-minimal-v2.md)
-- [R0B cloud run card](cloud/phk_v23_r0b_autodl/README.md)
+- [ADR 0051](docs/adr/0051-activate-phk-v23-r0c-effective-update-25-v100.md)
+- [R0C cloud run card](cloud/phk_v23_r0c_autodl/README.md)
+- [R0C closeout](docs/experiment/2026-08-31-phk-v23-r0c-effective-update-25-closeout.md)
 - [R0B closeout](docs/experiment/2026-08-31-phk-v23-r0b-first-switch-175-closeout.md)
-- [R0B compact artifact](docs/experiment/artifacts/20260831T095149-phk-v23-r0b-first-switch-175-8d072e2.json)
-- [R0A closeout](docs/experiment/2026-08-30-phk-v23-r0a-cpu-diagnostics-closeout.md)
-- [V2.2R terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)
 
-PHK-V2.1、PHK-V2、V1 与更早 No-Go 均保持原样。
+PHK-V2.2R terminal No-Go、R0A、R0B 及所有更早负面结果保持原样。

@@ -23,7 +23,7 @@
 
 - [当前 HFO-NP-v1 Q1–Q68 决策总索引](research_decisions_HFO_Q1_Q68.md) — 路由当前 HFO 编号空间的有效处置；不覆盖历史 KC Q1–Q23 或 R1 Q1–Q24，也不授权执行。
 
-ADR 0019–0025 保留旧 exact-KC、同源对象扫描及其证据合同；ADR 0026 已允许透明派生对象，ADR 0027 已撤销固定研究路线次数上限。ADR 0028–0040 保存 R1、R2、HFO 与 TaOₓ C1 的设计史和有界 No-Go。ADR 0041 冻结方法盲单链对象筛选，ADR 0042 记录该包在 3/3 家族、11/12 载体处组合级有界关闭。ADR 0043 提出的模块化主锚点路线保持历史 `PROPOSED` 身份；ADR 0044 已采纳并完成 `GOAL-PAPER-ONE-SHOT-V1`。ADR 0045 采纳的 `PHK-V2` 已由 Oracle Gate No-Go 与 V2 完成包消费关闭。ADR 0046 新建且完成不回写旧终局的 `PHK-V2.1` 工程—科学双阶段合同。ADR 0047 以前瞻数据角色、预算和止损边界启动独立的 `PHK-V2.2R` 一周 Method-MVP；ADR 0048 在 GPU profile 后激活 v1.1 四臂 fallback；ADR 0049 完成一次本地 CPU R0A；ADR 0050 在保留所有终局证据的前提下激活一次 R0B 175-step reference-blind temporal-precursor replay。所有旧扫描事实、失败 intent、论文和 No-Go 原样有效。
+ADR 0019–0025 保留旧 exact-KC、同源对象扫描及其证据合同；ADR 0026 已允许透明派生对象，ADR 0027 已撤销固定研究路线次数上限。ADR 0028–0040 保存 R1、R2、HFO 与 TaOₓ C1 的设计史和有界 No-Go。ADR 0041 冻结方法盲单链对象筛选，ADR 0042 记录该包在 3/3 家族、11/12 载体处组合级有界关闭。ADR 0043 提出的模块化主锚点路线保持历史 `PROPOSED` 身份；ADR 0044 已采纳并完成 `GOAL-PAPER-ONE-SHOT-V1`。ADR 0045 采纳的 `PHK-V2` 已由 Oracle Gate No-Go 与 V2 完成包消费关闭。ADR 0046 新建且完成不回写旧终局的 `PHK-V2.1` 工程—科学双阶段合同。ADR 0047 以前瞻数据角色、预算和止损边界启动独立的 `PHK-V2.2R` 一周 Method-MVP；ADR 0048 在 GPU profile 后激活 v1.1 四臂 fallback；ADR 0049 完成一次本地 CPU R0A；ADR 0050 完成一次 R0B 175-step reference-blind temporal-precursor replay；ADR 0051 完成一次 R0C 25-step Adam-effective update materiality replay。所有旧扫描事实、失败 intent、论文和 No-Go 原样有效。
 
 - [R1 FULL_DESIGN Q1–Q24 决策合同](research_decisions_R1_FULL_DESIGN_GRILL_2026-08-22.md) — 独立于历史 KC-PINN Q1–Q23 的当前 R1 决策身份。
 
@@ -64,3 +64,4 @@ ADR 0019–0025 保留旧 exact-KC、同源对象扫描及其证据合同；ADR 
 - [0048：在 GPU profile 后激活 PHK-V2.2R v1.1 四臂冲刺](0048-activate-phk-v22r-v11-four-arm-sprint-after-gpu-profile.md) — strict PHA 增益门失败后删除 routing，generic-RAR 截止后采用四臂 fallback；授权先完成 v1.1 对齐，再连续执行 nominal、条件性 sealed confirmation 与论文初稿，继续禁止投稿和结果导向救援。
 - [0049：激活 PHK-V2.3 R0A 本地 CPU 只读失效诊断](0049-activate-phk-v23-r0a-cpu-diagnostics.md) — 只允许一次既有 STRONG_RAW checkpoint 的 CPU/FP64 诊断与本地 nominal teacher probes；不训练、不更新参数、不读 stress，也不授权 R0B/R1/PJGR。
 - [0050：激活并收口 PHK-V2.3 R0B 首次窗口切换 175-step 最小诊断](0050-activate-phk-v23-r0b-first-switch-175-minimal-v2.md) — 一次 V100 reference-blind STRONG_RAW scratch replay 已识别 `GRADIENT_STARVATION` 为最早持续前兆并完成回收关机；结果不是因果 root 或方法证据，不授权 recovery、R1、PJGR、stress 或第二次 run。
+- [0051：激活并收口 PHK-V2.3 R0C 25-step 有效更新诊断](0051-activate-phk-v23-r0c-effective-update-25-v100.md) — 唯一 V100 reference-blind STRONG_RAW 25-step replay 发现 Adam 对 phase raw-gradient starvation 形成物质有效更新补偿；不恢复 competence，不授权 recovery、R1、PJGR、reference 或 stress。

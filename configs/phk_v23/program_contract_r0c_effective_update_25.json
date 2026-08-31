@@ -1,0 +1,54 @@
+{
+  "schema_id": "phk-v23-program-contract-r0c-effective-update-25",
+  "contract_id": "PHK_V23_R0C_EFFECTIVE_UPDATE_25_V100",
+  "effective_date": "2026-08-31",
+  "phase_id": "PHK_V23_R0C_EFFECTIVE_UPDATE_25_V100",
+  "status": "R0C_EXPLICITLY_AUTHORIZED_ONCE",
+  "authorization": {
+    "source": "CURRENT_USER_EXPLICIT_EXECUTE_PHK_V23_R0C_EFFECTIVE_UPDATE_25_V100",
+    "evidence_anchor_commit": "a935549808c879989c040e264a04a2456a057589",
+    "contract_and_implementation_writes_authorized": true,
+    "selective_commit_and_push_authorized": false,
+    "r0c_reference_blind_gpu_replay_authorized": true,
+    "local_reference_blind_adjudication_authorized": true,
+    "instance_shutdown_after_recovery_required": true,
+    "r1_or_recovery_intervention_authorized": false,
+    "pjgr_or_other_method_authorized": false,
+    "nominal_reference_access_authorized": false,
+    "stress_reference_access_authorized": false,
+    "second_gpu_run_or_seed_change_authorized": false,
+    "submission_or_external_contact_authorized": false
+  },
+  "preserves_without_rewrite": [
+    "PHK_V22_ONE_WEEK_SPRINT_TERMINAL_NO_GO",
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "PHK_V23_R0A_INCONCLUSIVE",
+    "PHK_V23_R0B_GRADIENT_STARVATION_TEMPORAL_PRECURSOR",
+    "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  ],
+  "execution_budget": {
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "maximum_scientific_gpu_runs": 1,
+    "gpu_wall_hours_hard_cap": 0.5,
+    "gpu_paid_work_soft_stop_minutes": 20,
+    "estimated_incremental_cost_cny_hard_cap": 2.0,
+    "local_cpu_closeout_wall_hours_hard_cap": 1.0,
+    "displayed_hourly_price_cny_preflight": 1.88,
+    "prior_estimated_project_spend_cny": 4.907328583228272,
+    "project_absolute_cloud_cost_cny_hard_cap": 150.0
+  },
+  "parent_v23_global_stop": {
+    "phase_start_utc": "2026-08-30T16:48:19Z",
+    "calendar_days_hard_cap": 14,
+    "gpu_hours_hard_cap": 34.0,
+    "estimated_incremental_cost_cny_hard_cap": 95.0,
+    "unused_balance_may_not_fund_extra_seed_module_or_rescue": true
+  },
+  "reference_roles": {
+    "cloud": "REFERENCE_BLIND",
+    "nominal": "INACCESSIBLE_FOR_R0C",
+    "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD_AND_INACCESSIBLE"
+  },
+  "completion_does_not_authorize_any_next_stage": true
+}

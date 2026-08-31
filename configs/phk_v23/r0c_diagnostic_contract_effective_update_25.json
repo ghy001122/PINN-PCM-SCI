@@ -1,0 +1,65 @@
+{
+  "schema_id": "phk-v23-r0c-diagnostic-contract-effective-update-25",
+  "contract_id": "PHK_V23_R0C_EFFECTIVE_UPDATE_MATERIALITY_DIAGNOSTIC",
+  "effective_date": "2026-08-31",
+  "program_contract": "configs/phk_v23/program_contract_r0c_effective_update_25.json",
+  "method_contract": "configs/phk_v23/method_contract_r0c_effective_update_25.json",
+  "scientific_role": "REFERENCE_BLIND_EFFECTIVE_UPDATE_MATERIALITY_DIAGNOSTIC_NOT_COMPETENCE_OR_METHOD_EVIDENCE",
+  "execution": {
+    "device": "TESLA_V100_PCIE_32GB",
+    "dtype": "FLOAT64",
+    "canonical_optimizer_steps": 25,
+    "cloud_shadow_optimizer_steps": 0,
+    "maximum_runs": 1,
+    "omp_num_threads": 1
+  },
+  "measurements": {
+    "quantiles": [0.05, 0.5, 0.95, 0.99],
+    "phase_activity_threshold": 0.5,
+    "roi": {"abs_x_max": 0.55, "z_min": 0.0, "z_max": 0.55}
+  },
+  "decision": {
+    "epsilon": 1e-18,
+    "raw_gradient_starvation_ratio_max": 0.1,
+    "effective_update_starvation_ratio_max": 0.1,
+    "adam_compensation_ratio_min": 0.5,
+    "other_head_update_activity_floor": 1e-8,
+    "persistence_window_start": 10,
+    "persistence_window_end": 25,
+    "minimum_consecutive_steps": 10,
+    "electrothermal_temperature_max": 0.225,
+    "electrothermal_positive_growth_max": 0.05,
+    "output_low_jacobian_fraction_min": 0.95,
+    "output_jacobian_q95_max": 0.01,
+    "output_capacity_max": 0.01,
+    "allowed_scientific_outcomes": [
+      "R0C_EFFECTIVE_UPDATE_STARVATION_SUPPORTED",
+      "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+      "R0C_INCONCLUSIVE_STOP"
+    ],
+    "invalid_outcome": "R0C_INVALID_EXECUTION"
+  },
+  "root_cause": {
+    "zero_gradient_norm_epsilon": 1e-18
+  },
+  "trajectory_identity": {
+    "source_r0b_run": "20260831T095149-phk-v23-r0b-first-switch-175-8d072e2",
+    "source_r0b_telemetry_sha256": "CACB89EDA7F17F7F5DB7021A0C5DB689141986F236A8BCA0B4C9BB27BBA1B741",
+    "relative_tolerance": 1e-9,
+    "absolute_tolerance": 1e-12,
+    "scalar_anchor_steps": [1, 10, 20, 25],
+    "fixed_pool_gradient_anchor_steps": [1, 10, 25],
+    "anchors": {
+      "1": {"loss": 0.4175774770794769, "pde_loss": 0.11763333393137929, "boundary_loss": 0.05998882862961953, "temperature_max_w1": 0.7551354425013989, "phase_max_w1": 0.029269538223856473, "phase_jacobian_q95_w1": 0.09519363351373039, "phase_jacobian_below_floor_fraction_w1": 0.064453125, "positive_growth_roi_fraction_w1": 0.1923076923076923, "fixed_pool_gradient_ratio": 0.016737834876299326},
+      "10": {"loss": 0.3803331516227355, "pde_loss": 0.1115740626074161, "boundary_loss": 0.05375181780306389, "temperature_max_w1": 0.7255559886427142, "phase_max_w1": 0.025757258390896008, "phase_jacobian_q95_w1": 0.07489202286144721, "phase_jacobian_below_floor_fraction_w1": 0.068359375, "positive_growth_roi_fraction_w1": 0.16025641025641024, "phase_output_capacity_0_1": 0.00143370246574369, "phase_output_capacity_1_10": 0.0015754617294266313, "fixed_pool_gradient_ratio": 0.00990607213914907},
+      "20": {"loss": 0.325450354324119, "pde_loss": 0.10139758013305895, "boundary_loss": 0.04481055483821201, "temperature_max_w1": 0.6779718743503332, "phase_max_w1": 0.024400302470185226, "phase_jacobian_q95_w1": 0.05431630668335504, "phase_jacobian_below_floor_fraction_w1": 0.072265625, "positive_growth_roi_fraction_w1": 0.14743589743589744},
+      "25": {"loss": 0.29300603586265617, "pde_loss": 0.09468987272581153, "boundary_loss": 0.03966323262736893, "temperature_max_w1": 0.6470385621282114, "phase_max_w1": 0.024329179020054957, "phase_jacobian_q95_w1": 0.044436816369766076, "phase_jacobian_below_floor_fraction_w1": 0.076171875, "positive_growth_roi_fraction_w1": 0.10897435897435898, "fixed_pool_gradient_ratio": 0.003964568452297231}
+    }
+  },
+  "reference_boundary": {
+    "cloud_reference_fields_read": false,
+    "nominal_reference_fields_or_metrics_may_be_read": false,
+    "stress_reference_fields_or_metrics_may_be_read": false
+  },
+  "completion_does_not_authorize_r1_pjgr_stress_or_second_run": true
+}

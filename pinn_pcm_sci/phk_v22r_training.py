@@ -184,12 +184,64 @@ class TrainingObservation:
     boundary: Mapping[str, torch.Tensor] | None
     initial: torch.Tensor | None
     scalars: Mapping[str, float]
+    optimizer_state_summary: Mapping[str, Mapping[str, float | int]] | None = None
 
 
 class TrainingObserver(Protocol):
     """Optional observer; implementations must not mutate the supplied state."""
 
     def observe(self, observation: TrainingObservation) -> None: ...
+
+
+_LEGACY_OBSERVER_PHASES = frozenset(
+    {"PRE_RUN", "PRE_REFRESH", "PRE_BACKWARD", "POST_STEP"}
+)
+
+
+def _observer_wants_phase(observer: TrainingObserver | None, phase: str) -> bool:
+    if observer is None:
+        return False
+    requested = getattr(observer, "requested_phases", _LEGACY_OBSERVER_PHASES)
+    return phase in requested
+
+
+def _emit_observation(
+    observer: TrainingObserver | None, observation: TrainingObservation
+) -> None:
+    if _observer_wants_phase(observer, observation.phase):
+        assert observer is not None
+        observer.observe(observation)
+
+
+def _optimizer_scalar_summary(
+    model: PhkV22RModel, optimizer: torch.optim.Optimizer
+) -> dict[str, dict[str, float | int]]:
+    """Return detached scalar Adam-state summaries without exposing the optimizer."""
+
+    result: dict[str, dict[str, float | int]] = {}
+    for name, parameter in model.named_parameters():
+        state = optimizer.state.get(parameter, {})
+        step = state.get("step", 0)
+        if isinstance(step, torch.Tensor):
+            step_value = int(step.detach().cpu())
+        else:
+            step_value = int(step)
+        exp_avg = state.get("exp_avg")
+        exp_avg_sq = state.get("exp_avg_sq")
+        result[name] = {
+            "step": step_value,
+            "exp_avg_l2": (
+                float(torch.linalg.vector_norm(exp_avg.detach()).cpu())
+                if isinstance(exp_avg, torch.Tensor)
+                else 0.0
+            ),
+            "exp_avg_sq_l2": (
+                float(torch.linalg.vector_norm(exp_avg_sq.detach()).cpu())
+                if isinstance(exp_avg_sq, torch.Tensor)
+                else 0.0
+            ),
+        }
+    return result
 
 
 def load_case_physics(
@@ -402,7 +454,8 @@ def train(
     status = "DIAGNOSTIC_PREFIX" if diagnostic_prefix else "COMPLETE"
     try:
         if observer is not None:
-            observer.observe(
+            _emit_observation(
+                observer,
                 TrainingObservation(
                     phase="PRE_RUN",
                     optimizer_step=0,
@@ -426,7 +479,8 @@ def train(
                 )
                 if needs_refresh:
                     if observer is not None and cached_interior is not None:
-                        observer.observe(
+                        _emit_observation(
+                            observer,
                             TrainingObservation(
                                 phase="PRE_REFRESH",
                                 optimizer_step=update + 1,
@@ -465,7 +519,8 @@ def train(
                 assert cached_initial is not None
 
                 if observer is not None:
-                    observer.observe(
+                    _emit_observation(
+                        observer,
                         TrainingObservation(
                             phase="PRE_BACKWARD",
                             optimizer_step=update + 1,
@@ -494,6 +549,27 @@ def train(
                 if not bool(torch.isfinite(total)):
                     raise FloatingPointError(f"nonfinite loss at update {update + 1}")
                 total.backward()
+                if observer is not None:
+                    _emit_observation(
+                        observer,
+                        TrainingObservation(
+                            phase="POST_BACKWARD_PRE_CLIP",
+                            optimizer_step=update + 1,
+                            update_index=update,
+                            active_windows=active_windows,
+                            collocation_refreshed=needs_refresh,
+                            model=model,
+                            interior=cached_interior,
+                            boundary=cached_boundary,
+                            initial=cached_initial,
+                            scalars={
+                                "loss": float(total.detach().cpu()),
+                                "pde_loss": float(pde_loss.detach().cpu()),
+                                "boundary_loss": float(bc_loss.detach().cpu()),
+                                "initial_loss": float(ic_loss.detach().cpu()),
+                            },
+                        ),
+                    )
                 gradient_norm = torch.nn.utils.clip_grad_norm_(
                     model.parameters(), config.gradient_clip_norm
                 )
@@ -501,12 +577,42 @@ def train(
                     raise FloatingPointError(
                         f"nonfinite gradient norm at update {update + 1}"
                     )
+                if observer is not None:
+                    _emit_observation(
+                        observer,
+                        TrainingObservation(
+                            phase="POST_CLIP_PRE_STEP",
+                            optimizer_step=update + 1,
+                            update_index=update,
+                            active_windows=active_windows,
+                            collocation_refreshed=needs_refresh,
+                            model=model,
+                            interior=cached_interior,
+                            boundary=cached_boundary,
+                            initial=cached_initial,
+                            scalars={
+                                "gradient_norm_before_clip": float(
+                                    gradient_norm.detach().cpu()
+                                )
+                            },
+                        ),
+                    )
                 optimizer.step()
                 final_loss = float(total.detach().cpu())
                 minimum_loss = min(minimum_loss, final_loss)
 
                 if observer is not None:
-                    observer.observe(
+                    optimizer_summary = (
+                        _optimizer_scalar_summary(model, optimizer)
+                        if bool(
+                            getattr(
+                                observer, "include_optimizer_state_summary", False
+                            )
+                        )
+                        else None
+                    )
+                    _emit_observation(
+                        observer,
                         TrainingObservation(
                             phase="POST_STEP",
                             optimizer_step=update + 1,
@@ -526,6 +632,7 @@ def train(
                                     gradient_norm.detach().cpu()
                                 ),
                             },
+                            optimizer_state_summary=optimizer_summary,
                         )
                     )
 
