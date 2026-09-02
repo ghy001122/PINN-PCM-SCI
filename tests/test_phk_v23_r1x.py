@@ -509,6 +509,10 @@ class PhkV23R1XTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         path = root / "cloud" / "phk_v23_r1x_autodl" / "deployed-source-manifest.json"
         manifest = json.loads(path.read_text(encoding="utf-8"))
+        self.assertIn(
+            "configs/phk_v21/engineering_contract.json",
+            manifest["files"],
+        )
         lines = []
         for relative, expected in sorted(manifest["files"].items()):
             actual = hashlib.sha256((root / relative).read_bytes()).hexdigest().upper()
