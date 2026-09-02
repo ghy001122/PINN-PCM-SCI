@@ -515,6 +515,7 @@ class PhkV23R1XTests(unittest.TestCase):
             {
                 "pinn_pcm_sci/__init__.py",
                 "pinn_pcm_sci/artifacts.py",
+                "cloud/phk_v23_r1x_autodl/preflight.py",
                 "configs/phk_v23/execution_override_r1x_verified_engineering_repair.json",
                 "configs/phk_v21/engineering_contract.json",
                 "configs/phk_v21/e1_solver_selection.json",

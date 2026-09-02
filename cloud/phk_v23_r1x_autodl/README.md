@@ -11,7 +11,7 @@
 - `maximum_optimizer_updates_e1`: `1800`
 - `checkpoint_policy`: `GLOBAL_FINAL_ONLY`
 - `execution_override`: `configs/phk_v23/execution_override_r1x_verified_engineering_repair.json`
-- `source_identity`: `R1X-BUNDLE-371FEBD6107A2BE4913AEFE07216DF79E789B1E3597C24D8791E2B7EB59CC65B`
+- `source_identity`: `R1X-BUNDLE-FCB708FA45EC0BEC3878CD94389345CFFA4442802831648F9B4ADA011DEA5D69`
 
 云端只包含 source bundle 和 reference-blind 训练入口，不得包含 nominal/stress reference、evaluator 或 teacher probe。每条轨迹必须从 scratch；不得读取上一条 checkpoint、optimizer state 或随机状态。
 
