@@ -1,12 +1,14 @@
 {
   "schema_id": "phk-v23-r1x-deployed-source-manifest-v1",
-  "source_identity": "R1X-BUNDLE-91E37F4B02F2A9A45D30942FBBB03D025B65B46DAD50051963936D150180636F",
+  "source_identity": "R1X-BUNDLE-371FEBD6107A2BE4913AEFE07216DF79E789B1E3597C24D8791E2B7EB59CC65B",
   "identity_definition": "SHA256_OF_SORTED_PATH_EQUALS_UPPERCASE_SHA256_LINES",
   "evidence_anchor_commit": "4cb9ee41f70e1989e316f2a67ced049304c3c9d8",
+  "reactivation_base_commit": "3b1dacc4e6344e7de218634fb7af62fef2f7d0d1",
   "files": {
     "configs/phk_v23/program_contract_r1x_bounded_clean_coupling.json": "04B4139282F628A107E873B62ABEBD57764F2F7BDECDF3BBE95D89FC3A3C7993",
     "configs/phk_v23/method_contract_r1x_clean_coupling.json": "41C022CE4AC30EF1199F2D2FB90FDD73FD45BF7B302FF321D00E12C2DF13E838",
     "configs/phk_v23/exploration_contract_r1x_bounded_clean_coupling.json": "4DEF1B867160E935228A11930993A399D5116A5F7571F98F3E4F2827C264D9C2",
+    "configs/phk_v23/execution_override_r1x_verified_engineering_repair.json": "C72823E31DA8C07306A81B2078A215ECE863EFFEB4926E40AFCD916CC996FC69",
     "configs/phk_v22r/program_contract.json": "A413F56A2317CEFF15FFF2D3BD183C11D990F2E47E8BA33F7316F11567275272",
     "configs/phk_v22r/method_contract.json": "FEEFB36A4D86CACFA6CBAA8C263E7071421415CE88B4F7FBF6BA5F31B9B71D4F",
     "configs/phk_v21/program_contract.json": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2",

@@ -515,6 +515,7 @@ class PhkV23R1XTests(unittest.TestCase):
             {
                 "pinn_pcm_sci/__init__.py",
                 "pinn_pcm_sci/artifacts.py",
+                "configs/phk_v23/execution_override_r1x_verified_engineering_repair.json",
                 "configs/phk_v21/engineering_contract.json",
                 "configs/phk_v21/e1_solver_selection.json",
                 "outputs/runs/20260827T-phk-v21-e2-engineering-search-001/summary.json",
@@ -566,6 +567,32 @@ class PhkV23R1XTests(unittest.TestCase):
             )
             self.assertEqual(completed.returncode, 0, completed.stderr)
             self.assertIn("ISOLATED_PHYSICS_LOAD_VALID", completed.stdout)
+
+    def test_39_verified_engineering_repair_override_resumes_same_science(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        override = json.loads(
+            (
+                root
+                / "configs"
+                / "phk_v23"
+                / "execution_override_r1x_verified_engineering_repair.json"
+            ).read_text(encoding="utf-8")
+        )
+        current = override["current_r1x_reactivation"]
+        rule = override["general_reexecution_rule"]
+        self.assertTrue(current["authorized"])
+        self.assertEqual(
+            current["task_id"],
+            "PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE",
+        )
+        self.assertEqual(current["trajectory"], "E1_CLEAN_COUPLING_EXPLORATION")
+        self.assertEqual(current["non_voting_explorations_already_executed"], 0)
+        self.assertEqual(current["frozen_confirmations_already_executed"], 0)
+        self.assertTrue(rule["applies_to_future_research"])
+        self.assertTrue(rule["does_not_authorize_scientific_identity_changes"])
+        self.assertIn(
+            "FIX_PASSES_A_TARGETED_ISOLATED_REGRESSION", rule["applies_when_all"]
+        )
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0054：在已验证工程修复后恢复 R1X 原科学任务](0054-resume-r1x-after-verified-engineering-repair.md) — 覆盖旧的一次 engineering-retry 限制；仅当首步前纯工程故障根因已明确且隔离回归证明修复时，重执行相同冻结任务且不消耗科学 run 配额。
 - [0053：激活 PHK-V2.3 R1X 有界 clean-coupling campaign](0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md) — 最多三条 non-voting exploration 与一条条件性 frozen confirmation；每条云端运行回收后立即关机，nominal 仅在本地关机验证后评价，stress 始终 sealed。
 - [0052：激活 PHK-V2.3 R1a ConFIG competence recovery](0052-activate-phk-v23-r1a-config-competence-recovery.md) — 只授权一次 reference-blind STRONG_RAW/seed-17/FP64/V100 1000-update ConFIG solver-backbone 恢复实验；关机后本地 nominal 裁决，stress 继续 sealed。
 

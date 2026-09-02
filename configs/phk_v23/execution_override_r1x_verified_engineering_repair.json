@@ -1,0 +1,49 @@
+{
+  "schema_id": "phk-v23-r1x-verified-engineering-repair-override-v1",
+  "override_id": "PHK_V23_R1X_VERIFIED_ENGINEERING_REPAIR_REEXECUTION_OVERRIDE",
+  "effective_date": "2026-09-03",
+  "user_authorization": "CONTINUE_ORIGINAL_R1X_TASK_AND_APPLY_VERIFIED_ENGINEERING_REPAIR_REEXECUTION_RULE_TO_FUTURE_RESEARCH",
+  "supersedes_only": [
+    "program_contract_r1x_bounded_clean_coupling.run_limits.maximum_identical_engineering_retries_per_unformed_trajectory",
+    "R1X_CAMPAIGN_CLOSED_SOLELY_BECAUSE_ENGINEERING_RETRY_WAS_EXHAUSTED"
+  ],
+  "preserves": [
+    "ORIGINAL_R1X_SCIENTIFIC_QUESTION",
+    "ORIGINAL_R1X_METHOD_AND_EXPLORATION_CONTRACTS",
+    "MAXIMUM_NON_VOTING_EXPLORATIONS_3",
+    "MAXIMUM_FROZEN_CONFIRMATIONS_1",
+    "SEED_17",
+    "REFERENCE_BLIND_CLOUD_EXECUTION",
+    "TWO_STRESS_REFERENCES_SEALED_UNREAD",
+    "ALL_V22R_R0A_R0B_R0C_R1A_AND_ENGINEERING_BLOCKER_HISTORY"
+  ],
+  "general_reexecution_rule": {
+    "applies_when_all": [
+      "SCIENTIFIC_TASK_WAS_ALREADY_EXPLICITLY_AUTHORIZED",
+      "FAILURE_OCCURRED_BEFORE_FIRST_OPTIMIZER_STEP",
+      "SCIENTIFIC_TRAJECTORIES_EXECUTED_EQUALS_ZERO",
+      "FAILURE_IS_PURELY_ENGINEERING",
+      "ROOT_CAUSE_IS_EXPLICITLY_IDENTIFIED",
+      "FIX_PASSES_A_TARGETED_ISOLATED_REGRESSION"
+    ],
+    "action": "REEXECUTE_THE_SAME_FROZEN_SCIENTIFIC_TASK_WITHOUT_CONSUMING_A_SCIENTIFIC_RUN_QUOTA",
+    "applies_to_future_research": true,
+    "does_not_authorize_scientific_identity_changes": true
+  },
+  "current_r1x_reactivation": {
+    "authorized": true,
+    "task_id": "PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE",
+    "trajectory": "E1_CLEAN_COUPLING_EXPLORATION",
+    "role": "NON_VOTING_DEVELOPMENT_EXPLORATION",
+    "non_voting_explorations_already_executed": 0,
+    "frozen_confirmations_already_executed": 0,
+    "required_preflight": [
+      "DEPLOYED_BUNDLE_IDENTITY_VALID",
+      "ISOLATED_PHYSICS_LOAD_VALID",
+      "TESLA_V100_PCIE_32GB_VALID",
+      "NO_DUPLICATE_TRAINING_PROCESS",
+      "CLOUD_REFERENCE_ABSENT"
+    ],
+    "gpu_shutdown_after_each_trajectory": true
+  }
+}

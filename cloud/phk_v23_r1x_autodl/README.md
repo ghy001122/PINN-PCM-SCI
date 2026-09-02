@@ -1,6 +1,6 @@
 # PHK-V2.3 R1X AutoDL run card
 
-- `status`: `AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE`
+- `status`: `AUTHORIZED_REACTIVATED_DEPLOYMENT_PREFLIGHT_PENDING`
 - `task_id`: `PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE`
 - `first_trajectory`: `E1_CLEAN_COUPLING_EXPLORATION`
 - `role`: `NON_VOTING_DEVELOPMENT_EXPLORATION`
@@ -10,8 +10,12 @@
 - `arm`: `STRONG_RAW`
 - `maximum_optimizer_updates_e1`: `1800`
 - `checkpoint_policy`: `GLOBAL_FINAL_ONLY`
+- `execution_override`: `configs/phk_v23/execution_override_r1x_verified_engineering_repair.json`
+- `source_identity`: `R1X-BUNDLE-371FEBD6107A2BE4913AEFE07216DF79E789B1E3597C24D8791E2B7EB59CC65B`
 
 云端只包含 source bundle 和 reference-blind 训练入口，不得包含 nominal/stress reference、evaluator 或 teacher probe。每条轨迹必须从 scratch；不得读取上一条 checkpoint、optimizer state 或随机状态。
+
+2026-09-03 用户已按 ADR 0054 覆盖旧的一次 engineering-retry 限制。历史两次首步前失败均不计入 exploration；只有 source identity 与 isolated physics-load 前检通过后才可恢复原 E1。
 
 ## E1 唯一命令
 
