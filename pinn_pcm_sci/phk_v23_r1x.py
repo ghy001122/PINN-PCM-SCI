@@ -94,10 +94,34 @@ def _sha256_tensor(value: torch.Tensor) -> str:
 
 def _write_json_exclusive(path: Path, payload: Mapping[str, Any]) -> None:
     exact = Path(path)
+    serialized = json.dumps(
+        payload,
+        indent=2,
+        sort_keys=True,
+        ensure_ascii=False,
+        allow_nan=False,
+    )
     exact.parent.mkdir(parents=True, exist_ok=True)
     with exact.open("x", encoding="utf-8", newline="\n") as handle:
-        json.dump(payload, handle, indent=2, sort_keys=True, ensure_ascii=False, allow_nan=False)
+        handle.write(serialized)
         handle.write("\n")
+
+
+def _strict_json_metric_value(value: Any) -> Any:
+    """Preserve expected infinite evaluator sentinels in strict JSON."""
+
+    if isinstance(value, Mapping):
+        return {str(key): _strict_json_metric_value(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_strict_json_metric_value(item) for item in value]
+    if isinstance(value, (float, np.floating)):
+        scalar = float(value)
+        if math.isnan(scalar):
+            raise FloatingPointError("R1X_LOCAL_EVALUATION_INVALID: NaN metric")
+        if math.isinf(scalar):
+            return "POSITIVE_INFINITY" if scalar > 0.0 else "NEGATIVE_INFINITY"
+        return scalar
+    return value
 
 
 def _finite(value: torch.Tensor | float) -> float:
@@ -987,7 +1011,13 @@ def adjudicate_local_nominal(
         "competence_signal": evaluation["hard_guards"]["passed"] is True,
         "hard_guard_failures": list(evaluation["hard_guards"]["failures"]),
         "event_topology": evaluation["hard_guards"]["event_topology"],
-        "metrics": evaluation["metrics"],
+        "metrics": _strict_json_metric_value(evaluation["metrics"]),
+        "nonfinite_metric_encoding": {
+            "positive_infinity": "POSITIVE_INFINITY",
+            "negative_infinity": "NEGATIVE_INFINITY",
+            "nan": "REJECTED",
+            "scope": "EXPECTED_FROZEN_EVALUATOR_SENTINELS_ONLY",
+        },
         "run_summary_sha256": _sha256_path(run_summary_path),
         "evaluation_sha256": _sha256_path(evaluation_path),
         "claim_boundary": claim_boundary,

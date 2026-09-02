@@ -33,6 +33,7 @@ from pinn_pcm_sci.phk_v23_r1x import (
     ET_GROUPS,
     CampaignController,
     CampaignVariant,
+    adjudicate_local_nominal,
     accelerated_active_windows,
     build_campaign_model,
     load_r1x_contracts,
@@ -594,6 +595,73 @@ class PhkV23R1XTests(unittest.TestCase):
         self.assertIn(
             "FIX_PASSES_A_TARGETED_ISOLATED_REGRESSION", rule["applies_when_all"]
         )
+
+    def test_40_local_adjudication_encodes_expected_infinite_metrics_strictly(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            summary_path = root / "summary.json"
+            evaluation_path = root / "evaluation.json"
+            output_path = root / "adjudication.json"
+            summary_path.write_text(
+                json.dumps(
+                    {
+                        "status": "R1X_REFERENCE_BLIND_GPU_TRAJECTORY_COMPLETE",
+                        "variant": E1.variant_id,
+                        "trajectory_role": "NON_VOTING_DEVELOPMENT_EXPLORATION",
+                        "reference_blind_outcome": "ET_NOT_READY",
+                        "phase_signal_ever": False,
+                        "final_phase_max": 0.03,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            evaluation_path.write_text(
+                json.dumps(
+                    {
+                        "status": "EVALUATED_LOCAL_REFERENCE_ONLY",
+                        "hard_guards": {
+                            "passed": False,
+                            "failures": ["event_missing"],
+                            "event_topology": {"cycles": []},
+                        },
+                        "metrics": {
+                            "finite": 1.0,
+                            "missing_event_distance": float("inf"),
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = adjudicate_local_nominal(
+                run_summary_path=summary_path,
+                evaluation_path=evaluation_path,
+                output_path=output_path,
+            )
+
+            self.assertEqual(result["status"], "E1_ET_NOT_READY")
+            self.assertEqual(
+                result["metrics"]["missing_event_distance"], "POSITIVE_INFINITY"
+            )
+            serialized = output_path.read_text(encoding="utf-8")
+            parsed = json.loads(serialized)
+            self.assertEqual(
+                parsed["metrics"]["missing_event_distance"], "POSITIVE_INFINITY"
+            )
+            self.assertNotIn(
+                "Infinity", serialized.replace("POSITIVE_INFINITY", "")
+            )
+
+    def test_41_exclusive_json_writer_leaves_no_partial_file_on_serialization_error(self) -> None:
+        from pinn_pcm_sci import phk_v23_r1x
+
+        with tempfile.TemporaryDirectory() as directory:
+            output_path = Path(directory) / "must-not-exist.json"
+            with self.assertRaises(ValueError):
+                phk_v23_r1x._write_json_exclusive(
+                    output_path, {"invalid": float("nan")}
+                )
+            self.assertFalse(output_path.exists())
 
 
 if __name__ == "__main__":

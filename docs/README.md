@@ -2,9 +2,9 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-当前阶段为工程修复后已恢复的 PHK-V2.3 R1X 有界 clean-coupling campaign。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[ADR 0054](adr/0054-resume-r1x-after-verified-engineering-repair.md) 与原 [ADR 0053](adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)；V2.2R/R0A/R0B/R0C/R1a 历史证据保持不变，stress 继续 sealed/unread。
+当前阶段为 PHK-V2.3 R1X 有界 clean-coupling campaign。E1 已完成并裁决为 `E1_ET_NOT_READY`，冻结机器树选择 `E2_TOP_DIRICHLET_HARD_LIFT`；AutoDL 已关机，campaign 授权保持有效并等待用户重启实例。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[E1 closeout](experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)、[ADR 0054](adr/0054-resume-r1x-after-verified-engineering-repair.md) 与原 [ADR 0053](adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)；V2.2R/R0A/R0B/R0C/R1a 历史证据保持不变，stress 继续 sealed/unread。
 
-R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，科学 trajectory 和 optimizer updates 均为 0；该历史见 [R1X closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖现已闭合并通过隔离回归，用户已授权继续原 E1，旧的一次 engineering-retry 限制不再阻塞相同科学任务。
+R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，修复的 E1 有效运行 300 updates 并按 readiness policy 停止，现已计入 1/3 条 exploration。
 
 ## 固定入口顺序
 
@@ -23,10 +23,11 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前执行入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-R1X](plans/NEXT_ACTIONS.md)。R1X 已按 [ADR 0054](adr/0054-resume-r1x-after-verified-engineering-repair.md) 恢复原 E1；此前不存在科学轨迹或 nominal 评价，exploration 计数仍为 0/3。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-R1X](plans/NEXT_ACTIONS.md)。E1 已形成 1/3 条 exploration 并裁决为 `E1_ET_NOT_READY`；下一条仅可执行 E2 top hard lift，当前等待 AutoDL 重启。
 - 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R 四臂 nominal 的
   `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A/R0B/R0C/R1a 证据保持冻结；R1X 已授权恢复 E1 及冻结机器树，PJGR、R2、low-fidelity、其他 seed、stress 和投稿仍未授权。
 - 历史 PHK-V2.3 R1X 工程阻塞记录：[2026-09-02 R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。它记录两次 pre-update 部署失败、日志哈希、0 科学轨迹、关机验证和 post-blocker isolation 回归修复；不得解释为 clean-coupling 方法失败。
+- 当前 PHK-V2.3 R1X E1 结果入口：[2026-09-03 R1X E1 ET-not-ready closeout](experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)。它记录 300-step reference-blind warm-up、readiness 失败、产物回收/关机、本地 nominal 评价和 E2 top-hard-lift 路由；它是 non-voting development evidence。
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 是 fixed-discretization
   单 seed 负面 Method-MVP；PDE loss 下降没有建立局域事件 competence，不能外推为 PINN
   全局失败、continuum truth、formal OOD 或实验结论。
