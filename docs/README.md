@@ -2,6 +2,8 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
+当前阶段为 PHK-V2.3 R1X 有界 clean-coupling campaign。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md) 与 [ADR 0053](adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)；V2.2R/R0A/R0B/R0C/R1a 历史证据保持不变，stress 继续 sealed/unread。
+
 ## 固定入口顺序
 
 每次任务依次读取：

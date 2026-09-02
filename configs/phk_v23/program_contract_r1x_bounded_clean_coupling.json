@@ -1,0 +1,55 @@
+{
+  "schema_id": "phk-v23-r1x-program-contract-v1",
+  "contract_id": "PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE",
+  "effective_date": "2026-09-02",
+  "status": "EXPLICITLY_AUTHORIZED_BOUNDED_CAMPAIGN",
+  "authorization": {
+    "source": "CURRENT_USER_EXPLICIT_EXECUTE_PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE",
+    "evidence_anchor_commit": "4cb9ee41f70e1989e316f2a67ced049304c3c9d8",
+    "contract_code_test_document_writes": true,
+    "non_voting_explorations": true,
+    "one_frozen_confirmation_after_competence_signal": true,
+    "reference_free_cloud_prediction": true,
+    "local_nominal_evaluation_after_shutdown": true,
+    "selective_commit_and_push_main": true,
+    "fourth_exploration": false,
+    "second_confirmation": false,
+    "seed_change": false,
+    "stress_prediction_or_unseal": false,
+    "pjgr_or_r2": false,
+    "low_fidelity_route": false,
+    "benchmark_physics_reference_or_evaluator_change": false,
+    "submission_external_contact_or_disclosure": false
+  },
+  "scientific_question": "CAN_CLEAN_COLD_STATE_ELECTROTHERMAL_WARMUP_FOLLOWED_BY_TRANSPARENT_COUPLING_HOMOTOPY_AND_FULL_JOINT_CLOSURE_RECOVER_TWO_CYCLE_STRONG_RAW_COMPETENCE",
+  "run_limits": {
+    "maximum_non_voting_explorations": 3,
+    "maximum_frozen_confirmations": 1,
+    "maximum_identical_engineering_retries_per_unformed_trajectory": 1,
+    "optimizer_step_limits_are_hard": true,
+    "gpu_hours_hard_cap": null,
+    "cost_cny_hard_cap": null,
+    "calendar_hard_cap": null,
+    "resource_use_is_recorded_but_not_a_stop_gate": true
+  },
+  "reference_roles": {
+    "cloud": "REFERENCE_BLIND",
+    "nominal": "LOCAL_DEVELOPMENT_EVALUATION_ONLY_AFTER_ARTIFACT_RECOVERY_HASH_VERIFICATION_AND_AUTODL_SHUTDOWN_VERIFICATION",
+    "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  },
+  "preserves_without_rewrite": [
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "R0A_INCONCLUSIVE",
+    "GRADIENT_STARVATION_TEMPORAL_PRECURSOR_ONLY",
+    "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "R1A_CONFIG_RAW_NO_COMPETENCE",
+    "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  ],
+  "terminal_states": [
+    "R1C_PASS_HEADLINE_CORE_GATE_REVIEW_NOT_AUTHORIZED",
+    "PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED",
+    "AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE",
+    "ENGINEERING_BLOCKED"
+  ],
+  "completion_does_not_authorize_r2_pjgr_low_fidelity_stress_other_seed_or_submission": true
+}

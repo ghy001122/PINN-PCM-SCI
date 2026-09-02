@@ -168,6 +168,56 @@ class TrainingOutcome:
     seconds_per_update: float
     peak_gpu_memory_bytes: int
     checkpoint_path: Path
+    executed_updates: int
+
+
+@dataclass(frozen=True)
+class TrainingStepSpec:
+    """Generic per-step controls for a bounded staged training campaign."""
+
+    stage: str
+    block_type: str
+    active_windows: int
+    coupling_alpha: float
+    active_heads: tuple[str, ...]
+    active_loss_groups: tuple[str, ...]
+
+    def validate(self) -> None:
+        if not self.stage or not self.block_type:
+            raise ValueError("training stage and block type must be non-empty")
+        if not 1 <= int(self.active_windows) <= 4:
+            raise ValueError("active windows must lie in [1, 4]")
+        alpha = float(self.coupling_alpha)
+        if not math.isfinite(alpha) or not 0.0 <= alpha <= 1.0:
+            raise ValueError("coupling alpha must lie in [0, 1]")
+        if not self.active_heads or any(name not in {"potential", "temperature", "phase"} for name in self.active_heads):
+            raise ValueError("active head set is invalid")
+        if len(set(self.active_heads)) != len(self.active_heads):
+            raise ValueError("active head set contains duplicates")
+        if not self.active_loss_groups or len(set(self.active_loss_groups)) != len(self.active_loss_groups):
+            raise ValueError("active loss groups are empty or duplicated")
+
+
+class TrainingStepPolicy(Protocol):
+    """A bounded controller that selects an immutable spec before each step."""
+
+    stop_requested: bool
+
+    def step_spec(
+        self, optimizer_step: int, total_updates: int
+    ) -> TrainingStepSpec: ...
+
+
+class TrainingModelFactory(Protocol):
+    """Construct a model while leaving the legacy default factory untouched."""
+
+    def __call__(
+        self,
+        *,
+        physics: PhkV22RPhysics,
+        config: PhkTrainingConfig,
+        frequency_band: FrequencyBand,
+    ) -> PhkV22RModel: ...
 
 
 @dataclass(frozen=True)
@@ -186,6 +236,7 @@ class TrainingObservation:
     scalars: Mapping[str, float]
     optimizer_state_summary: Mapping[str, Mapping[str, float | int]] | None = None
     gradient_combination_diagnostics: Mapping[str, Any] | None = None
+    step_metadata: Mapping[str, Any] | None = None
 
 
 class TrainingObserver(Protocol):
@@ -316,22 +367,77 @@ def _merge_residuals(
 def _boundary_loss(
     model: PhkV22RModel,
     batches: Mapping[str, torch.Tensor],
+    *,
+    coupling_alpha: float = 1.0,
 ) -> tuple[torch.Tensor, dict[str, float]]:
+    total, diagnostics, _ = _boundary_loss_by_field(
+        model, batches, coupling_alpha=coupling_alpha
+    )
+    return total, diagnostics
+
+
+def _boundary_field(name: str) -> str:
+    if name.startswith("bc_phase"):
+        return "phase"
+    if name.startswith("bc_temperature"):
+        return "temperature"
+    if name.startswith("bc_potential") or name.startswith("bc_electric"):
+        return "potential"
+    raise KeyError(f"unknown boundary residual family: {name}")
+
+
+def _boundary_loss_by_field(
+    model: PhkV22RModel,
+    batches: Mapping[str, torch.Tensor],
+    *,
+    coupling_alpha: float = 1.0,
+) -> tuple[torch.Tensor, dict[str, float], dict[str, torch.Tensor]]:
     residuals = _merge_residuals(
         {
-            side: boundary_residuals(model, coordinates, side=side)
+            side: boundary_residuals(
+                model,
+                coordinates,
+                side=side,
+                coupling_alpha=coupling_alpha,
+            )
             for side, coordinates in batches.items()
         }
     )
-    losses = []
+    losses: list[torch.Tensor] = []
+    fields: list[str] = []
     diagnostics = {}
     for qualified_name, value in residuals.items():
         base_name = qualified_name.split(":", 1)[1]
         scale = BOUNDARY_SCALES[base_name]
         item = torch.mean((value / scale).square())
         losses.append(item)
+        fields.append(_boundary_field(base_name))
         diagnostics[qualified_name] = float(item.detach().cpu())
-    return torch.stack(losses).mean(), diagnostics
+    denominator = float(len(losses))
+    by_field = {
+        name: torch.stack(
+            [item for item, field in zip(losses, fields, strict=True) if field == name]
+        ).sum()
+        / denominator
+        for name in ("potential", "temperature", "phase")
+    }
+    return torch.stack(losses).mean(), diagnostics, by_field
+
+
+def _initial_loss_by_field(
+    residuals: Mapping[str, torch.Tensor],
+) -> tuple[torch.Tensor, dict[str, torch.Tensor]]:
+    ordered = ("ic_potential", "ic_temperature", "ic_phase")
+    losses = {
+        name.removeprefix("ic_"): torch.mean(
+            (residuals[name] / float(INITIAL_SCALES[name])).square()
+        )
+        / float(len(ordered))
+        for name in ordered
+    }
+    # Keep the scalar on the exact legacy reduction path.  The split values are
+    # used only by staged objectives and retain the same denominator.
+    return normalized_residual_loss(residuals, scales=INITIAL_SCALES), losses
 
 
 def canonical_weighted_loss_groups(
@@ -361,6 +467,47 @@ def canonical_weighted_loss_groups(
             config.boundary_weight * boundary_loss
             + config.initial_weight * initial_loss
         ),
+    }
+
+
+def campaign_weighted_loss_groups(
+    *,
+    interior: Mapping[str, torch.Tensor],
+    boundary_by_field: Mapping[str, torch.Tensor],
+    initial_by_field: Mapping[str, torch.Tensor],
+    config: PhkTrainingConfig,
+) -> dict[str, torch.Tensor]:
+    """Expose exact field-split auxiliaries for staged ConFIG objectives.
+
+    Each field contribution retains the denominator of the legacy aggregate,
+    so the ET and phase auxiliary pieces sum exactly to the R1a G4 scalar.
+    """
+
+    required_fields = ("potential", "temperature", "phase")
+    if any(name not in boundary_by_field for name in required_fields):
+        raise KeyError("missing boundary field contribution")
+    if any(name not in initial_by_field for name in required_fields):
+        raise KeyError("missing initial field contribution")
+    pde = canonical_weighted_loss_groups(
+        interior=interior,
+        boundary_loss=torch.stack(tuple(boundary_by_field.values())).sum(),
+        initial_loss=torch.stack(tuple(initial_by_field.values())).sum(),
+        config=config,
+    )
+    auxiliary_by_field = {
+        name: config.boundary_weight * boundary_by_field[name]
+        + config.initial_weight * initial_by_field[name]
+        for name in required_fields
+    }
+    et = auxiliary_by_field["potential"] + auxiliary_by_field["temperature"]
+    phase = auxiliary_by_field["phase"]
+    return {
+        "G1_ELECTRIC_PDE": pde["G1_ELECTRIC_PDE"],
+        "G2_THERMAL_PDE": pde["G2_THERMAL_PDE"],
+        "G3_PHASE_PDE": pde["G3_PHASE_PDE"],
+        "G4_ET_AUXILIARY": et,
+        "G4_PHASE_AUXILIARY": phase,
+        "G4_BOUNDARY_INITIAL": et + phase,
     }
 
 
@@ -398,6 +545,8 @@ def train(
     execution_limit: int | None = None,
     observer: TrainingObserver | None = None,
     gradient_combiner: GradientCombiner | None = None,
+    step_policy: TrainingStepPolicy | None = None,
+    model_factory: TrainingModelFactory | None = None,
     execution_metadata: Mapping[str, Any] | None = None,
 ) -> TrainingOutcome:
     """Run one bounded arm from scratch and emit an immutable evidence directory."""
@@ -427,13 +576,18 @@ def train(
         torch.cuda.manual_seed_all(config.seed)
         torch.cuda.reset_peak_memory_stats(device)
 
-    model = PhkV22RModel(
-        physics=physics,
-        arm=config.arm,
-        hidden_width=config.hidden_width,
-        hidden_layers=config.hidden_layers,
-        frequency_band=_frequency_band(config.frequency_band),
-    ).to(device=device, dtype=dtype)
+    band = _frequency_band(config.frequency_band)
+    if model_factory is None:
+        model = PhkV22RModel(
+            physics=physics,
+            arm=config.arm,
+            hidden_width=config.hidden_width,
+            hidden_layers=config.hidden_layers,
+            frequency_band=band,
+        )
+    else:
+        model = model_factory(physics=physics, config=config, frequency_band=band)
+    model = model.to(device=device, dtype=dtype)
     optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate)
     mixture = CollocationMixture(
         candidate_pool_multiplier=config.candidate_pool_multiplier
@@ -465,7 +619,11 @@ def train(
             if config.checkpoint_every >= execution_updates
             else "PERIODIC_PLUS_FINAL"
         ),
-        "sampler_inputs": ["SOBOL", "PDE_RESIDUAL", "PREDICTED_PHASE", "PREDICTED_JOULE"],
+        "sampler_inputs": (
+            ["SOBOL", "PDE_RESIDUAL", "PREDICTED_PHASE", "PREDICTED_JOULE"]
+            if PhkV22RArm(config.arm).uses_physics_sampler
+            else ["SOBOL"]
+        ),
         "pde_scales": dict(PDE_SCALES),
         "boundary_scales": dict(BOUNDARY_SCALES),
         "initial_scales": dict(INITIAL_SCALES),
@@ -474,7 +632,9 @@ def train(
             "boundary": config.boundary_weight,
             "initial": config.initial_weight,
         },
-        "causal_window_open_fractions": [0.0, 0.15, 0.35, 0.55],
+        "causal_window_open_fractions": (
+            [0.0, 0.15, 0.35, 0.55] if step_policy is None else None
+        ),
     }
     if diagnostic_prefix:
         manifest.update(
@@ -488,6 +648,11 @@ def train(
         manifest["execution_metadata"] = dict(execution_metadata)
     if gradient_combiner is not None:
         manifest["gradient_combiner"] = dict(gradient_combiner.manifest())
+    if step_policy is not None:
+        manifest["step_policy"] = type(step_policy).__name__
+        manifest["causal_window_schedule"] = (
+            "STEP_POLICY_CONTROLLED_SEE_EXECUTION_METADATA_AND_FROZEN_CONTRACT"
+        )
     _write_json_exclusive(output / "manifest-start.json", manifest)
 
     log_path = output / "training-log.jsonl"
@@ -500,6 +665,7 @@ def train(
     final_loss = math.inf
     start = time.perf_counter()
     status = "DIAGNOSTIC_PREFIX" if diagnostic_prefix else "COMPLETE"
+    executed_updates = 0
     try:
         if observer is not None:
             _emit_observation(
@@ -519,7 +685,43 @@ def train(
             )
         with log_path.open("x", encoding="utf-8", newline="\n") as log_handle:
             for update in range(execution_updates):
-                active_windows = _active_windows(update, config.updates)
+                optimizer_step = update + 1
+                if step_policy is None:
+                    step_spec = TrainingStepSpec(
+                        stage="LEGACY_JOINT",
+                        block_type="JOINT_BLOCK",
+                        active_windows=_active_windows(update, config.updates),
+                        coupling_alpha=1.0,
+                        active_heads=("potential", "temperature", "phase"),
+                        active_loss_groups=(
+                            "G1_ELECTRIC_PDE",
+                            "G2_THERMAL_PDE",
+                            "G3_PHASE_PDE",
+                            "G4_BOUNDARY_INITIAL",
+                        ),
+                    )
+                else:
+                    step_spec = step_policy.step_spec(optimizer_step, config.updates)
+                step_spec.validate()
+                active_windows = step_spec.active_windows
+                active_head_set = set(step_spec.active_heads)
+                for head_name, head in model.heads.items():
+                    active = head_name in active_head_set
+                    for parameter in head.parameters():
+                        parameter.requires_grad_(active)
+                if model.high_temperature is not None:
+                    for parameter in model.high_temperature.parameters():
+                        parameter.requires_grad_("temperature" in active_head_set)
+                if model.high_phase is not None:
+                    for parameter in model.high_phase.parameters():
+                        parameter.requires_grad_("phase" in active_head_set)
+                step_metadata = {
+                    "stage": step_spec.stage,
+                    "block_type": step_spec.block_type,
+                    "coupling_alpha": step_spec.coupling_alpha,
+                    "active_heads": list(step_spec.active_heads),
+                    "active_loss_groups": list(step_spec.active_loss_groups),
+                }
                 needs_refresh = (
                     cached_interior is None
                     or update % config.refresh_updates == 0
@@ -540,6 +742,7 @@ def train(
                                 boundary=cached_boundary,
                                 initial=cached_initial,
                                 scalars={},
+                                step_metadata=step_metadata,
                             )
                         )
                     cached_interior = sampler.select_interior(
@@ -580,32 +783,60 @@ def train(
                             boundary=cached_boundary,
                             initial=cached_initial,
                             scalars={},
+                            step_metadata=step_metadata,
                         )
                     )
 
                 optimizer.zero_grad(set_to_none=True)
-                interior = interior_residuals(model, cached_interior)
+                interior = interior_residuals(
+                    model,
+                    cached_interior,
+                    coupling_alpha=step_spec.coupling_alpha,
+                )
                 pde_loss = normalized_residual_loss(interior, scales=PDE_SCALES)
-                bc_loss, bc_diagnostics = _boundary_loss(model, cached_boundary)
+                bc_loss, bc_diagnostics, boundary_by_field = _boundary_loss_by_field(
+                    model,
+                    cached_boundary,
+                    coupling_alpha=step_spec.coupling_alpha,
+                )
                 ic = initial_residuals(model, cached_initial)
-                ic_loss = normalized_residual_loss(ic, scales=INITIAL_SCALES)
-                total = (
+                ic_loss, initial_by_field = _initial_loss_by_field(ic)
+                full_total = (
                     config.pde_weight * pde_loss
                     + config.boundary_weight * bc_loss
                     + config.initial_weight * ic_loss
                 )
-                if not bool(torch.isfinite(total)):
+                available_groups = campaign_weighted_loss_groups(
+                    interior=interior,
+                    boundary_by_field=boundary_by_field,
+                    initial_by_field=initial_by_field,
+                    config=config,
+                )
+                if step_policy is None:
+                    loss_groups = {
+                        name: available_groups[name]
+                        for name in step_spec.active_loss_groups
+                    }
+                    total = full_total
+                else:
+                    unknown_groups = [
+                        name
+                        for name in step_spec.active_loss_groups
+                        if name not in available_groups
+                    ]
+                    if unknown_groups:
+                        raise KeyError(f"unknown staged loss groups: {unknown_groups}")
+                    loss_groups = {
+                        name: available_groups[name]
+                        for name in step_spec.active_loss_groups
+                    }
+                    total = torch.stack(tuple(loss_groups.values())).sum()
+                if not bool(torch.isfinite(total)) or not bool(torch.isfinite(full_total)):
                     raise FloatingPointError(f"nonfinite loss at update {update + 1}")
                 gradient_combination_diagnostics: Mapping[str, Any] | None = None
                 if gradient_combiner is None:
                     total.backward()
                 else:
-                    loss_groups = canonical_weighted_loss_groups(
-                        interior=interior,
-                        boundary_loss=bc_loss,
-                        initial_loss=ic_loss,
-                        config=config,
-                    )
                     gradient_combination_diagnostics = gradient_combiner.combine(
                         model=model,
                         loss_groups=loss_groups,
@@ -629,10 +860,14 @@ def train(
                                 "pde_loss": float(pde_loss.detach().cpu()),
                                 "boundary_loss": float(bc_loss.detach().cpu()),
                                 "initial_loss": float(ic_loss.detach().cpu()),
+                                "full_all_group_total_at_current_coupling": float(
+                                    full_total.detach().cpu()
+                                ),
                             },
                             gradient_combination_diagnostics=(
                                 gradient_combination_diagnostics
                             ),
+                            step_metadata=step_metadata,
                         ),
                     )
                 gradient_norm = torch.nn.utils.clip_grad_norm_(
@@ -663,6 +898,7 @@ def train(
                             gradient_combination_diagnostics=(
                                 gradient_combination_diagnostics
                             ),
+                            step_metadata=step_metadata,
                         ),
                     )
                 optimizer.step()
@@ -699,13 +935,18 @@ def train(
                                 "gradient_norm_before_clip": float(
                                     gradient_norm.detach().cpu()
                                 ),
+                                "full_all_group_total_at_current_coupling": float(
+                                    full_total.detach().cpu()
+                                ),
                             },
                             optimizer_state_summary=optimizer_summary,
                             gradient_combination_diagnostics=(
                                 gradient_combination_diagnostics
                             ),
+                            step_metadata=step_metadata,
                         )
                     )
+                executed_updates = optimizer_step
 
                 should_log = (
                     update == 0
@@ -733,6 +974,14 @@ def train(
                         ),
                         "boundary_components": bc_diagnostics,
                         "elapsed_seconds": time.perf_counter() - start,
+                        "stage": step_spec.stage,
+                        "block_type": step_spec.block_type,
+                        "coupling_alpha": step_spec.coupling_alpha,
+                        "active_heads": list(step_spec.active_heads),
+                        "active_loss_groups": list(step_spec.active_loss_groups),
+                        "full_all_group_total_at_current_coupling": float(
+                            full_total.detach().cpu()
+                        ),
                     }
                     log_handle.write(json.dumps(record, sort_keys=True) + "\n")
                     log_handle.flush()
@@ -752,12 +1001,17 @@ def train(
                         ),
                         output / f"checkpoint-{update + 1:06d}.pt",
                     )
+                if step_policy is not None and bool(step_policy.stop_requested):
+                    status = "EARLY_POLICY_STOP"
+                    break
+        for parameter in model.parameters():
+            parameter.requires_grad_(True)
         torch.save(
             _checkpoint_payload(
                 model=model,
                 optimizer=optimizer,
                 config=config,
-                update=execution_updates,
+                update=executed_updates,
                 program_contract_sha256=program_contract_sha256,
                 method_contract_sha256=method_contract_sha256,
                 physical_program_sha256=physical_program_sha256,
@@ -780,13 +1034,16 @@ def train(
             "status": status,
             "finished_at_utc": datetime.now(timezone.utc).isoformat(),
             "wall_seconds": wall_seconds,
-            "seconds_per_update": wall_seconds / max(execution_updates, 1),
+            "seconds_per_update": wall_seconds / max(executed_updates, 1),
             "peak_gpu_memory_bytes": peak_memory,
             "final_loss": final_loss,
             "minimum_loss": minimum_loss,
         }
         if diagnostic_prefix:
-            final_manifest["canonical_optimizer_steps_executed"] = execution_updates
+            final_manifest["canonical_optimizer_steps_executed"] = executed_updates
+        if step_policy is not None:
+            final_manifest["canonical_optimizer_steps_executed"] = executed_updates
+            final_manifest["scientific_schedule_denominator"] = config.updates
         _write_json_exclusive(output / "manifest-final.json", final_manifest)
     return TrainingOutcome(
         run_directory=output,
@@ -794,9 +1051,10 @@ def train(
         final_loss=final_loss,
         minimum_loss=minimum_loss,
         wall_seconds=wall_seconds,
-        seconds_per_update=wall_seconds / execution_updates,
+        seconds_per_update=wall_seconds / max(executed_updates, 1),
         peak_gpu_memory_bytes=peak_memory,
         checkpoint_path=checkpoint_path,
+        executed_updates=executed_updates,
     )
 
 
@@ -883,9 +1141,14 @@ __all__ = [
     "METHOD_CONTRACT_PATH",
     "PDE_SCALES",
     "PhkTrainingConfig",
+    "TrainingModelFactory",
     "TrainingObservation",
     "TrainingObserver",
     "TrainingOutcome",
+    "TrainingStepPolicy",
+    "TrainingStepSpec",
+    "campaign_weighted_loss_groups",
+    "canonical_weighted_loss_groups",
     "load_case_physics",
     "main",
     "train",

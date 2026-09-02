@@ -21,6 +21,10 @@ from .phk_v21_benchmark import PhkV21CaseSpec
 
 
 FIELD_NAMES = ("potential", "temperature", "phase")
+POTENTIAL_TRANSFORM_LEGACY = "LEGACY_WAVEFORM_SIGMOID"
+POTENTIAL_TRANSFORM_TOP_DIRICHLET_HARD_LIFT = "TOP_DIRICHLET_HARD_LIFT"
+PHASE_TRANSFORM_LEGACY = "LEGACY_FIXED_LATENT_SCALE"
+PHASE_TRANSFORM_JACOBIAN_NORMALIZED = "JACOBIAN_NORMALIZED_CAP_32"
 
 
 class PhkV22RArm(str, Enum):
@@ -336,6 +340,9 @@ class PhkV22RModel(nn.Module):
         phase_latent_scale: float = 8.0,
         gate_floor: float = 0.05,
         startup_time: float = 0.35,
+        potential_output_transform: str = POTENTIAL_TRANSFORM_LEGACY,
+        phase_output_transform: str = PHASE_TRANSFORM_LEGACY,
+        phase_jacobian_beta_cap: float = 32.0,
     ) -> None:
         super().__init__()
         self.physics = physics
@@ -345,10 +352,25 @@ class PhkV22RModel(nn.Module):
         self.phase_latent_scale = float(phase_latent_scale)
         self.gate_floor = float(gate_floor)
         self.startup_time = float(startup_time)
+        self.potential_output_transform = str(potential_output_transform)
+        self.phase_output_transform = str(phase_output_transform)
+        self.phase_jacobian_beta_cap = float(phase_jacobian_beta_cap)
         if not 0.0 < self.gate_floor < 1.0:
             raise ValueError("strict PHA gate floor must lie in (0, 1)")
         if self.startup_time <= 0.0:
             raise ValueError("hard-IC startup time must be positive")
+        if self.potential_output_transform not in {
+            POTENTIAL_TRANSFORM_LEGACY,
+            POTENTIAL_TRANSFORM_TOP_DIRICHLET_HARD_LIFT,
+        }:
+            raise ValueError("unknown potential output transform")
+        if self.phase_output_transform not in {
+            PHASE_TRANSFORM_LEGACY,
+            PHASE_TRANSFORM_JACOBIAN_NORMALIZED,
+        }:
+            raise ValueError("unknown phase output transform")
+        if self.phase_jacobian_beta_cap != 32.0:
+            raise ValueError("phase Jacobian beta cap is frozen to 32")
 
         raw_encoder = FixedAxisFourier(x=(), z=(), t=())
         if self.arm.uses_multifrequency:
@@ -431,6 +453,9 @@ class PhkV22RModel(nn.Module):
             "physics_sampler": self.arm.uses_physics_sampler,
             "strict_routing": self.arm is PhkV22RArm.STRICT_PHA_PROBE,
             "gate_stop_gradient": False,
+            "potential_output_transform": self.potential_output_transform,
+            "phase_output_transform": self.phase_output_transform,
+            "phase_jacobian_beta_cap": self.phase_jacobian_beta_cap,
         }
 
     def _latent_fields(
@@ -505,7 +530,16 @@ class PhkV22RModel(nn.Module):
             name: value * (1.0 - value) for name, value in sigmoid_latent.items()
         }
         waveform = self.physics.waveform(time)
-        potential = waveform * sigmoid_latent["potential"]
+        if self.potential_output_transform == POTENTIAL_TRANSFORM_LEGACY:
+            potential = waveform * sigmoid_latent["potential"]
+            potential_jacobian = waveform * sigmoid_derivative["potential"]
+        else:
+            potential = waveform * (
+                z_fraction + (1.0 - z_fraction) * sigmoid_latent["potential"]
+            )
+            potential_jacobian = (
+                waveform * (1.0 - z_fraction) * sigmoid_derivative["potential"]
+            )
         temperature = (
             self.temperature_scale
             * startup
@@ -513,10 +547,23 @@ class PhkV22RModel(nn.Module):
             * sigmoid_latent["temperature"]
         )
         initial = self.physics.initial_phase(coordinates).clamp(1.0e-8, 1.0 - 1.0e-8)
-        phase = torch.sigmoid(
-            torch.logit(initial)
-            + self.phase_latent_scale * startup * latent["phase"]
-        )
+        if self.phase_output_transform == PHASE_TRANSFORM_LEGACY:
+            phase = torch.sigmoid(
+                torch.logit(initial)
+                + self.phase_latent_scale * startup * latent["phase"]
+            )
+            phase_jacobian = (
+                self.phase_latent_scale * startup * phase * (1.0 - phase)
+            )
+        else:
+            phase_scale = torch.minimum(
+                initial.new_full(initial.shape, self.phase_jacobian_beta_cap),
+                1.0 / (initial * (1.0 - initial) + 1.0e-8),
+            )
+            phase = torch.sigmoid(
+                torch.logit(initial) + startup * phase_scale * latent["phase"]
+            )
+            phase_jacobian = phase_scale * startup * phase * (1.0 - phase)
         output = PhkModelOutput(
             fields=torch.cat((potential, temperature, phase), dim=1),
             gate=gate,
@@ -528,14 +575,14 @@ class PhkV22RModel(nn.Module):
             latents=latent,
             raw_latent_sigmoid_derivatives=sigmoid_derivative,
             analytic_output_jacobians={
-                "potential": waveform * sigmoid_derivative["potential"],
+                "potential": potential_jacobian,
                 "temperature": (
                     self.temperature_scale
                     * startup
                     * (1.0 - z_fraction)
                     * sigmoid_derivative["temperature"]
                 ),
-                "phase": self.phase_latent_scale * startup * phase * (1.0 - phase),
+                "phase": phase_jacobian,
             },
         )
 
@@ -599,8 +646,33 @@ def evaluate_fields(
     )
 
 
+def phase_kinetic_rhs_from_laplacian(
+    physics: PhkV22RPhysics,
+    *,
+    temperature: torch.Tensor,
+    phase: torch.Tensor,
+    phase_laplacian: torch.Tensor,
+) -> torch.Tensor:
+    """Evaluate the canonical phase kinetic right-hand side for any field."""
+
+    return physics.mobility(temperature) * (
+        physics.interface_width**2 * phase_laplacian
+        - physics.potential_derivative(temperature, phase)
+    )
+
+
+def _validate_coupling_alpha(coupling_alpha: float) -> float:
+    alpha = float(coupling_alpha)
+    if not math.isfinite(alpha) or not 0.0 <= alpha <= 1.0:
+        raise ValueError("coupling alpha must be finite and lie in [0, 1]")
+    return alpha
+
+
 def interior_diagnostic_terms(
-    model: PhkV22RModel, coordinates: torch.Tensor
+    model: PhkV22RModel,
+    coordinates: torch.Tensor,
+    *,
+    coupling_alpha: float = 1.0,
 ) -> dict[str, torch.Tensor]:
     """Decompose the exact strong-form residuals without changing model state."""
 
@@ -609,8 +681,19 @@ def interior_diagnostic_terms(
     gradients = bundle.gradients
     second = bundle.diagonal_second
     physics = model.physics
+    alpha = _validate_coupling_alpha(coupling_alpha)
+    if alpha == 1.0:
+        coupling_phase = values["phase"]
+        coupling_phase_time = gradients["phase"][:, 2:3]
+    elif alpha == 0.0:
+        coupling_phase = physics.initial_phase(bundle.coordinates)
+        coupling_phase_time = torch.zeros_like(gradients["phase"][:, 2:3])
+    else:
+        initial_phase = physics.initial_phase(bundle.coordinates)
+        coupling_phase = (1.0 - alpha) * initial_phase + alpha * values["phase"]
+        coupling_phase_time = alpha * gradients["phase"][:, 2:3]
 
-    conductivity = physics.conductivity(values["temperature"], values["phase"])
+    conductivity = physics.conductivity(values["temperature"], coupling_phase)
     conductivity_gradient = _gradient(conductivity, bundle.coordinates)
     lap_potential = second["potential"]["xx"] + second["potential"]["zz"]
     lap_temperature = second["temperature"]["xx"] + second["temperature"]["zz"]
@@ -630,7 +713,7 @@ def interior_diagnostic_terms(
         electric_conductivity_laplacian + electric_gradient_x + electric_gradient_z
     )
     thermal_time = gradients["temperature"][:, 2:3]
-    thermal_latent = physics.latent_ratio * gradients["phase"][:, 2:3]
+    thermal_latent = physics.latent_ratio * coupling_phase_time
     thermal_diffusion = -physics.thermal_diffusivity * lap_temperature
     thermal_cooling = physics.volumetric_cooling * values["temperature"]
     thermal_joule = -physics.joule_gain * joule
@@ -648,7 +731,12 @@ def interior_diagnostic_terms(
     )
     phase_reaction = -potential_derivative
     mobility = physics.mobility(values["temperature"])
-    phase_kinetic_rhs = mobility * (phase_diffusion - potential_derivative)
+    phase_kinetic_rhs = phase_kinetic_rhs_from_laplacian(
+        physics,
+        temperature=values["temperature"],
+        phase=values["phase"],
+        phase_laplacian=lap_phase,
+    )
     phase = phase_time - phase_kinetic_rhs
     return {
         "electric_conductivity_laplacian": electric_conductivity_laplacian,
@@ -670,15 +758,22 @@ def interior_diagnostic_terms(
         "conductivity": conductivity,
         "mobility": mobility,
         "phase_indicator": 4.0 * values["phase"] * (1.0 - values["phase"]),
+        "coupling_phase": coupling_phase,
+        "coupling_phase_time": coupling_phase_time,
     }
 
 
 def interior_residuals(
-    model: PhkV22RModel, coordinates: torch.Tensor
+    model: PhkV22RModel,
+    coordinates: torch.Tensor,
+    *,
+    coupling_alpha: float = 1.0,
 ) -> dict[str, torch.Tensor]:
     """Evaluate the exact three strong-form residuals and sampler diagnostics."""
 
-    terms = interior_diagnostic_terms(model, coordinates)
+    terms = interior_diagnostic_terms(
+        model, coordinates, coupling_alpha=coupling_alpha
+    )
     return {
         "electric": terms["electric_residual"],
         "thermal": terms["thermal_residual"],
@@ -711,6 +806,7 @@ def boundary_residuals(
     coordinates: torch.Tensor,
     *,
     side: str,
+    coupling_alpha: float = 1.0,
 ) -> dict[str, torch.Tensor]:
     """Return mixed electrical, thermal, and phase boundary residuals."""
 
@@ -726,6 +822,15 @@ def boundary_residuals(
     }
     gradients = {name: _gradient(value, q) for name, value in values.items()}
     physics = model.physics
+    alpha = _validate_coupling_alpha(coupling_alpha)
+    if alpha == 1.0:
+        coupling_phase = values["phase"]
+    elif alpha == 0.0:
+        coupling_phase = physics.initial_phase(q)
+    else:
+        coupling_phase = (
+            (1.0 - alpha) * physics.initial_phase(q) + alpha * values["phase"]
+        )
     normal = {
         "left": (-1.0, 0.0),
         "right": (1.0, 0.0),
@@ -744,7 +849,7 @@ def boundary_residuals(
         normal[0] * gradients["phase"][:, 0:1]
         + normal[1] * gradients["phase"][:, 1:2]
     )
-    conductivity = physics.conductivity(values["temperature"], values["phase"])
+    conductivity = physics.conductivity(values["temperature"], coupling_phase)
     result: dict[str, torch.Tensor] = {"bc_phase_no_flux": normal_phase}
     if side == "top":
         result["bc_potential_top"] = values["potential"] - physics.waveform(
@@ -1021,10 +1126,15 @@ __all__ = [
     "PhkV22RArm",
     "PhkV22RModel",
     "PhkV22RPhysics",
+    "PHASE_TRANSFORM_JACOBIAN_NORMALIZED",
+    "PHASE_TRANSFORM_LEGACY",
+    "POTENTIAL_TRANSFORM_LEGACY",
+    "POTENTIAL_TRANSFORM_TOP_DIRICHLET_HARD_LIFT",
     "boundary_residuals",
     "evaluate_fields",
     "initial_residuals",
     "interior_diagnostic_terms",
     "interior_residuals",
     "normalized_residual_loss",
+    "phase_kinetic_rhs_from_laplacian",
 ]

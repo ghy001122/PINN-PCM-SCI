@@ -143,7 +143,7 @@ class PhkV23R1AConFIGTests(unittest.TestCase):
         self.assertIsNone(result["combined_cosine_by_group"][GROUP_NAMES[3]])
         self.assertTrue(all(torch.isfinite(p.grad).all() for p in model.parameters()))
         self.assertEqual(combiner.manifest()["trainable_parameters"], 0)
-        self.assertEqual(len(tuple(combiner.__dict__)), 4)
+        self.assertEqual(combiner.allowed_group_orders, (GROUP_NAMES,))
 
     def test_legacy_default_and_equivalent_seam_are_exact_for_one_update(self) -> None:
         config = _tiny_config()

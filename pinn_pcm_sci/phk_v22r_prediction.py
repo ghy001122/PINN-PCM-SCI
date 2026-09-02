@@ -82,12 +82,22 @@ def _load_model(
         raise ValueError("checkpoint physical program hash mismatch")
     if checkpoint.get("physical_object_sha256") != object_sha:
         raise ValueError("checkpoint physical object hash mismatch")
+    architecture = checkpoint.get("architecture", {})
     model = PhkV22RModel(
         physics=physics,
         arm=config.arm,
         hidden_width=config.hidden_width,
         hidden_layers=config.hidden_layers,
         frequency_band=_band(config.frequency_band),
+        potential_output_transform=architecture.get(
+            "potential_output_transform", "LEGACY_WAVEFORM_SIGMOID"
+        ),
+        phase_output_transform=architecture.get(
+            "phase_output_transform", "LEGACY_FIXED_LATENT_SCALE"
+        ),
+        phase_jacobian_beta_cap=float(
+            architecture.get("phase_jacobian_beta_cap", 32.0)
+        ),
     ).to(device=device, dtype=torch.float64)
     model.load_state_dict(checkpoint["model_state_dict"], strict=True)
     model.eval()

@@ -1,0 +1,69 @@
+{
+  "schema_id": "phk-v23-r1x-method-contract-v1",
+  "contract_id": "PHK_V23_R1X_CLEAN_COUPLING_SHARED_SOLVER_BACKBONE",
+  "effective_date": "2026-09-02",
+  "program_contract": "configs/phk_v23/program_contract_r1x_bounded_clean_coupling.json",
+  "status": "FROZEN_FOR_BOUNDED_NON_VOTING_EXPLORATION_AND_ONE_CONDITIONAL_CONFIRMATION",
+  "scientific_role": "SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION",
+  "common_execution_identity": {
+    "gpu": "TESLA_V100_PCIE_32GB",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "arm": "STRONG_RAW",
+    "initialization": "SCRATCH_START_EACH_TRAJECTORY",
+    "optimizer": "ONE_TORCH_ADAM_INSTANCE_ALL_STAGES",
+    "learning_rate": 0.001,
+    "adam_defaults": {"betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0, "amsgrad": false},
+    "gradient_clip_norm": 10.0,
+    "gradient_combination": "R1A_STANDARD_CONFIG_ADAPTER",
+    "network": "V22R_STRONG_RAW_EXCEPT_ONE_MACHINE_SELECTED_E2_OUTPUT_TRANSFORM_AXIS",
+    "sampler": "PURE_SOBOL",
+    "collocation_counts": {"interior": 512, "boundary": 128, "initial": 128},
+    "checkpoint_policy": "GLOBAL_FINAL_ONLY",
+    "manual_early_stopping": false,
+    "checkpoint_selection": false
+  },
+  "coupling_homotopy": {
+    "phase_network": "PHI_THETA",
+    "initial_phase": "PHYSICS_INITIAL_PHASE_X_Z",
+    "phase_coupling_formula": "(1-ALPHA)*PHI0+ALPHA*PHI_THETA",
+    "alpha_is_optimizer_stage_scalar": true,
+    "warmup_alpha": 0.0,
+    "warmup_latent_derivative": 0.0,
+    "ramp_phase_pde_uses_true_phi_theta": true,
+    "ramp_latent_derivative": "ALPHA_TIMES_DPHI_THETA_DT",
+    "full_closure_alpha": 1.0,
+    "alpha_one_residual_identity_tolerance": {"rtol": 1e-12, "atol": 1e-14}
+  },
+  "loss_groups": {
+    "G1_ELECTRIC_PDE": "ONE_THIRD_TIMES_ELECTRIC_NORMALIZED_MSE",
+    "G2_THERMAL_PDE": "ONE_THIRD_TIMES_THERMAL_NORMALIZED_MSE",
+    "G3_PHASE_PDE": "ONE_THIRD_TIMES_PHASE_NORMALIZED_MSE",
+    "G4_ET_AUXILIARY": "LEGACY_DENOMINATOR_PRESERVING_POTENTIAL_AND_TEMPERATURE_BC_IC_CONTRIBUTIONS",
+    "G4_PHASE_AUXILIARY": "LEGACY_DENOMINATOR_PRESERVING_PHASE_BC_IC_CONTRIBUTIONS",
+    "G4_BOUNDARY_INITIAL": "G4_ET_AUXILIARY_PLUS_G4_PHASE_AUXILIARY"
+  },
+  "accelerated_active_windows": {
+    "steps_1_50": 1,
+    "steps_51_100": 2,
+    "steps_101_150": 3,
+    "steps_151_onward": 4,
+    "physical_windows": [[0.0, 0.35], [0.35, 1.25], [1.25, 1.6], [1.6, 2.5]]
+  },
+  "output_variants": {
+    "E1": {"potential": "LEGACY_WAVEFORM_SIGMOID", "phase": "LEGACY_FIXED_LATENT_SCALE"},
+    "E2_TOP_DIRICHLET_HARD_LIFT": {"potential": "TOP_DIRICHLET_HARD_LIFT", "phase": "LEGACY_FIXED_LATENT_SCALE"},
+    "E2_PHASE_JACOBIAN_NORMALIZED_OUTPUT": {"potential": "LEGACY_WAVEFORM_SIGMOID", "phase": "JACOBIAN_NORMALIZED_CAP_32", "beta_cap": 32.0},
+    "E2_SMOOTHER_COUPLING_RAMP": {"potential": "LEGACY_WAVEFORM_SIGMOID", "phase": "LEGACY_FIXED_LATENT_SCALE"}
+  },
+  "forbidden_concurrent_changes": [
+    "SEED_CHANGE",
+    "PHYSICS_OR_REFERENCE_CHANGE",
+    "LOSS_WEIGHT_SWEEP",
+    "MULTIADAM_OR_PHASE_LR_MULTIPLIER",
+    "FOURIER_OR_SAMPLER_CHANGE",
+    "LBFGS",
+    "PJGR",
+    "LOW_FIDELITY_GUIDANCE"
+  ]
+}

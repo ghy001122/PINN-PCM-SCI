@@ -207,11 +207,25 @@ def _assert_deployed_source_identity(source_identity: str) -> None:
 class ConFIGGradientCombiner:
     """Parameter-free adaptation of the official standard ConFIG update."""
 
-    def __init__(self, *, relative_tolerance: float = 1.0e-12, absolute_tolerance: float = 1.0e-14) -> None:
+    def __init__(
+        self,
+        *,
+        relative_tolerance: float = 1.0e-12,
+        absolute_tolerance: float = 1.0e-14,
+        allowed_group_orders: Sequence[Sequence[str]] | None = None,
+    ) -> None:
         self.relative_tolerance = float(relative_tolerance)
         self.absolute_tolerance = float(absolute_tolerance)
         self.epsilon = 1.0e-18
         self.calls = 0
+        self.allowed_group_orders = tuple(
+            tuple(group_order)
+            for group_order in (
+                (GROUP_NAMES,) if allowed_group_orders is None else allowed_group_orders
+            )
+        )
+        if not self.allowed_group_orders or any(not order for order in self.allowed_group_orders):
+            raise ValueError("ConFIG requires at least one non-empty group order")
 
     def manifest(self) -> Mapping[str, Any]:
         return {
@@ -220,7 +234,14 @@ class ConFIGGradientCombiner:
             "source_paper": "Liu_Chu_Thuerey_ICLR_2025",
             "source_repository": "https://github.com/tum-pbs/ConFIG",
             "source_license": "MIT",
-            "gradient_groups": list(GROUP_NAMES),
+            "gradient_groups": (
+                list(self.allowed_group_orders[0])
+                if len(self.allowed_group_orders) == 1
+                else "STAGE_DEPENDENT_SEE_ALLOWED_GRADIENT_GROUP_ORDERS"
+            ),
+            "allowed_gradient_group_orders": [
+                list(order) for order in self.allowed_group_orders
+            ],
             "linear_solver": "MOORE_PENROSE_VIA_FOUR_BY_FOUR_GRAM_PINV",
             "projection_length": "SUM_GROUP_PROJECTIONS_ON_TARGET_UNIT",
             "trainable_parameters": 0,
@@ -258,7 +279,8 @@ class ConFIGGradientCombiner:
         loss_groups: Mapping[str, torch.Tensor],
         legacy_total: torch.Tensor,
     ) -> Mapping[str, Any]:
-        if tuple(loss_groups) != GROUP_NAMES:
+        group_names = tuple(loss_groups)
+        if group_names not in self.allowed_group_orders:
             raise ValueError("R1a ConFIG loss-group order drift")
         grouped_total = torch.stack(tuple(loss_groups.values())).sum()
         if not torch.allclose(
@@ -286,7 +308,7 @@ class ConFIGGradientCombiner:
         norms = torch.linalg.vector_norm(stacked, dim=1)
         units = torch.nan_to_num(stacked / norms[:, None], nan=0.0, posinf=0.0, neginf=0.0)
         equal_weights = torch.ones(
-            (len(GROUP_NAMES),), dtype=stacked.dtype, device=stacked.device
+            (len(group_names),), dtype=stacked.dtype, device=stacked.device
         )
         gram_pseudoinverse = torch.linalg.pinv(units @ units.T)
         target = units.T @ gram_pseudoinverse @ equal_weights
@@ -318,18 +340,18 @@ class ConFIGGradientCombiner:
                 name: _finite(value) for name, value in loss_groups.items()
             },
             "loss_group_gradient_norms": {
-                name: _finite(value) for name, value in zip(GROUP_NAMES, norms, strict=True)
+                name: _finite(value) for name, value in zip(group_names, norms, strict=True)
             },
             "combined_gradient_norm": _finite(combined_norm),
             "combined_dot_by_group": {
-                name: _finite(value) for name, value in zip(GROUP_NAMES, dots, strict=True)
+                name: _finite(value) for name, value in zip(group_names, dots, strict=True)
             },
             "combined_cosine_by_group": {
-                name: value for name, value in zip(GROUP_NAMES, cosines, strict=True)
+                name: value for name, value in zip(group_names, cosines, strict=True)
             },
             "zero_norm_groups": [
                 name
-                for name, value in zip(GROUP_NAMES, norms, strict=True)
+                for name, value in zip(group_names, norms, strict=True)
                 if _finite(value) <= self.epsilon
             ],
         }

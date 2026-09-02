@@ -1,37 +1,25 @@
 # PINN-PCM-SCI
 
-面向“物理信息神经网络 × 氧化物/相变材料与器件”的纯软件研究项目。目标是以可复现、证据闭合的方式形成中科院二区定位的论文初稿；这不是期刊接收承诺，合成数值证据也不等于实验验证。
+面向“物理信息神经网络 × 氧化物相变材料与器件”的纯软件研究项目。目标是形成证据闭合、可复现、达到中科院二区定位的论文初稿；这不是期刊接收承诺，合成数值证据也不等于实验验证。
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_R1A_CONFIG_COMPETENCE_RECOVERY`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `claim_status`: `V22R_TERMINAL_NO_GO_PRESERVED_R1A_CONFIG_RAW_NO_COMPETENCE_NO_METHOD_EVIDENCE`
-- `next_research_execution_authorized`: `false`
+- `claim_status`: `V22R_TERMINAL_NO_GO_AND_R1A_NO_COMPETENCE_PRESERVED_R1X_E1_PENDING`
+- `next_research_execution_authorized`: `true`
 
-PHK-V2.2R v1.1 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 PHK-V2.3 R0A/R0B/R0C 结果保持冻结。唯一一次 R1a standard-ConFIG V100 run 已完成并裁决为 `R1A_CONFIG_RAW_NO_COMPETENCE`：四组梯度合成按定义工作，但仍未重建两周期事件。实例已关机，两份 stress references 继续 sealed/unread，下一科研执行未授权。
-
-现有证据支持的核心表述是：在固定单 seed、1000-update、fixed-discretization nominal 协议下，physics-loss 收敛与小的全域平均误差没有构成局域事件 competence 证书。它不表示 PINN 全局失败，不支持 continuum、formal OOD、材料校准或实验主张。
+PHK-V2.2R 的 `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A/R0B/R0C/R1a 结果保持冻结。当前获批 R1X 有界 campaign 用 clean cold-state electrothermal warm-up、coupling homotopy 与 full joint closure 检验 raw solver competence；最多三条 non-voting exploration 和一条条件性 frozen confirmation。两份 stress references 继续 sealed/unread。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
-- 终局运行记录：[nominal terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)
-- R0A 诊断收口：[PHK-V2.3 R0A CPU closeout](docs/experiment/2026-08-30-phk-v23-r0a-cpu-diagnostics-closeout.md)
-- 当前 R0B 决定：[ADR 0050](docs/adr/0050-activate-phk-v23-r0b-first-switch-175-minimal-v2.md)
-- R0B 云端 run card：[cloud/phk_v23_r0b_autodl](cloud/phk_v23_r0b_autodl/README.md)
-- R0B 诊断收口：[PHK-V2.3 R0B closeout](docs/experiment/2026-08-31-phk-v23-r0b-first-switch-175-closeout.md)
-- 当前 R0C 决定：[ADR 0051](docs/adr/0051-activate-phk-v23-r0c-effective-update-25-v100.md)
-- R0C 云端 run card：[cloud/phk_v23_r0c_autodl](cloud/phk_v23_r0c_autodl/README.md)
-- R0C 诊断收口：[PHK-V2.3 R0C closeout](docs/experiment/2026-08-31-phk-v23-r0c-effective-update-25-closeout.md)
-- 当前 R1a 决定：[ADR 0052](docs/adr/0052-activate-phk-v23-r1a-config-competence-recovery.md)
-- R1a 云端 run card：[cloud/phk_v23_r1a_config_autodl](cloud/phk_v23_r1a_config_autodl/README.md)
-- R1a 终局收口：[PHK-V2.3 R1a ConFIG closeout](docs/experiment/2026-08-31-phk-v23-r1a-config-closeout.md)
-- 英文导师初稿与五图复现包：[paper/paper_v22r](paper/paper_v22r/README.md)
+- 当前决定：[ADR 0053](docs/adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)
+- R1a 历史结果：[R1a closeout](docs/experiment/2026-08-31-phk-v23-r1a-config-closeout.md)
+- V2.2R 终局结果：[nominal terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)
+- 论文历史包：[paper/paper_v22r](paper/paper_v22r/README.md)
 - 文档地图：[docs/README.md](docs/README.md)
 - 当前研究口径：[CONTEXT.md](CONTEXT.md)
-
-PHK-V2.1 的 `PHK_V21_ORACLE_NO_GO_STOP_BEFORE_PINN`、PHK-V2、V1 与更早历史结果均保持原样。本轮只新增一项边界清楚的 neural Method-MVP 负面证据。

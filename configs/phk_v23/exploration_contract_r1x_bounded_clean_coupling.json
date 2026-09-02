@@ -1,0 +1,58 @@
+{
+  "schema_id": "phk-v23-r1x-exploration-contract-v1",
+  "contract_id": "PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_MACHINE_TREE",
+  "effective_date": "2026-09-02",
+  "status": "FROZEN_BEFORE_FIRST_EXPLORATION",
+  "readiness": {
+    "pool": {"sampler": "INDEPENDENT_SCRAMBLED_SOBOL", "seed": 17, "count": 2048, "points_per_window": 512},
+    "steps": [200, 225, 250, 275, 300],
+    "voting_windows": ["W1", "W3"],
+    "roi": {"abs_x_max": 0.55, "z_min": 0.0, "z_max": 0.55},
+    "thermal_activation_fraction_minimum": 0.02,
+    "positive_cold_kinetic_growth_fraction_minimum": 0.02,
+    "joule_q95_roi_strict_minimum": 1e-12,
+    "consecutive_passes_required": 2,
+    "minimum_warmup_step": 200,
+    "maximum_warmup_step": 300
+  },
+  "ramp": {
+    "default_length": 400,
+    "smoother_length": 800,
+    "alpha": "SMOOTHSTEP_3R2_MINUS_2R3_INCLUSIVE_ENDPOINTS",
+    "block_cycle": ["ELECTROTHERMAL_BLOCK", "ELECTROTHERMAL_BLOCK", "PHASE_BLOCK", "PHASE_BLOCK", "JOINT_BLOCK"]
+  },
+  "trajectories": {
+    "E1_CLEAN_COUPLING_EXPLORATION": {"maximum_updates": 1800},
+    "E2_TOP_DIRICHLET_HARD_LIFT": {"maximum_updates": 1800},
+    "E2_PHASE_JACOBIAN_NORMALIZED_OUTPUT": {"maximum_updates": 1800},
+    "E2_SMOOTHER_COUPLING_RAMP": {"maximum_updates": 2200},
+    "E3_EXTENSION": {"extra_alpha_one_joint_updates": 500}
+  },
+  "e1_machine_tree": {
+    "E1_ET_NOT_READY": "RUN_E2_TOP_DIRICHLET_HARD_LIFT",
+    "E1_ET_READY_PHASE_NO_RESPONSE": "RUN_E2_PHASE_JACOBIAN_NORMALIZED_OUTPUT",
+    "E1_PHASE_SIGNAL_INCOMPLETE_OR_COLLAPSED": "RUN_E2_SMOOTHER_COUPLING_RAMP",
+    "E1_COMPETENCE_SIGNAL_OBSERVED": "RUN_FROZEN_CONFIRMATION",
+    "E1_INVALID": "ENGINEERING_RETRY_ONCE_IF_NO_SCIENTIFIC_TRAJECTORY_ELSE_STOP"
+  },
+  "phase_signal": {
+    "material_phase_max": 0.1,
+    "activity_threshold": 0.5,
+    "material_if_any_cycle_event_in_local_frozen_evaluation": true
+  },
+  "telemetry": {
+    "warmup_every_steps": 25,
+    "ramp_and_full_every_steps": 25,
+    "mechanism_every_steps": 100,
+    "stage_boundary_triplets": true,
+    "no_new_every_step_large_gradient_framework": true
+  },
+  "confirmation": {
+    "maximum_runs": 1,
+    "from_scratch": true,
+    "same_seed": 17,
+    "winning_exploration_identity_frozen": true,
+    "minimum_fraction_alpha_one_full_joint": 0.5,
+    "allowed_outcomes": ["R1C_RAW_COMPETENCE_CONFIRMED_DEVELOPMENT_ONLY", "R1C_CONFIRMATION_NO_COMPETENCE"]
+  }
+}
