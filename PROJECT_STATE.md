@@ -4,19 +4,19 @@
 
 - `phase_id`: `PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE`
 - `lifecycle_state`: `ACTIVE`
-- `blocker_id`: `NONE`
-- `claim_status`: `V22R_TERMINAL_NO_GO_AND_R1A_NO_COMPETENCE_PRESERVED_R1X_E1_PENDING`
+- `blocker_id`: `AUTODL_INSTANCE_OFFLINE_CONNECTION_REFUSED`
+- `claim_status`: `V22R_TERMINAL_NO_GO_AND_R1A_NO_COMPETENCE_PRESERVED_R1X_E1_NOT_STARTED_INFRASTRUCTURE_WAIT`
 - `next_research_execution_authorized`: `true`
 - `authorization_scope`: `MAX_THREE_NON_VOTING_EXPLORATIONS_AND_ONE_CONDITIONAL_FROZEN_CONFIRMATION`
 - `candidate_status`: `NOT_FROZEN`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED`
 - `reference_status`: `CLOUD_REFERENCE_BLIND_LOCAL_NOMINAL_AFTER_SHUTDOWN_STRESS_UNREAD_SEALED`
-- `implementation_status`: `R1X_CONTRACT_AND_E1_IMPLEMENTATION_IN_PROGRESS`
+- `implementation_status`: `R1X_CONTRACT_E1_IMPLEMENTATION_TESTS_AND_DEPLOYMENT_BUNDLE_READY`
 - `method_selection_status`: `NO_CANDIDATE_ALL_FOUR_ARMS_INELIGIBLE`
-- `compute_status`: `E1_NOT_STARTED_LOCAL_PREFLIGHT_PENDING`
+- `compute_status`: `NO_R1X_GPU_RUN_ENDPOINT_CONNECTION_REFUSED`
 - `contract_status`: `PHK_V23_R1X_CONTRACTS_FROZEN_ACTIVE`
 - `paper_status`: `EXISTING_BOUNDED_NEGATIVE_ADVISOR_DRAFT_PRESERVED`
-- `diagnostic_outcome`: `R1X_CAMPAIGN_ACTIVE_E1_PENDING`
+- `diagnostic_outcome`: `AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE`
 
 ## 已核验证据
 
@@ -34,5 +34,6 @@
 - [active phase](active_phase.md)
 - [live plan](docs/plans/NEXT_ACTIONS.md)
 - [ADR 0053](docs/adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)
+- [R1X E1 infrastructure preflight](docs/experiment/2026-09-02-phk-v23-r1x-e1-preflight-blocked.md)
 - [R1a closeout](docs/experiment/2026-08-31-phk-v23-r1a-config-closeout.md)
 - [V2.2R terminal closeout](docs/experiment/2026-08-30-phk-v22r-v11-nominal-terminal-closeout.md)

@@ -4,6 +4,8 @@
 
 当前阶段为 PHK-V2.3 R1X 有界 clean-coupling campaign。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md) 与 [ADR 0053](adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)；V2.2R/R0A/R0B/R0C/R1a 历史证据保持不变，stress 继续 sealed/unread。
 
+E1 当前为纯基础设施等待：已知 endpoint 返回 `Connection refused`，未消耗 GPU 轨迹。详见 [R1X E1 preflight record](experiment/2026-09-02-phk-v23-r1x-e1-preflight-blocked.md)。
+
 ## 固定入口顺序
 
 每次任务依次读取：
