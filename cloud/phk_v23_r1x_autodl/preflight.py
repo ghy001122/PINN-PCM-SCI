@@ -44,7 +44,7 @@ def run_preflight(source_identity: str) -> dict[str, object]:
         "gpu_name": gpu_name,
         "torch_version": torch.__version__,
         "torch_cuda_version": torch.version.cuda,
-        "physics_control": physics.control,
+        "physics_loaded": physics is not None,
         "reference_like_files": forbidden,
         "optimizer_constructed": False,
         "optimizer_updates": 0,
