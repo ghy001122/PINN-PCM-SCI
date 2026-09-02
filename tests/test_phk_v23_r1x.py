@@ -4,6 +4,8 @@ import inspect
 import hashlib
 import json
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest import mock
@@ -509,9 +511,15 @@ class PhkV23R1XTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         path = root / "cloud" / "phk_v23_r1x_autodl" / "deployed-source-manifest.json"
         manifest = json.loads(path.read_text(encoding="utf-8"))
-        self.assertIn(
-            "configs/phk_v21/engineering_contract.json",
-            manifest["files"],
+        self.assertTrue(
+            {
+                "pinn_pcm_sci/__init__.py",
+                "pinn_pcm_sci/artifacts.py",
+                "configs/phk_v21/engineering_contract.json",
+                "configs/phk_v21/e1_solver_selection.json",
+                "outputs/runs/20260827T-phk-v21-e2-engineering-search-001/summary.json",
+                "tests/test_phk_v21_benchmark.py",
+            }.issubset(manifest["files"]),
         )
         lines = []
         for relative, expected in sorted(manifest["files"].items()):
@@ -520,6 +528,44 @@ class PhkV23R1XTests(unittest.TestCase):
             lines.append(f"{relative}={actual}\n")
         identity = hashlib.sha256("".join(lines).encode("utf-8")).hexdigest().upper()
         self.assertEqual(manifest["source_identity"], f"R1X-BUNDLE-{identity}")
+
+    def test_38_deployed_bundle_loads_physics_from_an_isolated_tree(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        manifest_path = (
+            root / "cloud" / "phk_v23_r1x_autodl" / "deployed-source-manifest.json"
+        )
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory() as directory:
+            isolated = Path(directory)
+            for relative in manifest["files"]:
+                destination = isolated / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes((root / relative).read_bytes())
+            destination = (
+                isolated
+                / "cloud"
+                / "phk_v23_r1x_autodl"
+                / "deployed-source-manifest.json"
+            )
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(manifest_path.read_bytes())
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    "-c",
+                    (
+                        "from pinn_pcm_sci.phk_v22r_training import load_case_physics; "
+                        "load_case_physics(); print('ISOLATED_PHYSICS_LOAD_VALID')"
+                    ),
+                ],
+                cwd=isolated,
+                capture_output=True,
+                text=True,
+                timeout=30,
+                check=False,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            self.assertIn("ISOLATED_PHYSICS_LOAD_VALID", completed.stdout)
 
 
 if __name__ == "__main__":

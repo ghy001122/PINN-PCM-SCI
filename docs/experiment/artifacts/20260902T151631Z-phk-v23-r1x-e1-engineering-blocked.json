@@ -1,0 +1,99 @@
+{
+  "schema_id": "phk-v23-r1x-engineering-blocker-artifact-v1",
+  "task_id": "PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE",
+  "trajectory_id": "PHK_V23_R1X_E1_CLEAN_COUPLING_EXPLORATION",
+  "record_role": "ENGINEERING_PREFLIGHT_NO_SCIENTIFIC_TRAJECTORY",
+  "status": "ENGINEERING_BLOCKED",
+  "recorded_at_utc": "2026-09-02T15:24:06.1257675Z",
+  "historical_evidence_preserved": [
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "R0A_INCONCLUSIVE",
+    "GRADIENT_STARVATION_TEMPORAL_PRECURSOR_ONLY",
+    "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "R1A_CONFIG_RAW_NO_COMPETENCE"
+  ],
+  "attempts": [
+    {
+      "attempt_id": "20260902T150959Z-phk-v23-r1x-e1-22f3b06",
+      "attempt_role": "INITIAL_ENGINEERING_LAUNCH",
+      "source_identity": "R1X-BUNDLE-B44B6E2D085A20250539B92F0C909464FBB4658AAD859FB86BE6F959CFEAA44F",
+      "source_commit": "22f3b06b27838baf0822a7ae910b18652644ed27",
+      "failure_stage": "PHYSICAL_CONTRACT_MATERIALIZATION_BEFORE_MODEL_CONSTRUCTION",
+      "failure_type": "MISSING_DEPLOYMENT_DEPENDENCY",
+      "missing_path": "configs/phk_v21/engineering_contract.json",
+      "optimizer_updates": 0,
+      "model_constructed": false,
+      "checkpoint_written": false,
+      "prediction_written": false,
+      "console_log": "outputs/runs/20260902T151631Z-phk-v23-r1x-e1-engineering-blocked/20260902T150959Z-phk-v23-r1x-e1-22f3b06-console.log",
+      "console_log_bytes": 1960,
+      "console_log_sha256": "11B992F59EF0BCFD8059E86B630E4FC8588398812A9CE73B11394EA24F04D7E3"
+    },
+    {
+      "attempt_id": "20260902T151631Z-phk-v23-r1x-e1-a8b1d7f",
+      "attempt_role": "ONLY_AUTHORIZED_IDENTICAL_ENGINEERING_RETRY",
+      "source_identity": "R1X-BUNDLE-4053E22C7313C98500A8667CADE6792842945084D145B6C9014430BFF1DBF9BA",
+      "source_commit": "a8b1d7f3c72cc1b00d6f6974a91fa72b45c8e326",
+      "failure_stage": "PHYSICAL_CONTRACT_MATERIALIZATION_BEFORE_MODEL_CONSTRUCTION",
+      "failure_type": "MISSING_TRANSITIVE_DEPLOYMENT_DEPENDENCY",
+      "missing_path": "configs/phk_v21/e1_solver_selection.json",
+      "optimizer_updates": 0,
+      "model_constructed": false,
+      "checkpoint_written": false,
+      "prediction_written": false,
+      "console_log": "outputs/runs/20260902T151631Z-phk-v23-r1x-e1-engineering-blocked/20260902T151631Z-phk-v23-r1x-e1-a8b1d7f-console.log",
+      "console_log_bytes": 1953,
+      "console_log_sha256": "C619483E7A853F57DC74D3D4F69AE1C9D3DDD1AD3A0BC33704EDC79C4EF0DA34"
+    }
+  ],
+  "campaign_counts": {
+    "non_voting_explorations_executed": 0,
+    "frozen_confirmations_executed": 0,
+    "scientific_trajectories_executed": 0,
+    "engineering_launch_attempts": 2,
+    "engineering_retries_consumed": 1,
+    "additional_retry_authorized": false
+  },
+  "execution_identity": {
+    "requested_device": "Tesla V100-PCIE-32GB",
+    "device_preflight_verified": true,
+    "dtype_planned": "FLOAT64",
+    "seed_planned": 17,
+    "arm_planned": "STRONG_RAW",
+    "scratch_start_planned": true,
+    "optimizer_constructed": false,
+    "optimizer_steps": 0,
+    "scientific_gpu_hours": 0.0,
+    "hourly_price_cny_recorded": 1.88,
+    "hourly_price_source": "LAST_VERSIONED_SAME_INSTANCE_V100_RATE_NOT_LIVE_PAGE_REFRESHED",
+    "incremental_cost_cny": null,
+    "incremental_cost_status": "UNKNOWN_NO_PLATFORM_BILLING_EXPORT",
+    "nominal_reference_read": false,
+    "stress_reference_read": false
+  },
+  "shutdown": {
+    "autodl_shutdown_requested": true,
+    "autodl_shutdown_verified": true,
+    "post_shutdown_ssh_probe": "CONNECTION_REFUSED",
+    "nominal_evaluation_after_shutdown": "NOT_RUN_NO_SCIENTIFIC_TRAJECTORY"
+  },
+  "post_blocker_repair": {
+    "purpose": "CLOSE_TRANSITIVE_DEPLOYMENT_IDENTITY_FOR_FUTURE_SEPARATELY_AUTHORIZED_WORK_ONLY",
+    "source_identity": "R1X-BUNDLE-91E37F4B02F2A9A45D30942FBBB03D025B65B46DAD50051963936D150180636F",
+    "deployed_source_manifest_sha256": "C1FA10C283EAC9BADDD7833362F59994CB5EC6E5FC755D1AD58BDD0AE4FD1C20",
+    "isolated_physics_load_test": "PASS",
+    "executed_on_gpu": false,
+    "reactivates_campaign": false
+  },
+  "scientific_result": {
+    "competence_evaluated": false,
+    "phase_signal_evaluated": false,
+    "method_evidence_created": false,
+    "claim_change": false,
+    "primary": null,
+    "co_primary": null
+  },
+  "reference_status": "NOMINAL_NOT_READ_STRESS_TWO_REFERENCES_SEALED_UNREAD",
+  "route_disposition": "STOP_R1X_CAMPAIGN_ENGINEERING_RETRY_EXHAUSTED",
+  "next_research_execution_authorized": false
+}

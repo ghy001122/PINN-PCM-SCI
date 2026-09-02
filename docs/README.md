@@ -2,9 +2,9 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-当前阶段为 PHK-V2.3 R1X 有界 clean-coupling campaign。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md) 与 [ADR 0053](adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)；V2.2R/R0A/R0B/R0C/R1a 历史证据保持不变，stress 继续 sealed/unread。
+当前阶段为已关闭的 PHK-V2.3 R1X 有界 clean-coupling campaign。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md) 与 [ADR 0053](adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)；V2.2R/R0A/R0B/R0C/R1a 历史证据保持不变，stress 继续 sealed/unread。
 
-E1 当前为纯基础设施等待：已知 endpoint 返回 `Connection refused`，未消耗 GPU 轨迹。详见 [R1X E1 preflight record](experiment/2026-09-02-phk-v23-r1x-e1-preflight-blocked.md)。
+R1X E1 首次启动和唯一 engineering retry 都在模型构造前因隔离部署传递依赖缺失而终止；科学 trajectory 和 optimizer updates 均为 0。日志回收后 AutoDL 已关闭并验证，终局为 `ENGINEERING_BLOCKED`，下一科研执行未授权。详见 [R1X closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。
 
 ## 固定入口顺序
 
@@ -23,9 +23,10 @@ E1 当前为纯基础设施等待：已知 endpoint 返回 `Connection refused`�
 
 ## 当前执行入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-R1A](plans/NEXT_ACTIONS.md)。唯一 R1a V100 run 已完成并裁决 `R1A_CONFIG_RAW_NO_COMPETENCE`；AutoDL 已关闭，下一科研执行未授权。早期未消耗 run 的基础设施阻塞保存在 [preflight blocker](experiment/2026-08-31-phk-v23-r1a-config-preflight-blocked.md)。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-R1X](plans/NEXT_ACTIONS.md)。R1X 因唯一 engineering retry 耗尽而终止为 `ENGINEERING_BLOCKED`；不存在 E1 科学轨迹或 nominal 评价，AutoDL 已关闭，下一科研执行未授权。
 - 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R 四臂 nominal 的
-  `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A/R0B/R0C 证据保持冻结；R1a 授权已消费，R1b、PJGR、stress、第二次 run 和投稿均未授权。
+  `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A/R0B/R0C/R1a 证据保持冻结；R1X 未产生新科学证据，E1/E2/E3/confirmation、PJGR、stress、GPU 和投稿均未授权。
+- 当前 PHK-V2.3 R1X 终局记录：[2026-09-02 R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。它记录两次 pre-update 部署失败、日志哈希、0 科学轨迹、关机验证和 post-blocker isolation 回归修复；不得解释为 clean-coupling 方法失败。
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 是 fixed-discretization
   单 seed 负面 Method-MVP；PDE loss 下降没有建立局域事件 competence，不能外推为 PINN
   全局失败、continuum truth、formal OOD 或实验结论。
