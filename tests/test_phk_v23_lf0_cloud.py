@@ -2,7 +2,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
+import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest import mock
@@ -39,6 +43,29 @@ class _CudaProbe:
 
 
 class Lf0CloudPreflightTests(unittest.TestCase):
+    def test_runtime_manifest_closure_imports_lf0_in_isolated_tree(self) -> None:
+        repository_root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as temporary:
+            deployment_root = Path(temporary).resolve()
+            for relative in sorted(preflight.REQUIRED_RUNTIME_RELATIVE_PATHS):
+                source = repository_root / relative
+                self.assertTrue(source.is_file(), relative)
+                destination = deployment_root / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(source, destination)
+
+            environment = os.environ.copy()
+            environment["PYTHONPATH"] = str(deployment_root)
+            completed = subprocess.run(
+                [sys.executable, "-c", "import pinn_pcm_sci.phk_v23_lf0"],
+                cwd=deployment_root,
+                env=environment,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+
     def _tree(self) -> tuple[tempfile.TemporaryDirectory[str], Path, str]:
         temporary = tempfile.TemporaryDirectory()
         root = Path(temporary.name).resolve()

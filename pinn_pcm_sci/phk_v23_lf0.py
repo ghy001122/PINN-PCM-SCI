@@ -127,6 +127,7 @@ REQUIRED_DEPLOYED_RUNTIME_RELATIVE_PATHS = frozenset(
         "configs/phk_v2/object_numerical_contract.json",
         "outputs/runs/20260827T-phk-v21-e2-engineering-search-001/summary.json",
         "pinn_pcm_sci/__init__.py",
+        "pinn_pcm_sci/artifacts.py",
         "pinn_pcm_sci/phk_contract.py",
         "pinn_pcm_sci/phk_benchmark.py",
         "pinn_pcm_sci/phk_v21_benchmark.py",
