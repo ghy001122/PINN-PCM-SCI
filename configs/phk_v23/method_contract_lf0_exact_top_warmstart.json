@@ -1,0 +1,70 @@
+{
+  "schema_id": "phk-v23-lf0-method-contract-v1",
+  "contract_id": "PHK_V23_LF0_EXACT_TOP_MEDIUM_WARMSTART_METHOD",
+  "program_contract": "configs/phk_v23/program_contract_lf0_exact_top_warmstart.json",
+  "effective_date": "2026-09-03",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "inherited_identity": {
+    "v22r_program_contract": {"path": "configs/phk_v22r/program_contract.json", "sha256": "A413F56A2317CEFF15FFF2D3BD183C11D990F2E47E8BA33F7316F11567275272"},
+    "v22r_method_contract": {"path": "configs/phk_v22r/method_contract.json", "sha256": "FEEFB36A4D86CACFA6CBAA8C263E7071421415CE88B4F7FBF6BA5F31B9B71D4F"},
+    "physical_program": {"path": "configs/phk_v21/program_contract.json", "sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2"},
+    "physical_object": {"path": "configs/phk_v21/object_numerical_contract.json", "sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD"}
+  },
+  "common_gpu_identity": {
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "arm": "STRONG_RAW",
+    "case_control": "FULL",
+    "initialization": "SCRATCH_START_PER_ARM",
+    "network": {"head_type": "MODIFIED_MLP", "hidden_width": 64, "hidden_layers": 4, "heads": ["potential", "temperature", "phase"]},
+    "potential_transform": "POTENTIAL_TRANSFORM_EXACT_TOP_AFFINE_RAW_LIFT",
+    "temperature_transform": "LEGACY",
+    "phase_transform": "LEGACY",
+    "optimizer": {"name": "TORCH_ADAM", "learning_rate": 0.001, "betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0.0, "amsgrad": false},
+    "gradient_combination": "LEGACY_SUMMED_LOSS_BACKWARD_NO_CONFIG",
+    "gradient_clip_norm": 10.0,
+    "collocation_counts": {"interior": 512, "boundary": 128, "initial": 128},
+    "sampler": "PURE_STATEFUL_SCRAMBLED_SOBOL",
+    "manual_early_stop": false,
+    "accuracy_checkpoint_selection": false
+  },
+  "exact_top_transform": {
+    "identity": "POTENTIAL_TRANSFORM_EXACT_TOP_AFFINE_RAW_LIFT",
+    "formula": "V=waveform(t)*(zeta+(1-zeta)*potential_raw_latent)",
+    "zeta": "(z-z_min)/(z_max-z_min)",
+    "latent_activation": "IDENTITY_UNBOUNDED",
+    "analytic_jacobian": "dV_dh=waveform(t)*(1-zeta)",
+    "hard_properties": ["TOP_DIRICHLET_EXACT", "ZERO_WAVEFORM_EXACT"],
+    "forbidden": ["SIGMOID", "TANH", "CLIP", "ARTIFICIAL_INTERIOR_LOWER_BOUND", "ADDED_TRAINABLE_PARAMETERS"]
+  },
+  "physics_schedule": {
+    "axis": "PHYSICS_LOCAL_OPTIMIZER_STEP",
+    "1-150": 1,
+    "151-350": 2,
+    "351-550": 3,
+    "551+": 4,
+    "refresh_updates": 250
+  },
+  "physics_sampler_isolation": {
+    "A_constructs_before_local_step_1": true,
+    "B0_must_not_construct_or_advance": true,
+    "B_constructs_fresh_seed_17_before_B1": true,
+    "A_B_first_1200_coordinate_batch_hashes_exact_equal": true,
+    "C_first_1200_coordinate_batch_hashes_equal_A_if_run": true
+  },
+  "runs": {
+    "A": {"identity": "LF0_A_EXACT_TOP_SCRATCH_PINN", "physics_updates": 1200, "low_fidelity_updates": 0, "checkpoint_policy": "FINAL_STEP_1200_ONLY"},
+    "B": {
+      "identity": "LF0_B_MEDIUM_WARMSTART_ANNEALED_PINN",
+      "B0": {"updates": 800, "objective": "LOW_FIDELITY_ONLY", "optimizer": "INDEPENDENT_ADAM", "checkpoint": "LF0_B_LF_SUPERVISED_NO_PDE_STEP_800"},
+      "B1": {"physics_updates": 200, "objective": "PHYSICS_PLUS_COSINE_LOW_FIDELITY_ANCHOR", "lambda": "0.5*(1+cos(pi*(k-1)/199))", "lambda_endpoints": [1.0, 0.0]},
+      "B2": {"physics_updates": 1000, "objective": "PURE_PHYSICS", "low_fidelity_calls": 0},
+      "physics_optimizer": "ONE_NEW_ADAM_SHARED_BY_B1_AND_B2_WITHOUT_RESET",
+      "global_updates": 2000,
+      "final_pure_physics_fraction": 0.5,
+      "checkpoint_policy": "FIXED_STEP_800_AND_FINAL_STEP_2000_ONLY"
+    },
+    "C": {"identity": "LF0_C_EXACT_TOP_SCRATCH_COMPUTE_CONTROL", "conditional": true, "physics_updates": 2000, "low_fidelity_updates": 0, "checkpoint_policy": "FINAL_STEP_2000_ONLY"}
+  }
+}

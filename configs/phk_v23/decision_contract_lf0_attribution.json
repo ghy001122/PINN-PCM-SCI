@@ -1,0 +1,112 @@
+{
+  "schema_id": "phk-v23-lf0-decision-contract-v1",
+  "contract_id": "PHK_V23_LF0_ATTRIBUTION_DECISION",
+  "program_contract": "configs/phk_v23/program_contract_lf0_exact_top_warmstart.json",
+  "method_contract": "configs/phk_v23/method_contract_lf0_exact_top_warmstart.json",
+  "data_contract": "configs/phk_v23/data_contract_lf0_medium_only.json",
+  "effective_date": "2026-09-03",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "qualification_inputs": {
+    "c0_artifact": {"path": "docs/experiment/artifacts/20260903T030442Z-phk-v23-c0-compatibility-17dac74.json", "sha256": "F378FD38250694059AB2EC00EFE46D801E55DA77DECB5499D694E6838607CFFB"},
+    "c0_contract": {"path": "configs/phk_v23/c0_reference_discrete_strongform_compatibility_contract.json", "sha256": "03B3D1D5EC1AAD0286FBBFCF32EF71755DD441493743AF9C60F7AC0F8E70739B"},
+    "oracle_floor_contract": {"path": "configs/phk_v21/oracle_and_floor_contract.json", "sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB"},
+    "oracle_floor_seal": {"path": "outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/oracle-floor-seal.json", "sha256": "3B71753CBAC720C1CF5F7937741FCF605693C5580988C848113AC9378F1A01F7"}
+  },
+  "cpu_qualification": {
+    "required_before_gpu": true,
+    "required_latent_mask": "waveform>=1e-8*waveform_amplitude AND 1-zeta>=1e-12",
+    "required_latent_formula": "h_required=(V_ref/waveform-zeta)/(1-zeta)",
+    "zero_waveform_rule": "abs(V_ref)<=1e-8*waveform_amplitude_WITHOUT_DIVISION",
+    "medium_two_cycle_competence": true,
+    "c0_official_strongform_subverdict": {"maximum_residual_to_floor_ratio": 2.0, "minimum_rhs_sign_agreement": 0.9},
+    "correction_headroom": {
+      "primary": "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+      "co_primary": "UNNORMALIZED_PHASE_ROI_CONTINUOUS_RMS",
+      "source": "MEDIUM_VS_EXTRA_FINE_PHK_V21_FIXED_COMPONENT_COMPARISON",
+      "primary_floor_index": 4,
+      "co_primary_normalized_floor_index": 0,
+      "co_primary_unnormalized_scale": 0.5,
+      "pass": "D_PRIMARY_STRICTLY_GREATER_THAN_U_PRIMARY_OR_D_CO_PRIMARY_STRICTLY_GREATER_THAN_U_CO_PRIMARY",
+      "fallback_source": false
+    }
+  },
+  "potential_maximum_principle": {
+    "role": "SEPARATE_METHOD_AND_RUN_VALIDITY_GUARD_NOT_FROZEN_EVALUATOR",
+    "lower": "min(0,waveform)",
+    "upper": "max(0,waveform)",
+    "absolute_tolerance": 1e-6,
+    "maximum_violation_fraction": 0.0,
+    "applies_to": ["A", "B_FINAL", "C", "LF_DATA_ONLY", "LF_ONLY"],
+    "failure": "POTENTIAL_MAXIMUM_PRINCIPLE_VALIDITY_FAIL_TO_LF0_NUMERICAL_OR_IDENTITY_INVALID"
+  },
+  "comparators": ["A_EXACT_TOP_SCRATCH", "LF_ONLY_MEDIUM_DIRECT", "LF_DATA_ONLY_STEP_800", "C_EXACT_TOP_COMPUTE_CONTROL_IF_TRIGGERED"],
+  "reference_blind_physics_diagnostic_pool": {
+    "role": "LOCAL_POST_SHUTDOWN_FIXED_REFERENCE_BLIND_FULL_SUMMED_PHYSICS_OBJECTIVE",
+    "device": "CPU",
+    "dtype": "FLOAT64",
+    "seed": 17031,
+    "sampler": "FRESH_STATEFUL_SCRAMBLED_SOBOL_PHYSICS_AWARE_FALSE",
+    "active_windows": 4,
+    "interior_points": 512,
+    "boundary_points_total": 128,
+    "boundary_points_per_side": 32,
+    "initial_points": 128,
+    "draw_order": ["INTERIOR", "BOUNDARY_LEFT", "BOUNDARY_RIGHT", "BOUNDARY_BOTTOM", "BOUNDARY_TOP", "INITIAL"],
+    "objective": "NORMALIZED_PDE_PLUS_5_TIMES_BOUNDARY_PLUS_INITIAL",
+    "same_coordinate_tensors_for": ["B_FINAL", "LF_DATA_ONLY"],
+    "reference_or_low_fidelity_values_read": false
+  },
+  "increment_gate": {
+    "primary": "time_averaged_phase_region_symmetric_difference",
+    "co_primary": "phase_roi_continuous_rms",
+    "primary_ratio_maximum": 0.98,
+    "co_primary_ratio_maximum": 0.98,
+    "geometric_mean_ratio_maximum": 0.95,
+    "noncompetent_comparator_rule": "IF_B_IS_COMPETENT_AND_COMPARATOR_IS_NOT_THEN_CATEGORY_UPGRADE_REPLACES_RATIO_GATE_BUT_CONTINUOUS_RATIOS_REMAIN_REPORTED",
+    "ratio_zero_denominator_rule": "IF_COMPARATOR_ZERO_AND_B_ZERO_RATIO_EQUALS_ONE_ELSE_IF_COMPARATOR_ZERO_AND_B_POSITIVE_RATIO_IS_NULL_AND_FAILS",
+    "competent_comparator_rule": "PRIMARY_AND_CO_PRIMARY_RATIOS_EACH_LE_0_98_AND_GEOMETRIC_MEAN_LE_0_95",
+    "full_summed_physics_objective_ratio_B_final_to_LF_DATA_ONLY_maximum": 0.8,
+    "legacy_field_name_pde_ratio_is_not_used_for_adjudication": true,
+    "physics_objective_formula": "NORMALIZED_PDE_PLUS_5_TIMES_BOUNDARY_PLUS_INITIAL",
+    "pde_pool": "FIXED_SEED_17031_REFERENCE_BLIND_FULL_W1_W4_512_128_128_BATCH_SAME_COORDINATE_TENSORS_FOR_B_FINAL_AND_LF_DATA_ONLY",
+    "improvement_over_component_floor": "FOR_EACH_COMPARATOR_ABS_ERROR_REDUCTION_STRICTLY_EXCEEDS_AT_LEAST_ONE_OF_U_PHASE_RMS_OR_U_PHASE_REGION",
+    "component_floor_indices": {"phase_roi_continuous_rms": 0, "time_averaged_phase_region_symmetric_difference": 4},
+    "temperature_preservation": "E_T_B<=max(1.10*E_T_COMPARATOR,0.05)",
+    "temperature_metric": "temperature_roi_nrmse_by_0_45",
+    "current_preservation": "E_I_B<=max(1.10*E_I_COMPARATOR,0.15)",
+    "current_metric": "terminal_current_trace_nrmse",
+    "all_pre_C_comparators_must_pass": ["A_EXACT_TOP_SCRATCH", "LF_ONLY_MEDIUM_DIRECT", "LF_DATA_ONLY_STEP_800"]
+  },
+  "run_tree": {
+    "after_valid_A": "ALWAYS_RUN_B",
+    "run_C_only_if": ["B_COMPETENT", "B_PROVISIONAL_INCREMENT_VS_A_LF_ONLY_LF_DATA_ONLY", "PDE_RATIO_PASS", "PRESERVATION_PASS", "POTENTIAL_VALIDITY_PASS"],
+    "after_C": "B_MUST_PASS_SAME_INCREMENT_AND_PRESERVATION_GATES_VS_C_OR_C_IS_NOT_COMPETENT"
+  },
+  "machine_outcomes_and_unique_next": {
+    "LF0_CPU_QUALIFICATION_BLOCKED": "LF0_CPU_BLOCKED_REQUIRES_NEW_USER_DECISION",
+    "LF0_EXACT_TOP_SCRATCH_COMPETENCE_ONLY": "EXACT_TOP_COMPETENT_BACKBONE_CORE_GATE_REVIEW_NOT_AUTHORIZED",
+    "LF0_WARMSTART_PINN_PROVISIONAL_METHOD_SIGNAL": "LF0_MULTI_SEED_AND_CORE_ATTRIBUTION_REQUIRES_NEW_EXECUTE",
+    "LF0_GUIDED_SOLVER_RESCUE_NO_METHOD_GAIN": "RETAIN_GUIDED_SOLVER_AS_NON_HEADLINE_AND_STOP_METHOD_CLAIM",
+    "LF0_LOW_FIDELITY_ROUTE_NO_COMPETENCE": "RETAIN_BOUNDED_NEGATIVE_PACKAGE",
+    "LF0_NUMERICAL_OR_IDENTITY_INVALID": "INVALID_RUN_REQUIRES_USER_REVIEW_NO_AUTOMATIC_SCIENTIFIC_RETRY",
+    "LF0_ENGINEERING_BLOCKED": "IDENTICAL_ENGINEERING_RETRY_WITHIN_CAMPAIGN"
+  },
+  "outcome_precedence_and_exhaustiveness": [
+    "IF_EXECUTION_CANNOT_REACH_ADJUDICATION_FOR_A_LOCAL_ENGINEERING_REASON_THEN_LF0_ENGINEERING_BLOCKED",
+    "IF_CPU_QUALIFICATION_FAILED_THEN_LF0_CPU_QUALIFICATION_BLOCKED",
+    "ELSE_IF_ANY_REQUIRED_RUN_IDENTITY_NUMERICAL_POTENTIAL_OR_BATCH_IS_INVALID_THEN_LF0_NUMERICAL_OR_IDENTITY_INVALID",
+    "ELSE_IF_ONLY_A_IS_AVAILABLE_THEN_INTERIM_LF0_A_VALID_RUN_B_REQUIRED_NOT_A_TERMINAL_OUTCOME",
+    "ELSE_IF_B_TRIGGERS_C_AND_C_IS_NOT_AVAILABLE_THEN_WRITE_BOUND_C_TRIGGER_NOT_A_TERMINAL_OUTCOME",
+    "ELSE_IF_B_IS_COMPETENT_AND_ALL_PRE_C_GATES_PASS_AND_C_IS_AVAILABLE_AND_B_PASSES_VS_C_OR_C_IS_NOT_COMPETENT_THEN_LF0_WARMSTART_PINN_PROVISIONAL_METHOD_SIGNAL",
+    "ELSE_IF_A_OR_C_IS_COMPETENT_THEN_LF0_EXACT_TOP_SCRATCH_COMPETENCE_ONLY",
+    "ELSE_IF_B_IS_COMPETENT_THEN_LF0_GUIDED_SOLVER_RESCUE_NO_METHOD_GAIN",
+    "ELSE_LF0_LOW_FIDELITY_ROUTE_NO_COMPETENCE"
+  ],
+  "interim_actions": {
+    "LF0_A_VALID_RUN_B_REQUIRED": "RUN_B_MEDIUM_WARMSTART_AFTER_AUTODL_RESTART",
+    "LF0_C_TRIGGERED": "RUN_C_EXACT_TOP_COMPUTE_CONTROL_AFTER_AUTODL_RESTART"
+  },
+  "claim_boundary": "SINGLE_SEED_NOMINAL_DEVELOPMENT_SOLVER_AND_ATTRIBUTION_EVIDENCE_NOT_MULTI_SEED_STRESS_FORMAL_OOD_OR_HEADLINE_CORE",
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD",
+  "completion_does_not_authorize_next_research": true
+}

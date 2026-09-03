@@ -1,0 +1,42 @@
+{
+  "schema_id": "phk-v23-lf0-data-contract-v1",
+  "contract_id": "PHK_V23_LF0_MEDIUM_ONLY_DATA",
+  "program_contract": "configs/phk_v23/program_contract_lf0_exact_top_warmstart.json",
+  "effective_date": "2026-09-03",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "training_source": {
+    "role": "DECLARED_MEDIUM_LOW_FIDELITY_METHOD_INPUT",
+    "path": "outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/result-intent-04.npz",
+    "sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F",
+    "resolution": "medium",
+    "only_gpu_training_label_source": true
+  },
+  "qualification_only": {
+    "fine": {"path": "outputs/runs/20260828T-phk-v21-s1-q-05-nominal-fine/result-intent-05.npz", "sha256": "7343FC4AB6648F82CFAD3E517A748034D8E636959BC41D733195C477C1DCFA53"},
+    "extra_fine": {"path": "outputs/runs/20260828T-phk-v21-s1-q-06-nominal-extra-fine/result-intent-06.npz", "sha256": "0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE"}
+  },
+  "cloud_boundary": {
+    "medium_allowed_as_declared_method_input": true,
+    "fine_extra_fine_evaluator_and_stress_carriers_inaccessible": true,
+    "stress_fail_closed_before_io": true,
+    "reference_free_prediction": true
+  },
+  "low_fidelity_sampler": {
+    "identity": "STATEFUL_DETERMINISTIC_SCRAMBLED_SOBOL_PER_STRATUM",
+    "dimensions": 3,
+    "order": ["W1_ROI", "W1_OUTSIDE", "W2_ROI", "W2_OUTSIDE", "W3_ROI", "W3_OUTSIDE", "W4_ROI", "W4_OUTSIDE"],
+    "seeds": [17017, 17018, 17019, 17020, 17021, 17022, 17023, 17024],
+    "points_per_stratum_per_step": 128,
+    "points_per_step": 1024,
+    "interpolation": "LINEAR_TIME_Z_X_ON_MEDIUM_CELL_CENTERED_CARRIER_WITH_FINITE_LINEAR_EXTRAPOLATION",
+    "B0_B1_continuous_draws": 1000,
+    "B2_draws": 0,
+    "independent_from_physics_and_model_rng": true
+  },
+  "low_fidelity_loss": {
+    "formula": "ONE_THIRD_TIMES_SUM_OF_NORMALIZED_V_T_PHI_MSE",
+    "potential_scale": "WAVEFORM_AMPLITUDE",
+    "temperature_scale": "THETA_TRANSITION",
+    "phase_scale": 0.5
+  }
+}

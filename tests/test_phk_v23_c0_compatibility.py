@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import hashlib
 import inspect
 import json
 import math
 from pathlib import Path
+import subprocess
 from types import SimpleNamespace
 import tempfile
 import unittest
@@ -60,8 +62,28 @@ class PhkV23C0CompatibilityTests(unittest.TestCase):
     def test_contract_binds_physical_object_and_source_hashes(self) -> None:
         records = self.contract["inputs"]["contracts_and_implementations"]
         self.assertGreaterEqual(len(records), 10)
+        artifact = json.loads(
+            (
+                ROOT
+                / "docs"
+                / "experiment"
+                / "artifacts"
+                / "20260903T030442Z-phk-v23-c0-compatibility-17dac74.json"
+            ).read_text(encoding="utf-8")
+        )
+        source_commit = artifact["source_identity"]["execution_source_commit"]
         for record in records:
-            self.assertEqual(_sha256_path(ROOT / record["path"]), record["sha256"])
+            committed = subprocess.run(
+                ["git", "show", f"{source_commit}:{record['path']}"],
+                cwd=ROOT,
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+            ).stdout
+            self.assertEqual(
+                hashlib.sha256(committed).hexdigest().upper(),
+                record["sha256"],
+            )
         self.assertEqual(
             self.contract["expected_base_commit"],
             "3f86fc40d49580da86b8687611326cd85d6d0169",

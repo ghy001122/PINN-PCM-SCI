@@ -1,23 +1,27 @@
-# PLAN-PHK-V2.3-C0：reference/discrete/strong-form compatibility audit（完成）
+# PLAN-PHK-V2.3-LF0：exact-top warm-start attribution campaign
 
-- `phase_id`: `PHK_V23_C0_REFERENCE_DISCRETE_STRONGFORM_COMPATIBILITY_AUDIT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
-- `blocker_id`: `C0_OUTPUT_TRANSFORM_INADMISSIBLE`
-- `claim_status`: `V22R_AND_R1X_NEGATIVE_EVIDENCE_PRESERVED_C0_OUTPUT_TRANSFORM_INADMISSIBLE_NO_METHOD_EVIDENCE`
-- `next_research_execution_authorized`: `false`
-- `authorization_state`: `C0_CONSUMED_NO_FURTHER_EXECUTION_AUTHORIZED`
-- `plan_status`: `C0_OUTPUT_TRANSFORM_INADMISSIBLE`
-- `current_stage`: `TERMINAL_C0_STOP`
-- `supersedes`: `PLAN_PHK_V23_R1X_COMPLETE`
-- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_EVIDENCE`
-- `contract`: `configs/phk_v23/c0_reference_discrete_strongform_compatibility_contract.json`
-- `decision`: `docs/adr/0055-activate-phk-v23-c0-reference-discrete-strongform-compatibility-audit.md`
-- `next_recommendation`: `OUTPUT_REPARAMETERIZATION_REQUIRED_BEFORE_LOW_FIDELITY`
+- `phase_id`: `PHK_V23_LF0_EXACT_TOP_WARMSTART_ATTRIBUTION_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
+- `blocker_id`: `LF0_CPU_QUALIFICATION_PENDING`
+- `claim_status`: `C0_OUTPUT_TRANSFORM_INADMISSIBLE_PRESERVED_LF0_AUTHORIZED_NO_NEW_RESULT`
+- `next_research_execution_authorized`: `true`
+- `authorization_state`: `USER_EXPLICIT_LF0_EXECUTE_ACTIVE`
+- `plan_status`: `LF0_EXECUTION_ACTIVE`
+- `current_stage`: `LF0_IMPLEMENTATION_AND_CPU_QUALIFICATION`
+- `supersedes`: `PLAN_PHK_V23_C0_COMPLETE`
+- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_EVIDENCE`
+- `contracts`: `configs/phk_v23/{program_contract_lf0_exact_top_warmstart,method_contract_lf0_exact_top_warmstart,data_contract_lf0_medium_only,decision_contract_lf0_attribution}.json`
+- `decision`: `docs/adr/0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md`
+- `next_recommendation`: `EXECUTE_LF0_FROZEN_MACHINE_TREE`
 
-## 完成态
+## 当前步骤
 
-C0 唯一 CPU/FP64 diagnostic 已完成。reference readiness 与 phase strong-form compatibility 子门通过；E2 hard top lift 在 fine/extra-fine 的 W1/W3 nominal event support 上均结构性排除参考电势，PRIMARY=`C0_OUTPUT_TRANSFORM_INADMISSIBLE`，SECONDARY=`null`。
+1. 实现 exact-top raw potential transform、CPU qualification、medium-only LF stream 与 A/B/C runner；通过 focused 和受影响回归。
+2. 运行一次 CPU/FP64 qualification；任一门失败即以 `LF0_CPU_QUALIFICATION_BLOCKED` 收口，不启动 GPU。
+3. CPU PASS 后执行 Run A。回收后立即关机；本地评价完成后等待用户重启以执行固定 Run B。
+4. Run B 后按冻结增量门决定是否执行 C；未触发 C 时直接收口。
+5. 每次状态变化仅提交本 campaign 白名单文件，保持 stress sealed/unread，不执行 PJGR、R2、其他 seed 或投稿。
 
-本计划不授权任何后续动作。若用户选择继续，最短候选路线是先冻结一个 exact-top、无人工内部下界的 potential output reparameterization，通过 reference-envelope 和 alpha=1 identity 测试，再另立 low-fidelity-guided residual PINN 合同。不得从本文件直接执行该路线。
+## 停止条件
 
-最终证据见 [C0 closeout](../experiment/2026-09-03-phk-v23-c0-reference-discrete-strongform-compatibility-closeout.md)。
+达到 decision contract 中任一穷尽 machine outcome，或需要用户重启 AutoDL 时立即停止当前运行阶段。不存在结果导向改门、第四条科学轨迹或隐式新模块。

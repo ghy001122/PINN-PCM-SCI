@@ -512,6 +512,16 @@ class PhkV23R1XTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         path = root / "cloud" / "phk_v23_r1x_autodl" / "deployed-source-manifest.json"
         manifest = json.loads(path.read_text(encoding="utf-8"))
+        run_manifest = json.loads(
+            (
+                root
+                / "docs"
+                / "experiment"
+                / "manifests"
+                / "20260903T010712Z-phk-v23-r1x-e2-top-hard-lift-ce64086.json"
+            ).read_text(encoding="utf-8")
+        )
+        source_commit = run_manifest["code_identity"]["execution_source_commit"]
         self.assertTrue(
             {
                 "pinn_pcm_sci/__init__.py",
@@ -526,7 +536,14 @@ class PhkV23R1XTests(unittest.TestCase):
         )
         lines = []
         for relative, expected in sorted(manifest["files"].items()):
-            actual = hashlib.sha256((root / relative).read_bytes()).hexdigest().upper()
+            committed = subprocess.run(
+                ["git", "show", f"{source_commit}:{relative}"],
+                cwd=root,
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+            ).stdout
+            actual = hashlib.sha256(committed).hexdigest().upper()
             self.assertEqual(actual, expected, relative)
             lines.append(f"{relative}={actual}\n")
         identity = hashlib.sha256("".join(lines).encode("utf-8")).hexdigest().upper()

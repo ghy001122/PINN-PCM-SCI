@@ -23,6 +23,7 @@ from .phk_v21_benchmark import PhkV21CaseSpec
 FIELD_NAMES = ("potential", "temperature", "phase")
 POTENTIAL_TRANSFORM_LEGACY = "LEGACY_WAVEFORM_SIGMOID"
 POTENTIAL_TRANSFORM_TOP_DIRICHLET_HARD_LIFT = "TOP_DIRICHLET_HARD_LIFT"
+POTENTIAL_TRANSFORM_EXACT_TOP_RAW = "POTENTIAL_TRANSFORM_EXACT_TOP_AFFINE_RAW_LIFT"
 PHASE_TRANSFORM_LEGACY = "LEGACY_FIXED_LATENT_SCALE"
 PHASE_TRANSFORM_JACOBIAN_NORMALIZED = "JACOBIAN_NORMALIZED_CAP_32"
 
@@ -362,6 +363,7 @@ class PhkV22RModel(nn.Module):
         if self.potential_output_transform not in {
             POTENTIAL_TRANSFORM_LEGACY,
             POTENTIAL_TRANSFORM_TOP_DIRICHLET_HARD_LIFT,
+            POTENTIAL_TRANSFORM_EXACT_TOP_RAW,
         }:
             raise ValueError("unknown potential output transform")
         if self.phase_output_transform not in {
@@ -454,6 +456,11 @@ class PhkV22RModel(nn.Module):
             "strict_routing": self.arm is PhkV22RArm.STRICT_PHA_PROBE,
             "gate_stop_gradient": False,
             "potential_output_transform": self.potential_output_transform,
+            "potential_latent_activation": (
+                "IDENTITY"
+                if self.potential_output_transform == POTENTIAL_TRANSFORM_EXACT_TOP_RAW
+                else "SIGMOID"
+            ),
             "phase_output_transform": self.phase_output_transform,
             "phase_jacobian_beta_cap": self.phase_jacobian_beta_cap,
         }
@@ -533,13 +540,18 @@ class PhkV22RModel(nn.Module):
         if self.potential_output_transform == POTENTIAL_TRANSFORM_LEGACY:
             potential = waveform * sigmoid_latent["potential"]
             potential_jacobian = waveform * sigmoid_derivative["potential"]
-        else:
+        elif self.potential_output_transform == POTENTIAL_TRANSFORM_TOP_DIRICHLET_HARD_LIFT:
             potential = waveform * (
                 z_fraction + (1.0 - z_fraction) * sigmoid_latent["potential"]
             )
             potential_jacobian = (
                 waveform * (1.0 - z_fraction) * sigmoid_derivative["potential"]
             )
+        else:
+            potential = waveform * (
+                z_fraction + (1.0 - z_fraction) * latent["potential"]
+            )
+            potential_jacobian = waveform * (1.0 - z_fraction)
         temperature = (
             self.temperature_scale
             * startup

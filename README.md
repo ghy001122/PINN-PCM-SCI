@@ -4,21 +4,21 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_C0_REFERENCE_DISCRETE_STRONGFORM_COMPATIBILITY_AUDIT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
-- `blocker_id`: `C0_OUTPUT_TRANSFORM_INADMISSIBLE`
-- `claim_status`: `V22R_AND_R1X_NEGATIVE_EVIDENCE_PRESERVED_C0_OUTPUT_TRANSFORM_INADMISSIBLE_NO_METHOD_EVIDENCE`
-- `next_research_execution_authorized`: `false`
+- `phase_id`: `PHK_V23_LF0_EXACT_TOP_WARMSTART_ATTRIBUTION_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
+- `blocker_id`: `LF0_CPU_QUALIFICATION_PENDING`
+- `claim_status`: `C0_OUTPUT_TRANSFORM_INADMISSIBLE_PRESERVED_LF0_AUTHORIZED_NO_NEW_RESULT`
+- `next_research_execution_authorized`: `true`
 
-C0 CPU/FP64 audit 已完成：event-competent reference 通过原 R1X readiness，phase native/strong-form 子门 compatible；但 E2 top hard lift 的人工内部下界排除了 W1/W3 大部分 nominal event-support potential，机器 PRIMARY 为 `C0_OUTPUT_TRANSFORM_INADMISSIBLE`。该发现只收紧 E2 hard-lift 负结果的解释边界，不改写其他历史证据，也不授权下一训练。stress 仍 sealed/unread，C0 未触碰当前 AutoDL 实例。
+LF0 已获用户明确授权并进入实现与 CPU 资格阶段。该 campaign 用无 E2 内部下界的 exact-top raw potential transform 对照 scratch 与唯一 medium-only warm-start，固定执行 A、B，并仅在 B 通过 provisional 增量门时执行 C；最多三条 V100/FP64/seed-17 科学轨迹。stress 保持 sealed/unread，尚无 LF0 科学结果。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
+- 当前决定：[ADR 0056](docs/adr/0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md)
 - C0 结果：[compatibility closeout](docs/experiment/2026-09-03-phk-v23-c0-reference-discrete-strongform-compatibility-closeout.md)
-- 当前决定：[ADR 0055](docs/adr/0055-activate-phk-v23-c0-reference-discrete-strongform-compatibility-audit.md)
 - R1X 历史结果：[terminal closeout](docs/experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)
 - 论文历史包：[paper/paper_v22r](paper/paper_v22r/README.md)
 - 文档地图：[docs/README.md](docs/README.md)

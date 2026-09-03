@@ -2,43 +2,38 @@
 
 更新时间：2026-09-03
 
-- `phase_id`: `PHK_V23_C0_REFERENCE_DISCRETE_STRONGFORM_COMPATIBILITY_AUDIT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
-- `blocker_id`: `C0_OUTPUT_TRANSFORM_INADMISSIBLE`
-- `claim_status`: `V22R_AND_R1X_NEGATIVE_EVIDENCE_PRESERVED_C0_OUTPUT_TRANSFORM_INADMISSIBLE_NO_METHOD_EVIDENCE`
-- `next_research_execution_authorized`: `false`
-- `authorization_scope`: `NONE_NEW_EXECUTE_REQUIRED`
+- `phase_id`: `PHK_V23_LF0_EXACT_TOP_WARMSTART_ATTRIBUTION_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
+- `blocker_id`: `LF0_CPU_QUALIFICATION_PENDING`
+- `claim_status`: `C0_OUTPUT_TRANSFORM_INADMISSIBLE_PRESERVED_LF0_AUTHORIZED_NO_NEW_RESULT`
+- `next_research_execution_authorized`: `true`
+- `authorization_scope`: `LF0_CPU_GATE_THEN_A_B_AND_CONDITIONAL_C_ONLY`
 - `candidate_status`: `NOT_FROZEN`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED`
-- `reference_status`: `LOCAL_NOMINAL_DEVELOPMENT_DIAGNOSTIC_COMPLETE_STRESS_UNREAD_SEALED`
-- `implementation_status`: `C0_CPU_DIAGNOSTIC_COMPLETE`
-- `method_selection_status`: `NO_CANDIDATE_ALL_FOUR_ARMS_INELIGIBLE`
-- `compute_status`: `C0_LOCAL_CPU_COMPLETE_AUTODL_RETAINED_BY_PRIOR_USER_OVERRIDE_NOT_TOUCHED`
-- `contract_status`: `C0_CONTRACT_CONSUMED_COMPLETE`
+- `reference_status`: `MEDIUM_DECLARED_METHOD_INPUT_FINE_EXTRA_LOCAL_EVAL_ONLY_STRESS_SEALED_UNREAD`
+- `implementation_status`: `LF0_IMPLEMENTATION_IN_PROGRESS`
+- `method_selection_status`: `NO_CANDIDATE_LF0_ATTRIBUTION_PENDING`
+- `compute_status`: `LF0_LOCAL_IMPLEMENTATION_AND_CPU_QUALIFICATION_PENDING`
+- `contract_status`: `LF0_FOUR_CONTRACTS_FROZEN`
 - `paper_status`: `EXISTING_BOUNDED_NEGATIVE_ADVISOR_DRAFT_PRESERVED`
-- `diagnostic_outcome`: `C0_OUTPUT_TRANSFORM_INADMISSIBLE`
-- `next_recommendation`: `OUTPUT_REPARAMETERIZATION_REQUIRED_BEFORE_LOW_FIDELITY`
+- `diagnostic_outcome`: `PENDING`
+- `next_recommendation`: `EXECUTE_LF0_FROZEN_MACHINE_TREE`
 
 ## 已核验证据
 
-- 历史 V2.2R/R0A/R0B/R0C/R1a/R1X 状态未被追溯改写；candidate 仍为空，stress 仍 sealed/unread。
-- event-competent reference 在 dense 与 exact R1X Sobol pool 的 W1/W3 均通过 thermal、cold-growth 与 QJ readiness；E2 同一 pool 的 cold-growth 为 0，所以 pool 漏检解释被排除。
-- phase strict-interior native-vs-strong RHS sign agreement 为 1.0；saved-cadence residual/floor 最大 1.91408，通过冻结 compatible 子门，不支持 dominant discretization mismatch。
-- `phi0` 在 bottom 存在真实 no-flux 边界层不相容，但严格内点 Laplacian 一致，事件区不足以构成 dominant mismatch。
-- E2 hard top lift 的 `V>=waveform*z_fraction` 下界排除了 extra-fine nominal event support 的 W1 `69.7612%`、W3 `66.8327%`；fine 分辨率给出同方向确认。
-- legacy V、temperature 与 phase hard transforms 在 nominal event support 上可容许；E2 prediction 自身也严格遵守其声明 transform，故上述是结构性包络排除而非实现漂移。
-- C0 wall time `34.0156218 s`；GPU/cloud/optimizer/neural computation 均为 0。AutoDL 未被 C0 触碰。
+- C0 的输出包络裁决与全部历史负面证据保持冻结；LF0 尚未形成新科学结果。
+- C0 官方 strong-form compatibility 子门为 residual/floor `1.91408`、RHS sign agreement `1.0`；不得改成 medium-only 分子重新裁决。
+- medium fixed-discretization carrier 具备两周期 competence，并相对 extra-fine 在 phase primary 与 co-primary 上都存在超过冻结 component floor 的 correction headroom。
+- exact-top raw affine lift 可在不施加 E2 内部下界的情况下严格满足 top Dirichlet 与零 waveform；实现和运行资格仍须由 focused tests 与 CPU gate 完成。
 
-## 仍未回答
+## 当前任务
 
-可容许的 exact-top potential reparameterization 能否配合 low-fidelity-guided residual PINN 恢复 competence，仍为 `UNKNOWN`。需要新合同与新执行授权。
+完成 LF0 四合同、exact-top/medium-only 训练状态机、CPU 资格与必要回归；通过后按 A→B→条件 C 机器树执行。任何 GPU 轨迹完成后先回收、随后立即关机，再做本地 nominal evaluation。
 
 ## 入口
 
 - [active phase](active_phase.md)
 - [live plan](docs/plans/NEXT_ACTIONS.md)
+- [ADR 0056](docs/adr/0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md)
 - [C0 closeout](docs/experiment/2026-09-03-phk-v23-c0-reference-discrete-strongform-compatibility-closeout.md)
-- [C0 artifact](docs/experiment/artifacts/20260903T030442Z-phk-v23-c0-compatibility-17dac74.json)
-- [C0 manifest](docs/experiment/manifests/20260903T030442Z-phk-v23-c0-compatibility-17dac74.json)
-- [ADR 0055](docs/adr/0055-activate-phk-v23-c0-reference-discrete-strongform-compatibility-audit.md)
 - [R1X terminal closeout](docs/experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)
