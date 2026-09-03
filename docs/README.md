@@ -2,7 +2,7 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-PHK-V2.3 LF0 exact-top warm-start attribution campaign 已获用户明确授权，当前处于实现与 CPU 资格阶段；通过后固定执行 A、B 和条件 C，最多三条 V100/FP64/seed-17 科学轨迹。云端只允许 medium method input，fine/extra-fine 仅在每条关机后本地评价，stress 继续 sealed/unread。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、四份 LF0 合同与 [ADR 0056](adr/0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md)。
+PHK-V2.3 LF0 exact-top warm-start attribution campaign 的实现与 CPU 资格已完成，结果为 `LF0_CPU_QUALIFIED`；当前等待 AutoDL 重启以执行 Run A，campaign 授权保持有效。随后固定执行 B 和条件 C，最多三条 V100/FP64/seed-17 科学轨迹。云端只允许 medium method input，fine/extra-fine 仅在每条关机后本地评价，stress 继续 sealed/unread。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[CPU qualification](experiment/2026-09-03-phk-v23-lf0-cpu-qualification.md)、四份 LF0 合同与 [ADR 0056](adr/0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md)。
 
 R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 

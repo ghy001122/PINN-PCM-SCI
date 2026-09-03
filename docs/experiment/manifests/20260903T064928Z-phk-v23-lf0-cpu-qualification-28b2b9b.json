@@ -1,0 +1,74 @@
+{
+  "actual_budget": {
+    "cloud_cost_cny": 0.0,
+    "cpu_qualification_runs": 1,
+    "gpu_hours": 0.0,
+    "optimizer_steps": 0,
+    "wall_seconds": 5.6567814
+  },
+  "artifacts": {
+    "compact_qualification": "artifacts/20260903T064928Z-phk-v23-lf0-cpu-qualification-28b2b9b.json",
+    "compact_qualification_sha256": "8B6996762C4541C6D6A87BFE16D17A871B18E0022E33417B34D7D08DCD7DB2C0",
+    "deployed_source_manifest": "cloud/phk_v23_lf0_autodl/deployed-source-manifest.json",
+    "deployed_source_manifest_sha256": "76E2BE7FD7C22FDA89FA1F5F8D06E097B6B2F1D79489597F89EA7ED0E2E43233"
+  },
+  "case_id": "PHK_V21_NOMINAL_DEVELOPMENT_QUALIFICATION",
+  "checkpoint": {
+    "loaded": false,
+    "modified": false,
+    "path": null
+  },
+  "claim_status": "C0_OUTPUT_TRANSFORM_INADMISSIBLE_PRESERVED_LF0_CPU_QUALIFIED_NO_GPU_SCIENTIFIC_RESULT",
+  "code_identity": {
+    "deployed_source_manifest_sha256": "76E2BE7FD7C22FDA89FA1F5F8D06E097B6B2F1D79489597F89EA7ED0E2E43233",
+    "execution_source_commit": "28b2b9bb216920f54c50f3ae1c9bf9313b88635d",
+    "source_identity": "LF0-BUNDLE-A30B661FF81059155EFDFDE908E3A21B53365BA5B7034E730BDD12AD0C758152"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_v23_lf0_qualification",
+    "--output",
+    "docs/experiment/artifacts/20260903T064928Z-phk-v23-lf0-cpu-qualification-28b2b9b.json",
+    "--source-identity",
+    "LF0-BUNDLE-A30B661FF81059155EFDFDE908E3A21B53365BA5B7034E730BDD12AD0C758152",
+    "--source-commit",
+    "28b2b9bb216920f54c50f3ae1c9bf9313b88635d"
+  ],
+  "ended_at": "2026-09-03T06:50:01.7522151+00:00",
+  "environment": {
+    "device": "LOCAL_CPU",
+    "dtype": "FLOAT64",
+    "gpu_used": false,
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "reference_role": "NOMINAL_LOCAL_DEVELOPMENT_QUALIFICATION_ONLY",
+    "stress_fields_or_metrics_read": false,
+    "torch": "2.5.1+cpu"
+  },
+  "evaluator_id": "phk-v23-lf0-cpu-qualification-v1",
+  "evidence_identity": "CPU_ONLY_NOMINAL_DEVELOPMENT_QUALIFICATION_NOT_GPU_METHOD_COMPETENCE_STRESS_OR_FORMAL_OOD_EVIDENCE",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF0_EXACT_TOP_WARMSTART_ATTRIBUTION",
+  "failure_class": null,
+  "gate": "PHK_V23_LF0_CPU",
+  "gate_outcome": "LF0_CPU_QUALIFIED",
+  "method_id": "phk-v23-lf0-exact-top-medium-warmstart-v1",
+  "numerical_validity": "VALID_LOCAL_CPU_FP64_NOMINAL_ONLY_NO_MODEL_CHECKPOINT_OPTIMIZER_GPU_OR_STRESS",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "cpu_qualification_runs_maximum": 1,
+    "gpu_hours": 0.0,
+    "optimizer_steps": 0
+  },
+  "replay_of": null,
+  "route_disposition": "RUN_A_EXACT_TOP_SCRATCH_AFTER_GPU_ADMISSION",
+  "run_id": "20260903T064928Z-phk-v23-lf0-cpu-qualification-28b2b9b",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "cpu_only_pre_gpu_qualification",
+  "seed": 17,
+  "split_id": "MEDIUM_METHOD_INPUT_FINE_EXTRA_QUALIFICATION_ONLY_STRESS_SEALED",
+  "started_at": "2026-09-03T06:49:56.0954337+00:00",
+  "supersedes": null,
+  "tier": "qualification"
+}
