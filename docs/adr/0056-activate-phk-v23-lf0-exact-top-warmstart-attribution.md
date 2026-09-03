@@ -1,6 +1,6 @@
 # ADR 0056：激活 PHK-V2.3 LF0 exact-top warm-start attribution campaign
 
-- `status`: `ACCEPTED_ACTIVE`
+- `status`: `ACCEPTED_COMPLETE`
 - `date`: `2026-09-03`
 - `phase_id`: `PHK_V23_LF0_EXACT_TOP_WARMSTART_ATTRIBUTION_EXECUTE`
 - `supersedes_authorization_only`: `PHK_V23_C0_REFERENCE_DISCRETE_STRONGFORM_COMPATIBILITY_AUDIT_EXECUTE_COMPLETE`
@@ -27,3 +27,9 @@ V=w(t)\{\zeta+(1-\zeta)h_V\},
 本 campaign 最多产生 single-seed nominal solver competence 或 provisional low-fidelity attribution signal。exact-top、warm-start 与 anchor annealing 默认都是 shared solver/backbone，不自动成为 headline innovation。V2.2R、R0A、R0B、R0C、R1a、R1X 与 C0 证据均原样保留。
 
 精确机器合同见 [program](../../configs/phk_v23/program_contract_lf0_exact_top_warmstart.json)、[method](../../configs/phk_v23/method_contract_lf0_exact_top_warmstart.json)、[data](../../configs/phk_v23/data_contract_lf0_medium_only.json) 与 [decision](../../configs/phk_v23/decision_contract_lf0_attribution.json)。
+
+## 执行后状态
+
+Run A 完成但没有 competence。Run B 的固定 step-800 `LF_DATA_ONLY` checkpoint 违反 potential maximum-principle validity guard；B final 虽恢复 potential validity，仍无两周期事件。冻结优先级因此产生 `LF0_NUMERICAL_OR_IDENTITY_INVALID`，不触发 Run C，也不授权自动科学重试。完整事实见 [LF0 terminal closeout](../experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)。
+
+用户明确要求本次执行后保留实例在线；该单次生命周期例外已如实记录，不改变科学裁决或后续授权边界。

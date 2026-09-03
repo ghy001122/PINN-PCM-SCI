@@ -5,12 +5,12 @@
 ## 当前状态
 
 - `phase_id`: `PHK_V23_LF0_EXACT_TOP_WARMSTART_ATTRIBUTION_EXECUTE`
-- `lifecycle_state`: `AWAITING`
-- `blocker_id`: `AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE`
-- `claim_status`: `C0_OUTPUT_TRANSFORM_INADMISSIBLE_PRESERVED_LF0_CPU_QUALIFIED_NO_GPU_SCIENTIFIC_RESULT`
-- `next_research_execution_authorized`: `true`
+- `lifecycle_state`: `COMPLETE`
+- `blocker_id`: `NONE`
+- `claim_status`: `V22R_R1X_C0_PRESERVED_LF0_NUMERICAL_OR_IDENTITY_INVALID_NO_METHOD_EVIDENCE`
+- `next_research_execution_authorized`: `false`
 
-LF0 实现、CPU/FP64 资格门和 Run-A 部署包已完成；资格结果为 `LF0_CPU_QUALIFIED`。该 campaign 用无 E2 内部下界的 exact-top raw potential transform 对照 scratch 与唯一 medium-only warm-start，固定执行 A、B，并仅在 B 通过 provisional 增量门时执行 C。当前已知 AutoDL 端点不可达，尚无 LF0 GPU 科学轨迹；campaign 授权保持有效，stress 保持 sealed/unread。
+LF0 已执行并收口。A 的 exact-top scratch PINN 没有两周期 competence；B 的固定 step-800 `LF_DATA_ONLY` checkpoint 违反 potential validity，B final 虽恢复合法 potential 仍无事件。机器终局为 `LF0_NUMERICAL_OR_IDENTITY_INVALID`，条件 C 未运行，无 candidate 或方法增量证据。用户明确要求本次保留空闲 GPU 实例；这不是后续科研授权。stress 保持 sealed/unread。
 
 ## 当前入口
 
@@ -18,6 +18,7 @@ LF0 实现、CPU/FP64 资格门和 Run-A 部署包已完成；资格结果为 `L
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
 - 当前决定：[ADR 0056](docs/adr/0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md)
+- LF0 结果：[terminal closeout](docs/experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)
 - CPU 资格：[LF0 qualification](docs/experiment/2026-09-03-phk-v23-lf0-cpu-qualification.md)
 - C0 结果：[compatibility closeout](docs/experiment/2026-09-03-phk-v23-c0-reference-discrete-strongform-compatibility-closeout.md)
 - R1X 历史结果：[terminal closeout](docs/experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)

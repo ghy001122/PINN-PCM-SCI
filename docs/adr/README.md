@@ -1,6 +1,6 @@
 # 架构与研究决策索引
 
-- [0056：激活 PHK-V2.3 LF0 exact-top warm-start attribution campaign](0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md) — CPU 资格通过后固定执行 A、B 和条件 C；最多三条 V100/FP64/seed-17 轨迹，medium 是唯一低保真训练源，stress 继续 sealed/unread。
+- [0056：激活并收口 PHK-V2.3 LF0 exact-top warm-start attribution campaign](0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md) — A 无 competence；B 的 step-800 data-only checkpoint 违反 potential validity，故以 `LF0_NUMERICAL_OR_IDENTITY_INVALID` 收口且不执行条件 C；stress 继续 sealed/unread。
 - [0055：激活并收口 PHK-V2.3 C0 reference/discrete/strong-form compatibility audit](0055-activate-phk-v23-c0-reference-discrete-strongform-compatibility-audit.md) — 一次本地 CPU/FP64 nominal development diagnostic 识别 E2 hard-lift output inadmissibility；不训练、不使用 GPU、不读取 stress，完成后不自动授权下一路线。
 - [0054：在已验证工程修复后恢复 R1X 原科学任务](0054-resume-r1x-after-verified-engineering-repair.md) — 覆盖旧的一次 engineering-retry 限制；仅当首步前纯工程故障根因已明确且隔离回归证明修复时，重执行相同冻结任务且不消耗科学 run 配额。
 - [0053：激活 PHK-V2.3 R1X 有界 clean-coupling campaign](0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md) — 最多三条 non-voting exploration 与一条条件性 frozen confirmation；每条云端运行回收后立即关机，nominal 仅在本地关机验证后评价，stress 始终 sealed。
