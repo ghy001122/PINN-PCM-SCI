@@ -1,6 +1,6 @@
 # ADR 0055：激活 PHK-V2.3 C0 reference/discrete/strong-form compatibility audit
 
-- `status`: `ACCEPTED_ACTIVE`
+- `status`: `ACCEPTED_COMPLETE`
 - `date`: `2026-09-03`
 - `phase_id`: `PHK_V23_C0_REFERENCE_DISCRETE_STRONGFORM_COMPATIBILITY_AUDIT_EXECUTE`
 - `supersedes_authorization_only`: `PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE_COMPLETE`
@@ -31,3 +31,7 @@ PRIMARY 只能是合同列出的五类 machine outcome。若多个问题并存�
 C0 是 nominal local development diagnostic，不是 method、competence、continuum truth、formal OOD 或 stress evidence。任何下一路线均需新合同与新 `EXECUTE`；旧 No-Go 和历史产物不追溯改写。
 
 精确合同见 [C0 compatibility contract](../../configs/phk_v23/c0_reference_discrete_strongform_compatibility_contract.json)。
+
+## 执行结果
+
+机器 PRIMARY 为 `C0_OUTPUT_TRANSFORM_INADMISSIBLE`，SECONDARY 为 `null`。reference readiness 与 phase strong-form compatibility 均通过冻结门；E2 top hard lift 在 fine/extra-fine 两个周期的 nominal event support 上结构性排除参考电势。唯一下一建议为 `OUTPUT_REPARAMETERIZATION_REQUIRED_BEFORE_LOW_FIDELITY`，且不自动授权执行。详见 [C0 closeout](../experiment/2026-09-03-phk-v23-c0-reference-discrete-strongform-compatibility-closeout.md)。

@@ -2,7 +2,7 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-当前阶段为 PHK-V2.3 C0 reference/discrete/strong-form compatibility CPU audit。它只读取本地 nominal development 与 E2 prediction carriers，检查 reference readiness、native FVM、saved-cadence strong form、初值/边界及 output transform；不训练、不使用 GPU、不触碰当前 AutoDL 实例、不读取 stress。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[C0 contract](../configs/phk_v23/c0_reference_discrete_strongform_compatibility_contract.json) 与 [ADR 0055](adr/0055-activate-phk-v23-c0-reference-discrete-strongform-compatibility-audit.md)。
+PHK-V2.3 C0 reference/discrete/strong-form compatibility CPU audit 已完成。reference readiness 与 phase strong-form 子门通过；E2 hard top lift 的内部下界结构性排除 nominal event-support potential，PRIMARY=`C0_OUTPUT_TRANSFORM_INADMISSIBLE`。该结果不改写其他历史证据，不授权下一训练，stress 继续 sealed/unread。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[C0 closeout](experiment/2026-09-03-phk-v23-c0-reference-discrete-strongform-compatibility-closeout.md)、[C0 contract](../configs/phk_v23/c0_reference_discrete_strongform_compatibility_contract.json) 与 [ADR 0055](adr/0055-activate-phk-v23-c0-reference-discrete-strongform-compatibility-audit.md)。
 
 R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 
@@ -23,8 +23,8 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前执行入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-C0](plans/NEXT_ACTIONS.md)。仅执行一次 CPU/FP64 compatibility audit，得到机器结果即停止。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R/R0A/R0B/R0C/R1a/R1X 证据保持冻结；只授权 C0，不授权训练、GPU、PJGR、R2、low-fidelity、其他 seed、stress 或投稿。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-C0](plans/NEXT_ACTIONS.md)。C0 已消费完成，当前没有后续科研执行授权。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R/R0A/R0B/R0C/R1a/R1X 证据保持冻结；C0 仅收紧 E2 hard-lift 解释边界，不授权训练、GPU、PJGR、R2、low-fidelity、其他 seed、stress 或投稿。
 - 历史 PHK-V2.3 R1X 工程阻塞记录：[2026-09-02 R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。它记录两次 pre-update 部署失败、日志哈希、0 科学轨迹、关机验证和 post-blocker isolation 回归修复；不得解释为 clean-coupling 方法失败。
 - 当前 PHK-V2.3 R1X E1 结果入口：[2026-09-03 R1X E1 ET-not-ready closeout](experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)。它记录 300-step reference-blind warm-up、readiness 失败、产物回收/关机、本地 nominal 评价和 E2 top-hard-lift 路由；它是 non-voting development evidence。
 - 当前 PHK-V2.3 R1X 终局入口：[2026-09-03 R1X E2/pure-scratch stop closeout](experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)。它记录 top hard lift、第二条 300-step reference-blind warm-up、两窗 readiness 失败、无 material phase signal、本地 nominal 评价、实例保留例外及 `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`；它不构成方法增益。

@@ -1,0 +1,79 @@
+{
+  "actual_budget": {
+    "cloud_cost_cny": 0.0,
+    "cpu_hours": 0.0094487838333589,
+    "diagnostic_runs": 1,
+    "gpu_hours": 0.0,
+    "optimizer_steps": 0,
+    "wall_seconds": 34.01562180009205
+  },
+  "artifacts": {
+    "compact_artifact": "artifacts/20260903T030442Z-phk-v23-c0-compatibility-17dac74.json",
+    "compact_artifact_sha256": "F378FD38250694059AB2EC00EFE46D801E55DA77DECB5499D694E6838607CFFB"
+  },
+  "case_id": "PHK_V21_NOMINAL_DEVELOPMENT_REFERENCE_PLUS_R1X_E2_CONTRAST",
+  "checkpoint": {
+    "loaded": false,
+    "modified": false,
+    "path": null
+  },
+  "claim_status": "V22R_AND_R1X_NEGATIVE_EVIDENCE_PRESERVED_C0_OUTPUT_TRANSFORM_INADMISSIBLE_NO_METHOD_EVIDENCE",
+  "code_identity": {
+    "contract_sha256": "03B3D1D5EC1AAD0286FBBFCF32EF71755DD441493743AF9C60F7AC0F8E70739B",
+    "execution_source_commit": "17dac7448241d100c15cdeae24da90464a2a6ea7",
+    "expected_base_commit": "3f86fc40d49580da86b8687611326cd85d6d0169",
+    "source_blob_identity_verified_before_reference_io": true
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_v23_c0_compatibility",
+    "--device",
+    "cpu",
+    "--source-commit",
+    "17dac7448241d100c15cdeae24da90464a2a6ea7",
+    "--run-id",
+    "20260903T030442Z-phk-v23-c0-compatibility-17dac74",
+    "--output",
+    "docs/experiment/artifacts/20260903T030442Z-phk-v23-c0-compatibility-17dac74.json"
+  ],
+  "ended_at": "2026-09-03T03:05:27.6915852+00:00",
+  "environment": {
+    "autodl": "RETAINED_BY_PRIOR_USER_OVERRIDE_NOT_TOUCHED_BY_C0",
+    "device": "LOCAL_CPU",
+    "dtype": "FLOAT64",
+    "gpu_used": false,
+    "numpy": "2.1.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "reference_role": "NOMINAL_LOCAL_DEVELOPMENT_DIAGNOSTIC_ONLY",
+    "stress_fields_or_metrics_read": false,
+    "torch": "2.5.1+cu118"
+  },
+  "evaluator_id": "phk-v23-c0-compatibility-adjudicator-v1",
+  "evidence_identity": "CPU_ONLY_NOMINAL_DEVELOPMENT_COMPATIBILITY_DIAGNOSTIC_NOT_METHOD_COMPETENCE_CONTINUUM_TRUTH_FORMAL_OOD_OR_STRESS_EVIDENCE",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_C0_REFERENCE_DISCRETE_STRONGFORM_COMPATIBILITY",
+  "failure_class": "E2_TOP_DIRICHLET_HARD_LIFT_EXCLUDES_NOMINAL_EVENT_SUPPORT",
+  "gate": "PHK_V23_C0",
+  "gate_outcome": "C0_OUTPUT_TRANSFORM_INADMISSIBLE",
+  "method_id": "phk-v23-c0-reference-discrete-strongform-compatibility-audit-v1",
+  "numerical_validity": "VALID_CPU_FP64_HASH_BOUND_REFERENCE_ONLY_NO_GPU_NO_STRESS",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "cloud_cost_cny": 0.0,
+    "diagnostic_runs_maximum": 1,
+    "gpu_hours": 0.0,
+    "optimizer_steps": 0
+  },
+  "replay_of": null,
+  "route_disposition": "OUTPUT_REPARAMETERIZATION_REQUIRED_BEFORE_LOW_FIDELITY",
+  "run_id": "20260903T030442Z-phk-v23-c0-compatibility-17dac74",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "reference_discrete_strongform_compatibility_audit",
+  "seed": 17,
+  "split_id": "NOMINAL_DEVELOPMENT_MULTIPLE_FIXED_DISCRETIZATIONS_LOCAL_ONLY_STRESS_SEALED",
+  "started_at": "2026-09-03T03:04:53.6755852+00:00",
+  "supersedes": null,
+  "tier": "diagnostic"
+}
