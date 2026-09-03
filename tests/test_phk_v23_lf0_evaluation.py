@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 from pathlib import Path
@@ -13,6 +14,7 @@ from pinn_pcm_sci.phk_v23_lf0_evaluation import (
     A_ROLE,
     B_FINAL_ROLE,
     C_ROLE,
+    GPU_LIFECYCLE_RETAINED_BY_USER,
     LF_DATA_ONLY_ROLE,
     LF_ONLY_ROLE,
     adjudicate_campaign,
@@ -20,10 +22,12 @@ from pinn_pcm_sci.phk_v23_lf0_evaluation import (
     compare_physics_batch_logs,
     interpolate_low_fidelity_arrays,
     load_decision_contract,
+    reference_role_for_gpu_lifecycle,
     safe_error_ratio,
     write_c_trigger,
     write_strict_json,
     evaluate_lf0_campaign,
+    _run_files,
 )
 
 
@@ -80,6 +84,17 @@ class LF0DecisionTests(unittest.TestCase):
             "phase_roi_continuous_rms": 0.004,
             "time_averaged_phase_region_symmetric_difference": 0.001,
         }
+
+    def test_explicit_instance_retention_has_truthful_local_reference_role(self) -> None:
+        self.assertEqual(
+            reference_role_for_gpu_lifecycle(GPU_LIFECYCLE_RETAINED_BY_USER),
+            (
+                "NOMINAL_LOCAL_DEVELOPMENT_ONLY_AFTER_RECOVERY_"
+                "INSTANCE_RETAINED_BY_EXPLICIT_USER_OVERRIDE"
+            ),
+        )
+        with self.assertRaisesRegex(ValueError, "unsupported LF0 GPU lifecycle"):
+            reference_role_for_gpu_lifecycle("RUNNING_TRAINING")
 
     def test_contract_freezes_reference_blind_full_objective_pool(self) -> None:
         contract = load_decision_contract()
@@ -352,6 +367,45 @@ class LF0EvidenceTests(unittest.TestCase):
                     case_control="INTERFACE_WIDTH_0_025",
                 )
             load_contract.assert_not_called()
+
+    def test_recovered_machine_invalid_run_reaches_campaign_adjudication(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            names = {
+                "prediction_final": "prediction-final.npz",
+                "checkpoint_final": "checkpoint-final.pt",
+                "physics_batch_hashes": "physics-batch-hashes.jsonl",
+                "prediction_lf_data_only": "prediction-lf-data-only-step-800.npz",
+                "checkpoint_lf_data_only": "checkpoint-lf-data-only-step-800.pt",
+            }
+            artifacts = {}
+            for key, name in names.items():
+                path = root / name
+                path.write_bytes(key.encode("ascii"))
+                artifacts[key] = {
+                    "path": name,
+                    "size_bytes": path.stat().st_size,
+                    "sha256": hashlib.sha256(path.read_bytes()).hexdigest().upper(),
+                }
+            (root / "summary.json").write_text(
+                json.dumps(
+                    {
+                        "status": "LF0_NUMERICAL_OR_IDENTITY_INVALID",
+                        "run_arm": "B_MEDIUM_WARMSTART",
+                        "prediction_reference_free": True,
+                        "stress_fields_or_metrics_read": False,
+                        "artifacts": artifacts,
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            recovered = _run_files(root, arm="B_MEDIUM_WARMSTART")
+
+            self.assertEqual(
+                recovered["summary_payload"]["status"],
+                "LF0_NUMERICAL_OR_IDENTITY_INVALID",
+            )
 
 
 if __name__ == "__main__":

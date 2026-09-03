@@ -1,9 +1,11 @@
 """Local-only evaluation and attribution adjudication for PHK-V2.3 LF0.
 
-This module is deliberately downstream of cloud recovery and shutdown.  It
-reuses the frozen V2.2R evaluator without changing it, constructs the declared
-medium-grid ``LF_ONLY`` comparator on the evaluator axes, and owns the small
-machine-decision surface for A/B/(optional C).
+This module is deliberately downstream of complete cloud recovery.  The
+normal lifecycle also requires shutdown; an explicit user override may retain
+an idle instance, which is recorded without changing the local-only reference
+boundary.  The module reuses the frozen V2.2R evaluator without changing it,
+constructs the declared medium-grid ``LF_ONLY`` comparator on the evaluator
+axes, and owns the small machine-decision surface for A/B/(optional C).
 """
 
 from __future__ import annotations
@@ -56,6 +58,22 @@ REQUIRED_TRIGGER_FIELDS = (
     "preservation_pass",
     "potential_validity_pass",
 )
+GPU_LIFECYCLE_SHUTDOWN_VERIFIED = "SHUTDOWN_VERIFIED"
+GPU_LIFECYCLE_RETAINED_BY_USER = "RETAINED_BY_EXPLICIT_USER_OVERRIDE"
+GPU_LIFECYCLE_REFERENCE_ROLES = {
+    GPU_LIFECYCLE_SHUTDOWN_VERIFIED: "NOMINAL_LOCAL_DEVELOPMENT_ONLY_AFTER_GPU_SHUTDOWN",
+    GPU_LIFECYCLE_RETAINED_BY_USER: (
+        "NOMINAL_LOCAL_DEVELOPMENT_ONLY_AFTER_RECOVERY_"
+        "INSTANCE_RETAINED_BY_EXPLICIT_USER_OVERRIDE"
+    ),
+}
+
+
+def reference_role_for_gpu_lifecycle(gpu_lifecycle: str) -> str:
+    try:
+        return GPU_LIFECYCLE_REFERENCE_ROLES[gpu_lifecycle]
+    except KeyError as exc:
+        raise ValueError(f"unsupported LF0 GPU lifecycle: {gpu_lifecycle}") from exc
 
 
 def _sha256_path(path: Path) -> str:
@@ -858,7 +876,11 @@ def _run_files(path: Path, *, arm: str) -> dict[str, Any]:
     summary = json.loads(summary_path.read_text(encoding="utf-8"))
     expected = {ARM_A: ARM_A, ARM_B: ARM_B, ARM_C: ARM_C}[arm]
     if (
-        summary.get("status") != "LF0_REFERENCE_BLIND_GPU_RUN_COMPLETE"
+        summary.get("status")
+        not in {
+            "LF0_REFERENCE_BLIND_GPU_RUN_COMPLETE",
+            "LF0_NUMERICAL_OR_IDENTITY_INVALID",
+        }
         or summary.get("run_arm") != expected
         or summary.get("prediction_reference_free") is not True
         or summary.get("stress_fields_or_metrics_read") is not False
@@ -956,12 +978,14 @@ def evaluate_lf0_campaign(
     c_run_directory: Path | None = None,
     case_control: str = "FULL",
     decision_contract_path: Path = DECISION_CONTRACT_PATH,
+    gpu_lifecycle: str = GPU_LIFECYCLE_SHUTDOWN_VERIFIED,
 ) -> dict[str, Any]:
     """Evaluate recovered LF0 arms locally and emit a strict machine record."""
 
     # This check must precede every contract, directory, checkpoint, or carrier I/O.
     if case_control != PhkControl.FULL.value:
         raise PermissionError("LF0 local evaluation is nominal-only; stress stays sealed")
+    reference_role = reference_role_for_gpu_lifecycle(gpu_lifecycle)
     contract = load_decision_contract(decision_contract_path)
     if cpu_qualification_path is None:
         raise ValueError("LF0 local adjudication requires the CPU qualification record")
@@ -1060,7 +1084,8 @@ def evaluate_lf0_campaign(
         "task_id": "PHK_V23_LF0_EXACT_TOP_WARMSTART_ATTRIBUTION_EXECUTE",
         "status": "COMPLETE",
         "case_control": "FULL",
-        "reference_role": "NOMINAL_LOCAL_DEVELOPMENT_ONLY_AFTER_GPU_SHUTDOWN",
+        "reference_role": reference_role,
+        "gpu_lifecycle": gpu_lifecycle,
         "roles_evaluated": list(prediction_paths),
         "prediction_bindings": {
             role: {
@@ -1116,6 +1141,11 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--c-run-directory", type=Path)
     parser.add_argument("--cpu-qualification", type=Path, required=True)
     parser.add_argument("--case-control", default="FULL")
+    parser.add_argument(
+        "--gpu-lifecycle",
+        choices=tuple(GPU_LIFECYCLE_REFERENCE_ROLES),
+        default=GPU_LIFECYCLE_SHUTDOWN_VERIFIED,
+    )
     parser.add_argument("--decision-contract", type=Path, default=DECISION_CONTRACT_PATH)
     return parser
 
@@ -1130,6 +1160,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         c_run_directory=args.c_run_directory,
         case_control=args.case_control,
         decision_contract_path=args.decision_contract,
+        gpu_lifecycle=args.gpu_lifecycle,
     )
     print(json.dumps(report["decision"], sort_keys=True, allow_nan=False))
     return 0 if report["decision"].get("outcome") not in {
@@ -1147,6 +1178,8 @@ __all__ = [
     "A_ROLE",
     "B_FINAL_ROLE",
     "C_ROLE",
+    "GPU_LIFECYCLE_RETAINED_BY_USER",
+    "GPU_LIFECYCLE_SHUTDOWN_VERIFIED",
     "LF_DATA_ONLY_ROLE",
     "LF_ONLY_ROLE",
     "adjudicate_campaign",
@@ -1158,6 +1191,7 @@ __all__ = [
     "interpolate_low_fidelity_arrays",
     "load_decision_contract",
     "main",
+    "reference_role_for_gpu_lifecycle",
     "safe_error_ratio",
     "write_c_trigger",
     "write_lf_only_prediction_carrier",
