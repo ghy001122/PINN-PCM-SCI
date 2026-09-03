@@ -2,9 +2,9 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-当前阶段为 PHK-V2.3 R1X 有界 clean-coupling campaign。E1 已完成并裁决为 `E1_ET_NOT_READY`，冻结机器树选择 `E2_TOP_DIRICHLET_HARD_LIFT`；AutoDL 已关机，campaign 授权保持有效并等待用户重启实例。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[E1 closeout](experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)、[ADR 0054](adr/0054-resume-r1x-after-verified-engineering-repair.md) 与原 [ADR 0053](adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)；V2.2R/R0A/R0B/R0C/R1a 历史证据保持不变，stress 继续 sealed/unread。
+当前阶段为 PHK-V2.3 R1X 有界 clean-coupling campaign 的完成态。E1 与 E2 两条 non-voting pure-scratch explorations 均未通过冻结 readiness；E2 top-Dirichlet hard lift 虽增强电热量，仍没有 material phase signal 或两周期 competence。冻结树禁止 E3/confirmation，终局为 `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[E2/campaign closeout](experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)、[ADR 0054](adr/0054-resume-r1x-after-verified-engineering-repair.md) 与原 [ADR 0053](adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md)；V2.2R/R0A/R0B/R0C/R1a 历史证据保持不变，stress 继续 sealed/unread。
 
-R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，修复的 E1 有效运行 300 updates 并按 readiness policy 停止，现已计入 1/3 条 exploration。
+R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 
 ## 固定入口顺序
 
@@ -23,11 +23,12 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前执行入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-R1X](plans/NEXT_ACTIONS.md)。E1 已形成 1/3 条 exploration 并裁决为 `E1_ET_NOT_READY`；下一条仅可执行 E2 top hard lift，当前等待 AutoDL 重启。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-R1X](plans/NEXT_ACTIONS.md)。E1/E2 已按冻结树完成；E2 无 material phase signal，E3/confirmation 不可达，当前为 pure-scratch terminal stop。
 - 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R 四臂 nominal 的
-  `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A/R0B/R0C/R1a 证据保持冻结；R1X 已授权恢复 E1 及冻结机器树，PJGR、R2、low-fidelity、其他 seed、stress 和投稿仍未授权。
+  `MVP_NO_GO_NO_BASIC_COMPETENCE` 与 R0A/R0B/R0C/R1a 证据保持冻结；R1X campaign 已消费完毕。当前不授权 PJGR、R2、low-fidelity、其他 seed、stress 或投稿。
 - 历史 PHK-V2.3 R1X 工程阻塞记录：[2026-09-02 R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。它记录两次 pre-update 部署失败、日志哈希、0 科学轨迹、关机验证和 post-blocker isolation 回归修复；不得解释为 clean-coupling 方法失败。
 - 当前 PHK-V2.3 R1X E1 结果入口：[2026-09-03 R1X E1 ET-not-ready closeout](experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)。它记录 300-step reference-blind warm-up、readiness 失败、产物回收/关机、本地 nominal 评价和 E2 top-hard-lift 路由；它是 non-voting development evidence。
+- 当前 PHK-V2.3 R1X 终局入口：[2026-09-03 R1X E2/pure-scratch stop closeout](experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)。它记录 top hard lift、第二条 300-step reference-blind warm-up、两窗 readiness 失败、无 material phase signal、本地 nominal 评价、实例保留例外及 `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`；它不构成方法增益。
 - 当前研究身份与论文口径：[CONTEXT.md](../CONTEXT.md)。V2.2R 是 fixed-discretization
   单 seed 负面 Method-MVP；PDE loss 下降没有建立局域事件 competence，不能外推为 PINN
   全局失败、continuum truth、formal OOD 或实验结论。

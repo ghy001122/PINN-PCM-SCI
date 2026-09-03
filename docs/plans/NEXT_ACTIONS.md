@@ -1,40 +1,41 @@
-# PLAN-PHK-V2.3-R1X：有界 clean-coupling campaign
+# PLAN-PHK-V2.3-R1X：有界 clean-coupling campaign（完成）
 
 - `phase_id`: `PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE`
-- `lifecycle_state`: `ACTIVE`
-- `blocker_id`: `AUTODL_RESTART_REQUIRED_FOR_E2_TOP_DIRICHLET_HARD_LIFT`
-- `claim_status`: `V22R_TERMINAL_NO_GO_AND_R1A_NO_COMPETENCE_PRESERVED_R1X_E1_ET_NOT_READY_NO_COMPETENCE`
-- `next_research_execution_authorized`: `true`
-- `authorization_state`: `EXPLICITLY_REAUTHORIZED_AFTER_VERIFIED_ENGINEERING_REPAIR`
-- `plan_status`: `AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE`
-- `current_stage`: `R1X_E2_TOP_DIRICHLET_HARD_LIFT_WAITING_FOR_AUTODL_RESTART`
+- `lifecycle_state`: `COMPLETE`
+- `blocker_id`: `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`
+- `claim_status`: `V22R_TERMINAL_NO_GO_AND_R1A_NO_COMPETENCE_PRESERVED_R1X_PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`
+- `next_research_execution_authorized`: `false`
+- `authorization_state`: `CAMPAIGN_CONSUMED_NO_FURTHER_EXECUTION_AUTHORIZED`
+- `plan_status`: `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`
+- `current_stage`: `TERMINAL_PURE_SCRATCH_STOP`
 - `supersedes`: `PLAN_PHK_V23_R1A_COMPLETE`
 - `preserves`: `V22R_R0A_R0B_R0C_R1A_EVIDENCE`
 - `program_contract`: `configs/phk_v23/program_contract_r1x_bounded_clean_coupling.json`
 - `method_contract`: `configs/phk_v23/method_contract_r1x_clean_coupling.json`
 - `exploration_contract`: `configs/phk_v23/exploration_contract_r1x_bounded_clean_coupling.json`
-- `decision`: `docs/adr/0054-resume-r1x-after-verified-engineering-repair.md`
+- `decision`: `docs/adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md`
 - `execution_override`: `configs/phk_v23/execution_override_r1x_verified_engineering_repair.json`
 
-## 唯一执行链
+## 已执行链
 
-1. `COMPLETED`: 完成合同、单一 trainer/residual seam、R1X adapter、focused/regression tests、run card、部署 bundle 和文档一致性门；激活提交已推送。
-2. `COMPLETED_NO_SCIENTIFIC_TRAJECTORY`: 用户重启实例后核验 V100/FP64 环境并部署隔离 bundle；首次启动在模型构造前发现缺失 `engineering_contract.json`。
-3. `COMPLETED_NO_SCIENTIFIC_TRAJECTORY`: 按合同唯一一次 engineering retry 补入并绑定该文件，但仍在模型构造前发现缺失传递依赖 `e1_solver_selection.json`；两次均为 0 optimizer updates。
-4. `COMPLETED`: 回收两份失败日志并核对远端/本地 SHA-256，立即关闭 AutoDL；SSH probe 返回 `Connection refused`。nominal/stress 均未读取。
-5. `SUPERSEDED_AUTHORITY`: 2026-09-02 曾因 retry 耗尽收口为 `ENGINEERING_BLOCKED`；该历史事实保留，但其停止权限已由用户 2026-09-03 的明确覆盖和 ADR 0054 取代。
-6. `COMPLETED_SCIENTIFIC_TRAJECTORY_1_OF_3`: 修复后的 E1 通过云端隔离前检，在 V100/FP64/seed 17 上从 scratch 完成 300 warm-up updates；steps 200/225/250/275/300 readiness 均失败，按冻结 policy 停止为 `E1_ET_NOT_READY`。
-7. `COMPLETED`: E1 产物完整回收并核对 hash，AutoDL 立即关机且 SSH 为 `Connection refused`；关机后 frozen nominal evaluator 确认无两周期 competence。
-8. `AWAITING_AUTODL_RESTART`: 冻结机器树唯一选择 `E2_TOP_DIRICHLET_HARD_LIFT`。用户只需重新启动实例并提供 endpoint；campaign 科学授权无需重批。
-9. `PENDING_MACHINE_TREE`: E2 结束后仍仅可按原冻结规则进入 E3、confirmation 或 pure-scratch stop。
+1. `COMPLETED`: 建立并激活 R1X 合同、trainer/residual seam、adapter、focused/regression tests、run card 与内容寻址部署。
+2. `PRESERVED_ENGINEERING_HISTORY`: 两次历史 E1 启动在模型构造前因隔离部署传递依赖缺失而 0-update 终止；用户覆盖原一次 retry 上限后，依赖闭合并通过 isolated preflight。
+3. `COMPLETED_EXPLORATION_1_OF_3`: 修复后的 E1 在 V100/FP64/seed 17 上从 scratch 完成 300 warm-up updates；五次 readiness 均失败，裁决为 `E1_ET_NOT_READY`。
+4. `COMPLETED_MACHINE_BRANCH`: 冻结树唯一选择 E2 top-Dirichlet hard lift；用户重启实例后部署 source commit `ce64086c...`。
+5. `PRESERVED_ZERO_STEP_STARTUP`: E2 首次 tmux 启动因相对 `PYTHONPATH` 未指向隔离根而在 import 前 0-update 终止；改用绝对路径并通过 isolated import regression，不计 exploration。
+6. `COMPLETED_EXPLORATION_2_OF_3`: 有效 E2 从 scratch 完成 300 warm-up updates；top BC 精确满足，但五次 readiness 仍失败，且无 material phase signal。
+7. `COMPLETED_LOCAL_ADJUDICATION`: 全部产物回收并核验 hash 后，本地 frozen nominal evaluator 确认两周期 event/ROI peak/recovery 全部失败。
+8. `MACHINE_TREE_TERMINAL`: E2 未产生 material phase signal，故 E3 与 confirmation 不可达；终局为 `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`。
+9. `INSTANCE_LIFECYCLE_OVERRIDE`: 用户明确要求本条运行后不关机；实例保持在线但 GPU 空闲、无 R1X 进程。该事实不产生新科研授权。
 
-## 不变量与停止条件
+## 最终计数与边界
 
-- 本 campaign 已执行 1/3 条 non-voting exploration、0/1 条 confirmation；历史 engineering failure 仍为 0-step 工程证据，不计 exploration。
-- 当前只授权原 R1X E1 及其后由冻结机器树唯一到达的 E2/E3/confirmation；不授权 PJGR、R2、low-fidelity、其他 seed 或 stress。
-- V2.2R/R0A/R0B/R0C/R1a 历史证据、benchmark、PDE、本构、reference 和 evaluator 均保持不变。
-- 两份 stress references 始终 sealed/unread。
-- 工程故障只有在首步前、0 科学轨迹、根因明确且隔离回归证明完全修复时才可继续相同冻结任务；其余停止条件仍按原合同执行。
+- 有效 non-voting explorations：`2/3`；冻结树下剩余可达 exploration：`0`。
+- frozen confirmations：`0/1`；当前不可达。
+- E1/E2 均从 scratch、V100/FP64/seed 17、reference-blind；stress 始终 sealed/unread。
+- V2.2R/R0A/R0B/R0C/R1a 历史证据、benchmark、PDE、本构、reference 与 evaluator 保持不变。
+- 当前不得使用未消耗的数量槽重新选择 E2、进入 E3、执行 confirmation、PJGR、R2、其他 seed 或 stress。
+- 下一研究路线仅可是 `LOW_FIDELITY_GUIDED_ROUTE_REQUIRES_NEW_CONTRACT_AND_EXECUTE`，或保留 bounded-negative package；本文件不授权其执行。
+- 未来默认 GPU 生命周期仍为使用结束后及时关机；仅在用户对具体运行明确要求时保留实例。
 
-恢复决定见 [ADR 0054](../adr/0054-resume-r1x-after-verified-engineering-repair.md)；历史工程阻塞见 [R1X engineering-blocked closeout](../experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。
-E1 科学轨迹与机器路由见 [R1X E1 closeout](../experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)。
+最终证据见 [R1X E2/campaign closeout](../experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)，E1 证据见 [R1X E1 closeout](../experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)，历史工程阻塞见 [R1X engineering-blocked closeout](../experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。
