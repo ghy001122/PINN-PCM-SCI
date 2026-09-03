@@ -1,0 +1,134 @@
+{
+  "schema_id": "phk-v23-c0-reference-discrete-strongform-compatibility-contract-v1",
+  "contract_id": "PHK_V23_C0_REFERENCE_DISCRETE_STRONGFORM_COMPATIBILITY_AUDIT_V1",
+  "effective_date": "2026-09-03",
+  "phase_id": "PHK_V23_C0_REFERENCE_DISCRETE_STRONGFORM_COMPATIBILITY_AUDIT_EXECUTE",
+  "status": "FROZEN_BEFORE_SINGLE_CPU_DIAGNOSTIC",
+  "expected_base_commit": "3f86fc40d49580da86b8687611326cd85d6d0169",
+  "scientific_question": "ARE_THE_EVENT_COMPETENT_FIXED_DISCRETIZATION_REFERENCE_R1X_READINESS_GATE_CONTINUOUS_STRONG_FORM_AND_HARD_OUTPUT_PARAMETERIZATION_MUTUALLY_COMPARABLE",
+  "authorization": {
+    "single_cpu_fp64_diagnostic": true,
+    "local_nominal_development_reference_read": true,
+    "e2_prediction_carrier_read": true,
+    "selective_commit_and_push_main": true,
+    "gpu_use": false,
+    "neural_checkpoint_load": false,
+    "neural_model_construction": false,
+    "neural_forward_backward": false,
+    "optimizer_construction_or_step": false,
+    "reference_solver_replay": false,
+    "benchmark_reference_or_evaluator_modification": false,
+    "low_fidelity_training": false,
+    "pjgr_or_r2": false,
+    "stress_read": false,
+    "completion_does_not_authorize_next_research": true
+  },
+  "preserves_without_rewrite": [
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "R0A_INCONCLUSIVE",
+    "GRADIENT_STARVATION_TEMPORAL_PRECURSOR_ONLY",
+    "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "R1A_CONFIG_RAW_NO_COMPETENCE",
+    "PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED",
+    "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  ],
+  "inputs": {
+    "contracts_and_implementations": [
+      {"path": "configs/phk_v21/program_contract.json", "sha256": "B47CB3E131326077EF8D3EC50473B4F6A06D61E63B09861ECEF834901BE4D2A2"},
+      {"path": "configs/phk_v21/object_numerical_contract.json", "sha256": "BDC86AE4C1417E16A8772A88F7738B59D4F0D7BB3B272D1FFEC9E9572CF9CBDD"},
+      {"path": "configs/phk_v2/program_contract.json", "sha256": "0E1D89DD23F93C90160AC82ECE60ADA154410F4DDC33578CB892207FE8B445A8"},
+      {"path": "configs/phk_v2/object_numerical_contract.json", "sha256": "3B3B9A369F4AFDFFB201394DD294E7196BAF04E5B36BAFE126291CA9CB3EA157"},
+      {"path": "configs/phk_v23/program_contract_r1x_bounded_clean_coupling.json", "sha256": "04B4139282F628A107E873B62ABEBD57764F2F7BDECDF3BBE95D89FC3A3C7993"},
+      {"path": "configs/phk_v23/method_contract_r1x_clean_coupling.json", "sha256": "41C022CE4AC30EF1199F2D2FB90FDD73FD45BF7B302FF321D00E12C2DF13E838"},
+      {"path": "configs/phk_v23/exploration_contract_r1x_bounded_clean_coupling.json", "sha256": "4DEF1B867160E935228A11930993A399D5116A5F7571F98F3E4F2827C264D9C2"},
+      {"path": "pinn_pcm_sci/phk_benchmark.py", "sha256": "B18AFA4F9005735EF46E3958F325C5BC40CECD0BF5E419854B140FAF76DF9645"},
+      {"path": "pinn_pcm_sci/phk_v21_benchmark.py", "sha256": "2CA60CCB157EA2B5F06C887F363C9D21BEC221225CE67D9A1352B73ED446822D"},
+      {"path": "pinn_pcm_sci/phk_v21_solver.py", "sha256": "A4A70BE2F580EF7AAACBEBD0E3735B703E4E4045DD297B3B1BFC7B8A93B879FA"},
+      {"path": "pinn_pcm_sci/phk_v22r_pinn.py", "sha256": "ED81359EE5C878D7CA1B191A7E68ADFE82BB90EC5C1F939FEB005BA6261F970D"},
+      {"path": "pinn_pcm_sci/phk_v23_r1x.py", "sha256": "82CE498F2056E3D08C56DE1BD5613E15A49E79E899B32E79CAD6D1FEDCA56A9F"},
+      {"path": "pinn_pcm_sci/phk_v22r_prediction.py", "sha256": "D6353E129B2A3E54E94D5F834AB03B7E394874800DC09683E9B3AE967DADE750"},
+      {"path": "pinn_pcm_sci/phk_v22r_evaluator.py", "sha256": "09A86837A70093A73E20B5014950D11549BC086AF768E28B6EFBF718CFB78F9B"}
+    ],
+    "nominal_development_carriers": {
+      "medium": {"path": "outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/result-intent-04.npz", "sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F", "required": true},
+      "fine": {"path": "outputs/runs/20260828T-phk-v21-s1-q-05-nominal-fine/result-intent-05.npz", "sha256": "7343FC4AB6648F82CFAD3E517A748034D8E636959BC41D733195C477C1DCFA53", "required": true},
+      "extra_fine": {"path": "outputs/runs/20260828T-phk-v21-s1-q-06-nominal-extra-fine/result-intent-06.npz", "sha256": "0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE", "required": true},
+      "medium_half_dt": {"path": "outputs/runs/20260828T-phk-v21-s1-q-07-medium-half-dt/result-intent-07.npz", "sha256": "7F77284B58E6F46DAB99AEA778DE7C808C3913F70188B7BE5CE611748395F4A9", "required": true},
+      "fine_exact_replay": {"path": "outputs/runs/20260828T-phk-v21-s1-q-08-fine-exact-replay/result-intent-08.npz", "sha256": "4854C9CE4DE19916D5BAD347FA077BD66AFF572271FB137F79851CBDE340699F", "required": true}
+    },
+    "e2_prediction": {"path": "outputs/runs/20260903T010712Z-phk-v23-r1x-e2-top-hard-lift-ce64086/strong_raw/prediction.npz", "sha256": "5962DA2855CF67DB156F7F2E244758D18B9DD211EFE619453D85B6A87C44EFFA", "required": true},
+    "r1x_readiness_pool": {
+      "algorithm": "PhkCollocationSampler.interior_uniform",
+      "seed": 17,
+      "count": 2048,
+      "active_windows": 4,
+      "points_per_window": 512,
+      "canonical_tensor_sha256": "FF863ADFDFCA7B6C7B421DCF21F9527E60E7A83053FC26643055C35793755828"
+    }
+  },
+  "execution": {
+    "device": "CPU",
+    "dtype": "FLOAT64",
+    "gpu_hours": 0,
+    "cloud_cost_cny": 0,
+    "maximum_runs": 1,
+    "autodl_policy": "RETAINED_BY_PRIOR_USER_OVERRIDE_NOT_TOUCHED_BY_C0"
+  },
+  "measurement_contract": {
+    "windows": {"W1": [0.0, 0.35], "W2": [0.35, 1.25], "W3": [1.25, 1.6], "W4": [1.6, 2.5]},
+    "readiness_windows": ["W1", "W3"],
+    "roi": {"abs_x_max": 0.55, "z_min": 0.0, "z_max": 0.55},
+    "readiness": {"thermal_activation_fraction_minimum": 0.02, "positive_cold_kinetic_growth_fraction_minimum": 0.02, "joule_q95_strict_minimum": 1e-12},
+    "event_alignment": {"onset": "FIRST_SAVED_ROI_ACTIVE_FRACTION_GE_0_02", "pre_onset": "IMMEDIATELY_PRECEDING_SAVED_TIME", "peak": "MAXIMUM_SAVED_ROI_ACTIVE_FRACTION", "early_recovery": "FIRST_POST_PEAK_SAVED_TIME_WITH_AT_LEAST_10_PERCENT_OF_PEAK_MINUS_PRE_EXCURSION_RECOVERED"},
+    "boundary_strip_cell_layers": 2,
+    "bottom_seed_mask": "BOTTOM_TWO_CELL_LAYERS_AND_ABS_X_MINUS_SEED_CENTER_LE_2_SIGMA_X",
+    "saved_time_derivative": "BACKWARD_DIFFERENCE_LABELLED_SAVED_CADENCE_NOT_EXACT_INTERNAL_STEP",
+    "strong_spatial_approximation": "THREE_POINT_SECOND_ORDER_CENTRAL_STRICT_INTERIOR_AND_FOUR_POINT_SECOND_ORDER_ONE_SIDED_BOUNDARY",
+    "readiness_joule_identity": "R1X_MATCHED_CONTINUOUS_FINITE_DIFFERENCE_PROXY_VOTING_WITH_NATIVE_FVM_EDGE_DISSIPATION_NON_VOTING_SENSITIVITY",
+    "resolution_floor": "MAX_OF_MEDIUM_FINE_FINE_EXTRA_FINE_MEDIUM_HALF_DT_AND_FINE_EXACT_REPLAY_ABSOLUTE_STATISTIC_DIFFERENCES_PLUS_NATIVE_INTERNAL_RESIDUAL_RATE",
+    "phase_rhs": "MOBILITY_TIMES_EPSILON_SQUARED_LAPLACIAN_MINUS_BARRIER_DERIVATIVE_MINUS_THERMAL_TILT_DERIVATIVE",
+    "output_transforms": {
+      "potential_legacy": "0_LE_V_LE_WAVEFORM",
+      "potential_e2_hard_lift": "WAVEFORM_TIMES_Z_FRACTION_LE_V_LE_WAVEFORM",
+      "temperature": "0_LE_T_LE_2_5_TIMES_STARTUP_TIMES_ONE_MINUS_Z_FRACTION",
+      "phase": "0_LT_PHI_LT_1_WITH_REQUIRED_LATENT_NON_VOTING"
+    }
+  },
+  "machine_adjudication": {
+    "allowed_primary_outcomes": [
+      "C0_STRONGFORM_COMPATIBLE_LOW_FIDELITY_ALLOWED",
+      "C0_READINESS_GATE_MISALIGNED",
+      "C0_DISCRETE_STRONGFORM_MISMATCH_DOMINANT",
+      "C0_OUTPUT_TRANSFORM_INADMISSIBLE",
+      "C0_INCONCLUSIVE_EXACT_NATIVE_REPLAY_REQUIRED"
+    ],
+    "output_inadmissible": {
+      "minimum_event_support_violation_fraction": 0.001,
+      "minimum_q95_relative_excess": 0.01,
+      "hard_initial_or_bound_tolerance": 1e-8,
+      "audited_event_support_transforms": ["potential_legacy", "potential_e2_top_hard_lift", "temperature"],
+      "global_envelope_statistics_are_non_voting": true,
+      "required_latent_magnitude_is_non_voting": true,
+      "relative_excess_definition": "POINTWISE_MAX_LOWER_MINUS_VALUE_VALUE_MINUS_UPPER_ZERO_DIVIDED_BY_MAX_LOCAL_ENVELOPE_SCALE_1E_12",
+      "trigger_logic": "BOTH_FRACTION_AND_Q95_MUST_PASS_IN_FINE_AND_EXTRA_FINE"
+    },
+    "discrete_strongform_mismatch": {"minimum_residual_to_resolution_floor_ratio": 10.0, "maximum_rhs_sign_agreement": 0.9},
+    "strongform_compatible": {"maximum_residual_to_resolution_floor_ratio": 2.0, "minimum_rhs_sign_agreement": 0.9},
+    "multi_issue_selection": "PRIMARY_IS_TRIGGER_WITH_LARGEST_TRIGGER_NORMALIZED_EVIDENCE_RATIO_TIES_BY_ALLOWED_OUTCOME_ORDER_SECONDARY_IS_NEXT_LARGEST_TRIGGER_MAXIMUM_ONE",
+    "compatibility_gray_zone": "RATIO_ABOVE_2_AND_BELOW_10_WITH_NO_DOMINANT_SIGN_MISMATCH_IS_INCONCLUSIVE_EXACT_NATIVE_REPLAY_REQUIRED",
+    "insufficient_data_policy": "MISSING_EXACT_LOCAL_NATIVE_STATE_LIMITS_THE_CLAIM_BUT_ONLY_AN_UNRESOLVED_2_TO_10_COMPATIBILITY_GRAY_ZONE_OR_MISSING_REQUIRED_EVENT_OR_FLOOR_STATISTIC_TRIGGERS_INCONCLUSIVE_INPUT_HASH_SHAPE_OR_FINITE_FAILURE_IS_EXECUTION_INVALID",
+    "next_recommendation": {
+      "C0_STRONGFORM_COMPATIBLE_LOW_FIDELITY_ALLOWED": "LOW_FIDELITY_STRONGFORM_ROUTE_REQUIRES_NEW_EXECUTE",
+      "C0_READINESS_GATE_MISALIGNED": "DISCRETIZATION_CONSISTENT_ROUTE_REQUIRES_NEW_EXECUTE",
+      "C0_DISCRETE_STRONGFORM_MISMATCH_DOMINANT": "DISCRETIZATION_CONSISTENT_ROUTE_REQUIRES_NEW_EXECUTE",
+      "C0_OUTPUT_TRANSFORM_INADMISSIBLE": "OUTPUT_REPARAMETERIZATION_REQUIRED_BEFORE_LOW_FIDELITY",
+      "C0_INCONCLUSIVE_EXACT_NATIVE_REPLAY_REQUIRED": "EXACT_NATIVE_REFERENCE_REPLAY_REQUIRES_NEW_EXECUTE"
+    }
+  },
+  "reference_boundary": {
+    "role": "NOMINAL_LOCAL_DEVELOPMENT_DIAGNOSTIC_ONLY",
+    "forbidden_consumers": ["TRAINING", "LOSS", "SAMPLER", "INITIALIZATION", "READINESS_TRIGGER_CHANGE", "THRESHOLD_SELECTION", "CHECKPOINT_SELECTION", "EARLY_STOPPING", "CLOUD"],
+    "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD",
+    "raw_or_derived_fields_may_be_committed": false
+  }
+}

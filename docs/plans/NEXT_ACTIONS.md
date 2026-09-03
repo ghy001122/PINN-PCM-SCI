@@ -1,41 +1,26 @@
-# PLAN-PHK-V2.3-R1X：有界 clean-coupling campaign（完成）
+# PLAN-PHK-V2.3-C0：reference/discrete/strong-form compatibility audit
 
-- `phase_id`: `PHK_V23_R1X_BOUNDED_CLEAN_COUPLING_CAMPAIGN_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
-- `blocker_id`: `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`
-- `claim_status`: `V22R_TERMINAL_NO_GO_AND_R1A_NO_COMPETENCE_PRESERVED_R1X_PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`
-- `next_research_execution_authorized`: `false`
-- `authorization_state`: `CAMPAIGN_CONSUMED_NO_FURTHER_EXECUTION_AUTHORIZED`
-- `plan_status`: `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`
-- `current_stage`: `TERMINAL_PURE_SCRATCH_STOP`
-- `supersedes`: `PLAN_PHK_V23_R1A_COMPLETE`
-- `preserves`: `V22R_R0A_R0B_R0C_R1A_EVIDENCE`
-- `program_contract`: `configs/phk_v23/program_contract_r1x_bounded_clean_coupling.json`
-- `method_contract`: `configs/phk_v23/method_contract_r1x_clean_coupling.json`
-- `exploration_contract`: `configs/phk_v23/exploration_contract_r1x_bounded_clean_coupling.json`
-- `decision`: `docs/adr/0053-activate-phk-v23-r1x-bounded-clean-coupling-campaign.md`
-- `execution_override`: `configs/phk_v23/execution_override_r1x_verified_engineering_repair.json`
+- `phase_id`: `PHK_V23_C0_REFERENCE_DISCRETE_STRONGFORM_COMPATIBILITY_AUDIT_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
+- `blocker_id`: `C0_CPU_COMPATIBILITY_DIAGNOSTIC_PENDING`
+- `claim_status`: `V22R_AND_R1X_NEGATIVE_EVIDENCE_PRESERVED_C0_DIAGNOSTIC_PENDING`
+- `next_research_execution_authorized`: `true`
+- `authorization_state`: `ONE_C0_CPU_FP64_DIAGNOSTIC_AUTHORIZED`
+- `plan_status`: `C0_EXECUTION_ACTIVE`
+- `current_stage`: `PRE_EXECUTION_VALIDATION`
+- `supersedes`: `PLAN_PHK_V23_R1X_COMPLETE`
+- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_EVIDENCE`
+- `contract`: `configs/phk_v23/c0_reference_discrete_strongform_compatibility_contract.json`
+- `decision`: `docs/adr/0055-activate-phk-v23-c0-reference-discrete-strongform-compatibility-audit.md`
 
-## 已执行链
+## 执行顺序
 
-1. `COMPLETED`: 建立并激活 R1X 合同、trainer/residual seam、adapter、focused/regression tests、run card 与内容寻址部署。
-2. `PRESERVED_ENGINEERING_HISTORY`: 两次历史 E1 启动在模型构造前因隔离部署传递依赖缺失而 0-update 终止；用户覆盖原一次 retry 上限后，依赖闭合并通过 isolated preflight。
-3. `COMPLETED_EXPLORATION_1_OF_3`: 修复后的 E1 在 V100/FP64/seed 17 上从 scratch 完成 300 warm-up updates；五次 readiness 均失败，裁决为 `E1_ET_NOT_READY`。
-4. `COMPLETED_MACHINE_BRANCH`: 冻结树唯一选择 E2 top-Dirichlet hard lift；用户重启实例后部署 source commit `ce64086c...`。
-5. `PRESERVED_ZERO_STEP_STARTUP`: E2 首次 tmux 启动因相对 `PYTHONPATH` 未指向隔离根而在 import 前 0-update 终止；改用绝对路径并通过 isolated import regression，不计 exploration。
-6. `COMPLETED_EXPLORATION_2_OF_3`: 有效 E2 从 scratch 完成 300 warm-up updates；top BC 精确满足，但五次 readiness 仍失败，且无 material phase signal。
-7. `COMPLETED_LOCAL_ADJUDICATION`: 全部产物回收并核验 hash 后，本地 frozen nominal evaluator 确认两周期 event/ROI peak/recovery 全部失败。
-8. `MACHINE_TREE_TERMINAL`: E2 未产生 material phase signal，故 E3 与 confirmation 不可达；终局为 `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`。
-9. `INSTANCE_LIFECYCLE_OVERRIDE`: 用户明确要求本条运行后不关机；实例保持在线但 GPU 空闲、无 R1X 进程。该事实不产生新科研授权。
+1. 冻结并测试 carrier、物理对象、FVM 算子、R1X pool、mask、公式与五类裁决。
+2. 运行受影响的 CPU regressions、ledger validator 和 document-consistency gate。
+3. 以精确 source commit 执行一次 CPU/FP64 C0 audit；不使用神经 checkpoint、GPU 或 AutoDL。
+4. 保存 compact statistics、manifest、closeout 和 ledger；不保存 reference 场或派生数组。
+5. 将机器 primary/secondary 与唯一 next recommendation 同步到权威状态，关闭本阶段并精确提交、推送。
 
-## 最终计数与边界
+## 停止条件
 
-- 有效 non-voting explorations：`2/3`；冻结树下剩余可达 exploration：`0`。
-- frozen confirmations：`0/1`；当前不可达。
-- E1/E2 均从 scratch、V100/FP64/seed 17、reference-blind；stress 始终 sealed/unread。
-- V2.2R/R0A/R0B/R0C/R1a 历史证据、benchmark、PDE、本构、reference 与 evaluator 保持不变。
-- 当前不得使用未消耗的数量槽重新选择 E2、进入 E3、执行 confirmation、PJGR、R2、其他 seed 或 stress。
-- 下一研究路线仅可是 `LOW_FIDELITY_GUIDED_ROUTE_REQUIRES_NEW_CONTRACT_AND_EXECUTE`，或保留 bounded-negative package；本文件不授权其执行。
-- 未来默认 GPU 生命周期仍为使用结束后及时关机；仅在用户对具体运行明确要求时保留实例。
-
-最终证据见 [R1X E2/campaign closeout](../experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)，E1 证据见 [R1X E1 closeout](../experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)，历史工程阻塞见 [R1X engineering-blocked closeout](../experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。
+得到五类机器结果之一后立即停止。任何输入 hash、shape、finite、source identity 或 stress fail-close 失败均属于工程阻塞，不得伪装成科学结果。C0 完成不自动授权下一路线。
