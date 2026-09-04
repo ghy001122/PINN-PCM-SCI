@@ -1,46 +1,34 @@
-# PLAN-PHK-V2.3-LF1：admissible event-preserving multi-fidelity pilot（已完成）
+# PLAN-PHK-V2.3-LF2：measure-calibrated feasible PINN
 
-- `phase_id`: `PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY_PILOT`
-- `lifecycle_state`: `COMPLETE`
-- `blocker_id`: `NONE_TERMINAL`
-- `claim_status`: `V22R_R0_R1A_R1X_C0_LF0_EVIDENCE_PRESERVED_LF1_DATA_ONLY_VALUE_NO_PINN_GAIN`
-- `next_research_execution_authorized`: `false`
-- `authorization_state`: `CONSUMED_AND_CLOSED`
-- `plan_status`: `LF1_TERMINAL_COMPLETE`
-- `current_stage`: `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN_TERMINAL`
-- `supersedes`: `PLAN_PHK_V23_LF0_TERMINAL_COMPLETE`
-- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_LF0_EVIDENCE`
-- `contracts`: `configs/phk_v23/{program_contract_lf1_event_preserving_multifidelity,method_contract_lf1_event_preserving_multifidelity,data_contract_lf1_medium_event_replay,decision_contract_lf1_event_preserving}.json`
-- `decision`: `docs/adr/0057-activate-phk-v23-lf1-event-preserving-multifidelity-pilot.md`
-- `next_recommendation`: `RETAIN_DATA_ONLY_VALUE_AS_NON_PINN_BASELINE_STOP_METHOD_CLAIM`
+- `phase_id`: `PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
+- `blocker_id`: `NONE`
+- `claim_status`: `V22R_R0_R1A_R1X_C0_LF0_LF1_EVIDENCE_PRESERVED_LF2_CPU_QUALIFIED_GPU_RESULT_PENDING`
+- `next_research_execution_authorized`: `true`
+- `authorization_state`: `EXPLICIT_USER_EXECUTE_ACTIVE`
+- `plan_status`: `LF2_GPU_EXECUTION_READY`
+- `current_stage`: `REMOTE_ZERO_STEP_PREFLIGHT_PENDING`
+- `supersedes`: `PLAN_PHK_V23_LF1_TERMINAL_COMPLETE`
+- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_LF0_LF1_EVIDENCE`
+- `contracts`: `configs/phk_v23/{program_contract_lf2_measure_calibrated_feasible_pinn,method_contract_lf2_measure_calibrated_feasible_pinn,data_contract_lf2_measure_calibrated_medium,decision_contract_lf2_measure_calibrated_feasible_pinn}.json`
+- `decision`: `docs/adr/0058-activate-phk-v23-lf2-measure-calibrated-feasible-pinn.md`
+- `next_recommendation`: `REMOTE_ZERO_STEP_PREFLIGHT_THEN_SOLE_LF2_TRAJECTORY`
 
-## 终局
+## 当前关键路径
 
-LF1 已按冻结顺序执行 Run A 与 Run B，共使用 `2/3` 条 scientific GPU trajectories。Run A 是有效但无事件的 range-preserving scratch control。Run B0 通过 data-transfer gate并获得两周期 competence；B final 在 persistent replay 下保留 competence且把固定 physics objective 降到 B0 的 `0.0571112`。
+1. 将精确 LF2 source bundle、medium carrier、LF1-B0 checkpoint 上传到隔离部署根；按 live price 执行零 optimizer-step preflight。
+2. 若 preflight 通过，运行唯一 trajectory：M0 1200-step target-measure data-only calibration；仅当 M0 full-medium gate 通过时运行 M1 1200-step full physics + feasibility inequalities。
+3. 回收 summary 及其全部绑定文件，在本地逐项复算大小与 SHA256；随后立即关闭实例并以 SSH refused 证明关机。
+4. 关机后在本地用未修改 frozen evaluator 比较 LF1 A、direct LF_ONLY、LF1 B0、LF1 B final、LF2 M0 与存在时的 LF2 final；同时计算固定 seed-17301 physics objective 和逐步 batch identity。
+5. 按七类机器结局唯一映射生成 terminal artifact/manifest/closeout，关闭授权并精确提交、推送。
 
-B final 没有通过相对 B0 与 direct `LF_ONLY` 的 phase noninferiority 和 temperature preservation，因此机器结果为：
+## Go/No-Go 与止损
 
-```text
-LF1_DATA_ONLY_VALUE_NO_PINN_GAIN
-→ RETAIN_DATA_ONLY_VALUE_AS_NON_PINN_BASELINE_STOP_METHOD_CLAIM
-```
+- CPU 资格已经通过；远端身份或边界失败时不得开始 optimizer。
+- M0 任一数值、potential、两周期事件、recall/precision/mass/event-time 或 V/T/phase 误差门失败，立即以相应 terminal outcome 停止，不运行 M1。
+- M1 只使用原 full physics objective 与 AL feasibility constraints；不加固定 replay weight、不做 sweep、不做 checkpoint selection。
+- 第一科学步后不授权工程重跑；最多一条 LF2 科学轨迹。stress、PJGR/R2、phase-latent teacher、新 seed 与 formal OOD 均保持关闭。
 
-条件 C 仅在 provisional gate 全部通过时运行，本次没有触发。两条 GPU 运行均已完整回收、哈希核验和关机；本地 nominal evaluation 在关机验证后完成；stress 始终 sealed/unread。
+## 论文映射
 
-## 对论文的可用证据
-
-| 证据 | 可写结论 | 不可写结论 |
-|---|---|---|
-| LF0 + LF1 CPU diagnosis | 普通 field distillation 稀释稀疏事件监督 | 一般性 low-fidelity 失败 |
-| Run A | 新 potential 表示有效但不独自恢复事件 | 表示本身构成方法增益 |
-| Run B0 | event-balanced data-only 蒸馏可转移两周期 competence | PINN-specific value |
-| Run B final | persistent replay 避免冷态坍塌并降低 physics residual | 相对强 data-only baseline 的冻结增量 |
-| C 未运行 | provisional gate 未达到，compute control 不可达 | C 失败或 C 支持任一方向 |
-
-这些材料可进入导师初稿的 failure-analysis、solver-recovery 与强 data-only baseline 章节，但不能形成正向 headline PINN 方法主张。中科院二区投稿所需的 multi-seed、formal OOD/stress、强基线统计与核心方法增量均未建立。
-
-## 停止与后续边界
-
-当前没有授权下一研究阶段。不得把未使用的第三条额度用于 C、救援运行或新方法，不得启动 phase-latent teacher、PJGR、R2、新 seed、stress、formal OOD 或投稿。后续若要继续，应先由用户选择是否建立一个直接面向 accuracy–physics Pareto 的新最小合同；本完成态不自动产生该授权。
-
-终局证据见 [LF1 terminal closeout](../experiment/2026-09-03-phk-v23-lf1-terminal-closeout.md) 与 [compact artifact](../experiment/artifacts/20260903T155306Z-phk-v23-lf1-terminal-dc091be.json)。
+M0 回答“评价测度校准能否把 LF1 的过宽事件 carrier 修回准确可容许状态”；M1 回答“full physics residual 能否在显式 accuracy/event 可行域内下降”。只有冻结 provisional gate 全部通过才能形成 single-seed nominal candidate；其余结果进入 failure-analysis 与强 non-PINN baseline 叙事，不夸大为一般 PINN 失败。

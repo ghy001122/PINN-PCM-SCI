@@ -1,0 +1,76 @@
+{
+  "actual_budget": {
+    "cloud_cost_cny": 0.0,
+    "cpu_qualification_runs": 1,
+    "gpu_hours": 0.0,
+    "optimizer_steps_on_scientific_model": 0,
+    "wall_seconds_upper_bound_from_run_id_to_artifact": 47.38
+  },
+  "artifacts": {
+    "compact_qualification": "artifacts/20260904T064642Z-phk-v23-lf2-cpu-qualification-e7f3152.json",
+    "compact_qualification_sha256": "EB5BE3344E83B0FB31513490A909D481E337CF7445CB8753B0C561C1E7E8B71A",
+    "deployed_source_manifest": "../../cloud/phk_v23_lf2_autodl/deployed-source-manifest.json",
+    "deployed_source_manifest_sha256": "0E69B5D8252834594FA151E5E6984CAD7B18E5302AAC8E2D500DC77956EAD9CD",
+    "raw_qualification": "../../outputs/runs/20260904T064642Z-phk-v23-lf2-cpu-qualification-e7f3152/qualification.json",
+    "raw_qualification_sha256": "1113FDC11287CBE51FEE2D03154C8234F882AF3ED42D303EC895A2DE9579CCA4",
+    "source_archive": "../../outputs/deploy/phk-v23-lf2-source-e7f3152.tar.gz",
+    "source_archive_sha256": "75E57334E60624840CF6E29DE5FCFBE73264C3617D6E26D9C392636EC026CDF9"
+  },
+  "case_id": "PHK_V21_NOMINAL_MEDIUM_MEASURE_CALIBRATION_QUALIFICATION",
+  "checkpoint": {
+    "loaded_for_read_only_identity_and_full_medium_audit": true,
+    "modified": false,
+    "optimizer_state_loaded": false,
+    "path": "outputs/runs/20260903T152501Z-phk-v23-lf1-b-event-replay-dc091be-er1/checkpoint-b0-step-1200.pt",
+    "sha256": "B4073CD5D09EE3A022F333A8AB1CDDF9B6195E87461BBA1BFED67AC0E3424182"
+  },
+  "claim_status": "LF1_NEGATIVE_EVIDENCE_PRESERVED_LF2_CPU_QUALIFIED_NO_GPU_SCIENTIFIC_RESULT",
+  "code_identity": {
+    "base_commit": "e7f31523823675a90aee26f8703e71ebaff2f536",
+    "deployed_source_manifest_sha256": "0E69B5D8252834594FA151E5E6984CAD7B18E5302AAC8E2D500DC77956EAD9CD",
+    "source_identity": "LF2-BUNDLE-AB0756BF7D4CBDCFDCA88F48C5BBB882760D586C65089999DA16F1DFA64E4AA3"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pinn_pcm_sci.phk_v23_lf2_qualification",
+    "--output",
+    "outputs/runs/20260904T064642Z-phk-v23-lf2-cpu-qualification-e7f3152/qualification.json"
+  ],
+  "ended_at": "2026-09-04T06:47:29.379663+00:00",
+  "environment": {
+    "device": "LOCAL_CPU",
+    "dtype": "FLOAT64",
+    "fine_extra_fine_reference_read": false,
+    "gpu_used": false,
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "stress_fields_or_metrics_read": false,
+    "torch": "2.5.1+cpu"
+  },
+  "evaluator_id": "phk-v23-lf2-cpu-qualification-v1",
+  "evidence_identity": "CPU_ONLY_TARGET_MEASURE_PARTITION_SAMPLING_IDENTITY_AND_LF1_B0_FULL_MEDIUM_BASELINE_NOT_PINN_COMPETENCE_OR_METHOD_GAIN",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN",
+  "failure_class": null,
+  "gate": "PHK_V23_LF2_CPU",
+  "gate_outcome": "LF2_CPU_QUALIFICATION_PASS",
+  "method_id": "phk-v23-lf2-measure-calibrated-feasible-pinn-v1",
+  "numerical_validity": "VALID_LOCAL_CPU_FP64_HASH_BOUND_MEDIUM_LF1_B0_PARTITION_AND_SYNTHETIC_ONE_STEP_NO_GPU_FINE_EXTRA_OR_STRESS",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "cpu_qualification_runs_maximum": 1,
+    "gpu_hours": 0.0,
+    "optimizer_steps_on_scientific_model": 0
+  },
+  "replay_of": null,
+  "route_disposition": "REMOTE_ZERO_STEP_PREFLIGHT_THEN_SOLE_LF2_TRAJECTORY",
+  "run_id": "20260904T064642Z-phk-v23-lf2-cpu-qualification-e7f3152",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "cpu_only_measure_calibration_and_feasibility_qualification",
+  "seed": 17,
+  "split_id": "MEDIUM_METHOD_INPUT_LF1_B0_INITIALIZATION_FINE_EXTRA_LOCAL_ONLY_STRESS_SEALED",
+  "started_at": "2026-09-04T06:46:42+00:00",
+  "supersedes": null,
+  "tier": "qualification"
+}

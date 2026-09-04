@@ -1,0 +1,155 @@
+{
+  "schema_id": "phk-v23-lf2-decision-contract-v1",
+  "contract_id": "PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_DECISION",
+  "program_contract": "configs/phk_v23/program_contract_lf2_measure_calibrated_feasible_pinn.json",
+  "method_contract": "configs/phk_v23/method_contract_lf2_measure_calibrated_feasible_pinn.json",
+  "data_contract": "configs/phk_v23/data_contract_lf2_measure_calibrated_medium.json",
+  "effective_date": "2026-09-04",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "qualification_inputs": {
+    "lf1_terminal_artifact": {
+      "path": "docs/experiment/artifacts/20260903T155306Z-phk-v23-lf1-terminal-dc091be.json",
+      "sha256": "9BE79417DD3C536830E12EC40C7ADBF65C0B40D162E1D131ED2F9426FD06AEF6"
+    },
+    "lf1_terminal_manifest": {
+      "path": "docs/experiment/manifests/20260903T155306Z-phk-v23-lf1-terminal-dc091be.json",
+      "sha256": "3FC43EC64F0060A776945C568AB4099B58174E1AB0C0C6F4D2E32378AE731F16"
+    },
+    "lf1_raw_adjudication": {
+      "path": "outputs/runs/20260903T155306Z-phk-v23-lf1-local-after-b/adjudication.json",
+      "sha256": "39B9169E745FF7AEEE67917382C92E90D10B5D1CF6C4B5ECA8DEC99775735B7C"
+    },
+    "oracle_floor_contract": {
+      "path": "configs/phk_v21/oracle_and_floor_contract.json",
+      "sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB"
+    },
+    "oracle_floor_seal": {
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/oracle-floor-seal.json",
+      "sha256": "3B71753CBAC720C1CF5F7937741FCF605693C5580988C848113AC9378F1A01F7"
+    }
+  },
+  "cpu_qualification": {
+    "required_before_gpu": true,
+    "required_reports": [
+      "FOURTEEN_CATEGORY_MUTUALLY_EXCLUSIVE_EXHAUSTIVE_PARTITION",
+      "TARGET_MEASURE_CATEGORY_MASSES_PI",
+      "PROPOSAL_QUOTAS_SEEDS_CALL_ORDER_AND_ROLLING_HASH",
+      "OLD_PROPOSAL_AMPLIFICATION_BY_CATEGORY",
+      "LF1_B0_FULL_MEDIUM_WEIGHTED_V_T_PHASE_AND_TOPOLOGY_ERRORS",
+      "LF1_B0_TWO_CYCLE_RECALL_PRECISION_ACTIVE_MASS_AND_EVENT_TIME",
+      "SYNTHETIC_WEIGHTED_ESTIMATOR_CONSTANT_IDENTITY",
+      "EXACT_SOURCE_CHECKPOINT_FP64_POTENTIAL_AND_REFERENCE_BOUNDARY"
+    ],
+    "one_step_smoke": "SYNTHETIC_CPU_ONLY_NO_SCIENTIFIC_TRAINING",
+    "failure": "LF2_CPU_OR_PARTITION_BLOCKED"
+  },
+  "potential_maximum_principle": {
+    "role": "METHOD_AND_RUN_VALIDITY_GUARD_NOT_FROZEN_EVALUATOR",
+    "lower": "min(0,waveform)",
+    "upper": "max(0,waveform)",
+    "absolute_tolerance": 1e-06,
+    "maximum_violation_fraction": 0.0,
+    "applies_to": [
+      "M0_CALIBRATED_CARRIER",
+      "M1_FINAL",
+      "LF_ONLY_MEDIUM_DIRECT",
+      "LF1_B0"
+    ],
+    "failure": "LF2_NUMERICAL_OR_IDENTITY_INVALID"
+  },
+  "M0_constraints_each_cycle": {
+    "soft_activation": "s_tau=sigmoid((phase_prediction-0.5)/0.05)",
+    "soft_recall": "R=TARGET_MEASURE_CONDITIONAL_MEAN_s_tau_ON_TEACHER_EVENT_NODES",
+    "soft_active_mass": "M=TARGET_MEASURE_INTEGRAL_s_tau_OVER_CYCLE_WINDOW",
+    "teacher_active_mass": "M_star=TARGET_MEASURE_OF_TEACHER_PHASE_GE_0.5_IN_CYCLE_WINDOW",
+    "inequalities": [
+      "0.90-R_LE_0",
+      "0.80-M_DIV_M_star_LE_0",
+      "M_DIV_M_star-1.20_LE_0"
+    ]
+  },
+  "M0_full_medium_gate": {
+    "all_values_finite": true,
+    "potential_guard_pass": true,
+    "phase_maximum_minimum": 0.9,
+    "two_cycle_events_required": true,
+    "hard_recall_each_cycle_minimum": 0.9,
+    "hard_precision_each_cycle_minimum": 0.8,
+    "hard_active_mass_ratio_each_cycle_minimum": 0.8,
+    "hard_active_mass_ratio_each_cycle_maximum": 1.2,
+    "event_time_absolute_error_each_cycle_maximum": 0.005,
+    "phase_weighted_mse_to_lf1_b0_maximum_ratio": 0.5,
+    "temperature_weighted_mse_to_lf1_b0_maximum_ratio": 0.5,
+    "potential_weighted_mse_to_lf1_b0_maximum_ratio": 1.1,
+    "failure": "LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED"
+  },
+  "M1_feasibility_constraints_relative_to_M0": {
+    "denominator_floor": 1e-12,
+    "potential_weighted_mse_maximum_ratio": 1.2,
+    "temperature_weighted_mse_maximum_ratio": 1.05,
+    "phase_weighted_mse_maximum_ratio": 1.05,
+    "topology_weighted_loss_maximum_ratio": 1.05,
+    "hard_recall_each_cycle_minimum": 0.9,
+    "hard_active_mass_ratio_each_cycle_minimum": 0.8,
+    "hard_active_mass_ratio_each_cycle_maximum": 1.2,
+    "failure": "LF2_FEASIBILITY_PRESERVATION_FAILED"
+  },
+  "local_evaluation": {
+    "frozen_evaluator_unchanged": true,
+    "nominal_extra_fine_only_after_complete_recovery_hash_verification_and_shutdown_refusal": true,
+    "comparators": [
+      "LF1_A_RANGE_PRESERVING_SCRATCH",
+      "LF_ONLY_MEDIUM_DIRECT",
+      "LF1_B0_LF_DATA_ONLY",
+      "LF1_B_FINAL",
+      "LF2_M0_CALIBRATED_CARRIER",
+      "LF2_M1_FINAL"
+    ],
+    "fixed_reference_blind_physics_pool": {
+      "seed": 17301,
+      "dtype": "FLOAT64",
+      "device": "CPU",
+      "active_windows": 4,
+      "interior_points": 512,
+      "boundary_points_total": 128,
+      "initial_points": 128,
+      "objective": "NORMALIZED_PDE_PLUS_5_TIMES_BOUNDARY_PLUS_INITIAL"
+    }
+  },
+  "provisional_positive_gate": {
+    "M0_and_final_valid_and_two_cycle_frozen_competent": true,
+    "fixed_physics_objective_ratio_final_to_M0_maximum": 0.5,
+    "phase_noninferiority_vs_M0_and_LF_ONLY": "REUSE_LF1_FORMULA_AND_PHK_V21_COMPONENT_FLOORS",
+    "temperature_preservation_vs_M0_and_LF_ONLY": "REUSE_LF1_FORMULA",
+    "current_preservation_vs_M0_and_LF_ONLY": "REUSE_LF1_FORMULA",
+    "full_medium_M1_feasibility_constraints_pass": true,
+    "all_identity_and_batch_guards_pass": true
+  },
+  "machine_outcomes_and_unique_next": {
+    "LF2_ENGINEERING_BLOCKED": "IDENTICAL_PRE_FIRST_SCIENTIFIC_STEP_ENGINEERING_RETRY_WITHIN_CAMPAIGN_OR_AWAIT_AUTODL_RESTART",
+    "LF2_CPU_OR_PARTITION_BLOCKED": "USER_REVIEW_REQUIRED_NO_GPU_EXECUTION",
+    "LF2_NUMERICAL_OR_IDENTITY_INVALID": "INVALID_RUN_REQUIRES_USER_REVIEW_NO_AUTOMATIC_SCIENTIFIC_RETRY",
+    "LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED": "PHASE_LATENT_TEACHER_BACKUP_REQUIRES_NEW_EXECUTE",
+    "LF2_FEASIBILITY_PRESERVATION_FAILED": "STOP_FEASIBILITY_CONSTRAINED_REFINEMENT_RETAIN_BOUNDED_NEGATIVE",
+    "LF2_NO_PINN_SPECIFIC_GAIN": "KEEP_LF_DATA_ONLY_AND_LF_ONLY_BASELINES_FOR_NEGATIVE_ADVISOR_DRAFT",
+    "LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_PROVISIONAL_SIGNAL": "FREEZE_LF2_CANDIDATE_THEN_MULTISEED_CONFIRMATION_REQUIRES_NEW_EXECUTE"
+  },
+  "outcome_precedence": [
+    "ENGINEERING_BLOCKED_BEFORE_FIRST_SCIENTIFIC_STEP",
+    "CPU_OR_PARTITION_BLOCKED",
+    "NUMERICAL_OR_IDENTITY_INVALID",
+    "CALIBRATED_CARRIER_NOT_ESTABLISHED",
+    "FEASIBILITY_PRESERVATION_FAILED",
+    "NO_PINN_SPECIFIC_GAIN",
+    "PROVISIONAL_SIGNAL"
+  ],
+  "claim_boundary": "SINGLE_SEED_NOMINAL_DEVELOPMENT_PILOT_NOT_MULTI_SEED_STRESS_FORMAL_OOD_CONTINUUM_TRUTH_EXPERIMENTAL_VALIDATION_OR_SUBMISSION_READY",
+  "source_attribution": {
+    "multi_fidelity_neural_networks": "arXiv:1903.00104",
+    "pecann_inequality_augmented_lagrangian": "arXiv:2109.14860",
+    "originality_claim_for_source_components": false,
+    "candidate_identity": "COMBINED_MEASURE_CALIBRATED_RARE_EVENT_TRANSFER_AND_FEASIBILITY_CONSTRAINED_FULL_PHYSICS_INTERFACE_ONLY"
+  },
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD",
+  "completion_does_not_authorize_next_research": true
+}

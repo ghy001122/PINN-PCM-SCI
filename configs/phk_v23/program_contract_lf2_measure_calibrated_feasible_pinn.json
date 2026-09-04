@@ -1,0 +1,56 @@
+{
+  "schema_id": "phk-v23-lf2-program-contract-v1",
+  "contract_id": "PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_EXECUTE",
+  "phase_id": "PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_EXECUTE",
+  "effective_date": "2026-09-04",
+  "status": "EXPLICITLY_AUTHORIZED_BOUNDED_CAMPAIGN",
+  "expected_base_commit": "e7f31523823675a90aee26f8703e71ebaff2f536",
+  "lf1_closeout_commit": "e7f31523823675a90aee26f8703e71ebaff2f536",
+  "authorization_source": "CURRENT_USER_DIRECT_EXECUTE_REQUEST_FOR_THE_COMPLETE_LF2_INSTRUCTION",
+  "scientific_question": "CAN_EVALUATOR_MEASURE_CALIBRATED_RARE_EVENT_TRANSFER_ESTABLISH_AN_ACCURATE_MEDIUM_CARRIER_AND_CAN_INEQUALITY_CONSTRAINED_FULL_PHYSICS_REFINEMENT_REDUCE_PHYSICS_RESIDUAL_WITHOUT_ERASING_THAT_ACCURACY",
+  "paper_role": "SINGLE_SEED_NOMINAL_ACCURACY_PHYSICS_PARETO_PILOT",
+  "authorization": {
+    "contract_code_test_document_writes": true,
+    "cpu_partition_qualification": true,
+    "one_gpu_trajectory_after_cpu_gate": true,
+    "local_nominal_evaluation_after_shutdown": true,
+    "selective_commit_and_push_main": true,
+    "maximum_scientific_gpu_trajectories": 1,
+    "seed_17_only": true,
+    "new_seed": false,
+    "phase_latent_teacher_backup": false,
+    "stress_prediction_or_unseal": false,
+    "pjgr_or_r2": false,
+    "benchmark_pde_constitutive_geometry_parameter_reference_roi_threshold_or_evaluator_change": false,
+    "submission_external_contact_or_publication": false
+  },
+  "hard_limits": {
+    "maximum_scientific_gpu_trajectories": 1,
+    "maximum_optimizer_updates": 2400,
+    "maximum_v100_wall_hours": 1.0,
+    "maximum_incremental_cost_cny": 3.0,
+    "manual_early_stop": false,
+    "accuracy_checkpoint_selection": false,
+    "hyperparameter_or_weight_sweep": false
+  },
+  "lifecycle": {
+    "before_first_optimizer_step": "VERIFY_LIVE_PRICE_GPU_PROCESS_SOURCE_CHECKPOINT_QUALIFICATION_AND_REFERENCE_BOUNDARY",
+    "after_gpu_trajectory": "RECOVER_ALL_SUMMARY_BOUND_ARTIFACTS_VERIFY_HASHES_SHUTDOWN_AND_VERIFY_SSH_REFUSED_BEFORE_LOCAL_REFERENCE_IO",
+    "restart_required_status": "AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE",
+    "engineering_retry": "ONLY_BEFORE_FIRST_SCIENTIFIC_OPTIMIZER_STEP_AFTER_ROOT_CAUSE_AND_TARGETED_REGRESSION_WITH_IDENTICAL_SCIENTIFIC_IDENTITY",
+    "post_first_step_interruption": "SCIENTIFIC_TRAJECTORY_CONSUMED_REQUIRES_USER_REVIEW",
+    "completion_does_not_authorize_next_research": true
+  },
+  "preserves_without_rewrite": [
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "R0A_INCONCLUSIVE",
+    "GRADIENT_STARVATION_TEMPORAL_PRECURSOR_ONLY",
+    "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "R1A_CONFIG_RAW_NO_COMPETENCE",
+    "PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED",
+    "C0_OUTPUT_TRANSFORM_INADMISSIBLE",
+    "LF0_NUMERICAL_OR_IDENTITY_INVALID",
+    "LF1_DATA_ONLY_VALUE_NO_PINN_GAIN",
+    "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  ]
+}

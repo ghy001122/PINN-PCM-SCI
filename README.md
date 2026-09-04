@@ -4,21 +4,21 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY_PILOT`
-- `lifecycle_state`: `COMPLETE`
-- `blocker_id`: `NONE_TERMINAL`
-- `claim_status`: `V22R_R0_R1A_R1X_C0_LF0_EVIDENCE_PRESERVED_LF1_DATA_ONLY_VALUE_NO_PINN_GAIN`
-- `next_research_execution_authorized`: `false`
+- `phase_id`: `PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
+- `blocker_id`: `NONE`
+- `claim_status`: `V22R_R0_R1A_R1X_C0_LF0_LF1_EVIDENCE_PRESERVED_LF2_CPU_QUALIFIED_GPU_RESULT_PENDING`
+- `next_research_execution_authorized`: `true`
 
-LF1 已终局完成。Run B0 的 event-balanced medium 蒸馏与 B final 的 persistent replay 都保留了两周期 competence，且固定 physics objective ratio 降至 `0.0571112`；但 B final 相对 B0 与 direct `LF_ONLY` 的 phase noninferiority 和 temperature preservation 失败。机器结果为 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN`，candidate 为 none，条件 C 未触发。两条 GPU 轨迹均已回收、哈希核验和关机；stress 继续 sealed/unread。
+LF2 CPU 资格已通过，当前授权唯一一条 V100/FP64/seed-17 trajectory。它先用 evaluator-compatible target measure 校准 LF1-B0 的过宽事件 carrier，再条件式执行 inequality-constrained full physics refinement；GPU 结束后必须先回收、核验和关机，才能做本地 nominal 评价。LF1 的 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN` 保持不改写，stress 继续 sealed/unread。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
-- 当前决定：[ADR 0057](docs/adr/0057-activate-phk-v23-lf1-event-preserving-multifidelity-pilot.md)
-- CPU 资格：[LF1 qualification](docs/experiment/2026-09-03-phk-v23-lf1-cpu-qualification.md)
+- 当前决定：[ADR 0058](docs/adr/0058-activate-phk-v23-lf2-measure-calibrated-feasible-pinn.md)
+- CPU 资格：[LF2 qualification](docs/experiment/2026-09-04-phk-v23-lf2-cpu-qualification.md)
 - LF1 终局：[LF1 terminal closeout](docs/experiment/2026-09-03-phk-v23-lf1-terminal-closeout.md)
 - Run A 中间证据：[LF1 Run A interim closeout](docs/experiment/2026-09-03-phk-v23-lf1-run-a-interim-closeout.md)
 - LF0 结果：[terminal closeout](docs/experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)

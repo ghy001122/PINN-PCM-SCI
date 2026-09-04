@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0058：激活 PHK-V2.3 LF2 measure-calibrated feasible PINN](0058-activate-phk-v23-lf2-measure-calibrated-feasible-pinn.md) — 唯一 seed-17 trajectory 先做评价测度校准 M0，再条件式做可行性约束 full-physics M1；CPU 资格已通过，stress/PJGR/R2/额外轨迹保持关闭。
 - [0057：激活并收口 PHK-V2.3 LF1 event-preserving multi-fidelity pilot](0057-activate-phk-v23-lf1-event-preserving-multifidelity-pilot.md) — B0/B final 均恢复两周期 competence且 physics objective 显著下降，但冻结 phase/temperature 增量门失败，故以 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN` 收口；C 未触发，继续禁止 PJGR/R2/stress。
 - [0056：激活并收口 PHK-V2.3 LF0 exact-top warm-start attribution campaign](0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md) — A 无 competence；B 的 step-800 data-only checkpoint 违反 potential validity，故以 `LF0_NUMERICAL_OR_IDENTITY_INVALID` 收口且不执行条件 C；stress 继续 sealed/unread。
 - [0055：激活并收口 PHK-V2.3 C0 reference/discrete/strong-form compatibility audit](0055-activate-phk-v23-c0-reference-discrete-strongform-compatibility-audit.md) — 一次本地 CPU/FP64 nominal development diagnostic 识别 E2 hard-lift output inadmissibility；不训练、不使用 GPU、不读取 stress，完成后不自动授权下一路线。

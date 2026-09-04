@@ -1,0 +1,100 @@
+{
+  "bound_inputs": {
+    "lf1_b0_checkpoint_sha256": "B4073CD5D09EE3A022F333A8AB1CDDF9B6195E87461BBA1BFED67AC0E3424182",
+    "lf1_raw_adjudication_sha256": "39B9169E745FF7AEEE67917382C92E90D10B5D1CF6C4B5ECA8DEC99775735B7C",
+    "medium_sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F",
+    "oracle_floor_contract_sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB",
+    "oracle_floor_seal_sha256": "3B71753CBAC720C1CF5F7937741FCF605693C5580988C848113AC9378F1A01F7"
+  },
+  "contracts": {
+    "data_sha256": "3D0E5F6A19EE57E95D547F6330327EAB02BA9D4A3356127E12A4A264295821DC",
+    "decision_sha256": "E91488F9A0119EC8A46655EB3EDAF8E821BC555D00C98BF6D732D903664B1C63",
+    "method_sha256": "ACBB904B6FD442965D46A5E73508F6F16241725E29ACA28877407678CF5E72C7",
+    "program_sha256": "26C82ECDA8686DDC559C9CA0CE2ED728CA7EED6BCE8D27245C73ABA0CFA3D80F"
+  },
+  "created_at_utc": "2026-09-04T06:47:29.379663+00:00",
+  "execution_boundary": {
+    "fine_extra_fine_reference_read": false,
+    "gpu_used": false,
+    "optimizer_updates_on_scientific_model": 0,
+    "stress_fields_or_metrics_read": false,
+    "synthetic_scalar_optimizer_steps": 1
+  },
+  "lf1_b0_full_medium_baseline": {
+    "cycle_1": {
+      "event_time_absolute_error": 0.04461999999999999,
+      "hard_active_mass_ratio": 5.26975945017182,
+      "hard_precision": 0.17052494294098466,
+      "hard_recall": 0.8986254295532644
+    },
+    "cycle_2": {
+      "event_time_absolute_error": 0.05177777777777792,
+      "hard_active_mass_ratio": 5.863883847549908,
+      "hard_precision": 0.16109563602599816,
+      "hard_recall": 0.9446460980036296
+    },
+    "phase_maximum": 0.7541966324539336,
+    "potential_maximum_principle_passed": true,
+    "topology_weighted_loss": 0.040861138466208875,
+    "two_cycle_events": true,
+    "weighted_errors": {
+      "phase": 0.056688433089415936,
+      "potential": 0.00029549333452002987,
+      "temperature": 0.01122029538393568
+    }
+  },
+  "old_lf1_proposal_amplification": {
+    "b0_mean_onset_event": 176.52250661959403,
+    "definition": "PROPOSAL_POINT_SHARE_DIVIDED_BY_TARGET_MEASURE_MASS",
+    "persistent_replay_mean_onset_event": 353.04501323918805
+  },
+  "partition": {
+    "all_fourteen_categories_nonempty": true,
+    "category_target_measure_masses_pi": {
+      "EVENT_CYCLE_1": 0.0007275,
+      "EVENT_CYCLE_2": 0.0006887499999999998,
+      "RECOVERY_CYCLE_1": 0.010373749999999996,
+      "RECOVERY_CYCLE_2": 0.009481249999999997,
+      "TRANSITION_CYCLE_1": 0.004929999999999997,
+      "TRANSITION_CYCLE_2": 0.009247499999999995,
+      "W1_OUTSIDE_REMAINDER": 0.09695249999999996,
+      "W1_ROI_REMAINDER": 0.036389999999999985,
+      "W2_OUTSIDE_REMAINDER": 0.2511,
+      "W2_ROI_REMAINDER": 0.09852624999999994,
+      "W3_OUTSIDE_REMAINDER": 0.09874249999999994,
+      "W3_ROI_REMAINDER": 0.03332124999999997,
+      "W4_OUTSIDE_REMAINDER": 0.2504024999999998,
+      "W4_ROI_REMAINDER": 0.09911624999999995
+    },
+    "exhaustive": true,
+    "mutually_exclusive": true,
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "saved_node_count": 1603200,
+    "target_measure_mass_sum": 0.9999999999999996
+  },
+  "proposal_identity": {
+    "m0_first_batch_sha256": "CD70AACFB144DF7174DAF332A19E1938AFC5360505AE5516A577BD10988A4FC9",
+    "m0_rolling_sha256_after_8_draws": "5D37B5194A43EA37C99C7E976F58E5A35A9C0B1DDD6F15CC1A0FCCE69FB33ED5",
+    "m1_first_batch_sha256": "85CAACEC37E5FC975F2E110D6BFAB60DF67AB8CCAB3F2FDC70A031A87F85AFA8",
+    "m1_rolling_sha256_after_8_draws": "71441A06A0E11CE373CF475916255CA3C8942859A9F9B0E3A136E978555206AD",
+    "strict_call_order": true,
+    "total_points_per_step": 1024
+  },
+  "raw_qualification": {
+    "path": "outputs/runs/20260904T064642Z-phk-v23-lf2-cpu-qualification-e7f3152/qualification.json",
+    "sha256": "1113FDC11287CBE51FEE2D03154C8234F882AF3ED42D303EC895A2DE9579CCA4"
+  },
+  "schema_id": "phk-v23-lf2-cpu-qualification-compact-v1",
+  "source_bundle": {
+    "archive_sha256": "75E57334E60624840CF6E29DE5FCFBE73264C3617D6E26D9C392636EC026CDF9",
+    "deployed_source_manifest_sha256": "0E69B5D8252834594FA151E5E6984CAD7B18E5302AAC8E2D500DC77956EAD9CD",
+    "source_identity": "LF2-BUNDLE-AB0756BF7D4CBDCFDCA88F48C5BBB882760D586C65089999DA16F1DFA64E4AA3"
+  },
+  "status": "LF2_CPU_QUALIFICATION_PASS",
+  "synthetic_checks": {
+    "constant_estimator_absolute_error": 1.3322676295501878e-15,
+    "constant_estimator_passed": true,
+    "one_step_smoke_passed": true
+  },
+  "task_id": "PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_EXECUTE"
+}

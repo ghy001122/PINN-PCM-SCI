@@ -1,0 +1,99 @@
+{
+  "schema_id": "phk-v23-lf2-method-contract-v1",
+  "contract_id": "PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_METHOD",
+  "program_contract": "configs/phk_v23/program_contract_lf2_measure_calibrated_feasible_pinn.json",
+  "effective_date": "2026-09-04",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "common_identity": {
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "arm": "STRONG_RAW",
+    "case_control": "FULL",
+    "network": {
+      "head_type": "MODIFIED_MLP",
+      "hidden_width": 64,
+      "hidden_layers": 4,
+      "heads": [
+        "potential",
+        "temperature",
+        "phase"
+      ]
+    },
+    "potential_transform": "POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING_LOG_RATIO",
+    "temperature_transform": "LEGACY",
+    "phase_transform": "LEGACY_FIXED_LATENT_SCALE",
+    "optimizer_each_stage": {
+      "name": "TORCH_ADAM",
+      "learning_rate": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "amsgrad": false,
+      "new_instance_at_stage_boundary": true
+    },
+    "gradient_combination": "LEGACY_SUMMED_LOSS_BACKWARD_NO_CONFIG",
+    "gradient_clip_norm": 10.0,
+    "collocation_counts": {
+      "interior": 512,
+      "boundary": 128,
+      "initial": 128
+    },
+    "physics_sampler": "PURE_STATEFUL_SCRAMBLED_SOBOL_IDENTICAL_TO_LF1_A_B_PHYSICS_LOCAL_STEPS_1_TO_1200",
+    "physics_schedule": {
+      "axis": "PHYSICS_LOCAL_OPTIMIZER_STEP",
+      "1-150": 1,
+      "151-350": 2,
+      "351-550": 3,
+      "551+": 4,
+      "refresh_updates": 250
+    }
+  },
+  "trajectory": {
+    "identity": "LF2_MEASURE_CALIBRATED_FEASIBLE_PINN",
+    "initialization": "EXACT_LF1_B0_STEP_1200_MODEL_WEIGHTS_ONLY",
+    "M0": {
+      "updates": 1200,
+      "objective": "TARGET_MEASURE_WEIGHTED_FIELD_PLUS_TOPOLOGY_PLUS_INEQUALITY_AUGMENTED_LAGRANGIAN",
+      "optimizer": "NEW_ADAM_WITHOUT_PARENT_OPTIMIZER_STATE",
+      "physics_sampler_constructed_or_advanced": false,
+      "checkpoint": "FIXED_GLOBAL_STEP_1200",
+      "prediction": "FIXED_GLOBAL_STEP_1200"
+    },
+    "M1": {
+      "conditional_on_M0_gate": true,
+      "updates": 1200,
+      "objective": "ORIGINAL_FULL_PHYSICS_PLUS_INEQUALITY_AUGMENTED_LAGRANGIAN_FEASIBILITY_CONSTRAINTS",
+      "optimizer": "NEW_ADAM",
+      "physics_local_steps": "1_THROUGH_1200",
+      "data_constraint_stream": "INDEPENDENT_FROM_M0_AND_PHYSICS",
+      "fixed_replay_weight": null,
+      "checkpoint": "FINAL_GLOBAL_STEP_2400",
+      "prediction": "FINAL_GLOBAL_STEP_2400"
+    },
+    "maximum_global_updates": 2400
+  },
+  "augmented_lagrangian": {
+    "inequality_convention": "g_LE_0",
+    "formula": "A_rho_g_lambda=(max(0,lambda+rho*g)^2-lambda^2)/(2*rho)",
+    "rho": 1.0,
+    "initial_lambda": 0.0,
+    "lambda_update": "AFTER_EVERY_OPTIMIZER_STEP_lambda=max(0,lambda+rho*g_detached)",
+    "lambda_reset_between_M0_and_M1": true,
+    "denominator_floor": 1e-12,
+    "weight_or_rho_sweep": false
+  },
+  "telemetry": {
+    "full_medium_audit_every_updates": 50,
+    "always_include_updates": [
+      1,
+      1200,
+      1201,
+      2400
+    ],
+    "checkpoint_selection_from_telemetry": false
+  }
+}
