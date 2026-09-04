@@ -1,6 +1,6 @@
 # ADR 0058：激活 PHK-V2.3 LF2 measure-calibrated feasible PINN
 
-- `status`: `ACCEPTED_ACTIVE`
+- `status`: `ACCEPTED_COMPLETE`
 - `date`: `2026-09-04`
 - `phase_id`: `PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_EXECUTE`
 - `supersedes_authorization_only`: `PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY_PILOT_COMPLETE`
@@ -29,3 +29,9 @@ M0 任一 full-medium gate 失败即停止且不进入 M1；M1 可行性失败�
 首次远端启动在 `load_case_physics()` 读取身份绑定时，因 bundle 遗漏 `tests/test_phk_v21_benchmark.py` 而于模型、Adam 和 optimizer 构造前退出；运行目录为空，optimizer updates 与科学轨迹均为 0。该缺口不构成 LF2 方法结果。
 
 修复只把上述既有哈希绑定文件加入 source manifest 和 preflight 必需闭包，没有改变任何科学合同、参数、训练输入或门槛。新增隔离回归会把完整 allowlist 复制到空临时根并真实调用 `load_case_physics("FULL")`；解包复演与零步 preflight 均通过。工程重执行 source identity 为 `LF2-BUNDLE-9D06E26720363A39E5CC62D87E1B494A4AFA0116EEA727A103DB6B5FB2ABD455`，适用 program contract 中首步前纯工程故障的同身份重执行规则。
+
+## 执行结果与处置
+
+同身份工程重执行在 V100/FP64/seed 17 上完成 M0 的全部 1200 updates。M0 potential maximum-principle 通过，potential、temperature、phase 的 target-measure weighted-MSE 相对 LF1-B0 分别降至 `0.257104/0.0654992/0.273361`，但 `phase_max` 同时降至 `0.0299479`，两个周期的 hard recall、active mass 与 event 均为零。冻结 M0 gate 因此给出 `LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED`，M1 按合同未运行。
+
+该结果把“sampling measure mismatch 足以修复过宽事件 carrier”的假设关闭为有界负面证据；它不否认 target measure 对连续场误差的校准作用，也不构成 PINN 类、物理对象或 phase-latent teacher 的失败。全部云端产物回收并哈希对账后实例已关闭，SSH 返回 `Connection refused`；本地 nominal evaluation 之后才读取 fine/extra-fine，stress 始终 sealed/unread。candidate 为 none，后续 `PHASE_LATENT_TEACHER_BACKUP_REQUIRES_NEW_EXECUTE` 只是机器建议，不构成新授权。终局证据见 [LF2 closeout](../experiment/2026-09-04-phk-v23-lf2-terminal-closeout.md)。

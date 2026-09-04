@@ -1,0 +1,75 @@
+{
+  "actual_budget": {
+    "estimated_incremental_cost_cny": 0.04380011293380003,
+    "gpu_hours": 0.023297932411595765,
+    "optimizer_steps": 1200,
+    "scientific_gpu_trajectories": 1,
+    "wall_seconds_including_predictions": 83.87255668174475
+  },
+  "artifacts": {
+    "checkpoint_m0_sha256": "D0F208474624F4C3291A614E5540B5A66F84C4B01F5152B93F508BF850268E7F",
+    "compact_artifact": "artifacts/20260904T074000Z-phk-v23-lf2-terminal-841c7e2.json",
+    "compact_artifact_sha256": "B407E58DAF115455988D880FCC022F92F9165078F99A4955C6648BA605C1A224",
+    "closeout": "../2026-09-04-phk-v23-lf2-terminal-closeout.md",
+    "closeout_sha256": "85FEB2AE81770F65F18C7372CB55ED65A47DEE211B0ED500D4A03000C7C726DA",
+    "local_adjudication_sha256": "D37EDDD10BBDC183C30DF973C1031599D4A303A891B9FB1AF4EC909EFAAD75A4",
+    "prediction_m0_sha256": "DE003FA8B90CF44614C0FD9DBDC5A375F96BBB10E7A7127E8C55314DDFD2C08A",
+    "run_summary_sha256": "B976C105C0219437040C832CA83B0DC342C465A65514BD72D34DD24452B84699"
+  },
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "checkpoint": {
+    "loaded_by_terminal_adjudicator": true,
+    "modified": false,
+    "path": "outputs/runs/20260904T071158Z-phk-v23-lf2-measure-calibrated-841c7e2-er1/checkpoint-m0-step-1200.pt",
+    "role": "FIXED_M0_STEP_1200_GATE_CHECKPOINT_M1_NOT_TRIGGERED"
+  },
+  "claim_status": "V22R_R0_R1A_R1X_C0_LF0_LF1_EVIDENCE_PRESERVED_LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED",
+  "code_identity": {
+    "deployment_closure_commit": "841c7e2d8650a0283d74915155e68a4107b1c2c3",
+    "lf2_activation_commit": "3ca065e6c6372f881a6c30d3ab6de0656c8c9090",
+    "lf2_base_commit": "e7f31523823675a90aee26f8703e71ebaff2f536",
+    "cloud_source_identity": "LF2-BUNDLE-9D06E26720363A39E5CC62D87E1B494A4AFA0116EEA727A103DB6B5FB2ABD455",
+    "source_archive_sha256": "30D5E0425E15C6DFE6D026CA54F054674F9138D09BBC703CC9A1748896B5E32F",
+    "source_manifest_sha256": "5A733C861F7C9CB6EDB30336410578C4D50984B2D2C4335EDF4F50E90EA4D1D4"
+  },
+  "command": [
+    "remote python -m pinn_pcm_sci.phk_v23_lf2 --output-root <isolated-run-root> --medium-carrier <hash-bound-medium> --initial-checkpoint <hash-bound-lf1-b0> --cpu-qualification <hash-bound-qualification> --device cuda:0 --source-identity LF2-BUNDLE-9D06E26720363A39E5CC62D87E1B494A4AFA0116EEA727A103DB6B5FB2ABD455 --hourly-price-cny 1.88",
+    "local python -m pinn_pcm_sci.phk_v23_lf2_evaluation --output-directory outputs/runs/20260904T074000Z-phk-v23-lf2-local-adjudication-841c7e2-er1 --run-directory outputs/runs/20260904T071158Z-phk-v23-lf2-measure-calibrated-841c7e2-er1 --cpu-qualification outputs/runs/20260904T064642Z-phk-v23-lf2-cpu-qualification-e7f3152/qualification.json"
+  ],
+  "ended_at": "2026-09-04T07:39:59Z",
+  "environment": {
+    "cloud_dtype": "FLOAT64",
+    "cloud_gpu": "Tesla V100-PCIE-32GB",
+    "fine_extra_fine_evaluator_read_on_cloud": false,
+    "instance_lifecycle": "SHUTDOWN_VERIFIED_BY_SSH_CONNECTION_REFUSED",
+    "local_evaluator_device": "CPU",
+    "medium_only_cloud_training_labels": true,
+    "stress_fields_or_metrics_read": false
+  },
+  "evaluator_id": "phk-v23-lf2-local-adjudication-v1",
+  "evidence_identity": "SINGLE_SEED_NOMINAL_TARGET_MEASURE_FIELD_ERROR_REDUCTION_WITH_TWO_CYCLE_EVENT_TOPOLOGY_LOSS_BEFORE_PINN_REFINEMENT",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN",
+  "failure_class": "M0_CALIBRATED_EVENT_CARRIER_GATE_FAILED",
+  "gate": "PHK_V23_LF2",
+  "gate_outcome": "LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED",
+  "method_id": "phk-v23-lf2-measure-calibrated-feasible-pinn-v1",
+  "numerical_validity": "VALID_FINITE_POTENTIAL_ARTIFACT_AND_IDENTITY_GUARDS_PASS_M0_EVENT_GATE_FAILED",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "m0_measure_calibration_updates": 1200,
+    "m1_conditional_full_physics_updates": 1200,
+    "maximum_optimizer_updates": 2400,
+    "maximum_scientific_gpu_trajectories": 1
+  },
+  "replay_of": null,
+  "route_disposition": "PHASE_LATENT_TEACHER_BACKUP_REQUIRES_NEW_EXECUTE",
+  "run_id": "20260904T074000Z-phk-v23-lf2-terminal-841c7e2",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "measure_calibrated_feasible_pinn_campaign_terminal_adjudication",
+  "seed": 17,
+  "split_id": "MEDIUM_METHOD_INPUT_FINE_EXTRA_LOCAL_NOMINAL_AFTER_SHUTDOWN_STRESS_SEALED",
+  "started_at": "2026-09-04T07:30:47.392073+00:00",
+  "supersedes": null,
+  "tier": "development_campaign"
+}
