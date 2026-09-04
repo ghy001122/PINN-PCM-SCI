@@ -1,0 +1,59 @@
+{
+  "schema_id": "phk-v23-lf3-program-contract-v1",
+  "contract_id": "PHK_V23_LF3_MEASURE_DECOUPLED_STARTUP_SCALED_PHASE_LATENT_CARRIER_PILOT_EXECUTE",
+  "phase_id": "PHK_V23_LF3_MEASURE_DECOUPLED_STARTUP_SCALED_PHASE_LATENT_CARRIER_PILOT_EXECUTE",
+  "effective_date": "2026-09-04",
+  "status": "EXPLICITLY_AUTHORIZED_BOUNDED_CAMPAIGN",
+  "expected_base_commit": "6ec084cbffcbbd754da3aaff191ffb1862a20b0e",
+  "authorization_source": "CURRENT_USER_DIRECT_EXECUTE_REQUEST_FOR_THE_COMPLETE_LF3_INSTRUCTION",
+  "scientific_question": "CAN_MEASURE_DECOUPLED_STARTUP_SCALED_PHASE_LOGIT_INCREMENT_TEACHING_ESTABLISH_A_VALID_TWO_CYCLE_NEURAL_CARRIER_AND_CAN_LABEL_FREE_FULL_PHYSICS_REFINEMENT_REDUCE_RESIDUAL_WITHOUT_DESTROYING_IT",
+  "paper_role": "SOLVER_RECOVERY_COMBINATION_PILOT_WITH_STRONG_DIRECT_BASELINE",
+  "authorization": {
+    "contract_code_test_document_writes": true,
+    "bounded_primary_source_prior_art_closure": true,
+    "cpu_qualification": true,
+    "one_gpu_trajectory_after_cpu_gate": true,
+    "local_nominal_evaluation_after_shutdown": true,
+    "paper_v23_advisor_draft": true,
+    "selective_commit_and_push_main": true,
+    "seed_17_only": true,
+    "new_seed": false,
+    "d0_diagnostic_campaign": false,
+    "matched_output_phase_ablation": false,
+    "new_ood_or_stress": false,
+    "stress_prediction_or_unseal": false,
+    "pjgr_r2_or_kinetic_teacher": false,
+    "benchmark_pde_constitutive_geometry_parameter_reference_roi_threshold_or_frozen_evaluator_change": false,
+    "submission_external_contact_or_publication": false
+  },
+  "hard_limits": {
+    "maximum_scientific_gpu_trajectories": 1,
+    "maximum_optimizer_updates": 2400,
+    "maximum_wall_seconds": 1800,
+    "manual_early_stop": false,
+    "accuracy_checkpoint_selection": false,
+    "hyperparameter_weight_or_architecture_sweep": false,
+    "gpu_price_or_cost_reporting": false
+  },
+  "lifecycle": {
+    "before_first_optimizer_step": "VERIFY_HEAD_BRANCH_OVERLAPPING_WHITELIST_INPUTS_CPU_GATE_GPU_PROCESS_SOURCE_AND_REFERENCE_BOUNDARY",
+    "after_gpu_trajectory": "RECOVER_ALL_SUMMARY_BOUND_ARTIFACTS_VERIFY_HASHES_TERMINATE_PROCESSES_SHUTDOWN_AND_VERIFY_SSH_REFUSED_BEFORE_LOCAL_REFERENCE_IO",
+    "restart_required_status": "AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE",
+    "engineering_retry": "ONLY_BEFORE_FIRST_SCIENTIFIC_OPTIMIZER_STEP_AFTER_ROOT_CAUSE_AND_TARGETED_REGRESSION_WITH_IDENTICAL_SCIENTIFIC_IDENTITY",
+    "post_first_step_interruption": "SCIENTIFIC_TRAJECTORY_CONSUMED_NO_AUTOMATIC_RETRY",
+    "completion_does_not_authorize_next_research": true
+  },
+  "preserves_without_rewrite": [
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "R0A_INCONCLUSIVE",
+    "GRADIENT_STARVATION_TEMPORAL_PRECURSOR_ONLY",
+    "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "R1A_CONFIG_RAW_NO_COMPETENCE",
+    "PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED",
+    "C0_OUTPUT_TRANSFORM_INADMISSIBLE",
+    "LF0_NUMERICAL_OR_IDENTITY_INVALID",
+    "LF1_DATA_ONLY_VALUE_NO_PINN_GAIN",
+    "LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED",
+    "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  ]
+}

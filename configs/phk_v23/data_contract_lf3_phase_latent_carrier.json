@@ -1,0 +1,71 @@
+{
+  "schema_id": "phk-v23-lf3-data-contract-v1",
+  "contract_id": "PHK_V23_LF3_PHASE_LATENT_CARRIER_DATA",
+  "program_contract": "configs/phk_v23/program_contract_lf3_phase_latent_carrier.json",
+  "effective_date": "2026-09-04",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "training_source": {
+    "role": "DECLARED_MEDIUM_LOW_FIDELITY_METHOD_INPUT",
+    "path": "outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/result-intent-04.npz",
+    "sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F",
+    "resolution": "medium",
+    "only_gpu_training_label_source": true
+  },
+  "initial_checkpoint": {
+    "role": "EXACT_LF1_B0_EVENT_AWARE_DATA_ONLY_INITIALIZATION",
+    "path": "outputs/runs/20260903T152501Z-phk-v23-lf1-b-event-replay-dc091be-er1/checkpoint-b0-step-1200.pt",
+    "sha256": "B4073CD5D09EE3A022F333A8AB1CDDF9B6195E87461BBA1BFED67AC0E3424182",
+    "load_model_weights": true,
+    "load_optimizer_state": false
+  },
+  "target_measure": {
+    "identity": "LF2_FROZEN_SAVED_NODE_TRAPEZOID_TIME_TIMES_CELL_VOLUME",
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "evaluation_measure": "TARGET_MEASURE_MU",
+    "phase_training_measure": "NU_EQUAL_ONE_FOURTEENTH_MIXTURE_OF_MU_CONDITIONAL_ON_EACH_CATEGORY"
+  },
+  "partition": {
+    "priority_order": [
+      "EVENT_CYCLE_1", "EVENT_CYCLE_2", "TRANSITION_CYCLE_1", "TRANSITION_CYCLE_2",
+      "RECOVERY_CYCLE_1", "RECOVERY_CYCLE_2", "W1_ROI_REMAINDER", "W1_OUTSIDE_REMAINDER",
+      "W2_ROI_REMAINDER", "W2_OUTSIDE_REMAINDER", "W3_ROI_REMAINDER", "W3_OUTSIDE_REMAINDER",
+      "W4_ROI_REMAINDER", "W4_OUTSIDE_REMAINDER"
+    ],
+    "mutually_exclusive": true,
+    "exhaustive_over_saved_medium_nodes": true,
+    "empty_category_policy": "FAIL_CPU_QUALIFICATION",
+    "event_threshold": 0.5,
+    "roi": "ABS_X_LE_0.55_AND_Z_LE_0.55"
+  },
+  "T0_proposal_per_step": {
+    "total": 1024,
+    "category_quotas_in_partition_order": [128,128,64,64,64,64,64,64,64,64,64,64,64,64],
+    "sobol_seeds_in_partition_order": [17101,17102,17103,17104,17105,17106,17017,17018,17019,17020,17021,17022,17023,17024],
+    "sampling_within_category": "STATEFUL_DETERMINISTIC_SOBOL_INVERSE_CDF_PROPORTIONAL_TO_TARGET_NODE_WEIGHTS",
+    "role_and_domain_tag": "PHK_V23_LF2_M0_MEASURE_BATCHES",
+    "strict_call_order": true,
+    "draws": 1200,
+    "rolling_sha256": "6E9957E861BE0FD10E19A1585635C7B2C323077D89908159B1736734FB548F28",
+    "independent_from_physics_rng": true
+  },
+  "P0_physics_stream": {
+    "medium_draws": 0,
+    "role_and_domain_tag": "PHK_V23_LF0_PHYSICS_BATCHES",
+    "draws": 1200,
+    "rolling_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53"
+  },
+  "local_evaluation_only": {
+    "fine": {"path": "outputs/runs/20260828T-phk-v21-s1-q-05-nominal-fine/result-intent-05.npz", "sha256": "7343FC4AB6648F82CFAD3E517A748034D8E636959BC41D733195C477C1DCFA53"},
+    "extra_fine": {"path": "outputs/runs/20260828T-phk-v21-s1-q-06-nominal-extra-fine/result-intent-06.npz", "sha256": "0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE"}
+  },
+  "inherited_comparators": {
+    "direct_lf_only_prediction_sha256": "47B11E9DF7B95ED6CA282D22E4A8852775194FA1471D115310F7DCA7BCB447D0",
+    "lf2_m0_checkpoint": {"path": "outputs/runs/20260904T071158Z-phk-v23-lf2-measure-calibrated-841c7e2-er1/checkpoint-m0-step-1200.pt", "sha256": "D0F208474624F4C3291A614E5540B5A66F84C4B01F5152B93F508BF850268E7F"},
+    "lf2_m0_prediction": {"path": "outputs/runs/20260904T071158Z-phk-v23-lf2-measure-calibrated-841c7e2-er1/prediction-m0-step-1200.npz", "sha256": "DE003FA8B90CF44614C0FD9DBDC5A375F96BBB10E7A7127E8C55314DDFD2C08A"}
+  },
+  "cloud_boundary": {
+    "medium_and_exact_lf1_b0_checkpoint_allowed": true,
+    "fine_extra_fine_lf_only_frozen_evaluator_and_stress_inaccessible": true,
+    "reference_free_prediction": true
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema_id": "phk-v23-lf3-method-contract-v1",
+  "contract_id": "PHK_V23_LF3_PHASE_LATENT_CARRIER_METHOD",
+  "program_contract": "configs/phk_v23/program_contract_lf3_phase_latent_carrier.json",
+  "effective_date": "2026-09-04",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "common_identity": {
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "arm": "STRONG_RAW",
+    "case_control": "FULL",
+    "network": {
+      "head_type": "MODIFIED_MLP",
+      "hidden_width": 64,
+      "hidden_layers": 4,
+      "independent_field_heads": ["potential", "temperature", "phase"],
+      "new_head_or_shared_trunk": false
+    },
+    "potential_transform": "POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING_LOG_RATIO",
+    "temperature_transform": "LEGACY",
+    "phase_transform": "STARTUP_SCALED_LOGIT_INCREMENT",
+    "phase_formula": "phi_theta=sigmoid(logit(clip(phi_0,epsilon,1-epsilon))+8*s(t)*h_phi)",
+    "startup_formula": "s(t)=1-exp(-(t-t_0)/0.35)",
+    "clip_epsilon": 1e-08,
+    "phase_latent_scale": 8.0,
+    "optimizer": {
+      "name": "TORCH_ADAM",
+      "learning_rate": 0.001,
+      "betas": [0.9, 0.999],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "amsgrad": false,
+      "parent_optimizer_state_loaded": false,
+      "T0_and_P0_use_separate_fresh_instances": true,
+      "single_instance_across_P0_freeze_boundary": true
+    },
+    "gradient_combination": "LEGACY_SUMMED_LOSS_BACKWARD_NO_CONFIG",
+    "gradient_clip_norm": 10.0
+  },
+  "trajectory": {
+    "identity": "LF3_MEASURE_DECOUPLED_PHASE_LATENT_CARRIER_PILOT",
+    "initialization": "EXACT_LF1_B0_STEP_1200_MODEL_WEIGHTS_ONLY",
+    "T0": {
+      "updates": 1200,
+      "updated_parameters": "ALL_THREE_EXISTING_INDEPENDENT_FIELD_HEADS",
+      "objective": "MEAN_OF_TARGET_MEASURE_V_TARGET_MEASURE_T_AND_EQUAL_CATEGORY_PHASE_LOGIT_INCREMENT_MSE",
+      "phase_teacher": "DELTA_LOGIT_STAR=LOGIT(CLIP(PHI_MEDIUM))-LOGIT(CLIP(PHI_0))",
+      "phase_prediction": "DELTA_LOGIT_THETA=8*S_TIMES_H_PHI",
+      "normalization_divisor": 36.84136146790473,
+      "t0_nodes_in_phase_loss": false,
+      "phase_output_mse_bce_augmented_lagrangian_event_penalty_huber": false,
+      "physics_sampler_constructed_or_advanced": false,
+      "checkpoint": "FIXED_GLOBAL_STEP_1200",
+      "prediction": "FIXED_GLOBAL_STEP_1200"
+    },
+    "P0": {
+      "conditional_on_T0_carrier_gate": true,
+      "updates": 1200,
+      "objective": "ORIGINAL_FULL_PHYSICS_L_PDE_PLUS_5_L_BC_PLUS_L_IC",
+      "medium_label_draws": 0,
+      "data_replay_anchor_teacher_forcing_bce_augmented_lagrangian_event_penalty": false,
+      "steps_1_through_550": "V_AND_T_PARAMETERS_TRAIN_PHASE_PARAMETERS_AND_BUFFERS_BITWISE_FROZEN_PHASE_FIELD_REMAINS_COUPLED_IN_RESIDUAL",
+      "steps_551_through_1200": "ALL_THREE_EXISTING_HEADS_JOINTLY_TRAINED",
+      "optimizer": "NEW_FRESH_ADAM_AT_P0_START_SINGLE_INSTANCE_THROUGH_P0_V_T_MOMENTS_CONTINUOUS_ACROSS_STEP_550_551_PHASE_STATE_NATURALLY_CREATED_AT_FIRST_P0_GRADIENT",
+      "physics_local_steps": "1_THROUGH_1200",
+      "checkpoint": "FINAL_GLOBAL_STEP_2400",
+      "prediction": "FINAL_GLOBAL_STEP_2400"
+    },
+    "maximum_global_updates": 2400
+  },
+  "physics": {
+    "collocation_counts": {"interior": 512, "boundary": 128, "initial": 128},
+    "sampler": "LF0_STATEFUL_SCRAMBLED_SOBOL_ISOLATED_FROM_T0",
+    "schedule": {"1-150": 1, "151-350": 2, "351-550": 3, "551+": 4, "refresh_updates": 250},
+    "objective_weights": {"pde": 1.0, "boundary": 5.0, "initial": 1.0}
+  },
+  "telemetry": {
+    "T0_full_medium_audit_updates": [1, 50, 100, 200, 400, 800, 1200],
+    "P0_full_medium_audit_updates": [1201, 1250, 1300, 1400, 1600, 1800, 2000, 2200, 2400],
+    "checkpoint_selection_from_telemetry": false
+  }
+}

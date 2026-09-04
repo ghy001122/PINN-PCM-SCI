@@ -2,7 +2,7 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-PHK-V2.3 LF2 已以 `LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED` 收口。唯一 V100/FP64/seed-17 trajectory 在 M0 完成 1200 个 target-measure data-only updates 后，全局加权场误差显著下降但两周期事件拓扑消失，因此 M1 未触发、candidate 为 none、后续授权关闭。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[LF2 terminal closeout](experiment/2026-09-04-phk-v23-lf2-terminal-closeout.md)、四份 LF2 合同与 [ADR 0058](adr/0058-activate-phk-v23-lf2-measure-calibrated-feasible-pinn.md)。LF1 terminal `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN` 与更早证据均保持，stress sealed/unread。
+PHK-V2.3 LF3 已通过零步 CPU 资格门，当前仅授权唯一 V100/FP64/seed-17 的 T0→条件 P0 trajectory。T0 检验 measure-decoupled startup-scaled phase-logit teacher 能否建立合法两周期 carrier；只有 T0 全门通过才进行无标签 full-physics P0。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[LF3 CPU qualification](experiment/2026-09-04-phk-v23-lf3-cpu-qualification.md)、四份 LF3 合同与 [ADR 0059](adr/0059-activate-phk-v23-lf3-phase-latent-carrier-pilot.md)。LF2 terminal 与更早证据保持，stress sealed/unread。
 
 R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 
@@ -23,8 +23,9 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF2 terminal disposition](plans/NEXT_ACTIONS.md)。LF2 已完成，当前没有科研执行授权；phase-latent teacher 仅为需要新 EXECUTE 的建议。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R/R0A/R0B/R0C/R1a/R1X/C0/LF0/LF1 证据保持冻结；LF2 M1 未运行，不授权第二条 LF2 trajectory、phase-latent teacher、PJGR、R2、其他 seed、stress 或投稿。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF3 GPU execution ready](plans/NEXT_ACTIONS.md)。仅执行一条 T0→条件 P0；T0 失败即停止。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R/R0A/R0B/R0C/R1a/R1X/C0/LF0/LF1/LF2 证据保持冻结；不授权第二条 trajectory、matched ablation、PJGR、R2、其他 seed、OOD、stress 或投稿。
+- 当前 PHK-V2.3 LF3 资格入口：[2026-09-04 LF3 CPU qualification](experiment/2026-09-04-phk-v23-lf3-cpu-qualification.md)。它记录 phase-logit 数学、14 类分区、matched stream 与 reference boundary；只准入唯一 GPU trajectory，不是方法结果。
 - 当前 PHK-V2.3 LF2 终局入口：[2026-09-04 LF2 terminal closeout](experiment/2026-09-04-phk-v23-lf2-terminal-closeout.md)。它记录 M0 的连续场误差改善与事件拓扑消失、M1 未触发、完整产物回收/哈希核验/关机、本地 nominal 裁决及 `LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED`。
 - 当前 PHK-V2.3 LF2 资格入口：[2026-09-04 LF2 CPU qualification](experiment/2026-09-04-phk-v23-lf2-cpu-qualification.md)。它记录 14 类目标测度分区、旧 LF1 proposal amplification、LF1-B0 full-medium baseline、Sobol/hash 身份和 reference boundary；只准入唯一 GPU trajectory，不是方法结果。
 - 当前 PHK-V2.3 LF1 资格入口：[2026-09-03 LF1 CPU qualification](experiment/2026-09-03-phk-v23-lf1-cpu-qualification.md)。它记录旧 sampler event exposure、旧 B0 event recall/loss、phase Jacobian、新表示可重构性与六个事件池；仅准入 Run A，不是方法结果。

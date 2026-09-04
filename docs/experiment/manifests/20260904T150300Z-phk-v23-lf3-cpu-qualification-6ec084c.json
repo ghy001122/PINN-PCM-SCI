@@ -1,0 +1,66 @@
+{
+  "actual_budget": {
+    "gpu_trajectories": 0,
+    "optimizer_updates": 0,
+    "wall_seconds": 42
+  },
+  "artifacts": {
+    "compact_qualification": "docs/experiment/artifacts/20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c.json#sha256=37C231347A27DC040715A84C8480D351DE9F41EEE19B8A4F8A574ACC93CB0F6F",
+    "cpu_qualification_note": "docs/experiment/2026-09-04-phk-v23-lf3-cpu-qualification.md#sha256=FC8316C748263CE571F81EBD59BC16834C48C9897DB7CBE5A8D844EA78FE4428",
+    "deployed_source_manifest": "cloud/phk_v23_lf3_autodl/deployed-source-manifest.json#sha256=51564EAAEF1486405718ABE4D3C24098392A8B2FD93F58139453EBEBCF9D8BC6",
+    "initial_worktree": "outputs/runs/20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c/initial-worktree.json#sha256=8BB037A0295E0A9D2BDEF6F376F09C4E436D79048E9123B2A6048FBFA2F63188",
+    "prior_art_closure": "docs/references/2026-09-04-phk-v23-lf3-prior-art-closure.md#sha256=91B4489715DCDE2EB5953D2AC5A7E80B5B84B234B1CD2281CA785C291D0F1D34",
+    "raw_qualification": "outputs/runs/20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c/qualification.json#sha256=A88B35037881BFD6D3A7934688C23DDC85ED4AC7D952F4D641C7BDBF0CDC5C76",
+    "source_archive": "outputs/deploy/phk-v23-lf3-source-6ec084c.tar.gz#sha256=C3EC3D8BD2FE93E7FA878D51B0B8F7873376D9595C5EE0754BF220F910FB63E3"
+  },
+  "case_id": "PHK_V21_NOMINAL_MEDIUM_PHASE_LATENT_QUALIFICATION",
+  "checkpoint": {
+    "loaded_model_weights_only": true,
+    "optimizer_state_loaded": false,
+    "source_sha256": "B4073CD5D09EE3A022F333A8AB1CDDF9B6195E87461BBA1BFED67AC0E3424182"
+  },
+  "claim_status": "LF2_NEGATIVE_EVIDENCE_PRESERVED_LF3_CPU_QUALIFIED_NO_GPU_SCIENTIFIC_RESULT",
+  "code_identity": {
+    "base_commit": "6ec084cbffcbbd754da3aaff191ffb1862a20b0e",
+    "lf3_bundle_identity": "LF3-BUNDLE-93BDB1F29B95BA757FC8756509E8C257FC296EE0DE6F04451E6E363E2D4BF63D",
+    "workspace_scope": "LF3_EXACT_ALLOWLIST_UNRELATED_DIRTY_PRESERVED"
+  },
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pinn_pcm_sci.phk_v23_lf3_qualification",
+    "--output",
+    "outputs/runs/20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c/qualification.json"
+  ],
+  "ended_at": "2026-09-04T15:31:49.744598+00:00",
+  "environment": {
+    "device": "CPU",
+    "dtype": "FLOAT64",
+    "python": "PROJECT_PYTHON_3_11_ENVIRONMENT",
+    "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  },
+  "evaluator_id": "NOT_READ_DURING_CPU_QUALIFICATION",
+  "evidence_identity": "ZERO_UPDATE_HASH_BOUND_MATH_PARTITION_STREAM_AND_REAL_BATCH_GRADIENT_QUALIFICATION",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF3",
+  "failure_class": null,
+  "gate": "PHK_V23_LF3_CPU",
+  "gate_outcome": "LF3_CPU_QUALIFICATION_PASS",
+  "method_id": "phk-v23-lf3-measure-decoupled-startup-scaled-phase-latent-carrier-v1",
+  "numerical_validity": "VALID_LOCAL_CPU_FP64_HASH_BOUND_MEDIUM_LF1_B0_PARTITION_STREAM_AND_LOGIT_MATH_NO_GPU_FINE_EXTRA_EVALUATOR_OR_STRESS",
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "planned_budget": {
+    "gpu_trajectories": 0,
+    "optimizer_updates": 0
+  },
+  "replay_of": null,
+  "route_disposition": "REMOTE_ZERO_STEP_PREFLIGHT_THEN_SOLE_LF3_T0_TO_CONDITIONAL_P0_TRAJECTORY",
+  "run_id": "20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "cpu_only_phase_latent_math_measure_and_deployment_qualification",
+  "seed": 17,
+  "split_id": "MEDIUM_METHOD_INPUT_LF1_B0_INITIALIZATION_FINE_EXTRA_LOCAL_ONLY_STRESS_SEALED",
+  "started_at": "2026-09-04T15:31:07+00:00",
+  "supersedes": null,
+  "tier": "qualification"
+}

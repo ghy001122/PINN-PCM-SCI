@@ -1,29 +1,31 @@
-# PLAN-PHK-V2.3-LF2：terminal disposition
+# PLAN-PHK-V2.3-LF3：GPU execution ready
 
-- `phase_id`: `PHK_V23_LF2_MEASURE_CALIBRATED_FEASIBLE_PINN_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF3_MEASURE_DECOUPLED_STARTUP_SCALED_PHASE_LATENT_CARRIER_PILOT_EXECUTE`
+- `lifecycle_state`: `CPU_QUALIFIED_GPU_EXECUTION_AUTHORIZED`
 - `blocker_id`: `NONE`
-- `claim_status`: `V22R_R0_R1A_R1X_C0_LF0_LF1_EVIDENCE_PRESERVED_LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED`
-- `next_research_execution_authorized`: `false`
-- `authorization_state`: `LF2_EXECUTE_CONSUMED_CLOSED`
-- `plan_status`: `LF2_TERMINAL_COMPLETE`
-- `current_stage`: `NO_AUTHORIZED_RESEARCH_EXECUTION`
-- `supersedes`: `PLAN_PHK_V23_LF2_GPU_EXECUTION_READY`
-- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_LF0_LF1_EVIDENCE`
-- `contracts`: `configs/phk_v23/{program_contract_lf2_measure_calibrated_feasible_pinn,method_contract_lf2_measure_calibrated_feasible_pinn,data_contract_lf2_measure_calibrated_medium,decision_contract_lf2_measure_calibrated_feasible_pinn}.json`
-- `decision`: `docs/adr/0058-activate-phk-v23-lf2-measure-calibrated-feasible-pinn.md`
-- `next_recommendation`: `PHASE_LATENT_TEACHER_BACKUP_REQUIRES_NEW_EXECUTE`
+- `claim_status`: `LF2_EVIDENCE_PRESERVED_LF3_CPU_QUALIFIED_NO_GPU_RESULT_YET`
+- `next_research_execution_authorized`: `true`
+- `authorization_state`: `LF3_CURRENT_USER_EXECUTE_ACTIVE`
+- `plan_status`: `LF3_GPU_EXECUTION_READY`
+- `current_stage`: `REMOTE_ZERO_STEP_PREFLIGHT_THEN_SOLE_GPU_TRAJECTORY`
+- `supersedes`: `PLAN_PHK_V23_LF2_TERMINAL_DISPOSITION`
+- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_LF0_LF1_LF2_EVIDENCE`
+- `contracts`: `configs/phk_v23/{program_contract_lf3_phase_latent_carrier,method_contract_lf3_phase_latent_carrier,data_contract_lf3_phase_latent_carrier,decision_contract_lf3_phase_latent_carrier}.json`
+- `decision`: `docs/adr/0059-activate-phk-v23-lf3-phase-latent-carrier-pilot.md`
+- `next_recommendation`: `EXECUTE_SOLE_T0_TO_CONDITIONAL_P0_AND_ADJUDICATE`
 
-## 终局处置
+## 当前执行序列
 
-LF2 的唯一轨迹在 M0 恰好执行 1200 updates 后触发 `LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED`。M0 全局场误差相对 LF1-B0 明显下降、potential validity 通过，但两周期 event topology 消失，故冻结门要求停止，M1 没有运行。当前无 candidate、无第二条 LF2 轨迹、无 stress 或论文正面方法主张。
+1. 已完成四合同、实现、focused tests、prior-art closure、零步 CPU 资格和 hash-bound bundle。
+2. 精确部署 bundle、medium 与 LF1-B0 checkpoint，运行 remote zero-step preflight。
+3. preflight 通过后运行 T0 恰好 1200 updates；T0 carrier gate 失败即停止。仅当全通过时，从精确 T0 权重以新 Adam 运行 P0 恰好 1200 updates，其中前 550 步冻结 phase head、后 650 步联合更新；P0 零 label/replay/anchor。
+4. 回收 summary-bound 全部产物并逐项核验；终止训练进程、关机并确认 SSH 拒绝。
+5. 关机后本地运行 frozen nominal evaluation，按 carrier、single-seed PINN Pareto、direct `LF_ONLY` candidate signal 三层裁决，完成 advisor draft、closeout、manifest 和精确白名单 Git 交付。
 
-## 下一最小建议（未授权）
+## 停止边界
 
-若用户决定继续，唯一建议是另立一个极小 `PHASE_LATENT_TEACHER` 合同，直接检验 phase 表示/动力学监督能否建立合法两周期 carrier。该建议必须保持：同一 medium-only 训练身份、同一 range-preserving potential、固定 seed 与单轨迹上限、M0 式全-medium 事件门、完整回收关机，以及强 `LF_ONLY`/LF1-B0 对照。
-
-不得把该建议解释为当前授权；不得在新 EXECUTE 前实现、训练或读取 stress。若后备仍不能建立 carrier，应停止 solver-recovery 主张并转为有界 failure-analysis 稿件，而不是继续 module/optimizer sweep。
+最多一条科学 GPU 轨迹、2400 updates、1800 秒；达到冻结机器结局立即停止。不运行 D0、第二臂、参数 sweep、matched ablation、新 seed、OOD、stress、PJGR/R2 或 kinetic teacher。T0 失败时 P0 是 `NOT_TRIGGERED` 而非失败。无关 dirty 工作树保持不动。
 
 ## 论文去向
 
-LF2 可进入导师初稿的 failure-analysis：评价测度校准减少了连续场误差，却牺牲了稀有事件拓扑，说明 rare-event PINN 的目标函数不能只由全局测度误差定义。它不能单独支撑二区投稿；投稿级正面证据仍需先有 competent backbone，再完成冻结候选、强基线、关键消融、多 seed 与 formal OOD/stress。两份 stress references 继续 sealed/unread。
+本轮必须形成 `paper/paper_v23/` 导师初稿。若 LF3 阴性，写成不夸大的 failure-analysis + solver-recovery 边界；若有 Level 2，只写 single-seed nominal within-architecture PINN-specific pilot；只有 Level 3 才记 provisional candidate signal，且仍需新授权的 matched output-phase ablation、多 seed 与 formal OOD/stress 才可能升级为投稿级正面方法。两份 stress references 继续 sealed/unread。

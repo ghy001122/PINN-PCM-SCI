@@ -1,0 +1,97 @@
+{
+  "schema_id": "phk-v23-lf3-decision-contract-v1",
+  "contract_id": "PHK_V23_LF3_PHASE_LATENT_CARRIER_DECISION",
+  "program_contract": "configs/phk_v23/program_contract_lf3_phase_latent_carrier.json",
+  "method_contract": "configs/phk_v23/method_contract_lf3_phase_latent_carrier.json",
+  "data_contract": "configs/phk_v23/data_contract_lf3_phase_latent_carrier.json",
+  "effective_date": "2026-09-04",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "qualification_inputs": {
+    "lf1_terminal_artifact": {"path": "docs/experiment/artifacts/20260903T155306Z-phk-v23-lf1-terminal-dc091be.json", "sha256": "9BE79417DD3C536830E12EC40C7ADBF65C0B40D162E1D131ED2F9426FD06AEF6"},
+    "lf1_terminal_manifest": {"path": "docs/experiment/manifests/20260903T155306Z-phk-v23-lf1-terminal-dc091be.json", "sha256": "3FC43EC64F0060A776945C568AB4099B58174E1AB0C0C6F4D2E32378AE731F16"},
+    "lf1_raw_adjudication": {"path": "outputs/runs/20260903T155306Z-phk-v23-lf1-local-after-b/adjudication.json", "sha256": "39B9169E745FF7AEEE67917382C92E90D10B5D1CF6C4B5ECA8DEC99775735B7C"},
+    "oracle_floor_contract": {"path": "configs/phk_v21/oracle_and_floor_contract.json", "sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB"},
+    "oracle_floor_seal": {"path": "outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/oracle-floor-seal.json", "sha256": "3B71753CBAC720C1CF5F7937741FCF605693C5580988C848113AC9378F1A01F7"}
+  },
+  "cpu_qualification": {
+    "required_before_gpu": true,
+    "required_reports": ["EXACT_INPUT_AND_CONTRACT_HASHES", "LF2_PARTITION_IDENTITY", "T0_1200_DRAW_ROLLING_HASH", "STARTUP_T0_MASK_AND_LOGIT_RECONSTRUCTION", "FINITE_BOUNDED_LATENT_TARGET", "NO_PHYSICS_SAMPLER_CONSTRUCTION"],
+    "failure": "LF3_CPU_OR_INPUT_BLOCKED"
+  },
+  "potential_maximum_principle": {
+    "role": "METHOD_AND_RUN_VALIDITY_GUARD_NOT_FROZEN_EVALUATOR",
+    "lower": "min(0,waveform)",
+    "upper": "max(0,waveform)",
+    "absolute_tolerance": 1e-06,
+    "maximum_violation_fraction": 0.0,
+    "failure": "LF3_NUMERICAL_OR_IDENTITY_INVALID"
+  },
+  "T0_carrier_competence_gate": {
+    "all_values_finite": true,
+    "phase_range": [-1e-10, 1.0000000001],
+    "potential_guard_pass": true,
+    "phase_maximum_minimum": 0.9,
+    "two_cycle_events_required": true,
+    "hard_recall_each_cycle_minimum": 0.9,
+    "hard_precision_each_cycle_minimum": 0.8,
+    "hard_active_mass_ratio_each_cycle_minimum": 0.8,
+    "hard_active_mass_ratio_each_cycle_maximum": 1.2,
+    "event_time_absolute_error_each_cycle_maximum": 0.005,
+    "roi_peak_fraction_each_cycle_minimum": 0.02,
+    "full_domain_peak_fraction_each_cycle_maximum": 0.45,
+    "outside_roi_peak_fraction_each_cycle_maximum": 0.10,
+    "recovery_fraction_each_cycle_minimum": 0.70,
+    "potential_weighted_mse_to_lf1_b0_maximum_ratio": 1.1,
+    "temperature_weighted_mse_to_lf1_b0_maximum_ratio": 0.5,
+    "phase_weighted_mse_to_lf1_b0_maximum_ratio": 0.5,
+    "topology_bce": "REPORT_ONLY"
+  },
+  "temporal_only_failure_definition": "ALL_FINITE_IDENTITY_PHASE_RANGE_POTENTIAL_SPATIAL_AND_FIELD_ERROR_GATES_PASS_BUT_ONLY_EVENT_TIME_OR_RECOVERY_GATES_FAIL",
+  "P0_preservation_gate": {
+    "rerun_all_T0_carrier_competence_gates": true,
+    "potential_weighted_mse_to_T0_maximum_ratio": 1.2,
+    "temperature_weighted_mse_to_T0_maximum_ratio": 1.05,
+    "phase_weighted_mse_to_T0_maximum_ratio": 1.05,
+    "topology_weighted_loss_to_T0_maximum_ratio": 1.05,
+    "physics_stream_rolling_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53"
+  },
+  "local_evaluation": {
+    "frozen_evaluator_unchanged": true,
+    "nominal_extra_fine_only_after_complete_recovery_hash_verification_and_shutdown_refusal": true,
+    "comparators": ["LF_ONLY_MEDIUM_DIRECT", "LF1_B0_LF_DATA_ONLY", "LF1_B_FINAL", "LF2_M0_CALIBRATED_CARRIER", "LF3_T0_LATENT_CARRIER", "LF3_P0_FULL_PHYSICS"],
+    "fixed_reference_blind_physics_pool": {"seed": 17301, "dtype": "FLOAT64", "device": "CPU", "active_windows": 4, "interior_points": 512, "boundary_points_total": 128, "initial_points": 128, "objective": "NORMALIZED_PDE_PLUS_5_TIMES_BOUNDARY_PLUS_INITIAL", "sha256": "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF"}
+  },
+  "decision_levels": {
+    "carrier_success": "T0_PASSES_ALL_FULL_MEDIUM_CARRIER_GATES_ONLY_NOT_A_PINN_OR_CANDIDATE",
+    "single_seed_pinn_specific_pilot": {
+      "T0_and_P0_frozen_evaluator_competent": true,
+      "P0_phase_noninferiority_vs_T0": "PHK_V21_FLOOR_OR_0_98_0_98_0_95_RATIO_FORMULA",
+      "temperature_P0_maximum": "MAX_1_10_TIMES_T0_OR_0_05",
+      "current_P0_maximum": "MAX_1_10_TIMES_T0_OR_0_15",
+      "fixed_physics_objective_ratio_P0_to_T0_maximum": 0.5
+    },
+    "candidate_signal": "SAME_PARETO_AND_NONINFERIORITY_RELATIONS_RELATIVE_TO_DIRECT_LF_ONLY_WITH_BOTH_ROLES_COMPETENT_AND_ALL_VALIDITY_GUARDS_PASS"
+  },
+  "machine_outcomes_and_unique_next": {
+    "LF3_START_IDENTITY_BLOCKED": "RESTORE_EXACT_MAIN_HEAD_OR_RESOLVE_LF3_WHITELIST_OVERLAP_WITH_USER",
+    "LF3_CPU_OR_INPUT_BLOCKED": "STOP_BEFORE_GPU_AND_REVIEW_FAILED_CPU_OR_INPUT_GATE",
+    "LF3_PRIOR_ART_OR_LICENSE_BLOCKED": "STOP_ONLY_FOR_UNATTRIBUTABLE_OR_UNLICENSED_EXTERNAL_ASSET_NOT_FOR_FUNCTIONAL_COLLISION",
+    "LF3_ENGINEERING_BLOCKED": "IDENTICAL_PRE_FIRST_STEP_ENGINEERING_RETRY_OR_AWAIT_AUTODL_RESTART",
+    "LF3_NUMERICAL_OR_IDENTITY_INVALID": "INVALID_RUN_USER_REVIEW_NO_AUTOMATIC_SCIENTIFIC_RETRY",
+    "LF3_RUN_BOUND_EXCEEDED": "STOP_AND_RETAIN_BOUNDED_INTERRUPTED_TRAJECTORY_NO_AUTOMATIC_RETRY",
+    "LF3_POST_STEP_INTERRUPTED": "RETAIN_CONSUMED_TRAJECTORY_USER_REVIEW_REQUIRED",
+    "LF3_ARTIFACT_OR_SHUTDOWN_BLOCKED": "COMPLETE_RECOVERY_AND_SHUTDOWN_BEFORE_ANY_LOCAL_REFERENCE_IO",
+    "LF3_TEMPORAL_CARRIER_FAILURE": "KINETIC_OR_PHASE_LATENT_TEACHER_BACKUP_REQUIRES_NEW_EXECUTE",
+    "LF3_CARRIER_NOT_ESTABLISHED": "STOP_LATENT_CARRIER_ROUTE_RETAIN_NEGATIVE_ADVISOR_DRAFT",
+    "LF3_P0_PRESERVATION_FAILED": "STOP_PHYSICS_REFINEMENT_RETAIN_CARRIER_AND_FORGETTING_EVIDENCE",
+    "LF3_LOCAL_ADJUDICATION_BLOCKED": "REPAIR_LOCAL_EVALUATION_ONLY_WITHOUT_NEW_GPU_TRAJECTORY",
+    "LF3_NO_PINN_PARETO": "RETAIN_DATA_ONLY_CARRIER_AND_NEGATIVE_PINN_REFINEMENT_EVIDENCE",
+    "LF3_DIRECT_BASELINE_GAP": "WRITE_WITHIN_ARCHITECTURE_RECOVERY_ONLY_NO_CANDIDATE_CLAIM",
+    "LF3_PROVISIONAL_CANDIDATE_SIGNAL": "FREEZE_SINGLE_SEED_SIGNAL_MATCHED_OUTPUT_PHASE_ABLATION_REQUIRES_NEW_EXECUTE"
+  },
+  "outcome_precedence": ["START_IDENTITY", "CPU_OR_INPUT", "PRIOR_ART_OR_LICENSE", "ENGINEERING_BEFORE_FIRST_STEP", "NUMERICAL_OR_IDENTITY", "RUN_BOUND", "POST_STEP_INTERRUPTION", "ARTIFACT_OR_SHUTDOWN", "TEMPORAL_CARRIER", "CARRIER", "P0_PRESERVATION", "LOCAL_ADJUDICATION", "NO_PINN_PARETO", "DIRECT_BASELINE_GAP", "PROVISIONAL_CANDIDATE_SIGNAL"],
+  "claim_boundary": "SINGLE_SEED_NOMINAL_COMBINATION_PILOT_NOT_LATENT_ONLY_ATTRIBUTION_MULTI_SEED_STRESS_FORMAL_OOD_CONTINUUM_TRUTH_EXPERIMENTAL_VALIDATION_OR_SUBMISSION_READY",
+  "originality_boundary": "FUNCTIONAL_COLLISION_FORBIDS_HEADLINE_ORIGINALITY_CLAIM_BUT_DOES_NOT_BLOCK_ATTRIBUTED_BACKBONE_RECOVERY_PILOT",
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD",
+  "completion_does_not_authorize_next_research": true
+}
