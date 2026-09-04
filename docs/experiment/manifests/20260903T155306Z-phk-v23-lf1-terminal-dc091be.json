@@ -1,0 +1,77 @@
+{
+  "actual_budget": {
+    "estimated_incremental_cost_cny": 0.7864075401916479,
+    "gpu_hours": 0.41830188308066377,
+    "optimizer_steps": 3600,
+    "scientific_gpu_runs": 2,
+    "wall_seconds_including_predictions": 1505.8867790903896
+  },
+  "artifacts": {
+    "a_summary_sha256": "BEA1CB4561FCFB0FB1E68EE44435CEAE3D9198180AC8AF513743AD0EF32C21EE",
+    "b_summary_sha256": "D16CAFCC287E9FAEF450081F213756F91FB667D98BD1C097E880220F5E5B7C66",
+    "compact_artifact": "artifacts/20260903T155306Z-phk-v23-lf1-terminal-dc091be.json",
+    "compact_artifact_sha256": "9BE79417DD3C536830E12EC40C7ADBF65C0B40D162E1D131ED2F9426FD06AEF6",
+    "closeout": "../2026-09-03-phk-v23-lf1-terminal-closeout.md",
+    "closeout_sha256": "8E8CA576FE9AB537102C552D202CBC5D8506AD61EAA45F3300004B726D18829A",
+    "local_adjudication_sha256": "39B9169E745FF7AEEE67917382C92E90D10B5D1CF6C4B5ECA8DEC99775735B7C",
+    "run_b_checkpoint_b0_sha256": "B4073CD5D09EE3A022F333A8AB1CDDF9B6195E87461BBA1BFED67AC0E3424182",
+    "run_b_checkpoint_final_sha256": "603C91B9BE91E4290B1FA45AC34858CBCB29372A0F0D55BEF5B2E8B4C0765DBB",
+    "run_b_prediction_b0_sha256": "798FFD0B722C958D38E82A77332BEE576901588E13F7895FDEFEB6DECFBBDF35",
+    "run_b_prediction_final_sha256": "C7A9DFF5DCDDA8D7C42D11B626A8217E6BE3FB130D17CE664CE46ACE763B6552"
+  },
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "checkpoint": {
+    "loaded_by_terminal_adjudicator": true,
+    "modified": false,
+    "path": null,
+    "role": "MULTI_RUN_CAMPAIGN_CHECKPOINTS_REMAIN_GIT_IGNORED"
+  },
+  "claim_status": "V22R_R0_R1A_R1X_C0_LF0_EVIDENCE_PRESERVED_LF1_DATA_ONLY_VALUE_NO_PINN_GAIN",
+  "code_identity": {
+    "base_commit": "dc091be9079768244a09cc5bf1ffb06791f4303c",
+    "cloud_source_identity": "LF1-BUNDLE-79B2E3449D7560C48B9E1B318BA2C1BD7E0403AB3F5B974167FA01A59285F370",
+    "source_archive_sha256": "A159A1CE88EF8E8E34B44834A6B30BFA097716A60723D098B3E3FABC34D4FF65",
+    "source_manifest_sha256": "64B981F83C36778C13A108745851B870EAA0D67FDFA7C6C05B31DBA63B8478F2"
+  },
+  "command": [
+    "remote python -m pinn_pcm_sci.phk_v23_lf1 --arm B_EVENT_DISTILLATION_PERSISTENT_REPLAY --device cuda:0",
+    "local python -m pinn_pcm_sci.phk_v23_lf1_evaluation --a-run-directory 20260903T134252Z-phk-v23-lf1-a-range-preserving-dc091be-er1 --b-run-directory 20260903T152501Z-phk-v23-lf1-b-event-replay-dc091be-er1"
+  ],
+  "ended_at": "2026-09-03T15:54:13.7184435+00:00",
+  "environment": {
+    "cloud_dtype": "FLOAT64",
+    "cloud_gpu": "Tesla V100-PCIE-32GB",
+    "instance_lifecycle": "SHUTDOWN_VERIFIED_BY_SSH_CONNECTION_REFUSED",
+    "local_evaluator_device": "CPU",
+    "medium_only_cloud_training_labels": true,
+    "reference_blind_cloud_physics": true,
+    "stress_fields_or_metrics_read": false
+  },
+  "evaluator_id": "phk-v23-lf1-local-adjudication-v1",
+  "evidence_identity": "SINGLE_SEED_NOMINAL_EVENT_TRANSFER_AND_COMPETENT_PHYSICS_REFINEMENT_WITHOUT_FROZEN_COMPARATOR_GAIN",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY",
+  "failure_class": "PINN_SPECIFIC_GAIN_GATE_FAILED",
+  "gate": "PHK_V23_LF1",
+  "gate_outcome": "LF1_DATA_ONLY_VALUE_NO_PINN_GAIN",
+  "method_id": "phk-v23-lf1-admissible-event-preserving-multifidelity-v1",
+  "numerical_validity": "VALID_FINITE_POTENTIAL_PHASE_BATCH_AND_ARTIFACT_IDENTITY_GUARDS_PASS",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "run_a_physics_updates": 1200,
+    "run_b_data_updates": 1200,
+    "run_b_physics_updates": 1200,
+    "run_c_conditional_data_updates": 1200,
+    "scientific_gpu_runs_maximum": 3
+  },
+  "replay_of": "20260903T140233Z-phk-v23-lf1-a-interim-dc091be",
+  "route_disposition": "RETAIN_DATA_ONLY_VALUE_AS_NON_PINN_BASELINE_STOP_METHOD_CLAIM",
+  "run_id": "20260903T155306Z-phk-v23-lf1-terminal-dc091be",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "event_preserving_multifidelity_campaign_terminal_adjudication",
+  "seed": 17,
+  "split_id": "MEDIUM_METHOD_INPUT_FINE_EXTRA_LOCAL_NOMINAL_AFTER_SHUTDOWN_STRESS_SEALED",
+  "started_at": "2026-09-03T13:43:15.450647+00:00",
+  "supersedes": "20260903T140233Z-phk-v23-lf1-a-interim-dc091be",
+  "tier": "development_campaign"
+}

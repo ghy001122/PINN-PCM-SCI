@@ -1,0 +1,284 @@
+{
+  "schema_id": "phk-v23-lf1-terminal-artifact-v1",
+  "run_id": "20260903T155306Z-phk-v23-lf1-terminal-dc091be",
+  "task_id": "PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY_PILOT",
+  "phase_id": "PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY_PILOT",
+  "lifecycle_state": "COMPLETE",
+  "machine_outcome": "LF1_DATA_ONLY_VALUE_NO_PINN_GAIN",
+  "unique_next": "RETAIN_DATA_ONLY_VALUE_AS_NON_PINN_BASELINE_STOP_METHOD_CLAIM",
+  "next_research_execution_authorized": false,
+  "candidate": null,
+  "preserves_without_rewrite": [
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "R0A_INCONCLUSIVE",
+    "GRADIENT_STARVATION_TEMPORAL_PRECURSOR_ONLY",
+    "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "R1A_CONFIG_RAW_NO_COMPETENCE",
+    "PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED",
+    "C0_OUTPUT_TRANSFORM_INADMISSIBLE",
+    "LF0_NUMERICAL_OR_IDENTITY_INVALID"
+  ],
+  "contracts": {
+    "program": {
+      "path": "configs/phk_v23/program_contract_lf1_event_preserving_multifidelity.json",
+      "sha256": "88B351650D3CF60849C974BD9EE04617CE3EB31D682F627DFEE3FF161819C9A1"
+    },
+    "method": {
+      "path": "configs/phk_v23/method_contract_lf1_event_preserving_multifidelity.json",
+      "sha256": "98BC2C06558B5DBA7C76416524802FC1A59DAC81A10FC6D01A79554F2A936B47"
+    },
+    "data": {
+      "path": "configs/phk_v23/data_contract_lf1_medium_event_replay.json",
+      "sha256": "66E7DF21154C27117B70D72038B3EE41401600D9F5C460146993E2273DB5AC28"
+    },
+    "decision": {
+      "path": "configs/phk_v23/decision_contract_lf1_event_preserving.json",
+      "sha256": "4D561DA849752BD43B0FCF708DDF1AAD1FB11759B78638CCBD7E21A7CA71393E"
+    }
+  },
+  "cpu_qualification": {
+    "status": "LF1_CPU_QUALIFICATION_PASS",
+    "path": "docs/experiment/artifacts/20260903T113005Z-phk-v23-lf1-cpu-qualification-dc091be.json",
+    "sha256": "EABA0D12124F4C9023D1F40FC6DA8576D8CA5325CE0D94A0F045FFD3AF1DC8CC"
+  },
+  "source_identity": {
+    "base_commit": "dc091be9079768244a09cc5bf1ffb06791f4303c",
+    "bundle": "LF1-BUNDLE-79B2E3449D7560C48B9E1B318BA2C1BD7E0403AB3F5B974167FA01A59285F370",
+    "manifest_path": "cloud/phk_v23_lf1_autodl/deployed-source-manifest-engineering-retry1.json",
+    "manifest_sha256": "64B981F83C36778C13A108745851B870EAA0D67FDFA7C6C05B31DBA63B8478F2",
+    "archive_path": "outputs/deploy/phk-v23-lf1-source-dc091be-engineering-retry1.tar.gz",
+    "archive_sha256": "A159A1CE88EF8E8E34B44834A6B30BFA097716A60723D098B3E3FABC34D4FF65",
+    "medium_sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F"
+  },
+  "common_gpu_identity": {
+    "gpu": "Tesla V100-PCIE-32GB",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "arm": "STRONG_RAW",
+    "optimizer": "TORCH_ADAM_LEGACY_SUMMED_PHYSICS_WITH_FROZEN_LF1_STAGE_OBJECTIVES",
+    "potential_transform": "POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING_LOG_RATIO",
+    "reference_blind_cloud_physics": true,
+    "only_gpu_training_label_source": "DECLARED_MEDIUM_LOW_FIDELITY_METHOD_INPUT",
+    "fine_extra_fine_or_evaluator_read_on_cloud": false,
+    "stress_fields_or_metrics_read": false
+  },
+  "scientific_gpu_runs": {
+    "executed": 2,
+    "maximum": 3,
+    "run_a": {
+      "run_id": "20260903T134252Z-phk-v23-lf1-a-range-preserving-dc091be-er1",
+      "run_identity": "LF1_A_RANGE_PRESERVING_EXACT_TOP_SCRATCH_PINN",
+      "status": "LF1_REFERENCE_BLIND_GPU_RUN_COMPLETE",
+      "started_at_utc": "2026-09-03T13:43:15.450647+00:00",
+      "finished_at_utc": "2026-09-03T13:55:17.885129+00:00",
+      "optimizer_steps": 1200,
+      "physics_steps": 1200,
+      "wall_seconds_including_prediction": 722.4337922921404,
+      "gpu_hours": 0.20067605341448344,
+      "hourly_price_cny": 1.88,
+      "estimated_incremental_cost_cny": 0.37727098041922885,
+      "final_pde_loss": 0.005272590121451032,
+      "final_total_loss": 0.009012799807086741,
+      "physics_batch_rolling_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53",
+      "summary_sha256": "BEA1CB4561FCFB0FB1E68EE44435CEAE3D9198180AC8AF513743AD0EF32C21EE"
+    },
+    "run_b": {
+      "run_id": "20260903T152501Z-phk-v23-lf1-b-event-replay-dc091be-er1",
+      "run_identity": "LF1_B_EVENT_DISTILLATION_PERSISTENT_REPLAY_PINN",
+      "status": "LF1_REFERENCE_BLIND_GPU_RUN_COMPLETE",
+      "started_at_utc": "2026-09-03T15:25:31.138307+00:00",
+      "finished_at_utc": "2026-09-03T15:38:34.592186+00:00",
+      "optimizer_steps": 2400,
+      "stage_updates": {
+        "B0_EVENT_DATA_ONLY": 1200,
+        "B1_PHYSICS_PLUS_PERSISTENT_REPLAY": 1200
+      },
+      "distillation_draws": 1200,
+      "replay_draws": 1200,
+      "physics_steps": 1200,
+      "optimizer_instances": 2,
+      "wall_seconds_including_prediction": 783.4529867982492,
+      "gpu_hours": 0.21762582966618033,
+      "hourly_price_cny": 1.88,
+      "estimated_incremental_cost_cny": 0.409136559772419,
+      "final_pde_loss": 0.03360486570016167,
+      "final_physics_total": 0.053986898612001726,
+      "final_total_with_replay": 0.12119298956566452,
+      "distillation_rolling_sha256": "B3E54AE9E6B0D17D3ED4CF627899DDCCE62DF710E139773C85FE320B7E450D05",
+      "replay_rolling_sha256": "12DE71B3C31EEB6F8EE2EA802BD63DFFF7BFA1F72542B2A732F4E68E73F03E86",
+      "physics_batch_rolling_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53",
+      "a_b_physics_batches_stepwise_equal": true,
+      "summary_sha256": "D16CAFCC287E9FAEF450081F213756F91FB667D98BD1C097E880220F5E5B7C66",
+      "checkpoint_b0_sha256": "B4073CD5D09EE3A022F333A8AB1CDDF9B6195E87461BBA1BFED67AC0E3424182",
+      "checkpoint_final_sha256": "603C91B9BE91E4290B1FA45AC34858CBCB29372A0F0D55BEF5B2E8B4C0765DBB",
+      "prediction_b0_sha256": "798FFD0B722C958D38E82A77332BEE576901588E13F7895FDEFEB6DECFBBDF35",
+      "prediction_final_sha256": "C7A9DFF5DCDDA8D7C42D11B626A8217E6BE3FB130D17CE664CE46ACE763B6552"
+    },
+    "run_c": {
+      "executed": false,
+      "optimizer_steps": 0,
+      "disposition": "NOT_TRIGGERED_BECAUSE_RUN_B_FAILED_THE_FROZEN_PROVISIONAL_GAIN_GATE"
+    }
+  },
+  "actual_budget": {
+    "scientific_gpu_runs": 2,
+    "optimizer_steps": 3600,
+    "gpu_hours": 0.41830188308066377,
+    "wall_seconds_including_predictions": 1505.8867790903896,
+    "estimated_incremental_cost_cny": 0.7864075401916479
+  },
+  "b0_data_transfer_gate": {
+    "passed": true,
+    "phase_maximum_on_medium_gate_grid": 0.7541966324539335,
+    "potential_maximum_principle_passed": true,
+    "teacher_event_support_predicted_active_count": {
+      "cycle_1": 1046,
+      "cycle_2": 1041
+    },
+    "teacher_event_support_total_count": {
+      "cycle_1": 1164,
+      "cycle_2": 1102
+    },
+    "all_six_event_transition_recovery_pools_nonempty": true
+  },
+  "potential_validity": {
+    "absolute_tolerance": 1e-06,
+    "a_final": {"passed": true, "maximum_absolute_excess": 0.0, "violation_fraction": 0.0},
+    "b0": {"passed": true, "maximum_absolute_excess": 0.0, "violation_fraction": 0.0},
+    "b_final": {"passed": true, "maximum_absolute_excess": 0.0, "violation_fraction": 0.0},
+    "lf_only_medium_direct": {"passed": true, "maximum_absolute_excess": 0.0, "violation_fraction": 0.0}
+  },
+  "local_nominal_development_evaluation": {
+    "raw_adjudication_path": "outputs/runs/20260903T155306Z-phk-v23-lf1-local-after-b/adjudication.json",
+    "raw_adjudication_sha256": "39B9169E745FF7AEEE67917382C92E90D10B5D1CF6C4B5ECA8DEC99775735B7C",
+    "reference_role": "NOMINAL_LOCAL_DEVELOPMENT_ONLY_AFTER_COMPLETE_RECOVERY_AND_SHUTDOWN_VERIFICATION",
+    "a_final": {
+      "competent": false,
+      "phase_max": 0.029993192904299273,
+      "phase_ge_0_5_fraction": 0.0,
+      "phase_region_symmetric_difference": 0.00515,
+      "phase_roi_rms": 0.11047846854791515,
+      "temperature_roi_rms": 0.16274756071704222,
+      "terminal_current_trace_nrmse": 0.18886136987903415,
+      "event_guard_failures": 6
+    },
+    "lf_only_medium_direct": {
+      "competent": true,
+      "phase_max": 0.9915152094722343,
+      "phase_ge_0_5_fraction": 0.005304227022977023,
+      "cycle_1_event": 0.2381,
+      "cycle_2_event": 1.4954500000000002,
+      "phase_region_symmetric_difference": 0.00034953125,
+      "phase_roi_rms": 0.006570375888844028,
+      "temperature_roi_rms": 0.0018006948281555659,
+      "terminal_current_trace_nrmse": 0.0035221351893723663,
+      "event_guard_failures": 0
+    },
+    "b0_lf_data_only": {
+      "competent": true,
+      "phase_max": 0.7644697442784207,
+      "phase_ge_0_5_fraction": 0.01888814310689311,
+      "temperature_max": 0.831171738039785,
+      "cycle_1_event": 0.19339444444444445,
+      "cycle_2_event": 1.4421444444444445,
+      "phase_region_symmetric_difference": 0.017437031250000002,
+      "phase_roi_rms": 0.1634463969649899,
+      "temperature_roi_rms": 0.054592534991385715,
+      "terminal_current_trace_nrmse": 0.2561935734231694,
+      "event_guard_failures": 0
+    },
+    "b_final": {
+      "competent": true,
+      "phase_max": 0.6644660594668035,
+      "phase_ge_0_5_fraction": 0.021578187437562436,
+      "temperature_max": 0.7641065209543962,
+      "cycle_1_event": 0.20969310344827585,
+      "cycle_2_event": 1.431488888888889,
+      "phase_region_symmetric_difference": 0.020594765624999997,
+      "phase_roi_rms": 0.21445921728638048,
+      "temperature_roi_rms": 0.07930235367208854,
+      "terminal_current_trace_nrmse": 0.13875724934916162,
+      "event_guard_failures": 0
+    }
+  },
+  "reference_blind_fixed_physics_pool": {
+    "seed": 17301,
+    "fixed_pool_sha256": "8C43A763154A3A0F877D48CFAD3FE6EB1EA47C41D96C690BBD33B44D1F3CDD1D",
+    "b0_full_summed_physics_objective": 7.3746408915652335,
+    "b_final_full_summed_physics_objective": 0.4211746207409791,
+    "ratio_b_final_to_b0": 0.05711120404828102,
+    "maximum_allowed_ratio": 0.5,
+    "ratio_passed": true,
+    "reference_or_low_fidelity_values_read": false
+  },
+  "frozen_comparisons": {
+    "b_final_vs_b0": {
+      "both_competent": true,
+      "primary_ratio": 1.1810935777843488,
+      "co_primary_ratio": 1.3121073408079929,
+      "geometric_mean_ratio": 1.244878128007726,
+      "phase_noninferiority_passed": false,
+      "temperature_preservation_passed": false,
+      "current_preservation_passed": true,
+      "preservation_passed": false
+    },
+    "b_final_vs_lf_only": {
+      "both_competent": true,
+      "primary_ratio": 58.921099687080904,
+      "co_primary_ratio": 32.64032696371528,
+      "geometric_mean_ratio": 43.85434937207464,
+      "phase_noninferiority_passed": false,
+      "temperature_preservation_passed": false,
+      "current_preservation_passed": true,
+      "preservation_passed": false
+    }
+  },
+  "recovery_and_instance_lifecycle": {
+    "run_b_recovered_file_count": 12,
+    "summary_bound_artifacts_verified": 11,
+    "remote_and_local_summary_sha256_equal": true,
+    "all_declared_artifact_sizes_and_sha256_verified": true,
+    "training_log_lines": 98,
+    "event_data_batch_hash_lines": 2400,
+    "physics_batch_hash_lines": 1200,
+    "a_b_physics_identity_mismatches": 0,
+    "gpu_memory_used_mib_before_shutdown": 0,
+    "gpu_utilization_percent_before_shutdown": 0,
+    "shutdown_executed_after_recovery": true,
+    "shutdown_verified_by": "SSH_CONNECTION_REFUSED"
+  },
+  "machine_adjudication": {
+    "outcome": "LF1_DATA_ONLY_VALUE_NO_PINN_GAIN",
+    "status": "TERMINAL",
+    "unique_next": "RETAIN_DATA_ONLY_VALUE_AS_NON_PINN_BASELINE_STOP_METHOD_CLAIM",
+    "c_trigger_written": false
+  },
+  "verification": {
+    "focused_ledger_and_document_tests_run": 40,
+    "focused_ledger_and_document_tests_passed": 40,
+    "test_runner": "PYTHON_UNITTEST",
+    "strict_json_passed": true,
+    "document_consistency": "DOCUMENT_CONSISTENCY_VALID"
+  },
+  "claim_boundary": "SINGLE_SEED_NOMINAL_EVENT_TRANSFER_AND_COMPETENT_PHYSICS_REFINEMENT_WITHOUT_FROZEN_COMPARATOR_GAIN_NOT_MULTI_SEED_STRESS_FORMAL_OOD_CONTINUUM_TRUTH_OR_HEADLINE_METHOD_EVIDENCE",
+  "evidence_assessment": {
+    "verified": [
+      "RANGE_PRESERVING_B0_TRANSFERRED_TWO_CYCLE_EVENT_COMPETENCE",
+      "PERSISTENT_REPLAY_B_FINAL_RETAINED_TWO_CYCLE_EVENT_COMPETENCE",
+      "B_FINAL_REDUCED_THE_FIXED_FULL_PHYSICS_OBJECTIVE_RELATIVE_TO_B0",
+      "B_FINAL_FAILED_PHASE_NONINFERIORITY_AND_TEMPERATURE_PRESERVATION_VERSUS_B0_AND_LF_ONLY",
+      "CONDITIONAL_C_WAS_NOT_TRIGGERED",
+      "RUN_B_WAS_RECOVERED_HASH_VERIFIED_AND_THE_INSTANCE_WAS_SHUT_DOWN",
+      "STRESS_REMAINED_SEALED_UNREAD"
+    ],
+    "supported_interpretation": "EVENT_BALANCED_DISTILLATION_SOLVED_THE_FROZEN_EVENT_TRANSFER_FAILURE_AND_PERSISTENT_REPLAY_PREVENTED_COLD_STATE_COLLAPSE_BUT_THE_PHYSICS_REFINEMENT_DEGRADED_PHASE_AND_TEMPERATURE_ACCURACY_TOO_MUCH_TO_ESTABLISH_PINN_SPECIFIC_GAIN",
+    "hypothesis": "A_FUTURE_METHOD_WOULD_NEED_A_STRONGER_ACCURACY_PRESERVATION_MECHANISM_OR_A_DIFFERENT_CLAIM_TARGET_NOT_MORE_UNCONTROLLED_TRAINING",
+    "unknown": [
+      "WHETHER_ANY_NEW_BOUNDED_PINN_METHOD_CAN_BE_NONINFERIOR_TO_THE_STRONG_DIRECT_LF_ONLY_BASELINE",
+      "MULTI_SEED_BEHAVIOR",
+      "STRESS_AND_FORMAL_OOD",
+      "HEADLINE_CORE_INCREMENT"
+    ]
+  },
+  "stress_reference_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

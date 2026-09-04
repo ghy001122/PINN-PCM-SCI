@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0057：激活并收口 PHK-V2.3 LF1 event-preserving multi-fidelity pilot](0057-activate-phk-v23-lf1-event-preserving-multifidelity-pilot.md) — B0/B final 均恢复两周期 competence且 physics objective 显著下降，但冻结 phase/temperature 增量门失败，故以 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN` 收口；C 未触发，继续禁止 PJGR/R2/stress。
 - [0056：激活并收口 PHK-V2.3 LF0 exact-top warm-start attribution campaign](0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md) — A 无 competence；B 的 step-800 data-only checkpoint 违反 potential validity，故以 `LF0_NUMERICAL_OR_IDENTITY_INVALID` 收口且不执行条件 C；stress 继续 sealed/unread。
 - [0055：激活并收口 PHK-V2.3 C0 reference/discrete/strong-form compatibility audit](0055-activate-phk-v23-c0-reference-discrete-strongform-compatibility-audit.md) — 一次本地 CPU/FP64 nominal development diagnostic 识别 E2 hard-lift output inadmissibility；不训练、不使用 GPU、不读取 stress，完成后不自动授权下一路线。
 - [0054：在已验证工程修复后恢复 R1X 原科学任务](0054-resume-r1x-after-verified-engineering-repair.md) — 覆盖旧的一次 engineering-retry 限制；仅当首步前纯工程故障根因已明确且隔离回归证明修复时，重执行相同冻结任务且不消耗科学 run 配额。

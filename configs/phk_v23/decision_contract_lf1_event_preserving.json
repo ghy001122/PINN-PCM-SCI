@@ -1,0 +1,101 @@
+{
+  "schema_id": "phk-v23-lf1-decision-contract-v1",
+  "contract_id": "PHK_V23_LF1_EVENT_PRESERVING_ATTRIBUTION_DECISION",
+  "program_contract": "configs/phk_v23/program_contract_lf1_event_preserving_multifidelity.json",
+  "method_contract": "configs/phk_v23/method_contract_lf1_event_preserving_multifidelity.json",
+  "data_contract": "configs/phk_v23/data_contract_lf1_medium_event_replay.json",
+  "effective_date": "2026-09-03",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "qualification_inputs": {
+    "lf0_terminal_artifact": {"path": "docs/experiment/artifacts/20260903T092416Z-phk-v23-lf0-terminal-172ae2c.json", "sha256": "6307FD801BD8513CE1BD8CEF29535FC3A2BD6722FA83F20B004BB7704C41DF22"},
+    "lf0_terminal_manifest": {"path": "docs/experiment/manifests/20260903T092416Z-phk-v23-lf0-terminal-172ae2c.json", "sha256": "DD7230A0BB0038251E939F42250ED1799FAD3D1210112B26B62A2B3C95D84C34"},
+    "oracle_floor_contract": {"path": "configs/phk_v21/oracle_and_floor_contract.json", "sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB"},
+    "oracle_floor_seal": {"path": "outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/oracle-floor-seal.json", "sha256": "3B71753CBAC720C1CF5F7937741FCF605693C5580988C848113AC9378F1A01F7"}
+  },
+  "cpu_qualification": {
+    "required_before_gpu": true,
+    "old_sampler_draws": 800,
+    "required_reports": [
+      "OLD_LF0_EVENT_EXPOSURE_BY_CYCLE",
+      "OLD_LF0_PHASE_LOSS_BY_EVENT_TRANSITION_RECOVERY_BACKGROUND",
+      "OLD_B0_EVENT_RECALL_PRECISION",
+      "OLD_B0_POTENTIAL_VIOLATION_EVENT_OVERLAP",
+      "OLD_B0_EVENT_POINT_PHASE_LATENT_AND_JACOBIAN",
+      "NEW_MEDIUM_EVENT_POOL_COUNTS",
+      "NEW_TRANSFORM_RANGE_LATENT_RECONSTRUCTION_AND_DERIVATIVE"
+    ],
+    "old_checkpoint_unavailable_rule": "LATENT_DIAGNOSTIC_UNKNOWN_WITHOUT_BLOCKING_OTHER_PRECHECKS",
+    "stress_or_extra_fine_reference_read": false
+  },
+  "potential_maximum_principle": {
+    "role": "METHOD_AND_RUN_VALIDITY_GUARD_NOT_FROZEN_EVALUATOR",
+    "lower": "min(0,waveform)",
+    "upper": "max(0,waveform)",
+    "absolute_tolerance": 1e-6,
+    "maximum_violation_fraction": 0.0,
+    "applies_to": ["A_FINAL", "B0_LF_DATA_ONLY", "B_FINAL", "C_FINAL", "LF_ONLY"],
+    "failure": "LF1_NUMERICAL_OR_IDENTITY_INVALID"
+  },
+  "b0_data_transfer_gate": {
+    "potential_validity": true,
+    "phase_maximum_minimum": 0.5,
+    "teacher_event_support_predicted_active_count_each_cycle_minimum": 1,
+    "all_event_transition_recovery_pools_nonempty": true,
+    "failure": "LF1_DATA_TRANSFER_NO_EVENT"
+  },
+  "local_evaluation": {
+    "frozen_evaluator_unchanged": true,
+    "nominal_extra_fine_only_after_complete_recovery_and_shutdown": true,
+    "comparators": ["A_RANGE_PRESERVING_SCRATCH", "LF_ONLY_MEDIUM_DIRECT", "B0_LF_DATA_ONLY", "C_DATA_ONLY_CONTINUATION_IF_TRIGGERED"]
+  },
+  "reference_blind_physics_diagnostic_pool": {
+    "device": "CPU",
+    "dtype": "FLOAT64",
+    "seed": 17301,
+    "active_windows": 4,
+    "interior_points": 512,
+    "boundary_points_total": 128,
+    "boundary_points_per_side": 32,
+    "initial_points": 128,
+    "objective": "NORMALIZED_PDE_PLUS_5_TIMES_BOUNDARY_PLUS_INITIAL",
+    "reference_or_low_fidelity_values_read": false
+  },
+  "provisional_positive_gate": {
+    "B_final_two_cycle_frozen_competence": true,
+    "full_summed_physics_objective_ratio_B_final_to_B0_maximum": 0.5,
+    "phase_noninferiority": "FOR_LF_ONLY_AND_B0_BOTH_PRIMARY_AND_CO_PRIMARY_ERRORS_MUST_NOT_EXCEED_COMPARATOR_ERROR_PLUS_MATCHING_PHK_V21_COMPONENT_FLOOR_OR_PASS_THE_EXISTING_0_98_0_98_0_95_RATIO_GATE",
+    "phase_ratio_gate": {"primary_maximum": 0.98, "co_primary_maximum": 0.98, "geometric_mean_maximum": 0.95},
+    "component_floor_indices": {"phase_roi_continuous_rms": 0, "time_averaged_phase_region_symmetric_difference": 4},
+    "temperature_preservation": "E_T_B_LE_MAX_1_10_TIMES_E_T_COMPARATOR_OR_0_05",
+    "current_preservation": "E_I_B_LE_MAX_1_10_TIMES_E_I_COMPARATOR_OR_0_15",
+    "A_rule": "B_MUST_BE_COMPETENT_AND_A_MAY_BE_NONCOMPETENT_CATEGORY_CONTROL",
+    "C_if_run": "B_EVENT_NONINFERIOR_TO_C_AND_FIXED_PHYSICS_OBJECTIVE_RATIO_B_TO_C_LE_0_5"
+  },
+  "run_tree": {
+    "after_valid_A": "ALWAYS_RUN_B",
+    "after_invalid_B0": "STOP_WITHOUT_B1_OR_C",
+    "run_C_only_if": ["B_FINAL_COMPETENT", "B_PROVISIONAL_PHYSICS_VALUE_VS_A_LF_ONLY_B0", "POTENTIAL_VALIDITY_PASS", "PRESERVATION_PASS"],
+    "phase_latent_teacher_backup": "NOT_EXECUTED_IN_THIS_CAMPAIGN_REQUIRES_NEW_EXECUTE_AFTER_LF1_DATA_TRANSFER_NO_EVENT"
+  },
+  "machine_outcomes_and_unique_next": {
+    "LF1_CPU_OR_REPRESENTABILITY_BLOCKED": "LF1_CPU_BLOCKED_REQUIRES_USER_REVIEW",
+    "LF1_DATA_TRANSFER_NO_EVENT": "LF1_PHASE_LATENT_TEACHER_BACKUP_REQUIRES_NEW_EXECUTE",
+    "LF1_PHYSICS_FORGETTING_PERSISTS": "RETAIN_BOUNDED_NEGATIVE_PACKAGE_STOP_EVENT_REPLAY_ROUTE",
+    "LF1_DATA_ONLY_VALUE_NO_PINN_GAIN": "RETAIN_DATA_ONLY_VALUE_AS_NON_PINN_BASELINE_STOP_METHOD_CLAIM",
+    "LF1_EVENT_PRESERVING_PINN_PROVISIONAL_SIGNAL": "LF1_MULTI_SEED_CONFIRMATION_REQUIRES_NEW_EXECUTE",
+    "LF1_NUMERICAL_OR_IDENTITY_INVALID": "INVALID_RUN_REQUIRES_USER_REVIEW_NO_AUTOMATIC_SCIENTIFIC_RETRY",
+    "LF1_ENGINEERING_BLOCKED": "IDENTICAL_PRE_FIRST_SCIENTIFIC_STEP_ENGINEERING_RETRY_WITHIN_CAMPAIGN"
+  },
+  "outcome_precedence": [
+    "ENGINEERING_BLOCKED_BEFORE_SCIENTIFIC_TRAJECTORY",
+    "CPU_OR_REPRESENTABILITY_BLOCKED",
+    "NUMERICAL_OR_IDENTITY_INVALID",
+    "DATA_TRANSFER_NO_EVENT",
+    "PHYSICS_FORGETTING_PERSISTS",
+    "DATA_ONLY_VALUE_NO_PINN_GAIN",
+    "EVENT_PRESERVING_PINN_PROVISIONAL_SIGNAL"
+  ],
+  "claim_boundary": "SINGLE_SEED_NOMINAL_DEVELOPMENT_MULTI_FIDELITY_PINN_PILOT_NOT_MULTI_SEED_STRESS_FORMAL_OOD_CONTINUUM_TRUTH_OR_SUBMISSION_READY",
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD",
+  "completion_does_not_authorize_next_research": true
+}

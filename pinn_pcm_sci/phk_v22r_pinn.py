@@ -24,8 +24,46 @@ FIELD_NAMES = ("potential", "temperature", "phase")
 POTENTIAL_TRANSFORM_LEGACY = "LEGACY_WAVEFORM_SIGMOID"
 POTENTIAL_TRANSFORM_TOP_DIRICHLET_HARD_LIFT = "TOP_DIRICHLET_HARD_LIFT"
 POTENTIAL_TRANSFORM_EXACT_TOP_RAW = "POTENTIAL_TRANSFORM_EXACT_TOP_AFFINE_RAW_LIFT"
+POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING = (
+    "POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING_LOG_RATIO"
+)
 PHASE_TRANSFORM_LEGACY = "LEGACY_FIXED_LATENT_SCALE"
 PHASE_TRANSFORM_JACOBIAN_NORMALIZED = "JACOBIAN_NORMALIZED_CAP_32"
+
+
+def range_preserving_exact_top_fraction(
+    latent: torch.Tensor, z_fraction: torch.Tensor
+) -> torch.Tensor:
+    """Map a raw potential latent to ``[0, 1]`` with an exact top value.
+
+    The mathematical map is ``exp(h) / (exp(h) + 1 - zeta)``.  The
+    implementation uses algebraically equivalent branches selected by the sign
+    of ``h``.  This avoids overflow without a hard top-boundary branch, so the
+    exact value and the finite one-sided normal derivative at ``zeta == 1`` are
+    both retained by automatic differentiation.
+    """
+
+    if latent.shape != z_fraction.shape:
+        raise ValueError("potential latent and z fraction must have matching shapes")
+    one_minus_zeta = 1.0 - z_fraction
+    if bool(torch.any(one_minus_zeta < 0.0)):
+        raise ValueError("z fraction must not exceed the top boundary")
+    positive = latent >= 0.0
+    # Mask before exponentiation, rather than only after it, so the inactive
+    # branch cannot overflow and poison backward with ``0 * inf``.
+    positive_h = torch.where(positive, latent, torch.zeros_like(latent))
+    negative_h = torch.where(positive, torch.zeros_like(latent), latent)
+    positive_ratio = 1.0 / (1.0 + one_minus_zeta * torch.exp(-positive_h))
+    exp_negative_h = torch.exp(negative_h)
+    underflow_at_top = (one_minus_zeta == 0.0) & (exp_negative_h == 0.0)
+    safe_negative_gap = torch.where(
+        underflow_at_top, torch.ones_like(one_minus_zeta), one_minus_zeta
+    )
+    negative_ratio = exp_negative_h / (exp_negative_h + safe_negative_gap)
+    negative_ratio = torch.where(
+        underflow_at_top, torch.ones_like(negative_ratio), negative_ratio
+    )
+    return torch.where(positive, positive_ratio, negative_ratio)
 
 
 class PhkV22RArm(str, Enum):
@@ -364,6 +402,7 @@ class PhkV22RModel(nn.Module):
             POTENTIAL_TRANSFORM_LEGACY,
             POTENTIAL_TRANSFORM_TOP_DIRICHLET_HARD_LIFT,
             POTENTIAL_TRANSFORM_EXACT_TOP_RAW,
+            POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING,
         }:
             raise ValueError("unknown potential output transform")
         if self.phase_output_transform not in {
@@ -459,7 +498,12 @@ class PhkV22RModel(nn.Module):
             "potential_latent_activation": (
                 "IDENTITY"
                 if self.potential_output_transform == POTENTIAL_TRANSFORM_EXACT_TOP_RAW
-                else "SIGMOID"
+                else (
+                    "RANGE_PRESERVING_LOG_RATIO"
+                    if self.potential_output_transform
+                    == POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING
+                    else "SIGMOID"
+                )
             ),
             "phase_output_transform": self.phase_output_transform,
             "phase_jacobian_beta_cap": self.phase_jacobian_beta_cap,
@@ -547,11 +591,19 @@ class PhkV22RModel(nn.Module):
             potential_jacobian = (
                 waveform * (1.0 - z_fraction) * sigmoid_derivative["potential"]
             )
-        else:
+        elif self.potential_output_transform == POTENTIAL_TRANSFORM_EXACT_TOP_RAW:
             potential = waveform * (
                 z_fraction + (1.0 - z_fraction) * latent["potential"]
             )
             potential_jacobian = waveform * (1.0 - z_fraction)
+        else:
+            potential_fraction = range_preserving_exact_top_fraction(
+                latent["potential"], z_fraction
+            )
+            potential = waveform * potential_fraction
+            potential_jacobian = (
+                waveform * potential_fraction * (1.0 - potential_fraction)
+            )
         temperature = (
             self.temperature_scale
             * startup
@@ -1140,6 +1192,8 @@ __all__ = [
     "PhkV22RPhysics",
     "PHASE_TRANSFORM_JACOBIAN_NORMALIZED",
     "PHASE_TRANSFORM_LEGACY",
+    "POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING",
+    "POTENTIAL_TRANSFORM_EXACT_TOP_RAW",
     "POTENTIAL_TRANSFORM_LEGACY",
     "POTENTIAL_TRANSFORM_TOP_DIRICHLET_HARD_LIFT",
     "boundary_residuals",
@@ -1149,4 +1203,5 @@ __all__ = [
     "interior_residuals",
     "normalized_residual_loss",
     "phase_kinetic_rhs_from_laplacian",
+    "range_preserving_exact_top_fraction",
 ]

@@ -4,22 +4,24 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF0_EXACT_TOP_WARMSTART_ATTRIBUTION_EXECUTE`
+- `phase_id`: `PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY_PILOT`
 - `lifecycle_state`: `COMPLETE`
-- `blocker_id`: `NONE`
-- `claim_status`: `V22R_R1X_C0_PRESERVED_LF0_NUMERICAL_OR_IDENTITY_INVALID_NO_METHOD_EVIDENCE`
+- `blocker_id`: `NONE_TERMINAL`
+- `claim_status`: `V22R_R0_R1A_R1X_C0_LF0_EVIDENCE_PRESERVED_LF1_DATA_ONLY_VALUE_NO_PINN_GAIN`
 - `next_research_execution_authorized`: `false`
 
-LF0 已执行并收口。A 的 exact-top scratch PINN 没有两周期 competence；B 的固定 step-800 `LF_DATA_ONLY` checkpoint 违反 potential validity，B final 虽恢复合法 potential 仍无事件。机器终局为 `LF0_NUMERICAL_OR_IDENTITY_INVALID`，条件 C 未运行，无 candidate 或方法增量证据。用户明确要求本次保留空闲 GPU 实例；这不是后续科研授权。stress 保持 sealed/unread。
+LF1 已终局完成。Run B0 的 event-balanced medium 蒸馏与 B final 的 persistent replay 都保留了两周期 competence，且固定 physics objective ratio 降至 `0.0571112`；但 B final 相对 B0 与 direct `LF_ONLY` 的 phase noninferiority 和 temperature preservation 失败。机器结果为 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN`，candidate 为 none，条件 C 未触发。两条 GPU 轨迹均已回收、哈希核验和关机；stress 继续 sealed/unread。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
-- 当前决定：[ADR 0056](docs/adr/0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md)
+- 当前决定：[ADR 0057](docs/adr/0057-activate-phk-v23-lf1-event-preserving-multifidelity-pilot.md)
+- CPU 资格：[LF1 qualification](docs/experiment/2026-09-03-phk-v23-lf1-cpu-qualification.md)
+- LF1 终局：[LF1 terminal closeout](docs/experiment/2026-09-03-phk-v23-lf1-terminal-closeout.md)
+- Run A 中间证据：[LF1 Run A interim closeout](docs/experiment/2026-09-03-phk-v23-lf1-run-a-interim-closeout.md)
 - LF0 结果：[terminal closeout](docs/experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)
-- CPU 资格：[LF0 qualification](docs/experiment/2026-09-03-phk-v23-lf0-cpu-qualification.md)
 - C0 结果：[compatibility closeout](docs/experiment/2026-09-03-phk-v23-c0-reference-discrete-strongform-compatibility-closeout.md)
 - R1X 历史结果：[terminal closeout](docs/experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)
 - 论文历史包：[paper/paper_v22r](paper/paper_v22r/README.md)

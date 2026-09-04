@@ -1,0 +1,172 @@
+{
+  "bound_qualification_inputs": {
+    "lf0_terminal_artifact": {
+      "path": "docs/experiment/artifacts/20260903T092416Z-phk-v23-lf0-terminal-172ae2c.json",
+      "sha256": "6307FD801BD8513CE1BD8CEF29535FC3A2BD6722FA83F20B004BB7704C41DF22"
+    },
+    "lf0_terminal_manifest": {
+      "path": "docs/experiment/manifests/20260903T092416Z-phk-v23-lf0-terminal-172ae2c.json",
+      "sha256": "DD7230A0BB0038251E939F42250ED1799FAD3D1210112B26B62A2B3C95D84C34"
+    },
+    "oracle_floor_contract": {
+      "path": "configs/phk_v21/oracle_and_floor_contract.json",
+      "sha256": "E596A5D50BB79A241928D98AC000BDCDD3AD7AF0B207BD5882F2D1C2EBB2E5FB"
+    },
+    "oracle_floor_seal": {
+      "path": "outputs/runs/20260828T-phk-v21-s1-q-terminal-summary-001/oracle-floor-seal.json",
+      "sha256": "3B71753CBAC720C1CF5F7937741FCF605693C5580988C848113AC9378F1A01F7"
+    }
+  },
+  "contracts": {
+    "data": {
+      "path": "configs/phk_v23/data_contract_lf1_medium_event_replay.json",
+      "sha256": "66E7DF21154C27117B70D72038B3EE41401600D9F5C460146993E2273DB5AC28"
+    },
+    "decision": {
+      "path": "configs/phk_v23/decision_contract_lf1_event_preserving.json",
+      "sha256": "4D561DA849752BD43B0FCF708DDF1AAD1FB11759B78638CCBD7E21A7CA71393E"
+    },
+    "method": {
+      "path": "configs/phk_v23/method_contract_lf1_event_preserving_multifidelity.json",
+      "sha256": "98BC2C06558B5DBA7C76416524802FC1A59DAC81A10FC6D01A79554F2A936B47"
+    },
+    "program": {
+      "path": "configs/phk_v23/program_contract_lf1_event_preserving_multifidelity.json",
+      "sha256": "88B351650D3CF60849C974BD9EE04617CE3EB31D682F627DFEE3FF161819C9A1"
+    }
+  },
+  "created_at_utc": "2026-09-03T11:30:11.336384+00:00",
+  "fine_extra_fine_reference_read": false,
+  "gpu_execution_authorized_by_cpu_gate": true,
+  "new_medium_event_pool_counts": {
+    "event_cycle_1": 1164,
+    "event_cycle_2": 1102,
+    "recovery_cycle_1": 16600,
+    "recovery_cycle_2": 15170,
+    "transition_cycle_1": 7888,
+    "transition_cycle_2": 14796
+  },
+  "new_transform_range_latent_reconstruction_and_derivative": {
+    "maximum_latent_derivative_error": 1.0941971612631052e-16,
+    "maximum_sampled_reconstruction_error": 1.1102230246251565e-16,
+    "maximum_top_zeta_derivative_error": 3.637978807091713e-12,
+    "medium_all_potential_ratios_admissible_with_tolerance": true,
+    "medium_nonfinite_required_latent_endpoint_count": 0,
+    "medium_reconstructable_point_count": 441600,
+    "passed": true,
+    "required_latent": {
+      "maximum": 0.48230703854491525,
+      "median": -0.1267908663571582,
+      "minimum": -5.170869125708402,
+      "q05": -1.819591712864569,
+      "q95": 0.29796491915144113
+    },
+    "synthetic_all_finite": true,
+    "synthetic_range_maximum": 1.0,
+    "synthetic_range_minimum": 0.0,
+    "top_exact": true
+  },
+  "old_b0_event_point_phase_latent_and_jacobian": {
+    "phase_latent": {
+      "maximum": 0.6886300438758994,
+      "median": 0.3519339900877417,
+      "minimum": 0.1552006899145845,
+      "q05": 0.21420501191872054,
+      "q95": 0.5904800725985909
+    },
+    "phase_output_jacobian": {
+      "maximum": 1.935715202445823,
+      "median": 1.018615546612714,
+      "minimum": 0.29292111268054866,
+      "q05": 0.5002685061574236,
+      "q95": 1.7392648829272113
+    },
+    "predicted_phase": {
+      "maximum": 0.423032942681992,
+      "median": 0.19267288319591486,
+      "minimum": 0.06316650937547859,
+      "q05": 0.0926685997708755,
+      "q95": 0.35631146000441055
+    },
+    "sample_count": 4096,
+    "status": "AVAILABLE"
+  },
+  "old_b0_prediction_diagnostics": {
+    "event_recall_precision": {
+      "cycle_1": {
+        "precision": null,
+        "predicted_positive": 0,
+        "recall": 0.0,
+        "teacher_positive": 9288,
+        "true_positive": 0
+      },
+      "cycle_2": {
+        "precision": null,
+        "predicted_positive": 0,
+        "recall": 0.0,
+        "teacher_positive": 8536,
+        "true_positive": 0
+      }
+    },
+    "phase_loss_by_teacher_topology_category": {
+      "background_complement": {
+        "normalized_phase_mse": 0.003094977330185303,
+        "point_count": 12344902
+      },
+      "event_cycle_1": {
+        "normalized_phase_mse": 1.4237479373125146,
+        "point_count": 9288
+      },
+      "event_cycle_2": {
+        "normalized_phase_mse": 1.4832782127453517,
+        "point_count": 8536
+      },
+      "recovery_cycle_1": {
+        "normalized_phase_mse": 0.28472346201853294,
+        "point_count": 136598
+      },
+      "recovery_cycle_2": {
+        "normalized_phase_mse": 0.2718414110080784,
+        "point_count": 125132
+      },
+      "transition_cycle_1": {
+        "normalized_phase_mse": 0.06337896558015606,
+        "point_count": 65436
+      },
+      "transition_cycle_2": {
+        "normalized_phase_mse": 0.040282994981895345,
+        "point_count": 122908
+      }
+    },
+    "phase_maximum": 0.477584003568351,
+    "potential_violation_event_overlap": {
+      "absolute_tolerance": 1e-06,
+      "fraction_of_teacher_event_support_violating": 0.0,
+      "fraction_of_violations_on_teacher_event_support": 0.0,
+      "overlap_count": 0,
+      "teacher_event_count": 17824,
+      "violation_count": 13750
+    }
+  },
+  "old_lf0_event_exposure_by_cycle": {
+    "draws": 800,
+    "event_fraction_of_all_points": {
+      "cycle_1": 0.002176513671875,
+      "cycle_2": 0.001947021484375
+    },
+    "points": {
+      "all_points": 819200,
+      "cycle_1": 1783,
+      "cycle_2": 1595
+    },
+    "rolling_sha256": "B93EB5786C4747EA2A0ABD71242786F5838FBB34B34CC0E5FBA670C33B90F61C",
+    "steps_with_at_least_one_event_point": {
+      "cycle_1": 797,
+      "cycle_2": 798
+    }
+  },
+  "schema_id": "phk-v23-lf1-cpu-qualification-v1",
+  "status": "LF1_CPU_QUALIFICATION_PASS",
+  "stress_fields_or_metrics_read": false,
+  "task_id": "PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY_PILOT"
+}

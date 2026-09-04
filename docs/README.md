@@ -2,7 +2,7 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-PHK-V2.3 LF0 exact-top warm-start attribution campaign 已完成。A 的 exact-top scratch PINN 无两周期 competence；B 的固定 step-800 `LF_DATA_ONLY` checkpoint 违反 potential validity，B final 仍无事件。机器终局为 `LF0_NUMERICAL_OR_IDENTITY_INVALID`，条件 C 未运行，下一科研执行未授权。云端只读取了声明的 medium method input，stress 继续 sealed/unread。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[LF0 terminal closeout](experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)、四份 LF0 合同与 [ADR 0056](adr/0056-activate-phk-v23-lf0-exact-top-warmstart-attribution.md)。
+PHK-V2.3 LF1 已以 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN` 终局收口。Run B0 的 event-balanced medium 蒸馏与 B final 的 persistent replay 均获得两周期 competence，且固定 physics objective 显著下降；但 B final 相对 B0 与 direct `LF_ONLY` 的 phase noninferiority 和 temperature preservation 失败，故没有方法 candidate，条件 C 未触发。两条 GPU 轨迹已回收、哈希核验并关机；stress sealed/unread。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[LF1 terminal closeout](experiment/2026-09-03-phk-v23-lf1-terminal-closeout.md)、四份 LF1 合同与 [ADR 0057](adr/0057-activate-phk-v23-lf1-event-preserving-multifidelity-pilot.md)。LF0 terminal `LF0_NUMERICAL_OR_IDENTITY_INVALID` 继续保持。
 
 R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 
@@ -23,8 +23,11 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前执行入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF0](plans/NEXT_ACTIONS.md)。LF0 已达到 terminal machine outcome，原 `EXECUTE` 已消费关闭。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R/R0A/R0B/R0C/R1a/R1X/C0 证据保持冻结；当前不授权自动重试 B、条件 C、PJGR、R2、其他 seed、stress 或投稿。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF1](plans/NEXT_ACTIONS.md)。LF1 已终局完成，机器结果为 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN`；当前没有后续科研授权。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。V2.2R/R0A/R0B/R0C/R1a/R1X/C0/LF0 证据保持冻结；LF1 授权已消费关闭，不授权条件 C、PJGR、R2、其他 seed、stress 或投稿。
+- 当前 PHK-V2.3 LF1 资格入口：[2026-09-03 LF1 CPU qualification](experiment/2026-09-03-phk-v23-lf1-cpu-qualification.md)。它记录旧 sampler event exposure、旧 B0 event recall/loss、phase Jacobian、新表示可重构性与六个事件池；仅准入 Run A，不是方法结果。
+- 当前 PHK-V2.3 LF1 终局入口：[2026-09-03 LF1 terminal closeout](experiment/2026-09-03-phk-v23-lf1-terminal-closeout.md)。它记录 B0/B final 两周期 competence、固定 physics ratio 通过但 phase/temperature 增量门失败、C 未触发、完整回收/关机与 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN`。
+- 当前 PHK-V2.3 LF1 Run A 入口：[2026-09-03 LF1 Run A interim closeout](experiment/2026-09-03-phk-v23-lf1-run-a-interim-closeout.md)。它记录 1200-step category control、potential validity、冷态无事件、完整回收/哈希/关机与 `LF1_A_VALID_RUN_B_REQUIRED`；不是 LF1 主方法正面结果。
 - 当前 PHK-V2.3 LF0 结果入口：[2026-09-03 LF0 terminal closeout](experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)。它记录 A 无 competence、B0 potential validity failure、B final 无事件、C 未触发、实例保留例外与 `LF0_NUMERICAL_OR_IDENTITY_INVALID`。
 - 历史 PHK-V2.3 R1X 工程阻塞记录：[2026-09-02 R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。它记录两次 pre-update 部署失败、日志哈希、0 科学轨迹、关机验证和 post-blocker isolation 回归修复；不得解释为 clean-coupling 方法失败。
 - 当前 PHK-V2.3 R1X E1 结果入口：[2026-09-03 R1X E1 ET-not-ready closeout](experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)。它记录 300-step reference-blind warm-up、readiness 失败、产物回收/关机、本地 nominal 评价和 E2 top-hard-lift 路由；它是 non-voting development evidence。

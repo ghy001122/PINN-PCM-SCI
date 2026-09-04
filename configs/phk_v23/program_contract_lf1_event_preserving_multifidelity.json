@@ -1,0 +1,57 @@
+{
+  "schema_id": "phk-v23-lf1-program-contract-v1",
+  "contract_id": "PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY_PILOT",
+  "phase_id": "PHK_V23_LF1_EVENT_PRESERVING_MULTIFIDELITY_PILOT",
+  "effective_date": "2026-09-03",
+  "status": "EXPLICITLY_AUTHORIZED_BOUNDED_CAMPAIGN",
+  "expected_base_commit": "dc091be9079768244a09cc5bf1ffb06791f4303c",
+  "authorization_source": "CURRENT_USER_EXPLICIT_REQUEST_TO_EXECUTE_THE_LATEST_PROJECT_SPRINT_RESEARCH_INSTRUCTION",
+  "scientific_question": "CAN_ADMISSIBLE_EVENT_BALANCED_MEDIUM_DISTILLATION_PLUS_PERSISTENT_EVENT_REPLAY_PRESERVE_TWO_CYCLE_EVENTS_AND_REDUCE_PHYSICS_RESIDUAL_RELATIVE_TO_DATA_ONLY",
+  "paper_role": "SINGLE_SEED_NOMINAL_EVENT_TRANSFER_AND_PINN_SPECIFIC_VALUE_PILOT",
+  "authorization": {
+    "contract_code_test_document_writes": true,
+    "cpu_event_transfer_qualification": true,
+    "gpu_run_a": true,
+    "gpu_run_b_after_valid_a": true,
+    "conditional_gpu_run_c": true,
+    "maximum_scientific_gpu_runs": 3,
+    "seed_17_only": true,
+    "selective_commit_or_push": false,
+    "new_seed": false,
+    "phase_latent_teacher_backup": false,
+    "stress_prediction_or_unseal": false,
+    "pjgr_or_r2": false,
+    "benchmark_pde_constitutive_geometry_parameter_reference_or_evaluator_change": false,
+    "submission_external_contact_or_publication": false
+  },
+  "run_limits": {
+    "fixed_order": [
+      "A_RANGE_PRESERVING_SCRATCH",
+      "B_EVENT_DISTILLATION_PERSISTENT_REPLAY",
+      "C_DATA_ONLY_CONTINUATION_IF_TRIGGERED"
+    ],
+    "maximum_scientific_gpu_runs": 3,
+    "fourth_scientific_gpu_run": false,
+    "updates_and_run_count_are_hard_limits": true,
+    "manual_accuracy_checkpoint_selection": false,
+    "hyperparameter_sweep": false
+  },
+  "lifecycle": {
+    "after_each_gpu_run": "RECOVER_VALIDATE_SHUTDOWN_VERIFY_THEN_LOCAL_EVALUATE",
+    "lf0_instance_retention_override_is_not_inherited": true,
+    "restart_required_status": "AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE",
+    "engineering_retry": "ONLY_BEFORE_FIRST_SCIENTIFIC_OPTIMIZER_STEP_AFTER_ROOT_CAUSE_AND_TARGETED_REGRESSION_WITH_IDENTICAL_SCIENTIFIC_IDENTITY",
+    "completion_does_not_authorize_next_research": true
+  },
+  "preserves_without_rewrite": [
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "R0A_INCONCLUSIVE",
+    "GRADIENT_STARVATION_TEMPORAL_PRECURSOR_ONLY",
+    "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "R1A_CONFIG_RAW_NO_COMPETENCE",
+    "PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED",
+    "C0_OUTPUT_TRANSFORM_INADMISSIBLE",
+    "LF0_NUMERICAL_OR_IDENTITY_INVALID",
+    "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  ]
+}
