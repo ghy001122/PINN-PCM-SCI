@@ -1,0 +1,22 @@
+{
+  "schema_id": "paper-v23-figure-source-manifest-v1",
+  "scope": "single-seed nominal fixed-discretization development evidence",
+  "inputs": {
+    "paper/paper_v23/figures/data/lf3_terminal_metrics.json": "B972A80EB3C69717FB274566B1755E56311083CE9BAE2B8AD127EF85F57B2CFE",
+    "outputs/runs/20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74/prediction-t0-step-1200.npz": "485F0D09C65BDDCE3AEA212B337B85CFB08CD81E788E9F6AF81083871611819D",
+    "outputs/runs/20260828T-phk-v21-s1-q-06-nominal-extra-fine/result-intent-06.npz": "0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE"
+  },
+  "outputs": {
+    "paper/paper_v23/figures/figure-01-recovery-ladder.png": "01DFB4F8A90A2A27B953C1AACB847E5EAAE6617326ADEEC08C9A1402144FBEBA",
+    "paper/paper_v23/figures/figure-01-recovery-ladder.pdf": "59FCBBB1EA8CC42E28FD1471D8CD54E72B4747B1DD08C2C0802156102B6D6FFF",
+    "paper/paper_v23/figures/figure-02-full-medium-event-metrics.png": "6B87BA6E1F00DAFEEDC1124B450A4E1A69ADFC20D8E6FC3F1FA680A0775516FC",
+    "paper/paper_v23/figures/figure-02-full-medium-event-metrics.pdf": "6289EDFC3AB76982CF3E5341F311096959657F5F0C098E34ABB246E340FAEBFB",
+    "paper/paper_v23/figures/figure-03-local-error-gap.png": "7FA4289DAAA43CBA917F1F96E848908815AEEDC4D96B199448FFB6BD5B3B4E89",
+    "paper/paper_v23/figures/figure-03-local-error-gap.pdf": "422A59080B0F37BFA7EC061C77E208725A0F861EE3EDAACE79F900E62C19899C",
+    "paper/paper_v23/figures/figure-04-phase-support-snapshots.png": "19E8614EA1B19E4D3060300BB8252FD0380AC1020D6506E24716CEE66A3350EC",
+    "paper/paper_v23/figures/figure-04-phase-support-snapshots.pdf": "3E3080EAB77667E4B91D4BF09C65B8B0FDF304A35979928EF16A757E73D8ABAA",
+    "paper/paper_v23/figures/figure-05-evidence-gates.png": "0602F5C1B0FBE2A4BCADCC146F3E94E253F08A2475A9244067E4E94B45A8647F",
+    "paper/paper_v23/figures/figure-05-evidence-gates.pdf": "390CC3879CE9C39842FC424CE4C47EE339099153AE4A4673E0136C940C037FD9"
+  },
+  "stress_reference_read": false
+}

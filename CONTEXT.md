@@ -1,7 +1,7 @@
 # PINN-PCM-SCI 当前研究设定与论文口径
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
-- `updated_at`: `2026-09-04`
+- `updated_at`: `2026-09-05`
 
 ## 当前研究问题
 
@@ -13,18 +13,18 @@ LF1 使用 range-preserving exact-top 表示、event-balanced medium distillatio
 
 LF2 从精确 LF1-B0 权重出发，把 data-only objective 改为 evaluator-compatible target measure，并用 inequality augmented Lagrangian 约束事件 recall/active mass。唯一 M0 轨迹使 potential、temperature、phase 的 target-measure weighted error 相对 LF1-B0 分别降至约 `25.7%/6.55%/27.3%`，但 `phase_max` 同时回到约 `0.02995`，两个周期的 hard event support 全部消失。冻结 M0 gate 因此给出 `LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED`，M1 未运行、candidate 为 none。这说明 sampling-measure mismatch 是 LF1 过宽 carrier 的因素，却不是建立准确稀有事件 carrier 的充分修复。
 
-LF3 将待验证对象收缩为 `Measure-Decoupled Phase-Latent Carrier`：V/T 仍按 target measure 拟合，phase 则按 14 个互斥事件类别等权拟合初值精确的完整 logit 增量；只有合法且准确的 T0 `Carrier Success` 才进入无标签 full-physics P0。`Single-Seed PINN-Specific Pilot` 专指 P0 相对同架构 T0 同时降低冻结 physics objective 并保持 carrier；`Candidate Signal` 还要求面对 direct `LF_ONLY` 强基线。三者不得互相替代。
+LF3 用 `Measure-Decoupled Phase-Latent Carrier` 执行了唯一 T0 轨迹：V/T 按 target measure 拟合，phase 按 14 个互斥事件类别等权拟合初值精确的完整 logit 增量。T0 恢复了合法、局域、时刻准确的双周期事件，precision 与 active-mass 门通过，但两周期 hard recall `0.805842/0.768603` 未达冻结 `0.90`，终局为 `LF3_CARRIER_NOT_ESTABLISHED`。P0 因此前提失败而未触发，故没有 PINN-specific pilot 或 candidate signal。
 
 ## 物理对象与证据边界
 
 对象仍是 PHK-V2.1 的透明、无量纲、literature-inspired synthetic 2D wall-cell；几何、PDE、本构、参数、IC/BC、ROI、事件与 frozen evaluator 均不改变。extra-fine fixed-discretization carrier 不是 continuum truth；C0 saved-cadence strong residual 也不是 exact internal-step residual。
 
-两份 stress references 始终 sealed/unread。LF0/LF1/LF2 云端只读取了 medium low-fidelity method input；LF2 另读取精确 LF1-B0 model checkpoint。fine/extra-fine 仅用于全部产物回收且实例关机验证后的本地 development evaluation。LF2 唯一 GPU 轨迹已回收、哈希核验并关机。
+两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint。fine/extra-fine 仅用于全部产物回收且实例关机验证后的本地 development evaluation。LF3 唯一 GPU 轨迹已回收、哈希核验并关机。
 
 ## 方法与论文身份
 
-ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation 与类别重平衡都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 曾建立 single-seed nominal PINN competence但没有强基线增量；LF2 又证明全局测度误差改善不能替代稀有事件 competence。LF3 只是已归因的 solver-recovery 组合 pilot，尚无结果或 candidate。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是必须保留的强 non-PINN comparators。任何正面路线最终仍须面对强基线、关键 matched ablation、多 seed、sealed stress/formal OOD 与单一 load-bearing core。
+ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation 与类别重平衡都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 又把冷态/过宽失败收缩为高 precision 但 support recall 不足的组合级 near-pass。LF3 不是合格 carrier、PINN 结果或 candidate。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是必须保留的强 non-PINN comparators。任何正面路线最终仍须面对强基线、关键 matched ablation、多 seed、sealed stress/formal OOD 与单一 load-bearing core。
 
 ## 权威路由
 
-当前授权见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF2 结果见 [terminal closeout](docs/experiment/2026-09-04-phk-v23-lf2-terminal-closeout.md)，LF1 结果见 [previous terminal closeout](docs/experiment/2026-09-03-phk-v23-lf1-terminal-closeout.md)，LF0 结果见 [LF0 closeout](docs/experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)，C0 结果见 [compatibility closeout](docs/experiment/2026-09-03-phk-v23-c0-reference-discrete-strongform-compatibility-closeout.md)。
+当前授权见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF3 结果见 [terminal closeout](docs/experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)，LF2/LF1/LF0/C0 历史入口继续由对应 terminal closeout 保留。

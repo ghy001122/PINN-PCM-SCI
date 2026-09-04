@@ -96,6 +96,26 @@ def _run_files(path: Path) -> dict[str, Any]:
     return result
 
 
+def _lf3_fixed_physics_values(
+    checkpoints: Mapping[str, Path], *, contract: Mapping[str, Any]
+) -> dict[str, Any]:
+    """Reuse the frozen pool calculation while preserving LF3 role identity."""
+
+    if set(checkpoints) not in ({LF3_T0_ROLE}, {LF3_T0_ROLE, LF3_P0_ROLE}):
+        raise ValueError("LF3 fixed physics checkpoint roles are invalid")
+    legacy_checkpoints = {_POOL_M0_ROLE: checkpoints[LF3_T0_ROLE]}
+    if LF3_P0_ROLE in checkpoints:
+        legacy_checkpoints[_POOL_FINAL_ROLE] = checkpoints[LF3_P0_ROLE]
+    report = _fixed_physics_values(legacy_checkpoints, contract=contract)
+    role_map = {_POOL_M0_ROLE: LF3_T0_ROLE, _POOL_FINAL_ROLE: LF3_P0_ROLE}
+    report["values"] = {role_map[role]: value for role, value in report["values"].items()}
+    report["components"] = {
+        role_map[role]: value for role, value in report["components"].items()
+    }
+    report["P0_to_T0"] = report.pop("final_to_M0")
+    return report
+
+
 def _terminal(outcome: str, *, contract: Mapping[str, Any], details: Mapping[str, Any] | None = None) -> dict[str, Any]:
     mapping = contract["machine_outcomes_and_unique_next"]
     if outcome not in mapping:
@@ -135,7 +155,7 @@ def adjudicate(
         raise ValueError("LF3 run status is unsupported at adjudication")
 
     t0_compare = comparisons["P0_vs_T0"]
-    pool = physics.get("final_to_M0", {})
+    pool = physics.get("P0_to_T0", {})
     level2 = bool(
         _competent(evaluations[LF3_T0_ROLE]) and _competent(evaluations[LF3_P0_ROLE])
         and t0_compare["phase_noninferiority_passed"] and t0_compare["preservation_passed"]
@@ -201,14 +221,14 @@ def evaluate_lf3_campaign(
             "P0_vs_T0": compare_b_to_comparator(evaluations[LF3_P0_ROLE], evaluations[LF3_T0_ROLE], component_floors=floors),
             "P0_vs_LF_ONLY": compare_b_to_comparator(evaluations[LF3_P0_ROLE], evaluations[LF_ONLY_ROLE], component_floors=floors),
         }
-    checkpoints = {_POOL_M0_ROLE: run["checkpoint_t0"]}
+    checkpoints = {LF3_T0_ROLE: run["checkpoint_t0"]}
     if run["checkpoint_p0"] is not None:
-        checkpoints[_POOL_FINAL_ROLE] = run["checkpoint_p0"]
+        checkpoints[LF3_P0_ROLE] = run["checkpoint_p0"]
     pool_contract = {
         "local_evaluation": contract["local_evaluation"],
         "provisional_positive_gate": {"fixed_physics_objective_ratio_final_to_M0_maximum": 0.5},
     }
-    physics = _fixed_physics_values(checkpoints, contract=pool_contract)
+    physics = _lf3_fixed_physics_values(checkpoints, contract=pool_contract)
     if physics["fixed_pool_sha256"] != contract["local_evaluation"]["fixed_reference_blind_physics_pool"]["sha256"]:
         raise ValueError("LF3 fixed physics pool identity drift")
     summary = run["summary_payload"]
@@ -259,4 +279,10 @@ if __name__ == "__main__":
     raise SystemExit(main())
 
 
-__all__ = ["LF3_P0_ROLE", "LF3_T0_ROLE", "adjudicate", "evaluate_lf3_campaign"]
+__all__ = [
+    "LF3_P0_ROLE",
+    "LF3_T0_ROLE",
+    "_lf3_fixed_physics_values",
+    "adjudicate",
+    "evaluate_lf3_campaign",
+]

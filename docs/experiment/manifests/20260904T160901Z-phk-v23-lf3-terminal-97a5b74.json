@@ -1,0 +1,79 @@
+{
+  "actual_budget": {
+    "optimizer_updates": 1200,
+    "p0_label_free_full_physics_updates": 0,
+    "scientific_gpu_trajectories": 1,
+    "t0_phase_latent_carrier_updates": 1200,
+    "wall_seconds_including_predictions": 81.34162780828774
+  },
+  "artifacts": {
+    "checkpoint_t0_sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA",
+    "closeout": "../2026-09-05-phk-v23-lf3-terminal-closeout.md",
+    "closeout_sha256": "D420EB6F1EE618557248736295FE3D247716BFE4FC6DBEDD21FC4754329B7241",
+    "compact_artifact": "artifacts/20260904T160901Z-phk-v23-lf3-terminal-97a5b74.json",
+    "compact_artifact_sha256": "6A64BDF30D821C548C6AA910004976B614250FD6511891EC08E63A07D9103D50",
+    "figure_source_manifest_sha256": "4B5E2420D24E24BAEA0276952076E556C9078699994CD69B78B34C66137E5BB1",
+    "local_adjudication_sha256": "BB45AB4FAFE0A0ADC8E4F21A35E96E3A05B233594933C04AC0F3C58401B23378",
+    "manuscript_sha256": "4F8895D6A357D59D5321B7371205969430BC3AA3BA6FE5F06FBF0B37E9AC14DC",
+    "paper_package": "../../paper/paper_v23/README.md",
+    "prediction_t0_sha256": "485F0D09C65BDDCE3AEA212B337B85CFB08CD81E788E9F6AF81083871611819D",
+    "run_summary_sha256": "335DBF2194BA62C89E3E607941BA92B5FA14BB533B679330A7234A4466455D12"
+  },
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "checkpoint": {
+    "loaded_by_terminal_adjudicator": true,
+    "modified": false,
+    "path": "outputs/runs/20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74/checkpoint-t0-step-1200.pt",
+    "role": "FIXED_T0_STEP_1200_GATE_CHECKPOINT_P0_NOT_TRIGGERED"
+  },
+  "claim_status": "V22R_R0_R1A_R1X_C0_LF0_LF1_LF2_EVIDENCE_PRESERVED_LF3_CARRIER_NOT_ESTABLISHED_P0_NOT_TRIGGERED",
+  "code_identity": {
+    "cloud_source_identity": "LF3-BUNDLE-93BDB1F29B95BA757FC8756509E8C257FC296EE0DE6F04451E6E363E2D4BF63D",
+    "lf3_activation_commit": "97a5b74cf79332115397d07c83b400c942859fb4",
+    "lf3_base_commit": "6ec084cbffcbbd754da3aaff191ffb1862a20b0e",
+    "local_evaluation_identity_repair": "REPORT_KEYS_ONLY_NO_METRIC_OR_DECISION_CHANGE",
+    "source_archive_sha256": "C3EC3D8BD2FE93E7FA878D51B0B8F7873376D9595C5EE0754BF220F910FB63E3",
+    "source_manifest_sha256": "51564EAAEF1486405718ABE4D3C24098392A8B2FD93F58139453EBEBCF9D8BC6",
+    "terminal_evaluation_sha256": "AEC851E03A1581E10E7419684AB747793F8E6F2608BC7D7216799C955D05EA91"
+  },
+  "command": [
+    "remote python -m pinn_pcm_sci.phk_v23_lf3 --output-root <isolated-run-root> --medium-carrier <hash-bound-medium> --initial-checkpoint <hash-bound-lf1-b0> --cpu-qualification <hash-bound-qualification> --device cuda:0 --source-identity LF3-BUNDLE-93BDB1F29B95BA757FC8756509E8C257FC296EE0DE6F04451E6E363E2D4BF63D",
+    "local python -m pinn_pcm_sci.phk_v23_lf3_evaluation --output-directory outputs/runs/20260904T150300Z-phk-v23-lf3-local-adjudication-97a5b74-er1 --run-directory outputs/runs/20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74 --cpu-qualification outputs/runs/20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c/qualification.json"
+  ],
+  "ended_at": "2026-09-04T16:09:01Z",
+  "environment": {
+    "cloud_dtype": "FLOAT64",
+    "cloud_gpu": "Tesla V100-PCIE-32GB",
+    "fine_extra_fine_evaluator_read_on_cloud": false,
+    "instance_lifecycle": "SHUTDOWN_VERIFIED_BY_SSH_CONNECTION_REFUSED",
+    "local_evaluator_device": "CPU",
+    "medium_only_cloud_training_labels": true,
+    "stress_fields_or_metrics_read": false
+  },
+  "evaluator_id": "phk-v23-lf3-local-adjudication-v1",
+  "evidence_identity": "SINGLE_SEED_NOMINAL_DATA_ONLY_HIGH_PRECISION_INCOMPLETE_SUPPORT_CARRIER_FAILURE_BEFORE_PINN_REFINEMENT",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF3_MEASURE_DECOUPLED_PHASE_LATENT_CARRIER",
+  "failure_class": "T0_FULL_MEDIUM_HARD_RECALL_GATE_FAILED",
+  "gate": "PHK_V23_LF3",
+  "gate_outcome": "LF3_CARRIER_NOT_ESTABLISHED",
+  "method_id": "phk-v23-lf3-measure-decoupled-startup-scaled-phase-latent-carrier-v1",
+  "numerical_validity": "VALID_FINITE_POTENTIAL_PHASE_ARTIFACT_AND_IDENTITY_GUARDS_PASS_T0_RECALL_GATE_FAILED",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "planned_budget": {
+    "maximum_optimizer_updates": 2400,
+    "maximum_scientific_gpu_trajectories": 1,
+    "p0_conditional_label_free_full_physics_updates": 1200,
+    "t0_phase_latent_carrier_updates": 1200
+  },
+  "replay_of": null,
+  "route_disposition": "STOP_LATENT_CARRIER_ROUTE_RETAIN_NEGATIVE_ADVISOR_DRAFT",
+  "run_id": "20260904T160901Z-phk-v23-lf3-terminal-97a5b74",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "phase_latent_carrier_campaign_terminal_adjudication",
+  "seed": 17,
+  "split_id": "MEDIUM_METHOD_INPUT_FINE_EXTRA_LOCAL_NOMINAL_AFTER_SHUTDOWN_STRESS_SEALED",
+  "started_at": "2026-09-04T15:52:15.389283+00:00",
+  "supersedes": null,
+  "tier": "development_campaign"
+}

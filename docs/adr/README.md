@@ -34,6 +34,8 @@
 
 ADR 0019–0025 保留旧 exact-KC、同源对象扫描及其证据合同；ADR 0026 已允许透明派生对象，ADR 0027 已撤销固定研究路线次数上限。ADR 0028–0040 保存 R1、R2、HFO 与 TaOₓ C1 的设计史和有界 No-Go。ADR 0041 冻结方法盲单链对象筛选，ADR 0042 记录该包在 3/3 家族、11/12 载体处组合级有界关闭。ADR 0043 提出的模块化主锚点路线保持历史 `PROPOSED` 身份；ADR 0044 已采纳并完成 `GOAL-PAPER-ONE-SHOT-V1`。ADR 0045 采纳的 `PHK-V2` 已由 Oracle Gate No-Go 与 V2 完成包消费关闭。ADR 0046 新建且完成不回写旧终局的 `PHK-V2.1` 工程—科学双阶段合同。ADR 0047 以前瞻数据角色、预算和止损边界启动独立的 `PHK-V2.2R` 一周 Method-MVP；ADR 0048 在 GPU profile 后激活 v1.1 四臂 fallback；ADR 0049 完成一次本地 CPU R0A；ADR 0050 完成一次 R0B 175-step reference-blind temporal-precursor replay；ADR 0051 完成一次 R0C 25-step Adam-effective update materiality replay。所有旧扫描事实、失败 intent、论文和 No-Go 原样有效。
 
+- [0060：以 carrier recall 未达标关闭 PHK-V2.3 LF3](0060-close-phk-v23-lf3-carrier-not-established.md) — T0 恢复合法局域双周期事件但两周期 recall 未达 0.90；P0 未触发、无 candidate，保留 paper_v23 负面 solver-recovery 导师初稿并关闭后续授权。
+
 - [R1 FULL_DESIGN Q1–Q24 决策合同](research_decisions_R1_FULL_DESIGN_GRILL_2026-08-22.md) — 独立于历史 KC-PINN Q1–Q23 的当前 R1 决策身份。
 
 - [0014：在 reduced oracle 中恢复动态电子序参量](0014-restore-dynamic-electronic-order-in-the-bounded-reduced-oracle.md) — 历史 R4 路线决定；执行结果已由 [R4/raw-v3 收口](../experiment/2026-08-21-r4-and-raw-v3-closeout.md) 关闭。

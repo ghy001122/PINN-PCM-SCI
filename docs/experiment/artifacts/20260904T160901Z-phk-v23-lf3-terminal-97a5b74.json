@@ -1,0 +1,199 @@
+{
+  "schema_id": "phk-v23-lf3-terminal-artifact-v1",
+  "run_id": "20260904T160901Z-phk-v23-lf3-terminal-97a5b74",
+  "task_id": "PHK_V23_LF3_MEASURE_DECOUPLED_STARTUP_SCALED_PHASE_LATENT_CARRIER_PILOT_EXECUTE",
+  "phase_id": "PHK_V23_LF3_MEASURE_DECOUPLED_STARTUP_SCALED_PHASE_LATENT_CARRIER_PILOT_EXECUTE",
+  "lifecycle_state": "COMPLETE",
+  "machine_outcome": "LF3_CARRIER_NOT_ESTABLISHED",
+  "unique_next": "STOP_LATENT_CARRIER_ROUTE_RETAIN_NEGATIVE_ADVISOR_DRAFT",
+  "next_research_execution_authorized": false,
+  "candidate": null,
+  "preserves_without_rewrite": [
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "R0A_INCONCLUSIVE",
+    "GRADIENT_STARVATION_TEMPORAL_PRECURSOR_ONLY",
+    "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "R1A_CONFIG_RAW_NO_COMPETENCE",
+    "PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED",
+    "C0_OUTPUT_TRANSFORM_INADMISSIBLE",
+    "LF0_NUMERICAL_OR_IDENTITY_INVALID",
+    "LF1_DATA_ONLY_VALUE_NO_PINN_GAIN",
+    "LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED"
+  ],
+  "contracts": {
+    "program": {"path": "configs/phk_v23/program_contract_lf3_phase_latent_carrier.json", "sha256": "CDCC4D16F29FC197CED1ADFC4AD8BDDFF31EC6570267A2B96E985744813D4766"},
+    "method": {"path": "configs/phk_v23/method_contract_lf3_phase_latent_carrier.json", "sha256": "7E3318D936DB6F22F8AC3E7914B6886C7069910788A7F0059D05197182E9EDEF"},
+    "data": {"path": "configs/phk_v23/data_contract_lf3_phase_latent_carrier.json", "sha256": "2CB57DFC83450F0D89B6EB37AC0D904032CAD6DD679D8602F6B89F87FEF61083"},
+    "decision": {"path": "configs/phk_v23/decision_contract_lf3_phase_latent_carrier.json", "sha256": "42399C8BE2C053333B4D582C196658F3E36DD03BEBAAA2435F7E2591B957FA24"}
+  },
+  "implementation": {
+    "deployed_runner_sha256": "756D2FFC22B40FAAE844FF4CCEF828071BA7405F9D55EF455F93CBAE31ABD7EE",
+    "qualification_sha256": "61D9A2CEE25C97199A836E7B95A3100C92361A2558A3AC188E79B7E066A77406",
+    "deployed_evaluation_sha256": "79CDE10ECB7654CE7EE71B9CA377AFC7F0E3B70B5B6C8F4B47C7AE2E75E0F6B6",
+    "terminal_evaluation_sha256": "AEC851E03A1581E10E7419684AB747793F8E6F2608BC7D7216799C955D05EA91",
+    "cloud_preflight_sha256": "50B7BB3B25151618CC36E5119EE220669A1212DDFFFB11237A326A9F4BD4B662",
+    "bundle_builder_sha256": "55CD91DE957EF1B7F1A3B2D2481A518D4D12D34D850F04928F1FD2190894F92B"
+  },
+  "cpu_qualification": {
+    "status": "LF3_CPU_QUALIFICATION_PASS",
+    "run_id": "20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c",
+    "raw_path": "outputs/runs/20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c/qualification.json",
+    "raw_sha256": "A88B35037881BFD6D3A7934688C23DDC85ED4AC7D952F4D641C7BDBF0CDC5C76",
+    "compact_path": "docs/experiment/artifacts/20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c.json",
+    "compact_sha256": "37C231347A27DC040715A84C8480D351DE9F41EEE19B8A4F8A574ACC93CB0F6F",
+    "saved_medium_nodes": 1603200,
+    "partition_categories": 14,
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "logit_reconstruction_maximum_absolute_error": 2.220446049250313e-16,
+    "observed_q_absolute_maximum": 1.8642133549450581,
+    "q_absolute_bound": 4.605170183488091
+  },
+  "prior_art": {
+    "path": "docs/references/2026-09-04-phk-v23-lf3-prior-art-closure.md",
+    "sha256": "91B4489715DCDE2EB5953D2AC5A7E80B5B84B234B1CD2281CA785C291D0F1D34",
+    "primary_sources_or_author_repositories_checked": 12,
+    "verdict": "NO_EXACT_COLLISION_FOUND_WITHIN_FROZEN_SEARCH_SCOPE",
+    "method_identity": "ATTRIBUTED_SOLVER_RECOVERY_COMBINATION_PILOT_NOT_HEADLINE_NOVELTY"
+  },
+  "source_identity": {
+    "lf3_base_commit": "6ec084cbffcbbd754da3aaff191ffb1862a20b0e",
+    "lf3_activation_commit": "97a5b74cf79332115397d07c83b400c942859fb4",
+    "cloud_source_identity": "LF3-BUNDLE-93BDB1F29B95BA757FC8756509E8C257FC296EE0DE6F04451E6E363E2D4BF63D",
+    "source_archive_path": "outputs/deploy/phk-v23-lf3-source-6ec084c.tar.gz",
+    "source_archive_sha256": "C3EC3D8BD2FE93E7FA878D51B0B8F7873376D9595C5EE0754BF220F910FB63E3",
+    "source_manifest_sha256": "51564EAAEF1486405718ABE4D3C24098392A8B2FD93F58139453EBEBCF9D8BC6",
+    "medium_sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F",
+    "lf1_b0_checkpoint_sha256": "B4073CD5D09EE3A022F333A8AB1CDDF9B6195E87461BBA1BFED67AC0E3424182"
+  },
+  "scientific_gpu_trajectory": {
+    "run_id": "20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74",
+    "identity": "LF3_MEASURE_DECOUPLED_PHASE_LATENT_CARRIER_PILOT",
+    "status": "LF3_CARRIER_NOT_ESTABLISHED",
+    "started_at_utc": "2026-09-04T15:52:15.389283+00:00",
+    "finished_at_utc": "2026-09-04T15:53:36.730791+00:00",
+    "gpu": "Tesla V100-PCIE-32GB",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "optimizer_updates": 1200,
+    "stage_updates": {"T0_MEASURE_DECOUPLED_PHASE_LATENT_CARRIER": 1200, "P0_LABEL_FREE_FULL_PHYSICS_REFINEMENT": 0},
+    "P0_disposition": "NOT_TRIGGERED_BECAUSE_T0_GATE_FAILED",
+    "T0_measure_draws": 1200,
+    "T0_measure_rolling_sha256": "6E9957E861BE0FD10E19A1585635C7B2C323077D89908159B1736734FB548F28",
+    "P0_physics_draws": 0,
+    "physics_sampler_constructed_or_advanced": false,
+    "wall_seconds_including_predictions": 81.34162780828774,
+    "run_summary_sha256": "335DBF2194BA62C89E3E607941BA92B5FA14BB533B679330A7234A4466455D12",
+    "gpu_price_or_cost_reported": false
+  },
+  "T0_full_medium_gate": {
+    "passed": false,
+    "failure_outcome": "LF3_CARRIER_NOT_ESTABLISHED",
+    "failed_checks": ["cycle_1:hard_recall", "cycle_2:hard_recall"],
+    "all_values_finite": true,
+    "potential_maximum_principle_passed": true,
+    "phase_range_passed": true,
+    "phase_minimum": 2.6697436584127174e-9,
+    "phase_maximum": 0.9911872960989128,
+    "temperature_maximum": 0.8050099454973635,
+    "two_cycle_events": true,
+    "cycle_1": {"event_time": 0.23295000000000002, "event_time_absolute_error": 0.004849999999999993, "hard_recall": 0.8058419243986251, "hard_precision": 0.9071566731141198, "hard_active_mass_ratio": 0.8883161512027489, "roi_peak_fraction": 0.07231404958677685, "full_domain_peak_fraction": 0.021875, "outside_roi_peak_fraction": 0.0, "recovery_fraction": 1.0},
+    "cycle_2": {"event_time": 1.4959, "event_time_absolute_error": 0.0016999999999998128, "hard_recall": 0.7686025408348455, "hard_precision": 0.8660531697341514, "hard_active_mass_ratio": 0.8874773139745913, "roi_peak_fraction": 0.06714876033057851, "full_domain_peak_fraction": 0.0203125, "outside_roi_peak_fraction": 0.0, "recovery_fraction": 1.0},
+    "weighted_errors": {"potential": 0.00007147677141984318, "temperature": 0.0007111887418509096, "phase": 0.0018751014076345538, "topology": 0.006855904106532231},
+    "weighted_mse_ratios_to_lf1_b0": {"potential": 0.24188962345273535, "temperature": 0.06338413718315586, "phase": 0.03307731940088932}
+  },
+  "local_nominal_development_evaluation": {
+    "performed_only_after_recovery_hash_verification_and_shutdown_refusal": true,
+    "canonical_raw_path": "outputs/runs/20260904T150300Z-phk-v23-lf3-local-adjudication-97a5b74-er1/adjudication.json",
+    "canonical_raw_sha256": "BB45AB4FAFE0A0ADC8E4F21A35E96E3A05B233594933C04AC0F3C58401B23378",
+    "canonical_raw_size_bytes": 624160,
+    "roles_evaluated": ["LF_ONLY_MEDIUM_DIRECT", "B0_LF_DATA_ONLY", "B_FINAL", "LF2_M0_CALIBRATED_CARRIER", "LF3_T0_LATENT_CARRIER"],
+    "lf3_t0": {"frozen_evaluator_event_guard_passed": true, "event_times": [0.23522, 1.4944428571428572], "phase_roi_rms": 0.039000843552371975, "phase_region_symmetric_difference": 0.00202578125, "potential_full_rms": 0.005996623163842027, "temperature_roi_rms": 0.017361839140172267, "terminal_current_trace_nrmse": 0.1372971214905007, "pulse_energy_relative_error": 0.06300399785485389, "event_guard_failures": 0},
+    "lf_only_medium_direct": {"competent": true, "event_times": [0.2381, 1.4954500000000002], "phase_roi_rms": 0.006570375888844028, "phase_region_symmetric_difference": 0.00034953125, "potential_full_rms": 0.0005761281633015013, "temperature_roi_rms": 0.0018006948281555659, "terminal_current_trace_nrmse": 0.0035221351893723663, "event_guard_failures": 0}
+  },
+  "reference_blind_fixed_physics_pool": {
+    "seed": 17301,
+    "fixed_pool_sha256": "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF",
+    "T0_physics_total": 6.571589165588435,
+    "P0_to_T0_defined": false,
+    "reference_or_low_fidelity_values_read": false
+  },
+  "local_evaluation_identity_repair": {
+    "cause": "INHERITED_LF2_FIXED_POOL_ROLE_LABELS_FOR_LF3_T0_CHECKPOINT",
+    "original_raw_path": "outputs/runs/20260904T150300Z-phk-v23-lf3-local-adjudication-97a5b74/adjudication.json",
+    "original_raw_sha256": "70FD89DD8817861172853D674BFBA39FB57972325BBC1655DE3479A6E9A007B9",
+    "repair_scope": "REPORT_KEYS_ONLY_LF3_T0_AND_P0_TO_T0",
+    "fixed_pool_checkpoint_scalar_reference_metrics_and_decision_changed": false,
+    "new_gpu_trajectory_or_scientific_update": false,
+    "targeted_regression_passed": true
+  },
+  "recovery_and_instance_lifecycle": {
+    "summary_bound_artifacts_verified": 7,
+    "all_declared_artifact_sizes_and_sha256_verified": true,
+    "remote_and_local_summary_sha256_equal": true,
+    "training_log_lines": 7,
+    "T0_measure_batch_hash_lines": 1200,
+    "P0_physics_batch_hash_lines": 0,
+    "full_medium_audit_lines": 7,
+    "checkpoint_t0_sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA",
+    "prediction_t0_sha256": "485F0D09C65BDDCE3AEA212B337B85CFB08CD81E788E9F6AF81083871611819D",
+    "console_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "launcher_exit_capture_valid_integer": false,
+    "launcher_exit_capture_sha256": "097D68F4988A2989D5C9F99B0BA328DFDE1067A3F9FA8C78C2583E828806DD96",
+    "launcher_exit_capture_classification": "POST_RUN_LAUNCHER_LOGGING_DEFECT_RAW_PRESERVED",
+    "shutdown_proof_path": "outputs/runs/20260904T160901Z-phk-v23-lf3-lifecycle/shutdown-proof.json",
+    "shutdown_proof_sha256": "CC7A57E4A349E1139D7A95401F9252BCA88B857ED163328352FD8D18D997493C",
+    "shutdown_executed_after_recovery": true,
+    "gpu_compute_processes_before_shutdown": 0,
+    "lf3_training_processes_before_shutdown": 0,
+    "shutdown_verified_by": "SSH_CONNECTION_REFUSED"
+  },
+  "machine_adjudication": {
+    "outcome": "LF3_CARRIER_NOT_ESTABLISHED",
+    "status": "TERMINAL",
+    "unique_next": "STOP_LATENT_CARRIER_ROUTE_RETAIN_NEGATIVE_ADVISOR_DRAFT",
+    "level_1_carrier_success": false,
+    "level_2_single_seed_pinn_specific_pilot": "NOT_REACHED_P0_NOT_RUN",
+    "level_3_candidate_signal": "NOT_REACHED",
+    "P0_executed": false
+  },
+  "paper_package": {
+    "path": "paper/paper_v23",
+    "status": "ADVISOR_DRAFT_COMPLETE_NEGATIVE_SOLVER_RECOVERY_BOUNDARY",
+    "manuscript_sha256": "4F8895D6A357D59D5321B7371205969430BC3AA3BA6FE5F06FBF0B37E9AC14DC",
+    "figure_source_manifest_sha256": "4B5E2420D24E24BAEA0276952076E556C9078699994CD69B78B34C66137E5BB1",
+    "main_figures_png_pdf_pairs": 5,
+    "claim_identity": "FAILURE_ANALYSIS_AND_BOUNDED_SOLVER_RECOVERY_NOT_POSITIVE_PINN_METHOD"
+  },
+  "verification": {
+    "lf3_focused_tests_run": 15,
+    "lf3_focused_tests_passed": 15,
+    "focused_and_research_chain_regression_tests_run": 218,
+    "focused_and_research_chain_regression_tests_passed": 218,
+    "test_runner": "PYTHON_UNITTEST",
+    "strict_json_passed": true,
+    "experiment_ledger": "EXPERIMENT_LEDGER_VALID",
+    "document_consistency": "DOCUMENT_CONSISTENCY_VALID"
+  },
+  "claim_boundary": "SINGLE_SEED_NOMINAL_DATA_ONLY_COMBINATION_NEAR_PASS_BEFORE_PINN_REFINEMENT_NOT_LATENT_ONLY_ATTRIBUTION_MULTI_SEED_STRESS_FORMAL_OOD_CONTINUUM_TRUTH_EXPERIMENTAL_VALIDATION_OR_SUBMISSION_READY",
+  "evidence_assessment": {
+    "verified": [
+      "T0_RECOVERED_FINITE_ADMISSIBLE_LOCALIZED_TWO_CYCLE_EVENTS_AFTER_LF2_COLD_COLLAPSE",
+      "T0_PASSED_TIMING_PRECISION_ACTIVE_MASS_LOCALITY_RECOVERY_AND_FIELD_ERROR_GATES",
+      "T0_FAILED_BOTH_FROZEN_HARD_RECALL_GATES",
+      "P0_WAS_NOT_TRIGGERED_AND_NO_PINN_SPECIFIC_RESULT_EXISTS",
+      "DIRECT_LF_ONLY_REMAINS_THE_STRONGEST_ACCURACY_BASELINE",
+      "ALL_RUN_ARTIFACTS_WERE_RECOVERED_HASH_VERIFIED_AND_THE_INSTANCE_WAS_SHUT_DOWN",
+      "STRESS_REMAINED_SEALED_UNREAD"
+    ],
+    "supported_interpretation": "THE_LF3_COMBINATION_CHANGED_THE_DOMINANT_EVENT_ERROR_FROM_LF1_DIFFUSE_FALSE_POSITIVE_MASS_AND_LF2_COLD_COLLAPSE_TO_HIGH_PRECISION_INCOMPLETE_BOUNDARY_SUPPORT",
+    "hypothesis": "THE_REMAINING_LF3_MISMATCH_IS_PRIMARILY_EVENT_BOUNDARY_COVERAGE_RATHER_THAN_COLD_STATE_GLOBAL_OVERBREADTH_OR_TEMPORAL_MISPLACEMENT",
+    "unknown": [
+      "WHETHER_ANY_FUTURE_MECHANISM_CAN_ESTABLISH_THE_CARRIER_WITHOUT_POST_HOC_TUNING",
+      "WHETHER_LABEL_FREE_PHYSICS_REFINEMENT_CAN_ADD_VALUE_RELATIVE_TO_T0_AND_DIRECT_LF_ONLY",
+      "STRICT_SINGLE_FACTOR_ATTRIBUTION_OF_PHASE_LOGIT_TEACHING",
+      "MULTI_SEED_FORMAL_OOD_AND_STRESS_BEHAVIOR",
+      "CONTINUUM_MATERIAL_EXPERIMENTAL_AND_SUBMISSION_LEVEL_VALIDITY"
+    ]
+  },
+  "stress_reference_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

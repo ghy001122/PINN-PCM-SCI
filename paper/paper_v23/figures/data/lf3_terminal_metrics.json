@@ -1,0 +1,118 @@
+{
+  "schema_id": "paper-v23-lf3-terminal-figure-data-v1",
+  "evidence_scope": "single-seed nominal fixed-discretization development evidence",
+  "route_ladder": [
+    {
+      "stage": "V2.2R raw",
+      "phase_maximum": 0.0299932,
+      "event_state": "absent",
+      "validity_state": "valid"
+    },
+    {
+      "stage": "LF0 B0",
+      "phase_maximum": 0.477584,
+      "event_state": "absent",
+      "validity_state": "potential-invalid"
+    },
+    {
+      "stage": "LF1 B0",
+      "phase_maximum": 0.7541966324539335,
+      "event_state": "broad two-cycle",
+      "validity_state": "valid"
+    },
+    {
+      "stage": "LF2 M0",
+      "phase_maximum": 0.029947898547040934,
+      "event_state": "absent",
+      "validity_state": "valid"
+    },
+    {
+      "stage": "LF3 T0",
+      "phase_maximum": 0.9911872960989128,
+      "event_state": "localized; recall miss",
+      "validity_state": "valid"
+    }
+  ],
+  "full_medium_event_metrics": {
+    "LF_ONLY teacher": {
+      "cycle_1": {"recall": 1.0, "precision": 1.0, "active_mass_ratio": 1.0, "event_time_error": 0.0},
+      "cycle_2": {"recall": 1.0, "precision": 1.0, "active_mass_ratio": 1.0, "event_time_error": 0.0}
+    },
+    "LF1 B0": {
+      "cycle_1": {"recall": 0.8986254295532646, "precision": 0.1705249, "active_mass_ratio": 5.26976, "event_time_error": 0.04462},
+      "cycle_2": {"recall": 0.9446460980036298, "precision": 0.1610989, "active_mass_ratio": 5.86388, "event_time_error": 0.05178}
+    },
+    "LF2 M0": {
+      "cycle_1": {"recall": 0.0, "precision": 0.0, "active_mass_ratio": 0.0, "event_time_error": null},
+      "cycle_2": {"recall": 0.0, "precision": 0.0, "active_mass_ratio": 0.0, "event_time_error": null}
+    },
+    "LF3 T0": {
+      "cycle_1": {"recall": 0.8058419243986251, "precision": 0.9071566731141198, "active_mass_ratio": 0.8883161512027489, "event_time_error": 0.004849999999999993},
+      "cycle_2": {"recall": 0.7686025408348455, "precision": 0.8660531697341514, "active_mass_ratio": 0.8874773139745913, "event_time_error": 0.0016999999999998128}
+    }
+  },
+  "full_medium_weighted_errors": {
+    "LF1 B0": {"potential": 0.000295493, "temperature": 0.0112203, "phase": 0.0566884},
+    "LF2 M0": {"potential": 0.00007597256222231007, "temperature": 0.0007349199043785992, "phase": 0.01549640951403105},
+    "LF3 T0": {"potential": 0.00007147677141984318, "temperature": 0.0007111887418509096, "phase": 0.0018751014076345538}
+  },
+  "local_extra_fine_metrics": {
+    "LF_ONLY": {
+      "phase_roi_rms": 0.006570375888844028,
+      "phase_symmetric_difference": 0.00034953125,
+      "temperature_roi_rms": 0.0018006948281555659,
+      "current_nrmse": 0.0035221351893723663,
+      "potential_rms": 0.0005761281633015013,
+      "event_guard_failures": 0
+    },
+    "LF1 B0": {
+      "phase_roi_rms": 0.1634463969649899,
+      "phase_symmetric_difference": 0.017437031250000002,
+      "temperature_roi_rms": 0.054592534991385715,
+      "current_nrmse": 0.2561935734231694,
+      "potential_rms": 0.01207970687266603,
+      "event_guard_failures": 0
+    },
+    "LF1 final": {
+      "phase_roi_rms": 0.21445921728638048,
+      "phase_symmetric_difference": 0.020594765624999997,
+      "temperature_roi_rms": 0.07930235367208854,
+      "current_nrmse": 0.13875724934916162,
+      "potential_rms": 0.031929174318109856,
+      "event_guard_failures": 0
+    },
+    "LF2 M0": {
+      "phase_roi_rms": 0.11056382835170216,
+      "phase_symmetric_difference": 0.00515,
+      "temperature_roi_rms": 0.017598017494831406,
+      "current_nrmse": 0.14637385986190685,
+      "potential_rms": 0.00616749148270114,
+      "event_guard_failures": 6
+    },
+    "LF3 T0": {
+      "phase_roi_rms": 0.039000843552371975,
+      "phase_symmetric_difference": 0.00202578125,
+      "temperature_roi_rms": 0.017361839140172267,
+      "current_nrmse": 0.1372971214905007,
+      "potential_rms": 0.005996623163842027,
+      "event_guard_failures": 0
+    }
+  },
+  "local_event_times": {
+    "reference": [0.24059999999999998, 1.4984],
+    "LF_ONLY": [0.2381, 1.4954500000000002],
+    "LF1 B0": [0.19339444444444445, 1.4421444444444445],
+    "LF1 final": [0.20969310344827585, 1.431488888888889],
+    "LF2 M0": [null, null],
+    "LF3 T0": [0.23522, 1.4944428571428572]
+  },
+  "run": {
+    "outcome": "LF3_CARRIER_NOT_ESTABLISHED",
+    "T0_updates": 1200,
+    "P0_updates": 0,
+    "P0_disposition": "NOT_TRIGGERED_BECAUSE_T0_GATE_FAILED",
+    "T0_stream_sha256": "6E9957E861BE0FD10E19A1585635C7B2C323077D89908159B1736734FB548F28",
+    "run_summary_sha256": "335DBF2194BA62C89E3E607941BA92B5FA14BB533B679330A7234A4466455D12",
+    "local_adjudication_sha256": "BB45AB4FAFE0A0ADC8E4F21A35E96E3A05B233594933C04AC0F3C58401B23378"
+  }
+}
