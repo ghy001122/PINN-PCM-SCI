@@ -3,7 +3,11 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
+import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -37,12 +41,47 @@ class LF2CloudPreflightTests(unittest.TestCase):
             "pinn_pcm_sci/phk_v23_lf2.py",
             "pinn_pcm_sci/phk_v23_lf0.py",
             "pinn_pcm_sci/phk_v23_lf1.py",
+            "tests/test_phk_v21_benchmark.py",
         }
         self.assertTrue(required.issubset(set(build_bundle.STATIC_FILES)))
         self.assertTrue(required.issubset(preflight.REQUIRED_RUNTIME))
         self.assertFalse(
             any("evaluator" in name.lower() for name in build_bundle.STATIC_FILES)
         )
+
+    def test_isolated_runtime_closure_loads_physics(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary).resolve()
+            repository = PREFLIGHT_PATH.parents[2]
+            for relative in build_bundle.STATIC_FILES:
+                source = repository / relative
+                target = root / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source, target)
+            environment = os.environ.copy()
+            environment["PYTHONPATH"] = str(root)
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    "-c",
+                    (
+                        "from pinn_pcm_sci.phk_v22r_training import "
+                        "load_case_physics; load_case_physics('FULL'); "
+                        "print('ISOLATED_PHYSICS_LOAD_VALID')"
+                    ),
+                ],
+                cwd=root,
+                env=environment,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(
+                completed.returncode,
+                0,
+                msg=f"stdout={completed.stdout}\nstderr={completed.stderr}",
+            )
+            self.assertIn("ISOLATED_PHYSICS_LOAD_VALID", completed.stdout)
 
     def test_safe_deployed_path_rejects_escape(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

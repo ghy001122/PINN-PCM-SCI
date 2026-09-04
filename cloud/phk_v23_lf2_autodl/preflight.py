@@ -63,6 +63,7 @@ REQUIRED_RUNTIME = frozenset(
         "pinn_pcm_sci/phk_v23_lf0.py",
         "pinn_pcm_sci/phk_v23_lf1.py",
         "pinn_pcm_sci/phk_v23_lf2.py",
+        "tests/test_phk_v21_benchmark.py",
     }
 )
 

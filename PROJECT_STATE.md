@@ -11,13 +11,13 @@
 - `candidate_status`: `NONE_PENDING_FROZEN_LF2_ADJUDICATION`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED`
 - `reference_status`: `MEDIUM_ONLY_GPU_METHOD_INPUT_FINE_EXTRA_LOCAL_NOMINAL_ONLY_AFTER_SHUTDOWN_STRESS_SEALED_UNREAD`
-- `implementation_status`: `LF2_CONTRACTS_RUNNER_QUALIFICATION_EVALUATION_CLOUD_AND_TESTS_READY`
+- `implementation_status`: `LF2_DEPLOYMENT_TRANSITIVE_CLOSURE_REPAIRED_ISOLATED_PHYSICS_LOAD_VALID`
 - `method_selection_status`: `MEASURE_CALIBRATED_M0_THEN_CONDITIONAL_FEASIBILITY_CONSTRAINED_FULL_PHYSICS`
-- `compute_status`: `CPU_QUALIFIED_ZERO_LF2_SCIENTIFIC_GPU_TRAJECTORIES_REMOTE_PREFLIGHT_PENDING`
+- `compute_status`: `CPU_QUALIFIED_ZERO_LF2_SCIENTIFIC_GPU_TRAJECTORIES_ONE_PRESTEP_ENGINEERING_FAILURE_ER1_READY`
 - `contract_status`: `LF2_FOUR_CONTRACTS_FROZEN_ACTIVE`
 - `paper_status`: `LF1_FAILURE_ANALYSIS_REUSABLE_LF2_ACCURACY_PHYSICS_PARETO_PILOT_PENDING`
 - `diagnostic_outcome`: `LF2_CPU_QUALIFICATION_PASS`
-- `next_recommendation`: `REMOTE_ZERO_STEP_PREFLIGHT_THEN_SOLE_LF2_TRAJECTORY`
+- `next_recommendation`: `REMOTE_ER1_ZERO_STEP_PREFLIGHT_THEN_SOLE_LF2_TRAJECTORY`
 
 ## 已核验证据
 
@@ -27,11 +27,12 @@
 - LF1-B0 的全-medium target-measure audit 复算有限、potential validity 通过且有两周期事件，但 precision 为 `0.17052/0.16110`、active-mass ratio 为 `5.26976/5.86388`、event-time error 为 `0.04462/0.05178`。
 - LF1 B0/replay 的 onset-event proposal 相对 target measure 平均放大 `176.5225x/353.0450x`，支持“训练测度错配”作为 LF2 的首要可检验阻塞。
 - 常数 weighted-estimator 恒等、AL 公式、M0 无 physics RNG、M1 physics 批次身份、数值守卫、七类结局与云端 reference boundary 均通过测试；相关 focused/regression tests 共 100 项通过。
-- 部署 source identity 为 `LF2-BUNDLE-AB0756BF7D4CBDCFDCA88F48C5BBB882760D586C65089999DA16F1DFA64E4AA3`。CPU 资格没有科学模型更新、GPU、fine/extra-fine evaluator 或 stress I/O。
+- 首次远端启动在 `load_case_physics()` 阶段因部署包遗漏其哈希绑定依赖 `tests/test_phk_v21_benchmark.py` 而退出；输出目录为空，模型、Adam 与 optimizer 均未构造，科学轨迹仍为 0。闭包现已补齐，并由解包隔离目录中的真实 physics load 回归证明。
+- 工程重执行 source identity 为 `LF2-BUNDLE-9D06E26720363A39E5CC62D87E1B494A4AFA0116EEA727A103DB6B5FB2ABD455`。科学合同、medium、LF1-B0 checkpoint、seed、阶段、loss、采样与运行上限均未改变；CPU 资格及本次工程失败均没有 fine/extra-fine evaluator 或 stress I/O。
 
 ## 当前任务
 
-在 live price、精确 V100、零重复进程、source/checkpoint/qualification hash 与禁止引用文件边界全部通过远端零步 preflight 后，运行唯一 LF2 trajectory。运行完成后必须先回收、核验并关机，再做本地 nominal adjudication。M0 gate 失败时不进入 M1；任何数值/身份失败或 terminal outcome 均按七类唯一映射收口，不做自动科学重试。
+按用户已明确的首步前纯工程故障覆盖规则，以完全相同科学身份执行一次工程重启：新闭包必须先在远端再次通过 live price、精确 V100、零重复进程、source/checkpoint/qualification hash 与禁止引用文件边界零步 preflight。随后运行唯一 LF2 trajectory；运行完成后必须先回收、核验并关机，再做本地 nominal adjudication。M0 gate 失败时不进入 M1；首个 optimizer step 后不得科学重试。
 
 ## 入口
 

@@ -55,6 +55,7 @@ STATIC_FILES = (
     "pinn_pcm_sci/phk_v23_lf1.py",
     "pinn_pcm_sci/phk_v23_lf2.py",
     "pinn_pcm_sci/phk_v23_lf2_qualification.py",
+    "tests/test_phk_v21_benchmark.py",
 )
 
 

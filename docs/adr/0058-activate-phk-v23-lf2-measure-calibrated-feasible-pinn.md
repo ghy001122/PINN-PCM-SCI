@@ -23,3 +23,9 @@ LF1-B0 已有两周期事件，却把 event active mass 放大到 medium teacher
 M0 任一 full-medium gate 失败即停止且不进入 M1；M1 可行性失败即保留有界负结果。只有 M0/final 均通过数值、事件与冻结 nominal competence，final 相对 M0 和 direct `LF_ONLY` 非劣，且固定 physics objective ratio `<=0.5`，才允许 single-seed `PROVISIONAL_SIGNAL`。无论结果如何都不自动授权多 seed、stress、formal OOD、phase-latent teacher、PJGR/R2 或投稿。
 
 精确机器合同见 [program](../../configs/phk_v23/program_contract_lf2_measure_calibrated_feasible_pinn.json)、[method](../../configs/phk_v23/method_contract_lf2_measure_calibrated_feasible_pinn.json)、[data](../../configs/phk_v23/data_contract_lf2_measure_calibrated_medium.json) 与 [decision](../../configs/phk_v23/decision_contract_lf2_measure_calibrated_feasible_pinn.json)。CPU 准入事实见 [qualification](../experiment/2026-09-04-phk-v23-lf2-cpu-qualification.md)。
+
+## 首步前部署闭包修复
+
+首次远端启动在 `load_case_physics()` 读取身份绑定时，因 bundle 遗漏 `tests/test_phk_v21_benchmark.py` 而于模型、Adam 和 optimizer 构造前退出；运行目录为空，optimizer updates 与科学轨迹均为 0。该缺口不构成 LF2 方法结果。
+
+修复只把上述既有哈希绑定文件加入 source manifest 和 preflight 必需闭包，没有改变任何科学合同、参数、训练输入或门槛。新增隔离回归会把完整 allowlist 复制到空临时根并真实调用 `load_case_physics("FULL")`；解包复演与零步 preflight 均通过。工程重执行 source identity 为 `LF2-BUNDLE-9D06E26720363A39E5CC62D87E1B494A4AFA0116EEA727A103DB6B5FB2ABD455`，适用 program contract 中首步前纯工程故障的同身份重执行规则。
