@@ -1,0 +1,351 @@
+{
+  "boundary_geometry": {
+    "FN_graph_distance_histogram": {
+      "0": 455,
+      "1": 26
+    },
+    "FP_graph_distance_histogram": {
+      "0": 199,
+      "1": 28
+    },
+    "absolute_boundary_logit_margin_quantiles": {
+      "0.0": 0.0012280054511396089,
+      "0.1": 0.12952850518173212,
+      "0.25": 0.35014104749572733,
+      "0.5": 0.7890361004360981,
+      "0.75": 1.459346159020768,
+      "0.9": 2.0094926205441146,
+      "1.0": 3.4985109413202036
+    },
+    "absolute_full_logit_margin_quantiles": {
+      "0.0": 5.626300956438468e-05,
+      "0.1": 5.157029740073819,
+      "0.25": 7.895359242755541,
+      "0.5": 13.320281134603729,
+      "0.75": 17.743478086803673,
+      "0.9": 18.420680733952366,
+      "1.0": 18.420680733952366
+    },
+    "confusion_counts": {
+      "FN": 481,
+      "FP": 227,
+      "TP": 1785
+    },
+    "nonperiodic_four_neighbour": true,
+    "pool_counts": {
+      "C1_INNER_POSITIVE": 496,
+      "C1_OUTER_NEGATIVE": 620,
+      "C2_INNER_POSITIVE": 480,
+      "C2_OUTER_NEGATIVE": 604
+    },
+    "pool_hashes": {
+      "C1_INNER_POSITIVE": "C08AF4A39DE859774D1C40FFFDE98CEC82EFC2393605823BE4E22D0BF9B5EE2A",
+      "C1_OUTER_NEGATIVE": "7D13787E829CA4DC1E22307A5B3E9CE665818385AD837F35F9E1AB411980DD73",
+      "C2_INNER_POSITIVE": "1A3638A4B4D36D6CBE0885AC2BE85491C226E9569398E9287CF6D72F45F34ABF",
+      "C2_OUTER_NEGATIVE": "1C839665983583F6722A401ED2C0C8BF5A0E93780A090C6FFF30869EC618B946"
+    },
+    "pool_masses": {
+      "C1_INNER_POSITIVE": 0.0003099999999999999,
+      "C1_OUTER_NEGATIVE": 0.00038749999999999993,
+      "C2_INNER_POSITIVE": 0.0002999999999999998,
+      "C2_OUTER_NEGATIVE": 0.0003774999999999999
+    },
+    "weighted_dice": 0.8345021037868163,
+    "weighted_jaccard": 0.7160048134777377
+  },
+  "checks": {
+    "fine_extra_stress_unread": true,
+    "four_pools_nonempty": true,
+    "input_hashes": true,
+    "lf3_t0_audit_finite": true,
+    "partition": true,
+    "phase_math": true,
+    "pool_values_finite": true,
+    "stream_hashes_frozen": true,
+    "zero_optimizer_updates": true
+  },
+  "contracts": {
+    "data": {
+      "path": "configs/phk_v23/data_contract_lf4_interface_band.json",
+      "sha256": "A86AC02CEFDE9FA2E936DB0F4F1EDA9662827AE63C28C774523B7BB2E82A81D5"
+    },
+    "decision": {
+      "path": "configs/phk_v23/decision_contract_lf4_interface_band.json",
+      "sha256": "964F3022FE81CAA9FE479E1474E1FE909213FF41AAE693E7CA010681BE76339D"
+    },
+    "method": {
+      "path": "configs/phk_v23/method_contract_lf4_interface_band.json",
+      "sha256": "BA286E4A151AA81A4F760DD62112DA06928189947669A26C4C994A6C01040C65"
+    },
+    "program": {
+      "path": "configs/phk_v23/program_contract_lf4_interface_band.json",
+      "sha256": "E5643823BB717E434E27E5C0C09BE701EEFC93B0A5C38BE6FB616E41D9BCC94A"
+    }
+  },
+  "created_at_utc": "2026-09-05T08:52:28.121977+00:00",
+  "gpu_execution_authorized_by_cpu_gate": true,
+  "gpu_used": false,
+  "input_bindings": {
+    "lf3_raw_qualification": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260904T150300Z-phk-v23-lf3-cpu-qualification-6ec084c\\qualification.json",
+      "sha256": "A88B35037881BFD6D3A7934688C23DDC85ED4AC7D952F4D641C7BDBF0CDC5C76"
+    },
+    "lf3_t0_checkpoint": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74\\checkpoint-t0-step-1200.pt",
+      "sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA"
+    },
+    "lf3_t0_prediction": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74\\prediction-t0-step-1200.npz",
+      "sha256": "485F0D09C65BDDCE3AEA212B337B85CFB08CD81E788E9F6AF81083871611819D"
+    },
+    "medium": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260828T-phk-v21-s1-q-04-nominal-medium\\result-intent-04.npz",
+      "sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F"
+    }
+  },
+  "lf1_b0_full_medium_audit": {
+    "all_values_finite": true,
+    "event_metrics": {
+      "cycle_1": {
+        "event_time_absolute_error": 0.04461999999999999,
+        "hard_active_mass_ratio": 5.26975945017182,
+        "hard_precision": 0.17052494294098466,
+        "hard_recall": 0.8986254295532644,
+        "predicted_active_target_mass": 0.003833749999999999,
+        "predicted_event_time": 0.19318000000000002,
+        "teacher_active_target_mass": 0.0007275,
+        "teacher_event_time": 0.2378,
+        "true_positive_target_mass": 0.0006537499999999998
+      },
+      "cycle_2": {
+        "event_time_absolute_error": 0.05177777777777792,
+        "hard_active_mass_ratio": 5.863883847549908,
+        "hard_precision": 0.16109563602599816,
+        "hard_recall": 0.9446460980036296,
+        "predicted_active_target_mass": 0.004038749999999998,
+        "predicted_event_time": 1.4424222222222223,
+        "teacher_active_target_mass": 0.0006887499999999998,
+        "teacher_event_time": 1.4942000000000002,
+        "true_positive_target_mass": 0.0006506249999999997
+      }
+    },
+    "event_topology_hard_guard": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.19318000000000002,
+          "peak_full_domain_fraction": 0.090625,
+          "peak_outside_roi_fraction": 0.04525089605734767,
+          "peak_roi_fraction": 0.1952479338842975,
+          "peak_time_index": 70,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.4424222222222223,
+          "peak_full_domain_fraction": 0.08875,
+          "peak_outside_roi_fraction": 0.04614695340501792,
+          "peak_roi_fraction": 0.18698347107438015,
+          "peak_time_index": 313,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "phase_maximum": 0.7541966324539336,
+    "phase_range": {
+      "maximum": 0.7541966324539336,
+      "minimum": 0.00010206055824332187,
+      "passed": true
+    },
+    "potential_maximum_principle": {
+      "by_window": {
+        "W1": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W2": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W3": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W4": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        }
+      },
+      "global": {
+        "absolute_tolerance": 1e-06,
+        "all_pointwise_values_finite": true,
+        "maximum_absolute_excess": 0.0,
+        "passed": true,
+        "violation_fraction": 0.0
+      },
+      "passed": true
+    },
+    "target_measure_identity": "TRAPEZOID_TIME_TIMES_CELL_VOLUME",
+    "temperature_maximum": 0.8189112507976513,
+    "topology_weighted_loss": 0.040861138466208875,
+    "two_cycle_events": true,
+    "weighted_errors": {
+      "phase": 0.056688433089415936,
+      "potential": 0.00029549333452002987,
+      "temperature": 0.01122029538393568
+    }
+  },
+  "lf3_t0_full_medium_audit": {
+    "all_values_finite": true,
+    "event_metrics": {
+      "cycle_1": {
+        "event_time_absolute_error": 0.004849999999999993,
+        "hard_active_mass_ratio": 0.8883161512027489,
+        "hard_precision": 0.9071566731141198,
+        "hard_recall": 0.8058419243986251,
+        "predicted_active_target_mass": 0.0006462499999999998,
+        "predicted_event_time": 0.23295000000000002,
+        "teacher_active_target_mass": 0.0007275,
+        "teacher_event_time": 0.2378,
+        "true_positive_target_mass": 0.0005862499999999997
+      },
+      "cycle_2": {
+        "event_time_absolute_error": 0.0016999999999998128,
+        "hard_active_mass_ratio": 0.8874773139745913,
+        "hard_precision": 0.8660531697341514,
+        "hard_recall": 0.7686025408348455,
+        "predicted_active_target_mass": 0.0006112499999999996,
+        "predicted_event_time": 1.4959,
+        "teacher_active_target_mass": 0.0006887499999999998,
+        "teacher_event_time": 1.4942000000000002,
+        "true_positive_target_mass": 0.0005293749999999997
+      }
+    },
+    "event_topology_hard_guard": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23295000000000002,
+          "peak_full_domain_fraction": 0.021875,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07231404958677685,
+          "peak_time_index": 80,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.4959,
+          "peak_full_domain_fraction": 0.0203125,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06714876033057851,
+          "peak_time_index": 327,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "phase_maximum": 0.9911872960989128,
+    "phase_range": {
+      "maximum": 0.9911872960989128,
+      "minimum": 2.669743658412727e-09,
+      "passed": true
+    },
+    "potential_maximum_principle": {
+      "by_window": {
+        "W1": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W2": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W3": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W4": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        }
+      },
+      "global": {
+        "absolute_tolerance": 1e-06,
+        "all_pointwise_values_finite": true,
+        "maximum_absolute_excess": 0.0,
+        "passed": true,
+        "violation_fraction": 0.0
+      },
+      "passed": true
+    },
+    "target_measure_identity": "TRAPEZOID_TIME_TIMES_CELL_VOLUME",
+    "temperature_maximum": 0.8050099454973638,
+    "topology_weighted_loss": 0.00685590410653223,
+    "two_cycle_events": true,
+    "weighted_errors": {
+      "phase": 0.0018751014076345538,
+      "potential": 7.14767714198432e-05,
+      "temperature": 0.0007111887418509094
+    }
+  },
+  "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+  "phase_math": {
+    "clip_bound": 36.84136146790473,
+    "prediction_finite_and_bounded": true,
+    "startup_at_t0_exact_zero": true,
+    "teacher_delta_logit_finite": true,
+    "teacher_delta_logit_maximum": 8.476559213306174,
+    "teacher_delta_logit_minimum": -14.913706839560465,
+    "within_clip_span": true
+  },
+  "reference_boundary": {
+    "fine_extra_read": false,
+    "frozen_evaluator_read": false,
+    "stress_read": false
+  },
+  "schema_id": "phk-v23-lf4-cpu-qualification-v1",
+  "scientific_model_optimizer_updates": 0,
+  "status": "LF4_CPU_QUALIFICATION_PASS",
+  "stream_identities": {
+    "band_400_sha256": "4DB1728CC543B1AB18BD3F74B83B29EBFE5F95624D98DAFEA615B0ECDC69DEC4",
+    "base_rolling_1600_sha256": "ECD2605AF35B642259EF0F2CF35A92DA635AA0FF163BF47B71ABE4CFA84001BD",
+    "base_window_1201_1600_sha256": "3870D0C1411B3DF6E04C5BA316B3F0F77233D94A73A19E84523D81B62F692E4A",
+    "global_extra_400_sha256": "227244A6F97847E86A123E5F980A56A405D5F46C2A9716A0A13A5BD9A0123C48",
+    "lf3_prefix_1200_sha256": "6E9957E861BE0FD10E19A1585635C7B2C323077D89908159B1736734FB548F28",
+    "matched_base_band_400_sha256": "A9C61C946743CC855DAA8F105F2514F364AE2FE06DEFE4A8BD6E01849714176D"
+  },
+  "task_id": "PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE"
+}

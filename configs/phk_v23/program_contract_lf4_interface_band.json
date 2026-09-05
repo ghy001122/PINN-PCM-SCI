@@ -1,0 +1,45 @@
+{
+  "schema_id": "phk-v23-lf4-program-contract-v1",
+  "contract_id": "PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE",
+  "phase_id": "PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE",
+  "title": "PHK-V2.3 LF4 threshold-aligned two-sided interface-band mechanism screen and conditional physics pilot",
+  "effective_date": "2026-09-05",
+  "status": "EXPLICITLY_AUTHORIZED_BOUNDED_CAMPAIGN",
+  "expected_base_commit": "7df29ef730ad60156dfae5abd4a3ef41fa69a109",
+  "scientific_question": "DOES_EXPLICIT_TEACHER_INTERFACE_EXPOSURE_OR_A_THRESHOLD_ALIGNED_TWO_SIDED_LOSS_REPAIR_THE_REMAINING_LF3_BOUNDARY_RECALL_GAP_AND_ENABLE_A_LABEL_FREE_PHYSICS_PARETO_PILOT",
+  "paper_role": "MATCHED_INTERFACE_MECHANISM_SCREEN_AND_CONDITIONAL_SINGLE_SEED_PINN_RECOVERY_PILOT",
+  "authorization": {
+    "contracts_code_tests_documents": true,
+    "cpu_boundary_geometry_and_stream_qualification": true,
+    "three_matched_gpu_development_arms": true,
+    "conditional_label_free_physics_p0": true,
+    "post_shutdown_nominal_local_evaluation": true,
+    "paper_v23_update": true,
+    "selective_commit_and_push_main": true,
+    "full_from_lf1_b0_confirmation": false,
+    "new_seed_multi_seed_ood_or_stress": false,
+    "pjgr_r2_fourier_siren_or_kinetic_teacher": false,
+    "submission_or_external_contact": false
+  },
+  "hard_limits": {
+    "maximum_scientific_gpu_trajectories": 4,
+    "maximum_development_arms": 3,
+    "maximum_optimizer_updates": 2400,
+    "maximum_wall_seconds": 1800,
+    "seed": 17,
+    "manual_early_stop": false,
+    "best_checkpoint_selection": false,
+    "hyperparameter_or_architecture_sweep": false,
+    "gpu_price_or_cost_reporting": false
+  },
+  "lifecycle": {
+    "development_completion_rule": "RUN_ALL_THREE_FIXED_400_STEP_ARMS_EVEN_IF_AN_EARLIER_ARM_FAILS",
+    "p0_trigger": "AT_LEAST_ONE_FIXED_ENDPOINT_PASSES_P0_ENTRY",
+    "engineering_retry": "ONLY_BEFORE_FIRST_OPTIMIZER_STEP_OF_AFFECTED_ARM_AFTER_ROOT_CAUSE_AND_TARGETED_REGRESSION_WITH_IDENTICAL_SCIENTIFIC_IDENTITY",
+    "post_first_step_interruption": "AFFECTED_TRAJECTORY_CONSUMED_NO_AUTOMATIC_RETRY",
+    "restart_required_status": "AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE",
+    "shutdown_before_local_reference_io": true,
+    "completion_does_not_authorize_next_research": true
+  },
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

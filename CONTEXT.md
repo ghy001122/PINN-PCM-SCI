@@ -15,6 +15,8 @@ LF2 从精确 LF1-B0 权重出发，把 data-only objective 改为 evaluator-com
 
 LF3 用 `Measure-Decoupled Phase-Latent Carrier` 执行了唯一 T0 轨迹：V/T 按 target measure 拟合，phase 按 14 个互斥事件类别等权拟合初值精确的完整 logit 增量。T0 恢复了合法、局域、时刻准确的双周期事件，precision 与 active-mass 门通过，但两周期 hard recall `0.805842/0.768603` 未达冻结 `0.90`，终局为 `LF3_CARRIER_NOT_ESTABLISHED`。P0 因此前提失败而未触发，故没有 PINN-specific pilot 或 candidate signal。
 
+LF4 当前检验 LF3 剩余误差是否为界面暴露不足，以及 threshold-aligned two-sided loss 是否在相同界面点上提供额外增量。CPU-G 已验证 94.6% FN 与 87.7% FP 位于 teacher boundary graph distance 0；三臂分别隔离 generic extra supervision、interface exposure 与 threshold alignment。该几何事实不预先授权正面机制措辞，只有冻结的 matched 差值与质量门可以支持。
+
 ## 物理对象与证据边界
 
 对象仍是 PHK-V2.1 的透明、无量纲、literature-inspired synthetic 2D wall-cell；几何、PDE、本构、参数、IC/BC、ROI、事件与 frozen evaluator 均不改变。extra-fine fixed-discretization carrier 不是 continuum truth；C0 saved-cadence strong residual 也不是 exact internal-step residual。
@@ -27,4 +29,4 @@ ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-sta
 
 ## 权威路由
 
-当前授权见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF3 结果见 [terminal closeout](docs/experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)，LF2/LF1/LF0/C0 历史入口继续由对应 terminal closeout 保留。
+当前授权见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF4 CPU 证据见 [CPU-G](docs/experiment/2026-09-05-phk-v23-lf4-cpu-qualification.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)，LF3/LF2/LF1/LF0/C0 历史入口继续由对应 terminal closeout 保留。

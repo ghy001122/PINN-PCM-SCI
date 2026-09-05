@@ -2,7 +2,7 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-PHK-V2.3 LF3 已终局完成。T0 恢复合法局域双周期事件，但两周期 hard recall `0.805842/0.768603` 未达冻结 `0.90`，故 `LF3_CARRIER_NOT_ESTABLISHED`；P0 未触发、candidate 为 none、当前无后续科研授权。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[LF3 terminal closeout](experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)、[ADR 0060](adr/0060-close-phk-v23-lf3-carrier-not-established.md)与 [paper_v23](../paper/paper_v23/README.md)。LF2 terminal 与更早证据保持，stress sealed/unread。
+PHK-V2.3 LF4 已由当前用户明确授权并通过 CPU-G，正在执行三条 matched 400-step interface mechanism arms 及条件 label-free physics P0。CPU-G 显示 LF3-T0 的 W1/W3 错误高度集中在 teacher interface（455/481 FN、199/227 FP 位于 graph distance 0），但这只支持实验问题，不预判机制成功。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[CPU-G](experiment/2026-09-05-phk-v23-lf4-cpu-qualification.md)、[ADR 0061](adr/0061-activate-phk-v23-lf4-interface-band-pilot.md)与 [paper_v23](../paper/paper_v23/README.md)。LF3 与更早终局保持，stress sealed/unread。
 
 R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 

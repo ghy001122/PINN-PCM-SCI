@@ -4,26 +4,26 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF3_MEASURE_DECOUPLED_STARTUP_SCALED_PHASE_LATENT_CARRIER_PILOT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
+- `lifecycle_state`: `EXECUTING_GPU_PENDING_ACTIVATION_COMMIT`
 - `blocker_id`: `NONE`
-- `claim_status`: `LF3_CARRIER_NOT_ESTABLISHED_P0_NOT_TRIGGERED_NEGATIVE_ADVISOR_DRAFT_COMPLETE`
-- `next_research_execution_authorized`: `false`
+- `claim_status`: `LF4_CPU_GEOMETRY_SUPPORT_ONLY_GPU_MECHANISM_UNTESTED`
+- `next_research_execution_authorized`: `true`
 
-LF3 已完成唯一 V100/FP64/seed-17 轨迹。T0 恢复了合法、局域、时刻准确的双周期事件，但两周期 hard recall `0.805842/0.768603` 未达冻结 `0.90`，终局为 `LF3_CARRIER_NOT_ESTABLISHED`；P0 未触发，candidate 为 none。产物已回收核验，实例已关机；关机后的 nominal 评价与 `paper_v23` 导师初稿均已完成，stress 继续 sealed/unread。
+LF4 已通过零更新 CPU-G：冻结的四个 interface-band pool 均非空，LF3-T0 的错分主要集中在 reference interface boundary，且 matched M0/G/C 与条件 P0 的数据流、随机数账本和固定 physics pool 身份均已闭合。该证据只支持边界几何与可执行性，不是 GPU 机制增量或 PINN 候选证据。
 
-当前不授权任何新科研执行、第二条轨迹、matched ablation、PJGR/R2、多 seed、OOD、stress 或投稿。LF2 终局与更早负面证据保持原边界。
+当前仅授权本具名 LF4：一条 matched DEV-M→条件 DEV-C 机制轨迹，以及仅在 DEV-C 通过后执行的 label-free P0。不得自动扩展为额外臂、多 seed、OOD、stress、PJGR/R2 或投稿；LF3 与更早终局保持原证据边界。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
-- 当前终局决定：[ADR 0060](docs/adr/0060-close-phk-v23-lf3-carrier-not-established.md)
-- LF3 终局：[terminal closeout](docs/experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)
+- 当前激活决定：[ADR 0061](docs/adr/0061-activate-phk-v23-lf4-interface-band-pilot.md)
+- LF4 CPU 资格：[CPU-G qualification](docs/experiment/2026-09-05-phk-v23-lf4-cpu-qualification.md)
+- 上一终局：[LF3 terminal closeout](docs/experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)
 - 当前论文初稿：[paper/paper_v23](paper/paper_v23/README.md)
-- 激活决定：[ADR 0059](docs/adr/0059-activate-phk-v23-lf3-phase-latent-carrier-pilot.md)
-- CPU 资格：[LF3 qualification](docs/experiment/2026-09-04-phk-v23-lf3-cpu-qualification.md)
+- 上一关闭决定：[ADR 0060](docs/adr/0060-close-phk-v23-lf3-carrier-not-established.md)
 - LF2 终局：[LF2 terminal closeout](docs/experiment/2026-09-04-phk-v23-lf2-terminal-closeout.md)
 - LF1 终局：[LF1 terminal closeout](docs/experiment/2026-09-03-phk-v23-lf1-terminal-closeout.md)
 - LF0 结果：[LF0 terminal closeout](docs/experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)

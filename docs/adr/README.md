@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0061：激活 PHK-V2.3 LF4 interface-band pilot](0061-activate-phk-v23-lf4-interface-band-pilot.md) — 用 matched DEV-G/M/C 隔离 generic supervision、teacher-interface exposure 与 threshold alignment；仅 entry 通过后运行 label-free P0。
 - [0059：激活 PHK-V2.3 LF3 phase-latent carrier pilot](0059-activate-phk-v23-lf3-phase-latent-carrier-pilot.md) — 唯一 T0→条件 P0 轨迹检验 measure-decoupled startup-scaled phase-logit teacher 能否建立合法 carrier，并由 label-free physics continuation 形成同架构 Pareto；保留 direct `LF_ONLY` 强基线与后续归因边界。
 - [0058：激活并收口 PHK-V2.3 LF2 measure-calibrated feasible PINN](0058-activate-phk-v23-lf2-measure-calibrated-feasible-pinn.md) — M0 降低全局加权场误差却抹除两周期事件，以 `LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED` 收口；M1 未触发、candidate 为 none，stress/PJGR/R2/额外轨迹保持关闭。
 - [0057：激活并收口 PHK-V2.3 LF1 event-preserving multi-fidelity pilot](0057-activate-phk-v23-lf1-event-preserving-multifidelity-pilot.md) — B0/B final 均恢复两周期 competence且 physics objective 显著下降，但冻结 phase/temperature 增量门失败，故以 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN` 收口；C 未触发，继续禁止 PJGR/R2/stress。

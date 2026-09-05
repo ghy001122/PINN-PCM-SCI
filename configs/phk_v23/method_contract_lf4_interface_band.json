@@ -1,0 +1,48 @@
+{
+  "schema_id": "phk-v23-lf4-method-contract-v1",
+  "contract_id": "PHK_V23_LF4_INTERFACE_BAND_METHOD",
+  "program_contract": "configs/phk_v23/program_contract_lf4_interface_band.json",
+  "effective_date": "2026-09-05",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "common_identity": {
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "case_control": "FULL",
+    "initialization": "EXACT_LF3_T0_STEP_1200_MODEL_WEIGHTS_ONLY",
+    "network": "UNCHANGED_STRONG_RAW_THREE_INDEPENDENT_FIELD_HEADS",
+    "updated_parameters": "EXISTING_PHASE_ENCODER_AND_PHASE_HEAD_ONLY",
+    "frozen_parameters_and_buffers": ["potential", "temperature"],
+    "new_parameters_heads_branches_fourier_siren_or_shared_trunk": false,
+    "potential_transform": "POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING_LOG_RATIO",
+    "phase_transform": "LF3_STARTUP_SCALED_LOGIT_INCREMENT",
+    "clip_epsilon": 1e-08,
+    "logit_span": 36.84136146790473,
+    "optimizer": {"name": "TORCH_ADAM", "learning_rate": 0.001, "betas": [0.9, 0.999], "eps": 1e-08, "weight_decay": 0.0, "amsgrad": false, "fresh_per_arm": true},
+    "gradient_clip_norm": 10.0
+  },
+  "development": {
+    "updates_per_arm": 400,
+    "fixed_endpoint": 400,
+    "common_base_loss": "LF3_EQUAL_14_CATEGORY_NORMALIZED_LOGIT_INCREMENT_MSE",
+    "DEV_G_GLOBAL_MSE_CONTROL": {"extra_points": 256, "loss": "0.5*L_base+0.5*L_global_extra_normalized_logit_increment_mse"},
+    "DEV_M_INTERFACE_BAND_MSE": {"four_pool_points": [64, 64, 64, 64], "loss": "0.5*L_base+0.5*(SUM_FOUR_POOL_NORMALIZED_LOGIT_INCREMENT_MSE)/4"},
+    "DEV_C_THRESHOLD_ALIGNED_INTERFACE": {"four_pool_points": [64, 64, 64, 64], "same_coordinates_as_DEV_M": true, "loss": "0.5*L_base+0.5*(SUM_POS_SOFTPLUS_MINUS_Z_PLUS_NEG_SOFTPLUS_Z)/(4*LOG_2)"},
+    "forbidden": ["V_OR_T_UPDATE", "PDE", "GLOBAL_BCE", "AUGMENTED_LAGRANGIAN", "DICE", "TVERSKY", "SIGNED_DISTANCE", "RAR", "DYNAMIC_WEIGHTING", "LBFGS", "EARLY_STOP", "SWEEP"]
+  },
+  "conditional_P0": {
+    "updates": 1200,
+    "fresh_adam": true,
+    "single_optimizer_across_blocks": true,
+    "objective": "L_PDE_PLUS_5_L_BC_PLUS_L_IC",
+    "medium_or_label_draws": 0,
+    "steps_1_through_550": "PHASE_PARAMETERS_AND_BUFFERS_BITWISE_FROZEN_ONLY_V_T_UPDATED",
+    "steps_551_through_1200": "UNFREEZE_PHASE_AND_JOINTLY_UPDATE_ALL_THREE_HEADS",
+    "forbidden": ["REPLAY", "ANCHOR", "BCE", "AUGMENTED_LAGRANGIAN", "EVENT_LOSS", "DYNAMIC_WEIGHTING", "LBFGS"]
+  },
+  "telemetry": {
+    "development_steps": "STEP_1_AND_EVERY_50_THROUGH_400",
+    "P0_steps": "STEP_1_EVERY_50_STEP_550_STEP_551_AND_STEP_1200",
+    "selection_or_adaptation_from_telemetry": false
+  }
+}
