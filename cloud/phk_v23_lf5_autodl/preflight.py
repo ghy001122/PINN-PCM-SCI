@@ -18,7 +18,7 @@ EXPECTED_GPU="Tesla V100-PCIE-32GB"
 MEDIUM_RELATIVE=PurePosixPath("outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/result-intent-04.npz")
 CHECKPOINT_RELATIVE=PurePosixPath("outputs/runs/20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74/checkpoint-t0-step-1200.pt")
 CONTRACT_RELATIVES={name:PurePosixPath(f"configs/phk_v23/{name}_contract_lf5_temporal_zero_level.json") for name in ("program","method","data","decision")}
-REQUIRED_RUNTIME=frozenset({*(path.as_posix() for path in CONTRACT_RELATIVES.values()),"cloud/phk_v23_lf5_autodl/preflight.py","cloud/phk_v23_lf5_autodl/run.sh","pinn_pcm_sci/phk_v23_lf5.py","pinn_pcm_sci/phk_v23_lf4.py","pinn_pcm_sci/phk_v23_lf3.py","pinn_pcm_sci/phk_v23_lf2.py","pinn_pcm_sci/phk_v23_lf1.py","pinn_pcm_sci/phk_v23_lf0.py","pinn_pcm_sci/phk_v22r_training.py"})
+REQUIRED_RUNTIME=frozenset({*(path.as_posix() for path in CONTRACT_RELATIVES.values()),"cloud/phk_v23_lf5_autodl/preflight.py","cloud/phk_v23_lf5_autodl/run.sh","pinn_pcm_sci/phk_v23_lf5.py","pinn_pcm_sci/phk_v23_lf4.py","pinn_pcm_sci/phk_v23_lf3.py","pinn_pcm_sci/phk_v23_lf2.py","pinn_pcm_sci/phk_v23_lf1.py","pinn_pcm_sci/phk_v23_lf0.py","pinn_pcm_sci/phk_v22r_training.py","tests/test_phk_v21_benchmark.py"})
 
 
 def _sha(path:Path)->str:
