@@ -1,6 +1,6 @@
 # PHK-V2.3 event-competence recovery advisor draft
 
-Status: `ADVISOR_DRAFT_UPDATED_LF5_TZL_PREMISE_REFUTED_CPU_NO_GPU`
+Status: `ADVISOR_DRAFT_UPDATED_LF5_EXPLORATORY_IDENTITY_INVALID`
 
 This package is the first manuscript draft that integrates the bounded
 PHK-V2.2R→LF4 solver-recovery sequence. It is deliberately written as a
@@ -11,12 +11,15 @@ under the frozen quality controls, supporting a bounded boundary-exposure
 mechanism result. Threshold-aligned BCE raised recall further but increased
 phase error to `0.02967`, so it did not provide a quality-preserving increment.
 No arm passed every entry condition; P0 ran zero updates and no PINN-specific
-gain or candidate was established. LF5 then tested, before any new training,
-whether DEV-C's better aggregate event time corresponded to improved local
-teacher-secanted zero-level alignment. It did not: DEV-C had larger mean
-absolute onset residual than DEV-M in both cycles. The preregistered CPU gate
-therefore rejected the temporal-zero-level premise with zero optimizer updates
-and zero GPU trajectories.
+gain or candidate was established. LF5's preregistered CPU gate then rejected
+the temporal-zero-level premise because DEV-C had larger mean absolute onset
+residual than DEV-M in both cycles. After that result, the user explicitly
+authorized the unchanged 400-step DEV-T as exploratory evidence. Its base and
+spatial streams matched, but the temporal stream diverged from the frozen SHA
+from the first batch. The 400 completed updates are therefore identity-invalid,
+no checkpoint was written, and P0 remained unexecuted. Directional step-400
+telemetry recovered recall to about 0.918 in both cycles while still missing
+cycle-1 timing; it is reported only as non-voting evidence.
 
 ## Package contents
 
@@ -52,12 +55,17 @@ LF5 evidence identity:
 
 - starting source: `d86ddf1d206c611087a1b5284acda69efdfda9fa`;
 - CPU-T: `20260905T150045Z-phk-v23-lf5-cpu-qualification`;
-- outcome: `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`;
+- CPU outcome: `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`;
 - valid temporal pools: `68/68/64/64`, invalid-edge fraction `0`;
 - DEV-M versus DEV-C onset mean absolute residual:
   `0.2921<0.7238` (cycle 1) and `0.3100<0.6041` (cycle 2);
-- scientific optimizer updates / GPU trajectories: `0 / 0`;
-- DEV-T and P0: not run, not failed;
+- post-qualification role: `POST_QUALIFICATION_USER_OVERRIDE_EXPLORATORY`;
+- DEV-T scientific optimizer updates / GPU trajectories: `400 / 1`;
+- expected/actual temporal stream SHA: `8FD79D99...C9B3BD9` /
+  `48A0C6B4...AAFB127`; base and spatial streams matched;
+- terminal outcome: `LF5_NUMERICAL_OR_IDENTITY_INVALID`;
+- DEV-T checkpoint/prediction: none; P0: not run because of the higher-priority
+  identity failure;
 - candidate: none; stress remains sealed/unread.
 
 The nominal fine/extra-fine reference and frozen evaluator were read locally

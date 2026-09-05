@@ -17,25 +17,29 @@ LF3 用 `Measure-Decoupled Phase-Latent Carrier` 执行了唯一 T0 轨迹：V/T
 
 LF4 以三条 matched 400-step phase-only arms 检验 LF3 剩余误差是否来自界面暴露不足。DEV-G/M/C 的 `Rmin` 分别为 `0.819419/0.909256/0.941581`；DEV-M 相对等预算 DEV-G 提升 `0.089837` 且保持冻结质量条件，因此支持本 single-seed nominal 对象上的 `BOUNDARY_EXPOSURE_SUPPORTED`。DEV-C 虽再提升 `0.032325` 并修复 timing，却把 phase weighted MSE 提高到 `0.0296673` 并降低 cycle-2 recovery，故不支持 threshold-aligned BCE 的完整 load-bearing claim。三臂分别因 timing、timing、phase error 未通过完整 P0-entry，selected carrier 为 none，P0 未运行，终局为 `LF4_NO_DEVELOPMENT_ENTRY`。
 
+LF5 的 CPU-T 重建 `68/68/64/64` 条合法 temporal edges，却发现 DEV-C 在两个 onset pool 的 teacher-secanted zero-level residual 都劣于 DEV-M，故冻结前提门返回 `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`。用户知晓结果后只授权不变的 DEV-T 作 post-qualification exploratory evidence。该轨迹完成 400 updates，base/spatial stream 匹配，但 temporal stream 从 step 1 偏离冻结身份，未写出 checkpoint/prediction；P0 未运行。终局为 `LF5_NUMERICAL_OR_IDENTITY_INVALID`。step-400 recall `0.9175/0.9174` 与 cycle-1 timing error `0.0094` 只能作非投票方向性观察。
+
 ## 物理对象与证据边界
 
 对象仍是 PHK-V2.1 的透明、无量纲、literature-inspired synthetic 2D wall-cell；几何、PDE、本构、参数、IC/BC、ROI、事件与 frozen evaluator 均不改变。extra-fine fixed-discretization carrier 不是 continuum truth；C0 saved-cadence strong residual 也不是 exact internal-step residual。
 
-两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4 读取 medium 与 exact LF3-T0 checkpoint。fine/extra-fine 与 direct `LF_ONLY` 仅用于全部产物回收、哈希核验且实例关机验证后的本地 development evaluation。LF4 三条 development 轨迹已回收、核验并关机，P0 未运行。
+两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4/LF5 读取 medium 与 exact LF3-T0 checkpoint。LF5 未读取 fine/extra-fine、direct `LF_ONLY` 或 frozen evaluator；其三份可用 raw 文件已回收核验，实例已关机，P0 未运行。
 
 ## 方法与论文身份
 
-ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling 与 BCE-with-logits 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为高 precision 但 support recall 不足；LF4 又以 matched control 验证界面暴露可提高最低召回，但没有建立完整 entry 或 PINN 结果。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是必须保留的强 non-PINN comparators。当前稿件只能承载有界 failure-analysis 与 solver-recovery mechanism evidence；任何正面路线仍须面对强基线、关键单因素消融、多 seed、sealed stress/formal OOD 与单一 load-bearing core。
+ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling 与 BCE-with-logits 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为高 precision 但 support recall 不足；LF4 又以 matched control 验证界面暴露可提高最低召回，但没有建立完整 entry 或 PINN 结果。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是必须保留的强 non-PINN comparators。当前稿件只能承载有界 failure-analysis、solver-recovery mechanism evidence 与 LF5 非投票方向性 telemetry；任何正面路线仍须面对强基线、关键单因素消融、多 seed、sealed stress/formal OOD 与单一 load-bearing core。
 
 ## 权威路由
 
-当前完成态与无后续授权边界见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，终局动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF4 证据见 [terminal closeout](docs/experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md) 与 [ADR 0062](docs/adr/0062-close-phk-v23-lf4-interface-band-pilot.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF3/LF2/LF1/LF0/C0 历史入口继续由对应 terminal closeout 保留。
-# LF5 current context (2026-09-05)
+当前完成态与无后续授权边界见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，终局动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF5 证据见 [terminal closeout](docs/experiment/2026-09-05-phk-v23-lf5-terminal-closeout.md) 与 [ADR 0064](docs/adr/0064-close-phk-v23-lf5-temporal-zero-level-pilot.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF4/LF3/LF2/LF1/LF0/C0 历史入口继续由对应 terminal closeout 保留。
+
+# LF5 terminal context (2026-09-06)
 
 LF5 tested whether LF4 DEV-C's aggregate timing improvement also improved a
 teacher-anchored per-cell saved-cadence zero-level residual. CPU-T found the
 opposite in both onset cycles, while geometry, identity, sign, and gradient
-checks passed. The frozen CPU gate would close DEV-T/P0. On 2026-09-06 the user
-explicitly authorized the otherwise unchanged DEV-T as post-qualification
-exploratory evidence; only an original carrier-gate pass may trigger P0. This
-override does not rehabilitate or rewrite the CPU premise.
+checks passed. On 2026-09-06 the user explicitly authorized the otherwise
+unchanged DEV-T as post-qualification exploratory evidence. DEV-T completed
+400 updates but its temporal stream drifted from the frozen identity at step 1;
+the terminal gate raised before checkpoint writing and P0 was not run. This
+does not rehabilitate or rewrite the CPU premise, and no retry is authorized.

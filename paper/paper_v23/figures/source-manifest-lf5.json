@@ -1,21 +1,26 @@
 {
-  "schema_id": "paper-v23-lf5-figure-source-manifest-v1",
-  "scope": "LF5 CPU-T zero-update nominal mechanism-premise evidence",
+  "schema_id": "paper-v23-lf5-figure-source-manifest-v2",
+  "scope": "LF5 CPU-T premise rejection plus post-qualification identity-invalid exploratory DEV-T",
   "inputs": {
     "docs/experiment/artifacts/20260905T150045Z-phk-v23-lf5-cpu-qualification.json": "89F2B95D8F72C14506DEA4D78AF69E748637EB397B6983ADA4E9FA957ED8CED4",
     "docs/references/2026-09-05-phk-v23-lf5-temporal-zero-level-prior-art.md": "F45F4A9EC13D65C4B1BA456057077F10E1C16EF88368A0DCB96229B126CC7FBF",
-    "paper/paper_v23/figures/data/lf5_terminal_metrics.json": "32DAFF223CDC37B8B1EA19B7B778E9A9BBB9777352B501ADC733BB767D5BBBB5"
+    "outputs/runs/20260905T172640Z-phk-v23-lf5-temporal-eba0ffe/dev-t-batch-hashes.jsonl": "8E555FC2648C779F11FEA610DB972553DB2C0FE4063B8F9A3E595F2DCB9DB5BE",
+    "outputs/runs/20260905T172640Z-phk-v23-lf5-temporal-eba0ffe/dev-t-telemetry.jsonl": "CE9361A34D7C4F47BE8057FD30446B78C6895B6F36445B6118BADC8EDE4C6016",
+    "outputs/runs/20260905T172640Z-phk-v23-lf5-temporal-eba0ffe/execution-failure.json": "4BFDF3A5108A2AF300F37BEEE8B988709C1F57427C6E9DEBF80A4BCA8D654669",
+    "paper/paper_v23/figures/data/lf5_terminal_metrics.json": "568D1CC4667BBF65E16814AA8FAB6249895065D8F7417E4A687C6B16A994B789"
   },
   "outputs": {
-    "paper/paper_v23/figures/20260905T150045Z-lf5-temporal-edge-geometry.png": "55DE8EC2C1D9B1E9E57E94DC61A596D3322CD615EDCF29D010B1FD0AC84B634C",
-    "paper/paper_v23/figures/20260905T150045Z-lf5-temporal-edge-geometry.pdf": "959EECFE8A863970E66F43DBF4ACF0CD4356C9B7987C9E69F67DDBEAF6211E93",
-    "paper/paper_v23/figures/20260905T150045Z-lf5-timing-calibration.png": "E8299C801F24C75997FC45DAAD4E265AD34989D3C6A9AB12394B4FBD16879952",
-    "paper/paper_v23/figures/20260905T150045Z-lf5-timing-calibration.pdf": "F0AE99FA8F2A4F6DB0CEEC7D160F2CF1188ADB348B62EF908C88DE932518F2BA",
-    "paper/paper_v23/figures/20260905T150045Z-lf5-physics-pareto.png": "ACF1265C45A96DF9A5299A39EE21CEA680A4E17CFB2C354D664D7A4B4A3B86C3",
-    "paper/paper_v23/figures/20260905T150045Z-lf5-physics-pareto.pdf": "16E88E7878ABF2F459651D5FC9CCB0CAEE484EC5E33FFD2378002F9C56C219FA"
+    "paper/paper_v23/figures/20260905T150045Z-lf5-temporal-edge-geometry.png": "1974DF715266CECD6598997B84C0CE0221B7380C470C5FC9D44868672C0C85DB",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-temporal-edge-geometry.pdf": "E408198B9CA54B9B03BE50966229ADE82D1A0CA8209BC39DCCA3BC6CC5EA92D0",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-timing-calibration.png": "397EBC1C294489AA998361782402ADA09CB2A17721DEA3025E59CC0EE29E01E4",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-timing-calibration.pdf": "86B06F62144E18D82B46F8E313BF11A299E26DD91D387B4D4A2AC1FE1C701972",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-physics-pareto.png": "679EA2F39EFFDB6B37EF2CA8AB8C563D984590529B9E4172D2BCF9E653EA56C5",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-physics-pareto.pdf": "2FA6BD734D6826BCC501D4D92297C62C5E7FAD9235069CFC585DC2006F79FEAF"
   },
-  "generator_sha256": "60056E1C53499B12C9150EFB00BDDF864ADB3E864E56A718E4308A4D0A0A24D6",
+  "generator_sha256": "A60D37FC7541DD7F732DB12D872EB06857120CC89DD8001E20070B309E02D190",
+  "dev_t_metric_role": "NON_VOTING_DIRECTIONAL_TELEMETRY_ONLY",
   "fine_extra_lf_only_frozen_evaluator_read": false,
-  "cloud_connection_opened": false,
+  "cloud_connection_opened": true,
+  "instance_shutdown_verified": true,
   "stress_reference_read": false
 }

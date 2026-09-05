@@ -1,7 +1,7 @@
 # Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
 
 > Advisor-reviewable draft. Evidence status:
-> `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`, retaining LF4's
+> `LF5_NUMERICAL_OR_IDENTITY_INVALID`, retaining LF4's
 > `BOUNDARY_EXPOSURE_SUPPORTED`. This manuscript reports single-seed nominal
 > development evidence. It does not claim a successful PINN method.
 
@@ -33,18 +33,19 @@ to 0.0297 and degraded recovery relative to the interface-MSE arm. Thus
 teacher-interface exposure, not the threshold loss, was supported by the
 matched mechanism gate. No arm passed every carrier-entry condition, so the
 conditional label-free physics stage was not run. A subsequent zero-update
-qualification reconstructed 264 valid cycle-resolved temporal edges and asked
-whether the threshold-supervised endpoint was locally better aligned to the
-teacher crossing than the field-faithful interface-MSE endpoint. It was worse
-in both onset pools (0.724 versus 0.292 and 0.604 versus 0.310 mean absolute
-logit residual), rejecting the proposed temporal-zero-level continuation before
-GPU deployment. On the nominal extra-fine evaluator the LF3 carrier passed the
+qualification reconstructed 264 valid cycle-resolved temporal edges and found
+the threshold-supervised endpoint worse than the field-faithful interface-MSE
+endpoint in both onset pools (0.724 versus 0.292 and 0.604 versus 0.310 mean
+absolute logit residual). The user later authorized the unchanged DEV-T as a
+post-qualification exploratory run. It completed 400 updates, but its temporal
+batch stream differed from the frozen identity from step 1; hence no valid
+checkpoint was written and P0 was not run. Non-voting endpoint telemetry had
+recall 0.918/0.917 and phase weighted MSE 0.000784, while cycle-1 event-time
+error remained 0.0094. On the nominal extra-fine evaluator the LF3 carrier passed the
 coarser event-existence/locality guards and reduced phase region-of-interest RMS
 error from 0.1106 for the calibrated cold carrier to 0.0390, but direct medium
-interpolation remained much more accurate at 0.00657. The terminal outcome was
-latest training outcome remained `LF4_NO_DEVELOPMENT_ENTRY`; the LF5 mechanism
-qualification outcome was `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`, with no
-candidate. The study shows that
+interpolation remained much more accurate at 0.00657. LF5 closed as
+`LF5_NUMERICAL_OR_IDENTITY_INVALID`, with no candidate. The study shows that
 domain-averaged accuracy, event existence, event mass, precision, and recall are
 non-substitutable requirements in sparse-event multiphysics learning. It also
 demonstrates why a near-pass data carrier cannot be used to infer PINN-specific
@@ -337,7 +338,9 @@ The proposed training term was the equally weighted mean of
 any optimizer step, however, a preregistered mechanism gate required DEV-C to
 reduce weighted mean \(|r|\) relative to DEV-M in both onset pools. This check
 had direct decision value: failure closed the GPU branch, rather than spending
-a trajectory on an initialization that contradicted the stated premise.
+a trajectory on an initialization that contradicted the stated premise. The
+gate failed. A later explicit user override authorized only the unchanged fixed
+trajectory as exploratory evidence and did not convert the gate to PASS.
 
 ## 4. Experimental protocol
 
@@ -377,14 +380,22 @@ scientific identity completed once. All files were recovered and hash-matched,
 the idle GPU instance was shut down, and local nominal evaluation was performed
 only after the port closed and SSH returned connection refusal.
 
-LF5 was evaluated entirely on CPU before deployment. It loaded the medium
+LF5 first ran the frozen CPU qualification. It loaded the medium
 carrier and fixed LF4 DEV-M/DEV-C checkpoints read-only, reconstructed the four
 temporal pools, and reproduced the LF4 base and interface streams. All 264
 candidate edges were valid. A single backward probe confirmed a finite nonzero
 phase gradient but made no update. Fine, extra-fine, direct `LF_ONLY`, the
-frozen evaluator, and stress were not opened. Because the mechanism comparison
-failed, no bundle was built, no cloud connection was opened, and no LF5
-checkpoint or prediction exists.
+frozen evaluator, and stress were not opened. After the explicit override,
+three deployment attempts occurred before shutdown. Two ended before any
+optimizer step because the committed bundle lacked one runtime dependency and
+then because the separately uploaded inputs were absent; each isolated repair
+passed a targeted regression without changing the scientific identity. The
+third passed the full remote zero-step preflight and completed 400 DEV-T
+updates. Its base and spatial stream hashes matched, but its temporal batch
+stream differed from the CPU-frozen SHA from step 1. The terminal identity gate
+therefore raised before checkpoint writing. All available raw logs were
+recovered and hash-matched, the idle V100 was shut down, and SSH returned
+connection refusal. No LF5 checkpoint or prediction exists.
 
 ## 5. Results
 
@@ -524,11 +535,22 @@ the two inherited endpoints (Figure 9).
 
 ![LF5 temporal-edge geometry](figures/20260905T150045Z-lf5-temporal-edge-geometry.png)
 
-The result sharpens the LF4 timing–calibration conflict. A model can improve a
+The CPU result sharpens the LF4 timing–calibration conflict. A model can improve a
 single aggregate event-time statistic while moving many local interface cells
 farther from the teacher's crossing fraction (Figure 10). Under the frozen
-rule, the proposed DEV-T objective was therefore not executed. Conditional P0
-was also not reached; both stages are `NOT_RUN`, not failed (Figure 11).
+rule, the proposed DEV-T objective was not preregistered for execution. Under
+the later user override, it completed 400 exploratory updates. The base and
+spatial ledgers reproduced their frozen hashes, whereas the temporal ledger
+ended at `48A0C6B4...AAFB127` instead of `8FD79D99...C9B3BD9`, with divergence
+at the first batch. The higher-priority identity failure invalidates model
+voting and prevented checkpoint creation.
+
+The non-voting step-400 telemetry nonetheless supplies a bounded directional
+observation: both recalls reached 0.918/0.917, precision 0.910/0.946, active-mass
+ratios 1.009/0.970, and phase weighted MSE 0.000784, but cycle-1 timing error
+remained 0.0094. Thus extra temporal-edge supervision may recover support while
+still failing aggregate timing; this is not a valid carrier result. P0 is
+`NOT_RUN` because no identity-valid carrier checkpoint existed (Figure 11).
 
 ![LF5 timing-calibration audit](figures/20260905T150045Z-lf5-timing-calibration.png)
 
@@ -558,11 +580,12 @@ destroyed field fidelity. Exposure location and loss shape therefore play
 different roles.
 
 Fifth, aggregate event timing and local interface timing are not interchangeable.
-LF5's zero-update audit falsified the assumption that DEV-C's aggregate timing
-gain made it a better initialization for teacher-secanted temporal zero-level
-alignment. This preserves the LF4 boundary-exposure result while rejecting one
-specific continuation premise without conflating it with a trained-model
-failure.
+LF5's CPU audit falsified the assumption that DEV-C's aggregate timing gain made
+it a better initialization for teacher-secanted temporal zero-level alignment.
+The post-qualification exploratory trajectory cannot overturn that result: its
+temporal stream identity failed, and even its non-voting endpoint retained a
+cycle-1 timing miss. This preserves the LF4 boundary-exposure result while
+rejecting one specific continuation premise.
 
 The most specific supported interpretation is that the remaining LF3 mismatch
 is an event-boundary coverage problem. It is not the previous cold-state basin,
@@ -638,8 +661,9 @@ should not be interpreted as a single simultaneous factorial experiment. LF3
 itself is a single combination pilot and cannot establish component causality.
 The three LF4 arms are internally matched, but remain one seed and one nominal
 object; their boundary-exposure result cannot establish cross-seed or OOD
-generality. LF5 is a zero-update diagnostic of one frozen premise and therefore
-adds mechanism exclusion, not model-performance evidence.
+generality. LF5 combines a valid zero-update premise rejection with one
+post-qualification, identity-invalid 400-step trajectory. The latter adds only
+directional telemetry, not valid model-performance evidence.
 
 Finally, direct interpolation of the available medium trajectory is an unusually
 strong baseline because the full medium field is available at inference points.
@@ -661,9 +685,12 @@ quality-preserving mechanism. No endpoint passed every carrier-entry check and
 the label-free physics stage was correctly not run. A subsequent zero-update,
 cycle-resolved edge audit showed that the timing-improved endpoint had worse
 local onset alignment in both cycles, rejecting the proposed temporal-zero-level
-continuation before GPU deployment. The result is a substantive boundary-
-exposure finding plus a bounded mechanism-premise rejection within a negative
-carrier/PINN outcome, not a positive method claim. The strongest direct
+continuation. A later exploratory override completed 400 updates, but temporal
+stream identity drift invalidated the endpoint before checkpoint writing; its
+non-voting metrics suggested support recovery without cycle-1 timing recovery.
+P0 remained unexecuted. The result is a substantive boundary-exposure finding
+plus a bounded mechanism-premise rejection and an identity-invalid directional
+observation within a negative carrier/PINN outcome, not a positive method claim. The strongest direct
 low-fidelity baseline remains the standard that any future positive route must
 face.
 

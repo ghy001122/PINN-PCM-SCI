@@ -31,8 +31,9 @@
 | LF4 DEV-M | Teacher-interface-band MSE | 0.99222 | Two cycles | Boundary exposure supported; cycle-1 timing failed |
 | LF4 DEV-C | Two-sided threshold BCE | 1.00000 | Two cycles | Timing/recall passed; phase error inflated |
 | LF4 P0 | Conditional label-free physics | — | Not run | No development arm passed every entry condition |
-| LF5 CPU-T | Cycle-resolved teacher-secanted zero-level premise | — | Zero-update audit | DEV-C worse than DEV-M in both onset pools; GPU branch closed |
-| LF5 DEV-T / P0 | Conditional temporal carrier / physics | — | Not run | Preregistered CPU mechanism gate failed |
+| LF5 CPU-T | Cycle-resolved teacher-secanted zero-level premise | — | Zero-update audit | DEV-C worse than DEV-M in both onset pools; gate failed |
+| LF5 DEV-T | Post-qualification override, base+spatial+TZL | 0.98716 | 400 updates, identity invalid | Non-voting recall 0.918/0.917; C1 timing 0.0094; temporal SHA drift |
+| LF5 P0 | Conditional label-free physics | — | Not run | No identity-valid DEV-T checkpoint |
 
 The stages are a sequential diagnostic program, not a simultaneous factorial
 benchmark. Historical comparisons do not isolate the LF3 logit teacher alone.
@@ -155,17 +156,20 @@ edge. All 264 candidate edges were valid. The frozen gate required DEV-C to
 have lower mean absolute residual than DEV-M in both onset pools; it failed in
 both cycles.
 
-## Table 12. LF5 execution and claim disposition
+## Table 12. LF5 CPU qualification, exploratory execution, and claim disposition
 
 | Item | Frozen or observed value |
 |---|---|
 | Temporal stream SHA-256 | `8FD79D99DAA0175026017BB0025BEFEF896BCB383F46F906A3E800427C9B3BD9` |
 | Gradient probe | loss `6.03514e-4`; phase-gradient norm `4.87159e-3`; no step |
 | CPU-T outcome | `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU` |
-| DEV-T / P0 | Not run / not run |
-| Optimizer updates / GPU trajectories | 0 / 0 |
+| DEV-T / P0 | 400 updates, identity invalid / not run |
+| Optimizer updates / GPU trajectories | 400 / 1 |
+| Temporal stream expected / actual | `8FD79D99...C9B3BD9` / `48A0C6B4...AAFB127`; first mismatch step 1 |
+| Non-voting DEV-T endpoint | recall `0.9175/0.9174`; precision `0.9097/0.9457`; mass `1.0086/0.9701`; timing `0.0094/0.00125`; phase MSE `0.0007836` |
+| Terminal outcome | `LF5_NUMERICAL_OR_IDENTITY_INVALID` |
 | Candidate | none |
-| Unique next | kinetic-RHS or \(\partial_t\phi\) teacher plan only; new EXECUTE required |
-| Claim | DEV-C aggregate timing gain did not imply better local zero-level alignment |
+| Unique next | `STOP_NO_SCIENTIFIC_RETRY` |
+| Claim | CPU premise rejected; exploratory DEV-T telemetry is directional only and not a carrier result |
 | Does label-free physics add a Pareto improvement? | P0 vs selected carrier | P0 not run | Not tested |
 | Is there a direct-`LF_ONLY` candidate signal? | Full candidate gate | Not reached | No candidate |

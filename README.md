@@ -5,23 +5,25 @@
 ## 当前状态
 
 - `phase_id`: `PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
-- `lifecycle_state`: `ACTIVE`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`
-- `mechanism_outcome`: `CPU_T_PREMISE_REFUTED_USER_OVERRIDE_EXPLORATORY_GPU_PENDING`
-- `claim_status`: `CPU_T_PREMISE_REFUTED_USER_OVERRIDE_EXPLORATORY_GPU_AUTHORIZED`
-- `next_research_execution_authorized`: `true`
+- `machine_outcome`: `LF5_NUMERICAL_OR_IDENTITY_INVALID`
+- `mechanism_outcome`: `CPU_T_PREMISE_REFUTED_EXPLORATORY_DEV_T_IDENTITY_INVALID`
+- `claim_status`: `CPU_T_PREMISE_REFUTED_AND_POST_QUALIFICATION_DEV_T_IDENTITY_INVALID_NO_CARRIER_OR_PINN_GAIN`
+- `next_research_execution_authorized`: `false`
 
 LF5 CPU-T 已重建 `68/68/64/64` 条 cycle/direction temporal edges；DEV-C 在两个 onset 池的 teacher-secanted zero-level residual 均劣于 DEV-M，故原冻结门返回 `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`。该结果保持有效且不被改写。
 
-用户随后明确覆盖该停止条件，授权以完全不变的 loss、初始化、stream、seed、预算和 gate 执行一条探索性 DEV-T；只有 DEV-T 通过原 carrier gate 才运行 P0。该轨迹必须标记为 `POST_QUALIFICATION_USER_OVERRIDE_EXPLORATORY`，不得冒充预注册机制确认。stress 继续 sealed/unread。
+用户随后明确覆盖该停止条件，授权以完全不变的 loss、初始化、stream、seed、预算和 gate 执行一条探索性 DEV-T。轨迹完成 400 updates，但 temporal stream 从 step 1 偏离 CPU 冻结身份；base/spatial stream 匹配。身份失败优先覆盖数值，未写出 checkpoint/prediction，P0 未运行，candidate 为 none。产物已回收核验，实例关机并确认 SSH 拒绝。stress 继续 sealed/unread。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
-- 当前激活决定：[ADR 0063](docs/adr/0063-activate-phk-v23-lf5-temporal-zero-level-pilot.md)
+- 当前关闭决定：[ADR 0064](docs/adr/0064-close-phk-v23-lf5-temporal-zero-level-pilot.md)
+- LF5 终局：[terminal closeout](docs/experiment/2026-09-05-phk-v23-lf5-terminal-closeout.md)
+- LF5 激活决定：[ADR 0063](docs/adr/0063-activate-phk-v23-lf5-temporal-zero-level-pilot.md)
 - LF5 CPU-T：[CPU-T qualification](docs/experiment/2026-09-05-phk-v23-lf5-cpu-qualification.md)
 - LF4 关闭决定：[ADR 0062](docs/adr/0062-close-phk-v23-lf4-interface-band-pilot.md)
 - LF4 终局：[terminal closeout](docs/experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)

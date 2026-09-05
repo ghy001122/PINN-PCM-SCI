@@ -1,4 +1,4 @@
-# PHK-V2.3 LF4 研究判断与论文路线
+# PHK-V2.3 LF5 研究判断与论文路线
 
 ## 一句话裁决
 
@@ -87,17 +87,25 @@ latent teacher 单独有效、优于
 `LF_ONLY`、具有 OOD/stress 鲁棒性、达到 continuum truth、材料验证或投稿级
 结论。
 
-## LF5：零步反证优先于继续训练
+## LF5：CPU 前提反证与用户覆盖后的身份无效轨迹
 
-LF5 没有重复做一条“训练后不过门”的轨迹。CPU-T 先把 medium teacher 的
+CPU-T 先把 medium teacher 的
 cycle-1/2 onset 与 recovery 重建为 `68/68/64/64` 条有效相邻时间边，invalid
 fraction 为 0，并冻结 400-draw stream。DEV-M 的 onset mean-absolute residual
 为 `0.2921/0.3100`，DEV-C 为 `0.7238/0.6041`；DEV-C 在两个周期都更差。
 因此，LF4 中 DEV-C 的 aggregate timing 改善并不代表其逐 cell zero-level
-alignment 更好。冻结门返回 `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`，DEV-T 与
-P0 均为 `NOT_RUN`，optimizer/GPU 均为 0。
+alignment 更好。冻结门返回 `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`。
 
-这是一条有决策价值的负结果：保留 LF4 已支持的 interface exposure，同时淘汰
-“用 DEV-C 支撑 teacher-secanted TZL continuation”的具体前提。它不否定 temporal
-supervision 全类，更不证明 kinetic teacher 有效。下一条唯一建议只是
-`KINETIC_BACKUP_PLAN_ONLY_NEW_EXECUTE`；在新合同和新授权前不执行。
+用户在知晓该结果后明确覆盖停止条件，只授权不变的 DEV-T 作 exploratory
+evidence。远端通过完整零步预检后完成 400 updates；base 与 spatial stream
+精确匹配，但 temporal stream 从 step 1 即偏离 CPU 冻结身份，最终 SHA 为
+`48A0C6B4...AAFB127` 而非 `8FD79D99...C9B3BD9`。因此机器终局按优先级为
+`LF5_NUMERICAL_OR_IDENTITY_INVALID`，不得重跑；checkpoint/prediction 未写出，
+P0 为 `NOT_RUN` 而不是失败。
+
+step-400 非投票 telemetry 仍提供方向：recall 达 `0.9175/0.9174`，precision、
+mass、recovery 和 phase MSE 均表现良好，但 cycle-1 timing error 仍为 `0.0094`
+而未过 `0.005` 门。它提示 temporal-edge exposure 可能补 support，却没有解决
+周期一 timing；因身份无效不能称 carrier 或机制成功。有效结论仍是 LF4 的
+boundary-exposure 正向证据与 LF5 CPU 前提反证。unique next 为
+`STOP_NO_SCIENTIFIC_RETRY`，任何新机制均须新合同与新授权。

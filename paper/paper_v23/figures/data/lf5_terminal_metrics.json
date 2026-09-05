@@ -1,7 +1,9 @@
 {
-  "schema_id": "paper-v23-lf5-terminal-metrics-v1",
+  "schema_id": "paper-v23-lf5-terminal-metrics-v2",
   "task_id": "PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE",
-  "outcome": "LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU",
+  "cpu_outcome": "LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU",
+  "terminal_outcome": "LF5_NUMERICAL_OR_IDENTITY_INVALID",
+  "evidence_role": "POST_QUALIFICATION_USER_OVERRIDE_EXPLORATORY",
   "pool_order": ["C1_ONSET", "C1_RECOVERY", "C2_ONSET", "C2_RECOVERY"],
   "pool_counts": [68, 68, 64, 64],
   "DEV_M_mean_abs_residual": [0.2920705753720851, 0.3984591039958937, 0.3099827339141064, 0.6993708074689402],
@@ -10,13 +12,27 @@
   "DEV_C_mean_signed_residual": [-0.008769475569572943, 5.246607549634532, 0.2524261896193833, 7.112637876492879],
   "timing": {
     "DEV_M": {"cycle_1_error": 0.010533333333333339, "cycle_2_error": 0.004999999999999893, "phase_weighted_mse": 0.0012096258776594534},
-    "DEV_C": {"cycle_1_error": 0.0019000000000000128, "cycle_2_error": 0.0025000000000001688, "phase_weighted_mse": 0.02966726393350914}
+    "DEV_C": {"cycle_1_error": 0.0019000000000000128, "cycle_2_error": 0.0025000000000001688, "phase_weighted_mse": 0.02966726393350914},
+    "DEV_T": {"cycle_1_error": 0.009399999999999992, "cycle_2_error": 0.0012499999999999734, "phase_weighted_mse": 0.0007836235370530539, "identity_valid": false}
+  },
+  "DEV_T_step_400_non_voting": {
+    "phase_maximum": 0.9871613711193944,
+    "recall": [0.9175257731958762, 0.9174228675136114],
+    "precision": [0.9097103918228278, 0.9457436856875584],
+    "active_mass_ratio": [1.0085910652920964, 0.9700544464609798],
+    "event_time_absolute_error": [0.009399999999999992, 0.0012499999999999734],
+    "recovery_fraction": [1.0, 1.0],
+    "phase_weighted_mse": 0.0007836235370530539,
+    "validity": "NON_VOTING_TEMPORAL_STREAM_IDENTITY_DRIFT"
   },
   "gradient_probe": {"loss": 0.000603514476818032, "phase_gradient_norm": 0.00487158654412475, "optimizer_steps": 0},
-  "stream_sha256": "8FD79D99DAA0175026017BB0025BEFEF896BCB383F46F906A3E800427C9B3BD9",
-  "DEV_T": "NOT_RUN",
-  "P0": "NOT_RUN",
-  "gpu_trajectories": 0,
-  "optimizer_updates": 0,
+  "temporal_stream_expected_sha256": "8FD79D99DAA0175026017BB0025BEFEF896BCB383F46F906A3E800427C9B3BD9",
+  "temporal_stream_actual_sha256": "48A0C6B48F6A606B9681E7C349CC5FB089D3D129EF6A40077564E08C9AAFB127",
+  "base_stream_match": true,
+  "spatial_stream_match": true,
+  "DEV_T": "EXECUTED_IDENTITY_INVALID_NO_CHECKPOINT",
+  "P0": "NOT_RUN_HIGHER_PRIORITY_IDENTITY_FAILURE",
+  "gpu_trajectories": 1,
+  "optimizer_updates": 400,
   "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
 }

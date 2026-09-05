@@ -1,0 +1,91 @@
+{
+  "schema_version": "run-manifest-v1",
+  "run_id": "20260905T150045Z-phk-v23-lf5-terminal",
+  "experiment_group_id": "PHK_V23_LF5_TEMPORAL_ZERO_LEVEL_ALIGNMENT",
+  "tier": "development_campaign",
+  "scientific_role": "temporal_zero_level_alignment_campaign_terminal_adjudication",
+  "gate": "PHK_V23_LF5",
+  "gate_outcome": "LF5_NUMERICAL_OR_IDENTITY_INVALID",
+  "execution_status": "COMPLETE",
+  "claim_status": "LF5_CPU_PREMISE_REJECTED_EXPLORATORY_DEV_T_TEMPORAL_STREAM_IDENTITY_INVALID_P0_NOT_RUN_NO_CANDIDATE",
+  "numerical_validity": "INVALID_TEMPORAL_STREAM_IDENTITY_DEV_T_NON_VOTING_P0_NOT_RUN",
+  "route_disposition": "STOP_NO_SCIENTIFIC_RETRY_UPDATE_FAILURE_ANALYSIS_PAPER",
+  "method_id": "phk-v23-lf5-cycle-resolved-temporal-zero-level-alignment-v1",
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "physical_contract_id": "PHK_V21_REPEATABLE_EVENT_2D_NUMERICAL_V1",
+  "split_id": "MEDIUM_METHOD_INPUT_NO_FINE_EXTRA_LF_ONLY_EVALUATION_STRESS_SEALED",
+  "seed": 17,
+  "replay_of": null,
+  "supersedes": null,
+  "started_at": "2026-09-05T17:26:40Z",
+  "ended_at": "2026-09-05T17:34:05Z",
+  "planned_budget": {
+    "maximum_scientific_gpu_trajectories": 1,
+    "maximum_optimizer_updates": 1600,
+    "dev_t_updates": 400,
+    "conditional_p0_updates": 1200
+  },
+  "actual_budget": {
+    "scientific_gpu_trajectories": 1,
+    "optimizer_updates": 400,
+    "dev_t_updates": 400,
+    "p0_label_free_full_physics_updates": 0
+  },
+  "environment": {
+    "cloud_gpu": "Tesla V100-PCIE-32GB",
+    "cloud_dtype": "FLOAT64",
+    "cloud_training_inputs": "MEDIUM_AND_EXACT_LF3_T0_CHECKPOINT_ONLY",
+    "fine_extra_fine_lf_only_evaluator_read_on_cloud": false,
+    "fine_extra_fine_lf_only_evaluator_read_locally": false,
+    "instance_lifecycle": "SHUTDOWN_VERIFIED_BY_TCP_CLOSED_AND_SSH_CONNECTION_REFUSED",
+    "stress_fields_or_metrics_read": false
+  },
+  "evaluator_id": "NOT_EXECUTED_NO_IDENTITY_VALID_CHECKPOINT_OR_PREDICTION",
+  "evidence_identity": "POST_QUALIFICATION_USER_OVERRIDE_EXPLORATORY_IDENTITY_INVALID_NON_VOTING_DEV_T_WITH_P0_NOT_RUN",
+  "failure_class": "TEMPORAL_STREAM_IDENTITY_DRIFT_FROM_FIRST_BATCH_DETECTED_AFTER_400_UPDATES",
+  "code_identity": {
+    "lf5_base_commit": "d86ddf1d206c611087a1b5284acda69efdfda9fa",
+    "lf5_activation_commit": "fe629d6b120c1caaa891692a92062b6fe5ce8178",
+    "deployment_binding_commit": "ea8ddcad74337db7f65d74f6f1ec71577747e52a",
+    "dependency_closure_commit": "4bec07a8afd3cddcbc0bbf6f5d9557df31e2d12b",
+    "executed_source_commit": "eba0ffec8c20a23064488ad42adbaf4e2acc424f",
+    "cloud_source_identity": "LF5-BUNDLE-07D66D6DC077C4988A7F14CADCE4DAAD028F0810901403A9F74143AA273A0664",
+    "source_archive_sha256": "DC084782AC0EBEC8A9755FE0971192170C3A28CA9C635E14AA0D5E5097E51F4E",
+    "source_manifest_sha256": "909A6656E8A650649A1F8ED5B6552647EC27989E79DD6BBC0EC0F3D8AEDF3C68",
+    "runner_sha256": "8FBED4C11CFB7019491C0A342673EDE331FD041FBD2E9E2B16C1B58F1A87DD70",
+    "qualification_sha256": "657AA9672E7E0D6356412AC719AA7D21D4A3EEE5143265589489499E0BBFCE07",
+    "evaluation_sha256": "42AE072473B578C7B66594292F4A3945D0184C8B107FE46B7F1C581BA330C470",
+    "base_stream_expected_and_actual_sha256": "3870D0C1411B3DF6E04C5BA316B3F0F77233D94A73A19E84523D81B62F692E4A",
+    "spatial_stream_expected_and_actual_sha256": "4DB1728CC543B1AB18BD3F74B83B29EBFE5F95624D98DAFEA615B0ECDC69DEC4",
+    "temporal_stream_expected_sha256": "8FD79D99DAA0175026017BB0025BEFEF896BCB383F46F906A3E800427C9B3BD9",
+    "temporal_stream_actual_sha256": "48A0C6B48F6A606B9681E7C349CC5FB089D3D129EF6A40077564E08C9AAFB127"
+  },
+  "checkpoint": {
+    "initial_role": "EXACT_LF3_T0_MODEL_WEIGHTS_ONLY",
+    "initial_sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA",
+    "dev_t_checkpoint": null,
+    "p0_checkpoint": null,
+    "reason": "IDENTITY_FAILURE_OCCURRED_BEFORE_CHECKPOINT_AND_PREDICTION_WRITES"
+  },
+  "artifacts": {
+    "compact_artifact": "artifacts/20260905T150045Z-phk-v23-lf5-terminal.json",
+    "compact_artifact_sha256": "271CE2D394650785EB1359151D99DE7C31628467FDBF117D30C1682022EE282D",
+    "closeout": "../2026-09-05-phk-v23-lf5-terminal-closeout.md",
+    "closeout_sha256": "66E4DC525654B8CBC4DDD365641CC11511CCD196C425458B6EB5A91FD771A7A8",
+    "cpu_qualification_sha256": "89F2B95D8F72C14506DEA4D78AF69E748637EB397B6983ADA4E9FA957ED8CED4",
+    "prior_art_sha256": "F45F4A9EC13D65C4B1BA456057077F10E1C16EF88368A0DCB96229B126CC7FBF",
+    "manifest_start_sha256": "812C077A762EA3F1D551791440510D1CA5DDF17723A94902FFBC4D37388D4BCC",
+    "dev_t_batch_ledger_sha256": "8E555FC2648C779F11FEA610DB972553DB2C0FE4063B8F9A3E595F2DCB9DB5BE",
+    "dev_t_telemetry_sha256": "CE9361A34D7C4F47BE8057FD30446B78C6895B6F36445B6118BADC8EDE4C6016",
+    "execution_failure_sha256": "4BFDF3A5108A2AF300F37BEEE8B988709C1F57427C6E9DEBF80A4BCA8D654669",
+    "recovery_shutdown_sha256": "040F0FA484308360DECE0257F8B1EF9CD15FF24535CD905DC89EE625EFF7A054",
+    "local_adjudication_sha256": "EAE8D8DC9FC4AEB4D866A22E924A1768501D160E4F05FEFC3483A6202D5C06F1",
+    "manuscript_sha256": "566368F73B1A2022DF3798193BA4B03B5C4D3131B3066A95349E87DD96AAD338",
+    "figure_source_manifest_sha256": "F047CA540A547F9596545AF48A066753D6CC3D6A3BF4EE8B820E5FBCB28F3F91",
+    "paper_package": "../../paper/paper_v23/README.md"
+  },
+  "command": [
+    "remote project-python -m pinn_pcm_sci.phk_v23_lf5 --output-root <isolated-run-root> --medium-carrier <hash-bound-medium> --initial-checkpoint <hash-bound-lf3-t0> --cpu-qualification <hash-bound-qualification> --device cuda:0 --source-identity LF5-BUNDLE-07D66D6DC077C4988A7F14CADCE4DAAD028F0810901403A9F74143AA273A0664",
+    "local identity-first adjudication recorded no evaluator target because no valid checkpoint or prediction existed"
+  ]
+}

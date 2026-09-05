@@ -3,7 +3,8 @@
 ## Scope
 
 This guide maps the LF3 baseline, LF4 matched mechanism screen, and LF5
-zero-update temporal-edge premise test, figure extraction, and local terminal adjudication. It does not authorize another scientific GPU run,
+CPU premise test plus post-qualification identity-invalid exploratory run,
+figure extraction, and terminal adjudication. It does not authorize another scientific GPU run,
 opening stress references, or changing frozen contracts.
 
 ## Frozen identities
@@ -147,7 +148,7 @@ lacks the git-ignored files cannot independently recompute the local evaluator
 or phase-snapshot figure. The current paper therefore distinguishes versioned
 compact evidence from locally retained raw carriers.
 
-## LF5 zero-update temporal-edge qualification
+## LF5 CPU-T and post-qualification exploratory trajectory
 
 - starting commit: `d86ddf1d206c611087a1b5284acda69efdfda9fa`;
 - compact qualification:
@@ -157,8 +158,8 @@ compact evidence from locally retained raw carriers.
 - temporal stream SHA-256:
   `8FD79D99DAA0175026017BB0025BEFEF896BCB383F46F906A3E800427C9B3BD9`;
 - pool counts: `68/68/64/64`, invalid edge fraction `0`;
-- optimizer updates / GPU trajectories: `0 / 0`;
-- result: `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`.
+- CPU optimizer updates / GPU trajectories: `0 / 0`;
+- CPU result: `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`.
 
 Onset uses the first medium-teacher logit sign crossing in W1/W3; recovery uses
 the first subsequent reverse crossing in W2/W4 of the same cycle, with no time
@@ -175,6 +176,25 @@ python paper/paper_v23/figures/generate_figures.py --lf5-only
 ```
 
 The source identities and output hashes are recorded in
-`figures/source-manifest-lf5.json`. Because the CPU gate failed, there is no LF5
-bundle, cloud run, checkpoint, prediction, recovery record, shutdown proof, or
-local nominal adjudication to reproduce.
+`figures/source-manifest-lf5.json`. After the CPU result, the user explicitly
+authorized the unchanged trajectory with evidence role
+`POST_QUALIFICATION_USER_OVERRIDE_EXPLORATORY`. The executed source identity was
+`LF5-BUNDLE-07D66D6D...273A0664` from commit
+`eba0ffec8c20a23064488ad42adbaf4e2acc424f`.
+
+The run directory is:
+
+```text
+outputs/runs/20260905T172640Z-phk-v23-lf5-temporal-eba0ffe/
+```
+
+It contains a 400-line DEV-T batch ledger, nine telemetry records, and the start
+manifest. Base and spatial final hashes equal their frozen values. The temporal
+hash is `48A0C6B48F6A606B9681E7C349CC5FB089D3D129EF6A40077564E08C9AAFB127`
+rather than the frozen
+`8FD79D99DAA0175026017BB0025BEFEF896BCB383F46F906A3E800427C9B3BD9`,
+with the first mismatch at step 1. The runner raised after 400 updates and before
+checkpoint writing. Hence the endpoint is identity-invalid, P0 was not run, and
+fine/extra/direct-LF_ONLY evaluation was not executed. All three remote files
+were recovered with matching size/SHA; GPU memory and compute processes were
+zero before shutdown, TCP 28355 closed, and SSH returned `Connection refused`.

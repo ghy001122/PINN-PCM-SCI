@@ -354,22 +354,22 @@ def lf5_temporal_edge_geometry(data: dict) -> list[Path]:
 
 
 def lf5_timing_calibration(data: dict) -> list[Path]:
-    image,draw,font,bold,small=_pil_canvas("LF4 timing-calibration conflict and the LF5 premise test")
+    image,draw,font,bold,small=_pil_canvas("LF5 exploratory endpoint: support recovered, cycle-1 timing still misses")
     x0,y0,x1,y1=180,150,1660,650; draw.line((x0,y1,x1,y1),fill=NAVY,width=4); draw.line((x0,y0,x0,y1),fill=NAVY,width=4)
     draw.text((600,690),"Worst-cycle event-time error (right is worse)",fill=NAVY,font=small); draw.text((20,370),"phase MSE",fill=NAVY,font=small)
     gate_x=x0+(0.005/0.012)*(x1-x0); draw.line((gate_x,y0,gate_x,y1),fill=RED,width=3); draw.text((gate_x+8,y0),"timing gate",fill=RED,font=small)
-    for name,color in (("DEV_M",TEAL),("DEV_C",ORANGE)):
-        item=data["timing"][name]; x=x0+max(item["cycle_1_error"],item["cycle_2_error"])/0.012*(x1-x0); y=y1-(np.log10(item["phase_weighted_mse"])-np.log10(0.0008))/(np.log10(0.05)-np.log10(0.0008))*(y1-y0); draw.ellipse((x-15,y-15,x+15,y+15),fill=color); draw.text((x+22,y-15),f"{name.replace('_','-')}: {item['phase_weighted_mse']:.4g}",fill=color,font=small)
-    draw.text((240,100),"DEV-M preserves calibration but misses C1 timing; DEV-C passes timing but loses field fidelity.",fill=GRAY,font=font); return _save_pil(image,"20260905T150045Z-lf5-timing-calibration")
+    for name,color in (("DEV_M",TEAL),("DEV_C",ORANGE),("DEV_T",BLUE)):
+        item=data["timing"][name]; x=x0+max(item["cycle_1_error"],item["cycle_2_error"])/0.012*(x1-x0); y=y1-(np.log10(item["phase_weighted_mse"])-np.log10(0.0008))/(np.log10(0.05)-np.log10(0.0008))*(y1-y0); y=min(y1-18,max(y0+18,y)); draw.ellipse((x-15,y-15,x+15,y+15),fill=color); label_x=x-260 if name=="DEV_T" else x+22; label_y=y-45 if name=="DEV_T" else y-15; draw.text((label_x,label_y),f"{name.replace('_','-')}: {item['phase_weighted_mse']:.4g}",fill=color,font=small)
+    draw.text((170,100),"DEV-T values are directional only: its temporal batch identity drifted from the CPU-frozen stream.",fill=GRAY,font=font); return _save_pil(image,"20260905T150045Z-lf5-timing-calibration")
 
 
 def lf5_physics_pareto(data: dict) -> list[Path]:
-    image,draw,font,bold,small=_pil_canvas("LF5 decision path: the physics branch is correctly not entered")
-    boxes=[(80,"CPU-T","VALID GEOMETRY",TEAL,"264/264 valid temporal edges"),(640,"Mechanism gate","FAIL",RED,"DEV-C worse in both onset pools"),(1200,"DEV-T to P0","NOT RUN",GRAY,"GPU branch closed before deployment")]
+    image,draw,font,bold,small=_pil_canvas("LF5 outcome: DEV-T identity invalid; P0 not run")
+    boxes=[(80,"CPU-T","FAIL / OVERRIDDEN",ORANGE,"valid geometry; premise refuted"),(640,"DEV-T","400 / ID INVALID",RED,"temporal stream SHA drift"),(1200,"P0","NOT RUN",GRAY,"no valid carrier checkpoint")]
     for x,title,status,color,detail in boxes:
         draw.rounded_rectangle((x,190,x+460,430),radius=25,outline=color,width=5); draw.text((x+30,225),title,fill=NAVY,font=bold); draw.text((x+30,290),status,fill=color,font=font); draw.text((x+30,355),detail,fill=GRAY,font=small)
     draw.line((545,310,625,310),fill=GRAY,width=5); draw.polygon([(625,310),(600,295),(600,325)],fill=GRAY); draw.line((1105,310,1185,310),fill=GRAY,width=5); draw.polygon([(1185,310),(1160,295),(1160,325)],fill=GRAY)
-    draw.text((100,520),"Disposition: reject the DEV-C-to-TZL premise; retain LF4 boundary exposure.",fill=NAVY,font=font); draw.text((100,580),"No carrier, PINN Pareto, strong-baseline gain, or candidate claim was produced.",fill=RED,font=font); return _save_pil(image,"20260905T150045Z-lf5-physics-pareto")
+    draw.text((100,520),"Directional telemetry: recall 0.918/0.917, phase MSE 7.84e-4, but C1 timing error 0.0094.",fill=NAVY,font=font); draw.text((100,580),"Identity failure overrides metrics: no checkpoint, P0, PINN Pareto, or candidate claim.",fill=RED,font=font); return _save_pil(image,"20260905T150045Z-lf5-physics-pareto")
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -378,7 +378,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--lf5-only", action="store_true", help="Generate timestamped LF5 CPU-T terminal figures")
     args = parser.parse_args(argv)
     if args.lf5_only:
-        data=json.loads(LF5_DATA_PATH.read_text(encoding="utf-8")); outputs=[]; outputs.extend(lf5_temporal_edge_geometry(data)); outputs.extend(lf5_timing_calibration(data)); outputs.extend(lf5_physics_pareto(data)); print(json.dumps({"figures":len(outputs)//2,"scope":"LF5_CPU_T_TERMINAL"},sort_keys=True)); return
+        data=json.loads(LF5_DATA_PATH.read_text(encoding="utf-8")); outputs=[]; outputs.extend(lf5_temporal_edge_geometry(data)); outputs.extend(lf5_timing_calibration(data)); outputs.extend(lf5_physics_pareto(data)); print(json.dumps({"figures":len(outputs)//2,"scope":"LF5_CPU_T_PLUS_IDENTITY_INVALID_EXPLORATORY_DEV_T"},sort_keys=True)); return
     setup()
     if args.lf4_only:
         data = json.loads(LF4_DATA_PATH.read_text(encoding="utf-8"))

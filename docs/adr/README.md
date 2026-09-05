@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0064：以 temporal stream identity failure 关闭 PHK-V2.3 LF5](0064-close-phk-v23-lf5-temporal-zero-level-pilot.md) — CPU-T 前提反证保持有效；用户覆盖后的 exploratory DEV-T 完成 400 updates，但 temporal stream 从 step 1 漂移，故无合法 checkpoint、P0 未运行、无 candidate，LF5 不得重试。
 - [0063：激活并修订 PHK-V2.3 LF5 temporal zero-level pilot](0063-activate-phk-v23-lf5-temporal-zero-level-pilot.md) — CPU-T 否决 DEV-C→TZL 前提；用户随后明确授权不改科学参数的一条 post-qualification exploratory DEV-T 与条件 P0，且不改写 CPU 反证。
 - [0062：以 boundary-exposure 机制证据和无 development entry 关闭 PHK-V2.3 LF4](0062-close-phk-v23-lf4-interface-band-pilot.md) — DEV-M 相对等预算 DEV-G 提高 minimum recall 并保持冻结质量条件；DEV-C 的 phase-error/recovery 代价否决完整 threshold-aligned claim，三臂均无 P0-entry、P0 未运行、无 candidate。
 - [0061：激活 PHK-V2.3 LF4 interface-band pilot](0061-activate-phk-v23-lf4-interface-band-pilot.md) — 用 matched DEV-G/M/C 隔离 generic supervision、teacher-interface exposure 与 threshold alignment；仅 entry 通过后运行 label-free P0。

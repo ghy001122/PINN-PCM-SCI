@@ -2,7 +2,7 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-PHK-V2.3 LF4 已完成。三条 matched 400-step arms 给出 `BOUNDARY_EXPOSURE_SUPPORTED` 的有界 single-seed nominal 证据，但没有 arm 通过完整 P0-entry；P0 未运行、candidate 为 none，机器终局为 `LF4_NO_DEVELOPMENT_ENTRY`。产物已回收核验、实例已关机、本地 nominal evaluation 已完成，stress sealed/unread。权威入口见 [active phase](../active_phase.md)、[terminal plan](plans/NEXT_ACTIONS.md)、[terminal closeout](experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)、[ADR 0062](adr/0062-close-phk-v23-lf4-interface-band-pilot.md)与 [paper_v23](../paper/paper_v23/README.md)。
+PHK-V2.3 LF5 已以 `LF5_NUMERICAL_OR_IDENTITY_INVALID` 完成。CPU-T 的 premise rejection 保持有效；用户覆盖后的 exploratory DEV-T 完成 400 updates，但 temporal stream 从首批偏离冻结身份，未写 checkpoint，P0 未运行、candidate 为 none。产物已回收核验、实例已关机并确认 SSH 拒绝，stress sealed/unread。权威入口见 [active phase](../active_phase.md)、[terminal plan](plans/NEXT_ACTIONS.md)、[terminal closeout](experiment/2026-09-05-phk-v23-lf5-terminal-closeout.md)、[ADR 0064](adr/0064-close-phk-v23-lf5-temporal-zero-level-pilot.md) 与 [paper_v23](../paper/paper_v23/README.md)。
 
 R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 
@@ -23,9 +23,10 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF4 terminal complete](plans/NEXT_ACTIONS.md)。完成态不产生新授权。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。LF4 已关闭，P0 未运行且无 candidate；V2.2R/R0A/R0B/R0C/R1a/R1X/C0/LF0/LF1/LF2/LF3 证据保持冻结；不授权确认臂、PJGR、R2、其他 seed、OOD、stress 或投稿。
-- 当前 PHK-V2.3 LF4 终局入口：[2026-09-05 LF4 terminal closeout](experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)。它记录界面暴露相对等预算全局监督的有界 minimum-recall 增量、threshold BCE 的 field-quality 代价、三臂无完整 entry、P0 未运行、关机后 nominal 裁决与论文更新。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF5 terminal complete](plans/NEXT_ACTIONS.md)。完成态不产生新授权。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。LF5 已关闭，DEV-T 身份无效、P0 未运行且无 candidate；V2.2R/R0A/R0B/R0C/R1a/R1X/C0/LF0/LF1/LF2/LF3/LF4 证据保持冻结；不授权 retry、确认臂、PJGR、R2、其他 seed、OOD、stress 或投稿。
+- 当前 PHK-V2.3 LF5 终局入口：[2026-09-05 LF5 terminal closeout](experiment/2026-09-05-phk-v23-lf5-terminal-closeout.md)。它记录 CPU premise rejection、用户覆盖后的 400-step exploratory run、temporal stream 首批漂移、P0 未运行、产物回收关机与论文更新。
+- 上一 PHK-V2.3 LF4 终局入口：[2026-09-05 LF4 terminal closeout](experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)。它记录界面暴露相对等预算全局监督的有界 minimum-recall 增量、threshold BCE 的 field-quality 代价、三臂无完整 entry、P0 未运行、关机后 nominal 裁决与论文更新。
 - 当前论文初稿：[paper_v23](../paper/paper_v23/README.md)。它保存英文 failure-analysis + bounded solver-recovery 导师稿、八图、表格、claim audit 与复现边界，不构成正面 PINN 方法 claim。
 - 上一 PHK-V2.3 LF3 终局入口：[2026-09-05 LF3 terminal closeout](experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)。它记录 T0 高 precision/质量及时序通过但两周期 recall 失败、P0 未触发、关机后 nominal 裁决、local role-label 修复及 `LF3_CARRIER_NOT_ESTABLISHED`。
 - 当前 PHK-V2.3 LF3 资格入口：[2026-09-04 LF3 CPU qualification](experiment/2026-09-04-phk-v23-lf3-cpu-qualification.md)。它记录 phase-logit 数学、14 类分区、matched stream 与 reference boundary；只准入唯一 GPU trajectory，不是方法结果。
@@ -135,6 +136,6 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 ```
 
 门禁核对权威状态字段、唯一 live plan、文档角色、ADR 完整索引、本地链接、实验 ledger 和运行锁 ignore。失败时先修复文档逻辑链，不得以手工声明绕过。
-# LF5 current evidence
+# LF5 terminal evidence
 
-The LF5 CPU-T record is [here](experiment/2026-09-05-phk-v23-lf5-cpu-qualification.md). It rejected the local temporal-alignment premise. The user subsequently authorized one otherwise unchanged DEV-T trajectory as explicitly post-qualification exploratory evidence; P0 remains conditional and the CPU result must not be rewritten as a pass.
+The LF5 CPU-T record is [here](experiment/2026-09-05-phk-v23-lf5-cpu-qualification.md). It rejected the local temporal-alignment premise. The user subsequently authorized one otherwise unchanged DEV-T trajectory as explicitly post-qualification exploratory evidence. It completed 400 updates, but the temporal stream identity drifted from the first batch; no checkpoint was written and P0 was not run. The CPU result remains a failure, the exploratory metrics are non-voting, and the terminal outcome is `LF5_NUMERICAL_OR_IDENTITY_INVALID`.
