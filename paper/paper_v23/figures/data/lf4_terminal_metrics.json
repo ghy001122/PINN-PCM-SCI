@@ -1,0 +1,78 @@
+{
+  "schema_id": "paper-v23-lf4-terminal-metrics-v1",
+  "evidence_scope": "SINGLE_SEED_NOMINAL_MATCHED_INTERFACE_MECHANISM_SCREEN_P0_NOT_RUN_STRESS_SEALED",
+  "cpu_boundary_geometry": {
+    "confusion_counts": {"TP": 1785, "FN": 481, "FP": 227},
+    "fn_graph_distance": {"0": 455, "1": 26},
+    "fp_graph_distance": {"0": 199, "1": 28},
+    "weighted_jaccard": 0.7160048134777377,
+    "weighted_dice": 0.8345021037868163,
+    "boundary_logit_margin_median": 0.7890361004360981
+  },
+  "development_arms": {
+    "DEV-G": {
+      "label": "Global extra MSE",
+      "rmin": 0.8194192377495462,
+      "recall": [0.8402061855670101, 0.8194192377495462],
+      "precision": [0.8923357664233575, 0.8674351585014409],
+      "mass_ratio": [0.9415807560137456, 0.9446460980036296],
+      "timing_error": [0.013866666666666666, 0.006159999999999721],
+      "recovery": [1.0, 1.0],
+      "phase_weighted_mse": 0.0013087002590659602,
+      "entry_passed": false,
+      "failed_checks": ["cycle_1_timing", "cycle_2_timing"]
+    },
+    "DEV-M": {
+      "label": "Interface-band MSE",
+      "rmin": 0.9092558983666059,
+      "recall": [0.9372852233676976, 0.9092558983666059],
+      "precision": [0.9091666666666666, 0.9461756373937675],
+      "mass_ratio": [1.0309278350515465, 0.9609800362976405],
+      "timing_error": [0.010533333333333339, 0.004999999999999893],
+      "recovery": [1.0, 1.0],
+      "phase_weighted_mse": 0.0012096258776594536,
+      "entry_passed": false,
+      "failed_checks": ["cycle_1_timing"]
+    },
+    "DEV-C": {
+      "label": "Threshold-aligned BCE",
+      "rmin": 0.9415807560137457,
+      "recall": [0.9415807560137457, 0.9754990925589836],
+      "precision": [0.9133333333333332, 0.9380453752181501],
+      "mass_ratio": [1.0309278350515465, 1.039927404718693],
+      "timing_error": [0.0019000000000000128, 0.0025000000000001688],
+      "recovery": [1.0, 0.7678571428571429],
+      "phase_weighted_mse": 0.02966728485699944,
+      "entry_passed": false,
+      "failed_checks": ["phase_weighted_error"]
+    }
+  },
+  "gates": {
+    "rmin_strict": 0.9,
+    "timing_error_maximum": 0.005,
+    "phase_weighted_mse_maximum": 0.0020626115483980095,
+    "boundary_exposure_delta_minimum": 0.03,
+    "threshold_aligned_delta_minimum": 0.03
+  },
+  "mechanism_decision": {
+    "M_minus_G": 0.08983666061705975,
+    "C_minus_M": 0.03232485764713977,
+    "boundary_exposure_supported": true,
+    "threshold_aligned_supported": false,
+    "threshold_failure_reason": "C_IMPROVED_RMIN_AND_TIMING_BUT_DID_NOT_PRESERVE_RECOVERY_AND_PHASE_ERROR"
+  },
+  "terminal": {
+    "outcome": "LF4_NO_DEVELOPMENT_ENTRY",
+    "optimizer_updates": 1200,
+    "selected_role": null,
+    "p0_updates": 0,
+    "candidate": null,
+    "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  },
+  "direct_lf_only": {
+    "phase_roi_rms": 0.006570375888844028,
+    "phase_symmetric_difference": 0.00034953125,
+    "temperature_roi_rms": 0.0018006948281555659,
+    "current_nrmse": 0.0035221351893723663
+  }
+}

@@ -1,8 +1,10 @@
 # Reviewer-risk self-check
 
-## Major risk 1: “There is no successful PINN result.”
+## Major risk 1: “There is still no successful PINN result.”
 
-Correct. P0 was conditional on T0 carrier competence and was not triggered.
+Correct. LF4 improved mechanism attribution, but all three development arms
+failed at least one conjunctive entry check. P0 was conditional on an eligible
+carrier and was not triggered.
 The present package must be positioned as a failure-analysis and solver-recovery
 study, not a positive PINN method paper. A journal expecting a new successful
 algorithm would reject the current evidence.
@@ -49,11 +51,29 @@ is supported by a terminal summary, fixed update count, final checkpoint,
 prediction, audits, batch ledgers, and matching remote/local hashes. The defect
 is limited to post-run wrapper logging and did not trigger a repeat trajectory.
 
+## Major risk 8: “Is interface exposure really identified?”
+
+Within the frozen single-seed screen, yes: DEV-G and DEV-M had equal update
+budgets and common base batches, while DEV-M replaced only the extra global
+draws with the frozen teacher-interface band. DEV-M improved minimum recall by
+`0.08984`, exceeding the preregistered `0.03` margin while preserving the
+required precision, mass, timing, locality, recovery, and V/T quality. The
+claim remains system-specific and should cite established interface-focused
+sampling; it is not an originality or general-PINN claim.
+
+## Major risk 9: “Why not claim the threshold-aligned loss?”
+
+DEV-C improved minimum recall by `0.03232` and passed both timing limits, but
+its phase weighted MSE rose to `0.02967` (15.8 times LF3-T0), and cycle-2
+recovery fell below DEV-M. The full preservation clause therefore rejected the
+mechanism claim. The two-sided softplus term is standard BCE-with-logits, not a
+new loss family.
+
 ## Submission-readiness verdict
 
 ```text
 ADVISOR_DRAFT: YES
-NEGATIVE_DIAGNOSTIC_PREPRINT_AFTER_ADVISOR_REVIEW: POSSIBLE
+NEGATIVE_DIAGNOSTIC_PREPRINT_WITH_BOUNDED_MECHANISM_RESULT: POSSIBLE
 POSITIVE_METHODS_SUBMISSION: NO
 CAS_Q2_METHOD_CLAIM: NOT YET SUPPORTED
 ```

@@ -5,23 +5,26 @@
 ## 当前状态
 
 - `phase_id`: `PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
-- `lifecycle_state`: `EXECUTING_GPU_PENDING_ACTIVATION_COMMIT`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `LF4_CPU_GEOMETRY_SUPPORT_ONLY_GPU_MECHANISM_UNTESTED`
-- `next_research_execution_authorized`: `true`
+- `machine_outcome`: `LF4_NO_DEVELOPMENT_ENTRY`
+- `mechanism_outcome`: `BOUNDARY_EXPOSURE_SUPPORTED`
+- `claim_status`: `LF4_BOUNDARY_EXPOSURE_SUPPORTED_NO_DEVELOPMENT_ENTRY_NO_PINN_RESULT`
+- `next_research_execution_authorized`: `false`
 
-LF4 已通过零更新 CPU-G：冻结的四个 interface-band pool 均非空，LF3-T0 的错分主要集中在 reference interface boundary，且 matched M0/G/C 与条件 P0 的数据流、随机数账本和固定 physics pool 身份均已闭合。该证据只支持边界几何与可执行性，不是 GPU 机制增量或 PINN 候选证据。
+LF4 已完成三条 matched 400-step phase-only arms。DEV-M 相对等预算 DEV-G 将 minimum recall 提高 `0.089837` 且通过冻结质量条件，支持本 single-seed nominal 对象上的有界 boundary-exposure 增量；DEV-C 的 threshold BCE 虽继续提高 recall，却显著恶化 phase error，未通过完整机制门。
 
-当前仅授权本具名 LF4：一条 matched DEV-M→条件 DEV-C 机制轨迹，以及仅在 DEV-C 通过后执行的 label-free P0。不得自动扩展为额外臂、多 seed、OOD、stress、PJGR/R2 或投稿；LF3 与更早终局保持原证据边界。
+三臂均未通过完整 P0-entry，故 P0 未运行、candidate 为 none，终局为 `LF4_NO_DEVELOPMENT_ENTRY`。实例已在产物回收和哈希核验后关闭；本地 nominal evaluation 随后完成，stress 始终 sealed/unread。当前无后续科研执行授权。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
-- 当前激活决定：[ADR 0061](docs/adr/0061-activate-phk-v23-lf4-interface-band-pilot.md)
+- 当前关闭决定：[ADR 0062](docs/adr/0062-close-phk-v23-lf4-interface-band-pilot.md)
+- LF4 终局：[terminal closeout](docs/experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)
 - LF4 CPU 资格：[CPU-G qualification](docs/experiment/2026-09-05-phk-v23-lf4-cpu-qualification.md)
-- 上一终局：[LF3 terminal closeout](docs/experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)
+- 上一阶段：[LF3 terminal closeout](docs/experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)
 - 当前论文初稿：[paper/paper_v23](paper/paper_v23/README.md)
 - 上一关闭决定：[ADR 0060](docs/adr/0060-close-phk-v23-lf3-carrier-not-established.md)
 - LF2 终局：[LF2 terminal closeout](docs/experiment/2026-09-04-phk-v23-lf2-terminal-closeout.md)

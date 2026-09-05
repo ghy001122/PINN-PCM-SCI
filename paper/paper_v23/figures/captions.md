@@ -19,3 +19,15 @@ Reference and LF3-T0 phase fields at the two reference peak indices, with a thre
 ## Figure 5. Evidence gates
 
 The preregistered three-level claim ladder and observed stopping point. T0 failed Level 1 only at cycle-wise recall, so the label-free P0 physics stage was not triggered. Level 2 PINN-specific Pareto value and Level 3 direct-baseline candidate value were consequently not tested; they cannot be inferred from T0.
+
+## Figure 6. Interface-boundary geometry
+
+Zero-update CPU-G localization of LF3-T0 support errors on the full medium teacher. Of 481 false-negative and 227 false-positive nodes in the two event windows, 94.6% and 87.7%, respectively, lie directly on the nonperiodic four-neighbour teacher interface. The boundary logit-margin distribution spans nearly zero to 3.50, motivating a matched exposure test without itself establishing a training mechanism.
+
+## Figure 7. Matched LF4 development ablation
+
+Fixed step-400 endpoints for equal-budget phase-only arms from identical LF3-T0 weights and common base batches. Replacing generic global extras with the teacher-interface band raises minimum two-cycle recall from 0.819 to 0.909 while slightly reducing phase weighted MSE. Two-sided BCE on the identical band raises recall to 0.942 and restores both timing gates, but increases phase error to 0.0297, above the frozen entry limit. This is a recall–fidelity trade-off, not a carrier pass.
+
+## Figure 8. LF4 mechanism and physics-Pareto gate
+
+The matched screen supports teacher-interface exposure relative to global-extra supervision (`ΔRmin=0.08984`) but rejects threshold-aligned BCE as a quality-preserving load-bearing mechanism. DEV-G failed timing, DEV-M failed cycle-1 timing, and DEV-C failed phase-error preservation. With no eligible development carrier, label-free P0 correctly remained unexecuted; no physics-objective ratio, PINN Pareto, or candidate signal exists.

@@ -30,8 +30,8 @@
     "compact_qualification": "docs/experiment/artifacts/20260905T082728Z-phk-v23-lf4-cpu-qualification.json#sha256=D63D63953BEE85D7B9772B7FFCC06238640E01541B30DA174E10BD4A3F40A4D1",
     "cpu_qualification_note": "docs/experiment/2026-09-05-phk-v23-lf4-cpu-qualification.md#sha256=04DAA0051D95DD4430E1927F5342668E21559C1F4D69F35CBB560D58A7FB54D2",
     "prior_art_closure": "docs/references/2026-09-05-phk-v23-lf4-interface-prior-art.md#sha256=F46681F4C80CACD1D9B72F8AA83E2778B690DE5A1E091010554D699DE60DED7B",
-    "deployed_source_manifest": "cloud/phk_v23_lf4_autodl/deployed-source-manifest.json#sha256=DBB9090A803C57B98C16C15BA0E61BB5FA3777860649A5D45C078DC907383D57",
-    "source_archive": "outputs/deploy/phk-v23-lf4-source-7df29ef.tar.gz#sha256=A549EA16DB76E3396966193D0E4ED218B52C52F2D4F5BE9CF91ED6502F88143E",
+    "deployed_source_manifest": "cloud/phk_v23_lf4_autodl/deployed-source-manifest.json#sha256=3D0207D7C274922C34738F0BC0E4685F4846D1C39C31FA86BBE8E1B2BF15B9F3",
+    "source_archive": "outputs/deploy/phk-v23-lf4-source-5dbde1d.tar.gz#sha256=780BAC482BC1DD538FBAB33180EF15F2270A684908C1D7168320D20C045AFC2E",
     "initial_worktree": "outputs/runs/20260905T082728Z-phk-v23-lf4-initial-worktree.json#sha256=F6A142C8C1251DC5B17C66B535732C62FFFCB0DE3C5A2455D1D5DA35B8D75175"
   },
   "command": [".venv/Scripts/python.exe", "-m", "pinn_pcm_sci.phk_v23_lf4_qualification"],

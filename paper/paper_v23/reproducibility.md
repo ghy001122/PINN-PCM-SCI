@@ -2,8 +2,8 @@
 
 ## Scope
 
-This guide reproduces the LF3 implementation checks, figure extraction, and
-local terminal adjudication. It does not authorize another scientific GPU run,
+This guide maps the LF3 baseline and LF4 matched mechanism screen,
+figure extraction, and local terminal adjudication. It does not authorize another scientific GPU run,
 opening stress references, or changing frozen contracts.
 
 ## Frozen identities
@@ -97,10 +97,52 @@ The generator reads the frozen scalar extract, LF3-T0 prediction, and nominal
 extra-fine reference. It emits five PNG/PDF pairs and refreshes
 `figures/source-manifest.json`. It does not read either stress reference.
 
+LF4 figures 6–8 are generated independently so the historical LF3 source
+manifest is not rewritten:
+
+```powershell
+python paper/paper_v23/figures/generate_figures.py --lf4-only
+```
+
+## LF4 matched mechanism screen
+
+- starting commit: `7df29ef730ad60156dfae5abd4a3ef41fa69a109`;
+- activation commit: `5dbde1d210b6f2ff15d0f341ee316e59b49a1074`;
+- source identity: `LF4-BUNDLE-EF532BCCF7FAC4482BEBD56A49DFAFE2D5F2FD4B2043540BD4414B6668CA644F`;
+- source archive SHA-256: `780BAC482BC1DD538FBAB33180EF15F2270A684908C1D7168320D20C045AFC2E`;
+- run directory: `outputs/runs/20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d`;
+- run-summary SHA-256: `692833FA52787AE9B204A64AC84D11E9AA15352459498EF3A2D066F7CB313ED2`;
+- local adjudication: `outputs/runs/20260905T102817Z-phk-v23-lf4-local-adjudication-5dbde1d/adjudication.json`;
+- adjudication SHA-256: `4301BEF71B49B17EA0EA164314A0FF5F9CBF11367C2EA92AF0509D75F0D94289`.
+
+The cloud runner used three fresh-Adam, phase-only, FP64 arms from the exact
+LF3-T0 weights. Each arm used the same 400 base batches; DEV-M and DEV-C also
+used the same interface-band coordinates. Their three checkpoints and the
+1200-row batch ledger are bound by the run summary. The initial launch stopped
+before importing the runner because the base interpreter lacked `h5py`; no
+output directory, optimizer, GPU process, or update existed. The existing
+`pinn-pcm-sci-py311` environment passed an isolated `torch+h5py+CUDA+V100`
+check and the full zero-step preflight, after which the unchanged scientific
+run completed once.
+
+After recovery, every remote file matched the local SHA-256, no training or
+GPU compute process remained, and shutdown was confirmed by a closed TCP port
+and SSH `Connection refused`. Only then was the local adjudicator run:
+
+```powershell
+.\.venv\Scripts\python.exe -m pinn_pcm_sci.phk_v23_lf4_evaluation `
+  --output-directory outputs/runs/20260905T102817Z-phk-v23-lf4-local-adjudication-5dbde1d `
+  --run-directory outputs/runs/20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d `
+  --cpu-qualification docs/experiment/artifacts/20260905T082728Z-phk-v23-lf4-cpu-qualification.json
+```
+
+The local result is `LF4_NO_DEVELOPMENT_ENTRY`. No development prediction was
+selected and P0 was not run, so no fixed-physics P0 ratio exists.
+
 ## Non-reproducible-from-Git boundary
 
-The compact terminal package does not embed the large checkpoint, prediction,
-or raw run directory in Git. Their identity is hash-bound, but a checkout that
+The compact terminal package does not embed checkpoints or raw run directories
+in Git. Their identity is hash-bound, but a checkout that
 lacks the git-ignored files cannot independently recompute the local evaluator
 or phase-snapshot figure. The current paper therefore distinguishes versioned
 compact evidence from locally retained raw carriers.

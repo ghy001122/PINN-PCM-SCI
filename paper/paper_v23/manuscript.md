@@ -1,7 +1,8 @@
 # Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
 
 > Advisor-reviewable draft. Evidence status:
-> `LF3_CARRIER_NOT_ESTABLISHED`. This manuscript reports single-seed nominal
+> `LF4_NO_DEVELOPMENT_ENTRY` with
+> `BOUNDARY_EXPOSURE_SUPPORTED`. This manuscript reports single-seed nominal
 > development evidence. It does not claim a successful PINN method.
 
 ## Abstract
@@ -22,12 +23,20 @@ trained with equal weight across 14 mutually exclusive event categories. The
 result was finite and potential-admissible, reached phase maximum 0.9912, and
 recovered both event times, with cycle-wise precision 0.907 and 0.866 and active
 mass ratios 0.888 and 0.887. However, recalls were only 0.806 and 0.769, below
-the frozen 0.90 gate. The conditional label-free physics stage was therefore
-not run. On the nominal extra-fine evaluator the recovered carrier passed the
+the frozen 0.90 gate. We then ran a matched three-arm interface-mechanism screen
+from those exact weights. Equal-budget generic extra supervision reached
+minimum recall 0.819. Replacing only those extras with teacher-interface-band
+MSE raised it to 0.909, a preregistered quality-preserving gain of 0.0898.
+Two-sided threshold logistic supervision on the identical band raised minimum
+recall to 0.942 and restored both timing gates, but increased phase weighted MSE
+to 0.0297 and degraded recovery relative to the interface-MSE arm. Thus
+teacher-interface exposure, not the threshold loss, was supported by the
+matched mechanism gate. No arm passed every carrier-entry condition, so the
+conditional label-free physics stage was not run. On the nominal extra-fine evaluator the LF3 carrier passed the
 coarser event-existence/locality guards and reduced phase region-of-interest RMS
 error from 0.1106 for the calibrated cold carrier to 0.0390, but direct medium
-interpolation remained much more accurate at 0.00657. The machine outcome was
-`LF3_CARRIER_NOT_ESTABLISHED`, with no candidate. The study shows that
+interpolation remained much more accurate at 0.00657. The terminal outcome was
+`LF4_NO_DEVELOPMENT_ENTRY`, with no candidate. The study shows that
 domain-averaged accuracy, event existence, event mass, precision, and recall are
 non-substitutable requirements in sparse-event multiphysics learning. It also
 demonstrates why a near-pass data carrier cannot be used to infer PINN-specific
@@ -89,8 +98,11 @@ superiority. Instead, this study contributes:
 2. an executed failure ladder that isolates cold collapse, invalid
    representation, over-broad event transfer, and inactive-measure dominance;
 3. a matched-stream combination pilot showing a transition from diffuse
-   false-positive mass to localized but incomplete support; and
-4. a three-level decision rule that prevents data-only carrier recovery from
+   false-positive mass to localized but incomplete support;
+4. a matched mechanism screen that identifies teacher-interface exposure as a
+   driver of recall while rejecting threshold logistic loss as a
+   quality-preserving increment; and
+5. a three-level decision rule that prevents data-only carrier recovery from
    being reported as a PINN-specific or paper-positive result.
 
 ## 2. Coupled benchmark and evidence roles
@@ -265,6 +277,34 @@ The decision hierarchy is:
 
 Failure at an earlier level makes later levels not reached, not failed.
 
+### 3.5 Matched interface-band mechanism screen
+
+LF4 tested the boundary-support interpretation without changing the network,
+initial weights, V/T fields, base loss, optimizer, update budget, or random
+stream. Three phase-only arms started from the exact LF3-T0 checkpoint and ran
+400 fixed updates. All used
+
+\[
+L_{\mathrm{dev}}=\tfrac12L_{\mathrm{base}}+\tfrac12L_{\mathrm{extra}}.
+\]
+
+DEV-G used 256 additional global points with normalized logit-increment MSE.
+DEV-M instead used 64 samples from each of four frozen teacher-interface pools
+(positive/negative side for each cycle) with the same MSE. DEV-C reused the
+identical DEV-M coordinates but replaced MSE by balanced binary logistic loss,
+\(\operatorname{softplus}(-z)\) on the positive side and
+\(\operatorname{softplus}(z)\) on the negative side, normalized by
+\(\log 2\). This is standard BCE-with-logits, not a new loss family
+[@kervadec2021boundary; @mescheder2019occupancy]. Interface-focused sampling in
+phase-field PINNs is also established [@chen2025pf; @elfetni2025pinnsmpf].
+
+The boundary-exposure claim required
+\(R_{\min}^{M}-R_{\min}^{G}\ge0.03\); the threshold-loss claim analogously
+required \(R_{\min}^{C}-R_{\min}^{M}\ge0.03\). Both additionally required
+precision, active mass, timing, locality, recovery, and V/T quality preservation.
+These matched gates distinguish extra optimization, exposure location, and loss
+shape without treating any constituent as original.
+
 ## 4. Experimental protocol
 
 All neural runs used three independent modified-MLP field networks, four hidden
@@ -290,6 +330,18 @@ by the terminal summary and all seven complete, hash-bound artifacts. The defect
 did not justify a second trajectory. After the instance returned SSH connection
 refusal, the unchanged local nominal evaluator compared `LF_ONLY`, LF1-B0,
 LF1-final, LF2-M0, and LF3-T0 against the extra-fine reference.
+
+LF4 then executed DEV-G, DEV-M, and DEV-C for exactly 400 updates each from the
+same LF3-T0 weights. V/T parameters were bitwise frozen; each arm used fresh
+Adam and the identical 1201–1600 base stream. DEV-M and DEV-C also shared the
+same band ledger. The three fixed endpoints, rather than intermediate
+telemetry, determined all comparisons. A first launcher attempt encountered a
+missing `h5py` import before runner import, output creation, or optimizer
+construction. After an isolated dependency/CUDA regression and repeated
+zero-step preflight in the existing project environment, the unchanged
+scientific identity completed once. All files were recovered and hash-matched,
+the idle GPU instance was shut down, and local nominal evaluation was performed
+only after the port closed and SSH returned connection refusal.
 
 ## 5. Results
 
@@ -379,11 +431,46 @@ loss contained no PDE or constitutive residual (Figure 5).
 
 ![Evidence gates](figures/figure-05-evidence-gates.png)
 
+### 5.5 Matched LF4 controls support interface exposure, not threshold loss
+
+CPU-G found that 455 of 481 false-negative nodes (94.6%) and 199 of 227
+false-positive nodes (87.7%) lay directly on the frozen four-neighbour teacher
+interface (Figure 6). LF4 then tested whether this geometry mattered.
+
+![Interface-boundary geometry](figures/figure-06-interface-boundary-geometry.png)
+
+DEV-G, the equal-budget global-extra control, reached cycle recalls 0.8402 and
+0.8194 but failed both timing gates. DEV-M replaced only the extra points with
+the teacher-interface band. Recall rose to 0.9373 and 0.9093; precision remained
+0.9092/0.9462, mass ratios remained 1.031/0.961, recovery remained complete,
+and phase weighted MSE decreased from 0.001309 to 0.001210. The minimum-recall
+gain was 0.08984, almost three times the preregistered 0.03 margin. The frozen
+mechanism verdict was therefore `BOUNDARY_EXPOSURE_SUPPORTED`. DEV-M still
+missed the cycle-1 timing limit (0.01053 versus 0.005), so it was not an entry
+carrier.
+
+DEV-C applied balanced BCE-with-logits on the identical interface coordinates.
+Its recalls rose to 0.9416/0.9755 and both timing errors fell below 0.005, but
+phase weighted MSE increased to 0.02967—15.8 times LF3-T0 and 24.5 times DEV-M—
+while cycle-2 recovery fell from 1.0 to 0.768. Although its recall difference
+exceeded 0.03, it failed the preregistered quality-preservation clause. The
+threshold-aligned loss was therefore not supported as the load-bearing
+mechanism (Figure 7).
+
+![LF4 development ablation](figures/figure-07-lf4-development-ablation.png)
+
+The three fixed endpoints failed entry for distinct reasons: both timing gates
+for DEV-G, cycle-1 timing for DEV-M, and phase error for DEV-C. Consequently no
+arm was selected, P0 ran zero updates, and the terminal machine outcome was
+`LF4_NO_DEVELOPMENT_ENTRY` with no candidate (Figure 8).
+
+![LF4 physics-Pareto gate](figures/figure-08-lf4-physics-pareto.png)
+
 ## 6. Discussion
 
 ### 6.1 What was learned
 
-Three conclusions are directly supported within the fixed protocol.
+Four conclusions are directly supported within the fixed protocol.
 
 First, low aggregate field error is not a proxy for sparse-event competence.
 LF2 had substantially lower weighted field error than LF1-B0 but erased the
@@ -394,13 +481,23 @@ well-timed, high-precision event after the target-measure cold collapse, but it
 did not reproduce enough of the teacher support to establish the preregistered
 carrier.
 
+Fourth, LF4 converts the boundary-support interpretation into a matched,
+system-specific mechanism result: allocating the same extra supervision budget
+to the teacher interface materially improves minimum recall beyond generic
+global extras. It simultaneously shows that more threshold alignment is not
+automatically better: binary logistic supervision corrected event timing but
+destroyed field fidelity. Exposure location and loss shape therefore play
+different roles.
+
 The most specific supported interpretation is that the remaining LF3 mismatch
 is an event-boundary coverage problem. It is not the previous cold-state basin,
 because phase maximum and both event episodes returned. It is not primarily
 diffuse false-positive mass, because precision and mass gates passed. It is not
 a temporal-only error, because event-time and recovery gates passed. The red
 boundary band in Figure 4 and the two recall failures point to incomplete
-support around the localized event core.
+support around the localized event core. LF4 directly supports the exposure
+part of this interpretation while showing that the remaining timing–fidelity
+trade-off is unresolved.
 
 ### 6.2 What was not learned
 
@@ -416,17 +513,21 @@ Likewise, the local extra-fine evaluator pass does not supersede the frozen
 full-medium carrier gate. The two instruments ask different questions. The
 extra-fine event guard establishes that an event exists in the intended place
 and recovers; the carrier gate demands quantitative teacher-support fidelity.
+LF4 does not establish a threshold-loss benefit, an eligible carrier, or a
+physics-informed improvement. Its boundary-exposure attribution is conditional
+on the inherited LF3 representation and one nominal seed; it does not identify
+the earlier latent components.
 
 ### 6.3 Why further tuning was not justified inside this campaign
 
-The miss might be reduced by longer T0 training, a different category loss, or
-an altered decision threshold. None was authorized, and each would be a
-result-conditioned intervention. More importantly, a carrier-only improvement
-would still not establish the central PINN value proposition. The strongest
-direct baseline remains far ahead, and physics refinement was never reached.
-The scientifically efficient decision is therefore to preserve the near-pass as
-diagnostic evidence and stop this latent-carrier route under its frozen
-contract, rather than consume more GPU runs on unregistered rescue attempts.
+LF4 reveals a tempting post hoc mixture: retain DEV-M's field fidelity while
+borrowing DEV-C's timing correction. Such a mixture, an intermediate loss
+weight, or a changed timing gate would be a new scientific identity selected
+after inspecting endpoints. More importantly, a carrier-only improvement would
+still not establish the central PINN value proposition. The strongest direct
+baseline remains far ahead, and physics refinement was never reached. The
+efficient decision is therefore to preserve the matched boundary-exposure
+result and close LF4 rather than consume unregistered rescue arms.
 
 ### 6.4 Paper positioning
 
@@ -435,12 +536,14 @@ a reproducible negative/diagnostic study. Its defensible central message is:
 
 > In a coupled electric–thermal–phase benchmark with sparse localized events,
 > apparently favorable residual or field metrics can correspond to mutually
-> distinct scientific failures; competence-first gates expose those failures
-> and prevent data-only solver recovery from being mistaken for PINN value.
+> distinct scientific failures; matched competence-first controls identify
+> interface exposure as a recall mechanism while revealing a timing–fidelity
+> conflict, and prevent data-only solver recovery from being mistaken for PINN
+> value.
 
 It is not yet a positive method paper. To support that stronger identity, a
-future, separately authorized program would need a load-bearing mechanism that
-establishes the carrier, an executed label-free physics refinement with matched
+future, separately authorized program would need a timing-preserving,
+field-faithful carrier mechanism built on the supported interface exposure, an executed label-free physics refinement with matched
 T0 comparison, a strict output-phase matched ablation if the logit mechanism is
 claimed, repeated seeds, and a predefined OOD/stress evaluation against direct
 `LF_ONLY`. Those are prospective requirements, not results of the present work.
@@ -455,6 +558,9 @@ experimental data were used. No stress or formal OOD result is available. The
 recovery sequence was designed adaptively across campaigns, so historical arms
 should not be interpreted as a single simultaneous factorial experiment. LF3
 itself is a single combination pilot and cannot establish component causality.
+The three LF4 arms are internally matched, but remain one seed and one nominal
+object; their boundary-exposure result cannot establish cross-seed or OOD
+generality.
 
 Finally, direct interpolation of the available medium trajectory is an unusually
 strong baseline because the full medium field is available at inference points.
@@ -467,15 +573,16 @@ here and none is claimed retrospectively.
 ## 8. Conclusion
 
 A bounded solver-recovery sequence for a coupled electric–thermal–phase system
-progressed from cold-state collapse to an admissible and well-timed localized
-two-cycle neural event. The final phase-logit combination dramatically reduced
-field errors and false-positive event mass, but missed 19.4% and 23.1% of the
-medium teacher support. The preregistered recall gate therefore rejected the
-carrier and blocked the label-free physics stage. This negative outcome is
-scientifically useful because it identifies the remaining mismatch and preserves
-the distinction between data-only recovery, PINN-specific improvement, and
-paper-positive value. The strongest direct low-fidelity baseline remains the
-standard that any future positive route must face.
+progressed from cold-state collapse to an admissible localized two-cycle neural
+event and then to a matched mechanism attribution. Teacher-interface exposure
+raised minimum cycle recall by 0.0898 beyond equal-budget global extras while
+preserving the frozen quality controls. Threshold-aligned BCE repaired timing
+but inflated phase error 15.8-fold relative to LF3-T0, so it was not a
+quality-preserving mechanism. No endpoint passed every carrier-entry check and
+the label-free physics stage was correctly not run. The result is a substantive
+boundary-exposure finding within a negative carrier/PINN outcome, not a positive
+method claim. The strongest direct low-fidelity baseline remains the standard
+that any future positive route must face.
 
 ## Data, code, and evidence availability
 

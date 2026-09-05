@@ -3,33 +3,45 @@
 更新时间：2026-09-05
 
 - `phase_id`: `PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
-- `lifecycle_state`: `EXECUTING_GPU_PENDING_ACTIVATION_COMMIT`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `LF4_CPU_GEOMETRY_SUPPORT_ONLY_GPU_MECHANISM_UNTESTED`
-- `next_research_execution_authorized`: `true`
+- `machine_outcome`: `LF4_NO_DEVELOPMENT_ENTRY`
+- `mechanism_outcome`: `BOUNDARY_EXPOSURE_SUPPORTED`
+- `claim_status`: `LF4_BOUNDARY_EXPOSURE_SUPPORTED_NO_DEVELOPMENT_ENTRY_NO_PINN_RESULT`
+- `next_research_execution_authorized`: `false`
 - `candidate_status`: `NONE`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED_UNCHANGED`
-- `implementation_status`: `LF4_CONTRACTS_RUNNER_EVALUATOR_CLOUD_AND_FOCUSED_TESTS_IMPLEMENTED`
-- `compute_status`: `CPU_G_PASS_ZERO_SCIENTIFIC_UPDATES_GPU_PENDING`
-- `paper_status`: `PAPER_V23_LF3_ADVISOR_DRAFT_AWAITING_LF4_RESULTS`
+- `implementation_status`: `LF4_TERMINAL_ARTIFACTS_AND_PAPER_PACKAGE_COMPLETE`
+- `compute_status`: `DEV_G_M_C_400_EACH_P0_ZERO_SHUTDOWN_VERIFIED`
+- `paper_status`: `PAPER_V23_ADVISOR_DRAFT_UPDATED_WITH_LF4_BOUNDED_MECHANISM_RESULT`
 - `stress_status`: `TWO_STRESS_REFERENCES_SEALED_UNREAD`
+- `unique_next`: `P0_NOT_RUN_THREE_ARM_MECHANISM_NEGATIVE_UPDATE_PAPER`
 
 ## VERIFIED
 
-- Start identity is `main@7df29ef730ad60156dfae5abd4a3ef41fa69a109`;
-  unrelated dirty/untracked paths are recorded and protected with no overlap.
-- Medium, LF1-B0 identity, exact LF3-T0 checkpoint/prediction, partition, and
-  inherited qualification hashes match.
-- Four interface pools contain `496/620/480/604` nodes. Exact LF3-T0 W1/W3
-  errors are strongly interface-localized: `455/481` FN and `199/227` FP at
-  graph distance zero.
-- Common base, global-extra, shared band, and P0 physics hashes are frozen.
-- Focused LF4 tests pass. No LF4 GPU optimizer step, fine/extra, frozen
-  evaluator, LF_ONLY, or stress read has occurred yet.
+- Start identity was `main@7df29ef730ad60156dfae5abd4a3ef41fa69a109` and activation identity was
+  `5dbde1d210b6f2ff15d0f341ee316e59b49a1074`; unrelated dirty/untracked paths
+  remained protected and outside LF4 staging.
+- CPU-G found `455/481` FN and `199/227` FP at teacher boundary graph distance
+  zero. All three GPU arms then completed exactly 400 FP64/V100/seed-17 updates
+  with matched base batches and frozen V/T.
+- DEV-G/M/C `Rmin` values are `0.819419/0.909256/0.941581`. DEV-M minus DEV-G
+  is `+0.089837` with the frozen quality conditions preserved, supporting a
+  bounded teacher-interface exposure increment. DEV-C minus DEV-M is
+  `+0.032325`, but phase error and recovery trade-offs reject the complete
+  threshold-aligned mechanism gate.
+- No arm passed the conjunctive P0-entry gate. P0 was not run, selected carrier
+  and candidate are none, and no PINN-specific Pareto result exists.
+- All declared cloud artifacts and launcher logs were recovered and hash-checked;
+  LF4 processes and GPU compute processes were zero before shutdown. TCP closed
+  and SSH returned `Connection refused`.
+- Only after shutdown verification, local nominal evaluation read fine,
+  extra-fine, direct `LF_ONLY`, and the frozen evaluator. Stress was never read.
 
 ## Evidence boundary
 
-Interface localization motivates the matched screen but does not establish
-boundary-exposure or threshold-aligned causality. Only DEV-M minus DEV-G and
-DEV-C minus DEV-M under the frozen gates may support those respective claims.
-Git, tests, and hash closure are engineering evidence, not scientific gain.
+The positive result is limited to boundary exposure versus an equal-budget
+global-extra control in one frozen nominal seed. Interface sampling, boundary
+supervision, implicit-surface two-sided labels, and BCE-with-logits have prior
+art; LF4 is not a novelty, carrier, PINN-gain, strong-baseline, OOD, stress,
+continuum, material, experimental, SOTA, or submission-ready result.

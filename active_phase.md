@@ -2,33 +2,43 @@
 
 - `phase_id`: `PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
 - `phase_name`: PHK-V2.3 LF4 threshold-aligned two-sided interface-band mechanism screen and conditional physics pilot
-- `lifecycle_state`: `EXECUTING_GPU_PENDING_ACTIVATION_COMMIT`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `LF4_CPU_GEOMETRY_SUPPORT_ONLY_GPU_MECHANISM_UNTESTED`
-- `next_research_execution_authorized`: `true`
-- `authorization_scope`: `LF4_THREE_MATCHED_DEVELOPMENT_ARMS_AND_CONDITIONAL_P0_ONLY`
+- `machine_outcome`: `LF4_NO_DEVELOPMENT_ENTRY`
+- `mechanism_outcome`: `BOUNDARY_EXPOSURE_SUPPORTED`
+- `claim_status`: `LF4_BOUNDARY_EXPOSURE_SUPPORTED_NO_DEVELOPMENT_ENTRY_NO_PINN_RESULT`
+- `next_research_execution_authorized`: `false`
+- `authorization_scope`: `NONE_TERMINAL`
 - `candidate_status`: `NONE`
-- `reference_status`: `FINE_EXTRA_LF_ONLY_LOCAL_AFTER_SHUTDOWN_STRESS_SEALED_UNREAD`
-- `compute_status`: `CPU_G_PASS_GPU_ZERO_UPDATES_PENDING`
-- `next_recommendation`: `ACTIVATION_COMMIT_DEPLOY_RUN_DEV_G_M_C_THEN_CONDITIONAL_P0`
+- `reference_status`: `NOMINAL_LOCAL_EVALUATION_COMPLETE_STRESS_SEALED_UNREAD`
+- `compute_status`: `THREE_DEVELOPMENT_ARMS_COMPLETE_P0_NOT_RUN_INSTANCE_SHUTDOWN_VERIFIED`
+- `next_recommendation`: `P0_NOT_RUN_THREE_ARM_MECHANISM_NEGATIVE_UPDATE_PAPER`
 - `effective_date`: `2026-09-05`
+
+## 终局证据
+
+三条 matched phase-only development arms 均从 exact LF3-T0 weights 完成固定
+400 updates。`Rmin` 从 DEV-G 的 `0.819419` 提升到 DEV-M 的 `0.909256`
+（`+0.089837`），且 DEV-M 保持冻结的 precision、active-mass、locality、
+recovery 与 field-quality 条件，因此在本 single-seed nominal 对象上支持
+`BOUNDARY_EXPOSURE_SUPPORTED`。DEV-C 虽将 `Rmin` 再提高 `0.032325` 并修复
+timing，却令 phase weighted MSE 升至 `0.0296673` 且 cycle-2 recovery 降至
+`0.767857`，不支持 threshold-aligned BCE 的 load-bearing claim。
+
+DEV-G、DEV-M、DEV-C 分别因 timing、timing、phase error 未通过完整 P0-entry；
+selected carrier 为 none，P0 按合同 `NOT_RUN`，不是 P0 失败。终局无 PINN
+Pareto、无 strong-baseline gain、无 candidate。全部产物已回收并核验，实例已
+关机且 SSH `Connection refused`；本地 nominal evaluation 此后才读取
+fine/extra-fine 与 direct `LF_ONLY`。两份 stress references 始终 sealed/unread。
 
 ## 授权边界
 
-当前用户已明确授权 LF4 完整执行。三条 development arms 均须从 exact
-LF3-T0 weights 运行到固定 step 400；不得因早臂失败提前关闭。至少一臂通过
-P0-entry 时，必须按冻结选择规则运行 1200-step label-free full-physics P0。
-不授权 full-from-LF1-B0 confirmation、新 seed、OOD、stress、PJGR/R2、替代
-架构、kinetic teacher、投稿或作者联系。
+LF4 完成不授权任何新训练、确认臂、混合 DEV-M/DEV-C、调权、新 seed、OOD、
+stress、PJGR/R2、替代架构、kinetic teacher、投稿或作者联系。任何后续科研
+动作都必须获得新的明确 EXECUTE 授权。
 
-## 当前证据
-
-CPU-G 为零 optimizer update，通过输入、四个非周期界面池、phase-logit
-数学和全部流哈希门。LF3-T0 的 481 FN 中 455 个、227 FP 中 199 个位于
-teacher boundary graph distance 0。这是 `VERIFIED` 几何证据；界面机制
-是否有增量仍为 `UNKNOWN`。
-
-入口：[ADR 0061](docs/adr/0061-activate-phk-v23-lf4-interface-band-pilot.md)、
-[CPU-G](docs/experiment/2026-09-05-phk-v23-lf4-cpu-qualification.md)、
-[四合同](configs/phk_v23/program_contract_lf4_interface_band.json)与
-[live plan](docs/plans/NEXT_ACTIONS.md)。
+终局入口：[ADR 0062](docs/adr/0062-close-phk-v23-lf4-interface-band-pilot.md)、
+[terminal closeout](docs/experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)、
+[terminal artifact](docs/experiment/artifacts/20260905T082728Z-phk-v23-lf4-terminal.json)、
+[terminal manifest](docs/experiment/manifests/20260905T082728Z-phk-v23-lf4-terminal.json)与
+[paper_v23](paper/paper_v23/README.md)。

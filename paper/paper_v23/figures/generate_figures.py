@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -16,6 +17,7 @@ from matplotlib.patches import FancyBboxPatch
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 DATA_PATH = HERE / "data" / "lf3_terminal_metrics.json"
+LF4_DATA_PATH = HERE / "data" / "lf4_terminal_metrics.json"
 PREDICTION_PATH = ROOT / "outputs" / "runs" / "20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74" / "prediction-t0-step-1200.npz"
 REFERENCE_PATH = ROOT / "outputs" / "runs" / "20260828T-phk-v21-s1-q-06-nominal-extra-fine" / "result-intent-06.npz"
 
@@ -232,8 +234,108 @@ def evidence_gates(data: dict) -> list[Path]:
     return save(fig, "figure-05-evidence-gates")
 
 
-def main() -> None:
+def interface_boundary_geometry(data: dict) -> list[Path]:
+    source = data["cpu_boundary_geometry"]
+    fn = source["fn_graph_distance"]
+    fp = source["fp_graph_distance"]
+    fig, axes = plt.subplots(1, 2, figsize=(9.7, 3.8), gridspec_kw={"width_ratios": [1.0, 1.35]})
+    labels = ["False negatives", "False positives"]
+    boundary = np.asarray([fn["0"], fp["0"]], dtype=float)
+    adjacent = np.asarray([fn["1"], fp["1"]], dtype=float)
+    x = np.arange(2)
+    axes[0].bar(x, boundary, color=TEAL, label="teacher boundary (distance 0)")
+    axes[0].bar(x, adjacent, bottom=boundary, color=GOLD, label="one graph step away")
+    axes[0].set_xticks(x, labels)
+    axes[0].set_ylabel("Full-medium node count")
+    axes[0].set_title("LF3 errors are concentrated at the event interface")
+    axes[0].legend(loc="upper right", fontsize=8)
+    for idx, (bnd, adj) in enumerate(zip(boundary, adjacent)):
+        axes[0].text(idx, bnd * 0.5, f"{bnd / (bnd + adj):.1%}\nat boundary", ha="center", va="center", color="white", fontweight="bold")
+    quantiles = [0.0012280054511396089, 0.12952850518173212, 0.35014104749572733, 0.7890361004360981, 1.459346159020768, 2.0094926205441146, 3.4985109413202036]
+    qlabels = ["min", "10%", "25%", "50%", "75%", "90%", "max"]
+    axes[1].plot(np.arange(len(quantiles)), quantiles, marker="o", color=BLUE, linewidth=2)
+    axes[1].axhline(source["boundary_logit_margin_median"], color=TEAL, linestyle="--", linewidth=1)
+    axes[1].set_xticks(np.arange(len(quantiles)), qlabels)
+    axes[1].set_ylabel("Absolute teacher logit margin")
+    axes[1].set_title("The exposed interface spans near-threshold and easy nodes")
+    axes[1].grid(axis="y", alpha=0.18)
+    fig.suptitle("CPU-G localizes the remaining support error without claiming a mechanism", color=NAVY, fontweight="bold")
+    fig.tight_layout()
+    return save(fig, "figure-06-interface-boundary-geometry")
+
+
+def lf4_development_ablation(data: dict) -> list[Path]:
+    arms = data["development_arms"]
+    order = ["DEV-G", "DEV-M", "DEV-C"]
+    colors = [GRAY, TEAL, ORANGE]
+    fig, axes = plt.subplots(1, 2, figsize=(10.8, 4.0))
+    x = np.arange(3)
+    rmin = [arms[name]["rmin"] for name in order]
+    bars = axes[0].bar(x, rmin, color=colors)
+    axes[0].axhline(data["gates"]["rmin_strict"], color=RED, linestyle="--", linewidth=1.2, label="strict recall gate")
+    axes[0].set_ylim(0.75, 1.0)
+    axes[0].set_ylabel("Minimum cycle-wise recall")
+    axes[0].set_xticks(x, [arms[name]["label"] for name in order], rotation=18, ha="right")
+    axes[0].legend(loc="lower right")
+    for bar, value in zip(bars, rmin):
+        axes[0].text(bar.get_x() + bar.get_width() / 2, value + 0.006, f"{value:.3f}", ha="center", color=NAVY, fontweight="bold")
+    errors = [arms[name]["phase_weighted_mse"] for name in order]
+    bars = axes[1].bar(x, errors, color=colors)
+    axes[1].axhline(data["gates"]["phase_weighted_mse_maximum"], color=RED, linestyle="--", linewidth=1.2, label="entry error limit")
+    axes[1].set_yscale("log")
+    axes[1].set_ylabel("Full-medium phase weighted MSE")
+    axes[1].set_xticks(x, [arms[name]["label"] for name in order], rotation=18, ha="right")
+    axes[1].legend(loc="upper left")
+    for bar, value in zip(bars, errors):
+        axes[1].text(bar.get_x() + bar.get_width() / 2, value * 1.12, f"{value:.4f}", ha="center", fontsize=8)
+    fig.suptitle("Matched LF4 screen: interface exposure improves recall; threshold BCE trades away field fidelity", color=NAVY, fontweight="bold")
+    fig.tight_layout()
+    return save(fig, "figure-07-lf4-development-ablation")
+
+
+def lf4_physics_pareto(data: dict) -> list[Path]:
+    arms = data["development_arms"]
+    fig, ax = plt.subplots(figsize=(10.6, 4.2))
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 4.1)
+    ax.axis("off")
+    boxes = [
+        (0.25, 2.55, 2.55, 1.05, "DEV-G", "NO ENTRY", RED, "timing failed in both cycles"),
+        (3.05, 2.55, 2.55, 1.05, "DEV-M", "BOUNDARY EXPOSURE +", TEAL, "Rmin 0.819→0.909; cycle-1 timing failed"),
+        (5.85, 2.55, 2.55, 1.05, "DEV-C", "NO ENTRY", RED, "timing passed; phase error 15.8× T0"),
+        (7.15, 0.65, 2.55, 1.05, "Label-free P0", "NOT RUN", GRAY, "no eligible development carrier"),
+    ]
+    for x, y, w, h, title, status, color, detail in boxes:
+        box = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.03,rounding_size=0.08", linewidth=1.5, edgecolor=color, facecolor="white")
+        ax.add_patch(box)
+        ax.text(x + 0.12, y + 0.75, title, color=NAVY, fontweight="bold")
+        ax.text(x + 0.12, y + 0.46, status, color=color, fontweight="bold", fontsize=8.5)
+        ax.text(x + 0.12, y + 0.16, detail, color=GRAY, fontsize=7.6)
+    ax.annotate("", xy=(2.98, 3.08), xytext=(2.83, 3.08), arrowprops={"arrowstyle": "->", "color": GRAY})
+    ax.annotate("", xy=(5.78, 3.08), xytext=(5.63, 3.08), arrowprops={"arrowstyle": "->", "color": GRAY})
+    ax.annotate("", xy=(8.35, 1.78), xytext=(7.45, 2.50), arrowprops={"arrowstyle": "->", "color": GRAY, "linestyle": "--"})
+    ax.text(0.3, 1.45, "Mechanism result", color=TEAL, fontweight="bold")
+    ax.text(0.3, 1.12, f"Boundary exposure passed the frozen matched gate (ΔRmin={data['mechanism_decision']['M_minus_G']:.3f}).", color=NAVY)
+    ax.text(0.3, 0.78, "Threshold-aligned BCE did not preserve recovery/field quality, so it is not the load-bearing mechanism.", color=NAVY)
+    ax.text(0.3, 0.35, "No selected carrier ⇒ no physics-objective ratio, no PINN Pareto, and no candidate claim.", color=RED, fontweight="bold")
+    ax.set_title("LF4 advances mechanism attribution but does not reach the physics-Pareto stage", color=NAVY, fontweight="bold", pad=10)
+    fig.tight_layout()
+    return save(fig, "figure-08-lf4-physics-pareto")
+
+
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(description="Generate paper_v23 evidence figures")
+    parser.add_argument("--lf4-only", action="store_true", help="Generate LF4 figures 6–8 without rewriting the LF3 source manifest")
+    args = parser.parse_args(argv)
     setup()
+    if args.lf4_only:
+        data = json.loads(LF4_DATA_PATH.read_text(encoding="utf-8"))
+        outputs: list[Path] = []
+        outputs.extend(interface_boundary_geometry(data))
+        outputs.extend(lf4_development_ablation(data))
+        outputs.extend(lf4_physics_pareto(data))
+        print(json.dumps({"figures": len(outputs) // 2, "scope": "LF4_ONLY_NO_SOURCE_MANIFEST_REWRITE"}, sort_keys=True))
+        return
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     outputs: list[Path] = []
     outputs.extend(recovery_ladder(data))

@@ -19,15 +19,24 @@
 | PINNs cannot solve coupled PCM dynamics | `REJECTED_EXTRAPOLATION` | one object, architecture, seed, budget | Never generalize beyond frozen protocol |
 | Stress/OOD robustness | `UNKNOWN` | stress references sealed/unread | Must not claim |
 | Continuum, material, or experimental validity | `UNKNOWN` | fixed synthetic numerical object only | Must not claim |
+| LF4 completed three matched 400-update development arms | `VERIFIED` | run summary, checkpoints, and 1200-row batch ledger | Direct factual claim |
+| Interface-band exposure improved minimum recall beyond global-extra supervision | `VERIFIED_WITHIN_FROZEN_MATCHED_SCREEN` | DEV-M−DEV-G ΔRmin `+0.08984`, quality gate pass | System-specific boundary-exposure result; cite established interface sampling |
+| Threshold-aligned BCE is the load-bearing mechanism | `REJECTED_BY_FROZEN_GATE` | DEV-C improved Rmin but worsened recovery and phase error | Report the trade-off; do not claim threshold-loss superiority |
+| LF4 established an eligible development carrier | `REJECTED` | G failed timing; M failed cycle-1 timing; C failed phase-error gate | No selected carrier |
+| LF4 demonstrated PINN-specific value | `NOT_TESTED` | P0 correctly ran zero updates | Never call the phase-only arms PINNs |
+| LF4 positive proves the earlier LF3 latent representation | `REJECTED_EXTRAPOLATION` | all LF4 arms share LF3-T0 initialization | Boundary exposure is conditional on the inherited carrier, not latent attribution |
 
 ## Current central statement
 
 The maximum defensible central statement is:
 
 > Within a fixed single-seed coupled electric–thermal–phase benchmark,
-> competence-first gates separated low-error cold collapse, over-broad event
-> transfer, and high-precision incomplete-support recovery, and prevented a
-> data-only near-pass from being reported as PINN-specific value.
+> competence-first matched controls isolated teacher-interface exposure as a
+> substantial driver of rare-event support recall, while showing that a more
+> threshold-aligned classification loss can recover timing only by sacrificing
+> field fidelity; neither result substitutes for an eligible carrier or an
+> executed physics-informed Pareto test.
 
-This statement supports an advisor draft and a bounded negative/diagnostic
-paper package. It does not support a positive method submission.
+This statement supports an advisor draft with one positive, bounded mechanism
+attribution embedded in an otherwise negative solver-recovery result. It does
+not support a positive PINN method submission.

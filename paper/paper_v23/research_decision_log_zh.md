@@ -1,11 +1,11 @@
-# PHK-V2.3 LF3 研究判断与论文路线
+# PHK-V2.3 LF4 研究判断与论文路线
 
 ## 一句话裁决
 
-LF3 不是成功 carrier，也不是 PINN 方法结果；但它首次把此前的“冷态塌缩”
-和 LF1 的“事件过宽”收缩成了一个很具体的剩余问题：**事件核心、时间、质量和
-precision 已恢复，边界 support recall 仍不足。** 这是可写的 solver-recovery
-负面证据，但不足以继续在同一 latent 路线上调参救援。
+LF4 仍未建立可进入 P0 的 carrier，也不是 PINN 方法结果；但它用严格 matched
+三臂把 LF3 的“边界 support recall 不足”推进成了一个可归因结论：**teacher
+interface exposure 是提升最差周期 recall 的有效机制，而 threshold-aligned BCE
+会以显著场误差为代价修复 timing。** 这是实质机制进展，不是 candidate。
 
 ## 已验证事实
 
@@ -32,20 +32,39 @@ precision 已恢复，边界 support recall 仍不足。** 这是可写的 solve
 这三段比“又一次没过门”更有科研含量：它建立了 sparse-event 学习中
 existence、mass、precision、recall、timing 彼此不可替代的对象特异证据。
 
-## 为什么现在不继续跑 P0 或延长 T0
+## LF4 新增的 matched 机制证据
 
-P0 的科学问题是“physics 能否在保持合格 carrier 的同时降低残差”。当前
-前提不成立，强行运行会把 carrier 缺陷和 physics forgetting 混在一起。延长
-T0、改 loss 或放宽 recall 都是看过结果后的新科学身份；即使偶然过门，也仍
-没有解决 direct `LF_ONLY` 大幅领先的问题。因此本 campaign 的最佳止损就是
-保留近门证据并结束，不追加同身份 GPU。
+- DEV-G、DEV-M、DEV-C 都从 exact LF3-T0 权重出发，各 400 步、同一 base
+  stream；DEV-M/DEV-C 还复用完全相同的 interface-band coordinates。
+- DEV-G 的 `Rmin=0.81942`，且两周期 timing 都失败，说明普通追加全域监督不足。
+- DEV-M 的 `Rmin=0.90926`，相对 DEV-G 增加 `0.08984`，precision、mass、
+  locality、recovery 与 V/T 保存门均通过；因此冻结裁决支持
+  `BOUNDARY_EXPOSURE_SUPPORTED`。它只证明对象特异的 teacher-interface
+  exposure 增量，不声称 interface sampling 新颖。
+- DEV-C 的 `Rmin=0.94158`，两周期 timing 均通过，但 phase weighted MSE
+  升到 `0.02967`，约为 LF3-T0 的 `15.8` 倍，且 cycle-2 recovery 比 DEV-M
+  下降。故 threshold-aligned BCE 未通过完整质量保存门，不能作为核心机制。
+- 三臂分别因 timing、timing、phase error 未通过 entry，P0 合法地运行 0 步；
+  机器终局为 `LF4_NO_DEVELOPMENT_ENTRY`，candidate 为 none。
+
+这使论文叙事从“猜测边界不足”升级为“matched 证据确认暴露位置重要，但损失
+形状仍须在 timing 与场保真之间取得可容许折中”。
+
+## 为什么现在不继续跑 P0 或追加救援臂
+
+P0 的科学问题是“physics 能否在保持合格 carrier 的同时降低残差”。三臂没有
+同时满足完整 entry，强行运行会把 timing/field 缺陷和 physics forgetting 混在
+一起。拼接 DEV-M 与 DEV-C、放宽 phase error 或新增中间权重都属于看过结果后
+的新科学身份。因此本 campaign 在获得 boundary-exposure 归因后止损，不追加
+同身份 GPU。
 
 ## 导师初稿与二区正面稿的差距
 
-当前材料足以交付导师审阅：有完整问题、强基线、执行链、失败机理、五张图和
-明确边界。若要升级为中科院二区定位的正面方法稿，最低还缺：
+当前材料足以交付导师审阅：有完整问题、强基线、执行链、matched 机制证据、
+失败机理、八张图和明确边界。若要升级为中科院二区定位的正面方法稿，最低还缺：
 
-1. 一个能真正通过 carrier gate 的 load-bearing 核心机制；
+1. 以 interface exposure 为已验证 backbone，形成一个同时保持 field error 与
+   timing 的单一 carrier 机制，并真正通过 entry；
 2. 实际执行的无标签 physics refinement，并相对同架构 T0 形成 Pareto；
 3. 若主张 phase latent，补同初始化/同 batch、只换 output-phase teacher 的
    matched ablation；
@@ -59,10 +78,11 @@ T0、改 loss 或放宽 recall 都是看过结果后的新科学身份；即使�
 
 ## 论文口径
 
-允许写：在单 seed、nominal、fixed-discretization 对象中，competence-first
-评价揭示了三种互不等价的失败，并将恢复路线推进到“高 precision 但 support
-不完整”的近门状态。
+允许写：在单 seed、nominal、fixed-discretization 对象中，matched 控制表明
+teacher-interface exposure 相对普通全域追加监督显著提高最差周期 recall；
+threshold BCE 则暴露了 timing 与场保真的冲突。该结论只属于冻结对象与组合。
 
-禁止写：LF3 carrier 成功、P0/PINN 有增量、latent teacher 单独有效、优于
+禁止写：LF4 carrier 成功、threshold BCE 有质量保持增量、P0/PINN 有增量、
+latent teacher 单独有效、优于
 `LF_ONLY`、具有 OOD/stress 鲁棒性、达到 continuum truth、材料验证或投稿级
 结论。

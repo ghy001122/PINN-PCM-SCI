@@ -27,7 +27,7 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-当前具名执行为 LF4：三条 matched 400-step phase-only development arms，任一通过 entry 后必须运行条件 1200-step label-free physics P0；完整边界见 LF4 四合同与 ADR 0061。该授权不扩张到后续 seed、OOD、stress、PJGR/R2 或投稿。
+当前最近具名执行 LF4 已完成：三条 matched 400-step phase-only development arms 均已运行，无臂通过完整 P0-entry，故条件 P0 未运行。终局为 `LF4_NO_DEVELOPMENT_ENTRY`，同时保留有界的 `BOUNDARY_EXPOSURE_SUPPORTED` 机制证据、candidate none、`next_research_execution_authorized=false`。完整终局见 LF4 四合同、ADR 0062 与 terminal closeout；任何 seed、确认臂、OOD、stress、PJGR/R2、替代路线或投稿均须新的明确授权。
 
 涉及当前研究对象、方法边界或论文措辞时读取 `CONTEXT.md`；需要决策理由时再读取 `docs/adr/`。处理 V2.2R 的方法替换、止损、故事分支或稿后升级时，在当前合同之后读取 `docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md`；该笔记不授权动作。实验事实、参考审查、其他研究笔记和历史归档按 `docs/README.md` 的触发条件读取。
 

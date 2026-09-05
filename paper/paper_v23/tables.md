@@ -1,6 +1,6 @@
 # PHK-V2.3 advisor-draft tables
 
-## Table 1. Frozen LF3 evidence identity
+## Table 1. Frozen LF3 baseline evidence identity
 
 | Item | Value |
 |---|---|
@@ -27,6 +27,10 @@
 | LF2 M0 | Target-measure field losses + stochastic inequality AL | 0.02995 | No event | Lower field error but event erased |
 | LF3 T0 | V/T target measure + 14-class phase-logit teacher | 0.99119 | Two localized cycles | Recall 0.806/0.769 below 0.90 |
 | LF3 P0 | Conditional label-free physics | — | Not run | Correctly not triggered by T0 gate |
+| LF4 DEV-G | Equal-budget global extra MSE | 0.98743 | Two cycles | Timing failed in both cycles |
+| LF4 DEV-M | Teacher-interface-band MSE | 0.99222 | Two cycles | Boundary exposure supported; cycle-1 timing failed |
+| LF4 DEV-C | Two-sided threshold BCE | 1.00000 | Two cycles | Timing/recall passed; phase error inflated |
+| LF4 P0 | Conditional label-free physics | — | Not run | No development arm passed every entry condition |
 
 The stages are a sequential diagnostic program, not a simultaneous factorial
 benchmark. Historical comparisons do not isolate the LF3 logit teacher alone.
@@ -97,3 +101,41 @@ recall failure.
 | Multiple seeds | Limitation stated | Required | Not run |
 | Formal OOD/stress | Limitation stated | Required | Sealed/unread |
 | Continuum/material/experimental evidence | Excluded | Depends on target claim | Not available |
+
+## Table 8. Frozen LF4 execution identity
+
+| Item | Value |
+|---|---|
+| Task | `PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE` |
+| Activation commit | `5dbde1d210b6f2ff15d0f341ee316e59b49a1074` |
+| Source identity | `LF4-BUNDLE-EF532BCCF7FAC4482BEBD56A49DFAFE2D5F2FD4B2043540BD4414B6668CA644F` |
+| GPU / dtype / seed | Tesla V100-PCIE-32GB / FP64 / 17 |
+| DEV-G / DEV-M / DEV-C updates | 400 / 400 / 400 |
+| P0 updates | 0 (`NOT_RUN_NO_DEVELOPMENT_ENTRY`) |
+| Run-summary SHA-256 | `692833FA52787AE9B204A64AC84D11E9AA15352459498EF3A2D066F7CB313ED2` |
+| Local-adjudication SHA-256 | `4301BEF71B49B17EA0EA164314A0FF5F9CBF11367C2EA92AF0509D75F0D94289` |
+| Outcome / candidate | `LF4_NO_DEVELOPMENT_ENTRY` / none |
+| Stress | `TWO_STRESS_REFERENCES_SEALED_UNREAD` |
+
+## Table 9. Matched LF4 development endpoints
+
+| Arm | Extra supervision | Recall C1/C2 | Precision C1/C2 | Mass ratio C1/C2 | Timing error C1/C2 | Phase weighted MSE | Entry result |
+|---|---|---:|---:|---:|---:|---:|---|
+| DEV-G | global normalized logit MSE | 0.8402 / 0.8194 | 0.8923 / 0.8674 | 0.9416 / 0.9446 | 0.01387 / 0.00616 | 0.001309 | Fail: both timing gates |
+| DEV-M | identical-coordinate interface-band MSE | 0.9373 / 0.9093 | 0.9092 / 0.9462 | 1.0309 / 0.9610 | 0.01053 / 0.00500 | 0.001210 | Fail: cycle-1 timing |
+| DEV-C | identical band, two-sided BCE-with-logits | 0.9416 / 0.9755 | 0.9133 / 0.9380 | 1.0309 / 1.0399 | 0.00190 / 0.00250 | 0.029667 | Fail: phase error |
+
+All arms were finite, potential-admissible, phase-range valid, and preserved
+the frozen potential/temperature heads bitwise. DEV-M improved minimum recall
+over DEV-G by `0.08984`, exceeding the frozen `0.03` mechanism margin while
+preserving precision, mass, timing, locality, recovery, and V/T quality.
+
+## Table 10. LF4 attribution and claim ladder
+
+| Question | Frozen comparison | Result | Claim status |
+|---|---|---|---|
+| Does teacher-interface exposure add value? | DEV-M − DEV-G, ΔRmin ≥ 0.03 plus quality preservation | ΔRmin `+0.08984`; pass | `BOUNDARY_EXPOSURE_SUPPORTED` |
+| Does threshold-aligned BCE add value on the same points? | DEV-C − DEV-M, ΔRmin ≥ 0.03 plus quality preservation | ΔRmin `+0.03232`, but recovery/field quality not preserved | Not supported |
+| Is an eligible carrier established? | All P0-entry checks conjunctively | No arm passed all checks | `LF4_NO_DEVELOPMENT_ENTRY` |
+| Does label-free physics add a Pareto improvement? | P0 vs selected carrier | P0 not run | Not tested |
+| Is there a direct-`LF_ONLY` candidate signal? | Full candidate gate | Not reached | No candidate |

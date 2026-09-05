@@ -1,0 +1,227 @@
+{
+  "schema_id": "phk-v23-lf4-terminal-artifact-v1",
+  "run_id": "20260905T082728Z-phk-v23-lf4-terminal",
+  "task_id": "PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE",
+  "phase_id": "PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE",
+  "lifecycle_state": "COMPLETE",
+  "machine_outcome": "LF4_NO_DEVELOPMENT_ENTRY",
+  "mechanism_outcome": "BOUNDARY_EXPOSURE_SUPPORTED",
+  "unique_next": "P0_NOT_RUN_THREE_ARM_MECHANISM_NEGATIVE_UPDATE_PAPER",
+  "next_research_execution_authorized": false,
+  "candidate": null,
+  "selected_carrier": null,
+  "preserves_without_rewrite": [
+    "MVP_NO_GO_NO_BASIC_COMPETENCE",
+    "R0A_INCONCLUSIVE",
+    "GRADIENT_STARVATION_TEMPORAL_PRECURSOR_ONLY",
+    "R0C_ADAM_PRECONDITIONING_COMPENSATES_RAW_GRADIENT",
+    "R1A_CONFIG_RAW_NO_COMPETENCE",
+    "PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED",
+    "C0_OUTPUT_TRANSFORM_INADMISSIBLE",
+    "LF0_NUMERICAL_OR_IDENTITY_INVALID",
+    "LF1_DATA_ONLY_VALUE_NO_PINN_GAIN",
+    "LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED",
+    "LF3_CARRIER_NOT_ESTABLISHED"
+  ],
+  "contracts": {
+    "program": {"path": "configs/phk_v23/program_contract_lf4_interface_band.json", "sha256": "E5643823BB717E434E27E5C0C09BE701EEFC93B0A5C38BE6FB616E41D9BCC94A"},
+    "method": {"path": "configs/phk_v23/method_contract_lf4_interface_band.json", "sha256": "BA286E4A151AA81A4F760DD62112DA06928189947669A26C4C994A6C01040C65"},
+    "data": {"path": "configs/phk_v23/data_contract_lf4_interface_band.json", "sha256": "A86AC02CEFDE9FA2E936DB0F4F1EDA9662827AE63C28C774523B7BB2E82A81D5"},
+    "decision": {"path": "configs/phk_v23/decision_contract_lf4_interface_band.json", "sha256": "964F3022FE81CAA9FE479E1474E1FE909213FF41AAE693E7CA010681BE76339D"}
+  },
+  "implementation": {
+    "runner_sha256": "CDDE972DF1AD45999D01ACED9EC60C35762B1F16CD27947D236F804843D787E1",
+    "qualification_sha256": "3DFA1965B61898E86EDA6490A6E5FA471107B7ECA1526E392A79AF3C96FF048B",
+    "evaluation_sha256": "729B0D807FB92CFD1EFE8B6FE882B6479AA2F089FA3DA12C258BC3BC3BA06495",
+    "bundle_builder_sha256": "F8768CAD4E281DC4EFAD07A59860C558D522FC4AEB3230B500B5A07713854510",
+    "cloud_preflight_sha256": "CDD3507EE40419A26CF54188295B5A2B613D2064A297BFCAA176179461A627DD",
+    "cloud_launcher_sha256": "44C19A7A320EB38D88C3E4F8D864293A9D7D07929291252306BEC66BAFF5A508"
+  },
+  "cpu_qualification": {
+    "status": "LF4_CPU_QUALIFICATION_PASS",
+    "compact_path": "docs/experiment/artifacts/20260905T082728Z-phk-v23-lf4-cpu-qualification.json",
+    "compact_sha256": "D63D63953BEE85D7B9772B7FFCC06238640E01541B30DA174E10BD4A3F40A4D1",
+    "boundary_pool_counts": [496, 620, 480, 604],
+    "FN_graph_distance_zero": {"count": 455, "total": 481},
+    "FP_graph_distance_zero": {"count": 199, "total": 227},
+    "weighted_jaccard": 0.7160048134777377,
+    "weighted_dice": 0.8345021037868163,
+    "base_window_1201_1600_sha256": "3870D0C1411B3DF6E04C5BA316B3F0F77233D94A73A19E84523D81B62F692E4A",
+    "global_extra_400_sha256": "227244A6F97847E86A123E5F980A56A405D5F46C2A9716A0A13A5BD9A0123C48",
+    "band_400_sha256": "4DB1728CC543B1AB18BD3F74B83B29EBFE5F95624D98DAFEA615B0ECDC69DEC4",
+    "P0_physics_1200_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53",
+    "fixed_blind_physics_pool_sha256": "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF"
+  },
+  "prior_art": {
+    "path": "docs/references/2026-09-05-phk-v23-lf4-interface-prior-art.md",
+    "sha256": "F46681F4C80CACD1D9B72F8AA83E2778B690DE5A1E091010554D699DE60DED7B",
+    "primary_sources_or_author_repositories_checked": 12,
+    "verdict": "NO_EXACT_FUNCTIONAL_COLLISION_FOUND_WITHIN_FROZEN_12_SOURCE_SCOPE",
+    "method_identity": "ATTRIBUTED_PROJECT_SPECIFIC_SOLVER_RECOVERY_MECHANISM_SCREEN"
+  },
+  "source_identity": {
+    "lf4_base_commit": "7df29ef730ad60156dfae5abd4a3ef41fa69a109",
+    "lf4_activation_commit": "5dbde1d210b6f2ff15d0f341ee316e59b49a1074",
+    "cloud_source_identity": "LF4-BUNDLE-EF532BCCF7FAC4482BEBD56A49DFAFE2D5F2FD4B2043540BD4414B6668CA644F",
+    "source_archive_path": "outputs/deploy/phk-v23-lf4-source-5dbde1d.tar.gz",
+    "source_archive_sha256": "780BAC482BC1DD538FBAB33180EF15F2270A684908C1D7168320D20C045AFC2E",
+    "source_manifest_sha256": "3D0207D7C274922C34738F0BC0E4685F4846D1C39C31FA86BBE8E1B2BF15B9F3",
+    "medium_sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F",
+    "lf3_t0_checkpoint_sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA",
+    "lf3_t0_prediction_sha256": "485F0D09C65BDDCE3AEA212B337B85CFB08CD81E788E9F6AF81083871611819D",
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515"
+  },
+  "scientific_gpu_execution": {
+    "run_id": "20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d",
+    "status": "LF4_NO_DEVELOPMENT_ENTRY",
+    "started_at_utc": "2026-09-05T10:33:32.848321+00:00",
+    "finished_at_utc": "2026-09-05T10:34:48.751378+00:00",
+    "gpu": "Tesla V100-PCIE-32GB",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "scientific_gpu_trajectories": 3,
+    "optimizer_updates": 1200,
+    "stage_updates": {"DEV_G_GLOBAL_MSE_CONTROL": 400, "DEV_M_INTERFACE_BAND_MSE": 400, "DEV_C_THRESHOLD_ALIGNED_INTERFACE": 400, "P0_LABEL_FREE_FULL_PHYSICS": 0},
+    "P0_disposition": "NOT_RUN_NO_DEVELOPMENT_ENTRY",
+    "wall_seconds": 75.90314029995352,
+    "run_summary_sha256": "692833FA52787AE9B204A64AC84D11E9AA15352459498EF3A2D066F7CB313ED2",
+    "development_batch_ledger_lines": 1200,
+    "development_batch_ledger_sha256": "18635CDAFC4F55A13E78D075795A1CC535B0A201316F80663FAFD13F39388C33",
+    "telemetry_sha256": "001273E4206E63B3607041C96A979FE2682869B50E3C6FF53AC8B0143E0092B4"
+  },
+  "development_endpoints": {
+    "DEV_G_GLOBAL_MSE_CONTROL": {
+      "checkpoint_sha256": "938069AC719C347C7175BFA5BC908E55C28EE07D6A1C178BD982B541B6DF301F",
+      "entry_passed": false,
+      "entry_failed_checks": ["cycle_1_timing", "cycle_2_timing"],
+      "strict_passed": false,
+      "Rmin": 0.8194192377495462,
+      "recall": [0.8402061855670101, 0.8194192377495462],
+      "precision": [0.8923357664233575, 0.8674351585014409],
+      "active_mass_ratio": [0.9415807560137456, 0.9446460980036296],
+      "event_time_absolute_error": [0.013866666666666666, 0.006159999999999721],
+      "recovery_fraction": [1.0, 1.0],
+      "phase_weighted_mse": 0.0013087002590659602
+    },
+    "DEV_M_INTERFACE_BAND_MSE": {
+      "checkpoint_sha256": "16EEE20C6B1A2510ACB387E83894ADD64061D631422FAB4DAA9EC1F7194018B5",
+      "entry_passed": false,
+      "entry_failed_checks": ["cycle_1_timing"],
+      "strict_passed": false,
+      "strict_failure_is_temporal_only": true,
+      "Rmin": 0.9092558983666059,
+      "recall": [0.9372852233676976, 0.9092558983666059],
+      "precision": [0.9091666666666666, 0.9461756373937675],
+      "active_mass_ratio": [1.0309278350515465, 0.9609800362976405],
+      "event_time_absolute_error": [0.010533333333333339, 0.004999999999999893],
+      "recovery_fraction": [1.0, 1.0],
+      "phase_weighted_mse": 0.0012096258776594536
+    },
+    "DEV_C_THRESHOLD_ALIGNED_INTERFACE": {
+      "checkpoint_sha256": "103491B36C2DA0942B9E44AAC87558E94C4D07CE99A80401FEA28F3EBF97EC20",
+      "entry_passed": false,
+      "entry_failed_checks": ["phase_weighted_error"],
+      "strict_passed": false,
+      "Rmin": 0.9415807560137457,
+      "recall": [0.9415807560137457, 0.9754990925589836],
+      "precision": [0.9133333333333332, 0.9380453752181501],
+      "active_mass_ratio": [1.0309278350515465, 1.039927404718693],
+      "event_time_absolute_error": [0.0019000000000000128, 0.0025000000000001688],
+      "recovery_fraction": [1.0, 0.7678571428571429],
+      "phase_weighted_mse": 0.02966728485699944,
+      "phase_error_ratio_to_lf3_t0": 15.821696221979167,
+      "phase_error_ratio_to_DEV_M": 24.526000480746728
+    }
+  },
+  "mechanism_decision": {
+    "Rmin_DEV_M_minus_DEV_G": 0.08983666061705975,
+    "Rmin_DEV_C_minus_DEV_M": 0.03232485764713977,
+    "boundary_exposure_supported": true,
+    "threshold_aligned_supported": false,
+    "classification": "BOUNDARY_EXPOSURE_SUPPORTED",
+    "interpretation": "TEACHER_INTERFACE_EXPOSURE_IMPROVED_MINIMUM_RECALL_VERSUS_EQUAL_BUDGET_GLOBAL_EXTRA_SUPERVISION_WITH_FROZEN_QUALITY_PRESERVED",
+    "threshold_loss_rejection": "RECALL_AND_TIMING_IMPROVED_BUT_PHASE_ERROR_AND_CYCLE_2_RECOVERY_TRADED_AWAY"
+  },
+  "local_nominal_development_evaluation": {
+    "performed_only_after_recovery_hash_verification_and_shutdown_refusal": true,
+    "canonical_raw_path": "outputs/runs/20260905T102817Z-phk-v23-lf4-local-adjudication-5dbde1d/adjudication.json",
+    "canonical_raw_sha256": "4301BEF71B49B17EA0EA164314A0FF5F9CBF11367C2EA92AF0509D75F0D94289",
+    "canonical_raw_size_bytes": 624275,
+    "outcome": "LF4_NO_DEVELOPMENT_ENTRY",
+    "selected_prediction_evaluated": false,
+    "direct_LF_ONLY_remains_strongest_inherited_accuracy_baseline": true,
+    "new_direct_baseline_candidate_comparison_defined": false,
+    "P0_to_selected_physics_ratio_defined": false
+  },
+  "engineering_retry": {
+    "first_attempt_optimizer_updates": 0,
+    "first_attempt_output_root_created": false,
+    "cause": "BASE_INTERPRETER_MISSING_H5PY_BEFORE_RUNNER_IMPORT",
+    "isolated_repair": "USE_EXISTING_PROJECT_PY311_ENVIRONMENT_AFTER_TORCH_H5PY_CUDA_V100_AND_ZERO_STEP_PREFLIGHT_REGRESSION",
+    "scientific_identity_changed": false,
+    "same_task_engineering_retry_count": 1,
+    "first_launcher_log_sha256": "5E038302B2F9BC652262ADAD4EFD0B65F160977D2297FC4F17051CFBD8536855",
+    "retry_launcher_log_sha256": "E48103551F3F1947F6E0AB2BC522B7306A6F4BA1950436AC8B02074D2C7ED900"
+  },
+  "recovery_and_instance_lifecycle": {
+    "summary_bound_artifacts_verified": 6,
+    "all_declared_artifact_sizes_and_sha256_verified": true,
+    "remote_and_local_hashes_equal": true,
+    "lf4_training_processes_before_shutdown": 0,
+    "gpu_compute_processes_before_shutdown": 0,
+    "gpu_memory_used_mib_before_shutdown": 0,
+    "shutdown_executed_after_recovery": true,
+    "tcp_port_closed": true,
+    "shutdown_verified_by": "SSH_CONNECTION_REFUSED"
+  },
+  "machine_adjudication": {
+    "outcome": "LF4_NO_DEVELOPMENT_ENTRY",
+    "status": "TERMINAL",
+    "unique_next": "P0_NOT_RUN_THREE_ARM_MECHANISM_NEGATIVE_UPDATE_PAPER",
+    "development_entry_exists": false,
+    "P0_executed": false,
+    "single_seed_pinn_specific_pilot": "NOT_REACHED",
+    "candidate_signal": "NOT_REACHED",
+    "candidate": null
+  },
+  "paper_package": {
+    "path": "paper/paper_v23",
+    "status": "ADVISOR_DRAFT_UPDATED_WITH_BOUNDED_LF4_MECHANISM_RESULT_AND_NEGATIVE_ENTRY_BOUNDARY",
+    "manuscript_sha256": "27B8407C558A02503A328BC4EA18F9917EAF31AF1ABC357351F0469B3548C67D",
+    "main_figures_png_pdf_pairs": 8,
+    "lf4_figures": ["figure-06-interface-boundary-geometry", "figure-07-lf4-development-ablation", "figure-08-lf4-physics-pareto"],
+    "claim_identity": "FAILURE_ANALYSIS_PLUS_BOUNDED_INTERFACE_EXPOSURE_SOLVER_RECOVERY_EVIDENCE_NOT_POSITIVE_PINN_METHOD"
+  },
+  "verification": {
+    "lf4_focused_tests_run": 12,
+    "lf4_focused_tests_passed": 12,
+    "focused_and_research_chain_regression_tests_run": 135,
+    "focused_and_research_chain_regression_tests_passed": 135,
+    "test_runner": "PYTHON_UNITTEST",
+    "strict_json": "STRICT_JSON_VALID",
+    "experiment_ledger": "EXPERIMENT_LEDGER_VALID",
+    "document_consistency": "DOCUMENT_CONSISTENCY_VALID"
+  },
+  "claim_boundary": "SINGLE_SEED_NOMINAL_MATCHED_BOUNDARY_EXPOSURE_INCREMENT_WITHOUT_COMPLETE_CARRIER_ENTRY_P0_PINN_GAIN_DIRECT_BASELINE_GAIN_MULTI_SEED_FORMAL_OOD_STRESS_CONTINUUM_TRUTH_MATERIAL_EXPERIMENTAL_VALIDATION_SOTA_OR_SUBMISSION_READINESS",
+  "evidence_assessment": {
+    "verified": [
+      "CPU_G_BOUNDARY_LOCALIZATION_AND_ALL_FROZEN_STREAM_IDENTITIES_PASS",
+      "ALL_THREE_MATCHED_DEVELOPMENT_ARMS_COMPLETED_FIXED_400_UPDATE_ENDPOINTS",
+      "DEV_M_MINUS_DEV_G_PASSES_FROZEN_BOUNDARY_EXPOSURE_INCREMENT_AND_QUALITY_GATE",
+      "DEV_C_MINUS_DEV_M_DOES_NOT_PASS_COMPLETE_THRESHOLD_ALIGNED_QUALITY_GATE",
+      "NO_DEVELOPMENT_ARM_PASSED_COMPLETE_P0_ENTRY",
+      "P0_WAS_NOT_RUN_AND_NO_PINN_OR_CANDIDATE_RESULT_EXISTS",
+      "ALL_DECLARED_RUN_ARTIFACTS_WERE_RECOVERED_HASH_VERIFIED_AND_THE_INSTANCE_WAS_SHUT_DOWN",
+      "STRESS_REMAINED_SEALED_UNREAD"
+    ],
+    "supported_interpretation": "LF3_T0_RECALL_DEFICIT_WAS_MATERIALLY_INTERFACE_EXPOSURE_LIMITED_IN_THIS_FROZEN_OBJECT_BUT_THRESHOLD_ALIGNED_BCE_OVEREXPANDED_THE_PHASE_FIELD",
+    "hypothesis": "A_NON_BCE_INTERFACE_OBJECTIVE_MIGHT_PRESERVE_DEV_M_FIELD_QUALITY_WHILE_REPAIRING_ITS_REMAINING_CYCLE_1_TIMING_ERROR",
+    "unknown": [
+      "WHETHER_A_COMPLETE_CARRIER_CAN_BE_ESTABLISHED_WITHOUT_POST_HOC_TUNING",
+      "WHETHER_LABEL_FREE_PHYSICS_REFINEMENT_CAN_ADD_VALUE",
+      "MULTI_SEED_FORMAL_OOD_AND_STRESS_BEHAVIOR",
+      "CONTINUUM_MATERIAL_EXPERIMENTAL_AND_SUBMISSION_LEVEL_VALIDITY"
+    ]
+  },
+  "stress_reference_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}
