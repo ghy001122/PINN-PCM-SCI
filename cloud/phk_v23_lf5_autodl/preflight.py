@@ -44,6 +44,20 @@ def _forbidden(root:Path)->list[str]:
     return sorted(result)
 
 
+def _validate_training_inputs(*,root:Path,manifest:dict[str,Any],medium_carrier:Path,initial_checkpoint:Path)->dict[str,dict[str,Any]]:
+    data=json.loads(_safe(root,CONTRACT_RELATIVES["data"].as_posix()).read_text(encoding="utf-8"))
+    bindings={"medium":data["training_source"],"initial_checkpoint":data["initial_checkpoint"]}
+    supplied={"medium":(Path(medium_carrier).resolve(),MEDIUM_RELATIVE),"initial_checkpoint":(Path(initial_checkpoint).resolve(),CHECKPOINT_RELATIVE)}
+    records:dict[str,dict[str,Any]]={}
+    for role,(exact,relative) in supplied.items():
+        required=(root/Path(*relative.parts)).resolve(); actual=_sha(exact) if exact.is_file() else None
+        record={"path":relative.as_posix(),"sha256":actual,"size_bytes":exact.stat().st_size if exact.is_file() else -1}
+        if exact!=required or not exact.is_file() or bindings[role].get("path")!=relative.as_posix() or actual!=str(bindings[role].get("sha256","")).upper() or manifest.get("training_inputs",{}).get(role)!=record:
+            raise PermissionError(f"LF5 exact {role} drift")
+        records[role]=record
+    return records
+
+
 def run_preflight(*,source_identity:str,deployment_root:Path,medium_carrier:Path,initial_checkpoint:Path,cuda_probe:Any=None,pythonpath:str|None=None,user_override_cpu_gate:bool=False)->dict[str,Any]:
     root=ROOT.resolve()
     if Path(deployment_root).resolve()!=root: raise ValueError("LF5 deployment root mismatch")
@@ -59,6 +73,7 @@ def run_preflight(*,source_identity:str,deployment_root:Path,medium_carrier:Path
         if actual!=str(expected).upper(): raise ValueError(f"LF5 deployed source drift: {relative}")
         lines.append(f"{relative}={actual}\n")
     if source_identity!="LF5-BUNDLE-"+hashlib.sha256("".join(lines).encode()).hexdigest().upper(): raise ValueError("LF5 aggregate identity drift")
+    training_inputs=_validate_training_inputs(root=root,manifest=manifest,medium_carrier=medium_carrier,initial_checkpoint=initial_checkpoint)
     qualification_binding=manifest["cpu_qualification"]; qualification_path=_safe(root,qualification_binding["path"]); qualification=json.loads(qualification_path.read_text(encoding="utf-8"))
     gate_passed=qualification.get("status")=="LF5_CPU_T_QUALIFICATION_PASS" and qualification.get("gpu_execution_authorized_by_cpu_gate") is True
     override_valid=user_override_cpu_gate and qualification.get("status")=="LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU" and qualification.get("gpu_execution_authorized_by_cpu_gate") is False
@@ -67,7 +82,7 @@ def run_preflight(*,source_identity:str,deployment_root:Path,medium_carrier:Path
     if _forbidden(root): raise PermissionError("LF5 forbidden cloud files present")
     cuda=torch.cuda if cuda_probe is None else cuda_probe
     if not cuda.is_available() or cuda.get_device_name(0)!=EXPECTED_GPU: raise RuntimeError("LF5 exact V100 unavailable")
-    return {"status":"REMOTE_LF5_PREFLIGHT_VALID","task_id":TASK_ID,"source_identity":source_identity,"evidence_role":"POST_QUALIFICATION_USER_OVERRIDE_EXPLORATORY" if override_valid else "PREREGISTERED_CPU_QUALIFIED","gpu_name":EXPECTED_GPU,"dtype":"FLOAT64","seed":17,"maximum_optimizer_updates":1600,"maximum_scientific_trajectories":1,"optimizer_constructed":False,"optimizer_updates":0,"stress_fields_present":False}
+    return {"status":"REMOTE_LF5_PREFLIGHT_VALID","task_id":TASK_ID,"source_identity":source_identity,"evidence_role":"POST_QUALIFICATION_USER_OVERRIDE_EXPLORATORY" if override_valid else "PREREGISTERED_CPU_QUALIFIED","gpu_name":EXPECTED_GPU,"dtype":"FLOAT64","seed":17,"training_inputs":training_inputs,"maximum_optimizer_updates":1600,"maximum_scientific_trajectories":1,"optimizer_constructed":False,"optimizer_updates":0,"stress_fields_present":False}
 
 
 def main()->int:
