@@ -25,6 +25,11 @@
 | LF4 established an eligible development carrier | `REJECTED` | G failed timing; M failed cycle-1 timing; C failed phase-error gate | No selected carrier |
 | LF4 demonstrated PINN-specific value | `NOT_TESTED` | P0 correctly ran zero updates | Never call the phase-only arms PINNs |
 | LF4 positive proves the earlier LF3 latent representation | `REJECTED_EXTRAPOLATION` | all LF4 arms share LF3-T0 initialization | Boundary exposure is conditional on the inherited carrier, not latent attribution |
+| LF5 reconstructed a valid cycle-resolved temporal-edge object | `VERIFIED` | 68/68/64/64 pools, 264/264 valid edges, frozen stream hash | Geometry/identity fact only |
+| DEV-C is locally better aligned than DEV-M because its aggregate timing is better | `REJECTED_BY_CPU_T` | onset mean absolute residual is larger for DEV-C in both cycles | Aggregate event time is not a proxy for per-cell zero-level alignment |
+| The LF5 TZL objective was trained and failed | `REJECTED` | zero optimizer updates; DEV-T and P0 not run | Say “mechanism premise rejected before GPU,” never “LF5 model failed” |
+| LF5 produced a carrier or PINN gain | `NOT_TESTED` | CPU gate closed the GPU branch | No carrier, physics ratio, or candidate claim |
+| A kinetic or \(\partial_t\phi\) teacher will succeed | `HYPOTHESIS` | proposed unique plan-only backup | Requires a new contract and authorization |
 
 ## Current central statement
 
@@ -33,9 +38,11 @@ The maximum defensible central statement is:
 > Within a fixed single-seed coupled electric–thermal–phase benchmark,
 > competence-first matched controls isolated teacher-interface exposure as a
 > substantial driver of rare-event support recall, while showing that a more
-> threshold-aligned classification loss can recover timing only by sacrificing
-> field fidelity; neither result substitutes for an eligible carrier or an
-> executed physics-informed Pareto test.
+> threshold-aligned classification loss can recover aggregate timing only by
+> sacrificing field fidelity; a zero-update temporal-edge audit then falsified
+> the assumption that this aggregate gain represented improved local
+> zero-level alignment. None of these results substitutes for an eligible
+> carrier or an executed physics-informed Pareto test.
 
 This statement supports an advisor draft with one positive, bounded mechanism
 attribution embedded in an otherwise negative solver-recovery result. It does

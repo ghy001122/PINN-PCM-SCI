@@ -30,3 +30,12 @@ ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-sta
 ## 权威路由
 
 当前完成态与无后续授权边界见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，终局动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF4 证据见 [terminal closeout](docs/experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md) 与 [ADR 0062](docs/adr/0062-close-phk-v23-lf4-interface-band-pilot.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF3/LF2/LF1/LF0/C0 历史入口继续由对应 terminal closeout 保留。
+# LF5 current context (2026-09-05)
+
+LF5 tested whether LF4 DEV-C's aggregate timing improvement also improved a
+teacher-anchored per-cell saved-cadence zero-level residual. CPU-T found the
+opposite in both onset cycles, while geometry, identity, sign, and gradient
+checks passed. The frozen CPU gate would close DEV-T/P0. On 2026-09-06 the user
+explicitly authorized the otherwise unchanged DEV-T as post-qualification
+exploratory evidence; only an original carrier-gate pass may trigger P0. This
+override does not rehabilitate or rewrite the CPU premise.

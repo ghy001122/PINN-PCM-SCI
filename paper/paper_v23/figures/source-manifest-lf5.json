@@ -1,0 +1,21 @@
+{
+  "schema_id": "paper-v23-lf5-figure-source-manifest-v1",
+  "scope": "LF5 CPU-T zero-update nominal mechanism-premise evidence",
+  "inputs": {
+    "docs/experiment/artifacts/20260905T150045Z-phk-v23-lf5-cpu-qualification.json": "89F2B95D8F72C14506DEA4D78AF69E748637EB397B6983ADA4E9FA957ED8CED4",
+    "docs/references/2026-09-05-phk-v23-lf5-temporal-zero-level-prior-art.md": "F45F4A9EC13D65C4B1BA456057077F10E1C16EF88368A0DCB96229B126CC7FBF",
+    "paper/paper_v23/figures/data/lf5_terminal_metrics.json": "32DAFF223CDC37B8B1EA19B7B778E9A9BBB9777352B501ADC733BB767D5BBBB5"
+  },
+  "outputs": {
+    "paper/paper_v23/figures/20260905T150045Z-lf5-temporal-edge-geometry.png": "55DE8EC2C1D9B1E9E57E94DC61A596D3322CD615EDCF29D010B1FD0AC84B634C",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-temporal-edge-geometry.pdf": "959EECFE8A863970E66F43DBF4ACF0CD4356C9B7987C9E69F67DDBEAF6211E93",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-timing-calibration.png": "E8299C801F24C75997FC45DAAD4E265AD34989D3C6A9AB12394B4FBD16879952",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-timing-calibration.pdf": "F0AE99FA8F2A4F6DB0CEEC7D160F2CF1188ADB348B62EF908C88DE932518F2BA",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-physics-pareto.png": "ACF1265C45A96DF9A5299A39EE21CEA680A4E17CFB2C354D664D7A4B4A3B86C3",
+    "paper/paper_v23/figures/20260905T150045Z-lf5-physics-pareto.pdf": "16E88E7878ABF2F459651D5FC9CCB0CAEE484EC5E33FFD2378002F9C56C219FA"
+  },
+  "generator_sha256": "60056E1C53499B12C9150EFB00BDDF864ADB3E864E56A718E4308A4D0A0A24D6",
+  "fine_extra_lf_only_frozen_evaluator_read": false,
+  "cloud_connection_opened": false,
+  "stress_reference_read": false
+}

@@ -1,0 +1,59 @@
+{
+  "schema_id": "phk-v23-lf5-method-contract-v1",
+  "contract_id": "PHK_V23_LF5_TEMPORAL_ZERO_LEVEL_METHOD",
+  "program_contract": "configs/phk_v23/program_contract_lf5_temporal_zero_level.json",
+  "effective_date": "2026-09-05",
+  "status": "FROZEN_BEFORE_GPU_EXECUTION",
+  "common_identity": {
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "case_control": "FULL",
+    "initialization": "EXACT_LF3_T0_STEP_1200_MODEL_WEIGHTS_ONLY",
+    "network": "UNCHANGED_STRONG_RAW_THREE_INDEPENDENT_FIELD_HEADS",
+    "updated_parameters": "EXISTING_PHASE_ENCODER_AND_PHASE_HEAD_ONLY",
+    "frozen_parameters_and_buffers": ["potential", "temperature"],
+    "new_parameters": false,
+    "potential_transform": "POTENTIAL_TRANSFORM_EXACT_TOP_RANGE_PRESERVING_LOG_RATIO",
+    "phase_transform": "SIGMOID_LOGIT_PHI0_PLUS_8_TIMES_STARTUP_TIMES_HPHI",
+    "startup": "1-exp(-(t-t0)/0.35)",
+    "clip_epsilon": 1e-8,
+    "logit_span": 36.84136146790473,
+    "optimizer": {"name":"TORCH_ADAM","learning_rate":0.001,"betas":[0.9,0.999],"eps":1e-8,"weight_decay":0.0,"amsgrad":false,"fresh":true},
+    "gradient_clip_norm": 10.0
+  },
+  "CPU_T": {
+    "device": "CPU",
+    "dtype": "FLOAT64",
+    "optimizer_updates": 0,
+    "maximum_hours": 2,
+    "teacher_logit": "logit(clip(phi_medium,1e-8,1-1e-8))",
+    "onset": "FIRST_ADJACENT_SAVED_EDGE_IN_W1_OR_W3_WITH_ZK_LT_0_LE_ZK1",
+    "recovery": "FIRST_SUBSEQUENT_ADJACENT_EDGE_IN_SAME_CYCLE_W2_OR_W4_WITH_ZK_GE_0_GT_ZK1_NO_WRAP",
+    "rho_star": "-z_k/(z_k1-z_k)",
+    "denominator_guard": "ABS_DEN_GT_64_TIMES_FLOAT64_EPS_TIMES_MAX_1_ABS_ENDPOINTS",
+    "invalid_edge_fraction_maximum": 0.01,
+    "mechanism_gate": "BOTH_ONSET_POOLS_MEAN_ABS_R_DEV_C_LT_MEAN_ABS_R_DEV_M_AND_DEV_M_SIGN_MATCHES_EVENT_EARLY_LATE_DIRECTION",
+    "single_backward_no_step": true
+  },
+  "DEV_T": {
+    "updates": 400,
+    "fixed_endpoint": 400,
+    "loss": "0.50*L_BASE_PLUS_0.25*L_SPATIAL_PLUS_0.25*L_TZL",
+    "L_BASE": "LF3_EQUAL_14_CATEGORY_NORMALIZED_LOGIT_INCREMENT_MSE",
+    "L_SPATIAL": "LF4_FOUR_POOL_NORMALIZED_LOGIT_INCREMENT_MSE",
+    "L_TZL": "ONE_QUARTER_SUM_POOL_MEAN_SQUARE_OF_INTERPOLATED_PREDICTED_LOGIT_AT_TEACHER_RHO_DIVIDED_BY_LOGIT_SPAN",
+    "forbidden": ["BCE","AUGMENTED_LAGRANGIAN","DICE","SIGNED_DISTANCE","KINETIC_TEACHER","PDE","V_OR_T_UPDATE","DYNAMIC_WEIGHTING","LBFGS","NETWORK_EXPANSION","WEIGHT_OR_SEED_SWEEP","EARLY_STOP"]
+  },
+  "conditional_P0": {
+    "updates": 1200,
+    "fresh_adam": true,
+    "single_optimizer_across_blocks": true,
+    "objective": "L_PDE_PLUS_5_L_BC_PLUS_L_IC",
+    "medium_or_label_draws": 0,
+    "steps_1_through_550": "PHASE_PARAMETERS_AND_BUFFERS_BITWISE_FROZEN_ONLY_V_T_UPDATED_FULL_RESIDUAL_READS_PHASE",
+    "steps_551_through_1200": "UNFREEZE_PHASE_WITHOUT_OPTIMIZER_RESET_AND_JOINTLY_UPDATE_ALL_THREE_HEADS",
+    "forbidden": ["REPLAY","ANCHOR","BCE","AUGMENTED_LAGRANGIAN","TZL","DATA_OR_EVENT_LOSS","DYNAMIC_WEIGHTING","LBFGS"]
+  },
+  "telemetry": {"DEV_T":"STEP_1_AND_EVERY_50","P0":"STEP_1_EVERY_50_STEP_550_STEP_551_STEP_1200","selection_or_adaptation":false}
+}

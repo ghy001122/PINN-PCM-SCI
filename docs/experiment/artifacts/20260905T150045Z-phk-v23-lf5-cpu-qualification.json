@@ -1,0 +1,397 @@
+{
+  "DEV_C_temporal_residuals": {
+    "full_weighted_loss": 0.01629197535168119,
+    "pool_reports": {
+      "C1_ONSET": {
+        "maximum_absolute_residual": 2.9424942479714415,
+        "weighted_mean_absolute_residual": 0.7237598631677347,
+        "weighted_mean_signed_residual": -0.008769475569572943
+      },
+      "C1_RECOVERY": {
+        "maximum_absolute_residual": 9.06964227676204,
+        "weighted_mean_absolute_residual": 5.246607549634532,
+        "weighted_mean_signed_residual": 5.246607549634532
+      },
+      "C2_ONSET": {
+        "maximum_absolute_residual": 2.083450432993568,
+        "weighted_mean_absolute_residual": 0.6040551907367746,
+        "weighted_mean_signed_residual": 0.2524261896193833
+      },
+      "C2_RECOVERY": {
+        "maximum_absolute_residual": 12.019332729967749,
+        "weighted_mean_absolute_residual": 7.112637876492879,
+        "weighted_mean_signed_residual": 7.112637876492879
+      }
+    }
+  },
+  "DEV_M_temporal_residuals": {
+    "full_weighted_loss": 0.0002750195057695652,
+    "pool_reports": {
+      "C1_ONSET": {
+        "maximum_absolute_residual": 1.2346873321968055,
+        "weighted_mean_absolute_residual": 0.2920705753720851,
+        "weighted_mean_signed_residual": 0.07706398568397911
+      },
+      "C1_RECOVERY": {
+        "maximum_absolute_residual": 1.276985667054805,
+        "weighted_mean_absolute_residual": 0.3984591039958937,
+        "weighted_mean_signed_residual": 0.16198087375520573
+      },
+      "C2_ONSET": {
+        "maximum_absolute_residual": 1.0677805736555577,
+        "weighted_mean_absolute_residual": 0.3099827339141064,
+        "weighted_mean_signed_residual": -0.09995831462301503
+      },
+      "C2_RECOVERY": {
+        "maximum_absolute_residual": 3.093803578825913,
+        "weighted_mean_absolute_residual": 0.6993708074689402,
+        "weighted_mean_signed_residual": 0.18136742353460794
+      }
+    }
+  },
+  "backward": {
+    "loss": 0.000603514476818032,
+    "optimizer_step_taken": false,
+    "phase_gradient_norm": 0.00487158654412475
+  },
+  "checks": {
+    "DEV_M_onset_sign_aligned": true,
+    "all_input_hashes": true,
+    "both_onset_DEV_C_strictly_better_than_DEV_M": false,
+    "fine_extra_lf_only_stress_unread": true,
+    "finite_nonzero_phase_gradient_backward": true,
+    "four_pools_nonempty": true,
+    "invalid_edge_fraction": true,
+    "partition": true,
+    "raw_signed_timing_and_step350_present": true,
+    "stream_hashes": true,
+    "zero_optimizer_updates": true
+  },
+  "claim_boundary": "CPU_T_CAN_FALSIFY_ALIGNMENT_INTERFACE_BUT_CANNOT_ESTABLISH_LATENT_OR_PINN_SUCCESS",
+  "contracts": {
+    "data": {
+      "path": "configs/phk_v23/data_contract_lf5_temporal_zero_level.json",
+      "sha256": "EDCAD7AC0AFBFEA9B3B28F3D8C4DE86CF27DBFD902C35357296D9C0B035C6690"
+    },
+    "decision": {
+      "path": "configs/phk_v23/decision_contract_lf5_temporal_zero_level.json",
+      "sha256": "889AC3D8BBEDFF1B34CE66F3D10EB5FDECB8EC5F8C8925D862996CE3EAB12A8F"
+    },
+    "method": {
+      "path": "configs/phk_v23/method_contract_lf5_temporal_zero_level.json",
+      "sha256": "58329972AF25963EE37D8D32387A26F2B564B91253F2A1E66732BA8E7C4AA2D6"
+    },
+    "program": {
+      "path": "configs/phk_v23/program_contract_lf5_temporal_zero_level.json",
+      "sha256": "83E2DD4930C1E7BC7061EF282BE5C9951E38C89083B5736EC1210BCA1274F979"
+    }
+  },
+  "created_at_utc": "2026-09-05T15:18:31.895089+00:00",
+  "gpu_execution_authorized_by_cpu_gate": false,
+  "gpu_used": false,
+  "input_bindings": {
+    "LF4_compact": {
+      "cpu": {
+        "path": "E:\\Python demo\\PINN-PCM-SCI\\docs\\experiment\\artifacts\\20260905T082728Z-phk-v23-lf4-cpu-qualification.json",
+        "sha256": "D63D63953BEE85D7B9772B7FFCC06238640E01541B30DA174E10BD4A3F40A4D1"
+      },
+      "terminal": {
+        "path": "E:\\Python demo\\PINN-PCM-SCI\\docs\\experiment\\artifacts\\20260905T082728Z-phk-v23-lf4-terminal.json",
+        "sha256": "D8950DFC8DCA40C5C124CFB21B49E460110A4214AEAE7A1C99264B0D0A8889D8"
+      }
+    },
+    "LF4_fixed": {
+      "DEV_C": {
+        "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d\\checkpoint-dev-c-threshold-aligned-interface-step-400.pt",
+        "sha256": "103491B36C2DA0942B9E44AAC87558E94C4D07CE99A80401FEA28F3EBF97EC20"
+      },
+      "DEV_G": {
+        "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d\\checkpoint-dev-g-global-mse-control-step-400.pt",
+        "sha256": "938069AC719C347C7175BFA5BC908E55C28EE07D6A1C178BD982B541B6DF301F"
+      },
+      "DEV_M": {
+        "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d\\checkpoint-dev-m-interface-band-mse-step-400.pt",
+        "sha256": "16EEE20C6B1A2510ACB387E83894ADD64061D631422FAB4DAA9EC1F7194018B5"
+      },
+      "batch_ledger": {
+        "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d\\development-batch-hashes.jsonl",
+        "sha256": "18635CDAFC4F55A13E78D075795A1CC535B0A201316F80663FAFD13F39388C33"
+      },
+      "local_adjudication": {
+        "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260905T102817Z-phk-v23-lf4-local-adjudication-5dbde1d\\adjudication.json",
+        "sha256": "4301BEF71B49B17EA0EA164314A0FF5F9CBF11367C2EA92AF0509D75F0D94289"
+      },
+      "summary": {
+        "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d\\summary.json",
+        "sha256": "692833FA52787AE9B204A64AC84D11E9AA15352459498EF3A2D066F7CB313ED2"
+      },
+      "telemetry": {
+        "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d\\development-telemetry.jsonl",
+        "sha256": "001273E4206E63B3607041C96A979FE2682869B50E3C6FF53AC8B0143E0092B4"
+      }
+    },
+    "lf3_t0_checkpoint": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74\\checkpoint-t0-step-1200.pt",
+      "sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA"
+    },
+    "lf3_t0_prediction": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74\\prediction-t0-step-1200.npz",
+      "sha256": "485F0D09C65BDDCE3AEA212B337B85CFB08CD81E788E9F6AF81083871611819D"
+    },
+    "medium": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260828T-phk-v21-s1-q-04-nominal-medium\\result-intent-04.npz",
+      "sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F"
+    }
+  },
+  "lf1_b0_full_medium_audit": {
+    "all_values_finite": true,
+    "event_metrics": {
+      "cycle_1": {
+        "event_time_absolute_error": 0.04461999999999999,
+        "hard_active_mass_ratio": 5.26975945017182,
+        "hard_precision": 0.17052494294098466,
+        "hard_recall": 0.8986254295532644,
+        "predicted_active_target_mass": 0.003833749999999999,
+        "predicted_event_time": 0.19318000000000002,
+        "teacher_active_target_mass": 0.0007275,
+        "teacher_event_time": 0.2378,
+        "true_positive_target_mass": 0.0006537499999999998
+      },
+      "cycle_2": {
+        "event_time_absolute_error": 0.05177777777777792,
+        "hard_active_mass_ratio": 5.863883847549908,
+        "hard_precision": 0.16109563602599816,
+        "hard_recall": 0.9446460980036296,
+        "predicted_active_target_mass": 0.004038749999999998,
+        "predicted_event_time": 1.4424222222222223,
+        "teacher_active_target_mass": 0.0006887499999999998,
+        "teacher_event_time": 1.4942000000000002,
+        "true_positive_target_mass": 0.0006506249999999997
+      }
+    },
+    "event_topology_hard_guard": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.19318000000000002,
+          "peak_full_domain_fraction": 0.090625,
+          "peak_outside_roi_fraction": 0.04525089605734767,
+          "peak_roi_fraction": 0.1952479338842975,
+          "peak_time_index": 70,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.4424222222222223,
+          "peak_full_domain_fraction": 0.08875,
+          "peak_outside_roi_fraction": 0.04614695340501792,
+          "peak_roi_fraction": 0.18698347107438015,
+          "peak_time_index": 313,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "phase_maximum": 0.7541966324539336,
+    "phase_range": {
+      "maximum": 0.7541966324539336,
+      "minimum": 0.00010206055824332187,
+      "passed": true
+    },
+    "potential_maximum_principle": {
+      "by_window": {
+        "W1": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W2": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W3": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W4": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        }
+      },
+      "global": {
+        "absolute_tolerance": 1e-06,
+        "all_pointwise_values_finite": true,
+        "maximum_absolute_excess": 0.0,
+        "passed": true,
+        "violation_fraction": 0.0
+      },
+      "passed": true
+    },
+    "target_measure_identity": "TRAPEZOID_TIME_TIMES_CELL_VOLUME",
+    "temperature_maximum": 0.8189112507976513,
+    "topology_weighted_loss": 0.040861138466208875,
+    "two_cycle_events": true,
+    "weighted_errors": {
+      "phase": 0.056688433089415936,
+      "potential": 0.00029549333452002987,
+      "temperature": 0.01122029538393568
+    }
+  },
+  "onset_mechanism_comparison": {
+    "C1_ONSET": {
+      "DEV_C_strictly_better": false,
+      "DEV_C_weighted_mean_abs": 0.7237598631677347,
+      "DEV_M_timing_direction": "EARLY",
+      "DEV_M_weighted_mean_abs": 0.2920705753720851,
+      "DEV_M_weighted_mean_signed": 0.07706398568397911,
+      "expected_residual_sign_from_teacher_minus_prediction": 1,
+      "observed_residual_sign": 1,
+      "sign_aligned": true
+    },
+    "C2_ONSET": {
+      "DEV_C_strictly_better": false,
+      "DEV_C_weighted_mean_abs": 0.6040551907367746,
+      "DEV_M_timing_direction": "LATE",
+      "DEV_M_weighted_mean_abs": 0.3099827339141064,
+      "DEV_M_weighted_mean_signed": -0.09995831462301503,
+      "expected_residual_sign_from_teacher_minus_prediction": -1,
+      "observed_residual_sign": -1,
+      "sign_aligned": true
+    }
+  },
+  "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+  "raw_timing_evidence": {
+    "DEV_C_THRESHOLD_ALIGNED_INTERFACE": {
+      "step_350": {
+        "cycle_1": {
+          "direction": "EARLY",
+          "predicted_event_time": 0.23090000000000002,
+          "signed_predicted_minus_teacher": -0.0068999999999999895,
+          "teacher_event_time": 0.2378
+        },
+        "cycle_2": {
+          "direction": "LATE",
+          "predicted_event_time": 1.495257142857143,
+          "signed_predicted_minus_teacher": 0.0010571428571428676,
+          "teacher_event_time": 1.4942000000000002
+        }
+      },
+      "step_400": {
+        "cycle_1": {
+          "direction": "EARLY",
+          "predicted_event_time": 0.2359,
+          "signed_predicted_minus_teacher": -0.0019000000000000128,
+          "teacher_event_time": 0.2378
+        },
+        "cycle_2": {
+          "direction": "EARLY",
+          "predicted_event_time": 1.4917,
+          "signed_predicted_minus_teacher": -0.0025000000000001688,
+          "teacher_event_time": 1.4942000000000002
+        }
+      }
+    },
+    "DEV_M_INTERFACE_BAND_MSE": {
+      "step_350": {
+        "cycle_1": {
+          "direction": "EARLY",
+          "predicted_event_time": 0.23090000000000002,
+          "signed_predicted_minus_teacher": -0.0068999999999999895,
+          "teacher_event_time": 0.2378
+        },
+        "cycle_2": {
+          "direction": "LATE",
+          "predicted_event_time": 1.4969666666666668,
+          "signed_predicted_minus_teacher": 0.002766666666666584,
+          "teacher_event_time": 1.4942000000000002
+        }
+      },
+      "step_400": {
+        "cycle_1": {
+          "direction": "EARLY",
+          "predicted_event_time": 0.22726666666666667,
+          "signed_predicted_minus_teacher": -0.010533333333333339,
+          "teacher_event_time": 0.2378
+        },
+        "cycle_2": {
+          "direction": "LATE",
+          "predicted_event_time": 1.4992,
+          "signed_predicted_minus_teacher": 0.004999999999999893,
+          "teacher_event_time": 1.4942000000000002
+        }
+      }
+    }
+  },
+  "reference_boundary": {
+    "LF_ONLY_read": false,
+    "fine_extra_read": false,
+    "frozen_evaluator_read": false,
+    "stress_read": false
+  },
+  "schema_id": "phk-v23-lf5-cpu-qualification-v1",
+  "scientific_model_optimizer_updates": 0,
+  "status": "LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU",
+  "stream_checks": {
+    "base_window": true,
+    "pool_counts": true,
+    "pool_hashes": true,
+    "spatial_band": true,
+    "temporal": true
+  },
+  "stream_identities": {
+    "band_400_sha256": "4DB1728CC543B1AB18BD3F74B83B29EBFE5F95624D98DAFEA615B0ECDC69DEC4",
+    "base_window_1201_1600_sha256": "3870D0C1411B3DF6E04C5BA316B3F0F77233D94A73A19E84523D81B62F692E4A",
+    "temporal": {
+      "candidate_edge_count": 264,
+      "invalid_edge_count": 0,
+      "invalid_edge_fraction": 0.0,
+      "pool_counts": {
+        "C1_ONSET": 68,
+        "C1_RECOVERY": 68,
+        "C2_ONSET": 64,
+        "C2_RECOVERY": 64
+      },
+      "pool_hashes": {
+        "C1_ONSET": "53ACE1B24C2ACFE1587AAD257E0CA4BABF297E26BDB7F233E78384C9BE4B77AC",
+        "C1_RECOVERY": "CFE8B84384325D37D406E0F0EC733DB6AB14E0B337C335ADC325904EAD1201CF",
+        "C2_ONSET": "39D08EE16CE0954C53162011E773162656FAEA99C4EEE91D4D1E03BE952E3FD0",
+        "C2_RECOVERY": "B7F1ECAD054C5BF51586645C964E7AD6DA080DD08FE716117824C5867C59A0AC"
+      },
+      "rolling_sha256": "8FD79D99DAA0175026017BB0025BEFEF896BCB383F46F906A3E800427C9B3BD9"
+    }
+  },
+  "task_id": "PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE",
+  "temporal_geometry": {
+    "candidate_edge_count": 264,
+    "cycle_semantics": "ONSET_W1_W3_THEN_RECOVERY_W2_W4_NO_WRAP",
+    "invalid_edge_count": 0,
+    "invalid_edge_fraction": 0.0,
+    "pool_counts": {
+      "C1_ONSET": 68,
+      "C1_RECOVERY": 68,
+      "C2_ONSET": 64,
+      "C2_RECOVERY": 64
+    },
+    "pool_hashes": {
+      "C1_ONSET": "53ACE1B24C2ACFE1587AAD257E0CA4BABF297E26BDB7F233E78384C9BE4B77AC",
+      "C1_RECOVERY": "CFE8B84384325D37D406E0F0EC733DB6AB14E0B337C335ADC325904EAD1201CF",
+      "C2_ONSET": "39D08EE16CE0954C53162011E773162656FAEA99C4EEE91D4D1E03BE952E3FD0",
+      "C2_RECOVERY": "B7F1ECAD054C5BF51586645C964E7AD6DA080DD08FE716117824C5867C59A0AC"
+    }
+  }
+}

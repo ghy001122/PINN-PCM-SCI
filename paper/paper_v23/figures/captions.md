@@ -31,3 +31,28 @@ Fixed step-400 endpoints for equal-budget phase-only arms from identical LF3-T0 
 ## Figure 8. LF4 mechanism and physics-Pareto gate
 
 The matched screen supports teacher-interface exposure relative to global-extra supervision (`ΔRmin=0.08984`) but rejects threshold-aligned BCE as a quality-preserving load-bearing mechanism. DEV-G failed timing, DEV-M failed cycle-1 timing, and DEV-C failed phase-error preservation. With no eligible development carrier, label-free P0 correctly remained unexecuted; no physics-objective ratio, PINN Pareto, or candidate signal exists.
+
+## Figure 9. LF5 temporal-edge geometry and residual premise
+
+CPU-T reconstructed four cycle- and direction-resolved saved-cadence crossing
+pools with 68/68/64/64 valid edges and zero invalid edges. Despite DEV-C's
+better aggregate event timing in LF4, its weighted mean absolute teacher-secanted
+zero-level residual was larger than DEV-M in both onset pools and dramatically
+larger in both recovery pools. The plot uses a log scale for residuals and does
+not report an executed LF5 optimizer trajectory.
+
+## Figure 10. Timing-calibration conflict versus local alignment
+
+LF4 DEV-M preserves low phase weighted MSE but misses the cycle-1 timing gate;
+DEV-C passes aggregate timing while inflating phase error. LF5's local edge
+audit shows that the latter endpoint is not a better initialization for the
+proposed zero-level residual, so aggregate timing improvement cannot be treated
+as evidence for per-cell temporal alignment.
+
+## Figure 11. LF5 decision path
+
+All temporal geometry, identity, direction-sign, and finite-gradient checks
+passed, but the preregistered mechanism gate failed because DEV-C was worse in
+both onset pools. DEV-T and conditional P0 were therefore not run. This is a
+zero-update rejection of one mechanism premise, not a failed GPU model or a
+PINN result.

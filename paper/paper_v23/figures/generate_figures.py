@@ -5,19 +5,25 @@ import hashlib
 import json
 from pathlib import Path
 
-import matplotlib
-
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.colors import ListedColormap
-from matplotlib.patches import FancyBboxPatch
+try:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.colors import ListedColormap
+    from matplotlib.patches import FancyBboxPatch
+except ModuleNotFoundError:  # LF5-only has a Pillow fallback in the bundled runtime.
+    matplotlib = None
+    plt = None
+    ListedColormap = None
+    FancyBboxPatch = None
 
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 DATA_PATH = HERE / "data" / "lf3_terminal_metrics.json"
 LF4_DATA_PATH = HERE / "data" / "lf4_terminal_metrics.json"
+LF5_DATA_PATH = HERE / "data" / "lf5_terminal_metrics.json"
 PREDICTION_PATH = ROOT / "outputs" / "runs" / "20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74" / "prediction-t0-step-1200.npz"
 REFERENCE_PATH = ROOT / "outputs" / "runs" / "20260828T-phk-v21-s1-q-06-nominal-extra-fine" / "result-intent-06.npz"
 
@@ -48,6 +54,8 @@ def save(fig: plt.Figure, stem: str) -> list[Path]:
 
 
 def setup() -> None:
+    if plt is None:
+        raise RuntimeError("matplotlib is required unless --lf5-only is used")
     plt.rcParams.update(
         {
             "font.family": "DejaVu Sans",
@@ -323,10 +331,54 @@ def lf4_physics_pareto(data: dict) -> list[Path]:
     return save(fig, "figure-08-lf4-physics-pareto")
 
 
+def _pil_canvas(title: str):
+    from PIL import Image, ImageDraw, ImageFont
+    image=Image.new("RGB",(1800,760),"white"); draw=ImageDraw.Draw(image)
+    try: font=ImageFont.truetype("C:/Windows/Fonts/arial.ttf",30); bold=ImageFont.truetype("C:/Windows/Fonts/arialbd.ttf",36); small=ImageFont.truetype("C:/Windows/Fonts/arial.ttf",24)
+    except OSError: font=bold=small=ImageFont.load_default()
+    draw.text((60,35),title,fill=NAVY,font=bold); return image,draw,font,bold,small
+
+
+def _save_pil(image, stem: str) -> list[Path]:
+    paths=[HERE/f"{stem}.png",HERE/f"{stem}.pdf"]; image.save(paths[0],dpi=(240,240)); image.save(paths[1],"PDF",resolution=240.0); return paths
+
+
+def lf5_temporal_edge_geometry(data: dict) -> list[Path]:
+    image,draw,font,bold,small=_pil_canvas("LF5 CPU-T: aggregate timing improvement does not imply local zero-level alignment")
+    names=[name.replace("_"," ") for name in data["pool_order"]]; m=data["DEV_M_mean_abs_residual"]; c=data["DEV_C_mean_abs_residual"]
+    draw.text((80,120),"Valid edge pools",fill=NAVY,font=font); draw.text((760,120),"Weighted mean absolute zero-level residual (log scale)",fill=NAVY,font=font)
+    for i,(name,count) in enumerate(zip(names,data["pool_counts"])):
+        y=190+i*115; draw.text((80,y+20),name,fill=NAVY,font=small); draw.rectangle((300,y,300+count*5,y+55),fill=BLUE if "ONSET" in name else TEAL); draw.text((650,y+10),str(count),fill=NAVY,font=small)
+        scale=230*np.log10(1+max(m[i],c[i])); draw.text((760,y+16),name,fill=NAVY,font=small); draw.rectangle((1030,y,1030+230*np.log10(1+m[i]),y+24),fill=TEAL); draw.rectangle((1030,y+31,1030+scale,y+55),fill=ORANGE); draw.text((1500,y),f"M {m[i]:.3f}",fill=TEAL,font=small); draw.text((1500,y+30),f"C {c[i]:.3f}",fill=ORANGE,font=small)
+    return _save_pil(image,"20260905T150045Z-lf5-temporal-edge-geometry")
+
+
+def lf5_timing_calibration(data: dict) -> list[Path]:
+    image,draw,font,bold,small=_pil_canvas("LF4 timing-calibration conflict and the LF5 premise test")
+    x0,y0,x1,y1=180,150,1660,650; draw.line((x0,y1,x1,y1),fill=NAVY,width=4); draw.line((x0,y0,x0,y1),fill=NAVY,width=4)
+    draw.text((600,690),"Worst-cycle event-time error (right is worse)",fill=NAVY,font=small); draw.text((20,370),"phase MSE",fill=NAVY,font=small)
+    gate_x=x0+(0.005/0.012)*(x1-x0); draw.line((gate_x,y0,gate_x,y1),fill=RED,width=3); draw.text((gate_x+8,y0),"timing gate",fill=RED,font=small)
+    for name,color in (("DEV_M",TEAL),("DEV_C",ORANGE)):
+        item=data["timing"][name]; x=x0+max(item["cycle_1_error"],item["cycle_2_error"])/0.012*(x1-x0); y=y1-(np.log10(item["phase_weighted_mse"])-np.log10(0.0008))/(np.log10(0.05)-np.log10(0.0008))*(y1-y0); draw.ellipse((x-15,y-15,x+15,y+15),fill=color); draw.text((x+22,y-15),f"{name.replace('_','-')}: {item['phase_weighted_mse']:.4g}",fill=color,font=small)
+    draw.text((240,100),"DEV-M preserves calibration but misses C1 timing; DEV-C passes timing but loses field fidelity.",fill=GRAY,font=font); return _save_pil(image,"20260905T150045Z-lf5-timing-calibration")
+
+
+def lf5_physics_pareto(data: dict) -> list[Path]:
+    image,draw,font,bold,small=_pil_canvas("LF5 decision path: the physics branch is correctly not entered")
+    boxes=[(80,"CPU-T","VALID GEOMETRY",TEAL,"264/264 valid temporal edges"),(640,"Mechanism gate","FAIL",RED,"DEV-C worse in both onset pools"),(1200,"DEV-T to P0","NOT RUN",GRAY,"GPU branch closed before deployment")]
+    for x,title,status,color,detail in boxes:
+        draw.rounded_rectangle((x,190,x+460,430),radius=25,outline=color,width=5); draw.text((x+30,225),title,fill=NAVY,font=bold); draw.text((x+30,290),status,fill=color,font=font); draw.text((x+30,355),detail,fill=GRAY,font=small)
+    draw.line((545,310,625,310),fill=GRAY,width=5); draw.polygon([(625,310),(600,295),(600,325)],fill=GRAY); draw.line((1105,310,1185,310),fill=GRAY,width=5); draw.polygon([(1185,310),(1160,295),(1160,325)],fill=GRAY)
+    draw.text((100,520),"Disposition: reject the DEV-C-to-TZL premise; retain LF4 boundary exposure.",fill=NAVY,font=font); draw.text((100,580),"No carrier, PINN Pareto, strong-baseline gain, or candidate claim was produced.",fill=RED,font=font); return _save_pil(image,"20260905T150045Z-lf5-physics-pareto")
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Generate paper_v23 evidence figures")
     parser.add_argument("--lf4-only", action="store_true", help="Generate LF4 figures 6–8 without rewriting the LF3 source manifest")
+    parser.add_argument("--lf5-only", action="store_true", help="Generate timestamped LF5 CPU-T terminal figures")
     args = parser.parse_args(argv)
+    if args.lf5_only:
+        data=json.loads(LF5_DATA_PATH.read_text(encoding="utf-8")); outputs=[]; outputs.extend(lf5_temporal_edge_geometry(data)); outputs.extend(lf5_timing_calibration(data)); outputs.extend(lf5_physics_pareto(data)); print(json.dumps({"figures":len(outputs)//2,"scope":"LF5_CPU_T_TERMINAL"},sort_keys=True)); return
     setup()
     if args.lf4_only:
         data = json.loads(LF4_DATA_PATH.read_text(encoding="utf-8"))

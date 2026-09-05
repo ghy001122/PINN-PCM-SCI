@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0063：激活并修订 PHK-V2.3 LF5 temporal zero-level pilot](0063-activate-phk-v23-lf5-temporal-zero-level-pilot.md) — CPU-T 否决 DEV-C→TZL 前提；用户随后明确授权不改科学参数的一条 post-qualification exploratory DEV-T 与条件 P0，且不改写 CPU 反证。
 - [0062：以 boundary-exposure 机制证据和无 development entry 关闭 PHK-V2.3 LF4](0062-close-phk-v23-lf4-interface-band-pilot.md) — DEV-M 相对等预算 DEV-G 提高 minimum recall 并保持冻结质量条件；DEV-C 的 phase-error/recovery 代价否决完整 threshold-aligned claim，三臂均无 P0-entry、P0 未运行、无 candidate。
 - [0061：激活 PHK-V2.3 LF4 interface-band pilot](0061-activate-phk-v23-lf4-interface-band-pilot.md) — 用 matched DEV-G/M/C 隔离 generic supervision、teacher-interface exposure 与 threshold alignment；仅 entry 通过后运行 label-free P0。
 - [0059：激活 PHK-V2.3 LF3 phase-latent carrier pilot](0059-activate-phk-v23-lf3-phase-latent-carrier-pilot.md) — 唯一 T0→条件 P0 轨迹检验 measure-decoupled startup-scaled phase-logit teacher 能否建立合法 carrier，并由 label-free physics continuation 形成同架构 Pareto；保留 direct `LF_ONLY` 强基线与后续归因边界。

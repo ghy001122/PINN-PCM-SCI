@@ -1,6 +1,6 @@
 # PHK-V2.3 event-competence recovery advisor draft
 
-Status: `ADVISOR_DRAFT_UPDATED_LF4_BOUNDARY_EXPOSURE_SUPPORTED_NO_DEVELOPMENT_ENTRY`
+Status: `ADVISOR_DRAFT_UPDATED_LF5_TZL_PREMISE_REFUTED_CPU_NO_GPU`
 
 This package is the first manuscript draft that integrates the bounded
 PHK-V2.2R→LF4 solver-recovery sequence. It is deliberately written as a
@@ -11,7 +11,12 @@ under the frozen quality controls, supporting a bounded boundary-exposure
 mechanism result. Threshold-aligned BCE raised recall further but increased
 phase error to `0.02967`, so it did not provide a quality-preserving increment.
 No arm passed every entry condition; P0 ran zero updates and no PINN-specific
-gain or candidate was established.
+gain or candidate was established. LF5 then tested, before any new training,
+whether DEV-C's better aggregate event time corresponded to improved local
+teacher-secanted zero-level alignment. It did not: DEV-C had larger mean
+absolute onset residual than DEV-M in both cycles. The preregistered CPU gate
+therefore rejected the temporal-zero-level premise with zero optimizer updates
+and zero GPU trajectories.
 
 ## Package contents
 
@@ -23,8 +28,8 @@ gain or candidate was established.
 - `research_decision_log_zh.md`: concise Chinese interpretation and next-paper
   decision boundary;
 - `references.bib`: primary literature cited by the draft;
-- `figures/`: eight PNG/PDF figures, captions, frozen scalar data, generator,
-  and the retained LF3 source manifest.
+- `figures/`: eleven PNG/PDF figures, captions, frozen scalar data, generator,
+  and source manifests for the LF3 and LF5 figure groups.
 
 ## Evidence identity
 
@@ -42,6 +47,18 @@ gain or candidate was established.
   PINN-specific value, superiority to direct
   `LF_ONLY`, multi-seed reliability, OOD/stress robustness, continuum truth,
   material calibration, experimental validation, or submission readiness.
+
+LF5 evidence identity:
+
+- starting source: `d86ddf1d206c611087a1b5284acda69efdfda9fa`;
+- CPU-T: `20260905T150045Z-phk-v23-lf5-cpu-qualification`;
+- outcome: `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`;
+- valid temporal pools: `68/68/64/64`, invalid-edge fraction `0`;
+- DEV-M versus DEV-C onset mean absolute residual:
+  `0.2921<0.7238` (cycle 1) and `0.3100<0.6041` (cycle 2);
+- scientific optimizer updates / GPU trajectories: `0 / 0`;
+- DEV-T and P0: not run, not failed;
+- candidate: none; stress remains sealed/unread.
 
 The nominal fine/extra-fine reference and frozen evaluator were read locally
 only after full recovery, hash verification, instance shutdown, and SSH

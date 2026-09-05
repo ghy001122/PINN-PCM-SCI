@@ -86,3 +86,18 @@ threshold BCE 则暴露了 timing 与场保真的冲突。该结论只属于冻�
 latent teacher 单独有效、优于
 `LF_ONLY`、具有 OOD/stress 鲁棒性、达到 continuum truth、材料验证或投稿级
 结论。
+
+## LF5：零步反证优先于继续训练
+
+LF5 没有重复做一条“训练后不过门”的轨迹。CPU-T 先把 medium teacher 的
+cycle-1/2 onset 与 recovery 重建为 `68/68/64/64` 条有效相邻时间边，invalid
+fraction 为 0，并冻结 400-draw stream。DEV-M 的 onset mean-absolute residual
+为 `0.2921/0.3100`，DEV-C 为 `0.7238/0.6041`；DEV-C 在两个周期都更差。
+因此，LF4 中 DEV-C 的 aggregate timing 改善并不代表其逐 cell zero-level
+alignment 更好。冻结门返回 `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`，DEV-T 与
+P0 均为 `NOT_RUN`，optimizer/GPU 均为 0。
+
+这是一条有决策价值的负结果：保留 LF4 已支持的 interface exposure，同时淘汰
+“用 DEV-C 支撑 teacher-secanted TZL continuation”的具体前提。它不否定 temporal
+supervision 全类，更不证明 kinetic teacher 有效。下一条唯一建议只是
+`KINETIC_BACKUP_PLAN_ONLY_NEW_EXECUTE`；在新合同和新授权前不执行。

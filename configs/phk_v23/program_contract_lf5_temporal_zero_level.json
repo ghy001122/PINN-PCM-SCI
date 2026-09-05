@@ -1,0 +1,42 @@
+{
+  "schema_id": "phk-v23-lf5-program-contract-v1",
+  "contract_id": "PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE",
+  "phase_id": "PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE",
+  "title": "PHK-V2.3 LF5 calibration-preserving cycle-resolved temporal zero-level alignment and conditional physics pilot",
+  "effective_date": "2026-09-05",
+  "status": "EXPLICITLY_AUTHORIZED_BOUNDED_CAMPAIGN",
+  "expected_base_commit": "d86ddf1d206c611087a1b5284acda69efdfda9fa",
+  "scientific_question": "DOES_CYCLE_RESOLVED_SAVED_CADENCE_ZERO_LEVEL_ALIGNMENT_REPAIR_TIMING_WITHOUT_DESTROYING_LF3_LOGIT_CALIBRATION_AND_ENABLE_LABEL_FREE_PHYSICS_REFINEMENT",
+  "paper_role": "SPATIOTEMPORAL_INTERFACE_EXPOSURE_PLUS_TZL_COMBINATION_PILOT",
+  "authorization": {
+    "contracts_code_tests_documents": true,
+    "bounded_primary_source_prior_art": true,
+    "cpu_temporal_geometry_and_mechanism_gate": true,
+    "single_DEV_T_then_conditional_P0_gpu_trajectory": true,
+    "post_shutdown_nominal_local_evaluation": true,
+    "paper_v23_update": true,
+    "selective_commit_and_push_main": true,
+    "matched_temporal_edge_control_other_seeds_sparse_ood_stress_kinetic_teacher_pjgr_r2": false,
+    "submission_or_external_contact": false
+  },
+  "hard_limits": {
+    "maximum_scientific_gpu_trajectories": 1,
+    "maximum_optimizer_updates": 1600,
+    "maximum_wall_seconds": 1800,
+    "seed": 17,
+    "manual_early_stop": false,
+    "best_checkpoint_selection": false,
+    "hyperparameter_or_architecture_sweep": false,
+    "gpu_price_or_cost_reporting": false
+  },
+  "lifecycle": {
+    "cpu_gate_precedes_gpu": true,
+    "p0_trigger": "DEV_T_FIXED_STEP_400_STRICT_CARRIER_GATE_PASS",
+    "engineering_retry": "ONLY_BEFORE_FIRST_OPTIMIZER_STEP_AFTER_ROOT_CAUSE_AND_TARGETED_REAL_RUNTIME_REGRESSION_WITH_IDENTICAL_SCIENTIFIC_IDENTITY",
+    "post_first_step_interruption": "TRAJECTORY_CONSUMED_NO_RETRY_OR_RESUME",
+    "restart_required_status": "AWAITING_AUTODL_RESTART_CAMPAIGN_AUTHORIZATION_REMAINS_ACTIVE",
+    "shutdown_before_local_reference_io": true,
+    "completion_does_not_authorize_next_research": true
+  },
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

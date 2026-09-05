@@ -78,6 +78,22 @@ POSITIVE_METHODS_SUBMISSION: NO
 CAS_Q2_METHOD_CLAIM: NOT YET SUPPORTED
 ```
 
+## Major risk 10: “Why did LF5 stop without using the available GPU?”
+
+The preregistered CPU test asked whether the LF4 endpoint with improved
+aggregate timing was actually closer to the proposed per-cell zero-level
+alignment target. It was worse than DEV-M in both onset pools. Running DEV-T
+after that result would test a contradicted initialization/mechanism premise
+and violate the frozen decision rule. The zero-update stop is therefore a
+scientific falsification, not an infrastructure or budget limitation.
+
+## Major risk 11: “Does LF5 prove temporal supervision is useless?”
+
+No. It rejects only the frozen teacher-secanted zero-level premise using DEV-C
+as the supporting endpoint. It does not test a kinetic-RHS teacher,
+\(\partial_t\phi\) supervision, continuous-time event localization, a matched
+endpoint-MSE control, or any GPU-trained LF5 model.
+
 The fastest integrity-preserving use of the current evidence is advisor review
 of the failure-analysis narrative, while any further positive route is designed
 around one load-bearing mechanism and a predeclared direct-baseline role.

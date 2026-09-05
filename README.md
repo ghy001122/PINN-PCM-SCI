@@ -4,24 +4,26 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF4_THRESHOLD_ALIGNED_INTERFACE_BAND_MECHANISM_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF4_NO_DEVELOPMENT_ENTRY`
-- `mechanism_outcome`: `BOUNDARY_EXPOSURE_SUPPORTED`
-- `claim_status`: `LF4_BOUNDARY_EXPOSURE_SUPPORTED_NO_DEVELOPMENT_ENTRY_NO_PINN_RESULT`
-- `next_research_execution_authorized`: `false`
+- `machine_outcome`: `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`
+- `mechanism_outcome`: `CPU_T_PREMISE_REFUTED_USER_OVERRIDE_EXPLORATORY_GPU_PENDING`
+- `claim_status`: `CPU_T_PREMISE_REFUTED_USER_OVERRIDE_EXPLORATORY_GPU_AUTHORIZED`
+- `next_research_execution_authorized`: `true`
 
-LF4 已完成三条 matched 400-step phase-only arms。DEV-M 相对等预算 DEV-G 将 minimum recall 提高 `0.089837` 且通过冻结质量条件，支持本 single-seed nominal 对象上的有界 boundary-exposure 增量；DEV-C 的 threshold BCE 虽继续提高 recall，却显著恶化 phase error，未通过完整机制门。
+LF5 CPU-T 已重建 `68/68/64/64` 条 cycle/direction temporal edges；DEV-C 在两个 onset 池的 teacher-secanted zero-level residual 均劣于 DEV-M，故原冻结门返回 `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`。该结果保持有效且不被改写。
 
-三臂均未通过完整 P0-entry，故 P0 未运行、candidate 为 none，终局为 `LF4_NO_DEVELOPMENT_ENTRY`。实例已在产物回收和哈希核验后关闭；本地 nominal evaluation 随后完成，stress 始终 sealed/unread。当前无后续科研执行授权。
+用户随后明确覆盖该停止条件，授权以完全不变的 loss、初始化、stream、seed、预算和 gate 执行一条探索性 DEV-T；只有 DEV-T 通过原 carrier gate 才运行 P0。该轨迹必须标记为 `POST_QUALIFICATION_USER_OVERRIDE_EXPLORATORY`，不得冒充预注册机制确认。stress 继续 sealed/unread。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
-- 当前关闭决定：[ADR 0062](docs/adr/0062-close-phk-v23-lf4-interface-band-pilot.md)
+- 当前激活决定：[ADR 0063](docs/adr/0063-activate-phk-v23-lf5-temporal-zero-level-pilot.md)
+- LF5 CPU-T：[CPU-T qualification](docs/experiment/2026-09-05-phk-v23-lf5-cpu-qualification.md)
+- LF4 关闭决定：[ADR 0062](docs/adr/0062-close-phk-v23-lf4-interface-band-pilot.md)
 - LF4 终局：[terminal closeout](docs/experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)
 - LF4 CPU 资格：[CPU-G qualification](docs/experiment/2026-09-05-phk-v23-lf4-cpu-qualification.md)
 - 上一阶段：[LF3 terminal closeout](docs/experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)

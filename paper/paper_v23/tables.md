@@ -31,6 +31,8 @@
 | LF4 DEV-M | Teacher-interface-band MSE | 0.99222 | Two cycles | Boundary exposure supported; cycle-1 timing failed |
 | LF4 DEV-C | Two-sided threshold BCE | 1.00000 | Two cycles | Timing/recall passed; phase error inflated |
 | LF4 P0 | Conditional label-free physics | — | Not run | No development arm passed every entry condition |
+| LF5 CPU-T | Cycle-resolved teacher-secanted zero-level premise | — | Zero-update audit | DEV-C worse than DEV-M in both onset pools; GPU branch closed |
+| LF5 DEV-T / P0 | Conditional temporal carrier / physics | — | Not run | Preregistered CPU mechanism gate failed |
 
 The stages are a sequential diagnostic program, not a simultaneous factorial
 benchmark. Historical comparisons do not isolate the LF3 logit teacher alone.
@@ -137,5 +139,33 @@ preserving precision, mass, timing, locality, recovery, and V/T quality.
 | Does teacher-interface exposure add value? | DEV-M − DEV-G, ΔRmin ≥ 0.03 plus quality preservation | ΔRmin `+0.08984`; pass | `BOUNDARY_EXPOSURE_SUPPORTED` |
 | Does threshold-aligned BCE add value on the same points? | DEV-C − DEV-M, ΔRmin ≥ 0.03 plus quality preservation | ΔRmin `+0.03232`, but recovery/field quality not preserved | Not supported |
 | Is an eligible carrier established? | All P0-entry checks conjunctively | No arm passed all checks | `LF4_NO_DEVELOPMENT_ENTRY` |
+
+## Table 11. LF5 zero-update temporal-edge qualification
+
+| Pool | Valid edges | DEV-M mean \(|r|\) | DEV-C mean \(|r|\) | DEV-C improves? |
+|---|---:|---:|---:|---|
+| Cycle 1 onset | 68 | 0.292071 | 0.723760 | No |
+| Cycle 1 recovery | 68 | 0.398459 | 5.24661 | No |
+| Cycle 2 onset | 64 | 0.309983 | 0.604055 | No |
+| Cycle 2 recovery | 64 | 0.699371 | 7.11264 | No |
+
+Here \(r=(1-\rho^*)z_{\theta,k}+\rho^*z_{\theta,k+1}\), where
+\(\rho^*\) is the medium-teacher logit crossing fraction on the same saved-time
+edge. All 264 candidate edges were valid. The frozen gate required DEV-C to
+have lower mean absolute residual than DEV-M in both onset pools; it failed in
+both cycles.
+
+## Table 12. LF5 execution and claim disposition
+
+| Item | Frozen or observed value |
+|---|---|
+| Temporal stream SHA-256 | `8FD79D99DAA0175026017BB0025BEFEF896BCB383F46F906A3E800427C9B3BD9` |
+| Gradient probe | loss `6.03514e-4`; phase-gradient norm `4.87159e-3`; no step |
+| CPU-T outcome | `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU` |
+| DEV-T / P0 | Not run / not run |
+| Optimizer updates / GPU trajectories | 0 / 0 |
+| Candidate | none |
+| Unique next | kinetic-RHS or \(\partial_t\phi\) teacher plan only; new EXECUTE required |
+| Claim | DEV-C aggregate timing gain did not imply better local zero-level alignment |
 | Does label-free physics add a Pareto improvement? | P0 vs selected carrier | P0 not run | Not tested |
 | Is there a direct-`LF_ONLY` candidate signal? | Full candidate gate | Not reached | No candidate |

@@ -2,8 +2,8 @@
 
 ## Scope
 
-This guide maps the LF3 baseline and LF4 matched mechanism screen,
-figure extraction, and local terminal adjudication. It does not authorize another scientific GPU run,
+This guide maps the LF3 baseline, LF4 matched mechanism screen, and LF5
+zero-update temporal-edge premise test, figure extraction, and local terminal adjudication. It does not authorize another scientific GPU run,
 opening stress references, or changing frozen contracts.
 
 ## Frozen identities
@@ -146,3 +146,35 @@ in Git. Their identity is hash-bound, but a checkout that
 lacks the git-ignored files cannot independently recompute the local evaluator
 or phase-snapshot figure. The current paper therefore distinguishes versioned
 compact evidence from locally retained raw carriers.
+
+## LF5 zero-update temporal-edge qualification
+
+- starting commit: `d86ddf1d206c611087a1b5284acda69efdfda9fa`;
+- compact qualification:
+  `docs/experiment/artifacts/20260905T150045Z-phk-v23-lf5-cpu-qualification.json`;
+- compact SHA-256:
+  `89F2B95D8F72C14506DEA4D78AF69E748637EB397B6983ADA4E9FA957ED8CED4`;
+- temporal stream SHA-256:
+  `8FD79D99DAA0175026017BB0025BEFEF896BCB383F46F906A3E800427C9B3BD9`;
+- pool counts: `68/68/64/64`, invalid edge fraction `0`;
+- optimizer updates / GPU trajectories: `0 / 0`;
+- result: `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`.
+
+Onset uses the first medium-teacher logit sign crossing in W1/W3; recovery uses
+the first subsequent reverse crossing in W2/W4 of the same cycle, with no time
+wrap. Each edge stores cell, adjacent saved-time indices, teacher crossing
+fraction, and normalized trapezoid-cell weight. DEV-M and DEV-C checkpoints
+were loaded read-only. The finite-gradient probe called backward once and took
+no optimizer step. Fine, extra-fine, direct `LF_ONLY`, the frozen evaluator,
+and stress were not opened by LF5.
+
+Regenerate only the LF5 figures with:
+
+```powershell
+python paper/paper_v23/figures/generate_figures.py --lf5-only
+```
+
+The source identities and output hashes are recorded in
+`figures/source-manifest-lf5.json`. Because the CPU gate failed, there is no LF5
+bundle, cloud run, checkpoint, prediction, recovery record, shutdown proof, or
+local nominal adjudication to reproduce.

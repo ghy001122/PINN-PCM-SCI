@@ -135,3 +135,6 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 ```
 
 门禁核对权威状态字段、唯一 live plan、文档角色、ADR 完整索引、本地链接、实验 ledger 和运行锁 ignore。失败时先修复文档逻辑链，不得以手工声明绕过。
+# LF5 current evidence
+
+The LF5 CPU-T record is [here](experiment/2026-09-05-phk-v23-lf5-cpu-qualification.md). It rejected the local temporal-alignment premise. The user subsequently authorized one otherwise unchanged DEV-T trajectory as explicitly post-qualification exploratory evidence; P0 remains conditional and the CPU result must not be rewritten as a pass.

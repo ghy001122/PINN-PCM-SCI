@@ -51,3 +51,12 @@
 - 原始参数唯一性或反问题主张；
 - 正式实验预算、GPU 租用或长时间运行；
 - 对研究规范硬约束的任何修改。
+# LF5 execution handoff (2026-09-05)
+
+`PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
+retains the CPU outcome `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`. On 2026-09-06
+the user explicitly overrode that stop condition and authorized the otherwise
+unchanged DEV-T as `POST_QUALIFICATION_USER_OVERRIDE_EXPLORATORY`; P0 remains
+conditional on the original DEV-T carrier gate. Build only the activation-commit
+closure, recover and shut down before local reference evaluation, and do not
+present the run as preregistered TZL confirmation. Stress remains sealed/unread.
