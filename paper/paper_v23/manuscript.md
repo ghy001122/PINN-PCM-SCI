@@ -1,7 +1,7 @@
 # Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
 
 > Advisor-reviewable draft. Closed evidence status:
-> `LF6_P0_PRESERVATION_FAILED`; LF7 is ACTIVE with results pending.
+> `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`.
 > All neural results are single-seed nominal development evidence. No candidate,
 > positive PINN method, strong-baseline gain, OOD/stress result, or submission
 > readiness is claimed.
@@ -36,12 +36,13 @@ fell from 0.918 to 0.216 within 50 updates and reached zero in both cycles by th
 fixed endpoint. Relative to the selected safety near-carrier endpoint, final potential, temperature,
 phase, and topology errors increased by 28.6, 52.6, 25.8, and 20.0 times.
 
-Thus residual reduction and event competence were empirically anti-aligned in
-the tested continuation. The strongest direct low-fidelity interpolation
-remained substantially more accurate than either neural endpoint. The result is
-a reproducible failure-analysis and solver-recovery study with one bounded
-interface-exposure finding and a directly executed physics-forgetting result,
-not a positive methods claim.
+LF7 then compared a fixed-small-step continuation with competence-filtered
+blockwise backtracking. The valid 1200-update control reduced the same objective
+only to 2.9719 (ratio 0.6031) and erased cycle 1 while leaving cycle-2 recall at
+0.076. The filtered arm rejected four proposals and accepted one 25-update
+block at one-sixteenth of the base rate, but subsequent rollback state-identity
+drift left no valid endpoint. The result is a bounded interface-exposure and
+physics-forgetting study, not a positive method or candidate.
 
 ## 1. Introduction
 
@@ -217,9 +218,9 @@ full residual still read phase. Steps 551--1200 unfroze phase and continued the
 same optimizer jointly. The physics stream and blind evaluation pool were fully
 materialized before GPU execution.
 
-### 3.5 Preregistered LF7 competence-filtered refinement
+### 3.5 LF7 competence-filtered refinement
 
-LF7 starts both matched arms from the exact LF6 DEV-R endpoint and reuses the
+LF7 started both matched arms from the exact LF6 DEV-R endpoint and reused the
 same 1200 physics batches, fixed blind pool, phase-freeze boundary, and optimizer
 family. P0-S is a fixed 1200-update control at learning rate
 \(1.25\times10^{-4}\). P0-F proposes 25-update Adam blocks, snapshots the full
@@ -235,8 +236,9 @@ primitives rather than claiming those primitives as new
 phenomenon also reported in sequential PINN training [@maddu2022inversedirichlet].
 Medium labels do not supply gradients in P0-F, but they do determine update
 acceptance; P0-F is therefore not label-free. Only P0-S failure paired with
-P0-F safety success can support a filter-specific pilot signal. At activation,
-both outcomes remain unknown.
+P0-F safety success could support a filter-specific pilot signal. The terminal
+screen did not complete that relation because P0-F lost rollback state identity
+after its first accepted block.
 
 ## 4. Results
 
@@ -307,9 +309,29 @@ with phase ROI RMS 0.03237, temperature ROI RMS 0.01736, and current NRMSE
 guard with 0.00657/0.00180/0.00352. Neither neural endpoint is noninferior to
 the strongest direct baseline.
 
+### 4.5 Smaller steps did not preserve competence; the filter screen remained incomplete
+
+P0-S completed its exact 1200-update stream and was numerically valid. It
+reduced the blind physics objective from 4.927872 to 2.971883, but its ratio
+0.603076 failed the 0.50 gate. Cycle 1 disappeared; cycle-2 recall/recovery fell
+to 0.0762/0.0282. Potential, temperature, phase, and topology errors were 39.5,
+48.1, 22.5, and 17.4 times the DEV-R values. Smaller steps did not resolve
+physics forgetting.
+
+P0-F proposed the same first 25-update block at five dyadic rates. The first
+four were rejected for potential and/or temperature preservation. At
+`eta0/16`, all frozen block gates passed: blind physics decreased to 4.874314
+while the four relative errors were 0.995, 1.018, 1.000, and 1.000. A subsequent
+rollback identity check failed because its Adam-state snapshot was aliased and
+mutated. This bookkeeping defect was diagnosed after the run; no retry
+occurred. P0-F therefore has no valid endpoint, so partial block behavior cannot
+establish filter efficacy.
+
+![LF7 matched continuation](figures/20260907T144634Z-lf7-competence-filtered-refinement.png)
+
 ## 5. Discussion
 
-### 5.1 What LF6 establishes
+### 5.1 What LF6--LF7 establish
 
 LF6 supplies two pieces of valid evidence. First, critical-rank endpoint cells
 were not uniquely sufficient under the matched strict rule: the rank arm reached
@@ -326,7 +348,13 @@ observed phenomenon. It does not identify a unique cause among model mismatch,
 optimization geometry, insufficient coupling constraints, or the absence of
 replay; those remain hypotheses.
 
-### 5.2 What LF6 does not establish
+LF7 adds a matched negative control: an eightfold smaller Adam step did not
+preserve the event and did not meet the blind-physics gate. It also shows, below
+endpoint level, that the filter rejected four unsafe blocks before admitting
+one very small safe block. Because the arm then became identity-invalid, this
+is implementation diagnostic evidence rather than a mechanism result.
+
+### 5.2 What LF6--LF7 do not establish
 
 DEV-R's safety pass does not make it a strict carrier. Since DEV-U and DEV-R
 both missed strict competence, their difference cannot support a rank-specific
@@ -342,6 +370,12 @@ failure. Direct interpolation also remains the accuracy reference; no speed,
 compression, inverse, sparse-data, or OOD advantage was measured and none may
 be supplied after the fact.
 
+LF7 does not establish that blockwise competence filtering succeeds or fails:
+the required matched P0-F endpoint is absent. The forensic snapshot-aliasing
+diagnosis and its unexecuted repair are engineering facts, not a recovered
+scientific arm. The accepted first block cannot be extrapolated to 1200 updates
+or described as a candidate.
+
 ### 5.3 Paper positioning and next evidence
 
 The maximum defensible central statement is:
@@ -353,14 +387,11 @@ The maximum defensible central statement is:
 > safety-valid localized event carrier.
 
 This supports an advisor draft and potentially a carefully scoped
-negative/diagnostic paper. It does not yet support a positive methods
-submission. LF7 now tests whether carrier preservation can act as a
-load-bearing update-acceptance rule rather than an entry-only screen, using a
-matched small-step control and a full-state rollback filter from the same exact
-endpoint and physics stream. Activation is not scientific success: only the
-predeclared S/F endpoint relation can change the claim. Multi-seed and
-sparse/equal-information work require a later positive signal, and stress must
-remain sealed until a candidate exists.
+negative/diagnostic paper. It does not support a positive methods submission.
+LF7 strengthens the negative case against learning-rate reduction alone, but
+its incomplete filter arm cannot change the mechanism claim. A future execution
+would need an identity-correct matched endpoint before multi-seed or
+sparse/equal-information work is justified. Stress remains sealed.
 
 ## 6. Limitations
 
@@ -379,6 +410,11 @@ strict data-only carrier. Conversely, P0 is a valid negative physics result,
 not an engineering failure: all updates, stream identities, artifacts, recovery,
 shutdown, and local adjudication completed.
 
+LF7 P0-S is likewise a valid negative physics result. P0-F is different: it
+terminated after a state-identity defect, so neither its endpoint nor the
+matched S/F mechanism relation exists. Its four rejections and one accepted
+block are retained only as bounded diagnostic evidence.
+
 ## 7. Conclusion
 
 The program progressed from cold collapse to localized event recovery, a
@@ -390,7 +426,9 @@ objective by 98.7% yet increased all preservation errors and erased both-cycle
 recall. The decisive lesson is not that residuals are useless or PINNs are
 impossible. It is that residual reduction, field admissibility, and sparse-event
 competence are independent obligations, and in this frozen continuation they
-were actively in conflict. Candidate remains none; the direct low-fidelity
+were actively in conflict. LF7 further rejects smaller steps alone as a rescue,
+while leaving competence filtering scientifically unresolved because its arm
+did not retain rollback identity. Candidate remains none; the direct low-fidelity
 baseline remains stronger; stress remains sealed and unread.
 
 ## Data, code, and evidence availability

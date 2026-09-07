@@ -1,26 +1,24 @@
 {
   "schema_id": "paper-v23-lf7-terminal-metrics-v1",
   "task_id": "PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE",
-  "campaign_state": "ACTIVE_RESULTS_PENDING",
-  "evidence_status": "NO_LF7_SCIENTIFIC_RESULT_YET",
-  "terminal_outcome": null,
-  "mechanism_outcome": null,
+  "campaign_state": "COMPLETE",
+  "terminal_outcome": "LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID",
+  "mechanism_outcome": "MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID",
   "candidate": null,
+  "unique_next": "RETAIN_VALID_ARM_NO_MECHANISM_ATTRIBUTION",
   "method_identity": "ATTRIBUTED_CONSTRAINED_OPTIMIZATION_PRIMITIVES_WITH_PROJECT_SPECIFIC_EVENT_COMPETENCE_FILTER",
   "baseline": {
     "role": "LF6_DEV_R",
     "checkpoint_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
-    "fixed_blind_objective": 4.9278721846990505
+    "fixed_blind_objective": 4.9278721846990505,
+    "recall": [0.9175257731958762, 0.9228675136116149],
+    "recovery": [1.0, 1.0],
+    "phase_roi_rms_extra_fine": 0.03236830783140375
   },
   "gates": {
     "physics_ratio_max": 0.5,
     "recall_min": 0.9,
-    "precision_min": 0.8,
-    "active_mass_ratio_min": 0.8,
-    "active_mass_ratio_max": 1.2,
-    "timing_safety_max": [0.010533333333333339, 0.005000000000999893],
-    "timing_strict_max": 0.005,
-    "field_ratio_max": {
+    "preservation_ratio_max": {
       "potential": 1.2,
       "temperature": 1.05,
       "phase": 1.05,
@@ -30,25 +28,70 @@
   "arms": {
     "P0_S": {
       "label": "fixed-small-step control",
-      "planned": true,
-      "result": null,
-      "accepted_updates": null,
-      "attempted_updates": null,
-      "timeline": [],
-      "endpoint": null
+      "endpoint_valid": true,
+      "accepted_updates": 1200,
+      "attempted_updates": 1200,
+      "fixed_blind_objective": 2.97188310571405,
+      "fixed_blind_ratio": 0.6030763368704429,
+      "physics_ratio_pass": false,
+      "recall": [0.0, 0.07622504537205088],
+      "recovery": [0.0, 0.028169014084507137],
+      "relative_to_DEV_R": {
+        "potential": 39.46721441838945,
+        "temperature": 48.105008952692515,
+        "phase": 22.462171567385045,
+        "topology": 17.411757409710653
+      },
+      "strict_carrier": false,
+      "safety_pareto": false,
+      "checkpoint_sha256": "48BEBAEA89DE511B6B7478AB69294EF7DE878E76E2D3FAB1F8DB9173FD409981",
+      "prediction_sha256": "433E0FFD1893CF40D9A86BF0B1AB2ED523D11235068D0110EB286F18397464DD"
     },
     "P0_F": {
-      "label": "competence-filtered blockwise backtracking",
-      "planned": true,
-      "result": null,
-      "accepted_updates": null,
-      "attempted_updates": null,
-      "timeline": [],
-      "attempts": [],
-      "endpoint": null
+      "label": "competence-filtered backtracking",
+      "endpoint_valid": false,
+      "accepted_updates": 25,
+      "attempted_updates": 150,
+      "accepted_blocks": 1,
+      "attempts": [
+        {"learning_rate": 0.000125, "decision": "REJECT", "reason": "potential+temperature preservation", "fixed_blind_objective": 4.313495967875245},
+        {"learning_rate": 0.0000625, "decision": "REJECT", "reason": "potential+temperature preservation", "fixed_blind_objective": 4.558009292194847},
+        {"learning_rate": 0.00003125, "decision": "REJECT", "reason": "temperature preservation", "fixed_blind_objective": 4.726435513908985},
+        {"learning_rate": 0.000015625, "decision": "REJECT", "reason": "temperature preservation", "fixed_blind_objective": 4.822867070388044},
+        {"learning_rate": 0.0000078125, "decision": "ACCEPT", "reason": "all frozen block gates passed", "fixed_blind_objective": 4.874314040595978}
+      ],
+      "accepted_block_relative_to_DEV_R": {
+        "potential": 0.9946621416471394,
+        "temperature": 1.018486235819618,
+        "phase": 1.0,
+        "topology": 0.9999999999999998
+      },
+      "failure": "post-step rollback state identity drift",
+      "strict_carrier": false,
+      "safety_pareto": false
     }
   },
-  "local_extra_fine": null,
-  "recovery_shutdown": null,
+  "local_extra_fine": {
+    "P0_S": {
+      "event_guard_pass": false,
+      "phase_primary": 0.009865898437500001,
+      "phase_roi_rms": 0.14689526807843054,
+      "temperature_roi_rms": 0.14590697077260634,
+      "current_nrmse": 0.3056737970756706
+    },
+    "DIRECT_LF_ONLY": {
+      "event_guard_pass": true,
+      "phase_primary": 0.00034953125,
+      "phase_roi_rms": 0.006570375888844028,
+      "temperature_roi_rms": 0.0018006948281555659,
+      "current_nrmse": 0.0035221351893723663
+    }
+  },
+  "evidence_hashes": {
+    "run_summary": "2D43695972B9FA82D6BFF1BA1B3193AD1892994BBC96BD733F12382886441AB7",
+    "local_adjudication": "0DF6F83545CBA46973638F6D79EFA089AF52920079DF2A265023B5556E726DAD"
+  },
+  "recovery_shutdown": "RECOVERED_HASH_VERIFIED_SHUTDOWN_CONNECTION_REFUSED",
+  "claim_boundary": "P0_S_IS_A_VALID_NEGATIVE_CONTROL; P0_F_HAS_PARTIAL_BLOCK_BEHAVIOR_ONLY_AND_NO_VALID_ENDPOINT_OR_MECHANISM_ATTRIBUTION",
   "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
 }

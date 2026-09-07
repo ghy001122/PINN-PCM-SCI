@@ -27,7 +27,7 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-当前具名 LF7 已明确授权并通过 CPU 零步资格。它从 exact LF6 DEV-R 分别执行固定小步长 P0-S 与 fresh competence-filtered backtracking P0-F，以区分“较小步长已足够”和“function-space filter/rollback load-bearing”。两臂共用冻结的 1,200-step physics stream；P0-F 的 medium 只参加 accept/reject，因此不得称 fully label-free。GPU 结果尚不存在。执行边界见 LF7 四合同、ADR 0067、CPU qualification 与 `active_phase.md`；额外 rescue、seed、sparse/OOD/stress、weak-form/control-volume、PJGR/R2 或投稿不在授权内。
+LF7 已完成并关闭。P0-S 是有效的 1,200-update fixed-small-step 负面 arm；P0-F 在接受 25、尝试 150 updates 后发生 post-step rollback identity drift，无合法 endpoint，因此不能比较 filter 增量。终局为 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`，candidate 为 none，后续执行未授权。权威事实见 ADR 0068、terminal closeout 与 `active_phase.md`。
 
 涉及当前研究对象、方法边界或论文措辞时读取 `CONTEXT.md`；需要决策理由时再读取 `docs/adr/`。处理 V2.2R 的方法替换、止损、故事分支或稿后升级时，在当前合同之后读取 `docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md`；该笔记不授权动作。实验事实、参考审查、其他研究笔记和历史归档按 `docs/README.md` 的触发条件读取。
 
@@ -78,3 +78,17 @@ direct-LF_ONLY gain, or candidate. Recovery and hash checks completed; the
 shutdown proof records TCP closure and SSH refusal before local adjudication,
 without asserting an unrecorded exact observation time. Stress remains
 sealed/unread and no next research execution is authorized.
+
+# LF7 terminal handoff (2026-09-08)
+
+`PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE`
+ran from activation `1dbee129d8b958accc71b97bf2ade3201587b441`. P0-S
+completed 1,200 updates and reduced the fixed-blind objective to
+`0.6030763369` of DEV-R, but lost the event carrier and field accuracy. P0-F
+accepted 25 of 150 attempted updates before a post-step rollback identity error;
+it has no valid endpoint and was not retried. Post-run forensics identified
+nonempty Adam snapshot tensor aliasing; the terminal-tree fix was not executed
+scientifically and does not change the result. Recovery, hash verification,
+shutdown and post-shutdown local adjudication completed. No mechanism
+attribution, PINN Pareto, candidate or next research authorization exists;
+stress remains sealed/unread.

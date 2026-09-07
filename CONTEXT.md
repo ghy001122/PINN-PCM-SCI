@@ -1,7 +1,7 @@
 # PINN-PCM-SCI 当前研究设定与论文口径
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
-- `updated_at`: `2026-09-07`
+- `updated_at`: `2026-09-08`
 
 ## 当前研究问题
 
@@ -21,19 +21,21 @@ LF5 的 CPU-T 重建 `68/68/64/64` 条合法 temporal edges，却发现 DEV-C �
 
 LF6 用同起点、同预算的 DEV-U/DEV-R 隔离 generic endpoint 与 teacher-side event-frontier rank-band。DEV-R 通过 safety，DEV-U/DEV-R 均未通过 strict，故机制结论为 `NO_RANK_SPECIFIC_INCREMENT`。冻结 safety carrier 是指达到进入物理 continuation 的最低有效门，不等于方法优胜或 candidate。DEV-R 进入 1200-step label-free P0 后，fixed-blind physics objective ratio 降至 `0.0128142265`，但 V/T/phase/topology preservation ratios 恶化至 `28.62/52.60/25.84/20.03`，两周期 recall 最终均为零。这里的 physics preservation failure 指物理目标下降与已建立事件/场载体同时崩解；它是有效的 bounded negative PINN-refinement evidence，不是数值无效。
 
+LF7 从 exact DEV-R 运行 matched 小步长与 competence-filtered physics refinement。P0-S 完成 1,200 updates，fixed-blind ratio 为 `0.6030763369`，但事件和场 competence 仍坍塌，形成有效的小步长负面 arm。P0-F 尝试 150、接受 25 updates 后出现 post-step rollback identity drift，无合法 endpoint；事后定位为非空 Adam snapshot tensor aliasing。修复未用于科学重跑。终局为 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`：保留 P0-S 结果，但不能归因 filter 机制增量、PINN Pareto 或 candidate。
+
 ## 物理对象与证据边界
 
 对象仍是 PHK-V2.1 的透明、无量纲、literature-inspired synthetic 2D wall-cell；几何、PDE、本构、参数、IC/BC、ROI、事件与 frozen evaluator 均不改变。extra-fine fixed-discretization carrier 不是 continuum truth；C0 saved-cadence strong residual 也不是 exact internal-step residual。
 
-两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4/LF5/LF6 读取 medium 与 exact LF3-T0 checkpoint，LF6 还按合同只读 exact DEV-M fallback 与预物化 streams。fine/extra-fine、direct `LF_ONLY` 和 frozen evaluator 只在 LF6 关机后本地读取；raw 产物已回收并按哈希核验。shutdown proof 只支持 SSH refusal 先于本地裁决的顺序，不把其记录时间冒充精确观察时间。
+两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4/LF5/LF6 读取 medium 与 exact LF3-T0 checkpoint，LF6 还按合同只读 exact DEV-M fallback 与预物化 streams。LF7 云端只读取 medium audit、exact DEV-R、预物化 physics ledger 与 CPU qualification。fine/extra-fine、direct `LF_ONLY` 和 frozen evaluator 只在 LF7 关机后本地读取；raw 产物已回收并按哈希核验。
 
 ## 方法与论文身份
 
-ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling、BCE-with-logits 与 event-frontier rank-band 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为高 precision 但 support recall 不足；LF4 以 matched control 验证界面暴露可提高最低召回；LF6 则没有证明 rank-specific 增量，并揭示纯物理 continuation 在 bulk residual 大降时仍会两阶段遗忘场与事件。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是必须保留的强 non-PINN comparators。当前稿件只能承载有界 failure-analysis、solver-recovery mechanism evidence 与 physics-forgetting 负结果；任何正面路线仍须面对强基线、关键单因素消融、多 seed、sealed stress/formal OOD 与单一 load-bearing core。
+ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling、BCE-with-logits、event-frontier rank-band 与 competence-filter/backtracking 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为 high-precision/low-recall support；LF4 验证界面暴露可提高最低召回；LF6/LF7 证明 bulk residual 下降和更小步长均未保存事件载体。LF7 的 filtered arm 无合法 endpoint，不能判断 filter 是否有效。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是强 comparators。当前稿件只能承载有界 failure-analysis、solver-recovery mechanism evidence 与 physics-forgetting 负结果。
 
 ## 权威路由
 
-当前 LF7 执行授权见 [active phase](active_phase.md)，资格事实见 [project state](PROJECT_STATE.md)，顺序见 [live plan](docs/plans/NEXT_ACTIONS.md)，方法冻结见 [ADR 0067](docs/adr/0067-activate-phk-v23-lf7-competence-filtered-refinement.md) 与 [CPU qualification](docs/experiment/2026-09-07-phk-v23-lf7-cpu-qualification.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF6 及更早证据继续由对应 terminal closeout 保留，不被 LF7 激活追溯修改。
+LF7 终局与授权边界见 [active phase](active_phase.md)、[project state](PROJECT_STATE.md)、[live plan](docs/plans/NEXT_ACTIONS.md)、[ADR 0068](docs/adr/0068-close-phk-v23-lf7-competence-filtered-refinement.md) 与 [terminal closeout](docs/experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)。导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF6 及更早证据继续由对应 terminal closeout 保留。
 
 # LF5 terminal context (2026-09-06)
 
@@ -59,13 +61,13 @@ physics reduction did not preserve this event-bearing multiphysics carrier.
 The terminal status is `LF6_P0_PRESERVATION_FAILED`, with no PINN Pareto,
 direct-LF_ONLY gain, candidate, or next research authorization.
 
-# LF7 active context (2026-09-07)
+# LF7 terminal context (2026-09-08)
 
-LF7 tests whether a 16-times-smaller fixed physics step already supplies a
-local preservation path, or whether a medium-audited function-space filter and
-bitwise block rollback are load-bearing. P0-S and fresh P0-F share exact DEV-R,
-the same pre-materialized physics batches and the same initial learning rate.
-CPU qualification passed with zero optimizer updates; no LF7 GPU result exists
-yet. Because medium controls P0-F acceptance, that arm is multifidelity rather
-than fully label-free. Stress and all future sparse/OOD work remain outside the
-active authorization.
+LF7 attempted the preregistered matched P0-S/P0-F screen from exact DEV-R.
+P0-S completed 1,200 updates and is a valid negative arm: the fixed-blind
+objective fell to `0.6030763369` of entry while event and field competence
+collapsed. P0-F accepted one 25-update block, then failed a post-step rollback
+identity check after 150 attempted updates; it has no valid endpoint and was not
+retried. The terminal-tree snapshot fix was not scientifically executed. The
+outcome is `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`, with no mechanism
+attribution, PINN Pareto, candidate or next authorization. Stress remains sealed.

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import inspect
 import random
 from pathlib import Path
@@ -133,7 +134,13 @@ class LF7GateTests(unittest.TestCase):
 
 
 class LF7RollbackTests(unittest.TestCase):
-    def test_snapshot_restores_model_optimizer_rng_lr_and_phase_state_bitwise(self) -> None:
+    @staticmethod
+    def _payload_digest(value: object) -> str:
+        digest = hashlib.sha256()
+        lf7._update_digest(digest, value)
+        return digest.hexdigest()
+
+    def test_nonempty_adam_retry_does_not_mutate_snapshot_and_reject_rollback_is_exact(self) -> None:
         random.seed(17)
         np.random.seed(17)
         torch.manual_seed(17)
@@ -145,16 +152,45 @@ class LF7RollbackTests(unittest.TestCase):
         lf7._set_phase_trainable(model, False)
         snapshot = take_snapshot(model, optimizer, accepted_updates=525, learning_rate=ETA0)
 
-        expected_python = random.random()
-        expected_numpy = float(np.random.random())
-        expected_torch = float(torch.rand(()))
-        for parameter in model.parameters():
-            parameter.data.add_(7.0)
+        python_probe = random.Random()
+        python_probe.setstate(snapshot.python_rng)
+        expected_python = python_probe.random()
+        numpy_probe = np.random.RandomState()
+        numpy_probe.set_state(snapshot.numpy_rng)
+        expected_numpy = float(numpy_probe.random_sample())
+        torch_probe = torch.Generator()
+        torch_probe.set_state(snapshot.torch_rng)
+        expected_torch = float(torch.rand((), generator=torch_probe))
+        model_snapshot_digest = self._payload_digest(snapshot.model_state)
+        optimizer_snapshot_digest = self._payload_digest(snapshot.optimizer_state)
+        rng_snapshot_digest = self._payload_digest(
+            (snapshot.python_rng, snapshot.numpy_rng, snapshot.torch_rng, snapshot.cuda_rng)
+        )
+
+        # Match the filtered runtime: restore the accepted snapshot before the
+        # next block, run Adam with non-empty moments, then reject and restore.
+        self.assertEqual(restore_snapshot(snapshot, model, optimizer), snapshot.digest)
+        live_optimizer_state = optimizer.state_dict()["state"]
+        for state_id, saved_state in snapshot.optimizer_state["state"].items():
+            for key, saved_value in saved_state.items():
+                if torch.is_tensor(saved_value):
+                    self.assertNotEqual(live_optimizer_state[state_id][key].data_ptr(), saved_value.data_ptr())
         for group in optimizer.param_groups:
             group["lr"] = ETA0 / 16.0
-        random.seed(99)
-        np.random.seed(99)
-        torch.manual_seed(99)
+        optimizer.zero_grad(set_to_none=True)
+        attempt_loss = sum(parameter.square().sum() for parameter in model.parameters() if parameter.requires_grad)
+        attempt_loss.backward()
+        optimizer.step()
+        random.random()
+        np.random.random()
+        torch.rand(())
+
+        self.assertEqual(self._payload_digest(snapshot.model_state), model_snapshot_digest)
+        self.assertEqual(self._payload_digest(snapshot.optimizer_state), optimizer_snapshot_digest)
+        self.assertEqual(
+            self._payload_digest((snapshot.python_rng, snapshot.numpy_rng, snapshot.torch_rng, snapshot.cuda_rng)),
+            rng_snapshot_digest,
+        )
 
         restored = restore_snapshot(snapshot, model, optimizer)
         self.assertEqual(restored, snapshot.digest)
@@ -165,6 +201,31 @@ class LF7RollbackTests(unittest.TestCase):
         self.assertEqual(float(torch.rand(())), expected_torch)
         for name, value in model.state_dict().items():
             self.assertTrue(torch.equal(value, snapshot.model_state[name]))
+
+    def test_true_snapshot_optimizer_drift_is_rejected(self) -> None:
+        random.seed(17)
+        np.random.seed(17)
+        torch.manual_seed(17)
+        model = _ToyThreeHead()
+        optimizer = torch.optim.Adam(model.parameters(), lr=ETA0)
+        loss = sum(parameter.square().sum() for parameter in model.parameters())
+        loss.backward()
+        optimizer.step()
+        snapshot = take_snapshot(model, optimizer, accepted_updates=25, learning_rate=ETA0)
+
+        mutated = False
+        for state in snapshot.optimizer_state["state"].values():
+            for value in state.values():
+                if torch.is_tensor(value):
+                    value.add_(1.0)
+                    mutated = True
+                    break
+            if mutated:
+                break
+        self.assertTrue(mutated)
+
+        with self.assertRaisesRegex(RuntimeError, "rollback state identity drift"):
+            restore_snapshot(snapshot, model, optimizer)
 
     def test_phase_boundary_is_accepted_step_550_then_same_optimizer_joint(self) -> None:
         small = inspect.getsource(lf7._run_small)

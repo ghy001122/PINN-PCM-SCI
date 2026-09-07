@@ -1,15 +1,20 @@
 {
   "schema_id": "paper-v23-lf7-figure-source-manifest-v1",
-  "campaign_state": "ACTIVE_RESULTS_PENDING",
+  "campaign_state": "COMPLETE",
   "inputs": {
-    "paper/paper_v23/figures/data/lf7_terminal_metrics.json": null
+    "paper/paper_v23/figures/data/lf7_terminal_metrics.json": "A9BF5C9BF9EB137C4889684FECCC89F392FEC3A99C62EB01108119281458390E"
+  },
+  "evidence_bindings": {
+    "raw_run_summary_sha256": "2D43695972B9FA82D6BFF1BA1B3193AD1892994BBC96BD733F12382886441AB7",
+    "local_adjudication_sha256": "0DF6F83545CBA46973638F6D79EFA089AF52920079DF2A265023B5556E726DAD"
   },
   "outputs": {
-    "paper/paper_v23/figures/20260907T144634Z-lf7-competence-filtered-refinement.png": null,
-    "paper/paper_v23/figures/20260907T144634Z-lf7-competence-filtered-refinement.pdf": null
+    "paper/paper_v23/figures/20260907T144634Z-lf7-competence-filtered-refinement.png": "C63136F2BE47C747F127EF065FC81C8A9FBCC3DA876E352C5CD030E22D98E273",
+    "paper/paper_v23/figures/20260907T144634Z-lf7-competence-filtered-refinement.pdf": "8135FB9B71AC16E25383B1785F3C4E8D41CCF55C98FA68CA47E314553A6F57E4"
   },
   "generator": "python paper/paper_v23/figures/generate_figures.py --lf7-only",
-  "generation_status": "SKIPPED_NO_TERMINAL_DATA",
-  "claim_boundary": "Activation records a matched design only; no LF7 scientific result or figure exists yet.",
+  "generator_sha256": "DAB9ECD6F2D40F5DCE342D0D8B8842866F45CD2B29903919C3FBCA20E26EA8E3",
+  "generation_status": "COMPLETE_ONE_COMPOSITE",
+  "claim_boundary": "P0_S is a valid negative endpoint; P0_F shows partial first-block screening only and has no valid endpoint or mechanism attribution.",
   "stress_reference_read": false
 }

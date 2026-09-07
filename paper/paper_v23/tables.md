@@ -38,8 +38,8 @@
 | LF6 DEV-U | Matched uniform endpoint control | 0.98979 | Two cycles | Safety recall failed: 0.897/0.899 |
 | LF6 DEV-R | Matched event-frontier rank band | 0.99105 | Two cycles | Safety pass; strict C1 timing failed at 0.01053 |
 | LF6 P0 | 550 phase-frozen + 650 joint pure physics | 0.99992 | C1 absent; C2 late; no recovery | Blind physics ratio 0.0128 passed, preservation failed |
-| LF7 P0-S | Fixed-small-step matched physics control | -- | Pending | ACTIVE; no endpoint evidence yet |
-| LF7 P0-F | Competence-filtered blockwise backtracking | -- | Pending | ACTIVE; no endpoint evidence yet |
+| LF7 P0-S | Fixed-small-step matched physics control | 0.99915 | C1 absent; C2 late, recall 0.076 | Valid negative; blind ratio 0.6031 fails |
+| LF7 P0-F | Competence-filtered blockwise backtracking | -- | No valid endpoint | Four rejects, one accepted block, then state-identity drift |
 
 The stages are a sequential diagnostic program, not a simultaneous factorial
 benchmark. Historical comparisons do not isolate the LF3 logit teacher alone.
@@ -208,7 +208,7 @@ At step 550 phase was bitwise unchanged and had zero optimizer-state entries.
 The V/T drift therefore preceded the rapid event collapse after joint unfreeze.
 The terminal outcome is `LF6_P0_PRESERVATION_FAILED`; candidate is none.
 
-## Table 15. LF7 preregistered matched continuation (ACTIVE)
+## Table 15. LF7 matched continuation terminal evidence
 
 | Item | P0-S control | P0-F filtered arm |
 |---|---|---|
@@ -219,9 +219,15 @@ The terminal outcome is `LF6_P0_PRESERVATION_FAILED`; candidate is none.
 | Competence role | Endpoint audit | Block acceptance constraint |
 | Rollback | None | Full model/optimizer/RNG rollback |
 | Retry scales | None | At most five dyadic scales |
-| Activation result | Pending | Pending |
+| Executed updates | 1200 accepted / 1200 attempted | 25 accepted / 150 attempted |
+| Blind physics | `4.927872 -> 2.971883`; ratio `0.603076` (fail) | First accepted block: `4.927872 -> 4.874314` |
+| Event preservation | C1 absent; C2 recall/recovery `0.0762/0.0282` | First accepted block preserved frozen medium gates |
+| Relative field/topology errors | `39.47/48.11/22.46/17.41` | Accepted block `0.995/1.018/1.000/1.000` |
+| Terminal validity | Valid endpoint; safety/Pareto fail | Invalid after Adam-state snapshot aliasing |
 
 P0-F uses medium-teacher functionals for acceptance even though they supply no
 gradient. It is therefore a multifidelity competence-filtered PINN refinement,
-not a label-free physics arm. Only the preregistered terminal S/F relation may
-support a filter-specific pilot statement.
+not a label-free physics arm. Its four rejected rates and `eta0/16` accepted
+first block are partial diagnostics only. Because no valid P0-F endpoint exists,
+the matched filter mechanism remains unresolved. The terminal outcome is
+`LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`; candidate is none.

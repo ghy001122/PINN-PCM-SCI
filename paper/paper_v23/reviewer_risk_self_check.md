@@ -72,12 +72,20 @@ No. Medium labels do not enter its gradient, but medium-teacher competence
 functionals decide whether each proposed block is accepted. We therefore call
 it multifidelity competence-filtered PINN refinement, not label-free physics.
 
-## 12. “Does activating LF7 establish a new optimization method?”
+## 12. “Did LF7 establish a new optimization method?”
 
 No. LF7 adapts attributed trust-region, filter, restoration, and backtracking
-primitives. The activation is only a preregistered matched test. A mechanism
-signal requires P0-S to fail safety while P0-F passes it under the frozen rule;
-all other terminal relations have narrower or negative interpretations.
+primitives. P0-S validly rejects smaller steps alone. P0-F rejected four unsafe
+proposals and accepted one very small block, but Adam-state snapshot aliasing
+then broke rollback identity. With no valid endpoint, neither success nor
+failure of the filter mechanism can be inferred.
+
+## 13. “Does the accepted P0-F block prove the filter works?”
+
+No. It proves only that one `eta0/16` proposal passed the frozen block checks.
+It cannot be extrapolated to later blocks, a terminal carrier, or a PINN Pareto
+result. The forensic fix was not executed scientifically and does not repair the
+evidence retrospectively.
 
 ## Submission-readiness verdict
 
@@ -87,5 +95,6 @@ NEGATIVE_DIAGNOSTIC_PAPER_WITH_BOUNDED_MECHANISM_RESULT: PLAUSIBLE
 POSITIVE_METHODS_SUBMISSION: NO
 CAS_Q2_POSITIVE_METHOD_CLAIM: NOT SUPPORTED
 CANDIDATE: NONE
-LF7_ACTIVE_RESULT: PENDING
+LF7_RESULT: MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID
+LF7_FILTER_ATTRIBUTION: UNAVAILABLE
 ```

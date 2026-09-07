@@ -2,38 +2,33 @@
 
 - `phase_id`: `PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE`
 - `phase_name`: PHK-V2.3 LF7 competence-filtered blockwise backtracking physics refinement pilot
-- `lifecycle_state`: `ACTIVE`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `PENDING_GPU_MATCHED_SCREEN`
-- `mechanism_outcome`: `PENDING`
-- `claim_status`: `CPU_QUALIFIED_GPU_MECHANISM_UNTESTED`
-- `next_research_execution_authorized`: `true`
-- `authorization_scope`: `TWO_MATCHED_PHYSICS_REFINEMENT_ARMS`
-- `candidate_status`: `NONE_PENDING_EVIDENCE`
-- `reference_status`: `CLOUD_REFERENCE_BLIND_STRESS_SEALED`
-- `compute_status`: `CPU_QUALIFICATION_PASS_GPU_PENDING`
-- `next_recommendation`: `EXECUTE_AUTHORIZED_LF7_MATCHED_GPU_SCREEN`
-- `effective_date`: `2026-09-07`
+- `machine_outcome`: `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`
+- `mechanism_outcome`: `MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`
+- `claim_status`: `VALID_SMALL_STEP_NEGATIVE_ARM_FILTER_ARM_IDENTITY_INVALID_NO_MECHANISM_ATTRIBUTION`
+- `next_research_execution_authorized`: `false`
+- `authorization_scope`: `NONE_TERMINAL`
+- `candidate_status`: `NONE`
+- `reference_status`: `LOCAL_NOMINAL_ADJUDICATED_STRESS_SEALED`
+- `compute_status`: `GPU_COMPLETE_ARTIFACTS_RECOVERED_INSTANCE_SHUTDOWN`
+- `next_recommendation`: `RETAIN_VALID_ARM_NO_MECHANISM_ATTRIBUTION`
+- `effective_date`: `2026-09-08`
 
 PHASE_ID=PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE
 BLOCKER_ID=NONE
-NEXT_RESEARCH_EXECUTION_AUTHORIZED=true
+NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
 
-## 当前授权
+## 终局
 
-从 exact LF6 DEV-R 分别执行 P0-S 固定小步长控制与 fresh P0-F
-competence-filtered blockwise backtracking。两臂使用同一预物化 1,200-step
-physics stream；P0-F 的 medium 只参加每 25 步 accept/reject，不进入梯度。
+P0-S 完成 1,200 updates，是有效的 bounded negative arm：fixed-blind
+`J/J0=0.6030763369`，且场与事件 competence 坍塌。P0-F 接受 25、尝试
+150 updates 后触发 post-step rollback identity drift，无合法 endpoint，按合同不重试。
+因此 matched screen 不完整，不能归因 function-space filter 增量。
 
-## 已通过门
+## 证据边界
 
-CPU/FP64 零步资格的 24 项检查全部通过，精确复核
-`J0=4.9278721846990505`、DEV-R full-medium audit、1,200-step ledger、fixed
-blind pool、rollback/RNG 和真实有限 backward。该门不含科研性能 premise。
-
-## 边界
-
-最多两条科学 GPU 轨迹；P0-S 固定 1,200 updates，P0-F 最多 1,200
-accepted / 2,400 attempted updates。禁止新增 anchor/replay、优化器、seed、
-sparse/OOD/stress、weak-form/control-volume 或其他救援。本阶段完成后必须回收、
-关机并在本地裁决；后续研究仍须新授权。
+终局为 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`，candidate 为 none。
+产物已回收并逐项核验，实例已关机，关机后完成本地 nominal 裁决。post-run
+rollback 修复未重新执行，属于 engineering-only、non-voting 变更。direct
+`LF_ONLY` 仍显著更强；stress 保持 sealed/unread。任何后续研究均须新的明确授权。

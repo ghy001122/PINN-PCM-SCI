@@ -48,12 +48,23 @@ matched。机制必须在训练中承担事件保持，而不是只在 entry gat
 同时保持事件并降低 blind objective，则停止正面 solver-recovery 路线，收口负面稿。
 若成功，再补最少多 seed 和 sparse/equal-information task；candidate 前不解封 stress。
 
-## LF7 ACTIVE：将 preservation 提升为更新接受规则
+## LF7 终局：小步长负对照有效，filter 机制因身份故障未完成
 
-LF7 已预注册从同一 exact DEV-R 起点、同一 physics stream 与 blind pool 出发的
-matched screen。P0-S 用固定小步长回答“仅缩小步长是否足够”；P0-F 每 25 步审计
-事件 competence 与 blind physics，失败时完整回滚 model/optimizer/RNG 并作有限
-dyadic backtracking。medium teacher 不进梯度，但参与接受裁决，因此 P0-F 不是
-label-free。只有 S 不过 safety 而 F 通过时，才支持 competence filter 的 pilot
-信号；S 也通过表示小步长已足够，F 也失败则支持该强式路径下的有界负结论。
-当前仅为 ACTIVE 设计身份，结果、candidate 与论文正面结论均为未知。
+1. `VERIFIED`：P0-S 从 exact DEV-R 出发完成 1200 步，固定 blind objective
+   `4.927872 -> 2.971883`，ratio=0.603076，未过 0.50 门。
+2. `VERIFIED`：P0-S 的 cycle 1 事件消失；cycle 2 recall/recovery 仅
+   `0.0762/0.0282`；V/T/phase/topology 相对误差为
+   `39.47/48.11/22.46/17.41`。所以单纯把 Adam 步长缩小 8 倍仍不能保留事件。
+3. `VERIFIED_PARTIAL`：P0-F 对第一个 25-step block 的前四档学习率均因 V/T
+   preservation 拒绝并成功回滚；第五档 `eta0/16` 通过全部 block gates，blind
+   objective 降到 4.874314，且四个相对误差为 `0.995/1.018/1/1`。
+4. `VERIFIED_ENGINEERING`：接受该 block 后，非空 Adam state 的 snapshot aliasing
+   导致后续 rollback identity drift。事后修复与回归不能追溯恢复科学轨迹；未重跑。
+5. 因此终局为 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`，candidate=none。
+   不能说 filter 成功，也不能据此说 filter 科学失败；只能保留 P0-S 负对照和
+   P0-F 的局部筛选行为。
+
+论文当前可写的新增结论是：降低步长不足以解决 physics forgetting；强式
+competence filter 会在较大学习率下直接拒绝 V/T 漂移，但其长期有效性尚未获得
+身份有效的 matched endpoint。direct `LF_ONLY` 仍远强于 P0-S；不得写 PINN
+Pareto、强基线增益、SOTA 或候选方法。stress 保持 sealed/unread。

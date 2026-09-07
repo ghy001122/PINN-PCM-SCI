@@ -479,6 +479,126 @@ def lf6_physics_pareto(data: dict) -> list[Path]:
     return _save_pil(image, "20260906T065434Z-lf6-physics-pareto")
 
 
+def lf7_competence_filtered_refinement(data: dict) -> list[Path]:
+    """Render only identity-valid LF7 evidence; P0-F has no endpoint."""
+    baseline = data["baseline"]
+    small = data["arms"]["P0_S"]
+    filtered = data["arms"]["P0_F"]
+    if plt is None:
+        image, draw, font, bold, small_font = _pil_canvas(
+            "LF7: small-step forgetting; filtered arm has no valid endpoint"
+        )
+        # Panel A: normalized blind objective.
+        draw.text((70, 115), "A  Blind physics / DEV-R", fill=NAVY, font=font)
+        x0, y0, width, height = 80, 190, 430, 360
+        draw.line((x0, y0 + height, x0 + width, y0 + height), fill=NAVY, width=3)
+        gate_y = y0 + height - int(0.5 * height)
+        draw.line((x0, gate_y, x0 + width, gate_y), fill=RED, width=3)
+        draw.text((x0 + 5, gate_y - 32), "gate 0.50", fill=RED, font=small_font)
+        for idx, (label, value, color) in enumerate(
+            (("DEV-R", 1.0, GRAY), ("P0-S", small["fixed_blind_ratio"], BLUE))
+        ):
+            bx = x0 + 80 + idx * 180
+            bh = int(value * height)
+            draw.rectangle((bx, y0 + height - bh, bx + 90, y0 + height), fill=color)
+            draw.text((bx + 5, y0 + height + 14), label, fill=NAVY, font=small_font)
+            draw.text((bx + 5, y0 + height - bh - 34), f"{value:.3f}", fill=color, font=small_font)
+
+        # Panel B: event recall/recovery.
+        draw.text((620, 115), "B  Event functionals", fill=NAVY, font=font)
+        bx0, by0, bwidth, bheight = 625, 190, 500, 360
+        draw.line((bx0, by0 + bheight, bx0 + bwidth, by0 + bheight), fill=NAVY, width=3)
+        for group, (label, recalls, recovery) in enumerate(
+            (("DEV-R", baseline["recall"], baseline["recovery"]), ("P0-S", small["recall"], small["recovery"]))
+        ):
+            gx = bx0 + 60 + group * 250
+            values = [recalls[0], recalls[1], recovery[0], recovery[1]]
+            for j, (value, color) in enumerate(zip(values, (TEAL, BLUE, GOLD, ORANGE))):
+                bh = int(value * bheight)
+                xx = gx + j * 42
+                draw.rectangle((xx, by0 + bheight - bh, xx + 30, by0 + bheight), fill=color)
+            draw.text((gx + 30, by0 + bheight + 14), label, fill=NAVY, font=small_font)
+        draw.text((640, 605), "C1/C2 recall; C1/C2 recovery", fill=GRAY, font=small_font)
+
+        # Panel C: partial first-block screen.
+        draw.text((1210, 115), "C  P0-F first block", fill=NAVY, font=font)
+        attempts = filtered["attempts"]
+        for idx, row in enumerate(attempts):
+            y = 190 + idx * 72
+            color = TEAL if row["decision"] == "ACCEPT" else RED
+            draw.ellipse((1230, y, 1260, y + 30), fill=color)
+            draw.text((1280, y - 2), f"eta0/{2 ** idx}: {row['decision']}", fill=color, font=small_font)
+            draw.text((1530, y - 2), f"J/J0={row['fixed_blind_objective']/baseline['fixed_blind_objective']:.3f}", fill=NAVY, font=small_font)
+        draw.text((1225, 585), "4 rejects; eta0/16 accepted", fill=NAVY, font=small_font)
+        draw.text((1225, 625), "then Adam-state identity drift", fill=RED, font=small_font)
+        draw.text((1225, 665), "NO VALID P0-F ENDPOINT", fill=RED, font=bold)
+        return _save_pil(image, "20260907T144634Z-lf7-competence-filtered-refinement")
+
+    fig, axes = plt.subplots(1, 3, figsize=(12.8, 3.9))
+
+    # Panel A: the valid fixed-small-step control did not reach the physics gate.
+    ratios = [1.0, small["fixed_blind_ratio"]]
+    bars = axes[0].bar([0, 1], ratios, color=[GRAY, BLUE], width=0.62)
+    axes[0].axhline(data["gates"]["physics_ratio_max"], color=RED, linestyle="--", linewidth=1.3, label="required ratio <= 0.50")
+    axes[0].set_xticks([0, 1], ["DEV-R start", "P0-S\n1200 updates"])
+    axes[0].set_ylabel("Fixed blind physics / DEV-R")
+    axes[0].set_ylim(0, 1.12)
+    axes[0].set_title("A  Residual reduction")
+    axes[0].legend(loc="upper right", fontsize=7.5)
+    for bar, value in zip(bars, ratios):
+        axes[0].text(bar.get_x() + bar.get_width() / 2, value + 0.025, f"{value:.3f}", ha="center", color=NAVY, fontweight="bold")
+
+    # Panel B: endpoint competence is assessed independently of residual decrease.
+    x = np.arange(2)
+    width = 0.18
+    series = [
+        ("C1 recall", [baseline["recall"][0], small["recall"][0]], TEAL),
+        ("C2 recall", [baseline["recall"][1], small["recall"][1]], BLUE),
+        ("C1 recovery", [baseline["recovery"][0], small["recovery"][0]], GOLD),
+        ("C2 recovery", [baseline["recovery"][1], small["recovery"][1]], ORANGE),
+    ]
+    for idx, (label, values, color) in enumerate(series):
+        axes[1].bar(x + (idx - 1.5) * width, values, width=width, color=color, label=label)
+    axes[1].axhline(data["gates"]["recall_min"], color=RED, linestyle="--", linewidth=1.1)
+    axes[1].set_xticks(x, ["DEV-R", "P0-S"])
+    axes[1].set_ylim(0, 1.08)
+    axes[1].set_ylabel("Event functional")
+    axes[1].set_title("B  Carrier preservation")
+    axes[1].legend(loc="upper right", fontsize=6.8, ncol=2)
+
+    # Panel C: show partial filter behavior, never an endpoint or mechanism result.
+    attempts = filtered["attempts"]
+    rates = np.asarray([row["learning_rate"] for row in attempts], dtype=float)
+    physics = np.asarray([row["fixed_blind_objective"] for row in attempts], dtype=float) / baseline["fixed_blind_objective"]
+    colors = [RED if row["decision"] == "REJECT" else TEAL for row in attempts]
+    axes[2].scatter(np.arange(1, len(attempts) + 1), physics, c=colors, s=70, zorder=3)
+    axes[2].plot(np.arange(1, len(attempts) + 1), physics, color=GRAY, linewidth=1.0, zorder=2)
+    axes[2].set_xticks(np.arange(1, len(attempts) + 1), [f"eta0/{2 ** (i - 1)}" for i in range(1, len(attempts) + 1)], rotation=25)
+    axes[2].set_ylabel("Proposed block physics / DEV-R")
+    axes[2].set_ylim(min(0.84, float(physics.min()) - 0.03), 1.02)
+    axes[2].set_title("C  P0-F first block screen")
+    axes[2].text(0.03, 0.04, "4 rejected; eta0/16 accepted\nthen state-identity drift -> no endpoint", transform=axes[2].transAxes, color=RED, fontsize=7.7, fontweight="bold")
+    for idx, row in enumerate(attempts):
+        marker = "R" if row["decision"] == "REJECT" else "A"
+        axes[2].text(idx + 1, physics[idx] + 0.012, marker, ha="center", color=colors[idx], fontweight="bold", fontsize=8)
+
+    fig.suptitle(
+        "LF7: small-step physics still forgets the event; filtered arm is identity-invalid after one accepted block",
+        color=NAVY,
+        fontweight="bold",
+    )
+    fig.text(
+        0.5,
+        0.005,
+        "Single-seed nominal pilot. P0-F points are block proposals, not a valid endpoint; no filter-mechanism or candidate claim.",
+        ha="center",
+        color=GRAY,
+        fontsize=8,
+    )
+    fig.tight_layout(rect=(0, 0.045, 1, 0.92))
+    return save(fig, "20260907T144634Z-lf7-competence-filtered-refinement")
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Generate paper_v23 evidence figures")
     parser.add_argument("--lf4-only", action="store_true", help="Generate LF4 figures 6–8 without rewriting the LF3 source manifest")
@@ -501,7 +621,11 @@ def main(argv: list[str] | None = None) -> None:
         if data.get("campaign_state") != "COMPLETE" or data.get("terminal_outcome") is None:
             print(json.dumps({"figures": 0, "scope": "LF7_ACTIVE_RESULTS_PENDING", "status": "SKIPPED_NO_TERMINAL_DATA"}, sort_keys=True))
             return
-        raise RuntimeError("LF7 terminal data is complete but the terminal renderer has not been bound")
+        if plt is not None:
+            setup()
+        outputs = lf7_competence_filtered_refinement(data)
+        print(json.dumps({"figures": len(outputs) // 2, "scope": "LF7_VALID_P0_S_PLUS_PARTIAL_IDENTITY_INVALID_P0_F"}, sort_keys=True))
+        return
     setup()
     if args.lf4_only:
         data = json.loads(LF4_DATA_PATH.read_text(encoding="utf-8"))

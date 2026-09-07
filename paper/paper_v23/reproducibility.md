@@ -270,7 +270,7 @@ checkout without the git-ignored raw directory can verify the compact evidence
 and frozen figure data but cannot independently reload the large checkpoints or
 predictions. Stress remains sealed and unread.
 
-## LF7 ACTIVE matched continuation scaffold
+## LF7 matched continuation terminal record
 
 - starting commit: `e00f8767fc1d611b4cadcd0057720d1dd507f51c`;
 - campaign timestamp: `20260907T144634Z`;
@@ -285,10 +285,41 @@ predictions. Stress remains sealed and unread.
 - raw root:
   `outputs/runs/20260907T144634Z-phk-v23-lf7-competence-filtered-refinement-pilot`.
 
-At activation, the LF7 metrics file is deliberately `ACTIVE_RESULTS_PENDING`
-with null arm outcomes. Running
-`python paper/paper_v23/figures/generate_figures.py --lf7-only` must report a
-safe skip and emit no LF7 figure until terminal evidence replaces the nulls.
-P0-F uses medium competence only for block acceptance, not gradients, and is
-not label-free. Fine, extra-fine, and direct `LF_ONLY` remain local-only after
-recovery and shutdown; stress remains sealed and unread.
+P0-S completed 1200 accepted/attempted updates with checkpoint SHA-256
+`48BEBAEA89DE511B6B7478AB69294EF7DE878E76E2D3FAB1F8DB9173FD409981`
+and prediction SHA-256
+`433E0FFD1893CF40D9A86BF0B1AB2ED523D11235068D0110EB286F18397464DD`.
+Its endpoint is identity-valid. P0-F attempted 150 updates and accepted 25. The
+first four dyadic rates were exactly rolled back; `eta0/16` passed the first
+block. The next state-identity check failed because nonempty Adam state in the
+snapshot was aliased and mutated. That cause was established forensically and
+fixed only after execution; the arm was not rerun and has no checkpoint or
+prediction endpoint.
+
+Key raw SHA-256 values are:
+
+```text
+run summary             2D43695972B9FA82D6BFF1BA1B3193AD1892994BBC96BD733F12382886441AB7
+P0-S telemetry          419A695DAD2AA592567DA022ACFB89B1D39ABCE74ED623F3AD983EBC23122861
+P0-S gate               C949A02BA407E689819C796F186B4CF880C5140BE3FA6E39300BAD9823E389A9
+P0-F telemetry          5FA41BDF73356EAF89CE3914641E38AF1D4016A8B8C74CCE991E91B68EC1DBAD
+P0-F gate               16A3408E762390623C767A188452F689964A3AF01277A47C205DAA281EAE32FE
+recovery manifest       F8EB07005A453E92D4D80B0F0007D8AABF8501425731820EC5E320B3B1418EEC
+shutdown proof          53B6B4798876F535177DCF8758EFB6AB5401E52C8DBCC25855F8E3BDE4643CED
+local adjudication      0DF6F83545CBA46973638F6D79EFA089AF52920079DF2A265023B5556E726DAD
+```
+
+Recovery/hash checks completed before shutdown; TCP closed and SSH returned
+explicit `Connection refused` before local fine/extra-fine and direct
+`LF_ONLY` evaluation. P0-F uses medium competence for acceptance, not gradients,
+and is not label-free. Stress remained sealed and unread.
+
+Regenerate the one LF7 figure with:
+
+```powershell
+python paper/paper_v23/figures/generate_figures.py --lf7-only
+```
+
+`figures/source-manifest-lf7.json` binds the terminal metrics and outputs. A Git
+checkout can verify compact evidence but cannot reload git-ignored checkpoints,
+predictions, or raw telemetry without the bound run directory.

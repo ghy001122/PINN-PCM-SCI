@@ -87,10 +87,13 @@ nonetheless falls from 4.9279 to 0.06315 (ratio 0.012814, pass). This is an
 executed `P0_PRESERVATION_FAILED` result: residual reduction and event
 competence diverge, with no PINN Pareto or candidate claim.
 
-## Figure 15. LF7 competence-filtered matched continuation (reserved)
+## Figure 15. LF7 matched continuation: valid small-step failure and incomplete filter screen
 
-One terminal three-panel composite will compare P0-S and P0-F on blind-physics
-reduction versus accepted updates, endpoint competence/preservation, and P0-F
-accepted learning-rate scales plus rejected-block reasons. The ACTIVE/null data
-schema intentionally emits no figure before terminal evidence is bound. P0-F
-uses medium-teacher competence for acceptance and must not be called label-free.
+Panel A shows that identity-valid P0-S reduced the fixed blind objective from
+4.9279 to 2.9719 (ratio 0.6031), missing the frozen 0.50 gate. Panel B separates
+this reduction from carrier preservation: cycle 1 disappeared, while cycle-2
+recall/recovery fell to 0.076/0.028. Panel C reports only P0-F's first-block
+proposals: four rates were rejected for V/T preservation, and `eta0/16` passed.
+Adam-state snapshot aliasing then caused rollback identity drift. P0-F has no
+valid endpoint; the panel is partial diagnostic evidence, not filter efficacy,
+PINN Pareto value, or a candidate result.

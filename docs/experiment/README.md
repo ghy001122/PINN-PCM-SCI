@@ -22,10 +22,12 @@ view. Smoke and pilot entries never vote in formal adjudication. A run's
 
 ## Current bounded campaign
 
-LF7 is active after a zero-update CPU qualification. It compares a fixed-small
-physics step against a fresh competence-filtered, blockwise-backtracking arm
-from exact LF6 DEV-R. The medium reference is audit-only and gives no training
-gradient; its use in P0-F acceptance means that arm is not fully label-free.
+LF7 is complete. P0-S is a valid 1,200-update negative arm: its blind physics
+objective decreased but event and field competence collapsed. P0-F accepted one
+25-update block and then failed a post-step rollback identity check, so it has no
+valid endpoint and no filtered-versus-unfiltered mechanism comparison is
+available. The terminal outcome is `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`;
+candidate is none and no further research execution is authorized.
 
 ## G1 fixture boundary
 

@@ -419,14 +419,18 @@ def take_snapshot(model: PhkV22RModel, optimizer: torch.optim.Optimizer, *, acce
 
 
 def restore_snapshot(snapshot: TrainingSnapshot, model: PhkV22RModel, optimizer: torch.optim.Optimizer) -> str:
-    model.load_state_dict(snapshot.model_state, strict=True)
-    optimizer.load_state_dict(snapshot.optimizer_state)
+    # Loading an optimizer state can retain tensor aliases when source and
+    # destination already share dtype/device.  A subsequent Adam step would
+    # then mutate the saved moments themselves and make rollback impossible.
+    # Load from fresh deep copies so the snapshot remains an immutable value.
+    model.load_state_dict(copy.deepcopy(snapshot.model_state), strict=True)
+    optimizer.load_state_dict(copy.deepcopy(snapshot.optimizer_state))
     _set_phase_trainable(model, snapshot.phase_trainable)
-    random.setstate(snapshot.python_rng)
-    np.random.set_state(snapshot.numpy_rng)
-    torch.set_rng_state(snapshot.torch_rng)
+    random.setstate(copy.deepcopy(snapshot.python_rng))
+    np.random.set_state(copy.deepcopy(snapshot.numpy_rng))
+    torch.set_rng_state(snapshot.torch_rng.clone())
     if torch.cuda.is_available():
-        torch.cuda.set_rng_state_all(snapshot.cuda_rng)
+        torch.cuda.set_rng_state_all([value.clone() for value in snapshot.cuda_rng])
     for group in optimizer.param_groups:
         group["lr"] = snapshot.learning_rate
     restored = state_digest(model, optimizer)

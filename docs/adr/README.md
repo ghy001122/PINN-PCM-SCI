@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0068：以 matched-screen identity failure 关闭 PHK-V2.3 LF7](0068-close-phk-v23-lf7-competence-filtered-refinement.md) — P0-S 是有效的小步长负面 arm；P0-F post-step rollback identity invalid，无合法 matched filter 归因、PINN Pareto、candidate 或后续授权。
 - [0067：激活 PHK-V2.3 LF7 competence-filtered refinement pilot](0067-activate-phk-v23-lf7-competence-filtered-refinement.md) — 从 exact LF6 DEV-R 运行 matched 小步长 control 与函数空间 competence-filtered blockwise rollback/backtracking；medium 只作接受审计，不能称 fully label-free。
 - [0066：以 P0 preservation failure 关闭 PHK-V2.3 LF6](0066-close-phk-v23-lf6-event-frontier-pilot.md) — DEV-U/DEV-R 均未建立 strict rank-specific increment；safety-selected DEV-R 进入 P0 后，fixed-blind physics objective 显著下降但场与事件 preservation 坍塌，故无 PINN Pareto、candidate 或后续授权。
 - [0065：激活 PHK-V2.3 LF6 event-frontier rank-band pilot](0065-activate-phk-v23-lf6-event-frontier-pilot.md) — 以 CPU-F 预物化账本运行 matched DEV-U/DEV-R，并按冻结 Safety/Strict 规则选择 exact endpoint 进入条件纯物理 P0；只读 DEV-M 仅为精确回退初始化。

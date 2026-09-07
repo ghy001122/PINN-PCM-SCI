@@ -1,7 +1,7 @@
 # PHK-V2.3 LF7 competence-filtered refinement prior-art closure
 
-Date: 2026-09-07  
-Scope: six primary research works; author repositories were checked only when directly associated with a paper  
+Date: 2026-09-07
+Scope: six primary research works; author repositories were checked only when directly associated with a paper
 Campaign object: LF7 competence-filtered blockwise backtracking physics refinement pilot
 
 ## Frozen LF7 object reviewed

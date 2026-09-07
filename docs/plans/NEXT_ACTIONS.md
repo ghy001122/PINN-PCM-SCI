@@ -1,29 +1,28 @@
-# PLAN-PHK-V2.3-LF7: authorized matched constrained refinement
+# PLAN-PHK-V2.3-LF7: completed matched constrained refinement
 
 - `phase_id`: `PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE`
-- `lifecycle_state`: `ACTIVE`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `CPU_QUALIFIED_GPU_MECHANISM_UNTESTED`
-- `authorization_state`: `EXPLICIT_EXECUTE_ACTIVE`
-- `current_stage`: `GPU_DEPLOYMENT_PENDING`
-- `next_research_execution_authorized`: `true`
-- `unique_next`: `P0_S_1200_THEN_FRESH_P0_F`
+- `claim_status`: `VALID_SMALL_STEP_NEGATIVE_ARM_FILTER_ARM_IDENTITY_INVALID_NO_MECHANISM_ATTRIBUTION`
+- `authorization_state`: `NO_RESEARCH_EXECUTION_AUTHORIZED`
+- `current_stage`: `TERMINAL_CLOSED`
+- `next_research_execution_authorized`: `false`
+- `unique_next`: `RETAIN_VALID_ARM_NO_MECHANISM_ATTRIBUTION`
 - `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_LF0_LF1_LF2_LF3_LF4_LF5_LF6_EVIDENCE`
 
-## Ordered execution
+## Completed work
 
-1. Commit the CPU-qualified, source-bound activation state.
-2. Build and remotely preflight the activation-commit bundle on the exact V100.
-3. Run P0-S for 1,200 fixed small-step physics updates.
-4. Reload exact DEV-R and run P0-F to 1,200 accepted updates or its frozen
-   backtracking/attempt bound. An independent post-step arm failure must not
-   suppress the other arm.
-5. Recover and hash all artifacts, clear processes/GPU, shut down and verify SSH
-   refusal; only then run local nominal evaluation.
-6. Close paper/status/evidence, commit and push the exact whitelist.
+1. P0-S completed 1,200 matched fixed-small-step physics updates and produced a
+   valid negative endpoint: the blind objective decreased but competence failed.
+2. Fresh P0-F accepted one block, then a post-step snapshot identity failure
+   consumed the arm and prevented a valid matched comparison.
+3. All configured artifacts were recovered and hash-verified; the instance was
+   shut down before local nominal adjudication.
+4. LF7 closed with no candidate and no filter-mechanism attribution.
 
 ## Stop boundary
 
-No hyperparameter rescue, extra trajectory, seed, sparse/OOD/stress task,
-weak-form/control-volume method, PJGR/R2 or submission is authorized. A terminal
-result—positive or negative—must close LF7 and set next authorization false.
+No retry, rescue, extra seed, sparse/OOD/stress task, weak-form/control-volume
+method, PJGR/R2 or submission is authorized. The unique recommendation preserves
+the valid P0-S negative arm while declining inference from P0-F; it is not a new
+EXECUTE authorization.

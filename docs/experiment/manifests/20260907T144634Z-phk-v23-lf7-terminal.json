@@ -1,0 +1,81 @@
+{
+  "schema_version": "run-manifest-v1",
+  "run_id": "20260907T144634Z-phk-v23-lf7-terminal",
+  "experiment_group_id": "PHK_V23_LF7",
+  "tier": "development_campaign",
+  "scientific_role": "matched_fixed_small_step_and_competence_filtered_physics_refinement_terminal_adjudication",
+  "gate": "PHK_V23_LF7",
+  "started_at": "2026-09-07T16:32:22.005124+00:00",
+  "ended_at": "2026-09-07T16:57:13+00:00",
+  "command": [
+    "remote isolated-project-python -m pinn_pcm_sci.phk_v23_lf7 --output-root <hash-bound-run-root> --medium-carrier <hash-bound-medium> --initial-checkpoint <hash-bound-exact-dev-r> --materialized-ledger <hash-bound-ledger> --cpu-qualification <hash-bound-cpu-qualification> --device cuda:0 --source-identity LF7-BUNDLE-76111FA9EF195AFA28AAE43E68BD80F4471841A4FCACAED8FEDEAF1D078DACF9",
+    "local .venv/Scripts/python.exe -m pinn_pcm_sci.phk_v23_lf7_evaluation --run-directory <hash-bound-run-root> --output-directory <run-root>/local-adjudication"
+  ],
+  "execution_status": "COMPLETE",
+  "numerical_validity": "VALID_P0_S_ENDPOINT_AND_POST_STEP_IDENTITY_INVALID_P0_F_WITH_NO_RETRY",
+  "gate_outcome": "LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID",
+  "route_disposition": "RETAIN_VALID_ARM_NO_MECHANISM_ATTRIBUTION",
+  "evidence_identity": "SINGLE_SEED_NOMINAL_VALID_FIXED_SMALL_STEP_NEGATIVE_ARM_AND_IDENTITY_INVALID_FILTERED_ARM",
+  "claim_status": "VALID_SMALL_STEP_NEGATIVE_ARM_FILTER_ARM_IDENTITY_INVALID_NO_MECHANISM_ATTRIBUTION",
+  "code_identity": {
+    "starting_commit": "e00f8767fc1d611b4cadcd0057720d1dd507f51c",
+    "activation_commit": "1dbee129d8b958accc71b97bf2ade3201587b441",
+    "executed_source_identity": "LF7-BUNDLE-76111FA9EF195AFA28AAE43E68BD80F4471841A4FCACAED8FEDEAF1D078DACF9",
+    "post_run_rollback_fix_scientifically_executed": false
+  },
+  "environment": {
+    "cloud_gpu": "Tesla V100-PCIE-32GB",
+    "cloud_dtype": "FLOAT64",
+    "cloud_training_inputs": "MEDIUM_AUDIT_ONLY_EXACT_DEV_R_PREMATERIALIZED_PHYSICS_LEDGER_AND_CPU_QUALIFICATION",
+    "isolated_runtime_fix": "SYSTEM_SITE_PACKAGES_VENV_WITH_H5PY_3_12_1_AND_SCIPY_1_14_1",
+    "global_environment_modified": false,
+    "fine_extra_fine_lf_only_evaluator_read_on_cloud": false,
+    "local_evaluator_device": "CPU",
+    "instance_lifecycle": "RECOVERED_HASH_VERIFIED_ZERO_PROCESS_AND_GPU_THEN_TCP_CLOSED_AND_SSH_CONNECTION_REFUSED_BEFORE_LOCAL_ADJUDICATION",
+    "stress_fields_or_metrics_read": false
+  },
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "split_id": "MEDIUM_AUDIT_ONLY_FINE_EXTRA_LF_ONLY_LOCAL_POST_SHUTDOWN_STRESS_SEALED",
+  "method_id": "phk-v23-lf7-competence-filtered-refinement-v1",
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "seed": 17,
+  "planned_budget": {
+    "maximum_scientific_gpu_trajectories": 2,
+    "p0_small_updates": 1200,
+    "p0_filter_maximum_accepted_updates": 1200,
+    "p0_filter_maximum_attempted_updates": 2400,
+    "maximum_total_attempted_updates": 3600
+  },
+  "actual_budget": {
+    "scientific_gpu_trajectories_attempted": 2,
+    "p0_small_attempted_updates": 1200,
+    "p0_small_accepted_updates": 1200,
+    "p0_filter_attempted_updates": 150,
+    "p0_filter_accepted_updates": 25,
+    "total_attempted_optimizer_updates": 1350,
+    "total_accepted_optimizer_updates": 1225,
+    "post_step_scientific_retry": false
+  },
+  "checkpoint": {
+    "initial_dev_r_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "p0_small_sha256": "48BEBAEA89DE511B6B7478AB69294EF7DE878E76E2D3FAB1F8DB9173FD409981",
+    "p0_filter_sha256": null,
+    "p0_filter_endpoint_valid": false,
+    "optimizer_state_loaded_from_development": false
+  },
+  "evaluator_id": "phk-v23-lf7-local-adjudication-v1",
+  "artifacts": {
+    "compact_artifact": "artifacts/20260907T144634Z-phk-v23-lf7-terminal.json#sha256=1C7BB7AE84A9BF9D72E0BC5DE163DB250A912F1D21D15ED894AD95E8D9DD5D49",
+    "closeout": "../2026-09-07-phk-v23-lf7-terminal-closeout.md#sha256=D1B1387870B4C97922A8AF0F7BDD69F88606FEC504599AE554C6C0D631996186",
+    "cpu_qualification": "artifacts/20260907T144634Z-phk-v23-lf7-cpu-qualification.json#sha256=BCA9ABD2293FF3F43C492269315CBFF2EFF370841B7D2E030908212B60CA8F25",
+    "run_summary": "outputs/runs/20260907T144634Z-phk-v23-lf7-competence-filtered-refinement-pilot/run_summary.json#sha256=2D43695972B9FA82D6BFF1BA1B3193AD1892994BBC96BD733F12382886441AB7",
+    "recovery_manifest": "outputs/runs/20260907T144634Z-phk-v23-lf7-competence-filtered-refinement-pilot/cloud/recovery_manifest.json#sha256=F8EB07005A453E92D4D80B0F0007D8AABF8501425731820EC5E320B3B1418EEC",
+    "shutdown_proof": "outputs/runs/20260907T144634Z-phk-v23-lf7-competence-filtered-refinement-pilot/cloud/shutdown_proof.json#sha256=53B6B4798876F535177DCF8758EFB6AB5401E52C8DBCC25855F8E3BDE4643CED",
+    "local_adjudication": "outputs/runs/20260907T144634Z-phk-v23-lf7-competence-filtered-refinement-pilot/local-adjudication/adjudication.json#sha256=0DF6F83545CBA46973638F6D79EFA089AF52920079DF2A265023B5556E726DAD",
+    "results_archive": "outputs/deploy/lf7-results-20260907T144634Z.tar.gz#sha256=37C2D51227953A96723809C956E7599CD6E0C69BEEEC47945E34A93009980466",
+    "paper_package": "../../paper/paper_v23/README.md"
+  },
+  "failure_class": "MATCHED_SCREEN_INCOMPLETE_AFTER_VALID_SMALL_STEP_NEGATIVE_ARM_AND_POST_STEP_FILTER_ROLLBACK_IDENTITY_FAILURE",
+  "replay_of": null,
+  "supersedes": null
+}
