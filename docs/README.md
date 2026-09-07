@@ -139,3 +139,10 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 # LF5 terminal evidence
 
 The LF5 CPU-T record is [here](experiment/2026-09-05-phk-v23-lf5-cpu-qualification.md). It rejected the local temporal-alignment premise. The user subsequently authorized one otherwise unchanged DEV-T trajectory as explicitly post-qualification exploratory evidence. It completed 400 updates, but the temporal stream identity drifted from the first batch; no checkpoint was written and P0 was not run. The CPU result remains a failure, the exploratory metrics are non-voting, and the terminal outcome is `LF5_NUMERICAL_OR_IDENTITY_INVALID`.
+
+# LF6 active evidence
+
+LF6 is active after [CPU-F qualification](experiment/2026-09-06-phk-v23-lf6-cpu-qualification.md).
+Its fixed event-frontier decision is recorded in [ADR 0065](adr/0065-activate-phk-v23-lf6-event-frontier-pilot.md),
+the current scope is in [active phase](../active_phase.md), and the only live
+route is [NEXT_ACTIONS](plans/NEXT_ACTIONS.md).

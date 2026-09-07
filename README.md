@@ -4,23 +4,24 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF6_EVENT_FRONTIER_RANK_BAND_AND_SAFETY_GATED_PHYSICS_PILOT_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF5_NUMERICAL_OR_IDENTITY_INVALID`
-- `mechanism_outcome`: `CPU_T_PREMISE_REFUTED_EXPLORATORY_DEV_T_IDENTITY_INVALID`
-- `claim_status`: `CPU_T_PREMISE_REFUTED_AND_POST_QUALIFICATION_DEV_T_IDENTITY_INVALID_NO_CARRIER_OR_PINN_GAIN`
-- `next_research_execution_authorized`: `false`
+- `machine_outcome`: `PENDING`
+- `mechanism_outcome`: `PENDING_MATCHED_DEV_U_DEV_R`
+- `claim_status`: `CPU_F_QUALIFIED_MATCHED_EVENT_FRONTIER_AND_CONDITIONAL_PHYSICS_EXECUTION_PENDING`
+- `next_research_execution_authorized`: `true`
 
-LF5 CPU-T 已重建 `68/68/64/64` 条 cycle/direction temporal edges；DEV-C 在两个 onset 池的 teacher-secanted zero-level residual 均劣于 DEV-M，故原冻结门返回 `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`。该结果保持有效且不被改写。
-
-用户随后明确覆盖该停止条件，授权以完全不变的 loss、初始化、stream、seed、预算和 gate 执行一条探索性 DEV-T。轨迹完成 400 updates，但 temporal stream 从 step 1 偏离 CPU 冻结身份；base/spatial stream 匹配。身份失败优先覆盖数值，未写出 checkpoint/prediction，P0 未运行，candidate 为 none。产物已回收核验，实例关机并确认 SSH 拒绝。stress 继续 sealed/unread。
+LF6 CPU-F 已在零 optimizer update 下冻结 ROI 临界秩、matched DEV-U/DEV-R endpoint、全部 development/P0 batches 与 blind physics pool，并重新核验 exact historical DEV-M safety fallback。当前只执行 fixed 400+400 matched screen 和由冻结规则选择的唯一 1200-step label-free P0；fine、extra-fine、direct LF_ONLY 与 frozen evaluator 仅在关机后本地读取，stress 保持 sealed/unread。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
+- 当前激活决定：[ADR 0065](docs/adr/0065-activate-phk-v23-lf6-event-frontier-pilot.md)
+- LF6 CPU-F：[CPU-F qualification](docs/experiment/2026-09-06-phk-v23-lf6-cpu-qualification.md)
+- LF6 prior art：[event-frontier prior-art closure](docs/references/2026-09-06-phk-v23-lf6-event-frontier-prior-art.md)
 - 当前关闭决定：[ADR 0064](docs/adr/0064-close-phk-v23-lf5-temporal-zero-level-pilot.md)
 - LF5 终局：[terminal closeout](docs/experiment/2026-09-05-phk-v23-lf5-terminal-closeout.md)
 - LF5 激活决定：[ADR 0063](docs/adr/0063-activate-phk-v23-lf5-temporal-zero-level-pilot.md)

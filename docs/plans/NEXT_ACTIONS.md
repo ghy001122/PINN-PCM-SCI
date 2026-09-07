@@ -1,28 +1,22 @@
-# PLAN-PHK-V2.3-LF5: terminal identity-invalid closeout
+# PHK-V2.3 LF6 live execution plan
 
-- `phase_id`: `PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF6_EVENT_FRONTIER_RANK_BAND_AND_SAFETY_GATED_PHYSICS_PILOT_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF5_NUMERICAL_OR_IDENTITY_INVALID`
-- `claim_status`: `CPU_T_PREMISE_REFUTED_AND_POST_QUALIFICATION_DEV_T_IDENTITY_INVALID_NO_CARRIER_OR_PINN_GAIN`
-- `authorization_state`: `CLOSED_NO_NEXT_RESEARCH_AUTHORIZATION`
-- `current_stage`: `TERMINAL_COMPLETE`
-- `next_research_execution_authorized`: `false`
-- `unique_next`: `STOP_NO_SCIENTIFIC_RETRY`
-- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_LF0_LF1_LF2_LF3_LF4_EVIDENCE`
+- `claim_status`: `CPU_F_QUALIFIED_MATCHED_EVENT_FRONTIER_AND_CONDITIONAL_PHYSICS_EXECUTION_PENDING`
+- `next_research_execution_authorized`: `true`
 
-## Terminal disposition
+1. Freeze the activation commit and build a content-addressed, reference-blind
+   bundle containing the full CPU-F ledger.
+2. Pass isolated local and remote zero-step preflight before any optimizer is
+   created.
+3. Run DEV-U and DEV-R for exactly 400 updates each; both endpoints vote.
+4. Apply the deterministic strict/safety selection over DEV-M/U/R and run the
+   selected endpoint through exactly 1200 label-free physics updates.
+5. Recover and hash all artifacts, clear processes/GPU, shut down the instance,
+   and verify closed TCP plus explicit SSH refusal.
+6. Only then run nominal local frozen evaluation, update the single paper_v23
+   package, terminalize the unique machine outcome, and push the exact whitelist.
 
-LF5 consumed its one scientific trajectory: 400 DEV-T updates, followed by a
-frozen temporal-stream identity failure before checkpoint writing. No retry or
-resume is permitted. P0 is `NOT_RUN`; no local fine/extra evaluator was run
-because no identity-valid prediction exists. The paper package records the valid
-CPU premise rejection and labels step-400 metrics as non-voting directional
-telemetry.
-
-## Stop boundary
-
-No scientific action is currently authorized. Any replacement mechanism,
-matched temporal-edge control, new seed, sparse/OOD/stress task, kinetic teacher,
-PJGR/R2, or submission requires a new PLAN and explicit EXECUTE. LF5 itself must
-not be retried.
+No matched confirmation, new seed, sparse/OOD/stress task, kinetic teacher,
+PJGR/R2 or submission is authorized by this live plan.

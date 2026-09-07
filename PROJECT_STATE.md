@@ -2,36 +2,30 @@
 
 更新时间：2026-09-06
 
-- `phase_id`: `PHK_V23_LF5_CYCLE_RESOLVED_TEMPORAL_ZERO_LEVEL_ALIGNMENT_AND_CONDITIONAL_PHYSICS_PILOT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF6_EVENT_FRONTIER_RANK_BAND_AND_SAFETY_GATED_PHYSICS_PILOT_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF5_NUMERICAL_OR_IDENTITY_INVALID`
-- `claim_status`: `CPU_T_PREMISE_REFUTED_AND_POST_QUALIFICATION_DEV_T_IDENTITY_INVALID_NO_CARRIER_OR_PINN_GAIN`
-- `next_research_execution_authorized`: `false`
-- `candidate_status`: `NONE`
+- `claim_status`: `CPU_F_QUALIFIED_MATCHED_EVENT_FRONTIER_AND_CONDITIONAL_PHYSICS_EXECUTION_PENDING`
+- `next_research_execution_authorized`: `true`
+- `candidate_status`: `NONE_PRE_RESULT`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED_UNCHANGED`
-- `implementation_status`: `LF5_EXECUTED_TERMINAL_IDENTITY_FAILURE_NO_RETRY`
-- `compute_status`: `DEV_T_400_P0_0_RECOVERED_HASH_VERIFIED_INSTANCE_SHUTDOWN`
-- `paper_status`: `PAPER_V23_UPDATED_WITH_LF5_CPU_NEGATIVE_AND_NON_VOTING_DIRECTIONAL_TELEMETRY`
+- `implementation_status`: `LF6_CORE_AND_CONTENT_ADDRESSED_LEDGER_IMPLEMENTED`
+- `compute_status`: `ZERO_GPU_UPDATES_CPU_F_PASS`
+- `paper_status`: `PAPER_V23_TERMINAL_UPDATE_PENDING`
 - `stress_status`: `TWO_STRESS_REFERENCES_SEALED_UNREAD`
-- `unique_next`: `STOP_NO_SCIENTIFIC_RETRY`
+- `unique_next`: `RUN_FIXED_DEV_U_DEV_R_THEN_SELECTED_P0`
 
 ## VERIFIED
 
-- CPU-T rebuilt four valid temporal pools (`68/68/64/64`) and rejected the
-  required DEV-C-over-DEV-M onset ordering.
-- The later explicit user override did not change method, streams, seed, budget
-  or gates. Its remote preflight passed and DEV-T completed 400 updates.
-- Frozen base and spatial stream hashes matched; temporal stream SHA was
-  `48A0C6B4...AAFB127`, not frozen `8FD79D99...C9B3BD9`, with mismatch at step 1.
-- The identity gate raised before checkpoint/prediction writing. P0 ran zero
-  updates and is `NOT_RUN`, not failed.
-- Three available remote run files were recovered with exact size/SHA equality;
-  GPU/process usage was zero before shutdown; TCP closed and SSH refused.
+- Start identity is `main@9d3c22674dc6279846fa341433d36f603a0854f1`; unrelated dirty and untracked content is protected.
+- Six-source primary prior-art closure found no exact functional collision and no required external dependency or license blocker.
+- CPU-F reproduced all inherited hashes and materialized the complete ledger with no optimizer update.
+- ROI size is 968 and the frozen event rank is 20. Frontier pool counts are `6/6/4/4`; generic controls use the same counts and endpoint times.
+- Exact historical DEV-M was reverified as safety-qualified. DEV-U/DEV-R outcomes and P0 evidence do not yet exist.
 
 ## Evidence boundary
 
-The step-400 endpoint metrics are non-voting directional telemetry only. They
-cannot establish a carrier, temporal-zero-level effect, PINN Pareto, direct
-baseline gain, candidate, multi-seed/OOD/stress result, or submission readiness.
-The inherited LF4 `BOUNDARY_EXPOSURE_SUPPORTED` result remains unchanged.
+Implementation, tests and CPU materialization are engineering/qualification
+evidence only. They do not establish a carrier, event-frontier increment, PINN
+Pareto, direct-baseline gain, candidate, OOD/stress result or paper-positive
+claim.

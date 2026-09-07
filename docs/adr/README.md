@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0065：激活 PHK-V2.3 LF6 event-frontier rank-band pilot](0065-activate-phk-v23-lf6-event-frontier-pilot.md) — 以 CPU-F 预物化账本运行 matched DEV-U/DEV-R，并按冻结 Safety/Strict 规则选择 exact endpoint 进入条件纯物理 P0；只读 DEV-M 仅为精确回退初始化。
 - [0064：以 temporal stream identity failure 关闭 PHK-V2.3 LF5](0064-close-phk-v23-lf5-temporal-zero-level-pilot.md) — CPU-T 前提反证保持有效；用户覆盖后的 exploratory DEV-T 完成 400 updates，但 temporal stream 从 step 1 漂移，故无合法 checkpoint、P0 未运行、无 candidate，LF5 不得重试。
 - [0063：激活并修订 PHK-V2.3 LF5 temporal zero-level pilot](0063-activate-phk-v23-lf5-temporal-zero-level-pilot.md) — CPU-T 否决 DEV-C→TZL 前提；用户随后明确授权不改科学参数的一条 post-qualification exploratory DEV-T 与条件 P0，且不改写 CPU 反证。
 - [0062：以 boundary-exposure 机制证据和无 development entry 关闭 PHK-V2.3 LF4](0062-close-phk-v23-lf4-interface-band-pilot.md) — DEV-M 相对等预算 DEV-G 提高 minimum recall 并保持冻结质量条件；DEV-C 的 phase-error/recovery 代价否决完整 threshold-aligned claim，三臂均无 P0-entry、P0 未运行、无 candidate。

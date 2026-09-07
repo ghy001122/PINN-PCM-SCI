@@ -116,6 +116,7 @@ This is a generated view of the append-only `index.jsonl` ledger.
 | 20260905T082728Z-phk-v23-lf4-terminal | development_campaign | interface_band_mechanism_campaign_terminal_adjudication | PHK_V23_LF4 | phk-v23-lf4-interface-band-threshold-aligned-screen-v1 | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | LF4_NO_DEVELOPMENT_ENTRY | [manifests/20260905T082728Z-phk-v23-lf4-terminal.json](manifests/20260905T082728Z-phk-v23-lf4-terminal.json) |
 | 20260905T150045Z-phk-v23-lf5-cpu-qualification | qualification | cpu_only_temporal_zero_level_geometry_and_mechanism_qualification | PHK_V23_LF5_CPU_T | phk-v23-lf5-cycle-resolved-temporal-zero-level-alignment-v1 | PHK_V21_NOMINAL_MEDIUM_TEMPORAL_EDGE_QUALIFICATION | 17 | COMPLETE | LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU | [manifests/20260905T150045Z-phk-v23-lf5-cpu-qualification.json](manifests/20260905T150045Z-phk-v23-lf5-cpu-qualification.json) |
 | 20260905T150045Z-phk-v23-lf5-terminal | development_campaign | temporal_zero_level_alignment_campaign_terminal_adjudication | PHK_V23_LF5 | phk-v23-lf5-cycle-resolved-temporal-zero-level-alignment-v1 | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | LF5_NUMERICAL_OR_IDENTITY_INVALID | [manifests/20260905T150045Z-phk-v23-lf5-terminal.json](manifests/20260905T150045Z-phk-v23-lf5-terminal.json) |
+| 20260906T065434Z-phk-v23-lf6-cpu-qualification | qualification | cpu_only_event_frontier_geometry_ledger_and_fallback_qualification | PHK_V23_LF6_CPU_F | phk-v23-lf6-event-frontier-rank-band-v1 | PHK_V21_NOMINAL_MEDIUM_EVENT_FRONTIER_QUALIFICATION | 17 | COMPLETE | LF6_CPU_F_QUALIFICATION_PASS | [manifests/20260906T065434Z-phk-v23-lf6-cpu-qualification.json](manifests/20260906T065434Z-phk-v23-lf6-cpu-qualification.json) |
 # PHK-V2.3 LF5 temporal zero-level pilot (2026-09-05)
 
 - [CPU-T qualification](2026-09-05-phk-v23-lf5-cpu-qualification.md): `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`; zero updates. A later explicit user override authorizes the unchanged DEV-T only as post-qualification exploratory evidence.
@@ -123,3 +124,9 @@ This is a generated view of the append-only `index.jsonl` ledger.
 - [ADR 0063](../adr/0063-activate-phk-v23-lf5-temporal-zero-level-pilot.md): frozen combination pilot and CPU-first stop semantics.
 - [Terminal closeout](2026-09-05-phk-v23-lf5-terminal-closeout.md): exploratory DEV-T completed 400 updates, then failed the frozen temporal-stream identity; P0 was not run and no candidate was established.
 - [ADR 0064](../adr/0064-close-phk-v23-lf5-temporal-zero-level-pilot.md): closes LF5 as `LF5_NUMERICAL_OR_IDENTITY_INVALID` with `STOP_NO_SCIENTIFIC_RETRY`.
+
+# PHK-V2.3 LF6 event-frontier pilot (2026-09-06)
+
+- [CPU-F qualification](2026-09-06-phk-v23-lf6-cpu-qualification.md): `LF6_CPU_F_QUALIFICATION_PASS`; zero optimizer updates, with exact rank geometry, matched streams, fixed blind pool and historical DEV-M fallback re-audited.
+- [Prior-art closure](../references/2026-09-06-phk-v23-lf6-event-frontier-prior-art.md): bounded six-source nearest-neighbour closure with no exact functional collision found.
+- [ADR 0065](../adr/0065-activate-phk-v23-lf6-event-frontier-pilot.md): freezes the matched DEV-U/DEV-R screen, safety-gated endpoint selection and conditional P0.

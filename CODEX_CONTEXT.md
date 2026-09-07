@@ -61,3 +61,14 @@ completed 400 updates but failed its temporal-stream identity check before
 checkpoint writing; P0 was not run. Recovery/hash verification and shutdown
 completed, with TCP closed and SSH refusal. The terminal outcome is
 `LF5_NUMERICAL_OR_IDENTITY_INVALID`; no retry or next research is authorized.
+
+# LF6 active handoff (2026-09-06)
+
+The user explicitly authorized
+`PHK_V23_LF6_EVENT_FRONTIER_RANK_BAND_AND_SAFETY_GATED_PHYSICS_PILOT_EXECUTE`
+from `main@9d3c22674dc6279846fa341433d36f603a0854f1`. CPU-F passed with zero
+optimizer updates, materialized all development/P0/fixed-pool coordinates, and
+reverified exact DEV-M as a legal safety fallback. The only active scientific
+sequence is fixed DEV-U, fixed DEV-R, then the deterministically selected
+safety carrier's label-free P0. Fine, extra-fine, direct LF_ONLY and the frozen
+evaluator remain local post-shutdown resources; stress remains sealed/unread.

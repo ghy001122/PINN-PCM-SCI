@@ -43,3 +43,18 @@ unchanged DEV-T as post-qualification exploratory evidence. DEV-T completed
 400 updates but its temporal stream drifted from the frozen identity at step 1;
 the terminal gate raised before checkpoint writing and P0 was not run. This
 does not rehabilitate or rewrite the CPU premise, and no retry is authorized.
+
+# LF6 active context (2026-09-06)
+
+LF6 tests whether cells in the teacher-side critical order-statistic interval
+that changes the frozen two-percent ROI event functional add value beyond a
+same-cardinality generic endpoint control. Both development arms inherit the
+LF3 calibrated logit teacher and LF4 spatial-interface loss; only endpoint cell
+identity differs. CPU-F found critical rank 20 in a 968-cell ROI, with frontier
+pool counts `6/6/4/4`, and froze every training coordinate before GPU use.
+
+The narrow mechanism outcome is `EVENT_FRONTIER_SUPPORTED` only when DEV-R is
+strict and DEV-U is not. Any selected safety endpoint then enters a separate,
+label-free physics continuation. Thus matched data-only mechanism attribution,
+within-architecture PINN Pareto, and comparison with direct LF_ONLY remain
+three distinct evidence levels.
