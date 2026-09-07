@@ -20,6 +20,35 @@ EXPECTED_GPU = "Tesla V100-PCIE-32GB"
 EXPECTED_DEV_M_SHA256 = "16EEE20C6B1A2510ACB387E83894ADD64061D631422FAB4DAA9EC1F7194018B5"
 EXPECTED_INITIAL_SHA256 = "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA"
 EXPECTED_FIXED_POOL_SHA256 = "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF"
+EXPECTED_OUTPUT_BASENAME = "lf6-run-20260906T065434Z"
+EXPECTED_REMOTE_OUTPUT_IDENTITY = "/root/autodl-tmp/lf6-run-20260906T065434Z"
+DEVELOPMENT_ARTIFACT_LOCK_RELATIVE = PurePosixPath("cloud/recovery_manifest.json")
+DEVELOPMENT_ARTIFACT_LOCK_SCHEMA = "phk-v23-lf6-development-artifact-lock-v1"
+DEVELOPMENT_SOURCE_IDENTITY = "LF6-BUNDLE-2A4DE4E45D48EDD11FC314D5F0525D9639966B2D728952FC0A83F7AE3096274A"
+EXPECTED_REMOTE_LOCAL_MATCH = {
+    "status": "VERIFIED_EXACT_MATCH",
+    "basis": "OUTPUT_ROOT_RELATIVE_PATH_SIZE_SHA256",
+    "artifact_count": 12,
+}
+EXPECTED_P0_PRESTEP = {
+    "directory_exists": True,
+    "directory_empty": True,
+    "optimizer_updates": 0,
+}
+EXPECTED_DEVELOPMENT_ARTIFACTS = {
+    "DEV_U_telemetry": {"path": "dev_u/telemetry.jsonl", "size_bytes": 28426, "sha256": "B28D6611C43131B82158371F7E84AEA7DD7B964B219D79F404A2D58294A059F2"},
+    "DEV_U_batch_ledger": {"path": "dev_u/batch_ledger.jsonl", "size_bytes": 111492, "sha256": "AB8963A4F51AD544486C3DA547FF0972EA601E36FF0B0B5A2110DCC34EA1AB37"},
+    "DEV_U_checkpoint": {"path": "dev_u/checkpoint.pt", "size_bytes": 564287, "sha256": "1DE231C248BF4C02D75D62F02C437F7E088D5AA57C79E62E25A48D5125FB592C"},
+    "DEV_U_prediction": {"path": "dev_u/prediction.npz", "size_bytes": 217945781, "sha256": "777884775AB3AC83ADCB36AFBB58D65FAEF482345B0948274409432E42789565"},
+    "DEV_U_gate": {"path": "dev_u/gate.json", "size_bytes": 6503, "sha256": "968C3891FB92DDE2A8C2C18EEFFCECEBCB0355DC23D1833B567A67BCE2F0EE24"},
+    "DEV_U_exit": {"path": "dev_u/exit.json", "size_bytes": 76, "sha256": "10EB70EC9A0A5D8197082919A8466F39B30185C4D620B9CC8C373B7E84AC3BF3"},
+    "DEV_R_telemetry": {"path": "dev_r/telemetry.jsonl", "size_bytes": 28490, "sha256": "581A54E6DA4A27B38E43695CDAE0B489A5ED616A065FFEC346510EDF6652A10E"},
+    "DEV_R_batch_ledger": {"path": "dev_r/batch_ledger.jsonl", "size_bytes": 111492, "sha256": "0B368B871F22E9D8FC725445C04D0EC70847C0BE93758ADDC1054928B427F053"},
+    "DEV_R_checkpoint": {"path": "dev_r/checkpoint.pt", "size_bytes": 564287, "sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499"},
+    "DEV_R_prediction": {"path": "dev_r/prediction.npz", "size_bytes": 217939501, "sha256": "5F20FB6ACBFE7D627A1C73D0E707A102F0872E8BF09ED83CFFD30397E4F350EF"},
+    "DEV_R_gate": {"path": "dev_r/gate.json", "size_bytes": 6398, "sha256": "21187B3E857A2C8BEB10FEE27261D438172DF21866D314AE8B8C2C09FF532DF0"},
+    "DEV_R_exit": {"path": "dev_r/exit.json", "size_bytes": 76, "sha256": "10EB70EC9A0A5D8197082919A8466F39B30185C4D620B9CC8C373B7E84AC3BF3"},
+}
 MEDIUM_RELATIVE = PurePosixPath("outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/result-intent-04.npz")
 CHECKPOINT_RELATIVE = PurePosixPath("outputs/runs/20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74/checkpoint-t0-step-1200.pt")
 DEV_M_RELATIVE = PurePosixPath("outputs/runs/20260905T102817Z-phk-v23-lf4-interface-band-5dbde1d/checkpoint-dev-m-interface-band-mse-step-400.pt")
@@ -92,6 +121,75 @@ def _safe(root: Path, relative: str) -> Path:
 def _record(root: Path, path: Path) -> dict[str, Any]:
     exact = path.resolve()
     return {"path": exact.relative_to(root.resolve()).as_posix(), "sha256": _sha256(exact), "size_bytes": exact.stat().st_size}
+
+
+def _verify_development_artifact_lock(
+    *,
+    root: Path,
+    output_root: Path,
+    lock_path: Path,
+    continuation_source_identity: str,
+) -> dict[str, Any]:
+    deployment = Path(root).resolve()
+    output = Path(output_root)
+    if not output.is_absolute():
+        raise PermissionError("LF6 P0-only output root must be absolute")
+    expected_output = output.resolve()
+    if expected_output.name != EXPECTED_OUTPUT_BASENAME or expected_output.as_posix() != EXPECTED_REMOTE_OUTPUT_IDENTITY:
+        raise PermissionError("LF6 P0-only output root drift")
+    if expected_output == deployment or deployment in expected_output.parents:
+        raise PermissionError("LF6 P0-only output root must remain outside the deployment root")
+    p0 = expected_output / "p0"
+    if not p0.is_dir():
+        raise RuntimeError("LF6 P0-only prestep directory absent")
+    if any(p0.iterdir()):
+        raise RuntimeError("LF6 P0-only requires the existing P0 directory to be empty")
+
+    expected_lock = (expected_output / Path(*DEVELOPMENT_ARTIFACT_LOCK_RELATIVE.parts)).resolve()
+    lock = Path(lock_path)
+    if not lock.is_absolute() or lock.resolve() != expected_lock or not expected_lock.is_file():
+        raise PermissionError("LF6 development artifact lock path drift")
+    payload = _read_object(expected_lock)
+    if (
+        payload.get("schema_id") != DEVELOPMENT_ARTIFACT_LOCK_SCHEMA
+        or payload.get("task_id") != TASK_ID
+        or payload.get("development_source_identity") != DEVELOPMENT_SOURCE_IDENTITY
+        or payload.get("continuation_source_identity") != continuation_source_identity
+        or payload.get("remote_output_identity") != EXPECTED_REMOTE_OUTPUT_IDENTITY
+        or payload.get("remote_local_match") != EXPECTED_REMOTE_LOCAL_MATCH
+        or payload.get("p0_prestep") != EXPECTED_P0_PRESTEP
+    ):
+        raise PermissionError("LF6 development artifact lock identity drift")
+    artifacts = payload.get("artifacts")
+    if not isinstance(artifacts, Mapping) or set(artifacts) != set(EXPECTED_DEVELOPMENT_ARTIFACTS):
+        raise ValueError("LF6 development artifact lock key set drift")
+
+    verified: dict[str, dict[str, Any]] = {}
+    for key, expected in EXPECTED_DEVELOPMENT_ARTIFACTS.items():
+        record = artifacts.get(key)
+        if not isinstance(record, Mapping) or dict(record) != expected:
+            raise ValueError(f"LF6 fixed development artifact record drift: {key}")
+        relative = PurePosixPath(str(expected["path"]))
+        if relative.is_absolute() or ".." in relative.parts:
+            raise PermissionError(f"LF6 development artifact path escaped output root: {key}")
+        exact = (expected_output / Path(*relative.parts)).resolve()
+        exact.relative_to(expected_output)
+        actual = _record(expected_output, exact) if exact.is_file() else None
+        if actual != expected:
+            raise ValueError(f"LF6 fixed development artifact content drift: {key}")
+        verified[key] = dict(actual)
+    return {
+        "schema_id": DEVELOPMENT_ARTIFACT_LOCK_SCHEMA,
+        "path": expected_lock.as_posix(),
+        "sha256": _sha256(expected_lock),
+        "remote_output_identity": EXPECTED_REMOTE_OUTPUT_IDENTITY,
+        "development_source_identity": DEVELOPMENT_SOURCE_IDENTITY,
+        "continuation_source_identity": continuation_source_identity,
+        "artifact_count": len(verified),
+        "development_optimizer_updates": 800,
+        "p0_optimizer_updates": 0,
+        "artifacts": verified,
+    }
 
 
 def _decode_step_hashes(array: np.ndarray) -> list[str]:
@@ -304,6 +402,9 @@ def run_preflight(
     cpu_qualification: Path,
     dev_m_checkpoint: Path | None,
     allow_dev_m_fallback_input: bool,
+    p0_only_prestep_engineering_retry: bool = False,
+    output_root: Path | None = None,
+    development_artifact_lock: Path | None = None,
     cuda_probe: Any = None,
     pythonpath: str | None = None,
 ) -> dict[str, Any]:
@@ -382,6 +483,19 @@ def run_preflight(
     forbidden_generators = [token for token in ("SobolEngine(", "BaseDevelopmentStream(", "BandStream(", "LF0PhysicsBatchStream(") if token in lf6_source]
     if forbidden_generators:
         raise PermissionError(f"LF6 remote runner contains runtime generator calls: {forbidden_generators}")
+    continuation_report: dict[str, Any] | None = None
+    if p0_only_prestep_engineering_retry:
+        if output_root is None or development_artifact_lock is None:
+            raise PermissionError("LF6 P0-only preflight requires output root and development artifact lock")
+        continuation_report = _verify_development_artifact_lock(
+            root=root,
+            output_root=Path(output_root),
+            lock_path=Path(development_artifact_lock),
+            continuation_source_identity=source_identity,
+        )
+    elif output_root is not None or development_artifact_lock is not None:
+        raise PermissionError("LF6 development artifacts supplied without explicit P0-only retry mode")
+
     allowed = {relative.as_posix() for _, relative in supplied.values()}
     forbidden = _forbidden(root, allowed)
     duplicates = _duplicates()
@@ -403,6 +517,9 @@ def run_preflight(
         "maximum_optimizer_updates": 2000,
         "maximum_scientific_trajectories": 3,
         "dev_m_fallback_input_authorized": bool(allow_dev_m_fallback_input),
+        "execution_mode": "P0_ONLY_PRESTEP_ENGINEERING_RETRY" if p0_only_prestep_engineering_retry else "FULL_CAMPAIGN",
+        "development_artifact_lock": continuation_report,
+        "remaining_optimizer_updates": 1200 if p0_only_prestep_engineering_retry else 2000,
         "ledger": ledger_report,
         "checkpoint_metadata": checkpoint_metadata,
         "forbidden_cloud_files": [],
@@ -425,8 +542,11 @@ def main() -> int:
     parser.add_argument("--cpu-qualification", type=Path, required=True)
     parser.add_argument("--dev-m-checkpoint", type=Path)
     parser.add_argument("--allow-dev-m-fallback-input", action="store_true")
+    parser.add_argument("--p0-only-prestep-engineering-retry", action="store_true")
+    parser.add_argument("--output-root", type=Path)
+    parser.add_argument("--development-artifact-lock", type=Path)
     args = parser.parse_args()
-    report = run_preflight(source_identity=args.source_identity, deployment_root=args.deployment_root, medium_carrier=args.medium_carrier, initial_checkpoint=args.initial_checkpoint, materialized_ledger=args.materialized_ledger, ledger_manifest=args.ledger_manifest, cpu_qualification=args.cpu_qualification, dev_m_checkpoint=args.dev_m_checkpoint, allow_dev_m_fallback_input=args.allow_dev_m_fallback_input)
+    report = run_preflight(source_identity=args.source_identity, deployment_root=args.deployment_root, medium_carrier=args.medium_carrier, initial_checkpoint=args.initial_checkpoint, materialized_ledger=args.materialized_ledger, ledger_manifest=args.ledger_manifest, cpu_qualification=args.cpu_qualification, dev_m_checkpoint=args.dev_m_checkpoint, allow_dev_m_fallback_input=args.allow_dev_m_fallback_input, p0_only_prestep_engineering_retry=args.p0_only_prestep_engineering_retry, output_root=args.output_root, development_artifact_lock=args.development_artifact_lock)
     print(json.dumps(report, sort_keys=True, allow_nan=False))
     return 0
 

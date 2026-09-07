@@ -51,6 +51,11 @@ class LF6CloudTests(unittest.TestCase):
         self.assertIn("--materialized-ledger", launcher)
         self.assertIn("--allow-dev-m-fallback-input", launcher)
         self.assertIn("LF6_ALLOW_DEV_M_FALLBACK_INPUT", launcher)
+        self.assertIn("LF6_EXECUTION_MODE", launcher)
+        self.assertIn("P0_ONLY_PRESTEP_ENGINEERING_RETRY", launcher)
+        self.assertIn("LF6_DEVELOPMENT_ARTIFACT_LOCK", launcher)
+        self.assertIn("--p0-only-prestep-engineering-retry", launcher)
+        self.assertIn("--development-artifact-lock", launcher)
 
     def test_builder_requires_explicit_dev_m_authorization(self):
         signature = inspect.signature(bundle.build)
@@ -155,6 +160,100 @@ class LF6CloudTests(unittest.TestCase):
             self.assertEqual(preflight._forbidden(root, {"medium.npz"}), [])
             (root / "extra-fine.npz").write_bytes(b"bad")
             self.assertEqual(preflight._forbidden(root, {"medium.npz"}), ["extra-fine.npz"])
+
+    def test_p0_only_lock_binds_existing_development_artifacts_and_empty_p0(self):
+        source_identity = "LF6-BUNDLE-" + "A" * 64
+        artifact_payloads = {
+            "DEV_U_telemetry": ("dev_u/telemetry.jsonl", b"u-telemetry"),
+            "DEV_U_batch_ledger": ("dev_u/batch_ledger.jsonl", b"u-ledger"),
+            "DEV_U_checkpoint": ("dev_u/checkpoint.pt", b"u-checkpoint"),
+            "DEV_U_prediction": ("dev_u/prediction.npz", b"u-prediction"),
+            "DEV_U_gate": ("dev_u/gate.json", b"u-gate"),
+            "DEV_U_exit": ("dev_u/exit.json", b"u-exit"),
+            "DEV_R_telemetry": ("dev_r/telemetry.jsonl", b"r-telemetry"),
+            "DEV_R_batch_ledger": ("dev_r/batch_ledger.jsonl", b"r-ledger"),
+            "DEV_R_checkpoint": ("dev_r/checkpoint.pt", b"r-checkpoint"),
+            "DEV_R_prediction": ("dev_r/prediction.npz", b"r-prediction"),
+            "DEV_R_gate": ("dev_r/gate.json", b"r-gate"),
+            "DEV_R_exit": ("dev_r/exit.json", b"r-exit"),
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            temporary_root = Path(temporary).resolve()
+            root = temporary_root / "deployment"
+            root.mkdir()
+            output_root = temporary_root / preflight.EXPECTED_OUTPUT_BASENAME
+            records = {}
+            for key, (relative, payload) in artifact_payloads.items():
+                path = output_root / Path(*Path(relative).parts)
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(payload)
+                records[key] = {
+                    "path": relative,
+                    "sha256": hashlib.sha256(payload).hexdigest().upper(),
+                    "size_bytes": len(payload),
+                }
+            p0 = output_root / "p0"
+            p0.mkdir(parents=True)
+            lock_path = output_root / "cloud/recovery_manifest.json"
+            lock_path.parent.mkdir(parents=True)
+            lock_payload = {
+                "schema_id": preflight.DEVELOPMENT_ARTIFACT_LOCK_SCHEMA,
+                "task_id": preflight.TASK_ID,
+                "development_source_identity": preflight.DEVELOPMENT_SOURCE_IDENTITY,
+                "continuation_source_identity": source_identity,
+                "remote_output_identity": output_root.as_posix(),
+                "remote_local_match": {
+                    "status": "VERIFIED_EXACT_MATCH",
+                    "basis": "OUTPUT_ROOT_RELATIVE_PATH_SIZE_SHA256",
+                    "artifact_count": 12,
+                },
+                "artifacts": records,
+                "p0_prestep": {
+                    "directory_exists": True,
+                    "directory_empty": True,
+                    "optimizer_updates": 0,
+                },
+            }
+            lock_path.write_text(json.dumps(lock_payload), encoding="utf-8")
+            with mock.patch.object(preflight, "EXPECTED_REMOTE_OUTPUT_IDENTITY", output_root.as_posix()), mock.patch.dict(preflight.EXPECTED_DEVELOPMENT_ARTIFACTS, records, clear=True):
+                report = preflight._verify_development_artifact_lock(
+                    root=root,
+                    output_root=output_root,
+                    lock_path=lock_path,
+                    continuation_source_identity=source_identity,
+                )
+                self.assertEqual(report["artifact_count"], 12)
+                self.assertEqual(report["development_optimizer_updates"], 800)
+
+                (output_root / "dev_u/checkpoint.pt").write_bytes(b"drift")
+                with self.assertRaises(ValueError):
+                    preflight._verify_development_artifact_lock(
+                        root=root,
+                        output_root=output_root,
+                        lock_path=lock_path,
+                        continuation_source_identity=source_identity,
+                    )
+
+    def test_p0_only_lock_rejects_nonempty_p0_directory(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            temporary_root = Path(temporary).resolve()
+            root = temporary_root / "deployment"
+            root.mkdir()
+            output_root = temporary_root / preflight.EXPECTED_OUTPUT_BASENAME
+            p0 = output_root / "p0"
+            p0.mkdir(parents=True)
+            (p0 / "unexpected.partial").write_text("partial", encoding="utf-8")
+            lock_path = output_root / "cloud/recovery_manifest.json"
+            lock_path.parent.mkdir(parents=True)
+            lock_path.write_text("{}", encoding="utf-8")
+            with mock.patch.object(preflight, "EXPECTED_REMOTE_OUTPUT_IDENTITY", output_root.as_posix()):
+                with self.assertRaises(RuntimeError):
+                    preflight._verify_development_artifact_lock(
+                        root=root,
+                        output_root=output_root,
+                        lock_path=lock_path,
+                        continuation_source_identity="LF6-BUNDLE-" + "A" * 64,
+                    )
 
 
 if __name__ == "__main__":

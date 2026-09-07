@@ -29,3 +29,26 @@ with SHA-256
 Fine, extra-fine, direct LF_ONLY, frozen evaluators, and stress material are
 forbidden on the cloud.  Local reference adjudication begins only after all
 cloud artifacts are recovered and verified and the instance is shut down.
+
+## P0-only prestep engineering continuation
+
+The original remote campaign completed the fixed DEV-U and DEV-R endpoints,
+then stopped after creating an empty `p0/` directory and before constructing
+the P0 optimizer.  The bounded engineering continuation must not rerun either
+development arm.  It is enabled only with all of the following explicit
+environment values:
+
+- `LF6_EXECUTION_MODE=P0_ONLY_PRESTEP_ENGINEERING_RETRY`;
+- `LF6_OUTPUT_ROOT=/root/autodl-tmp/lf6-run-20260906T065434Z`; and
+- `LF6_DEVELOPMENT_ARTIFACT_LOCK=/root/autodl-tmp/lf6-run-20260906T065434Z/cloud/recovery_manifest.json`.
+
+The recovery manifest uses schema
+`phk-v23-lf6-development-artifact-lock-v1`.  It separates the original
+`development_source_identity` from the new `continuation_source_identity`,
+binds all twelve DEV-U/DEV-R files by output-root-relative path, byte size and
+SHA-256, records an exact remote/local match, and attests that `p0/` exists but
+is empty with zero P0 updates.  The preflight independently checks those fixed
+records before allowing the core P0-only entrypoint.  It still verifies the
+continuation deployment manifest, original activation inputs, complete
+materialized ledger, exact V100 identity, duplicate-process absence, and the
+reference-blind cloud boundary.

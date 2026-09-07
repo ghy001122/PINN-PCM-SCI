@@ -68,6 +68,18 @@ FRONTIER_POOL_NAMES = ("C1_PRE", "C1_POST", "C2_PRE", "C2_POST")
 DEV_UPDATES = 400
 P0_UPDATES = 1200
 P0_PHASE_FREEZE_STEPS = 550
+DEVELOPMENT_ARTIFACT_PATHS = {
+    f"{prefix}_{role}": f"{folder}/{name}"
+    for prefix, folder in (("DEV_U", "dev_u"), ("DEV_R", "dev_r"))
+    for role, name in (
+        ("telemetry", "telemetry.jsonl"),
+        ("batch_ledger", "batch_ledger.jsonl"),
+        ("checkpoint", "checkpoint.pt"),
+        ("prediction", "prediction.npz"),
+        ("gate", "gate.json"),
+        ("exit", "exit.json"),
+    )
+}
 EXPECTED_PARTITION_SHA256 = "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515"
 EXPECTED_BASE_400_SHA256 = "3870D0C1411B3DF6E04C5BA316B3F0F77233D94A73A19E84523D81B62F692E4A"
 EXPECTED_SPATIAL_400_SHA256 = "4DB1728CC543B1AB18BD3F74B83B29EBFE5F95624D98DAFEA615B0ECDC69DEC4"
@@ -440,16 +452,192 @@ def read_cpu_qualification(path: Path) -> dict[str, Any]:
     return payload
 
 
+def verify_development_artifact_lock(
+    output_root: Path,
+    artifact_lock_path: Path,
+    *,
+    continuation_source_identity: str,
+) -> dict[str, Any]:
+    """Verify the recovered fixed endpoints before a P0-only continuation."""
+    root = Path(output_root).resolve()
+    lock_path = Path(artifact_lock_path).resolve()
+    if not root.is_dir() or not lock_path.is_file():
+        raise PermissionError("LF6 P0 prestep recovery root or artifact lock absent")
+    payload = _read_json(lock_path)
+    if (
+        payload.get("schema_id") != "phk-v23-lf6-development-artifact-lock-v1"
+        or payload.get("task_id") != TASK_ID
+        or payload.get("continuation_source_identity") != continuation_source_identity
+        or not isinstance(payload.get("development_source_identity"), str)
+    ):
+        raise PermissionError("LF6 development artifact lock identity drift")
+    match = payload.get("remote_local_match", {})
+    if match != {
+        "status": "VERIFIED_EXACT_MATCH",
+        "basis": "OUTPUT_ROOT_RELATIVE_PATH_SIZE_SHA256",
+        "artifact_count": len(DEVELOPMENT_ARTIFACT_PATHS),
+    }:
+        raise PermissionError("LF6 development artifact remote/local match absent")
+    records = payload.get("artifacts")
+    if not isinstance(records, Mapping) or set(records) != set(DEVELOPMENT_ARTIFACT_PATHS):
+        raise PermissionError("LF6 development artifact set drift")
+    for key, relative in DEVELOPMENT_ARTIFACT_PATHS.items():
+        record = records[key]
+        if not isinstance(record, Mapping) or record.get("path") != relative:
+            raise PermissionError(f"LF6 development artifact path drift: {key}")
+        exact = (root / relative).resolve()
+        try:
+            exact.relative_to(root)
+        except ValueError as exc:
+            raise PermissionError(f"LF6 development artifact path escape: {key}") from exc
+        if (
+            not exact.is_file()
+            or exact.stat().st_size != record.get("size_bytes")
+            or _sha256_path(exact) != record.get("sha256")
+        ):
+            raise PermissionError(f"LF6 development artifact content drift: {key}")
+    if payload.get("p0_prestep") != {
+        "directory_exists": True,
+        "directory_empty": True,
+        "optimizer_updates": 0,
+    }:
+        raise PermissionError("LF6 P0 prestep lock identity drift")
+    p0 = root / "p0"
+    if not p0.is_dir() or any(p0.iterdir()):
+        raise PermissionError("LF6 P0 prestep directory is absent or nonempty")
+    if (root / "run_summary.json").exists():
+        raise PermissionError("LF6 P0 prestep run summary already exists")
+    return payload
+
+
 def _load_bound_model(path: Path, *, expected_sha256: str, initial_checkpoint: Path, physics: Any, config: Any, device: torch.device) -> tuple[PhkV22RModel, dict[str, Any]]:
     supplied = Path(path).resolve()
     if not supplied.is_file() or _sha256_path(supplied) != expected_sha256:
         raise ValueError("LF6 checkpoint input absent or hash-drifted")
     model, _ = load_lf3_t0_model(initial_checkpoint, physics=physics, config=config, device=device, expected_sha256=_sha256_path(initial_checkpoint))
     payload = torch.load(supplied, map_location=device, weights_only=False)
-    if payload.get("architecture") != model.architecture_manifest():
-        raise PermissionError("LF6 inherited checkpoint architecture drift")
+    # Development checkpoints are written after freezing V/T, so their
+    # manifest's trainable count describes that phase-only training state.
+    # Reproduce that state for the complete identity comparison, then restore
+    # V/T before the P0 caller freezes phase and trains V/T.
+    for field in ("potential", "temperature"):
+        model.encoders[field].requires_grad_(False)
+        model.heads[field].requires_grad_(False)
+    try:
+        if payload.get("architecture") != model.architecture_manifest():
+            raise PermissionError("LF6 inherited checkpoint architecture drift")
+    finally:
+        for field in ("potential", "temperature"):
+            model.encoders[field].requires_grad_(True)
+            model.heads[field].requires_grad_(True)
     model.load_state_dict(payload["model_state_dict"], strict=True); model.train()
     return model, payload
+
+
+def _read_jsonl(path: Path) -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    with Path(path).open("r", encoding="utf-8") as handle:
+        for line_number, line in enumerate(handle, start=1):
+            if not line.strip():
+                raise PermissionError(f"LF6 recovered JSONL blank line at {path}:{line_number}")
+            value = json.loads(line)
+            if not isinstance(value, dict):
+                raise PermissionError(f"LF6 recovered JSONL object drift at {path}:{line_number}")
+            records.append(value)
+    return records
+
+
+def _load_recovered_development_arms(
+    *,
+    root: Path,
+    artifact_lock_path: Path,
+    continuation_source_identity: str,
+    ledger: MaterializedLedger,
+    qualification: Mapping[str, Any],
+    contracts: Mapping[str, Mapping[str, Any]],
+    initial_checkpoint: Path,
+    physics: Any,
+    config: Any,
+    device: torch.device,
+) -> tuple[dict[str, Any], dict[str, Path], str]:
+    lock = verify_development_artifact_lock(
+        root, artifact_lock_path,
+        continuation_source_identity=continuation_source_identity,
+    )
+    development_source_identity = str(lock["development_source_identity"])
+    identities = contract_identity()
+    parent_sha256 = _sha256_path(Path(initial_checkpoint))
+    telemetry_steps = [1, *range(50, DEV_UPDATES + 1, 50)]
+    arms: dict[str, Any] = {}
+    checkpoints: dict[str, Path] = {}
+    for arm, prefix, folder in ((DEV_U, "DEV_U", "dev_u"), (DEV_R, "DEV_R", "dev_r")):
+        directory = root / folder
+        gate = _read_json(directory / "gate.json")
+        exit_record = _read_json(directory / "exit.json")
+        if (
+            gate.get("arm") != arm
+            or gate.get("numerical_valid") is not True
+            or exit_record != {"returncode": 0, "executed_updates": DEV_UPDATES, "numerical_valid": True}
+        ):
+            raise PermissionError(f"LF6 recovered development exit/gate drift: {arm}")
+        telemetry = _read_jsonl(directory / "telemetry.jsonl")
+        if [record.get("step") for record in telemetry] != telemetry_steps or telemetry[-1].get("audit") != gate.get("audit"):
+            raise PermissionError(f"LF6 recovered development telemetry drift: {arm}")
+        batch_records = _read_jsonl(directory / "batch_ledger.jsonl")
+        endpoint_sha256 = contracts["data"]["materialized_ledger"][
+            "uniform_endpoint_sha256" if arm == DEV_U else "frontier_endpoint_sha256"
+        ]
+        if len(batch_records) != DEV_UPDATES:
+            raise PermissionError(f"LF6 recovered development batch count drift: {arm}")
+        for index, record in enumerate(batch_records):
+            if record != {
+                "step": index + 1,
+                "base_sha256": ledger.base_hashes[index],
+                "spatial_sha256": ledger.spatial_hashes[index],
+                "endpoint_semantic_sha256": endpoint_sha256,
+            }:
+                raise PermissionError(f"LF6 recovered development stream drift: {arm}:{index + 1}")
+        vt = gate.get("V_T_state_sha256", {})
+        vt_unchanged = isinstance(vt, Mapping) and vt.get("before") == vt.get("after")
+        expected_safety = safety_gate(gate["audit"], qualification["lf1_b0_full_medium_audit"], vt_unchanged=vt_unchanged)
+        expected_strict = strict_gate(gate["audit"], qualification["lf1_b0_full_medium_audit"], vt_unchanged=vt_unchanged)
+        if gate.get("safety_gate") != expected_safety or gate.get("strict_gate") != expected_strict:
+            raise PermissionError(f"LF6 recovered development gate recomputation drift: {arm}")
+        checkpoint = directory / "checkpoint.pt"
+        model, payload = _load_bound_model(
+            checkpoint,
+            expected_sha256=lock["artifacts"][f"{prefix}_checkpoint"]["sha256"],
+            initial_checkpoint=Path(initial_checkpoint), physics=physics, config=config, device=device,
+        )
+        del model
+        metadata = payload.get("lf6", {})
+        if (
+            payload.get("update") != DEV_UPDATES
+            or metadata.get("schema_id") != "phk-v23-lf6-checkpoint-metadata-v1"
+            or metadata.get("task_id") != TASK_ID
+            or metadata.get("role") != arm
+            or metadata.get("optimizer_update") != DEV_UPDATES
+            or metadata.get("source_identity") != development_source_identity
+            or metadata.get("contracts") != identities
+            or metadata.get("parent_checkpoint_sha256") != parent_sha256
+            or metadata.get("medium_labels_used") is not True
+            or metadata.get("physics_residual_used") is not False
+            or metadata.get("runtime_sampling_used") is not False
+            or metadata.get("stress_read") is not False
+        ):
+            raise PermissionError(f"LF6 recovered development checkpoint provenance drift: {arm}")
+        checkpoints[arm] = checkpoint
+        arms[arm] = {
+            **gate,
+            "executed_updates": DEV_UPDATES,
+            "checkpoint_sha256": lock["artifacts"][f"{prefix}_checkpoint"]["sha256"],
+            "prediction_sha256": lock["artifacts"][f"{prefix}_prediction"]["sha256"],
+            "batch_streams": {
+                "base": ledger.streams["base_400_sha256"],
+                "spatial": ledger.streams["spatial_400_sha256"],
+            },
+        }
+    return arms, checkpoints, development_source_identity
 
 
 def _write_checkpoint(path: Path, *, model: PhkV22RModel, optimizer: torch.optim.Optimizer, config: Any, update: int, role: str, source_identity: str, contracts: Mapping[str, Any], parent_sha256: str, physics_program_sha256: str, physics_object_sha256: str) -> Path:
@@ -510,16 +698,27 @@ def _run_development_arm(*, arm: str, root: Path, ledger: MaterializedLedger, da
     return result, checkpoint
 
 
-def execute_reference_blind_gpu_campaign(*, output_root: Path, medium_carrier: Path, initial_checkpoint: Path, materialized_ledger: Path, dev_m_checkpoint: Path | None, cpu_qualification_path: Path, device_name: str, source_identity: str) -> dict[str, Any]:
+def execute_reference_blind_gpu_campaign(
+    *, output_root: Path, medium_carrier: Path, initial_checkpoint: Path,
+    materialized_ledger: Path, dev_m_checkpoint: Path | None,
+    cpu_qualification_path: Path, device_name: str, source_identity: str,
+    p0_only_prestep_engineering_retry: bool = False,
+    development_artifact_lock_path: Path | None = None,
+) -> dict[str, Any]:
     contracts = load_contracts(); qualification = read_cpu_qualification(cpu_qualification_path)
     if not device_name.startswith("cuda") or not torch.cuda.is_available():
         raise RuntimeError("LF6 requires CUDA")
     device = torch.device(device_name); gpu_name = torch.cuda.get_device_name(device)
     if gpu_name != "Tesla V100-PCIE-32GB":
         raise RuntimeError("LF6 requires Tesla V100-PCIE-32GB")
-    root = Path(output_root).resolve(); root.mkdir(parents=True, exist_ok=True)
-    if any((root/name).exists() for name in ("dev_u", "dev_r", "p0", "run_summary.json")):
-        raise FileExistsError("LF6 scientific outputs already exist")
+    root = Path(output_root).resolve()
+    if p0_only_prestep_engineering_retry:
+        if development_artifact_lock_path is None or not root.is_dir():
+            raise PermissionError("LF6 P0-only prestep recovery inputs absent")
+    else:
+        root.mkdir(parents=True, exist_ok=True)
+        if any((root/name).exists() for name in ("dev_u", "dev_r", "p0", "run_summary.json")):
+            raise FileExistsError("LF6 scientific outputs already exist")
     config = build_training_config(device_name); physics, physics_program_sha256, physics_object_sha256 = load_case_physics(config.case_control)
     dataset = load_medium_dataset(Path(medium_carrier), physics=physics, contracts=contracts)
     if dataset.partition_sha256 != qualification["partition_sha256"]:
@@ -527,15 +726,27 @@ def execute_reference_blind_gpu_campaign(*, output_root: Path, medium_carrier: P
     ledger = MaterializedLedger(materialized_ledger, contracts=contracts, qualification=qualification)
     started = time.perf_counter(); started_at = datetime.now(timezone.utc).isoformat()
     random.seed(17); np.random.seed(17); torch.manual_seed(17); torch.cuda.manual_seed_all(17)
-    arms: dict[str, Any] = {}; checkpoints: dict[str, Path] = {}
-    for arm in DEV_ORDER:
-        arms[arm], checkpoints[arm] = _run_development_arm(arm=arm, root=root, ledger=ledger, dataset=dataset, initial_checkpoint=Path(initial_checkpoint), contracts=contracts, qualification=qualification, physics=physics, config=config, device=device, source_identity=source_identity, physics_program_sha256=physics_program_sha256, physics_object_sha256=physics_object_sha256, started=started)
+    development_source_identity = source_identity
+    if p0_only_prestep_engineering_retry:
+        arms, checkpoints, development_source_identity = _load_recovered_development_arms(
+            root=root, artifact_lock_path=Path(development_artifact_lock_path),
+            continuation_source_identity=source_identity, ledger=ledger,
+            qualification=qualification, contracts=contracts,
+            initial_checkpoint=Path(initial_checkpoint), physics=physics,
+            config=config, device=device,
+        )
+    else:
+        arms = {}; checkpoints = {}
+        for arm in DEV_ORDER:
+            arms[arm], checkpoints[arm] = _run_development_arm(arm=arm, root=root, ledger=ledger, dataset=dataset, initial_checkpoint=Path(initial_checkpoint), contracts=contracts, qualification=qualification, physics=physics, config=config, device=device, source_identity=source_identity, physics_program_sha256=physics_program_sha256, physics_object_sha256=physics_object_sha256, started=started)
     mechanism = mechanism_outcome(arms)
     dev_m_audit = qualification["dev_m_full_medium_audit"]
     dev_m_safety = safety_gate(dev_m_audit, qualification["lf1_b0_full_medium_audit"], vt_unchanged=True)
     dev_m_strict = strict_gate(dev_m_audit, qualification["lf1_b0_full_medium_audit"], vt_unchanged=True)
     candidates = {DEV_M:{"audit":dev_m_audit,"safety_gate":dev_m_safety,"strict_gate":dev_m_strict,"numerical_valid":qualification.get("dev_m_input_valid") is True}, **arms}
     selected = select_p0_candidate(candidates)
+    if p0_only_prestep_engineering_retry and selected is None:
+        raise PermissionError("LF6 P0-only recovery has no valid frozen safety candidate")
     p0_result: dict[str, Any] | None = None
     if selected is not None:
         if selected == DEV_M:
@@ -546,7 +757,9 @@ def execute_reference_blind_gpu_campaign(*, output_root: Path, medium_carrier: P
                 raise ValueError("LF6 DEV-M fallback hash drift")
         else:
             selected_checkpoint = checkpoints[selected]
-        directory = root/"p0"; directory.mkdir(parents=True, exist_ok=False)
+        directory = root/"p0"
+        if not p0_only_prestep_engineering_retry:
+            directory.mkdir(parents=True, exist_ok=False)
         model, _ = _load_bound_model(selected_checkpoint, expected_sha256=_sha256_path(selected_checkpoint), initial_checkpoint=Path(initial_checkpoint), physics=physics, config=config, device=device)
         phase_parameters = tuple(model.encoders["phase"].parameters()) + tuple(model.heads["phase"].parameters())
         for parameter in phase_parameters:
@@ -598,22 +811,50 @@ def execute_reference_blind_gpu_campaign(*, output_root: Path, medium_carrier: P
     elif selected is None: status="LF6_NO_VALID_SAFETY_CARRIER"
     elif p0_result is not None and not p0_result["numerical_valid"]: status="LF6_P0_NUMERICAL_OR_IDENTITY_INVALID"
     else: status="LF6_REFERENCE_BLIND_GPU_CAMPAIGN_COMPLETE"
-    summary={"schema_id":"phk-v23-lf6-reference-blind-run-summary-v1","task_id":TASK_ID,"title":TITLE,"status":status,"started_at_utc":started_at,"finished_at_utc":datetime.now(timezone.utc).isoformat(),"source_identity":source_identity,"gpu":gpu_name,"dtype":"FLOAT64","seed":17,"optimizer_updates":sum(int(arms[name]["executed_updates"]) for name in DEV_ORDER)+(int(p0_result["executed_updates"]) if p0_result else 0),"development":arms,"mechanism_outcome":mechanism,"candidates":candidates,"selected_role":selected,"P0_disposition":"EXECUTED" if p0_result else "NOT_RUN_NO_VALID_SAFETY_CARRIER","P0":p0_result,"ledger":{"path":str(Path(materialized_ledger)),"sha256":_sha256_path(Path(materialized_ledger)),"semantic_sha256":contracts["data"]["materialized_ledger"]["semantic_sha256"],"streams":ledger.streams},"wall_seconds":time.perf_counter()-started,"artifacts":artifacts,"prediction_reference_free":True,"fine_extra_lf_only_evaluator_stress_read":False}
+    summary={"schema_id":"phk-v23-lf6-reference-blind-run-summary-v1","task_id":TASK_ID,"title":TITLE,"status":status,"started_at_utc":started_at,"finished_at_utc":datetime.now(timezone.utc).isoformat(),"source_identity":source_identity,"development_source_identity":development_source_identity,"execution_mode":"P0_ONLY_PRESTEP_ENGINEERING_RETRY" if p0_only_prestep_engineering_retry else "FULL_REFERENCE_BLIND_CAMPAIGN","gpu":gpu_name,"dtype":"FLOAT64","seed":17,"optimizer_updates":sum(int(arms[name]["executed_updates"]) for name in DEV_ORDER)+(int(p0_result["executed_updates"]) if p0_result else 0),"development":arms,"mechanism_outcome":mechanism,"candidates":candidates,"selected_role":selected,"P0_disposition":"EXECUTED" if p0_result else "NOT_RUN_NO_VALID_SAFETY_CARRIER","P0":p0_result,"ledger":{"path":str(Path(materialized_ledger)),"sha256":_sha256_path(Path(materialized_ledger)),"semantic_sha256":contracts["data"]["materialized_ledger"]["semantic_sha256"],"streams":ledger.streams},"wall_seconds":time.perf_counter()-started,"artifacts":artifacts,"prediction_reference_free":True,"fine_extra_lf_only_evaluator_stress_read":False}
     _write_json_exclusive(root/"run_summary.json",summary); return summary
+
+
+def execute_p0_only_prestep_engineering_retry(
+    *, output_root: Path, medium_carrier: Path, initial_checkpoint: Path,
+    materialized_ledger: Path, dev_m_checkpoint: Path | None,
+    cpu_qualification_path: Path, device_name: str, source_identity: str,
+    development_artifact_lock_path: Path,
+) -> dict[str, Any]:
+    """Resume only the untouched P0 trajectory from verified fixed endpoints."""
+    return execute_reference_blind_gpu_campaign(
+        output_root=output_root, medium_carrier=medium_carrier,
+        initial_checkpoint=initial_checkpoint, materialized_ledger=materialized_ledger,
+        dev_m_checkpoint=dev_m_checkpoint, cpu_qualification_path=cpu_qualification_path,
+        device_name=device_name, source_identity=source_identity,
+        p0_only_prestep_engineering_retry=True,
+        development_artifact_lock_path=development_artifact_lock_path,
+    )
 
 
 def _parser() -> argparse.ArgumentParser:
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-root",type=Path,required=True); parser.add_argument("--medium-carrier",type=Path,required=True); parser.add_argument("--initial-checkpoint",type=Path,required=True); parser.add_argument("--materialized-ledger",type=Path,required=True); parser.add_argument("--dev-m-checkpoint",type=Path); parser.add_argument("--cpu-qualification",type=Path,required=True); parser.add_argument("--device",default="cuda:0"); parser.add_argument("--source-identity",required=True)
+    parser.add_argument("--p0-only-prestep-engineering-retry",action="store_true")
+    parser.add_argument("--development-artifact-lock",type=Path)
     return parser
 
 
 def main(argv: Sequence[str] | None=None) -> int:
-    args=_parser().parse_args(argv); summary=execute_reference_blind_gpu_campaign(output_root=args.output_root,medium_carrier=args.medium_carrier,initial_checkpoint=args.initial_checkpoint,materialized_ledger=args.materialized_ledger,dev_m_checkpoint=args.dev_m_checkpoint,cpu_qualification_path=args.cpu_qualification,device_name=args.device,source_identity=args.source_identity); print(json.dumps({"status":summary["status"],"optimizer_updates":summary["optimizer_updates"],"mechanism_outcome":summary["mechanism_outcome"],"selected_role":summary["selected_role"]},sort_keys=True)); return 0
+    args=_parser().parse_args(argv)
+    if args.p0_only_prestep_engineering_retry:
+        if args.development_artifact_lock is None:
+            raise PermissionError("LF6 P0-only engineering retry requires the development artifact lock")
+        summary=execute_p0_only_prestep_engineering_retry(output_root=args.output_root,medium_carrier=args.medium_carrier,initial_checkpoint=args.initial_checkpoint,materialized_ledger=args.materialized_ledger,dev_m_checkpoint=args.dev_m_checkpoint,cpu_qualification_path=args.cpu_qualification,device_name=args.device,source_identity=args.source_identity,development_artifact_lock_path=args.development_artifact_lock)
+    else:
+        if args.development_artifact_lock is not None:
+            raise PermissionError("LF6 development artifact lock is only valid for P0-only engineering retry")
+        summary=execute_reference_blind_gpu_campaign(output_root=args.output_root,medium_carrier=args.medium_carrier,initial_checkpoint=args.initial_checkpoint,materialized_ledger=args.materialized_ledger,dev_m_checkpoint=args.dev_m_checkpoint,cpu_qualification_path=args.cpu_qualification,device_name=args.device,source_identity=args.source_identity)
+    print(json.dumps({"status":summary["status"],"optimizer_updates":summary["optimizer_updates"],"mechanism_outcome":summary["mechanism_outcome"],"selected_role":summary["selected_role"]},sort_keys=True)); return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
 
 
-__all__ = ["DEV_M","DEV_R","DEV_U","DEV_ORDER","FRONTIER_POOL_NAMES","LEDGER_ARRAY_NAMES","MaterializedLedger","TASK_ID","array_sha256","contract_identity","endpoint_logit_loss","execute_reference_blind_gpu_campaign","load_contracts","mechanism_outcome","p0_preservation_gate","rolling_batch_sha256","safety_gate","select_p0_candidate","semantic_ledger_sha256","strict_gate"]
+__all__ = ["DEV_M","DEV_R","DEV_U","DEV_ORDER","DEVELOPMENT_ARTIFACT_PATHS","FRONTIER_POOL_NAMES","LEDGER_ARRAY_NAMES","MaterializedLedger","TASK_ID","array_sha256","contract_identity","endpoint_logit_loss","execute_p0_only_prestep_engineering_retry","execute_reference_blind_gpu_campaign","load_contracts","mechanism_outcome","p0_preservation_gate","rolling_batch_sha256","safety_gate","select_p0_candidate","semantic_ledger_sha256","strict_gate","verify_development_artifact_lock"]
