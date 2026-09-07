@@ -1,0 +1,54 @@
+{
+  "schema_id": "paper-v23-lf7-terminal-metrics-v1",
+  "task_id": "PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE",
+  "campaign_state": "ACTIVE_RESULTS_PENDING",
+  "evidence_status": "NO_LF7_SCIENTIFIC_RESULT_YET",
+  "terminal_outcome": null,
+  "mechanism_outcome": null,
+  "candidate": null,
+  "method_identity": "ATTRIBUTED_CONSTRAINED_OPTIMIZATION_PRIMITIVES_WITH_PROJECT_SPECIFIC_EVENT_COMPETENCE_FILTER",
+  "baseline": {
+    "role": "LF6_DEV_R",
+    "checkpoint_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "fixed_blind_objective": 4.9278721846990505
+  },
+  "gates": {
+    "physics_ratio_max": 0.5,
+    "recall_min": 0.9,
+    "precision_min": 0.8,
+    "active_mass_ratio_min": 0.8,
+    "active_mass_ratio_max": 1.2,
+    "timing_safety_max": [0.010533333333333339, 0.005000000000999893],
+    "timing_strict_max": 0.005,
+    "field_ratio_max": {
+      "potential": 1.2,
+      "temperature": 1.05,
+      "phase": 1.05,
+      "topology": 1.05
+    }
+  },
+  "arms": {
+    "P0_S": {
+      "label": "fixed-small-step control",
+      "planned": true,
+      "result": null,
+      "accepted_updates": null,
+      "attempted_updates": null,
+      "timeline": [],
+      "endpoint": null
+    },
+    "P0_F": {
+      "label": "competence-filtered blockwise backtracking",
+      "planned": true,
+      "result": null,
+      "accepted_updates": null,
+      "attempted_updates": null,
+      "timeline": [],
+      "attempts": [],
+      "endpoint": null
+    }
+  },
+  "local_extra_fine": null,
+  "recovery_shutdown": null,
+  "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

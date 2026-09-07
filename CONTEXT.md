@@ -33,7 +33,7 @@ ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-sta
 
 ## 权威路由
 
-当前完成态与无后续授权边界见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，终局动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF6 证据见 [terminal closeout](docs/experiment/2026-09-06-phk-v23-lf6-terminal-closeout.md) 与 [ADR 0066](docs/adr/0066-close-phk-v23-lf6-event-frontier-pilot.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF5/LF4/LF3/LF2/LF1/LF0/C0 历史入口继续由对应 terminal closeout 保留。
+当前 LF7 执行授权见 [active phase](active_phase.md)，资格事实见 [project state](PROJECT_STATE.md)，顺序见 [live plan](docs/plans/NEXT_ACTIONS.md)，方法冻结见 [ADR 0067](docs/adr/0067-activate-phk-v23-lf7-competence-filtered-refinement.md) 与 [CPU qualification](docs/experiment/2026-09-07-phk-v23-lf7-cpu-qualification.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF6 及更早证据继续由对应 terminal closeout 保留，不被 LF7 激活追溯修改。
 
 # LF5 terminal context (2026-09-06)
 
@@ -58,3 +58,14 @@ objective nevertheless fell to `0.0128142265` of entry, demonstrating that bulk
 physics reduction did not preserve this event-bearing multiphysics carrier.
 The terminal status is `LF6_P0_PRESERVATION_FAILED`, with no PINN Pareto,
 direct-LF_ONLY gain, candidate, or next research authorization.
+
+# LF7 active context (2026-09-07)
+
+LF7 tests whether a 16-times-smaller fixed physics step already supplies a
+local preservation path, or whether a medium-audited function-space filter and
+bitwise block rollback are load-bearing. P0-S and fresh P0-F share exact DEV-R,
+the same pre-materialized physics batches and the same initial learning rate.
+CPU qualification passed with zero optimizer updates; no LF7 GPU result exists
+yet. Because medium controls P0-F acceptance, that arm is multifidelity rather
+than fully label-free. Stress and all future sparse/OOD work remain outside the
+active authorization.

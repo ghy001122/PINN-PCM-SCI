@@ -1,6 +1,11 @@
 # PHK-V2.3 event-competence recovery advisor draft
 
-Status: `ADVISOR_DRAFT_UPDATED_LF6_P0_PRESERVATION_FAILED`
+Status: `LF7_ACTIVE_RESULTS_PENDING`
+
+LF7 preregisters a matched continuation from the exact LF6 DEV-R endpoint:
+P0-S is the fixed-small-step control and P0-F adds full-state, blockwise
+competence filtering with dyadic backtracking. Neither arm has an LF7 result at
+activation; the closed scientific evidence summarized below still ends at LF6.
 
 This package presents the bounded PHK-V2.2R--LF6 recovery sequence as a
 failure-analysis and competence-first solver study. Its strongest positive
@@ -26,8 +31,9 @@ to zero in both cycles. The terminal outcome is
 - `reviewer_risk_self_check.md`: adversarial publishability assessment;
 - `research_decision_log_zh.md`: Chinese research interpretation;
 - `references.bib`: cited primary literature;
-- `figures/`: fourteen PNG/PDF figures, frozen scalar data, generators, captions,
-  and source manifests.
+- `figures/`: fourteen completed PNG/PDF figures, frozen scalar data, generators,
+  captions, source manifests, and an ACTIVE/null LF7 schema that cannot emit an
+  LF7 figure before terminal evidence is bound.
 
 ## LF6 evidence identity
 

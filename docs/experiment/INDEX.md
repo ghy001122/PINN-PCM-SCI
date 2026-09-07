@@ -118,6 +118,7 @@ This is a generated view of the append-only `index.jsonl` ledger.
 | 20260905T150045Z-phk-v23-lf5-terminal | development_campaign | temporal_zero_level_alignment_campaign_terminal_adjudication | PHK_V23_LF5 | phk-v23-lf5-cycle-resolved-temporal-zero-level-alignment-v1 | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | LF5_NUMERICAL_OR_IDENTITY_INVALID | [manifests/20260905T150045Z-phk-v23-lf5-terminal.json](manifests/20260905T150045Z-phk-v23-lf5-terminal.json) |
 | 20260906T065434Z-phk-v23-lf6-cpu-qualification | qualification | cpu_only_event_frontier_geometry_ledger_and_fallback_qualification | PHK_V23_LF6_CPU_F | phk-v23-lf6-event-frontier-rank-band-v1 | PHK_V21_NOMINAL_MEDIUM_EVENT_FRONTIER_QUALIFICATION | 17 | COMPLETE | LF6_CPU_F_QUALIFICATION_PASS | [manifests/20260906T065434Z-phk-v23-lf6-cpu-qualification.json](manifests/20260906T065434Z-phk-v23-lf6-cpu-qualification.json) |
 | 20260906T065434Z-phk-v23-lf6-terminal | development_campaign | event_frontier_matched_development_and_safety_gated_physics_terminal_adjudication | PHK_V23_LF6 | phk-v23-lf6-event-frontier-rank-band-v1 | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | LF6_P0_PRESERVATION_FAILED | [manifests/20260906T065434Z-phk-v23-lf6-terminal.json](manifests/20260906T065434Z-phk-v23-lf6-terminal.json) |
+| 20260907T144634Z-phk-v23-lf7-cpu-qualification | qualification | cpu_only_DEV_R_ledger_rollback_and_backward_qualification | PHK_V23_LF7_CPU | phk-v23-lf7-competence-filtered-refinement-v1 | PHK_V21_NOMINAL_DEV_R_REFINEMENT_QUALIFICATION | 17 | COMPLETE | LF7_CPU_QUALIFICATION_PASS | [manifests/20260907T144634Z-phk-v23-lf7-cpu-qualification.json](manifests/20260907T144634Z-phk-v23-lf7-cpu-qualification.json) |
 # PHK-V2.3 LF5 temporal zero-level pilot (2026-09-05)
 
 - [CPU-T qualification](2026-09-05-phk-v23-lf5-cpu-qualification.md): `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`; zero updates. A later explicit user override authorizes the unchanged DEV-T only as post-qualification exploratory evidence.
@@ -133,3 +134,9 @@ This is a generated view of the append-only `index.jsonl` ledger.
 - [ADR 0065](../adr/0065-activate-phk-v23-lf6-event-frontier-pilot.md): freezes the matched DEV-U/DEV-R screen, safety-gated endpoint selection and conditional P0.
 - [Terminal closeout](2026-09-06-phk-v23-lf6-terminal-closeout.md): DEV-R passed safety and entered P0; neither development arm passed strict, and P0 reduced the blind physics objective while catastrophically failing field and event preservation.
 - [ADR 0066](../adr/0066-close-phk-v23-lf6-event-frontier-pilot.md): closes LF6 as `LF6_P0_PRESERVATION_FAILED`, with `NO_RANK_SPECIFIC_INCREMENT`, no candidate and no next authorization.
+
+# PHK-V2.3 LF7 competence-filtered refinement (2026-09-07)
+
+- [CPU qualification](2026-09-07-phk-v23-lf7-cpu-qualification.md): `LF7_CPU_QUALIFICATION_PASS`; zero optimizer updates, exact DEV-R and all 1,200 physics batches revalidated with rollback/RNG checks.
+- [Prior-art closure](../references/2026-09-07-phk-v23-lf7-constrained-refinement-prior-art.md): bounded six-source primary-source closure; constrained-optimization primitives remain attributed.
+- [ADR 0067](../adr/0067-activate-phk-v23-lf7-competence-filtered-refinement.md): freezes P0-S versus fresh P0-F and the safety/strict/local/direct evidence hierarchy.

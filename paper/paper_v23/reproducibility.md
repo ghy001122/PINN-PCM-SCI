@@ -269,3 +269,26 @@ Input and output hashes are bound in `figures/source-manifest-lf6.json`. A Git
 checkout without the git-ignored raw directory can verify the compact evidence
 and frozen figure data but cannot independently reload the large checkpoints or
 predictions. Stress remains sealed and unread.
+
+## LF7 ACTIVE matched continuation scaffold
+
+- starting commit: `e00f8767fc1d611b4cadcd0057720d1dd507f51c`;
+- campaign timestamp: `20260907T144634Z`;
+- exact LF6 DEV-R checkpoint SHA-256:
+  `7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499`;
+- LF6 materialized-ledger SHA-256:
+  `29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801`;
+- P0 physics stream SHA-256:
+  `536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53`;
+- fixed blind pool SHA-256:
+  `FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF`;
+- raw root:
+  `outputs/runs/20260907T144634Z-phk-v23-lf7-competence-filtered-refinement-pilot`.
+
+At activation, the LF7 metrics file is deliberately `ACTIVE_RESULTS_PENDING`
+with null arm outcomes. Running
+`python paper/paper_v23/figures/generate_figures.py --lf7-only` must report a
+safe skip and emit no LF7 figure until terminal evidence replaces the nulls.
+P0-F uses medium competence only for block acceptance, not gradients, and is
+not label-free. Fine, extra-fine, and direct `LF_ONLY` remain local-only after
+recovery and shutdown; stress remains sealed and unread.

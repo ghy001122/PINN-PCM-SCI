@@ -1,0 +1,38 @@
+{
+  "schema_id": "phk-v23-lf7-decision-contract-v1",
+  "contract_id": "PHK_V23_LF7_COMPETENCE_FILTER_DECISION",
+  "program_contract": "configs/phk_v23/program_contract_lf7_competence_filter.json",
+  "method_contract": "configs/phk_v23/method_contract_lf7_competence_filter.json",
+  "data_contract": "configs/phk_v23/data_contract_lf7_competence_filter.json",
+  "effective_date": "2026-09-07",
+  "status": "FROZEN_BEFORE_GPU_EXECUTION",
+  "function_space_feasibility": {
+    "finite":true,"phase_range":[-1e-10,1.0000000001],"potential_maximum_excess":1e-6,"potential_violation_fraction":0.0,"phase_maximum_minimum":0.90,"two_cycle_events":true,
+    "hard_recall_each_cycle_minimum":0.90,"hard_precision_each_cycle_minimum":0.80,"hard_active_mass_ratio_each_cycle":[0.80,1.20],
+    "event_time_absolute_error_cycle_1_maximum":0.010533333334333338,"event_time_absolute_error_cycle_2_maximum":0.005000000000999893,
+    "roi_peak_fraction_each_cycle_minimum":0.02,"full_domain_peak_fraction_each_cycle_maximum":0.45,"outside_roi_peak_fraction_each_cycle_maximum":0.10,"recovery_fraction_each_cycle_minimum":0.70,
+    "relative_DEV_R_maximum":{"potential":1.20,"temperature":1.05,"phase":1.05,"topology":1.05},
+    "fixed_blind_strict_improvement":"J_NEW_LE_J_PREV_MINUS_MAX_1E_MINUS_12_OR_1E_MINUS_8_TIMES_J_PREV"
+  },
+  "dense_safety_pareto": {"reuse_function_space_A_through_C":true,"fixed_blind_ratio_to_DEV_R_maximum":0.50,"P0_F_minimum_accepted_blocks":1},
+  "strict_carrier": {"reuse_dense_safety_pareto":true,"event_time_absolute_error_each_cycle_maximum":0.005},
+  "local_PINN_Pareto": {"DEV_R_and_arm_frozen_evaluator_competent":true,"arm_strict_carrier":true,"phase_noninferiority":"PHK_V21_FROZEN_FLOOR_OR_RATIO_FORMULA","temperature_maximum":"MAX_1_10_TIMES_DEV_R_OR_0_05","current_maximum":"MAX_1_10_TIMES_DEV_R_OR_0_15","fixed_blind_ratio_maximum":0.50},
+  "direct_paper_value": "ARM_MUST_PASS_SAME_PHASE_T_CURRENT_POTENTIAL_EVENT_RECOVERY_GATES_RELATIVE_TO_DIRECT_LF_ONLY",
+  "machine_outcomes_and_unique_next": {
+    "LF7_START_OR_INPUT_BLOCKED":"USER_REVIEW_NO_GPU",
+    "LF7_PRIOR_ART_OR_LICENSE_BLOCKED":"USER_REVIEW_NO_GPU",
+    "LF7_ENGINEERING_BLOCKED_PRESTEP":"USER_REVIEW_SAME_LF7_ONLY",
+    "LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID":"RETAIN_VALID_ARM_NO_MECHANISM_ATTRIBUTION",
+    "LF7_FILTER_STALLED_NO_FEASIBLE_BLOCK_PATH":"WEAK_FORM_OR_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE",
+    "LF7_NO_PRESERVATION_COMPATIBLE_STRONG_FORM_PATH":"FINALIZE_NEGATIVE_SOLVER_ANALYSIS_NO_MORE_STRONG_FORM_RESCUE",
+    "LF7_SAFETY_PRESERVING_PHYSICS_SIGNAL_ONLY":"STRICT_CARRIER_AND_SPARSE_VALUE_REQUIRE_NEW_EXECUTE",
+    "LF7_SINGLE_SEED_PINN_PILOT_DIRECT_BASELINE_GAP":"SPARSE_EQUAL_INFORMATION_TASK_REQUIRES_NEW_EXECUTE",
+    "LF7_PROVISIONAL_SINGLE_SEED_DENSE_SIGNAL":"SPARSE_EQUAL_INFORMATION_AND_MATCHED_CONFIRMATION_REQUIRE_NEW_EXECUTE",
+    "LF7_ARTIFACT_RECOVERY_OR_SHUTDOWN_BLOCKED":"USER_REVIEW_NO_LOCAL_OR_CANDIDATE_CLAIM",
+    "LF7_LOCAL_ADJUDICATION_BLOCKED":"USER_REVIEW_NO_CANDIDATE_CLAIM"
+  },
+  "outcome_precedence":["START_OR_INPUT","PRIOR_ART_OR_LICENSE","ENGINEERING_PRESTEP","MATCHED_IDENTITY","FILTER_STALL","NO_STRONG_FORM_PATH","SAFETY_ONLY","DIRECT_BASELINE_GAP","PROVISIONAL_SIGNAL","RECOVERY_OR_SHUTDOWN","LOCAL_ADJUDICATION"],
+  "claim_boundary":"SINGLE_SEED_NOMINAL_MATCHED_LOCAL_REFINEMENT_PILOT_NOT_FULLY_LABEL_FREE_MULTI_SEED_SPARSE_FORMAL_OOD_STRESS_EXPERIMENTAL_VALIDATION_SOTA_OR_SUBMISSION_READY",
+  "stress_status":"TWO_STRESS_REFERENCES_SEALED_UNREAD",
+  "completion_does_not_authorize_next_research":true
+}

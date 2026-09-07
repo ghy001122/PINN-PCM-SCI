@@ -4,6 +4,7 @@
 
 ## 当前对象与来源终点
 
+- [2026-09-07 PHK-V2.3 LF7 constrained-refinement prior-art](2026-09-07-phk-v23-lf7-constrained-refinement-prior-art.md)：6 项一手来源未发现 exact functional collision；filter、rollback、backtracking 与 multifidelity acceptance 均保留归因，LF7 仅检验项目特定的 event-competence 组合。
 - [2026-09-04 PHK-V2.3 LF3 快速 prior-art 闭包](2026-09-04-phk-v23-lf3-prior-art-closure.md)：12 项一手论文/作者仓库内未发现完整功能同构碰撞；LF3 固定为有来源的 solver-recovery 组合 pilot，不主张组成件原创。
 - [2026-08-27 PHK-PINN 一手来源与主 baseline 审查](2026-08-27-phk-pinn-primary-source-baseline-audit.md)：固定 Sharp paper/repo 身份、PF/jaxpi2/PirateNet/Causality-RBAR 许可与可复现性边界，并限定 reduced PCM 对象只能是 literature-inspired transparent benchmark；这是 R0 来源证据，不是方法结果。
 - [2026-08-26 方法盲 clean-room 对象筛选](2026-08-26-method-blind-cleanroom-object-screen.md)：Package A 冻结三家族、11/12 新载体后的组合级 bounded No-Go。

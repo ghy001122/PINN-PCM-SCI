@@ -1,6 +1,7 @@
 # Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
 
-> Advisor-reviewable draft. Evidence status: `LF6_P0_PRESERVATION_FAILED`.
+> Advisor-reviewable draft. Closed evidence status:
+> `LF6_P0_PRESERVATION_FAILED`; LF7 is ACTIVE with results pending.
 > All neural results are single-seed nominal development evidence. No candidate,
 > positive PINN method, strong-baseline gain, OOD/stress result, or submission
 > readiness is claimed.
@@ -216,6 +217,27 @@ full residual still read phase. Steps 551--1200 unfroze phase and continued the
 same optimizer jointly. The physics stream and blind evaluation pool were fully
 materialized before GPU execution.
 
+### 3.5 Preregistered LF7 competence-filtered refinement
+
+LF7 starts both matched arms from the exact LF6 DEV-R endpoint and reuses the
+same 1200 physics batches, fixed blind pool, phase-freeze boundary, and optimizer
+family. P0-S is a fixed 1200-update control at learning rate
+\(1.25\times10^{-4}\). P0-F proposes 25-update Adam blocks, snapshots the full
+model, optimizer, and random-number state, and accepts a block only when the
+preregistered medium-function competence checks and blind physics decrease all
+pass. Rejected blocks are exactly rolled back and retried over at most five
+dyadic learning-rate scales.
+
+This design adapts trust-region, filter, restoration, and backtracking
+primitives rather than claiming those primitives as new
+[@cheng2024trsqppinn; @fletcher2002filter; @wachter2006ipopt;
+@armijo1966backtracking; @alexandrov1998trustregion]. It targets the forgetting
+phenomenon also reported in sequential PINN training [@maddu2022inversedirichlet].
+Medium labels do not supply gradients in P0-F, but they do determine update
+acceptance; P0-F is therefore not label-free. Only P0-S failure paired with
+P0-F safety success can support a filter-specific pilot signal. At activation,
+both outcomes remain unknown.
+
 ## 4. Results
 
 ### 4.1 Interface exposure was supported before LF6
@@ -331,14 +353,14 @@ The maximum defensible central statement is:
 > safety-valid localized event carrier.
 
 This supports an advisor draft and potentially a carefully scoped
-negative/diagnostic paper. It does not support a positive methods submission.
-A future positive route must treat carrier preservation as a load-bearing part
-of physics training, not as an entry-only screen. The smallest informative next
-experiment should be a separately authorized, matched physics-continuation
-test—such as a frozen, preregistered event-preservation/replay mechanism versus
-pure physics—from the same selected endpoint. Only a positive result would
-justify multiple seeds and a sparse/equal-information task. Stress must remain
-sealed until a candidate exists.
+negative/diagnostic paper. It does not yet support a positive methods
+submission. LF7 now tests whether carrier preservation can act as a
+load-bearing update-acceptance rule rather than an entry-only screen, using a
+matched small-step control and a full-state rollback filter from the same exact
+endpoint and physics stream. Activation is not scientific success: only the
+predeclared S/F endpoint relation can change the claim. Multi-seed and
+sparse/equal-information work require a later positive signal, and stress must
+remain sealed until a candidate exists.
 
 ## 6. Limitations
 

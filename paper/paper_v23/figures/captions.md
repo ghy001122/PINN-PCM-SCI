@@ -86,3 +86,11 @@ by step 600 and reaches zero by the endpoint. The fixed blind physics objective
 nonetheless falls from 4.9279 to 0.06315 (ratio 0.012814, pass). This is an
 executed `P0_PRESERVATION_FAILED` result: residual reduction and event
 competence diverge, with no PINN Pareto or candidate claim.
+
+## Figure 15. LF7 competence-filtered matched continuation (reserved)
+
+One terminal three-panel composite will compare P0-S and P0-F on blind-physics
+reduction versus accepted updates, endpoint competence/preservation, and P0-F
+accepted learning-rate scales plus rejected-block reasons. The ACTIVE/null data
+schema intentionally emits no figure before terminal evidence is bound. P0-F
+uses medium-teacher competence for acceptance and must not be called label-free.

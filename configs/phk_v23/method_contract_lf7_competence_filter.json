@@ -1,0 +1,42 @@
+{
+  "schema_id": "phk-v23-lf7-method-contract-v1",
+  "contract_id": "PHK_V23_LF7_COMPETENCE_FILTER_METHOD",
+  "program_contract": "configs/phk_v23/program_contract_lf7_competence_filter.json",
+  "effective_date": "2026-09-07",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "identity": {
+    "method": "MULTIFIDELITY_COMPETENCE_FILTERED_PINN_REFINEMENT",
+    "originality": "ATTRIBUTED_CONSTRAINED_OPTIMIZATION_PRIMITIVES_WITH_PROJECT_SPECIFIC_EVENT_COMPETENCE_FILTER",
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "case_control": "FULL",
+    "initialization": "EXACT_LF6_DEV_R_MODEL_WEIGHTS_ONLY",
+    "network": "UNCHANGED_STRONG_RAW_THREE_INDEPENDENT_FIELD_HEADS",
+    "objective": "L_PDE_PLUS_5_L_BC_PLUS_L_IC",
+    "medium_or_label_gradient": false,
+    "runtime_sampling": false,
+    "initial_learning_rate": 0.000125,
+    "optimizer": {"name":"TORCH_ADAM","betas":[0.9,0.999],"eps":1e-8,"weight_decay":0.0,"amsgrad":false,"fresh_per_arm":true},
+    "gradient_clip_norm": 10.0
+  },
+  "phase_schedule": {
+    "accepted_steps_1_through_550": "PHASE_PARAMETERS_AND_BUFFERS_BITWISE_FROZEN_ONLY_V_T_UPDATED_FULL_RESIDUAL_READS_PHASE",
+    "accepted_steps_551_through_1200": "UNFREEZE_PHASE_WITHOUT_OPTIMIZER_RESET_AND_JOINTLY_UPDATE_ALL_THREE_HEADS",
+    "step_550_is_block_boundary": true
+  },
+  "matched_stream": {"accepted_steps":1200,"block_size":25,"blocks":48,"physics_stream_sha256":"536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53"},
+  "P0_S": {"role":"P0_S_FIXED_SMALL_STEP_CONTROL","updates":1200,"filter":false,"rollback":false,"early_stop":false,"audit_every_updates":25},
+  "P0_F": {
+    "role":"P0_F_COMPETENCE_FILTERED_BACKTRACKING",
+    "maximum_accepted_updates":1200,
+    "maximum_attempted_updates":2400,
+    "block_size":25,
+    "snapshot":"MODEL_OPTIMIZER_CPU_CUDA_PYTHON_NUMPY_RNG_ACCEPTED_STEP_LR_AND_PHASE_STAGE",
+    "dyadic_learning_rates":[0.000125,0.0000625,0.00003125,0.000015625,0.0000078125],
+    "accepted_learning_rate_never_increases":true,
+    "all_five_scales_rejected":"CFBR_STALLED",
+    "attempt_cap":"CFBR_STALLED_RUN_BOUND"
+  },
+  "forbidden": ["DATA_REPLAY_OR_ANCHOR_GRADIENT","BCE","AUGMENTED_LAGRANGIAN","EVENT_RANK_OR_TZL_LOSS","DYNAMIC_WEIGHTING","RUNTIME_SOBOL_OR_RESAMPLING","RAR","LBFGS","NETWORK_OPTIMIZER_OR_SEED_SWEEP","BEST_CHECKPOINT_SELECTION"]
+}

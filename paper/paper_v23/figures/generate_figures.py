@@ -25,6 +25,7 @@ DATA_PATH = HERE / "data" / "lf3_terminal_metrics.json"
 LF4_DATA_PATH = HERE / "data" / "lf4_terminal_metrics.json"
 LF5_DATA_PATH = HERE / "data" / "lf5_terminal_metrics.json"
 LF6_DATA_PATH = HERE / "data" / "lf6_terminal_metrics.json"
+LF7_DATA_PATH = HERE / "data" / "lf7_terminal_metrics.json"
 PREDICTION_PATH = ROOT / "outputs" / "runs" / "20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74" / "prediction-t0-step-1200.npz"
 REFERENCE_PATH = ROOT / "outputs" / "runs" / "20260828T-phk-v21-s1-q-06-nominal-extra-fine" / "result-intent-06.npz"
 
@@ -483,6 +484,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--lf4-only", action="store_true", help="Generate LF4 figures 6–8 without rewriting the LF3 source manifest")
     parser.add_argument("--lf5-only", action="store_true", help="Generate timestamped LF5 CPU-T terminal figures")
     parser.add_argument("--lf6-only", action="store_true", help="Generate timestamped LF6 terminal figures")
+    parser.add_argument("--lf7-only", action="store_true", help="Generate the LF7 terminal figure only after terminal evidence is bound")
     args = parser.parse_args(argv)
     if args.lf5_only:
         data=json.loads(LF5_DATA_PATH.read_text(encoding="utf-8")); outputs=[]; outputs.extend(lf5_temporal_edge_geometry(data)); outputs.extend(lf5_timing_calibration(data)); outputs.extend(lf5_physics_pareto(data)); print(json.dumps({"figures":len(outputs)//2,"scope":"LF5_CPU_T_PLUS_IDENTITY_INVALID_EXPLORATORY_DEV_T"},sort_keys=True)); return
@@ -494,6 +496,12 @@ def main(argv: list[str] | None = None) -> None:
         outputs.extend(lf6_physics_pareto(data))
         print(json.dumps({"figures": len(outputs) // 2, "scope": "LF6_MATCHED_DEVELOPMENT_AND_EXECUTED_P0"}, sort_keys=True))
         return
+    if args.lf7_only:
+        data = json.loads(LF7_DATA_PATH.read_text(encoding="utf-8"))
+        if data.get("campaign_state") != "COMPLETE" or data.get("terminal_outcome") is None:
+            print(json.dumps({"figures": 0, "scope": "LF7_ACTIVE_RESULTS_PENDING", "status": "SKIPPED_NO_TERMINAL_DATA"}, sort_keys=True))
+            return
+        raise RuntimeError("LF7 terminal data is complete but the terminal renderer has not been bound")
     setup()
     if args.lf4_only:
         data = json.loads(LF4_DATA_PATH.read_text(encoding="utf-8"))

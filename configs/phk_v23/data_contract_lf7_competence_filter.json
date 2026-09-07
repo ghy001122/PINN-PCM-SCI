@@ -1,0 +1,39 @@
+{
+  "schema_id": "phk-v23-lf7-data-contract-v1",
+  "contract_id": "PHK_V23_LF7_COMPETENCE_FILTER_DATA",
+  "program_contract": "configs/phk_v23/program_contract_lf7_competence_filter.json",
+  "effective_date": "2026-09-07",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "training_source": {"path":"outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/result-intent-04.npz","sha256":"18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F","role":"AUDIT_AND_ACCEPT_REJECT_ONLY_NO_GRADIENT"},
+  "initial_DEV_R": {
+    "checkpoint_path":"outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/dev_r/checkpoint.pt",
+    "checkpoint_sha256":"7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "prediction_path":"outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/dev_r/prediction.npz",
+    "prediction_sha256":"5F20FB6ACBFE7D627A1C73D0E707A102F0872E8BF09ED83CFFD30397E4F350EF",
+    "load_optimizer_state":false
+  },
+  "historical_LF6_P0": {"checkpoint_path":"outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/p0/checkpoint.pt","checkpoint_sha256":"8ED892EAFDF7F4C37D677B618079A2AE078CB4C5E5F24D09AEB676330CFAF864","prediction_path":"outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/p0/prediction.npz","prediction_sha256":"A61DBC917BA28FF3059B42039390DB6044871E3B2DBECE602922F3469878B228","training_use":false},
+  "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+  "materialized_ledger": {
+    "path":"outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cpu/materialized_ledger.npz",
+    "file_sha256":"29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801",
+    "manifest_path":"outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cpu/materialized_ledger_manifest.json",
+    "manifest_sha256":"3CFA268CFB22CF225ABB92BFD7F9F00353634AF7AFEE7AA607EC59FE4F4C8F90",
+    "semantic_sha256":"0E2F680D33C4489F6092CB5D01E87483F7ECDA8290CD3E2C24EBDD06B3DA2B7F",
+    "physics_1200_sha256":"536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53",
+    "fixed_blind_pool_sha256":"FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF"
+  },
+  "LF6_evidence": {
+    "terminal_artifact":{"path":"docs/experiment/artifacts/20260906T065434Z-phk-v23-lf6-terminal.json","sha256":"6C80864BF0E74A71F43DB283FE3404A3087FC3C119A17856D9DA726BA79CF49D"},
+    "terminal_manifest":{"path":"docs/experiment/manifests/20260906T065434Z-phk-v23-lf6-terminal.json","sha256":"55F6090010A6B86AFE79460066E27B02DDA33848B32EACBA35FE51DAD427FCE9"},
+    "run_summary":{"path":"outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/run_summary.json","sha256":"31194B489131076445138A817956D30A1FC27FFBCEFDF5E9B2D2642EEED028F0"},
+    "cpu_qualification":{"path":"docs/experiment/artifacts/20260906T065434Z-phk-v23-lf6-cpu-qualification.json","sha256":"60996F3814BF7113E39925774EE9EAAC11091F466F10E7575AC55F2D731A1046"}
+  },
+  "DEV_R_baseline": {"fixed_blind_J0":4.9278721846990505,"weighted_errors":{"potential":0.0000714767714198432,"temperature":0.0007111887418509096,"phase":0.0011832624059166495},"topology_weighted_loss":0.0046144880306589605},
+  "local_evaluation_only": {
+    "fine":{"path":"outputs/runs/20260828T-phk-v21-s1-q-05-nominal-fine/result-intent-05.npz","sha256":"7343FC4AB6648F82CFAD3E517A748034D8E636959BC41D733195C477C1DCFA53"},
+    "extra_fine":{"path":"outputs/runs/20260828T-phk-v21-s1-q-06-nominal-extra-fine/result-intent-06.npz","sha256":"0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE"},
+    "direct_LF_ONLY_prediction_sha256":"47B11E9DF7B95ED6CA282D22E4A8852775194FA1471D115310F7DCA7BCB447D0"
+  },
+  "cloud_boundary": {"allowed":["MEDIUM","EXACT_LF6_DEV_R_CHECKPOINT","LF6_MATERIALIZED_LEDGER","CONTRACTS","CPU_QUALIFICATION","RUNTIME"],"forbidden":["FINE","EXTRA_FINE","DIRECT_LF_ONLY","FROZEN_LOCAL_EVALUATOR","STRESS","FORMAL_OOD"]}
+}

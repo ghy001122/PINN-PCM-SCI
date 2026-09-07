@@ -66,6 +66,19 @@ That would be a new scientific identity selected after observing failure.
 Replay or another preservation mechanism should be tested only in a separately
 authorized matched continuation against this pure-physics endpoint.
 
+## 11. “Is LF7 P0-F label-free?”
+
+No. Medium labels do not enter its gradient, but medium-teacher competence
+functionals decide whether each proposed block is accepted. We therefore call
+it multifidelity competence-filtered PINN refinement, not label-free physics.
+
+## 12. “Does activating LF7 establish a new optimization method?”
+
+No. LF7 adapts attributed trust-region, filter, restoration, and backtracking
+primitives. The activation is only a preregistered matched test. A mechanism
+signal requires P0-S to fail safety while P0-F passes it under the frozen rule;
+all other terminal relations have narrower or negative interpretations.
+
 ## Submission-readiness verdict
 
 ```text
@@ -74,4 +87,5 @@ NEGATIVE_DIAGNOSTIC_PAPER_WITH_BOUNDED_MECHANISM_RESULT: PLAUSIBLE
 POSITIVE_METHODS_SUBMISSION: NO
 CAS_Q2_POSITIVE_METHOD_CLAIM: NOT SUPPORTED
 CANDIDATE: NONE
+LF7_ACTIVE_RESULT: PENDING
 ```

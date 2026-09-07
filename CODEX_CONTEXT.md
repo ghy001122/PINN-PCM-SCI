@@ -27,7 +27,7 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-当前最近具名执行 LF6 已完成：DEV-U/DEV-R 各完成 400 个 matched phase-only updates，DEV-R 通过 safety 并按冻结规则进入 1200-step label-free P0；两臂均未通过 strict，机制结论为 `NO_RANK_SPECIFIC_INCREMENT`。P0 的 fixed-blind physics objective ratio 为 `0.0128142265`，但 V/T/phase/topology preservation 全部失败且事件坍塌，终局为 `LF6_P0_PRESERVATION_FAILED`、candidate none、`next_research_execution_authorized=false`。完整终局见 LF6 四合同、ADR 0066 与 terminal closeout；任何 rescue、新机制、seed、OOD/stress、PJGR/R2、替代路线或投稿均须新的明确授权。
+当前具名 LF7 已明确授权并通过 CPU 零步资格。它从 exact LF6 DEV-R 分别执行固定小步长 P0-S 与 fresh competence-filtered backtracking P0-F，以区分“较小步长已足够”和“function-space filter/rollback load-bearing”。两臂共用冻结的 1,200-step physics stream；P0-F 的 medium 只参加 accept/reject，因此不得称 fully label-free。GPU 结果尚不存在。执行边界见 LF7 四合同、ADR 0067、CPU qualification 与 `active_phase.md`；额外 rescue、seed、sparse/OOD/stress、weak-form/control-volume、PJGR/R2 或投稿不在授权内。
 
 涉及当前研究对象、方法边界或论文措辞时读取 `CONTEXT.md`；需要决策理由时再读取 `docs/adr/`。处理 V2.2R 的方法替换、止损、故事分支或稿后升级时，在当前合同之后读取 `docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md`；该笔记不授权动作。实验事实、参考审查、其他研究笔记和历史归档按 `docs/README.md` 的触发条件读取。
 

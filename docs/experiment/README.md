@@ -20,6 +20,13 @@ The machine ledger is `index.jsonl`; `INDEX.md` is only its generated human
 view. Smoke and pilot entries never vote in formal adjudication. A run's
 `evidence_identity` and `claim_status` define what it may support.
 
+## Current bounded campaign
+
+LF7 is active after a zero-update CPU qualification. It compares a fixed-small
+physics step against a fresh competence-filtered, blockwise-backtracking arm
+from exact LF6 DEV-R. The medium reference is audit-only and gives no training
+gradient; its use in P0-F acceptance means that arm is not fully label-free.
+
 ## G1 fixture boundary
 
 The G1 fixture is deliberately tagged `NON_SCIENTIFIC_FIXTURE`. Its one-step

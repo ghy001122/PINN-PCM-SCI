@@ -47,3 +47,13 @@ matched。机制必须在训练中承担事件保持，而不是只在 entry gat
 小权重 replay/functional constraint 只能二选一，不能堆模块。若 matched arm 仍不能
 同时保持事件并降低 blind objective，则停止正面 solver-recovery 路线，收口负面稿。
 若成功，再补最少多 seed 和 sparse/equal-information task；candidate 前不解封 stress。
+
+## LF7 ACTIVE：将 preservation 提升为更新接受规则
+
+LF7 已预注册从同一 exact DEV-R 起点、同一 physics stream 与 blind pool 出发的
+matched screen。P0-S 用固定小步长回答“仅缩小步长是否足够”；P0-F 每 25 步审计
+事件 competence 与 blind physics，失败时完整回滚 model/optimizer/RNG 并作有限
+dyadic backtracking。medium teacher 不进梯度，但参与接受裁决，因此 P0-F 不是
+label-free。只有 S 不过 safety 而 F 通过时，才支持 competence filter 的 pilot
+信号；S 也通过表示小步长已足够，F 也失败则支持该强式路径下的有界负结论。
+当前仅为 ACTIVE 设计身份，结果、candidate 与论文正面结论均为未知。

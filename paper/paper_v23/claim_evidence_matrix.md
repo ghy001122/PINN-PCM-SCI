@@ -22,6 +22,9 @@
 | LF6 beat direct `LF_ONLY` | `REJECTED` | direct phase/T/current errors remain much smaller | Report direct baseline in main text/table |
 | Physics forgetting occurred in two stages | `SUPPORTED_INTERPRETATION` | V/T drift during phase freeze; recall collapse after unfreeze | Observed timeline, without unique causal attribution |
 | Replay, a kinetic teacher, or another optimizer would fix P0 | `HYPOTHESIS` | not tested | Requires a new matched contract |
+| LF7 defines a matched small-step versus competence-filtered screen | `VERIFIED_IMPLEMENTATION_CONTRACT_ONLY` | frozen activation contracts and common start/streams | Design identity only; no scientific result at activation |
+| LF7 preserves competence while reducing blind physics | `UNKNOWN_ACTIVE` | P0-S/P0-F terminal evidence pending | Do not imply success from activation or tests |
+| LF7 P0-F is label-free | `REJECTED_BY_METHOD_IDENTITY` | medium-teacher functionals determine block acceptance | Call it multifidelity competence-filtered refinement |
 | PINNs generally cannot solve the system | `REJECTED_EXTRAPOLATION` | one object, seed, architecture, budget | Bound all conclusions to the frozen protocol |
 | Stress/OOD, continuum, material, or experimental validity | `UNKNOWN` | not executed; stress sealed | Must not claim |
 
@@ -34,4 +37,5 @@
 > safety-valid localized event carrier.
 
 This supports an advisor draft and a possible negative/diagnostic paper. It does
-not support a positive PINN methods submission.
+not support a positive PINN methods submission. LF7 is an active matched test,
+not a result; only its frozen terminal S/F relation may revise this statement.

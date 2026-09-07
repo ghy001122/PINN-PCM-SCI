@@ -1,0 +1,15 @@
+{
+  "schema_id": "paper-v23-lf7-figure-source-manifest-v1",
+  "campaign_state": "ACTIVE_RESULTS_PENDING",
+  "inputs": {
+    "paper/paper_v23/figures/data/lf7_terminal_metrics.json": null
+  },
+  "outputs": {
+    "paper/paper_v23/figures/20260907T144634Z-lf7-competence-filtered-refinement.png": null,
+    "paper/paper_v23/figures/20260907T144634Z-lf7-competence-filtered-refinement.pdf": null
+  },
+  "generator": "python paper/paper_v23/figures/generate_figures.py --lf7-only",
+  "generation_status": "SKIPPED_NO_TERMINAL_DATA",
+  "claim_boundary": "Activation records a matched design only; no LF7 scientific result or figure exists yet.",
+  "stress_reference_read": false
+}

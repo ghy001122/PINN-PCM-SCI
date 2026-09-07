@@ -38,6 +38,8 @@
 | LF6 DEV-U | Matched uniform endpoint control | 0.98979 | Two cycles | Safety recall failed: 0.897/0.899 |
 | LF6 DEV-R | Matched event-frontier rank band | 0.99105 | Two cycles | Safety pass; strict C1 timing failed at 0.01053 |
 | LF6 P0 | 550 phase-frozen + 650 joint pure physics | 0.99992 | C1 absent; C2 late; no recovery | Blind physics ratio 0.0128 passed, preservation failed |
+| LF7 P0-S | Fixed-small-step matched physics control | -- | Pending | ACTIVE; no endpoint evidence yet |
+| LF7 P0-F | Competence-filtered blockwise backtracking | -- | Pending | ACTIVE; no endpoint evidence yet |
 
 The stages are a sequential diagnostic program, not a simultaneous factorial
 benchmark. Historical comparisons do not isolate the LF3 logit teacher alone.
@@ -205,3 +207,21 @@ is `NO_RANK_SPECIFIC_INCREMENT`; DEV-R was selected only by the safety rule.
 At step 550 phase was bitwise unchanged and had zero optimizer-state entries.
 The V/T drift therefore preceded the rapid event collapse after joint unfreeze.
 The terminal outcome is `LF6_P0_PRESERVATION_FAILED`; candidate is none.
+
+## Table 15. LF7 preregistered matched continuation (ACTIVE)
+
+| Item | P0-S control | P0-F filtered arm |
+|---|---|---|
+| Start | Exact LF6 DEV-R | Exact LF6 DEV-R |
+| Physics stream / blind pool | Same frozen 1200 batches / same pool | Same frozen 1200 batches / same pool |
+| Base learning rate | `1.25e-4` | `1.25e-4` |
+| Update structure | Fixed 1200-step continuation | 25-step proposal blocks |
+| Competence role | Endpoint audit | Block acceptance constraint |
+| Rollback | None | Full model/optimizer/RNG rollback |
+| Retry scales | None | At most five dyadic scales |
+| Activation result | Pending | Pending |
+
+P0-F uses medium-teacher functionals for acceptance even though they supply no
+gradient. It is therefore a multifidelity competence-filtered PINN refinement,
+not a label-free physics arm. Only the preregistered terminal S/F relation may
+support a filter-specific pilot statement.
