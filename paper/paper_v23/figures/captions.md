@@ -59,3 +59,30 @@ onset pools. A later explicit override ran DEV-T for 400 updates; its temporal
 ledger differed from the frozen SHA from step 1, so the endpoint was invalidated
 before checkpoint writing. P0 was not run. Non-voting telemetry cannot establish
 a carrier, PINN result, or candidate.
+
+## Figure 12. LF6 event-frontier geometry
+
+Zero-update CPU-F geometry for the medium-teacher two-percent active-count
+functional. The 968-cell ROI gives critical rank 20. Adjacent saved endpoints
+bracket the threshold in both cycles; stable teacher-logit sorting yields ranks
+17--22 (six cells) for cycle 1 and ranks 17--20 (four cells) for cycle 2. The
+frontier is frozen teacher-side preprocessing, not a differentiated rank loss or
+a trained-model result.
+
+## Figure 13. LF6 matched development endpoints
+
+DEV-U and DEV-R use identical initialization, 400-update budget, base/spatial
+streams, optimizer, and loss weights; only endpoint cell selection differs.
+DEV-U minimum recall is 0.897 and fails safety. DEV-R minimum recall is 0.918
+and passes safety, but its cycle-1 timing error 0.01053 exceeds the strict 0.005
+gate. Since neither arm is strict, the frozen result is
+`NO_RANK_SPECIFIC_INCREMENT`; DEV-R is only a safety near-carrier.
+
+## Figure 14. LF6 physics-objective reduction versus preservation
+
+The first 550 pure-physics updates keep phase bitwise frozen while potential and
+temperature errors drift. After phase unfreezing, minimum recall falls to 0.216
+by step 600 and reaches zero by the endpoint. The fixed blind physics objective
+nonetheless falls from 4.9279 to 0.06315 (ratio 0.012814, pass). This is an
+executed `P0_PRESERVATION_FAILED` result: residual reduction and event
+competence diverge, with no PINN Pareto or candidate claim.

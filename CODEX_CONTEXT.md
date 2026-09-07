@@ -27,7 +27,7 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-当前最近具名执行 LF5 已完成：CPU-T 的 `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU` 保持有效；用户覆盖后的 exploratory DEV-T 完成 400 updates，但 temporal stream 从 step 1 偏离冻结身份，base/spatial stream 匹配。无合法 checkpoint/prediction，条件 P0 未运行。终局为 `LF5_NUMERICAL_OR_IDENTITY_INVALID`、candidate none、`next_research_execution_authorized=false`。完整终局见 LF5 四合同、ADR 0064 与 terminal closeout；LF5 scientific retry 或任何新机制、seed、OOD、stress、PJGR/R2、替代路线或投稿均须新的明确授权。
+当前最近具名执行 LF6 已完成：DEV-U/DEV-R 各完成 400 个 matched phase-only updates，DEV-R 通过 safety 并按冻结规则进入 1200-step label-free P0；两臂均未通过 strict，机制结论为 `NO_RANK_SPECIFIC_INCREMENT`。P0 的 fixed-blind physics objective ratio 为 `0.0128142265`，但 V/T/phase/topology preservation 全部失败且事件坍塌，终局为 `LF6_P0_PRESERVATION_FAILED`、candidate none、`next_research_execution_authorized=false`。完整终局见 LF6 四合同、ADR 0066 与 terminal closeout；任何 rescue、新机制、seed、OOD/stress、PJGR/R2、替代路线或投稿均须新的明确授权。
 
 涉及当前研究对象、方法边界或论文措辞时读取 `CONTEXT.md`；需要决策理由时再读取 `docs/adr/`。处理 V2.2R 的方法替换、止损、故事分支或稿后升级时，在当前合同之后读取 `docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md`；该笔记不授权动作。实验事实、参考审查、其他研究笔记和历史归档按 `docs/README.md` 的触发条件读取。
 
@@ -62,13 +62,19 @@ checkpoint writing; P0 was not run. Recovery/hash verification and shutdown
 completed, with TCP closed and SSH refusal. The terminal outcome is
 `LF5_NUMERICAL_OR_IDENTITY_INVALID`; no retry or next research is authorized.
 
-# LF6 active handoff (2026-09-06)
+# LF6 terminal handoff (2026-09-07)
 
-The user explicitly authorized
 `PHK_V23_LF6_EVENT_FRONTIER_RANK_BAND_AND_SAFETY_GATED_PHYSICS_PILOT_EXECUTE`
-from `main@9d3c22674dc6279846fa341433d36f603a0854f1`. CPU-F passed with zero
-optimizer updates, materialized all development/P0/fixed-pool coordinates, and
-reverified exact DEV-M as a legal safety fallback. The only active scientific
-sequence is fixed DEV-U, fixed DEV-R, then the deterministically selected
-safety carrier's label-free P0. Fine, extra-fine, direct LF_ONLY and the frozen
-evaluator remain local post-shutdown resources; stress remains sealed/unread.
+completed from activation `55d552670ba0f727f781d4051b84efde474996f9`, with a
+pre-P0 engineering repair at `074eec7f76b4661deda1a622b5343bf992fa2715` that
+did not rerun development or change the scientific identity. DEV-U and DEV-R
+completed 400 matched updates each; DEV-R was the frozen safety selection, but
+neither arm passed strict, so no rank-specific increment was established. P0
+completed 1200 pure-physics updates and matched its frozen stream. It reduced
+the fixed-blind physics objective by about 98.7% while destroying field and
+event preservation, including zero final recall in both cycles. This is a
+valid bounded physics-forgetting result, not a numerical failure, PINN Pareto,
+direct-LF_ONLY gain, or candidate. Recovery and hash checks completed; the
+shutdown proof records TCP closure and SSH refusal before local adjudication,
+without asserting an unrecorded exact observation time. Stress remains
+sealed/unread and no next research execution is authorized.

@@ -35,6 +35,10 @@
 | LF5 DEV-T | Post-qualification override, base+spatial+TZL | 0.98716 | 400 updates, identity invalid | Non-voting recall 0.918/0.917; C1 timing 0.0094; temporal SHA drift |
 | LF5 P0 | Conditional label-free physics | — | Not run | No identity-valid DEV-T checkpoint |
 
+| LF6 DEV-U | Matched uniform endpoint control | 0.98979 | Two cycles | Safety recall failed: 0.897/0.899 |
+| LF6 DEV-R | Matched event-frontier rank band | 0.99105 | Two cycles | Safety pass; strict C1 timing failed at 0.01053 |
+| LF6 P0 | 550 phase-frozen + 650 joint pure physics | 0.99992 | C1 absent; C2 late; no recovery | Blind physics ratio 0.0128 passed, preservation failed |
+
 The stages are a sequential diagnostic program, not a simultaneous factorial
 benchmark. Historical comparisons do not isolate the LF3 logit teacher alone.
 
@@ -79,26 +83,28 @@ phase-error reduction.
 | LF1-final | Pass | 0.214459 | 0.0205948 | 0.0793024 | 0.138757 | 0.0319292 |
 | LF2-M0 | Fail (6) | 0.110564 | 0.0051500 | 0.0175980 | 0.146374 | 0.00616749 |
 | LF3-T0 | Pass | 0.0390008 | 0.00202578 | 0.0173618 | 0.137297 | 0.00599662 |
+| LF6 DEV-R selected safety endpoint | Pass | 0.0323683 | 0.00160984 | 0.0173618 | 0.137297 | 0.00599662 |
+| LF6 P0 pure physics | **Fail** | 0.157505 | 0.0102173 | 0.151474 | 0.0753970 | 0.0325076 |
 
 The frozen evaluator's event guard is less stringent than the LF3
 teacher-relative carrier gate. Its pass does not override the full-medium
 recall failure.
 
-## Table 6. Three-level adjudication
+## Table 6. Three-level LF6 adjudication
 
 | Level | Question | Observed result | Claim status |
 |---|---|---|---|
-| 1. Carrier | Is T0 valid and quantitatively event-competent? | Failed recall in both cycles | `NOT_ESTABLISHED` |
-| 2. PINN pilot | Does label-free P0 reduce physics objective while preserving T0? | P0 not triggered | `NOT_TESTED` |
-| 3. Candidate | Does eligible P0 add value relative to direct `LF_ONLY`? | Not reached | `NOT_TESTED` |
+| 1. Development endpoint | Is an endpoint safe and/or strict? | DEV-R safety pass; no strict arm | `SAFETY_NEAR_CARRIER_ONLY` |
+| 2. PINN pilot | Does label-free P0 reduce physics objective and preserve DEV-R? | ratio 0.012814 passed; preservation failed | `NEGATIVE` |
+| 3. Candidate | Does an eligible P0 add value relative to direct `LF_ONLY`? | Not reached; P0 not competent | `NO_CANDIDATE` |
 
 ## Table 7. Current paper evidence versus a positive methods submission
 
 | Evidence item | Advisor draft | Positive methods submission minimum | Current state |
 |---|---|---|---|
 | Executed failure analysis | Required | Required | Available |
-| Legal, localized neural event | Required | Required | Near-pass; strict recall failed |
-| PINN-specific P0-vs-T0 Pareto | Optional for negative draft | Required | Not run |
+| Legal, localized neural event | Required | Required | DEV-R safety pass; strict timing fail |
+| PINN-specific P0-vs-carrier Pareto | Optional for negative draft | Required | Executed; preservation failed |
 | Direct `LF_ONLY` comparison | Required | Required | Available; large gap remains |
 | Matched output-phase ablation | Optional if no component claim | Required for latent claim | Not authorized/run |
 | Multiple seeds | Limitation stated | Required | Not run |
@@ -173,3 +179,29 @@ both cycles.
 | Claim | CPU premise rejected; exploratory DEV-T telemetry is directional only and not a carrier result |
 | Does label-free physics add a Pareto improvement? | P0 vs selected carrier | P0 not run | Not tested |
 | Is there a direct-`LF_ONLY` candidate signal? | Full candidate gate | Not reached | No candidate |
+
+## Table 13. LF6 matched development endpoints
+
+| Arm | Endpoint cells | Recall C1/C2 | Precision C1/C2 | Mass C1/C2 | Timing C1/C2 | Phase MSE | Safety / strict |
+|---|---|---:|---:|---:|---:|---:|---|
+| DEV-U | equal-size uniform ROI complement | 0.8969 / 0.8993 | 0.9264 / 0.9210 | 0.9682 / 0.9764 | 0.00690 / 0.00140 | 0.0012067 | Fail / fail |
+| DEV-R | teacher critical-rank frontier | 0.9175 / 0.9229 | 0.8967 / 0.9204 | 1.0232 / 1.0027 | 0.01053 / 0.00180 | 0.0011833 | Pass / fail C1 timing |
+
+Both 400-update arms were finite, potential-admissible, phase-range valid, and
+kept V/T bitwise unchanged. Neither was strict, so the frozen mechanism result
+is `NO_RANK_SPECIFIC_INCREMENT`; DEV-R was selected only by the safety rule.
+
+## Table 14. LF6 executed physics continuation
+
+| Check | Selected DEV-R | P0 step 550 | P0 step 1200 | Result |
+|---|---:|---:|---:|---|
+| Phase MSE | 0.0011833 | 0.0011833 | 0.0305709 | Fail preservation |
+| Potential MSE | 0.00007148 | 0.0020553 | 0.0020458 | 28.62x selected |
+| Temperature MSE | 0.0007112 | 0.0431605 | 0.0374086 | 52.60x selected |
+| Recall C1/C2 | 0.9175 / 0.9229 | unchanged | 0 / 0 | Both events lost |
+| Fixed blind physics objective | 4.927872 | -- | 0.063147 | ratio 0.012814, pass |
+| Local event guard | Pass | -- | Fail | No PINN Pareto |
+
+At step 550 phase was bitwise unchanged and had zero optimizer-state entries.
+The V/T drift therefore preceded the rapid event collapse after joint unfreeze.
+The terminal outcome is `LF6_P0_PRESERVATION_FAILED`; candidate is none.

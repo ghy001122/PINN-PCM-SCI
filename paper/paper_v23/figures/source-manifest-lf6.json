@@ -1,0 +1,28 @@
+{
+  "schema_id": "paper-v23-lf6-figure-source-manifest-v1",
+  "scope": "LF6 zero-update event-frontier geometry, matched development endpoints, and executed physics-preservation result",
+  "inputs": {
+    "configs/phk_v23/method_contract_lf6_event_frontier.json": "5B89F88FEC58D3A395D4B22CB1959EF54E7BABEA0C9AED17F0FD654BD689BB29",
+    "configs/phk_v23/decision_contract_lf6_event_frontier.json": "2D5695CE583935BDB01CF322E43274D1A4CBDE1AB8E567F6C3F29F1750E3BD21",
+    "docs/experiment/artifacts/20260906T065434Z-phk-v23-lf6-cpu-qualification.json": "60996F3814BF7113E39925774EE9EAAC11091F466F10E7575AC55F2D731A1046",
+    "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/run_summary.json": "31194B489131076445138A817956D30A1FC27FFBCEFDF5E9B2D2642EEED028F0",
+    "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/dev_u/gate.json": "968C3891FB92DDE2A8C2C18EEFFCECEBCB0355DC23D1833B567A67BCE2F0EE24",
+    "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/dev_r/gate.json": "21187B3E857A2C8BEB10FEE27261D438172DF21866D314AE8B8C2C09FF532DF0",
+    "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/p0/gate.json": "8351E5474BF2D2C790E8E3ACE32D847A9E59D9F0C1F85918BC59A1FD819BC694",
+    "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/local/adjudication.json": "8A8E27970D4C12840087D9FFBA3F27C920498C035071F48D7B265F7D7982AAAD",
+    "paper/paper_v23/figures/data/lf6_terminal_metrics.json": "5E7DFC7862521B9FDF31A7D8485A4F50F25EEDD5D00C9B98124B38C090EAE585"
+  },
+  "outputs": {
+    "paper/paper_v23/figures/20260906T065434Z-lf6-event-frontier.png": "F82886894DAC7DDD4F664ED0A281970882238933E4601C0D5EA4E238D0D596EC",
+    "paper/paper_v23/figures/20260906T065434Z-lf6-event-frontier.pdf": "B6940C9794FF03B344F35145A3EC2E86E15A66BA1573DE22110CC8C26C10070C",
+    "paper/paper_v23/figures/20260906T065434Z-lf6-matched-development.png": "5F431BB5D6D7D0F218A037945645EBF5588F0A695372E7C2B81E9510DE975190",
+    "paper/paper_v23/figures/20260906T065434Z-lf6-matched-development.pdf": "8B9694230D8C8B76765A918221E5ADEE9B2141F4D885F476BA4C04492F7494E4",
+    "paper/paper_v23/figures/20260906T065434Z-lf6-physics-pareto.png": "D660501A7D98489E1D27B27DB6E6793E9AFE08F055C8AA16B6A5EB55B5E515B1",
+    "paper/paper_v23/figures/20260906T065434Z-lf6-physics-pareto.pdf": "39D5CFB0EE164DEACFAB8ECCAE813B502C9F6C7E316FD346A73F5E62CF117514"
+  },
+  "generator": "paper/paper_v23/figures/generate_figures.py --lf6-only",
+  "fine_extra_lf_only_frozen_evaluator_read": true,
+  "fine_extra_use": "LOCAL_NOMINAL_ONLY_AFTER_RECOVERY_AND_SHUTDOWN",
+  "stress_reference_read": false,
+  "claim_boundary": "SINGLE_SEED_NOMINAL_MATCHED_COMPOSITION_PILOT_NO_RANK_SPECIFIC_INCREMENT_P0_PRESERVATION_FAILED_NO_CANDIDATE"
+}

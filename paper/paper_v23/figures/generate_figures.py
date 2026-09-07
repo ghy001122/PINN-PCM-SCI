@@ -24,6 +24,7 @@ ROOT = HERE.parents[2]
 DATA_PATH = HERE / "data" / "lf3_terminal_metrics.json"
 LF4_DATA_PATH = HERE / "data" / "lf4_terminal_metrics.json"
 LF5_DATA_PATH = HERE / "data" / "lf5_terminal_metrics.json"
+LF6_DATA_PATH = HERE / "data" / "lf6_terminal_metrics.json"
 PREDICTION_PATH = ROOT / "outputs" / "runs" / "20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74" / "prediction-t0-step-1200.npz"
 REFERENCE_PATH = ROOT / "outputs" / "runs" / "20260828T-phk-v21-s1-q-06-nominal-extra-fine" / "result-intent-06.npz"
 
@@ -372,13 +373,127 @@ def lf5_physics_pareto(data: dict) -> list[Path]:
     draw.text((100,520),"Directional telemetry: recall 0.918/0.917, phase MSE 7.84e-4, but C1 timing error 0.0094.",fill=NAVY,font=font); draw.text((100,580),"Identity failure overrides metrics: no checkpoint, P0, PINN Pareto, or candidate claim.",fill=RED,font=font); return _save_pil(image,"20260905T150045Z-lf5-physics-pareto")
 
 
+def lf6_event_frontier(data: dict) -> list[Path]:
+    source = data["event_frontier"]
+    image, draw, font, bold, small = _pil_canvas("LF6 event-frontier geometry: teacher-side critical-rank exposure")
+    cycles = [source["cycles"]["cycle_1"], source["cycles"]["cycle_2"]]
+    draw.text((80, 120), "Saved endpoints bracket the 2% active-count threshold", fill=NAVY, font=font)
+    draw.line((90, 500, 790, 500), fill=NAVY, width=3)
+    threshold_y = 500 - int(source["q"] / 0.026 * 300)
+    draw.line((90, threshold_y, 790, threshold_y), fill=RED, width=3)
+    draw.text((95, threshold_y - 38), "2% threshold", fill=RED, font=small)
+    for idx, cycle in enumerate(cycles):
+        base_x = 250 + idx * 330
+        for offset, key, color, label in ((-65, "pre_fraction", GRAY, "pre"), (20, "post_fraction", TEAL, "post")):
+            value = cycle[key]
+            height = int(value / 0.026 * 300)
+            draw.rectangle((base_x + offset, 500 - height, base_x + offset + 60, 500), fill=color)
+            draw.text((base_x + offset - 12, 515), label, fill=NAVY, font=small)
+            draw.text((base_x + offset - 15, 465 - height), f"{100 * value:.2f}%", fill=color, font=small)
+        draw.text((base_x - 55, 570), f"Cycle {idx + 1}", fill=NAVY, font=font)
+    draw.text((930, 120), "Frozen order-statistic band", fill=NAVY, font=font)
+    draw.text((940, 175), f"ROI cells: {source['roi_cell_count']}   critical rank: {source['critical_rank_one_based']}", fill=GRAY, font=small)
+    for idx, cycle in enumerate(cycles):
+        y = 300 + idx * 190
+        x0 = 1020 + (cycle["rank_start"] - 16) * 65
+        x1 = 1020 + (cycle["rank_stop"] - 16) * 65
+        xc = 1020 + (source["critical_rank_one_based"] - 16) * 65
+        draw.line((1020, y, 1535, y), fill=GRAY, width=3)
+        draw.line((x0, y, x1, y), fill=BLUE, width=20)
+        draw.ellipse((xc - 13, y - 13, xc + 13, y + 13), fill=RED)
+        draw.text((925, y - 18), f"C{idx + 1}", fill=NAVY, font=font)
+        draw.text((x0, y + 28), f"ranks {cycle['rank_start']}-{cycle['rank_stop']} ({cycle['pool_size']} cells)", fill=BLUE, font=small)
+    draw.text((930, 650), "Red dot: downstream count threshold; blue band: supervised frontier", fill=GRAY, font=small)
+    return _save_pil(image, "20260906T065434Z-lf6-event-frontier")
+
+
+def lf6_matched_development(data: dict) -> list[Path]:
+    arms = data["development"]
+    image, draw, font, bold, small = _pil_canvas("LF6 matched development: safety endpoint, no rank-specific increment")
+    order = ["DEV_U", "DEV_R"]
+    labels = ["Uniform endpoint control", "Event-frontier rank band"]
+    colors = [GRAY, BLUE]
+    draw.text((90, 120), "Minimum cycle recall", fill=NAVY, font=font)
+    draw.line((90, 525, 790, 525), fill=NAVY, width=3)
+    gate_y = 525 - int((0.90 - 0.86) / 0.08 * 330)
+    draw.line((90, gate_y, 790, gate_y), fill=RED, width=3)
+    draw.text((95, gate_y - 35), "safety gate 0.90", fill=RED, font=small)
+    for idx, name in enumerate(order):
+        value = min(arms[name]["recall"])
+        height = int((value - 0.86) / 0.08 * 330)
+        x = 235 + idx * 350
+        draw.rectangle((x, 525 - height, x + 130, 525), fill=colors[idx])
+        draw.text((x + 12, 485 - height), f"{value:.3f}", fill=colors[idx], font=font)
+        draw.text((x - 45, 550), labels[idx], fill=NAVY, font=small)
+    draw.text((930, 120), "Cycle-wise event-time error", fill=NAVY, font=font)
+    draw.line((950, 525, 1660, 525), fill=NAVY, width=3)
+    timing_gate_y = 525 - int(0.005 / 0.012 * 330)
+    draw.line((950, timing_gate_y, 1660, timing_gate_y), fill=RED, width=3)
+    for idx, name in enumerate(order):
+        x = 1085 + idx * 350
+        for offset, value, color in ((0, arms[name]["timing"][0], ORANGE), (70, arms[name]["timing"][1], TEAL)):
+            height = int(value / 0.012 * 330)
+            draw.rectangle((x + offset, 525 - height, x + offset + 55, 525), fill=color)
+        draw.text((x - 45, 550), labels[idx], fill=NAVY, font=small)
+    draw.rectangle((950, timing_gate_y - 38, 1190, timing_gate_y - 4), fill="white")
+    draw.text((955, timing_gate_y - 35), "strict gate 0.005", fill=RED, font=small)
+    draw.text((990, 650), "orange: cycle 1    teal: cycle 2", fill=GRAY, font=small)
+    draw.text((95, 665), "DEV-R is safety-valid but misses strict cycle-1 timing; neither arm is a strict carrier.", fill=NAVY, font=small)
+    return _save_pil(image, "20260906T065434Z-lf6-matched-development")
+
+
+def lf6_physics_pareto(data: dict) -> list[Path]:
+    physics = data["physics"]
+    rows = physics["timeline"]
+    image, draw, font, bold, small = _pil_canvas("LF6 P0: residual reduction and event preservation diverge")
+    x0, y0, x1, y1 = 100, 175, 1120, 610
+    draw.line((x0, y1, x1, y1), fill=NAVY, width=4)
+    draw.line((x0, y0, x0, y1), fill=NAVY, width=4)
+    draw.text((380, 650), "P0 physics update", fill=NAVY, font=small)
+    draw.text((110, 125), "Minimum cycle recall", fill=NAVY, font=font)
+    points = []
+    for row in rows:
+        x = x0 + int(row["step"] / 1200 * (x1 - x0))
+        y = y1 - int(row["recall_min"] * (y1 - y0))
+        points.append((x, y))
+    draw.line(points, fill=TEAL, width=7)
+    for x, y in points:
+        draw.ellipse((x - 10, y - 10, x + 10, y + 10), fill=TEAL)
+    gate_y = y1 - int(0.90 * (y1 - y0))
+    draw.line((x0, gate_y, x1, gate_y), fill=RED, width=3)
+    unfreeze_x = x0 + int(550 / 1200 * (x1 - x0))
+    draw.line((unfreeze_x, y0, unfreeze_x, y1), fill=GRAY, width=3)
+    draw.text((unfreeze_x + 8, y0 + 12), "phase unfreezes", fill=GRAY, font=small)
+    for tick in (0, 550, 800, 1200):
+        x = x0 + int(tick / 1200 * (x1 - x0))
+        draw.text((x - 25, y1 + 12), str(tick), fill=NAVY, font=small)
+    draw.rounded_rectangle((1200, 150, 1710, 575), radius=25, outline=RED, width=5)
+    draw.text((1240, 185), "Fixed blind physics", fill=NAVY, font=font)
+    draw.text((1240, 240), f"4.9279 -> 0.06315", fill=TEAL, font=bold)
+    draw.text((1240, 305), f"ratio = {physics['fixed_blind_ratio']:.4f} (PASS)", fill=TEAL, font=font)
+    draw.text((1240, 385), "Carrier preservation", fill=NAVY, font=font)
+    draw.text((1240, 440), "FAIL", fill=RED, font=bold)
+    draw.text((1240, 505), "final recall = 0 / 0", fill=RED, font=font)
+    draw.text((120, 700), "V/T drift while phase is frozen; event recall collapses immediately after joint unfreeze.", fill=NAVY, font=small)
+    return _save_pil(image, "20260906T065434Z-lf6-physics-pareto")
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Generate paper_v23 evidence figures")
     parser.add_argument("--lf4-only", action="store_true", help="Generate LF4 figures 6–8 without rewriting the LF3 source manifest")
     parser.add_argument("--lf5-only", action="store_true", help="Generate timestamped LF5 CPU-T terminal figures")
+    parser.add_argument("--lf6-only", action="store_true", help="Generate timestamped LF6 terminal figures")
     args = parser.parse_args(argv)
     if args.lf5_only:
         data=json.loads(LF5_DATA_PATH.read_text(encoding="utf-8")); outputs=[]; outputs.extend(lf5_temporal_edge_geometry(data)); outputs.extend(lf5_timing_calibration(data)); outputs.extend(lf5_physics_pareto(data)); print(json.dumps({"figures":len(outputs)//2,"scope":"LF5_CPU_T_PLUS_IDENTITY_INVALID_EXPLORATORY_DEV_T"},sort_keys=True)); return
+    if args.lf6_only:
+        data = json.loads(LF6_DATA_PATH.read_text(encoding="utf-8"))
+        outputs: list[Path] = []
+        outputs.extend(lf6_event_frontier(data))
+        outputs.extend(lf6_matched_development(data))
+        outputs.extend(lf6_physics_pareto(data))
+        print(json.dumps({"figures": len(outputs) // 2, "scope": "LF6_MATCHED_DEVELOPMENT_AND_EXECUTED_P0"}, sort_keys=True))
+        return
     setup()
     if args.lf4_only:
         data = json.loads(LF4_DATA_PATH.read_text(encoding="utf-8"))

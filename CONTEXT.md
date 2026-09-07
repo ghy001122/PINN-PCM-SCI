@@ -1,7 +1,7 @@
 # PINN-PCM-SCI 当前研究设定与论文口径
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
-- `updated_at`: `2026-09-05`
+- `updated_at`: `2026-09-07`
 
 ## 当前研究问题
 
@@ -19,19 +19,21 @@ LF4 以三条 matched 400-step phase-only arms 检验 LF3 剩余误差是否来�
 
 LF5 的 CPU-T 重建 `68/68/64/64` 条合法 temporal edges，却发现 DEV-C 在两个 onset pool 的 teacher-secanted zero-level residual 都劣于 DEV-M，故冻结前提门返回 `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`。用户知晓结果后只授权不变的 DEV-T 作 post-qualification exploratory evidence。该轨迹完成 400 updates，base/spatial stream 匹配，但 temporal stream 从 step 1 偏离冻结身份，未写出 checkpoint/prediction；P0 未运行。终局为 `LF5_NUMERICAL_OR_IDENTITY_INVALID`。step-400 recall `0.9175/0.9174` 与 cycle-1 timing error `0.0094` 只能作非投票方向性观察。
 
+LF6 用同起点、同预算的 DEV-U/DEV-R 隔离 generic endpoint 与 teacher-side event-frontier rank-band。DEV-R 通过 safety，DEV-U/DEV-R 均未通过 strict，故机制结论为 `NO_RANK_SPECIFIC_INCREMENT`。冻结 safety carrier 是指达到进入物理 continuation 的最低有效门，不等于方法优胜或 candidate。DEV-R 进入 1200-step label-free P0 后，fixed-blind physics objective ratio 降至 `0.0128142265`，但 V/T/phase/topology preservation ratios 恶化至 `28.62/52.60/25.84/20.03`，两周期 recall 最终均为零。这里的 physics preservation failure 指物理目标下降与已建立事件/场载体同时崩解；它是有效的 bounded negative PINN-refinement evidence，不是数值无效。
+
 ## 物理对象与证据边界
 
 对象仍是 PHK-V2.1 的透明、无量纲、literature-inspired synthetic 2D wall-cell；几何、PDE、本构、参数、IC/BC、ROI、事件与 frozen evaluator 均不改变。extra-fine fixed-discretization carrier 不是 continuum truth；C0 saved-cadence strong residual 也不是 exact internal-step residual。
 
-两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4/LF5 读取 medium 与 exact LF3-T0 checkpoint。LF5 未读取 fine/extra-fine、direct `LF_ONLY` 或 frozen evaluator；其三份可用 raw 文件已回收核验，实例已关机，P0 未运行。
+两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4/LF5/LF6 读取 medium 与 exact LF3-T0 checkpoint，LF6 还按合同只读 exact DEV-M fallback 与预物化 streams。fine/extra-fine、direct `LF_ONLY` 和 frozen evaluator 只在 LF6 关机后本地读取；raw 产物已回收并按哈希核验。shutdown proof 只支持 SSH refusal 先于本地裁决的顺序，不把其记录时间冒充精确观察时间。
 
 ## 方法与论文身份
 
-ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling 与 BCE-with-logits 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为高 precision 但 support recall 不足；LF4 又以 matched control 验证界面暴露可提高最低召回，但没有建立完整 entry 或 PINN 结果。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是必须保留的强 non-PINN comparators。当前稿件只能承载有界 failure-analysis、solver-recovery mechanism evidence 与 LF5 非投票方向性 telemetry；任何正面路线仍须面对强基线、关键单因素消融、多 seed、sealed stress/formal OOD 与单一 load-bearing core。
+ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling、BCE-with-logits 与 event-frontier rank-band 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为高 precision 但 support recall 不足；LF4 以 matched control 验证界面暴露可提高最低召回；LF6 则没有证明 rank-specific 增量，并揭示纯物理 continuation 在 bulk residual 大降时仍会两阶段遗忘场与事件。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是必须保留的强 non-PINN comparators。当前稿件只能承载有界 failure-analysis、solver-recovery mechanism evidence 与 physics-forgetting 负结果；任何正面路线仍须面对强基线、关键单因素消融、多 seed、sealed stress/formal OOD 与单一 load-bearing core。
 
 ## 权威路由
 
-当前完成态与无后续授权边界见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，终局动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF5 证据见 [terminal closeout](docs/experiment/2026-09-05-phk-v23-lf5-terminal-closeout.md) 与 [ADR 0064](docs/adr/0064-close-phk-v23-lf5-temporal-zero-level-pilot.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF4/LF3/LF2/LF1/LF0/C0 历史入口继续由对应 terminal closeout 保留。
+当前完成态与无后续授权边界见 [active phase](active_phase.md)，事实见 [project state](PROJECT_STATE.md)，终局动作见 [live plan](docs/plans/NEXT_ACTIONS.md)，LF6 证据见 [terminal closeout](docs/experiment/2026-09-06-phk-v23-lf6-terminal-closeout.md) 与 [ADR 0066](docs/adr/0066-close-phk-v23-lf6-event-frontier-pilot.md)，导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF5/LF4/LF3/LF2/LF1/LF0/C0 历史入口继续由对应 terminal closeout 保留。
 
 # LF5 terminal context (2026-09-06)
 
@@ -44,17 +46,15 @@ unchanged DEV-T as post-qualification exploratory evidence. DEV-T completed
 the terminal gate raised before checkpoint writing and P0 was not run. This
 does not rehabilitate or rewrite the CPU premise, and no retry is authorized.
 
-# LF6 active context (2026-09-06)
+# LF6 terminal context (2026-09-07)
 
-LF6 tests whether cells in the teacher-side critical order-statistic interval
-that changes the frozen two-percent ROI event functional add value beyond a
-same-cardinality generic endpoint control. Both development arms inherit the
-LF3 calibrated logit teacher and LF4 spatial-interface loss; only endpoint cell
-identity differs. CPU-F found critical rank 20 in a 968-cell ROI, with frontier
-pool counts `6/6/4/4`, and froze every training coordinate before GPU use.
-
-The narrow mechanism outcome is `EVENT_FRONTIER_SUPPORTED` only when DEV-R is
-strict and DEV-U is not. Any selected safety endpoint then enters a separate,
-label-free physics continuation. Thus matched data-only mechanism attribution,
-within-architecture PINN Pareto, and comparison with direct LF_ONLY remain
-three distinct evidence levels.
+LF6 compared teacher-side event-frontier rank-band cells against a
+same-cardinality generic endpoint control. DEV-R passed safety and was selected,
+but both matched arms failed strict, so the narrow result is
+`NO_RANK_SPECIFIC_INCREMENT`. The selected endpoint then completed a separate
+label-free physics continuation. During the phase-frozen block V/T drifted;
+after joint unfreezing event support collapsed. The fixed-blind physics
+objective nevertheless fell to `0.0128142265` of entry, demonstrating that bulk
+physics reduction did not preserve this event-bearing multiphysics carrier.
+The terminal status is `LF6_P0_PRESERVATION_FAILED`, with no PINN Pareto,
+direct-LF_ONLY gain, candidate, or next research authorization.

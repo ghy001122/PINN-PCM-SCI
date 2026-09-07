@@ -1,51 +1,37 @@
-# Claim–evidence matrix
+# Claim--evidence matrix
 
 | Proposed statement | State | Direct evidence | Allowed wording |
 |---|---|---|---|
-| LF3-T0 completed 1200 finite seed-17 FP64 updates | `VERIFIED` | terminal summary and recovered artifacts | Direct factual claim |
-| T0 passed potential, phase-range, timing, precision, mass, locality, and recovery gates | `VERIFIED` | full-medium gate JSON | Direct factual claim |
-| T0 failed both 0.90 recall gates | `VERIFIED` | recall 0.805842 / 0.768603 | Direct factual claim |
-| P0 ran zero steps because T0 failed | `VERIFIED` | summary disposition | Say “not triggered,” never “P0 failed” |
-| LF3 recovered localized events after LF2 cold collapse | `SUPPORTED_INTERPRETATION` | matched stream; phase max/event metrics | Attribute to the complete LF3 combination |
-| LF3 changed the dominant topology error from broad false-positive mass to missed boundary support | `SUPPORTED_INTERPRETATION` | LF1/LF3 precision, mass, recall, snapshots | Bounded to medium teacher and nominal case |
-| The phase-logit teacher alone caused recovery | `UNKNOWN` | multiple LF2→LF3 factors changed | Prohibited without matched output-phase arm |
-| LF3 established a valid carrier | `REJECTED` | conjunctive recall gate failed | Must not claim |
-| LF3 demonstrated PINN-specific improvement | `REJECTED` | T0 is data-only; P0 not run | Must not call T0 a PINN result |
-| LF3 beat direct `LF_ONLY` | `REJECTED` | direct baseline is 5.8–39× better on reported errors | Must report the gap |
-| Small global/weighted error guarantees event fidelity | `REJECTED` | LF2 lower errors with zero event | State the bounded counterexample |
-| Extra-fine event-guard pass overrides medium recall failure | `REJECTED` | instruments have different gates | Explain both results without merging them |
-| The complete LF3 combination is globally novel | `UNKNOWN` | bounded 12-source closure found no exact collision | “No exact collision found in bounded search” only |
-| Logit distillation or category balance is original | `REJECTED_EXTRAPOLATION` | primary-source precedents | Cite and describe as borrowed components |
-| PINNs cannot solve coupled PCM dynamics | `REJECTED_EXTRAPOLATION` | one object, architecture, seed, budget | Never generalize beyond frozen protocol |
-| Stress/OOD robustness | `UNKNOWN` | stress references sealed/unread | Must not claim |
-| Continuum, material, or experimental validity | `UNKNOWN` | fixed synthetic numerical object only | Must not claim |
-| LF4 completed three matched 400-update development arms | `VERIFIED` | run summary, checkpoints, and 1200-row batch ledger | Direct factual claim |
-| Interface-band exposure improved minimum recall beyond global-extra supervision | `VERIFIED_WITHIN_FROZEN_MATCHED_SCREEN` | DEV-M−DEV-G ΔRmin `+0.08984`, quality gate pass | System-specific boundary-exposure result; cite established interface sampling |
-| Threshold-aligned BCE is the load-bearing mechanism | `REJECTED_BY_FROZEN_GATE` | DEV-C improved Rmin but worsened recovery and phase error | Report the trade-off; do not claim threshold-loss superiority |
-| LF4 established an eligible development carrier | `REJECTED` | G failed timing; M failed cycle-1 timing; C failed phase-error gate | No selected carrier |
-| LF4 demonstrated PINN-specific value | `NOT_TESTED` | P0 correctly ran zero updates | Never call the phase-only arms PINNs |
-| LF4 positive proves the earlier LF3 latent representation | `REJECTED_EXTRAPOLATION` | all LF4 arms share LF3-T0 initialization | Boundary exposure is conditional on the inherited carrier, not latent attribution |
-| LF5 reconstructed a valid cycle-resolved temporal-edge object | `VERIFIED` | 68/68/64/64 pools, 264/264 valid edges, frozen stream hash | Geometry/identity fact only |
-| DEV-C is locally better aligned than DEV-M because its aggregate timing is better | `REJECTED_BY_CPU_T` | onset mean absolute residual is larger for DEV-C in both cycles | Aggregate event time is not a proxy for per-cell zero-level alignment |
-| The LF5 TZL combination established a valid trained endpoint | `REJECTED` | post-qualification DEV-T completed 400 updates but temporal SHA drifted from step 1 and no checkpoint was written | Report only identity-invalid directional telemetry |
-| LF5 produced a carrier or PINN gain | `NOT_TESTED` | no identity-valid DEV-T checkpoint; P0 not run | No carrier, physics ratio, or candidate claim |
-| A kinetic or \(\partial_t\phi\) teacher will succeed | `HYPOTHESIS` | proposed unique plan-only backup | Requires a new contract and authorization |
+| Scratch physics loss decreased while both phase events were absent | `VERIFIED` | V2.2R terminal evidence | Bounded counterexample to loss-as-competence |
+| LF1 transferred events but made them over-broad | `VERIFIED` | active-mass ratios 5.27/5.86 | Output-space replay failed calibrated topology |
+| LF2 lowered field errors but erased the event | `VERIFIED` | LF2 full-medium audit | Low weighted error did not imply event competence |
+| LF3 recovered localized events after LF2 | `SUPPORTED_INTERPRETATION` | phase max, timing, precision, mass | Attribute to the full LF3 combination |
+| LF3 established a strict carrier or PINN gain | `REJECTED` | both recall gates failed; P0 not run | Do not call LF3 data-only training a PINN result |
+| LF4 interface exposure improved recall beyond generic extras | `VERIFIED_WITHIN_FROZEN_MATCHED_SCREEN` | DEV-M minus DEV-G minimum recall `+0.08984`, quality pass | Bounded single-seed boundary-exposure result |
+| LF4 threshold BCE was quality-preserving | `REJECTED_BY_FROZEN_GATE` | phase MSE `0.02967`, recovery degradation | Report timing--calibration trade-off |
+| LF5 established temporal supervision value | `REJECTED` | CPU premise failed; exploratory stream identity invalid | Only bounded premise rejection and directional telemetry |
+| LF6 event-frontier geometry and fixed streams were valid | `VERIFIED` | CPU-F, ranks 17--22 / 17--20, zero-update ledger | Geometry and identity fact only |
+| LF6 DEV-U was a safety or strict carrier | `REJECTED` | recall `0.897/0.899` | Matched control missed safety recall |
+| LF6 DEV-R was safety-valid | `VERIFIED` | recall `0.918/0.923`, all safety checks pass | Call it a safety near-carrier only |
+| LF6 DEV-R was a strict carrier | `REJECTED` | cycle-1 timing error `0.01053>0.005` | Never collapse safety and strict gates |
+| Event-frontier rank exposure added a strict matched increment | `REJECTED_BY_FROZEN_RULE` | neither DEV-U nor DEV-R strict | `NO_RANK_SPECIFIC_INCREMENT` |
+| P0 executed the frozen label-free physics objective | `VERIFIED` | 1200 updates, exact stream, no label draws | This stage is a PINN trajectory |
+| P0 greatly reduced the fixed blind physics objective | `VERIFIED` | `4.927872 -> 0.063147`, ratio `0.012814` | Residual-objective reduction only |
+| P0 preserved or improved the event carrier | `REJECTED` | final recall `0/0`; relative errors 20--53x | `LF6_P0_PRESERVATION_FAILED` |
+| LF6 demonstrates PINN-specific Pareto value | `REJECTED` | preservation failed despite physics ratio pass | Valid negative PINN result, not gain |
+| LF6 beat direct `LF_ONLY` | `REJECTED` | direct phase/T/current errors remain much smaller | Report direct baseline in main text/table |
+| Physics forgetting occurred in two stages | `SUPPORTED_INTERPRETATION` | V/T drift during phase freeze; recall collapse after unfreeze | Observed timeline, without unique causal attribution |
+| Replay, a kinetic teacher, or another optimizer would fix P0 | `HYPOTHESIS` | not tested | Requires a new matched contract |
+| PINNs generally cannot solve the system | `REJECTED_EXTRAPOLATION` | one object, seed, architecture, budget | Bound all conclusions to the frozen protocol |
+| Stress/OOD, continuum, material, or experimental validity | `UNKNOWN` | not executed; stress sealed | Must not claim |
 
 ## Current central statement
 
-The maximum defensible central statement is:
+> Within one fixed coupled electro-thermal-phase benchmark, competence-first
+> matched controls support teacher-interface exposure as a bounded recall
+> mechanism, do not support a rank-specific endpoint increment, and directly
+> show that a 98.7% physics-objective reduction can catastrophically erase a
+> safety-valid localized event carrier.
 
-> Within a fixed single-seed coupled electric–thermal–phase benchmark,
-> competence-first matched controls isolated teacher-interface exposure as a
-> substantial driver of rare-event support recall, while showing that a more
-> threshold-aligned classification loss can recover aggregate timing only by
-> sacrificing field fidelity; a temporal-edge audit falsified the assumption
-> that this aggregate gain represented improved local zero-level alignment.
-> A post-qualification exploratory continuation recovered support in non-voting
-> telemetry but was invalidated by temporal-stream drift and retained a cycle-1
-> timing miss. None of these results substitutes for an eligible carrier or an
-> executed physics-informed Pareto test.
-
-This statement supports an advisor draft with one positive, bounded mechanism
-attribution embedded in an otherwise negative solver-recovery result. It does
-not support a positive PINN method submission.
+This supports an advisor draft and a possible negative/diagnostic paper. It does
+not support a positive PINN methods submission.

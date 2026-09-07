@@ -1,0 +1,45 @@
+{
+  "schema_id": "paper-v23-lf6-terminal-metrics-v1",
+  "task_id": "PHK_V23_LF6_EVENT_FRONTIER_RANK_BAND_AND_SAFETY_GATED_PHYSICS_PILOT_EXECUTE",
+  "terminal_outcome": "LF6_P0_PRESERVATION_FAILED",
+  "mechanism_outcome": "NO_RANK_SPECIFIC_INCREMENT",
+  "candidate": null,
+  "event_frontier": {
+    "q": 0.02,
+    "roi_cell_count": 968,
+    "critical_rank_one_based": 20,
+    "cycles": {
+      "cycle_1": {"pre_fraction": 0.01652892561983471, "post_fraction": 0.022727272727272728, "rank_start": 17, "rank_stop": 22, "pool_size": 6},
+      "cycle_2": {"pre_fraction": 0.01652892561983471, "post_fraction": 0.02066115702479339, "rank_start": 17, "rank_stop": 20, "pool_size": 4}
+    }
+  },
+  "development": {
+    "DEV_U": {"label": "uniform endpoint control", "recall": [0.8969072164948453, 0.8992740471869325], "precision": [0.9263531499556343, 0.9210037174721187], "mass": [0.968213058419244, 0.9764065335753175], "timing": [0.0068999999999999895, 0.0013999999999998458], "phase_mse": 0.001206668050154017, "safety": false, "strict": false},
+    "DEV_R": {"label": "event-frontier rank band", "recall": [0.9175257731958762, 0.9228675136116149], "precision": [0.8967254408060453, 0.920361990950226], "mass": [1.0231958762886597, 1.0027223230490017], "timing": [0.010533333333333339, 0.0018000000000002458], "phase_mse": 0.0011832624059166495, "safety": true, "strict": false}
+  },
+  "physics": {
+    "selected": "DEV_R",
+    "step550_phase_bitwise_preserved": true,
+    "step550_phase_optimizer_state_entries": 0,
+    "fixed_blind_objective_before": 4.9278721846990505,
+    "fixed_blind_objective_after": 0.06314687051655783,
+    "fixed_blind_ratio": 0.012814226536278206,
+    "ratio_gate": 0.5,
+    "timeline": [
+      {"step": 0, "phase_mse": 0.0011832624059166495, "potential_mse": 0.00007147677141984318, "temperature_mse": 0.0007111887418509096, "recall_min": 0.9175257731958762},
+      {"step": 1, "phase_mse": 0.0011832624059166495, "potential_mse": 0.00008249239941889086, "temperature_mse": 0.0024580257518400446, "recall_min": 0.9175257731958762},
+      {"step": 550, "phase_mse": 0.0011832624059166495, "potential_mse": 0.002055280893441712, "temperature_mse": 0.04316051848156409, "recall_min": 0.9175257731958762},
+      {"step": 600, "phase_mse": 0.018325436188398915, "potential_mse": 0.0019960451504570527, "temperature_mse": 0.04388365977089208, "recall_min": 0.21597096188747728},
+      {"step": 800, "phase_mse": 0.0317590969913628, "potential_mse": 0.002007105372449995, "temperature_mse": 0.04225398298762283, "recall_min": 0.0},
+      {"step": 1200, "phase_mse": 0.030570933904096577, "potential_mse": 0.0020457511260763383, "temperature_mse": 0.03740860813504991, "recall_min": 0.0}
+    ],
+    "relative_selected": {"potential": 28.62120218133415, "temperature": 52.60011292880124, "phase": 25.836140615330283, "topology": 20.03417898913848},
+    "preservation": false
+  },
+  "local_extra_fine": {
+    "LF_ONLY": {"phase_roi_rms": 0.006570375888844028, "temperature_roi_rms": 0.0018006948281555659, "current_nrmse": 0.0035221351893723663, "event_guard": true},
+    "DEV_R": {"phase_roi_rms": 0.03236830783140375, "temperature_roi_rms": 0.017361839140172267, "current_nrmse": 0.13729673237736076, "event_guard": true},
+    "P0": {"phase_roi_rms": 0.1575045974493349, "temperature_roi_rms": 0.15147398816994087, "current_nrmse": 0.07539704908710924, "event_guard": false}
+  },
+  "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

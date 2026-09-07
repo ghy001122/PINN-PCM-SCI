@@ -1,0 +1,78 @@
+{
+  "schema_version": "run-manifest-v1",
+  "run_id": "20260906T065434Z-phk-v23-lf6-terminal",
+  "experiment_group_id": "PHK_V23_LF6_EVENT_FRONTIER",
+  "tier": "development_campaign",
+  "scientific_role": "event_frontier_matched_development_and_safety_gated_physics_terminal_adjudication",
+  "gate": "PHK_V23_LF6",
+  "started_at": "2026-09-06T06:54:34+00:00",
+  "ended_at": "2026-09-07T08:30:38+00:00",
+  "command": [
+    "remote LF6_EXECUTION_MODE=FULL_CAMPAIGN project-python -m pinn_pcm_sci.phk_v23_lf6 --output-root <hash-bound-run-root> --medium-carrier <hash-bound-medium> --initial-checkpoint <hash-bound-lf3-t0> --dev-m-checkpoint <authorized-hash-bound-lf4-dev-m> --materialized-ledger <hash-bound-ledger> --cpu-qualification <hash-bound-cpu-qualification> --device cuda:0 --source-identity <development-source-identity>",
+    "remote LF6_EXECUTION_MODE=P0_ONLY_PRESTEP_ENGINEERING_RETRY project-python -m pinn_pcm_sci.phk_v23_lf6 --output-root <same-run-root> --medium-carrier <same-hash-bound-medium> --initial-checkpoint <same-hash-bound-lf3-t0> --dev-m-checkpoint <same-authorized-hash-bound-lf4-dev-m> --materialized-ledger <same-hash-bound-ledger> --cpu-qualification <same-hash-bound-cpu-qualification> --device cuda:0 --source-identity <continuation-source-identity> --p0-only-prestep-engineering-retry --development-artifact-lock <same-run-root>/cloud/recovery_manifest.json",
+    "local .venv/Scripts/python.exe -m pinn_pcm_sci.phk_v23_lf6_evaluation --output-directory <run-root>/local --run-directory <run-root> --cpu-qualification docs/experiment/artifacts/20260906T065434Z-phk-v23-lf6-cpu-qualification.json"
+  ],
+  "execution_status": "COMPLETE",
+  "numerical_validity": "VALID_HASH_BOUND_DEV_U_DEV_R_AND_P0_EXECUTION_P0_PRESERVATION_FAILED_AFTER_EVENT_COLLAPSE",
+  "gate_outcome": "LF6_P0_PRESERVATION_FAILED",
+  "route_disposition": "PHYSICS_FORGETTING_RESULT_NO_RESCUE",
+  "evidence_identity": "SINGLE_SEED_NOMINAL_MATCHED_ENDPOINT_SCREEN_AND_VALID_LABEL_FREE_PHYSICS_FORGETTING_RESULT",
+  "claim_status": "NO_RANK_SPECIFIC_INCREMENT_P0_PRESERVATION_FAILED_NO_PINN_PARETO_OR_CANDIDATE",
+  "code_identity": {
+    "starting_commit": "9d3c22674dc6279846fa341433d36f603a0854f1",
+    "activation_commit": "55d552670ba0f727f781d4051b84efde474996f9",
+    "engineering_commit": "074eec7f76b4661deda1a622b5343bf992fa2715",
+    "development_source_identity": "LF6-BUNDLE-2A4DE4E45D48EDD11FC314D5F0525D9639966B2D728952FC0A83F7AE3096274A",
+    "continuation_source_identity": "LF6-BUNDLE-760CAED377A5E32740CE07314FFF8AF4E216CB69FC71C00BD4E6B732DE5C10EC"
+  },
+  "environment": {
+    "cloud_gpu": "Tesla V100-PCIE-32GB",
+    "cloud_dtype": "FLOAT64",
+    "cloud_training_inputs": "MEDIUM_LF3_T0_LF4_DEV_M_FALLBACK_AND_PREMATERIALIZED_STREAMS_ONLY",
+    "fine_extra_fine_lf_only_evaluator_read_on_cloud": false,
+    "local_evaluator_device": "CPU",
+    "instance_lifecycle": "SHUTDOWN_VERIFIED_BY_TCP_CLOSED_AND_SSH_CONNECTION_REFUSED_BEFORE_LOCAL_ADJUDICATION_EXACT_OBSERVATION_TIME_NOT_SEPARATELY_PERSISTED",
+    "stress_fields_or_metrics_read": false
+  },
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "split_id": "MEDIUM_METHOD_INPUT_FINE_EXTRA_LF_ONLY_LOCAL_POST_SHUTDOWN_STRESS_SEALED",
+  "method_id": "phk-v23-lf6-event-frontier-rank-band-v1",
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "seed": 17,
+  "planned_budget": {
+    "maximum_scientific_gpu_trajectories": 3,
+    "maximum_optimizer_updates": 2000,
+    "development_arms": 2,
+    "updates_per_development_arm": 400,
+    "conditional_p0_updates": 1200
+  },
+  "actual_budget": {
+    "scientific_gpu_trajectories": 3,
+    "optimizer_updates": 2000,
+    "development_updates": 800,
+    "p0_label_free_full_physics_updates": 1200,
+    "development_retrained_during_engineering_retry": false
+  },
+  "checkpoint": {
+    "initial_sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA",
+    "dev_u_sha256": "1DE231C248BF4C02D75D62F02C437F7E088D5AA57C79E62E25A48D5125FB592C",
+    "dev_r_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "selected_role": "DEV_R_EVENT_FRONTIER_RANK_BAND",
+    "p0_sha256": "8ED892EAFDF7F4C37D677B618079A2AE078CB4C5E5F24D09AEB676330CFAF864",
+    "optimizer_state_loaded_from_development": false
+  },
+  "evaluator_id": "phk-v23-lf6-local-adjudication-v1",
+  "artifacts": {
+    "compact_artifact": "artifacts/20260906T065434Z-phk-v23-lf6-terminal.json#sha256=6C80864BF0E74A71F43DB283FE3404A3087FC3C119A17856D9DA726BA79CF49D",
+    "closeout": "../2026-09-06-phk-v23-lf6-terminal-closeout.md#sha256=6D5C35F5C9940AD914ABC8097A8472877B670B70BBFDF0B34050B12B5C1FE13F",
+    "cpu_qualification": "artifacts/20260906T065434Z-phk-v23-lf6-cpu-qualification.json#sha256=60996F3814BF7113E39925774EE9EAAC11091F466F10E7575AC55F2D731A1046",
+    "run_summary": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/run_summary.json#sha256=31194B489131076445138A817956D30A1FC27FFBCEFDF5E9B2D2642EEED028F0",
+    "recovery_manifest": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cloud/recovery_manifest.json#sha256=E49BD8AB57CC7FBCDEAD0CB05525F4728672AC936B3D83BC2316A66FBFFFDDC9",
+    "shutdown_proof": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cloud/shutdown_proof.json#sha256=71C0D72AA8173E6466ABFDF537D3347DC1420109D8DB7AA9B2CDE32DD61C1671",
+    "local_adjudication": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/local/adjudication.json#sha256=8A8E27970D4C12840087D9FFBA3F27C920498C035071F48D7B265F7D7982AAAD",
+    "paper_package": "../../paper/paper_v23/README.md"
+  },
+  "failure_class": "P0_PRESERVATION_FAILED_AFTER_VALID_LABEL_FREE_PHYSICS_CONTINUATION",
+  "replay_of": null,
+  "supersedes": null
+}

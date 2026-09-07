@@ -1,22 +1,27 @@
-# PHK-V2.3 LF6 live execution plan
+# PLAN-PHK-V2.3-LF6: terminal physics-preservation failure
 
 - `phase_id`: `PHK_V23_LF6_EVENT_FRONTIER_RANK_BAND_AND_SAFETY_GATED_PHYSICS_PILOT_EXECUTE`
-- `lifecycle_state`: `ACTIVE`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `CPU_F_QUALIFIED_MATCHED_EVENT_FRONTIER_AND_CONDITIONAL_PHYSICS_EXECUTION_PENDING`
-- `next_research_execution_authorized`: `true`
+- `machine_outcome`: `LF6_P0_PRESERVATION_FAILED`
+- `mechanism_outcome`: `NO_RANK_SPECIFIC_INCREMENT`
+- `claim_status`: `SAFETY_CARRIER_ENTERED_P0_BUT_PHYSICS_PRESERVATION_FAILED_NO_PINN_PARETO`
+- `authorization_state`: `CLOSED_NO_NEXT_RESEARCH_AUTHORIZATION`
+- `current_stage`: `TERMINAL_COMPLETE`
+- `next_research_execution_authorized`: `false`
+- `unique_next`: `PHYSICS_FORGETTING_RESULT_NO_RESCUE`
+- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_LF0_LF1_LF2_LF3_LF4_LF5_EVIDENCE`
 
-1. Freeze the activation commit and build a content-addressed, reference-blind
-   bundle containing the full CPU-F ledger.
-2. Pass isolated local and remote zero-step preflight before any optimizer is
-   created.
-3. Run DEV-U and DEV-R for exactly 400 updates each; both endpoints vote.
-4. Apply the deterministic strict/safety selection over DEV-M/U/R and run the
-   selected endpoint through exactly 1200 label-free physics updates.
-5. Recover and hash all artifacts, clear processes/GPU, shut down the instance,
-   and verify closed TCP plus explicit SSH refusal.
-6. Only then run nominal local frozen evaluation, update the single paper_v23
-   package, terminalize the unique machine outcome, and push the exact whitelist.
+## Terminal disposition
 
-No matched confirmation, new seed, sparse/OOD/stress task, kinetic teacher,
-PJGR/R2 or submission is authorized by this live plan.
+LF6 completed DEV-U 400, DEV-R 400 and the safety-selected DEV-R -> P0 1200
+sequence. Neither matched development arm passed strict, and P0 reduced the
+fixed blind physics objective while catastrophically degrading all four
+preservation dimensions and event support. Candidate remains none.
+
+## Stop boundary
+
+No scientific action is currently authorized. Any preservation mechanism,
+continuation redesign, new seed, matched confirmation, sparse/OOD/stress task,
+kinetic teacher, PJGR/R2 or submission requires a new PLAN and explicit EXECUTE.
+LF6 may not be rescued or rerun under this completed authorization.

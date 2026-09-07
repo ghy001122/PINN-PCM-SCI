@@ -1,0 +1,176 @@
+{
+  "schema_id": "phk-v23-lf6-terminal-artifact-v1",
+  "run_id": "20260906T065434Z-phk-v23-lf6-terminal",
+  "task_id": "PHK_V23_LF6_EVENT_FRONTIER_RANK_BAND_AND_SAFETY_GATED_PHYSICS_PILOT_EXECUTE",
+  "phase_id": "PHK_V23_LF6_EVENT_FRONTIER_RANK_BAND_AND_SAFETY_GATED_PHYSICS_PILOT_EXECUTE",
+  "lifecycle_state": "COMPLETE",
+  "cpu_outcome": "LF6_CPU_F_QUALIFICATION_PASS",
+  "machine_outcome": "LF6_P0_PRESERVATION_FAILED",
+  "mechanism_outcome": "NO_RANK_SPECIFIC_INCREMENT",
+  "unique_next": "PHYSICS_FORGETTING_RESULT_NO_RESCUE",
+  "next_research_execution_authorized": false,
+  "candidate": null,
+  "selected_role": "DEV_R_EVENT_FRONTIER_RANK_BAND",
+  "contracts": {
+    "program": {"path": "configs/phk_v23/program_contract_lf6_event_frontier.json", "sha256": "22AFE4365A727E23B7382EC48053850D47A5B32A9FA66A746B98688069E8D67F"},
+    "method": {"path": "configs/phk_v23/method_contract_lf6_event_frontier.json", "sha256": "5B89F88FEC58D3A395D4B22CB1959EF54E7BABEA0C9AED17F0FD654BD689BB29"},
+    "data": {"path": "configs/phk_v23/data_contract_lf6_event_frontier.json", "sha256": "B8171FAE3EF7B20AC0BEC31CDB00ABF35253E8C7AA8BDA87E836DE798E2E26E0"},
+    "decision": {"path": "configs/phk_v23/decision_contract_lf6_event_frontier.json", "sha256": "2D5695CE583935BDB01CF322E43274D1A4CBDE1AB8E567F6C3F29F1750E3BD21"}
+  },
+  "implementation": {
+    "runner_sha256": "2B483ABE5AFDDDDE96341F04DD7F9F7B156F4CD11A5A3534095FE286287B65F1",
+    "qualification_sha256": "5AA96B6144BD12889B1E0F0F47C012E8D36BC7D0C6744F0B2201F936E9BAEFA3",
+    "evaluation_sha256": "5AECF5B9EA85D59A8FCA657B31CAE56F25445C134512620D9029E27B73076C7A",
+    "bundle_builder_sha256": "CB770E8716877BD3D2F1F327020752960D9B8B84BBC50D37F10897EF9B867703",
+    "cloud_preflight_sha256": "4EAB12FD59A83171B5EA412244CBC721C8B927914EF25F1AB7D9B6FBB1BA4DB5",
+    "cloud_launcher_sha256": "F737D79A1E565D41684485CC26AB79E4B0FF7D1C3801DD6E89DC6E0667F69D04"
+  },
+  "source_identity": {
+    "starting_commit": "9d3c22674dc6279846fa341433d36f603a0854f1",
+    "activation_commit": "55d552670ba0f727f781d4051b84efde474996f9",
+    "engineering_commit": "074eec7f76b4661deda1a622b5343bf992fa2715",
+    "development_source_identity": "LF6-BUNDLE-2A4DE4E45D48EDD11FC314D5F0525D9639966B2D728952FC0A83F7AE3096274A",
+    "development_archive_sha256": "FFA3BA71D65BC5894B1F04166820D91D27B42458774D1E5A09BBE4E5D063EFE7",
+    "development_manifest_sha256": "CFB5E67B376D4A6A35EA35A2CE34E4D90D5E0AB9C5D2D57534430FCCE6D3A34B",
+    "continuation_source_identity": "LF6-BUNDLE-760CAED377A5E32740CE07314FFF8AF4E216CB69FC71C00BD4E6B732DE5C10EC",
+    "continuation_archive_sha256": "4A7D342A444BEC1AEF6AF7FBDAEBEA57F3CE809B1A066F016B01CA7C972C782A",
+    "continuation_manifest_sha256": "9A91B81BB6D1C843200B234D40E62372BC03DB009344503522FFA370FFFE46CC",
+    "initial_status_sha256": "83BF1B7586B39F5E50BF9D2DA4767584ACF87F32F66D79ED0B3361F5CB2950CA"
+  },
+  "frozen_inputs": {
+    "medium_sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F",
+    "lf3_t0_checkpoint_sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA",
+    "lf4_dev_m_fallback_checkpoint_sha256": "16EEE20C6B1A2510ACB387E83894ADD64061D631422FAB4DAA9EC1F7194018B5",
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "fine_sha256": "7343FC4AB6648F82CFAD3E517A748034D8E636959BC41D733195C477C1DCFA53",
+    "extra_fine_sha256": "0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE",
+    "direct_lf_only_prediction_sha256": "47B11E9DF7B95ED6CA282D22E4A8852775194FA1471D115310F7DCA7BCB447D0"
+  },
+  "cpu_qualification": {
+    "status": "LF6_CPU_F_QUALIFICATION_PASS",
+    "compact_sha256": "60996F3814BF7113E39925774EE9EAAC11091F466F10E7575AC55F2D731A1046",
+    "manifest_sha256": "0B336C1A7088E5EC78DD169797EC81DB8CC923CE674BFE26EE87314FF3B96E29",
+    "materialized_ledger_sha256": "29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801",
+    "materialized_ledger_manifest_sha256": "3CFA268CFB22CF225ABB92BFD7F9F00353634AF7AFEE7AA607EC59FE4F4C8F90",
+    "ledger_semantic_sha256": "0E2F680D33C4489F6092CB5D01E87483F7ECDA8290CD3E2C24EBDD06B3DA2B7F",
+    "scientific_optimizer_updates": 0
+  },
+  "stream_identities": {
+    "base_400_expected_and_actual": "3870D0C1411B3DF6E04C5BA316B3F0F77233D94A73A19E84523D81B62F692E4A",
+    "spatial_400_expected_and_actual": "4DB1728CC543B1AB18BD3F74B83B29EBFE5F95624D98DAFEA615B0ECDC69DEC4",
+    "p0_physics_1200_expected_and_actual": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53",
+    "fixed_blind_pool_expected_and_actual": "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF"
+  },
+  "scientific_gpu_execution": {
+    "gpu": "Tesla V100-PCIE-32GB",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "scientific_gpu_trajectories": 3,
+    "dev_u_optimizer_updates": 400,
+    "dev_r_optimizer_updates": 400,
+    "p0_optimizer_updates": 1200,
+    "total_optimizer_updates": 2000,
+    "mechanism_outcome": "NO_RANK_SPECIFIC_INCREMENT",
+    "selected_role": "DEV_R_EVENT_FRONTIER_RANK_BAND"
+  },
+  "development_endpoints": {
+    "DEV_U": {"safety_passed": false, "strict_passed": false, "phase_weighted_mse": 0.001206668050154017, "recall": [0.8969072164948453, 0.8992740471869325], "precision": [0.9263531499556343, 0.9210037174721187], "active_mass_ratio": [0.968213058419244, 0.9764065335753175], "event_time_absolute_error": [0.0068999999999999895, 0.0013999999999998458], "recovery": [1.0, 1.0]},
+    "DEV_R": {"safety_passed": true, "strict_passed": false, "phase_weighted_mse": 0.0011832624059166495, "recall": [0.9175257731958762, 0.9228675136116149], "precision": [0.8967254408060453, 0.920361990950226], "active_mass_ratio": [1.0231958762886597, 1.0027223230490017], "event_time_absolute_error": [0.010533333333333339, 0.0018000000000002458], "recovery": [1.0, 1.0]}
+  },
+  "p0": {
+    "executed_updates": 1200,
+    "numerical_valid": true,
+    "potential_valid": true,
+    "step550_phase_bitwise_preserved": true,
+    "step550_phase_optimizer_state_entries": 0,
+    "preservation_passed": false,
+    "relative_selected": {"potential": 28.62120218133415, "temperature": 52.60011292880124, "phase": 25.836140615330283, "topology": 20.03417898913848},
+    "phase_weighted_mse": 0.030570933904096577,
+    "hard_recall": [0.0, 0.0],
+    "two_cycle_events": false,
+    "fixed_blind_physics": {"selected": 4.9278721846990505, "p0": 0.06314687051655783, "ratio": 0.012814226536278206}
+  },
+  "engineering_retry": {
+    "stage": "P0_SELECTED_CHECKPOINT_LOAD_BEFORE_OPTIMIZER_CONSTRUCTION",
+    "cause": "DYNAMIC_TRAINABLE_PARAMETER_COUNT_COMPARED_AS_STATIC_ARCHITECTURE_IDENTITY",
+    "p0_optimizer_updates_before_failure": 0,
+    "development_retrained": false,
+    "scientific_identity_changed": false,
+    "continuation_mode": "P0_ONLY_PRESTEP_ENGINEERING_RETRY"
+  },
+  "raw_artifacts": {
+    "run_summary": {"path": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/run_summary.json", "size_bytes": 53339, "sha256": "31194B489131076445138A817956D30A1FC27FFBCEFDF5E9B2D2642EEED028F0"},
+    "recovery_manifest": {"path": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cloud/recovery_manifest.json", "size_bytes": 4656, "sha256": "E49BD8AB57CC7FBCDEAD0CB05525F4728672AC936B3D83BC2316A66FBFFFDDC9"},
+    "shutdown_proof": {"path": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cloud/shutdown_proof.json", "size_bytes": 1198, "sha256": "71C0D72AA8173E6466ABFDF537D3347DC1420109D8DB7AA9B2CDE32DD61C1671", "observed_utc": null, "ordering": "SSH_REFUSAL_OBSERVED_BEFORE_LOCAL_ADJUDICATION"},
+    "local_adjudication": {"path": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/local/adjudication.json", "size_bytes": 1147464, "sha256": "8A8E27970D4C12840087D9FFBA3F27C920498C035071F48D7B265F7D7982AAAD"},
+    "dev_u_checkpoint_sha256": "1DE231C248BF4C02D75D62F02C437F7E088D5AA57C79E62E25A48D5125FB592C",
+    "dev_u_prediction_sha256": "777884775AB3AC83ADCB36AFBB58D65FAEF482345B0948274409432E42789565",
+    "dev_u_telemetry_sha256": "B28D6611C43131B82158371F7E84AEA7DD7B964B219D79F404A2D58294A059F2",
+    "dev_u_batch_ledger_sha256": "AB8963A4F51AD544486C3DA547FF0972EA601E36FF0B0B5A2110DCC34EA1AB37",
+    "dev_u_gate_sha256": "968C3891FB92DDE2A8C2C18EEFFCECEBCB0355DC23D1833B567A67BCE2F0EE24",
+    "dev_r_checkpoint_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "dev_r_prediction_sha256": "5F20FB6ACBFE7D627A1C73D0E707A102F0872E8BF09ED83CFFD30397E4F350EF",
+    "dev_r_telemetry_sha256": "581A54E6DA4A27B38E43695CDAE0B489A5ED616A065FFEC346510EDF6652A10E",
+    "dev_r_batch_ledger_sha256": "0B368B871F22E9D8FC725445C04D0EC70847C0BE93758ADDC1054928B427F053",
+    "dev_r_gate_sha256": "21187B3E857A2C8BEB10FEE27261D438172DF21866D314AE8B8C2C09FF532DF0",
+    "p0_checkpoint_sha256": "8ED892EAFDF7F4C37D677B618079A2AE078CB4C5E5F24D09AEB676330CFAF864",
+    "p0_prediction_sha256": "A61DBC917BA28FF3059B42039390DB6044871E3B2DBECE602922F3469878B228",
+    "p0_telemetry_sha256": "6134D9B8331300C958E08843FA47B96B9FA1E8087274D102C819E7211F3D2932",
+    "p0_batch_ledger_sha256": "9B96F967544F70A879B86FFD8E91095176998176BAAEABC68751174F6A2B3756",
+    "p0_gate_sha256": "8351E5474BF2D2C790E8E3ACE32D847A9E59D9F0C1F85918BC59A1FD819BC694",
+    "console_capture": "NOT_SEPARATELY_PERSISTED_TELEMETRY_EXIT_GATE_RUN_SUMMARY_AND_CODEX_TRANSCRIPT_ONLY"
+  },
+  "local_adjudication": {
+    "outcome": "LF6_P0_PRESERVATION_FAILED",
+    "selected_phase_roi_rms": 0.03236830783140375,
+    "selected_temperature_roi_rms": 0.017361839140172267,
+    "selected_current_nrmse": 0.13729673237736076,
+    "p0_phase_roi_rms": 0.1575045974493349,
+    "p0_temperature_roi_rms": 0.15147398816994087,
+    "p0_current_nrmse": 0.07539704908710924,
+    "direct_lf_only_phase_roi_rms": 0.006570375888844028,
+    "direct_lf_only_temperature_roi_rms": 0.0018006948281555659,
+    "direct_lf_only_current_nrmse": 0.0035221351893723663,
+    "single_seed_pinn_pareto_reached": false,
+    "direct_baseline_candidate_level_reached": false
+  },
+  "recovery_and_instance_lifecycle": {
+    "remote_local_artifact_sizes_and_sha256_equal": true,
+    "training_processes_before_shutdown": 0,
+    "gpu_compute_processes_before_shutdown": 0,
+    "shutdown_executed_after_recovery": true,
+    "tcp_port_closed": true,
+    "shutdown_verified_by": "SSH_CONNECTION_REFUSED"
+  },
+  "prior_art": {
+    "path": "docs/references/2026-09-06-phk-v23-lf6-event-frontier-prior-art.md",
+    "sha256": "5F35405F1DA82ED94B52FC2C5FC3730F4EEA4831AB29A2D242DD9B1EEE19B4BB",
+    "primary_sources_checked": 6,
+    "verdict": "NO_EXACT_FUNCTIONAL_COLLISION_FOUND_WITHIN_BOUNDED_6_ITEM_SCOPE"
+  },
+  "paper_package": {
+    "path": "paper/paper_v23",
+    "claim_boundary": "FAILURE_ANALYSIS_AND_BOUNDED_SOLVER_RECOVERY_NO_POSITIVE_PINN_OR_RANK_SPECIFIC_CLAIM",
+    "hashes_bound_by_terminal_commit": true
+  },
+  "evidence_assessment": {
+    "verified": [
+      "DEV_U_AND_DEV_R_COMPLETED_400_MATCHED_PHASE_ONLY_UPDATES",
+      "DEV_R_SAFETY_PASSED_AND_WAS_SELECTED_FOR_P0",
+      "NEITHER_DEVELOPMENT_ARM_PASSED_STRICT_GATE",
+      "P0_COMPLETED_1200_LABEL_FREE_PHYSICS_UPDATES",
+      "P0_FIXED_BLIND_PHYSICS_OBJECTIVE_DECREASED",
+      "P0_FAILED_ALL_FOUR_PRESERVATION_RATIOS_AND_LOST_EVENT_SUPPORT",
+      "ARTIFACTS_RECOVERED_AND_SHUTDOWN_VERIFIED",
+      "LOCAL_NOMINAL_EVALUATION_RAN_ONLY_AFTER_SHUTDOWN",
+      "STRESS_REMAINED_SEALED_UNREAD"
+    ],
+    "supported_interpretation": "PHYSICS_CONTINUATION_CAUSED_TWO_STAGE_CATASTROPHIC_FORGETTING_DESPITE_BULK_RESIDUAL_REDUCTION",
+    "hypothesis": "ANY_FUTURE_RECOVERY_WOULD_REQUIRE_AN_EXPLICIT_PRESERVATION_MECHANISM_OR_DIFFERENT_PHYSICS_CONTINUATION_CONTRACT",
+    "unknown": [
+      "WHETHER_A_DIFFERENT_PREDECLARED_CONTINUATION_CAN_PRESERVE_THE_EVENT_CARRIER",
+      "WHETHER_THE_COMPOSITION_CAN_OUTPERFORM_DIRECT_LF_ONLY_ON_A_SPARSE_EQUAL_INFORMATION_TASK",
+      "MULTI_SEED_OOD_STRESS_AND_EXPERIMENTAL_VALIDITY"
+    ]
+  }
+}

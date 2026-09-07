@@ -1,122 +1,92 @@
 # Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
 
-> Advisor-reviewable draft. Evidence status:
-> `LF5_NUMERICAL_OR_IDENTITY_INVALID`, retaining LF4's
-> `BOUNDARY_EXPOSURE_SUPPORTED`. This manuscript reports single-seed nominal
-> development evidence. It does not claim a successful PINN method.
+> Advisor-reviewable draft. Evidence status: `LF6_P0_PRESERVATION_FAILED`.
+> All neural results are single-seed nominal development evidence. No candidate,
+> positive PINN method, strong-baseline gain, OOD/stress result, or submission
+> readiness is claimed.
 
 ## Abstract
 
-Physics-informed neural networks (PINNs) can minimize averaged residuals while
-missing a localized phase event that determines device behavior. We investigate
-this failure mode in a fixed two-dimensional synthetic wall-cell benchmark with
-coupled electric potential, temperature, and phase dynamics under two driven
-pulses. A preregistered sequence separated representation validity, low-fidelity
-event transfer, training measure, and physics refinement. Scratch physics
-training remained in a cold state with phase maximum near 0.03. Event-balanced
-output-space distillation recovered both events but expanded their active mass
-to 5.27 and 5.86 times the medium teacher. Target-measure calibration reduced
-all three weighted field errors but erased both events. We then tested one
-measure-decoupled, startup-scaled phase-logit carrier trajectory: potential and
-temperature retained the target measure, whereas phase-logit increments were
-trained with equal weight across 14 mutually exclusive event categories. The
-result was finite and potential-admissible, reached phase maximum 0.9912, and
-recovered both event times, with cycle-wise precision 0.907 and 0.866 and active
-mass ratios 0.888 and 0.887. However, recalls were only 0.806 and 0.769, below
-the frozen 0.90 gate. We then ran a matched three-arm interface-mechanism screen
-from those exact weights. Equal-budget generic extra supervision reached
-minimum recall 0.819. Replacing only those extras with teacher-interface-band
-MSE raised it to 0.909, a preregistered quality-preserving gain of 0.0898.
-Two-sided threshold logistic supervision on the identical band raised minimum
-recall to 0.942 and restored both timing gates, but increased phase weighted MSE
-to 0.0297 and degraded recovery relative to the interface-MSE arm. Thus
-teacher-interface exposure, not the threshold loss, was supported by the
-matched mechanism gate. No arm passed every carrier-entry condition, so the
-conditional label-free physics stage was not run. A subsequent zero-update
-qualification reconstructed 264 valid cycle-resolved temporal edges and found
-the threshold-supervised endpoint worse than the field-faithful interface-MSE
-endpoint in both onset pools (0.724 versus 0.292 and 0.604 versus 0.310 mean
-absolute logit residual). The user later authorized the unchanged DEV-T as a
-post-qualification exploratory run. It completed 400 updates, but its temporal
-batch stream differed from the frozen identity from step 1; hence no valid
-checkpoint was written and P0 was not run. Non-voting endpoint telemetry had
-recall 0.918/0.917 and phase weighted MSE 0.000784, while cycle-1 event-time
-error remained 0.0094. On the nominal extra-fine evaluator the LF3 carrier passed the
-coarser event-existence/locality guards and reduced phase region-of-interest RMS
-error from 0.1106 for the calibrated cold carrier to 0.0390, but direct medium
-interpolation remained much more accurate at 0.00657. LF5 closed as
-`LF5_NUMERICAL_OR_IDENTITY_INVALID`, with no candidate. The study shows that
-domain-averaged accuracy, event existence, event mass, precision, and recall are
-non-substitutable requirements in sparse-event multiphysics learning. It also
-demonstrates why a near-pass data carrier cannot be used to infer PINN-specific
-value before physics refinement is actually executed.
+Physics-informed neural networks (PINNs) can reduce averaged residuals while
+missing the localized phase event that controls a coupled device response. We
+study this failure in a fixed two-dimensional synthetic wall-cell benchmark
+with electric potential, temperature, and phase dynamics under two pulses. A
+bounded recovery sequence separated mathematical admissibility, event transfer,
+training measure, interface exposure, event-functional supervision, and
+physics continuation. Scratch physics training collapsed to a cold phase state.
+Output-space event replay recovered events but made them more than five times
+too broad; target-measure calibration reduced field errors but erased them.
+Equal-category startup-scaled logit distillation recovered localized events,
+and a matched interface-band experiment increased minimum recall from 0.819 to
+0.909, supporting teacher-interface exposure within the frozen screen.
+
+The final LF6 experiment targeted the downstream two-percent active-count
+functional. A zero-update CPU stage constructed fixed teacher rank bands around
+the critical rank. Two phase-only 400-update arms then compared these frontier
+cells with equal-size uniform endpoint cells. The uniform arm missed both 0.90
+recall gates. The frontier arm reached safety recall 0.918/0.923 but missed the
+strict cycle-1 timing gate; because neither arm was strict, the preregistered
+mechanism result was `NO_RANK_SPECIFIC_INCREMENT`. The safety-valid frontier
+endpoint nevertheless enabled the first executed label-free physics stage in
+this recovery sequence. Its fixed blind physics objective fell from 4.9279 to
+0.06315 (ratio 0.0128), but preservation failed. Potential and temperature
+errors increased while phase was frozen; after joint unfreezing, minimum recall
+fell from 0.918 to 0.216 within 50 updates and reached zero in both cycles by the
+fixed endpoint. Relative to the selected safety near-carrier endpoint, final potential, temperature,
+phase, and topology errors increased by 28.6, 52.6, 25.8, and 20.0 times.
+
+Thus residual reduction and event competence were empirically anti-aligned in
+the tested continuation. The strongest direct low-fidelity interpolation
+remained substantially more accurate than either neural endpoint. The result is
+a reproducible failure-analysis and solver-recovery study with one bounded
+interface-exposure finding and a directly executed physics-forgetting result,
+not a positive methods claim.
 
 ## 1. Introduction
 
-Physics-informed neural networks encode governing equations and boundary or
-initial conditions in differentiable training objectives
-[@raissi2019pinn]. Their flexibility is attractive for coupled systems in which
-electrical conduction, Joule heating, and phase kinetics interact across space
-and time. Yet the loss is usually an average over collocation points, while the
-scientific quantity of interest may be a small and transient active set. A model
-can therefore reduce its residual or global field error by fitting the inactive
-bulk and still erase the event that changes device current, thermal feedback, or
-state retention.
+PINNs encode governing equations and boundary or initial conditions in a
+differentiable objective [@raissi2019pinn]. This is appealing for devices in
+which conduction, Joule heating, and phase kinetics form a closed causal chain.
+The scientific observable, however, may occupy a tiny fraction of space-time.
+An average collocation loss can then reward the inactive bulk while omitting the
+switching front that determines current, thermal feedback, and recovery.
 
-Phase-field PINNs have motivated hard output constraints, staggered training,
-curricula, specialized architectures, and adaptive sampling
-[@chen2025sharp; @chen2025pf; @wang2024causal; @wu2023sampling]. These methods
-address genuine optimization pathologies, but their success cannot be inferred
-from loss reduction alone. A bounded phase field can still remain entirely
-cold; an event-balanced model can obtain recall by predicting an excessively
-large hot region; and a target-measure objective can prefer the inactive class
-because it occupies nearly all space-time measure. The basic distinction is
-between field approximation and event competence.
+Phase-field PINNs have consequently used hard output constraints, curricula,
+staggered optimization, and adaptive interface sampling
+[@chen2025sharp; @chen2025pf; @wang2024causal; @wu2023sampling]. These are
+important tools, but loss reduction alone does not establish event competence.
+A bounded phase field may remain cold; high recall may come from a diffuse
+false-positive region; and accurate event timing may coexist with a badly
+miscalibrated continuous phase field.
 
-This paper studies that distinction in a transparent synthetic device rather
-than making a material-calibrated claim. The model closes an electric–thermal–
-phase causal chain and contains two localized switching-and-recovery episodes.
-The reference hierarchy includes a medium carrier used only as a low-fidelity
-training source and fine/extra-fine nominal carriers used only for local
-development evaluation after predictions are frozen and cloud execution is
-shut down. Two stress references were byte-sealed and never read in the reported
-campaign.
+We therefore treat event competence as a conjunction of event existence,
+cycle-wise recall and precision, active mass, timing, locality, and recovery.
+Potential admissibility and field errors remain separate requirements. The
+strongest available direct low-fidelity interpolation is always reported, so
+neural recovery cannot be mistaken for practical superiority.
 
-The research proceeded through a sequence of bounded hypotheses. A four-arm
-scratch PINN comparison first established that decreasing physics loss did not
-produce either phase event. Gradient and optimizer diagnostics then ruled out a
-simple gradient-magnitude rescue. An inadmissible hard potential lift was
-replaced by a range-preserving exact-top construction. Low-fidelity supervision
-could transfer events, but an output-space event-balanced objective made them
-far too broad. Replacing that measure with the final evaluation measure reduced
-field errors but returned the phase field to the cold solution. These failures
-motivated a final combination pilot in which potential and temperature retained
-target-measure supervision, while phase was taught as a startup-scaled logit
-increment under equal category weighting.
+This paper makes three bounded contributions:
 
-The contribution is not a positive algorithm claim. Each constituent—exact
-output constraints [@lagaris1998ann; @sukumar2022exact], logit-space distillation
-[@hinton2015distill], class rebalancing [@cui2019classbalanced], and staged
-physics-informed fine tuning—has clear precedent. Within a bounded primary-
-source search, we found no exact functional collision for the complete
-combination, but one trajectory cannot establish originality, robustness, or
-superiority. Instead, this study contributes:
+1. an executed recovery ladder distinguishing cold collapse, inadmissible
+   representation, over-broad transfer, inactive-measure dominance, incomplete
+   support, and physics-induced forgetting;
+2. a matched single-seed result showing that teacher-interface exposure, rather
+   than generic extra supervision, materially improves rare-event recall; and
+3. the first executed label-free physics continuation in the ladder, showing
+   that a 98.7% blind-objective reduction can coexist with catastrophic loss of
+   the event carrier.
 
-1. a competence-first decomposition of localized event fidelity into existence,
-   timing, active mass, precision, recall, locality, and recovery;
-2. an executed failure ladder that isolates cold collapse, invalid
-   representation, over-broad event transfer, and inactive-measure dominance;
-3. a matched-stream combination pilot showing a transition from diffuse
-   false-positive mass to localized but incomplete support;
-4. a matched mechanism screen that identifies teacher-interface exposure as a
-   driver of recall while rejecting threshold logistic loss as a
-   quality-preserving increment; and
-5. a three-level decision rule that prevents data-only carrier recovery from
-   being reported as a PINN-specific or paper-positive result.
+The components have prior art. Exact constraints, logit distillation, class
+rebalancing, order statistics, event functions, and phase-interface sampling
+are not claimed as original [@lagaris1998ann; @sukumar2022exact;
+@hinton2015distill; @cui2019classbalanced; @koenker1978regression;
+@blondel2020sorting; @berrada2018topk; @chen2021event]. Our contribution is the
+bounded competence-first evidence and the observed interaction among these
+components in one coupled benchmark.
 
-## 2. Coupled benchmark and evidence roles
+## 2. Benchmark and evidence roles
 
-### 2.1 Synthetic electric–thermal–phase object
+### 2.1 Coupled synthetic object
 
 The fixed domain is
 
@@ -124,580 +94,286 @@ The fixed domain is
 (x,z)\in[-1,1]\times[0,1],\qquad t\in[0,2.5].
 \]
 
-Dimensionless electric potential \(v\), temperature \(\theta\), and phase
-\(\phi\) satisfy a state-dependent conduction equation, an energy balance with
-Joule heating and latent coupling, and a phase-field kinetic equation:
+Dimensionless potential \(v\), temperature \(\theta\), and phase \(\phi\)
+obey a state-dependent conduction equation, an energy balance with Joule
+heating and latent coupling, and a phase kinetic equation. The applied waveform
+contains two switching-and-recovery cycles. The benchmark is synthetic and
+fixed-discretization; it is not a material calibration or continuum certificate.
+
+Three independent modified-MLP field networks were used, each with four hidden
+layers of width 64. Potential used the frozen exact-top range-preserving
+transform; phase used the startup-scaled logit-increment representation. All
+reported training used FP64, seed 17, final checkpoints, and preregistered
+budgets.
+
+### 2.2 Reference and leakage boundary
+
+The medium trajectory was the sole low-fidelity training source. Fine and
+extra-fine trajectories and the frozen nominal evaluator were read locally only
+after cloud predictions were recovered, hash-verified, the GPU process was
+absent, the instance was shut down, the TCP port was closed, and SSH returned
+connection refusal. Two stress references remained byte-sealed and unread.
+
+Direct medium interpolation (`LF_ONLY`) is the strongest non-PINN comparator.
+It uses the full medium field and is therefore unusually strong, but it is the
+honest benchmark for any accuracy claim when that information is available.
+
+### 2.3 Competence and claim levels
+
+The full-medium development gate required finite values, potential
+maximum-principle validity, phase range validity, two events, phase maximum at
+least 0.90, recall at least 0.90 per cycle, precision at least 0.80, active-mass
+ratio in [0.80,1.20], locality and recovery, and field-error limits. LF6 used a
+relaxed safety timing limit only to decide whether a near-carrier could enter
+physics; its strict gate retained 0.005 per-cycle event-time error.
+
+Claims were separated into three levels:
+
+1. **Carrier:** a data-trained endpoint satisfies the declared carrier gate.
+2. **Single-seed PINN Pareto:** label-free physics reduces a fixed blind physics
+   objective while preserving the selected endpoint and passing strict output
+   gates.
+3. **Candidate signal:** the eligible P0 also meets the frozen comparison to
+   direct `LF_ONLY`. Even then it would remain provisional and single-seed.
+
+## 3. Bounded recovery program
+
+### 3.1 From cold collapse to an incomplete localized carrier
+
+V2.2R scratch physics training reduced its objective but stayed near
+\(\phi_{\max}=0.03\). LF0 showed that ordinary low-fidelity warm start was not
+enough. LF1 transferred both events but predicted active masses 5.27/5.86 times
+the teacher. LF2 aligned supervision with the target measure and reduced field
+errors, yet erased both events. LF3 decoupled the V/T and phase training measures
+and supervised startup-scaled phase-logit increments over 14 equal-weight event
+categories. It recovered localized, well-timed events but failed recall at
+0.806/0.769.
+
+### 3.2 Interface exposure and the rejected temporal premise
+
+LF4 compared three 400-update phase-only arms from the exact LF3 endpoint.
+Replacing generic extra points with teacher-interface-band points raised minimum
+recall by 0.0898 while preserving the frozen quality checks. Two-sided BCE on
+the same points improved timing but increased phase MSE to 0.02967 and degraded
+recovery, so it was not a quality-preserving mechanism.
+
+LF5 then reconstructed cycle-resolved temporal zero-level edges. Its valid
+zero-update audit found that the threshold-supervised LF4 endpoint was less
+aligned than the field-faithful interface-MSE endpoint in both onset pools. A
+later exploratory run had a temporal-stream identity mismatch and could not
+vote. We retain this as a bounded premise rejection, not as evidence that all
+temporal supervision fails.
+
+### 3.3 LF6 teacher-side event-frontier supervision
+
+LF6 aligned supervision with the evaluator's active-count functional without
+differentiating a rank. Let \(N=968\) be the ROI cell count and \(q=0.02\). The
+critical one-based rank was
 
 \[
-\nabla\!\cdot[\sigma(\theta,\phi)\nabla v]=0,
+n^\star=\lceil qN\rceil=20.
 \]
+
+For each cycle, adjacent saved times bracketing the teacher count crossing had
+active counts \(n^-<n^\star\le n^+\). Stable descending teacher-logit sort with
+cell-index tie-breaking defined the frontier
 
 \[
-\theta_t+L_r\phi_t=\alpha\nabla^2\theta-\gamma\theta
-+G\sigma(\theta,\phi)|\nabla v|^2,
+F_{c,s}=\{n^-+1,\ldots,n^+\}.
 \]
+
+The cycle-1 band contained ranks 17--22 (six cells); cycle 2 contained ranks
+17--20 (four cells). An equal-size uniform control was sampled without
+replacement from the ROI complement using fixed seeds. This is teacher-side
+preprocessing, not differentiable ranking or top-k optimization
+[@koenker1978regression; @blondel2020sorting; @berrada2018topk].
+
+Both development arms started from the exact LF3-T0 weights, froze V/T bitwise,
+updated only the existing phase network for 400 steps, and used
 
 \[
-\phi_t=M(\theta)\left[\epsilon^2\nabla^2\phi-
-\partial_\phi W(\phi,\theta)\right].
+L_{\mathrm{dev}}=0.50L_{\mathrm{base}}+0.25L_{\mathrm{spatial}}
+                 +0.25L_{\mathrm{endpoint}}.
 \]
 
-Conductivity depends smoothly on temperature and phase. A fixed waveform drives
-the lower electrode while the top potential is grounded. Thermal and no-flux
-conditions close the boundary-value problem. All equations, geometry,
-parameters, boundary/initial conditions, event regions, and evaluation
-thresholds were inherited unchanged from the PHK-V2.1 fixed-discretization
-object. The extra-fine carrier is a numerical development reference, not
-continuum truth or experimental validation.
+DEV-U used uniform endpoint cells; DEV-R used frontier cells. Every other
+input, update, optimizer setting, base batch, spatial batch, and loss formula
+was matched. The mechanism rule required a strict DEV-R endpoint when DEV-U was
+not strict; otherwise the result was no rank-specific increment.
 
-### 2.2 Data and leakage boundary
+### 3.4 Safety-gated label-free physics
 
-The medium numerical carrier is the sole cloud-side label source. It is used for
-T0 supervision and for the full-medium carrier gate. Fine and extra-fine nominal
-carriers and the frozen evaluator are local-only assets: they may be opened only
-after the remote prediction and checkpoint are recovered, all declared hashes
-match, the instance is shut down, and SSH refuses connection. Stress carriers
-are excluded from training, selection, evaluation, and this paper.
-
-The direct medium interpolation `LF_ONLY` is the strongest non-PINN baseline.
-It is intentionally not weakened merely because it is difficult to beat. It
-tests whether a neural representation or physics-informed continuation adds a
-measurable benefit over direct use of the available low-fidelity field.
-
-## 3. Competence-gated recovery design
-
-### 3.1 Exact-top, range-preserving potential
-
-Earlier experiments showed that a top-hard lift could couple the raw network
-envelope to a structural lower bound. The retained potential representation
-instead uses a range-preserving log-ratio parameterization that satisfies the
-top Dirichlet value exactly and keeps the predicted potential between the two
-electrode values at every time. In addition to the unchanged frozen evaluator,
-a method-validity maximum-principle guard requires
+The deterministic safety-valid endpoint seeded P0 even if it was not strict.
+P0 used a fresh Adam optimizer for 1200 updates and no medium labels, replay,
+anchor, rank loss, or event loss:
 
 \[
-\min(0,w(t))-10^{-6}\le v_\theta(x,z,t)
-\le\max(0,w(t))+10^{-6}
+L_{P0}=L_{\mathrm{PDE}}+5L_{\mathrm{BC}}+L_{\mathrm{IC}}.
 \]
 
-with zero violating fraction. This guard is a property of the LF campaign, not
-a retroactive modification of the evaluator.
-
-### 3.2 Startup-scaled phase-logit representation
-
-Let \(\phi_0(x,z)\) be the initial phase and
-
-\[
-s(t)=1-\exp[-(t-t_0)/0.35].
-\]
-
-The phase network predicts
-
-\[
-\phi_\theta=\operatorname{sigmoid}\!\left[
-\operatorname{logit}(\operatorname{clip}(\phi_0,10^{-8},1-10^{-8}))
-+8s(t)h_\phi(x,z,t)\right].
-\]
-
-The representation is exactly initial-condition compatible because \(s(t_0)=0\).
-Rather than dividing by the poorly identifiable startup factor, the supervised
-quantity is the complete logit increment
-
-\[
-\Delta\ell_\theta=8s(t)h_\phi,
-\qquad
-\Delta\ell^\star=
-\operatorname{logit}(\bar\phi_m)-
-\operatorname{logit}(\bar\phi_0),
-\]
-
-where bars denote the same fixed clipping. Nodes at \(t=t_0\) are masked from
-the phase loss. The target was checked before GPU execution: reconstruction
-error was \(2.22\times10^{-16}\), and the largest observed equivalent latent
-magnitude was 1.864, below the frozen analytical bound 4.605.
-
-### 3.3 Measure decoupling
-
-Potential and temperature are smooth fields for which the final space-time
-target measure is appropriate. The phase event is rare, so the same measure
-would allocate most gradient mass to inactive background. The medium grid is
-therefore partitioned into 14 mutually exclusive categories spanning the two
-cycles and event, transition, recovery, hard-negative, and background roles.
-Every category was nonempty on 1,603,200 saved medium nodes.
-
-For a target-measure batch \(B_f\), potential and temperature losses are
-
-\[
-L_v=\frac{\sum_{i\in B_v}\mu_i(v_{\theta,i}-v_{m,i})^2}
-{\sum_{i\in B_v}\mu_i},\qquad
-L_\theta=\frac{\sum_{i\in B_\theta}\mu_i(\theta_{\theta,i}-\theta_{m,i})^2}
-{\sum_{i\in B_\theta}\mu_i}.
-\]
-
-For phase, an independent deterministic draw supplies a fixed quota from each
-category. Each category contributes its own mean normalized logit-increment MSE,
-and the 14 category means are averaged equally:
-
-\[
-L_\phi=\frac1{14}\sum_{c=1}^{14}
-\frac1{|B_c|}\sum_{i\in B_c}
-\left(\frac{\Delta\ell_{\theta,i}-\Delta\ell_i^\star}
-{36.8413614679}\right)^2.
-\]
-
-The T0 objective is
-
-\[
-L_{T0}=\frac{L_v+L_\theta+L_\phi}{3}.
-\]
-
-It contains no output-space phase MSE, BCE, augmented Lagrangian, event penalty,
-Huber term, PDE residual, or physics sampling. Equal category weighting changes
-the training measure; it does not change the final target-measure evaluation.
-All 1200 draws reproduced the LF2 deterministic stream identity, allowing the
-observed difference to be associated with the combined phase objective and AL
-removal, though not with phase-logit teaching alone.
-
-### 3.4 Conditional physics refinement and the three claim levels
-
-The intended P0 stage would start from the fixed T0 checkpoint with a fresh Adam
-optimizer and no labels or replay. It would minimize the original full-physics
-objective
-
-\[
-L_{P0}=L_{\mathrm{PDE}}+5L_{\mathrm{BC}}+L_{\mathrm{IC}}
-\]
-
-for 1200 updates, freezing the independent phase head for the first 550 and then
-updating all three heads. This stage is conditional, not automatic.
-
-The decision hierarchy is:
-
-1. **Carrier competence.** T0 must be finite, potential-admissible, contain both
-   events, satisfy field-error/locality/recovery gates, and achieve recall at
-   least 0.90, precision at least 0.80, and active-mass ratio in [0.80,1.20] for
-   each cycle.
-2. **Single-seed PINN-specific pilot.** Only an executed P0 can be compared with
-   the same T0 checkpoint for physics-objective reduction and field/event
-   noninferiority.
-3. **Candidate/paper-positive signal.** An eligible P0 must also be noninferior
-   to direct `LF_ONLY`. Multi-seed and OOD/stress confirmation would still be
-   required under a separate authorization.
-
-Failure at an earlier level makes later levels not reached, not failed.
-
-### 3.5 Matched interface-band mechanism screen
-
-LF4 tested the boundary-support interpretation without changing the network,
-initial weights, V/T fields, base loss, optimizer, update budget, or random
-stream. Three phase-only arms started from the exact LF3-T0 checkpoint and ran
-400 fixed updates. All used
-
-\[
-L_{\mathrm{dev}}=\tfrac12L_{\mathrm{base}}+\tfrac12L_{\mathrm{extra}}.
-\]
-
-DEV-G used 256 additional global points with normalized logit-increment MSE.
-DEV-M instead used 64 samples from each of four frozen teacher-interface pools
-(positive/negative side for each cycle) with the same MSE. DEV-C reused the
-identical DEV-M coordinates but replaced MSE by balanced binary logistic loss,
-\(\operatorname{softplus}(-z)\) on the positive side and
-\(\operatorname{softplus}(z)\) on the negative side, normalized by
-\(\log 2\). This is standard BCE-with-logits, not a new loss family
-[@kervadec2021boundary; @mescheder2019occupancy]. Interface-focused sampling in
-phase-field PINNs is also established [@chen2025pf; @elfetni2025pinnsmpf].
-
-The boundary-exposure claim required
-\(R_{\min}^{M}-R_{\min}^{G}\ge0.03\); the threshold-loss claim analogously
-required \(R_{\min}^{C}-R_{\min}^{M}\ge0.03\). Both additionally required
-precision, active mass, timing, locality, recovery, and V/T quality preservation.
-These matched gates distinguish extra optimization, exposure location, and loss
-shape without treating any constituent as original.
-
-### 3.6 Cycle-resolved temporal zero-level premise test
-
-LF5 asked whether LF4's timing-improved DEV-C endpoint supplied the right local
-geometry for a calibration-preserving temporal correction. On each ROI cell,
-the medium teacher logit (z^star) defined the first onset sign crossing in
-W1/W3 and the first subsequent recovery crossing in W2/W4. For adjacent saved
-times (k,k+1), the teacher crossing fraction was
-
-\[
-\rho^star=-\frac{z_k^star}{z_{k+1}^star-z_k^star},
-\]
-
-and a checkpoint's teacher-secanted zero-level residual was
-
-\[
-r_{\theta,e}=(1-\rho^star)z_{\theta,k}
-              +\rho^star z_{\theta,k+1}.
-\]
-
-The proposed training term was the equally weighted mean of
-\((r_{\theta,e}/36.8413614679)^2\) over the four cycle/direction pools. Before
-any optimizer step, however, a preregistered mechanism gate required DEV-C to
-reduce weighted mean \(|r|\) relative to DEV-M in both onset pools. This check
-had direct decision value: failure closed the GPU branch, rather than spending
-a trajectory on an initialization that contradicted the stated premise. The
-gate failed. A later explicit user override authorized only the unchanged fixed
-trajectory as exploratory evidence and did not convert the gate to PASS.
-
-## 4. Experimental protocol
-
-All neural runs used three independent modified-MLP field networks, four hidden
-layers of width 64, FP64 arithmetic, seed 17, and final-checkpoint evaluation.
-T0 loaded only the exact LF1-B0 model weights; optimizer state was discarded.
-All three field networks were updated with fresh Adam at learning rate
-\(10^{-3}\), standard betas, and global gradient-norm clipping at 10. No
-hyperparameter sweep, checkpoint selection, manual early stop, or second GPU
-arm was permitted.
-
-The T0 sampling stream contained exactly 1200 deterministic draws with rolling
-SHA-256
-`6E9957E861BE0FD10E19A1585635C7B2C323077D89908159B1736734FB548F28`.
-No physics sampler was constructed or advanced in T0. Audits were recorded at
-steps 1, 50, 100, 200, 400, 800, and 1200. The final checkpoint and full-grid
-prediction were fixed at step 1200.
-
-The single V100 trajectory and all summary-bound artifacts were recovered and
-hash-verified before shutdown. A launcher wrapper recorded the literal text
-`$?` rather than an integer exit code; that raw three-byte record was preserved
-as a post-run logging defect. Scientific completion is independently supported
-by the terminal summary and all seven complete, hash-bound artifacts. The defect
-did not justify a second trajectory. After the instance returned SSH connection
-refusal, the unchanged local nominal evaluator compared `LF_ONLY`, LF1-B0,
-LF1-final, LF2-M0, and LF3-T0 against the extra-fine reference.
-
-LF4 then executed DEV-G, DEV-M, and DEV-C for exactly 400 updates each from the
-same LF3-T0 weights. V/T parameters were bitwise frozen; each arm used fresh
-Adam and the identical 1201–1600 base stream. DEV-M and DEV-C also shared the
-same band ledger. The three fixed endpoints, rather than intermediate
-telemetry, determined all comparisons. A first launcher attempt encountered a
-missing `h5py` import before runner import, output creation, or optimizer
-construction. After an isolated dependency/CUDA regression and repeated
-zero-step preflight in the existing project environment, the unchanged
-scientific identity completed once. All files were recovered and hash-matched,
-the idle GPU instance was shut down, and local nominal evaluation was performed
-only after the port closed and SSH returned connection refusal.
-
-LF5 first ran the frozen CPU qualification. It loaded the medium
-carrier and fixed LF4 DEV-M/DEV-C checkpoints read-only, reconstructed the four
-temporal pools, and reproduced the LF4 base and interface streams. All 264
-candidate edges were valid. A single backward probe confirmed a finite nonzero
-phase gradient but made no update. Fine, extra-fine, direct `LF_ONLY`, the
-frozen evaluator, and stress were not opened. After the explicit override,
-three deployment attempts occurred before shutdown. Two ended before any
-optimizer step because the committed bundle lacked one runtime dependency and
-then because the separately uploaded inputs were absent; each isolated repair
-passed a targeted regression without changing the scientific identity. The
-third passed the full remote zero-step preflight and completed 400 DEV-T
-updates. Its base and spatial stream hashes matched, but its temporal batch
-stream differed from the CPU-frozen SHA from step 1. The terminal identity gate
-therefore raised before checkpoint writing. All available raw logs were
-recovered and hash-matched, the idle V100 was shut down, and SSH returned
-connection refusal. No LF5 checkpoint or prediction exists.
-
-## 5. Results
-
-### 5.1 The recovery ladder separated four distinct failure modes
-
-The original scratch PINN remained near the initial phase field, with phase
-maximum approximately 0.03 and no active nodes. An early low-fidelity warm start
-raised the maximum to 0.478 but failed the potential maximum-principle guard.
-The LF1 range-preserving output-space distillation crossed the event threshold
-and produced both cycles, but the predicted active masses were 5.27 and 5.86
-times the teacher. LF2 target-measure calibration reduced potential,
-temperature, and phase weighted errors to 25.7%, 6.55%, and 27.3% of LF1-B0,
-respectively, while erasing both events. LF3 recovered a phase maximum of 0.9912
-and valid two-cycle topology (Figure 1).
-
-![Recovery ladder](figures/figure-01-recovery-ladder.png)
-
-This sequence does not identify a single causal factor. It does show that the
-four outcomes—cold collapse, invalid field representation, broad event support,
-and low-error event erasure—are observably different and require different
-guards.
-
-### 5.2 LF3 changed the dominant topology error from false-positive mass to missed support
-
-On the full medium grid, LF3-T0 was finite, passed the phase range and potential
-maximum-principle guards, reached a maximum temperature of 0.8050, and produced
-both event and recovery episodes. Cycle-1 and cycle-2 event-time errors were
-0.00485 and 0.00170, within the frozen 0.005 limit. Precision was 0.907 and
-0.866, while active-mass ratios were 0.888 and 0.887. Thus the predicted event
-was neither diffuse nor grossly oversized.
-
-However, recall was 0.806 in cycle 1 and 0.769 in cycle 2. Both values failed
-the 0.90 hard gate. In contrast, LF1-B0 recall was about 0.899 and 0.945, but
-precision was only about 0.171 and 0.161 because its active mass was more than
-five times too large (Figure 2). The combination pilot therefore traded a broad,
-mostly false-positive event for a localized event with incomplete boundary
-support. The visual audit at reference peak times shows the same pattern:
-overlap dominates the event core, while missed support forms a narrow boundary
-(Figure 4).
-
-![Full-medium event metrics](figures/figure-02-full-medium-event-metrics.png)
-
-![Phase-support snapshots](figures/figure-04-phase-support-snapshots.png)
-
-The final full-medium weighted errors were
-\(7.15\times10^{-5}\) for potential, \(7.11\times10^{-4}\) for temperature,
-and \(1.88\times10^{-3}\) for phase. Relative to LF1-B0 these were 0.242, 0.0634,
-and 0.0331. These strong field-error improvements did not override the recall
-failure.
-
-### 5.3 Local extra-fine evaluation confirms recovery, not paper-positive accuracy
-
-The frozen local evaluator uses event-existence, locality, peak, and recovery
-guards rather than the LF3 teacher-relative 0.90 recall gate. LF3-T0 passed
-those evaluator guards, with event times 0.23522 and 1.49444 versus reference
-times 0.24060 and 1.49840. This is consistent with, not contradictory to, the
-full-medium failure: a localized event may pass existence/locality tests while
-still omitting more than 10% of teacher-positive support.
-
-LF3-T0 reduced phase ROI RMS from 0.11056 for LF2-M0 to 0.03900 and reduced the
-time-averaged phase-region symmetric difference from 0.00515 to 0.002026. It
-also improved the LF1-B0 event timing. Nevertheless, direct `LF_ONLY` remained
-much stronger: phase ROI RMS 0.006570, phase symmetric difference 0.0003495,
-temperature ROI RMS 0.001801, current nRMSE 0.003522, and potential RMS
-0.000576. LF3 remained approximately 5.9, 5.8, 9.6, 39.0, and 10.4 times worse
-on these five metrics, respectively (Figure 3).
-
-![Local strong-baseline gap](figures/figure-03-local-error-gap.png)
-
-### 5.4 The preregistered stop prevented an unsupported PINN claim
-
-The only failed carrier checks were the two recall thresholds. The machine
-therefore returned
-
-```text
-LF3_CARRIER_NOT_ESTABLISHED
-P0_NOT_TRIGGERED_BECAUSE_T0_GATE_FAILED
-candidate = none
-```
-
-T0 executed 1200 data-only optimizer steps; P0 executed zero physics steps.
-Consequently, the experiment provides no P0-versus-T0 physics-objective ratio,
-no evidence that physics refinement preserves the carrier, and no PINN-specific
-Pareto result. It would be incorrect to call P0 a failed method, because it was
-not run; it would be equally incorrect to call T0 a PINN result, because its
-loss contained no PDE or constitutive residual (Figure 5).
-
-![Evidence gates](figures/figure-05-evidence-gates.png)
-
-### 5.5 Matched LF4 controls support interface exposure, not threshold loss
-
-CPU-G found that 455 of 481 false-negative nodes (94.6%) and 199 of 227
-false-positive nodes (87.7%) lay directly on the frozen four-neighbour teacher
-interface (Figure 6). LF4 then tested whether this geometry mattered.
-
-![Interface-boundary geometry](figures/figure-06-interface-boundary-geometry.png)
-
-DEV-G, the equal-budget global-extra control, reached cycle recalls 0.8402 and
-0.8194 but failed both timing gates. DEV-M replaced only the extra points with
-the teacher-interface band. Recall rose to 0.9373 and 0.9093; precision remained
-0.9092/0.9462, mass ratios remained 1.031/0.961, recovery remained complete,
-and phase weighted MSE decreased from 0.001309 to 0.001210. The minimum-recall
-gain was 0.08984, almost three times the preregistered 0.03 margin. The frozen
-mechanism verdict was therefore `BOUNDARY_EXPOSURE_SUPPORTED`. DEV-M still
-missed the cycle-1 timing limit (0.01053 versus 0.005), so it was not an entry
-carrier.
-
-DEV-C applied balanced BCE-with-logits on the identical interface coordinates.
-Its recalls rose to 0.9416/0.9755 and both timing errors fell below 0.005, but
-phase weighted MSE increased to 0.02967—15.8 times LF3-T0 and 24.5 times DEV-M—
-while cycle-2 recovery fell from 1.0 to 0.768. Although its recall difference
-exceeded 0.03, it failed the preregistered quality-preservation clause. The
-threshold-aligned loss was therefore not supported as the load-bearing
-mechanism (Figure 7).
-
-![LF4 development ablation](figures/figure-07-lf4-development-ablation.png)
-
-The three fixed endpoints failed entry for distinct reasons: both timing gates
-for DEV-G, cycle-1 timing for DEV-M, and phase error for DEV-C. Consequently no
-arm was selected, P0 ran zero updates, and the terminal machine outcome was
-`LF4_NO_DEVELOPMENT_ENTRY` with no candidate (Figure 8).
-
-![LF4 physics-Pareto gate](figures/figure-08-lf4-physics-pareto.png)
-
-### 5.6 Aggregate event timing did not imply local zero-level alignment
-
-CPU-T reconstructed 68/68/64/64 valid edges for cycle-1 onset/recovery and
-cycle-2 onset/recovery, respectively, with no invalid edges. DEV-M's weighted
-mean absolute residuals were 0.2921 and 0.3100 in the two onset pools. DEV-C,
-despite passing LF4's aggregate timing gates, was worse at 0.7238 and 0.6041.
-Its recovery residuals were also substantially larger (5.247 and 7.113 versus
-0.398 and 0.699). DEV-M's signed onset residuals agreed with the independently
-recorded early/late timing directions, and a zero-step backward probe was
-finite and nonzero. Thus the failure was not an invalid edge construction or a
-disconnected loss; it was a direct rejection of the required ordering between
-the two inherited endpoints (Figure 9).
-
-![LF5 temporal-edge geometry](figures/20260905T150045Z-lf5-temporal-edge-geometry.png)
-
-The CPU result sharpens the LF4 timing–calibration conflict. A model can improve a
-single aggregate event-time statistic while moving many local interface cells
-farther from the teacher's crossing fraction (Figure 10). Under the frozen
-rule, the proposed DEV-T objective was not preregistered for execution. Under
-the later user override, it completed 400 exploratory updates. The base and
-spatial ledgers reproduced their frozen hashes, whereas the temporal ledger
-ended at `48A0C6B4...AAFB127` instead of `8FD79D99...C9B3BD9`, with divergence
-at the first batch. The higher-priority identity failure invalidates model
-voting and prevented checkpoint creation.
-
-The non-voting step-400 telemetry nonetheless supplies a bounded directional
-observation: both recalls reached 0.918/0.917, precision 0.910/0.946, active-mass
-ratios 1.009/0.970, and phase weighted MSE 0.000784, but cycle-1 timing error
-remained 0.0094. Thus extra temporal-edge supervision may recover support while
-still failing aggregate timing; this is not a valid carrier result. P0 is
-`NOT_RUN` because no identity-valid carrier checkpoint existed (Figure 11).
-
-![LF5 timing-calibration audit](figures/20260905T150045Z-lf5-timing-calibration.png)
-
-![LF5 decision path](figures/20260905T150045Z-lf5-physics-pareto.png)
-
-## 6. Discussion
-
-### 6.1 What was learned
-
-Five conclusions are directly supported within the fixed protocol.
-
-First, low aggregate field error is not a proxy for sparse-event competence.
-LF2 had substantially lower weighted field error than LF1-B0 but erased the
-event. Second, event existence and recall are not sufficient either. LF1-B0
-covered most teacher-positive nodes by predicting a region more than five times
-too large. Third, the LF3 combination recovered a numerically admissible,
-well-timed, high-precision event after the target-measure cold collapse, but it
-did not reproduce enough of the teacher support to establish the preregistered
-carrier.
-
-Fourth, LF4 converts the boundary-support interpretation into a matched,
-system-specific mechanism result: allocating the same extra supervision budget
-to the teacher interface materially improves minimum recall beyond generic
-global extras. It simultaneously shows that more threshold alignment is not
-automatically better: binary logistic supervision corrected event timing but
-destroyed field fidelity. Exposure location and loss shape therefore play
-different roles.
-
-Fifth, aggregate event timing and local interface timing are not interchangeable.
-LF5's CPU audit falsified the assumption that DEV-C's aggregate timing gain made
-it a better initialization for teacher-secanted temporal zero-level alignment.
-The post-qualification exploratory trajectory cannot overturn that result: its
-temporal stream identity failed, and even its non-voting endpoint retained a
-cycle-1 timing miss. This preserves the LF4 boundary-exposure result while
-rejecting one specific continuation premise.
-
-The most specific supported interpretation is that the remaining LF3 mismatch
-is an event-boundary coverage problem. It is not the previous cold-state basin,
-because phase maximum and both event episodes returned. It is not primarily
-diffuse false-positive mass, because precision and mass gates passed. It is not
-a temporal-only error, because event-time and recovery gates passed. The red
-boundary band in Figure 4 and the two recall failures point to incomplete
-support around the localized event core. LF4 directly supports the exposure
-part of this interpretation while showing that the remaining timing–fidelity
-trade-off is unresolved.
-
-### 6.2 What was not learned
-
-LF3 changed multiple coupled factors relative to LF2: phase supervision moved
-from target-measure output-space losses with BCE and stochastic inequality AL to
-equal-category normalized logit-increment MSE without BCE or AL. The historical
-LF2 trajectory is therefore a baseline for the combined recovery package, not a
-strict single-factor ablation. The result cannot attribute the improvement to
-the logit link alone, startup scaling alone, category weighting alone, or AL
-removal alone.
-
-Likewise, the local extra-fine evaluator pass does not supersede the frozen
-full-medium carrier gate. The two instruments ask different questions. The
-extra-fine event guard establishes that an event exists in the intended place
-and recovers; the carrier gate demands quantitative teacher-support fidelity.
-LF4 does not establish a threshold-loss benefit, an eligible carrier, or a
-physics-informed improvement. Its boundary-exposure attribution is conditional
-on the inherited LF3 representation and one nominal seed; it does not identify
-the earlier latent components. LF5 does not establish that temporal supervision
-as a class is ineffective. It did not train the proposed loss and did not test
-a kinetic-RHS teacher, \(\partial_t\phi\) supervision, continuous-time event
-localization, or a matched endpoint-MSE control.
-
-### 6.3 Why further tuning was not justified inside this campaign
-
-LF4 reveals a tempting post hoc mixture: retain DEV-M's field fidelity while
-borrowing DEV-C's timing correction. Such a mixture, an intermediate loss
-weight, or a changed timing gate would be a new scientific identity selected
-after inspecting endpoints. More importantly, a carrier-only improvement would
-still not establish the central PINN value proposition. The strongest direct
-baseline remains far ahead, and physics refinement was never reached. The
-efficient decision is therefore to preserve the matched boundary-exposure
-result and close LF4 rather than consume unregistered rescue arms.
-
-### 6.4 Paper positioning
-
-At its present evidence level, this work is suitable as an advisor draft and as
-a reproducible negative/diagnostic study. Its defensible central message is:
-
-> In a coupled electric–thermal–phase benchmark with sparse localized events,
-> apparently favorable residual or field metrics can correspond to mutually
-> distinct scientific failures; matched competence-first controls identify
-> interface exposure as a recall mechanism while revealing a timing–fidelity
-> conflict, and prevent data-only solver recovery from being mistaken for PINN
-> value.
-
-It is not yet a positive method paper. To support that stronger identity, a
-future, separately authorized program would need a timing-preserving,
-field-faithful carrier mechanism built on the supported interface exposure, an executed label-free physics refinement with matched
-T0 comparison, a strict output-phase matched ablation if the logit mechanism is
-claimed, repeated seeds, and a predefined OOD/stress evaluation against direct
-`LF_ONLY`. Those are prospective requirements, not results of the present work.
-
-## 7. Limitations
-
-The benchmark is transparent and coupled but synthetic. All results are tied to
-one fixed spatial/temporal discretization, one nominal protocol, one network
-family, one seed, and frozen update budgets. The extra-fine solution is a
-numerical carrier, not a continuum-limit certificate. No material fitting or
-experimental data were used. No stress or formal OOD result is available. The
-recovery sequence was designed adaptively across campaigns, so historical arms
-should not be interpreted as a single simultaneous factorial experiment. LF3
-itself is a single combination pilot and cannot establish component causality.
-The three LF4 arms are internally matched, but remain one seed and one nominal
-object; their boundary-exposure result cannot establish cross-seed or OOD
-generality. LF5 combines a valid zero-update premise rejection with one
-post-qualification, identity-invalid 400-step trajectory. The latter adds only
-directional telemetry, not valid model-performance evidence.
-
-Finally, direct interpolation of the available medium trajectory is an unusually
-strong baseline because the full medium field is available at inference points.
-Any future claim of neural value must predeclare a different measurable benefit
-if it does not meet accuracy noninferiority—for example, sparse-observation
-reconstruction, continuous-query compression, inverse identification, or
-generalization to unseen complete protocols. None of those benefits was tested
-here and none is claimed retrospectively.
-
-## 8. Conclusion
-
-A bounded solver-recovery sequence for a coupled electric–thermal–phase system
-progressed from cold-state collapse to an admissible localized two-cycle neural
-event and then to a matched mechanism attribution. Teacher-interface exposure
-raised minimum cycle recall by 0.0898 beyond equal-budget global extras while
-preserving the frozen quality controls. Threshold-aligned BCE repaired timing
-but inflated phase error 15.8-fold relative to LF3-T0, so it was not a
-quality-preserving mechanism. No endpoint passed every carrier-entry check and
-the label-free physics stage was correctly not run. A subsequent zero-update,
-cycle-resolved edge audit showed that the timing-improved endpoint had worse
-local onset alignment in both cycles, rejecting the proposed temporal-zero-level
-continuation. A later exploratory override completed 400 updates, but temporal
-stream identity drift invalidated the endpoint before checkpoint writing; its
-non-voting metrics suggested support recovery without cycle-1 timing recovery.
-P0 remained unexecuted. The result is a substantive boundary-exposure finding
-plus a bounded mechanism-premise rejection and an identity-invalid directional
-observation within a negative carrier/PINN outcome, not a positive method claim. The strongest direct
-low-fidelity baseline remains the standard that any future positive route must
-face.
+Steps 1--550 froze phase parameters and buffers bitwise while updating V/T; the
+full residual still read phase. Steps 551--1200 unfroze phase and continued the
+same optimizer jointly. The physics stream and blind evaluation pool were fully
+materialized before GPU execution.
+
+## 4. Results
+
+### 4.1 Interface exposure was supported before LF6
+
+The historical ladder is summarized in Table 2. LF3 restored the event core but
+under-covered teacher-positive boundary cells. In the matched LF4 screen,
+interface-band MSE raised minimum recall from 0.819 to 0.909 without the large
+field-error cost of threshold BCE. This remains the only positive mechanism
+statement: it is bounded to one seed, one object, and the inherited LF3
+representation.
+
+### 4.2 Rank-band exposure reached safety but not strict competence
+
+CPU-F reconstructed the two count crossings and all fixed streams without an
+optimizer update (Figure 12). Both LF6 arms were finite, potential-admissible,
+phase-range valid, and preserved V/T bitwise.
+
+![LF6 event-frontier geometry](figures/20260906T065434Z-lf6-event-frontier.png)
+
+DEV-U achieved recall 0.897/0.899, precision 0.926/0.921, active-mass ratios
+0.968/0.976, and timing errors 0.00690/0.00140. It failed both safety recall
+checks and strict cycle-1 timing. DEV-R achieved recall 0.918/0.923, precision
+0.897/0.920, active-mass ratios 1.023/1.003, and timing errors
+0.01053/0.00180. It passed the relaxed safety gate but failed only strict
+cycle-1 timing. Its phase weighted MSE was 0.001183, slightly lower than
+DEV-U's 0.001207.
+
+![LF6 matched development](figures/20260906T065434Z-lf6-matched-development.png)
+
+Because neither arm was strict, the frozen verdict was
+`NO_RANK_SPECIFIC_INCREMENT`. DEV-R was selected solely as the deterministic
+safety near-carrier for P0. It is not a strict carrier, and its selection does
+not establish a rank-band mechanism.
+
+### 4.3 Physics residual reduction destroyed the selected near-carrier event structure
+
+The first 550 P0 updates passed the block identity check: phase weights and
+buffers were bitwise unchanged and phase optimizer state was empty. Phase MSE
+and recalls therefore remained 0.001183 and 0.918/0.923. At the selected DEV-R
+endpoint, potential/temperature weighted MSE was
+0.00007148/0.0007112. After the first V/T update it was
+0.00008249/0.002458, and by step 550 it was 0.002055/0.04316. This isolates
+substantial V/T drift under pure physics while the event carrier itself was
+locked.
+
+After joint unfreezing, the event collapsed rapidly. At step 600, only 50 joint
+updates later, phase MSE was 0.01833 and recalls were 0.343/0.216. By step 800
+cycle 1 had no event; at step 1200 both recalls were zero, cycle 1 was absent,
+cycle 2 was delayed to 1.7184, and both cycles failed recovery. Potential
+admissibility and phase range remained valid, so the result is not a numerical
+range failure.
+
+The fixed blind physics objective fell from 4.927872 to 0.063147, a ratio of
+0.012814 that easily passed the 0.50 reduction gate. Yet final potential,
+temperature, phase, and topology errors were 28.62, 52.60, 25.84, and 20.03
+times their selected-endpoint values. The preregistered outcome is therefore
+`LF6_P0_PRESERVATION_FAILED`, not a PINN Pareto success (Figure 14).
+
+![LF6 physics Pareto](figures/20260906T065434Z-lf6-physics-pareto.png)
+
+### 4.4 The direct low-fidelity baseline remains stronger
+
+On the post-shutdown extra-fine evaluator, DEV-R passed the coarser event guard
+with phase ROI RMS 0.03237, temperature ROI RMS 0.01736, and current NRMSE
+0.13730. P0 failed the event guard and worsened phase/temperature RMS to
+0.15750/0.15147; current NRMSE was 0.07540. Direct `LF_ONLY` passed the event
+guard with 0.00657/0.00180/0.00352. Neither neural endpoint is noninferior to
+the strongest direct baseline.
+
+## 5. Discussion
+
+### 5.1 What LF6 establishes
+
+LF6 supplies two pieces of valid evidence. First, critical-rank endpoint cells
+were not uniquely sufficient under the matched strict rule: the rank arm reached
+safety, but neither arm was strict. Second, physics-only continuation sharply
+reduced its own blind objective while destroying field and event competence.
+The latter is stronger than the earlier inference from an unexecuted P0: it is a
+directly observed, two-stage forgetting trajectory.
+
+The timeline narrows the failure. V/T drift began while phase was immutable,
+showing that the selected safety near-carrier endpoint was not jointly compatible with the frozen
+physics objective under the block-F update. Event collapse then followed almost
+immediately after phase unfreezing. This supports `physics forgetting` as the
+observed phenomenon. It does not identify a unique cause among model mismatch,
+optimization geometry, insufficient coupling constraints, or the absence of
+replay; those remain hypotheses.
+
+### 5.2 What LF6 does not establish
+
+DEV-R's safety pass does not make it a strict carrier. Since DEV-U and DEV-R
+both missed strict competence, their difference cannot support a rank-specific
+mechanism claim. Historical LF3--LF5 runs are not strict single-factor
+ablations. P0's residual reduction does not show physical accuracy, because its
+observable fields and events degraded. The run does not show that PINNs in
+general fail, that replay would solve the conflict, or that the medium teacher
+is exact physics truth.
+
+The local evaluator and full-medium gate answer different questions. A
+post-shutdown event-guard pass for DEV-R does not override its strict timing
+failure. Direct interpolation also remains the accuracy reference; no speed,
+compression, inverse, sparse-data, or OOD advantage was measured and none may
+be supplied after the fact.
+
+### 5.3 Paper positioning and next evidence
+
+The maximum defensible central statement is:
+
+> In a fixed coupled electro-thermal-phase benchmark, competence-first matched
+> controls identify interface exposure as a bounded recall mechanism, reject a
+> rank-specific endpoint increment under the strict gate, and show directly
+> that large physics-residual reduction can catastrophically erase an otherwise
+> safety-valid localized event carrier.
+
+This supports an advisor draft and potentially a carefully scoped
+negative/diagnostic paper. It does not support a positive methods submission.
+A future positive route must treat carrier preservation as a load-bearing part
+of physics training, not as an entry-only screen. The smallest informative next
+experiment should be a separately authorized, matched physics-continuation
+test—such as a frozen, preregistered event-preservation/replay mechanism versus
+pure physics—from the same selected endpoint. Only a positive result would
+justify multiple seeds and a sparse/equal-information task. Stress must remain
+sealed until a candidate exists.
+
+## 6. Limitations
+
+All experiments use one synthetic object, fixed discretization, architecture,
+seed, and nominal protocol. The recovery sequence was adapted across separately
+frozen campaigns; it is not a single factorial comparison. LF6's two
+development arms are internally matched, but the broader sequence is not.
+Fine/extra-fine data are numerical references rather than continuum or material
+truth. There is no experimental validation, multi-seed analysis, sparse task,
+formal OOD result, stress result, or submission-ready candidate.
+
+The safety timing gate was intentionally weaker than strict competence to let
+P0 test whether physics could repair or preserve a near-carrier. That design
+made the physics experiment possible, but it means DEV-R must never be called a
+strict data-only carrier. Conversely, P0 is a valid negative physics result,
+not an engineering failure: all updates, stream identities, artifacts, recovery,
+shutdown, and local adjudication completed.
+
+## 7. Conclusion
+
+The program progressed from cold collapse to localized event recovery, a
+matched interface-exposure result, and finally an executed label-free physics
+continuation. LF6's teacher-side frontier arm reached a relaxed safety entry but
+not strict timing, while the matched control was also non-strict; therefore no
+rank-specific increment was established. P0 reduced the fixed blind physics
+objective by 98.7% yet increased all preservation errors and erased both-cycle
+recall. The decisive lesson is not that residuals are useless or PINNs are
+impossible. It is that residual reduction, field admissibility, and sparse-event
+competence are independent obligations, and in this frozen continuation they
+were actively in conflict. Candidate remains none; the direct low-fidelity
+baseline remains stronger; stress remains sealed and unread.
 
 ## Data, code, and evidence availability
 
-The contracts, implementation, compact artifacts, figures, and manuscript are
-versioned in the project repository. Large checkpoints, predictions, and raw
-logs remain in git-ignored run storage and are bound by size and SHA-256 in the
-terminal evidence. The two stress references remain sealed and unread. No
-external publication or submission is authorized by this draft.
+Contracts, implementations, compact artifacts, figures, and this manuscript are
+versioned in the repository. Large checkpoints, predictions, and raw logs remain
+in git-ignored run storage and are bound by size and SHA-256 in terminal
+evidence. No external publication or submission is authorized by this draft.
