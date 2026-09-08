@@ -5,24 +5,26 @@
 ## 当前状态
 
 - `phase_id`: `PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE`
-- `lifecycle_state`: `ACTIVE`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `PENDING_ER_S_AND_ER_CV_SCREENS`
-- `mechanism_outcome`: `PENDING_MATCHED_ADJUDICATION`
-- `claim_status`: `CPU_QUALIFIED_GPU_MECHANISM_UNTESTED`
-- `next_research_execution_authorized`: `true`
+- `machine_outcome`: `LF9_NO_SAFE_MIXED_FORM_SCREEN`
+- `mechanism_outcome`: `NO_SAFE_MIXED_FORM_SCREEN`
+- `claim_status`: `VALID_MATCHED_SCREEN_STALL_NO_COMPLETE_PINN_PARETO_OR_CANDIDATE`
+- `next_research_execution_authorized`: `false`
 
-LF9 已通过零科学更新 CPU 资格并激活。当前执行 exact DEV-R 起点的 mandatory
-ER-S/ER-CV matched screens，以隔离 equation routing 与 thermal control-volume
-functional；条件继续 filtered full path 和 no-filter control。candidate 仍为 none，
-stress 保持 sealed/unread。
+LF9 两条身份有效的 matched screens 均只保留一个 25-update 安全前缀，随后在
+最小冻结学习率因 temperature preservation 停滞；无臂完成冻结 200-update
+screen。filtered full path 与 no-filter control 因前提未满足而未运行。candidate
+为 none，stress 保持 sealed/unread，当前无新科研执行授权。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
-- 当前激活决定：[ADR 0071](docs/adr/0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md)
+- 当前关闭决定：[ADR 0072](docs/adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md)
+- LF9 终局：[terminal closeout](docs/experiment/2026-09-08-phk-v23-lf9-terminal-closeout.md)
+- LF9 激活决定：[ADR 0071](docs/adr/0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md)
 - LF9 CPU 资格：[CPU qualification](docs/experiment/2026-09-08-phk-v23-lf9-cpu-qualification.md)
 - 当前关闭决定：[ADR 0070](docs/adr/0070-close-phk-v23-lf8-competence-filter-completion.md)
 - LF8 终局：[terminal closeout](docs/experiment/2026-09-08-phk-v23-lf8-terminal-closeout.md)

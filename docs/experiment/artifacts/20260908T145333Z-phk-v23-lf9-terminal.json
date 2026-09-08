@@ -1,0 +1,168 @@
+{
+  "schema_id": "phk-v23-lf9-terminal-artifact-v1",
+  "run_id": "20260908T145333Z-phk-v23-lf9-terminal",
+  "task_id": "PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE",
+  "phase_id": "PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE",
+  "lifecycle_state": "COMPLETE",
+  "cpu_outcome": "LF9_CPU_QUALIFICATION_PASS",
+  "machine_outcome": "LF9_NO_SAFE_MIXED_FORM_SCREEN",
+  "mechanism_outcome": "NO_SAFE_MIXED_FORM_SCREEN",
+  "unique_next": "FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE",
+  "next_research_execution_authorized": false,
+  "candidate": null,
+  "contracts": {
+    "program": {"path": "configs/phk_v23/program_contract_lf9_equation_routed_thermal_cv.json", "sha256": "D64040BC1AFA45E9D35565AB1A6D82ED5E985E411C625A90531B226AA3031309"},
+    "method": {"path": "configs/phk_v23/method_contract_lf9_equation_routed_thermal_cv.json", "sha256": "BDF88FA4B17C9F432FAB68101A375590F0696BB4D24B0F8F0B9F5F1B57137CA6"},
+    "data": {"path": "configs/phk_v23/data_contract_lf9_equation_routed_thermal_cv.json", "sha256": "B86A9F38A06D66A8B981CBA3F06AA24E5607F90B4AB328A2CF1C5DA26F386D0B"},
+    "decision": {"path": "configs/phk_v23/decision_contract_lf9_equation_routed_thermal_cv.json", "sha256": "A475E0AD5DEB9742543535F75EB273E4BB3E60DB8035E1082DCA4FD49A31BED5"},
+    "write_allowlist_lock": {"path": "configs/phk_v23/lf9_write_allowlist_lock.json", "sha256": "3DA90B9ABBE4A6FCE22B7D889EC5CACE91EBBAD4792A22EFB40B478AD5922CBC"}
+  },
+  "executed_source_identity": {
+    "starting_commit": "f16ca9db66843c04d420c077679604dd553ac036",
+    "activation_commit": "c38fa80d2fa2ceb0b1bd1fa9faf70440f2a07159",
+    "engineering_commits": [
+      "3ad2dcb302faca00bb60d1cbb1529b11061b6cca",
+      "bc3950a13935a9ded70d4a8b6cc2862deb4a3fd8"
+    ],
+    "source_identity": "LF9-BUNDLE-A8A03C2D2A049F2025793B6B9BA8C7C6412EDF594DBF2042BA3C59F1B9CE5D8B",
+    "source_archive": {"path": "outputs/deploy/phk-v23-lf9-source-bc3950a.tar.gz", "size_bytes": 31333165, "sha256": "0812EF2B6780AB88D20B23CD8CBF3199779FF02A08FD3DB352857FD2B65847EA"},
+    "deployed_manifest": {"path": "cloud/phk_v23_lf9_autodl/deployed-source-manifest.json", "size_bytes": 9287, "sha256": "861CE9AAA3EA4601B0EB5517EAB9019184AE1F88804D4CA8D9E177F3159B5D52"},
+    "base_commit_in_deployed_manifest": "bc3950a13935a9ded70d4a8b6cc2862deb4a3fd8"
+  },
+  "frozen_inputs": {
+    "medium_sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F",
+    "exact_dev_r_checkpoint_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "strong_ledger_sha256": "29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801",
+    "strong_ledger_semantic_sha256": "0E2F680D33C4489F6092CB5D01E87483F7ECDA8290CD3E2C24EBDD06B3DA2B7F",
+    "physics_1200_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53",
+    "fixed_blind_pool_sha256": "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF",
+    "cv_ledger_sha256": "65BAAB64A2B0D8F8B4042B95E6F2FA583EA0D74754B2B38F5A56226DFF7F13C7",
+    "cv_ledger_manifest_sha256": "B8394B4E517A55D626BB24C13AD53ABE5EC2B81BAC65763240CEC18F90A2D25C",
+    "cv_ledger_semantic_sha256": "D26E2BDAACF108249C3DBCBAD038101A900DF82CBDC972F37FC0E33D43A851AF",
+    "cv_training_rolling_sha256": "12EFFDA5B6417C4DFB7AB605B4AEB69D4536FDCCF251A949BF9376B382392F3D",
+    "cv_one_cell_blind_sha256": "410F39C5789C8FB548ED4E9ECC30C0D845B5979495B404AA189D87B0845A8EBA",
+    "cv_two_by_two_blind_sha256": "3F606A774344CB9294000C2C65411E93266CC97E43FA3FF9C812055948879605"
+  },
+  "cpu_qualification": {
+    "status": "LF9_CPU_QUALIFICATION_PASS",
+    "compact_sha256": "94D549BB66601C90AD9830FD4BF87408FE5891A87E88DE3D416E06CBDA750BD9",
+    "manifest_sha256": "160577927EA4DDC362151066F4C8760B25051B5BDF6DA162847B2C971390C71C",
+    "scientific_optimizer_updates": 0,
+    "checks_passed": 13,
+    "checks_total": 13,
+    "normalization": {"s_cv": 3.932157024118817, "r_cv0_rms": 0.7097646689156927, "L_T_strong0": 0.03258119801290102, "L_T_CV0": 0.03258119801290102},
+    "dev_r_blind_baseline": {"J_S": 4.9278721846990505, "J_M": 4.925521658963255, "CV1": 0.01198042763327962, "CV4": 0.008291401447887748}
+  },
+  "scientific_gpu_execution": {
+    "gpu": "Tesla V100-PCIE-32GB",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "scientific_gpu_trajectories_attempted": 2,
+    "ER_S": {"attempted_updates": 150, "accepted_updates": 25, "accepted_blocks": 1, "rejected_block_attempts": 5, "endpoint_valid": true, "disposition": "FILTER_STALLED_WITH_VALID_PREFIX", "screen_go": false},
+    "ER_CV": {"attempted_updates": 150, "accepted_updates": 25, "accepted_blocks": 1, "rejected_block_attempts": 5, "endpoint_valid": true, "disposition": "FILTER_STALLED_WITH_VALID_PREFIX", "screen_go": false},
+    "selected_arm": null,
+    "filtered_full_path": {"attempted_updates": 0, "executed": false, "disposition": "NOT_RUN_PREREQUISITE_NOT_MET"},
+    "accepted_schedule_control": {"attempted_updates": 0, "executed": false, "disposition": "NOT_RUN_PREREQUISITE_NOT_MET"},
+    "scientific_retry": false
+  },
+  "screen_endpoints": {
+    "ER_S": {
+      "accepted_learning_rate": 0.0000078125,
+      "last_rejection": ["relative_temperature"],
+      "safety_gate_passed": true,
+      "strict_gate_passed": false,
+      "strict_gate_failed_checks": ["cycle_1_timing"],
+      "blind": {"J_S": 4.876983808325191, "J_M": 4.874811625314533, "CV1": 0.012011965906869555, "CV4": 0.008297958510107905},
+      "blind_ratios_to_dev_r": {"J_S": 0.9896733570866819, "J_M": 0.9897046369583123, "CV1": 1.0026324831262556, "CV4": 1.0007908267693186},
+      "checkpoint_sha256": "8CC0123C6348DE1E490F7C3AD049418251FF701C2308AB1E8A43F85E9C5225BA",
+      "prediction_sha256": "555BBF20DAD295743FB7FA3B3CAEB9307E8FAC08202B0BFF5A5EF102097D4A77"
+    },
+    "ER_CV": {
+      "accepted_learning_rate": 0.0000078125,
+      "last_rejection": ["relative_temperature"],
+      "safety_gate_passed": true,
+      "strict_gate_passed": false,
+      "strict_gate_failed_checks": ["cycle_1_timing"],
+      "blind": {"J_S": 4.876974053680426, "J_M": 4.874802072377451, "CV1": 0.012011676537792147, "CV4": 0.00829821276489794},
+      "blind_ratios_to_dev_r": {"J_S": 0.9896713776025559, "J_M": 0.9897026974810866, "CV1": 1.0026083296413997, "CV4": 1.0008214916444464},
+      "checkpoint_sha256": "CBC3450A18F7CFB3B028CE6B9137DD473A0D5065F4B0F773E0EF02D842189E70",
+      "prediction_sha256": "7BA750684131328C33A34E2156E7E06F41466D557CF918BEA5494F291D7F80BA"
+    }
+  },
+  "shared_endpoint_audit": {
+    "finite": true,
+    "potential_valid": true,
+    "phase_valid": true,
+    "phase_maximum": 0.9910522424050187,
+    "cycle_1": {"hard_recall": 0.9175257731958762, "hard_precision": 0.8967254408060453, "hard_active_mass_ratio": 1.0231958762886597, "event_time_absolute_error": 0.010533333333333339, "recovery": 1.0},
+    "cycle_2": {"hard_recall": 0.9228675136116149, "hard_precision": 0.920361990950226, "hard_active_mass_ratio": 1.0027223230490017, "event_time_absolute_error": 0.0018000000000002458, "recovery": 1.0},
+    "phase_weighted_mse": 0.0011832624059166495,
+    "topology_weighted_loss": 0.0046144880306589605
+  },
+  "local_adjudication": {
+    "outcome": "LF9_NO_SAFE_MIXED_FORM_SCREEN",
+    "mechanism_outcome": "NO_SAFE_MIXED_FORM_SCREEN",
+    "dev_r": {"event_guard": true, "phase_primary": 0.00160984375, "phase_roi_rms": 0.03236830783140375, "temperature_roi_rms": 0.017361839140172267, "current_nrmse": 0.13729673237736076},
+    "er_s": {"event_guard": true, "phase_primary": 0.00160984375, "phase_roi_rms": 0.03236830783140375, "temperature_roi_rms": 0.017204027630401447, "current_nrmse": 0.13709198277554216},
+    "er_cv": {"event_guard": true, "phase_primary": 0.00160984375, "phase_roi_rms": 0.03236830783140375, "temperature_roi_rms": 0.017200575850579367, "current_nrmse": 0.13709201776080773},
+    "direct_lf_only": {"event_guard": true, "phase_primary": 0.00034953125, "phase_roi_rms": 0.006570375888844028, "temperature_roi_rms": 0.0018006948281555659, "current_nrmse": 0.0035221351893723663},
+    "prelocal_internal_pareto": false,
+    "complete_internal_pinn_pareto": false,
+    "direct_paper_value": false,
+    "candidate": null
+  },
+  "raw_artifacts": {
+    "run_summary": {"path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/gpu/lf9-run-bc3950a/run_summary.json", "size_bytes": 21442, "sha256": "472FF01C74DE3CC361A0E3205221BADA302538698A3A5FBFAAF761C76F21464F"},
+    "er_s_checkpoint": {"path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/gpu/lf9-run-bc3950a/er-s/screen-checkpoint.pt", "size_bytes": 789220, "sha256": "8CC0123C6348DE1E490F7C3AD049418251FF701C2308AB1E8A43F85E9C5225BA"},
+    "er_s_prediction": {"path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/gpu/lf9-run-bc3950a/er-s/screen-prediction.npz", "size_bytes": 217930830, "sha256": "555BBF20DAD295743FB7FA3B3CAEB9307E8FAC08202B0BFF5A5EF102097D4A77"},
+    "er_cv_checkpoint": {"path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/gpu/lf9-run-bc3950a/er-cv/screen-checkpoint.pt", "size_bytes": 789220, "sha256": "CBC3450A18F7CFB3B028CE6B9137DD473A0D5065F4B0F773E0EF02D842189E70"},
+    "er_cv_prediction": {"path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/gpu/lf9-run-bc3950a/er-cv/screen-prediction.npz", "size_bytes": 217932170, "sha256": "7BA750684131328C33A34E2156E7E06F41466D557CF918BEA5494F291D7F80BA"},
+    "recovery_manifest": {"path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cloud/recovery_manifest.json", "size_bytes": 2573, "sha256": "2021736075A387F135A5F571F1154CC23CF121AD8C1840DF78C0A18B1389C62B"},
+    "shutdown_proof": {"path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cloud/shutdown_proof.json", "size_bytes": 873, "sha256": "17EA27209166476A09FE43E3A4B7DE9F078D03EAE84953BF7D9B56F1980E56C9"},
+    "local_adjudication": {"path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/local-adjudication/adjudication.json", "size_bytes": 508585, "sha256": "3A9E480DF0466136AF6AA83FF7CB145D8A5D1413A82C535C9FB32F85615A3F03"}
+  },
+  "recovery_and_instance_lifecycle": {
+    "configured_artifact_count": 15,
+    "remote_local_artifact_sizes_and_sha256_equal": true,
+    "training_processes_before_shutdown": 0,
+    "gpu_compute_processes_before_shutdown": 0,
+    "gpu_memory_mib_before_shutdown": 0,
+    "shutdown_recorded_utc": "2026-09-08T16:41:23Z",
+    "tcp_port_open": false,
+    "shutdown_verified_by": "SSH_CONNECTION_REFUSED",
+    "local_adjudication_after_shutdown": true
+  },
+  "evidence_assessment": {
+    "verified": [
+      "BOTH_MATCHED_SCREENS_WERE_NUMERICALLY_AND_IDENTITY_VALID",
+      "BOTH_SCREENS_ACCEPTED_ONE_25_UPDATE_SAFETY_BLOCK_AT_THE_MINIMUM_FROZEN_RATE",
+      "BOTH_SCREENS_STALLED_ON_SECOND_BLOCK_TEMPERATURE_PRESERVATION",
+      "NEITHER_SCREEN_REACHED_THE_200_ACCEPTED_UPDATE_SELECTION_PREREQUISITE",
+      "FILTERED_FULL_PATH_AND_SCHEDULE_CONTROL_WERE_NOT_RUN",
+      "ALL_15_CONFIGURED_CLOUD_ARTIFACTS_MATCHED_REMOTE_AND_LOCAL_HASHES",
+      "SHUTDOWN_PRECEDED_LOCAL_ADJUDICATION",
+      "STRESS_REMAINED_SEALED_UNREAD"
+    ],
+    "supported_interpretation": [
+      "UNDER_EQUATION_ROUTING_BOTH_ARMS_ADMIT_ONE_SMALL_SAFE_DESCENT_PREFIX",
+      "THE_TESTED_THERMAL_CONTROL_VOLUME_REPLACEMENT_DOES_NOT_EXTEND_THE_SAFE_PATH_RELATIVE_TO_ROUTED_STRONG_FORM",
+      "THE_BOUNDED_STRONG_AND_THERMAL_CV_RESCUE_FAMILY_IS_CLOSED_FOR_THIS_NOMINAL_CARRIER"
+    ],
+    "unknown": [
+      "FILTER_VERSUS_SCHEDULE_ATTRIBUTION_BEYOND_A_COMPLETE_PATH",
+      "OTHER_WEAK_FORMULATIONS",
+      "MULTI_SEED_SPARSE_OOD_STRESS_AND_EXPERIMENTAL_BEHAVIOR"
+    ],
+    "forbidden_claims": [
+      "COMPLETE_SAFE_FULL_PATH",
+      "THERMAL_CV_MECHANISM_INCREMENT",
+      "COMPLETE_INTERNAL_PINN_PARETO",
+      "DIRECT_LF_ONLY_GAIN",
+      "CANDIDATE_OR_PAPER_POSITIVE",
+      "SOTA",
+      "SPARSE_OR_OOD_GENERALIZATION",
+      "STRESS_OR_EXPERIMENTAL_VALIDATION"
+    ]
+  },
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

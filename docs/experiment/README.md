@@ -22,12 +22,12 @@ view. Smoke and pilot entries never vote in formal adjudication. A run's
 
 ## Current bounded campaign
 
-LF9 is active after `LF9_CPU_QUALIFICATION_PASS`. Its zero-update qualification
-materialized the complete CV training and disjoint blind ledgers and froze the
-DEV-R normalization/baselines. The next evidence must come from both mandatory
-ER-S and ER-CV screens. `PRELOCAL_INTERNAL_PARETO` is only a cloud trigger for a
-conditional control; complete internal Pareto requires post-shutdown local
-evaluation. No LF9 method result or candidate exists yet.
+LF9 is complete as `LF9_NO_SAFE_MIXED_FORM_SCREEN`. Both identity-valid matched
+screens retained one 25-update safety prefix and then stalled at the minimum
+frozen learning rate on temperature preservation. Neither completed the frozen
+200-update screen; the filtered full path and schedule control were not run
+because their prerequisites were unmet. No complete internal Pareto or candidate
+exists, and no new research execution is authorized.
 
 ## G1 fixture boundary
 

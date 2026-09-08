@@ -114,8 +114,12 @@ Pareto, direct-baseline gain, or candidate result.
 
 ## Figure 17. LF9 equation-routed thermal control-volume refinement
 
-Reserved for the terminal four-panel composite: LF8 temperature stall;
-matched `ER-S` versus `ER-CV` temperature preservation, one-cell and 2-by-2
-control-volume conservation, and own blind-objective paths; the selected full
-refinement; and the conditional no-filter control or its exact non-trigger
-reason. The figure is not generated while LF9 remains active.
+Panel A shows that matched equation-routed strong-form (`ER-S`) and thermal
+control-volume (`ER-CV`) screens each retained only 25 of the required 200
+accepted updates. Panel B shows the shared blocker: each second `eta0/16` block
+violated the 1.05 temperature-preservation limit and was exactly rolled back.
+Panel C shows that neither the one-cell nor 2-by-2 frozen control-volume audit
+improved over DEV-R; the two retained endpoints are nearly identical. Panel D
+records the exact non-triggers: no selected arm, full refinement, or no-filter
+control. The figure supports `LF9_NO_SAFE_MIXED_FORM_SCREEN`, not a general
+control-volume failure, filter attribution, PINN Pareto, or candidate claim.

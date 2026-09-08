@@ -114,10 +114,19 @@ PINN Pareto nor a strong-baseline gain.
 
 No. Variational, space-time control-volume, block-coordinate, staggered,
 enthalpy phase-change, and phase-field local-balance PINNs all precede LF9. The
-active campaign is a matched test of a project-specific composition:
+closed campaign is a matched test of a project-specific composition:
 equation-to-owning-head gradient routing plus optional thermal-CV replacement
-inside the existing competence filter. No scientific claim is available until
-both screen arms close, and no general novelty claim follows from either name.
+inside the existing competence filter. Both screens stalled after one safe
+block, and their conservation audits were nearly identical. This rejects a
+load-bearing thermal-CV increment in the frozen screen, not the prior-art
+methods generally; no general novelty claim follows from either name.
+
+## 18. Are the absent full and no-filter arms hidden failures?
+
+No. Both were conditional. Full refinement required a screen arm to reach 200
+accepted updates; neither exceeded 25. The no-filter control required a complete
+internal Pareto path; none existed. Their zero updates are exact non-triggers,
+not failed endpoints, and provide no filter attribution.
 
 ## Submission-readiness verdict
 
@@ -127,7 +136,8 @@ NEGATIVE_DIAGNOSTIC_PAPER_WITH_BOUNDED_MECHANISM_RESULT: PLAUSIBLE
 POSITIVE_METHODS_SUBMISSION: NO
 CAS_Q2_POSITIVE_METHOD_CLAIM: NOT SUPPORTED
 CANDIDATE: NONE
-LF8_RESULT: FILTER_STALLED_WITH_VALID_PREFIX
-LF8_FILTER_ATTRIBUTION: MATCHED_ATTRIBUTION_UNAVAILABLE
-LF8_NEXT: MIXED_WEAK_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE
+LF9_RESULT: NO_SAFE_MIXED_FORM_SCREEN
+LF9_MECHANISM: NO_SAFE_MIXED_FORM_SCREEN
+LF9_FULL_AND_CONTROL: NOT_RUN_BY_FROZEN_TRIGGER
+LF9_NEXT: FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE
 ```

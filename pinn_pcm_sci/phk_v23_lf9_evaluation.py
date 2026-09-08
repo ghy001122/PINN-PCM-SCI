@@ -219,8 +219,9 @@ def _level_for_endpoint(
     ratios = {
         key: float(blind[key]) / float(blind_baseline[key])
         for key in ("J_S", "J_M", "CV1", "CV4")
-    } if isinstance(blind, Mapping) else {key: math.inf for key in ("J_S", "J_M", "CV1", "CV4")}
+    } if isinstance(blind, Mapping) else {key: None for key in ("J_S", "J_M", "CV1", "CV4")}
     own_key = "J_S" if selected_arm == ER_S else "J_M"
+    ratios_available = all(isinstance(ratios[key], (int, float)) for key in (own_key, "CV1", "CV4"))
     local_ni = bool(
         isinstance(comparison_dev_r, Mapping)
         and comparison_dev_r.get("phase_noninferiority_passed") is True
@@ -236,6 +237,7 @@ def _level_for_endpoint(
     prelocal = bool(
         int(raw.get("accepted_updates", -1)) == FULL_ACCEPTED_UPDATES
         and safety.get("passed") is True and strict.get("passed") is True
+        and ratios_available
         and ratios[own_key] <= 0.50 and ratios["CV1"] <= 0.75 and ratios["CV4"] <= 0.75
     )
     complete = bool(

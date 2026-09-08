@@ -1,6 +1,6 @@
 # PHK-V2.3 event-competence recovery advisor draft
 
-Status: `LF9_ACTIVE_RESULTS_PENDING`
+Status: `LF9_NO_SAFE_MIXED_FORM_SCREEN`
 
 This package presents PHK-V2.2R--LF8 as a bounded failure-analysis and
 competence-first solver-recovery study. The strongest positive mechanism result
@@ -10,12 +10,14 @@ safety-valid localized event carrier. LF8 then established that an
 identity-correct competence filter can retain one safe 25-update prefix, but
 the next block fails temperature preservation and the strong-form path stalls.
 
-LF9 is the active matched mechanism test. `ER-S` isolates equation-to-field-head
-gradient routing while retaining all strong residuals. `ER-CV` changes only the
-thermal objective to a fixed-quadrature space-time enthalpy control-volume
-balance. Both reuse the same event-competence filter and exact rollback. No LF9
-GPU endpoint or scientific outcome is asserted until terminal evidence replaces
-the pending scaffold.
+LF9 closed the matched screen. Both arms used equation-to-field-head gradient
+routing; `ER-S` retained all strong residuals, while `ER-CV` changed only the
+thermal objective to a fixed-quadrature space-time enthalpy control-volume balance.
+Both accepted one safety-valid 25-update block at `eta0/16`, then rejected the
+next same-rate block on temperature preservation and stopped at 25/200 accepted
+screen updates. Their retained blind metrics were nearly identical, and neither
+one-cell nor 2-by-2 control-volume conservation improved over DEV-R. No arm was
+selected; full refinement and the no-filter control were not run.
 
 ## Package contents
 
@@ -27,6 +29,8 @@ the pending scaffold.
 - `research_decision_log_zh.md`: Chinese research interpretation;
 - `figures/`: frozen data, captions, figures, and source manifests.
 
-The current package does not claim an LF9 mechanism result, successful PINN
+The terminal outcome is `LF9_NO_SAFE_MIXED_FORM_SCREEN`, candidate is none, and
+the unique next is `FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE`. The
+package does not claim equation-routing or thermal-CV gain, successful PINN
 Pareto, strong-baseline improvement, multi-seed reliability, sparse/OOD or
 stress performance, experimental validation, SOTA, or submission readiness.

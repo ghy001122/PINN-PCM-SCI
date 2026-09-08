@@ -695,6 +695,72 @@ def lf8_filter_path(data: dict) -> list[Path]:
     return save(fig, "20260908T050343Z-lf8-filter-path")
 
 
+def lf9_equation_routed_thermal_cv(data: dict) -> list[Path]:
+    """Render the two valid-prefix screens and their exact non-triggers."""
+    arms = data["screen_arms"]
+    names = ["ER_S", "ER_CV"]
+    labels = ["ER-S\nstrong", "ER-CV\nthermal CV"]
+    colors = [BLUE, TEAL]
+    fig, axes = plt.subplots(2, 2, figsize=(11.8, 7.0))
+
+    # Both matched screens retained one small safe prefix but missed completion.
+    accepted = [arms[name]["accepted_updates"] for name in names]
+    bars = axes[0, 0].bar(labels, accepted, color=colors, width=0.56)
+    axes[0, 0].axhline(data["gates"]["screen_target_accepted_updates"], color=RED, linestyle="--", linewidth=1.2, label="screen target 200")
+    axes[0, 0].set_ylim(0, 220)
+    axes[0, 0].set_ylabel("Accepted updates")
+    axes[0, 0].set_title("A  Matched screen completion")
+    axes[0, 0].legend(fontsize=7.5)
+    for bar, value in zip(bars, accepted):
+        axes[0, 0].text(bar.get_x() + bar.get_width() / 2, value + 6, str(value), ha="center", color=NAVY, fontweight="bold")
+
+    # Temperature is the shared second-block blocker.
+    temp = [arms[name]["block_2_proposal"]["relative_temperature"] for name in names]
+    bars = axes[0, 1].bar(labels, temp, color=colors, width=0.56)
+    axes[0, 1].axhline(data["gates"]["temperature_preservation_max"], color=RED, linestyle="--", linewidth=1.2, label="limit 1.05")
+    axes[0, 1].set_ylim(0.96, 1.12)
+    axes[0, 1].set_ylabel("Proposed T error / DEV-R")
+    axes[0, 1].set_title("B  Second same-rate block")
+    axes[0, 1].legend(fontsize=7.5)
+    for bar, value in zip(bars, temp):
+        axes[0, 1].text(bar.get_x() + bar.get_width() / 2, value + 0.004, f"{value:.3f}\nREJECT", ha="center", color=RED, fontweight="bold", fontsize=8)
+
+    # The thermal-CV replacement did not improve either frozen conservation audit.
+    x = np.arange(2)
+    width = 0.34
+    cv1 = [arms[name]["ratios"]["CV1"] for name in names]
+    cv4 = [arms[name]["ratios"]["CV4"] for name in names]
+    axes[1, 0].bar(x - width / 2, cv1, width, label="one-cell CV", color=ORANGE)
+    axes[1, 0].bar(x + width / 2, cv4, width, label="2x2 CV", color=GOLD)
+    axes[1, 0].axhline(1.0, color=NAVY, linestyle=":", linewidth=1.1)
+    axes[1, 0].set_xticks(x, labels)
+    axes[1, 0].set_ylim(0.997, 1.005)
+    axes[1, 0].set_ylabel("Blind CV residual / DEV-R")
+    axes[1, 0].set_title("C  Conservation audit at retained prefix")
+    axes[1, 0].legend(fontsize=7.3)
+
+    axes[1, 1].axis("off")
+    axes[1, 1].set_title("D  Terminal evidence ladder")
+    terminal_rows = [
+        ("ER-S screen", "25 / 200; STALL", RED),
+        ("ER-CV screen", "25 / 200; STALL", RED),
+        ("Selected arm", "NONE", GRAY),
+        ("Full refinement", "NOT RUN", GRAY),
+        ("No-filter control", "NOT RUN", GRAY),
+        ("PINN Pareto", "NOT ESTABLISHED", GRAY),
+        ("Candidate", "NONE", GRAY),
+    ]
+    for idx, (label, value, color) in enumerate(terminal_rows):
+        y = 0.91 - idx * 0.12
+        axes[1, 1].text(0.03, y, label, transform=axes[1, 1].transAxes, color=NAVY, fontsize=9)
+        axes[1, 1].text(0.98, y, value, transform=axes[1, 1].transAxes, color=color, fontsize=9, fontweight="bold", ha="right")
+
+    fig.suptitle("LF9: under equation routing, strong and thermal-CV arms share the same safe-prefix stall", color=NAVY, fontweight="bold")
+    fig.text(0.5, 0.01, "Single-seed matched screen. Full refinement and no-filter control were not triggered; no mechanism, Pareto, or direct-baseline gain.", ha="center", color=GRAY, fontsize=8)
+    fig.tight_layout(rect=(0, 0.04, 1, 0.94))
+    return save(fig, "20260908T145333Z-lf9-equation-routed-thermal-cv")
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Generate paper_v23 evidence figures")
     parser.add_argument("--lf4-only", action="store_true", help="Generate LF4 figures 6–8 without rewriting the LF3 source manifest")
@@ -709,7 +775,23 @@ def main(argv: list[str] | None = None) -> None:
         if data.get("campaign_state") != "COMPLETE" or data.get("terminal_outcome") is None:
             print(json.dumps({"figures": 0, "scope": "LF9_ACTIVE_RESULTS_PENDING", "status": "SKIPPED_NO_TERMINAL_DATA"}, sort_keys=True))
             return
-        raise RuntimeError("LF9 terminal metrics are bound but the terminal renderer has not been implemented")
+        setup()
+        outputs = lf9_equation_routed_thermal_cv(data)
+        manifest = {
+            "schema_id": "paper-v23-lf9-figure-source-manifest-v1",
+            "campaign_state": "COMPLETE",
+            "inputs": {LF9_DATA_PATH.relative_to(ROOT).as_posix(): sha256(LF9_DATA_PATH)},
+            "evidence_bindings": data["evidence_hashes"],
+            "outputs": {path.relative_to(ROOT).as_posix(): sha256(path) for path in outputs},
+            "generator": "python paper/paper_v23/figures/generate_figures.py --lf9-only",
+            "generator_sha256": sha256(Path(__file__)),
+            "generation_status": "COMPLETE_ONE_COMPOSITE",
+            "claim_boundary": data["claim_boundary"],
+            "stress_reference_read": False,
+        }
+        (HERE / "source-manifest-lf9.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps({"figures": len(outputs) // 2, "scope": "LF9_NO_SAFE_MIXED_FORM_SCREEN"}, sort_keys=True))
+        return
     if args.lf5_only:
         data=json.loads(LF5_DATA_PATH.read_text(encoding="utf-8")); outputs=[]; outputs.extend(lf5_temporal_edge_geometry(data)); outputs.extend(lf5_timing_calibration(data)); outputs.extend(lf5_physics_pareto(data)); print(json.dumps({"figures":len(outputs)//2,"scope":"LF5_CPU_T_PLUS_IDENTITY_INVALID_EXPLORATORY_DEV_T"},sort_keys=True)); return
     if args.lf6_only:

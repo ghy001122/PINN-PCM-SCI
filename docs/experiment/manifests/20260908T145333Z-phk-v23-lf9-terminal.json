@@ -1,0 +1,82 @@
+{
+  "schema_version": "run-manifest-v1",
+  "run_id": "20260908T145333Z-phk-v23-lf9-terminal",
+  "experiment_group_id": "PHK_V23_LF9",
+  "tier": "development_campaign",
+  "scientific_role": "equation_routed_strong_and_thermal_cv_matched_screen_terminal_adjudication",
+  "gate": "PHK_V23_LF9",
+  "started_at": "2026-09-08T16:22:55.464736+00:00",
+  "ended_at": "2026-09-08T16:41:23+00:00",
+  "command": [
+    "remote isolated-project-python -m pinn_pcm_sci.phk_v23_lf9 --output-root <hash-bound-run-root> --medium-carrier <hash-bound-medium> --initial-checkpoint <hash-bound-exact-dev-r> --materialized-ledger <hash-bound-strong-ledger> --cv-ledger <hash-bound-cv-ledger> --cpu-qualification <hash-bound-cpu-qualification> --device cuda:0 --source-identity LF9-BUNDLE-A8A03C2D2A049F2025793B6B9BA8C7C6412EDF594DBF2042BA3C59F1B9CE5D8B",
+    "local .venv/Scripts/python.exe -m pinn_pcm_sci.phk_v23_lf9_evaluation --run-directory <hash-bound-run-root> --output-directory <run-root>/local-adjudication"
+  ],
+  "execution_status": "COMPLETE",
+  "numerical_validity": "VALID_TWO_IDENTITY_CORRECT_25_UPDATE_PREFIXES_BOTH_STALLED_BEFORE_200_UPDATE_SCREEN",
+  "gate_outcome": "LF9_NO_SAFE_MIXED_FORM_SCREEN",
+  "route_disposition": "FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE",
+  "evidence_identity": "SINGLE_SEED_NOMINAL_MATCHED_ROUTED_STRONG_AND_THERMAL_CV_SCREEN_STALL",
+  "claim_status": "VALID_MATCHED_SCREEN_PREFIXES_NO_COMPLETE_SCREEN_NO_PINN_PARETO_OR_CANDIDATE",
+  "code_identity": {
+    "starting_commit": "f16ca9db66843c04d420c077679604dd553ac036",
+    "activation_commit": "c38fa80d2fa2ceb0b1bd1fa9faf70440f2a07159",
+    "engineering_commits": ["3ad2dcb302faca00bb60d1cbb1529b11061b6cca", "bc3950a13935a9ded70d4a8b6cc2862deb4a3fd8"],
+    "executed_source_identity": "LF9-BUNDLE-A8A03C2D2A049F2025793B6B9BA8C7C6412EDF594DBF2042BA3C59F1B9CE5D8B",
+    "deployed_source_manifest": "cloud/phk_v23_lf9_autodl/deployed-source-manifest.json#sha256=861CE9AAA3EA4601B0EB5517EAB9019184AE1F88804D4CA8D9E177F3159B5D52"
+  },
+  "environment": {
+    "cloud_gpu": "Tesla V100-PCIE-32GB",
+    "cloud_dtype": "FLOAT64",
+    "cloud_training_inputs": "MEDIUM_NO_GRADIENT_AUDIT_ONLY_EXACT_DEV_R_PREMATERIALIZED_STRONG_AND_CV_LEDGERS_AND_CPU_QUALIFICATION",
+    "fine_extra_fine_lf_only_evaluator_read_on_cloud": false,
+    "local_evaluator_device": "CPU",
+    "instance_lifecycle": "RECOVERED_HASH_VERIFIED_ZERO_PROCESS_AND_GPU_THEN_TCP_CLOSED_AND_SSH_CONNECTION_REFUSED_BEFORE_LOCAL_ADJUDICATION",
+    "stress_fields_or_metrics_read": false
+  },
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "split_id": "MEDIUM_AUDIT_ONLY_FINE_EXTRA_LF_ONLY_LOCAL_POST_SHUTDOWN_STRESS_SEALED",
+  "method_id": "phk-v23-lf9-equation-routed-thermal-cv-v1",
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "seed": 17,
+  "planned_budget": {
+    "mandatory_screens": 2,
+    "accepted_updates_per_screen": 200,
+    "conditional_filtered_full_accepted_updates": 1200,
+    "conditional_schedule_control_updates": 1200
+  },
+  "actual_budget": {
+    "scientific_gpu_trajectories_attempted": 2,
+    "er_s_attempted_updates": 150,
+    "er_s_accepted_updates": 25,
+    "er_cv_attempted_updates": 150,
+    "er_cv_accepted_updates": 25,
+    "filtered_full_attempted_updates": 0,
+    "schedule_control_attempted_updates": 0,
+    "scientific_retry": false
+  },
+  "checkpoint": {
+    "initial_dev_r_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "er_s_sha256": "8CC0123C6348DE1E490F7C3AD049418251FF701C2308AB1E8A43F85E9C5225BA",
+    "er_cv_sha256": "CBC3450A18F7CFB3B028CE6B9137DD473A0D5065F4B0F773E0EF02D842189E70",
+    "er_s_endpoint_valid": true,
+    "er_cv_endpoint_valid": true,
+    "filtered_full_executed": false,
+    "schedule_control_executed": false
+  },
+  "evaluator_id": "phk-v23-lf9-local-adjudication-v1",
+  "artifacts": {
+    "compact_artifact": "artifacts/20260908T145333Z-phk-v23-lf9-terminal.json#sha256=1323370E97FD556303510487F648356321DDD398AFEC5333E7740AB234090B35",
+    "closeout": "../2026-09-08-phk-v23-lf9-terminal-closeout.md#sha256=87D6244840AF0AB65DA78B974E10D86C558B8DD8F2B82C00D78819B34A80CDF9",
+    "adr": "../../adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md#sha256=A5B2D93D4E16EC8020ADA35F7DDE8412C3B0DB4EB7B14C0A751CE83022671003",
+    "cpu_qualification": "artifacts/20260908T145333Z-phk-v23-lf9-cpu-qualification.json#sha256=94D549BB66601C90AD9830FD4BF87408FE5891A87E88DE3D416E06CBDA750BD9",
+    "run_summary": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/gpu/lf9-run-bc3950a/run_summary.json#sha256=472FF01C74DE3CC361A0E3205221BADA302538698A3A5FBFAAF761C76F21464F",
+    "recovery_manifest": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cloud/recovery_manifest.json#sha256=2021736075A387F135A5F571F1154CC23CF121AD8C1840DF78C0A18B1389C62B",
+    "shutdown_proof": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cloud/shutdown_proof.json#sha256=17EA27209166476A09FE43E3A4B7DE9F078D03EAE84953BF7D9B56F1980E56C9",
+    "local_adjudication": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/local-adjudication/adjudication.json#sha256=3A9E480DF0466136AF6AA83FF7CB145D8A5D1413A82C535C9FB32F85615A3F03",
+    "source_archive": "outputs/deploy/phk-v23-lf9-source-bc3950a.tar.gz#sha256=0812EF2B6780AB88D20B23CD8CBF3199779FF02A08FD3DB352857FD2B65847EA",
+    "paper_package": "../../paper/paper_v23/README.md"
+  },
+  "failure_class": "BOTH_IDENTITY_VALID_MATCHED_SCREENS_STALLED_AFTER_ONE_ACCEPTED_BLOCK_ON_RECURRENT_TEMPERATURE_PRESERVATION",
+  "replay_of": null,
+  "supersedes": null
+}

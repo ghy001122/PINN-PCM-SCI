@@ -27,7 +27,7 @@ LF7 从 exact DEV-R 运行 matched 小步长与 competence-filtered physics refi
 
 对象仍是 PHK-V2.1 的透明、无量纲、literature-inspired synthetic 2D wall-cell；几何、PDE、本构、参数、IC/BC、ROI、事件与 frozen evaluator 均不改变。extra-fine fixed-discretization carrier 不是 continuum truth；C0 saved-cadence strong residual 也不是 exact internal-step residual。
 
-两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4/LF5/LF6 读取 medium 与 exact LF3-T0 checkpoint，LF6 还按合同只读 exact DEV-M fallback 与预物化 streams。LF7 云端只读取 medium audit、exact DEV-R、预物化 physics ledger 与 CPU qualification。fine/extra-fine、direct `LF_ONLY` 和 frozen evaluator 只在 LF7 关机后本地读取；raw 产物已回收并按哈希核验。
+两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4/LF5/LF6 读取 medium 与 exact LF3-T0 checkpoint，LF6 还按合同只读 exact DEV-M fallback 与预物化 streams。LF7/LF8 云端只读取 medium audit、exact DEV-R、预物化 physics ledger 与 CPU qualification。LF9 另读取预物化 thermal-CV ledger，仍不读取 fine/extra/direct `LF_ONLY`/frozen evaluator/stress。LF9 的本地 nominal evaluation 仅在产物回收、哈希核验和关机后执行。
 
 ## 方法与论文身份
 
@@ -57,11 +57,23 @@ available internal gate before shutdown. It is not a complete Pareto claim.
 post-shutdown frozen local evaluator. It remains distinct from direct-baseline
 paper value.
 
-ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling、BCE-with-logits、event-frontier rank-band 与 competence-filter/backtracking 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为 high-precision/low-recall support；LF4 验证界面暴露可提高最低召回；LF6/LF7 证明 bulk residual 下降和更小步长均未保存事件载体。LF8 证明 identity-correct filter 可保留一个 25-step local feasible prefix，但无法在最小冻结学习率接受第二个 block；因此 tested long-path strong-form continuation 已关闭，而 filter-versus-schedule attribution 仍未知。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是强 comparators。当前稿件只能承载有界 failure-analysis、solver-recovery mechanism evidence、physics-forgetting 与 valid-prefix stall 负结果。
+ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling、BCE-with-logits、event-frontier rank-band 与 competence-filter/backtracking 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为 high-precision/low-recall support；LF4 验证界面暴露可提高最低召回；LF6/LF7 证明 bulk residual 下降和更小步长均未保存事件载体。LF8 证明 identity-correct filter 可保留一个 25-step local feasible prefix。LF9 进一步证明 equation routing 与 thermal-CV replacement 各自也只能保留近似相同的 25-step prefix，均无法完成冻结 200-update screen；因此 tested strong/thermal-CV rescue family 已关闭，而 full-path filter-versus-schedule attribution仍未知。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是强 comparators。当前稿件只能承载有界 failure-analysis、solver-recovery mechanism evidence、physics-forgetting 与 valid-prefix stall 负结果。
 
 ## 权威路由
 
-LF9 is explicitly active under [ADR 0071](docs/adr/0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md) and the [live plan](docs/plans/NEXT_ACTIONS.md). Its CPU qualification authorizes the two frozen screens but is not method evidence. LF8 and earlier terminal evidence remain unchanged.
+LF9 is complete under [ADR 0072](docs/adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md), [terminal closeout](docs/experiment/2026-09-08-phk-v23-lf9-terminal-closeout.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md), and the [live plan](docs/plans/NEXT_ACTIONS.md). No new research execution is authorized. LF8 and earlier terminal evidence remain unchanged.
+
+# LF9 terminal context (2026-09-09)
+
+LF9 compared equation-routed strong and thermal control-volume refinement from
+exact DEV-R. Both identity-valid screens accepted one 25-update block at the
+minimum frozen learning rate and stalled on the next block because temperature
+preservation failed. Neither completed the frozen 200-update screen, so the
+filtered full path and schedule control were not run. Their near-identical blind,
+field and event endpoints provide no evidence that the thermal-CV replacement
+opens a longer safe path. The terminal outcome is
+`LF9_NO_SAFE_MIXED_FORM_SCREEN`; no complete PINN Pareto, direct-baseline gain,
+candidate or further rescue authorization exists.
 
 LF7 终局证据见 [ADR 0068](docs/adr/0068-close-phk-v23-lf7-competence-filtered-refinement.md) 与 [terminal closeout](docs/experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)。导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF7 及更早证据继续由对应 terminal closeout 保留，不被 LF8 激活追溯修改。
 

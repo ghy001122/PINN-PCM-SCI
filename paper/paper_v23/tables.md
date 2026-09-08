@@ -250,13 +250,17 @@ updates; therefore the conditional schedule control was not run and
 Medium functionals govern acceptance, so F* is not label-free. Candidate is
 none, and direct `LF_ONLY` remains substantially more accurate.
 
-## Table 17. LF9 matched mechanism screen (active scaffold)
+## Table 17. LF9 matched equation-routing / thermal-CV screen
 
-| Role | Thermal objective | Equation routing | Competence filter | Screen endpoint | Full path |
-|---|---|---|---|---|---|
-| `ER-S` | Original normalized strong residual | Per-equation owning head | Exact rollback and dyadic retry | Pending | Conditional |
-| `ER-CV` | Space-time enthalpy control-volume balance | Same as `ER-S` | Same as `ER-S` | Pending | Conditional |
-| no-filter control | Selected objective, if eligible | Same as selected arm | None | Not yet eligible | Conditional |
+| Endpoint | Accepted / attempted | Strong / mixed ratio | CV1 / CV4 ratio | Second-block T ratio | Disposition |
+|---|---:|---:|---:|---:|---|
+| `ER-S` | 25 / 150 | 0.989673 / 0.989705 | 1.002632 / 1.000791 | 1.097467 | Temperature reject; valid prefix |
+| `ER-CV` | 25 / 150 | 0.989671 / 0.989703 | 1.002608 / 1.000821 | 1.093782 | Temperature reject; valid prefix |
+| selected full refinement | 0 / 0 | -- | -- | -- | Not run: no 200-update screen pass |
+| no-filter control | 0 / 0 | -- | -- | -- | Not run: no complete internal Pareto |
 
-The two screen arms must finish before mechanism selection. Pending cells are
-not zero, failure, or evidence of either equation-routing or thermal-CV value.
+Both matched screens accepted only the first `eta0/16` block and exactly rolled
+back the second. Neither conservation audit improved over DEV-R, and neither arm
+reached the frozen 200-update selection gate. The terminal outcome is
+`LF9_NO_SAFE_MIXED_FORM_SCREEN`; no equation-routing, thermal-CV, filter, PINN
+Pareto, or direct-baseline gain is established.

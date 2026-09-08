@@ -377,17 +377,61 @@ python paper/paper_v23/figures/generate_figures.py --lf8-only
 and PNG/PDF hashes. Git alone cannot reconstruct the git-ignored checkpoint,
 prediction, or raw telemetry.
 
-## LF9 active matched-screen record
+## LF9 terminal matched-screen record
 
 - starting commit: `f16ca9db66843c04d420c077679604dd553ac036`;
 - campaign timestamp: `20260908T145333Z`;
-- arms: `ER-S` equation-routed strong form and matched `ER-CV` with only the
-  thermal residual replaced by a space-time enthalpy control-volume balance;
+- raw root:
+  `outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv`;
+- GPU run root: `gpu/lf9-run-bc3950a`;
 - common start: exact LF6 `DEV-R` weights;
-- common acceptance: identity-correct competence filter, immutable rollback,
-  same-block replay, and the frozen dyadic rate ladder;
-- paper metrics: `figures/data/lf9_terminal_metrics.json` is an ACTIVE/null
-  scaffold and must not be interpreted until terminal evidence binds it.
+- strong ledger SHA-256:
+  `29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801`;
+- fixed blind pool SHA-256:
+  `FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF`;
+- control-volume ledger/manifest SHA-256:
+  `65BAAB64A2B0D8F8B4042B95E6F2FA583EA0D74754B2B38F5A56226DFF7F13C7` /
+  `B8394B4E517A55D626BB24C13AD53ABE5EC2B81BAC65763240CEC18F90A2D25C`;
+- CV training rolling SHA-256:
+  `12EFFDA5B6417C4DFB7AB605B4AEB69D4536FDCCF251A949BF9376B382392F3D`.
 
-The LF9 figure and source manifest are intentionally absent while results are
-pending. Stress and local-reference restrictions remain unchanged.
+`ER-S` and `ER-CV` each attempted 150 updates, accepted one 25-update
+`eta0/16` block, and exactly restored the second rejected block. Their retained
+checkpoint SHA-256 values are
+`8CC0123C6348DE1E490F7C3AD049418251FF701C2308AB1E8A43F85E9C5225BA`
+and
+`CBC3450A18F7CFB3B028CE6B9137DD473A0D5065F4B0F773E0EF02D842189E70`;
+prediction SHA-256 values are
+`555BBF20DAD295743FB7FA3B3CAEB9307E8FAC08202B0BFF5A5EF102097D4A77`
+and
+`7BA750684131328C33A34E2156E7E06F41466D557CF918BEA5494F291D7F80BA`.
+Neither reached the 200-update screen target. Full refinement was not run
+because there was no valid matched selection; the no-filter control was not run
+because no prelocal complete internal Pareto existed.
+
+Key raw SHA-256 values are:
+
+```text
+run summary         472FF01C74DE3CC361A0E3205221BADA302538698A3A5FBFAAF761C76F21464F
+ER-S gate           EE182172DC3C61B17F887D9B2E0F891B2B8DA4223F51EEAD8B9F6F0A037ED521
+ER-S telemetry      74643A42E337C86043C036649FF82973E6FD4D809338998935DFBABE23DA9B47
+ER-CV gate          DBD5BC1E68F0DB39EA876AA694F778AE2B3A76BE72974C4CA2116BB2BAACECCE
+ER-CV telemetry     15A1CA86B08336677E4AC42EF95EFC782DE05C1FE8F5248AD743F47C78623E75
+local adjudication  3A9E480DF0466136AF6AA83FF7CB145D8A5D1413A82C535C9FB32F85615A3F03
+recovery manifest   2021736075A387F135A5F571F1154CC23CF121AD8C1840DF78C0A18B1389C62B
+shutdown proof      17EA27209166476A09FE43E3A4B7DE9F078D03EAE84953BF7D9B56F1980E56C9
+```
+
+Recovery/hash verification and process/GPU clearance preceded shutdown. Local
+reference evaluation began only after TCP closure and explicit SSH connection
+refusal. Stress remained sealed and unread.
+
+Regenerate the LF9 composite with:
+
+```powershell
+D:\anaconda\python.exe paper/paper_v23/figures/generate_figures.py --lf9-only
+```
+
+`figures/source-manifest-lf9.json` binds the metrics, generator, raw sources,
+and PNG/PDF outputs. Git alone cannot reconstruct the git-ignored checkpoints,
+predictions, telemetry, or local adjudication.

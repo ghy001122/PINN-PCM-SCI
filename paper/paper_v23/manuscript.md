@@ -1,7 +1,7 @@
 # Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
 
-> Advisor-reviewable draft. LF9 execution status:
-> `LF9_ACTIVE_RESULTS_PENDING`.
+> Advisor-reviewable draft. Closed evidence status:
+> `LF9_NO_SAFE_MIXED_FORM_SCREEN`.
 > All neural results are single-seed nominal development evidence. No candidate,
 > positive PINN method, strong-baseline gain, OOD/stress result, or submission
 > readiness is claimed.
@@ -47,6 +47,15 @@ the required completion condition was not reached, the schedule control was not
 triggered and matched attribution is unavailable. The result remains a bounded
 interface-exposure and physics-forgetting study, not a positive method or
 candidate.
+
+LF9 then compared equation-routed strong-form and thermal control-volume
+screens. Both retained only one 25-update safety-valid prefix at `eta0/16` and
+rejected the next same-rate block on temperature preservation. Their strong,
+mixed, and one-cell/2-by-2 control-volume audits were nearly identical; the CV
+audits did not improve over the common start. No arm reached the 200-update
+screen gate, so full refinement and the no-filter control were not run. The
+terminal result is `NO_SAFE_MIXED_FORM_SCREEN`, not a positive mixed-form or
+attribution result.
 
 ## 1. Introduction
 
@@ -263,7 +272,7 @@ The matched schedule-control arm was conditional: it could execute only after
 F* completed 1200 accepted updates while retaining safety. This prevents a
 control with a different path length from being reported as matched attribution.
 
-### 3.7 LF9 equation-routed thermal control-volume screen (active)
+### 3.7 LF9 equation-routed thermal control-volume screen
 
 LF8 localized the first preservation failure to temperature while phase was
 frozen. LF9 therefore compares two matched continuations from exact DEV-R.
@@ -277,10 +286,12 @@ cooling, and Joule heating.
 Variational, control-volume, block-coordinate, staggered, enthalpy, and local
 balance primitives all have prior art [@kharazmi2019vpinn; @patel2022cvpinn;
 @gratton2024blockcoordinate; @chen2025sharp; @patra2025phasechange;
-@shang2026localbalance]. LF9 tests only whether equation routing is sufficient
+@shang2026localbalance]. LF9 tested only whether equation routing was sufficient
 or whether thermal control-volume replacement is load-bearing in this frozen
-competence-preserving continuation. Results remain pending; this section makes
-no LF9 mechanism or performance claim.
+competence-preserving continuation. Both screen arms used the same 25-update
+blocks, dyadic rate ladder, immutable rollback, and medium competence filter.
+Full refinement required one arm to reach 200 accepted screen updates; the
+no-filter control additionally required a complete internal Pareto path.
 
 ## 4. Results
 
@@ -393,9 +404,31 @@ direct `LF_ONLY`: phase ROI RMS was 0.03237 versus 0.00657, temperature ROI RMS
 
 ![LF8 identity-correct filter path](figures/20260908T050343Z-lf8-filter-path.png)
 
+### 4.7 Equation routing and thermal-CV replacement shared the same stall
+
+Both LF9 screens accepted one 25-update block at `eta0/16` after four larger
+rates were rejected. `ER-S` retained strong/mixed objective ratios
+0.98967/0.98970; `ER-CV` retained 0.98967/0.98970. Their one-cell and 2-by-2
+control-volume ratios were also effectively identical and slightly worse than
+DEV-R: 1.00263/1.00079 for `ER-S` and 1.00261/1.00082 for `ER-CV`.
+
+The second same-rate proposal failed temperature preservation in both arms
+(relative errors 1.0975 and 1.0938) and was exactly rolled back. Each screen
+therefore stopped at 25 accepted of 150 attempted updates, below the frozen
+200-update selection gate. No arm was selected; full refinement and the
+conditional no-filter control were not run. Post-shutdown evaluation retained
+the DEV-R phase error and remained far behind direct `LF_ONLY`. The valid
+terminal outcome is `LF9_NO_SAFE_MIXED_FORM_SCREEN`; it neither supports
+equation-routing sufficiency nor a load-bearing thermal-CV increment. Relative
+to direct `LF_ONLY`, the retained screens were approximately 10.34x, 4.61x,
+4.93x, 9.55x, and 38.9x worse in potential, phase primary, phase ROI,
+temperature ROI, and current, respectively.
+
+![LF9 equation-routed thermal control-volume screen](figures/20260908T145333Z-lf9-equation-routed-thermal-cv.png)
+
 ## 5. Discussion
 
-### 5.1 What LF6--LF8 establish
+### 5.1 What LF6--LF9 establish
 
 LF6 supplies two pieces of valid evidence. First, critical-rank endpoint cells
 were not uniquely sufficient under the matched strict rule: the rank arm reached
@@ -426,7 +459,13 @@ but cannot progress beyond 25 accepted updates under this schedule and filter.
 This is a valid bounded stall result; it does not establish matched schedule
 attribution because the preregistered control trigger was not reached.
 
-### 5.2 What LF6--LF8 do not establish
+LF9 resolves the proposed strong-versus-CV branch within the common
+equation-routed implementation: strong and thermal-CV arms exhibited the same
+one-block safe prefix and temperature-limited second-block rejection. The
+frozen CV audits did not improve. Neither arm supplied a safe sustained screen
+under the matched contract; the design cannot attribute this stall to routing.
+
+### 5.2 What LF6--LF9 do not establish
 
 DEV-R's safety pass does not make it a strict carrier. Since DEV-U and DEV-R
 both missed strict competence, their difference cannot support a rank-specific
@@ -449,6 +488,11 @@ PINN Pareto result. The medium acceptance audit also prevents calling F*
 label-free, despite its pure-physics gradient. The retained prefix remains
 strictly noncompetent on cycle-1 timing and inferior to direct interpolation.
 
+Because neither LF9 screen reached selection, the study has no full mixed-form
+endpoint and no no-filter control. It therefore cannot attribute failure to the
+filter, prove that control-volume PINNs generally fail, or convert a one-block
+objective decrease into PINN Pareto value.
+
 ### 5.3 Paper positioning and next evidence
 
 The maximum defensible central statement is:
@@ -461,13 +505,12 @@ The maximum defensible central statement is:
 
 This supports an advisor draft and potentially a carefully scoped
 negative/diagnostic paper. It does not support a positive methods submission.
-LF7 strengthens the negative case against learning-rate reduction alone, and
-LF8 establishes that the identity-correct strong-form filter stalls after one
-safe block. The most direct next question is therefore no longer a snapshot or
-learning-rate repair, but whether a mixed weak/control-volume physics objective
-supplies a preservation-compatible descent direction. That route requires a
-new contract. Multi-seed and sparse/equal-information work remain unjustified;
-stress remains sealed.
+LF7 strengthens the negative case against learning-rate reduction alone, LF8
+establishes an identity-correct strong-form stall, and LF9 shows that neither
+equation-routed strong nor thermal-CV arm completes a safe sustained path. The
+frozen solver-recovery sequence should now close as a negative diagnostic
+result rather than add another rescue module. Multi-seed and sparse/OOD work
+remain unjustified; stress remains sealed.
 
 ## 6. Limitations
 
@@ -496,6 +539,10 @@ prefix. However, it stopped after one accepted block and did not trigger its
 conditional control. Consequently there is still no completed filter/control
 comparison, no PINN Pareto, and no candidate.
 
+LF9 likewise produced only two 25-update screen prefixes. Neither arm reached
+selection, so full and control trajectories were absent by design. These
+non-triggers are not failed endpoints and cannot support mechanism attribution.
+
 ## 7. Conclusion
 
 The program progressed from cold collapse to localized event recovery, a
@@ -511,9 +558,11 @@ were actively in conflict. LF7 further rejects smaller steps alone as a rescue.
 LF8 proves that exact rollback can retain one safety-valid residual-reducing
 prefix, but the next same-rate block violates temperature preservation and the
 strong-form path stalls. The conditional schedule control is therefore absent
-and matched filter attribution remains unavailable. Candidate remains none;
-the direct low-fidelity baseline remains stronger; stress remains sealed and
-unread.
+and matched filter attribution remains unavailable. In LF9's common
+equation-routed implementation, strong and thermal-CV arms both stalled after
+one block and neither improved the CV audits; routing itself is not attributed.
+Candidate remains none; the direct low-fidelity baseline remains stronger;
+stress remains sealed and unread.
 
 ## Data, code, and evidence availability
 

@@ -27,7 +27,7 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-LF9 已由用户明确授权并通过零步 CPU qualification。当前必须从 exact DEV-R 完成 `ER-S` 与 `ER-CV` 两条 matched screens；至少一臂通过才条件继续 filtered full path，且仅在云端达到 `PRELOCAL_INTERNAL_PARETO` 后运行 no-filter control。完整内部 Pareto 仍须关机后的 frozen local evaluation，direct `LF_ONLY` 继续决定 paper-value。CPU gate 不是方法结果，candidate 仍为 none。
+LF9 已完成并关闭为 `LF9_NO_SAFE_MIXED_FORM_SCREEN`。ER-S 与 ER-CV 均保留一个身份有效的 25-update safety prefix，并在最小冻结学习率的第二块因 temperature preservation 停滞；无臂完成 200 accepted updates。filtered full path 与 no-filter control 因前提未满足而未运行，不得称失败。没有完整内部 PINN Pareto、direct `LF_ONLY` 增益或 candidate。当前无新科研执行授权，唯一建议是 `FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE`。
 
 LF8 已完成并关闭为 `LF8_FILTER_STALLED_WITH_VALID_PREFIX`。它保留一个 25-step strong-form safety prefix，但完整路径和 control 未到达；该历史结果不被 LF9 激活改写。
 
@@ -110,13 +110,14 @@ adjudication completed; the result establishes neither filter attribution nor a
 PINN Pareto/candidate. Strong-form rescue is closed, the mixed weak/control-volume
 route requires new authorization, and stress remains sealed/unread.
 
-# LF9 activation handoff (2026-09-08)
+# LF9 terminal handoff (2026-09-09)
 
-`PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE` is
-ACTIVE from base `f16ca9db66843c04d420c077679604dd553ac036`. CPU qualification
-materialized the complete causal CV training ledger and disjoint one-cell/2x2
-blind ledgers, and verified the integral identity, routing, coupling,
-normalization and rollback with zero scientific updates. Both ER-S and ER-CV
-screens are mandatory. Cloud-only `PRELOCAL_INTERNAL_PARETO` may trigger the
-conditional control; only post-shutdown local evaluation can establish
-`COMPLETE_INTERNAL_PINN_PARETO`. Stress remains sealed/unread.
+`PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE` ran from
+activation `c38fa80d2fa2ceb0b1bd1fa9faf70440f2a07159` with two pre-step runtime
+fixes, ending at deployed base `bc3950a13935a9ded70d4a8b6cc2862deb4a3fd8` and
+source identity `LF9-BUNDLE-A8A03C2D2A049F2025793B6B9BA8C7C6412EDF594DBF2042BA3C59F1B9CE5D8B`.
+Both valid screens accepted 25 of 150 attempted updates and then stalled on the
+second-block temperature gate at `7.8125e-6`. Neither reached the 200-update
+selection prerequisite, so full/control were not run. Recovery, shutdown and
+post-shutdown local adjudication completed; no mixed-form increment, PINN Pareto,
+candidate or next research authorization exists. Stress remains sealed/unread.

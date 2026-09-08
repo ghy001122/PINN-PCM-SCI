@@ -1,17 +1,89 @@
 {
   "schema_id": "paper-v23-lf9-terminal-metrics-v1",
-  "campaign_state": "ACTIVE",
+  "campaign_state": "COMPLETE",
   "task_id": "PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE",
-  "terminal_outcome": null,
-  "mechanism_outcome": null,
+  "terminal_outcome": "LF9_NO_SAFE_MIXED_FORM_SCREEN",
+  "mechanism_outcome": "NO_SAFE_MIXED_FORM_SCREEN",
   "selected_arm": null,
-  "screen_arms": {
-    "ER_S": null,
-    "ER_CV": null
+  "baseline": {
+    "role": "LF6_DEV_R_SAFETY_NEAR_CARRIER",
+    "J_S": 4.9278721846990505,
+    "J_M": 4.925521658963255,
+    "CV1": 0.01198042763327962,
+    "CV4": 0.008291401447887748
   },
-  "full_refinement": null,
-  "no_filter_control": null,
-  "direct_lf_only": null,
-  "claim_boundary": "ACTIVE_RESULTS_PENDING_NO_LF9_SCIENTIFIC_CLAIM",
+  "normalization": {
+    "L_T_strong0": 0.03258119801290102,
+    "L_T_CV0": 0.03258119801290102,
+    "r_cv0_rms": 0.7097646689156927,
+    "s_cv": 3.932157024118817
+  },
+  "gates": {
+    "screen_target_accepted_updates": 200,
+    "temperature_preservation_max": 1.05,
+    "strict_cycle_1_timing_max": 0.005
+  },
+  "screen_arms": {
+    "ER_S": {
+      "role": "equation-routed strong form",
+      "accepted_updates": 25,
+      "attempted_updates": 150,
+      "accepted_blocks": 1,
+      "rejected_attempts": 5,
+      "final_learning_rate": 0.0000078125,
+      "screen_go": false,
+      "disposition": "FILTER_STALLED_WITH_VALID_PREFIX",
+      "last_rejection": "relative_temperature",
+      "safety_gate_passed": true,
+      "strict_gate_passed": false,
+      "strict_failure": "cycle_1_timing",
+      "blind": {"J_S": 4.876983808325191, "J_M": 4.874811625314533, "CV1": 0.012011965906869555, "CV4": 0.008297958510107905},
+      "ratios": {"J_S": 0.9896733570866819, "J_M": 0.9897046369583123, "CV1": 1.0026324831262556, "CV4": 1.0007908267693186},
+      "relative_fields": {"potential": 0.9946580566608841, "temperature": 0.9889654235198962, "phase": 1.0, "topology": 0.9999999999999998},
+      "block_2_proposal": {"J_S": 4.826659231134107, "relative_temperature": 1.097467491426651, "decision": "REJECT_EXACT_ROLLBACK"},
+      "checkpoint_sha256": "8CC0123C6348DE1E490F7C3AD049418251FF701C2308AB1E8A43F85E9C5225BA",
+      "prediction_sha256": "555BBF20DAD295743FB7FA3B3CAEB9307E8FAC08202B0BFF5A5EF102097D4A77"
+    },
+    "ER_CV": {
+      "role": "equation-routed thermal control-volume",
+      "accepted_updates": 25,
+      "attempted_updates": 150,
+      "accepted_blocks": 1,
+      "rejected_attempts": 5,
+      "final_learning_rate": 0.0000078125,
+      "screen_go": false,
+      "disposition": "FILTER_STALLED_WITH_VALID_PREFIX",
+      "last_rejection": "relative_temperature",
+      "safety_gate_passed": true,
+      "strict_gate_passed": false,
+      "strict_failure": "cycle_1_timing",
+      "blind": {"J_S": 4.876974053680426, "J_M": 4.874802072377451, "CV1": 0.012011676537792147, "CV4": 0.00829821276489794},
+      "ratios": {"J_S": 0.9896713776025559, "J_M": 0.9897026974810866, "CV1": 1.0026083296413997, "CV4": 1.0008214916444464},
+      "relative_fields": {"potential": 0.9946591029683454, "temperature": 0.9883834063920115, "phase": 1.0, "topology": 0.9999999999999998},
+      "block_2_proposal": {"J_S": 4.826925302203891, "relative_temperature": 1.0937824112761745, "decision": "REJECT_EXACT_ROLLBACK"},
+      "checkpoint_sha256": "CBC3450A18F7CFB3B028CE6B9137DD473A0D5065F4B0F773E0EF02D842189E70",
+      "prediction_sha256": "7BA750684131328C33A34E2156E7E06F41466D557CF918BEA5494F291D7F80BA"
+    }
+  },
+  "full_refinement": {"executed": false, "reason": "NO_VALID_MATCHED_SCREEN_SELECTION"},
+  "no_filter_control": {"executed": false, "reason": "PRELOCAL_INTERNAL_PARETO_NOT_REACHED"},
+  "local_extra_fine": {
+    "ER_S": {"potential_full_rms": 0.005955907814300014, "phase_primary": 0.00160984375, "phase_roi_rms": 0.03236830783140375, "temperature_roi_rms": 0.017204027630401447, "current_nrmse": 0.13709198277554216},
+    "ER_CV": {"potential_full_rms": 0.005955910342921711, "phase_primary": 0.00160984375, "phase_roi_rms": 0.03236830783140375, "temperature_roi_rms": 0.017200575850579367, "current_nrmse": 0.13709201776080773},
+    "DIRECT_LF_ONLY": {"potential_full_rms": 0.0005761281633015013, "phase_primary": 0.00034953125, "phase_roi_rms": 0.006570375888844028, "temperature_roi_rms": 0.0018006948281555659, "current_nrmse": 0.0035221351893723663}
+  },
+  "evidence_hashes": {
+    "run_summary": "472FF01C74DE3CC361A0E3205221BADA302538698A3A5FBFAAF761C76F21464F",
+    "er_s_gate": "EE182172DC3C61B17F887D9B2E0F891B2B8DA4223F51EEAD8B9F6F0A037ED521",
+    "er_s_telemetry": "74643A42E337C86043C036649FF82973E6FD4D809338998935DFBABE23DA9B47",
+    "er_cv_gate": "DBD5BC1E68F0DB39EA876AA694F778AE2B3A76BE72974C4CA2116BB2BAACECCE",
+    "er_cv_telemetry": "15A1CA86B08336677E4AC42EF95EFC782DE05C1FE8F5248AD743F47C78623E75",
+    "local_adjudication": "3A9E480DF0466136AF6AA83FF7CB145D8A5D1413A82C535C9FB32F85615A3F03",
+    "recovery_manifest": "2021736075A387F135A5F571F1154CC23CF121AD8C1840DF78C0A18B1389C62B",
+    "shutdown_proof": "17EA27209166476A09FE43E3A4B7DE9F078D03EAE84953BF7D9B56F1980E56C9"
+  },
+  "candidate": null,
+  "unique_next": "FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE",
+  "claim_boundary": "BOTH_MATCHED_SCREENS_STALLED_AFTER_ONE_SAFE_BLOCK; THERMAL_CV_NOT_LOAD_BEARING_IN_FROZEN_SCREEN; FULL_AND_CONTROL_NOT_RUN; NO_PINN_PARETO_OR_DIRECT_GAIN",
   "stress_reference_read": false
 }

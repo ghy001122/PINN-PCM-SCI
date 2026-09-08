@@ -2,37 +2,35 @@
 
 - `phase_id`: `PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE`
 - `phase_name`: PHK-V2.3 LF9 equation-routed thermal control-volume competence-filtered refinement
-- `lifecycle_state`: `ACTIVE`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `PENDING_ER_S_AND_ER_CV_SCREENS`
-- `mechanism_outcome`: `PENDING_MATCHED_ADJUDICATION`
-- `claim_status`: `CPU_QUALIFIED_GPU_MECHANISM_UNTESTED`
-- `next_research_execution_authorized`: `true`
-- `authorization_scope`: `TWO_MANDATORY_SCREENS_THEN_CONDITIONAL_FILTERED_FULL_PATH_AND_NO_FILTER_CONTROL`
+- `machine_outcome`: `LF9_NO_SAFE_MIXED_FORM_SCREEN`
+- `mechanism_outcome`: `NO_SAFE_MIXED_FORM_SCREEN`
+- `claim_status`: `VALID_MATCHED_SCREEN_STALL_NO_COMPLETE_PINN_PARETO_OR_CANDIDATE`
+- `next_research_execution_authorized`: `false`
+- `authorization_scope`: `NONE_TERMINAL`
 - `candidate_status`: `NONE`
-- `reference_status`: `CPU_REFERENCE_BLIND_STRESS_SEALED`
-- `compute_status`: `CPU_QUALIFICATION_PASS_GPU_EXECUTION_PENDING`
-- `next_recommendation`: `EXECUTE_FROZEN_LF9_CAMPAIGN`
-- `effective_date`: `2026-09-08`
+- `reference_status`: `POST_SHUTDOWN_NOMINAL_EVALUATED_STRESS_SEALED`
+- `compute_status`: `RECOVERED_HASH_VERIFIED_SHUTDOWN_SSH_REFUSED`
+- `next_recommendation`: `FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE`
+- `effective_date`: `2026-09-09`
 
 PHASE_ID=PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE
 BLOCKER_ID=NONE
-NEXT_RESEARCH_EXECUTION_AUTHORIZED=true
+NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
 
-## 当前授权
+## 终局
 
-执行 exact DEV-R 起点的 mandatory `ER-S` 与 `ER-CV` 200-accepted-update
-matched screens。若至少一臂通过，按冻结机制选择继续至 filtered 1,200 accepted
-updates 或有效 stall；仅当云端 selected endpoint 达到
-`PRELOCAL_INTERNAL_PARETO` 时，运行 matched no-filter schedule control。
+ER-S 与 ER-CV 均形成身份有效的 25-update 安全前缀，并在最小冻结学习率
+的第二块因 temperature preservation 停滞。两臂均未满足 200 accepted-update
+selection prerequisite；filtered full path 与 no-filter control 均为
+`NOT_RUN_PREREQUISITE_NOT_MET`，不是失败。
 
-`PRELOCAL_INTERNAL_PARETO` 只是在 reference-blind 云端可计算门上通过，不得称
-完整 PINN Pareto。实例关机后还须由 frozen local evaluator 形成
-`COMPLETE_INTERNAL_PINN_PARETO`，再与 direct `LF_ONLY` 裁决 paper-value。
+LF9 不建立 mixed-form 增量、完整 PINN Pareto、direct `LF_ONLY` 增益或
+candidate。唯一建议是完成负面 solver diagnostic 与稿件收口，不再执行救援。
 
 ## 边界
 
-CPU qualification 是零科学更新的工程准入，不是方法结果。不得改物理对象、
-网络、冻结 streams、CV normalization、filter gates 或强基线；不授权 sparse、
-new seed、OOD/stress、phase weak-form、PJGR/R2/SRPG 或投稿。两份 stress
+当前没有新的科研执行授权。不得从本完成态推断 sparse、new seed、OOD/stress、
+其他 weak form、PJGR/R2/SRPG、网络/优化器救援或投稿授权。两份 stress
 references 保持 `TWO_STRESS_REFERENCES_SEALED_UNREAD`。

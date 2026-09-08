@@ -1,12 +1,34 @@
 from __future__ import annotations
 
 import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from pinn_pcm_sci import phk_v23_lf9 as lf9
 from pinn_pcm_sci import phk_v23_lf9_evaluation as evaluation
 
 
 class LF9EvaluationTests(unittest.TestCase):
+    def test_not_run_conditional_endpoints_are_strict_json_serializable(self) -> None:
+        level = evaluation._level_for_endpoint(
+            raw={"executed": False, "endpoint_valid": False},
+            evaluation=None,
+            potential=None,
+            medium=None,
+            baseline_medium={},
+            comparison_dev_r=None,
+            comparison_direct=None,
+            blind=None,
+            blind_baseline={"J_S": 1.0, "J_M": 1.0, "CV1": 1.0, "CV4": 1.0},
+            selected_arm=None,
+        )
+        self.assertEqual(
+            level["blind_ratios_to_DEV_R"],
+            {"J_S": None, "J_M": None, "CV1": None, "CV4": None},
+        )
+        with TemporaryDirectory() as tmp:
+            evaluation.write_strict_json(Path(tmp) / "report.json", {"level": level})
+
     def test_two_screen_failures_close_solver_rescue(self) -> None:
         result = evaluation.terminal_outcome(
             run={

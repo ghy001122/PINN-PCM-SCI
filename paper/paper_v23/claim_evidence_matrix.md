@@ -33,9 +33,10 @@
 | LF8 establishes filter or schedule attribution | `UNKNOWN_UNAVAILABLE` | F* completion trigger failed; schedule control not run | `MATCHED_ATTRIBUTION_UNAVAILABLE` |
 | LF8 is label-free or supplies a PINN Pareto | `REJECTED` | medium audit governs acceptance; no completed path/control | Multifidelity audit; no Pareto claim |
 | LF8 beat direct `LF_ONLY` | `REJECTED` | phase/T/current remain much worse | No strong-baseline gain or candidate |
-| Equation routing is sufficient for safe sustained refinement | `PENDING_LF9` | `ER-S` has no terminal endpoint yet | No result wording before the matched screen closes |
-| Thermal control-volume replacement is load-bearing | `PENDING_LF9` | `ER-CV` and its matched comparator have no terminal endpoints yet | Cite the primitive prior art; do not infer value from implementation |
-| The LF9 competence filter is load-bearing | `PENDING_CONDITIONAL_CONTROL` | no-filter control requires a completed internal Pareto path | Not tested unless the frozen trigger fires |
+| Equation routing is sufficient for safe sustained refinement | `REJECTED_IN_FROZEN_SCREEN` | `ER-S` stalled at 25/200 after temperature rejection | No safe sustained screen |
+| Thermal control-volume replacement is load-bearing | `REJECTED_IN_FROZEN_MATCHED_SCREEN` | `ER-CV` mirrors `ER-S`; CV1/CV4 ratios remain above one | No matched thermal-CV increment |
+| The LF9 competence filter is load-bearing | `UNKNOWN_NOT_TRIGGERED` | neither screen selected; no-filter control not run | No filter attribution |
+| LF9 establishes a PINN Pareto or direct-baseline gain | `REJECTED` | no full endpoint; screens remain far behind direct `LF_ONLY` | No candidate or positive method claim |
 | PINNs generally cannot solve the system | `REJECTED_EXTRAPOLATION` | one object, seed, architecture, budget | Bound all conclusions to the frozen protocol |
 | Stress/OOD, continuum, material, or experimental validity | `UNKNOWN` | not executed; stress sealed | Must not claim |
 
@@ -47,9 +48,11 @@
 > show that both aggressive residual minimization and an eightfold smaller
 > fixed step can erase a safety-valid localized event carrier. Identity-correct
 > competence filtering retains one small safe prefix but stalls when the next
-> strong-form block violates temperature preservation.
+> strong-form block violates temperature preservation. Equation routing and
+> thermal control-volume replacement reproduce the same temperature-limited
+> stall and do not improve the frozen conservation audits.
 
 This supports an advisor draft and a possible negative/diagnostic paper. It does
-not support a positive PINN methods submission. LF8 removes LF7's identity
-ambiguity, but the stalled path does not trigger the schedule control; matched
-attribution, PINN Pareto value, and candidate status remain unavailable.
+not support a positive PINN methods submission. LF9 closes the final bounded
+rescue screen with no selected arm, full refinement, or no-filter control.
+Mechanism attribution, PINN Pareto value, and candidate status remain absent.

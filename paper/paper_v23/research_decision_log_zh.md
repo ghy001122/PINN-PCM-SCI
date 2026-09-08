@@ -92,15 +92,27 @@ PINN Pareto、matched schedule attribution、强基线增益或 candidate。下�
 问题应转向 mixed weak/control-volume 物理目标能否提供 preservation-compatible
 方向；须另行授权，stress 继续 sealed/unread。
 
-## LF9 激活：把温度阻塞拆成“梯度路由”与“热控制体积”两个可归因问题
+## LF9 终局：梯度路由与热控制体积均未打开安全持续路径
 
-LF8 的有效前缀表明，强形式路径首先被 temperature preservation 拒绝。LF9
-不再继续缩学习率或堆通用训练技巧，而是从同一个 DEV-R 起点做两条 matched
-screen：`ER-S` 只增加 equation-to-head gradient routing；`ER-CV` 在完全相同
-路由与 filter 下，仅把 thermal strong residual 换成时空 enthalpy control-volume
-balance。两臂均完成后才能判断 routing 是否足够、thermal CV 是否 load-bearing。
+LF9 从同一个 DEV-R 起点完成两条 matched screen：`ER-S` 只增加
+equation-to-head gradient routing；`ER-CV` 在相同路由与 filter 下，仅把 thermal
+strong residual 换成时空 enthalpy control-volume balance。
 
-当前状态是 `LF9_ACTIVE_RESULTS_PENDING`：没有 screen endpoint、PINN Pareto、
-direct `LF_ONLY` 增益或 candidate。VPINN、cvPINN、block-coordinate、staggered、
-enthalpy 和 local-balance 原语均已有文献先例；潜在贡献只能来自本对象中经 matched
-实验支持的组合与 failure localization，而不能把已有原语重新命名成首创。
+1. `VERIFIED`：两臂均在前四档学习率被 V/T preservation 拒绝，在 `eta0/16`
+   接受一个 safety-valid 25-step block；第二个同尺度 block 又因 temperature
+   preservation 被拒并精确回滚。两臂均为 25 accepted / 150 attempted，未达到
+   200-update screen gate。
+2. `VERIFIED`：`ER-S` 与 `ER-CV` 的 retained strong/mixed ratio 都约 0.9897；
+   CV1/CV4 ratio 均略高于 1，且两臂差异极小。thermal-CV replacement 没有形成
+   load-bearing conservation 或持续性增量。
+3. `VERIFIED`：selected arm=none；full refinement 因无 screen selection 而
+   `NOT_RUN`，no-filter control 因无 complete internal Pareto 而 `NOT_RUN`。这些是
+   冻结条件未触发，不是两个失败 endpoint。
+4. `VERIFIED`：local extra-fine 上两条 screen 的 phase/T/current 仍显著落后
+   direct `LF_ONLY`。candidate=none，stress 继续 sealed/unread。
+
+终局为 `LF9_NO_SAFE_MIXED_FORM_SCREEN`。可写结论仅限：在本 single-seed、固定对象
+与 filter 下，equation routing 与 thermal-CV replacement 都复现同一个一-block
+温度阻塞，且 CV audit 不改善。不得写控制体积 PINN 一般无效、filter attribution、
+PINN Pareto、强基线增益或原创原语。唯一下一步是停止继续救援并收口负面 solver
+diagnostic：`FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE`。
