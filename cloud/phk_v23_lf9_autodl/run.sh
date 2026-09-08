@@ -7,7 +7,7 @@ set -euo pipefail
 : "${LF9_CPU_QUALIFICATION:?LF9_CPU_QUALIFICATION is required}"
 
 export PYTHONPATH="${LF9_DEPLOYMENT_ROOT}"
-PYTHON_BIN="/root/miniconda3/bin/python"
+PYTHON_BIN="/root/autodl-tmp/envs/pinn-pcm-sci-py311/bin/python"
 if [[ ! -x "${PYTHON_BIN}" ]]; then
   echo "LF9 cannot start: frozen Python runtime is unavailable: ${PYTHON_BIN}" >&2
   exit 44

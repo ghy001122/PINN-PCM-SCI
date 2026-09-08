@@ -60,9 +60,14 @@ class LF9CloudTests(unittest.TestCase):
         self.assertEqual(len(base_commit), 40)
         self.assertEqual(bundle._git("cat-file", "-t", base_commit).decode().strip(), "commit")
         self.assertEqual(
-            bundle._git("show", "-s", "--format=%s", base_commit).decode().strip(),
+            bundle._git("show", "-s", "--format=%s",
+                        "c38fa80d2fa2ceb0b1bd1fa9faf70440f2a07159").decode().strip(),
             "Activate PHK-V2.3 LF9 equation-routed thermal-CV refinement",
         )
+        # A source-identity-preserving prestep engineering fix may become the
+        # deployed base; it must remain descended from the authorized activation.
+        bundle._git("merge-base", "--is-ancestor",
+                    "c38fa80d2fa2ceb0b1bd1fa9faf70440f2a07159", base_commit)
         materialized = deployed.get("materialized_inputs", {})
         self.assertEqual(set(materialized), {
             "medium", "dev_r_checkpoint", "strong_ledger", "strong_ledger_manifest",
@@ -199,7 +204,10 @@ class LF9CloudTests(unittest.TestCase):
         launcher = (ROOT / "cloud/phk_v23_lf9_autodl/run.sh").read_text(encoding="utf-8")
         self.assertIn("LF9_OUTPUT_ROOT", launcher)
         self.assertIn("find \"${LF9_OUTPUT_ROOT}\"", launcher)
-        self.assertIn('PYTHON_BIN="/root/miniconda3/bin/python"', launcher)
+        self.assertIn(
+            'PYTHON_BIN="/root/autodl-tmp/envs/pinn-pcm-sci-py311/bin/python"',
+            launcher,
+        )
         self.assertIn('[[ ! -x "${PYTHON_BIN}" ]]', launcher)
         self.assertLess(launcher.index("preflight.py"),
                         launcher.index('"${PYTHON_BIN}" -m pinn_pcm_sci.phk_v23_lf9'))
