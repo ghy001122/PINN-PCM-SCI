@@ -1,34 +1,38 @@
 # 当前阶段
 
-- `phase_id`: `PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE`
-- `phase_name`: PHK-V2.3 LF7 competence-filtered blockwise backtracking physics refinement pilot
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE`
+- `phase_name`: PHK-V2.3 LF8 identity-correct competence-filter completion and conditional schedule attribution
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`
-- `mechanism_outcome`: `MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`
-- `claim_status`: `VALID_SMALL_STEP_NEGATIVE_ARM_FILTER_ARM_IDENTITY_INVALID_NO_MECHANISM_ATTRIBUTION`
-- `next_research_execution_authorized`: `false`
-- `authorization_scope`: `NONE_TERMINAL`
-- `candidate_status`: `NONE`
-- `reference_status`: `LOCAL_NOMINAL_ADJUDICATED_STRESS_SEALED`
-- `compute_status`: `GPU_COMPLETE_ARTIFACTS_RECOVERED_INSTANCE_SHUTDOWN`
-- `next_recommendation`: `RETAIN_VALID_ARM_NO_MECHANISM_ATTRIBUTION`
+- `machine_outcome`: `PENDING_MANDATORY_P0_FSTAR`
+- `mechanism_outcome`: `PENDING`
+- `claim_status`: `CPU_QUALIFIED_GPU_FILTER_UNTESTED`
+- `next_research_execution_authorized`: `true`
+- `authorization_scope`: `ONE_MANDATORY_P0_FSTAR_THEN_CONDITIONAL_SCHEDULE_CONTROL`
+- `candidate_status`: `NONE_PENDING_EVIDENCE`
+- `reference_status`: `CLOUD_REFERENCE_BLIND_STRESS_SEALED`
+- `compute_status`: `CPU_QUALIFICATION_PASS_GPU_PENDING`
+- `next_recommendation`: `EXECUTE_AUTHORIZED_P0_FSTAR`
 - `effective_date`: `2026-09-08`
 
-PHASE_ID=PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE
+PHASE_ID=PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE
 BLOCKER_ID=NONE
-NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
+NEXT_RESEARCH_EXECUTION_AUTHORIZED=true
 
-## 终局
+## 当前授权
 
-P0-S 完成 1,200 updates，是有效的 bounded negative arm：fixed-blind
-`J/J0=0.6030763369`，且场与事件 competence 坍塌。P0-F 接受 25、尝试
-150 updates 后触发 post-step rollback identity drift，无合法 endpoint，按合同不重试。
-因此 matched screen 不完整，不能归因 function-space filter 增量。
+从 exact LF6 DEV-R 执行 mandatory P0-F* identity-correct competence-filtered
+strong-form refinement。仅当 F* 接受全部 1,200 updates、保持安全且降低
+fixed-blind objective 时，才从 exact DEV-R 执行 accepted-schedule matched control。
 
-## 证据边界
+## 已通过门
 
-终局为 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`，candidate 为 none。
-产物已回收并逐项核验，实例已关机，关机后完成本地 nominal 裁决。post-run
-rollback 修复未重新执行，属于 engineering-only、non-voting 变更。direct
-`LF_ONLY` 仍显著更强；stress 保持 sealed/unread。任何后续研究均须新的明确授权。
+CPU/FP64 零步资格的九项检查全部通过。真实三头模型与 28 个非空 Adam
+state entries 通过两个连续 mutate/reject/restore 循环；快照与 live optimizer
+无 tensor alias，模型、优化器及 RNG 状态 bitwise 恢复。该门仅是工程身份事实。
+
+## 边界
+
+F* 最多 1,200 accepted / 2,400 attempted updates；conditional control 固定
+1,200 updates。禁止额外 strong-form rescue、seed、sparse、weak/control-volume、
+OOD/stress、PJGR/R2/SRPG 或投稿。本阶段结束后必须回收、关机、本地裁决并关闭授权。

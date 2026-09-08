@@ -1,0 +1,229 @@
+{
+  "checks": {
+    "DEV_R_checkpoint_metadata": true,
+    "DEV_R_full_medium_finite": true,
+    "all_input_hashes": true,
+    "fine_extra_LF_ONLY_stress_unread": true,
+    "fixed_blind_J0": true,
+    "partition_sha256": true,
+    "physics_stream_1200": true,
+    "real_nonempty_Adam_two_rollbacks": true,
+    "real_physics_finite_backward_no_step": true
+  },
+  "contracts": {
+    "data": {
+      "path": "configs/phk_v23/data_contract_lf8_competence_filter.json",
+      "sha256": "B460449E3D686E4423B19604860CFD51137D8B14B71F22E47D1B48991A33FFEE"
+    },
+    "decision": {
+      "path": "configs/phk_v23/decision_contract_lf8_competence_filter.json",
+      "sha256": "C9CF732D0471853350D76B66E01BCEEBD621EA52D652E38C65640AF7CD46F50A"
+    },
+    "method": {
+      "path": "configs/phk_v23/method_contract_lf8_competence_filter.json",
+      "sha256": "6398D006B1741C5BBD147F7A2542D45FA35E91A9F7670900E1E50AFF03726752"
+    },
+    "program": {
+      "path": "configs/phk_v23/program_contract_lf8_competence_filter.json",
+      "sha256": "D2F189AFF4B250E4BAFCA2807D593C5B6F8135C17759F8ABF9DB6E6272E07290"
+    }
+  },
+  "created_at_utc": "2026-09-08T05:25:29.745129+00:00",
+  "dev_r_full_medium_audit": {
+    "all_values_finite": true,
+    "event_metrics": {
+      "cycle_1": {
+        "event_time_absolute_error": 0.010533333333333339,
+        "hard_active_mass_ratio": 1.0231958762886597,
+        "hard_precision": 0.8967254408060453,
+        "hard_recall": 0.9175257731958762,
+        "predicted_active_target_mass": 0.0007443749999999999,
+        "predicted_event_time": 0.22726666666666667,
+        "teacher_active_target_mass": 0.0007275,
+        "teacher_event_time": 0.2378,
+        "true_positive_target_mass": 0.0006674999999999999
+      },
+      "cycle_2": {
+        "event_time_absolute_error": 0.0018000000000002458,
+        "hard_active_mass_ratio": 1.0027223230490017,
+        "hard_precision": 0.920361990950226,
+        "hard_recall": 0.9228675136116149,
+        "predicted_active_target_mass": 0.0006906249999999997,
+        "predicted_event_time": 1.4924,
+        "teacher_active_target_mass": 0.0006887499999999998,
+        "teacher_event_time": 1.4942000000000002,
+        "true_positive_target_mass": 0.0006356249999999996
+      }
+    },
+    "event_topology_hard_guard": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.22726666666666667,
+          "peak_full_domain_fraction": 0.0228125,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07541322314049587,
+          "peak_time_index": 82,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.4924,
+          "peak_full_domain_fraction": 0.0221875,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07334710743801653,
+          "peak_time_index": 330,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "phase_maximum": 0.9910522424050187,
+    "phase_range": {
+      "maximum": 0.9910522424050187,
+      "minimum": 2.7717232857562843e-09,
+      "passed": true
+    },
+    "potential_maximum_principle": {
+      "by_window": {
+        "W1": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W2": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W3": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W4": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        }
+      },
+      "global": {
+        "absolute_tolerance": 1e-06,
+        "all_pointwise_values_finite": true,
+        "maximum_absolute_excess": 0.0,
+        "passed": true,
+        "violation_fraction": 0.0
+      },
+      "passed": true
+    },
+    "target_measure_identity": "TRAPEZOID_TIME_TIMES_CELL_VOLUME",
+    "temperature_maximum": 0.8050099454973638,
+    "topology_weighted_loss": 0.004614488030658961,
+    "two_cycle_events": true,
+    "weighted_errors": {
+      "phase": 0.0011832624059166495,
+      "potential": 7.14767714198432e-05,
+      "temperature": 0.0007111887418509094
+    }
+  },
+  "fixed_blind_J0": 4.9278721846990505,
+  "fixed_blind_components": {
+    "boundary:bottom:bc_electric_insulating_bottom": 1.014001140188491,
+    "boundary:bottom:bc_phase_no_flux": 8.838413580365767,
+    "boundary:bottom:bc_potential_heater": 0.0013618322624149813,
+    "boundary:bottom:bc_temperature_robin": 0.492271620071917,
+    "boundary:left:bc_electric_insulating_side": 0.00032664725449285534,
+    "boundary:left:bc_phase_no_flux": 1.2925038177479999e-06,
+    "boundary:left:bc_temperature_robin": 0.0008808564050084268,
+    "boundary:right:bc_electric_insulating_side": 8.735936889053546e-05,
+    "boundary:right:bc_phase_no_flux": 6.070495784547081e-06,
+    "boundary:right:bc_temperature_robin": 0.004460853118684289,
+    "boundary:top:bc_phase_no_flux": 1.1312264454061735e-05,
+    "boundary:top:bc_potential_top": 0.0,
+    "boundary:top:bc_temperature_top": 0.0,
+    "boundary_loss": 0.7962940434076711,
+    "initial_loss": 4.42334170531646e-33,
+    "pde_loss": 0.9464019676606953,
+    "physics_total": 4.9278721846990505
+  },
+  "gate_outcome": "LF8_CPU_QUALIFICATION_PASS",
+  "gpu_execution_authorized_by_cpu_gate": true,
+  "gpu_used": false,
+  "input_bindings": {
+    "dev_r_checkpoint": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260906T065434Z-phk-v23-lf6-event-frontier-pilot\\dev_r\\checkpoint.pt",
+      "sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499"
+    },
+    "dev_r_prediction": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260906T065434Z-phk-v23-lf6-event-frontier-pilot\\dev_r\\prediction.npz",
+      "sha256": "5F20FB6ACBFE7D627A1C73D0E707A102F0872E8BF09ED83CFFD30397E4F350EF"
+    },
+    "ledger": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260906T065434Z-phk-v23-lf6-event-frontier-pilot\\cpu\\materialized_ledger.npz",
+      "sha256": "29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801"
+    },
+    "ledger_manifest": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260906T065434Z-phk-v23-lf6-event-frontier-pilot\\cpu\\materialized_ledger_manifest.json",
+      "sha256": "3CFA268CFB22CF225ABB92BFD7F9F00353634AF7AFEE7AA607EC59FE4F4C8F90"
+    },
+    "medium": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260828T-phk-v21-s1-q-04-nominal-medium\\result-intent-04.npz",
+      "sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F"
+    }
+  },
+  "ledger": {
+    "file_sha256": "29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801",
+    "fixed_blind_pool_sha256": "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF",
+    "manifest_sha256": "3CFA268CFB22CF225ABB92BFD7F9F00353634AF7AFEE7AA607EC59FE4F4C8F90",
+    "physics_1200_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53",
+    "semantic_sha256": "0E2F680D33C4489F6092CB5D01E87483F7ECDA8290CD3E2C24EBDD06B3DA2B7F"
+  },
+  "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+  "reference_boundary": {
+    "direct_LF_ONLY_read": false,
+    "extra_fine_read": false,
+    "fine_read": false,
+    "frozen_evaluator_read": false,
+    "stress_read": false
+  },
+  "rollback_qualification": {
+    "continuous_reject_restore_cycles": [
+      {
+        "cycle": 1,
+        "optimizer_snapshot_aliases": [],
+        "restored_after_sha256": "E91B536DD76310D470F1CEDFC09A52D77FE941FB6DE921139572287F8A2F52E0",
+        "restored_before_sha256": "E91B536DD76310D470F1CEDFC09A52D77FE941FB6DE921139572287F8A2F52E0",
+        "snapshot_stable_after_step": true
+      },
+      {
+        "cycle": 2,
+        "optimizer_snapshot_aliases": [],
+        "restored_after_sha256": "E91B536DD76310D470F1CEDFC09A52D77FE941FB6DE921139572287F8A2F52E0",
+        "restored_before_sha256": "E91B536DD76310D470F1CEDFC09A52D77FE941FB6DE921139572287F8A2F52E0",
+        "snapshot_stable_after_step": true
+      }
+    ],
+    "nonempty_adam_state_count": 28,
+    "passed": true,
+    "phase_frozen_in_snapshot": true,
+    "phase_optimizer_state_entries": 0,
+    "real_model": true,
+    "snapshot_sha256": "8201A645D01C300D18FB6299B7DA45E9AF16B425FD4584513FD56D153D37982B"
+  },
+  "schema_id": "phk-v23-lf8-cpu-qualification-v1",
+  "scientific_optimizer_updates": 0,
+  "status": "LF8_CPU_QUALIFICATION_PASS",
+  "task_id": "PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_id": "phk-v23-lf8-method-contract-v1",
+  "contract_id": "PHK_V23_LF8_COMPETENCE_FILTER_METHOD",
+  "program_contract": "configs/phk_v23/program_contract_lf8_competence_filter.json",
+  "effective_date": "2026-09-08",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "identity": {
+    "method": "IDENTITY_CORRECT_MULTIFIDELITY_COMPETENCE_FILTERED_PINN_REFINEMENT",
+    "gpu": "TESLA_V100_PCIE_32GB_ONLY",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "initialization": "EXACT_LF6_DEV_R_MODEL_WEIGHTS_ONLY",
+    "network": "UNCHANGED_STRONG_RAW_THREE_INDEPENDENT_FIELD_HEADS",
+    "objective": "L_PDE_PLUS_5_L_BC_PLUS_L_IC",
+    "medium_or_label_gradient": false,
+    "runtime_sampling": false,
+    "initial_learning_rate": 0.000125,
+    "optimizer": {"name": "TORCH_ADAM", "betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0.0, "amsgrad": false, "fresh_per_arm": true},
+    "gradient_clip_norm": 10.0
+  },
+  "phase_schedule": {
+    "accepted_steps_1_through_550": "PHASE_PARAMETERS_AND_BUFFERS_BITWISE_FROZEN_ONLY_V_T_UPDATED_FULL_RESIDUAL_READS_PHASE",
+    "accepted_steps_551_through_1200": "UNFREEZE_PHASE_WITHOUT_OPTIMIZER_RESET_AND_JOINTLY_UPDATE_ALL_THREE_HEADS"
+  },
+  "matched_stream": {"accepted_steps": 1200, "block_size": 25, "blocks": 48, "physics_stream_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53"},
+  "P0_FSTAR": {
+    "role": "P0_FSTAR_IDENTITY_CORRECT_COMPETENCE_FILTER",
+    "maximum_accepted_updates": 1200,
+    "maximum_attempted_updates": 2400,
+    "block_size": 25,
+    "snapshot": "IMMUTABLE_DEEP_COPY_MODEL_OPTIMIZER_AND_ALL_RNG_PLUS_ACCEPTED_STEP_LR_PHASE_STAGE",
+    "dyadic_learning_rates": [0.000125, 0.0000625, 0.00003125, 0.000015625, 0.0000078125],
+    "accepted_learning_rate_never_increases": true,
+    "all_scales_rejected": "SAVE_VALID_PREFIX_AND_STALL"
+  },
+  "P0_C": {
+    "role": "P0_C_ACCEPTED_SCHEDULE_NO_FILTER",
+    "trigger": "FSTAR_1200_VALID_SAFETY_AND_J_FINAL_LT_J0",
+    "updates": 1200,
+    "replay_exact_FSTAR_accepted_lr_by_block": true,
+    "medium_audit_during_training": false,
+    "rollback": false,
+    "filter": false
+  },
+  "forbidden": ["DATA_REPLAY_OR_ANCHOR_GRADIENT", "BCE", "AUGMENTED_LAGRANGIAN", "EVENT_RANK_OR_TZL_LOSS", "DYNAMIC_WEIGHTING", "RUNTIME_SOBOL_OR_RESAMPLING", "RAR", "LBFGS", "NETWORK_OPTIMIZER_OR_SEED_SWEEP", "BEST_CHECKPOINT_SELECTION"]
+}

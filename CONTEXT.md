@@ -31,11 +31,23 @@ LF7 从 exact DEV-R 运行 matched 小步长与 competence-filtered physics refi
 
 ## 方法与论文身份
 
+**Competence-filtered safety path**: a sequence of accepted strong-form physics
+blocks that strictly reduces the blind objective while retaining the frozen
+event-and-field safety conjunction. A stopped valid prefix is evidence about
+path feasibility, not a completed PINN Pareto result.
+
+**Accepted-schedule control**: a fresh exact-DEV-R trajectory that replays the
+learning-rate schedule accepted by a complete safety path but performs no
+competence audit, rejection or rollback. It isolates schedule sufficiency from
+the load-bearing effect of filtering.
+
 ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling、BCE-with-logits、event-frontier rank-band 与 competence-filter/backtracking 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为 high-precision/low-recall support；LF4 验证界面暴露可提高最低召回；LF6/LF7 证明 bulk residual 下降和更小步长均未保存事件载体。LF7 的 filtered arm 无合法 endpoint，不能判断 filter 是否有效。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是强 comparators。当前稿件只能承载有界 failure-analysis、solver-recovery mechanism evidence 与 physics-forgetting 负结果。
 
 ## 权威路由
 
-LF7 终局与授权边界见 [active phase](active_phase.md)、[project state](PROJECT_STATE.md)、[live plan](docs/plans/NEXT_ACTIONS.md)、[ADR 0068](docs/adr/0068-close-phk-v23-lf7-competence-filtered-refinement.md) 与 [terminal closeout](docs/experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)。导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF6 及更早证据继续由对应 terminal closeout 保留。
+LF8 activation and its evidence boundary are defined by [ADR 0069](docs/adr/0069-activate-phk-v23-lf8-competence-filter-completion.md), [CPU qualification](docs/experiment/2026-09-08-phk-v23-lf8-cpu-qualification.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md) and the [live plan](docs/plans/NEXT_ACTIONS.md). These replace LF7 terminal status only as the current authorization surface; they do not rewrite LF7 evidence.
+
+LF7 终局证据见 [ADR 0068](docs/adr/0068-close-phk-v23-lf7-competence-filtered-refinement.md) 与 [terminal closeout](docs/experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)。导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF7 及更早证据继续由对应 terminal closeout 保留，不被 LF8 激活追溯修改。
 
 # LF5 terminal context (2026-09-06)
 

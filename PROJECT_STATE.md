@@ -2,35 +2,34 @@
 
 更新时间：2026-09-08
 
-- `phase_id`: `PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`
-- `mechanism_outcome`: `MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`
-- `claim_status`: `VALID_SMALL_STEP_NEGATIVE_ARM_FILTER_ARM_IDENTITY_INVALID_NO_MECHANISM_ATTRIBUTION`
-- `next_research_execution_authorized`: `false`
-- `candidate_status`: `NONE`
+- `machine_outcome`: `PENDING_MANDATORY_P0_FSTAR`
+- `mechanism_outcome`: `PENDING`
+- `claim_status`: `CPU_QUALIFIED_GPU_FILTER_UNTESTED`
+- `next_research_execution_authorized`: `true`
+- `candidate_status`: `NONE_PENDING_EVIDENCE`
 - `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED_UNCHANGED`
-- `implementation_status`: `LF7_EXECUTED_ACTIVATION_SOURCE_POST_RUN_ROLLBACK_FIX_UNEXECUTED`
-- `compute_status`: `GPU_COMPLETE_RECOVERED_HASH_VERIFIED_SHUTDOWN`
-- `paper_status`: `PAPER_V23_TERMINAL_UPDATED`
+- `implementation_status`: `LF8_CONTRACTS_CPU_AND_RUNTIME_READY`
+- `compute_status`: `CPU_ZERO_UPDATE_PASS_GPU_PENDING`
+- `paper_status`: `PAPER_V23_LF7_TERMINAL_RETAINED_LF8_PENDING`
 - `stress_status`: `TWO_STRESS_REFERENCES_SEALED_UNREAD`
-- `unique_next`: `RETAIN_VALID_ARM_NO_MECHANISM_ATTRIBUTION`
+- `unique_next`: `RUN_AUTHORIZED_P0_FSTAR_THEN_CONDITIONAL_SCHEDULE_CONTROL`
 
 ## VERIFIED
 
-- P0-S 完成全部 1,200 个冻结 physics updates，endpoint finite 且
-  potential/phase valid；fixed-blind ratio 为 `0.6030763369`，但两周期事件与场精度崩解。
-- P0-F 尝试 150、接受 25 updates 后出现 post-step rollback identity drift；
-  无 checkpoint/prediction endpoint，合同禁止 scientific retry。
-- 事后定位为非空 Adam snapshot tensor aliasing；修复与回归未用于本次科学运行，
-  不改变终局。
-- 13/13 云端产物 remote/local size 与 SHA 一致；GPU/训练进程清零后关机，
-  SSH `Connection refused` 先于本地评价。
+- LF7 的 P0-S 仍是有效负面 arm；LF7 P0-F 的 tensor-alias identity failure
+  没有形成可投票 endpoint，因此 competence filter 的科学效果仍未知。
+- LF8 CPU qualification 在真实三头模型和非空 Adam state 上通过两个连续
+  snapshot/mutate/reject/restore 循环，且所有恢复状态 bitwise 一致。
+- Exact DEV-R、1,200-step materialized physics stream、fixed blind pool 与
+  `J0=4.9278721846990505` 均通过冻结身份检查。
+- LF8 只运行 mandatory P0-F*；仅在完整安全路径成功时运行 matched schedule control。
 
 ## Evidence boundary
 
-P0-S 只支持“小步长不足以形成 accuracy-preserving physics path”的单 seed
-nominal 负面结果。P0-F 只支持 identity-invalid 记录，不能用于判断 competence
-filter 的科学效果。没有 PINN Pareto、direct-baseline gain、candidate、multi-seed、
-sparse/OOD/stress、SOTA 或实验验证；direct `LF_ONLY` 仍是更强基线。
+CPU qualification is engineering identity evidence, not a scientific result.
+No LF8 GPU endpoint, filter attribution, PINN Pareto, direct-baseline gain or
+candidate exists yet. Medium is audit-only; fine/extra/direct `LF_ONLY` and the
+frozen evaluator remain local-only after shutdown; stress remains sealed.

@@ -4,24 +4,26 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF7_COMPETENCE_FILTERED_BLOCKWISE_BACKTRACKING_PHYSICS_REFINEMENT_PILOT_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`
-- `mechanism_outcome`: `MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`
-- `claim_status`: `VALID_SMALL_STEP_NEGATIVE_ARM_FILTER_ARM_IDENTITY_INVALID_NO_MECHANISM_ATTRIBUTION`
-- `next_research_execution_authorized`: `false`
+- `machine_outcome`: `PENDING_MANDATORY_P0_FSTAR`
+- `mechanism_outcome`: `PENDING`
+- `claim_status`: `CPU_QUALIFIED_GPU_FILTER_UNTESTED`
+- `next_research_execution_authorized`: `true`
 
-LF7 已完成并关闭。P0-S 完成 1,200 updates，但 fixed-blind ratio 仅降至
-`0.6030763369` 且事件/场 competence 坍塌；P0-F 在接受 25、尝试 150
-updates 后发生 post-step rollback identity drift，无合法 endpoint。matched screen
-因此不完整，不能归因 filter 增量；candidate 为 none，stress 保持 sealed/unread。
+LF8 已获具名授权并通过真实 nonempty-Adam 零步资格。当前从 exact LF6
+DEV-R 运行 mandatory identity-correct P0-F*；仅在 F* 完成 1,200 accepted
+updates、保持安全且降低 blind physics objective 时运行 accepted-schedule
+matched control。GPU 科学结果尚不存在，stress 保持 sealed/unread。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
+- 当前激活决定：[ADR 0069](docs/adr/0069-activate-phk-v23-lf8-competence-filter-completion.md)
+- LF8 CPU 资格：[CPU qualification](docs/experiment/2026-09-08-phk-v23-lf8-cpu-qualification.md)
 - 当前关闭决定：[ADR 0068](docs/adr/0068-close-phk-v23-lf7-competence-filtered-refinement.md)
 - LF7 终局：[terminal closeout](docs/experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)
 - LF7 激活决定：[ADR 0067](docs/adr/0067-activate-phk-v23-lf7-competence-filtered-refinement.md)

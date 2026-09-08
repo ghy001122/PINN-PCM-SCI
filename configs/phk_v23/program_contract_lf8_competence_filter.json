@@ -1,0 +1,27 @@
+{
+  "schema_id": "phk-v23-lf8-program-contract-v1",
+  "contract_id": "PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE",
+  "phase_id": "PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE",
+  "title": "PHK-V2.3 LF8 identity-correct competence-filter completion and conditional schedule attribution",
+  "effective_date": "2026-09-08",
+  "status": "EXPLICITLY_AUTHORIZED_BOUNDED_CAMPAIGN",
+  "expected_base_commit": "95e448e36a659ac266b670667543b80ce467da53",
+  "scientific_question": "DOES_AN_IDENTITY_CORRECT_COMPETENCE_FILTER_ADMIT_A_COMPLETE_EVENT_PRESERVING_STRONG_FORM_PATH_AND_IS_FILTERING_LOAD_BEARING_BEYOND_ITS_ACCEPTED_LR_SCHEDULE",
+  "paper_role": "COMPLETE_FILTER_PATH_OR_STRONG_FORM_BRANCH_CLOSURE_WITH_CONDITIONAL_SCHEDULE_ATTRIBUTION",
+  "hard_limits": {
+    "maximum_scientific_gpu_trajectories": 2,
+    "P0_FSTAR_maximum_accepted_updates": 1200,
+    "P0_FSTAR_maximum_attempted_updates": 2400,
+    "P0_C_updates": 1200,
+    "seed": 17,
+    "best_checkpoint_selection": false,
+    "hyperparameter_or_architecture_sweep": false
+  },
+  "lifecycle": {
+    "mandatory_arm": "P0_FSTAR_IDENTITY_CORRECT_COMPETENCE_FILTER",
+    "conditional_control": "ONLY_AFTER_1200_IDENTITY_VALID_SAFETY_PRESERVING_FSTAR_WITH_J_FINAL_LT_J0",
+    "valid_prefix_is_scientific_endpoint": true,
+    "completion_does_not_authorize_next_research": true
+  },
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

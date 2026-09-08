@@ -120,6 +120,7 @@ This is a generated view of the append-only `index.jsonl` ledger.
 | 20260906T065434Z-phk-v23-lf6-terminal | development_campaign | event_frontier_matched_development_and_safety_gated_physics_terminal_adjudication | PHK_V23_LF6 | phk-v23-lf6-event-frontier-rank-band-v1 | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | LF6_P0_PRESERVATION_FAILED | [manifests/20260906T065434Z-phk-v23-lf6-terminal.json](manifests/20260906T065434Z-phk-v23-lf6-terminal.json) |
 | 20260907T144634Z-phk-v23-lf7-cpu-qualification | qualification | cpu_only_DEV_R_ledger_rollback_and_backward_qualification | PHK_V23_LF7_CPU | phk-v23-lf7-competence-filtered-refinement-v1 | PHK_V21_NOMINAL_DEV_R_REFINEMENT_QUALIFICATION | 17 | COMPLETE | LF7_CPU_QUALIFICATION_PASS | [manifests/20260907T144634Z-phk-v23-lf7-cpu-qualification.json](manifests/20260907T144634Z-phk-v23-lf7-cpu-qualification.json) |
 | 20260907T144634Z-phk-v23-lf7-terminal | development_campaign | matched_fixed_small_step_and_competence_filtered_physics_refinement_terminal_adjudication | PHK_V23_LF7 | phk-v23-lf7-competence-filtered-refinement-v1 | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID | [manifests/20260907T144634Z-phk-v23-lf7-terminal.json](manifests/20260907T144634Z-phk-v23-lf7-terminal.json) |
+| 20260908T050343Z-phk-v23-lf8-cpu-qualification | qualification | cpu_only_real_model_nonempty_adam_continuous_rollback_and_physics_backward | PHK_V23_LF8_CPU | phk-v23-lf8-identity-correct-competence-filter-v1 | PHK_V21_NOMINAL_DEV_R_FILTER_COMPLETION_QUALIFICATION | 17 | COMPLETE | LF8_CPU_QUALIFICATION_PASS | [manifests/20260908T050343Z-phk-v23-lf8-cpu-qualification.json](manifests/20260908T050343Z-phk-v23-lf8-cpu-qualification.json) |
 # PHK-V2.3 LF5 temporal zero-level pilot (2026-09-05)
 
 - [CPU-T qualification](2026-09-05-phk-v23-lf5-cpu-qualification.md): `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`; zero updates. A later explicit user override authorizes the unchanged DEV-T only as post-qualification exploratory evidence.
@@ -143,3 +144,8 @@ This is a generated view of the append-only `index.jsonl` ledger.
 - [ADR 0067](../adr/0067-activate-phk-v23-lf7-competence-filtered-refinement.md): freezes P0-S versus fresh P0-F and the safety/strict/local/direct evidence hierarchy.
 - [Terminal closeout](2026-09-07-phk-v23-lf7-terminal-closeout.md): P0-S completed as a valid negative arm; P0-F had no valid endpoint after a post-step rollback identity failure, so the matched filter screen is incomplete.
 - [ADR 0068](../adr/0068-close-phk-v23-lf7-competence-filtered-refinement.md): closes LF7 as `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`, with no mechanism attribution, candidate or next authorization.
+
+# PHK-V2.3 LF8 identity-correct competence-filter completion (2026-09-08)
+
+- [CPU qualification](2026-09-08-phk-v23-lf8-cpu-qualification.md): `LF8_CPU_QUALIFICATION_PASS`; zero scientific updates, with two real-model nonempty-Adam mutate/reject/restore cycles and a finite real physics backward.
+- [ADR 0069](../adr/0069-activate-phk-v23-lf8-competence-filter-completion.md): freezes mandatory P0-F*, valid-prefix semantics and the conditional accepted-schedule control.

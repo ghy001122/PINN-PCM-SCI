@@ -1,0 +1,28 @@
+{
+  "schema_id": "phk-v23-lf8-decision-contract-v1",
+  "contract_id": "PHK_V23_LF8_COMPETENCE_FILTER_DECISION",
+  "program_contract": "configs/phk_v23/program_contract_lf8_competence_filter.json",
+  "method_contract": "configs/phk_v23/method_contract_lf8_competence_filter.json",
+  "data_contract": "configs/phk_v23/data_contract_lf8_competence_filter.json",
+  "effective_date": "2026-09-08",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "function_space_feasibility": {"finite": true, "phase_range": [-1e-10, 1.0000000001], "potential_maximum_excess": 1e-6, "potential_violation_fraction": 0.0, "phase_maximum_minimum": 0.90, "two_cycle_events": true, "hard_recall_each_cycle_minimum": 0.90, "hard_precision_each_cycle_minimum": 0.80, "hard_active_mass_ratio_each_cycle": [0.80, 1.20], "event_time_absolute_error_cycle_1_maximum": 0.010533333334333338, "event_time_absolute_error_cycle_2_maximum": 0.005000000000999893, "roi_peak_fraction_each_cycle_minimum": 0.02, "full_domain_peak_fraction_each_cycle_maximum": 0.45, "outside_roi_peak_fraction_each_cycle_maximum": 0.10, "recovery_fraction_each_cycle_minimum": 0.70, "relative_DEV_R_maximum": {"potential": 1.20, "temperature": 1.05, "phase": 1.05, "topology": 1.05}, "fixed_blind_strict_improvement": "J_NEW_LE_J_PREV_MINUS_MAX_1E_MINUS_12_OR_1E_MINUS_8_TIMES_J_PREV"},
+  "complete_safety_path": {"accepted_updates": 1200, "endpoint_safety": true, "J_final_less_than_J0": true},
+  "single_seed_PINN_Pareto": {"complete_safety_path": true, "fixed_blind_ratio_to_DEV_R_maximum": 0.50, "strict_event_time_each_cycle_maximum": 0.005, "both_frozen_evaluator_competent": true, "phase_noninferiority": "PHK_V21_FROZEN_FLOOR_OR_RATIO_FORMULA", "temperature_maximum": "MAX_1_10_TIMES_DEV_R_OR_0_05", "current_maximum": "MAX_1_10_TIMES_DEV_R_OR_0_15"},
+  "direct_paper_value": "ENDPOINT_MUST_PASS_SAME_PHASE_T_CURRENT_POTENTIAL_EVENT_RECOVERY_GATES_RELATIVE_TO_DIRECT_LF_ONLY",
+  "machine_outcomes_and_unique_next": {
+    "LF8_START_OR_INPUT_BLOCKED": "USER_REVIEW_NO_GPU",
+    "LF8_ENGINEERING_QUALIFICATION_FAILED": "FIX_ONLY_THE_REACHABLE_ROLLBACK_DEFECT_NO_SCIENTIFIC_RUN",
+    "LF8_POSTSTEP_IDENTITY_INVALID": "STOP_STRONG_FORM_NO_MORE_RETRY",
+    "LF8_NO_FEASIBLE_FIRST_BLOCK": "MIXED_WEAK_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE",
+    "LF8_FILTER_STALLED_WITH_VALID_PREFIX": "MIXED_WEAK_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE_VALID_PREFIX_RETAINED",
+    "LF8_FULL_SAFETY_PATH_PHYSICS_GATE_MISSED": "MIXED_WEAK_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE_PHYSICS_GATE_MISSED",
+    "LF8_SAFETY_PATH_STRICT_OR_LOCAL_FAILED": "FINALIZE_BOUNDED_STRONG_FORM_RESULT_AND_PLAN_WEAK_CV",
+    "LF8_SCHEDULE_SUFFICIENT_FILTER_NOT_LOAD_BEARING": "USE_SIMPLE_SCHEDULE_AS_BACKBONE_SPARSE_TASK_REQUIRES_NEW_EXECUTE",
+    "LF8_FILTER_LOAD_BEARING_DIRECT_BASELINE_GAP": "SPARSE_EQUAL_INFORMATION_TASK_REQUIRES_NEW_EXECUTE",
+    "LF8_PROVISIONAL_SINGLE_SEED_DENSE_SIGNAL": "SPARSE_TASK_AND_MULTI_SEED_REQUIRE_NEW_EXECUTE",
+    "LF8_RECOVERY_OR_LOCAL_EVALUATION_BLOCKED": "USER_REVIEW_NO_CANDIDATE_CLAIM"
+  },
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD",
+  "completion_does_not_authorize_next_research": true
+}

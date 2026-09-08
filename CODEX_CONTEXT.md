@@ -27,6 +27,8 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
+LF8 已获具名授权并通过真实 nonempty-Adam 零步资格。当前只运行 mandatory P0-F* identity-correct competence-filtered strong-form path；仅在其完整安全成功后运行 accepted-schedule matched control。CPU 资格是工程身份事实，不是性能 premise。额外 strong-form rescue、sparse、weak/control-volume、新 seed、OOD/stress、PJGR/R2/SRPG 或投稿不在授权内。
+
 LF7 已完成并关闭。P0-S 是有效的 1,200-update fixed-small-step 负面 arm；P0-F 在接受 25、尝试 150 updates 后发生 post-step rollback identity drift，无合法 endpoint，因此不能比较 filter 增量。终局为 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`，candidate 为 none，后续执行未授权。权威事实见 ADR 0068、terminal closeout 与 `active_phase.md`。
 
 涉及当前研究对象、方法边界或论文措辞时读取 `CONTEXT.md`；需要决策理由时再读取 `docs/adr/`。处理 V2.2R 的方法替换、止损、故事分支或稿后升级时，在当前合同之后读取 `docs/notes/2026-08-29-phk-v22r-recent-research-strategy-integration.md`；该笔记不授权动作。实验事实、参考审查、其他研究笔记和历史归档按 `docs/README.md` 的触发条件读取。
@@ -92,3 +94,15 @@ scientifically and does not change the result. Recovery, hash verification,
 shutdown and post-shutdown local adjudication completed. No mechanism
 attribution, PINN Pareto, candidate or next research authorization exists;
 stress remains sealed/unread.
+
+# LF8 active handoff (2026-09-08)
+
+`PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE`
+starts from exact LF6 DEV-R and reuses the frozen materialized 1,200-step
+physics stream. CPU qualification passed on the real three-head model with 28
+nonempty Adam state entries through two continuous mutate/reject/restore cycles;
+snapshot storage is non-aliased and all restored model, optimizer and RNG state
+is bitwise identical. Mandatory P0-F* is pending. A valid stopped prefix is a
+scientific endpoint; the schedule-only control is reachable only after a full
+safe 1,200-update F* path with lower blind physics objective. No LF8 GPU result,
+candidate or next-stage authorization exists yet; stress remains sealed/unread.
