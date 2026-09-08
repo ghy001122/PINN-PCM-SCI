@@ -249,3 +249,14 @@ updates; therefore the conditional schedule control was not run and
 `MATCHED_ATTRIBUTION_UNAVAILABLE` is the only valid mechanism disposition.
 Medium functionals govern acceptance, so F* is not label-free. Candidate is
 none, and direct `LF_ONLY` remains substantially more accurate.
+
+## Table 17. LF9 matched mechanism screen (active scaffold)
+
+| Role | Thermal objective | Equation routing | Competence filter | Screen endpoint | Full path |
+|---|---|---|---|---|---|
+| `ER-S` | Original normalized strong residual | Per-equation owning head | Exact rollback and dyadic retry | Pending | Conditional |
+| `ER-CV` | Space-time enthalpy control-volume balance | Same as `ER-S` | Same as `ER-S` | Pending | Conditional |
+| no-filter control | Selected objective, if eligible | Same as selected arm | None | Not yet eligible | Conditional |
+
+The two screen arms must finish before mechanism selection. Pending cells are
+not zero, failure, or evidence of either equation-routing or thermal-CV value.

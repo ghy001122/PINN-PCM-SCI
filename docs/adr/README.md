@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0071：激活 PHK-V2.3 LF9 equation-routed thermal-CV refinement](0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md) — 从 exact DEV-R 运行 mandatory ER-S/ER-CV matched screens，条件继续 filtered full path 与 no-filter control；local frozen evaluation 前只允许 `PRELOCAL_INTERNAL_PARETO`。
 - [0070：以 valid-prefix strong-form stall 关闭 PHK-V2.3 LF8](0070-close-phk-v23-lf8-competence-filter-completion.md) — corrected filter 接受一个 25-step safety block，随后在最小冻结学习率因 temperature preservation 失败而停止；control 未运行，strong-form rescue 收口，无 candidate 或后续授权。
 - [0069：激活 PHK-V2.3 LF8 identity-correct competence-filter completion](0069-activate-phk-v23-lf8-competence-filter-completion.md) — 以真实 nonempty-Adam 双循环回滚资格关闭 LF7 工程缺口，运行 mandatory P0-F*；仅在完整安全路径成立时运行 accepted-schedule matched control。
 - [0068：以 matched-screen identity failure 关闭 PHK-V2.3 LF7](0068-close-phk-v23-lf7-competence-filtered-refinement.md) — P0-S 是有效的小步长负面 arm；P0-F post-step rollback identity invalid，无合法 matched filter 归因、PINN Pareto、candidate 或后续授权。

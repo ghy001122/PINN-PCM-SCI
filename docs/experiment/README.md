@@ -22,12 +22,12 @@ view. Smoke and pilot entries never vote in formal adjudication. A run's
 
 ## Current bounded campaign
 
-LF7 is complete. P0-S is a valid 1,200-update negative arm: its blind physics
-objective decreased but event and field competence collapsed. P0-F accepted one
-25-update block and then failed a post-step rollback identity check, so it has no
-valid endpoint and no filtered-versus-unfiltered mechanism comparison is
-available. The terminal outcome is `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`;
-candidate is none and no further research execution is authorized.
+LF9 is active after `LF9_CPU_QUALIFICATION_PASS`. Its zero-update qualification
+materialized the complete CV training and disjoint blind ledgers and froze the
+DEV-R normalization/baselines. The next evidence must come from both mandatory
+ER-S and ER-CV screens. `PRELOCAL_INTERNAL_PARETO` is only a cloud trigger for a
+conditional control; complete internal Pareto requires post-shutdown local
+evaluation. No LF9 method result or candidate exists yet.
 
 ## G1 fixture boundary
 

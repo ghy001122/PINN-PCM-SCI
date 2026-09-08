@@ -1,38 +1,38 @@
 # 当前阶段
 
-- `phase_id`: `PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE`
-- `phase_name`: PHK-V2.3 LF8 identity-correct competence-filter completion and conditional schedule attribution
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE`
+- `phase_name`: PHK-V2.3 LF9 equation-routed thermal control-volume competence-filtered refinement
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF8_FILTER_STALLED_WITH_VALID_PREFIX`
-- `mechanism_outcome`: `MATCHED_ATTRIBUTION_UNAVAILABLE`
-- `claim_status`: `VALID_PREFIX_RETAINED_STRONG_FORM_BRANCH_CLOSED_NO_PINN_PARETO_OR_CANDIDATE`
-- `next_research_execution_authorized`: `false`
-- `authorization_scope`: `NONE_TERMINAL`
+- `machine_outcome`: `PENDING_ER_S_AND_ER_CV_SCREENS`
+- `mechanism_outcome`: `PENDING_MATCHED_ADJUDICATION`
+- `claim_status`: `CPU_QUALIFIED_GPU_MECHANISM_UNTESTED`
+- `next_research_execution_authorized`: `true`
+- `authorization_scope`: `TWO_MANDATORY_SCREENS_THEN_CONDITIONAL_FILTERED_FULL_PATH_AND_NO_FILTER_CONTROL`
 - `candidate_status`: `NONE`
-- `reference_status`: `LOCAL_NOMINAL_EVALUATED_STRESS_SEALED`
-- `compute_status`: `RECOVERED_HASH_VERIFIED_SHUTDOWN_CONNECTION_REFUSED`
-- `next_recommendation`: `MIXED_WEAK_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE_VALID_PREFIX_RETAINED`
+- `reference_status`: `CPU_REFERENCE_BLIND_STRESS_SEALED`
+- `compute_status`: `CPU_QUALIFICATION_PASS_GPU_EXECUTION_PENDING`
+- `next_recommendation`: `EXECUTE_FROZEN_LF9_CAMPAIGN`
 - `effective_date`: `2026-09-08`
 
-PHASE_ID=PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE
+PHASE_ID=PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE
 BLOCKER_ID=NONE
-NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
+NEXT_RESEARCH_EXECUTION_AUTHORIZED=true
 
-## 终局
+## 当前授权
 
-Mandatory P0-F* 尝试 150、接受 25 updates。在前四档更大学习率均被
-field-preservation gate 拒绝后，`7.8125e-6` 的首个 25-step block 将 fixed-blind
-`J` 从 `4.9278721847` 降到 `4.8743140406`，并保持完整 safety conjunction；
-第二个同学习率 block 因 temperature preservation 失败而回滚，形成
-`LF8_FILTER_STALLED_WITH_VALID_PREFIX`。回滚身份有效，valid prefix 已保留。
+执行 exact DEV-R 起点的 mandatory `ER-S` 与 `ER-CV` 200-accepted-update
+matched screens。若至少一臂通过，按冻结机制选择继续至 filtered 1,200 accepted
+updates 或有效 stall；仅当云端 selected endpoint 达到
+`PRELOCAL_INTERNAL_PARETO` 时，运行 matched no-filter schedule control。
 
-完整 1,200-step safety path 未建立，故 accepted-schedule control 未运行且不得称失败。
-没有 PINN Pareto、filter 归因、direct-`LF_ONLY` 增量或 candidate。
+`PRELOCAL_INTERNAL_PARETO` 只是在 reference-blind 云端可计算门上通过，不得称
+完整 PINN Pareto。实例关机后还须由 frozen local evaluator 形成
+`COMPLETE_INTERNAL_PINN_PARETO`，再与 direct `LF_ONLY` 裁决 paper-value。
 
 ## 边界
 
-Strong-form rescue 以 valid-prefix stall 收口；不授权更多学习率、缩短 block、换 optimizer、
-改权重/采样/网络、replay、sparse、weak/control-volume、seed、OOD/stress、PJGR/R2/SRPG
-或投稿。唯一建议是另立 `NEW EXECUTE` 的 mixed weak/control-volume physics 方案。
-两份 stress references 保持 `TWO_STRESS_REFERENCES_SEALED_UNREAD`。
+CPU qualification 是零科学更新的工程准入，不是方法结果。不得改物理对象、
+网络、冻结 streams、CV normalization、filter gates 或强基线；不授权 sparse、
+new seed、OOD/stress、phase weak-form、PJGR/R2/SRPG 或投稿。两份 stress
+references 保持 `TWO_STRESS_REFERENCES_SEALED_UNREAD`。

@@ -4,24 +4,26 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE`
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF8_FILTER_STALLED_WITH_VALID_PREFIX`
-- `mechanism_outcome`: `MATCHED_ATTRIBUTION_UNAVAILABLE`
-- `claim_status`: `VALID_PREFIX_RETAINED_STRONG_FORM_BRANCH_CLOSED_NO_PINN_PARETO_OR_CANDIDATE`
-- `next_research_execution_authorized`: `false`
+- `machine_outcome`: `PENDING_ER_S_AND_ER_CV_SCREENS`
+- `mechanism_outcome`: `PENDING_MATCHED_ADJUDICATION`
+- `claim_status`: `CPU_QUALIFIED_GPU_MECHANISM_UNTESTED`
+- `next_research_execution_authorized`: `true`
 
-LF8 已完成并关闭。Identity-correct P0-F* 在最小冻结学习率接受一个 25-step
-safety block，将 blind `J` 降至 `0.9891315882 J0`，随后因 temperature
-preservation 失败而形成 valid-prefix stall。完整路径未建立，conditional control
-未运行，strong-form rescue 已收口；candidate 为 none，stress 保持 sealed/unread。
+LF9 已通过零科学更新 CPU 资格并激活。当前执行 exact DEV-R 起点的 mandatory
+ER-S/ER-CV matched screens，以隔离 equation routing 与 thermal control-volume
+functional；条件继续 filtered full path 和 no-filter control。candidate 仍为 none，
+stress 保持 sealed/unread。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
+- 当前激活决定：[ADR 0071](docs/adr/0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md)
+- LF9 CPU 资格：[CPU qualification](docs/experiment/2026-09-08-phk-v23-lf9-cpu-qualification.md)
 - 当前关闭决定：[ADR 0070](docs/adr/0070-close-phk-v23-lf8-competence-filter-completion.md)
 - LF8 终局：[terminal closeout](docs/experiment/2026-09-08-phk-v23-lf8-terminal-closeout.md)
 - LF8 激活决定：[ADR 0069](docs/adr/0069-activate-phk-v23-lf8-competence-filter-completion.md)

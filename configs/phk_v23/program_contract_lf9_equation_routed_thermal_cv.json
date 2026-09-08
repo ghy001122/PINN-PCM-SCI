@@ -1,0 +1,32 @@
+{
+  "schema_id": "phk-v23-lf9-program-contract-v1",
+  "contract_id": "PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE",
+  "phase_id": "PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE",
+  "title": "PHK-V2.3 LF9 equation-routed thermal control-volume competence-filtered refinement",
+  "effective_date": "2026-09-08",
+  "status": "EXPLICITLY_AUTHORIZED_BOUNDED_CAMPAIGN",
+  "expected_base_commit": "f16ca9db66843c04d420c077679604dd553ac036",
+  "scientific_question": "DOES_FIELD_OWNED_EQUATION_ROUTING_OR_A_THERMAL_SPACE_TIME_CONTROL_VOLUME_RESIDUAL_ENABLE_A_SUSTAINED_EVENT_COMPETENT_PHYSICS_DESCENT_PATH",
+  "paper_role": "MATCHED_ROUTED_STRONG_VERSUS_ROUTED_THERMAL_CONTROL_VOLUME_MECHANISM_TEST_WITH_CONDITIONAL_FILTER_ATTRIBUTION",
+  "minimum_scientific_delivery": [
+    "ER_S_FIXED_SCREEN",
+    "ER_CV_FIXED_SCREEN",
+    "MATCHED_MECHANISM_ADJUDICATION",
+    "CONDITIONAL_SELECTED_FULL_PATH_OR_VALID_STALL",
+    "CONDITIONAL_NO_FILTER_CONTROL"
+  ],
+  "hard_limits": {
+    "required_screen_arms": 2,
+    "screen_accepted_updates_each": 200,
+    "screen_attempted_updates_each_maximum": 1000,
+    "selected_full_accepted_updates_maximum": 1200,
+    "selected_full_attempted_updates_maximum": 3600,
+    "conditional_no_filter_updates": 1200,
+    "seed": 17,
+    "best_checkpoint_selection": false,
+    "hyperparameter_or_architecture_sweep": false
+  },
+  "failure_isolation": "ONE_SCREEN_POSTSTEP_FAILURE_DOES_NOT_CANCEL_THE_OTHER_NONSHARED_SCREEN",
+  "completion_does_not_authorize_next_research": true,
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

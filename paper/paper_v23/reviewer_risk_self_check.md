@@ -110,6 +110,15 @@ decision. The correct identity is multifidelity competence-filtered PINN
 refinement. It also remains far behind direct `LF_ONLY` and supplies neither a
 PINN Pareto nor a strong-baseline gain.
 
+## 17. Does implementing LF9 establish a new weak-form or control-volume PINN?
+
+No. Variational, space-time control-volume, block-coordinate, staggered,
+enthalpy phase-change, and phase-field local-balance PINNs all precede LF9. The
+active campaign is a matched test of a project-specific composition:
+equation-to-owning-head gradient routing plus optional thermal-CV replacement
+inside the existing competence filter. No scientific claim is available until
+both screen arms close, and no general novelty claim follows from either name.
+
 ## Submission-readiness verdict
 
 ```text

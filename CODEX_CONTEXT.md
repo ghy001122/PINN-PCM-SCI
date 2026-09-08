@@ -27,7 +27,9 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-LF8 已完成并关闭。Identity-correct P0-F* 尝试 150、接受 25 updates；最小冻结学习率的首个 block 保持完整 safety conjunction 并将 blind `J` 降至 `0.9891315882 J0`，第二个同率 block 因 temperature preservation 失败而回滚，形成合法 valid-prefix stall。完整路径未建立，conditional control 未运行，故 filter-versus-schedule attribution 不可用。终局为 `LF8_FILTER_STALLED_WITH_VALID_PREFIX`，candidate 为 none，后续执行未授权。唯一建议是另立 mixed weak/control-volume physics `NEW EXECUTE`。
+LF9 已由用户明确授权并通过零步 CPU qualification。当前必须从 exact DEV-R 完成 `ER-S` 与 `ER-CV` 两条 matched screens；至少一臂通过才条件继续 filtered full path，且仅在云端达到 `PRELOCAL_INTERNAL_PARETO` 后运行 no-filter control。完整内部 Pareto 仍须关机后的 frozen local evaluation，direct `LF_ONLY` 继续决定 paper-value。CPU gate 不是方法结果，candidate 仍为 none。
+
+LF8 已完成并关闭为 `LF8_FILTER_STALLED_WITH_VALID_PREFIX`。它保留一个 25-step strong-form safety prefix，但完整路径和 control 未到达；该历史结果不被 LF9 激活改写。
 
 LF7 已完成并关闭。P0-S 是有效的 1,200-update fixed-small-step 负面 arm；P0-F 在接受 25、尝试 150 updates 后发生 post-step rollback identity drift，无合法 endpoint，因此不能比较 filter 增量。终局为 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`，candidate 为 none，后续执行未授权。权威事实见 ADR 0068、terminal closeout 与 `active_phase.md`。
 
@@ -107,3 +109,14 @@ and conditional schedule control were not reached. Recovery, shutdown and local
 adjudication completed; the result establishes neither filter attribution nor a
 PINN Pareto/candidate. Strong-form rescue is closed, the mixed weak/control-volume
 route requires new authorization, and stress remains sealed/unread.
+
+# LF9 activation handoff (2026-09-08)
+
+`PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE` is
+ACTIVE from base `f16ca9db66843c04d420c077679604dd553ac036`. CPU qualification
+materialized the complete causal CV training ledger and disjoint one-cell/2x2
+blind ledgers, and verified the integral identity, routing, coupling,
+normalization and rollback with zero scientific updates. Both ER-S and ER-CV
+screens are mandatory. Cloud-only `PRELOCAL_INTERNAL_PARETO` may trigger the
+conditional control; only post-shutdown local evaluation can establish
+`COMPLETE_INTERNAL_PINN_PARETO`. Stress remains sealed/unread.

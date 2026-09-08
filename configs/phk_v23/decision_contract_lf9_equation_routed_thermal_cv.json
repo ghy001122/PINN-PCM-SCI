@@ -1,0 +1,39 @@
+{
+  "schema_id": "phk-v23-lf9-decision-contract-v1",
+  "contract_id": "PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CV_DECISION",
+  "program_contract": "configs/phk_v23/program_contract_lf9_equation_routed_thermal_cv.json",
+  "method_contract": "configs/phk_v23/method_contract_lf9_equation_routed_thermal_cv.json",
+  "data_contract": "configs/phk_v23/data_contract_lf9_equation_routed_thermal_cv.json",
+  "effective_date": "2026-09-08",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "competence_filter": {
+    "validity": {"finite": true, "phase_range": [-1e-10, 1.0000000001], "potential_maximum_excess": 1e-6, "potential_violation_fraction": 0.0},
+    "event": {"phase_maximum_minimum": 0.90, "two_cycle_events": true, "hard_recall_each_cycle_minimum": 0.90, "hard_precision_each_cycle_minimum": 0.80, "hard_active_mass_ratio_each_cycle": [0.80, 1.20], "event_time_absolute_error_cycle_1_maximum": 0.010533333334333338, "event_time_absolute_error_cycle_2_maximum": 0.005000000000999893, "roi_peak_fraction_each_cycle_minimum": 0.02, "full_domain_peak_fraction_each_cycle_maximum": 0.45, "outside_roi_peak_fraction_each_cycle_maximum": 0.10, "recovery_fraction_each_cycle_minimum": 0.70},
+    "relative_DEV_R_maximum": {"potential": 1.20, "temperature": 1.05, "phase": 1.05, "topology": 1.05},
+    "own_blind_strict_improvement": "J_NEW_LE_J_PREV_MINUS_MAX_1E_MINUS_12_OR_1E_MINUS_8_TIMES_J_PREV"
+  },
+  "screen_go": {"accepted_updates": 200, "endpoint_safety": true, "own_ratio_maximum": 0.95, "one_cell_cv_ratio_maximum": 0.95, "two_by_two_cv_ratio_maximum": 0.95},
+  "mechanism_adjudication": {
+    "ER_S_GO_ER_CV_NO_GO": "EQUATION_ROUTING_SUFFICIENT",
+    "ER_S_NO_GO_ER_CV_GO": "THERMAL_CONTROL_VOLUME_SUPPORTED",
+    "BOTH_GO_CV4_CV_LE_0_90_TIMES_CV4_S_AND_CV_SAFE": "THERMAL_CONTROL_VOLUME_ADDS_MEANINGFUL_CONSERVATION_GAIN",
+    "BOTH_GO_OTHERWISE": "ROUTING_SUFFICIENT_CV_NOT_LOAD_BEARING",
+    "BOTH_NO_GO": "NO_SAFE_MIXED_FORM_SCREEN"
+  },
+  "complete_internal_PINN_Pareto": {"accepted_updates": 1200, "endpoint_safety": true, "strict_event_time_each_cycle_maximum": 0.005, "own_ratio_maximum": 0.50, "one_cell_cv_ratio_maximum": 0.75, "two_by_two_cv_ratio_maximum": 0.75, "frozen_evaluator_competent": true, "phase_noninferiority": "PHK_V21_FROZEN_FLOOR_OR_RATIO_FORMULA", "temperature_maximum": "MAX_1_10_TIMES_DEV_R_OR_0_05", "current_maximum": "MAX_1_10_TIMES_DEV_R_OR_0_15"},
+  "direct_paper_value": "SELECTED_ENDPOINT_MUST_PASS_PHASE_NI_T_CURRENT_POTENTIAL_EVENT_RECOVERY_RELATIVE_TO_DIRECT_LF_ONLY",
+  "machine_outcomes_and_unique_next": {
+    "LF9_START_OR_INPUT_BLOCKED": "USER_REVIEW_NO_GPU",
+    "LF9_SCREEN_IDENTITY_INVALID": "RETAIN_VALID_ARM_NO_FULL_ATTRIBUTION",
+    "LF9_NO_SAFE_MIXED_FORM_SCREEN": "FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE",
+    "LF9_PHASE_FROZEN_THERMAL_ROUTE_FAILED": "FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC",
+    "LF9_PHASE_KINETIC_PRIMARY_BLOCKER": "WEAK_PHASE_RESIDUAL_REQUIRES_NEW_EXECUTE",
+    "LF9_FULL_PATH_STALLED_OR_PHYSICS_GATE_MISSED": "FINALIZE_BOUNDED_MIXED_FORM_RESULT",
+    "LF9_SCHEDULE_AND_ROUTING_SUFFICIENT": "USE_SIMPLER_BACKBONE_SPARSE_TASK_REQUIRES_NEW_EXECUTE",
+    "LF9_FILTER_LOAD_BEARING_DIRECT_BASELINE_GAP": "SPARSE_EQUAL_INFORMATION_TASK_REQUIRES_NEW_EXECUTE",
+    "LF9_PROVISIONAL_SINGLE_SEED_DENSE_SIGNAL": "SPARSE_AND_MULTI_SEED_REQUIRE_NEW_EXECUTE",
+    "LF9_RECOVERY_OR_LOCAL_EVALUATION_BLOCKED": "USER_REVIEW_NO_CANDIDATE_CLAIM"
+  },
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD",
+  "completion_does_not_authorize_next_research": true
+}

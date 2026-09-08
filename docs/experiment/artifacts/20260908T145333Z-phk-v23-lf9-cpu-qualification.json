@@ -1,0 +1,265 @@
+{
+  "analytic_and_routing": {
+    "analytic_passed": true,
+    "analytic_residuals": {
+      "constant": 0.0,
+      "linear": 1.0,
+      "quadratic": -4.0
+    },
+    "coupling_coordinate_derivatives_preserved": true,
+    "coupling_parameter_gradients": {
+      "phase": 1.2400000000000007,
+      "potential": -0.8680000000000004,
+      "temperature": 0.6200000000000003
+    },
+    "routed_owned_gradients": {
+      "phase": 13.0,
+      "potential": 1.0,
+      "temperature": 3.0
+    },
+    "routing_passed": true
+  },
+  "blind_baseline": {
+    "CV1": 0.01198042763327962,
+    "CV4": 0.008291401447887748,
+    "J_M": 4.925521658963255,
+    "J_S": 4.9278721846990505
+  },
+  "checks": {
+    "DEV_R_checkpoint_metadata": true,
+    "DEV_R_finite": true,
+    "analytic_CV_identity": true,
+    "coupling_coordinate_derivatives_preserved": true,
+    "equation_routing_owned_gradients": true,
+    "input_bindings": true,
+    "ledger_disjoint": true,
+    "ledger_shapes": true,
+    "no_scientific_step_and_reference_blind": true,
+    "normalization_equality": true,
+    "normalization_finite_positive": true,
+    "partition_identity": true,
+    "real_nonempty_Adam_rollback": true
+  },
+  "contracts": {
+    "data": {
+      "path": "configs/phk_v23/data_contract_lf9_equation_routed_thermal_cv.json",
+      "sha256": "B86A9F38A06D66A8B981CBA3F06AA24E5607F90B4AB328A2CF1C5DA26F386D0B"
+    },
+    "decision": {
+      "path": "configs/phk_v23/decision_contract_lf9_equation_routed_thermal_cv.json",
+      "sha256": "A475E0AD5DEB9742543535F75EB273E4BB3E60DB8035E1082DCA4FD49A31BED5"
+    },
+    "method": {
+      "path": "configs/phk_v23/method_contract_lf9_equation_routed_thermal_cv.json",
+      "sha256": "BDF88FA4B17C9F432FAB68101A375590F0696BB4D24B0F8F0B9F5F1B57137CA6"
+    },
+    "program": {
+      "path": "configs/phk_v23/program_contract_lf9_equation_routed_thermal_cv.json",
+      "sha256": "D64040BC1AFA45E9D35565AB1A6D82ED5E985E411C625A90531B226AA3031309"
+    }
+  },
+  "counts": {
+    "one_cell_blind_count": 192,
+    "patches_per_step": 16,
+    "training_slabs": 19200,
+    "training_steps": 1200,
+    "two_by_two_blind_count": 192
+  },
+  "created_at_utc": "2026-09-08T15:42:39.748394+00:00",
+  "cv_ledger": {
+    "array_sha256": {
+      "one_cell_blind_bounds": "68393BB22E61D651E18DB139F0780F2AE24B5655960C70AAF62299DFC6DDEF93",
+      "one_cell_blind_identity": "DE4F2C35503DE45456839397DA9F1DE8C01B91EF11ADA87D566570610A238CBA",
+      "training_bounds": "2DAE1496AD5C286D5BB006EC0EFFBCE552918D90853405257E474FDE490A972B",
+      "training_identity": "678123E27FE8DC8E68D5A21CDD0441F26E396CC848DBF6D2150D0E1EDADFA392",
+      "training_step_sha256": "EFD0220E953248EF1FE4880259914CAE706FF93489F907A7B7DA9833BF7B6DEE",
+      "two_by_two_blind_bounds": "1E6B4061501AB7A84C6DFD4241613C0331509B9EB3D9104775CFD92D6E93E124",
+      "two_by_two_blind_identity": "BFB18FFE0B8A09DCEBA09BE68AB569929C53ED01B7FDC92095298FD605FB5B1B"
+    },
+    "file_sha256": "65BAAB64A2B0D8F8B4042B95E6F2FA583EA0D74754B2B38F5A56226DFF7F13C7",
+    "manifest_path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cpu/cv/materialized_cv_ledger_manifest.json",
+    "manifest_sha256": "B8394B4E517A55D626BB24C13AD53ABE5EC2B81BAC65763240CEC18F90A2D25C",
+    "one_cell_blind_sha256": "410F39C5789C8FB548ED4E9ECC30C0D845B5979495B404AA189D87B0845A8EBA",
+    "path": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cpu/cv/materialized_cv_ledger.npz",
+    "semantic_sha256": "D26E2BDAACF108249C3DBCBAD038101A900DF82CBDC972F37FC0E33D43A851AF",
+    "training_rolling_sha256": "12EFFDA5B6417C4DFB7AB605B4AEB69D4536FDCCF251A949BF9376B382392F3D",
+    "two_by_two_blind_sha256": "3F606A774344CB9294000C2C65411E93266CC97E43FA3FF9C812055948879605"
+  },
+  "cv_normalization": {
+    "L_T_CV0": 0.03258119801290102,
+    "L_T_strong0": 0.03258119801290102,
+    "r_cv0_rms": 0.7097646689156927,
+    "s_cv": 3.932157024118817
+  },
+  "dev_r_full_medium_audit": {
+    "all_values_finite": true,
+    "event_metrics": {
+      "cycle_1": {
+        "event_time_absolute_error": 0.010533333333333339,
+        "hard_active_mass_ratio": 1.0231958762886597,
+        "hard_precision": 0.8967254408060453,
+        "hard_recall": 0.9175257731958762,
+        "predicted_active_target_mass": 0.0007443749999999999,
+        "predicted_event_time": 0.22726666666666667,
+        "teacher_active_target_mass": 0.0007275,
+        "teacher_event_time": 0.2378,
+        "true_positive_target_mass": 0.0006674999999999999
+      },
+      "cycle_2": {
+        "event_time_absolute_error": 0.0018000000000002458,
+        "hard_active_mass_ratio": 1.0027223230490017,
+        "hard_precision": 0.920361990950226,
+        "hard_recall": 0.9228675136116149,
+        "predicted_active_target_mass": 0.0006906249999999997,
+        "predicted_event_time": 1.4924,
+        "teacher_active_target_mass": 0.0006887499999999998,
+        "teacher_event_time": 1.4942000000000002,
+        "true_positive_target_mass": 0.0006356249999999996
+      }
+    },
+    "event_topology_hard_guard": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.22726666666666667,
+          "peak_full_domain_fraction": 0.0228125,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07541322314049587,
+          "peak_time_index": 82,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.4924,
+          "peak_full_domain_fraction": 0.0221875,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07334710743801653,
+          "peak_time_index": 330,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "phase_maximum": 0.9910522424050187,
+    "phase_range": {
+      "maximum": 0.9910522424050187,
+      "minimum": 2.7717232857562843e-09,
+      "passed": true
+    },
+    "potential_maximum_principle": {
+      "by_window": {
+        "W1": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W2": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W3": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W4": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        }
+      },
+      "global": {
+        "absolute_tolerance": 1e-06,
+        "all_pointwise_values_finite": true,
+        "maximum_absolute_excess": 0.0,
+        "passed": true,
+        "violation_fraction": 0.0
+      },
+      "passed": true
+    },
+    "target_measure_identity": "TRAPEZOID_TIME_TIMES_CELL_VOLUME",
+    "temperature_maximum": 0.8050099454973638,
+    "topology_weighted_loss": 0.004614488030658961,
+    "two_cycle_events": true,
+    "weighted_errors": {
+      "phase": 0.0011832624059166495,
+      "potential": 7.14767714198432e-05,
+      "temperature": 0.0007111887418509094
+    }
+  },
+  "disjoint_checks": {
+    "one_cell_unique": true,
+    "one_cell_vs_two_by_two_occupied_cells": true,
+    "training_unique_within_each_step": true,
+    "training_vs_one_cell": true,
+    "training_vs_two_by_two_occupied_cells": true,
+    "two_by_two_occupied_cells_unique": true
+  },
+  "gate_outcome": "LF9_CPU_QUALIFICATION_PASS",
+  "gpu_execution_authorized_by_cpu_gate": true,
+  "gpu_used": false,
+  "input_bindings": {
+    "dev_r_checkpoint": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260906T065434Z-phk-v23-lf6-event-frontier-pilot\\dev_r\\checkpoint.pt",
+    "dev_r_prediction": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260906T065434Z-phk-v23-lf6-event-frontier-pilot\\dev_r\\prediction.npz",
+    "medium": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260828T-phk-v21-s1-q-04-nominal-medium\\result-intent-04.npz",
+    "strong_ledger": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260906T065434Z-phk-v23-lf6-event-frontier-pilot\\cpu\\materialized_ledger.npz",
+    "strong_ledger_manifest": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260906T065434Z-phk-v23-lf6-event-frontier-pilot\\cpu\\materialized_ledger_manifest.json"
+  },
+  "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+  "reference_boundary": {
+    "direct_LF_ONLY_read": false,
+    "extra_fine_read": false,
+    "fine_read": false,
+    "frozen_evaluator_read": false,
+    "stress_read": false
+  },
+  "rollback_qualification": {
+    "cycles": [
+      {
+        "after": "6688D84A66BD1CF0A5BF4C45AA8754B2C9B8E915855419CF3B4EEDEB2D79B039",
+        "aliases": [],
+        "before": "6688D84A66BD1CF0A5BF4C45AA8754B2C9B8E915855419CF3B4EEDEB2D79B039",
+        "cycle": 1,
+        "snapshot_stable": true
+      },
+      {
+        "after": "6688D84A66BD1CF0A5BF4C45AA8754B2C9B8E915855419CF3B4EEDEB2D79B039",
+        "aliases": [],
+        "before": "6688D84A66BD1CF0A5BF4C45AA8754B2C9B8E915855419CF3B4EEDEB2D79B039",
+        "cycle": 2,
+        "snapshot_stable": true
+      }
+    ],
+    "nonempty_adam_state": 28,
+    "passed": true
+  },
+  "schema_id": "phk-v23-lf9-cpu-qualification-v1",
+  "scientific_optimizer_updates": 0,
+  "status": "LF9_CPU_QUALIFICATION_PASS",
+  "stream_sha256": {
+    "one_cell_blind": "410F39C5789C8FB548ED4E9ECC30C0D845B5979495B404AA189D87B0845A8EBA",
+    "training": "12EFFDA5B6417C4DFB7AB605B4AEB69D4536FDCCF251A949BF9376B382392F3D",
+    "two_by_two_blind": "3F606A774344CB9294000C2C65411E93266CC97E43FA3FF9C812055948879605"
+  },
+  "strong_ledger": {
+    "file_sha256": "29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801",
+    "fixed_blind_pool_sha256": "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF",
+    "manifest_sha256": "3CFA268CFB22CF225ABB92BFD7F9F00353634AF7AFEE7AA607EC59FE4F4C8F90",
+    "physics_1200_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53",
+    "semantic_sha256": "0E2F680D33C4489F6092CB5D01E87483F7ECDA8290CD3E2C24EBDD06B3DA2B7F"
+  },
+  "task_id": "PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE"
+}

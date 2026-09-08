@@ -33,6 +33,9 @@
 | LF8 establishes filter or schedule attribution | `UNKNOWN_UNAVAILABLE` | F* completion trigger failed; schedule control not run | `MATCHED_ATTRIBUTION_UNAVAILABLE` |
 | LF8 is label-free or supplies a PINN Pareto | `REJECTED` | medium audit governs acceptance; no completed path/control | Multifidelity audit; no Pareto claim |
 | LF8 beat direct `LF_ONLY` | `REJECTED` | phase/T/current remain much worse | No strong-baseline gain or candidate |
+| Equation routing is sufficient for safe sustained refinement | `PENDING_LF9` | `ER-S` has no terminal endpoint yet | No result wording before the matched screen closes |
+| Thermal control-volume replacement is load-bearing | `PENDING_LF9` | `ER-CV` and its matched comparator have no terminal endpoints yet | Cite the primitive prior art; do not infer value from implementation |
+| The LF9 competence filter is load-bearing | `PENDING_CONDITIONAL_CONTROL` | no-filter control requires a completed internal Pareto path | Not tested unless the frozen trigger fires |
 | PINNs generally cannot solve the system | `REJECTED_EXTRAPOLATION` | one object, seed, architecture, budget | Bound all conclusions to the frozen protocol |
 | Stress/OOD, continuum, material, or experimental validity | `UNKNOWN` | not executed; stress sealed | Must not claim |
 

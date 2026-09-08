@@ -111,3 +111,11 @@ ladder. F* stalled at 25 accepted updates, so the conditional schedule control
 was not triggered and matched attribution is unavailable. Medium competence
 audits govern acceptance; the path is not label-free and supplies no PINN
 Pareto, direct-baseline gain, or candidate result.
+
+## Figure 17. LF9 equation-routed thermal control-volume refinement
+
+Reserved for the terminal four-panel composite: LF8 temperature stall;
+matched `ER-S` versus `ER-CV` temperature preservation, one-cell and 2-by-2
+control-volume conservation, and own blind-objective paths; the selected full
+refinement; and the conditional no-filter control or its exact non-trigger
+reason. The figure is not generated while LF9 remains active.

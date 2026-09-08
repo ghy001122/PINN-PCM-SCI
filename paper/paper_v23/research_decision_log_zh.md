@@ -91,3 +91,16 @@ Pareto、强基线增益、SOTA 或候选方法。stress 保持 sealed/unread。
 PINN Pareto、matched schedule attribution、强基线增益或 candidate。下一条最小
 问题应转向 mixed weak/control-volume 物理目标能否提供 preservation-compatible
 方向；须另行授权，stress 继续 sealed/unread。
+
+## LF9 激活：把温度阻塞拆成“梯度路由”与“热控制体积”两个可归因问题
+
+LF8 的有效前缀表明，强形式路径首先被 temperature preservation 拒绝。LF9
+不再继续缩学习率或堆通用训练技巧，而是从同一个 DEV-R 起点做两条 matched
+screen：`ER-S` 只增加 equation-to-head gradient routing；`ER-CV` 在完全相同
+路由与 filter 下，仅把 thermal strong residual 换成时空 enthalpy control-volume
+balance。两臂均完成后才能判断 routing 是否足够、thermal CV 是否 load-bearing。
+
+当前状态是 `LF9_ACTIVE_RESULTS_PENDING`：没有 screen endpoint、PINN Pareto、
+direct `LF_ONLY` 增益或 candidate。VPINN、cvPINN、block-coordinate、staggered、
+enthalpy 和 local-balance 原语均已有文献先例；潜在贡献只能来自本对象中经 matched
+实验支持的组合与 failure localization，而不能把已有原语重新命名成首创。

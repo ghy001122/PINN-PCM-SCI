@@ -1,7 +1,7 @@
 # Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
 
-> Advisor-reviewable draft. Closed evidence status:
-> `LF8_FILTER_STALLED_WITH_VALID_PREFIX`.
+> Advisor-reviewable draft. LF9 execution status:
+> `LF9_ACTIVE_RESULTS_PENDING`.
 > All neural results are single-seed nominal development evidence. No candidate,
 > positive PINN method, strong-baseline gain, OOD/stress result, or submission
 > readiness is claimed.
@@ -262,6 +262,25 @@ label-free physics.
 The matched schedule-control arm was conditional: it could execute only after
 F* completed 1200 accepted updates while retaining safety. This prevents a
 control with a different path length from being reported as matched attribution.
+
+### 3.7 LF9 equation-routed thermal control-volume screen (active)
+
+LF8 localized the first preservation failure to temperature while phase was
+frozen. LF9 therefore compares two matched continuations from exact DEV-R.
+Both evaluate the coupled fields at one pre-step state, route each governing
+equation and its BC/IC terms only to the owning field network, and retain the
+identity-correct competence filter. `ER-S` keeps all strong residuals. `ER-CV`
+changes only the thermal objective to the fixed-quadrature space-time balance
+of enthalpy (H=T+\lambda_{\mathrm{latent}}\phi), conductive boundary flux,
+cooling, and Joule heating.
+
+Variational, control-volume, block-coordinate, staggered, enthalpy, and local
+balance primitives all have prior art [@kharazmi2019vpinn; @patel2022cvpinn;
+@gratton2024blockcoordinate; @chen2025sharp; @patra2025phasechange;
+@shang2026localbalance]. LF9 tests only whether equation routing is sufficient
+or whether thermal control-volume replacement is load-bearing in this frozen
+competence-preserving continuation. Results remain pending; this section makes
+no LF9 mechanism or performance claim.
 
 ## 4. Results
 

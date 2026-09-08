@@ -1,0 +1,58 @@
+{
+  "actual_budget": {
+    "gpu_trajectories": 0,
+    "gpu_used": false,
+    "optimizer_updates": 0
+  },
+  "artifacts": {
+    "compact_qualification": "artifacts/20260908T145333Z-phk-v23-lf9-cpu-qualification.json#sha256=94D549BB66601C90AD9830FD4BF87408FE5891A87E88DE3D416E06CBDA750BD9",
+    "cv_ledger": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cpu/cv/materialized_cv_ledger.npz#sha256=65BAAB64A2B0D8F8B4042B95E6F2FA583EA0D74754B2B38F5A56226DFF7F13C7",
+    "raw_report": "outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cpu/qualification.json#sha256=94D549BB66601C90AD9830FD4BF87408FE5891A87E88DE3D416E06CBDA750BD9"
+  },
+  "case_id": "PHK_V21_NOMINAL_LF9_CPU_QUALIFICATION",
+  "checkpoint": {
+    "DEV_R_source_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "loaded_read_only": true
+  },
+  "claim_status": "LF9_CV_AND_ROUTING_ENGINEERING_QUALIFIED_GPU_MECHANISM_UNTESTED",
+  "code_identity": {
+    "base_commit": "f16ca9db66843c04d420c077679604dd553ac036",
+    "workspace_scope": "LF9_EXACT_ALLOWLIST_UNRELATED_DIRTY_PRESERVED"
+  },
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pinn_pcm_sci.phk_v23_lf9_qualification"
+  ],
+  "ended_at": "2026-09-08T15:42:39.748394+00:00",
+  "environment": {
+    "cloud_connection_opened": false,
+    "device": "CPU",
+    "dtype": "FLOAT64",
+    "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  },
+  "evaluator_id": "NOT_READ_DURING_LF9_CPU_QUALIFICATION",
+  "evidence_identity": "ENGINEERING_QUALIFICATION_ONLY",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF9",
+  "failure_class": null,
+  "gate": "PHK_V23_LF9_CPU",
+  "gate_outcome": "LF9_CPU_QUALIFICATION_PASS",
+  "method_id": "phk-v23-lf9-equation-routed-thermal-cv-v1",
+  "numerical_validity": "VALID_CPU_FP64_ZERO_SCIENTIFIC_UPDATE",
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "planned_budget": {
+    "gpu_trajectories": 0,
+    "optimizer_updates": 0
+  },
+  "replay_of": null,
+  "route_disposition": "RUN_ER_S_AND_ER_CV_FIXED_SCREENS",
+  "run_id": "20260908T145333Z-phk-v23-lf9-cpu-qualification",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "cpu_zero_update_cv_ledger_normalization_routing_and_rollback_qualification",
+  "seed": 17,
+  "split_id": "MEDIUM_AUDIT_DEV_R_STRONG_AND_CV_LEDGER_ONLY_REFERENCES_SEALED",
+  "started_at": "2026-09-08T15:42:39.748394+00:00",
+  "supersedes": null,
+  "tier": "qualification"
+}

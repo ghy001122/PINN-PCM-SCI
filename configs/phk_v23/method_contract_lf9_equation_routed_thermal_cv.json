@@ -1,0 +1,70 @@
+{
+  "schema_id": "phk-v23-lf9-method-contract-v1",
+  "contract_id": "PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CV_METHOD",
+  "program_contract": "configs/phk_v23/program_contract_lf9_equation_routed_thermal_cv.json",
+  "effective_date": "2026-09-08",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "identity": {
+    "model": "UNCHANGED_LF6_DEV_R_STRONG_RAW_THREE_INDEPENDENT_FIELD_HEADS",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "initialization": "EXACT_LF6_DEV_R_MODEL_WEIGHTS_ONLY",
+    "optimizer": {"name": "TORCH_ADAM", "betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0.0, "amsgrad": false, "fresh_per_arm": true},
+    "gradient_clip_norm": 10.0,
+    "medium_gradient": false,
+    "runtime_sampling": false
+  },
+  "equation_routing": {
+    "pre_step_state_shared": true,
+    "single_optimizer_step": true,
+    "potential_parameters": "ELECTRIC_PDE_PLUS_ELECTRIC_BC_PLUS_POTENTIAL_IC_ONLY",
+    "temperature_parameters": "THERMAL_PDE_PLUS_THERMAL_BC_PLUS_TEMPERATURE_IC_ONLY",
+    "phase_parameters": "PHASE_PDE_PLUS_PHASE_NO_FLUX_BC_PLUS_PHASE_IC_ONLY",
+    "coupling_coordinate_derivatives_preserved": true,
+    "cross_equation_parameter_gradients_forbidden": true,
+    "pde_denominator": 3,
+    "boundary_and_initial_denominators": "UNCHANGED_FROM_PHK_V22R"
+  },
+  "thermal_cv": {
+    "enthalpy": "H_EQUALS_T_PLUS_LATENT_RATIO_TIMES_PHASE",
+    "quadrature": {"volume": "2x2x2_GAUSS_LEGENDRE", "enthalpy_each_time_face": "2x2_GAUSS_LEGENDRE", "each_spatial_face": "2_TANGENTIAL_BY_2_TIME_GAUSS_LEGENDRE"},
+    "strict_interior_cells_only": true,
+    "patches_per_step": 16,
+    "training_steps": 1200,
+    "one_cell_blind_slabs": 192,
+    "two_by_two_blind_slabs": 192,
+    "window_allocation": "ACTIVE_CAUSAL_WINDOWS_COUNTS_DIFFER_BY_AT_MOST_ONE_ORDERED_REMAINDER",
+    "scale": "S_CV_EQUALS_R_CV0_RMS_DIV_SQRT_MAX_L_T_STRONG0_1E_MINUS_16",
+    "thermal_normalized_mse": "MEAN_R_T_CV_OVER_S_CV_SQUARED",
+    "total_pde_contribution": "PDE_WEIGHT_TIMES_THERMAL_NORMALIZED_MSE_DIV_3"
+  },
+  "arms": {
+    "ER_S": "EQUATION_ROUTED_ALL_STRONG_FORM",
+    "ER_CV": "EQUATION_ROUTED_ELECTRIC_AND_PHASE_STRONG_THERMAL_CONTROL_VOLUME"
+  },
+  "filter": {
+    "block_size": 25,
+    "learning_rate_ladder": [0.000125, 0.0000625, 0.00003125, 0.000015625, 0.0000078125],
+    "accepted_learning_rate_never_increases": true,
+    "screen_accepted_updates": 200,
+    "screen_attempted_cap": 1000,
+    "full_accepted_updates": 1200,
+    "full_attempted_cap": 3600,
+    "snapshot": "IMMUTABLE_DEEP_MODEL_OPTIMIZER_ALL_RNG_ACCEPTED_STEP_LR_PHASE_STAGE",
+    "all_scales_rejected": "SAVE_LAST_VALID_ENDPOINT_AND_STALL"
+  },
+  "phase_schedule": {
+    "accepted_steps_1_through_550": "PHASE_PARAMETERS_AND_BUFFERS_BITWISE_FROZEN",
+    "accepted_steps_551_through_1200": "UNFREEZE_PHASE_WITHOUT_OPTIMIZER_RESET"
+  },
+  "conditional_no_filter_control": {
+    "trigger": "SELECTED_FILTERED_ARM_PASSES_COMPLETE_INTERNAL_PINN_PARETO",
+    "start": "EXACT_LF6_DEV_R",
+    "updates": 1200,
+    "replay_selected_accepted_lr_schedule": true,
+    "filter": false,
+    "medium_audit": false,
+    "rollback": false
+  },
+  "forbidden": ["DATA_REPLAY_OR_ANCHOR_GRADIENT", "BCE", "AUGMENTED_LAGRANGIAN", "EVENT_RANK_OR_TZL_LOSS", "DYNAMIC_WEIGHTING", "RUNTIME_SAMPLING", "RAR", "LBFGS", "NETWORK_OPTIMIZER_SEED_LR_OR_BLOCK_SWEEP", "BEST_CHECKPOINT_SELECTION"]
+}

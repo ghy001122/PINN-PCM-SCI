@@ -376,3 +376,18 @@ python paper/paper_v23/figures/generate_figures.py --lf8-only
 `figures/source-manifest-lf8.json` binds the frozen metrics, raw evidence, script,
 and PNG/PDF hashes. Git alone cannot reconstruct the git-ignored checkpoint,
 prediction, or raw telemetry.
+
+## LF9 active matched-screen record
+
+- starting commit: `f16ca9db66843c04d420c077679604dd553ac036`;
+- campaign timestamp: `20260908T145333Z`;
+- arms: `ER-S` equation-routed strong form and matched `ER-CV` with only the
+  thermal residual replaced by a space-time enthalpy control-volume balance;
+- common start: exact LF6 `DEV-R` weights;
+- common acceptance: identity-correct competence filter, immutable rollback,
+  same-block replay, and the frozen dyadic rate ladder;
+- paper metrics: `figures/data/lf9_terminal_metrics.json` is an ACTIVE/null
+  scaffold and must not be interpreted until terminal evidence binds it.
+
+The LF9 figure and source manifest are intentionally absent while results are
+pending. Stress and local-reference restrictions remain unchanged.

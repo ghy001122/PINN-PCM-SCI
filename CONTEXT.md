@@ -41,11 +41,27 @@ learning-rate schedule accepted by a complete safety path but performs no
 competence audit, rejection or rollback. It isolates schedule sufficiency from
 the load-bearing effect of filtering.
 
+**Equation-routed multiphysics refinement**: a coupled PINN refinement in which
+every equation retains full coupled values and coordinate derivatives, while
+parameter gradients are assigned only to the head that owns that equation.
+_Avoid_: detached coupling, sequential field update
+
+**Thermal control-volume residual**: the normalized space-time integral of the
+unchanged thermal equation over a finite-volume cell and adjacent saved-time
+interval. _Avoid_: replacement thermal physics, label-derived balance
+
+**PRELOCAL_INTERNAL_PARETO**: a reference-blind cloud trigger satisfying every
+available internal gate before shutdown. It is not a complete Pareto claim.
+
+**COMPLETE_INTERNAL_PINN_PARETO**: an internal PINN result that also passes the
+post-shutdown frozen local evaluator. It remains distinct from direct-baseline
+paper value.
+
 ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-start、event-balanced distillation、persistent replay、target-measure calibration、普通 augmented Lagrangian、inverse-link distillation、类别重平衡、interface sampling、BCE-with-logits、event-frontier rank-band 与 competence-filter/backtracking 都是 `SHARED_SOLVER_BACKBONE_NOT_AUTOMATIC_HEADLINE_INNOVATION`。LF1 建立过 single-seed nominal competence但没有强基线增量；LF2 证明全局测度误差改善不能替代稀有事件 competence；LF3 把失败收缩为 high-precision/low-recall support；LF4 验证界面暴露可提高最低召回；LF6/LF7 证明 bulk residual 下降和更小步长均未保存事件载体。LF8 证明 identity-correct filter 可保留一个 25-step local feasible prefix，但无法在最小冻结学习率接受第二个 block；因此 tested long-path strong-form continuation 已关闭，而 filter-versus-schedule attribution 仍未知。direct medium `LF_ONLY` 与 B0 `LF_DATA_ONLY` 仍是强 comparators。当前稿件只能承载有界 failure-analysis、solver-recovery mechanism evidence、physics-forgetting 与 valid-prefix stall 负结果。
 
 ## 权威路由
 
-LF8 terminal evidence and its boundary are defined by [ADR 0070](docs/adr/0070-close-phk-v23-lf8-competence-filter-completion.md), [terminal closeout](docs/experiment/2026-09-08-phk-v23-lf8-terminal-closeout.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md) and the [live plan](docs/plans/NEXT_ACTIONS.md). The mixed weak/control-volume route is a recommendation requiring `NEW EXECUTE`; it is not current authorization and does not rewrite LF7 or earlier evidence.
+LF9 is explicitly active under [ADR 0071](docs/adr/0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md) and the [live plan](docs/plans/NEXT_ACTIONS.md). Its CPU qualification authorizes the two frozen screens but is not method evidence. LF8 and earlier terminal evidence remain unchanged.
 
 LF7 终局证据见 [ADR 0068](docs/adr/0068-close-phk-v23-lf7-competence-filtered-refinement.md) 与 [terminal closeout](docs/experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)。导师初稿见 [paper_v23](paper/paper_v23/README.md)。LF7 及更早证据继续由对应 terminal closeout 保留，不被 LF8 激活追溯修改。
 
