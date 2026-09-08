@@ -199,14 +199,16 @@ class LF9CloudTests(unittest.TestCase):
         launcher = (ROOT / "cloud/phk_v23_lf9_autodl/run.sh").read_text(encoding="utf-8")
         self.assertIn("LF9_OUTPUT_ROOT", launcher)
         self.assertIn("find \"${LF9_OUTPUT_ROOT}\"", launcher)
+        self.assertIn('PYTHON_BIN="/root/miniconda3/bin/python"', launcher)
+        self.assertIn('[[ ! -x "${PYTHON_BIN}" ]]', launcher)
         self.assertLess(launcher.index("preflight.py"),
-                        launcher.index("python -m pinn_pcm_sci.phk_v23_lf9"))
-        self.assertEqual(launcher.count("python -m pinn_pcm_sci.phk_v23_lf9"), 1)
+                        launcher.index('"${PYTHON_BIN}" -m pinn_pcm_sci.phk_v23_lf9'))
+        self.assertEqual(launcher.count('"${PYTHON_BIN}" -m pinn_pcm_sci.phk_v23_lf9'), 1)
         for flag in ("--medium-carrier", "--dev-r-checkpoint", "--strong-ledger",
                      "--strong-ledger-manifest", "--cv-ledger",
                      "--cv-ledger-manifest", "--cpu-qualification", "--source-identity"):
             self.assertIn(flag, launcher)
-        runner = launcher[launcher.index("python -m pinn_pcm_sci.phk_v23_lf9"):]
+        runner = launcher[launcher.index('"${PYTHON_BIN}" -m pinn_pcm_sci.phk_v23_lf9'):]
         self.assertIn("--initial-checkpoint", runner)
         self.assertNotIn("--dev-r-checkpoint", runner)
         self.assertNotIn("--strong-ledger-manifest", runner)

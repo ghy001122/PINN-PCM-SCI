@@ -7,6 +7,11 @@ set -euo pipefail
 : "${LF9_CPU_QUALIFICATION:?LF9_CPU_QUALIFICATION is required}"
 
 export PYTHONPATH="${LF9_DEPLOYMENT_ROOT}"
+PYTHON_BIN="/root/miniconda3/bin/python"
+if [[ ! -x "${PYTHON_BIN}" ]]; then
+  echo "LF9 cannot start: frozen Python runtime is unavailable: ${PYTHON_BIN}" >&2
+  exit 44
+fi
 
 case "${LF9_OUTPUT_ROOT}" in
   /root/autodl-tmp/lf9-run-*) ;;
@@ -32,7 +37,7 @@ STRONG_MANIFEST="${LF9_DEPLOYMENT_ROOT}/outputs/runs/20260906T065434Z-phk-v23-lf
 CV_LEDGER="${LF9_DEPLOYMENT_ROOT}/outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cpu/cv/materialized_cv_ledger.npz"
 CV_MANIFEST="${LF9_DEPLOYMENT_ROOT}/outputs/runs/20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv/cpu/cv/materialized_cv_ledger_manifest.json"
 
-python "${LF9_DEPLOYMENT_ROOT}/cloud/phk_v23_lf9_autodl/preflight.py" \
+"${PYTHON_BIN}" "${LF9_DEPLOYMENT_ROOT}/cloud/phk_v23_lf9_autodl/preflight.py" \
   --source-identity "${LF9_SOURCE_IDENTITY}" \
   --deployment-root "${LF9_DEPLOYMENT_ROOT}" \
   --output-root "${LF9_OUTPUT_ROOT}" \
@@ -47,7 +52,7 @@ python "${LF9_DEPLOYMENT_ROOT}/cloud/phk_v23_lf9_autodl/preflight.py" \
 # One process owns both mandatory screens, the conditional continuation, and
 # the conditional matched control. Arm-local failures are handled by the core
 # campaign so that the unaffected mandatory screen still completes.
-python -m pinn_pcm_sci.phk_v23_lf9 \
+"${PYTHON_BIN}" -m pinn_pcm_sci.phk_v23_lf9 \
   --output-root "${LF9_OUTPUT_ROOT}" \
   --medium-carrier "${MEDIUM}" \
   --initial-checkpoint "${DEV_R}" \
