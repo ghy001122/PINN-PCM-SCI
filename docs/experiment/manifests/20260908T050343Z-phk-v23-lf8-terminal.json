@@ -1,0 +1,80 @@
+{
+  "schema_version": "run-manifest-v1",
+  "run_id": "20260908T050343Z-phk-v23-lf8-terminal",
+  "experiment_group_id": "PHK_V23_LF8",
+  "tier": "development_campaign",
+  "scientific_role": "identity_correct_competence_filter_completion_and_conditional_schedule_attribution_terminal_adjudication",
+  "gate": "PHK_V23_LF8",
+  "started_at": "2026-09-08T05:47:21.356848+00:00",
+  "ended_at": "2026-09-08T06:05:39+00:00",
+  "command": [
+    "remote isolated-project-python -m pinn_pcm_sci.phk_v23_lf8 --output-root <hash-bound-run-root> --medium-carrier <hash-bound-medium> --initial-checkpoint <hash-bound-exact-dev-r> --materialized-ledger <hash-bound-ledger> --cpu-qualification <hash-bound-cpu-qualification> --device cuda:0 --source-identity LF8-BUNDLE-F9B2A84E8B3953D6BC5DC8F1D402D87EA6C060361FC9323785DF5CB46351E288",
+    "local .venv/Scripts/python.exe -m pinn_pcm_sci.phk_v23_lf8_evaluation --run-directory <hash-bound-run-root> --output-directory <run-root>/local-adjudication"
+  ],
+  "execution_status": "COMPLETE",
+  "numerical_validity": "VALID_IDENTITY_CORRECT_25_UPDATE_SAFETY_PREFIX_AND_FILTER_STALL",
+  "gate_outcome": "LF8_FILTER_STALLED_WITH_VALID_PREFIX",
+  "route_disposition": "MIXED_WEAK_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE_VALID_PREFIX_RETAINED",
+  "evidence_identity": "SINGLE_SEED_NOMINAL_VALID_PREFIX_STRONG_FORM_PATH_STALL_NO_MATCHED_SCHEDULE_ATTRIBUTION",
+  "claim_status": "VALID_PREFIX_RETAINED_STRONG_FORM_BRANCH_CLOSED_NO_PINN_PARETO_OR_CANDIDATE",
+  "code_identity": {
+    "starting_commit": "95e448e36a659ac266b670667543b80ce467da53",
+    "activation_commit": "70b4d30bc36cff0c745cc1eb0fc67f9081cd94f0",
+    "executed_source_identity": "LF8-BUNDLE-F9B2A84E8B3953D6BC5DC8F1D402D87EA6C060361FC9323785DF5CB46351E288",
+    "deployed_source_manifest": "cloud/phk_v23_lf8_autodl/deployed-source-manifest.json#sha256=0F77AAD81CD41FA49BBEC55B79647C08219C4BB38F893E51595D9BBEDDF7DBFA"
+  },
+  "environment": {
+    "cloud_gpu": "Tesla V100-PCIE-32GB",
+    "cloud_dtype": "FLOAT64",
+    "cloud_training_inputs": "MEDIUM_NO_GRADIENT_AUDIT_ONLY_EXACT_DEV_R_PREMATERIALIZED_PHYSICS_LEDGER_AND_CPU_QUALIFICATION",
+    "fine_extra_fine_lf_only_evaluator_read_on_cloud": false,
+    "local_evaluator_device": "CPU",
+    "instance_lifecycle": "RECOVERED_HASH_VERIFIED_ZERO_PROCESS_AND_GPU_THEN_TCP_CLOSED_AND_SSH_CONNECTION_REFUSED_BEFORE_LOCAL_ADJUDICATION",
+    "stress_fields_or_metrics_read": false
+  },
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "split_id": "MEDIUM_AUDIT_ONLY_FINE_EXTRA_LF_ONLY_LOCAL_POST_SHUTDOWN_STRESS_SEALED",
+  "method_id": "phk-v23-lf8-identity-correct-competence-filter-v1",
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "seed": 17,
+  "planned_budget": {
+    "maximum_scientific_gpu_trajectories": 2,
+    "p0_fstar_maximum_accepted_updates": 1200,
+    "p0_fstar_maximum_attempted_updates": 2400,
+    "conditional_control_updates": 1200
+  },
+  "actual_budget": {
+    "scientific_gpu_trajectories_attempted": 1,
+    "p0_fstar_attempted_updates": 150,
+    "p0_fstar_accepted_updates": 25,
+    "p0_fstar_rejected_block_attempts": 5,
+    "conditional_control_attempted_updates": 0,
+    "scientific_retry": false
+  },
+  "checkpoint": {
+    "initial_dev_r_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "p0_fstar_sha256": "E006350C367A1EA43BE4B70FB980BF72E31FB42F32A63C8494ED16E7F4755890",
+    "p0_fstar_valid_prefix_sha256": "765BA83BE9E1CB22B7E5B32C61551575D8FBE58EE05AD6BF5EB583AE53A7ABCD",
+    "p0_fstar_endpoint_valid": true,
+    "conditional_control_sha256": null,
+    "conditional_control_executed": false,
+    "optimizer_state_loaded_from_development": false
+  },
+  "evaluator_id": "phk-v23-lf8-local-adjudication-v1",
+  "artifacts": {
+    "compact_artifact": "artifacts/20260908T050343Z-phk-v23-lf8-terminal.json#sha256=6BD4C2CAFE32B016097FC07F91A0B1297103E872E49C5ACD2E7D3903F8C2BF21",
+    "closeout": "../2026-09-08-phk-v23-lf8-terminal-closeout.md#sha256=D8A81BAA00F32D2186C6C9F7FB38BDAA70342A519C546A91CF2089915C819D19",
+    "adr": "../../adr/0070-close-phk-v23-lf8-competence-filter-completion.md#sha256=366510D7894A2EFC35622B149D3ECD280004CDCFE792EA247A32069A2E8BEF3D",
+    "cpu_qualification": "artifacts/20260908T050343Z-phk-v23-lf8-cpu-qualification.json#sha256=24426624F60461F03F760688D49CBB1B3B2B8F9CEF3D7CFBB135C4238D03927F",
+    "run_summary": "outputs/runs/20260908T050343Z-phk-v23-lf8-competence-filter-completion-pilot/run_summary.json#sha256=6CD2B4E7CE2D89908911AE5EDFB7912A7E1064C84ECEC2E01B384360BB5C817A",
+    "recovery_manifest": "outputs/runs/20260908T050343Z-phk-v23-lf8-competence-filter-completion-pilot/cloud/recovery_manifest.json#sha256=B21DA900F86B1FC4397488DC1E1C0CEA4CB2B413632A44D7D85F09A3BACE2112",
+    "shutdown_proof": "outputs/runs/20260908T050343Z-phk-v23-lf8-competence-filter-completion-pilot/cloud/shutdown_proof.json#sha256=F1D2A78A2E2D436C9FEA01C37C08C3B447BF6CD1A4341F92C527A695C7E96073",
+    "local_adjudication": "outputs/runs/20260908T050343Z-phk-v23-lf8-competence-filter-completion-pilot/local-adjudication/adjudication.json#sha256=CBF7D52CF74212A4690B433B716A7AF4C0A70A1E619CF2351E95679DA74F7B97",
+    "source_archive": "outputs/deploy/phk-v23-lf8-source-70b4d30.tar.gz#sha256=076131769CBE74AA35395D211F91742329D9054AD89FA9546769C98830688A37",
+    "results_archive": "outputs/deploy/lf8-results-v3-70b4d30.tar.gz#sha256=6FCC6EFBBE96422B09D9B716BF9988A961B7AD6C63A8430F0D13EDEE262FBE21",
+    "paper_package": "../../paper/paper_v23/README.md"
+  },
+  "failure_class": "IDENTITY_VALID_STRONG_FORM_COMPETENCE_FILTER_STALLED_AFTER_ONE_ACCEPTED_BLOCK_DUE_TO_RECURRENT_TEMPERATURE_PRESERVATION_FAILURE",
+  "replay_of": null,
+  "supersedes": null
+}

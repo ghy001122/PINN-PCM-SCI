@@ -27,6 +27,12 @@
 | P0-F rejected unsafe proposals before one small safe block | `VERIFIED_PARTIAL_BLOCK_BEHAVIOR` | four rejected rates; `eta0/16` first block passed | Diagnostic block evidence only |
 | LF7 establishes a competence-filter mechanism | `UNKNOWN_INCOMPLETE_IDENTITY` | Adam-state snapshot aliasing; no valid P0-F endpoint | Neither positive nor negative mechanism attribution |
 | LF7 P0-F is label-free | `REJECTED_BY_METHOD_IDENTITY` | medium-teacher functionals determine block acceptance | Call it multifidelity competence-filtered refinement |
+| LF8 corrected rollback state identity | `VERIFIED_ENGINEERING` | nonempty Adam/model/RNG snapshots; five exact rejected-block restorations | Engineering validity, not scientific gain |
+| LF8 retained a safe residual-reducing prefix | `VERIFIED_BOUNDED_PATH` | first `eta0/16` block: 25 updates, safety pass, (J/J_0=0.989132) | One valid prefix only |
+| LF8 completed a preservation-compatible strong-form path | `REJECTED` | next same-rate block failed temperature preservation; 25/1200 accepted | Frozen path stalled |
+| LF8 establishes filter or schedule attribution | `UNKNOWN_UNAVAILABLE` | F* completion trigger failed; schedule control not run | `MATCHED_ATTRIBUTION_UNAVAILABLE` |
+| LF8 is label-free or supplies a PINN Pareto | `REJECTED` | medium audit governs acceptance; no completed path/control | Multifidelity audit; no Pareto claim |
+| LF8 beat direct `LF_ONLY` | `REJECTED` | phase/T/current remain much worse | No strong-baseline gain or candidate |
 | PINNs generally cannot solve the system | `REJECTED_EXTRAPOLATION` | one object, seed, architecture, budget | Bound all conclusions to the frozen protocol |
 | Stress/OOD, continuum, material, or experimental validity | `UNKNOWN` | not executed; stress sealed | Must not claim |
 
@@ -36,9 +42,11 @@
 > matched controls support teacher-interface exposure as a bounded recall
 > mechanism, do not support a rank-specific endpoint increment, and directly
 > show that both aggressive residual minimization and an eightfold smaller
-> fixed step can erase a safety-valid localized event carrier.
+> fixed step can erase a safety-valid localized event carrier. Identity-correct
+> competence filtering retains one small safe prefix but stalls when the next
+> strong-form block violates temperature preservation.
 
 This supports an advisor draft and a possible negative/diagnostic paper. It does
-not support a positive PINN methods submission. LF7 adds a valid negative
-small-step control, but its identity-invalid filtered arm cannot establish the
-matched mechanism relation.
+not support a positive PINN methods submission. LF8 removes LF7's identity
+ambiguity, but the stalled path does not trigger the schedule control; matched
+attribution, PINN Pareto value, and candidate status remain unavailable.

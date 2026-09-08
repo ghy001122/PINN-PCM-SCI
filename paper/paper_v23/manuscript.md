@@ -1,7 +1,7 @@
 # Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
 
 > Advisor-reviewable draft. Closed evidence status:
-> `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`.
+> `LF8_FILTER_STALLED_WITH_VALID_PREFIX`.
 > All neural results are single-seed nominal development evidence. No candidate,
 > positive PINN method, strong-baseline gain, OOD/stress result, or submission
 > readiness is claimed.
@@ -36,13 +36,17 @@ fell from 0.918 to 0.216 within 50 updates and reached zero in both cycles by th
 fixed endpoint. Relative to the selected safety near-carrier endpoint, final potential, temperature,
 phase, and topology errors increased by 28.6, 52.6, 25.8, and 20.0 times.
 
-LF7 then compared a fixed-small-step continuation with competence-filtered
-blockwise backtracking. The valid 1200-update control reduced the same objective
-only to 2.9719 (ratio 0.6031) and erased cycle 1 while leaving cycle-2 recall at
-0.076. The filtered arm rejected four proposals and accepted one 25-update
-block at one-sixteenth of the base rate, but subsequent rollback state-identity
-drift left no valid endpoint. The result is a bounded interface-exposure and
-physics-forgetting study, not a positive method or candidate.
+LF7 then showed that an eightfold smaller fixed step still erased competence,
+but a snapshot-aliasing defect left its filtered arm unresolved. LF8 reran the
+filter with immutable model, Adam, and random-state snapshots. Four initial
+rates were safely rejected, and one 25-update block at one-sixteenth of the base
+rate reduced the blind objective to 0.98913 of its start while preserving all
+safety checks. The next block at the same rate violated temperature preservation
+and was exactly rolled back, leaving a valid prefix but a stalled path. Because
+the required completion condition was not reached, the schedule control was not
+triggered and matched attribution is unavailable. The result remains a bounded
+interface-exposure and physics-forgetting study, not a positive method or
+candidate.
 
 ## 1. Introduction
 
@@ -76,7 +80,10 @@ This paper makes three bounded contributions:
    than generic extra supervision, materially improves rare-event recall; and
 3. the first executed label-free physics continuation in the ladder, showing
    that a 98.7% blind-objective reduction can coexist with catastrophic loss of
-   the event carrier.
+   the event carrier; and
+4. an identity-correct competence-filter completion showing that exact rollback
+   can retain one safe residual-reducing prefix, while the frozen strong-form
+   path stalls before a matched schedule comparison becomes admissible.
 
 The components have prior art. Exact constraints, logit distillation, class
 rebalancing, order statistics, event functions, and phase-interface sampling
@@ -240,6 +247,22 @@ P0-F safety success could support a filter-specific pilot signal. The terminal
 screen did not complete that relation because P0-F lost rollback state identity
 after its first accepted block.
 
+### 3.6 LF8 identity-correct filter completion
+
+LF8 repeated only the unresolved filtered path after replacing aliased
+snapshots with immutable deep copies of model, nonempty Adam state, and all
+random-number states. Each 25-update proposal reused the same materialized
+physics block after rejection. Acceptance required a strict decrease of the
+fixed blind physics objective plus the frozen medium competence and field
+preservation checks. A valid prefix was checkpointed after every accepted
+block. The medium teacher therefore supplied no gradient but did govern
+acceptance; this remains multifidelity competence-filtered PINN refinement, not
+label-free physics.
+
+The matched schedule-control arm was conditional: it could execute only after
+F* completed 1200 accepted updates while retaining safety. This prevents a
+control with a different path length from being reported as matched attribution.
+
 ## 4. Results
 
 ### 4.1 Interface exposure was supported before LF6
@@ -329,9 +352,31 @@ establish filter efficacy.
 
 ![LF7 matched continuation](figures/20260907T144634Z-lf7-competence-filtered-refinement.png)
 
+### 4.6 Identity-correct filtering retained one safe prefix and then stalled
+
+LF8 verified exact rollback on all rejected proposals. The first four dyadic
+rates failed potential and/or temperature preservation. At `eta0/16`, the first
+25-update block passed every safety check and reduced the fixed blind objective
+from 4.927872 to 4.874314 (ratio 0.989132). Relative potential, temperature,
+phase, and topology errors were 0.995, 1.018, 1.000, and 1.000. A second block
+at the same rate proposed a lower objective, 4.822579, but raised relative
+temperature error to 1.292, above the frozen 1.05 limit. Exact rollback restored
+the accepted prefix.
+
+F* therefore stopped at 25 accepted of 150 attempted updates. Its retained
+endpoint was safety-valid but still failed strict cycle-1 timing. It did not
+complete 1200 accepted updates, so the conditional schedule control correctly
+ran zero updates. The terminal mechanism result is
+`MATCHED_ATTRIBUTION_UNAVAILABLE`, not filter success or failure relative to a
+matched schedule. Post-shutdown extra-fine evaluation remained far behind
+direct `LF_ONLY`: phase ROI RMS was 0.03237 versus 0.00657, temperature ROI RMS
+0.01757 versus 0.00180, and current NRMSE 0.13709 versus 0.00352.
+
+![LF8 identity-correct filter path](figures/20260908T050343Z-lf8-filter-path.png)
+
 ## 5. Discussion
 
-### 5.1 What LF6--LF7 establish
+### 5.1 What LF6--LF8 establish
 
 LF6 supplies two pieces of valid evidence. First, critical-rank endpoint cells
 were not uniquely sufficient under the matched strict rule: the rank arm reached
@@ -354,7 +399,15 @@ endpoint level, that the filter rejected four unsafe blocks before admitting
 one very small safe block. Because the arm then became identity-invalid, this
 is implementation diagnostic evidence rather than a mechanism result.
 
-### 5.2 What LF6--LF7 do not establish
+LF8 closes that engineering uncertainty. With exact state restoration, the
+filter again rejected unsafe proposals and retained the same first safe block.
+The next same-rate block was rejected on temperature preservation and exactly
+rolled back. Thus the frozen strong-form direction has a nonempty safe prefix,
+but cannot progress beyond 25 accepted updates under this schedule and filter.
+This is a valid bounded stall result; it does not establish matched schedule
+attribution because the preregistered control trigger was not reached.
+
+### 5.2 What LF6--LF8 do not establish
 
 DEV-R's safety pass does not make it a strict carrier. Since DEV-U and DEV-R
 both missed strict competence, their difference cannot support a rank-specific
@@ -370,11 +423,12 @@ failure. Direct interpolation also remains the accuracy reference; no speed,
 compression, inverse, sparse-data, or OOD advantage was measured and none may
 be supplied after the fact.
 
-LF7 does not establish that blockwise competence filtering succeeds or fails:
-the required matched P0-F endpoint is absent. The forensic snapshot-aliasing
-diagnosis and its unexecuted repair are engineering facts, not a recovered
-scientific arm. The accepted first block cannot be extrapolated to 1200 updates
-or described as a candidate.
+LF8 does not establish that competence filtering is superior to a replayed
+schedule: F* never met the completion trigger and the control was not executed.
+One accepted block cannot be extrapolated to 1200 updates or described as a
+PINN Pareto result. The medium acceptance audit also prevents calling F*
+label-free, despite its pure-physics gradient. The retained prefix remains
+strictly noncompetent on cycle-1 timing and inferior to direct interpolation.
 
 ### 5.3 Paper positioning and next evidence
 
@@ -388,10 +442,13 @@ The maximum defensible central statement is:
 
 This supports an advisor draft and potentially a carefully scoped
 negative/diagnostic paper. It does not support a positive methods submission.
-LF7 strengthens the negative case against learning-rate reduction alone, but
-its incomplete filter arm cannot change the mechanism claim. A future execution
-would need an identity-correct matched endpoint before multi-seed or
-sparse/equal-information work is justified. Stress remains sealed.
+LF7 strengthens the negative case against learning-rate reduction alone, and
+LF8 establishes that the identity-correct strong-form filter stalls after one
+safe block. The most direct next question is therefore no longer a snapshot or
+learning-rate repair, but whether a mixed weak/control-volume physics objective
+supplies a preservation-compatible descent direction. That route requires a
+new contract. Multi-seed and sparse/equal-information work remain unjustified;
+stress remains sealed.
 
 ## 6. Limitations
 
@@ -415,6 +472,11 @@ terminated after a state-identity defect, so neither its endpoint nor the
 matched S/F mechanism relation exists. Its four rejections and one accepted
 block are retained only as bounded diagnostic evidence.
 
+LF8 repaired that identity defect prospectively and produced a valid retained
+prefix. However, it stopped after one accepted block and did not trigger its
+conditional control. Consequently there is still no completed filter/control
+comparison, no PINN Pareto, and no candidate.
+
 ## 7. Conclusion
 
 The program progressed from cold collapse to localized event recovery, a
@@ -426,10 +488,13 @@ objective by 98.7% yet increased all preservation errors and erased both-cycle
 recall. The decisive lesson is not that residuals are useless or PINNs are
 impossible. It is that residual reduction, field admissibility, and sparse-event
 competence are independent obligations, and in this frozen continuation they
-were actively in conflict. LF7 further rejects smaller steps alone as a rescue,
-while leaving competence filtering scientifically unresolved because its arm
-did not retain rollback identity. Candidate remains none; the direct low-fidelity
-baseline remains stronger; stress remains sealed and unread.
+were actively in conflict. LF7 further rejects smaller steps alone as a rescue.
+LF8 proves that exact rollback can retain one safety-valid residual-reducing
+prefix, but the next same-rate block violates temperature preservation and the
+strong-form path stalls. The conditional schedule control is therefore absent
+and matched filter attribution remains unavailable. Candidate remains none;
+the direct low-fidelity baseline remains stronger; stress remains sealed and
+unread.
 
 ## Data, code, and evidence availability
 

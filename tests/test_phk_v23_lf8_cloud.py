@@ -69,7 +69,57 @@ class LF8CloudTests(unittest.TestCase):
             "cloud/phk_v23_lf8_autodl/deployed-source-manifest.json",
             bundle.STATIC_FILES,
         )
-        self.assertFalse((ROOT / "cloud/phk_v23_lf8_autodl/deployed-source-manifest.json").exists())
+        deployed_path = ROOT / "cloud/phk_v23_lf8_autodl/deployed-source-manifest.json"
+        if deployed_path.exists():
+            deployed = json.loads(deployed_path.read_text(encoding="utf-8"))
+            self.assertEqual(
+                deployed.get("schema_id"),
+                "phk-v23-lf8-deployed-source-manifest-v1",
+            )
+            self.assertEqual(deployed.get("task_id"), bundle.TASK_ID)
+            base_commit = str(deployed.get("base_commit", ""))
+            self.assertEqual(len(base_commit), 40)
+            self.assertTrue(all(character in "0123456789abcdefABCDEF" for character in base_commit))
+            self.assertEqual(bundle._git("cat-file", "-t", base_commit).decode().strip(), "commit")
+            self.assertEqual(
+                bundle._git("show", "-s", "--format=%s", base_commit).decode().strip(),
+                "Activate PHK-V2.3 LF8 identity-correct competence-filter completion",
+            )
+            materialized = deployed.get("materialized_inputs", {})
+            self.assertEqual(
+                set(materialized),
+                {
+                    "medium", "dev_r_checkpoint", "lf6_materialized_ledger",
+                    "lf6_materialized_ledger_manifest", "cpu_qualification",
+                },
+            )
+            self.assertIs(deployed.get("runtime_coordinate_generation"), False)
+            bound_paths = [*deployed.get("files", {})]
+            bound_paths.extend(
+                str(record.get("path", "")) for record in materialized.values()
+            )
+            forbidden = ("fine", "extra", "lf_only", "lf-only", "stress")
+            self.assertFalse(any(
+                token in path.lower()
+                for path in bound_paths
+                for token in forbidden
+            ))
+            identity_lines = [f"base_commit={base_commit.upper()}\n"]
+            identity_lines.extend(
+                f"source:{path}={digest}\n"
+                for path, digest in sorted(deployed["files"].items())
+            )
+            identity_lines.extend(
+                f"input:{role}={record['sha256']}\n"
+                for role, record in sorted(materialized.items())
+            )
+            expected_identity = "LF8-BUNDLE-" + hashlib.sha256(
+                "".join(identity_lines).encode("ascii")
+            ).hexdigest().upper()
+            self.assertEqual(deployed.get("source_identity"), expected_identity)
+        else:
+            # Activation has not deployed yet; absence is the valid pre-deploy state.
+            self.assertFalse(deployed_path.exists())
         self.assertEqual(
             set(inspect.signature(bundle.build).parameters),
             {"qualification_path", "qualification_manifest_path", "archive_path", "base_commit"},

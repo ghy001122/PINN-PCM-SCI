@@ -27,7 +27,7 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-LF8 已获具名授权并通过真实 nonempty-Adam 零步资格。当前只运行 mandatory P0-F* identity-correct competence-filtered strong-form path；仅在其完整安全成功后运行 accepted-schedule matched control。CPU 资格是工程身份事实，不是性能 premise。额外 strong-form rescue、sparse、weak/control-volume、新 seed、OOD/stress、PJGR/R2/SRPG 或投稿不在授权内。
+LF8 已完成并关闭。Identity-correct P0-F* 尝试 150、接受 25 updates；最小冻结学习率的首个 block 保持完整 safety conjunction 并将 blind `J` 降至 `0.9891315882 J0`，第二个同率 block 因 temperature preservation 失败而回滚，形成合法 valid-prefix stall。完整路径未建立，conditional control 未运行，故 filter-versus-schedule attribution 不可用。终局为 `LF8_FILTER_STALLED_WITH_VALID_PREFIX`，candidate 为 none，后续执行未授权。唯一建议是另立 mixed weak/control-volume physics `NEW EXECUTE`。
 
 LF7 已完成并关闭。P0-S 是有效的 1,200-update fixed-small-step 负面 arm；P0-F 在接受 25、尝试 150 updates 后发生 post-step rollback identity drift，无合法 endpoint，因此不能比较 filter 增量。终局为 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`，candidate 为 none，后续执行未授权。权威事实见 ADR 0068、terminal closeout 与 `active_phase.md`。
 
@@ -95,14 +95,15 @@ shutdown and post-shutdown local adjudication completed. No mechanism
 attribution, PINN Pareto, candidate or next research authorization exists;
 stress remains sealed/unread.
 
-# LF8 active handoff (2026-09-08)
+# LF8 terminal handoff (2026-09-08)
 
 `PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE`
-starts from exact LF6 DEV-R and reuses the frozen materialized 1,200-step
-physics stream. CPU qualification passed on the real three-head model with 28
-nonempty Adam state entries through two continuous mutate/reject/restore cycles;
-snapshot storage is non-aliased and all restored model, optimizer and RNG state
-is bitwise identical. Mandatory P0-F* is pending. A valid stopped prefix is a
-scientific endpoint; the schedule-only control is reachable only after a full
-safe 1,200-update F* path with lower blind physics objective. No LF8 GPU result,
-candidate or next-stage authorization exists yet; stress remains sealed/unread.
+ran from activation `70b4d30bc36cff0c745cc1eb0fc67f9081cd94f0`. The corrected
+filter accepted 25 of 150 attempted updates at learning rate `7.8125e-6`,
+strictly reduced fixed-blind `J` to `4.8743140406`, and retained a recoverable
+safety-valid endpoint. A second block at the same minimum rate failed temperature
+preservation and rolled back exactly, so the path stalled. The 1,200-update path
+and conditional schedule control were not reached. Recovery, shutdown and local
+adjudication completed; the result establishes neither filter attribution nor a
+PINN Pareto/candidate. Strong-form rescue is closed, the mixed weak/control-volume
+route requires new authorization, and stress remains sealed/unread.

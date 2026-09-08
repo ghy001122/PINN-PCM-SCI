@@ -1,0 +1,76 @@
+{
+  "schema_id": "paper-v23-lf8-terminal-metrics-v1",
+  "task_id": "PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE",
+  "campaign_state": "COMPLETE",
+  "terminal_outcome": "LF8_FILTER_STALLED_WITH_VALID_PREFIX",
+  "mechanism_outcome": "MATCHED_ATTRIBUTION_UNAVAILABLE",
+  "candidate": null,
+  "unique_next": "MIXED_WEAK_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE_VALID_PREFIX_RETAINED",
+  "baseline": {
+    "role": "LF6_DEV_R_SAFETY_NEAR_CARRIER",
+    "fixed_blind_objective": 4.9278721846990505,
+    "recall": [0.9175257731958762, 0.9228675136116149],
+    "recovery": [1.0, 1.0]
+  },
+  "gates": {
+    "relative_potential_max": 1.2,
+    "relative_temperature_max": 1.05,
+    "relative_phase_max": 1.05,
+    "relative_topology_max": 1.05,
+    "block_physics_rule": "STRICT_DECREASE_FROM_LAST_ACCEPTED_PREFIX"
+  },
+  "fstar": {
+    "accepted_updates": 25,
+    "attempted_updates": 150,
+    "accepted_blocks": 1,
+    "rejected_attempts": 5,
+    "disposition": "FILTER_STALLED_WITH_VALID_PREFIX",
+    "final_learning_rate": 0.0000078125,
+    "fixed_blind_objective": 4.874314040595978,
+    "fixed_blind_ratio_to_DEV_R": 0.9891315882198874,
+    "safety_gate_passed": true,
+    "strict_gate_passed": false,
+    "strict_failure": "cycle_1_timing",
+    "checkpoint_sha256": "E006350C367A1EA43BE4B70FB980BF72E31FB42F32A63C8494ED16E7F4755890",
+    "prediction_sha256": "1A6B7431EBE474B6D619D27B80AC3E4A29E0BD8627FD314FBC83381676E6D993",
+    "attempts": [
+      {"block": 1, "rate_label": "eta0", "learning_rate": 0.000125, "decision": "REJECT", "reason": "potential+temperature", "physics": 4.313495967875245, "relative_potential": 3.041536745023922, "relative_temperature": 17.679209932504165, "rollback_verified": true},
+      {"block": 1, "rate_label": "eta0/2", "learning_rate": 0.0000625, "decision": "REJECT", "reason": "potential+temperature", "physics": 4.558009292194847, "relative_potential": 1.4423200943886594, "relative_temperature": 6.8384082214338635, "rollback_verified": true},
+      {"block": 1, "rate_label": "eta0/4", "learning_rate": 0.00003125, "decision": "REJECT", "reason": "temperature", "physics": 4.726435513908985, "relative_potential": 1.081892789703562, "relative_temperature": 2.499358892430618, "rollback_verified": true},
+      {"block": 1, "rate_label": "eta0/8", "learning_rate": 0.000015625, "decision": "REJECT", "reason": "temperature", "physics": 4.822867070388044, "relative_potential": 1.006531870324049, "relative_temperature": 1.29000239041092, "rollback_verified": true},
+      {"block": 1, "rate_label": "eta0/16", "learning_rate": 0.0000078125, "decision": "ACCEPT", "reason": "all block gates", "physics": 4.874314040595978, "relative_potential": 0.9946621416471394, "relative_temperature": 1.018486235819618, "rollback_verified": null},
+      {"block": 2, "rate_label": "eta0/16", "learning_rate": 0.0000078125, "decision": "REJECT", "reason": "temperature", "physics": 4.822578757321507, "relative_potential": 1.006556177870003, "relative_temperature": 1.291982511080871, "rollback_verified": true}
+    ]
+  },
+  "schedule_control": {
+    "executed": false,
+    "reason": "FSTAR_DID_NOT_COMPLETE_1200_ACCEPTED_UPDATES"
+  },
+  "local_extra_fine": {
+    "FSTAR_VALID_PREFIX": {
+      "event_guard_pass": true,
+      "phase_primary": 0.00160984375,
+      "phase_roi_rms": 0.03236830783140375,
+      "temperature_roi_rms": 0.017568069951699572,
+      "current_nrmse": 0.13709305783220227
+    },
+    "DIRECT_LF_ONLY": {
+      "event_guard_pass": true,
+      "phase_primary": 0.00034953125,
+      "phase_roi_rms": 0.006570375888844028,
+      "temperature_roi_rms": 0.0018006948281555659,
+      "current_nrmse": 0.0035221351893723663
+    }
+  },
+  "evidence_hashes": {
+    "run_summary": "6CD2B4E7CE2D89908911AE5EDFB7912A7E1064C84ECEC2E01B384360BB5C817A",
+    "telemetry": "57402F20365EC2FB1DA8400F9526DF4093D25A2AD9ED8E786A8E4E401234D5A8",
+    "gate": "E6D042A25D55C104375CF11EB09F04D3C9542FB558B69EA916BD993072FE934A",
+    "recovery_manifest": "B21DA900F86B1FC4397488DC1E1C0CEA4CB2B413632A44D7D85F09A3BACE2112",
+    "shutdown_proof": "F1D2A78A2E2D436C9FEA01C37C08C3B447BF6CD1A4341F92C527A695C7E96073",
+    "local_adjudication": "CBF7D52CF74212A4690B433B716A7AF4C0A70A1E619CF2351E95679DA74F7B97"
+  },
+  "method_identity": "MEDIUM_AUDITED_COMPETENCE_FILTERED_PINN_REFINEMENT_NOT_LABEL_FREE",
+  "claim_boundary": "IDENTITY_CORRECTION_VERIFIED; ONE_SAFE_BLOCK_RETAINED; FILTER_PATH_STALLED; CONTROL_NOT_TRIGGERED; NO_MATCHED_ATTRIBUTION; NO_PINN_PARETO_OR_DIRECT_BASELINE_GAIN",
+  "stress": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

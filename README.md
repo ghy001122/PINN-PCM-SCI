@@ -5,24 +5,26 @@
 ## 当前状态
 
 - `phase_id`: `PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE`
-- `lifecycle_state`: `ACTIVE`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `PENDING_MANDATORY_P0_FSTAR`
-- `mechanism_outcome`: `PENDING`
-- `claim_status`: `CPU_QUALIFIED_GPU_FILTER_UNTESTED`
-- `next_research_execution_authorized`: `true`
+- `machine_outcome`: `LF8_FILTER_STALLED_WITH_VALID_PREFIX`
+- `mechanism_outcome`: `MATCHED_ATTRIBUTION_UNAVAILABLE`
+- `claim_status`: `VALID_PREFIX_RETAINED_STRONG_FORM_BRANCH_CLOSED_NO_PINN_PARETO_OR_CANDIDATE`
+- `next_research_execution_authorized`: `false`
 
-LF8 已获具名授权并通过真实 nonempty-Adam 零步资格。当前从 exact LF6
-DEV-R 运行 mandatory identity-correct P0-F*；仅在 F* 完成 1,200 accepted
-updates、保持安全且降低 blind physics objective 时运行 accepted-schedule
-matched control。GPU 科学结果尚不存在，stress 保持 sealed/unread。
+LF8 已完成并关闭。Identity-correct P0-F* 在最小冻结学习率接受一个 25-step
+safety block，将 blind `J` 降至 `0.9891315882 J0`，随后因 temperature
+preservation 失败而形成 valid-prefix stall。完整路径未建立，conditional control
+未运行，strong-form rescue 已收口；candidate 为 none，stress 保持 sealed/unread。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
-- 当前激活决定：[ADR 0069](docs/adr/0069-activate-phk-v23-lf8-competence-filter-completion.md)
+- 当前关闭决定：[ADR 0070](docs/adr/0070-close-phk-v23-lf8-competence-filter-completion.md)
+- LF8 终局：[terminal closeout](docs/experiment/2026-09-08-phk-v23-lf8-terminal-closeout.md)
+- LF8 激活决定：[ADR 0069](docs/adr/0069-activate-phk-v23-lf8-competence-filter-completion.md)
 - LF8 CPU 资格：[CPU qualification](docs/experiment/2026-09-08-phk-v23-lf8-cpu-qualification.md)
 - 当前关闭决定：[ADR 0068](docs/adr/0068-close-phk-v23-lf7-competence-filtered-refinement.md)
 - LF7 终局：[terminal closeout](docs/experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)

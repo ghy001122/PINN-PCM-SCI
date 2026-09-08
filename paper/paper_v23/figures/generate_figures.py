@@ -26,6 +26,7 @@ LF4_DATA_PATH = HERE / "data" / "lf4_terminal_metrics.json"
 LF5_DATA_PATH = HERE / "data" / "lf5_terminal_metrics.json"
 LF6_DATA_PATH = HERE / "data" / "lf6_terminal_metrics.json"
 LF7_DATA_PATH = HERE / "data" / "lf7_terminal_metrics.json"
+LF8_DATA_PATH = HERE / "data" / "lf8_terminal_metrics.json"
 PREDICTION_PATH = ROOT / "outputs" / "runs" / "20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74" / "prediction-t0-step-1200.npz"
 REFERENCE_PATH = ROOT / "outputs" / "runs" / "20260828T-phk-v21-s1-q-06-nominal-extra-fine" / "result-intent-06.npz"
 
@@ -599,12 +600,107 @@ def lf7_competence_filtered_refinement(data: dict) -> list[Path]:
     return save(fig, "20260907T144634Z-lf7-competence-filtered-refinement")
 
 
+def lf8_filter_path(data: dict) -> list[Path]:
+    """Show the valid-prefix path without implying a completed matched arm."""
+    baseline = data["baseline"]["fixed_blind_objective"]
+    attempts = data["fstar"]["attempts"]
+    if plt is None:
+        image, draw, font, bold, small = _pil_canvas(
+            "LF8: exact rollback preserves one safe prefix; strong-form continuation stalls"
+        )
+        draw.text((55, 105), "A  Identity-correct block screen", fill=NAVY, font=font)
+        for idx, row in enumerate(attempts):
+            y = 165 + idx * 73
+            color = TEAL if row["decision"] == "ACCEPT" else RED
+            draw.ellipse((65, y, 91, y + 26), fill=color)
+            draw.text((110, y - 4), f"B{row['block']} {row['rate_label']}", fill=NAVY, font=small)
+            draw.text((255, y - 4), row["decision"], fill=color, font=small)
+            draw.text((405, y - 4), f"J/J0={row['physics']/baseline:.4f}", fill=GRAY, font=small)
+
+        draw.text((660, 105), "B  Temperature preservation", fill=NAVY, font=font)
+        draw.line((680, 600, 1180, 600), fill=NAVY, width=3)
+        gate_y = 520
+        draw.line((680, gate_y, 1180, gate_y), fill=RED, width=3)
+        draw.text((690, gate_y - 34), "limit 1.05", fill=RED, font=small)
+        for idx, row in enumerate(attempts):
+            x = 705 + idx * 78
+            capped = min(row["relative_temperature"], 4.0)
+            height = int(capped / 4.0 * 390)
+            color = TEAL if row["decision"] == "ACCEPT" else ORANGE
+            draw.rectangle((x, 600 - height, x + 48, 600), fill=color)
+            draw.text((x - 5, 615), row["rate_label"].replace("eta", "e"), fill=NAVY, font=small)
+        draw.text((690, 670), "block 1: e0 ... e0/16; block 2: e0/16", fill=GRAY, font=small)
+
+        draw.text((1250, 105), "C  Terminal evidence", fill=NAVY, font=font)
+        rows = [
+            ("Rollback identity", "PASS", TEAL),
+            ("Valid prefix", "25 updates", TEAL),
+            ("J / J0", f"{data['fstar']['fixed_blind_ratio_to_DEV_R']:.5f}", TEAL),
+            ("Next block", "TEMP. REJECT", RED),
+            ("F* completion", "STALL", RED),
+            ("Schedule control", "NOT RUN", GRAY),
+            ("Attribution", "UNAVAILABLE", GRAY),
+        ]
+        for idx, (label, value, color) in enumerate(rows):
+            y = 170 + idx * 68
+            draw.text((1260, y), label, fill=NAVY, font=small)
+            draw.text((1570, y), value, fill=color, font=small)
+        draw.text((1245, 675), "Medium audit; no PINN Pareto or candidate", fill=GRAY, font=small)
+        return _save_pil(image, "20260908T050343Z-lf8-filter-path")
+
+    fig, axes = plt.subplots(1, 3, figsize=(12.8, 3.9))
+
+    x = np.arange(len(attempts))
+    objective = np.asarray([row["physics"] / baseline for row in attempts])
+    colors = [TEAL if row["decision"] == "ACCEPT" else RED for row in attempts]
+    axes[0].scatter(x, objective, c=colors, s=65, zorder=3)
+    axes[0].plot(x, objective, color=GRAY, linewidth=1.0, zorder=2)
+    axes[0].axhline(1.0, color=NAVY, linestyle=":", linewidth=1.0)
+    axes[0].set_xticks(x, [row["rate_label"] for row in attempts], rotation=25)
+    axes[0].set_ylabel("Proposed block physics / DEV-R")
+    axes[0].set_title("A  Identity-correct block screen")
+    axes[0].text(0.03, 0.04, "red: rejected + exact rollback\ngreen: accepted prefix", transform=axes[0].transAxes, color=GRAY, fontsize=7.8)
+
+    temperature = np.asarray([row["relative_temperature"] for row in attempts])
+    axes[1].plot(x, temperature, marker="o", color=ORANGE, linewidth=1.5)
+    axes[1].axhline(data["gates"]["relative_temperature_max"], color=RED, linestyle="--", linewidth=1.2, label="temperature limit 1.05")
+    axes[1].set_yscale("log")
+    axes[1].set_xticks(x, [row["rate_label"] for row in attempts], rotation=25)
+    axes[1].set_ylabel("Temperature error / DEV-R")
+    axes[1].set_title("B  Load-bearing rejection gate")
+    axes[1].legend(loc="upper right", fontsize=7.2)
+    axes[1].annotate("accept", (4, temperature[4]), xytext=(3.45, 2.0), arrowprops={"arrowstyle": "->", "color": TEAL}, color=TEAL, fontsize=8)
+    axes[1].annotate("block 2 reject", (5, temperature[5]), xytext=(4.1, 3.2), arrowprops={"arrowstyle": "->", "color": RED}, color=RED, fontsize=8)
+
+    axes[2].axis("off")
+    axes[2].set_title("C  Terminal evidence ladder")
+    rows = [
+        ("Rollback identity", "PASS", TEAL),
+        ("Valid safe prefix", "25 updates", TEAL),
+        ("J / J0", f"{data['fstar']['fixed_blind_ratio_to_DEV_R']:.5f}", TEAL),
+        ("Next same-rate block", "TEMP. REJECT", RED),
+        ("F* completion", "STALL", RED),
+        ("Schedule control", "NOT TRIGGERED", GRAY),
+        ("Matched attribution", "UNAVAILABLE", GRAY),
+    ]
+    for idx, (label, value, color) in enumerate(rows):
+        y = 0.90 - idx * 0.12
+        axes[2].text(0.04, y, label, transform=axes[2].transAxes, color=NAVY, fontsize=8.5)
+        axes[2].text(0.98, y, value, transform=axes[2].transAxes, color=color, fontsize=8.5, fontweight="bold", ha="right")
+
+    fig.suptitle("LF8: exact rollback preserves one safe prefix, but strong-form continuation stalls", color=NAVY, fontweight="bold")
+    fig.text(0.5, 0.005, "Single-seed nominal evidence. Medium competence audits govern acceptance; no matched control, PINN Pareto, or candidate result.", ha="center", color=GRAY, fontsize=8)
+    fig.tight_layout(rect=(0, 0.045, 1, 0.92))
+    return save(fig, "20260908T050343Z-lf8-filter-path")
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Generate paper_v23 evidence figures")
     parser.add_argument("--lf4-only", action="store_true", help="Generate LF4 figures 6–8 without rewriting the LF3 source manifest")
     parser.add_argument("--lf5-only", action="store_true", help="Generate timestamped LF5 CPU-T terminal figures")
     parser.add_argument("--lf6-only", action="store_true", help="Generate timestamped LF6 terminal figures")
     parser.add_argument("--lf7-only", action="store_true", help="Generate the LF7 terminal figure only after terminal evidence is bound")
+    parser.add_argument("--lf8-only", action="store_true", help="Generate the LF8 valid-prefix terminal figure and source manifest")
     args = parser.parse_args(argv)
     if args.lf5_only:
         data=json.loads(LF5_DATA_PATH.read_text(encoding="utf-8")); outputs=[]; outputs.extend(lf5_temporal_edge_geometry(data)); outputs.extend(lf5_timing_calibration(data)); outputs.extend(lf5_physics_pareto(data)); print(json.dumps({"figures":len(outputs)//2,"scope":"LF5_CPU_T_PLUS_IDENTITY_INVALID_EXPLORATORY_DEV_T"},sort_keys=True)); return
@@ -625,6 +721,29 @@ def main(argv: list[str] | None = None) -> None:
             setup()
         outputs = lf7_competence_filtered_refinement(data)
         print(json.dumps({"figures": len(outputs) // 2, "scope": "LF7_VALID_P0_S_PLUS_PARTIAL_IDENTITY_INVALID_P0_F"}, sort_keys=True))
+        return
+    if args.lf8_only:
+        data = json.loads(LF8_DATA_PATH.read_text(encoding="utf-8"))
+        if data.get("campaign_state") != "COMPLETE" or data.get("terminal_outcome") is None:
+            print(json.dumps({"figures": 0, "scope": "LF8_RESULTS_PENDING", "status": "SKIPPED_NO_TERMINAL_DATA"}, sort_keys=True))
+            return
+        if plt is not None:
+            setup()
+        outputs = lf8_filter_path(data)
+        manifest = {
+            "schema_id": "paper-v23-lf8-figure-source-manifest-v1",
+            "campaign_state": "COMPLETE",
+            "inputs": {LF8_DATA_PATH.relative_to(ROOT).as_posix(): sha256(LF8_DATA_PATH)},
+            "evidence_bindings": data["evidence_hashes"],
+            "outputs": {path.relative_to(ROOT).as_posix(): sha256(path) for path in outputs},
+            "generator": "python paper/paper_v23/figures/generate_figures.py --lf8-only",
+            "generator_sha256": sha256(Path(__file__)),
+            "generation_status": "COMPLETE_ONE_COMPOSITE",
+            "claim_boundary": data["claim_boundary"],
+            "stress_reference_read": False,
+        }
+        (HERE / "source-manifest-lf8.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps({"figures": len(outputs) // 2, "scope": "LF8_VALID_PREFIX_STALL_NO_MATCHED_ATTRIBUTION"}, sort_keys=True))
         return
     setup()
     if args.lf4_only:

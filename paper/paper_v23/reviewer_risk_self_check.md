@@ -87,6 +87,29 @@ It cannot be extrapolated to later blocks, a terminal carrier, or a PINN Pareto
 result. The forensic fix was not executed scientifically and does not repair the
 evidence retrospectively.
 
+## 14. Does LF8 finally prove the competence filter works?
+
+No. LF8 prospectively fixes rollback identity and verifies five exact rejected
+block restorations. It retains one safety-valid 25-update prefix with blind
+objective ratio 0.98913, then rejects the next same-rate block on temperature
+preservation. This establishes a bounded valid-prefix stall, not completion,
+Pareto value, or superiority.
+
+## 15. Why was the schedule control not run?
+
+The preregistered control required F* to complete 1200 accepted updates while
+remaining safety-valid. F* stopped at 25 accepted updates. Running a 1200-step
+schedule replay anyway would not be matched to the realized accepted path.
+Therefore `MATCHED_ATTRIBUTION_UNAVAILABLE` is required, not a favorable filter
+comparison.
+
+## 16. Is LF8 label-free because medium labels supplied no gradient?
+
+No. Medium-derived event and field functionals govern every accept/reject
+decision. The correct identity is multifidelity competence-filtered PINN
+refinement. It also remains far behind direct `LF_ONLY` and supplies neither a
+PINN Pareto nor a strong-baseline gain.
+
 ## Submission-readiness verdict
 
 ```text
@@ -95,6 +118,7 @@ NEGATIVE_DIAGNOSTIC_PAPER_WITH_BOUNDED_MECHANISM_RESULT: PLAUSIBLE
 POSITIVE_METHODS_SUBMISSION: NO
 CAS_Q2_POSITIVE_METHOD_CLAIM: NOT SUPPORTED
 CANDIDATE: NONE
-LF7_RESULT: MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID
-LF7_FILTER_ATTRIBUTION: UNAVAILABLE
+LF8_RESULT: FILTER_STALLED_WITH_VALID_PREFIX
+LF8_FILTER_ATTRIBUTION: MATCHED_ATTRIBUTION_UNAVAILABLE
+LF8_NEXT: MIXED_WEAK_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE
 ```

@@ -323,3 +323,56 @@ python paper/paper_v23/figures/generate_figures.py --lf7-only
 `figures/source-manifest-lf7.json` binds the terminal metrics and outputs. A Git
 checkout can verify compact evidence but cannot reload git-ignored checkpoints,
 predictions, or raw telemetry without the bound run directory.
+
+## LF8 identity-correct valid-prefix record
+
+- starting commit: `95e448e36a659ac266b670667543b80ce467da53`;
+- campaign timestamp: `20260908T050343Z`;
+- raw root:
+  `outputs/runs/20260908T050343Z-phk-v23-lf8-competence-filter-completion-pilot`;
+- exact LF6 DEV-R checkpoint SHA-256:
+  `7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499`;
+- materialized-ledger SHA-256:
+  `29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801`;
+- physics stream SHA-256:
+  `536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53`;
+- fixed blind pool SHA-256:
+  `FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF`.
+
+F* attempted 150 updates and accepted one 25-update block at `eta0/16`.
+The retained checkpoint/prediction SHA-256 values are
+`E006350C367A1EA43BE4B70FB980BF72E31FB42F32A63C8494ED16E7F4755890`
+and
+`1A6B7431EBE474B6D619D27B80AC3E4A29E0BD8627FD314FBC83381676E6D993`.
+Four first-block proposals and the second same-rate proposal were restored
+exactly. The retained prefix has fixed blind objective `4.8743140406`, ratio
+`0.9891315882` to DEV-R, and a valid safety gate. The second same-rate proposal
+was rejected because relative temperature error was `1.2919825`, above `1.05`.
+The schedule control was not executed because F* did not reach 1200 accepted
+updates; no matched attribution is available.
+
+Key raw SHA-256 values are:
+
+```text
+run summary        6CD2B4E7CE2D89908911AE5EDFB7912A7E1064C84ECEC2E01B384360BB5C817A
+F* telemetry       57402F20365EC2FB1DA8400F9526DF4093D25A2AD9ED8E786A8E4E401234D5A8
+F* gate            E6D042A25D55C104375CF11EB09F04D3C9542FB558B69EA916BD993072FE934A
+recovery manifest  B21DA900F86B1FC4397488DC1E1C0CEA4CB2B413632A44D7D85F09A3BACE2112
+shutdown proof     F1D2A78A2E2D436C9FEA01C37C08C3B447BF6CD1A4341F92C527A695C7E96073
+local adjudication CBF7D52CF74212A4690B433B716A7AF4C0A70A1E619CF2351E95679DA74F7B97
+```
+
+Recovery and hash verification preceded shutdown; local extra-fine and direct
+`LF_ONLY` evaluation began only after TCP closure and explicit SSH connection
+refusal. F* uses medium competence for acceptance and is not label-free. Stress
+remained sealed and unread.
+
+Regenerate the single LF8 composite with:
+
+```powershell
+python paper/paper_v23/figures/generate_figures.py --lf8-only
+```
+
+`figures/source-manifest-lf8.json` binds the frozen metrics, raw evidence, script,
+and PNG/PDF hashes. Git alone cannot reconstruct the git-ignored checkpoint,
+prediction, or raw telemetry.

@@ -231,3 +231,21 @@ not a label-free physics arm. Its four rejected rates and `eta0/16` accepted
 first block are partial diagnostics only. Because no valid P0-F endpoint exists,
 the matched filter mechanism remains unresolved. The terminal outcome is
 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`; candidate is none.
+
+## Table 16. LF8 identity-correct filter completion
+
+| Proposal | Decision | Fixed blind physics | V/T error vs DEV-R | Retained state |
+|---|---|---:|---:|---|
+| Block 1, `eta0` | Reject | 4.313496 | 3.042 / 17.679 | Exact rollback |
+| Block 1, `eta0/2` | Reject | 4.558009 | 1.442 / 6.838 | Exact rollback |
+| Block 1, `eta0/4` | Reject | 4.726436 | 1.082 / 2.499 | Exact rollback |
+| Block 1, `eta0/8` | Reject | 4.822867 | 1.007 / 1.290 | Exact rollback |
+| Block 1, `eta0/16` | Accept | 4.874314 | 0.995 / 1.018 | Valid 25-step prefix |
+| Block 2, `eta0/16` | Reject | 4.822579 | 1.007 / 1.292 | Exact rollback to prefix |
+
+The retained prefix has (J/J_0=0.989132), passes the frozen safety gate, and
+still fails strict cycle-1 timing. F* stopped at 25 accepted / 150 attempted
+updates; therefore the conditional schedule control was not run and
+`MATCHED_ATTRIBUTION_UNAVAILABLE` is the only valid mechanism disposition.
+Medium functionals govern acceptance, so F* is not label-free. Candidate is
+none, and direct `LF_ONLY` remains substantially more accurate.

@@ -2,7 +2,7 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-PHK-V2.3 LF8 已获具名授权并通过真实 nonempty-Adam 零步资格。当前从 exact LF6 DEV-R 执行 mandatory identity-correct P0-F*；仅在完整安全路径成功时执行 accepted-schedule matched control。GPU 科学结果尚不存在，stress sealed/unread。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[CPU qualification](experiment/2026-09-08-phk-v23-lf8-cpu-qualification.md)、[ADR 0069](adr/0069-activate-phk-v23-lf8-competence-filter-completion.md) 与 [paper_v23](../paper/paper_v23/README.md)。
+PHK-V2.3 LF8 已完成并关闭为 `LF8_FILTER_STALLED_WITH_VALID_PREFIX`。P0-F* 在最小冻结学习率接受一个 25-step safety block，随后因 temperature preservation 失败而回滚并停止；完整路径与 conditional control 均未到达。Strong-form rescue 已收口，candidate 为 none，stress sealed/unread。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[terminal closeout](experiment/2026-09-08-phk-v23-lf8-terminal-closeout.md)、[ADR 0070](adr/0070-close-phk-v23-lf8-competence-filter-completion.md) 与 [paper_v23](../paper/paper_v23/README.md)。
 
 R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 
@@ -23,8 +23,10 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF8 authorized competence-filter completion](plans/NEXT_ACTIONS.md)。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。只授权 mandatory P0-F* 与其完整成功后才可运行的 accepted-schedule matched control；不授权额外 strong-form rescue 或后续研究。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF8 terminal valid-prefix strong-form stall](plans/NEXT_ACTIONS.md)。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。LF8 已关闭且不授权后续研究；mixed weak/control-volume 只是须另立 `NEW EXECUTE` 的建议。
+- 当前 PHK-V2.3 LF8 终局入口：[2026-09-08 LF8 terminal closeout](experiment/2026-09-08-phk-v23-lf8-terminal-closeout.md)。它记录 25-step valid prefix、五次 identity-correct rollback、strong-form stall、control 未运行、回收关机与本地 nominal 裁决。
+- 当前 PHK-V2.3 LF8 关闭决定：[ADR 0070](adr/0070-close-phk-v23-lf8-competence-filter-completion.md)。它关闭 strong-form rescue，并把 mixed weak/control-volume 固定为未授权的唯一建议。
 - 当前 PHK-V2.3 LF8 资格入口：[2026-09-08 LF8 CPU qualification](experiment/2026-09-08-phk-v23-lf8-cpu-qualification.md)。它记录真实 nonempty-Adam 双循环深拷贝回滚、exact DEV-R、冻结 ledger、blind J0 与零步反传；不是 GPU 结果。
 - 当前 PHK-V2.3 LF8 激活决定：[ADR 0069](adr/0069-activate-phk-v23-lf8-competence-filter-completion.md)。它冻结 valid-prefix、完整路径与条件 schedule-control 归因语义。
 - 当前 PHK-V2.3 LF7 终局入口：[2026-09-07 LF7 terminal closeout](experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)。它记录有效 P0-S 负面 arm、P0-F post-step identity failure、回收关机、本地 nominal 裁决和强基线差距。

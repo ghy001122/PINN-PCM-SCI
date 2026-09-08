@@ -97,3 +97,17 @@ proposals: four rates were rejected for V/T preservation, and `eta0/16` passed.
 Adam-state snapshot aliasing then caused rollback identity drift. P0-F has no
 valid endpoint; the panel is partial diagnostic evidence, not filter efficacy,
 PINN Pareto value, or a candidate result.
+
+## Figure 16. LF8 identity-correct competence-filter path
+
+Panel A shows all six identity-valid 25-update proposals relative to the frozen
+DEV-R blind physics objective. Four larger rates were rejected and exactly
+rolled back before `eta0/16` established a safety-valid 25-update prefix with
+(J/J_0=0.98913). Panel B identifies temperature preservation as the
+load-bearing gate: the next block at the same accepted rate reached a lower
+proposed objective but raised relative temperature error to 1.292, above the
+1.05 limit, and was exactly rolled back. Panel C records the resulting evidence
+ladder. F* stalled at 25 accepted updates, so the conditional schedule control
+was not triggered and matched attribution is unavailable. Medium competence
+audits govern acceptance; the path is not label-free and supplies no PINN
+Pareto, direct-baseline gain, or candidate result.

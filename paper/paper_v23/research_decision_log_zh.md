@@ -68,3 +68,26 @@ matched。机制必须在训练中承担事件保持，而不是只在 entry gat
 competence filter 会在较大学习率下直接拒绝 V/T 漂移，但其长期有效性尚未获得
 身份有效的 matched endpoint。direct `LF_ONLY` 仍远强于 P0-S；不得写 PINN
 Pareto、强基线增益、SOTA 或候选方法。stress 保持 sealed/unread。
+
+## LF8 终局：身份缺口已关闭，强式 filter 路径停在有效前缀
+
+1. `VERIFIED_ENGINEERING`：LF8 用不可变深拷贝覆盖 model、非空 Adam state 与
+   全部 RNG，五次被拒 proposal 均精确回滚；LF7 的 snapshot aliasing 不再是
+   科学裁决的不确定性。
+2. `VERIFIED`：第一 block 的前四档学习率因 potential/temperature preservation
+   被拒；`eta0/16` 的 25 步通过 safety，blind objective 从 `4.927872` 降至
+   `4.874314`，ratio=`0.989132`，形成可恢复的有效前缀。
+3. `VERIFIED`：第二个同尺度 block 虽把 proposed objective 降至 `4.822579`，但
+   temperature 相对误差升至 `1.291983>1.05`，被拒并精确回到 25 步前缀。
+4. `VERIFIED`：F* 仅完成 25/1200 accepted updates，因此条件 schedule control
+   合法地未触发；只能裁决 `MATCHED_ATTRIBUTION_UNAVAILABLE`，不能把“控制臂未跑”
+   写成 filter 增量。
+5. `VERIFIED`：有效前缀仍未过 strict cycle-1 timing，且 extra-fine phase/T/current
+   明显落后 direct `LF_ONLY`。medium 虽不提供梯度，却决定 accept/reject，因此
+   F* 是 multifidelity competence-filtered PINN，不是 label-free PINN。
+
+论文新增的诚实结论是：精确回滚确实能阻止不安全更新并保留一个残差下降的小前缀，
+但冻结的强形式方向在第二 block 即与 temperature preservation 冲突。当前没有
+PINN Pareto、matched schedule attribution、强基线增益或 candidate。下一条最小
+问题应转向 mixed weak/control-volume 物理目标能否提供 preservation-compatible
+方向；须另行授权，stress 继续 sealed/unread。

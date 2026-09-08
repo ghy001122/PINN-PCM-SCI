@@ -1,29 +1,30 @@
-# PLAN-PHK-V2.3-LF8: authorized competence-filter completion
+# PLAN-PHK-V2.3-LF8: terminal valid-prefix strong-form stall
 
 - `phase_id`: `PHK_V23_LF8_IDENTITY_CORRECT_COMPETENCE_FILTER_COMPLETION_AND_SCHEDULE_ATTRIBUTION_EXECUTE`
-- `lifecycle_state`: `ACTIVE`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `CPU_QUALIFIED_GPU_FILTER_UNTESTED`
-- `authorization_state`: `EXPLICIT_EXECUTE_ACTIVE`
-- `current_stage`: `ACTIVATION_COMMIT_PENDING`
-- `next_research_execution_authorized`: `true`
-- `unique_next`: `P0_FSTAR_THEN_CONDITIONAL_ACCEPTED_SCHEDULE_CONTROL`
-- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_LF0_LF1_LF2_LF3_LF4_LF5_LF6_LF7_EVIDENCE`
+- `claim_status`: `VALID_PREFIX_RETAINED_STRONG_FORM_BRANCH_CLOSED_NO_PINN_PARETO_OR_CANDIDATE`
+- `authorization_state`: `CLOSED_NO_NEXT_EXECUTE`
+- `current_stage`: `TERMINAL_CLOSEOUT`
+- `next_research_execution_authorized`: `false`
+- `unique_next`: `MIXED_WEAK_CONTROL_VOLUME_PLAN_REQUIRES_NEW_EXECUTE_VALID_PREFIX_RETAINED`
+- `preserves`: `V22R_R0A_R0B_R0C_R1A_R1X_C0_LF0_LF1_LF2_LF3_LF4_LF5_LF6_LF7_LF8_EVIDENCE`
 
-## Ordered execution
+## Completed result
 
-1. Commit the CPU-qualified, source-bound LF8 activation state.
-2. Build and remotely preflight only the activation-commit bundle and frozen inputs.
-3. Run mandatory P0-F* until 1,200 accepted updates or a frozen valid-prefix stall.
-4. Only after a complete safe F* path with `J_final<J0`, reload exact DEV-R and
-   run the accepted-schedule control without filter/audit/rollback.
-5. Recover and hash artifacts, clear training/GPU processes, shut down and verify
-   SSH refusal; only then run local nominal evaluation.
-6. Update paper/status/evidence, close LF8 and commit the exact whitelist.
+LF8 corrected LF7's rollback identity defect and executed mandatory P0-F*. The filter
+accepted one 25-update block at the minimum frozen learning rate, retained a valid safety
+prefix and strictly lowered the blind strong-form objective. It then rejected and exactly
+restored the next block because temperature preservation failed. The complete 1,200-step
+path was not reached, so the conditional schedule control was not run.
 
-## Stop boundary
+## Recommendation, not authorization
 
-No sixth learning-rate scale, smaller block, optimizer/weighting/replay/network
-rescue, extra seed, sparse/OOD/stress, weak/control-volume execution, PJGR/R2/SRPG
-or submission is authorized. A valid prefix or completed path is the scientific
-endpoint; every terminal result closes LF8 and sets next authorization false.
+The next highest-value research question is whether a mixed weak/control-volume physics
+objective can lower physics inconsistency without leaving the event-and-field feasible
+set. A future plan should retain exact DEV-R, the LF8 valid prefix, direct `LF_ONLY`, the
+frozen evaluator and equal-information accounting as comparators. It must be separately
+proposed and explicitly authorized.
+
+No further strong-form rescue, sparse task, seed, OOD/stress, PJGR/R2/SRPG or submission
+is authorized. Stress remains `TWO_STRESS_REFERENCES_SEALED_UNREAD`.
