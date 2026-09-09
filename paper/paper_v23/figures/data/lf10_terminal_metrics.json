@@ -1,20 +1,175 @@
 {
   "schema_id": "paper-v23-lf10-terminal-metrics-v1",
-  "campaign_state": "ACTIVE",
+  "campaign_state": "COMPLETE",
+  "paper_status": "TERMINAL_REPLICATED_FAILURE_ANALYSIS_PACKAGE_COMPLETE",
   "task_id": "PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE",
-  "terminal_outcome": null,
-  "feasible_direction_outcome": null,
-  "interface_replication_outcome": null,
-  "forgetting_replication_outcome": null,
-  "threshold_robustness": null,
-  "gradient_geometry": null,
-  "direction_screen": null,
-  "full_refinement": null,
-  "interface_replication": null,
-  "forgetting_replication": null,
-  "local_evaluation": null,
-  "evidence_hashes": null,
+  "paper_title": "Event Competence Before Residual Reduction: Replicated Failure Analysis and Bounded Solver Recovery",
+  "terminal_outcome": "LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED",
+  "feasible_direction_outcome": "NO_EXTENDED_FEASIBLE_PATH_FOUND",
+  "interface_replication_outcome": "INTERFACE_EFFECT_STREAM_REPLICATED",
+  "forgetting_replication_outcome": "PHYSICS_FORGETTING_STREAM_REPLICATED",
   "candidate": null,
-  "claim_boundary": "ACTIVE_NULL_SCAFFOLD_NO_LF10_SCIENTIFIC_RESULT",
+  "gradient_geometry": {
+    "potential_physics_competence_cosine": 0.786665775303044,
+    "temperature_physics_competence_cosine": 0.8157501997995793,
+    "ordinary_first_step_potential_change": -0.015959025164554674,
+    "projected_first_step_potential_change": -0.015959025164554674,
+    "ordinary_first_step_temperature_change": -0.04004910727994109,
+    "projected_first_step_temperature_change": -0.04004910727994109,
+    "phase_gradient_state": "FROZEN_ZERO",
+    "temperature_cosine_history": [
+      {"stage": "DEV-R", "cosine": 0.8157501997995793},
+      {"stage": "LF8", "cosine": -0.853},
+      {"stage": "LF9-S", "cosine": -0.748},
+      {"stage": "LF9-CV", "cosine": -0.756}
+    ],
+    "temperature_constraint_change_after_projection": [
+      {"stage": "LF8", "proposal": 0.0951, "projected": 0.000210},
+      {"stage": "LF9-S", "proposal": 0.0385, "projected": 0.00157},
+      {"stage": "LF9-CV", "proposal": 0.0397, "projected": 0.00159}
+    ]
+  },
+  "direction_screen": {
+    "baseline_fixed_blind_J": 4.9278721846990505,
+    "required_accepted_updates": 200,
+    "arms": {
+      "CTRL": {
+        "accepted_updates": 25,
+        "attempted_updates": 150,
+        "accepted_blocks": 1,
+        "final_learning_rate": 7.8125e-06,
+        "fixed_blind_J": 4.874314040595978,
+        "fixed_blind_ratio": 0.9891315882198876,
+        "safety_gate": true,
+        "strict_gate": false,
+        "last_rejection": "relative_temperature",
+        "field_ratios": {
+          "potential": 0.9946621416471394,
+          "temperature": 1.018486235819618,
+          "phase": 1.0,
+          "topology": 1.0
+        },
+        "event": {
+          "cycle_1": {"recall": 0.9175257731958762, "precision": 0.8967254408060453, "mass_ratio": 1.0231958762886597, "timing_error": 0.010533333333333339, "recovery": 1.0},
+          "cycle_2": {"recall": 0.9228675136116149, "precision": 0.920361990950226, "mass_ratio": 1.0027223230490017, "timing_error": 0.0018000000000002458, "recovery": 1.0}
+        },
+        "proposals": [
+          {"label": "B1 eta0", "learning_rate": 0.000125, "decision": "REJECT", "J_ratio": 0.8753262678501622, "temperature_ratio": 17.679209932504165, "potential_ratio": 3.041536745023922},
+          {"label": "B1 eta0/2", "learning_rate": 0.0000625, "decision": "REJECT", "J_ratio": 0.9249447066316735, "temperature_ratio": 6.8384082214338635, "potential_ratio": 1.4423200943886594},
+          {"label": "B1 eta0/4", "learning_rate": 0.00003125, "decision": "REJECT", "J_ratio": 0.9591229919851569, "temperature_ratio": 2.499358892430618, "potential_ratio": 1.081892789703562},
+          {"label": "B1 eta0/8", "learning_rate": 0.000015625, "decision": "REJECT", "J_ratio": 0.9786915913450343, "temperature_ratio": 1.29000239041092, "potential_ratio": 1.006531870324049},
+          {"label": "B1 eta0/16", "learning_rate": 0.0000078125, "decision": "ACCEPT", "J_ratio": 0.9891315882198874, "temperature_ratio": 1.018486235819618, "potential_ratio": 0.9946621416471394},
+          {"label": "B2 eta0/16", "learning_rate": 0.0000078125, "decision": "REJECT", "J_ratio": 0.9786330847410212, "temperature_ratio": 1.291982511080871, "potential_ratio": 1.006556177870003}
+        ]
+      },
+      "PROJ": {
+        "accepted_updates": 25,
+        "attempted_updates": 147,
+        "accepted_blocks": 1,
+        "final_learning_rate": 7.8125e-06,
+        "fixed_blind_J": 4.874314040595978,
+        "fixed_blind_ratio": 0.9891315882198876,
+        "safety_gate": true,
+        "strict_gate": false,
+        "last_rejection": "PROJECTION_INFEASIBLE:temperature:NORM_CAP_BREAKS_FEASIBILITY",
+        "field_ratios": {
+          "potential": 0.9946621416471394,
+          "temperature": 1.018486235819618,
+          "phase": 1.0,
+          "topology": 1.0
+        },
+        "event": {
+          "cycle_1": {"recall": 0.9175257731958762, "precision": 0.8967254408060453, "mass_ratio": 1.0231958762886597, "timing_error": 0.010533333333333339, "recovery": 1.0},
+          "cycle_2": {"recall": 0.9228675136116149, "precision": 0.920361990950226, "mass_ratio": 1.0027223230490017, "timing_error": 0.0018000000000002458, "recovery": 1.0}
+        },
+        "proposals": [
+          {"label": "B1 eta0", "learning_rate": 0.000125, "decision": "REJECT", "J_ratio": 0.9523072201073541, "temperature_ratio": 1.1934816534450872, "potential_ratio": 1.1903996383735596},
+          {"label": "B1 eta0/2", "learning_rate": 0.0000625, "decision": "REJECT", "J_ratio": 0.959025368759834, "temperature_ratio": 1.1123363927291396, "potential_ratio": 1.1798451672901253},
+          {"label": "B1 eta0/4", "learning_rate": 0.00003125, "decision": "REJECT", "J_ratio": 0.9694894048889489, "temperature_ratio": 1.1036400906752715, "potential_ratio": 1.0822401351420772},
+          {"label": "B1 eta0/8", "learning_rate": 0.000015625, "decision": "REJECT", "J_ratio": 0.981562434829323, "temperature_ratio": 1.0801094419471355, "potential_ratio": 1.0065490192400908},
+          {"label": "B1 eta0/16", "learning_rate": 0.0000078125, "decision": "ACCEPT", "J_ratio": 0.9891315882198874, "temperature_ratio": 1.018486235819618, "potential_ratio": 0.9946621416471394},
+          {"label": "B2 eta0/16", "learning_rate": 0.0000078125, "decision": "REJECT_INFEASIBLE", "J_ratio": null, "temperature_ratio": null, "potential_ratio": null}
+        ]
+      }
+    }
+  },
+  "full_refinement": {
+    "executed": false,
+    "status": "NOT_RUN_PREREQUISITE_NOT_MET",
+    "raw_reason": "NO_SCREEN_GO",
+    "conditional_control_executed": false
+  },
+  "interface_replication": {
+    "streams_are_model_seeds": false,
+    "streams": [
+      {"stream": 17, "role": "historical_LF4", "delta_Rmin": 0.08983668354595331, "quality_preserved": true},
+      {"stream": 23, "role": "new_LF10", "delta_Rmin": 0.046277932656026755, "quality_preserved": false, "DEV_G_Rmin": 0.8548109965635737, "DEV_M_Rmin": 0.9010889292196005, "DEV_G_phase_mse": 0.0015243057834151508, "DEV_M_phase_mse": 0.0011229544709617186},
+      {"stream": 29, "role": "new_LF10", "delta_Rmin": 0.025243075694925232, "quality_preserved": true, "DEV_G_Rmin": 0.864791288566243, "DEV_M_Rmin": 0.8900343642611682, "DEV_G_phase_mse": 0.001394152498825434, "DEV_M_phase_mse": 0.0011967159653730175}
+    ],
+    "median_delta_Rmin": 0.046277932656026755,
+    "positive_effect_streams": 3,
+    "quality_preserved_streams": 2,
+    "total_streams": 3
+  },
+  "forgetting_replication": {
+    "streams_are_model_seeds": false,
+    "streams": [
+      {"stream": 17, "role": "historical_LF6", "fixed_blind_ratio": 0.012814226536278206, "terminal_Rmin": 0.0, "event_collapse": true, "field_event_pareto": false},
+      {"stream": 23, "role": "new_LF10", "fixed_blind_ratio": 0.005121709708868058, "terminal_Rmin": 0.0, "event_collapse": true, "field_event_pareto": false},
+      {"stream": 29, "role": "new_LF10", "fixed_blind_ratio": 0.7166891313109821, "terminal_Rmin": 0.0, "event_collapse": true, "field_event_pareto": false}
+    ],
+    "median_fixed_blind_ratio": 0.012814226536278206,
+    "physics_gate_streams": 2,
+    "event_collapse_streams": 3,
+    "field_event_pareto_streams": 0,
+    "total_streams": 3
+  },
+  "threshold_robustness": {
+    "phase_thresholds": [0.4, 0.45, 0.5, 0.55, 0.6],
+    "active_fraction_thresholds": [0.01, 0.015, 0.02, 0.03, 0.05],
+    "official_cell": {"phase_threshold": 0.5, "active_fraction_threshold": 0.02},
+    "direct_LF_ONLY_symmetric_difference": [
+      [0.0013994480048168127, 0.0013994480048168127, 0.0013994480048168127, 0.0013994480048168127, 0.0013994480048168127],
+      [0.0013049912571551111, 0.0013049912571551111, 0.0013049912571551111, 0.0013049912571551111, 0.0013049912571551111],
+      [0.0011544019399218092, 0.0011544019399218092, 0.0011544019399218092, 0.0011544019399218092, 0.0011544019399218092],
+      [0.0010485537190082646, 0.0010485537190082646, 0.0010485537190082646, 0.0010485537190082646, 0.0010485537190082646],
+      [0.0009871682255324062, 0.0009871682255324062, 0.0009871682255324062, 0.0009871682255324062, 0.0009871682255324062]
+    ],
+    "best_neural_symmetric_difference": [
+      [0.005940173372263737, 0.005940173372263737, 0.005940173372263737, 0.005940173372263737, 0.005940173372263737],
+      [0.0054333662221012526, 0.0054333662221012526, 0.0054333662221012526, 0.0054333662221012526, 0.0054333662221012526],
+      [0.005005999364906551, 0.005005999364906551, 0.005005999364906551, 0.005005999364906551, 0.005005999364906551],
+      [0.004602085601524224, 0.004602085601524224, 0.004602085601524224, 0.004602085601524224, 0.004602085601524224],
+      [0.0042485911441579646, 0.0042485911441579646, 0.0042485911441579646, 0.0042485911441579646, 0.0042485911441579646]
+    ],
+    "direct_lead_count": 375,
+    "comparison_count": 375,
+    "new_interface_stream_same_sign_cells": {"23": 25, "29": 25},
+    "forgetting_persistence_cells": {"17": 25, "23": 25, "29": 25},
+    "historical_LF4_grid_status": "NA_HISTORICAL_PREDICTION_NOT_BOUND_LOCALLY",
+    "formal_machine_outcomes_changed": false
+  },
+  "local_evaluation": {
+    "direct_LF_ONLY": {"phase_roi_rms": 0.006570375888844028, "phase_primary": 0.00034953125, "temperature_roi_rms": 0.0018006948281555659, "current_nrmse": 0.0035221351893723663, "potential_rms": 0.0005761281633015013, "event_timing_normalized": 0.0021874185699128448},
+    "DEV_R": {"phase_roi_rms": 0.03236830783140375, "phase_primary": 0.00160984375, "temperature_roi_rms": 0.017361839140172267, "current_nrmse": 0.13729673237736076, "potential_rms": 0.005996623163842027},
+    "CTRL": {"phase_roi_rms": 0.03236830783140375, "phase_primary": 0.00160984375, "temperature_roi_rms": 0.017568069951699572, "current_nrmse": 0.13709305783220227, "potential_rms": 0.005955925316979509},
+    "PROJ": {"phase_roi_rms": 0.03236830783140375, "phase_primary": 0.00160984375, "temperature_roi_rms": 0.017568069951699572, "current_nrmse": 0.13709305783220227, "potential_rms": 0.005955925316979509}
+  },
+  "evidence_hashes": {
+    "run_summary_sha256": "987A264B2235CA9461717DA37D59C69AD2ED02160C135A8A8BA1809AD4E6830F",
+    "local_adjudication_sha256": "F322212DF49E0F25BE9B06B360A08CDDA95EDB92A30BCC475777A978B82AC27D",
+    "cpu_qualification_sha256": "7FF15B0F31C8921F08C258C1B1042D8656C696CB485E6E5F47534D4183E87544",
+    "shutdown_proof_sha256": "308760D54EA5231828EC22A6E625FE67F448402E5EB00309854CCB6087A7474B",
+    "lf10_ledger_sha256": "90BA299A37EFB6F01EA6B0AE28472182D89A2428F685D70819E97B4966B975A5",
+    "lf10_ledger_manifest_sha256": "4917BE4A245D678E9FBE76AAD9121ED4E326527A04A97634A6F78E552F6F3271",
+    "lf10_ledger_semantic_sha256": "8A70D533FE615FDD2053674E25D9ED6EC8D4781E9061BB1CB7A8D4827B2671A9",
+    "audit_baselines_array_sha256": "B49D0D5CF98A4A62472DB461674B23A0FE33B2FB8E5278B35351B3FDF5BA01CB",
+    "CTRL_telemetry_sha256": "C821DBD0EF724CB424BDD3B29F8C2A6F8AB8BC354D3138D76110EAA1F4ABAB37",
+    "PROJ_telemetry_sha256": "9723BE647D3DAF546B1057228D094D439839A3AFA780E16D2512F65D7517FC32",
+    "interface_stream_23_pair_sha256": "B570D790E20C9BBFD166F0289C9CAE466CC7C8761BA2F3D724DE27F818F0BF0E",
+    "interface_stream_29_pair_sha256": "7E140565617DC84D7E86F71FF957E3DD1DB2CC4D2C5AE86734A8DB8A4B05CDBC",
+    "forgetting_stream_23_gate_sha256": "522EF5F90C5918C9C3AE5BD2796A779298D3ED498306AE4EBB54CF8E08B3AD40"
+  },
+  "claim_boundary": "REPLICATED_SAMPLING_STREAM_FAILURE_ANALYSIS_AND_BOUNDED_SOLVER_RECOVERY_NO_PINN_PARETO_NO_DIRECT_BASELINE_GAIN_NO_CANDIDATE",
   "stress_reference_read": false
 }

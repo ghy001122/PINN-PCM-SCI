@@ -212,11 +212,21 @@ class LF10CloudTests(unittest.TestCase):
         ):
             self.assertIn(f'"{key}"', runner)
 
-    def test_active_paper_data_cannot_generate_terminal_figures(self):
+    def test_paper_data_has_a_valid_active_or_terminal_boundary(self):
         payload = json.loads((ROOT / "paper/paper_v23/figures/data/lf10_terminal_metrics.json").read_text(encoding="utf-8"))
-        self.assertEqual(payload["campaign_state"], "ACTIVE")
-        self.assertIsNone(payload["terminal_outcome"])
-        self.assertEqual(payload["claim_boundary"], "ACTIVE_NULL_SCAFFOLD_NO_LF10_SCIENTIFIC_RESULT")
+        if payload["campaign_state"] == "ACTIVE":
+            self.assertIsNone(payload["terminal_outcome"])
+            self.assertEqual(payload["claim_boundary"], "ACTIVE_NULL_SCAFFOLD_NO_LF10_SCIENTIFIC_RESULT")
+            return
+
+        self.assertEqual(payload["campaign_state"], "COMPLETE")
+        self.assertEqual(
+            payload["terminal_outcome"],
+            "LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED",
+        )
+        self.assertEqual(payload["feasible_direction_outcome"], "NO_EXTENDED_FEASIBLE_PATH_FOUND")
+        self.assertIn("NO_PINN_PARETO", payload["claim_boundary"])
+        self.assertIsNone(payload["candidate"])
 
 
 if __name__ == "__main__":

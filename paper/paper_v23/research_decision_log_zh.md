@@ -1,4 +1,4 @@
-# PHK-V2.3 LF6 研究判断与论文路线
+# PHK-V2.3 LF10 终局研究判断与论文路线
 
 ## 一句话裁决
 
@@ -117,11 +117,31 @@ strong residual 换成时空 enthalpy control-volume balance。
 PINN Pareto、强基线增益或原创原语。唯一下一步是停止继续救援并收口负面 solver
 diagnostic：`FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE`。
 
-## LF10 激活边界（尚无科学结果）
+## LF10 终局：投影未延长安全路径，两项 headline 证据完成 sampling-stream 复现
 
-LF10 不改写 LF0--LF9 终局，只新增三项有界证据：正式阈值周围的敏感性分析、
-普通 Adam 与事件/场可行方向投影的 matched screen，以及 LF4/LF6 两项 headline
-结果在新增 sampling streams 23/29 上的复现。当前三项 outcome、candidate、主图和
-主表数值均为空；不得把实现、测试、CPU 几何或 paper 占位写成方法成功。若投影失败
-但复现成立，论文转为 replicated failure analysis；若复现不成立，则主动收紧为
-single-benchmark case study。
+1. `VERIFIED`：CTRL 与 PROJ 都从 exact DEV-R 出发并保持 matched physics/audit
+   批次。二者均只接受一个 25-step block，固定 blind `J/J0=0.989132`；CTRL 为
+   25/150 accepted/attempted，PROJ 为 25/147。两者均未达到 200-update screen 门。
+2. `VERIFIED`：PROJ 缓和了部分高学习率 proposal 的温度约束变化，但未把可恢复
+   前缀延长到 CTRL 之外；冻结机制结论为 `NO_EXTENDED_FEASIBLE_PATH_FOUND`。
+   PROJ 使用 medium-derived competence gradients，不是 label-free 方法。
+3. `VERIFIED`：interface-band 相对 global-extra 的 `delta_Rmin` 在 streams
+   17/23/29 为 `0.08984/0.04628/0.02524`，三者同号，2/3 保持质量，median
+   为 `0.04628`，达到 `INTERFACE_EFFECT_STREAM_REPLICATED`。
+4. `VERIFIED`：strong-physics continuation 的 blind ratio 为
+   `0.01281/0.00512/0.71669`；2/3 过残差门、3/3 出现事件退化、0/3 达到
+   field-event Pareto，因此为 `PHYSICS_FORGETTING_STREAM_REPLICATED`。
+5. `VERIFIED`：post-shutdown 阈值审查中，direct `LF_ONLY` 在 mean symmetric-
+   difference predicate 的 375/375 role-grid comparisons 领先。它们不是375个
+   独立预测，也不代表所有指标；缺失的历史 LF4 stream-17 grid 保持 `NA`。
+6. `VERIFIED`：selected arm=none；full refinement 与 conditional control 因
+   screen prerequisite 未满足而 `NOT_RUN_PREREQUISITE_NOT_MET`，不能称失败。
+
+终局为 `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`，candidate
+仍为 none。当前最诚实且最有论文价值的路线是停止继续堆叠 refinement rescue，
+以“Event Competence Before Residual Reduction: Replicated Failure Analysis and
+Bounded Solver Recovery”为题收口：核心贡献是 bounded interface-exposure 机制、
+跨 sampling stream 的 physics-forgetting 复现、以及多种救援模块无法打开持续安全
+路径的系统诊断。不得写 model-seed robustness、PINN Pareto、强基线增益、SOTA、
+sparse/OOD/stress 或实验验证。唯一 next 为
+`FINALIZE_REPLICATED_INTERFACE_AND_FORGETTING_PAPER_NO_MORE_REFINEMENT_RESCUE`。

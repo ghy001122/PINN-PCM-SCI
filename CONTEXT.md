@@ -1,7 +1,7 @@
 # PINN-PCM-SCI 当前研究设定与论文口径
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
-- `updated_at`: `2026-09-08`
+- `updated_at`: `2026-09-09`
 
 ## 当前研究问题
 
@@ -23,11 +23,15 @@ LF6 用同起点、同预算的 DEV-U/DEV-R 隔离 generic endpoint 与 teacher-
 
 LF7 从 exact DEV-R 运行 matched 小步长与 competence-filtered physics refinement。P0-S 完成 1,200 updates，fixed-blind ratio 为 `0.6030763369`，但事件和场 competence 仍坍塌，形成有效的小步长负面 arm。P0-F 尝试 150、接受 25 updates 后出现 post-step rollback identity drift，无合法 endpoint；事后定位为非空 Adam snapshot tensor aliasing。修复未用于科学重跑。终局为 `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`：保留 P0-S 结果，但不能归因 filter 机制增量、PINN Pareto 或 candidate。
 
+LF8/LF9 在修复 rollback 身份后分别测试 strong-form filter completion 与 equation-routed strong/thermal-CV。它们均只保留一个 25-update 局部安全前缀，未完成冻结 200-update screen，故没有完整 PINN Pareto 或 filter/schedule 归因。
+
+LF10 以同批次 exact DEV-R 审计基线匹配 CTRL 与 event-competence PROJ。两臂各保留一个有效 25-update safety prefix，但均未完成 200 accepted updates；投影未延长安全路径，full/control 未触发。独立的 streams 17/23/29 复现建立 `INTERFACE_EFFECT_STREAM_REPLICATED` 与 `PHYSICS_FORGETTING_STREAM_REPLICATED`；direct `LF_ONLY` 仅在 mean-symmetric-difference predicate 上领先全部 375 个可用 role-grid comparisons。终局为 `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`，无 candidate。
+
 ## 物理对象与证据边界
 
 对象仍是 PHK-V2.1 的透明、无量纲、literature-inspired synthetic 2D wall-cell；几何、PDE、本构、参数、IC/BC、ROI、事件与 frozen evaluator 均不改变。extra-fine fixed-discretization carrier 不是 continuum truth；C0 saved-cadence strong residual 也不是 exact internal-step residual。
 
-两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4/LF5/LF6 读取 medium 与 exact LF3-T0 checkpoint，LF6 还按合同只读 exact DEV-M fallback 与预物化 streams。LF7/LF8 云端只读取 medium audit、exact DEV-R、预物化 physics ledger 与 CPU qualification。LF9 另读取预物化 thermal-CV ledger，仍不读取 fine/extra/direct `LF_ONLY`/frozen evaluator/stress。LF9 的本地 nominal evaluation 仅在产物回收、哈希核验和关机后执行。
+两份 stress references 始终 sealed/unread。LF0/LF1/LF2/LF3 云端只读取了获准的 medium low-fidelity method input；LF2/LF3 另读取精确 LF1-B0 model checkpoint，LF4/LF5/LF6 读取 medium 与 exact LF3-T0 checkpoint，LF6 还按合同只读 exact DEV-M fallback 与预物化 streams。LF7/LF8 云端只读取 medium audit、exact DEV-R、预物化 physics ledger 与 CPU qualification。LF9 另读取预物化 thermal-CV ledger；LF10 另读取预物化 audit/interface/forgetting streams。两阶段均未在云端读取 fine/extra/direct `LF_ONLY`/frozen evaluator/stress，且本地 nominal evaluation 仅在产物回收、哈希核验和关机后执行。
 
 ## 方法与论文身份
 
@@ -50,6 +54,11 @@ _Avoid_: detached coupling, sequential field update
 unchanged thermal equation over a finite-volume cell and adjacent saved-time
 interval. _Avoid_: replacement thermal physics, label-derived balance
 
+**Event-competence feasible-direction projection**: a per-head nearest-feasible
+projection of the unchanged Adam physics proposal onto linearized field/event
+audit constraints normalized by exact DEV-R on the identical materialized
+batch. _Avoid_: adding medium data to the physics loss, replay training
+
 **PRELOCAL_INTERNAL_PARETO**: a reference-blind cloud trigger satisfying every
 available internal gate before shutdown. It is not a complete Pareto claim.
 
@@ -61,9 +70,7 @@ ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-sta
 
 ## 权威路由
 
-LF10 is active under [ADR 0073](docs/adr/0073-activate-phk-v23-lf10-feasible-direction-replication.md), [CPU qualification](docs/experiment/2026-09-09-phk-v23-lf10-cpu-qualification.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md), and the [live plan](docs/plans/NEXT_ACTIONS.md). It is a bounded feasible-direction and evidence-replication campaign; no LF10 scientific result exists before GPU execution and post-shutdown adjudication. The explicit LF10 authorization supersedes LF9's stop recommendation only for this named campaign and does not rewrite LF9 evidence.
-
-LF9 is complete under [ADR 0072](docs/adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md), [terminal closeout](docs/experiment/2026-09-08-phk-v23-lf9-terminal-closeout.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md), and the [live plan](docs/plans/NEXT_ACTIONS.md). No new research execution is authorized. LF8 and earlier terminal evidence remain unchanged.
+LF10 is complete under [ADR 0074](docs/adr/0074-close-phk-v23-lf10-feasible-direction-replication.md), [terminal closeout](docs/experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md), and the [live plan](docs/plans/NEXT_ACTIONS.md). No new research execution is authorized. LF9 and earlier terminal evidence remain unchanged.
 
 # LF9 terminal context (2026-09-09)
 

@@ -27,7 +27,9 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-LF9 已完成并关闭为 `LF9_NO_SAFE_MIXED_FORM_SCREEN`。ER-S 与 ER-CV 均保留一个身份有效的 25-update safety prefix，并在最小冻结学习率的第二块因 temperature preservation 停滞；无臂完成 200 accepted updates。filtered full path 与 no-filter control 因前提未满足而未运行，不得称失败。没有完整内部 PINN Pareto、direct `LF_ONLY` 增益或 candidate。当前无新科研执行授权，唯一建议是 `FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE`。
+LF10 已完成并关闭为 `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`。CTRL 与 PROJ 各保留一个身份有效的 25-update safety prefix，但均未完成 200 accepted updates；full path/control 因前提未满足而未运行，不得称失败。方向机制结论为 `NO_EXTENDED_FEASIBLE_PATH_FOUND`，同时建立 `INTERFACE_EFFECT_STREAM_REPLICATED` 与 `PHYSICS_FORGETTING_STREAM_REPLICATED`。没有完整 PINN Pareto、direct `LF_ONLY` 增益或 candidate。当前无新科研执行授权，终局路由为 `FINALIZE_REPLICATED_INTERFACE_AND_FORGETTING_PAPER_NO_MORE_REFINEMENT_RESCUE`。
+
+LF9 已完成并关闭为 `LF9_NO_SAFE_MIXED_FORM_SCREEN`。ER-S 与 ER-CV 均保留一个身份有效的 25-update safety prefix，并在最小冻结学习率的第二块因 temperature preservation 停滞；无臂完成 200 accepted updates。filtered full path 与 no-filter control 因前提未满足而未运行，不得称失败。其历史证据不被 LF10 改写。
 
 LF8 已完成并关闭为 `LF8_FILTER_STALLED_WITH_VALID_PREFIX`。它保留一个 25-step strong-form safety prefix，但完整路径和 control 未到达；该历史结果不被 LF9 激活改写。
 
@@ -122,12 +124,17 @@ selection prerequisite, so full/control were not run. Recovery, shutdown and
 post-shutdown local adjudication completed; no mixed-form increment, PINN Pareto,
 candidate or next research authorization exists. Stress remains sealed/unread.
 
-# LF10 active handoff (2026-09-09)
+# LF10 terminal handoff (2026-09-09)
 
 `PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE`
-is explicitly authorized and CPU-qualified with zero scientific updates. Exact
-same-batch DEV-R denominators make the preservation projection well-defined.
-The mandatory order is CTRL/PROJ screens, conditional selected full path, then
-LF4 interface and LF6 forgetting replications on streams 23/29. Fine, extra,
-direct `LF_ONLY`, the frozen evaluator and stress remain unavailable to cloud
-training. LF9 evidence remains terminal and unchanged.
+ran from activation `f5e05f4dec416df2a3598e433d4edcb9f7ba299c`. CTRL and
+PROJ were identity-valid and each retained one 25-update safety prefix, but
+neither completed the frozen 200-update screen; full refinement and its control
+were therefore not run. Post-shutdown nominal evaluation established
+`INTERFACE_EFFECT_STREAM_REPLICATED` and
+`PHYSICS_FORGETTING_STREAM_REPLICATED`; direct `LF_ONLY` led the
+mean-symmetric-difference predicate in all 375 available role-grid comparisons.
+The claim is
+`VALID_REPLICATED_INTERFACE_AND_FORGETTING_EVIDENCE_NO_EXTENDED_REFINEMENT_PATH`.
+Recovery, shutdown and local adjudication completed; no complete PINN Pareto,
+candidate or new research authorization exists, and stress remains sealed/unread.

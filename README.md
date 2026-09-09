@@ -5,22 +5,25 @@
 ## 当前状态
 
 - `phase_id`: `PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE`
-- `lifecycle_state`: `ACTIVE`
+- `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `PENDING_GPU_EXECUTION`
-- `mechanism_outcome`: `PENDING`
-- `claim_status`: `CPU_QUALIFIED_GPU_RESULTS_PENDING`
-- `next_research_execution_authorized`: `true`
+- `machine_outcome`: `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`
+- `mechanism_outcome`: `NO_EXTENDED_FEASIBLE_PATH_FOUND`
+- `claim_status`: `VALID_REPLICATED_INTERFACE_AND_FORGETTING_EVIDENCE_NO_EXTENDED_REFINEMENT_PATH`
+- `next_research_execution_authorized`: `false`
 
-LF10 已通过零更新 CPU 资格，现已授权执行 matched `CTRL`/`PROJ` feasible-direction
-screens、条件 full path，以及 LF4 interface 与 LF6 physics-forgetting 的 streams
-23/29 复现。GPU 结果尚未产生；fine/extra/direct `LF_ONLY` 与 stress 未在云端读取。
+LF10 的 matched CTRL/PROJ 各保留一个有效 25-update 安全前缀，但均未完成
+200-update screen，故 full/control 未运行。interface exposure 与 physics
+forgetting 已通过 streams 17/23/29 的冻结复现规则；无完整 PINN Pareto 或
+candidate，stress sealed/unread，当前无新科研执行授权。
 
 ## 当前入口
 
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
+- LF10 关闭决定：[ADR 0074](docs/adr/0074-close-phk-v23-lf10-feasible-direction-replication.md)
+- LF10 终局：[terminal closeout](docs/experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md)
 - LF10 激活决定：[ADR 0073](docs/adr/0073-activate-phk-v23-lf10-feasible-direction-replication.md)
 - LF10 CPU 资格：[CPU qualification](docs/experiment/2026-09-09-phk-v23-lf10-cpu-qualification.md)
 - 当前关闭决定：[ADR 0072](docs/adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md)

@@ -2,7 +2,7 @@
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-PHK-V2.3 LF10 已通过零更新 CPU 资格并处于 ACTIVE。当前授权运行 matched CTRL/PROJ feasible-direction screens、条件 full path，以及 LF4/LF6 streams 23/29 复现；GPU 科学结果尚未产生，stress sealed/unread。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[CPU qualification](experiment/2026-09-09-phk-v23-lf10-cpu-qualification.md) 与 [ADR 0073](adr/0073-activate-phk-v23-lf10-feasible-direction-replication.md)。
+PHK-V2.3 LF10 已完成并关闭为 `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`。CTRL/PROJ 各保留一个 25-update 安全前缀但均未完成 200-update screen；interface exposure 与 physics forgetting 通过冻结多流复现。无完整 PINN Pareto、candidate 或后续科研授权，stress sealed/unread。权威入口见 [active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)、[terminal closeout](experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md) 与 [ADR 0074](adr/0074-close-phk-v23-lf10-feasible-direction-replication.md)。
 
 R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 
@@ -23,8 +23,10 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF10 execution](plans/NEXT_ACTIONS.md)。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。LF10 已获具名执行授权并完成 CPU 资格。
+- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF10 terminal](plans/NEXT_ACTIONS.md)。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。LF10 已完成，当前无新科研执行授权。
+- 当前 PHK-V2.3 LF10 终局入口：[2026-09-09 LF10 terminal closeout](experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md)。它记录两条有效 25-step prefix、无 extended feasible path、多流 interface/forgetting 复现、回收关机与本地裁决。
+- 当前 PHK-V2.3 LF10 关闭决定：[ADR 0074](adr/0074-close-phk-v23-lf10-feasible-direction-replication.md)。
 - 当前 PHK-V2.3 LF10 激活决定：[ADR 0073](adr/0073-activate-phk-v23-lf10-feasible-direction-replication.md)。
 - 当前 PHK-V2.3 LF10 资格入口：[2026-09-09 LF10 CPU qualification](experiment/2026-09-09-phk-v23-lf10-cpu-qualification.md)。
 - 当前 PHK-V2.3 LF9 终局入口：[2026-09-08 LF9 terminal closeout](experiment/2026-09-08-phk-v23-lf9-terminal-closeout.md)。它记录两条有效 screen 的 25-step prefix、共同温度门 stall、full/control 未运行、回收关机与本地裁决。

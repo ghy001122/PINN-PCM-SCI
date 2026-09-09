@@ -1,5 +1,6 @@
 # 架构与研究决策索引
 
+- [0074：以 replicated headline evidence 和无 extended feasible direction 关闭 PHK-V2.3 LF10](0074-close-phk-v23-lf10-feasible-direction-replication.md) — CTRL/PROJ 各保留一个有效 25-step 安全前缀但均未完成 200-step screen；interface exposure 与 physics forgetting 通过多流复现，无 PINN Pareto、candidate 或后续授权。
 - [0073：激活 PHK-V2.3 LF10 feasible-direction 与 headline replication](0073-activate-phk-v23-lf10-feasible-direction-replication.md) — 以同批次 DEV-R 审计基线运行 matched CTRL/PROJ、条件 full path，以及 LF4/LF6 streams 23/29 复现；本具名授权仅覆盖 LF9 的停止建议，不改写其终局证据。
 - [0072：以无完整安全 mixed-form screen 关闭 PHK-V2.3 LF9](0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md) — ER-S/ER-CV 均保留一个 25-step 安全前缀并在最小冻结学习率因温度保持停滞；full/control 因前提未满足而未运行，无 PINN Pareto、candidate 或后续授权。
 - [0071：激活 PHK-V2.3 LF9 equation-routed thermal-CV refinement](0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md) — 从 exact DEV-R 运行 mandatory ER-S/ER-CV matched screens，条件继续 filtered full path 与 no-filter control；local frozen evaluation 前只允许 `PRELOCAL_INTERNAL_PARETO`。

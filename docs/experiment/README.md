@@ -22,11 +22,14 @@ view. Smoke and pilot entries never vote in formal adjudication. A run's
 
 ## Current bounded campaign
 
-LF10 is ACTIVE after `LF10_CPU_QUALIFICATION_PASS` with zero scientific updates.
-The frozen campaign runs matched CTRL/PROJ feasible-direction screens, a
-conditional selected full path, and mandatory LF4/LF6 streams 23/29 headline
-replications. Cloud execution remains reference-blind; local direct/frozen
-evaluation follows recovery and shutdown. No LF10 scientific result exists yet.
+LF10 is complete as
+`LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`. CTRL and PROJ
+each retained one identity-valid 25-update safety prefix, but neither completed
+the frozen 200-update screen; full/control were not run because their
+prerequisite was unmet. The independent tracks established
+`INTERFACE_EFFECT_STREAM_REPLICATED` and
+`PHYSICS_FORGETTING_STREAM_REPLICATED`. No complete PINN Pareto or candidate
+exists, stress remains sealed/unread, and no new research execution is authorized.
 
 ## G1 fixture boundary
 

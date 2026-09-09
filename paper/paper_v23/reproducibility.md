@@ -436,19 +436,46 @@ D:\anaconda\python.exe paper/paper_v23/figures/generate_figures.py --lf9-only
 and PNG/PDF outputs. Git alone cannot reconstruct the git-ignored checkpoints,
 predictions, telemetry, or local adjudication.
 
-## LF10 active reproducibility scaffold
+## LF10 terminal reproducibility binding
 
 - task: `PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE`;
 - start: `main@06d1d2121c8d0fd6db13c12356568650083be4f3`;
 - campaign timestamp: `20260909T101615Z`;
-- frozen comparisons: CTRL/PROJ from exact DEV-R; LF4 DEV-G/DEV-M paired
-  streams 23/29; LF6 strong-physics streams 23/29;
+- source identity:
+  `LF10-BUNDLE-A0A6E9DB39FD33649E8B8E968A2713F90CDBB982E0B3E39D5CCBF7E6967702B2`;
+- frozen comparisons: CTRL/PROJ from exact DEV-R; paired interface streams
+  23/29 aggregated with historical stream 17; strong-physics streams 23/29
+  aggregated with historical stream 17;
 - cloud boundary: medium, LF3-T0, DEV-R, materialized physics/audit/development
   streams, contracts, runtime, and passed zero-update qualification only;
 - local-only boundary: historical predictions used by the threshold grid,
   fine/extra-fine, direct `LF_ONLY`, frozen evaluator, and all nominal local
   adjudication;
-- stress/OOD: sealed and unread.
+- stress/OOD: sealed and unread;
+- stream identity: LF10 ledger
+  `90BA299A37EFB6F01EA6B0AE28472182D89A2428F685D70819E97B4966B975A5`,
+  manifest `4917BE4A245D678E9FBE76AAD9121ED4E326527A04A97634A6F78E552F6F3271`,
+  semantic SHA
+  `8A70D533FE615FDD2053674E25D9ED6EC8D4781E9061BB1CB7A8D4827B2671A9`;
+- same-batch audit array SHA:
+  `B49D0D5CF98A4A62472DB461674B23A0FE33B2FB8E5278B35351B3FDF5BA01CB`.
 
-The terminal raw paths, source identity, accepted/attempted updates, evidence
-hashes, and regeneration command remain null until execution completes.
+The reference-blind run summary is
+`outputs/runs/20260909T101615Z-phk-v23-lf10-feasible-direction-replication/gpu/run_summary.json`
+(SHA-256
+`987A264B2235CA9461717DA37D59C69AD2ED02160C135A8A8BA1809AD4E6830F`).
+The post-shutdown local adjudication is under the same run root at
+`local/adjudication.json` (SHA-256
+`F322212DF49E0F25BE9B06B360A08CDDA95EDB92A30BCC475777A978B82AC27D`).
+The tracked CPU artifact SHA is
+`7FF15B0F31C8921F08C258C1B1042D8656C696CB485E6E5F47534D4183E87544`.
+
+Regenerate the three LF10 figures with:
+
+```powershell
+D:\anaconda\python.exe paper/paper_v23/figures/generate_figures.py --lf10-only
+```
+
+`figures/source-manifest-lf10.json` binds the terminal metrics JSON, generator,
+raw evidence hashes, and six PNG/PDF outputs. Git alone cannot reconstruct the
+git-ignored checkpoints, predictions, telemetry, or local adjudication.

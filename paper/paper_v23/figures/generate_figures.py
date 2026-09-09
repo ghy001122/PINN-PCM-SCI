@@ -762,6 +762,202 @@ def lf9_equation_routed_thermal_cv(data: dict) -> list[Path]:
     return save(fig, "20260908T145333Z-lf9-equation-routed-thermal-cv")
 
 
+def lf10_threshold_robustness(data: dict) -> list[Path]:
+    source = data["threshold_robustness"]
+    direct = np.asarray(source["direct_LF_ONLY_symmetric_difference"], dtype=float)
+    neural = np.asarray(source["best_neural_symmetric_difference"], dtype=float)
+    gap = neural - direct
+    phase = source["phase_thresholds"]
+    active = source["active_fraction_thresholds"]
+    fig, axes = plt.subplots(1, 3, figsize=(13.0, 3.9))
+    panels = [
+        (direct, "Direct LF_ONLY", "viridis", 0.0, max(direct.max(), neural.max())),
+        (neural, "Best neural comparator", "viridis", 0.0, max(direct.max(), neural.max())),
+        (gap, "Neural minus direct gap", "magma", 0.0, gap.max()),
+    ]
+    for ax, (matrix, title, cmap, vmin, vmax) in zip(axes, panels):
+        image = ax.imshow(matrix, origin="lower", cmap=cmap, vmin=vmin, vmax=vmax, aspect="auto")
+        for row in range(matrix.shape[0]):
+            for col in range(matrix.shape[1]):
+                color = "white"
+                ax.text(col, row, f"{matrix[row, col]:.4f}", ha="center", va="center", fontsize=6.4, color=color)
+        ax.add_patch(plt.Rectangle((1.5, 1.5), 1, 1, fill=False, edgecolor=RED, linewidth=2.1))
+        ax.set_xticks(np.arange(len(active)), [f"{value:.3g}" for value in active])
+        ax.set_yticks(np.arange(len(phase)), [f"{value:.2g}" for value in phase])
+        ax.set_xlabel("ROI active-fraction threshold")
+        ax.set_ylabel("Phase threshold")
+        ax.set_title(title)
+        fig.colorbar(image, ax=ax, fraction=0.046, pad=0.03)
+    fig.suptitle(
+        "Mean symmetric-difference audit: direct LF_ONLY leads all 375 role-grid comparisons",
+        color=NAVY,
+        fontweight="bold",
+    )
+    fig.text(
+        0.5,
+        0.005,
+        "Red box: frozen machine-voting cell (phase 0.5, active fraction 0.02). Comparisons are not 375 distinct predictions.",
+        ha="center",
+        color=GRAY,
+        fontsize=8,
+    )
+    fig.tight_layout(rect=(0, 0.045, 1, 0.94))
+    return save(fig, "20260909T101615Z-lf10-threshold-robustness")
+
+
+def lf10_feasible_direction(data: dict) -> list[Path]:
+    geometry = data["gradient_geometry"]
+    screen = data["direction_screen"]
+    arms = screen["arms"]
+    fig, axes = plt.subplots(2, 2, figsize=(12.0, 7.0))
+
+    ax = axes[0, 0]
+    history = geometry["temperature_cosine_history"]
+    fields = [row["stage"] for row in history]
+    cosines = [row["cosine"] for row in history]
+    bars = ax.bar(fields, cosines, color=[TEAL if value >= 0 else ORANGE for value in cosines], width=0.62)
+    ax.axhline(0, color=NAVY, linewidth=1)
+    ax.set_ylim(-1.05, 1.05)
+    ax.set_ylabel("Thermal physics/competence gradient cosine")
+    ax.set_title("A. Thermal geometry motivates projection")
+    for bar, value in zip(bars, cosines):
+        offset = 0.055 if value >= 0 else -0.09
+        ax.text(bar.get_x() + bar.get_width() / 2, value + offset, f"{value:+.3f}", ha="center", color=NAVY, fontweight="bold")
+    ax.text(
+        0.98,
+        0.96,
+        "Earlier unsafe proposals: projected dCT\nLF8 .0951->.000210; LF9 .0385/.0397->.00157/.00159",
+        transform=ax.transAxes,
+        ha="right",
+        va="top",
+        color=GRAY,
+        fontsize=8,
+        bbox={"boxstyle": "round,pad=0.25", "facecolor": "white", "edgecolor": "none", "alpha": 0.9},
+        zorder=5,
+    )
+
+    ax = axes[0, 1]
+    x = np.arange(1, 7)
+    for name, color, marker in [("CTRL", BLUE, "o"), ("PROJ", ORANGE, "s")]:
+        values = [row["temperature_ratio"] for row in arms[name]["proposals"]]
+        valid_x = [idx for idx, value in zip(x, values) if value is not None]
+        valid_y = [value for value in values if value is not None]
+        ax.plot(valid_x, valid_y, marker=marker, color=color, linewidth=1.8, label=name)
+        for idx, row in zip(x, arms[name]["proposals"]):
+            if row["decision"] == "ACCEPT":
+                ax.scatter(idx, row["temperature_ratio"], s=115, facecolors="none", edgecolors=TEAL, linewidths=2.2, zorder=5)
+    ax.axhline(1.05, color=RED, linestyle="--", linewidth=1.2, label="preservation limit")
+    ax.set_yscale("log")
+    ax.set_xticks(x, ["B1 eta0", "/2", "/4", "/8", "/16", "B2 /16"])
+    ax.set_ylabel("Temperature-error ratio to DEV-R")
+    ax.set_title("B. Proposal ladder and repeated blocker")
+    ax.grid(axis="y", which="both", alpha=0.18)
+    ax.legend(fontsize=8)
+
+    ax = axes[1, 0]
+    names = ["CTRL", "PROJ"]
+    accepted = [arms[name]["accepted_updates"] for name in names]
+    attempted = [arms[name]["attempted_updates"] for name in names]
+    required = screen["required_accepted_updates"]
+    ypos = np.arange(2)
+    ax.barh(ypos, [required, required], color=LIGHT, edgecolor=GRAY, label="screen requirement")
+    bars = ax.barh(ypos, accepted, color=[BLUE, ORANGE], label="accepted")
+    ax.set_yticks(ypos, names)
+    ax.set_xlim(0, required * 1.08)
+    ax.set_xlabel("Accepted updates")
+    ax.set_title("C. Same 25-step safe prefix, no extension")
+    for bar, name, tries in zip(bars, names, attempted):
+        ax.text(bar.get_width() + 4, bar.get_y() + bar.get_height() / 2, f"25/{tries} attempted; J/J0={arms[name]['fixed_blind_ratio']:.4f}", va="center", fontsize=8)
+    ax.legend(fontsize=8, loc="lower right")
+
+    ax = axes[1, 1]
+    ax.axis("off")
+    rows = [
+        ("Local safe descent", "YES", TEAL),
+        ("Extended feasible path", "NO", RED),
+        ("PROJ increment over CTRL", "NO", RED),
+        ("Full refinement", "NOT RUN: prerequisite", GRAY),
+        ("PINN Pareto / candidate", "NONE", GRAY),
+    ]
+    for idx, (label, status, color) in enumerate(rows):
+        y = 0.91 - idx * 0.17
+        ax.text(0.02, y, label, transform=ax.transAxes, color=NAVY, fontweight="bold")
+        ax.text(0.98, y, status, transform=ax.transAxes, ha="right", color=color, fontweight="bold")
+        ax.plot([0.02, 0.98], [y - 0.055, y - 0.055], transform=ax.transAxes, color=LIGHT, linewidth=1)
+    ax.text(
+        0.02,
+        0.02,
+        "PROJ uses medium-derived competence gradients; it is not label-free.",
+        transform=ax.transAxes,
+        color=GRAY,
+        fontsize=8,
+    )
+    ax.set_title("D. Frozen evidence ladder")
+    fig.suptitle("Feasible-direction screen: projection does not extend the recoverable prefix", color=NAVY, fontweight="bold")
+    fig.tight_layout(rect=(0, 0.02, 1, 0.95))
+    return save(fig, "20260909T101615Z-lf10-feasible-direction")
+
+
+def lf10_headline_replication(data: dict) -> list[Path]:
+    interface = data["interface_replication"]
+    forgetting = data["forgetting_replication"]
+    fig, axes = plt.subplots(1, 3, figsize=(13.0, 4.2))
+
+    streams = [row["stream"] for row in interface["streams"]]
+    deltas = [row["delta_Rmin"] for row in interface["streams"]]
+    quality = [row["quality_preserved"] for row in interface["streams"]]
+    bars = axes[0].bar([str(value) for value in streams], deltas, color=TEAL, edgecolor=[NAVY if ok else RED for ok in quality], linewidth=2)
+    axes[0].axhline(0.03, color=RED, linestyle="--", linewidth=1.2, label="median-effect gate")
+    axes[0].set_ylabel("DEV-M minus DEV-G minimum recall")
+    axes[0].set_xlabel("Sampling stream")
+    axes[0].set_title("A. Interface exposure effect")
+    axes[0].set_ylim(0, 0.105)
+    axes[0].legend(fontsize=8)
+    for bar, value, ok in zip(bars, deltas, quality):
+        axes[0].text(bar.get_x() + bar.get_width() / 2, value + 0.004, f"{value:.3f}\n{'Q+' if ok else 'Q-'}", ha="center", fontsize=8)
+
+    fstreams = [row["stream"] for row in forgetting["streams"]]
+    ratios = [row["fixed_blind_ratio"] for row in forgetting["streams"]]
+    bars = axes[1].bar([str(value) for value in fstreams], ratios, color=ORANGE)
+    axes[1].axhline(0.5, color=RED, linestyle="--", linewidth=1.2, label="physics-ratio gate")
+    axes[1].set_yscale("log")
+    axes[1].set_ylabel("Terminal fixed-blind J/J0 (log scale)")
+    axes[1].set_xlabel("Sampling stream")
+    axes[1].set_title("B. Residual reduction, event collapse")
+    axes[1].set_ylim(0.004, 1.2)
+    axes[1].legend(fontsize=8)
+    for bar, value in zip(bars, ratios):
+        label_y = value / 1.7 if value > 0.3 else value * 1.35
+        label_color = "white" if value > 0.3 else NAVY
+        axes[1].text(bar.get_x() + bar.get_width() / 2, label_y, f"{value:.3g}\nRmin=0", ha="center", fontsize=8, color=label_color)
+
+    ax = axes[2]
+    ax.axis("off")
+    lines = [
+        ("Interface sign", "3/3 positive", TEAL),
+        ("Interface quality", "2/3 preserved", TEAL),
+        ("Forgetting residual gate", "2/3 pass", ORANGE),
+        ("Event collapse", "3/3", RED),
+        ("Field-event Pareto", "0/3", RED),
+    ]
+    for idx, (label, value, color) in enumerate(lines):
+        y = 0.88 - idx * 0.16
+        ax.text(0.04, y, label, transform=ax.transAxes, color=NAVY, fontweight="bold")
+        ax.text(0.96, y, value, transform=ax.transAxes, ha="right", color=color, fontweight="bold")
+    ax.text(
+        0.04,
+        0.03,
+        "Streams 17/23/29 vary materialized sampling only;\nthey are not independent model-initialization seeds.",
+        transform=ax.transAxes,
+        color=GRAY,
+        fontsize=8,
+    )
+    ax.set_title("C. Replicated claim boundary")
+    fig.suptitle("Headline evidence replicates across sampling streams, without a positive PINN method", color=NAVY, fontweight="bold")
+    fig.tight_layout(rect=(0, 0.02, 1, 0.94))
+    return save(fig, "20260909T101615Z-lf10-headline-replication")
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Generate paper_v23 evidence figures")
     parser.add_argument("--lf4-only", action="store_true", help="Generate LF4 figures 6–8 without rewriting the LF3 source manifest")
@@ -777,7 +973,30 @@ def main(argv: list[str] | None = None) -> None:
         if data.get("campaign_state") != "COMPLETE" or data.get("terminal_outcome") is None:
             print(json.dumps({"figures": 0, "scope": "LF10_ACTIVE_RESULTS_PENDING", "status": "SKIPPED_NO_TERMINAL_DATA"}, sort_keys=True))
             return
-        raise RuntimeError("LF10 terminal figure renderer must be bound to the completed LF10 result schema before use")
+        setup()
+        outputs = []
+        outputs.extend(lf10_threshold_robustness(data))
+        outputs.extend(lf10_feasible_direction(data))
+        outputs.extend(lf10_headline_replication(data))
+        manifest = {
+            "schema_id": "paper-v23-lf10-figure-source-manifest-v1",
+            "campaign_state": "COMPLETE",
+            "paper_status": data["paper_status"],
+            "paper_title": data["paper_title"],
+            "inputs": {LF10_DATA_PATH.relative_to(ROOT).as_posix(): sha256(LF10_DATA_PATH)},
+            "evidence_bindings": data["evidence_hashes"],
+            "outputs": {path.relative_to(ROOT).as_posix(): sha256(path) for path in outputs},
+            "generator": "python paper/paper_v23/figures/generate_figures.py --lf10-only",
+            "generator_sha256": sha256(Path(__file__)),
+            "claim_boundary": data["claim_boundary"],
+            "sampling_stream_note": "Streams 17/23/29 are materialized sampling streams, not independent model-initialization seeds.",
+            "full_refinement_status": data["full_refinement"]["status"],
+            "stress_reference_read": data["stress_reference_read"],
+        }
+        manifest_path = HERE / "source-manifest-lf10.json"
+        manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        print(json.dumps({"figures": len(outputs), "manifest": manifest_path.relative_to(ROOT).as_posix(), "status": "GENERATED"}, sort_keys=True))
+        return
     if args.lf9_only:
         data = json.loads(LF9_DATA_PATH.read_text(encoding="utf-8"))
         if data.get("campaign_state") != "COMPLETE" or data.get("terminal_outcome") is None:

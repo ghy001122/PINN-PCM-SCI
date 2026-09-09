@@ -132,29 +132,48 @@ not failed endpoints, and provide no filter attribution.
 
 ```text
 ADVISOR_DRAFT: YES
-NEGATIVE_DIAGNOSTIC_PAPER_WITH_BOUNDED_MECHANISM_RESULT: PLAUSIBLE
+REPLICATED_NEGATIVE_DIAGNOSTIC_PAPER_WITH_BOUNDED_MECHANISM_RESULT: PLAUSIBLE
 POSITIVE_METHODS_SUBMISSION: NO
 CAS_Q2_POSITIVE_METHOD_CLAIM: NOT SUPPORTED
 CANDIDATE: NONE
-LF9_RESULT: NO_SAFE_MIXED_FORM_SCREEN
-LF9_MECHANISM: NO_SAFE_MIXED_FORM_SCREEN
-LF9_FULL_AND_CONTROL: NOT_RUN_BY_FROZEN_TRIGGER
-LF9_NEXT: FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE
+LF10_RESULT: LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED
+LF10_MECHANISM: NO_EXTENDED_FEASIBLE_PATH_FOUND
+LF10_INTERFACE: INTERFACE_EFFECT_STREAM_REPLICATED
+LF10_FORGETTING: PHYSICS_FORGETTING_STREAM_REPLICATED
+LF10_FULL_AND_CONTROL: NOT_RUN_PREREQUISITE_NOT_MET
+LF10_NEXT: FINALIZE_REPLICATED_INTERFACE_AND_FORGETTING_PAPER_NO_MORE_REFINEMENT_RESCUE
 ```
 
-## LF10 active reviewer-risk additions
+## 19. Does LF10 establish model-seed robustness?
 
-1. Sampling streams 17/23/29 are not independent model-initialization seeds;
-   the paper must call them matched sampling-stream replications.
-2. Medium-derived competence gradients enter PROJ, so a successful PROJ is a
-   multifidelity constrained PINN refinement, not label-free physics.
-3. The 5 x 5 threshold grid is sensitivity evidence only; the official
-   `0.5/0.02` cell alone governs terminal gates.
-4. If replication fails, the central LF4/LF6 language must narrow to a
-   single-benchmark case study. If PROJ fails, no feasible-direction method
-   claim is permitted.
-5. Direct `LF_ONLY` remains in the main table and candidate gate. No dense
-   result may be rewritten post hoc as sparse-task value.
+No. Streams 17/23/29 vary pre-materialized sampling while retaining one model
+initialization and object. The result is sampling-stream replication only.
 
-All LF10 answers are pending; this section records prospective review risks,
-not favorable outcomes.
+## 20. Does PROJ establish a feasible-direction method?
+
+No. PROJ used medium-derived competence gradients, retained the same 25-update
+endpoint as CTRL, and did not reach the 200-update screen. It is neither
+label-free nor an incremental method result. Earlier projected constraint
+changes motivate the test but do not override its negative endpoint.
+
+## 21. Are full refinement and its control hidden failures?
+
+No. Both were conditional on a screen reaching 200 accepted updates. Neither
+screen exceeded 25, so both are `NOT_RUN_PREREQUISITE_NOT_MET`, not failed
+trajectories. They provide no filter or schedule attribution.
+
+## 22. Does the 5-by-5 threshold audit prove universal baseline dominance?
+
+No. Direct `LF_ONLY` led the mean symmetric-difference predicate in 375/375
+role-grid comparisons. These are not 375 distinct predictions, do not cover all
+metrics, and include a role alias sharing the same prediction SHA. Historical
+LF4 stream-17 threshold predictions were unavailable and remain `NA`.
+
+## 23. What exactly replicated?
+
+The paired interface recall effect was positive in 3/3 streams, with quality
+preservation in 2/3. Strong-physics continuation degraded event competence in
+3/3 streams; 2/3 crossed the residual-ratio gate and 0/3 achieved field-event
+Pareto. This supports a replicated bounded failure-analysis narrative, not a
+positive PINN method, causal proof, sparse/OOD claim, or submission-ready
+candidate.

@@ -124,26 +124,33 @@ records the exact non-triggers: no selected arm, full refinement, or no-filter
 control. The figure supports `LF9_NO_SAFE_MIXED_FORM_SCREEN`, not a general
 control-volume failure, filter attribution, PINN Pareto, or candidate claim.
 
-## Planned LF10 Figure A. Threshold robustness (active; no figure yet)
+## Figure 18. LF10 threshold robustness
 
-Prospective 5 x 5 heatmaps over phase and ROI active-fraction thresholds. The
-official `0.5/0.02` cell will be boxed and remains the only machine-voting
-threshold. Panels will report the evaluated-cell denominator and the fractions
-for which the LF4 interface effect, LF6 forgetting contrast, and direct
-`LF_ONLY` ordering retain their declared sign. Missing historical predictions
-will appear as `NA`, never as a favorable cell.
+Post-shutdown 5-by-5 heatmaps of the mean symmetric-difference predicate for
+direct `LF_ONLY`, the best neural comparator in each role-grid cell, and their
+positive error gap. The official `phase=0.5`, `ROI active fraction=0.02` cell is
+boxed and remains the only machine-voting threshold. Direct `LF_ONLY` leads all
+375 role-grid comparisons. These are not 375 distinct predictions and do not
+imply dominance on every metric. Historical LF4 stream-17 threshold predictions
+were unavailable and remained `NA`; no formal outcome changed.
 
-## Planned LF10 Figure B. Feasible-direction geometry and path (active; no figure yet)
+## Figure 19. LF10 feasible-direction geometry and path
 
-Prospective comparison of physics/competence gradient geometry, first-order
-constraint changes under ordinary and projected directions, accepted versus
-attempted updates, and fixed-blind-physics versus preservation trajectories for
-matched CTRL and PROJ. Medium audit gradients are part of both arms' data-access
-identity and are used by PROJ; the method is not label-free.
+Panel A contrasts the positive DEV-R thermal physics/competence cosine with the
+negative cosines observed at earlier blocked LF8/LF9 proposals, motivating but
+not validating projection. Panel B shows temperature-preservation ratios across
+the matched CTRL/PROJ proposal ladder. Panel C shows that both arms retained the
+same 25-update prefix, with fixed-blind `J/J0=0.989132`, but neither reached the
+required 200 accepted updates. Panel D records the frozen decision: no extended
+feasible path, no projection increment, and no eligible full refinement or
+candidate. PROJ uses medium-derived gradients and is not label-free.
 
-## Planned LF10 Figure C. Headline replication (active; no figure yet)
+## Figure 20. LF10 headline sampling-stream replication
 
-Prospective sampling-stream replication of LF4 paired `DEV-M - DEV-G`
-minimum-recall effects and LF6 physics-objective reduction versus terminal
-event competence for historical stream 17 and new streams 23/29. These are
-sampling-stream replications, not independent network-initialization seeds.
+Panel A reports paired `DEV-M - DEV-G` minimum-recall effects for materialized
+streams 17/23/29: all are positive, the median is 0.04628, and field quality is
+preserved in two streams. Panel B shows strong-physics fixed-blind ratios; event
+competence degrades in all three streams, while two cross the 0.50 residual gate
+and none reaches field-event Pareto. Panel C states the frozen aggregate counts.
+These are sampling-stream replications under one model initialization and
+object, not independent model-seed replications or a positive PINN method.

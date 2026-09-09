@@ -1,8 +1,7 @@
-# Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
+# Event Competence Before Residual Reduction: Replicated Failure Analysis and Bounded Solver Recovery
 
-> Advisor-reviewable draft. Active evidence status:
-> `LF10_ACTIVE_RESULTS_PENDING`; last completed result:
-> `LF9_NO_SAFE_MIXED_FORM_SCREEN`.
+> Advisor-reviewable terminal draft. Evidence status:
+> `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`.
 > All neural results are single-seed nominal development evidence. No candidate,
 > positive PINN method, strong-baseline gain, OOD/stress result, or submission
 > readiness is claimed.
@@ -58,6 +57,18 @@ screen gate, so full refinement and the no-filter control were not run. The
 terminal result is `NO_SAFE_MIXED_FORM_SCREEN`, not a positive mixed-form or
 attribution result.
 
+LF10 closed the remaining paper-level uncertainty without adding another rescue
+module. Ordinary Adam and a medium-gradient event/field-feasible projection
+retained the same safety-valid 25-update prefix and failed to reach the required
+200 accepted updates, so projection did not open an extended feasible path.
+Across materialized sampling streams 17/23/29, however, interface exposure had a
+positive recall effect in all three streams (median `delta_Rmin=0.04628`, quality
+preserved in two), while strong-physics continuation degraded event competence
+in all three and produced no field-event Pareto endpoint. Direct `LF_ONLY` led
+the mean symmetric-difference predicate in all 375 threshold role-grid
+comparisons. Thus LF10 strengthens a replicated sampling-stream failure-analysis
+narrative, not a paper-positive PINN method.
+
 ## 1. Introduction
 
 PINNs encode governing equations and boundary or initial conditions in a
@@ -81,7 +92,7 @@ Potential admissibility and field errors remain separate requirements. The
 strongest available direct low-fidelity interpolation is always reported, so
 neural recovery cannot be mistaken for practical superiority.
 
-This paper makes three bounded contributions:
+This paper makes five bounded contributions:
 
 1. an executed recovery ladder distinguishing cold collapse, inadmissible
    representation, over-broad transfer, inactive-measure dominance, incomplete
@@ -93,7 +104,10 @@ This paper makes three bounded contributions:
    the event carrier; and
 4. an identity-correct competence-filter completion showing that exact rollback
    can retain one safe residual-reducing prefix, while the frozen strong-form
-   path stalls before a matched schedule comparison becomes admissible.
+   path stalls before a matched schedule comparison becomes admissible; and
+5. sampling-stream replication showing a positive interface-exposure effect in
+   3/3 streams and physics-induced event degradation in 3/3 streams, together
+   with a negative matched screen for event/field-feasible gradient projection.
 
 The components have prior art. Exact constraints, logit distillation, class
 rebalancing, order statistics, event functions, and phase-interface sampling
@@ -294,6 +308,22 @@ blocks, dyadic rate ladder, immutable rollback, and medium competence filter.
 Full refinement required one arm to reach 200 accepted screen updates; the
 no-filter control additionally required a complete internal Pareto path.
 
+### 3.8 LF10 feasible-direction screen and sampling-stream replication
+
+LF10 compared ordinary Adam (`CTRL`) with an event/field-feasible projected
+direction (`PROJ`) from exact DEV-R. Both arms consumed the same materialized
+physics and audit batches, used immutable 25-update rollback blocks, and were
+judged by the same safety and preservation conjunction. PROJ used
+medium-derived competence gradients and is therefore multifidelity rather than
+label-free. Full refinement was conditional on 200 accepted screen updates.
+
+Two independent evidence tracks varied only materialized sampling streams, not
+model initialization. Streams 23/29 repeated LF4's paired interface-band versus
+global-extra comparison; streams 23/29 also repeated LF6's pure strong-physics
+continuation and were aggregated with historical stream 17. A post-shutdown
+5-by-5 phase/active-fraction threshold grid was sensitivity evidence only; the
+frozen `0.5/0.02` cell alone retained machine-voting authority.
+
 ## 4. Results
 
 ### 4.1 Interface exposure was supported before LF6
@@ -427,9 +457,40 @@ temperature ROI, and current, respectively.
 
 ![LF9 equation-routed thermal control-volume screen](figures/20260908T145333Z-lf9-equation-routed-thermal-cv.png)
 
+### 4.8 Projection did not extend the safe path; both headline effects replicated
+
+At DEV-R the thermal physics/competence gradient cosine was positive (0.816),
+whereas the earlier blocked LF8/LF9 proposals were strongly negative. Projection
+moderated unsafe high-rate thermal changes, but it did not extend the accepted
+path. CTRL retained 25 of 150 attempted updates and PROJ 25 of 147; both ended at
+the same fixed-blind ratio `0.989132`, preserved the safety conjunction, and
+still failed strict cycle-1 timing (`0.010533`). No arm reached the 200-update
+screen requirement, so selected arm was none and full refinement/control were
+`NOT_RUN_PREREQUISITE_NOT_MET`.
+
+The paired interface effect was positive in streams 17/23/29:
+`0.08984/0.04628/0.02524`, with median `0.04628` and quality preservation in
+two streams. Strong-physics continuation yielded fixed-blind ratios
+`0.01281/0.00512/0.71669`; event competence degraded in all three streams and no
+stream reached a field-event Pareto endpoint. The frozen replication rules
+therefore returned `INTERFACE_EFFECT_STREAM_REPLICATED` and
+`PHYSICS_FORGETTING_STREAM_REPLICATED`. These are sampling-stream replications,
+not independent model-seed results.
+
+Across the post-shutdown threshold audit, direct `LF_ONLY` led the mean
+symmetric-difference predicate in all 375 role-grid comparisons. Historical LF4
+stream-17 threshold cells were unavailable and were left `NA`, not counted as
+favorable. The sensitivity analysis changed no formal outcome.
+
+![LF10 threshold robustness](figures/20260909T101615Z-lf10-threshold-robustness.png)
+
+![LF10 feasible-direction screen](figures/20260909T101615Z-lf10-feasible-direction.png)
+
+![LF10 sampling-stream replication](figures/20260909T101615Z-lf10-headline-replication.png)
+
 ## 5. Discussion
 
-### 5.1 What LF6--LF9 establish
+### 5.1 What LF6--LF10 establish
 
 LF6 supplies two pieces of valid evidence. First, critical-rank endpoint cells
 were not uniquely sufficient under the matched strict rule: the rank arm reached
@@ -466,7 +527,13 @@ one-block safe prefix and temperature-limited second-block rejection. The
 frozen CV audits did not improve. Neither arm supplied a safe sustained screen
 under the matched contract; the design cannot attribute this stall to routing.
 
-### 5.2 What LF6--LF9 do not establish
+LF10 then closes the rescue branch more strongly. Event/field-feasible projection
+did not extend the ordinary Adam prefix, while additional sampling streams
+preserved the sign of the interface-exposure effect and reproduced event
+degradation under strong-physics continuation. This distinguishes a replicated
+phenomenon within one frozen benchmark from a positive method or broad theorem.
+
+### 5.2 What LF6--LF10 do not establish
 
 DEV-R's safety pass does not make it a strict carrier. Since DEV-U and DEV-R
 both missed strict competence, their difference cannot support a rank-specific
@@ -494,24 +561,33 @@ endpoint and no no-filter control. It therefore cannot attribute failure to the
 filter, prove that control-volume PINNs generally fail, or convert a one-block
 objective decrease into PINN Pareto value.
 
+LF10 does not establish projection efficacy: CTRL and PROJ retained the same
+endpoint, and the latter used medium-derived gradients. Its stream replications
+vary sampling only and cannot substitute for independent initialization seeds,
+new objects, or formal OOD evaluation. The 375 threshold comparisons concern a
+single mean symmetric-difference predicate over role-grid cells, not 375
+independent predictions or universal direct-baseline dominance.
+
 ### 5.3 Paper positioning and next evidence
 
 The maximum defensible central statement is:
 
 > In a fixed coupled electro-thermal-phase benchmark, competence-first matched
-> controls identify interface exposure as a bounded recall mechanism, reject a
-> rank-specific endpoint increment under the strict gate, and show directly
-> that large physics-residual reduction can catastrophically erase an otherwise
-> safety-valid localized event carrier.
+> controls and sampling-stream replications support interface exposure as a
+> bounded recall mechanism, while repeated strong-physics continuations show
+> that residual reduction can erase event competence. Neither smaller steps,
+> equation routing, thermal control volumes, nor event/field-feasible projection
+> opened an extended preservation-compatible refinement path.
 
 This supports an advisor draft and potentially a carefully scoped
 negative/diagnostic paper. It does not support a positive methods submission.
 LF7 strengthens the negative case against learning-rate reduction alone, LF8
-establishes an identity-correct strong-form stall, and LF9 shows that neither
-equation-routed strong nor thermal-CV arm completes a safe sustained path. The
-frozen solver-recovery sequence should now close as a negative diagnostic
-result rather than add another rescue module. Multi-seed and sparse/OOD work
-remain unjustified; stress remains sealed.
+establishes an identity-correct strong-form stall, LF9 closes the strong/CV
+screen, and LF10 shows no projection increment while replicating the two
+headline effects across sampling streams. The frozen solver-recovery sequence
+therefore closes as a replicated negative diagnostic rather than adding another
+rescue module. Formal model-seed, object, and OOD evidence remains absent;
+stress remains sealed.
 
 ## 6. Limitations
 
@@ -544,6 +620,11 @@ LF9 likewise produced only two 25-update screen prefixes. Neither arm reached
 selection, so full and control trajectories were absent by design. These
 non-triggers are not failed endpoints and cannot support mechanism attribution.
 
+LF10 likewise retained only one 25-update block in each direction arm. Full
+refinement and its control were absent because the frozen screen prerequisite
+was unmet, not because those trajectories failed. The replication aggregate is
+limited to sampling streams 17/23/29 under one model initialization and object.
+
 ## 7. Conclusion
 
 The program progressed from cold collapse to localized event recovery, a
@@ -562,8 +643,11 @@ strong-form path stalls. The conditional schedule control is therefore absent
 and matched filter attribution remains unavailable. In LF9's common
 equation-routed implementation, strong and thermal-CV arms both stalled after
 one block and neither improved the CV audits; routing itself is not attributed.
-Candidate remains none; the direct low-fidelity baseline remains stronger;
-stress remains sealed and unread.
+LF10 found no longer projected path, but it replicated the positive
+interface-exposure direction and the residual-reduction/event-forgetting
+relation across sampling streams. Candidate remains none; direct `LF_ONLY`
+leads the thresholded mean symmetric-difference comparison and remains much
+more accurate on the reported local metrics; stress remains sealed and unread.
 
 ## Data, code, and evidence availability
 
@@ -571,14 +655,3 @@ Contracts, implementations, compact artifacts, figures, and this manuscript are
 versioned in the repository. Large checkpoints, predictions, and raw logs remain
 in git-ignored run storage and are bound by size and SHA-256 in terminal
 evidence. No external publication or submission is authorized by this draft.
-
-## LF10 prospective evidence extension (active; no result)
-
-LF10 prospectively adds three bounded questions without changing the completed
-LF0--LF9 evidence: whether a linearized event/field-feasible projection opens a
-longer physics-descent path than its matched Adam control; whether LF4's
-interface-exposure effect has the same sign in two additional sampling streams;
-and whether LF6's residual-reduction/event-forgetting relation replicates in
-two additional physics streams. The official threshold remains
-`phase=0.5`, `ROI active fraction=0.02`; the auxiliary threshold grid is only a
-sensitivity analysis. All LF10 outcomes and manuscript claims remain pending.

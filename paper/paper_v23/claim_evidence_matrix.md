@@ -50,21 +50,28 @@
 > competence filtering retains one small safe prefix but stalls when the next
 > strong-form block violates temperature preservation. Equation routing and
 > thermal control-volume replacement reproduce the same temperature-limited
-> stall and do not improve the frozen conservation audits.
+> stall and do not improve the frozen conservation audits. LF10 finds no
+> extended feasible path from event/field-feasible projection, while sampling-
+> stream replication supports the interface-exposure effect and reproduces
+> physics-induced event degradation.
 
-This supports an advisor draft and a possible negative/diagnostic paper. It does
-not support a positive PINN methods submission. LF9 closes the final bounded
-rescue screen with no selected arm, full refinement, or no-filter control.
-Mechanism attribution, PINN Pareto value, and candidate status remain absent.
+This supports an advisor draft and a possible replicated negative/diagnostic
+paper. It does not support a positive PINN methods submission. LF10 closes the
+final bounded rescue screen with no selected arm or eligible full refinement.
+PINN Pareto value and candidate status remain absent.
 
-## LF10 prospective claims (active; no result)
+## LF10 terminal claims
 
-| Proposed statement | Current state | Required LF10 evidence | Allowed wording now |
+| Proposed statement | State | Direct evidence | Allowed wording |
 |---|---|---|---|
-| Event-feasible projection opens a longer safe path than matched Adam | `UNKNOWN_ACTIVE` | CTRL stalls below 200 while PROJ reaches the frozen 200-update screen and safety/physics gates | No scientific claim |
-| LF4 interface exposure is sampling-stream robust | `UNKNOWN_ACTIVE` | At least 2/3 positive paired effects, median delta-Rmin at least 0.03, no systematic quality damage | No robustness claim |
-| LF6 physics forgetting replicates across sampling streams | `UNKNOWN_ACTIVE` | At least 2/3 strong physics reductions paired with event loss and no field/event Pareto | No replication claim |
-| LF10 beats direct `LF_ONLY` | `UNKNOWN_ACTIVE` | Completed eligible refinement plus frozen post-shutdown strong-baseline gate | No gain or candidate claim |
+| Event/field-feasible projection opens a longer safe path than matched Adam | `REJECTED_IN_FROZEN_SCREEN` | CTRL and PROJ retain the same 25-update endpoint; neither reaches 200 | `NO_EXTENDED_FEASIBLE_PATH_FOUND`; no projection gain |
+| LF4 interface exposure repeats across sampling streams | `VERIFIED_BY_FROZEN_REPLICATION_RULE` | paired delta-Rmin positive 3/3, median 0.04628, quality preserved 2/3 | Sampling-stream replication within one model/object |
+| LF6 physics forgetting repeats across sampling streams | `VERIFIED_BY_FROZEN_REPLICATION_RULE` | residual gate 2/3, event degradation 3/3, field-event Pareto 0/3 | Sampling-stream replication, without unique causal attribution |
+| Direct `LF_ONLY` leads the thresholded mean symmetric-difference predicate | `VERIFIED_ROLE_GRID` | 375/375 role-grid comparisons | Predicate-specific sensitivity result, not 375 distinct predictions |
+| LF10 beats direct `LF_ONLY` or supplies a candidate | `REJECTED` | no eligible full endpoint; direct baseline ordering retained | No gain, PINN Pareto, or candidate claim |
 
 The auxiliary threshold grid can strengthen or narrow sensitivity language but
 cannot change the official machine outcome or rescue a failed official gate.
+Streams 17/23/29 are materialized sampling streams, not independent
+model-initialization seeds. Full refinement was `NOT_RUN_PREREQUISITE_NOT_MET`,
+not a failed trajectory.

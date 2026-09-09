@@ -265,16 +265,18 @@ reached the frozen 200-update selection gate. The terminal outcome is
 `LF9_NO_SAFE_MIXED_FORM_SCREEN`; no equation-routing, thermal-CV, filter, PINN
 Pareto, or direct-baseline gain is established.
 
-## Table 18. LF10 headline evidence (prospective null scaffold)
+## Table 18. LF10 terminal headline evidence
 
 | Evidence role | Matched comparison or aggregate | Result | Claim state |
 |---|---|---|---|
-| Threshold robustness | 5 x 5 phase/active-fraction grid; official cell unchanged | Pending | Not evidence |
-| Feasible direction | CTRL versus PROJ from exact DEV-R | Pending | Not evidence |
-| Interface replication | historical stream 17 plus streams 23/29 | Pending | Not evidence |
-| Physics-forgetting replication | historical stream 17 plus streams 23/29 | Pending | Not evidence |
-| Strong direct baseline | direct `LF_ONLY` in post-shutdown local evaluation | Pending LF10 comparison | Not evidence |
+| Threshold robustness | 5 x 5 phase/active-fraction grid; official cell unchanged | Formal outcomes unchanged; historical LF4 stream-17 grid `NA` | Sensitivity only |
+| Feasible direction | CTRL versus PROJ from exact DEV-R | both 25 accepted; `J/J0=0.989132`; neither reached 200 | `NO_EXTENDED_FEASIBLE_PATH_FOUND` |
+| Conditional full/control | requires a 200-update screen pass | 0 updates, `NOT_RUN_PREREQUISITE_NOT_MET` | Non-trigger, not failure |
+| Interface replication | streams 17/23/29 | delta-Rmin `0.08984/0.04628/0.02524`; 3/3 positive, 2/3 quality-preserved; median `0.04628` | `INTERFACE_EFFECT_STREAM_REPLICATED` |
+| Physics-forgetting replication | streams 17/23/29 | `J/J0=0.01281/0.00512/0.71669`; residual gate 2/3, event degradation 3/3, Pareto 0/3 | `PHYSICS_FORGETTING_STREAM_REPLICATED` |
+| Strong direct baseline | post-shutdown mean symmetric-difference predicate | direct `LF_ONLY` leads 375/375 role-grid comparisons | No neural gain or candidate |
 
-Terminal values will replace only the `Pending` cells after recovery, shutdown,
-and local adjudication. Aggregate rows will report pass counts and median/range;
-they will not be presented as independent model-initialization seeds.
+Streams 17/23/29 vary materialized sampling, not model initialization. The 375
+comparisons are role-threshold cells, not 375 distinct predictions or evidence
+that direct `LF_ONLY` leads every metric. PROJ uses medium-derived competence
+gradients and is not label-free.
