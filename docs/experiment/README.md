@@ -22,12 +22,11 @@ view. Smoke and pilot entries never vote in formal adjudication. A run's
 
 ## Current bounded campaign
 
-LF9 is complete as `LF9_NO_SAFE_MIXED_FORM_SCREEN`. Both identity-valid matched
-screens retained one 25-update safety prefix and then stalled at the minimum
-frozen learning rate on temperature preservation. Neither completed the frozen
-200-update screen; the filtered full path and schedule control were not run
-because their prerequisites were unmet. No complete internal Pareto or candidate
-exists, and no new research execution is authorized.
+LF10 is ACTIVE after `LF10_CPU_QUALIFICATION_PASS` with zero scientific updates.
+The frozen campaign runs matched CTRL/PROJ feasible-direction screens, a
+conditional selected full path, and mandatory LF4/LF6 streams 23/29 headline
+replications. Cloud execution remains reference-blind; local direct/frozen
+evaluation follows recovery and shutdown. No LF10 scientific result exists yet.
 
 ## G1 fixture boundary
 

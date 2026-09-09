@@ -1,6 +1,7 @@
 # Event Competence Before Residual Reduction: Failure Analysis and Bounded Solver Recovery for Coupled Electro-Thermal Phase-Field PINNs
 
-> Advisor-reviewable draft. Closed evidence status:
+> Advisor-reviewable draft. Active evidence status:
+> `LF10_ACTIVE_RESULTS_PENDING`; last completed result:
 > `LF9_NO_SAFE_MIXED_FORM_SCREEN`.
 > All neural results are single-seed nominal development evidence. No candidate,
 > positive PINN method, strong-baseline gain, OOD/stress result, or submission
@@ -570,3 +571,14 @@ Contracts, implementations, compact artifacts, figures, and this manuscript are
 versioned in the repository. Large checkpoints, predictions, and raw logs remain
 in git-ignored run storage and are bound by size and SHA-256 in terminal
 evidence. No external publication or submission is authorized by this draft.
+
+## LF10 prospective evidence extension (active; no result)
+
+LF10 prospectively adds three bounded questions without changing the completed
+LF0--LF9 evidence: whether a linearized event/field-feasible projection opens a
+longer physics-descent path than its matched Adam control; whether LF4's
+interface-exposure effect has the same sign in two additional sampling streams;
+and whether LF6's residual-reduction/event-forgetting relation replicates in
+two additional physics streams. The official threshold remains
+`phase=0.5`, `ROI active fraction=0.02`; the auxiliary threshold grid is only a
+sensitivity analysis. All LF10 outcomes and manuscript claims remain pending.

@@ -1,6 +1,8 @@
 # PHK-V2.3 event-competence recovery advisor draft
 
-Status: `LF9_NO_SAFE_MIXED_FORM_SCREEN`
+Status: `LF10_ACTIVE_RESULTS_PENDING`
+
+Last completed evidence: `LF9_NO_SAFE_MIXED_FORM_SCREEN`.
 
 This package presents PHK-V2.2R--LF8 as a bounded failure-analysis and
 competence-first solver-recovery study. The strongest positive mechanism result
@@ -34,3 +36,12 @@ the unique next is `FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE`. The
 package does not claim equation-routing or thermal-CV gain, successful PINN
 Pareto, strong-baseline improvement, multi-seed reliability, sparse/OOD or
 stress performance, experimental validation, SOTA, or submission readiness.
+
+## LF10 active extension
+
+LF10 is an authorized prospective extension that will test one matched
+event-competence feasible-direction projection and replicate the two existing
+headline effects across additional sampling streams. Its terminal outcome,
+three figures, aggregate table, and claim changes are currently null. Nothing
+in this active scaffold is scientific evidence, and the LF9 statements above
+remain the latest completed results until LF10 terminal evidence is bound.

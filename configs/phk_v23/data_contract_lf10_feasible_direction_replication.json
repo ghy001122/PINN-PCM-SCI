@@ -1,0 +1,33 @@
+{
+  "schema_id": "phk-v23-lf10-data-contract-v1",
+  "contract_id": "PHK_V23_LF10_FEASIBLE_DIRECTION_REPLICATION_DATA",
+  "program_contract": "configs/phk_v23/program_contract_lf10_feasible_direction_replication.json",
+  "effective_date": "2026-09-09",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_LEDGER_MATERIALIZATION",
+  "training_source": {"path": "outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/result-intent-04.npz", "sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F", "role": "PREMATERIALIZED_AUDIT_AND_INTERFACE_REPLICATION_SOURCE"},
+  "medium": {"path": "outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/result-intent-04.npz", "sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F", "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515"},
+  "LF3_T0": {"checkpoint_path": "outputs/runs/20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74/checkpoint-t0-step-1200.pt", "checkpoint_sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA", "prediction_sha256": "485F0D09C65BDDCE3AEA212B337B85CFB08CD81E788E9F6AF81083871611819D"},
+  "DEV_R": {"checkpoint_path": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/dev_r/checkpoint.pt", "checkpoint_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499", "prediction_sha256": "5F20FB6ACBFE7D627A1C73D0E707A102F0872E8BF09ED83CFFD30397E4F350EF"},
+  "strong_ledger": {"path": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cpu/materialized_ledger.npz", "manifest_path": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cpu/materialized_ledger_manifest.json", "file_sha256": "29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801", "manifest_sha256": "3CFA268CFB22CF225ABB92BFD7F9F00353634AF7AFEE7AA607EC59FE4F4C8F90", "semantic_sha256": "0E2F680D33C4489F6092CB5D01E87483F7ECDA8290CD3E2C24EBDD06B3DA2B7F", "physics_1200_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53", "fixed_blind_pool_sha256": "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF"},
+  "LF10_ledger": {
+    "path": "outputs/runs/20260909T101615Z-phk-v23-lf10-feasible-direction-replication/cpu/materialized_lf10_ledger.npz",
+    "manifest_path": "outputs/runs/20260909T101615Z-phk-v23-lf10-feasible-direction-replication/cpu/materialized_lf10_ledger_manifest.json",
+    "manifest_schema": "phk-v23-lf10-materialized-ledger-manifest-v1",
+    "identity_authority": "LF10_CPU_QUALIFICATION_ARTIFACT",
+    "runtime_sampling": false,
+    "direction_audit_steps": 1200,
+    "audit_baselines": {"array": "audit_baselines", "shape": [1200, 4], "dtype": "FLOAT64", "columns": ["CV", "CT", "Cphase", "Ctopology_smooth_surrogate"], "semantics": "EXACT_DEV_R_SAME_BATCH_SAME_ACCEPTED_STEP_OBJECTIVES", "included_in_array_and_semantic_hashes": true},
+    "interface_streams": [23, 29],
+    "forgetting_streams": [23, 29],
+    "seed_domain_mapping": {
+      "audit": [17701, 17702, 17703, 17704, 17705, 17706, 17707, 17708, 17709, 17710, 17711, 17712, 17713, 17714],
+      "interface_base_formula": "STREAM_SEED_TIMES_1000_PLUS_101_THROUGH_114",
+      "interface_global_formula": "STREAM_SEED_TIMES_1000_PLUS_401",
+      "interface_band_formula": "STREAM_SEED_TIMES_1000_PLUS_411_THROUGH_414",
+      "physics_seed": "STREAM_SEED"
+    }
+  },
+  "DEV_R_baseline": {"fixed_blind_strong_J0": 4.9278721846990505, "weighted_errors": {"potential": 0.0000714767714198432, "temperature": 0.0007111887418509096, "phase": 0.0011832624059166495}, "topology_weighted_loss": 0.0046144880306589605},
+  "local_evaluation_only": {"fine_sha256": "7343FC4AB6648F82CFAD3E517A748034D8E636959BC41D733195C477C1DCFA53", "extra_sha256": "0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE", "direct_LF_ONLY_prediction_sha256": "47B11E9DF7B95ED6CA282D22E4A8852775194FA1471D115310F7DCA7BCB447D0"},
+  "cloud_boundary": {"allowed": ["MEDIUM", "LF3_T0", "DEV_R", "STRONG_LEDGER", "LF10_LEDGER", "CONTRACTS", "CPU_QUALIFICATION", "RUNTIME"], "forbidden": ["FINE", "EXTRA_FINE", "DIRECT_LF_ONLY", "FROZEN_LOCAL_EVALUATOR", "STRESS", "FORMAL_OOD"]}
+}

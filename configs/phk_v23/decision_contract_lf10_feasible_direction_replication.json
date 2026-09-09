@@ -1,0 +1,20 @@
+{
+  "schema_id": "phk-v23-lf10-decision-contract-v1",
+  "contract_id": "PHK_V23_LF10_FEASIBLE_DIRECTION_REPLICATION_DECISION",
+  "program_contract": "configs/phk_v23/program_contract_lf10_feasible_direction_replication.json",
+  "method_contract": "configs/phk_v23/method_contract_lf10_feasible_direction_replication.json",
+  "data_contract": "configs/phk_v23/data_contract_lf10_feasible_direction_replication.json",
+  "effective_date": "2026-09-09",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "projection_bounds": {"CV": 1.20, "CT": 1.05, "Cphase": 1.05, "Ctopology_smooth_surrogate": 1.05, "ratio_denominator": "EXACT_DEV_R_ON_SAME_AUDIT_BATCH_AND_ACCEPTED_STEP"},
+  "block_safety": {"finite": true, "phase_range": [-1e-10, 1.0000000001], "potential_maximum_excess": 1e-6, "potential_violation_fraction": 0.0, "two_cycle_events": true, "recall_each_minimum": 0.90, "precision_each_minimum": 0.80, "mass_each": [0.80, 1.20], "timing_cycle_1_maximum": 0.010533333334333338, "timing_cycle_2_maximum": 0.005000000000999893, "roi_peak_minimum": 0.02, "full_peak_maximum": 0.45, "outside_roi_peak_maximum": 0.10, "recovery_minimum": 0.70, "relative_DEV_R_maximum": {"potential": 1.20, "temperature": 1.05, "phase": 1.05, "topology_discrete_full_medium": 1.05}, "fixed_blind_J": "STRICT_DECREASE"},
+  "screen_go": {"accepted_updates": 200, "safety": true, "fixed_blind_J_ratio_maximum": 0.95},
+  "direction_adjudication": {"BOTH_COMPLETE": "PROJECTION_NOT_LOAD_BEARING", "CTRL_STALL_PROJ_COMPLETE": "FEASIBLE_DIRECTION_PROJECTION_SUPPORTED", "CTRL_COMPLETE_PROJ_STALL": "PROJECTION_HARMFUL_OR_UNNECESSARY", "BOTH_STALL": "NO_EXTENDED_FEASIBLE_PATH_FOUND", "ANY_IDENTITY_INVALID": "MATCHED_DIRECTION_SCREEN_IDENTITY_INVALID"},
+  "full_internal_pareto": {"accepted_updates": 1200, "strict_timing_each_maximum": 0.005, "fixed_blind_J_ratio_maximum": 0.50, "frozen_evaluator_competent": true, "phase_noninferiority": "PHK_V21_FROZEN_FLOOR_OR_RATIO", "temperature_maximum": "MAX_1_10_TIMES_DEV_R_OR_0_05", "current_maximum": "MAX_1_10_TIMES_DEV_R_OR_0_15"},
+  "interface_replication": {"positive_streams_minimum": 2, "delta_Rmin_median_minimum": 0.03, "quality_preserved_streams_minimum": 2, "per_stream_quality": "LF4_PRECISION_MASS_TIMING_LOCALITY_RECOVERY_PRESERVATION_AND_PHASE_MSE_M_LE_1_10_TIMES_G", "pass": "INTERFACE_EFFECT_STREAM_REPLICATED", "fail": "INTERFACE_EFFECT_NOT_ROBUST_ACROSS_STREAMS"},
+  "forgetting_replication": {"J_ratio_at_most_0_50_streams_minimum": 2, "event_missing_or_min_recall_at_most_0_50_streams_minimum": 2, "field_event_pareto_forbidden": true, "pass": "PHYSICS_FORGETTING_STREAM_REPLICATED", "fail": "PHYSICS_FORGETTING_STREAM_DEPENDENT"},
+  "primary_outcomes": ["LF10_INPUT_OR_ENGINEERING_BLOCKED", "LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED", "LF10_SAFE_PATH_EXTENDED_FULL_PARETO_NOT_REACHED", "LF10_WITHIN_ARCHITECTURE_PINN_PARETO_DIRECT_BASELINE_GAP", "LF10_PROVISIONAL_SINGLE_SEED_DENSE_SIGNAL", "LF10_LOCAL_EVALUATION_OR_RECOVERY_BLOCKED"],
+  "direct_paper_value": "FULL_ENDPOINT_MUST_PASS_PHASE_NI_T_CURRENT_POTENTIAL_EVENT_RECOVERY_RELATIVE_TO_DIRECT_LF_ONLY",
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD",
+  "completion_does_not_authorize_next_research": true
+}

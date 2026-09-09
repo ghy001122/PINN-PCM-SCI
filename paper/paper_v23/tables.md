@@ -264,3 +264,17 @@ back the second. Neither conservation audit improved over DEV-R, and neither arm
 reached the frozen 200-update selection gate. The terminal outcome is
 `LF9_NO_SAFE_MIXED_FORM_SCREEN`; no equation-routing, thermal-CV, filter, PINN
 Pareto, or direct-baseline gain is established.
+
+## Table 18. LF10 headline evidence (prospective null scaffold)
+
+| Evidence role | Matched comparison or aggregate | Result | Claim state |
+|---|---|---|---|
+| Threshold robustness | 5 x 5 phase/active-fraction grid; official cell unchanged | Pending | Not evidence |
+| Feasible direction | CTRL versus PROJ from exact DEV-R | Pending | Not evidence |
+| Interface replication | historical stream 17 plus streams 23/29 | Pending | Not evidence |
+| Physics-forgetting replication | historical stream 17 plus streams 23/29 | Pending | Not evidence |
+| Strong direct baseline | direct `LF_ONLY` in post-shutdown local evaluation | Pending LF10 comparison | Not evidence |
+
+Terminal values will replace only the `Pending` cells after recovery, shutdown,
+and local adjudication. Aggregate rows will report pass counts and median/range;
+they will not be presented as independent model-initialization seeds.

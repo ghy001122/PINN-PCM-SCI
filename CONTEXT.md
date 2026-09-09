@@ -61,6 +61,8 @@ ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-sta
 
 ## 权威路由
 
+LF10 is active under [ADR 0073](docs/adr/0073-activate-phk-v23-lf10-feasible-direction-replication.md), [CPU qualification](docs/experiment/2026-09-09-phk-v23-lf10-cpu-qualification.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md), and the [live plan](docs/plans/NEXT_ACTIONS.md). It is a bounded feasible-direction and evidence-replication campaign; no LF10 scientific result exists before GPU execution and post-shutdown adjudication. The explicit LF10 authorization supersedes LF9's stop recommendation only for this named campaign and does not rewrite LF9 evidence.
+
 LF9 is complete under [ADR 0072](docs/adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md), [terminal closeout](docs/experiment/2026-09-08-phk-v23-lf9-terminal-closeout.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md), and the [live plan](docs/plans/NEXT_ACTIONS.md). No new research execution is authorized. LF8 and earlier terminal evidence remain unchanged.
 
 # LF9 terminal context (2026-09-09)

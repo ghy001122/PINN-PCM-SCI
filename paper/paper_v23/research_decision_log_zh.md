@@ -116,3 +116,12 @@ strong residual 换成时空 enthalpy control-volume balance。
 温度阻塞，且 CV audit 不改善。不得写控制体积 PINN 一般无效、filter attribution、
 PINN Pareto、强基线增益或原创原语。唯一下一步是停止继续救援并收口负面 solver
 diagnostic：`FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE`。
+
+## LF10 激活边界（尚无科学结果）
+
+LF10 不改写 LF0--LF9 终局，只新增三项有界证据：正式阈值周围的敏感性分析、
+普通 Adam 与事件/场可行方向投影的 matched screen，以及 LF4/LF6 两项 headline
+结果在新增 sampling streams 23/29 上的复现。当前三项 outcome、candidate、主图和
+主表数值均为空；不得把实现、测试、CPU 几何或 paper 占位写成方法成功。若投影失败
+但复现成立，论文转为 replicated failure analysis；若复现不成立，则主动收紧为
+single-benchmark case study。

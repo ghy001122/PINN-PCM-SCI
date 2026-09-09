@@ -1,0 +1,964 @@
+{
+  "analytic_qp": {
+    "actual_projection": [
+      0.5,
+      0.25
+    ],
+    "expected_projection": [
+      0.5,
+      0.25
+    ],
+    "matches_expected": true,
+    "projection_feasible": true,
+    "zero_update_feasible": true
+  },
+  "audit_baselines": {
+    "columns": [
+      "CV",
+      "CT",
+      "Cphase",
+      "Ctopology_smooth_surrogate"
+    ],
+    "semantics": "EXACT_DEV_R_SAME_PREMATERIALIZED_AUDIT_BATCH"
+  },
+  "checks": {
+    "actual_direction_geometry_recorded": true,
+    "analytic_qp_projection_correct": true,
+    "analytic_qp_zero_update_feasible": true,
+    "audit_stream_1200": true,
+    "dev_r_same_batch_zero_update_feasible": true,
+    "fine_extra_direct_stress_unread": true,
+    "input_hashes": true,
+    "interface_streams_23_29": true,
+    "ledger_arrays_and_hashes": true,
+    "partition": true,
+    "physics_streams_23_29": true,
+    "scientific_optimizer_updates_zero": true
+  },
+  "contracts": {
+    "data": {
+      "path": "configs/phk_v23/data_contract_lf10_feasible_direction_replication.json",
+      "sha256": "3CA89A0D89DA3BBA078473C5B8B6EC818FABAA72DFE314C9B8701C1897ACB327"
+    },
+    "decision": {
+      "path": "configs/phk_v23/decision_contract_lf10_feasible_direction_replication.json",
+      "sha256": "3E0057EB99FC667769B42851D33719ADCCD3F4CA5A4138C3922C3969663713CE"
+    },
+    "method": {
+      "path": "configs/phk_v23/method_contract_lf10_feasible_direction_replication.json",
+      "sha256": "61D189D3C778F67968B0C27AEF7775E7B8644C28E45FC9AFC99D42B03C8A584E"
+    },
+    "program": {
+      "path": "configs/phk_v23/program_contract_lf10_feasible_direction_replication.json",
+      "sha256": "1F0D632DAAF4B63A42009D989A4DCD3A476B81A25849BE61F9A662B2196A7382"
+    }
+  },
+  "created_at_utc": "2026-09-09T11:30:18.495812+00:00",
+  "dev_r_full_medium_audit": {
+    "all_values_finite": true,
+    "event_metrics": {
+      "cycle_1": {
+        "event_time_absolute_error": 0.010533333333333339,
+        "hard_active_mass_ratio": 1.0231958762886597,
+        "hard_precision": 0.8967254408060453,
+        "hard_recall": 0.9175257731958762,
+        "predicted_active_target_mass": 0.0007443749999999999,
+        "predicted_event_time": 0.22726666666666667,
+        "teacher_active_target_mass": 0.0007275,
+        "teacher_event_time": 0.2378,
+        "true_positive_target_mass": 0.0006674999999999999
+      },
+      "cycle_2": {
+        "event_time_absolute_error": 0.0018000000000002458,
+        "hard_active_mass_ratio": 1.0027223230490017,
+        "hard_precision": 0.920361990950226,
+        "hard_recall": 0.9228675136116149,
+        "predicted_active_target_mass": 0.0006906249999999997,
+        "predicted_event_time": 1.4924,
+        "teacher_active_target_mass": 0.0006887499999999998,
+        "teacher_event_time": 1.4942000000000002,
+        "true_positive_target_mass": 0.0006356249999999996
+      }
+    },
+    "event_topology_hard_guard": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.22726666666666667,
+          "peak_full_domain_fraction": 0.0228125,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07541322314049587,
+          "peak_time_index": 82,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.4924,
+          "peak_full_domain_fraction": 0.0221875,
+          "peak_outside_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07334710743801653,
+          "peak_time_index": 330,
+          "pre_roi_fraction": 0.0,
+          "recovery_fraction": 1.0
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+    "phase_maximum": 0.9910522424050187,
+    "phase_range": {
+      "maximum": 0.9910522424050187,
+      "minimum": 2.7717232857562843e-09,
+      "passed": true
+    },
+    "potential_maximum_principle": {
+      "by_window": {
+        "W1": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W2": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W3": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        },
+        "W4": {
+          "absolute_tolerance": 1e-06,
+          "all_pointwise_values_finite": true,
+          "maximum_absolute_excess": 0.0,
+          "passed": true,
+          "violation_fraction": 0.0
+        }
+      },
+      "global": {
+        "absolute_tolerance": 1e-06,
+        "all_pointwise_values_finite": true,
+        "maximum_absolute_excess": 0.0,
+        "passed": true,
+        "violation_fraction": 0.0
+      },
+      "passed": true
+    },
+    "target_measure_identity": "TRAPEZOID_TIME_TIMES_CELL_VOLUME",
+    "temperature_maximum": 0.8050099454973638,
+    "topology_weighted_loss": 0.004614488030658961,
+    "two_cycle_events": true,
+    "weighted_errors": {
+      "phase": 0.0011832624059166495,
+      "potential": 7.14767714198432e-05,
+      "temperature": 0.0007111887418509094
+    }
+  },
+  "gate_outcome": "LF10_CPU_QUALIFICATION_PASS",
+  "gpu_execution_authorized_by_cpu_gate": true,
+  "gpu_used": false,
+  "gradient_geometry": {
+    "DEV_R": {
+      "current_ratios": {
+        "CT": 1.0,
+        "CV": 1.0,
+        "Cphase": 1.0000000000000002,
+        "Ctopology_smooth_surrogate": 1.0
+      },
+      "geometry": {
+        "phase": {
+          "active_set": [],
+          "constraint_rhs": {},
+          "distance": 0.0,
+          "physics_constraint_cosine": {},
+          "physics_gradient_norm": 0.0,
+          "projected_changes": {
+            "Cphase": 0.0,
+            "Ctopology_smooth_surrogate": 0.0
+          },
+          "projected_norm": 0.0,
+          "proposal_changes": {
+            "Cphase": 0.0,
+            "Ctopology_smooth_surrogate": 0.0
+          },
+          "proposal_norm": 0.0
+        },
+        "potential": {
+          "active_set": [],
+          "constraint_rhs": {
+            "CV": 0.007999999999999998
+          },
+          "distance": 0.0,
+          "physics_constraint_cosine": {
+            "CV": 0.786665775303044
+          },
+          "physics_gradient_norm": 27.840371601140244,
+          "projected_changes": {
+            "CV": -0.015959025164554674
+          },
+          "projected_norm": 0.014394934248242607,
+          "proposal_changes": {
+            "CV": -0.015959025164554674
+          },
+          "proposal_norm": 0.014394934248242607
+        },
+        "temperature": {
+          "active_set": [],
+          "constraint_rhs": {
+            "CT": 0.0020000000000000018
+          },
+          "distance": 0.0,
+          "physics_constraint_cosine": {
+            "CT": 0.8157501997995793
+          },
+          "physics_gradient_norm": 12.192373904317988,
+          "projected_changes": {
+            "CT": -0.04004910727994109
+          },
+          "projected_norm": 0.01439188564109367,
+          "proposal_changes": {
+            "CT": -0.04004910727994109
+          },
+          "proposal_norm": 0.01439188564109367
+        }
+      },
+      "physics_components": {
+        "boundary:bottom:bc_electric_insulating_bottom": 0.643299162450395,
+        "boundary:bottom:bc_phase_no_flux": 8.522252231980922,
+        "boundary:bottom:bc_potential_heater": 0.0016065224375898166,
+        "boundary:bottom:bc_temperature_robin": 0.6523155390412878,
+        "boundary:left:bc_electric_insulating_side": 0.0010309940281228048,
+        "boundary:left:bc_phase_no_flux": 3.3971382922834147e-06,
+        "boundary:left:bc_temperature_robin": 0.0017185405796205934,
+        "boundary:right:bc_electric_insulating_side": 0.001543997946477089,
+        "boundary:right:bc_phase_no_flux": 1.739636072416416e-05,
+        "boundary:right:bc_temperature_robin": 0.002062033372286773,
+        "boundary:top:bc_phase_no_flux": 2.8350569582737256e-05,
+        "boundary:top:bc_potential_top": 0.0,
+        "boundary:top:bc_temperature_top": 0.0,
+        "boundary_loss": 0.7558367819927153,
+        "initial_loss": 3.587434611398389e-33,
+        "pde_loss": 3.6248907159536716,
+        "physics_total": 7.404074625917248
+      },
+      "projected_feasible": true,
+      "zero_update_feasible": true
+    },
+    "LF8_PREFIX": {
+      "current_ratios": {
+        "CT": 1.0447393736179444,
+        "CV": 0.9840799132222544,
+        "Cphase": 1.0000000000000002,
+        "Ctopology_smooth_surrogate": 1.0
+      },
+      "geometry": {
+        "phase": {
+          "active_set": [],
+          "constraint_rhs": {},
+          "distance": 0.0,
+          "physics_constraint_cosine": {},
+          "physics_gradient_norm": 0.0,
+          "projected_changes": {
+            "Cphase": 0.0,
+            "Ctopology_smooth_surrogate": 0.0
+          },
+          "projected_norm": 0.0,
+          "proposal_changes": {
+            "Cphase": 0.0,
+            "Ctopology_smooth_surrogate": 0.0
+          },
+          "proposal_norm": 0.0
+        },
+        "potential": {
+          "active_set": [],
+          "constraint_rhs": {
+            "CV": 0.008636803471109821
+          },
+          "distance": 0.0,
+          "physics_constraint_cosine": {
+            "CV": 0.550637098939867
+          },
+          "physics_gradient_norm": 26.261113462652713,
+          "projected_changes": {
+            "CV": -0.004366844303502075
+          },
+          "projected_norm": 0.014394860323141764,
+          "proposal_changes": {
+            "CV": -0.004366844303502075
+          },
+          "proposal_norm": 0.014394860323141764
+        },
+        "temperature": {
+          "active_set": [
+            0
+          ],
+          "constraint_rhs": {
+            "CT": 0.00021042505528222398
+          },
+          "distance": 0.003916417447305112,
+          "physics_constraint_cosine": {
+            "CT": -0.8533343471756171
+          },
+          "physics_gradient_norm": 11.552521132131913,
+          "projected_changes": {
+            "CT": 0.00021042505528242206
+          },
+          "projected_norm": 0.013847005370344462,
+          "proposal_changes": {
+            "CT": 0.09514230200645583
+          },
+          "proposal_norm": 0.014392563389065582
+        }
+      },
+      "physics_components": {
+        "boundary:bottom:bc_electric_insulating_bottom": 0.6156590520351845,
+        "boundary:bottom:bc_phase_no_flux": 8.522252231980922,
+        "boundary:bottom:bc_potential_heater": 0.0015862105892504995,
+        "boundary:bottom:bc_temperature_robin": 0.6161343173926631,
+        "boundary:left:bc_electric_insulating_side": 0.001103689840302217,
+        "boundary:left:bc_phase_no_flux": 3.3971382922834147e-06,
+        "boundary:left:bc_temperature_robin": 0.001689288514627206,
+        "boundary:right:bc_electric_insulating_side": 0.001581831430520059,
+        "boundary:right:bc_phase_no_flux": 1.739636072416416e-05,
+        "boundary:right:bc_temperature_robin": 0.0017791830851172311,
+        "boundary:top:bc_phase_no_flux": 2.8350569582737256e-05,
+        "boundary:top:bc_potential_top": 0.0,
+        "boundary:top:bc_temperature_top": 0.0,
+        "boundary_loss": 0.750910380687476,
+        "initial_loss": 3.587434611398389e-33,
+        "pde_loss": 3.397633021111511,
+        "physics_total": 7.152184924548891
+      },
+      "projected_feasible": true,
+      "zero_update_feasible": true
+    },
+    "LF9_ER_CV_PREFIX": {
+      "current_ratios": {
+        "CT": 1.0103061292006756,
+        "CV": 0.9840691858302572,
+        "Cphase": 1.0000000000000002,
+        "Ctopology_smooth_surrogate": 1.0
+      },
+      "geometry": {
+        "phase": {
+          "active_set": [],
+          "constraint_rhs": {},
+          "distance": 0.0,
+          "physics_constraint_cosine": {},
+          "physics_gradient_norm": 0.0,
+          "projected_changes": {
+            "Cphase": 0.0,
+            "Ctopology_smooth_surrogate": 0.0
+          },
+          "projected_norm": 0.0,
+          "proposal_changes": {
+            "Cphase": 0.0,
+            "Ctopology_smooth_surrogate": 0.0
+          },
+          "proposal_norm": 0.0
+        },
+        "potential": {
+          "active_set": [],
+          "constraint_rhs": {
+            "CV": 0.008637232566789712
+          },
+          "distance": 0.0,
+          "physics_constraint_cosine": {
+            "CV": 0.5508430365415204
+          },
+          "physics_gradient_norm": 26.452393948166666,
+          "projected_changes": {
+            "CV": -0.004424341635311031
+          },
+          "projected_norm": 0.014394526882064376,
+          "proposal_changes": {
+            "CV": -0.004424341635311031
+          },
+          "proposal_norm": 0.014394526882064376
+        },
+        "temperature": {
+          "active_set": [
+            0
+          ],
+          "constraint_rhs": {
+            "CT": 0.0015877548319729762
+          },
+          "distance": 0.0029655910595081866,
+          "physics_constraint_cosine": {
+            "CT": -0.7560809285578964
+          },
+          "physics_gradient_norm": 11.525617676857413,
+          "projected_changes": {
+            "CT": 0.001587754831972904
+          },
+          "projected_norm": 0.014057891143560305,
+          "proposal_changes": {
+            "CT": 0.039703004575943605
+          },
+          "proposal_norm": 0.014392767360835303
+        }
+      },
+      "physics_components": {
+        "boundary:bottom:bc_electric_insulating_bottom": 0.6188010603046266,
+        "boundary:bottom:bc_phase_no_flux": 8.522252231980922,
+        "boundary:bottom:bc_potential_heater": 0.001585997114158481,
+        "boundary:bottom:bc_temperature_robin": 0.606635996933872,
+        "boundary:left:bc_electric_insulating_side": 0.001103736059422446,
+        "boundary:left:bc_phase_no_flux": 3.3971382922834147e-06,
+        "boundary:left:bc_temperature_robin": 0.0016810517798483094,
+        "boundary:right:bc_electric_insulating_side": 0.0015832416961574255,
+        "boundary:right:bc_phase_no_flux": 1.739636072416416e-05,
+        "boundary:right:bc_temperature_robin": 0.002028231886397251,
+        "boundary:top:bc_phase_no_flux": 2.8350569582737256e-05,
+        "boundary:top:bc_potential_top": 0.0,
+        "boundary:top:bc_temperature_top": 0.0,
+        "boundary_loss": 0.750440053217231,
+        "initial_loss": 3.587434611398389e-33,
+        "pde_loss": 3.4210926474421477,
+        "physics_total": 7.173292913528302
+      },
+      "projected_feasible": true,
+      "zero_update_feasible": true
+    },
+    "LF9_ER_S_PREFIX": {
+      "current_ratios": {
+        "CT": 1.0107781035510386,
+        "CV": 0.9840686784543063,
+        "Cphase": 1.0000000000000002,
+        "Ctopology_smooth_surrogate": 1.0
+      },
+      "geometry": {
+        "phase": {
+          "active_set": [],
+          "constraint_rhs": {},
+          "distance": 0.0,
+          "physics_constraint_cosine": {},
+          "physics_gradient_norm": 0.0,
+          "projected_changes": {
+            "Cphase": 0.0,
+            "Ctopology_smooth_surrogate": 0.0
+          },
+          "projected_norm": 0.0,
+          "proposal_changes": {
+            "Cphase": 0.0,
+            "Ctopology_smooth_surrogate": 0.0
+          },
+          "proposal_norm": 0.0
+        },
+        "potential": {
+          "active_set": [],
+          "constraint_rhs": {
+            "CV": 0.008637252861827744
+          },
+          "distance": 0.0,
+          "physics_constraint_cosine": {
+            "CV": 0.5508890481021539
+          },
+          "physics_gradient_norm": 26.459438486021853,
+          "projected_changes": {
+            "CV": -0.004442343198731687
+          },
+          "projected_norm": 0.014394549214308518,
+          "proposal_changes": {
+            "CV": -0.004442343198731687
+          },
+          "proposal_norm": 0.014394549214308518
+        },
+        "temperature": {
+          "active_set": [
+            0
+          ],
+          "constraint_rhs": {
+            "CT": 0.0015688758579584584
+          },
+          "distance": 0.002907780755253602,
+          "physics_constraint_cosine": {
+            "CT": -0.7478271883818493
+          },
+          "physics_gradient_norm": 11.52693386516369,
+          "projected_changes": {
+            "CT": 0.0015688758579584568
+          },
+          "projected_norm": 0.014070776289865316,
+          "proposal_changes": {
+            "CT": 0.03852178928414077
+          },
+          "proposal_norm": 0.01439304980463746
+        }
+      },
+      "physics_components": {
+        "boundary:bottom:bc_electric_insulating_bottom": 0.6188564279108094,
+        "boundary:bottom:bc_phase_no_flux": 8.522252231980922,
+        "boundary:bottom:bc_potential_heater": 0.001585999434939282,
+        "boundary:bottom:bc_temperature_robin": 0.6065250766466312,
+        "boundary:left:bc_electric_insulating_side": 0.0011037325933155896,
+        "boundary:left:bc_phase_no_flux": 3.3971382922834147e-06,
+        "boundary:left:bc_temperature_robin": 0.0016790108406590785,
+        "boundary:right:bc_electric_insulating_side": 0.0015832832272060057,
+        "boundary:right:bc_phase_no_flux": 1.739636072416416e-05,
+        "boundary:right:bc_temperature_robin": 0.002037390712335424,
+        "boundary:top:bc_phase_no_flux": 2.8350569582737256e-05,
+        "boundary:top:bc_potential_top": 0.0,
+        "boundary:top:bc_temperature_top": 0.0,
+        "boundary_loss": 0.7504363305704167,
+        "initial_loss": 3.587434611398389e-33,
+        "pde_loss": 3.421907880308464,
+        "physics_total": 7.174089533160547
+      },
+      "projected_feasible": true,
+      "zero_update_feasible": true
+    }
+  },
+  "input_bindings": {
+    "dev_r": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260906T065434Z-phk-v23-lf6-event-frontier-pilot\\dev_r\\checkpoint.pt",
+      "sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499"
+    },
+    "lf3_t0": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74\\checkpoint-t0-step-1200.pt",
+      "sha256": "4A679E54A4819A9D30CF55C6396C37129B9801BC635A8BD7EB3883F8F3B66EDA"
+    },
+    "lf8_prefix": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260908T050343Z-phk-v23-lf8-competence-filter-completion-pilot\\p0-fstar\\valid-prefix.pt",
+      "sha256": "765BA83BE9E1CB22B7E5B32C61551575D8FBE58EE05AD6BF5EB583AE53A7ABCD"
+    },
+    "lf9_er_cv_prefix": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv\\gpu\\lf9-run-bc3950a\\er-cv\\valid-prefix.pt",
+      "sha256": "4890CE3B7D9BEE24E990B54C308AF2B98E9B98AC50226BB35FA724D2134DBFB1"
+    },
+    "lf9_er_s_prefix": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260908T145333Z-phk-v23-lf9-equation-routed-thermal-cv\\gpu\\lf9-run-bc3950a\\er-s\\valid-prefix.pt",
+      "sha256": "C3F993E66D1A2898A31C90C09DA944F3DD6D34C044B0604C7BE147F8FEEE7F6F"
+    },
+    "medium": {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260828T-phk-v21-s1-q-04-nominal-medium\\result-intent-04.npz",
+      "sha256": "18411D8066FACB31570774374A699ECE867981752ED9FEE25C34DF30D5D8802F"
+    }
+  },
+  "ledger": {
+    "arrays": {
+      "audit_baselines": {
+        "dtype": "<f8",
+        "sha256": "B49D0D5CF98A4A62472DB461674B23A0FE33B2FB8E5278B35351B3FDF5BA01CB",
+        "shape": [
+          1200,
+          4
+        ]
+      },
+      "audit_batch_sha256": {
+        "dtype": "|S64",
+        "sha256": "6E918F91CDD9D040A44E2D0595D73FF330439AF204EFEA6FC2D47B49F20AA51C",
+        "shape": [
+          1200
+        ]
+      },
+      "audit_coordinates": {
+        "dtype": "<f8",
+        "sha256": "381BF0A4731DE19224900D51230DEA2EEB6BDF5407BD2A37F38353112DED0972",
+        "shape": [
+          1200,
+          1024,
+          3
+        ]
+      },
+      "audit_targets": {
+        "dtype": "<f8",
+        "sha256": "35E5DE5BB5344515A98171A1304A94C1BDB0F126230541486D12D5DE5539088A",
+        "shape": [
+          1200,
+          1024,
+          3
+        ]
+      },
+      "interface_23_band_coordinates": {
+        "dtype": "<f8",
+        "sha256": "7C35FDE098CE6616B344FA096D352DEE60B126AD803CA43DBC58F366B75C2F97",
+        "shape": [
+          400,
+          256,
+          3
+        ]
+      },
+      "interface_23_band_sha256": {
+        "dtype": "|S64",
+        "sha256": "DDC4841A340ADC6362186EFAC642FC7E291B88E4130B3907A44D054042ECF364",
+        "shape": [
+          400
+        ]
+      },
+      "interface_23_band_targets": {
+        "dtype": "<f8",
+        "sha256": "9DE9AE2EB4B3FBFF49DB403AC94169E4F5B7DDF2DF43B7C3EB44A46C3481F953",
+        "shape": [
+          400,
+          256,
+          3
+        ]
+      },
+      "interface_23_base_coordinates": {
+        "dtype": "<f8",
+        "sha256": "A7DEEB64726463468DF8422F454BD5AA4E01E03CF9AE69470359D0991B65FA0B",
+        "shape": [
+          400,
+          1024,
+          3
+        ]
+      },
+      "interface_23_base_sha256": {
+        "dtype": "|S64",
+        "sha256": "8CD71E8222AF289BA16E39369F617DC8B85381388A1682FC1968C0A0E9E7809C",
+        "shape": [
+          400
+        ]
+      },
+      "interface_23_base_targets": {
+        "dtype": "<f8",
+        "sha256": "A30FB5F301228B907720900289C9AAFF6DF88A535EC8E6EA1A4D9F7F5946AD67",
+        "shape": [
+          400,
+          1024,
+          3
+        ]
+      },
+      "interface_23_global_coordinates": {
+        "dtype": "<f8",
+        "sha256": "81C5F2AFE5B24FF2961782663E8D54FEF3F274941BD2180E4C362CF8A25F9BA4",
+        "shape": [
+          400,
+          256,
+          3
+        ]
+      },
+      "interface_23_global_sha256": {
+        "dtype": "|S64",
+        "sha256": "6D9F855AB4A286A11B9CCC5F2E5E2A5FF9078999042225272A9BA5B6AB48B546",
+        "shape": [
+          400
+        ]
+      },
+      "interface_23_global_targets": {
+        "dtype": "<f8",
+        "sha256": "B6E66716E1535F8417AE230ED41896CAEBCE6DB9BB3D12CD1A6D0D564DB640DA",
+        "shape": [
+          400,
+          256,
+          3
+        ]
+      },
+      "interface_29_band_coordinates": {
+        "dtype": "<f8",
+        "sha256": "5F292AE9E288080957D1858F111C690EE343D2E307A91B0824679C45ED8ADA3E",
+        "shape": [
+          400,
+          256,
+          3
+        ]
+      },
+      "interface_29_band_sha256": {
+        "dtype": "|S64",
+        "sha256": "F0A6D8A90EC0FC37DD9DFD007D3DEA0A43376CCAFF75AF78ACEA105455DB2D24",
+        "shape": [
+          400
+        ]
+      },
+      "interface_29_band_targets": {
+        "dtype": "<f8",
+        "sha256": "3603C63AD9AEA541F11D3C9DF35D63D75508D158040E00D211193AAACAE5228C",
+        "shape": [
+          400,
+          256,
+          3
+        ]
+      },
+      "interface_29_base_coordinates": {
+        "dtype": "<f8",
+        "sha256": "CD879AF072AA6653D46E1A4B01B0B435B6BDE743C2973AA91D1ECF3898AB56BE",
+        "shape": [
+          400,
+          1024,
+          3
+        ]
+      },
+      "interface_29_base_sha256": {
+        "dtype": "|S64",
+        "sha256": "B9FABF696A6CC09BAFFD81418EFA1F816C095AE4408F0A982B0FA572EDC53180",
+        "shape": [
+          400
+        ]
+      },
+      "interface_29_base_targets": {
+        "dtype": "<f8",
+        "sha256": "D23E80A94E0139A18FE6FF1ECEBC8259EC08F82FAB07CDDA6B3F18E8932C5D06",
+        "shape": [
+          400,
+          1024,
+          3
+        ]
+      },
+      "interface_29_global_coordinates": {
+        "dtype": "<f8",
+        "sha256": "F1772EC0F73DF7E14D625119292D14236781AF130A8D75D9DE025A5851AB9340",
+        "shape": [
+          400,
+          256,
+          3
+        ]
+      },
+      "interface_29_global_sha256": {
+        "dtype": "|S64",
+        "sha256": "FE44F142CA62F9D7C42D3FEE8AA43D6C812819B14ED3E7BC7134C212949A69E7",
+        "shape": [
+          400
+        ]
+      },
+      "interface_29_global_targets": {
+        "dtype": "<f8",
+        "sha256": "CFEF95735343D51FC5C0270ABF05DE21B7DC28B4E238B9D6A50EB0D5AF594772",
+        "shape": [
+          400,
+          256,
+          3
+        ]
+      },
+      "physics_23_active_windows": {
+        "dtype": "<i2",
+        "sha256": "9A651949236962A88C47504265D7D80AAA5EE6B043D131A511E4BDBB55852BD8",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_23_batch_sha256": {
+        "dtype": "|S64",
+        "sha256": "65ABEC898D8C782FAD5F9918D4431DD8F0628747EFCC3A8AEC11E58B54EA869F",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_23_bottom": {
+        "dtype": "<f8",
+        "sha256": "0B7B9BB31803BD093874049CF3940070E8C600436CC6442C88303C24582D2B4F",
+        "shape": [
+          1200,
+          32,
+          3
+        ]
+      },
+      "physics_23_boundary_sha256": {
+        "dtype": "|S64",
+        "sha256": "C5C8BAC51021227BE838D37C1F2E28548E766694E70BA4DCEE68D72820DC6138",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_23_initial": {
+        "dtype": "<f8",
+        "sha256": "85555BB1CC92958C5C6E5922ED0387FAABF161D6DB23C6AFE0623E2684DFB586",
+        "shape": [
+          1200,
+          128,
+          2
+        ]
+      },
+      "physics_23_initial_sha256": {
+        "dtype": "|S64",
+        "sha256": "D398C25109CB2FC03B06ED593E54838E1F52B68AFBEFE96C9C3AC4FA57C73915",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_23_interior": {
+        "dtype": "<f8",
+        "sha256": "7912EA77CC75F06B75CC9AF3A4F352F565C03C35B197AF4ED5FABF96378DBE77",
+        "shape": [
+          1200,
+          512,
+          3
+        ]
+      },
+      "physics_23_interior_sha256": {
+        "dtype": "|S64",
+        "sha256": "334AB08B5C12629F47377D9E582247D090B6DD8E0942D7A9A3A25A843A0A8996",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_23_left": {
+        "dtype": "<f8",
+        "sha256": "E0E349026667F8B3C2A8C38BC43F9EE9D258E96055E4435A1F3BF0723060EDDD",
+        "shape": [
+          1200,
+          32,
+          3
+        ]
+      },
+      "physics_23_refreshed": {
+        "dtype": "|b1",
+        "sha256": "E588D883D289C380BA9670A3FB685C782D68B2BC9C061F6FCCC37CA183531BCC",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_23_right": {
+        "dtype": "<f8",
+        "sha256": "BC9C326B50D879AF1A476C6881A061EBDC2CC74EA0A8508D136BF1FB2DFD5FC7",
+        "shape": [
+          1200,
+          32,
+          3
+        ]
+      },
+      "physics_23_top": {
+        "dtype": "<f8",
+        "sha256": "DED236D42EF1A8E65198E4DCC0714BA53366C1EC02D016AF91FEBBDA41883FDE",
+        "shape": [
+          1200,
+          32,
+          3
+        ]
+      },
+      "physics_29_active_windows": {
+        "dtype": "<i2",
+        "sha256": "432A7F22D985D10DFEA339F4F0BCFED3891B82B881B2C87E8E68391BAB29419E",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_29_batch_sha256": {
+        "dtype": "|S64",
+        "sha256": "F17426F31DCD487DADBE5DFC889428DC1A230C5EED4BA461E791EBE663B10368",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_29_bottom": {
+        "dtype": "<f8",
+        "sha256": "BE1995D702C449DFC5FF9F6395EF7B6ACBE1BEF6B18B14891D1E5867F1811A4D",
+        "shape": [
+          1200,
+          32,
+          3
+        ]
+      },
+      "physics_29_boundary_sha256": {
+        "dtype": "|S64",
+        "sha256": "6A6196A2BF048C06E9E4F0F4BAF5625B135EF295187CE37E9CFDADD681929FC3",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_29_initial": {
+        "dtype": "<f8",
+        "sha256": "A1B50BA9025972B926232CC2A50EE3D0CFEBCE560E6B13F9EC5DF2656CFD0C4D",
+        "shape": [
+          1200,
+          128,
+          2
+        ]
+      },
+      "physics_29_initial_sha256": {
+        "dtype": "|S64",
+        "sha256": "A6EFFD9799E34D19DB772AEE46B0FB2EBD9BB02BD35AA71B1F17A1D54D01F3DF",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_29_interior": {
+        "dtype": "<f8",
+        "sha256": "63988FAF742DB487B744517546CB8B2784128DCF92251CEA2F35DF39E52F3C29",
+        "shape": [
+          1200,
+          512,
+          3
+        ]
+      },
+      "physics_29_interior_sha256": {
+        "dtype": "|S64",
+        "sha256": "3441B28476A6F1777DF42B0FB002F03362FFDE50FE5D1294003ABA275CD794F7",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_29_left": {
+        "dtype": "<f8",
+        "sha256": "CED90BB4AC60853852D39C2436AFE19549EAFF253CB95B55F6072EFBF72746FF",
+        "shape": [
+          1200,
+          32,
+          3
+        ]
+      },
+      "physics_29_refreshed": {
+        "dtype": "|b1",
+        "sha256": "2F0A20E22FF9405CC02179CB4418D70E305C69BB54BED16EB2EEB802878B8256",
+        "shape": [
+          1200
+        ]
+      },
+      "physics_29_right": {
+        "dtype": "<f8",
+        "sha256": "BFD0B9631518385C0F4F91AB143A984B3BD30329D8759F85D628A2190E18EB7B",
+        "shape": [
+          1200,
+          32,
+          3
+        ]
+      },
+      "physics_29_top": {
+        "dtype": "<f8",
+        "sha256": "FCF17A32749DD4A50280B398453D0997BB01A11177EE62F4A5D29A1D1C4C6B47",
+        "shape": [
+          1200,
+          32,
+          3
+        ]
+      }
+    },
+    "manifest_path": "outputs/runs/20260909T101615Z-phk-v23-lf10-feasible-direction-replication/cpu/materialized_lf10_ledger_manifest.json",
+    "manifest_sha256": "4917BE4A245D678E9FBE76AAD9121ED4E326527A04A97634A6F78E552F6F3271",
+    "path": "outputs/runs/20260909T101615Z-phk-v23-lf10-feasible-direction-replication/cpu/materialized_lf10_ledger.npz",
+    "semantic_sha256": "8A70D533FE615FDD2053674E25D9ED6EC8D4781E9061BB1CB7A8D4827B2671A9",
+    "sha256": "90BA299A37EFB6F01EA6B0AE28472182D89A2428F685D70819E97B4966B975A5",
+    "size_bytes": 58681691,
+    "streams": {
+      "audit_1200_sha256": "2824F1E458566E4BB579B493D6A5C0F827269CC1C4F3F166E65808570F0B97CA",
+      "interface_23_band_400_sha256": "A919D95B3F1A5CD420A4F052B7CC9A1672F5EF482F5978C1BDF7846A1CA915B9",
+      "interface_23_base_400_sha256": "65F11B9B9185597AAB543FC25BB9332A230BAEC0B06CD3E2340C2845EFAAAF26",
+      "interface_23_global_400_sha256": "5F8F6CA02CA5AD8B33C4F1FDEF94A2C1E8B29DE9E3F3F6D5F89B71DBC847A731",
+      "interface_29_band_400_sha256": "EF26CBAED1B2E0A4C65E91825431E75BFCAE119F662FBB412521DAD680AAA2FF",
+      "interface_29_base_400_sha256": "6235686AA49D32237AC1352FD6E23E1185DD1A61AD780B5541B20DDD029968D1",
+      "interface_29_global_400_sha256": "6B2901B9C0B833F5917C8B623D78A9A1819F79AE2203CA0BC117245E7BE3AA64",
+      "physics_23_1200_sha256": "E339879F854C1FF61471F46E1432F0010B5E975E7907AF15CE7A9C94127F1BE8",
+      "physics_29_1200_sha256": "8C8FA7752026D792B72583320868776711B7DBAA825E181D9BD42EEEFC402799"
+    }
+  },
+  "partition_sha256": "EFD70886DD85AC467F06F38B48FB0EE6C0132471CE74817E3A4D68E752B7A515",
+  "reference_boundary": {
+    "direct_LF_ONLY_read": false,
+    "extra_fine_read": false,
+    "fine_read": false,
+    "frozen_evaluator_read": false,
+    "stress_read": false
+  },
+  "schema_id": "phk-v23-lf10-cpu-qualification-v1",
+  "scientific_optimizer_updates": 0,
+  "status": "LF10_CPU_QUALIFICATION_PASS",
+  "strong_ledger": {
+    "fixed_blind_pool_sha256": "FD285AFC67C011CE9778E36C5FEE8FA7EAECB933690AF346993B7677AF0E64CF",
+    "manifest_path": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cpu/materialized_ledger_manifest.json",
+    "manifest_sha256": "3CFA268CFB22CF225ABB92BFD7F9F00353634AF7AFEE7AA607EC59FE4F4C8F90",
+    "path": "outputs/runs/20260906T065434Z-phk-v23-lf6-event-frontier-pilot/cpu/materialized_ledger.npz",
+    "physics_1200_sha256": "536E6706A0B68EBB1277A97F402D273AFA2EA1E0B27106F26CB4222B7EC05C53",
+    "semantic_sha256": "0E2F680D33C4489F6092CB5D01E87483F7ECDA8290CD3E2C24EBDD06B3DA2B7F",
+    "sha256": "29E02DAF81A07BA4AF2B95B354126E75E9419AAE094E9486589455D31D2D6801"
+  },
+  "task_id": "PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE"
+}

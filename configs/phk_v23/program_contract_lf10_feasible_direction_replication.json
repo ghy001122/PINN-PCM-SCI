@@ -1,0 +1,36 @@
+{
+  "schema_id": "phk-v23-lf10-program-contract-v1",
+  "contract_id": "PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE",
+  "phase_id": "PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE",
+  "title": "PHK-V2.3 LF10 event-competence feasible-direction refinement and headline-evidence replication",
+  "effective_date": "2026-09-09",
+  "status": "EXPLICITLY_AUTHORIZED_BOUNDED_CAMPAIGN",
+  "expected_base_commit": "06d1d2121c8d0fd6db13c12356568650083be4f3",
+  "scientific_question": "CAN_A_MEDIUM_AUDIT_GRADIENT_PROJECT_THE_STRONG_PHYSICS_ADAM_PROPOSAL_INTO_AN_EVENT_COMPETENT_DESCENT_DIRECTION_AND_DO_THE_INTERFACE_AND_FORGETTING_HEADLINES_REPLICATE_ACROSS_SAMPLING_STREAMS",
+  "audit_ratio_identity": "EACH_RUNTIME_AUDIT_NUMERATOR_IS_NORMALIZED_BY_EXACT_DEV_R_ON_THE_IDENTICAL_PREMATERIALIZED_BATCH_AND_ACCEPTED_STEP",
+  "minimum_scientific_delivery": [
+    "THRESHOLD_ROBUSTNESS_GRID",
+    "MATCHED_CTRL_VERSUS_PROJ_SCREEN",
+    "LF4_INTERFACE_STREAMS_23_AND_29",
+    "LF6_FORGETTING_STREAMS_23_AND_29"
+  ],
+  "hard_limits": {
+    "direction_screen_arms": 2,
+    "screen_accepted_updates_each": 200,
+    "screen_attempted_updates_each_maximum": 1000,
+    "selected_full_accepted_updates": 1200,
+    "selected_full_attempted_updates_maximum": 3600,
+    "interface_replication_trajectories": 4,
+    "interface_updates_each": 400,
+    "forgetting_replication_trajectories": 2,
+    "forgetting_updates_each": 1200,
+    "scientific_trajectories_maximum": 8,
+    "accepted_optimizer_updates_maximum": 5400,
+    "model_initialization_seed": 17,
+    "best_checkpoint_selection": false,
+    "hyperparameter_or_architecture_sweep": false
+  },
+  "failure_isolation": "EACH_NONSHARED_DIRECTION_INTERFACE_OR_FORGETTING_TRACK_CONTINUES_AFTER_ANOTHER_TRACK_FAILS",
+  "completion_does_not_authorize_next_research": true,
+  "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+}

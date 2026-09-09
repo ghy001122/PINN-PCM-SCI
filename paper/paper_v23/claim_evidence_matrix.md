@@ -56,3 +56,15 @@ This supports an advisor draft and a possible negative/diagnostic paper. It does
 not support a positive PINN methods submission. LF9 closes the final bounded
 rescue screen with no selected arm, full refinement, or no-filter control.
 Mechanism attribution, PINN Pareto value, and candidate status remain absent.
+
+## LF10 prospective claims (active; no result)
+
+| Proposed statement | Current state | Required LF10 evidence | Allowed wording now |
+|---|---|---|---|
+| Event-feasible projection opens a longer safe path than matched Adam | `UNKNOWN_ACTIVE` | CTRL stalls below 200 while PROJ reaches the frozen 200-update screen and safety/physics gates | No scientific claim |
+| LF4 interface exposure is sampling-stream robust | `UNKNOWN_ACTIVE` | At least 2/3 positive paired effects, median delta-Rmin at least 0.03, no systematic quality damage | No robustness claim |
+| LF6 physics forgetting replicates across sampling streams | `UNKNOWN_ACTIVE` | At least 2/3 strong physics reductions paired with event loss and no field/event Pareto | No replication claim |
+| LF10 beats direct `LF_ONLY` | `UNKNOWN_ACTIVE` | Completed eligible refinement plus frozen post-shutdown strong-baseline gate | No gain or candidate claim |
+
+The auxiliary threshold grid can strengthen or narrow sensitivity language but
+cannot change the official machine outcome or rescue a failed official gate.

@@ -28,6 +28,7 @@ LF6_DATA_PATH = HERE / "data" / "lf6_terminal_metrics.json"
 LF7_DATA_PATH = HERE / "data" / "lf7_terminal_metrics.json"
 LF8_DATA_PATH = HERE / "data" / "lf8_terminal_metrics.json"
 LF9_DATA_PATH = HERE / "data" / "lf9_terminal_metrics.json"
+LF10_DATA_PATH = HERE / "data" / "lf10_terminal_metrics.json"
 PREDICTION_PATH = ROOT / "outputs" / "runs" / "20260904T150300Z-phk-v23-lf3-phase-latent-97a5b74" / "prediction-t0-step-1200.npz"
 REFERENCE_PATH = ROOT / "outputs" / "runs" / "20260828T-phk-v21-s1-q-06-nominal-extra-fine" / "result-intent-06.npz"
 
@@ -769,7 +770,14 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--lf7-only", action="store_true", help="Generate the LF7 terminal figure only after terminal evidence is bound")
     parser.add_argument("--lf8-only", action="store_true", help="Generate the LF8 valid-prefix terminal figure and source manifest")
     parser.add_argument("--lf9-only", action="store_true", help="Generate the LF9 terminal composite after terminal evidence is bound")
+    parser.add_argument("--lf10-only", action="store_true", help="Generate the three LF10 headline figures only after terminal evidence is bound")
     args = parser.parse_args(argv)
+    if args.lf10_only:
+        data = json.loads(LF10_DATA_PATH.read_text(encoding="utf-8"))
+        if data.get("campaign_state") != "COMPLETE" or data.get("terminal_outcome") is None:
+            print(json.dumps({"figures": 0, "scope": "LF10_ACTIVE_RESULTS_PENDING", "status": "SKIPPED_NO_TERMINAL_DATA"}, sort_keys=True))
+            return
+        raise RuntimeError("LF10 terminal figure renderer must be bound to the completed LF10 result schema before use")
     if args.lf9_only:
         data = json.loads(LF9_DATA_PATH.read_text(encoding="utf-8"))
         if data.get("campaign_state") != "COMPLETE" or data.get("terminal_outcome") is None:

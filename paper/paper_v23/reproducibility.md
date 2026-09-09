@@ -435,3 +435,20 @@ D:\anaconda\python.exe paper/paper_v23/figures/generate_figures.py --lf9-only
 `figures/source-manifest-lf9.json` binds the metrics, generator, raw sources,
 and PNG/PDF outputs. Git alone cannot reconstruct the git-ignored checkpoints,
 predictions, telemetry, or local adjudication.
+
+## LF10 active reproducibility scaffold
+
+- task: `PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE`;
+- start: `main@06d1d2121c8d0fd6db13c12356568650083be4f3`;
+- campaign timestamp: `20260909T101615Z`;
+- frozen comparisons: CTRL/PROJ from exact DEV-R; LF4 DEV-G/DEV-M paired
+  streams 23/29; LF6 strong-physics streams 23/29;
+- cloud boundary: medium, LF3-T0, DEV-R, materialized physics/audit/development
+  streams, contracts, runtime, and passed zero-update qualification only;
+- local-only boundary: historical predictions used by the threshold grid,
+  fine/extra-fine, direct `LF_ONLY`, frozen evaluator, and all nominal local
+  adjudication;
+- stress/OOD: sealed and unread.
+
+The terminal raw paths, source identity, accepted/attempted updates, evidence
+hashes, and regeneration command remain null until execution completes.

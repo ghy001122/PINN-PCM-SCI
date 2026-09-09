@@ -124,6 +124,7 @@ This is a generated view of the append-only `index.jsonl` ledger.
 | 20260908T050343Z-phk-v23-lf8-terminal | development_campaign | identity_correct_competence_filter_completion_and_conditional_schedule_attribution_terminal_adjudication | PHK_V23_LF8 | phk-v23-lf8-identity-correct-competence-filter-v1 | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | LF8_FILTER_STALLED_WITH_VALID_PREFIX | [manifests/20260908T050343Z-phk-v23-lf8-terminal.json](manifests/20260908T050343Z-phk-v23-lf8-terminal.json) |
 | 20260908T145333Z-phk-v23-lf9-cpu-qualification | qualification | cpu_zero_update_cv_ledger_normalization_routing_and_rollback_qualification | PHK_V23_LF9_CPU | phk-v23-lf9-equation-routed-thermal-cv-v1 | PHK_V21_NOMINAL_LF9_CPU_QUALIFICATION | 17 | COMPLETE | LF9_CPU_QUALIFICATION_PASS | [manifests/20260908T145333Z-phk-v23-lf9-cpu-qualification.json](manifests/20260908T145333Z-phk-v23-lf9-cpu-qualification.json) |
 | 20260908T145333Z-phk-v23-lf9-terminal | development_campaign | equation_routed_strong_and_thermal_cv_matched_screen_terminal_adjudication | PHK_V23_LF9 | phk-v23-lf9-equation-routed-thermal-cv-v1 | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | LF9_NO_SAFE_MIXED_FORM_SCREEN | [manifests/20260908T145333Z-phk-v23-lf9-terminal.json](manifests/20260908T145333Z-phk-v23-lf9-terminal.json) |
+| 20260909T101615Z-phk-v23-lf10-cpu-qualification | qualification | cpu_only_feasible_direction_geometry_and_materialized_replication_stream_qualification | PHK_V23_LF10_CPU | phk-v23-lf10-event-competence-feasible-direction-v1 | PHK_V21_NOMINAL_LF10_QUALIFICATION | 17 | COMPLETE | LF10_CPU_QUALIFICATION_PASS | [manifests/20260909T101615Z-phk-v23-lf10-cpu-qualification.json](manifests/20260909T101615Z-phk-v23-lf10-cpu-qualification.json) |
 # PHK-V2.3 LF5 temporal zero-level pilot (2026-09-05)
 
 - [CPU-T qualification](2026-09-05-phk-v23-lf5-cpu-qualification.md): `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`; zero updates. A later explicit user override authorizes the unchanged DEV-T only as post-qualification exploratory evidence.
@@ -161,3 +162,8 @@ This is a generated view of the append-only `index.jsonl` ledger.
 - [ADR 0071](../adr/0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md): freezes mandatory ER-S/ER-CV screens, conditional filtered continuation, cloud-only `PRELOCAL_INTERNAL_PARETO` and post-shutdown complete Pareto semantics.
 - [Terminal closeout](2026-09-08-phk-v23-lf9-terminal-closeout.md): both valid matched screens retained one 25-update safety prefix and stalled at the minimum frozen rate on temperature preservation; full/control were not run.
 - [ADR 0072](../adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md): closes LF9 as `LF9_NO_SAFE_MIXED_FORM_SCREEN`, with no complete internal PINN Pareto, candidate, rescue or next authorization.
+
+# PHK-V2.3 LF10 feasible-direction and headline replication (2026-09-09)
+
+- [CPU qualification](2026-09-09-phk-v23-lf10-cpu-qualification.md): `LF10_CPU_QUALIFICATION_PASS`; zero scientific updates, same-batch DEV-R preservation baselines, projection geometry and all mandatory streams materialized.
+- [ADR 0073](../adr/0073-activate-phk-v23-lf10-feasible-direction-replication.md): activates mandatory CTRL/PROJ screens, a conditional full path, and LF4/LF6 streams 23/29 evidence replications.

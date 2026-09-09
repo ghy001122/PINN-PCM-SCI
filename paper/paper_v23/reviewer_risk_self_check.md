@@ -141,3 +141,20 @@ LF9_MECHANISM: NO_SAFE_MIXED_FORM_SCREEN
 LF9_FULL_AND_CONTROL: NOT_RUN_BY_FROZEN_TRIGGER
 LF9_NEXT: FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE
 ```
+
+## LF10 active reviewer-risk additions
+
+1. Sampling streams 17/23/29 are not independent model-initialization seeds;
+   the paper must call them matched sampling-stream replications.
+2. Medium-derived competence gradients enter PROJ, so a successful PROJ is a
+   multifidelity constrained PINN refinement, not label-free physics.
+3. The 5 x 5 threshold grid is sensitivity evidence only; the official
+   `0.5/0.02` cell alone governs terminal gates.
+4. If replication fails, the central LF4/LF6 language must narrow to a
+   single-benchmark case study. If PROJ fails, no feasible-direction method
+   claim is permitted.
+5. Direct `LF_ONLY` remains in the main table and candidate gate. No dense
+   result may be rewritten post hoc as sparse-task value.
+
+All LF10 answers are pending; this section records prospective review risks,
+not favorable outcomes.

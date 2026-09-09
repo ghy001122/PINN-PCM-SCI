@@ -1,0 +1,64 @@
+{
+  "schema_id": "phk-v23-lf10-method-contract-v1",
+  "contract_id": "PHK_V23_LF10_FEASIBLE_DIRECTION_REPLICATION_METHOD",
+  "program_contract": "configs/phk_v23/program_contract_lf10_feasible_direction_replication.json",
+  "effective_date": "2026-09-09",
+  "status": "FROZEN_BEFORE_CPU_QUALIFICATION_AND_GPU_EXECUTION",
+  "direction_identity": {
+    "name": "MULTIFIDELITY_EVENT_COMPETENCE_PROJECTED_PINN_REFINEMENT",
+    "start": "EXACT_LF6_DEV_R_MODEL_WEIGHTS_ONLY",
+    "dtype": "FLOAT64",
+    "seed": 17,
+    "physics_objective": "L_PDE_PLUS_5_L_BC_PLUS_L_IC",
+    "optimizer": {"name": "TORCH_ADAM", "betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0.0, "amsgrad": false, "fresh_per_arm": true},
+    "gradient_clip_norm": 10.0,
+    "block_size": 25,
+    "learning_rate_ladder": [0.000125, 0.0000625, 0.00003125, 0.000015625, 0.0000078125],
+    "accepted_learning_rate_never_increases": true,
+    "phase_schedule": "ACCEPTED_1_TO_550_FROZEN_551_TO_1200_JOINT_WITH_SAME_OPTIMIZER",
+    "same_pre_materialized_physics_and_medium_audit_batches": true,
+    "audit_ratio_denominator": "EXACT_DEV_R_OBJECTIVE_ON_THE_SAME_PREMATERIALIZED_AUDIT_BATCH_AND_ACCEPTED_STEP",
+    "medium_audit_gradient_in_physics_loss": false
+  },
+  "adam_proposal": {
+    "algorithm": "RUN_EXACT_TORCH_ADAM_STEP_AFTER_GLOBAL_CLIP_CAPTURE_PARAMETER_DELTA_THEN_RESTORE_PARAMETERS_ONLY_KEEP_ADVANCED_MOMENTS",
+    "CTRL": "APPLY_UNCHANGED_ADAM_PROPOSAL",
+    "PROJ": "APPLY_PER_HEAD_NEAREST_FEASIBLE_PROJECTION_OF_SAME_ADAM_PROPOSAL",
+    "audit_gradients": "TORCH_AUTOGRAD_GRAD_ONLY_NO_PARAMETER_GRAD_SLOT_OR_OPTIMIZER_STATE_MUTATION"
+  },
+  "projection": {
+    "V_constraints": ["CV"],
+    "T_constraints": ["CT"],
+    "phase_constraints_after_unfreeze": ["Cphase", "Ctopology_smooth_surrogate"],
+    "optimization": "MIN_HALF_NORM_U_MINUS_U0_SQUARED_SUBJECT_TO_AJ_DOT_U_LE_BJ_MINUS_CJ_OVER_BLOCK_REMAINING_STEPS_WITH_CJ_USING_MATCHED_BATCH_DEV_R_DENOMINATOR",
+    "solver": "EXPLICIT_ACTIVE_SET_AT_MOST_TWO_CONSTRAINTS",
+    "norm_cap": "APPLY_ONLY_IF_SCALED_VECTOR_REMAINS_FEASIBLE_OTHERWISE_PROJECTION_INFEASIBLE_AND_FILTER_REJECT_ROLLBACK",
+    "discrete_topology_gate_separate": true
+  },
+  "filter": {
+    "screen_accepted": 200,
+    "screen_attempted_cap": 1000,
+    "full_accepted": 1200,
+    "full_attempted_cap": 3600,
+    "snapshot": "IMMUTABLE_DEEP_MODEL_OPTIMIZER_ALL_RNG_ACCEPTED_STEP_LR_PHASE_STAGE",
+    "all_scales_rejected": "SAVE_LAST_VALID_ENDPOINT_AND_STALL"
+  },
+  "interface_replication": {
+    "stream_seeds": [23, 29],
+    "arms": ["DEV_G_GLOBAL_MSE_CONTROL", "DEV_M_INTERFACE_BAND_MSE"],
+    "initialization": "EXACT_LF3_T0",
+    "updates": 400,
+    "optimizer_lr": 0.001,
+    "phase_only": true,
+    "losses": {"DEV_G": "0.5_LBASE_PLUS_0.5_LGLOBAL", "DEV_M": "0.5_LBASE_PLUS_0.5_LBAND_MSE"}
+  },
+  "forgetting_replication": {
+    "stream_seeds": [23, 29],
+    "initialization": "EXACT_LF6_DEV_R",
+    "updates": 1200,
+    "optimizer_lr": 0.001,
+    "phase_schedule": "550_FROZEN_650_JOINT",
+    "objective": "PURE_STRONG_PHYSICS_NO_MEDIUM_AUDIT_FILTER_OR_REPLAY"
+  },
+  "forbidden": ["DATA_REPLAY_OR_ANCHOR_LOSS", "BCE", "AUGMENTED_LAGRANGIAN", "TZL", "RANK_LOSS", "CONTROL_VOLUME_LOSS", "DYNAMIC_WEIGHTING", "RUNTIME_SAMPLING", "RAR", "LBFGS", "NETWORK_OR_OPTIMIZER_SWEEP", "BEST_CHECKPOINT_SELECTION"]
+}

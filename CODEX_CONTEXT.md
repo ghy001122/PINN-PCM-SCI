@@ -121,3 +121,13 @@ second-block temperature gate at `7.8125e-6`. Neither reached the 200-update
 selection prerequisite, so full/control were not run. Recovery, shutdown and
 post-shutdown local adjudication completed; no mixed-form increment, PINN Pareto,
 candidate or next research authorization exists. Stress remains sealed/unread.
+
+# LF10 active handoff (2026-09-09)
+
+`PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE`
+is explicitly authorized and CPU-qualified with zero scientific updates. Exact
+same-batch DEV-R denominators make the preservation projection well-defined.
+The mandatory order is CTRL/PROJ screens, conditional selected full path, then
+LF4 interface and LF6 forgetting replications on streams 23/29. Fine, extra,
+direct `LF_ONLY`, the frozen evaluator and stress remain unavailable to cloud
+training. LF9 evidence remains terminal and unchanged.

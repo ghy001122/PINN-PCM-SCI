@@ -123,3 +123,27 @@ improved over DEV-R; the two retained endpoints are nearly identical. Panel D
 records the exact non-triggers: no selected arm, full refinement, or no-filter
 control. The figure supports `LF9_NO_SAFE_MIXED_FORM_SCREEN`, not a general
 control-volume failure, filter attribution, PINN Pareto, or candidate claim.
+
+## Planned LF10 Figure A. Threshold robustness (active; no figure yet)
+
+Prospective 5 x 5 heatmaps over phase and ROI active-fraction thresholds. The
+official `0.5/0.02` cell will be boxed and remains the only machine-voting
+threshold. Panels will report the evaluated-cell denominator and the fractions
+for which the LF4 interface effect, LF6 forgetting contrast, and direct
+`LF_ONLY` ordering retain their declared sign. Missing historical predictions
+will appear as `NA`, never as a favorable cell.
+
+## Planned LF10 Figure B. Feasible-direction geometry and path (active; no figure yet)
+
+Prospective comparison of physics/competence gradient geometry, first-order
+constraint changes under ordinary and projected directions, accepted versus
+attempted updates, and fixed-blind-physics versus preservation trajectories for
+matched CTRL and PROJ. Medium audit gradients are part of both arms' data-access
+identity and are used by PROJ; the method is not label-free.
+
+## Planned LF10 Figure C. Headline replication (active; no figure yet)
+
+Prospective sampling-stream replication of LF4 paired `DEV-M - DEV-G`
+minimum-recall effects and LF6 physics-objective reduction versus terminal
+event competence for historical stream 17 and new streams 23/29. These are
+sampling-stream replications, not independent network-initialization seeds.

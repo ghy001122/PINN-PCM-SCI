@@ -1,36 +1,39 @@
 # 当前阶段
 
-- `phase_id`: `PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE`
-- `phase_name`: PHK-V2.3 LF9 equation-routed thermal control-volume competence-filtered refinement
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE`
+- `phase_name`: PHK-V2.3 LF10 event-competence feasible-direction refinement and headline-evidence replication
+- `lifecycle_state`: `ACTIVE`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF9_NO_SAFE_MIXED_FORM_SCREEN`
-- `mechanism_outcome`: `NO_SAFE_MIXED_FORM_SCREEN`
-- `claim_status`: `VALID_MATCHED_SCREEN_STALL_NO_COMPLETE_PINN_PARETO_OR_CANDIDATE`
-- `next_research_execution_authorized`: `false`
-- `authorization_scope`: `NONE_TERMINAL`
-- `candidate_status`: `NONE`
-- `reference_status`: `POST_SHUTDOWN_NOMINAL_EVALUATED_STRESS_SEALED`
-- `compute_status`: `RECOVERED_HASH_VERIFIED_SHUTDOWN_SSH_REFUSED`
-- `next_recommendation`: `FINALIZE_NEGATIVE_SOLVER_DIAGNOSTIC_NO_MORE_RESCUE`
+- `machine_outcome`: `PENDING_GPU_EXECUTION`
+- `mechanism_outcome`: `PENDING`
+- `claim_status`: `CPU_QUALIFIED_GPU_RESULTS_PENDING`
+- `next_research_execution_authorized`: `true`
+- `authorization_scope`: `MANDATORY_CTRL_PROJ_THEN_CONDITIONAL_FULL_PLUS_LF4_LF6_REPLICATIONS`
+- `candidate_status`: `NONE_PENDING_EVIDENCE`
+- `reference_status`: `CPU_QUALIFIED_LOCAL_REFERENCES_AND_STRESS_UNREAD`
+- `compute_status`: `CPU_QUALIFIED_GPU_NOT_YET_RUN`
+- `next_recommendation`: `EXECUTE_FROZEN_LF10_CAMPAIGN`
 - `effective_date`: `2026-09-09`
 
-PHASE_ID=PHK_V23_LF9_EQUATION_ROUTED_THERMAL_CONTROL_VOLUME_REFINEMENT_EXECUTE
+PHASE_ID=PHK_V23_LF10_EVENT_COMPETENCE_FEASIBLE_DIRECTION_AND_HEADLINE_EVIDENCE_REPLICATION_EXECUTE
 BLOCKER_ID=NONE
-NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
+NEXT_RESEARCH_EXECUTION_AUTHORIZED=true
 
-## 终局
+## 当前授权
 
-ER-S 与 ER-CV 均形成身份有效的 25-update 安全前缀，并在最小冻结学习率
-的第二块因 temperature preservation 停滞。两臂均未满足 200 accepted-update
-selection prerequisite；filtered full path 与 no-filter control 均为
-`NOT_RUN_PREREQUISITE_NOT_MET`，不是失败。
+CPU qualification passed with zero scientific updates. Execute mandatory matched
+`CTRL`/`PROJ` screens, then the conditional selected full path if eligible, plus
+the mandatory LF4 interface and LF6 forgetting replications on streams 23/29.
+The LF6-replication medium audit is report-only and cannot affect training,
+selection, stopping or checkpoint choice.
 
-LF9 不建立 mixed-form 增量、完整 PINN Pareto、direct `LF_ONLY` 增益或
-candidate。唯一建议是完成负面 solver diagnostic 与稿件收口，不再执行救援。
+The user's explicit LF10 authorization overrides LF9's `NO_MORE_RESCUE`
+recommendation for this named campaign only; LF9's terminal evidence remains
+unchanged. Paper work is active but awaits GPU and post-shutdown evaluation.
 
 ## 边界
 
-当前没有新的科研执行授权。不得从本完成态推断 sparse、new seed、OOD/stress、
-其他 weak form、PJGR/R2/SRPG、网络/优化器救援或投稿授权。两份 stress
-references 保持 `TWO_STRESS_REFERENCES_SEALED_UNREAD`。
+Fine/extra-fine, direct `LF_ONLY` and the frozen evaluator remain local-only
+until recovery and shutdown. Stress remains sealed/unread. This phase does not
+authorize additional seeds, sparse/OOD/stress work, architecture or optimizer
+sweeps, or submission.

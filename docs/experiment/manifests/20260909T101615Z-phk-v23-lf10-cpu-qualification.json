@@ -1,0 +1,58 @@
+{
+  "actual_budget": {
+    "gpu_trajectories": 0,
+    "gpu_used": false,
+    "optimizer_updates": 0
+  },
+  "artifacts": {
+    "compact_qualification": "artifacts/20260909T101615Z-phk-v23-lf10-cpu-qualification.json#sha256=7FF15B0F31C8921F08C258C1B1042D8656C696CB485E6E5F47534D4183E87544",
+    "materialized_ledger": "outputs/runs/20260909T101615Z-phk-v23-lf10-feasible-direction-replication/cpu/materialized_lf10_ledger.npz#sha256=90BA299A37EFB6F01EA6B0AE28472182D89A2428F685D70819E97B4966B975A5",
+    "raw_report": "outputs/runs/20260909T101615Z-phk-v23-lf10-feasible-direction-replication/cpu/qualification.json#sha256=7FF15B0F31C8921F08C258C1B1042D8656C696CB485E6E5F47534D4183E87544"
+  },
+  "case_id": "PHK_V21_NOMINAL_LF10_QUALIFICATION",
+  "checkpoint": {
+    "DEV_R_source_sha256": "7CFDD98E3A03BE29BBE587042967BD44E72D140AE7AC3396CB35E0CF5748F499",
+    "loaded_read_only": true
+  },
+  "claim_status": "LF10_STREAMS_AND_FEASIBLE_DIRECTION_IMPLEMENTATION_QUALIFIED_GPU_RESULTS_UNTESTED",
+  "code_identity": {
+    "base_commit": "06d1d2121c8d0fd6db13c12356568650083be4f3",
+    "workspace_scope": "LF10_EXACT_ALLOWLIST_UNRELATED_DIRTY_PRESERVED"
+  },
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pinn_pcm_sci.phk_v23_lf10_qualification"
+  ],
+  "ended_at": "2026-09-09T11:30:18.495812+00:00",
+  "environment": {
+    "cloud_connection_opened": false,
+    "device": "CPU",
+    "dtype": "FLOAT64",
+    "stress_status": "TWO_STRESS_REFERENCES_SEALED_UNREAD"
+  },
+  "evaluator_id": "NOT_READ_DURING_LF10_CPU_QUALIFICATION",
+  "evidence_identity": "ENGINEERING_AND_GEOMETRY_QUALIFICATION_ONLY",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF10",
+  "failure_class": null,
+  "gate": "PHK_V23_LF10_CPU",
+  "gate_outcome": "LF10_CPU_QUALIFICATION_PASS",
+  "method_id": "phk-v23-lf10-event-competence-feasible-direction-v1",
+  "numerical_validity": "VALID_CPU_FP64_ZERO_SCIENTIFIC_UPDATE_HASH_BOUND_GEOMETRY_AND_STREAMS",
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "planned_budget": {
+    "gpu_trajectories": 0,
+    "optimizer_updates": 0
+  },
+  "replay_of": null,
+  "route_disposition": "RUN_ALL_NONSHARED_LF10_TRACKS",
+  "run_id": "20260909T101615Z-phk-v23-lf10-cpu-qualification",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "cpu_only_gradient_geometry_and_materialized_audit_replication_stream_qualification",
+  "seed": 17,
+  "split_id": "MEDIUM_AUDIT_AND_REPLICATION_STREAMS_FINE_EXTRA_DIRECT_LOCAL_POST_SHUTDOWN_STRESS_SEALED",
+  "started_at": "2026-09-09T11:30:18.495812+00:00",
+  "supersedes": null,
+  "tier": "qualification"
+}
