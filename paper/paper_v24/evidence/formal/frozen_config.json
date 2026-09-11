@@ -1,0 +1,115 @@
+{
+  "schema_id": "phk-v23-lf11-sparse-metric-sprint-v1",
+  "phase_id": "PHK_V23_LF11_SPARSE_METRIC_ATTRIBUTION_SPRINT_EXECUTE",
+  "status": "FROZEN_BEFORE_SCIENTIFIC_UPDATES",
+  "authorization": "User request 2026-09-10 to execute E:/PINN-PCM/Prompt_for_Research_Sprint.md",
+  "source_commit": "918985c88f98321c96e6952c9bdd725bd958ed0e",
+  "medium": "outputs/runs/20260828T-phk-v21-s1-q-04-nominal-medium/result-intent-04.npz",
+  "seed": 17,
+  "width": 64,
+  "layers": 4,
+  "dtype": "float64",
+  "warmup_updates": 1200,
+  "branch_updates": 1200,
+  "development_updates": 0,
+  "maximum_updates": {
+    "development": 600,
+    "formal": 6000,
+    "conditional": 3600,
+    "total": 10200
+  },
+  "warmup_lr": 0.001,
+  "branch_lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "gradient_clip": 10,
+  "data_points": 1024,
+  "interior_counts": [
+    72,
+    184,
+    72,
+    184
+  ],
+  "boundary_counts_per_side": [
+    4,
+    12,
+    4,
+    12
+  ],
+  "initial_points": 128,
+  "windows": [
+    [
+      0,
+      0.35
+    ],
+    [
+      0.35,
+      1.25
+    ],
+    [
+      1.25,
+      1.6
+    ],
+    [
+      1.6,
+      2.5
+    ]
+  ],
+  "window_masses": [
+    0.14,
+    0.36,
+    0.14,
+    0.36
+  ],
+  "lambda_max": 0.1,
+  "lambda_ramp": 200,
+  "proposal_alpha": 0.25,
+  "calibration_points": 4096,
+  "calibration_denominator_min": 1e-24,
+  "phase_logit_divisor": 36.84136146790473,
+  "phase_logit_epsilon": 1e-08,
+  "phase_latent_scale": 8,
+  "pde_scales": {
+    "electric": 1,
+    "thermal": 4,
+    "phase": 5
+  },
+  "observation_scales": "V/waveform_amplitude; T/theta_transition; delta_logit/36.84136146790473",
+  "observation_measure": "dual spatial volume times trapezoid time; phase half t>0 global and half merged straddling endpoints",
+  "roles": [
+    "D_B",
+    "P_U",
+    "P_I",
+    "P_M"
+  ],
+  "decision": {
+    "relative_improvement": 0.1,
+    "relative_noninferiority": 0.05,
+    "absolute_tolerance": {
+      "S": 1e-08,
+      "Ephi": 1e-06,
+      "ET": 1e-06,
+      "EI": 1e-06,
+      "EV": 1e-07
+    },
+    "strict_device_gate_separate": true
+  },
+  "evaluation": {
+    "primary": "time_averaged_phase_region_symmetric_difference",
+    "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1",
+    "boundary_extension": "time interpolation first; known electrode values at each query time, thermal Robin extension, insulating electric/phase side extension; potential bounded by known waveform; analytic IC at t0",
+    "logit_baseline": "space linear + time PCHIP on complete initial-logit increment",
+    "physics_audit": "common finite-volume electric defect and energy defect; neural fixed AD audit separately",
+    "reference": "existing nominal extra-fine only after all fixed endpoints and compute stopped; no stress"
+  },
+  "conditional": {
+    "maximum_branches": 3,
+    "updates_each": 1200,
+    "positive": "P_S if metric signal then one RAD or PF_GAR; paired attribution only",
+    "negative": "one equation-by-head diagnosis; latent only if phase-related destructive direction supported"
+  },
+  "claim_scope": "Nominal sparse reconstruction/development attribution, not blind confirmation or OOD"
+}

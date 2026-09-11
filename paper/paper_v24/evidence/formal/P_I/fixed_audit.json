@@ -1,0 +1,24 @@
+{
+  "measure": "fixed independent uniform space-time integration",
+  "points": 4096,
+  "scaled_pde_mse": {
+    "electric": 0.3452450164226409,
+    "thermal": 0.02016120934027411,
+    "phase": 0.0032856351697048876
+  },
+  "raw_pde_rms": {
+    "electric": 0.5875755410350578,
+    "thermal": 0.5679606935734072,
+    "phase": 0.2866023015305742
+  },
+  "boundary": 0.0229694354376302,
+  "initial": 3.587434611398389e-33,
+  "observation": {
+    "observation": 0.008172301059647776,
+    "obs_V": 0.00028222329537578303,
+    "obs_T": 0.023631673042822546,
+    "obs_phase": 0.0006030068407449967
+  },
+  "no_reference_read": true,
+  "optimizer_updates": 0
+}

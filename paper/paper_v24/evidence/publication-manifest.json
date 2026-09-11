@@ -1,0 +1,239 @@
+{
+  "schema_id": "lf11-selected-publication-evidence-v1",
+  "publication_scope": "selected LF11 inputs, endpoints, telemetry, adjudication and diagnostic evidence",
+  "scientific_status": "NO_MATCHED_PINN_INCREMENT_POSTHOC_DIAGNOSTIC_SEPARATE",
+  "scientific_reexecution": false,
+  "original_run_root": "outputs/runs/20260910-lf11-sparse-metric-sprint",
+  "full_reference_and_prediction_arrays_included": false,
+  "sealed_stress_included": false,
+  "files": [
+    {
+      "path": "source_identity.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/source_identity.json",
+      "bytes": 682,
+      "sha256": "1d22150cb56ef2fc1b6b6c507269f1dedba577844dc7af2731df0fb26721a6df"
+    },
+    {
+      "path": "compute-closure.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/compute-closure.json",
+      "bytes": 739,
+      "sha256": "8607a558e5f50a2b7063e55b83ca3b75c55762ca5f68e524532e72238b58d858"
+    },
+    {
+      "path": "cpu_smoke.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/cpu_smoke.json",
+      "bytes": 482,
+      "sha256": "c0028f14d4411cede147a9defee89f2c53e3d4b19ef48db9cf2c310a109d9127"
+    },
+    {
+      "path": "input/observation_mask.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/input/observation_mask.json",
+      "bytes": 1909,
+      "sha256": "7488b94d2a4a7c15996c467f1cf6df92b67fddfaf62fbb687ccc12dc683190dd"
+    },
+    {
+      "path": "input/sparse_manifest.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/input/sparse_manifest.json",
+      "bytes": 829,
+      "sha256": "722bb29bc5a4e44aa1a82348badfe873dc9eef2017a3bcaa865da94f2e4ffc22"
+    },
+    {
+      "path": "input/sparse.npz",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/input/sparse.npz",
+      "bytes": 584815,
+      "sha256": "27ea0a29e69e7179e775144c7dca362aa92c676bb0942964c47946715d5002d8"
+    },
+    {
+      "path": "formal/frozen_config.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/frozen_config.json",
+      "bytes": 3246,
+      "sha256": "a685f876e9bf3e64cfaa42f7ea7ae46bd452952da744efb06f25583382df30ce"
+    },
+    {
+      "path": "formal/calibration.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/calibration.json",
+      "bytes": 610,
+      "sha256": "ab9bb54ef335a03a3dedc79d7807bffb4f8f48b206665ab45bd22875ad7591c2"
+    },
+    {
+      "path": "formal/conditional_calibration.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/conditional_calibration.json",
+      "bytes": 459,
+      "sha256": "732a908055ad3c280e10d8f12851b4a012cd97915453b8045887332e6c13e073"
+    },
+    {
+      "path": "formal/campaign.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/campaign.json",
+      "bytes": 2081,
+      "sha256": "1ce6785b24389323b8065976d5b0deb6bca91adc810c552b70ae9faeacd25b1a"
+    },
+    {
+      "path": "formal/execution_environment.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/execution_environment.json",
+      "bytes": 1167,
+      "sha256": "1d4b4000fadc53c261cda1e28f9e68a038cdac78315c916afd0f773c66f4dc2e"
+    },
+    {
+      "path": "local/results.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/results.json",
+      "bytes": 36776,
+      "sha256": "c6ea14f9984c7fe9ad0be058fb73a4178a8f454955155eecd90ca855f8d51983"
+    },
+    {
+      "path": "local/conditional-decision.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/conditional-decision.json",
+      "bytes": 2131,
+      "sha256": "2a78739530bc3e99e59b9ba1c2bed1e6694de46145a713565cbabe1afafe88bb"
+    },
+    {
+      "path": "local/equation-head-diagnosis.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/equation-head-diagnosis.json",
+      "bytes": 70440,
+      "sha256": "432e927dea594a567e15df18554bb78c2f7289414ef3c58c5ea647e0467aa9cf"
+    },
+    {
+      "path": "local/waveform-diagnostic.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/waveform-diagnostic.json",
+      "bytes": 3561,
+      "sha256": "24d48ac564b886cf67d81858955d1fcdba180513e41c994b4c3dbe55c6162feb"
+    },
+    {
+      "path": "local/traces.npz",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/traces.npz",
+      "bytes": 171943,
+      "sha256": "ba2ef657514824b1491f78ca62189f315eee83254300e3ccaf7c1b4675888584"
+    },
+    {
+      "path": "local/waveform-traces.npz",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/waveform-traces.npz",
+      "bytes": 19126,
+      "sha256": "e1e0fc31b885d8d7af2df4aaaac6fb6eaa137c7a23d6ab31390d7ef7e0d141d6"
+    },
+    {
+      "path": "recovered/recovery-manifest.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/recovered/recovery-manifest.json",
+      "bytes": 8715,
+      "sha256": "340a6a26504f181b35f0e521deadf00a855d5e16c9a5ab67d74f253e9e928a27"
+    },
+    {
+      "path": "formal/warm_start/checkpoint.pt",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/warm_start/checkpoint.pt",
+      "bytes": 1014191,
+      "sha256": "1d7290dea42304b9892bd1305df1e094c82a030734576be8976238fb1ed431da"
+    },
+    {
+      "path": "formal/warm_start/result.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/warm_start/result.json",
+      "bytes": 304,
+      "sha256": "c51ea0c8b1448c70cb25cc3f17462af62797b72a543bd2bf24dd93798fcf43ea"
+    },
+    {
+      "path": "formal/warm_start/telemetry.jsonl",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/warm_start/telemetry.jsonl",
+      "bytes": 5014,
+      "sha256": "c6926148d836bbc150ecb5ed593cf861fa9f7ce51afcc772287b79494e56e031"
+    },
+    {
+      "path": "formal/warm_start/fixed_audit.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/warm_start/fixed_audit.json",
+      "bytes": 647,
+      "sha256": "9e8f07224f1aeb17f4954e3b83751c5757aa07b6250c90d43410101da064c6f3"
+    },
+    {
+      "path": "formal/D_B/checkpoint.pt",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/checkpoint.pt",
+      "bytes": 1016623,
+      "sha256": "42199f9dc92979e89cf50d5799273edf3baf3d9a1c75be286603a6ccccaaec25"
+    },
+    {
+      "path": "formal/D_B/result.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/result.json",
+      "bytes": 281,
+      "sha256": "7a67a9a35f7e29391c0198bbeb11a074200b554a6ae5ec035a356e4ca7704d56"
+    },
+    {
+      "path": "formal/D_B/telemetry.jsonl",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/telemetry.jsonl",
+      "bytes": 7387,
+      "sha256": "b944abb648d2b187619581c9c7b66b85769da7435ee337db4951ab2f4c012358"
+    },
+    {
+      "path": "formal/D_B/fixed_audit.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/fixed_audit.json",
+      "bytes": 648,
+      "sha256": "0d628cfba8ae4fbf8d7cf226148f06d908ae1dab08fd7cceb9ee8f6acbd18815"
+    },
+    {
+      "path": "formal/P_U/checkpoint.pt",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/checkpoint.pt",
+      "bytes": 1016623,
+      "sha256": "f3f3bae8028b8982fbca23f0279eee7b025a0a2bd18217a9749400fc2f70dbc0"
+    },
+    {
+      "path": "formal/P_U/result.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/result.json",
+      "bytes": 281,
+      "sha256": "b8101169409e15aa9c325c308dbef2c6fb74f35f9a4209a872f5675d245b4c77"
+    },
+    {
+      "path": "formal/P_U/telemetry.jsonl",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/telemetry.jsonl",
+      "bytes": 12036,
+      "sha256": "c4a046ec7419bcf5f359d4ada07feb66bfcac6b975139d3ae1da10f536d17eec"
+    },
+    {
+      "path": "formal/P_U/fixed_audit.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/fixed_audit.json",
+      "bytes": 648,
+      "sha256": "6f755a0306469be665d42f1832f03bf63ab726e19ff3e5a1bbc7c10bf8fc7b86"
+    },
+    {
+      "path": "formal/P_I/checkpoint.pt",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/checkpoint.pt",
+      "bytes": 1016623,
+      "sha256": "b77eb2fa06c805e16e2eba571bd4ea930e15b4a7c5737ecd579e6e71ffac1270"
+    },
+    {
+      "path": "formal/P_I/result.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/result.json",
+      "bytes": 281,
+      "sha256": "538fb4242508a4de62371afaf3340a8481ca38735d9dc4f15f03f5b8d259c036"
+    },
+    {
+      "path": "formal/P_I/telemetry.jsonl",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/telemetry.jsonl",
+      "bytes": 11992,
+      "sha256": "8d45306b8c3d4fa5923904432e330ac71adf86bdf01df4398b67fac52794dccb"
+    },
+    {
+      "path": "formal/P_I/fixed_audit.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/fixed_audit.json",
+      "bytes": 647,
+      "sha256": "9b0d87a0bf59d4c9fe51eb60380de40ee16ef7b32ec89d3662c3b80d68e29dfa"
+    },
+    {
+      "path": "formal/P_M/checkpoint.pt",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/checkpoint.pt",
+      "bytes": 1016623,
+      "sha256": "28bb9930d41e89790b6095ff517932072d6c1f9021af88e43afbf915a24ebc71"
+    },
+    {
+      "path": "formal/P_M/result.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/result.json",
+      "bytes": 281,
+      "sha256": "3806f4c9c065b172e5a46ef497b6cfe23813689b9b29a5d57f343912fad70ae0"
+    },
+    {
+      "path": "formal/P_M/telemetry.jsonl",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/telemetry.jsonl",
+      "bytes": 12003,
+      "sha256": "3c0f18d83cc9567674744c2f6533ac0b447b01eb36dbe9943f25692c8a345269"
+    },
+    {
+      "path": "formal/P_M/fixed_audit.json",
+      "original_path": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/fixed_audit.json",
+      "bytes": 647,
+      "sha256": "b97e0f57110e927e02154da428999316212ba12ac9d2a46059ae79b8d34772dc"
+    }
+  ]
+}

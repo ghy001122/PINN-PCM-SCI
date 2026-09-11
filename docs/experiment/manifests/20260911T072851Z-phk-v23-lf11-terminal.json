@@ -1,0 +1,106 @@
+{
+  "actual_budget": {
+    "conditional_updates": 0,
+    "development_updates": 0,
+    "formal_updates": 6000,
+    "scientific_retry": false,
+    "scientific_training_trajectories": 5,
+    "total_updates": 6000
+  },
+  "artifacts": {
+    "campaign": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/campaign.json",
+    "closeout": "docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md",
+    "conditional_decision": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/conditional-decision.json",
+    "equation_head_diagnosis": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/equation-head-diagnosis.json",
+    "fixed_adjudication": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/results.json",
+    "frozen_configuration": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/frozen_config.json",
+    "observation_mask": "outputs/runs/20260910-lf11-sparse-metric-sprint/input/observation_mask.json",
+    "paper": "paper/paper_v24/manuscript.md",
+    "posthoc_waveform_diagnostic": "outputs/runs/20260910-lf11-sparse-metric-sprint/local/waveform-diagnostic.json",
+    "recovery_manifest": "outputs/runs/20260910-lf11-sparse-metric-sprint/recovered/recovery-manifest.json",
+    "reproducibility": "paper/paper_v24/reproducibility.md",
+    "shutdown_proof": "outputs/runs/20260910-lf11-sparse-metric-sprint/compute-closure.json",
+    "sparse_manifest": "outputs/runs/20260910-lf11-sparse-metric-sprint/input/sparse_manifest.json",
+    "training_source_identity": "outputs/runs/20260910-lf11-sparse-metric-sprint/source_identity.json"
+  },
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "checkpoint": {
+    "D_B": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/checkpoint.pt",
+    "P_I": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/checkpoint.pt",
+    "P_M": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/checkpoint.pt",
+    "P_U": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/checkpoint.pt",
+    "warm_start": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/warm_start/checkpoint.pt"
+  },
+  "claim_status": "VALID_SPARSE_DIAGNOSTIC_EVIDENCE_NO_MATCHED_PINN_GAIN",
+  "code_identity": {
+    "frozen_training_identity": {
+      "base_commit": "918985c88f98321c96e6952c9bdd725bd958ed0e",
+      "files": {
+        "configs/phk_v23/lf11_sprint.json": "4a41172109696d807f6b7f660dbe8f4ae800210950e037f1ef5d4a5127cac47d",
+        "pinn_pcm_sci/phk_v22r_pinn.py": "bc6ecf0447ba3937da5573ad60d630c57fa7c381dbdee237a7caa53d7ed0115b",
+        "pinn_pcm_sci/phk_v22r_training.py": "b01b779b7197d9114b0f953b9f1cf6cb869c0924b422a809b1f5481f8d17b69b",
+        "pinn_pcm_sci/phk_v23_lf11.py": "275759860b8c4b37c50d35313cdbb0165ed655a5d7979106a7ac7e929a5b74fc",
+        "pinn_pcm_sci/phk_v23_lf11_readout.py": "947c536d154146d15121307392a906b01c04bce0019f1d5d4f5296fe2fbaf00c"
+      },
+      "recorded_utc": "2026-09-10T14:35:19.954434+00:00"
+    },
+    "local_campaign_analysis_and_reproduction_sources": {
+      "pinn_pcm_sci/phk_v23_lf11_branch.py": "01e677d7e5f93c99fb36054d10381938c064f577fd62fae8c672969ad30c8b76",
+      "pinn_pcm_sci/phk_v23_lf11_campaign.py": "d487c910aa307edf80bd84596186da2d48afd727ff7a1ade5efb49648eca65ea",
+      "pinn_pcm_sci/phk_v23_lf11_diagnosis.py": "5b8b6df89312666f8e2e7499ec83145f1eb9ecb08d0e6d469dc661a1df8ede58",
+      "pinn_pcm_sci/phk_v23_lf11_evaluation.py": "d7e8bc5f450417e379239b1fc5981969f4908b1adbcfa0af2c6b3f77b6701c57",
+      "pinn_pcm_sci/phk_v23_lf11_render.py": "512869b0ff019f144d7536c1f923b89a683b0bd59ae2010d37b58e0b462611c9",
+      "pinn_pcm_sci/phk_v23_lf11_reproduce.py": "6206c3cc313a882671ec102c9fa665434c6e7f442d4a06ab25df75b32e78dd79",
+      "pinn_pcm_sci/phk_v23_lf11_waveform_check.py": "ca7095f26a20f5ecb8fd45ba4ddc9b907b76b8cddba98ff4926887afabf1a5a1"
+    },
+    "local_changes_published": false,
+    "starting_commit": "918985c88f98321c96e6952c9bdd725bd958ed0e"
+  },
+  "command": [
+    "CPU sparse export and 1200-update parent via phk_v23_lf11.run_role",
+    "python -m pinn_pcm_sci.phk_v23_lf11_campaign --root <run-root> --device cuda",
+    "P_U/P_I/P_M scheduled independently with phk_v23_lf11_branch; original D_B retained",
+    "python -m pinn_pcm_sci.phk_v23_lf11_evaluation --root <run-root> --compute-closure <run-root>/compute-closure.json",
+    "python -m pinn_pcm_sci.phk_v23_lf11_diagnosis --root <run-root>",
+    "python -m pinn_pcm_sci.phk_v23_lf11_waveform_check --root <run-root>"
+  ],
+  "ended_at": "2026-09-11T07:28:51.296792+00:00",
+  "environment": {
+    "artifact_paths_relative_to": "repository root",
+    "formal_branches_same_environment": true,
+    "formal_environment_record": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/execution_environment.json",
+    "initial_missing_deployment_dependency": "existing benchmark-test source; zero formal optimizer updates",
+    "instance_shutdown_before_local_evaluation": true,
+    "precision": "float64",
+    "recovery_verified": true,
+    "reference_read_on_cloud": false,
+    "scheduling": "D_B retained original process; P_U/P_I/P_M independent processes using the same frozen run_role; atomic directory check prevented duplicate P_U in original coordinator",
+    "stress_read": false
+  },
+  "evaluator_id": "lf11-local-matched-adjudication-v1-common-fv-readout",
+  "evidence_identity": "ONE_SEED_ONE_NOMINAL_SPARSE_MASK_FIXED_DISCRETIZATION_POSTHOC_DIAGNOSTICS_SEPARATE",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF11",
+  "failure_class": "NO_PREDECLARED_MATCHED_INCREMENT_AND_NO_PHASE_METRIC_FALLBACK_TRIGGER",
+  "gate": "PHK_V23_LF11",
+  "gate_outcome": "LF11_VALID_FOUR_ARM_NO_MATCHED_INCREMENT",
+  "method_id": "phk-v23-lf11-observation-sampling-metric-attribution-v1",
+  "numerical_validity": "VALID_COMMON_PARENT_AND_FOUR_FIXED_ENDPOINTS",
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "planned_budget": {
+    "conditional_cap": 3600,
+    "development_cap": 600,
+    "formal_cap": 6000,
+    "total_cap": 10200
+  },
+  "replay_of": null,
+  "route_disposition": "LATENT_NOT_TRIGGERED_BOUNDARY_ELECTRIC_ATTRIBUTION_PROPOSED",
+  "run_id": "20260911T072851Z-phk-v23-lf11-terminal",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "nominal_sparse_four_arm_and_conditional_attribution",
+  "seed": 17,
+  "split_id": "SPARSE_COORDINATE_MASK_NOMINAL_RECONSTRUCTION_NOT_ENTITY_SPLIT_STRESS_UNREAD",
+  "started_at": "2026-09-10T14:35:19.954434+00:00",
+  "supersedes": null,
+  "tier": "development_campaign"
+}

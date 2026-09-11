@@ -27,7 +27,9 @@
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-LF10 已完成并关闭为 `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`。CTRL 与 PROJ 各保留一个身份有效的 25-update safety prefix，但均未完成 200 accepted updates；full path/control 因前提未满足而未运行，不得称失败。方向机制结论为 `NO_EXTENDED_FEASIBLE_PATH_FOUND`，同时建立 `INTERFACE_EFFECT_STREAM_REPLICATED` 与 `PHYSICS_FORGETTING_STREAM_REPLICATED`。没有完整 PINN Pareto、direct `LF_ONLY` 增益或 candidate。当前无新科研执行授权，终局路由为 `FINALIZE_REPLICATED_INTERFACE_AND_FORGETTING_PAPER_NO_MORE_REFINEMENT_RESCUE`。
+LF11 用户授权的稀疏等观测冲刺已完成，四臂均数值合法，终局为 `LF11_VALID_FOUR_ARM_NO_MATCHED_INCREMENT`。正式更新6000，必要Adam方程×参数头诊断完成，latent条件未触发。后验波形感知插值将同观测电流NRMSE从103.08%降至0.428%，原裁决保持。详细事实、边界与唯一未授权后续见[LF11终局](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)及[paper_v24](paper/paper_v24/README.md)。当前无新研究执行授权，stress sealed/unread，实例已关闭。
+
+历史 LF10 已完成并关闭为 `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`。CTRL 与 PROJ 各保留一个身份有效的 25-update safety prefix，但均未完成 200 accepted updates；full path/control 因前提未满足而未运行，不得称失败。方向机制结论为 `NO_EXTENDED_FEASIBLE_PATH_FOUND`，同时建立 `INTERFACE_EFFECT_STREAM_REPLICATED` 与 `PHYSICS_FORGETTING_STREAM_REPLICATED`。没有完整 PINN Pareto、direct `LF_ONLY` 增益或 candidate。其原终局路由和paper_v23保留，不授权重启dense refinement。
 
 LF9 已完成并关闭为 `LF9_NO_SAFE_MIXED_FORM_SCREEN`。ER-S 与 ER-CV 均保留一个身份有效的 25-update safety prefix，并在最小冻结学习率的第二块因 temperature preservation 停滞；无臂完成 200 accepted updates。filtered full path 与 no-filter control 因前提未满足而未运行，不得称失败。其历史证据不被 LF10 改写。
 

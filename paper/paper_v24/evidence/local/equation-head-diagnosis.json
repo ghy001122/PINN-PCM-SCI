@@ -1,0 +1,2017 @@
+{
+  "schema_id": "lf11-one-equation-by-head-diagnosis-v1",
+  "recorded_utc": "2026-09-11T07:21:07.971772+00:00",
+  "status": "LOCAL_DIRECTIONAL_EVIDENCE_NOT_LONG_TERM_CAUSAL_PROOF",
+  "records": [
+    {
+      "role": "common_parent_fresh_P_U",
+      "checkpoint_updates": 1200,
+      "identity": {
+        "proposal_step": 1,
+        "global_clip_coefficient": 1.0,
+        "total_gradient_norm_before_clip": 0.7128124063873503,
+        "decomposition_max_abs_error": 1.531435568635775e-18,
+        "optimizer_moments": "fresh as in the four-arm launch",
+        "shared_denominator": true,
+        "executed_optimizer_updates": 0
+      },
+      "loss_components": {
+        "observation": 0.7740302344726969,
+        "boundary": 0.00034207860360658133,
+        "initial": 1.178909522231482e-36,
+        "electric": 7.738081158418468e-05,
+        "thermal": 2.499765487862921e-06,
+        "phase": 3.0053139604536384e-07
+      },
+      "diagnostic_metric_squared": {
+        "EV_squared": 0.00011951898418878418,
+        "ET_squared": 0.08314458382406939,
+        "Ephi_squared": 0.0008350501528796713,
+        "soft_event_mse": 0.0014357842660356233,
+        "EI_squared": 0.006432825628699324
+      },
+      "rows": [
+        {
+          "equation": "observation",
+          "head": "potential",
+          "raw_gradient_norm": 0.010711154874961172,
+          "adam_direction_norm": 0.015551262969019595,
+          "directional_effect": {
+            "EV_squared": 1.6331098275753218e-07,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -1.8886998524198576e-06
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.000683201015579153,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -0.00014680172924271697
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "temperature",
+          "raw_gradient_norm": 0.7118168984655967,
+          "adam_direction_norm": 0.011527286864477553,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 1.1892240893311057e-05,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.80163052639198e-08
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 7.151542738174361e-05,
+            "Ephi_squared": 0.0,
+            "EI_squared": 1.4003414909571071e-06
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "phase",
+          "raw_gradient_norm": 0.035250346939973205,
+          "adam_direction_norm": 0.049919582588261076,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 8.016025134495106e-06,
+            "soft_event_mse": 8.93437371352824e-05,
+            "EI_squared": -2.3669216165443183e-07
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.004799726763028445,
+            "EI_squared": -1.8397215727289148e-05
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "potential",
+          "raw_gradient_norm": 1.1867043438509515e-05,
+          "adam_direction_norm": 0.0005507569200736852,
+          "directional_effect": {
+            "EV_squared": -9.677232722390656e-10,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 6.787313455474801e-08
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -4.048408203965802e-06,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 5.275530417919281e-06
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "temperature",
+          "raw_gradient_norm": 4.006843198156352e-05,
+          "adam_direction_norm": 9.414187894060754e-05,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 1.6305733886681466e-08,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.4813433142096114e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 9.805650071677396e-08,
+            "Ephi_squared": 0.0,
+            "EI_squared": 1.1513939594451043e-10
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "phase",
+          "raw_gradient_norm": 0.004028244843533946,
+          "adam_direction_norm": 0.04878169273908214,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 1.1553158253548764e-06,
+            "soft_event_mse": 1.1832290669423699e-05,
+            "EI_squared": 1.9427569641224783e-07
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0006917643337772998,
+            "EI_squared": 1.5100339075375273e-05
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "potential",
+          "raw_gradient_norm": 0.00023825255021412065,
+          "adam_direction_norm": 0.009964956661749593,
+          "directional_effect": {
+            "EV_squared": -2.0680742679370107e-07,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.667772759923181e-06
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -0.0008651655977390249,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.00012962987466056918
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "temperature",
+          "raw_gradient_norm": 1.2063308798277343e-05,
+          "adam_direction_norm": 1.5039495308899269e-05,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 4.565784672357082e-09,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -1.4923803932035493e-13
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 2.7456897745847757e-08,
+            "Ephi_squared": 0.0,
+            "EI_squared": -1.1599726771276552e-11
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "phase",
+          "raw_gradient_norm": 0.0018162144890519977,
+          "adam_direction_norm": 0.020324289405111905,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -5.709081815620487e-08,
+            "soft_event_mse": -1.6122243232890937e-05,
+            "EI_squared": -8.450378186609117e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -3.418406544764235e-05,
+            "EI_squared": -6.568169786002523e-07
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "potential",
+          "raw_gradient_norm": 4.009517415646935e-06,
+          "adam_direction_norm": 0.00014879122901409662,
+          "directional_effect": {
+            "EV_squared": -1.022206558778261e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.224695399423248e-08
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -4.27633553663597e-06,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 9.519109253944394e-07
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 1.5664939571306237e-06,
+          "adam_direction_norm": 2.2344585096704297e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 4.039585318829374e-10,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 5.4176357527186935e-14
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 2.4292534360247537e-09,
+            "Ephi_squared": 0.0,
+            "EI_squared": 4.210930052688296e-12
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "phase",
+          "raw_gradient_norm": 4.08769045068139e-06,
+          "adam_direction_norm": 4.441775475119874e-05,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 4.4101293077211885e-09,
+            "soft_event_mse": -2.8100814609427852e-08,
+            "EI_squared": -9.955117943403137e-11
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 2.640637387175401e-06,
+            "EI_squared": -7.737748944250489e-09
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "temperature",
+          "raw_gradient_norm": 5.3911510092880725e-08,
+          "adam_direction_norm": 6.284277992751711e-08,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -1.2493619921081633e-11,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -2.1461719058897956e-15
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -7.513189282129088e-11,
+            "Ephi_squared": 0.0,
+            "EI_squared": -1.66814089932338e-13
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "phase",
+          "raw_gradient_norm": 2.769702016934504e-06,
+          "adam_direction_norm": 3.228551609571859e-05,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 6.542147405635438e-10,
+            "soft_event_mse": -1.680033989042775e-08,
+            "EI_squared": 1.479454307081191e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 3.917218255140027e-07,
+            "EI_squared": 1.1499257033182843e-08
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        }
+      ],
+      "total_directional_effect": {
+        "EV_squared": -4.5486373867186234e-08,
+        "ET_squared": 1.1913503876782058e-05,
+        "Ephi_squared": 9.119314485742061e-06,
+        "soft_event_mse": 8.500888341731526e-05,
+        "EI_squared": -1.7360776372583618e-07
+      }
+    },
+    {
+      "role": "D_B",
+      "checkpoint_updates": 1200,
+      "identity": {
+        "proposal_step": 1201,
+        "global_clip_coefficient": 1.0,
+        "total_gradient_norm_before_clip": 0.38467290454024944,
+        "decomposition_max_abs_error": 2.710505431213761e-20,
+        "optimizer_moments": "actual saved endpoint moments",
+        "shared_denominator": true,
+        "executed_optimizer_updates": 0
+      },
+      "loss_components": {
+        "observation": 0.6354982675218486,
+        "boundary": 0.00395824006246639,
+        "initial": 1.9258521966224206e-34
+      },
+      "diagnostic_metric_squared": {
+        "EV_squared": 0.00011196667517531483,
+        "ET_squared": 0.0610373885261074,
+        "Ephi_squared": 0.001494892271645079,
+        "soft_event_mse": 0.002173579780219051,
+        "EI_squared": 0.007053011909533405
+      },
+      "rows": [
+        {
+          "equation": "observation",
+          "head": "potential",
+          "raw_gradient_norm": 0.02743755627865013,
+          "adam_direction_norm": 0.0011944815817365728,
+          "directional_effect": {
+            "EV_squared": -4.37911522093321e-08,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -2.2664172546690672e-06
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -0.0001955544010785572,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -0.00016067017068308078
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "temperature",
+          "raw_gradient_norm": 0.3785635690103816,
+          "adam_direction_norm": 0.001168756510626514,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.7702706945187414e-06,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -4.37356219705092e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.269322755620368e-05,
+            "Ephi_squared": 0.0,
+            "EI_squared": -3.100492564842596e-07
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "phase",
+          "raw_gradient_norm": 0.08126746003575258,
+          "adam_direction_norm": 0.00048450821590385337,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -1.7711718647175018e-06,
+            "soft_event_mse": 2.4375093179986054e-06,
+            "EI_squared": 2.6088156428749084e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -0.0005924078605237508,
+            "EI_squared": 1.8494337428727637e-08
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "potential",
+          "raw_gradient_norm": 0.0017281738166025841,
+          "adam_direction_norm": 0.00012820021072841868,
+          "directional_effect": {
+            "EV_squared": -8.992748273038483e-10,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -2.919442507729519e-07
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -4.015814642596936e-06,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -2.069642406092758e-05
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "temperature",
+          "raw_gradient_norm": 0.027153781115049035,
+          "adam_direction_norm": 0.00022814909442076372,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -5.162691220012311e-08,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.2922388666156685e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -4.229121973169022e-07,
+            "Ephi_squared": 0.0,
+            "EI_squared": 9.160900925666786e-09
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "phase",
+          "raw_gradient_norm": 0.02256161777550003,
+          "adam_direction_norm": 0.0001652558000465333,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 3.178056261506068e-07,
+            "soft_event_mse": -1.035135872152109e-06,
+            "EI_squared": 7.964297544223755e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.00010629716675198017,
+            "EI_squared": 5.6460258726194585e-08
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.002089715249741332,
+          "directional_effect": {
+            "EV_squared": -1.411098905971935e-08,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 4.24018156159386e-06
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -6.301423632355203e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.00030059367657259286
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0045536989237495076,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.2474246632587927e-05,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -1.046559924242217e-08
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -0.00018410229512829716,
+            "Ephi_squared": 0.0,
+            "EI_squared": -7.419241153042747e-07
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0027355655267449807,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -3.5231735397633087e-06,
+            "soft_event_mse": -2.206962936758841e-05,
+            "EI_squared": 5.5523307155145105e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -0.0011784038243391858,
+            "EI_squared": 3.9361415993141483e-07
+          }
+        }
+      ],
+      "total_directional_effect": {
+        "EV_squared": -5.880141609635531e-08,
+        "ET_squared": -2.5296144239306794e-05,
+        "Ephi_squared": -4.976539778330202e-06,
+        "soft_event_mse": -2.066725592174192e-05,
+        "EI_squared": 1.6737197606332531e-06
+      }
+    },
+    {
+      "role": "P_U",
+      "checkpoint_updates": 1200,
+      "identity": {
+        "proposal_step": 1201,
+        "global_clip_coefficient": 1.0,
+        "total_gradient_norm_before_clip": 0.41841463915349225,
+        "decomposition_max_abs_error": 2.710505431213761e-20,
+        "optimizer_moments": "actual saved endpoint moments",
+        "shared_denominator": true,
+        "executed_optimizer_updates": 0
+      },
+      "loss_components": {
+        "observation": 0.6401945430525696,
+        "boundary": 0.0050278333184784274,
+        "initial": 1.9258521966224206e-34,
+        "electric": 0.004054308813748081,
+        "thermal": 0.00032545809980055073,
+        "phase": 5.658560825411148e-05
+      },
+      "diagnostic_metric_squared": {
+        "EV_squared": 0.00012422676390496528,
+        "ET_squared": 0.06105119146212842,
+        "Ephi_squared": 0.0021756449144900393,
+        "soft_event_mse": 0.002204949394965723,
+        "EI_squared": 0.006286121886936756
+      },
+      "rows": [
+        {
+          "equation": "observation",
+          "head": "potential",
+          "raw_gradient_norm": 0.02123807868374406,
+          "adam_direction_norm": 0.0005446124972848507,
+          "directional_effect": {
+            "EV_squared": -5.686720533774972e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 3.4041860296505856e-07
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -2.2888467649875233e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 2.7076996683160516e-05
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "temperature",
+          "raw_gradient_norm": 0.37911810900186366,
+          "adam_direction_norm": 0.0011708543664255698,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.8183821205874812e-06,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -5.3652206324489765e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.3082122175582717e-05,
+            "Ephi_squared": 0.0,
+            "EI_squared": -4.2675124098360926e-07
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "phase",
+          "raw_gradient_norm": 0.21086233129273918,
+          "adam_direction_norm": 0.0004569217673280539,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -6.235257760517805e-06,
+            "soft_event_mse": -2.078291097369548e-06,
+            "EI_squared": 2.6873322264032467e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -0.0014329676959209403,
+            "EI_squared": 2.1375120262842936e-08
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "potential",
+          "raw_gradient_norm": 0.0034072758251517165,
+          "adam_direction_norm": 0.00010924276007713983,
+          "directional_effect": {
+            "EV_squared": -1.5060800185390488e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 4.420002831705008e-08
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -6.061817804781645e-06,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 3.5156833666320196e-06
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "temperature",
+          "raw_gradient_norm": 0.02706682663554273,
+          "adam_direction_norm": 0.00022749168208058355,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -5.123793539560628e-08,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.0000032611037554e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -4.1963092094107987e-07,
+            "Ephi_squared": 0.0,
+            "EI_squared": 7.954055609245112e-09
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "phase",
+          "raw_gradient_norm": 0.03386687998735975,
+          "adam_direction_norm": 0.00013369224267923652,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 5.191166583589327e-07,
+            "soft_event_mse": -6.75259482257585e-08,
+            "EI_squared": 5.375968527399411e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.00011930178838043778,
+            "EI_squared": 4.276061317369026e-08
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "potential",
+          "raw_gradient_norm": 0.010326922147563951,
+          "adam_direction_norm": 0.0003980968592795166,
+          "directional_effect": {
+            "EV_squared": 5.492944403917234e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.75302215486053e-07
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 2.2108538575952085e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 1.394359023250488e-05
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0008138921770376199,
+          "adam_direction_norm": 1.9921294749149785e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 1.0896780355528554e-08,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 6.6754022614382665e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 8.92429786754293e-08,
+            "Ephi_squared": 0.0,
+            "EI_squared": 5.309634764886183e-10
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "phase",
+          "raw_gradient_norm": 0.03352519324861543,
+          "adam_direction_norm": 8.393168168419335e-05,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 5.344368662997843e-07,
+            "soft_event_mse": 3.751178515572474e-07,
+            "EI_squared": -3.69565470925088e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.00012282263128977867,
+            "EI_squared": -2.93953472086729e-08
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "potential",
+          "raw_gradient_norm": 0.0007083073144338766,
+          "adam_direction_norm": 5.949579855462077e-06,
+          "directional_effect": {
+            "EV_squared": -2.365125220785212e-11,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 5.166580863411895e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -9.519386750646409e-08,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 4.1095137481732667e-07
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0003129347031857219,
+          "adam_direction_norm": 1.190013309264177e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 4.559606117085725e-09,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.3149221304459847e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 3.7342482659934353e-08,
+            "Ephi_squared": 0.0,
+            "EI_squared": 1.045892963973969e-10
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "phase",
+          "raw_gradient_norm": 5.583698079626218e-05,
+          "adam_direction_norm": 1.0822369056053879e-07,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 8.496984583958535e-10,
+            "soft_event_mse": 6.658586535622828e-10,
+            "EI_squared": -9.10050383597109e-13
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 1.9527507745789915e-07,
+            "EI_squared": -7.238567752625768e-11
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "temperature",
+          "raw_gradient_norm": 0.000153625796817845,
+          "adam_direction_norm": 3.8361842393822207e-07,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.1434338892732148e-09,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -5.525919438688438e-13
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -1.7554398513277505e-08,
+            "Ephi_squared": 0.0,
+            "EI_squared": -4.3953327171176066e-11
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "phase",
+          "raw_gradient_norm": 0.0005398600055808993,
+          "adam_direction_norm": 1.4525240530429295e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -1.7331028371289043e-09,
+            "soft_event_mse": 3.9466874599669814e-09,
+            "EI_squared": -5.227635909051373e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -3.98296345508002e-07,
+            "EI_squared": -4.1580771126272364e-10
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0017814701664881833,
+          "directional_effect": {
+            "EV_squared": 3.4856772046373162e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -2.0450784412477686e-07
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 1.4029493705977458e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -1.6266614599835102e-05
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.004556396577788282,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.2637423859032576e-05,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -7.2732179991663285e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -0.00018539706856560807,
+            "Ephi_squared": 0.0,
+            "EI_squared": -5.78513917641405e-07
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0016743660541282612,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 2.4180468665714096e-06,
+            "soft_event_mse": 6.472842609872105e-06,
+            "EI_squared": 1.0856882527802546e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0005557080685517536,
+            "EI_squared": 8.635596575341887e-08
+          }
+        }
+      ],
+      "total_directional_effect": {
+        "EV_squared": 1.7621698040326776e-09,
+        "ET_squared": -2.5493730962432318e-05,
+        "Ephi_squared": -2.7645407736664124e-06,
+        "soft_event_mse": 4.7067559619475734e-06,
+        "EI_squared": 3.495648981046825e-07
+      }
+    },
+    {
+      "role": "P_I",
+      "checkpoint_updates": 1200,
+      "identity": {
+        "proposal_step": 1201,
+        "global_clip_coefficient": 1.0,
+        "total_gradient_norm_before_clip": 0.3875394848877445,
+        "decomposition_max_abs_error": 2.710505431213761e-20,
+        "optimizer_moments": "actual saved endpoint moments",
+        "shared_denominator": true,
+        "executed_optimizer_updates": 0
+      },
+      "loss_components": {
+        "observation": 0.6392332628622178,
+        "boundary": 0.004614823386931455,
+        "initial": 1.9258521966224206e-34,
+        "electric": 0.003438719445946207,
+        "thermal": 0.00040057218664378433,
+        "phase": 5.256341872312476e-05
+      },
+      "diagnostic_metric_squared": {
+        "EV_squared": 0.00012540126438399525,
+        "ET_squared": 0.061045990377903446,
+        "Ephi_squared": 0.0020294582481299893,
+        "soft_event_mse": 0.002178293301180968,
+        "EI_squared": 0.006298700588938715
+      },
+      "rows": [
+        {
+          "equation": "observation",
+          "head": "potential",
+          "raw_gradient_norm": 0.023271572772632615,
+          "adam_direction_norm": 0.0006612690171152711,
+          "directional_effect": {
+            "EV_squared": -1.152357076474677e-08,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -3.713778793220266e-08
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -4.59467885804567e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -2.9480515391873953e-06
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "temperature",
+          "raw_gradient_norm": 0.37893745493560477,
+          "adam_direction_norm": 0.0011701683606355354,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.8089819000048024e-06,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -6.34620256501171e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.3007095819200253e-05,
+            "Ephi_squared": 0.0,
+            "EI_squared": -5.037707758451334e-07
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "phase",
+          "raw_gradient_norm": 0.16673459988731282,
+          "adam_direction_norm": 0.0005691505857281305,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -7.199293647624101e-06,
+            "soft_event_mse": 1.395937437743948e-06,
+            "EI_squared": 4.0393878635529637e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -0.0017736983882910059,
+            "EI_squared": 3.2065247478556296e-08
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "potential",
+          "raw_gradient_norm": 0.0032770003221526964,
+          "adam_direction_norm": 0.00012470536200117884,
+          "directional_effect": {
+            "EV_squared": -1.6119054989468836e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 9.668638862853537e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -6.426990616342655e-06,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 7.675105941559474e-07
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "temperature",
+          "raw_gradient_norm": 0.02706886240961563,
+          "adam_direction_norm": 0.00022736446130449168,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -5.087326325164525e-08,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.180366808799006e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -4.1667980924476594e-07,
+            "Ephi_squared": 0.0,
+            "EI_squared": 9.369923146306349e-09
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "phase",
+          "raw_gradient_norm": 0.0260140124017845,
+          "adam_direction_norm": 0.00014757138534547942,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 7.328912848151344e-07,
+            "soft_event_mse": -2.793533679052773e-07,
+            "EI_squared": 4.721440919926665e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.00018056328221840605,
+            "EI_squared": 3.747948369079561e-08
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "potential",
+          "raw_gradient_norm": 0.009673953332428643,
+          "adam_direction_norm": 0.0002322379106838501,
+          "directional_effect": {
+            "EV_squared": 2.956571679667209e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -9.550392282953835e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 1.1788444455447418e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -7.581240089206246e-07
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0008065212311711014,
+          "adam_direction_norm": 2.0644640677779287e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 1.2330082940956837e-08,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 5.073289280816781e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 1.0099011306580345e-07,
+            "Ephi_squared": 0.0,
+            "EI_squared": 4.0272507076507933e-10
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "phase",
+          "raw_gradient_norm": 0.1166030869017798,
+          "adam_direction_norm": 0.00041860225395459896,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 4.876064695304237e-06,
+            "soft_event_mse": -1.631357864353918e-06,
+            "EI_squared": -1.1377669610088038e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0012013217566306687,
+            "EI_squared": -9.031759368010453e-08
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "potential",
+          "raw_gradient_norm": 0.0005786097528271357,
+          "adam_direction_norm": 9.933702882017571e-06,
+          "directional_effect": {
+            "EV_squared": 1.7913841703872872e-10,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 3.802395157697292e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 7.142608087673789e-07,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 3.0183964962350816e-07
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0004976268915656497,
+          "adam_direction_norm": 1.4819283745900685e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 5.8188995321507e-09,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 5.992851463963929e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 4.765996502087172e-08,
+            "Ephi_squared": 0.0,
+            "EI_squared": 4.757212522919494e-10
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "phase",
+          "raw_gradient_norm": 0.0001413391129704558,
+          "adam_direction_norm": 4.3344812366440304e-07,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 5.477135231867326e-09,
+            "soft_event_mse": -1.4619697253979398e-09,
+            "EI_squared": -1.7761012174330919e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 1.3494082070705671e-06,
+            "EI_squared": -1.4098949397214896e-10
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "temperature",
+          "raw_gradient_norm": 6.353184435271941e-05,
+          "adam_direction_norm": 1.818285815078643e-07,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -9.782437508285987e-10,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -4.239462213006359e-13
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -8.012350563671822e-09,
+            "Ephi_squared": 0.0,
+            "EI_squared": -3.365346672019441e-11
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "phase",
+          "raw_gradient_norm": 0.0008506119172596536,
+          "adam_direction_norm": 2.552931655305337e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 2.7095193648833905e-08,
+            "soft_event_mse": -9.383596189723535e-09,
+            "EI_squared": -1.1518761789642786e-11
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 6.675474519813434e-06,
+            "EI_squared": -9.143760389143703e-10
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0015167150219078853,
+          "directional_effect": {
+            "EV_squared": -6.360145350021241e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -2.551390033829138e-07
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -2.535917552850837e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -2.025330461261875e-05
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.004551226060018103,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.2542022783868913e-05,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -8.6666785161222e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -0.00018463147738551845,
+            "Ephi_squared": 0.0,
+            "EI_squared": -6.879735267415269e-07
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0020566092735537517,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 2.7906039831836513e-06,
+            "soft_event_mse": -2.557062571728217e-07,
+            "EI_squared": 3.464413464577876e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0006875243641388058,
+            "EI_squared": 2.75010171991808e-07
+          }
+        }
+      ],
+      "total_directional_effect": {
+        "EV_squared": -1.6359911517008956e-08,
+        "ET_squared": -2.538470720840308e-05,
+        "Ephi_squared": 1.2328386445596206e-06,
+        "soft_event_mse": -7.813256176031904e-07,
+        "EI_squared": -3.000509172643403e-07
+      }
+    },
+    {
+      "role": "P_M",
+      "checkpoint_updates": 1200,
+      "identity": {
+        "proposal_step": 1201,
+        "global_clip_coefficient": 1.0,
+        "total_gradient_norm_before_clip": 0.38759001380324365,
+        "decomposition_max_abs_error": 2.710505431213761e-20,
+        "optimizer_moments": "actual saved endpoint moments",
+        "shared_denominator": true,
+        "executed_optimizer_updates": 0
+      },
+      "loss_components": {
+        "observation": 0.6392323517135077,
+        "boundary": 0.004614879756487838,
+        "initial": 1.9258521966224206e-34,
+        "electric": 0.0034417329853158873,
+        "thermal": 0.0004005845681806749,
+        "phase": 3.589494539860252e-05
+      },
+      "diagnostic_metric_squared": {
+        "EV_squared": 0.00012540759198364165,
+        "ET_squared": 0.06104597930853921,
+        "Ephi_squared": 0.0020289465679426983,
+        "soft_event_mse": 0.002177945904547003,
+        "EI_squared": 0.006298770127283844
+      },
+      "rows": [
+        {
+          "equation": "observation",
+          "head": "potential",
+          "raw_gradient_norm": 0.023270758308388186,
+          "adam_direction_norm": 0.0006611829969235844,
+          "directional_effect": {
+            "EV_squared": -1.1522777559966318e-08,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -3.604839719772116e-08
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -4.5941307769745574e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -2.8615425288798366e-06
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "temperature",
+          "raw_gradient_norm": 0.37894447090062366,
+          "adam_direction_norm": 0.0011701915633327402,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.8095315298281275e-06,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -6.345657396487441e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.3011601760274535e-05,
+            "Ephi_squared": 0.0,
+            "EI_squared": -5.037219384305279e-07
+          }
+        },
+        {
+          "equation": "observation",
+          "head": "phase",
+          "raw_gradient_norm": 0.16672351984883144,
+          "adam_direction_norm": 0.0005691405026982905,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -7.196764071321004e-06,
+            "soft_event_mse": 1.3893099553175846e-06,
+            "EI_squared": 4.020264441454956e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": -0.001773522325582567,
+            "EI_squared": 3.191309065273489e-08
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "potential",
+          "raw_gradient_norm": 0.0032776086438906097,
+          "adam_direction_norm": 0.00012469872111133519,
+          "directional_effect": {
+            "EV_squared": -1.6124215116790513e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 9.801604931734925e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -6.428723676830419e-06,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 7.780570439678495e-07
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "temperature",
+          "raw_gradient_norm": 0.027068837143915312,
+          "adam_direction_norm": 0.00022736475340758822,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -5.088410025181369e-08,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 1.180071870428245e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -4.167686457664538e-07,
+            "Ephi_squared": 0.0,
+            "EI_squared": 9.367478464697646e-09
+          }
+        },
+        {
+          "equation": "boundary",
+          "head": "phase",
+          "raw_gradient_norm": 0.02599687410258611,
+          "adam_direction_norm": 0.0001474530514182436,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 7.321872518318152e-07,
+            "soft_event_mse": -2.785276248907726e-07,
+            "EI_squared": 4.721751106752865e-10
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.00018043532131411301,
+            "EI_squared": 3.748153219864351e-08
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "initial",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "potential",
+          "raw_gradient_norm": 0.009685252873203798,
+          "adam_direction_norm": 0.00023236376543720957,
+          "directional_effect": {
+            "EV_squared": 2.96237035034751e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -9.515821736735771e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 1.1810968951281378e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -7.553714093737839e-07
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0008073786651441884,
+          "adam_direction_norm": 2.0664789098756005e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 1.234527217343379e-08,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 5.075164176239786e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 1.0111453950995028e-07,
+            "Ephi_squared": 0.0,
+            "EI_squared": 4.0286945496360724e-10
+          }
+        },
+        {
+          "equation": "electric",
+          "head": "phase",
+          "raw_gradient_norm": 0.11677651489966981,
+          "adam_direction_norm": 0.00041926176446177284,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 4.881130398701237e-06,
+            "soft_event_mse": -1.6309605211314885e-06,
+            "EI_squared": -1.139912167625613e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0012028730760639454,
+            "EI_squared": -9.048688431158592e-08
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "potential",
+          "raw_gradient_norm": 0.0005785856543283011,
+          "adam_direction_norm": 9.93271993159056e-06,
+          "directional_effect": {
+            "EV_squared": 1.7885005206685125e-10,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 3.7926679651729695e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 7.130750588456428e-07,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 3.010641671732545e-07
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0004975919718571316,
+          "adam_direction_norm": 1.4818828079641598e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 5.819063303625518e-09,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 5.991480815599441e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 4.7661315041034475e-08,
+            "Ephi_squared": 0.0,
+            "EI_squared": 4.756071974786519e-10
+          }
+        },
+        {
+          "equation": "thermal",
+          "head": "phase",
+          "raw_gradient_norm": 0.0001415439537249484,
+          "adam_direction_norm": 4.341324066422675e-07,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 5.482155635577047e-09,
+            "soft_event_mse": -1.4614517340660363e-09,
+            "EI_squared": -1.7784854946763745e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 1.3509857090854339e-06,
+            "EI_squared": -1.4117720275047514e-10
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": 0.0
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": 0.0
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "temperature",
+          "raw_gradient_norm": 6.113351691391744e-05,
+          "adam_direction_norm": 1.7766919437941482e-07,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -9.454631681104596e-10,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -4.631066081451698e-13
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -7.743861093061429e-09,
+            "Ephi_squared": 0.0,
+            "EI_squared": -3.6761669245490525e-11
+          }
+        },
+        {
+          "equation": "phase",
+          "head": "phase",
+          "raw_gradient_norm": 0.00046531363597353156,
+          "adam_direction_norm": 1.7844139875559255e-06,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 1.6922820361577425e-08,
+            "soft_event_mse": -8.367257292687393e-09,
+            "EI_squared": -2.4195189307310796e-12
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 4.170346481508566e-06,
+            "EI_squared": -1.9206280605880953e-10
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0015163393592441403,
+          "directional_effect": {
+            "EV_squared": -6.35296094474789e-09,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -2.5604534101660206e-07
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": -2.5329251779176895e-05,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0,
+            "EI_squared": -2.032502661968186e-05
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.004551123806014158,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -2.2542036564510312e-05,
+            "Ephi_squared": 0.0,
+            "soft_event_mse": 0.0,
+            "EI_squared": -8.663237053748374e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": -0.00018463162373543165,
+            "Ephi_squared": 0.0,
+            "EI_squared": -6.876927462571281e-07
+          }
+        },
+        {
+          "equation": "historical_momentum",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.00205453897241993,
+          "directional_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 2.785972877520171e-06,
+            "soft_event_mse": -2.375585424255331e-07,
+            "EI_squared": 3.4606212728832944e-09
+          },
+          "relative_first_order_rms_effect": {
+            "EV_squared": 0.0,
+            "ET_squared": 0.0,
+            "Ephi_squared": 0.0006865564923045456,
+            "EI_squared": 2.7470610952233496e-07
+          }
+        }
+      ],
+      "total_directional_effect": {
+        "EV_squared": -1.6346939613978904e-08,
+        "ET_squared": -2.5385233322281307e-05,
+        "Ephi_squared": 1.2249314327293752e-06,
+        "soft_event_mse": -7.675654421569636e-07,
+        "EI_squared": -2.9970485812330715e-07
+      }
+    }
+  ],
+  "optimizer_updates": 0,
+  "reference_access": "local nominal only after formal screen and cloud closure",
+  "probe_scope": "4096 fixed samples per spatial scope; 64 fixed current times; no formal metric replacement",
+  "interpretation": "positive directional effect means locally increasing that error; history is separated, not assigned to a current residual equation"
+}

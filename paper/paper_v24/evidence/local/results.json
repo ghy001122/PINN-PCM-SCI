@@ -1,0 +1,1092 @@
+{
+  "schema_id": "lf11-local-matched-adjudication-v1",
+  "recorded_utc": "2026-09-11T07:16:49.876162+00:00",
+  "reference_sha256": "0CE36347433983DB3631C9CD92E3FBFDAEF5A692D3370736071696135FFB73CE",
+  "reference_role": "fixed-discretization nominal reference; historic oracle no-go retained",
+  "records": {
+    "D_B": {
+      "metrics": {
+        "S": 0.001676875,
+        "Ephi": 0.03542237218881261,
+        "ET": 0.24292720633803994,
+        "EV": 0.010685983381743478,
+        "EI": 0.08419371650082333,
+        "energy_error": 0.9630595984631153,
+        "electric_fv_rms": 60.64407856249437,
+        "current_balance_rms": 5.539599132614712,
+        "power_defect_rms": 0.39317254251851624,
+        "phase_max": 0.9296978500284481
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.20872000000000002,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05475206611570248,
+          "peak_full_domain_fraction": 0.0165625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 161,
+          "recall": 0.8348355114916629,
+          "precision": 0.8023822414726586,
+          "mass_ratio": 1.0404461469130237,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.031879999999999964,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0007214843749999996,
+          "true_positive_target_mass": 0.0005789062499999998
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.51672,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06766528925619834,
+          "peak_full_domain_fraction": 0.02046875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 666,
+          "recall": 0.7396663346613548,
+          "precision": 0.9881902860944778,
+          "mass_ratio": 0.7485059760956176,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.018320000000000114,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.0004696875000000001,
+          "true_positive_target_mass": 0.00046414062500000014
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": false,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1",
+      "fixed_ad_audit": {
+        "measure": "fixed independent uniform space-time integration",
+        "points": 4096,
+        "scaled_pde_mse": {
+          "electric": 1.9011521297353633,
+          "thermal": 0.024387691081057976,
+          "phase": 0.003878559333982892
+        },
+        "raw_pde_rms": {
+          "electric": 1.3788227332530325,
+          "thermal": 0.6246623546340275,
+          "phase": 0.3113904034320459
+        },
+        "boundary": 0.0218276526812773,
+        "initial": 3.587434611398389e-33,
+        "observation": {
+          "observation": 0.008118317387930042,
+          "obs_V": 0.00024086276181527585,
+          "obs_T": 0.023631281659462062,
+          "obs_phase": 0.00048280774251279065
+        },
+        "no_reference_read": true,
+        "optimizer_updates": 0
+      }
+    },
+    "P_I": {
+      "metrics": {
+        "S": 0.002253203125,
+        "Ephi": 0.03994638688775163,
+        "ET": 0.24294330624827848,
+        "EV": 0.011549594812415095,
+        "EI": 0.07934459610832788,
+        "energy_error": 1.1622078190224836,
+        "electric_fv_rms": 51.38317848102103,
+        "current_balance_rms": 5.479995424125729,
+        "power_defect_rms": 0.4279123823920036,
+        "phase_max": 0.8870258965122861
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.27893333333333337,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.03667355371900827,
+          "peak_full_domain_fraction": 0.01109375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 168,
+          "recall": 0.46214511041009454,
+          "precision": 1.0,
+          "mass_ratio": 0.46214511041009454,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.038333333333333386,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0003204687499999998,
+          "true_positive_target_mass": 0.0003204687499999998
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.5435166666666666,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06069214876033058,
+          "peak_full_domain_fraction": 0.018359375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 672,
+          "recall": 0.4545567729083667,
+          "precision": 1.0,
+          "mass_ratio": 0.4545567729083667,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.045116666666666694,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.0002852343750000001,
+          "true_positive_target_mass": 0.0002852343750000001
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": false,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1",
+      "fixed_ad_audit": {
+        "measure": "fixed independent uniform space-time integration",
+        "points": 4096,
+        "scaled_pde_mse": {
+          "electric": 0.3452450164226409,
+          "thermal": 0.02016120934027411,
+          "phase": 0.0032856351697048876
+        },
+        "raw_pde_rms": {
+          "electric": 0.5875755410350578,
+          "thermal": 0.5679606935734072,
+          "phase": 0.2866023015305742
+        },
+        "boundary": 0.0229694354376302,
+        "initial": 3.587434611398389e-33,
+        "observation": {
+          "observation": 0.008172301059647776,
+          "obs_V": 0.00028222329537578303,
+          "obs_T": 0.023631673042822546,
+          "obs_phase": 0.0006030068407449967
+        },
+        "no_reference_read": true,
+        "optimizer_updates": 0
+      }
+    },
+    "P_M": {
+      "metrics": {
+        "S": 0.002251484375,
+        "Ephi": 0.03994246790503231,
+        "ET": 0.2429433071319081,
+        "EV": 0.011549912127078869,
+        "EI": 0.07934502580392898,
+        "energy_error": 1.162379172503666,
+        "electric_fv_rms": 51.394113941457725,
+        "current_balance_rms": 5.480897637281491,
+        "power_defect_rms": 0.427987591328145,
+        "phase_max": 0.8869232813032574
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.27893333333333337,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.03667355371900827,
+          "peak_full_domain_fraction": 0.01109375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 168,
+          "recall": 0.4628210905813428,
+          "precision": 1.0,
+          "mass_ratio": 0.4628210905813428,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.038333333333333386,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.00032093749999999977,
+          "true_positive_target_mass": 0.00032093749999999977
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.5435166666666666,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06069214876033058,
+          "peak_full_domain_fraction": 0.018359375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 672,
+          "recall": 0.45505478087649426,
+          "precision": 1.0,
+          "mass_ratio": 0.45505478087649426,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.045116666666666694,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.00028554687500000016,
+          "true_positive_target_mass": 0.00028554687500000016
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": false,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1",
+      "fixed_ad_audit": {
+        "measure": "fixed independent uniform space-time integration",
+        "points": 4096,
+        "scaled_pde_mse": {
+          "electric": 0.3454540093559994,
+          "thermal": 0.020162354507004522,
+          "phase": 0.003286119201818252
+        },
+        "raw_pde_rms": {
+          "electric": 0.5877533575880273,
+          "thermal": 0.5679768235694767,
+          "phase": 0.2866234115445846
+        },
+        "boundary": 0.02297022750252822,
+        "initial": 3.587434611398389e-33,
+        "observation": {
+          "observation": 0.008172287863237981,
+          "obs_V": 0.00028223507789959404,
+          "obs_T": 0.02363165414502781,
+          "obs_phase": 0.0006029743667865383
+        },
+        "no_reference_read": true,
+        "optimizer_updates": 0
+      }
+    },
+    "P_U": {
+      "metrics": {
+        "S": 0.0023590625000000005,
+        "Ephi": 0.04170723551343157,
+        "ET": 0.24295291946727487,
+        "EV": 0.011488703635000088,
+        "EI": 0.07931922369180572,
+        "energy_error": 1.0896397006440677,
+        "electric_fv_rms": 50.08490747223682,
+        "current_balance_rms": 5.307062183987019,
+        "power_defect_rms": 0.40074076240093787,
+        "phase_max": 0.8839427156254448
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2786,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.03512396694214876,
+          "peak_full_domain_fraction": 0.010625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 167,
+          "recall": 0.4583145561063542,
+          "precision": 0.9907452508524113,
+          "mass_ratio": 0.4625957638575934,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.038000000000000034,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0003207812499999998,
+          "true_positive_target_mass": 0.00031781249999999984
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.5476833333333335,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.058884297520661155,
+          "peak_full_domain_fraction": 0.0178125,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 676,
+          "recall": 0.4281623505976096,
+          "precision": 1.0,
+          "mass_ratio": 0.4281623505976096,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.04928333333333357,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.00026867187500000003,
+          "true_positive_target_mass": 0.00026867187500000003
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": false,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1",
+      "fixed_ad_audit": {
+        "measure": "fixed independent uniform space-time integration",
+        "points": 4096,
+        "scaled_pde_mse": {
+          "electric": 0.3547934328991744,
+          "thermal": 0.020562603945371138,
+          "phase": 0.0032970930892590785
+        },
+        "raw_pde_rms": {
+          "electric": 0.5956453919062704,
+          "thermal": 0.5735866657497698,
+          "phase": 0.2871015974032136
+        },
+        "boundary": 0.023208002119672083,
+        "initial": 3.587434611398389e-33,
+        "observation": {
+          "observation": 0.008183175995724065,
+          "obs_V": 0.0002784103862217609,
+          "obs_T": 0.023632857103720956,
+          "obs_phase": 0.000638260497229481
+        },
+        "no_reference_read": true,
+        "optimizer_updates": 0
+      }
+    },
+    "warm_start": {
+      "metrics": {
+        "S": 0.001188671875,
+        "Ephi": 0.0272683755530492,
+        "ET": 0.282209755984883,
+        "EV": 0.010875804534305727,
+        "EI": 0.0803879379306552,
+        "energy_error": 1.0674024965512448,
+        "electric_fv_rms": 69.01714992483642,
+        "current_balance_rms": 6.281045605519666,
+        "power_defect_rms": 0.4332253468009436,
+        "phase_max": 0.9697878057022785
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.20272,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.051394628099173556,
+          "peak_full_domain_fraction": 0.015546875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 169,
+          "recall": 0.804754393871113,
+          "precision": 0.7629779961546678,
+          "mass_ratio": 1.054754393871113,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.03787999999999997,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0007314062499999996,
+          "true_positive_target_mass": 0.0005580468749999997
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.50055,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06069214876033058,
+          "peak_full_domain_fraction": 0.018359375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 662,
+          "recall": 0.8218376494023905,
+          "precision": 0.9330035335689045,
+          "mass_ratio": 0.880851593625498,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.0021500000000000963,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.0005527343750000001,
+          "true_positive_target_mass": 0.000515703125
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": false,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1",
+      "fixed_ad_audit": {
+        "measure": "fixed independent uniform space-time integration",
+        "points": 4096,
+        "scaled_pde_mse": {
+          "electric": 2.4860884854510914,
+          "thermal": 0.028562552324864952,
+          "phase": 0.003763407195408663
+        },
+        "raw_pde_rms": {
+          "electric": 1.5767334858659823,
+          "thermal": 0.6760183704588502,
+          "phase": 0.3067330759556533
+        },
+        "boundary": 0.14312743209560375,
+        "initial": 3.587434611398389e-33,
+        "observation": {
+          "observation": 0.010361273718308438,
+          "obs_V": 0.0002450300337041662,
+          "obs_T": 0.03051449096902667,
+          "obs_phase": 0.00032430015219448035
+        },
+        "no_reference_read": true,
+        "optimizer_updates": 0
+      }
+    },
+    "B_L": {
+      "metrics": {
+        "S": 0.0014917968750000003,
+        "Ephi": 0.028533365795171302,
+        "ET": 0.013541793751445728,
+        "EV": 0.003136937078752054,
+        "EI": 1.3608350923134842,
+        "energy_error": 0.04083593055255998,
+        "electric_fv_rms": 9.831036208592907,
+        "current_balance_rms": 0.7104258831961905,
+        "power_defect_rms": 0.4703984652666383,
+        "phase_max": 0.9741578237442158
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2492888888888889,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.058109504132231406,
+          "peak_full_domain_fraction": 0.017578125,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 136,
+          "recall": 0.7778278503830557,
+          "precision": 0.9708901701589089,
+          "mass_ratio": 0.8011491662911222,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.008688888888888913,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0005555468749999998,
+          "true_positive_target_mass": 0.0005393749999999999
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.5062,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05242768595041322,
+          "peak_full_domain_fraction": 0.015859375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 640,
+          "recall": 0.7650647410358566,
+          "precision": 0.9639215686274508,
+          "mass_ratio": 0.7937001992031875,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.007800000000000029,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.0004980468750000001,
+          "true_positive_target_mass": 0.00048007812500000004
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": false,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1"
+    },
+    "B_P": {
+      "metrics": {
+        "S": 0.001487265625,
+        "Ephi": 0.028503359657125544,
+        "ET": 0.013278255127362866,
+        "EV": 0.0031073382667593775,
+        "EI": 1.0308312087234692,
+        "energy_error": 0.036743569509997784,
+        "electric_fv_rms": 9.752995671955189,
+        "current_balance_rms": 0.5972865671670305,
+        "power_defect_rms": 0.3023202502733911,
+        "phase_max": 0.9741578237442158
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.24908571428571427,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05836776859504132,
+          "peak_full_domain_fraction": 0.01765625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 141,
+          "recall": 0.781658404686796,
+          "precision": 0.9694005868380606,
+          "mass_ratio": 0.8063316809373593,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.008485714285714291,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0005591406249999999,
+          "true_positive_target_mass": 0.0005420312499999999
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.5057200000000002,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05242768595041322,
+          "peak_full_domain_fraction": 0.015859375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 640,
+          "recall": 0.7694223107569723,
+          "precision": 0.96171802054155,
+          "mass_ratio": 0.8000498007968129,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.007320000000000215,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.0005020312500000001,
+          "true_positive_target_mass": 0.0004828125000000001
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": false,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1"
+    },
+    "B_logit": {
+      "metrics": {
+        "S": 0.0014084375000000002,
+        "Ephi": 0.023769782205783657,
+        "ET": 0.013278255127362866,
+        "EV": 0.0031073382667593775,
+        "EI": 1.0308311924536173,
+        "energy_error": 0.031320208829265186,
+        "electric_fv_rms": 9.775399796790627,
+        "current_balance_rms": 0.5965804021343832,
+        "power_defect_rms": 0.3023848823197505,
+        "phase_max": 0.9804634545213793
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2558714285714286,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05965909090909091,
+          "peak_full_domain_fraction": 0.018046875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 135,
+          "recall": 0.7929247408742678,
+          "precision": 0.9879281302638967,
+          "mass_ratio": 0.8026137899954936,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.015271428571428602,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0005565624999999999,
+          "true_positive_target_mass": 0.0005498437499999999
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.5133714285714286,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05371900826446281,
+          "peak_full_domain_fraction": 0.01625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 641,
+          "recall": 0.7721613545816732,
+          "precision": 0.9934326445619093,
+          "mass_ratio": 0.7772659362549801,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.014971428571428635,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.000487734375,
+          "true_positive_target_mass": 0.00048453125
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": false,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1"
+    },
+    "dense_LF_ONLY": {
+      "metrics": {
+        "S": 0.00034953125,
+        "Ephi": 0.006570375888844028,
+        "ET": 0.004001544062567924,
+        "EV": 0.0005761281633015013,
+        "EI": 0.003790590523837527,
+        "energy_error": 0.006067349347123467,
+        "electric_fv_rms": 4.394469835723881,
+        "current_balance_rms": 0.12942848561605988,
+        "power_defect_rms": 0.002326559334520364,
+        "phase_max": 0.9915152094722343
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2381,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07024793388429752,
+          "peak_full_domain_fraction": 0.02125,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 138,
+          "recall": 0.9853537629562865,
+          "precision": 0.9416451335055988,
+          "mass_ratio": 1.0464173050923837,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.0024999999999999745,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0007256249999999995,
+          "true_positive_target_mass": 0.0006832812499999996
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.4954500000000002,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0640495867768595,
+          "peak_full_domain_fraction": 0.019375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 639,
+          "recall": 0.9937749003984062,
+          "precision": 0.9350984067478911,
+          "mass_ratio": 1.0627490039840637,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.002949999999999786,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.000666875,
+          "true_positive_target_mass": 0.0006235937499999999
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": true,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1",
+      "source_path": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260903T092005Z-phk-v23-lf0-local-final-172ae2c\\prediction-lf-only-medium-direct.npz",
+      "source_sha256": "47b11e9df7b95ed6ca282d22e4a8852775194fa1471d115310f7dca7bcb447d0",
+      "comparison_role": "more-information direct reference; no same-observation win claim"
+    },
+    "native_reference_readout_check": {
+      "metrics": {
+        "S": 0.0,
+        "Ephi": 0.0,
+        "ET": 0.0,
+        "EV": 0.0,
+        "EI": 1.3522978102960761e-17,
+        "energy_error": 1.0102947601890362e-17,
+        "electric_fv_rms": 9.500789474733687e-13,
+        "current_balance_rms": 1.405812621300337e-14,
+        "power_defect_rms": 8.031902413040656e-15,
+        "phase_max": 0.9917180617305312
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.24059999999999998,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06869834710743801,
+          "peak_full_domain_fraction": 0.02078125,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 140,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mass_ratio": 1.0,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.0,
+          "support_window": [
+            0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0006934374999999997,
+          "true_positive_target_mass": 0.0006934374999999997
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.4984,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06198347107438017,
+          "peak_full_domain_fraction": 0.01875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 634,
+          "recall": 1.0,
+          "precision": 1.0,
+          "mass_ratio": 1.0,
+          "reference_event_time": 1.4984,
+          "timing_absolute": 0.0,
+          "support_window": [
+            1.25,
+            1.6
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006275,
+          "predicted_active_target_mass": 0.0006275,
+          "true_positive_target_mass": 0.0006275
+        }
+      ],
+      "valid": true,
+      "strict_device_pass": true,
+      "event_failures": [],
+      "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1"
+    }
+  },
+  "comparisons": {
+    "D_B_to_P_U": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": false
+      },
+      "relative_changes": {
+        "S": 0.40682072307118927,
+        "Ephi": 0.17742638158502258,
+        "ET": 0.00010584705444296064,
+        "EI": -0.05789615913878732,
+        "EV": 0.07511898761025788
+      }
+    },
+    "P_U_to_P_I": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.04487349317790455,
+        "Ephi": -0.04221926013563929,
+        "ET": -3.9568238230991396e-05,
+        "EI": 0.0003198772673411941,
+        "EV": 0.005300091233052879
+      }
+    },
+    "P_I_to_P_M": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.0007628029541277971,
+        "Ephi": -9.810606226624248e-05,
+        "ET": 3.637184442614757e-09,
+        "EI": 5.415562271110134e-06,
+        "EV": 2.7474094886236934e-05
+      }
+    },
+    "P_U_all_same_observation_baselines": {
+      "D_B": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.40682072307118927,
+          "Ephi": 0.17742638158502258,
+          "ET": 0.00010584705444296064,
+          "EI": -0.05789615913878732,
+          "EV": 0.07511898761025788
+        }
+      },
+      "B_L": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": false,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.5813563760146635,
+          "Ephi": 0.4617005162597986,
+          "ET": 16.940970297331333,
+          "EI": -0.9417128319663192,
+          "EV": 2.662395306816469
+        }
+      },
+      "B_P": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": false,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.5861742921678839,
+          "Ephi": 0.463239281794811,
+          "ET": 17.29705161837229,
+          "EI": -0.9230531409792776,
+          "EV": 2.697281289874366
+        }
+      },
+      "B_logit": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": false,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.6749500776569781,
+          "Ephi": 0.7546326319844604,
+          "ET": 17.29705161837229,
+          "EI": -0.9230531397648072,
+          "EV": 2.697281289874366
+        }
+      }
+    },
+    "P_I_all_same_observation_baselines": {
+      "D_B": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.3436917629519195,
+          "Ephi": 0.12771631089032004,
+          "ET": 6.627462803050299e-05,
+          "EI": -0.057594801536620985,
+          "EV": 0.0808172163309797
+        }
+      },
+      "B_L": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": false,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.5103953914637337,
+          "Ephi": 0.3999886019234279,
+          "ET": 16.940260404744514,
+          "EI": -0.9416941872262874,
+          "EV": 2.6818063360741013
+        }
+      },
+      "B_P": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": false,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.5149971108893207,
+          "Ephi": 0.40146240191602983,
+          "ET": 17.296327636274928,
+          "EI": -0.9230285274282835,
+          "EV": 2.7168772180249596
+        }
+      },
+      "B_logit": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": false,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.5997892167739071,
+          "Ephi": 0.680553340452227,
+          "ET": 17.296327636274928,
+          "EI": -0.9230285262134246,
+          "EV": 2.7168772180249596
+        }
+      }
+    },
+    "P_M_all_same_observation_baselines": {
+      "D_B": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.3426667909057026,
+          "Ephi": 0.12760567508370516,
+          "ET": 6.627826545599866e-05,
+          "EI": -0.05758969788258409,
+          "EV": 0.08084691080573585
+        }
+      },
+      "B_L": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": false,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.5092432573972241,
+          "Ephi": 0.39985125455447557,
+          "ET": 16.94026046999655,
+          "EI": -0.9416938714675276,
+          "EV": 2.6819074903707314
+        }
+      },
+      "B_P": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": false,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.5138414666176393,
+          "Ephi": 0.4013249099583637,
+          "ET": 17.296327702822047,
+          "EI": -0.9230281105844806,
+          "EV": 2.716979335862328
+        }
+      },
+      "B_logit": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": false,
+          "EI": true,
+          "EV": false
+        },
+        "relative_changes": {
+          "S": 0.5985688928333701,
+          "Ephi": 0.6803884679815668,
+          "ET": 17.296327702822047,
+          "EI": -0.9230281093696152,
+          "EV": 2.716979335862328
+        }
+      }
+    }
+  },
+  "outcome": {
+    "positive_matched_pairs": [],
+    "conditional_path": "EQUATION_BY_HEAD_DIAGNOSIS",
+    "metric_signal": false,
+    "strong_baseline_winners": []
+  },
+  "strict_device_gate_is_separate": true,
+  "scope": "single-initialization nominal development; no formal OOD or experimental validation"
+}

@@ -1,9 +1,13 @@
 # PINN-PCM-SCI 当前研究设定与论文口径
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
-- `updated_at`: `2026-09-09`
+- `updated_at`: `2026-09-11`
 
 ## 当前研究问题
+
+**LF11最新结论（VERIFIED）：** 稀疏等观测四臂已完整执行，共同起点与四臂共6000 updates。D_B→P_U独立物理目标下降80.37%，S/Ephi却恶化40.68%/17.74%；同目标界面重要性采样改善4.49%/4.22%，相态测度更改仅再改善0.0763%/0.00981%，均无预声明匹配增量。零训练后验波形感知插值使电流NRMSE从103.08%降至0.428%，相态和温度完全不变；它不替换原正式裁决。
+
+**SUPPORTED_INTERPRETATION：** 真实Adam局部方向优先指向electric/BC对phase的作用，没有发现破坏性phase residual→T，latent条件未触发。下一步电边界相容表示及electric→phase归因仅为PROPOSED_NOT_AUTHORIZED。[paper_v24](paper/paper_v24/README.md)承载本轮完整结果；下列旧阶段事实及paper_v23均保留。
 
 PHK-V2.2R 在 fixed-discretization nominal benchmark 上形成四臂 terminal No-Go；R0A/R0B/R0C 分别保留 inconclusive、temporal precursor 与 Adam-preconditioning 边界；R1a 表明 conflict-resolution-only 不足以恢复 competence。R1X E1/E2 两条 non-voting warm-up exploration 都未通过 W1/W3 readiness，并以冻结机器树的 `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED` 收口。
 
@@ -28,6 +32,8 @@ LF8/LF9 在修复 rollback 身份后分别测试 strong-form filter completion �
 LF10 以同批次 exact DEV-R 审计基线匹配 CTRL 与 event-competence PROJ。两臂各保留一个有效 25-update safety prefix，但均未完成 200 accepted updates；投影未延长安全路径，full/control 未触发。独立的 streams 17/23/29 复现建立 `INTERFACE_EFFECT_STREAM_REPLICATED` 与 `PHYSICS_FORGETTING_STREAM_REPLICATED`；direct `LF_ONLY` 仅在 mean-symmetric-difference predicate 上领先全部 375 个可用 role-grid comparisons。终局为 `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`，无 candidate。
 
 ## 物理对象与证据边界
+
+LF11训练只读取新导出的稀疏V/T/phase和已知物理，由新初始化构造共同起点，不读取旧模型权重或dense事件池。全部端点回收且实际实例关闭后才本地读取高保真nominal。后验波形与方向诊断属于nominal开发/归因，没有独立初始化、实体级留出或formal OOD。
 
 对象仍是 PHK-V2.1 的透明、无量纲、literature-inspired synthetic 2D wall-cell；几何、PDE、本构、参数、IC/BC、ROI、事件与 frozen evaluator 均不改变。extra-fine fixed-discretization carrier 不是 continuum truth；C0 saved-cadence strong residual 也不是 exact internal-step residual。
 
@@ -70,7 +76,7 @@ ConFIG、staggered blocks、coupling homotopy、exact-top lift、medium warm-sta
 
 ## 权威路由
 
-LF10 is complete under [ADR 0074](docs/adr/0074-close-phk-v23-lf10-feasible-direction-replication.md), [terminal closeout](docs/experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md), and the [live plan](docs/plans/NEXT_ACTIONS.md). No new research execution is authorized. LF9 and earlier terminal evidence remain unchanged.
+LF11 is complete under its [terminal closeout](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md), [active phase](active_phase.md), [project state](PROJECT_STATE.md), and the [live plan](docs/plans/NEXT_ACTIONS.md). No further research execution is authorized. [LF10](docs/experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md) and earlier terminal evidence remain unchanged.
 
 # LF9 terminal context (2026-09-09)
 

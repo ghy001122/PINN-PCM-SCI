@@ -1,0 +1,189 @@
+{
+  "recorded_utc": "2026-09-11T07:05:49.197876+00:00",
+  "optimizer_updates": 6000,
+  "training_processes_active": false,
+  "files": {
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/frozen_config.json": {
+      "sha256": "a685f876e9bf3e64cfaa42f7ea7ae46bd452952da744efb06f25583382df30ce",
+      "bytes": 3246
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/calibration.json": {
+      "sha256": "ab9bb54ef335a03a3dedc79d7807bffb4f8f48b206665ab45bd22875ad7591c2",
+      "bytes": 610
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/execution_environment.json": {
+      "sha256": "1d4b4000fadc53c261cda1e28f9e68a038cdac78315c916afd0f773c66f4dc2e",
+      "bytes": 1167
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/conditional_calibration.json": {
+      "sha256": "732a908055ad3c280e10d8f12851b4a012cd97915453b8045887332e6c13e073",
+      "bytes": 459
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/progress.json": {
+      "sha256": "37750f320a08c5287e0a190089ae1a640bd4107201cbb1940c7f825c599cb43d",
+      "bytes": 695
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/campaign.json": {
+      "sha256": "1ce6785b24389323b8065976d5b0deb6bca91adc810c552b70ae9faeacd25b1a",
+      "bytes": 2081
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/warm_start/checkpoint.pt": {
+      "sha256": "1d7290dea42304b9892bd1305df1e094c82a030734576be8976238fb1ed431da",
+      "bytes": 1014191
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/warm_start/result.json": {
+      "sha256": "c51ea0c8b1448c70cb25cc3f17462af62797b72a543bd2bf24dd93798fcf43ea",
+      "bytes": 304
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/warm_start/fixed_audit.json": {
+      "sha256": "9e8f07224f1aeb17f4954e3b83751c5757aa07b6250c90d43410101da064c6f3",
+      "bytes": 647
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/warm_start/prediction.npz": {
+      "sha256": "ec0090dc3fafec804b41dc4ecc4ad5a77d43e9cc0b969309423f449d1aa3bfd5",
+      "bytes": 218881495
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/telemetry.jsonl": {
+      "sha256": "b944abb648d2b187619581c9c7b66b85769da7435ee337db4951ab2f4c012358",
+      "bytes": 7387
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/checkpoint-step-600.pt": {
+      "sha256": "409bb055abd85f0f5996f3e9012b6b99b72661b2971bfbbbb7393a16293cf868",
+      "bytes": 1018252
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/checkpoint-step-1200.pt": {
+      "sha256": "f43ce09e0fa0e1a345cfeda298db75ed02ff6255e49979f19fa481520bf3353b",
+      "bytes": 1018433
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/checkpoint.pt": {
+      "sha256": "42199f9dc92979e89cf50d5799273edf3baf3d9a1c75be286603a6ccccaaec25",
+      "bytes": 1016623
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/result.json": {
+      "sha256": "7a67a9a35f7e29391c0198bbeb11a074200b554a6ae5ec035a356e4ca7704d56",
+      "bytes": 281
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/fixed_audit.json": {
+      "sha256": "0d628cfba8ae4fbf8d7cf226148f06d908ae1dab08fd7cceb9ee8f6acbd18815",
+      "bytes": 648
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/D_B/prediction.npz": {
+      "sha256": "63a7e39fdeacd385fca4c3a21898bd30d13b3cd072f6a9148af33413075d8669",
+      "bytes": 218744960
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/telemetry.jsonl": {
+      "sha256": "3c0f18d83cc9567674744c2f6533ac0b447b01eb36dbe9943f25692c8a345269",
+      "bytes": 12003
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/checkpoint-step-600.pt": {
+      "sha256": "afda745426eb3d136da3f63ae1b2169943954023b3ed396b31e8f1444c073f80",
+      "bytes": 1018252
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/checkpoint-step-1200.pt": {
+      "sha256": "b9d6b84cb2d1ecf6d47244a26f250b5b81e0a42cc631dd81fbffc8cd21d02262",
+      "bytes": 1018433
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/checkpoint.pt": {
+      "sha256": "28bb9930d41e89790b6095ff517932072d6c1f9021af88e43afbf915a24ebc71",
+      "bytes": 1016623
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/result.json": {
+      "sha256": "3806f4c9c065b172e5a46ef497b6cfe23813689b9b29a5d57f343912fad70ae0",
+      "bytes": 281
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/fixed_audit.json": {
+      "sha256": "b97e0f57110e927e02154da428999316212ba12ac9d2a46059ae79b8d34772dc",
+      "bytes": 647
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_M/prediction.npz": {
+      "sha256": "163238aa45b5adfc59369560f668b784fce4004f5e8beb9a4b7091c07963003b",
+      "bytes": 218799565
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/telemetry.jsonl": {
+      "sha256": "8d45306b8c3d4fa5923904432e330ac71adf86bdf01df4398b67fac52794dccb",
+      "bytes": 11992
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/checkpoint-step-600.pt": {
+      "sha256": "048398854a05f30f5a21a750e6c3b7aabdf611a2141ced7f6c8267610873c82e",
+      "bytes": 1018252
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/checkpoint-step-1200.pt": {
+      "sha256": "99578f02045e5bb27eec3f058a70d619c46925e5a462cdeebe867c3cc84b8cb3",
+      "bytes": 1018433
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/checkpoint.pt": {
+      "sha256": "b77eb2fa06c805e16e2eba571bd4ea930e15b4a7c5737ecd579e6e71ffac1270",
+      "bytes": 1016623
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/result.json": {
+      "sha256": "538fb4242508a4de62371afaf3340a8481ca38735d9dc4f15f03f5b8d259c036",
+      "bytes": 281
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/fixed_audit.json": {
+      "sha256": "9b0d87a0bf59d4c9fe51eb60380de40ee16ef7b32ec89d3662c3b80d68e29dfa",
+      "bytes": 647
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_I/prediction.npz": {
+      "sha256": "c9f98bda93fcec42af0efda2560ec8ab8aacab87055714bde431501fbe70bb2b",
+      "bytes": 218797769
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/telemetry.jsonl": {
+      "sha256": "c4a046ec7419bcf5f359d4ada07feb66bfcac6b975139d3ae1da10f536d17eec",
+      "bytes": 12036
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/checkpoint-step-600.pt": {
+      "sha256": "b39c20f0b3759120a7bacaf4621f448662c25e58837e04ed2a62ba98ba28f96c",
+      "bytes": 1018252
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/checkpoint-step-1200.pt": {
+      "sha256": "3918071f9d85b73663d7da40aceefae247a6f90829526da389d0bf508e450ebf",
+      "bytes": 1018433
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/checkpoint.pt": {
+      "sha256": "f3f3bae8028b8982fbca23f0279eee7b025a0a2bd18217a9749400fc2f70dbc0",
+      "bytes": 1016623
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/result.json": {
+      "sha256": "b8101169409e15aa9c325c308dbef2c6fb74f35f9a4209a872f5675d245b4c77",
+      "bytes": 281
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/fixed_audit.json": {
+      "sha256": "6f755a0306469be665d42f1832f03bf63ab726e19ff3e5a1bbc7c10bf8fc7b86",
+      "bytes": 648
+    },
+    "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/P_U/prediction.npz": {
+      "sha256": "84c7207ce266cef995685134dda4e9b5da5764e2e9fbd7107d7e6c41fad46336",
+      "bytes": 218792045
+    },
+    "cloud-engineering-attempt-1.log": {
+      "sha256": "ce75fac5b3d24cf82435fc7ab9de44ec9ed264ff8afebee77cc6ab02766e5647",
+      "bytes": 1689
+    },
+    "cloud.log": {
+      "sha256": "a25799b5eb0964781d443ce0b7f61ef2ffdc843ecef898c2ab3170366d807719",
+      "bytes": 2489
+    },
+    "cloud-P_U.log": {
+      "sha256": "82615c29780fb8c663ebb3f8275c9aded90ddfbc482b231c37b281087e89e307",
+      "bytes": 1500
+    },
+    "cloud-P_I.log": {
+      "sha256": "2aec896f93248f764b587ee1c00f6b535f73210fcc7a2a380fdd2ce622ea3cbb",
+      "bytes": 1501
+    },
+    "cloud-P_M.log": {
+      "sha256": "57c35662b079788dfbd3776fc5d4c2671e52ceb36569b935696cd963d0167d28",
+      "bytes": 1501
+    },
+    "pinn_pcm_sci/phk_v23_lf11_branch.py": {
+      "sha256": "01e677d7e5f93c99fb36054d10381938c064f577fd62fae8c672969ad30c8b76",
+      "bytes": 1667
+    },
+    "tests/test_phk_v21_benchmark.py": {
+      "sha256": "f2d8f7ac2755df1c569943f0273691b3622bf81a0ce86c2d6ef00d223f058629",
+      "bytes": 11494
+    }
+  },
+  "reference_carriers_read": false,
+  "stress_read": false
+}

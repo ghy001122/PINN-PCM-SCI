@@ -1,0 +1,13 @@
+{
+  "status": "NEW_INTERFACES_VALID",
+  "scientific_optimizer_updates": 0,
+  "recorded_utc": "2026-09-10T14:35:19.952487+00:00",
+  "checks": [
+    "sparse_information_and_quadrature",
+    "proposal_membership_measure_and_pairing",
+    "complete_four_arm_finite_backpropagation",
+    "manufactured_face_flux_power_and_defect",
+    "baseline_unobserved_pulse_knot_boundary_extension"
+  ],
+  "test_entry": "python -m unittest discover -s tests -p test_phk_v23_lf11.py -v"
+}

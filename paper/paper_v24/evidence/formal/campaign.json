@@ -1,0 +1,56 @@
+{
+  "schema_id": "lf11-four-arm-screen-v1",
+  "status": "FIXED_SCREEN_COMPLETE",
+  "results": {
+    "warm_start": {
+      "role": "warm_start",
+      "status": "VALID_FIXED_ENDPOINT",
+      "updates": 1200,
+      "sparse_sha256": "27ea0a29e69e7179e775144c7dca362aa92c676bb0942964c47946715d5002d8",
+      "parameter_count": 39939,
+      "checkpoint": "warm_start\\checkpoint.pt",
+      "completed_utc": "2026-09-10T14:36:40.481401+00:00"
+    },
+    "D_B": {
+      "role": "D_B",
+      "status": "VALID_FIXED_ENDPOINT",
+      "updates": 1200,
+      "sparse_sha256": "27ea0a29e69e7179e775144c7dca362aa92c676bb0942964c47946715d5002d8",
+      "parameter_count": 39939,
+      "checkpoint": "D_B/checkpoint.pt",
+      "completed_utc": "2026-09-11T06:50:43.010458+00:00"
+    },
+    "P_U": {
+      "role": "P_U",
+      "status": "VALID_FIXED_ENDPOINT",
+      "updates": 1200,
+      "sparse_sha256": "27ea0a29e69e7179e775144c7dca362aa92c676bb0942964c47946715d5002d8",
+      "parameter_count": 39939,
+      "checkpoint": "P_U/checkpoint.pt",
+      "completed_utc": "2026-09-11T07:03:42.543293+00:00"
+    },
+    "P_I": {
+      "role": "P_I",
+      "status": "VALID_FIXED_ENDPOINT",
+      "updates": 1200,
+      "sparse_sha256": "27ea0a29e69e7179e775144c7dca362aa92c676bb0942964c47946715d5002d8",
+      "parameter_count": 39939,
+      "checkpoint": "P_I/checkpoint.pt",
+      "completed_utc": "2026-09-11T07:04:32.864594+00:00"
+    },
+    "P_M": {
+      "role": "P_M",
+      "status": "VALID_FIXED_ENDPOINT",
+      "updates": 1200,
+      "sparse_sha256": "27ea0a29e69e7179e775144c7dca362aa92c676bb0942964c47946715d5002d8",
+      "parameter_count": 39939,
+      "checkpoint": "P_M/checkpoint.pt",
+      "completed_utc": "2026-09-11T07:05:19.319806+00:00"
+    }
+  },
+  "optimizer_updates": 6000,
+  "completed_utc": "2026-09-11T07:05:49.197876+00:00",
+  "high_fidelity_read": false,
+  "stress_read": false,
+  "orchestration": "D_B retained original process; P_U/P_I/P_M independent processes using the same frozen run_role; atomic directory check prevented duplicate P_U in original coordinator"
+}

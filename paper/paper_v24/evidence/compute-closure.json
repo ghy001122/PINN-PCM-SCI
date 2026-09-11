@@ -1,0 +1,18 @@
+{
+  "mode": "cloud",
+  "recorded_utc": "2026-09-11T07:14:23.935387+00:00",
+  "recovery_verified": true,
+  "optimizer_updates": 6000,
+  "verified_files": 45,
+  "remote_training_processes_active": false,
+  "shutdown_requested": true,
+  "connection_closed": true,
+  "compute_stopped_before_reference_read": true,
+  "closure_verified_utc": "2026-09-11T07:15:57.943294+00:00",
+  "shutdown_command": "/usr/bin/shutdown",
+  "shutdown_exit_code": 0,
+  "current_connection_check_exit_code": 1,
+  "current_connection_check_output": "banner exchange: Connection to UNKNOWN port -1: Connection refused",
+  "gpu_compute_process_check": "empty compute-process list before shutdown",
+  "instance_host": "region-46.seetacloud.com:28355"
+}

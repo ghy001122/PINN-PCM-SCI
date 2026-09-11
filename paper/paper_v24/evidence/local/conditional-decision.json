@@ -1,0 +1,52 @@
+{
+  "recorded_utc": "2026-09-11T07:28:51.296792+00:00",
+  "status": "NO_PHASE_METRIC_TRIGGER_NO_ADDITIONAL_TRAINING",
+  "evidence_status": "SUPPORTED_INTERPRETATION",
+  "scope": "one fixed prospective direction at the common parent and each fixed endpoint; not a complete trajectory attribution",
+  "formal_matched_increment": false,
+  "phase_to_temperature_destructive_in_any_endpoint": false,
+  "endpoint_details": [
+    {
+      "role": "P_U",
+      "positive_phase_error_effect_share": 0.0,
+      "phase_to_temperature_error_effect": -2.1434338892732148e-09,
+      "phase_error_effect_by_physics_equation": {
+        "electric": 5.344368662997843e-07,
+        "thermal": 8.496984583958535e-10,
+        "phase": -1.7331028371289043e-09,
+        "boundary": 5.191166583589327e-07
+      }
+    },
+    {
+      "role": "P_I",
+      "positive_phase_error_effect_share": 0.004802810898885017,
+      "phase_to_temperature_error_effect": -9.782437508285987e-10,
+      "phase_error_effect_by_physics_equation": {
+        "electric": 4.876064695304237e-06,
+        "thermal": 5.477135231867326e-09,
+        "phase": 2.7095193648833905e-08,
+        "boundary": 7.328912848151344e-07
+      }
+    },
+    {
+      "role": "P_M",
+      "positive_phase_error_effect_share": 0.0030027773691191123,
+      "phase_to_temperature_error_effect": -9.454631681104596e-10,
+      "phase_error_effect_by_physics_equation": {
+        "electric": 4.881130398701237e-06,
+        "thermal": 5.482155635577047e-09,
+        "phase": 1.6922820361577425e-08,
+        "boundary": 7.321872518318152e-07
+      }
+    }
+  ],
+  "latent_residual_test": "NOT_RUN_TRIGGER_NOT_MET",
+  "P_S_RAD_PF_GAR": "NOT_RUN_NO_MATCHED_POSITIVE_INCREMENT",
+  "development_updates": 0,
+  "formal_updates": 6000,
+  "conditional_updates": 0,
+  "total_updates": 6000,
+  "authorized_cap": 10200,
+  "next_priority": "Plan a matched boundary-compatible electric representation and electric-residual-to-phase attribution; retain physical object and strong same-observation baselines.",
+  "next_priority_authorization": "PROPOSED_NOT_AUTHORIZED"
+}

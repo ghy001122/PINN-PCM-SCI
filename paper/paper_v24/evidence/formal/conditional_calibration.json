@@ -1,0 +1,13 @@
+{
+  "schema_id": "lf11-fixed-global-phase-attribution-v1",
+  "recorded_utc": "2026-09-11T06:27:38.522733+00:00",
+  "kappa0": 0.6989526250324989,
+  "full_parameter_gradient_norm_uniform": 0.031200867988725036,
+  "full_parameter_gradient_norm_metric": 0.02180792858401183,
+  "gradient_cosine": 0.9062493806372219,
+  "calibration_seed": 70317,
+  "points": 4096,
+  "reference_blind": true,
+  "parent": "formal/warm_start/checkpoint.pt",
+  "optimizer_updates": 0
+}
