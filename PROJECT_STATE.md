@@ -2,24 +2,31 @@
 
 更新时间：2026-09-12
 
-- `phase_id`: `PHK_V23_LF11_V_CONTINUATION_AND_CONTACT_AUDIT_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_JOINT_BC_PDE_COMPLETE`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_V_ONLY_DEVICE_IMPROVEMENT_CONTACT_TRACE_ATTRIBUTION_NO_NEW_PINN`
+- `claim_status`: `VALID_MATCHED_CONSTRAINT_STUDY_NO_DECLARED_INCREMENT`
 - `next_research_execution_authorized`: `false`
 
-## 最新VERIFIED
+## 最新 VERIFIED
 
-VERIFIED：200次V-only评估接受99步，可见V误差0.8215%→0.5618%，T/phase完全不变。固定参考能量误差49.20%→28.28%；带符号底流积分下降的99.41%来自边界迹项。零训练接触端点强基线能量误差2.187%→0.644%。原0.5%拟合门未达，新D_B/P_U及归一化未运行，不是失败方法。
+VERIFIED：同父 D_I/D_B/P_U 与条件 R/G/N 六个固定终点均合法，实际新增 6500 Adam updates、1500 次完整固定评估。五个匹配差分的重建 A / 功能 B 均未通过；D_N 未触发、未运行。局部相态及顶流改善与接触/功率代价并存，归一化未建立独立增量。
 
-本轮只有V参数更新；固定目标下降53.23%，停止原因为预算耗尽。温度全局/加热/关断误差仍为1.1375%/1.8357%/0.7219%。phase与双周期事件未改善，S=0.001188671875、raw Ephi=0.027268375553。
+- D_B 对 D_I：总 BC 下降 61.44%，heater 子项却上升 20.92%，完整接触迹 RMS 上升 9.02%。raw Ephi 改善 3.10%、顶流改善 15.71%，底流/功率误差上升 7.74%/10.48%。
+- P_U 对 D_B：独立 AD 物理目标下降 55.75%，raw Ephi 改善 2.81%，EV 却上升 8.33%，底流/功率误差上升 5.87%/9.14%。两个周期 timing 改善但 recall 下降。
+- N 对 R：顶流误差下降 46.41%，底流/功率误差上升 12.75%/15.64%，raw Ephi 上升 5.20%；N 对 G 的底流/功率误差上升 17.09%/22.39%。G 的底流/功率改善 3.71%/5.52%，不足冻结效应门。
+- 三个原 P_U Adam 节点均满足同一 electric-amplitude→T 的局部判据，因此条件路径实际执行；局部分量并不等于历史动量或总方向。六个端点都未通过严格器件门。
 
-V-only正式top/bottom电流NRMSE为6.5030%/522.2628%，功率NRMSE30.7607%，能量误差28.2797%。接触强基线对应0.4278%/21.5140%、1.3776%、0.6443%。严格器件门仍未通过。
+## 解释、论文与未知
 
-## 解释与未知
+SUPPORTED_INTERPRETATION：汇总 BC、连续 AD 残差和有限体积器件读出不能相互替代；局部幅值通道存在不足以保证本次归一化有效。接触迹/增量与耗散分解，以及局部 FV 残差到双端电流/功率缺陷的代数关系，形成可入稿机制证据。各新臂 T/phase/σ 均改变，不能移用旧 V-only 的固定 σ 因果百分比。
 
-SUPPORTED_INTERPRETATION：固定函数和网格上的heater边界迹显著影响FV底流及V-only变化；内部耗散反而略升。这里是固定T/phase/σ的读出干预，不是自洽耦合求解或RMS贡献率。
+[本轮终局](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)、[paper_v27 六图与数表](paper/paper_v27/README.md)、[主张矩阵](paper/paper_v27/claim_evidence_matrix.md)、[复现](paper/paper_v27/reproducibility.md)为最新入口。通用拟合、适配器及已知代数恒等式不单独算 PINN 创新；竞争性的正面 PINN 方法、独立初始化、mask/完整案例确认、formal OOD、连续体真值及材料标定仍未建立。
 
-UNKNOWN：拟合门之上PDE是否有增量、归一化机制、独立seed/mask/完整案例稳健性、实验材料有效性。唯一优先建议为先审查heater相容且邻接绝缘导数良好的V表示，再另批共同底座/PDE比较；不得自动追加200或重启旧hard lift。
+HYPOTHESIS / PROPOSED_NOT_AUTHORIZED：下一优先为电学子问题消元与一致焦耳读出，D_E/P_E/B_E 共用相同电学层，检验热/相态 PDE 的独立增量。详见[唯一下一计划](docs/plans/NEXT_ACTIONS.md)。该方法尚未实现、求解或训练。
 
-[本轮终局](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)、[paper_v26](paper/paper_v26/README.md)、[复现](paper/paper_v26/reproducibility.md)。[paper_v25](paper/paper_v25/README.md)、[LF11四臂](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)和LF10历史证据保持原样。用户已另行授权本轮成果发布与[云端独立复评交接](docs/notes/2026-09-12-lf11-v26-results-cloud-review-handoff.md)，实际发布身份以所属Git提交及交付消息为准。CPU训练已结束，本轮未启动云实例，stress未读；没有新增科研执行授权。
+## 保留的历史与运行边界
+
+paper_v26 的 V-only 0.5618% 仍未通过原 0.5% 门，旧分支仍是未运行；本轮直接起于该指定父态，未替换旧裁决。paper_v23/v24/v25/v26 的界面暴露、物理遗忘、拟合修复与接触控制证据保持原样。新父态、新校准和新预算的组合不能单独归因于拟合修复。
+
+全部科学训练已结束，CPU-only，未启动云实例，stress 未读，未增加观测、独立 seed 或新物理。用户随后明确授权发布 paper_v27 与关键证据，并交付“推进PINN相变研究”独立评估；[本轮交接](docs/notes/2026-09-12-lf11-v27-results-cloud-review-handoff.md)随成果提交，实际云端版本及送达状态由交付消息确认。下一轮研究执行仍未授权，运行时未发布字段保留为历史快照。

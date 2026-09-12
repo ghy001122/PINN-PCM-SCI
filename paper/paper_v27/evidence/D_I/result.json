@@ -1,0 +1,39 @@
+{
+  "role": "D_I",
+  "status": "VALID_FIXED_ENDPOINT",
+  "adam_updates": 1500,
+  "lbfgs": {
+    "evaluations": 300,
+    "accepted_steps": 147,
+    "termination": "EVALUATION_BUDGET_EXHAUSTED",
+    "last_accepted_loss": 0.36669027404691346,
+    "initial_loss": 0.7137620314176499,
+    "history_resumed": false,
+    "first_gate_accepted_evaluation": null
+  },
+  "visible": {
+    "V_normalized_rms": 0.0052165082546783,
+    "T_normalized_rms": {
+      "all": 0.007437589597345076,
+      "heating": 0.012028588392851584,
+      "off": 0.004695550333632929
+    },
+    "phase_raw_visible_rms": 0.013937537447626953,
+    "phase_logit_objective": 9.787926511449887e-05,
+    "finite": true
+  },
+  "fixed_physics_audit": {
+    "pde": {
+      "electric": 8.518113337205667,
+      "thermal": 0.016758720767921124,
+      "phase": 0.0018671458337148584
+    },
+    "J_U": 2.8455797346024347,
+    "boundary": 0.1438238631199923,
+    "initial": 3.726752460384734e-33
+  },
+  "completed_utc": "2026-09-12T09:50:47.756766+00:00",
+  "elapsed_seconds_internal": 595.4566946999985,
+  "reference_read": false,
+  "optimizer_parent_history_inherited": false
+}

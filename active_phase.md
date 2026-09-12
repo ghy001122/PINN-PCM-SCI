@@ -1,19 +1,19 @@
 # 当前阶段
 
-- `phase_id`: `PHK_V23_LF11_V_CONTINUATION_AND_CONTACT_AUDIT_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_JOINT_BC_PDE_COMPLETE`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_V_ONLY_DEVICE_IMPROVEMENT_CONTACT_TRACE_ATTRIBUTION_NO_NEW_PINN`
+- `claim_status`: `VALID_MATCHED_CONSTRAINT_STUDY_NO_DECLARED_INCREMENT`
 - `next_research_execution_authorized`: `false`
 
-PHASE_ID=PHK_V23_LF11_V_CONTINUATION_AND_CONTACT_AUDIT_COMPLETE
+PHASE_ID=PHK_V23_LF11_JOINT_BC_PDE_COMPLETE
 BLOCKER_ID=NONE
 NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
 
-## 本轮边界
+## 本轮已完成
 
-用户授权的V续拟合、接触分解、直接基线和论文更新已按停止条件收口。V准入未满足，所有依赖物理分支未运行。详见[终局](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)与[原指令](docs/notes/2026-09-12-lf11-v-pde-authorized-sprint.md)。本轮没有新科研执行授权。
+[用户完整指令](docs/notes/2026-09-12-lf11-joint-authorized-sprint.md)已执行收口。VERIFIED：D_I/D_B/P_U 与 R/G/N 六个合法终点，实际新增 6500 Adam updates、1500 次完整固定评估；五个匹配差分的 A/B 均未通过，D_N 未触发。详见[本轮终局](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)及[paper_v27](paper/paper_v27/README.md)。所有训练已结束，CPU-only，未启动云实例，stress 未读。
 
-保留LF11及paper_v25；paper_v26为本次发布稿。新表示、新预算、PDE或独立案例确认均另批后执行。本轮CPU，无创建的云实例或待关闭实例；stress sealed/unread。
+旧 V26 的 0.5% 门未通过及旧分支未运行仍按[旧终局](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)保留；本轮没有替代资格门、改物理、加观测或扩大预算。
 
-2026-09-12用户另行明确授权将本轮重要成果commit/push到ghy001122/PINN-PCM-SCI，并交付“推进PINN相变研究”进行独立评估与下一步规划。本次发布和交接不重开科研执行；范围见[云端复评交接](docs/notes/2026-09-12-lf11-v26-results-cloud-review-handoff.md)。
+本次授权的实现、训练、分析与本地稿件交付已完成。用户随后明确授权将本轮重要结果提交并推送到既有 GitHub 仓库，以及向“推进PINN相变研究”交付并请求独立评估；该授权覆盖本轮发布与交接，不启动新科学训练、求解、确认 seed/mask/完整协议或 stress。[本轮交接](docs/notes/2026-09-12-lf11-v27-results-cloud-review-handoff.md)记录范围与评估请求；实际发布版本以所属 Git 提交及交付消息为准。[下一计划](docs/plans/NEXT_ACTIONS.md)中的电学消元仍为 HYPOTHESIS / PROPOSED_NOT_AUTHORIZED，不因发布或评估建议而自动执行。

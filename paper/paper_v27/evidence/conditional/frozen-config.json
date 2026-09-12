@@ -1,0 +1,194 @@
+{
+  "schema_id": "phk-v23-lf11-joint-bc-pde-v1",
+  "phase_id": "PHK_V23_LF11_JOINT_BC_PDE_SPRINT_EXECUTE",
+  "status": "FROZEN_BEFORE_SCIENTIFIC_UPDATES",
+  "authorization": "User request to execute E:/PINN-PCM/Prompt_for_Research_Sprint_20260912(2).md",
+  "source_commit": "4c16ba2ece84d4dd0c561f22ff91fe5b4932cfc6",
+  "seed": 17,
+  "width": 64,
+  "layers": 4,
+  "dtype": "float64",
+  "branch_updates": 1000,
+  "branch_lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "gradient_clip": 10,
+  "data_points": 1024,
+  "interior_counts": [
+    72,
+    184,
+    72,
+    184
+  ],
+  "boundary_counts_per_side": [
+    4,
+    12,
+    4,
+    12
+  ],
+  "initial_points": 128,
+  "windows": [
+    [
+      0,
+      0.35
+    ],
+    [
+      0.35,
+      1.25
+    ],
+    [
+      1.25,
+      1.6
+    ],
+    [
+      1.6,
+      2.5
+    ]
+  ],
+  "window_masses": [
+    0.14,
+    0.36,
+    0.14,
+    0.36
+  ],
+  "lambda_max": 0.1,
+  "lambda_ramp": 200,
+  "proposal_alpha": 0.25,
+  "calibration_points": 4096,
+  "calibration_denominator_min": 1e-24,
+  "phase_logit_divisor": 36.84136146790473,
+  "phase_logit_epsilon": 1e-08,
+  "phase_latent_scale": 8,
+  "pde_scales": {
+    "electric": 1,
+    "thermal": 4,
+    "phase": 5
+  },
+  "observation_scales": "V/waveform_amplitude; T/theta_transition; delta_logit/36.84136146790473",
+  "observation_measure": "dual spatial volume times trapezoid time; phase half t>0 global and half merged straddling endpoints",
+  "roles": [
+    "R",
+    "G",
+    "N"
+  ],
+  "decision": {
+    "relative_improvement": 0.1,
+    "relative_noninferiority": 0.05,
+    "absolute_tolerance": {
+      "S": 1e-08,
+      "Ephi": 1e-06,
+      "ET": 1e-06,
+      "EI": 1e-06,
+      "EV": 1e-07
+    },
+    "strict_device_gate_separate": true
+  },
+  "evaluation": {
+    "primary": "time_averaged_phase_region_symmetric_difference",
+    "readout": "COMMON_FV_FACE_FLUX_EDGE_DISSIPATION_V1",
+    "boundary_extension": "time interpolation first; known electrode values at each query time, thermal Robin extension, insulating electric/phase side extension; potential bounded by known waveform; analytic IC at t0",
+    "logit_baseline": "space linear + time PCHIP on complete initial-logit increment",
+    "physics_audit": "common finite-volume electric defect and energy defect; neural fixed AD audit separately",
+    "reference": "existing nominal extra-fine only after all fixed endpoints and compute stopped; no stress"
+  },
+  "conditional": {
+    "roles": [
+      "G",
+      "N"
+    ],
+    "D_N_only_if_N_positive": true,
+    "damage_metrics": [
+      "S",
+      "Ephi",
+      "bottom_current_NRMSE",
+      "power_trace_NRMSE",
+      "energy_error",
+      "current_balance_rms",
+      "power_defect_rms"
+    ],
+    "damage_relative": 0.05,
+    "normalized_tolerance": 1e-06,
+    "dimensional_defect_tolerance": 1e-12,
+    "nodes": [
+      500,
+      1000,
+      1500
+    ],
+    "diagnostic": "prospective next Adam proposal from each saved actual state and exact next stochastic batch; no diagnostic optimizer updates",
+    "amplitude": "analytic product-rule separation 2 r_squared grad(log_sigma), diagnosis only",
+    "materiality_min_ratio": 0.25,
+    "directional_materiality_absolute": 1e-12,
+    "trigger": "Damage P_U versus D_B plus the same electric or insulation amplitude block and T or phase head at all three nodes: norm ratio >= .25 and positive effect on full visible head observation error; reject if heater or phase-no-flux positive effect is at least as large. Large bottom current alone does not trigger.",
+    "reference_probes": false,
+    "R_comparability": "If triggered, P_U 1500+300 cannot stand in for R 1000+200. Reuse its identical Adam1000 prefix and run fresh 200-evaluation R endpoint before comparing G/N; no extra Adam prefix is run.",
+    "R_additional_evaluations_max": 200,
+    "N_calibration": "one parent full electric block loss match including actual BC/interior coefficients",
+    "G_calibration": "one parent gradient norm match to N, complete parameters and objective electric coefficients"
+  },
+  "claim_scope": "New specified-parent nominal protocol; no retrospective change to V26 gate, no independent seed/mask/case or formal OOD",
+  "parent": "outputs/runs/20260912-lf11-v-pde-increment/v_continue/checkpoint.pt",
+  "sparse": "outputs/runs/20260910-lf11-sparse-metric-sprint/input/sparse.npz",
+  "lbfgs_evaluations": 200,
+  "checkpoint_steps": [
+    500,
+    1000
+  ],
+  "cpu_threads": 4,
+  "observation_seed": 60117,
+  "sampling_seed": 60217,
+  "calibration_seed": 91117,
+  "lbfgs_pool_seed": 92117,
+  "audit_pool_seed": 93117,
+  "fixed_interior_multiplier": 8,
+  "fixed_boundary_multiplier": 8,
+  "full_observation_chunk": 4096,
+  "physics_chunk": 512,
+  "normalization_floor": 1e-12,
+  "normalizers": "a_star exact full observations; b_star uniform PDE + 5 BC + IC at one fixed blind parent pool; freeze once for all arms",
+  "parent_admission": "Specified V26 parent, with old gate unmet; no replacement fit/flux/event admission",
+  "optimizer": "fresh Adam for all parameters then fresh fixed-objective strong-Wolfe L-BFGS, no inherited V history",
+  "information_boundary": "known physics and old sparse bundle only; all old observations are exposed development data",
+  "strong_baselines": [
+    "B_logit_waveform_contact",
+    "B_logit_waveform",
+    "B_logit",
+    "B_P",
+    "B_L",
+    "LF11_D_B"
+  ],
+  "more_information_references": [
+    "dense_LF_ONLY",
+    "native_reference_readout_check"
+  ],
+  "budget": {
+    "main_adam": 4500,
+    "main_complete_evaluations": 900,
+    "G_N_each_adam": 1000,
+    "G_N_each_evaluations": 200,
+    "D_N_only_if_N_positive": true
+  },
+  "functional_rule": {
+    "gain": [
+      "bottom_current_NRMSE",
+      "power_trace_NRMSE"
+    ],
+    "relative_improvement": 0.1,
+    "noninferior": [
+      "S",
+      "Ephi",
+      "ET",
+      "EV",
+      "EI"
+    ],
+    "relative_noninferiority": 0.05,
+    "extra_normalized_absolute_tolerance": 1e-06,
+    "reported_separately_from_reconstruction": true
+  },
+  "main_root": "outputs\\runs\\20260912-lf11-joint-bc-pde",
+  "conditional_execution_authorized": true,
+  "max_workers": 3,
+  "conditional_followup_rule": "D_N only if N has the same declared positive layer against both R and G; layers stay separate"
+}

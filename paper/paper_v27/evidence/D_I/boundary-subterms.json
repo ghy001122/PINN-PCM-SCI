@@ -1,0 +1,16 @@
+{
+  "role": "D_I",
+  "components": {
+    "bc_insulation": 0.0034347896068625677,
+    "bc_heater": 2.661917292619095e-05,
+    "bc_phase_no_flux": 0.13014150840580133,
+    "bc_thermal": 0.010220945934402188,
+    "bc_top_potential": 0.0
+  },
+  "sum": 0.14382386311999226,
+  "pool_seed": 93117,
+  "reference_read": false,
+  "optimizer_updates": 0,
+  "new_sampling_pool": false,
+  "scope": "Scalar split of the already frozen endpoint BC audit; no additional equation-by-head gradient node."
+}

@@ -1,0 +1,27 @@
+{
+  "training_complete": true,
+  "compute_stopped_before_reference_read": true,
+  "training_worker_pids": {
+    "R": 14644,
+    "G": 12968,
+    "N": 9720
+  },
+  "actual_exit_codes": {
+    "R": 0,
+    "G": 0,
+    "N": 0
+  },
+  "all_training_workers_reaped": true,
+  "recorded_utc": "2026-09-12T13:53:12.366641+00:00",
+  "device": "cpu",
+  "cloud_instance_started": false,
+  "stress_read": false,
+  "actual_python_worker_pids": {
+    "R": 12960,
+    "G": 22168,
+    "N": 23348
+  },
+  "actual_python_workers_and_launchers_absent_checked": true,
+  "process_snapshot_result": "No matching live processes for the three recorded Python PIDs or their launchers.",
+  "process_snapshot_confirmed_utc": "2026-09-12T13:56:19.012805+00:00"
+}

@@ -4,21 +4,23 @@ PINN × 相变材料与器件的纯软件研究；当前对象为二维合成、
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF11_V_CONTINUATION_AND_CONTACT_AUDIT_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_JOINT_BC_PDE_COMPLETE`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_V_ONLY_DEVICE_IMPROVEMENT_CONTACT_TRACE_ATTRIBUTION_NO_NEW_PINN`
+- `claim_status`: `VALID_MATCHED_CONSTRAINT_STUDY_NO_DECLARED_INCREMENT`
 - `next_research_execution_authorized`: `false`
 
-VERIFIED：200次V-only评估接受99步，可见V误差0.8215%→0.5618%，T/phase完全不变。固定参考能量误差49.20%→28.28%；带符号底流积分下降的99.41%来自边界迹项。零训练接触端点强基线能量误差2.187%→0.644%。原0.5%拟合门未达，新D_B/P_U及归一化未运行，不是失败方法。
+VERIFIED：同父 D_I/D_B/P_U 与条件 R/G/N 六个固定终点均合法，实际新增 6500 Adam updates、1500 次完整固定评估。五个匹配差分的重建 A / 功能 B 均未通过；D_N 未触发、未运行。局部相态及顶流改善与接触/功率代价并存，归一化未建立独立增量。
 
-本轮已收口，paper_v26与关键证据按用户后续授权发布；无新研究执行授权或本轮待关闭云实例，stress未读。实际发布版本以所属Git提交为准。
+paper_v27 已完成初稿与六张证据图，并按用户后续授权纳入本轮云端发布。CPU 训练全部结束，未启用云实例，stress 未读；下一轮仅有电学子问题消元的未授权提案。旧 paper_v26 的 V 门与历史结果保留。
 
 ## 当前入口
 
-- 最新终局：[V-only与接触读出](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)
-- 当前论文：[paper_v26](paper/paper_v26/README.md)
-- 云端复评与下一步规划请求：[本轮交接](docs/notes/2026-09-12-lf11-v26-results-cloud-review-handoff.md)
+- 最新终局：[同父三臂与电学归一化](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)
+- 当前论文：[paper_v27](paper/paper_v27/README.md)、[复现](paper/paper_v27/reproducibility.md)
+- 本轮云端复评与下一步规划请求：[V27 交接](docs/notes/2026-09-12-lf11-v27-results-cloud-review-handoff.md)
+- 保留上轮：[V-only终局](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)、[paper_v26](paper/paper_v26/README.md)
+- 上轮云端复评交接：[V26交接](docs/notes/2026-09-12-lf11-v26-results-cloud-review-handoff.md)
 
 - LF11后续终局：[closeout](docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)
 - 保留论文：[paper_v25](paper/paper_v25/README.md)
@@ -63,3 +65,7 @@ VERIFIED：200次V-only评估接受99步，可见V误差0.8215%→0.5618%，T/ph
 - 上一论文包：[paper/paper_v22r](paper/paper_v22r/README.md)
 - 文档地图：[docs/README.md](docs/README.md)
 - 当前研究口径：[CONTEXT.md](CONTEXT.md)
+
+## 本轮执行记录
+
+[完整指令](docs/notes/2026-09-12-lf11-joint-authorized-sprint.md)已完成：同父三臂及条件 R/G/N 的实际结果已进入 paper_v27，D_N 未触发。旧 0.5% 门和历史结果不改写。科研阶段已关闭；本轮成果按用户后续授权发布并交付独立评估，实际版本以所属 Git 提交为准，下一研究方案仍未授权。

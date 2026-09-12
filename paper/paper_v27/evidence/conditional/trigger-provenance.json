@@ -1,0 +1,21 @@
+{
+  "triggered": true,
+  "matched_damage": {
+    "S": false,
+    "Ephi": false,
+    "bottom_current_NRMSE": true,
+    "power_trace_NRMSE": true,
+    "energy_error": true,
+    "current_balance_rms": true,
+    "power_defect_rms": true
+  },
+  "all_three_nodes_direction_supported": true,
+  "consistent_channels": [
+    [
+      "electric",
+      "temperature"
+    ]
+  ],
+  "reason": "Both endpoint damage and a consistent material amplitude channel at all three frozen nodes are required.",
+  "large_bottom_error_is_not_a_trigger": true
+}

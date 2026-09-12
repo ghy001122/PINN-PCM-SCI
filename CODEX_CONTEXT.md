@@ -1,10 +1,15 @@
 # Codex 项目上下文
 
-## 最新：V续拟合与接触读出终局
+## 最新：同父三臂与条件归一化已完成
+
+VERIFIED：D_I/D_B/P_U 与 R/G/N 六个合法固定终点，新增 6500 Adam updates、1500 次完整评估；五个匹配差分的 A/B 均未通过，D_N 未触发。当前入口为 [paper_v27](paper/paper_v27/README.md)、[终局](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)和 [active_phase.md](active_phase.md)。CPU 训练已结束；用户后续授权本轮发布及[云端独立复评交接](docs/notes/2026-09-12-lf11-v27-results-cloud-review-handoff.md)，未授权新科研执行。旧门、旧分支和以下旧阶段口径均按各自日期保留。
+
+
+## 历史：paper_v26 V续拟合与接触读出终局
 
 VERIFIED：200次V-only评估接受99步，可见V误差0.8215%→0.5618%，T/phase完全不变。固定参考能量误差49.20%→28.28%；带符号底流积分下降的99.41%来自边界迹项。零训练接触端点强基线能量误差2.187%→0.644%。原0.5%拟合门未达，新D_B/P_U及归一化未运行，不是失败方法。
 
-当前paper_v26及active_phase为最新路由。以下LF11、S1与旧稿条目保留各阶段历史身份；本轮无后续科研授权。
+该段仅记录 paper_v26 轮次。最新事实和授权以本页顶部、PROJECT_STATE.md 与 active_phase.md 为准。
 
 ## 项目标识
 
@@ -33,7 +38,7 @@ VERIFIED：200次V-only评估接受99步，可见V误差0.8215%→0.5618%，T/ph
 
 当前允许和禁止的工作只由 `active_phase.md` 记录。计划、历史会话、内部记忆、已有代码或 `docs/plans/NEXT_ACTIONS.md` 中的候选事项均不自动产生研究授权。
 
-LF11 用户授权的稀疏等观测冲刺已完成，四臂均数值合法，终局为 `LF11_VALID_FOUR_ARM_NO_MATCHED_INCREMENT`。正式更新6000，必要Adam方程×参数头诊断完成，latent条件未触发。后验波形感知插值将同观测电流NRMSE从103.08%降至0.428%，原裁决保持。详细事实、边界与唯一未授权后续见[LF11终局](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)及[paper_v24](paper/paper_v24/README.md)。当前无新研究执行授权，stress sealed/unread，实例已关闭。
+历史 LF11 用户授权的稀疏等观测冲刺已完成，四臂均数值合法，终局为 `LF11_VALID_FOUR_ARM_NO_MATCHED_INCREMENT`。正式更新6000，必要Adam方程×参数头诊断完成，latent条件未触发。后验波形感知插值将同观测电流NRMSE从103.08%降至0.428%，原裁决保持。详细事实、边界与唯一未授权后续见[LF11终局](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)及[paper_v24](paper/paper_v24/README.md)。当前无新研究执行授权，stress sealed/unread，实例已关闭。
 
 历史 LF10 已完成并关闭为 `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`。CTRL 与 PROJ 各保留一个身份有效的 25-update safety prefix，但均未完成 200 accepted updates；full path/control 因前提未满足而未运行，不得称失败。方向机制结论为 `NO_EXTENDED_FEASIBLE_PATH_FOUND`，同时建立 `INTERFACE_EFFECT_STREAM_REPLICATED` 与 `PHYSICS_FORGETTING_STREAM_REPLICATED`。没有完整 PINN Pareto、direct `LF_ONLY` 增益或 candidate。其原终局路由和paper_v23保留，不授权重启dense refinement。
 

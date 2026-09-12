@@ -1,17 +1,26 @@
 # PINN-PCM-SCI 当前研究设定与论文口径
 
-## 2026-09-12 最新进展：LF11后续拟合修复
+## 最新：同父三臂与条件归一化已完成
+
+VERIFIED：D_I/D_B/P_U 与 R/G/N 六个合法固定终点，新增 6500 Adam updates、1500 次完整评估；五个匹配差分的 A/B 均未通过，D_N 未触发。当前入口为 [paper_v27](paper/paper_v27/README.md)、[终局](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)和 [active_phase.md](active_phase.md)。CPU 训练已结束；用户后续授权本轮发布及独立复评，未授权新科研执行。旧门、旧分支和以下旧阶段口径均按各自日期保留。
+
+
+## 历史：paper_v25 LF11后续拟合修复
 
 VERIFIED：温度包络下界0.1504%；可见T误差17.8233%→1.1375%，三个T拟合门均过，phase不变。可见V误差0.8215%未达0.5%，是唯一未满足的拟合条件。完整nominal参考ROI T误差28.2210%→1.7475%，能量误差106.7402%→49.2006%。
-新物理对照未运行；温度修复未建立适配器独立归因。底部V是下一优先定位对象，所有新执行仍未授权。[paper_v25](paper/paper_v25/README.md)与[终局](docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)给出最新证据；下文LF11四臂为上轮保留记录。
+新物理对照未运行；温度修复未建立适配器独立归因。底部V是下一优先定位对象，所有新执行仍未授权。[paper_v25](paper/paper_v25/README.md)与[终局](docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)保留该轮证据；这些当时的未运行状态和优先建议不描述最新轮次。
 
 
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
-- `updated_at`: `2026-09-11`
+- `updated_at`: `2026-09-12`
 
 ## 当前研究问题
 
-**LF11最新结论（VERIFIED）：** 稀疏等观测四臂已完整执行，共同起点与四臂共6000 updates。D_B→P_U独立物理目标下降80.37%，S/Ephi却恶化40.68%/17.74%；同目标界面重要性采样改善4.49%/4.22%，相态测度更改仅再改善0.0763%/0.00981%，均无预声明匹配增量。零训练后验波形感知插值使电流NRMSE从103.08%降至0.428%，相态和温度完全不变；它不替换原正式裁决。
+SUPPORTED_INTERPRETATION：汇总 BC、连续 AD 残差、事件及双端器件读出不能互相替代。本轮已用嵌套目标和 R/G/N 排除所测试归一化作为充分修复；局部相态优势仍未转化为器件优势。HYPOTHESIS：下一步电学子问题消元与同信息 D_E/P_E/B_E 对照，见[唯一下一计划](docs/plans/NEXT_ACTIONS.md)。尚无竞争性 PINN 方法优势、独立确认、formal OOD 或材料标定。
+
+## 历史研究链（按原阶段口径保留）
+
+**原 LF11 四臂结论（VERIFIED）：** 稀疏等观测四臂已完整执行，共同起点与四臂共6000 updates。D_B→P_U独立物理目标下降80.37%，S/Ephi却恶化40.68%/17.74%；同目标界面重要性采样改善4.49%/4.22%，相态测度更改仅再改善0.0763%/0.00981%，均无预声明匹配增量。零训练后验波形感知插值使电流NRMSE从103.08%降至0.428%，相态和温度完全不变；它不替换原正式裁决。
 
 **SUPPORTED_INTERPRETATION：** 真实Adam局部方向优先指向electric/BC对phase的作用，没有发现破坏性phase residual→T，latent条件未触发。下一步电边界相容表示及electric→phase归因仅为PROPOSED_NOT_AUTHORIZED。[paper_v24](paper/paper_v24/README.md)承载本轮完整结果；下列旧阶段事实及paper_v23均保留。
 

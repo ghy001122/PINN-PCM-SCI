@@ -1,0 +1,127 @@
+{
+  "actual_budget": {
+    "D_N_executed": false,
+    "PDE_solve": false,
+    "R_reused_Adam_updates_already_counted_in_main": 1000,
+    "accepted_LBFGS_steps": 730,
+    "complete_fixed_objective_gradient_evaluations": 1500,
+    "diagnostic_Adam_nodes": [
+      500,
+      1000,
+      1500
+    ],
+    "new_Adam_updates": 6500,
+    "new_PDE_Adam_updates": 3500,
+    "new_initializations": 0,
+    "new_labels": 0,
+    "scientific_retry": false
+  },
+  "artifacts": {
+    "closeout": "docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md",
+    "conditional_campaign": "outputs/runs/20260912-lf11-joint-bc-pde/conditional/campaign.json",
+    "conditional_compute_closure": "outputs/runs/20260912-lf11-joint-bc-pde/conditional/compute-closure.json",
+    "conditional_evaluation": "outputs/runs/20260912-lf11-joint-bc-pde/conditional/evaluation.json",
+    "main_campaign": "outputs/runs/20260912-lf11-joint-bc-pde/campaign.json",
+    "main_compute_closure": "outputs/runs/20260912-lf11-joint-bc-pde/compute-closure.json",
+    "main_evaluation": "outputs/runs/20260912-lf11-joint-bc-pde/evaluation.json",
+    "normalization": "outputs/runs/20260912-lf11-joint-bc-pde/conditional/normalization.json",
+    "paper": "paper/paper_v27/manuscript.md",
+    "reproducibility": "paper/paper_v27/reproducibility.md",
+    "selected_evidence": "paper/paper_v27/evidence/README.md",
+    "terminal_summary": "outputs/runs/20260912-lf11-joint-bc-pde/terminal-summary.json",
+    "three_node_diagnosis": "outputs/runs/20260912-lf11-joint-bc-pde/equation-head-diagnosis.json"
+  },
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "checkpoint": {
+    "D_B": "outputs/runs/20260912-lf11-joint-bc-pde/D_B/checkpoint.pt",
+    "D_I": "outputs/runs/20260912-lf11-joint-bc-pde/D_I/checkpoint.pt",
+    "G": "outputs/runs/20260912-lf11-joint-bc-pde/conditional/G/checkpoint.pt",
+    "N": "outputs/runs/20260912-lf11-joint-bc-pde/conditional/N/checkpoint.pt",
+    "P_U": "outputs/runs/20260912-lf11-joint-bc-pde/P_U/checkpoint.pt",
+    "P_U_Adam_diagnosis_nodes": [
+      500,
+      1000,
+      1500
+    ],
+    "R": "outputs/runs/20260912-lf11-joint-bc-pde/conditional/R/checkpoint.pt",
+    "accepted_optimizer_in_each_checkpoint": true
+  },
+  "claim_status": "VALID_MATCHED_CONSTRAINT_STUDY_NO_DECLARED_INCREMENT",
+  "code_identity": {
+    "base_commit": "4c16ba2ece84d4dd0c561f22ff91fe5b4932cfc6",
+    "conditional_pre_update_identity": {
+      "files": {
+        "pinn_pcm_sci/phk_v23_lf11_joint.py": "0865688a80db305844adedb9cc5cbf3a6244f1882918e8f99f20c29307140f36",
+        "pinn_pcm_sci/phk_v23_lf11_joint_conditional.py": "a8383c8261c424a40be16642f3d07c12cd03f6cd40f9eff62f1165c1aa699427",
+        "pinn_pcm_sci/phk_v23_lf11_joint_normalization.py": "f65d29da05ae5fccaa25fb24e4182b835dd6d691fcd06c0cc8aaf599fbdada58",
+        "pinn_pcm_sci/phk_v23_lf11_v_continue.py": "84888516baa806693ee4a4ed4dd9422206334749163e9155996282794f6777d1"
+      },
+      "recorded_before_conditional_updates": true
+    },
+    "main_pre_update_identity": {
+      "files": {
+        "configs/phk_v23/lf11_joint_sprint.json": "85492c51fc5eecac7f75bbcdae9406f0bfcbf0552c3418ae6354a6adc61d6312",
+        "pinn_pcm_sci/phk_v22r_pinn.py": "bc6ecf0447ba3937da5573ad60d630c57fa7c381dbdee237a7caa53d7ed0115b",
+        "pinn_pcm_sci/phk_v22r_training.py": "b01b779b7197d9114b0f953b9f1cf6cb869c0924b422a809b1f5481f8d17b69b",
+        "pinn_pcm_sci/phk_v23_lf11.py": "275759860b8c4b37c50d35313cdbb0165ed655a5d7979106a7ac7e929a5b74fc",
+        "pinn_pcm_sci/phk_v23_lf11_followup_fit.py": "0d8fa603c8693ba9bff901aa1370e37ffb0e4e155298a44c13beb2d309550320",
+        "pinn_pcm_sci/phk_v23_lf11_joint.py": "0865688a80db305844adedb9cc5cbf3a6244f1882918e8f99f20c29307140f36",
+        "pinn_pcm_sci/phk_v23_lf11_v_continue.py": "84888516baa806693ee4a4ed4dd9422206334749163e9155996282794f6777d1"
+      },
+      "scope": "frozen main training source identity before first optimizer update",
+      "source_commit": "4c16ba2ece84d4dd0c561f22ff91fe5b4932cfc6"
+    },
+    "published": false,
+    "training_sources_frozen_during_updates": true
+  },
+  "command": [
+    "python -m pinn_pcm_sci.phk_v23_lf11_joint",
+    "python -m pinn_pcm_sci.phk_v23_lf11_joint_diagnosis",
+    "python -m pinn_pcm_sci.phk_v23_lf11_joint_evaluate",
+    "python -m pinn_pcm_sci.phk_v23_lf11_joint_conditional prepare / launch",
+    "python -m pinn_pcm_sci.phk_v23_lf11_joint_conditional_evaluate",
+    "saved-evidence report modules"
+  ],
+  "ended_at": "2026-09-12T13:58:33.270381+00:00",
+  "environment": {
+    "all_training_closed_before_its_reference_evaluation": true,
+    "cloud_instance_started": false,
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "start_marker": "common input/calibration timestamp before first optimizer update, not exact first-step time",
+    "torch": "2.5.1+cpu",
+    "torch_threads_per_worker": 4
+  },
+  "evaluator_id": "lf11-joint-and-conditional-fixed-evaluation-v1",
+  "evidence_identity": "ONE_INHERITED_INITIALIZATION_EXPOSED_NOMINAL_SPARSE_DEVELOPMENT",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF11_JOINT_BC_PDE",
+  "failure_class": null,
+  "gate": "SEPARATE_RECONSTRUCTION_A_AND_LIMITED_FUNCTION_B",
+  "gate_outcome": "MAIN_AND_CONDITIONAL_A_FALSE_B_FALSE",
+  "method_id": "lf11-joint-nested-BC-PDE-and-RGN",
+  "numerical_validity": "VALID_SIX_FIXED_ENDPOINTS_AND_ACCEPTED_OPTIMIZER_STATES",
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "planned_budget": {
+    "all_fixed_evaluations_max": 1700,
+    "all_new_Adam_max": 7500,
+    "conditional_budgets_not_required_to_be_used": true,
+    "conditional_fixed_evaluations_max_including_R_and_D_N": 800,
+    "conditional_new_Adam_max_including_D_N": 3000,
+    "main_Adam_max": 4500,
+    "main_fixed_evaluations_max": 900
+  },
+  "replay_of": null,
+  "route_disposition": "BOUNDED_COMPARISONS_COMPLETE_D_N_NOT_TRIGGERED",
+  "run_id": "20260912T142731Z-phk-v23-lf11-joint-terminal",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "SAME_PARENT_NESTED_CONSTRAINTS_AND_CONDITIONAL_ELECTRICAL_METRIC",
+  "seed": 17,
+  "split_id": "EXPOSED_NOMINAL_TRAINING_DEVELOPMENT_NO_HOLDOUT",
+  "started_at": "2026-09-12T09:40:44.291360+00:00",
+  "supersedes": null,
+  "tier": "development"
+}

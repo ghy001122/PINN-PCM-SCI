@@ -1,0 +1,1823 @@
+{
+  "schema_id": "lf11-joint-three-node-amplitude-diagnosis-v1",
+  "recorded_utc": "2026-09-12T11:34:03.578295+00:00",
+  "records": [
+    {
+      "step": 500,
+      "identity": {
+        "proposal_step": 501,
+        "global_clip_coefficient": 1.0,
+        "total_gradient_norm_before_clip": 8.655831300001191,
+        "decomposition_max_abs_error": 2.710505431213761e-20,
+        "optimizer_moments": "actual saved endpoint moments",
+        "shared_denominator": true,
+        "executed_optimizer_updates": 0,
+        "checkpoint_step": 500,
+        "total_gradient_split_max_error": 1.1102230246251565e-16
+      },
+      "loss_components": {
+        "observation": 0.8585627486776094,
+        "initial": 1.7269852861857994e-34,
+        "bc_insulation": 0.00010604027539843972,
+        "bc_heater": 2.6022419014797575e-06,
+        "bc_phase_no_flux": 0.031033585844110933,
+        "bc_thermal": 0.0006813528928557459,
+        "bc_top_potential": 0.0,
+        "electric": 0.01734692753340728,
+        "thermal": 0.0001369292001533438,
+        "phase": 3.602041620975505e-05
+      },
+      "visible_target_values": {
+        "potential": 3.454926369563181e-05,
+        "temperature": 0.00011674997104036018,
+        "phase": 0.0002945166008146745,
+        "phase_raw": 0.00020415838851206642
+      },
+      "rows": [
+        {
+          "source": "observation",
+          "head": "potential",
+          "raw_gradient_norm": 2.740769129677694,
+          "adam_direction_norm": 0.0012306967776467472,
+          "visible_directional_effect": {
+            "potential": -4.790356662478878e-07,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "observation",
+          "head": "temperature",
+          "raw_gradient_norm": 7.878625610798594,
+          "adam_direction_norm": 0.0012599901570009067,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": -5.422080471795541e-07,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "observation",
+          "head": "phase",
+          "raw_gradient_norm": 2.77207362666836,
+          "adam_direction_norm": 0.0010508887054047405,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -2.717372886039857e-07,
+            "phase_raw": 3.257842089944939e-07
+          }
+        },
+        {
+          "source": "initial",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "initial",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "initial",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_heater",
+          "head": "potential",
+          "raw_gradient_norm": 4.981069910963661e-05,
+          "adam_direction_norm": 2.5857012021367662e-08,
+          "visible_directional_effect": {
+            "potential": 4.055480664343111e-12,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_heater",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_heater",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_phase_no_flux",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_phase_no_flux",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_phase_no_flux",
+          "head": "phase",
+          "raw_gradient_norm": 0.2812358649286265,
+          "adam_direction_norm": 0.00020705193878600483,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 1.0391820950815125e-08,
+            "phase_raw": -3.490957929998861e-08
+          }
+        },
+        {
+          "source": "bc_thermal",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 0.016423379797661487,
+          "adam_direction_norm": 4.239979434595588e-06,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 3.313262710750023e-10,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_thermal",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_top_potential",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_top_potential",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_top_potential",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "thermal",
+          "head": "potential",
+          "raw_gradient_norm": 0.0009789219889866096,
+          "adam_direction_norm": 6.972216465307031e-07,
+          "visible_directional_effect": {
+            "potential": -3.713448047591894e-11,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0010161918175628677,
+          "adam_direction_norm": 3.055206044719822e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": -4.9103116518750275e-12,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "thermal",
+          "head": "phase",
+          "raw_gradient_norm": 0.0016454677316846932,
+          "adam_direction_norm": 5.471572463495118e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -1.1592427109980848e-10,
+            "phase_raw": 9.833672041396079e-11
+          }
+        },
+        {
+          "source": "phase",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "phase",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0018826569556555756,
+          "adam_direction_norm": 3.84296847485941e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": -6.205421786141658e-11,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "phase",
+          "head": "phase",
+          "raw_gradient_norm": 0.0007253953695640782,
+          "adam_direction_norm": 2.947978491486669e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 3.609536736775906e-11,
+            "phase_raw": -4.4193173715269235e-11
+          }
+        },
+        {
+          "source": "electric_amplitude",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_amplitude",
+          "head": "temperature",
+          "raw_gradient_norm": 0.021741176953754996,
+          "adam_direction_norm": 3.232077871747111e-06,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 6.425285761952768e-10,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_amplitude",
+          "head": "phase",
+          "raw_gradient_norm": 0.2505700925687356,
+          "adam_direction_norm": 8.355104363336408e-05,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 1.8084884337986927e-08,
+            "phase_raw": -1.513880094061833e-08
+          }
+        },
+        {
+          "source": "electric_shape",
+          "head": "potential",
+          "raw_gradient_norm": 0.17506752145487822,
+          "adam_direction_norm": 7.608821662607799e-05,
+          "visible_directional_effect": {
+            "potential": 1.5267511559746633e-08,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_shape",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0035460483966118454,
+          "adam_direction_norm": 1.2518911350201545e-06,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": -1.1524767317066811e-10,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_shape",
+          "head": "phase",
+          "raw_gradient_norm": 0.42003692409302784,
+          "adam_direction_norm": 0.00015349797618341052,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 2.3735452448728984e-08,
+            "phase_raw": -2.1029812455478157e-08
+          }
+        },
+        {
+          "source": "bc_insulation_amplitude",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_amplitude",
+          "head": "temperature",
+          "raw_gradient_norm": 8.947073842097676e-06,
+          "adam_direction_norm": 1.8323434954164683e-09,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.6824801448136985e-13,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_amplitude",
+          "head": "phase",
+          "raw_gradient_norm": 1.4801723868052435e-06,
+          "adam_direction_norm": 9.63134273054975e-10,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 1.859313047057175e-14,
+            "phase_raw": -6.798427135799698e-14
+          }
+        },
+        {
+          "source": "bc_insulation_shape",
+          "head": "potential",
+          "raw_gradient_norm": 0.002431664693649521,
+          "adam_direction_norm": 2.5511928290203245e-06,
+          "visible_directional_effect": {
+            "potential": 4.733434753749316e-11,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_shape",
+          "head": "temperature",
+          "raw_gradient_norm": 2.4646586938317254e-21,
+          "adam_direction_norm": 6.586544954995098e-25,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.7845744702804578e-29,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_shape",
+          "head": "phase",
+          "raw_gradient_norm": 7.775720701315668e-23,
+          "adam_direction_norm": 3.838085535240996e-26,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -1.6581819734544106e-31,
+            "phase_raw": 7.198743159670899e-31
+          }
+        },
+        {
+          "source": "historical_momentum",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.002676246483428632,
+          "visible_directional_effect": {
+            "potential": 2.49634763915646e-07,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "historical_momentum",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0019843558421674214,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 7.301627516162917e-07,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "historical_momentum",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0036937272889104966,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -2.1925289399254995e-07,
+            "phase_raw": -2.290285125644721e-07
+          }
+        },
+        {
+          "source": "total_proposal",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0026021506092978545,
+          "visible_directional_effect": {
+            "potential": -2.1411913542476926e-07,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "total_proposal",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0025274323708653003,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.8874651532933854e-07,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "total_proposal",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.003879300003926316,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -4.388578351696061e-07,
+            "phase_raw": 2.5731579296364066e-08
+          }
+        }
+      ],
+      "amplitude_tests": [
+        {
+          "block": "electric",
+          "head": "temperature",
+          "amplitude_to_full_gradient_norm": 0.9537643606179487,
+          "amplitude_effect_on_visible_head_error": 6.425285761952768e-10,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 0.0
+          },
+          "direct_BC_dominates": false,
+          "raw_gradient_cosine_with_visible_target": -0.43291029363049893,
+          "directional_channel_supported": true
+        },
+        {
+          "block": "electric",
+          "head": "phase",
+          "amplitude_to_full_gradient_norm": 0.38658560809103554,
+          "amplitude_effect_on_visible_head_error": 1.8084884337986927e-08,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 1.0391820950815125e-08
+          },
+          "direct_BC_dominates": false,
+          "raw_gradient_cosine_with_visible_target": -0.709713883267514,
+          "directional_channel_supported": true
+        },
+        {
+          "block": "bc_insulation",
+          "head": "temperature",
+          "amplitude_to_full_gradient_norm": 1.0000000000000002,
+          "amplitude_effect_on_visible_head_error": 1.6824801448136985e-13,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 0.0
+          },
+          "direct_BC_dominates": false,
+          "raw_gradient_cosine_with_visible_target": -0.3276611908691654,
+          "directional_channel_supported": false
+        },
+        {
+          "block": "bc_insulation",
+          "head": "phase",
+          "amplitude_to_full_gradient_norm": 1.0000000000000002,
+          "amplitude_effect_on_visible_head_error": 1.859313047057175e-14,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 1.0391820950815125e-08
+          },
+          "direct_BC_dominates": false,
+          "raw_gradient_cosine_with_visible_target": -0.22092330246176464,
+          "directional_channel_supported": false
+        }
+      ],
+      "total_visible_effect": {
+        "potential": -2.141191354247693e-07,
+        "temperature": 1.8874651532933848e-07,
+        "phase": -4.388578351696061e-07,
+        "phase_raw": 2.5731579296364053e-08
+      },
+      "reference_read": false,
+      "optimizer_updates_executed": 0,
+      "source_checkpoint": "P_U\\adam-500.pt",
+      "computed_before_main_campaign_close": true
+    },
+    {
+      "step": 1000,
+      "identity": {
+        "proposal_step": 1001,
+        "global_clip_coefficient": 1.0,
+        "total_gradient_norm_before_clip": 6.514725284621404,
+        "decomposition_max_abs_error": 2.710505431213761e-20,
+        "optimizer_moments": "actual saved endpoint moments",
+        "shared_denominator": true,
+        "executed_optimizer_updates": 0,
+        "checkpoint_step": 1000,
+        "total_gradient_split_max_error": 1.1102230246251565e-16
+      },
+      "loss_components": {
+        "observation": 0.8139662815141746,
+        "initial": 1.808446856288903e-34,
+        "bc_insulation": 0.0020879656847088506,
+        "bc_heater": 2.08219026900382e-06,
+        "bc_phase_no_flux": 0.03782675915950713,
+        "bc_thermal": 0.0016402972914528768,
+        "bc_top_potential": 0.0,
+        "electric": 0.011155414463104174,
+        "thermal": 0.00011237572477076869,
+        "phase": 4.524792392186475e-05
+      },
+      "visible_target_values": {
+        "potential": 3.609045078497755e-05,
+        "temperature": 0.00011221584903665229,
+        "phase": 0.00027209039214913625,
+        "phase_raw": 0.0002039778926768227
+      },
+      "rows": [
+        {
+          "source": "observation",
+          "head": "potential",
+          "raw_gradient_norm": 2.903343188053801,
+          "adam_direction_norm": 0.0013751240896586114,
+          "visible_directional_effect": {
+            "potential": -6.443545241331282e-07,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "observation",
+          "head": "temperature",
+          "raw_gradient_norm": 5.104340092776674,
+          "adam_direction_norm": 0.0015003821060999554,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": -6.031396170090737e-07,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "observation",
+          "head": "phase",
+          "raw_gradient_norm": 3.3851336256441704,
+          "adam_direction_norm": 0.0011908191489126104,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -8.429742470367666e-07,
+            "phase_raw": -9.671878588585893e-07
+          }
+        },
+        {
+          "source": "initial",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "initial",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "initial",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_heater",
+          "head": "potential",
+          "raw_gradient_norm": 3.4096385398750335e-05,
+          "adam_direction_norm": 1.4231475197046976e-08,
+          "visible_directional_effect": {
+            "potential": 3.905454592280392e-12,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_heater",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_heater",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_phase_no_flux",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_phase_no_flux",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_phase_no_flux",
+          "head": "phase",
+          "raw_gradient_norm": 0.37214192850581274,
+          "adam_direction_norm": 0.0002859491851436693,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 2.6097493081343287e-08,
+            "phase_raw": 1.999529364122401e-08
+          }
+        },
+        {
+          "source": "bc_thermal",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 0.03611566189094618,
+          "adam_direction_norm": 9.924958747464162e-06,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 3.1060780897873576e-09,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_thermal",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_top_potential",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_top_potential",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_top_potential",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "thermal",
+          "head": "potential",
+          "raw_gradient_norm": 0.002340728842198162,
+          "adam_direction_norm": 1.1634192446647988e-06,
+          "visible_directional_effect": {
+            "potential": -4.915615553632891e-10,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0021337386388195273,
+          "adam_direction_norm": 2.9549544215480766e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 2.679775297500886e-10,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "thermal",
+          "head": "phase",
+          "raw_gradient_norm": 0.0004531666924495236,
+          "adam_direction_norm": 1.8886182846620492e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -5.5952351334074557e-11,
+            "phase_raw": 8.83130712653351e-12
+          }
+        },
+        {
+          "source": "phase",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "phase",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0017641647908761366,
+          "adam_direction_norm": 2.3283795498071844e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.7112487823024633e-10,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "phase",
+          "head": "phase",
+          "raw_gradient_norm": 0.000619334546755925,
+          "adam_direction_norm": 2.505685879736072e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 8.858893459466279e-11,
+            "phase_raw": 1.8385467567348116e-11
+          }
+        },
+        {
+          "source": "electric_amplitude",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_amplitude",
+          "head": "temperature",
+          "raw_gradient_norm": 0.018625590203878346,
+          "adam_direction_norm": 2.310657497672817e-06,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.9655630932064042e-09,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_amplitude",
+          "head": "phase",
+          "raw_gradient_norm": 0.07492523494886322,
+          "adam_direction_norm": 3.1475412594016637e-05,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 1.0642675480989385e-08,
+            "phase_raw": 8.788891641004879e-09
+          }
+        },
+        {
+          "source": "electric_shape",
+          "head": "potential",
+          "raw_gradient_norm": 0.15371481927093342,
+          "adam_direction_norm": 0.00010349121150638496,
+          "visible_directional_effect": {
+            "potential": 3.464349481860816e-08,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_shape",
+          "head": "temperature",
+          "raw_gradient_norm": 0.00241086229683576,
+          "adam_direction_norm": 9.056433340317147e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": -9.81344564306211e-11,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_shape",
+          "head": "phase",
+          "raw_gradient_norm": 0.4499408396556037,
+          "adam_direction_norm": 0.0001828740299579219,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 6.576662526763664e-08,
+            "phase_raw": 5.380477310599808e-08
+          }
+        },
+        {
+          "source": "bc_insulation_amplitude",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_amplitude",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0010918312915717302,
+          "adam_direction_norm": 2.5857707142759387e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.2706400323178365e-10,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_amplitude",
+          "head": "phase",
+          "raw_gradient_norm": 9.453056800477214e-05,
+          "adam_direction_norm": 4.302571728957503e-08,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 1.8078386124091676e-12,
+            "phase_raw": -1.6604073969484004e-11
+          }
+        },
+        {
+          "source": "bc_insulation_shape",
+          "head": "potential",
+          "raw_gradient_norm": 0.018908631377237684,
+          "adam_direction_norm": 1.708751498263685e-05,
+          "visible_directional_effect": {
+            "potential": 1.085083342597621e-09,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_shape",
+          "head": "temperature",
+          "raw_gradient_norm": 3.7155120645495813e-19,
+          "adam_direction_norm": 7.89681850707361e-23,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": -4.2447609232334316e-26,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_shape",
+          "head": "phase",
+          "raw_gradient_norm": 4.77846995736577e-20,
+          "adam_direction_norm": 2.09583347503826e-23,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -9.085141836115642e-28,
+            "phase_raw": 7.483462263485599e-27
+          }
+        },
+        {
+          "source": "historical_momentum",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0022146127752757905,
+          "visible_directional_effect": {
+            "potential": -2.274862790440244e-07,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "historical_momentum",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0028978420509645575,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.5140456692678477e-06,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "historical_momentum",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0032458525846866073,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -2.1062399065403928e-07,
+            "phase_raw": -5.142041142440315e-07
+          }
+        },
+        {
+          "source": "total_proposal",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0027080485748861493,
+          "visible_directional_effect": {
+            "potential": -8.36599881116718e-07,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "total_proposal",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.003008316628921549,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 9.164457253965497e-07,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "total_proposal",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0037672697605882783,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -9.510569994389635e-07,
+            "phase_raw": -1.3987924020136692e-06
+          }
+        }
+      ],
+      "amplitude_tests": [
+        {
+          "block": "electric",
+          "head": "temperature",
+          "amplitude_to_full_gradient_norm": 1.0123135514813986,
+          "amplitude_effect_on_visible_head_error": 1.9655630932064042e-09,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 0.0
+          },
+          "direct_BC_dominates": false,
+          "raw_gradient_cosine_with_visible_target": -0.8120588694931578,
+          "directional_channel_supported": true
+        },
+        {
+          "block": "electric",
+          "head": "phase",
+          "amplitude_to_full_gradient_norm": 0.14280123001620357,
+          "amplitude_effect_on_visible_head_error": 1.0642675480989385e-08,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 2.6097493081343287e-08
+          },
+          "direct_BC_dominates": true,
+          "raw_gradient_cosine_with_visible_target": -0.6910662704409403,
+          "directional_channel_supported": false
+        },
+        {
+          "block": "bc_insulation",
+          "head": "temperature",
+          "amplitude_to_full_gradient_norm": 1.0000000000000002,
+          "amplitude_effect_on_visible_head_error": 1.2706400323178365e-10,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 0.0
+          },
+          "direct_BC_dominates": false,
+          "raw_gradient_cosine_with_visible_target": -0.7480588058675777,
+          "directional_channel_supported": true
+        },
+        {
+          "block": "bc_insulation",
+          "head": "phase",
+          "amplitude_to_full_gradient_norm": 1.0000000000000007,
+          "amplitude_effect_on_visible_head_error": 1.8078386124091676e-12,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 2.6097493081343287e-08
+          },
+          "direct_BC_dominates": true,
+          "raw_gradient_cosine_with_visible_target": -0.06746170238436255,
+          "directional_channel_supported": false
+        }
+      ],
+      "total_visible_effect": {
+        "potential": -8.365998811167179e-07,
+        "temperature": 9.164457253965495e-07,
+        "phase": -9.510569994389636e-07,
+        "phase_raw": -1.3987924020136692e-06
+      },
+      "reference_read": false,
+      "optimizer_updates_executed": 0,
+      "source_checkpoint": "P_U\\adam-1000.pt",
+      "computed_before_main_campaign_close": true
+    },
+    {
+      "step": 1500,
+      "identity": {
+        "proposal_step": 1501,
+        "global_clip_coefficient": 1.0,
+        "total_gradient_norm_before_clip": 7.986930937313955,
+        "decomposition_max_abs_error": 4.319868030996932e-20,
+        "optimizer_moments": "actual saved endpoint moments",
+        "shared_denominator": true,
+        "executed_optimizer_updates": 0,
+        "checkpoint_step": 1500,
+        "total_gradient_split_max_error": 2.220446049250313e-16
+      },
+      "loss_components": {
+        "observation": 0.7506213277000301,
+        "initial": 1.8410314843301445e-34,
+        "bc_insulation": 0.0016090587286149466,
+        "bc_heater": 1.1805053442588941e-05,
+        "bc_phase_no_flux": 0.0398208626187565,
+        "bc_thermal": 0.0025880008204398606,
+        "bc_top_potential": 0.0,
+        "electric": 0.3596014653952352,
+        "thermal": 0.00027085506490818584,
+        "phase": 6.401541251830759e-05
+      },
+      "visible_target_values": {
+        "potential": 3.293324495952015e-05,
+        "temperature": 0.00010520316513015808,
+        "phase": 0.00024308515185349677,
+        "phase_raw": 0.00019389211356988544
+      },
+      "rows": [
+        {
+          "source": "observation",
+          "head": "potential",
+          "raw_gradient_norm": 1.299592967528356,
+          "adam_direction_norm": 0.0007517817503708027,
+          "visible_directional_effect": {
+            "potential": -4.898087800312916e-08,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "observation",
+          "head": "temperature",
+          "raw_gradient_norm": 5.847742203847036,
+          "adam_direction_norm": 0.0012006005039450702,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.2353212899292718e-07,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "observation",
+          "head": "phase",
+          "raw_gradient_norm": 1.5541959641619072,
+          "adam_direction_norm": 0.0007069909929956709,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -4.6023623021647626e-08,
+            "phase_raw": 2.600290077978792e-07
+          }
+        },
+        {
+          "source": "initial",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "initial",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "initial",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_heater",
+          "head": "potential",
+          "raw_gradient_norm": 0.0003111277612903603,
+          "adam_direction_norm": 1.868200794105267e-07,
+          "visible_directional_effect": {
+            "potential": -6.989359689575622e-12,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_heater",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_heater",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_phase_no_flux",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_phase_no_flux",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_phase_no_flux",
+          "head": "phase",
+          "raw_gradient_norm": 1.1972622151982864,
+          "adam_direction_norm": 0.0005363617224899835,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 1.7732080028864943e-08,
+            "phase_raw": -2.9473875414298776e-08
+          }
+        },
+        {
+          "source": "bc_thermal",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 0.039507799315388246,
+          "adam_direction_norm": 1.2021758156748105e-05,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 9.769869719891304e-10,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_thermal",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_top_potential",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_top_potential",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_top_potential",
+          "head": "phase",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "thermal",
+          "head": "potential",
+          "raw_gradient_norm": 0.006240557837293211,
+          "adam_direction_norm": 3.5334917327551165e-06,
+          "visible_directional_effect": {
+            "potential": -4.1063488517828636e-11,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "thermal",
+          "head": "temperature",
+          "raw_gradient_norm": 0.0007680299011189536,
+          "adam_direction_norm": 2.722326018900334e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 3.8217261248282875e-11,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "thermal",
+          "head": "phase",
+          "raw_gradient_norm": 0.009074100285275331,
+          "adam_direction_norm": 3.1488947058529505e-06,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 2.8453694192335043e-10,
+            "phase_raw": -1.3412010213369185e-09
+          }
+        },
+        {
+          "source": "phase",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "phase",
+          "head": "temperature",
+          "raw_gradient_norm": 0.002935590274502589,
+          "adam_direction_norm": 4.2420130320593744e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.6299058213487698e-10,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "phase",
+          "head": "phase",
+          "raw_gradient_norm": 0.0006253411713017262,
+          "adam_direction_norm": 2.264036310715999e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -1.841738499929298e-11,
+            "phase_raw": 8.170076151294214e-11
+          }
+        },
+        {
+          "source": "electric_amplitude",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_amplitude",
+          "head": "temperature",
+          "raw_gradient_norm": 0.5358164775440167,
+          "adam_direction_norm": 0.00011498817334657686,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.0404356297349547e-08,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_amplitude",
+          "head": "phase",
+          "raw_gradient_norm": 17.83512366204489,
+          "adam_direction_norm": 0.0057046203793298155,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 5.337920152293257e-07,
+            "phase_raw": -2.6253729183098215e-06
+          }
+        },
+        {
+          "source": "electric_shape",
+          "head": "potential",
+          "raw_gradient_norm": 4.725588814512135,
+          "adam_direction_norm": 0.0030257808129460096,
+          "visible_directional_effect": {
+            "potential": 3.215458771383922e-08,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_shape",
+          "head": "temperature",
+          "raw_gradient_norm": 0.07055650034878158,
+          "adam_direction_norm": 2.582655129797239e-05,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 1.4217100622349795e-09,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "electric_shape",
+          "head": "phase",
+          "raw_gradient_norm": 17.05084722442274,
+          "adam_direction_norm": 0.00567438317456655,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -5.068301801485874e-07,
+            "phase_raw": 2.3014849091158285e-06
+          }
+        },
+        {
+          "source": "bc_insulation_amplitude",
+          "head": "potential",
+          "raw_gradient_norm": 0.0,
+          "adam_direction_norm": 0.0,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_amplitude",
+          "head": "temperature",
+          "raw_gradient_norm": 0.001937730089537552,
+          "adam_direction_norm": 5.002774700416533e-07,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 3.114572608948988e-11,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_amplitude",
+          "head": "phase",
+          "raw_gradient_norm": 0.00559878602274453,
+          "adam_direction_norm": 2.418198006227747e-06,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": 8.061627681002081e-11,
+            "phase_raw": -1.4468822122603802e-11
+          }
+        },
+        {
+          "source": "bc_insulation_shape",
+          "head": "potential",
+          "raw_gradient_norm": 0.011583429860251472,
+          "adam_direction_norm": 8.806810742397201e-06,
+          "visible_directional_effect": {
+            "potential": -3.6740889505587283e-13,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_shape",
+          "head": "temperature",
+          "raw_gradient_norm": 5.103758644152378e-19,
+          "adam_direction_norm": 1.710467073277092e-22,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 5.646145950433844e-27,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "bc_insulation_shape",
+          "head": "phase",
+          "raw_gradient_norm": 2.957606989434274e-22,
+          "adam_direction_norm": 1.3505061324891762e-24,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -2.920123395256224e-30,
+            "phase_raw": 9.445757031723074e-30
+          }
+        },
+        {
+          "source": "historical_momentum",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0011544679680581922,
+          "visible_directional_effect": {
+            "potential": 3.087009154815683e-08,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "historical_momentum",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0022641436056995076,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": -1.2147793273442463e-06,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "historical_momentum",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0021644814018900093,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -5.463591215358239e-08,
+            "phase_raw": 3.480198289447694e-07
+          }
+        },
+        {
+          "source": "total_proposal",
+          "head": "potential",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.003487707505421369,
+          "visible_directional_effect": {
+            "potential": 1.3995381001764427e-08,
+            "temperature": 0.0,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "total_proposal",
+          "head": "temperature",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0027183973064264606,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": -1.0782117914502732e-06,
+            "phase": 0.0,
+            "phase_raw": 0.0
+          }
+        },
+        {
+          "source": "total_proposal",
+          "head": "phase",
+          "raw_gradient_norm": null,
+          "adam_direction_norm": 0.0030210957343453394,
+          "visible_directional_effect": {
+            "potential": 0.0,
+            "temperature": 0.0,
+            "phase": -5.561888423189281e-08,
+            "phase_raw": 2.534129830524101e-07
+          }
+        }
+      ],
+      "amplitude_tests": [
+        {
+          "block": "electric",
+          "head": "temperature",
+          "amplitude_to_full_gradient_norm": 0.9534628411417108,
+          "amplitude_effect_on_visible_head_error": 1.0404356297349547e-08,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 0.0
+          },
+          "direct_BC_dominates": false,
+          "raw_gradient_cosine_with_visible_target": -0.4433424801865798,
+          "directional_channel_supported": true
+        },
+        {
+          "block": "electric",
+          "head": "phase",
+          "amplitude_to_full_gradient_norm": 6.893378892084963,
+          "amplitude_effect_on_visible_head_error": 5.337920152293257e-07,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 1.7732080028864943e-08
+          },
+          "direct_BC_dominates": false,
+          "raw_gradient_cosine_with_visible_target": -0.32056571878148554,
+          "directional_channel_supported": true
+        },
+        {
+          "block": "bc_insulation",
+          "head": "temperature",
+          "amplitude_to_full_gradient_norm": 1.0000000000000002,
+          "amplitude_effect_on_visible_head_error": 3.114572608948988e-11,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 0.0
+          },
+          "direct_BC_dominates": false,
+          "raw_gradient_cosine_with_visible_target": -0.4703733326811169,
+          "directional_channel_supported": true
+        },
+        {
+          "block": "bc_insulation",
+          "head": "phase",
+          "amplitude_to_full_gradient_norm": 1.0,
+          "amplitude_effect_on_visible_head_error": 8.061627681002081e-11,
+          "direct_BC_effects": {
+            "bc_heater": 0.0,
+            "bc_phase_no_flux": 1.7732080028864943e-08
+          },
+          "direct_BC_dominates": true,
+          "raw_gradient_cosine_with_visible_target": -0.3251244784696647,
+          "directional_channel_supported": false
+        }
+      ],
+      "total_visible_effect": {
+        "potential": 1.3995381001764437e-08,
+        "temperature": -1.078211791450273e-06,
+        "phase": -5.561888423189281e-08,
+        "phase_raw": 2.534129830524101e-07
+      },
+      "reference_read": false,
+      "optimizer_updates_executed": 0,
+      "source_checkpoint": "P_U\\adam-1500.pt",
+      "computed_before_main_campaign_close": true
+    }
+  ],
+  "missing_nodes": [],
+  "all_three_nodes_supported": true,
+  "consistent_supported_channels": [
+    [
+      "electric",
+      "temperature"
+    ]
+  ],
+  "reference_read": false,
+  "optimizer_updates_executed": 0,
+  "scope": "Exact prospective Adam algebra using saved states and next batches; local visible-target directions, not whole-path causality. All three nodes and final matched damage are required to trigger a conditional trial."
+}

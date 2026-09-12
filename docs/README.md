@@ -1,14 +1,21 @@
 # 文档库地图
 
-## 最新：V续拟合与接触读出终局
+## 最新路由：同父三臂与条件归一化终局
+
+当前成果见 [paper_v27](../paper/paper_v27/README.md)与[同父三臂终局](experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)。授权和事实分别以 [active_phase.md](../active_phase.md)、[PROJECT_STATE.md](../PROJECT_STATE.md)为准；[唯一下一计划](plans/NEXT_ACTIONS.md)已关闭本轮并列出未授权提案。以下旧入口按对应历史轮次读取。
+
+本轮成果发布及独立评估请求见 [V27 云端交接](notes/2026-09-12-lf11-v27-results-cloud-review-handoff.md)。发布和评估不产生新科研执行授权。
+
+
+## 历史：paper_v26 V续拟合与接触读出终局
 
 VERIFIED：200次V-only评估接受99步，可见V误差0.8215%→0.5618%，T/phase完全不变。固定参考能量误差49.20%→28.28%；带符号底流积分下降的99.41%来自边界迹项。零训练接触端点强基线能量误差2.187%→0.644%。原0.5%拟合门未达，新D_B/P_U及归一化未运行，不是失败方法。
 
-当前paper_v26及active_phase为最新路由。以下LF11、S1与旧稿条目保留各阶段历史身份；本轮无后续科研授权。
+本段为 paper_v26 的历史路由；最新事实与授权见本页顶部。
 
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
-PHK-V2.3 LF11 已完成并关闭为 `LF11_VALID_FOUR_ARM_NO_MATCHED_INCREMENT`。权威入口见[active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)及[LF11 terminal closeout](experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)。[paper_v24](../paper/paper_v24/README.md)保存四臂实际结果、方向归因和单列后验波形诊断。无candidate或新研究执行授权，stress sealed/unread；LF10与旧论文证据保留。
+历史的原 PHK-V2.3 LF11 已完成并关闭为 `LF11_VALID_FOUR_ARM_NO_MATCHED_INCREMENT`。权威入口见[active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)及[LF11 terminal closeout](experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)。[paper_v24](../paper/paper_v24/README.md)保存四臂实际结果、方向归因和单列后验波形诊断。无candidate或新研究执行授权，stress sealed/unread；LF10与旧论文证据保留。
 
 R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖缺失而终止，均不计 scientific trajectory；该历史见 [R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。传递依赖闭合后，E1 与 E2 各形成一条有效科学轨迹。E2 前还有一次 tmux 相对 `PYTHONPATH` 导致的 0-update import failure；改用绝对部署根后才启动有效 E2。最终计数为 2/3 条 exploration、0/1 confirmation，但第三条在冻结树下不可达。
 
@@ -29,36 +36,38 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[PLAN-PHK-V2.3-LF11 terminal](plans/NEXT_ACTIONS.md)。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。LF11 已完成，当前无新科研执行授权。
-- 当前 LF11 终局入口：[2026-09-11 LF11 terminal closeout](experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)。记录6000更新、合法四臂、无匹配增量、必要方向诊断、latent未触发、后验波形强基线及实际回收关机。
+- 当前唯一 current/most-recent plan：[PLAN-LF11-JOINT terminal及下一提案](plans/NEXT_ACTIONS.md)。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。同父三臂及条件 R/G/N 已收口，当前无新科研执行授权。
+- 最新终局：[同父三臂与电学归一化](experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)，记录实际六个终点与 D_N 未触发。
+- 原 LF11 终局入口：[2026-09-11 LF11 terminal closeout](experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)。记录6000更新、合法四臂、无匹配增量、必要方向诊断、latent未触发、后验波形强基线及实际回收关机。
 - 历史 LF10 终局入口：[2026-09-09 LF10 terminal closeout](experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md)。它记录两条有效 25-step prefix、无 extended feasible path、多流 interface/forgetting 复现、回收关机与本地裁决。
 - 历史 LF10 关闭决定：[ADR 0074](adr/0074-close-phk-v23-lf10-feasible-direction-replication.md)。
 - 历史 LF10 激活决定：[ADR 0073](adr/0073-activate-phk-v23-lf10-feasible-direction-replication.md)。
 - 历史 LF10 资格入口：[2026-09-09 LF10 CPU qualification](experiment/2026-09-09-phk-v23-lf10-cpu-qualification.md)。
-- 当前 PHK-V2.3 LF9 终局入口：[2026-09-08 LF9 terminal closeout](experiment/2026-09-08-phk-v23-lf9-terminal-closeout.md)。它记录两条有效 screen 的 25-step prefix、共同温度门 stall、full/control 未运行、回收关机与本地裁决。
-- 当前 PHK-V2.3 LF9 关闭决定：[ADR 0072](adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md)。它关闭当前 mixed-form rescue family，并把唯一建议限定为负面 solver diagnostic 收口。
-- 当前 PHK-V2.3 LF9 激活决定：[ADR 0071](adr/0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md)。
-- 当前 PHK-V2.3 LF9 资格入口：[2026-09-08 LF9 CPU qualification](experiment/2026-09-08-phk-v23-lf9-cpu-qualification.md)。它冻结 CV ledgers、normalization、routing/rollback 资格；不是方法结果。
-- 当前 PHK-V2.3 LF8 终局入口：[2026-09-08 LF8 terminal closeout](experiment/2026-09-08-phk-v23-lf8-terminal-closeout.md)。它记录 25-step valid prefix、五次 identity-correct rollback、strong-form stall、control 未运行、回收关机与本地 nominal 裁决。
-- 当前 PHK-V2.3 LF8 关闭决定：[ADR 0070](adr/0070-close-phk-v23-lf8-competence-filter-completion.md)。它关闭 strong-form rescue，并把 mixed weak/control-volume 固定为未授权的唯一建议。
-- 当前 PHK-V2.3 LF8 资格入口：[2026-09-08 LF8 CPU qualification](experiment/2026-09-08-phk-v23-lf8-cpu-qualification.md)。它记录真实 nonempty-Adam 双循环深拷贝回滚、exact DEV-R、冻结 ledger、blind J0 与零步反传；不是 GPU 结果。
-- 当前 PHK-V2.3 LF8 激活决定：[ADR 0069](adr/0069-activate-phk-v23-lf8-competence-filter-completion.md)。它冻结 valid-prefix、完整路径与条件 schedule-control 归因语义。
-- 当前 PHK-V2.3 LF7 终局入口：[2026-09-07 LF7 terminal closeout](experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)。它记录有效 P0-S 负面 arm、P0-F post-step identity failure、回收关机、本地 nominal 裁决和强基线差距。
-- 当前 PHK-V2.3 LF7 资格入口：[2026-09-07 LF7 CPU qualification](experiment/2026-09-07-phk-v23-lf7-cpu-qualification.md)。它记录 exact DEV-R、完整物理 ledger、blind J0、回滚/RNG 与零步反传；不构成 GPU 科学结果。
+- 历史 PHK-V2.3 LF9 终局入口：[2026-09-08 LF9 terminal closeout](experiment/2026-09-08-phk-v23-lf9-terminal-closeout.md)。它记录两条有效 screen 的 25-step prefix、共同温度门 stall、full/control 未运行、回收关机与本地裁决。
+- 历史 PHK-V2.3 LF9 关闭决定：[ADR 0072](adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md)。它关闭当前 mixed-form rescue family，并把唯一建议限定为负面 solver diagnostic 收口。
+- 历史 PHK-V2.3 LF9 激活决定：[ADR 0071](adr/0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md)。
+- 历史 PHK-V2.3 LF9 资格入口：[2026-09-08 LF9 CPU qualification](experiment/2026-09-08-phk-v23-lf9-cpu-qualification.md)。它冻结 CV ledgers、normalization、routing/rollback 资格；不是方法结果。
+- 历史 PHK-V2.3 LF8 终局入口：[2026-09-08 LF8 terminal closeout](experiment/2026-09-08-phk-v23-lf8-terminal-closeout.md)。它记录 25-step valid prefix、五次 identity-correct rollback、strong-form stall、control 未运行、回收关机与本地 nominal 裁决。
+- 历史 PHK-V2.3 LF8 关闭决定：[ADR 0070](adr/0070-close-phk-v23-lf8-competence-filter-completion.md)。它关闭 strong-form rescue，并把 mixed weak/control-volume 固定为未授权的唯一建议。
+- 历史 PHK-V2.3 LF8 资格入口：[2026-09-08 LF8 CPU qualification](experiment/2026-09-08-phk-v23-lf8-cpu-qualification.md)。它记录真实 nonempty-Adam 双循环深拷贝回滚、exact DEV-R、冻结 ledger、blind J0 与零步反传；不是 GPU 结果。
+- 历史 PHK-V2.3 LF8 激活决定：[ADR 0069](adr/0069-activate-phk-v23-lf8-competence-filter-completion.md)。它冻结 valid-prefix、完整路径与条件 schedule-control 归因语义。
+- 历史 PHK-V2.3 LF7 终局入口：[2026-09-07 LF7 terminal closeout](experiment/2026-09-07-phk-v23-lf7-terminal-closeout.md)。它记录有效 P0-S 负面 arm、P0-F post-step identity failure、回收关机、本地 nominal 裁决和强基线差距。
+- 历史 PHK-V2.3 LF7 资格入口：[2026-09-07 LF7 CPU qualification](experiment/2026-09-07-phk-v23-lf7-cpu-qualification.md)。它记录 exact DEV-R、完整物理 ledger、blind J0、回滚/RNG 与零步反传；不构成 GPU 科学结果。
 - 上一 PHK-V2.3 LF6 终局入口：[2026-09-06 LF6 terminal closeout](experiment/2026-09-06-phk-v23-lf6-terminal-closeout.md)。它记录 matched mechanism result、safety selection、P0 physics-forgetting、工程修复 provenance、回收关机、本地 nominal 裁决与强基线差距。
 - 上一 PHK-V2.3 LF5 终局入口：[2026-09-05 LF5 terminal closeout](experiment/2026-09-05-phk-v23-lf5-terminal-closeout.md)。它记录 CPU premise rejection、用户覆盖后的 400-step exploratory run、temporal stream 首批漂移、P0 未运行、产物回收关机与论文更新。
 - 上一 PHK-V2.3 LF4 终局入口：[2026-09-05 LF4 terminal closeout](experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)。它记录界面暴露相对等预算全局监督的有界 minimum-recall 增量、threshold BCE 的 field-quality 代价、三臂无完整 entry、P0 未运行、关机后 nominal 裁决与论文更新。
-- 当前论文初稿：[paper_v24](../paper/paper_v24/README.md)。它保存稀疏等观测四臂、五组图、完整数表、方程×参数头诊断和后验波形基线，不构成正面PINN方法claim。
+- 当前论文初稿：[paper_v27](../paper/paper_v27/README.md)。它保存同父三臂、条件 R/G/N、六图、完整数表与主张边界。
+- 保留论文：[paper_v24](../paper/paper_v24/README.md)，原稀疏四臂及后验波形基线保持历史身份。
 - 保留论文快照：[paper_v23](../paper/paper_v23/README.md)。它保存既有界面暴露、物理遗忘、failure-analysis与复现边界。
 - 上一 PHK-V2.3 LF3 终局入口：[2026-09-05 LF3 terminal closeout](experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)。它记录 T0 高 precision/质量及时序通过但两周期 recall 失败、P0 未触发、关机后 nominal 裁决、local role-label 修复及 `LF3_CARRIER_NOT_ESTABLISHED`。
-- 当前 PHK-V2.3 LF3 资格入口：[2026-09-04 LF3 CPU qualification](experiment/2026-09-04-phk-v23-lf3-cpu-qualification.md)。它记录 phase-logit 数学、14 类分区、matched stream 与 reference boundary；只准入唯一 GPU trajectory，不是方法结果。
-- 当前 PHK-V2.3 LF2 终局入口：[2026-09-04 LF2 terminal closeout](experiment/2026-09-04-phk-v23-lf2-terminal-closeout.md)。它记录 M0 的连续场误差改善与事件拓扑消失、M1 未触发、完整产物回收/哈希核验/关机、本地 nominal 裁决及 `LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED`。
-- 当前 PHK-V2.3 LF2 资格入口：[2026-09-04 LF2 CPU qualification](experiment/2026-09-04-phk-v23-lf2-cpu-qualification.md)。它记录 14 类目标测度分区、旧 LF1 proposal amplification、LF1-B0 full-medium baseline、Sobol/hash 身份和 reference boundary；只准入唯一 GPU trajectory，不是方法结果。
-- 当前 PHK-V2.3 LF1 资格入口：[2026-09-03 LF1 CPU qualification](experiment/2026-09-03-phk-v23-lf1-cpu-qualification.md)。它记录旧 sampler event exposure、旧 B0 event recall/loss、phase Jacobian、新表示可重构性与六个事件池；仅准入 Run A，不是方法结果。
-- 当前 PHK-V2.3 LF1 终局入口：[2026-09-03 LF1 terminal closeout](experiment/2026-09-03-phk-v23-lf1-terminal-closeout.md)。它记录 B0/B final 两周期 competence、固定 physics ratio 通过但 phase/temperature 增量门失败、C 未触发、完整回收/关机与 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN`。
-- 当前 PHK-V2.3 LF1 Run A 入口：[2026-09-03 LF1 Run A interim closeout](experiment/2026-09-03-phk-v23-lf1-run-a-interim-closeout.md)。它记录 1200-step category control、potential validity、冷态无事件、完整回收/哈希/关机与 `LF1_A_VALID_RUN_B_REQUIRED`；不是 LF1 主方法正面结果。
-- 当前 PHK-V2.3 LF0 结果入口：[2026-09-03 LF0 terminal closeout](experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)。它记录 A 无 competence、B0 potential validity failure、B final 无事件、C 未触发、实例保留例外与 `LF0_NUMERICAL_OR_IDENTITY_INVALID`。
+- 历史 PHK-V2.3 LF3 资格入口：[2026-09-04 LF3 CPU qualification](experiment/2026-09-04-phk-v23-lf3-cpu-qualification.md)。它记录 phase-logit 数学、14 类分区、matched stream 与 reference boundary；只准入唯一 GPU trajectory，不是方法结果。
+- 历史 PHK-V2.3 LF2 终局入口：[2026-09-04 LF2 terminal closeout](experiment/2026-09-04-phk-v23-lf2-terminal-closeout.md)。它记录 M0 的连续场误差改善与事件拓扑消失、M1 未触发、完整产物回收/哈希核验/关机、本地 nominal 裁决及 `LF2_CALIBRATED_CARRIER_NOT_ESTABLISHED`。
+- 历史 PHK-V2.3 LF2 资格入口：[2026-09-04 LF2 CPU qualification](experiment/2026-09-04-phk-v23-lf2-cpu-qualification.md)。它记录 14 类目标测度分区、旧 LF1 proposal amplification、LF1-B0 full-medium baseline、Sobol/hash 身份和 reference boundary；只准入唯一 GPU trajectory，不是方法结果。
+- 历史 PHK-V2.3 LF1 资格入口：[2026-09-03 LF1 CPU qualification](experiment/2026-09-03-phk-v23-lf1-cpu-qualification.md)。它记录旧 sampler event exposure、旧 B0 event recall/loss、phase Jacobian、新表示可重构性与六个事件池；仅准入 Run A，不是方法结果。
+- 历史 PHK-V2.3 LF1 终局入口：[2026-09-03 LF1 terminal closeout](experiment/2026-09-03-phk-v23-lf1-terminal-closeout.md)。它记录 B0/B final 两周期 competence、固定 physics ratio 通过但 phase/temperature 增量门失败、C 未触发、完整回收/关机与 `LF1_DATA_ONLY_VALUE_NO_PINN_GAIN`。
+- 历史 PHK-V2.3 LF1 Run A 入口：[2026-09-03 LF1 Run A interim closeout](experiment/2026-09-03-phk-v23-lf1-run-a-interim-closeout.md)。它记录 1200-step category control、potential validity、冷态无事件、完整回收/哈希/关机与 `LF1_A_VALID_RUN_B_REQUIRED`；不是 LF1 主方法正面结果。
+- 历史 PHK-V2.3 LF0 结果入口：[2026-09-03 LF0 terminal closeout](experiment/2026-09-03-phk-v23-lf0-terminal-closeout.md)。它记录 A 无 competence、B0 potential validity failure、B final 无事件、C 未触发、实例保留例外与 `LF0_NUMERICAL_OR_IDENTITY_INVALID`。
 - 历史 PHK-V2.3 R1X 工程阻塞记录：[2026-09-02 R1X engineering-blocked closeout](experiment/2026-09-02-phk-v23-r1x-engineering-blocked-closeout.md)。它记录两次 pre-update 部署失败、日志哈希、0 科学轨迹、关机验证和 post-blocker isolation 回归修复；不得解释为 clean-coupling 方法失败。
 - 当前 PHK-V2.3 R1X E1 结果入口：[2026-09-03 R1X E1 ET-not-ready closeout](experiment/2026-09-03-phk-v23-r1x-e1-et-not-ready-closeout.md)。它记录 300-step reference-blind warm-up、readiness 失败、产物回收/关机、本地 nominal 评价和 E2 top-hard-lift 路由；它是 non-voting development evidence。
 - 当前 PHK-V2.3 R1X 终局入口：[2026-09-03 R1X E2/pure-scratch stop closeout](experiment/2026-09-03-phk-v23-r1x-e2-pure-scratch-stop-closeout.md)。它记录 top hard lift、第二条 300-step reference-blind warm-up、两窗 readiness 失败、无 material phase signal、本地 nominal 评价、实例保留例外及 `PURE_SCRATCH_COMPETENCE_RECOVERY_FAILED`；它不构成方法增益。

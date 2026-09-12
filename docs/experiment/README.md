@@ -1,6 +1,6 @@
 # Experiment ledger protocol
 
-最新：[V-only与接触读出终局](2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)。V拟合与器件读出改善，接触迹定量归因；新PDE/归一化仍未运行。
+最新：[同父三臂与电学归一化终局](2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)。六个合法终点、6500 新增 Adam / 1500 完整评估；A/B 无预声明增量，D_N 未触发。
 
 This directory stores compact, reviewable facts for every attempted run. Raw
 checkpoints and arrays stay under `outputs/runs/<run_id>/` and are not evidence
@@ -22,7 +22,11 @@ The machine ledger is `index.jsonl`; `INDEX.md` is only its generated human
 view. Smoke and pilot entries never vote in formal adjudication. A run's
 `evidence_identity` and `claim_status` define what it may support.
 
-## Current bounded campaign
+## Latest bounded campaign
+
+The specified-parent D_I/D_B/P_U comparison and conditional R/G/N are complete. All six fixed endpoints are valid, no declared contrast passes reconstruction A or limited function B, and D_N was not triggered. The [latest closeout](2026-09-12-phk-v23-lf11-joint-terminal-closeout.md) and paper_v27 preserve actual endpoint, event, contact and optimization evidence. This completed campaign authorizes no further research or publication.
+
+## Historical LF10 campaign
 
 LF10 is complete as
 `LF10_FEASIBLE_DIRECTION_SCREEN_NEGATIVE_PAPER_STRENGTHENED`. CTRL and PROJ

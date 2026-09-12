@@ -1,0 +1,43 @@
+{
+  "role": "R",
+  "status": "VALID_FIXED_ENDPOINT",
+  "adam_updates": 0,
+  "trajectory_Adam_updates": 1000,
+  "reused_Adam_prefix": true,
+  "source": "outputs\\runs\\20260912-lf11-joint-bc-pde\\P_U\\adam-1000.pt",
+  "lbfgs": {
+    "evaluations": 200,
+    "accepted_steps": 98,
+    "termination": "EVALUATION_BUDGET_EXHAUSTED",
+    "last_accepted_loss": 0.5614011778450734,
+    "initial_loss": 0.9475246934911249,
+    "history_resumed": false,
+    "first_gate_accepted_evaluation": null
+  },
+  "visible": {
+    "V_normalized_rms": 0.006067797898945989,
+    "T_normalized_rms": {
+      "all": 0.008593731785519719,
+      "heating": 0.01404910983520665,
+      "off": 0.005277591203724662
+    },
+    "phase_raw_visible_rms": 0.013026439422873962,
+    "phase_logit_objective": 0.0001401912598172375,
+    "finite": true
+  },
+  "fixed_physics_audit": {
+    "pde": {
+      "electric": 3.4599325901496325,
+      "thermal": 0.007001443591445566,
+      "phase": 0.0025423940041757677
+    },
+    "J_U": 1.1564921425817511,
+    "boundary": 0.06954587054551237,
+    "initial": 3.726752460384734e-33
+  },
+  "started_utc": "2026-09-12T12:26:05.098588+00:00",
+  "completed_utc": "2026-09-12T13:12:13.106830+00:00",
+  "elapsed_seconds_internal": 2768.0116749000154,
+  "reference_read": false,
+  "pid": 12960
+}
