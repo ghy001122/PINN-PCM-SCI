@@ -2,23 +2,24 @@
 
 更新时间：2026-09-12
 
-- `phase_id`: `PHK_V23_LF11_FOLLOWUP_FIT_AND_ELECTRIC_BLOCK_SPRINT_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_V_CONTINUATION_AND_CONTACT_AUDIT_COMPLETE`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_THERMAL_FIT_REPAIR_NO_NEW_PINN_COMPARISON`
+- `claim_status`: `VALID_V_ONLY_DEVICE_IMPROVEMENT_CONTACT_TRACE_ATTRIBUTION_NO_NEW_PINN`
 - `next_research_execution_authorized`: `false`
 
 ## 最新VERIFIED
 
-VERIFIED：温度包络下界0.1504%；可见T误差17.8233%→1.1375%，三个T拟合门均过，phase不变。可见V误差0.8215%未达0.5%，是唯一未满足的拟合条件。完整nominal参考ROI T误差28.2210%→1.7475%，能量误差106.7402%→49.2006%。
+VERIFIED：200次V-only评估接受99步，可见V误差0.8215%→0.5618%，T/phase完全不变。固定参考能量误差49.20%→28.28%；带符号底流积分下降的99.41%来自边界迹项。零训练接触端点强基线能量误差2.187%→0.644%。原0.5%拟合门未达，新D_B/P_U及归一化未运行，不是失败方法。
 
-本轮实际1200 Adam更新、400次固定目标/梯度评估；仅CPU，训练正常结束后评价，无GPU实例、stress读取或新物理。S=0.001188671875、raw Ephi=0.027268375553与父状态相同；top-current NRMSE7.2178%，bottom-current NRMSE781.2535%，严格器件未通过。
+本轮只有V参数更新；固定目标下降53.23%，停止原因为预算耗尽。温度全局/加热/关断误差仍为1.1375%/1.8357%/0.7219%。phase与双周期事件未改善，S=0.001188671875、raw Ephi=0.027268375553。
 
-## 解释与未运行
+V-only正式top/bottom电流NRMSE为6.5030%/522.2628%，功率NRMSE30.7607%，能量误差28.2797%。接触强基线对应0.4278%/21.5140%、1.3776%、0.6443%。严格器件门仍未通过。
 
-SUPPORTED_INTERPRETATION：主要温度拟合缺口已可修复，剩余V误差偏向底部。最下两z层占16.25%测度、贡献53.17%V平方误差。尚未证明优化/表示/边界唯一根因；适配器与额外优化也未独立消融。
-新的D_B/P_U、R/N/G/D_N未运行，不是执行失败；没有新的PINN匹配增量、独立seed或formal OOD。
+## 解释与未知
 
-[本轮终局](docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)与[paper_v25](paper/paper_v25/README.md)保存事实和复现。[历史LF11](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)、[paper_v24](paper/paper_v24/README.md)、LF10及旧稿均保留。
+SUPPORTED_INTERPRETATION：固定函数和网格上的heater边界迹显著影响FV底流及V-only变化；内部耗散反而略升。这里是固定T/phase/σ的读出干预，不是自洽耦合求解或RMS贡献率。
 
-本轮成果的云端阅读路径、证据边界与最优先问题见[独立复评交接](docs/notes/2026-09-12-lf11-followup-results-cloud-review-handoff.md)。发布与评估不授权新训练。
+UNKNOWN：拟合门之上PDE是否有增量、归一化机制、独立seed/mask/完整案例稳健性、实验材料有效性。唯一优先建议为先审查heater相容且邻接绝缘导数良好的V表示，再另批共同底座/PDE比较；不得自动追加200或重启旧hard lift。
+
+[本轮终局](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)、[paper_v26](paper/paper_v26/README.md)、[复现](paper/paper_v26/reproducibility.md)。[paper_v25](paper/paper_v25/README.md)、[LF11四臂](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)和LF10历史证据保持原样。用户已另行授权本轮成果发布与[云端独立复评交接](docs/notes/2026-09-12-lf11-v26-results-cloud-review-handoff.md)，实际发布身份以所属Git提交及交付消息为准。CPU训练已结束，本轮未启动云实例，stress未读；没有新增科研执行授权。

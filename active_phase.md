@@ -1,21 +1,19 @@
 # 当前阶段
 
-- `phase_id`: `PHK_V23_LF11_FOLLOWUP_FIT_AND_ELECTRIC_BLOCK_SPRINT_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_V_CONTINUATION_AND_CONTACT_AUDIT_COMPLETE`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_THERMAL_FIT_REPAIR_NO_NEW_PINN_COMPARISON`
+- `claim_status`: `VALID_V_ONLY_DEVICE_IMPROVEMENT_CONTACT_TRACE_ATTRIBUTION_NO_NEW_PINN`
 - `next_research_execution_authorized`: `false`
 
-PHASE_ID=PHK_V23_LF11_FOLLOWUP_FIT_AND_ELECTRIC_BLOCK_SPRINT_COMPLETE
+PHASE_ID=PHK_V23_LF11_V_CONTINUATION_AND_CONTACT_AUDIT_COMPLETE
 BLOCKER_ID=NONE
 NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
 
-## 本轮已收口
+## 本轮边界
 
-用户授权的LF11后续Sprint已按停止条件完成：S0/S1及固定端点评价、图稿和paper_v25完成；S1的V拟合准入未满足，新的D_B/P_U及电学归一化后续未运行。详见[终局](docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)与[用户指令](docs/notes/2026-09-11-lf11-followup-authorized-sprint-instructions.md)。
+用户授权的V续拟合、接触分解、直接基线和论文更新已按停止条件收口。V准入未满足，所有依赖物理分支未运行。详见[终局](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)与[原指令](docs/notes/2026-09-12-lf11-v-pde-authorized-sprint.md)。本轮没有新科研执行授权。
 
-## 后续边界
+保留LF11及paper_v25；paper_v26为本次发布稿。新表示、新预算、PDE或独立案例确认均另批后执行。本轮CPU，无创建的云实例或待关闭实例；stress sealed/unread。
 
-新预算、V头修复或任何新PDE分支均需后续授权。本轮未启动云实例，无待关闭实例。物理、观测、LF11与paper_v24历史证据保持；stress sealed/unread。不自动commit/push/PR或跨会话发送。
-
-2026-09-12用户已明确授权本轮精选成果提交GitHub及交付“推进PINN相变研究”进行评估；该授权仅覆盖本次发布与交接，不新增科研执行权限。见[交接材料](docs/notes/2026-09-12-lf11-followup-results-cloud-review-handoff.md)。
+2026-09-12用户另行明确授权将本轮重要成果commit/push到ghy001122/PINN-PCM-SCI，并交付“推进PINN相变研究”进行独立评估与下一步规划。本次发布和交接不重开科研执行；范围见[云端复评交接](docs/notes/2026-09-12-lf11-v26-results-cloud-review-handoff.md)。

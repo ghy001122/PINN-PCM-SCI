@@ -1,0 +1,100 @@
+{
+  "role": "pre",
+  "recorded_utc": "2026-09-12T07:13:17.481154+00:00",
+  "reference_read": false,
+  "PDE_solve": false,
+  "summaries": {
+    "bottom_current": {
+      "signed_integral": 5.141454885872649,
+      "rms": 4.528502940724165
+    },
+    "I_trace": {
+      "signed_integral": 4.791357546664497,
+      "rms": 4.245788675689263
+    },
+    "I_drop": {
+      "signed_integral": 0.35009733920815256,
+      "rms": 0.2947960951812032
+    },
+    "P_bottom": {
+      "signed_integral": 0.23520473677066212,
+      "rms": 0.2297201785929929
+    },
+    "P_trace": {
+      "signed_integral": 0.20667079797370635,
+      "rms": 0.2047413844124924
+    },
+    "P_cross": {
+      "signed_integral": 0.027525626549412856,
+      "rms": 0.024824001762268438
+    },
+    "P_drop": {
+      "signed_integral": 0.001008312247542863,
+      "rms": 0.0008846426009456221
+    },
+    "P_internal": {
+      "signed_integral": 0.40073282314336434,
+      "rms": 0.3378341625125605
+    },
+    "P_top": {
+      "signed_integral": 0.002121579138585533,
+      "rms": 0.0018082769658909108
+    },
+    "joule_power": {
+      "signed_integral": 0.6380591390526119,
+      "rms": 0.5481847080622837
+    },
+    "top_current": {
+      "signed_integral": 0.6337604339142228,
+      "rms": 0.5110010840973644
+    },
+    "input_power": {
+      "signed_integral": 0.4196457365293045,
+      "rms": 0.35394370549809445
+    },
+    "current_identity_error": {
+      "signed_integral": -1.1518130199617016e-16,
+      "rms": 8.706329909633181e-16
+    },
+    "power_identity_error": {
+      "signed_integral": -8.564641297263577e-19,
+      "rms": 4.728592282276495e-17
+    },
+    "AD_bottom_current": {
+      "signed_integral": 0.3527203803780909,
+      "rms": 0.2982733694672828
+    },
+    "AD_cell_sigma_current": {
+      "signed_integral": 0.3409674767608317,
+      "rms": 0.2871349005162831
+    },
+    "I_trace_edge": {
+      "signed_integral": 1.179471699577665,
+      "rms": 1.1209349404333873
+    },
+    "I_drop_edge": {
+      "signed_integral": 0.07531195542895908,
+      "rms": 0.0702007909809096
+    },
+    "AD_bottom_edge": {
+      "signed_integral": 0.07723242352500168,
+      "rms": 0.07192799786890598
+    },
+    "I_trace_interior": {
+      "signed_integral": 3.611885847086832,
+      "rms": 3.1538105695561653
+    },
+    "I_drop_interior": {
+      "signed_integral": 0.2747853837791935,
+      "rms": 0.2271836820360051
+    },
+    "AD_bottom_interior": {
+      "signed_integral": 0.27548795685308924,
+      "rms": 0.2287234031904313
+    }
+  },
+  "heater_trace_rms": 0.018007904364866562,
+  "interpretation": "signed identities; RMS components are not additive shares; AD is own-model flux, not truth",
+  "boundary_trace_from_own_model": true,
+  "contact_edge_rule": "first/last two positive-overlap faces"
+}

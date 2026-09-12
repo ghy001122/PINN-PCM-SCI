@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-09-12T07:13:09.630433+00:00",
+  "compute_stopped_before_reference_read": true,
+  "training_process_exit_code": 0,
+  "CPU_only": true,
+  "cloud_instance_started": false,
+  "instance_shutdown": "NOT_APPLICABLE_NO_INSTANCE_CREATED",
+  "Adam_updates": 0,
+  "complete_objective_gradient_evaluations": 200,
+  "accepted_V_steps": 99,
+  "training_complete": true,
+  "unrun_branches": {
+    "D_B": "NOT_RUN_V_FIT_ADMISSION_NOT_MET",
+    "P_U": "NOT_RUN_V_FIT_ADMISSION_NOT_MET",
+    "G": "NOT_RUN_V_FIT_ADMISSION_NOT_MET",
+    "N": "NOT_RUN_V_FIT_ADMISSION_NOT_MET",
+    "D_N": "NOT_RUN_V_FIT_ADMISSION_NOT_MET"
+  },
+  "stress_read": false
+}

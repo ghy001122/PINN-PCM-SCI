@@ -1,0 +1,91 @@
+{
+  "schema_id": "lf11-v-pde-sprint-20260912-v1",
+  "status": "FROZEN_BEFORE_OPTIMIZER_STEPS",
+  "authorization": "User explicitly requested complete execution of Prompt_for_Research_Sprint_20260912.md; reports are advisory.",
+  "inherited_commit": "8a0f1a0952db57de2b5d0907e26981dcd3264076",
+  "base_config": "configs/phk_v23/lf11_sprint.json",
+  "parent": "outputs/runs/20260911-lf11-followup-fit-electric-block/s1/fixed_fit_endpoint.pt",
+  "V_optimizer": "outputs/runs/20260911-lf11-followup-fit-electric-block/s1/refinement_lbfgs_V.pt",
+  "sparse": "outputs/runs/20260910-lf11-sparse-metric-sprint/input/sparse.npz",
+  "original_s0": "outputs/runs/20260911-lf11-followup-fit-electric-block/s0.json",
+  "calibration": "outputs/runs/20260910-lf11-sparse-metric-sprint/formal/calibration.json",
+  "V_evaluations": 200,
+  "visible_V_gate": 0.005,
+  "V_stop": "first accepted Wolfe state at L_V <= .005^2/3; otherwise budget/optimizer stop; no retry",
+  "adam_updates_each": 1000,
+  "lbfgs_evaluations_each": 200,
+  "checkpoints": [
+    0,
+    500,
+    1000,
+    "final_accepted"
+  ],
+  "adam": {
+    "lr": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-8,
+    "clip": 10,
+    "data_points": 1024,
+    "observation_seed": 60117,
+    "physics_seed": 60217
+  },
+  "fixed_objective": {
+    "observation": "all existing sparse observations; exact original weights",
+    "interior_seed": 91221,
+    "interior_multiplier": 8,
+    "bc_seed": 91222,
+    "bc_repeats": 8,
+    "lambda": 0.1
+  },
+  "audit": {
+    "seed": 91223,
+    "interior_multiplier": 2,
+    "bc_repeats": 2,
+    "nodes": [
+      500,
+      1000
+    ],
+    "geometry": {
+      "nx": 160,
+      "nz": 80,
+      "nt": 1001,
+      "time_range": [
+        0,
+        2.5
+      ]
+    },
+    "edge_rule": "two heater faces nearest each switching endpoint; no deletion"
+  },
+  "normalizers": "Reuse old a0/b0 verbatim; user execution file explicitly resolves report disagreement.",
+  "strong_baseline": "B_logit_waveform_contact: insert +/- heater_half_width at bottom V=0, elsewhere old spatial interpolation; same cyclic positive-U PCHIP/holding/analytic U; T/phase unchanged",
+  "evaluation": {
+    "near_zero_metric_tolerances": "inherit LF11 decision; extra normalized device tolerances=1e-6, signed dimensional defects=1e-12",
+    "normalization_floor": 1e-14,
+    "matched_gain": 0.1,
+    "noninferiority": 0.05,
+    "device_damage": "relative increase >5% plus absolute tolerance in phase Ephi/S or bottom-current/power/energy/balance/defect; evaluate all without selecting checkpoints"
+  },
+  "conditional": {
+    "roles": [
+      "G",
+      "N"
+    ],
+    "DN_only_if_N_positive": true,
+    "trigger": "P_U damages phase/device versus D_B AND electric/insulation amplitude cross-head evidence at BOTH Adam500 and Adam1000; large bottom error alone never triggers.",
+    "diagnostic_materiality": "amplitude gradient norm / full block gradient norm >= .25 for T or phase, and common-Adam-denominator amplitude direction increases that head's visible observation error at both nodes; separately report raw cosine, total step, heater Dirichlet and phase-no-flux contributions. If direct trace/phase-no-flux dominates, do not trigger.",
+    "amplitude_gradient_diagnostic_only": "analytic product-rule separation; no detached conductivity in training",
+    "calibration": "one fixed blind common-parent electric block loss ratio for N; then full parameter gradient norm scalar for G, actual objective coefficients included",
+    "denominator_min": 1e-24
+  },
+  "budget": {
+    "main_adam": 2000,
+    "main_evaluations": 600,
+    "all_adam": 5000,
+    "all_evaluations": 1200
+  },
+  "claims": "nominal development and mechanistic comparison; no independent seeds, unseen validation, OOD or calibrated oxide device",
+  "publication": "paper_v26 local; no commit/push/PR; retain v25"
+}

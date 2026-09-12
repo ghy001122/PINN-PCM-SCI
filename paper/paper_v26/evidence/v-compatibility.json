@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "V_parameters_exact": true,
+    "V_parameter_order": true,
+    "same_sparse_identity": true,
+    "optimizer_type": true,
+    "parameter_group": true,
+    "optimizer_recipe": true,
+    "finite_FP64_history": true,
+    "history_shapes": true
+  },
+  "compatible": true,
+  "parameter_names": [
+    "heads.potential.u.weight",
+    "heads.potential.u.bias",
+    "heads.potential.v.weight",
+    "heads.potential.v.bias",
+    "heads.potential.input.weight",
+    "heads.potential.input.bias",
+    "heads.potential.hidden.0.weight",
+    "heads.potential.hidden.0.bias",
+    "heads.potential.hidden.1.weight",
+    "heads.potential.hidden.1.bias",
+    "heads.potential.hidden.2.weight",
+    "heads.potential.hidden.2.bias",
+    "heads.potential.output.weight",
+    "heads.potential.output.bias"
+  ],
+  "V_parameter_count": 13313
+}

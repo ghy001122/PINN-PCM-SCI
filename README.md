@@ -1,23 +1,27 @@
 # PINN-PCM-SCI
 
-面向“物理信息神经网络 × 氧化物相变材料与器件”的纯软件研究项目。目标是形成证据闭合、可复现、达到中科院二区定位的论文初稿；这不是期刊接收承诺，合成数值证据也不等于实验验证。
+PINN × 相变材料与器件的纯软件研究；当前对象为二维合成、无量纲电—热—相态wall-cell，尚非实验标定氧化物器件。
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF11_FOLLOWUP_FIT_AND_ELECTRIC_BLOCK_SPRINT_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_V_CONTINUATION_AND_CONTACT_AUDIT_COMPLETE`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_THERMAL_FIT_REPAIR_NO_NEW_PINN_COMPARISON`
+- `claim_status`: `VALID_V_ONLY_DEVICE_IMPROVEMENT_CONTACT_TRACE_ATTRIBUTION_NO_NEW_PINN`
 - `next_research_execution_authorized`: `false`
 
-VERIFIED：温度包络下界0.1504%；可见T误差17.8233%→1.1375%，三个T拟合门均过，phase不变。可见V误差0.8215%未达0.5%，是唯一未满足的拟合条件。完整nominal参考ROI T误差28.2210%→1.7475%，能量误差106.7402%→49.2006%。
+VERIFIED：200次V-only评估接受99步，可见V误差0.8215%→0.5618%，T/phase完全不变。固定参考能量误差49.20%→28.28%；带符号底流积分下降的99.41%来自边界迹项。零训练接触端点强基线能量误差2.187%→0.644%。原0.5%拟合门未达，新D_B/P_U及归一化未运行，不是失败方法。
 
-新的物理/归一化分支因V拟合前提未满足而未运行，不记为失败。paper_v25已整合实际结果；本轮未启动GPU实例。旧LF11与paper_v24保留，无新科研执行授权，stress sealed/unread。
+本轮已收口，paper_v26与关键证据按用户后续授权发布；无新研究执行授权或本轮待关闭云实例，stress未读。实际发布版本以所属Git提交为准。
 
 ## 当前入口
 
+- 最新终局：[V-only与接触读出](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)
+- 当前论文：[paper_v26](paper/paper_v26/README.md)
+- 云端复评与下一步规划请求：[本轮交接](docs/notes/2026-09-12-lf11-v26-results-cloud-review-handoff.md)
+
 - LF11后续终局：[closeout](docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)
-- 当前论文：[paper_v25](paper/paper_v25/README.md)
+- 保留论文：[paper_v25](paper/paper_v25/README.md)
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)

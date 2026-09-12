@@ -1,0 +1,79 @@
+{
+  "evaluations": 200,
+  "accepted_steps": 99,
+  "termination": "EVALUATION_BUDGET_EXHAUSTED",
+  "last_accepted_loss": 1.0522112986674133e-05,
+  "initial_loss": 2.2495957603127728e-05,
+  "history_resumed": true,
+  "first_gate_accepted_evaluation": null,
+  "schema_id": "lf11-v-continuation-result-v1",
+  "recorded_utc": "2026-09-12T07:09:08.891551+00:00",
+  "before": {
+    "V_normalized_rms": 0.008215100292107407,
+    "T_normalized_rms": {
+      "all": 0.011374918745879183,
+      "heating": 0.018357408660208487,
+      "off": 0.0072185960489034974
+    },
+    "phase_raw_visible_rms": 0.015015393735458373,
+    "phase_logit_objective": 0.0003310376514114488,
+    "finite": true
+  },
+  "after": {
+    "V_normalized_rms": 0.005618392916130234,
+    "T_normalized_rms": {
+      "all": 0.011374918745879183,
+      "heating": 0.018357408660208487,
+      "off": 0.0072185960489034974
+    },
+    "phase_raw_visible_rms": 0.015015393735458373,
+    "phase_logit_objective": 0.0003310376514114488,
+    "finite": true
+  },
+  "admission": {
+    "passed": false,
+    "predicates": {
+      "finite": true,
+      "V": false,
+      "T_all": true,
+      "T_heating": true,
+      "T_off": true,
+      "phase_raw_visible_rms": true,
+      "phase_logit_objective": true
+    }
+  },
+  "non_V_state_exactly_preserved": true,
+  "compatibility": {
+    "checks": {
+      "V_parameters_exact": true,
+      "V_parameter_order": true,
+      "same_sparse_identity": true,
+      "optimizer_type": true,
+      "parameter_group": true,
+      "optimizer_recipe": true,
+      "finite_FP64_history": true,
+      "history_shapes": true
+    },
+    "compatible": true,
+    "parameter_names": [
+      "heads.potential.u.weight",
+      "heads.potential.u.bias",
+      "heads.potential.v.weight",
+      "heads.potential.v.bias",
+      "heads.potential.input.weight",
+      "heads.potential.input.bias",
+      "heads.potential.hidden.0.weight",
+      "heads.potential.hidden.0.bias",
+      "heads.potential.hidden.1.weight",
+      "heads.potential.hidden.1.bias",
+      "heads.potential.hidden.2.weight",
+      "heads.potential.hidden.2.bias",
+      "heads.potential.output.weight",
+      "heads.potential.output.bias"
+    ],
+    "V_parameter_count": 13313
+  },
+  "reference_read": false,
+  "cloud_instance_started": false,
+  "outcome": "V_BOUNDED_CONTINUATION_NOT_ADMITTED"
+}

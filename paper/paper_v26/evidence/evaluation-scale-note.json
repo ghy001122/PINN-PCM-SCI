@@ -1,0 +1,11 @@
+{
+  "unused_config_floor": 1e-14,
+  "actual_inherited_evaluator_floor": 1e-12,
+  "reference_scales": {
+    "reference_current": 0.5192396884541327,
+    "reference_power": 0.3596171853089629,
+    "reference_energy": 0.42765199104331236
+  },
+  "floor_active": false,
+  "effect_on_values_or_decisions": "NONE; all scales exceed both floors; inherited evaluator and user-required metrics were retained; frozen config metadata remains unchanged"
+}
