@@ -1,0 +1,29 @@
+{
+  "schema_id": "lf11-followup-s0-v1",
+  "recorded_utc": "2026-09-11T15:52:42.724808+00:00",
+  "source_commit": "6412dbf3c766207dfb5f586a94bac8eaa0f247d5",
+  "sparse": "outputs\\runs\\20260910-lf11-sparse-metric-sprint\\input\\sparse.npz",
+  "parent": "outputs\\runs\\20260910-lf11-sparse-metric-sprint\\formal\\warm_start\\checkpoint.pt",
+  "strata": {
+    "all": "original full global observation measure including analytic IC",
+    "heating": "t>0 and known U(t)>0; conditional global measure",
+    "off": "t>0 and known U(t)=0; conditional global measure"
+  },
+  "thresholds": {
+    "T_all": 0.02,
+    "T_heating": 0.05,
+    "T_off": 0.05,
+    "V": 0.005,
+    "phase_relative_noninferiority": 0.05
+  },
+  "budget": {
+    "S1_Adam": 1200,
+    "S1_fixed_evaluations": 400,
+    "main_Adam": 3200,
+    "main_fixed_evaluations": 800,
+    "all_Adam": 6200,
+    "all_fixed_evaluations": 1400
+  },
+  "information_role": "previously exposed nominal training/development observations",
+  "stop_if": "any temperature lower bound exceeds its frozen admission threshold"
+}

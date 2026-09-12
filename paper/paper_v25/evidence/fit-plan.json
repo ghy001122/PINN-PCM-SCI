@@ -1,0 +1,47 @@
+{
+  "recorded_utc": "2026-09-11T15:58:54.242165+00:00",
+  "base": "600 Adam V/T then potential 80 and temperature 120 fixed L-BFGS evaluations",
+  "conditional": "If not admitted: at most 600 more Adam V/T; one zero-initialized T latent Fourier residual if T fails; potential up to 40 then T remainder to cumulative 400 fixed evaluations",
+  "phase": "unchanged during pure observation fitting; restore joint trainability before any S2 PDE",
+  "Adam": {
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "clip": 10.0,
+    "batch": 1024
+  },
+  "LBFGS": {
+    "fixed_full_weighted_component": true,
+    "weight": "global_probability / sum / 3",
+    "history_size": 50,
+    "line_search": "strong_wolfe_verified",
+    "no_gradient_clipping": true
+  },
+  "adapter": {
+    "type": "additive temperature latent only",
+    "width": 32,
+    "layers": 2,
+    "normalized_coordinate_frequencies": {
+      "x": [
+        0.5,
+        1,
+        2
+      ],
+      "z": [
+        0.5,
+        1
+      ],
+      "t": [
+        0.5,
+        1,
+        2,
+        4
+      ]
+    },
+    "initial_function": "exactly unchanged through zero final layer"
+  },
+  "source": "PyTorch Adam/LBFGS; smooth Fourier-feature additive adaptation of the existing ModifiedMLP, not claimed novel"
+}

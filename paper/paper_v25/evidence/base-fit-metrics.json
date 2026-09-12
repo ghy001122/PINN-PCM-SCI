@@ -1,0 +1,25 @@
+{
+  "metrics": {
+    "V_normalized_rms": 0.013247177277980339,
+    "T_normalized_rms": {
+      "all": 0.040357134327776156,
+      "heating": 0.06379982101928719,
+      "off": 0.02683963072973168
+    },
+    "phase_raw_visible_rms": 0.015015393735458373,
+    "phase_logit_objective": 0.0003310376514114488,
+    "finite": true
+  },
+  "admission": {
+    "passed": false,
+    "predicates": {
+      "finite": true,
+      "V": false,
+      "T_all": false,
+      "T_heating": false,
+      "T_off": true,
+      "phase_raw_visible_rms": true,
+      "phase_logit_objective": true
+    }
+  }
+}

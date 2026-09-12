@@ -1,0 +1,60 @@
+{
+  "schema_id": "lf11-followup-s0-result-v1",
+  "recorded_utc": "2026-09-11T15:52:43.607445+00:00",
+  "evidence_status": "VERIFIED",
+  "outcome": "S0_RANGE_BOUND_DOES_NOT_PRECLUDE_S1",
+  "failed_strata": [],
+  "temperature_normalized_rms_lower_bound": {
+    "all": 0.0015038294167862975,
+    "heating": 0.002883461279684625,
+    "off": 0.0
+  },
+  "parent_visible_metrics": {
+    "V_normalized_rms": 0.01567047072850068,
+    "T_normalized_rms": {
+      "all": 0.17823265896293036,
+      "heating": 0.2597549510708808,
+      "off": 0.1361178605939142
+    },
+    "phase_raw_visible_rms": 0.015015393735458373,
+    "phase_logit_objective": 0.0003310376514114488,
+    "finite": true
+  },
+  "stratum_counts": {
+    "all": {
+      "points": 29106,
+      "outside_envelope": 343,
+      "global_measure_mass": 1.0
+    },
+    "heating": {
+      "points": 7854,
+      "outside_envelope": 343,
+      "global_measure_mass": 0.272
+    },
+    "off": {
+      "points": 21021,
+      "outside_envelope": 0,
+      "global_measure_mass": 0.724
+    }
+  },
+  "maximum_temperature_gap": 0.02215226143797966,
+  "maximum_gap_witness": {
+    "coordinate_xzt": [
+      0.012499999999999956,
+      0.9125000000000001,
+      0.28
+    ],
+    "observed_T": 0.14261155053733732,
+    "envelope": 0.12045928909935766
+  },
+  "analytic_vs_actual_envelope_max_difference": 4.440892098500626e-16,
+  "input_identity": {
+    "sparse_sha256": "27ea0a29e69e7179e775144c7dca362aa92c676bb0942964c47946715d5002d8",
+    "parent_sha256": "1d7290dea42304b9892bd1305df1e094c82a030734576be8976238fb1ed431da"
+  },
+  "optimizer_updates": 0,
+  "fixed_optimization_evaluations": 0,
+  "reference_read": false,
+  "cloud_instance_started": false,
+  "scope": "Pointwise function-class lower bound on existing visible observations; not a trained endpoint or continuum claim"
+}

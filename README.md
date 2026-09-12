@@ -4,25 +4,25 @@
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF11_SPARSE_METRIC_ATTRIBUTION_SPRINT_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_FOLLOWUP_FIT_AND_ELECTRIC_BLOCK_SPRINT_COMPLETE`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `machine_outcome`: `LF11_VALID_FOUR_ARM_NO_MATCHED_INCREMENT`
-- `mechanism_outcome`: `LOCAL_ELECTRIC_BOUNDARY_DIRECTION_EVIDENCE_LATENT_NOT_TRIGGERED`
-- `claim_status`: `VALID_SPARSE_DIAGNOSTIC_EVIDENCE_NO_MATCHED_PINN_GAIN`
+- `claim_status`: `VALID_THERMAL_FIT_REPAIR_NO_NEW_PINN_COMPARISON`
 - `next_research_execution_authorized`: `false`
 
-VERIFIED：LF11已完成，共6000更新；四臂合法但无匹配PINN增量。D_B→P_U的独立物理目标下降80.37%，S/Ephi却恶化40.68%/17.74%。已知波形的后验同观测插值使电流NRMSE从103.08%降至0.428%，相态与温度不变。
-SUPPORTED_INTERPRETATION：实际Adam局部方向优先指向电方程/边界路径，latent条件未触发。成果已写入paper_v24，当前无新训练授权；stress保持sealed/unread。
-LF10的界面暴露、物理遗忘复现和有界负结果及paper_v23均保留。实际实例已关闭。本版收录LF11代码、论文和[关键数值证据](paper/paper_v24/evidence/README.md)；大型完整运行包保持本地存放。
+VERIFIED：温度包络下界0.1504%；可见T误差17.8233%→1.1375%，三个T拟合门均过，phase不变。可见V误差0.8215%未达0.5%，是唯一未满足的拟合条件。完整nominal参考ROI T误差28.2210%→1.7475%，能量误差106.7402%→49.2006%。
+
+新的物理/归一化分支因V拟合前提未满足而未运行，不记为失败。paper_v25已整合实际结果；本轮未启动GPU实例。旧LF11与paper_v24保留，无新科研执行授权，stress sealed/unread。
 
 ## 当前入口
 
+- LF11后续终局：[closeout](docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)
+- 当前论文：[paper_v25](paper/paper_v25/README.md)
 - 授权边界：[active_phase.md](active_phase.md)
 - 已核验状态：[PROJECT_STATE.md](PROJECT_STATE.md)
 - 唯一 live plan：[docs/plans/NEXT_ACTIONS.md](docs/plans/NEXT_ACTIONS.md)
 - LF11终局：[terminal closeout](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)
-- 当前论文初稿与图表：[paper/paper_v24](paper/paper_v24/README.md)
+- 上轮论文快照与图表：[paper/paper_v24](paper/paper_v24/README.md)
 - LF10 关闭决定：[ADR 0074](docs/adr/0074-close-phk-v23-lf10-feasible-direction-replication.md)
 - LF10 终局：[terminal closeout](docs/experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md)
 - LF10 激活决定：[ADR 0073](docs/adr/0073-activate-phk-v23-lf10-feasible-direction-replication.md)

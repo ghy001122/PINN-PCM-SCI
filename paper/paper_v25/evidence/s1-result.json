@@ -1,0 +1,72 @@
+{
+  "schema_id": "lf11-followup-s1-v1",
+  "recorded_utc": "2026-09-11T16:02:01.339257+00:00",
+  "outcome": "S1_BOUNDED_FIT_NOT_ADMITTED",
+  "metrics": {
+    "V_normalized_rms": 0.008215100292107407,
+    "T_normalized_rms": {
+      "all": 0.011374918745879183,
+      "heating": 0.018357408660208487,
+      "off": 0.0072185960489034974
+    },
+    "phase_raw_visible_rms": 0.015015393735458373,
+    "phase_logit_objective": 0.0003310376514114488,
+    "finite": true
+  },
+  "admission": {
+    "passed": false,
+    "predicates": {
+      "finite": true,
+      "V": false,
+      "T_all": true,
+      "T_heating": true,
+      "T_off": true,
+      "phase_raw_visible_rms": true,
+      "phase_logit_objective": true
+    }
+  },
+  "counters": {
+    "Adam_updates": 1200,
+    "fixed_objective_gradient_evaluations": 400
+  },
+  "fixed_full_metrics_exactly_repeatable": true,
+  "temperature_adapter_used": true,
+  "optimizer_terminations": [
+    {
+      "stage": "base_lbfgs_V",
+      "head": "potential",
+      "evaluations": 80,
+      "accepted_steps": 38,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED",
+      "last_accepted_loss": 5.8495901944746214e-05
+    },
+    {
+      "stage": "base_lbfgs_T",
+      "head": "temperature",
+      "evaluations": 120,
+      "accepted_steps": 59,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "last_accepted_loss": 0.0005428994303833894
+    },
+    {
+      "stage": "refinement_lbfgs_V",
+      "head": "potential",
+      "evaluations": 40,
+      "accepted_steps": 19,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED",
+      "last_accepted_loss": 2.2495957603127728e-05
+    },
+    {
+      "stage": "refinement_lbfgs_T",
+      "head": "temperature",
+      "evaluations": 160,
+      "accepted_steps": 78,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "last_accepted_loss": 4.312959215845122e-05
+    }
+  ],
+  "reference_read": false,
+  "cloud_instance_started": false,
+  "phase_unchanged": true,
+  "checkpoint": "s1/fixed_fit_endpoint.pt"
+}

@@ -1,5 +1,11 @@
 # PINN-PCM-SCI 当前研究设定与论文口径
 
+## 2026-09-12 最新进展：LF11后续拟合修复
+
+VERIFIED：温度包络下界0.1504%；可见T误差17.8233%→1.1375%，三个T拟合门均过，phase不变。可见V误差0.8215%未达0.5%，是唯一未满足的拟合条件。完整nominal参考ROI T误差28.2210%→1.7475%，能量误差106.7402%→49.2006%。
+新物理对照未运行；温度修复未建立适配器独立归因。底部V是下一优先定位对象，所有新执行仍未授权。[paper_v25](paper/paper_v25/README.md)与[终局](docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)给出最新证据；下文LF11四臂为上轮保留记录。
+
+
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
 - `updated_at`: `2026-09-11`
 

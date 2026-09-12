@@ -1,5 +1,7 @@
 # Experiment ledger protocol
 
+最新：[LF11后续温度拟合修复与V准入终局](2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)。当前无新的物理训练或归一化比较结果。
+
 This directory stores compact, reviewable facts for every attempted run. Raw
 checkpoints and arrays stay under `outputs/runs/<run_id>/` and are not evidence
 unless a finalized manifest points to them.

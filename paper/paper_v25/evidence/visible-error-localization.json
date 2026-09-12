@@ -1,0 +1,93 @@
+{
+  "status": "POSTHOC_VISIBLE_ERROR_LOCALIZATION",
+  "by_z": [
+    {
+      "z": 0.0125,
+      "probability_mass": 0.0625,
+      "V_normalized_rms": 0.017644944328834615,
+      "V_squared_error_fraction": 0.28833333994598914,
+      "T_normalized_rms": 0.02795882431044894
+    },
+    {
+      "z": 0.1125,
+      "probability_mass": 0.1,
+      "V_normalized_rms": 0.01281518337641072,
+      "V_squared_error_fraction": 0.2433458310871521,
+      "T_normalized_rms": 0.012164289011394172
+    },
+    {
+      "z": 0.21250000000000002,
+      "probability_mass": 0.1,
+      "V_normalized_rms": 0.010170929508006297,
+      "V_squared_error_fraction": 0.15328354969642832,
+      "T_normalized_rms": 0.010488244000012128
+    },
+    {
+      "z": 0.3125,
+      "probability_mass": 0.10000000000000003,
+      "V_normalized_rms": 0.00805979595380002,
+      "V_squared_error_fraction": 0.09625479084274739,
+      "T_normalized_rms": 0.008945630299983924
+    },
+    {
+      "z": 0.41250000000000003,
+      "probability_mass": 0.09999999999999998,
+      "V_normalized_rms": 0.006739687859978247,
+      "V_squared_error_fraction": 0.06730600707809345,
+      "T_normalized_rms": 0.00807708628425264
+    },
+    {
+      "z": 0.5125000000000001,
+      "probability_mass": 0.09999999999999998,
+      "V_normalized_rms": 0.005694261046359004,
+      "V_squared_error_fraction": 0.0480450894572771,
+      "T_normalized_rms": 0.00752708499379134
+    },
+    {
+      "z": 0.6125,
+      "probability_mass": 0.10000000000000009,
+      "V_normalized_rms": 0.0046938106795701845,
+      "V_squared_error_fraction": 0.03264565584675524,
+      "T_normalized_rms": 0.0074631069344440045
+    },
+    {
+      "z": 0.7125,
+      "probability_mass": 0.09999999999999987,
+      "V_normalized_rms": 0.0043380235441838715,
+      "V_squared_error_fraction": 0.02788419235415159,
+      "T_normalized_rms": 0.007686630485382054
+    },
+    {
+      "z": 0.8125,
+      "probability_mass": 0.10000000000000009,
+      "V_normalized_rms": 0.004318325578656077,
+      "V_squared_error_fraction": 0.027631535899710038,
+      "T_normalized_rms": 0.008675806709718018
+    },
+    {
+      "z": 0.9125000000000001,
+      "probability_mass": 0.08750000000000002,
+      "V_normalized_rms": 0.0033849508226195526,
+      "V_squared_error_fraction": 0.014855492024360817,
+      "T_normalized_rms": 0.012645381852780867
+    },
+    {
+      "z": 0.9875,
+      "probability_mass": 0.04999999999999993,
+      "V_normalized_rms": 0.0007479944837147651,
+      "V_squared_error_fraction": 0.0004145157673349631,
+      "T_normalized_rms": 0.005561417939063194
+    }
+  ],
+  "largest_V_error": {
+    "xzt": [
+      -0.38749999999999996,
+      0.1125,
+      1.52
+    ],
+    "observed_V": 0.08828826953211404,
+    "predicted_V": 0.16108130602013931,
+    "absolute_error": 0.07279303648802528
+  },
+  "purpose": "identify the remaining head/region for a future plan; not used for more training in this run"
+}

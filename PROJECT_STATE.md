@@ -1,32 +1,24 @@
 # 项目状态
 
-更新时间：2026-09-11
+更新时间：2026-09-12
 
-- `phase_id`: `PHK_V23_LF11_SPARSE_METRIC_ATTRIBUTION_SPRINT_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_FOLLOWUP_FIT_AND_ELECTRIC_BLOCK_SPRINT_COMPLETE`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_SPARSE_DIAGNOSTIC_EVIDENCE_NO_MATCHED_PINN_GAIN`
+- `claim_status`: `VALID_THERMAL_FIT_REPAIR_NO_NEW_PINN_COMPARISON`
 - `next_research_execution_authorized`: `false`
-- `object_status`: `PHK_V21_FIXED_DISCRETIZATION_BENCHMARK_REUSED_UNCHANGED`
-- `implementation_status`: `LF11_COMPLETE_WITH_VALID_ENDPOINTS_DIAGNOSIS_FIGURES_AND_PAPER_V24`
-- `candidate_status`: `NONE`
-- `stress_status`: `TWO_STRESS_REFERENCES_SEALED_UNREAD`
 
-## VERIFIED
+## 最新VERIFIED
 
-LF11稀疏等观测冲刺已完成：共同起点1200，D_B/P_U/P_I/P_M各1200，正式合计6000更新，开发与条件训练均为0。实际实例已回收关机，本地评价已完成。
+VERIFIED：温度包络下界0.1504%；可见T误差17.8233%→1.1375%，三个T拟合门均过，phase不变。可见V误差0.8215%未达0.5%，是唯一未满足的拟合条件。完整nominal参考ROI T误差28.2210%→1.7475%，能量误差106.7402%→49.2006%。
 
-D_B→P_U的独立内部物理目标下降80.37%，但S/Ephi恶化40.68%/17.74%；P_U→P_I改善4.49%/4.22%，P_I→P_M仅改善0.0763%/0.00981%。三条比较均未达预声明匹配增量，四臂均未通过严格器件门。
+本轮实际1200 Adam更新、400次固定目标/梯度评估；仅CPU，训练正常结束后评价，无GPU实例、stress读取或新物理。S=0.001188671875、raw Ephi=0.027268375553与父状态相同；top-current NRMSE7.2178%，bottom-current NRMSE781.2535%，严格器件未通过。
 
-后验、零训练、同观测的波形感知插值将电流NRMSE从103.08%降至0.428%，相态和温度指标完全不变。它单独报告，不替换原裁决。
+## 解释与未运行
 
-## SUPPORTED_INTERPRETATION
+SUPPORTED_INTERPRETATION：主要温度拟合缺口已可修复，剩余V误差偏向底部。最下两z层占16.25%测度、贡献53.17%V平方误差。尚未证明优化/表示/边界唯一根因；适配器与额外优化也未独立消融。
+新的D_B/P_U、R/N/G/D_N未运行，不是执行失败；没有新的PINN匹配增量、独立seed或formal OOD。
 
-真实Adam状态的局部诊断未显示破坏性的phase residual→T，electric与BC则指向phase误差增加；latent条件未触发。下一步优先考虑电边界相容表示与electric residual→phase归因，状态PROPOSED_NOT_AUTHORIZED。
+[本轮终局](docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)与[paper_v25](paper/paper_v25/README.md)保存事实和复现。[历史LF11](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)、[paper_v24](paper/paper_v24/README.md)、LF10及旧稿均保留。
 
-详细数值、边界和产物见[LF11终局](docs/experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)与[paper_v24](paper/paper_v24/README.md)。未建立独立seed重复、实体级拆分、formal OOD或正面PINN方法优势。
-
-## 保留证据
-
-[LF10关闭记录](docs/experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md)保留界面监督暴露和物理遗忘的采样流复现，以及未找到延长可行路径的有界负结果。
-现有[paper_v23](paper/paper_v23/manuscript.md)保持历史快照；paper_v24承载本轮实际结果。
+本轮成果的云端阅读路径、证据边界与最优先问题见[独立复评交接](docs/notes/2026-09-12-lf11-followup-results-cloud-review-handoff.md)。发布与评估不授权新训练。

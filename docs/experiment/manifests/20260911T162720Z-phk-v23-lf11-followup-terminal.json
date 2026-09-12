@@ -1,0 +1,79 @@
+{
+  "actual_budget": {
+    "Adam_updates": 1200,
+    "PDE_updates": 0,
+    "conditional_updates": 0,
+    "fixed_objective_gradient_evaluations": 400,
+    "scientific_retry": false
+  },
+  "artifacts": {
+    "S0": "outputs\\runs\\20260911-lf11-followup-fit-electric-block\\s0.json",
+    "S1": "outputs\\runs\\20260911-lf11-followup-fit-electric-block\\s1\\result.json",
+    "closeout": "docs/experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md",
+    "compute_closure": "outputs\\runs\\20260911-lf11-followup-fit-electric-block\\compute-closure.json",
+    "evaluation": "outputs\\runs\\20260911-lf11-followup-fit-electric-block\\evaluation.json",
+    "paper": "paper/paper_v25/manuscript.md",
+    "reproducibility": "paper/paper_v25/reproducibility.md"
+  },
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "checkpoint": {
+    "fixed_fit": "outputs\\runs\\20260911-lf11-followup-fit-electric-block\\s1\\fixed_fit_endpoint.pt",
+    "optimizer_stages": "s1/base_adam.pt,base_lbfgs_V.pt,base_lbfgs_T.pt,refinement_adam.pt,refinement_lbfgs_V.pt,refinement_lbfgs_T.pt under run root"
+  },
+  "claim_status": "VALID_THERMAL_FIT_REPAIR_NO_NEW_PINN_COMPARISON",
+  "code_identity": {
+    "base_commit": "6412dbf3c766207dfb5f586a94bac8eaa0f247d5",
+    "captured_at_closeout": true,
+    "local_training_sources": {
+      "pinn_pcm_sci/phk_v23_lf11_followup.py": "2cc6846f86a6669829991af0ad45b4e3729f4facab05abda4dc3047f8624ec21",
+      "pinn_pcm_sci/phk_v23_lf11_followup_fit.py": "0d8fa603c8693ba9bff901aa1370e37ffb0e4e155298a44c13beb2d309550320"
+    },
+    "published": false,
+    "runtime_source_changed_after_training": false
+  },
+  "command": [
+    "python -m pinn_pcm_sci.phk_v23_lf11_followup --stage s0",
+    "python -m pinn_pcm_sci.phk_v23_lf11_followup_fit",
+    "python -m pinn_pcm_sci.phk_v23_lf11_followup_evaluate",
+    "python -m pinn_pcm_sci.phk_v23_lf11_followup_report"
+  ],
+  "ended_at": "2026-09-11T16:27:20.202331+00:00",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "numpy": "2.1.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "recorded_utc": "2026-09-11T16:05:31.602776+00:00",
+    "torch": "2.5.1+cpu",
+    "torch_threads": 4
+  },
+  "evaluator_id": "lf11-followup-fixed-evaluation-v1",
+  "evidence_identity": "ONE_INHERITED_INITIALIZATION_EXPOSED_NOMINAL_SPARSE_DEVELOPMENT",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF11_FOLLOWUP",
+  "failure_class": "VOLTAGE_FIT_ADMISSION_NOT_MET_WITH_THERMAL_REPAIR",
+  "gate": "S1_FIT_ADMISSION",
+  "gate_outcome": "LF11_FOLLOWUP_THERMAL_FIT_REPAIRED_VOLTAGE_ADMISSION_NOT_MET",
+  "method_id": "lf11-followup-bounded-VT-fit",
+  "numerical_validity": "VALID_S0_AND_FIXED_S1_ENDPOINT",
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "planned_budget": {
+    "S1_Adam": 1200,
+    "S1_fixed_evaluations": 400,
+    "all_Adam": 6200,
+    "all_fixed_evaluations": 1400,
+    "main_Adam": 3200,
+    "main_fixed_evaluations": 800
+  },
+  "replay_of": null,
+  "route_disposition": "S2_AND_NORMALIZATION_NOT_RUN_VOLTAGE_ADMISSION",
+  "run_id": "20260911T162720Z-phk-v23-lf11-followup-terminal",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "VISIBLE_FIT_REPAIR_WITH_FIXED_NOMINAL_EVALUATION",
+  "seed": 17,
+  "split_id": "EXPOSED_NOMINAL_TRAINING_DEVELOPMENT_NO_HOLDOUT",
+  "started_at": "2026-09-11T15:52:43.607445+00:00",
+  "supersedes": null,
+  "tier": "development"
+}

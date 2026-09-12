@@ -1,5 +1,10 @@
 # 文档库地图
 
+## 2026-09-12 LF11后续终局
+
+VERIFIED：温度包络下界0.1504%；可见T误差17.8233%→1.1375%，三个T拟合门均过，phase不变。可见V误差0.8215%未达0.5%，是唯一未满足的拟合条件。完整nominal参考ROI T误差28.2210%→1.7475%，能量误差106.7402%→49.2006%。 当前已按停止条件收口；无新科研授权，stress未读，本轮未启用云实例。paper_v25与[本轮终局](experiment/2026-09-12-phk-v23-lf11-followup-terminal-closeout.md)为最新入口；下文LF11四臂和旧稿是保留的历史结果。
+
+
 本文件是项目文档的唯一导航入口。它只说明去哪里读、各文档能决定什么以及冲突时如何处理；它本身不授予研究执行权限，也不重述研究结论。
 
 PHK-V2.3 LF11 已完成并关闭为 `LF11_VALID_FOUR_ARM_NO_MATCHED_INCREMENT`。权威入口见[active phase](../active_phase.md)、[live plan](plans/NEXT_ACTIONS.md)及[LF11 terminal closeout](experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)。[paper_v24](../paper/paper_v24/README.md)保存四臂实际结果、方向归因和单列后验波形诊断。无candidate或新研究执行授权，stress sealed/unread；LF10与旧论文证据保留。
