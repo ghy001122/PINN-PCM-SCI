@@ -1,0 +1,5 @@
+| role | Adam | evaluations | accepted | termination | forward | adjoint | inference |
+|---|---|---|---|---|---|---|---|
+| D_C | 0 | 223 | 107 | EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK | 7582 | 7582 | 278 |
+| P1 | 0 | 223 | 108 | EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK | 11150 | 11150 | 278 |
+| P_kappa | 0 | 223 | 108 | EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK | 11150 | 11150 | 278 |

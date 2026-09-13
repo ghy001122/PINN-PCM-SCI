@@ -1,0 +1,1872 @@
+{
+  "status": "ONE_PASS_REFERENCE_BLIND_DIAGNOSIS",
+  "created_utc": "2026-09-13T08:56:35.508217+00:00",
+  "fixed_train_pool": {
+    "E0": {
+      "values": {
+        "observation": 5.937255597408749e-05,
+        "obs_V": 2.4920663789227887e-05,
+        "obs_T": 5.5317739018535704e-05,
+        "obs_phase": 9.787926511449889e-05,
+        "boundary": 0.2803728502259995,
+        "initial": 2.7515275174803178e-33,
+        "thermal": 0.011536777247715473,
+        "phase": 0.0010481653843067388,
+        "objective": 1.1211437137320421,
+        "J_Tphi": 0.0041949808773407374,
+        "C": 1.1207822811899786,
+        "F": 0.0003614325420632723,
+        "common_C_plus_F": 1.121143713732042
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.4580468949989583e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      }
+    },
+    "D_E": {
+      "values": {
+        "observation": 3.200424817016725e-05,
+        "obs_V": 1.7233570189025208e-06,
+        "obs_T": 3.451199413784969e-05,
+        "obs_phase": 5.977739335374952e-05,
+        "boundary": 0.042308578632685806,
+        "initial": 2.7515275174803178e-33,
+        "thermal": 0.017032875571729417,
+        "phase": 0.0005792872172509444,
+        "objective": 0.5577730985175361,
+        "J_Tphi": 0.00587072092966012,
+        "C": 0.5572672870129329,
+        "F": 0.0005058115046036157,
+        "common_C_plus_F": 0.5577730985175365
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.7701257532943686e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      }
+    },
+    "P_E": {
+      "values": {
+        "observation": 3.3155678762854994e-05,
+        "obs_V": 1.9831061174126996e-06,
+        "obs_T": 3.532949596591286e-05,
+        "obs_phase": 6.215443420523943e-05,
+        "boundary": 0.038647340961994445,
+        "initial": 2.7515275174803178e-33,
+        "thermal": 0.017138070800219472,
+        "phase": 0.0006282980344858637,
+        "objective": 0.5755936101559702,
+        "J_Tphi": 0.005922122944901779,
+        "C": 0.5750833699396324,
+        "F": 0.0005102402163377548,
+        "common_C_plus_F": 0.5755936101559701
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.304210088416303e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      }
+    }
+  },
+  "inherited_audit": {
+    "status": "COMMON_FIXED_ENDPOINT_UNLABELED_AUDIT",
+    "records": {
+      "E0": {
+        "values": {
+          "observation": 5.937255597408733e-05,
+          "obs_V": 2.4920663789227494e-05,
+          "obs_T": 5.5317739018535684e-05,
+          "obs_phase": 9.787926511449887e-05,
+          "boundary": 0.2402159279760523,
+          "initial": 2.681868592987145e-33,
+          "thermal": 0.01894318957614047,
+          "phase": 0.0009041913343967693,
+          "electric": 0.0,
+          "objective": 1.1040530203443981,
+          "J_Tphi": 0.006615793636845747,
+          "weighted_terms_at_lambda_max": {
+            "observation": 1.0,
+            "boundary": 0.10348301462045068,
+            "thermal": 0.0005440378524944274,
+            "phase": 2.5967871452274875e-05,
+            "initial": 2.31065316239882e-34
+          }
+        },
+        "statistics": {
+          "objectives": {
+            "complete_objective_gradient_evaluations": 0,
+            "adam_objective_gradient_evaluations": 0,
+            "audit_objective_evaluations": 1,
+            "audit_objective_gradient_evaluations": 0,
+            "optimizer_updates": 0
+          },
+          "electrical": {
+            "forward_queries": 158,
+            "zero_drive_queries": 108,
+            "factorizations": 50,
+            "forward_solves": 50,
+            "adjoint_solves": 0,
+            "zero_adjoint_queries": 0,
+            "max_forward_scaled_residual": 2.7157475994682585e-15,
+            "max_adjoint_scaled_residual": 0.0
+          }
+        },
+        "checkpoint_role": "E0"
+      },
+      "D_E": {
+        "values": {
+          "observation": 3.200424817016722e-05,
+          "obs_V": 1.7233570189024313e-06,
+          "obs_T": 3.451199413784969e-05,
+          "obs_phase": 5.9777393353749536e-05,
+          "boundary": 0.06201680397150302,
+          "initial": 2.681868592987145e-33,
+          "thermal": 0.018864771304421442,
+          "phase": 0.0003446281781471992,
+          "electric": 0.0,
+          "objective": 0.5663091090672833,
+          "J_Tphi": 0.006403133160856213,
+          "weighted_terms_at_lambda_max": {
+            "observation": 0.5390411048521342,
+            "boundary": 0.026716320962432035,
+            "thermal": 0.0005417857234128455,
+            "phase": 9.897529304379637e-06,
+            "initial": 2.31065316239882e-34
+          }
+        },
+        "statistics": {
+          "objectives": {
+            "complete_objective_gradient_evaluations": 0,
+            "adam_objective_gradient_evaluations": 0,
+            "audit_objective_evaluations": 1,
+            "audit_objective_gradient_evaluations": 0,
+            "optimizer_updates": 0
+          },
+          "electrical": {
+            "forward_queries": 158,
+            "zero_drive_queries": 108,
+            "factorizations": 50,
+            "forward_solves": 50,
+            "adjoint_solves": 0,
+            "zero_adjoint_queries": 0,
+            "max_forward_scaled_residual": 2.7654728296861014e-15,
+            "max_adjoint_scaled_residual": 0.0
+          }
+        },
+        "checkpoint_role": "D_E"
+      },
+      "P_E": {
+        "values": {
+          "observation": 3.3155678762855035e-05,
+          "obs_V": 1.9831061174128157e-06,
+          "obs_T": 3.532949596591284e-05,
+          "obs_phase": 6.215443420523945e-05,
+          "boundary": 0.059030740916738024,
+          "initial": 2.681868592987145e-33,
+          "thermal": 0.018947481542708918,
+          "phase": 0.00037304825667238187,
+          "electric": 0.0,
+          "objective": 0.5844192431778216,
+          "J_Tphi": 0.0064401765997937665,
+          "weighted_terms_at_lambda_max": {
+            "observation": 0.558434418375479,
+            "boundary": 0.02542994994883031,
+            "thermal": 0.0005441611153834721,
+            "phase": 1.071373812847533e-05,
+            "initial": 2.31065316239882e-34
+          }
+        },
+        "statistics": {
+          "objectives": {
+            "complete_objective_gradient_evaluations": 0,
+            "adam_objective_gradient_evaluations": 0,
+            "audit_objective_evaluations": 1,
+            "audit_objective_gradient_evaluations": 0,
+            "optimizer_updates": 0
+          },
+          "electrical": {
+            "forward_queries": 158,
+            "zero_drive_queries": 108,
+            "factorizations": 50,
+            "forward_solves": 50,
+            "adjoint_solves": 0,
+            "zero_adjoint_queries": 0,
+            "max_forward_scaled_residual": 2.4573374926220394e-15,
+            "max_adjoint_scaled_residual": 0.0
+          }
+        },
+        "checkpoint_role": "P_E"
+      }
+    },
+    "pool": "audit-pool.json",
+    "reference_fields_read": false,
+    "parameter_gradient_evaluations": 0,
+    "optimizer_updates": 0,
+    "objective_evaluations": 3,
+    "meaning": "Same full observations plus frozen independent unlabeled residual pool; post-training mechanism audit only, never endpoint selection or unseen validation."
+  },
+  "block_gradients": {
+    "E0": {
+      "blocks": {
+        "observation": {
+          "observation": 5.937255597408749e-05,
+          "obs_V": 2.4920663789227887e-05,
+          "obs_T": 5.5317739018535704e-05,
+          "obs_phase": 9.787926511449889e-05,
+          "boundary": 0.0,
+          "initial": 0.0,
+          "thermal": 0.0,
+          "phase": 0.0,
+          "objective": 1.0000000000000022,
+          "J_Tphi": 0.0,
+          "C": 1.0000000000000027,
+          "F": 0.0,
+          "common_C_plus_F": 1.0000000000000027
+        },
+        "boundary": {
+          "observation": 0.0,
+          "obs_V": 0.0,
+          "obs_T": 0.0,
+          "obs_phase": 0.0,
+          "boundary": 0.23087505373704229,
+          "initial": 4.0750470828505976e-33,
+          "thermal": 0.0,
+          "phase": 0.0,
+          "objective": 0.09945904404702716,
+          "J_Tphi": 0.0,
+          "C": 0.09945904404702713,
+          "F": 0.0,
+          "common_C_plus_F": 0.09945904404702713
+        },
+        "thermal": {
+          "observation": 0.0,
+          "obs_V": 0.0,
+          "obs_T": 0.0,
+          "obs_phase": 0.0,
+          "boundary": 0.0,
+          "initial": 0.0,
+          "thermal": 0.017294147999020733,
+          "phase": 0.0,
+          "objective": 0.000496678296983236,
+          "J_Tphi": 0.0057647159996735775,
+          "C": 0.0,
+          "F": 0.000496678296983236,
+          "common_C_plus_F": 0.000496678296983236
+        },
+        "phase": {
+          "observation": 0.0,
+          "obs_V": 0.0,
+          "obs_T": 0.0,
+          "obs_phase": 0.0,
+          "boundary": 0.0,
+          "initial": 0.0,
+          "thermal": 0.0,
+          "phase": 0.0015417310166061385,
+          "objective": 4.4277655989617386e-05,
+          "J_Tphi": 0.0005139103388687128,
+          "C": 0.0,
+          "F": 4.42776559896174e-05,
+          "common_C_plus_F": 4.42776559896174e-05
+        }
+      },
+      "parameter_layout": [
+        {
+          "name": "heads.temperature.base.u.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.temperature.base.u.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.v.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.temperature.base.v.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.input.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.temperature.base.input.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.hidden.0.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.temperature.base.hidden.0.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.hidden.1.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.temperature.base.hidden.1.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.hidden.2.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.temperature.base.hidden.2.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.output.weight",
+          "shape": [
+            1,
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.output.bias",
+          "shape": [
+            1
+          ],
+          "numel": 1
+        },
+        {
+          "name": "heads.temperature.residual.u.weight",
+          "shape": [
+            32,
+            21
+          ],
+          "numel": 672
+        },
+        {
+          "name": "heads.temperature.residual.u.bias",
+          "shape": [
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.v.weight",
+          "shape": [
+            32,
+            21
+          ],
+          "numel": 672
+        },
+        {
+          "name": "heads.temperature.residual.v.bias",
+          "shape": [
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.input.weight",
+          "shape": [
+            32,
+            21
+          ],
+          "numel": 672
+        },
+        {
+          "name": "heads.temperature.residual.input.bias",
+          "shape": [
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.hidden.0.weight",
+          "shape": [
+            32,
+            32
+          ],
+          "numel": 1024
+        },
+        {
+          "name": "heads.temperature.residual.hidden.0.bias",
+          "shape": [
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.output.weight",
+          "shape": [
+            1,
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.output.bias",
+          "shape": [
+            1
+          ],
+          "numel": 1
+        },
+        {
+          "name": "heads.phase.u.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.phase.u.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.v.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.phase.v.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.input.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.phase.input.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.hidden.0.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.phase.hidden.0.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.hidden.1.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.phase.hidden.1.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.hidden.2.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.phase.hidden.2.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.output.weight",
+          "shape": [
+            1,
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.output.bias",
+          "shape": [
+            1
+          ],
+          "numel": 1
+        }
+      ],
+      "by_head": {
+        "all": {
+          "norms": {
+            "observation": 4.028667126399396,
+            "boundary": 1.266077260077933,
+            "thermal": 0.0015614570028217186,
+            "phase": 0.0015694174026872503,
+            "C": 4.587609146150948,
+            "F": 0.0015222838310733745,
+            "C_plus_F": 4.587957168532135
+          },
+          "cosines": {
+            "observation": {
+              "observation": 1.0,
+              "boundary": 0.3149673388298877,
+              "thermal": -0.0225396862728437,
+              "phase": 0.2769209040807144,
+              "C": 0.9650865997322042,
+              "F": 0.2623753382300568,
+              "C_plus_F": 0.9651004485970115
+            },
+            "boundary": {
+              "observation": 0.3149673388298877,
+              "boundary": 1.0,
+              "thermal": -0.09343927058711175,
+              "phase": 0.0861227009799314,
+              "C": 0.5525701390752246,
+              "F": -0.007054491083237934,
+              "C_plus_F": 0.5525258828396435
+            },
+            "thermal": {
+              "observation": -0.0225396862728437,
+              "boundary": -0.09343927058711175,
+              "thermal": 1.0000000000000002,
+              "phase": -0.5271962595379329,
+              "C": -0.04558065479288154,
+              "F": 0.48221363420359414,
+              "C_plus_F": -0.045417198797339166
+            },
+            "phase": {
+              "observation": 0.2769209040807144,
+              "boundary": 0.0861227009799314,
+              "thermal": -0.5271962595379329,
+              "phase": 1.0,
+              "C": 0.2669495367096517,
+              "F": 0.49019972237645176,
+              "C_plus_F": 0.26709193531407405
+            },
+            "C": {
+              "observation": 0.9650865997322042,
+              "boundary": 0.5525701390752246,
+              "thermal": -0.04558065479288154,
+              "phase": 0.2669495367096517,
+              "C": 0.9999999999999998,
+              "F": 0.22846134789900369,
+              "C_plus_F": 0.9999999478274862
+            },
+            "F": {
+              "observation": 0.2623753382300568,
+              "boundary": -0.007054491083237934,
+              "thermal": 0.48221363420359414,
+              "phase": 0.49019972237645176,
+              "C": 0.22846134789900369,
+              "F": 1.0,
+              "C_plus_F": 0.22877581774163075
+            },
+            "C_plus_F": {
+              "observation": 0.9651004485970115,
+              "boundary": 0.5525258828396435,
+              "thermal": -0.045417198797339166,
+              "phase": 0.26709193531407405,
+              "C": 0.9999999478274862,
+              "F": 0.22877581774163075,
+              "C_plus_F": 1.0
+            }
+          },
+          "local_slopes_along_negative_unit_block_gradient": {
+            "observation": {
+              "observation": -4.028667126399396,
+              "boundary": -1.2688985638334689,
+              "thermal": 0.09080489312676113,
+              "phase": -1.1156221428827746,
+              "C": -3.8880126584697035,
+              "F": -1.0570228999053528,
+              "C_plus_F": -3.8880684509360908
+            },
+            "boundary": {
+              "observation": -0.39877298535978223,
+              "boundary": -1.266077260077933,
+              "thermal": 0.11830133568861104,
+              "phase": -0.10903799328718267,
+              "C": -0.6995964876812428,
+              "F": 0.008931530741910094,
+              "C_plus_F": -0.6995404558677569
+            },
+            "thermal": {
+              "observation": 3.519475097213635e-05,
+              "boundary": 0.00014590140339679908,
+              "thermal": -0.0015614570028217188,
+              "phase": 0.0008231942913169216,
+              "C": 7.117223261954422e-05,
+              "F": -0.0007529558559833127,
+              "C_plus_F": 7.091700311065137e-05
+            },
+            "phase": {
+              "observation": -0.00043460448603216,
+              "boundary": -0.00013516246568433466,
+              "thermal": 0.0008273909843504562,
+              "phase": -0.0015694174026872501,
+              "C": -0.0004189552485514264,
+              "F": -0.0007693279750900621,
+              "C_plus_F": -0.00041917873139932514
+            },
+            "C": {
+              "observation": -4.427440111759179,
+              "boundary": -2.5349758239114015,
+              "thermal": 0.20910622881537244,
+              "phase": -1.2246601361699565,
+              "C": -4.587609146150948,
+              "F": -1.048091369163443,
+              "C_plus_F": -4.587608906803847
+            },
+            "F": {
+              "observation": -0.00039940973506002336,
+              "boundary": 1.0738937712464402e-05,
+              "thermal": -0.0007340660184712622,
+              "phase": -0.0007462231113703296,
+              "C": -0.0003477830159318824,
+              "F": -0.0015222838310733745,
+              "C_plus_F": -0.0003482617282886737
+            },
+            "C_plus_F": {
+              "observation": -4.4278395214942385,
+              "boundary": -2.534965084973689,
+              "thermal": 0.2083721627969013,
+              "phase": -1.2254063592813274,
+              "C": -4.587956929166876,
+              "F": -1.049613652994516,
+              "C_plus_F": -4.587957168532135
+            }
+          }
+        },
+        "T_including_adapter": {
+          "norms": {
+            "observation": 1.1211255979873374,
+            "boundary": 0.09857153884042606,
+            "thermal": 0.001532031661716322,
+            "phase": 0.0015554043784366538,
+            "C": 1.163883650031027,
+            "F": 0.0014823341882178914,
+            "C_plus_F": 1.1643757557793455
+          },
+          "cosines": {
+            "observation": {
+              "observation": 1.0000000000000002,
+              "boundary": 0.3980876836902643,
+              "thermal": -0.36969904419969196,
+              "phase": 0.700393038173604,
+              "C": 0.9969774156816917,
+              "F": 0.35282445843764526,
+              "C_plus_F": 0.9970052292460154
+            },
+            "boundary": {
+              "observation": 0.3980876836902643,
+              "boundary": 1.0,
+              "thermal": -0.6110909563307361,
+              "phase": 0.5068340592003782,
+              "C": 0.4681548978323925,
+              "F": -0.09976075546357599,
+              "C_plus_F": 0.46783003664139355
+            },
+            "thermal": {
+              "observation": -0.36969904419969196,
+              "boundary": -0.6110909563307361,
+              "thermal": 1.0000000000000002,
+              "phase": -0.5390612586528218,
+              "C": -0.40787173007203953,
+              "F": 0.46789275001205044,
+              "C_plus_F": -0.4071036881076918
+            },
+            "phase": {
+              "observation": 0.700393038173604,
+              "boundary": 0.5068340592003782,
+              "thermal": -0.5390612586528218,
+              "phase": 1.0000000000000002,
+              "C": 0.7175871719466169,
+              "F": 0.4921599112902885,
+              "C_plus_F": 0.7179104496243536
+            },
+            "C": {
+              "observation": 0.9969774156816917,
+              "boundary": 0.4681548978323925,
+              "thermal": -0.40787173007203953,
+              "phase": 0.7175871719466169,
+              "C": 1.0000000000000002,
+              "F": 0.33141367761137674,
+              "C_plus_F": 0.9999992786490545
+            },
+            "F": {
+              "observation": 0.35282445843764526,
+              "boundary": -0.09976075546357599,
+              "thermal": 0.46789275001205044,
+              "phase": 0.4921599112902885,
+              "C": 0.33141367761137674,
+              "F": 1.0,
+              "C_plus_F": 0.3325466826622343
+            },
+            "C_plus_F": {
+              "observation": 0.9970052292460154,
+              "boundary": 0.46783003664139355,
+              "thermal": -0.4071036881076918,
+              "phase": 0.7179104496243536,
+              "C": 0.9999992786490545,
+              "F": 0.3325466826622343,
+              "C_plus_F": 1.0000000000000002
+            }
+          },
+          "local_slopes_along_negative_unit_block_gradient": {
+            "observation": {
+              "observation": -1.1211255979873376,
+              "boundary": -0.4463062924286416,
+              "thermal": 0.4144790620037267,
+              "phase": -0.7852285637485498,
+              "C": -1.1177369013360068,
+              "F": -0.3955605319504635,
+              "C_plus_F": -1.1177680838349415
+            },
+            "boundary": {
+              "observation": -0.03924011557477013,
+              "boundary": -0.09857153884042606,
+              "thermal": 0.060236175936988254,
+              "phase": -0.04995941315212087,
+              "C": -0.046146748695021375,
+              "F": 0.009833571181928126,
+              "C_plus_F": -0.04611472662751507
+            },
+            "thermal": {
+              "observation": 0.00056639064102019,
+              "boundary": 0.000936210693287194,
+              "thermal": -0.0015320316617163222,
+              "phase": 0.0008258589158607748,
+              "C": 0.0006248724043893778,
+              "F": -0.0007168265073059812,
+              "C_plus_F": 0.0006236957397824704
+            },
+            "phase": {
+              "observation": -0.0010893943982017741,
+              "boundary": -0.0007883319148210904,
+              "thermal": 0.0008384582419541727,
+              "phase": -0.001555404378436654,
+              "C": -0.0011161382291557439,
+              "F": -0.0007655076809119099,
+              "C_plus_F": -0.0011166410566711463
+            },
+            "C": {
+              "observation": -1.160365713562108,
+              "boundary": -0.5448778312690675,
+              "thermal": 0.47471523794071513,
+              "phase": -0.8351879769006707,
+              "C": -1.1638836500310272,
+              "F": -0.38572696076853524,
+              "C_plus_F": -1.1638828104624555
+            },
+            "F": {
+              "observation": -0.000523003757181584,
+              "boundary": 0.00014787877846610348,
+              "thermal": -0.0006935734197621496,
+              "phase": -0.0007295454625758794,
+              "C": -0.0004912658247663662,
+              "F": -0.0014823341882178914,
+              "C_plus_F": -0.0004929453168886758
+            },
+            "C_plus_F": {
+              "observation": -1.1608887173192888,
+              "boundary": -0.5447299524906015,
+              "thermal": 0.4740216645209526,
+              "phase": -0.8359175223632465,
+              "C": -1.164374915855793,
+              "F": -0.3872092949567532,
+              "C_plus_F": -1.1643757557793457
+            }
+          }
+        },
+        "phase": {
+          "norms": {
+            "observation": 3.8695266130198274,
+            "boundary": 1.2622342414215664,
+            "thermal": 0.0003017067436430767,
+            "phase": 0.00020925631029358022,
+            "C": 4.437514228375869,
+            "F": 0.0003464583911349769,
+            "C_plus_F": 4.437744931791223
+          },
+          "cosines": {
+            "observation": {
+              "observation": 1.0000000000000002,
+              "boundary": 0.3199121343896835,
+              "thermal": 0.4224608545307288,
+              "phase": 0.6539630839542333,
+              "C": 0.9630010053752068,
+              "F": 0.7628771521098494,
+              "C_plus_F": 0.9630105006414896
+            },
+            "boundary": {
+              "observation": 0.3199121343896835,
+              "boundary": 0.9999999999999999,
+              "thermal": -0.24273307065426034,
+              "phase": 0.3536851719181204,
+              "C": 0.563410646276502,
+              "F": 0.0022416826361469884,
+              "C_plus_F": 0.5633815314642341
+            },
+            "thermal": {
+              "observation": 0.4224608545307288,
+              "boundary": -0.24273307065426034,
+              "thermal": 1.0000000000000002,
+              "phase": -0.11706637004100347,
+              "C": 0.2993427080788688,
+              "F": 0.8001245577591892,
+              "C_plus_F": 0.29938961264077407
+            },
+            "phase": {
+              "observation": 0.6539630839542333,
+              "boundary": 0.3536851719181204,
+              "thermal": -0.11706637004100347,
+              "phase": 1.0,
+              "C": 0.6708623203809124,
+              "F": 0.5020418077581776,
+              "C_plus_F": 0.6708666393241486
+            },
+            "C": {
+              "observation": 0.9630010053752068,
+              "boundary": 0.563410646276502,
+              "thermal": 0.2993427080788688,
+              "phase": 0.6708623203809124,
+              "C": 1.0,
+              "F": 0.6658689570482889,
+              "C_plus_F": 0.9999999983036899
+            },
+            "F": {
+              "observation": 0.7628771521098494,
+              "boundary": 0.0022416826361469884,
+              "thermal": 0.8001245577591892,
+              "phase": 0.5020418077581776,
+              "C": 0.6658689570482889,
+              "F": 1.0,
+              "C_plus_F": 0.665912411584665
+            },
+            "C_plus_F": {
+              "observation": 0.9630105006414896,
+              "boundary": 0.5633815314642341,
+              "thermal": 0.29938961264077407,
+              "phase": 0.6708666393241486,
+              "C": 0.9999999983036899,
+              "F": 0.665912411584665,
+              "C_plus_F": 1.0
+            }
+          },
+          "local_slopes_along_negative_unit_block_gradient": {
+            "observation": {
+              "observation": -3.869526613019828,
+              "boundary": -1.2379085178488558,
+              "thermal": -1.634723519565753,
+              "phase": -2.5305275572934254,
+              "C": -3.7263580186642127,
+              "F": -2.9519734425538373,
+              "C_plus_F": -3.726394760849791
+            },
+            "boundary": {
+              "observation": -0.4038040502729164,
+              "boundary": -1.2622342414215661,
+              "thermal": 0.30638599330520777,
+              "phase": -0.44643353467812497,
+              "C": -0.7111562097116549,
+              "F": -0.002829528581744891,
+              "C_plus_F": -0.7111194599986778
+            },
+            "thermal": {
+              "observation": -0.0001274592887371377,
+              "boundary": 7.323420432158175e-05,
+              "thermal": -0.0003017067436430767,
+              "phase": 3.5319713295186587e-05,
+              "C": -9.031371368777561e-05,
+              "F": -0.0002414029748303818,
+              "C_plus_F": -9.032786511041006e-05
+            },
+            "phase": {
+              "observation": -0.00013684590201647372,
+              "boundary": -7.401085408113647e-05,
+              "thermal": 2.4496876654243305e-05,
+              "phase": -0.00020925631029358022,
+              "C": -0.00014038217387789945,
+              "F": -0.00010505541630459517,
+              "C_plus_F": -0.0001403830776440254
+            },
+            "C": {
+              "observation": -4.273330663292747,
+              "boundary": -2.500142759270421,
+              "thermal": -1.3283375262605444,
+              "phase": -2.9769610919715497,
+              "C": -4.437514228375869,
+              "F": -2.954802971135582,
+              "C_plus_F": -4.437514220848469
+            },
+            "F": {
+              "observation": -0.00026430519075361147,
+              "boundary": -7.766497595546994e-07,
+              "thermal": -0.0002772098669888336,
+              "phase": -0.0001739365969983936,
+              "C": -0.0002306958875656752,
+              "F": -0.0003464583911349769,
+              "C_plus_F": -0.00023071094275443557
+            },
+            "C_plus_F": {
+              "observation": -4.273594968483499,
+              "boundary": -2.5001435359201825,
+              "thermal": -1.3286147361275327,
+              "phase": -2.977135028568551,
+              "C": -4.437744924263432,
+              "F": -2.9551494295267178,
+              "C_plus_F": -4.437744931791223
+            }
+          }
+        }
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 4,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 50,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.4580468949989583e-15,
+          "max_adjoint_scaled_residual": 9.43689570931383e-16
+        }
+      }
+    },
+    "D_E": {
+      "blocks": {
+        "observation": {
+          "observation": 3.200424817016725e-05,
+          "obs_V": 1.7233570189025208e-06,
+          "obs_T": 3.451199413784969e-05,
+          "obs_phase": 5.977739335374952e-05,
+          "boundary": 0.0,
+          "initial": 0.0,
+          "thermal": 0.0,
+          "phase": 0.0,
+          "objective": 0.5390411048521343,
+          "J_Tphi": 0.0,
+          "C": 0.5390411048521347,
+          "F": 0.0,
+          "common_C_plus_F": 0.5390411048521347
+        },
+        "boundary": {
+          "observation": 0.0,
+          "obs_V": 0.0,
+          "obs_T": 0.0,
+          "obs_phase": 0.0,
+          "boundary": 0.065166975058067,
+          "initial": 4.0750470828505976e-33,
+          "thermal": 0.0,
+          "phase": 0.0,
+          "objective": 0.028073388344909345,
+          "J_Tphi": 0.0,
+          "C": 0.028073388344909356,
+          "F": 0.0,
+          "common_C_plus_F": 0.028073388344909356
+        },
+        "thermal": {
+          "observation": 0.0,
+          "obs_V": 0.0,
+          "obs_T": 0.0,
+          "obs_phase": 0.0,
+          "boundary": 0.0,
+          "initial": 0.0,
+          "thermal": 0.01600262935785485,
+          "phase": 0.0,
+          "objective": 0.00045958660103772344,
+          "J_Tphi": 0.005334209785951617,
+          "C": 0.0,
+          "F": 0.0004595866010377234,
+          "common_C_plus_F": 0.0004595866010377234
+        },
+        "phase": {
+          "observation": 0.0,
+          "obs_V": 0.0,
+          "obs_T": 0.0,
+          "obs_phase": 0.0,
+          "boundary": 0.0,
+          "initial": 0.0,
+          "thermal": 0.0,
+          "phase": 0.0006888073094212181,
+          "objective": 1.978216223269903e-05,
+          "J_Tphi": 0.00022960243647373937,
+          "C": 0.0,
+          "F": 1.9782162232699037e-05,
+          "common_C_plus_F": 1.9782162232699037e-05
+        }
+      },
+      "parameter_layout": [
+        {
+          "name": "heads.temperature.base.u.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.temperature.base.u.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.v.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.temperature.base.v.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.input.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.temperature.base.input.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.hidden.0.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.temperature.base.hidden.0.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.hidden.1.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.temperature.base.hidden.1.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.hidden.2.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.temperature.base.hidden.2.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.output.weight",
+          "shape": [
+            1,
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.temperature.base.output.bias",
+          "shape": [
+            1
+          ],
+          "numel": 1
+        },
+        {
+          "name": "heads.temperature.residual.u.weight",
+          "shape": [
+            32,
+            21
+          ],
+          "numel": 672
+        },
+        {
+          "name": "heads.temperature.residual.u.bias",
+          "shape": [
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.v.weight",
+          "shape": [
+            32,
+            21
+          ],
+          "numel": 672
+        },
+        {
+          "name": "heads.temperature.residual.v.bias",
+          "shape": [
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.input.weight",
+          "shape": [
+            32,
+            21
+          ],
+          "numel": 672
+        },
+        {
+          "name": "heads.temperature.residual.input.bias",
+          "shape": [
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.hidden.0.weight",
+          "shape": [
+            32,
+            32
+          ],
+          "numel": 1024
+        },
+        {
+          "name": "heads.temperature.residual.hidden.0.bias",
+          "shape": [
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.output.weight",
+          "shape": [
+            1,
+            32
+          ],
+          "numel": 32
+        },
+        {
+          "name": "heads.temperature.residual.output.bias",
+          "shape": [
+            1
+          ],
+          "numel": 1
+        },
+        {
+          "name": "heads.phase.u.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.phase.u.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.v.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.phase.v.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.input.weight",
+          "shape": [
+            64,
+            3
+          ],
+          "numel": 192
+        },
+        {
+          "name": "heads.phase.input.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.hidden.0.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.phase.hidden.0.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.hidden.1.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.phase.hidden.1.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.hidden.2.weight",
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096
+        },
+        {
+          "name": "heads.phase.hidden.2.bias",
+          "shape": [
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.output.weight",
+          "shape": [
+            1,
+            64
+          ],
+          "numel": 64
+        },
+        {
+          "name": "heads.phase.output.bias",
+          "shape": [
+            1
+          ],
+          "numel": 1
+        }
+      ],
+      "by_head": {
+        "all": {
+          "norms": {
+            "observation": 1.2578985050820497,
+            "boundary": 0.45739235751530366,
+            "thermal": 0.0015028706667890193,
+            "phase": 0.0008439692225931883,
+            "C": 1.239891097570467,
+            "F": 0.001441693592997228,
+            "C_plus_F": 1.2399691892810796
+          },
+          "cosines": {
+            "observation": {
+              "observation": 1.0,
+              "boundary": -0.22089605169603183,
+              "thermal": 0.31468285821140507,
+              "phase": -0.4284987810812356,
+              "C": 0.9330354427883389,
+              "F": 0.07719244528556587,
+              "C_plus_F": 0.9330664318809219
+            },
+            "boundary": {
+              "observation": -0.22089605169603183,
+              "boundary": 1.0,
+              "thermal": -0.11107217382451576,
+              "phase": 0.08328833635505313,
+              "C": 0.1447929940461041,
+              "F": -0.06702833384436599,
+              "C_plus_F": 0.1447059423250003
+            },
+            "thermal": {
+              "observation": 0.31468285821140507,
+              "boundary": -0.11107217382451576,
+              "thermal": 1.0,
+              "phase": -0.35179767661930117,
+              "C": 0.2782789021997303,
+              "F": 0.8364913744503659,
+              "C_plus_F": 0.2792339525266896
+            },
+            "phase": {
+              "observation": -0.4284987810812356,
+              "boundary": 0.08328833635505313,
+              "thermal": -0.35179767661930117,
+              "phase": 1.0000000000000002,
+              "C": -0.403997196700683,
+              "F": 0.21867532413880778,
+              "C_plus_F": -0.40371750293979863
+            },
+            "C": {
+              "observation": 0.9330354427883389,
+              "boundary": 0.1447929940461041,
+              "thermal": 0.2782789021997303,
+              "phase": -0.403997196700683,
+              "C": 1.0,
+              "F": 0.05358697551836222,
+              "C_plus_F": 0.9999993260224954
+            },
+            "F": {
+              "observation": 0.07719244528556587,
+              "boundary": -0.06702833384436599,
+              "thermal": 0.8364913744503659,
+              "phase": 0.21867532413880778,
+              "C": 0.05358697551836222,
+              "F": 1.0,
+              "C_plus_F": 0.054746285690614106
+            },
+            "C_plus_F": {
+              "observation": 0.9330664318809219,
+              "boundary": 0.1447059423250003,
+              "thermal": 0.2792339525266896,
+              "phase": -0.40371750293979863,
+              "C": 0.9999993260224954,
+              "F": 0.054746285690614106,
+              "C_plus_F": 1.0000000000000002
+            }
+          },
+          "local_slopes_along_negative_unit_block_gradient": {
+            "observation": {
+              "observation": -1.2578985050820497,
+              "boundary": 0.2778648132069656,
+              "thermal": -0.3958390969190731,
+              "phase": 0.5390079761515668,
+              "C": -1.1736638886720199,
+              "F": -0.09710026152834124,
+              "C_plus_F": -1.1737028698052538
+            },
+            "boundary": {
+              "observation": 0.10103616585107039,
+              "boundary": -0.45739235751530366,
+              "thermal": 0.05080356343994487,
+              "phase": -0.03809544851896532,
+              "C": -0.06622720889844688,
+              "F": 0.030658247637397374,
+              "C_plus_F": -0.06618739210650545
+            },
+            "thermal": {
+              "observation": -0.0004729276369472488,
+              "boundary": 0.00016692711193735585,
+              "thermal": -0.0015028706667890193,
+              "phase": 0.0005287064088356769,
+              "C": -0.0004182171993022249,
+              "F": -0.0012571383496834847,
+              "C_plus_F": -0.0004196525164239194
+            },
+            "phase": {
+              "observation": 0.0003616397831512592,
+              "boundary": -7.029279248465416e-05,
+              "thermal": 0.0002969064116464815,
+              "phase": -0.0008439692225931884,
+              "C": 0.0003409612000293028,
+              "F": -0.00018455524331374308,
+              "C_plus_F": 0.000340725147103365
+            },
+            "C": {
+              "observation": -1.1568623392309803,
+              "boundary": -0.1795275443083381,
+              "thermal": -0.3450355334791282,
+              "phase": 0.5009125276326016,
+              "C": -1.239891097570467,
+              "F": -0.06644201389094388,
+              "C_plus_F": -1.239890261911759
+            },
+            "F": {
+              "observation": -0.0001112878537959894,
+              "boundary": 9.663431945270169e-05,
+              "thermal": -0.0012059642551425376,
+              "phase": -0.0003152628137575112,
+              "C": -7.725599927292212e-05,
+              "F": -0.001441693592997228,
+              "C_plus_F": -7.892736932055417e-05
+            },
+            "C_plus_F": {
+              "observation": -1.1569736270847764,
+              "boundary": -0.1794309099888853,
+              "thermal": -0.3462414977342708,
+              "phase": 0.5005972648188439,
+              "C": -1.2399683535697397,
+              "F": -0.06788370748394114,
+              "C_plus_F": -1.2399691892810798
+            }
+          }
+        },
+        "T_including_adapter": {
+          "norms": {
+            "observation": 0.9673361703664953,
+            "boundary": 0.08439556843752852,
+            "thermal": 0.0014756925029907662,
+            "phase": 0.0008389854951086353,
+            "C": 0.9409621784646414,
+            "F": 0.0014151084453391627,
+            "C_plus_F": 0.9410306853496342
+          },
+          "cosines": {
+            "observation": {
+              "observation": 1.0,
+              "boundary": -0.3518669840290428,
+              "thermal": 0.37845225831828866,
+              "phase": -0.5485969211717145,
+              "C": 0.9964695475485567,
+              "F": 0.06940408075393845,
+              "C_plus_F": 0.996501373584189
+            },
+            "boundary": {
+              "observation": -0.3518669840290428,
+              "boundary": 1.0000000000000002,
+              "thermal": -0.5240648684769125,
+              "phase": 0.4763007075868992,
+              "C": -0.2720386623713309,
+              "F": -0.26411347748494013,
+              "C_plus_F": -0.2724160280584319
+            },
+            "thermal": {
+              "observation": 0.37845225831828866,
+              "boundary": -0.5240648684769125,
+              "thermal": 1.0,
+              "phase": -0.35499719025189297,
+              "C": 0.3420560497767254,
+              "F": 0.8323425766021828,
+              "C_plus_F": 0.3432828129769851
+            },
+            "phase": {
+              "observation": -0.5485969211717145,
+              "boundary": 0.4763007075868992,
+              "thermal": -0.35499719025189297,
+              "phase": 1.0,
+              "C": -0.5212536561643892,
+              "F": 0.2226817343285691,
+              "C_plus_F": -0.5208808433830341
+            },
+            "C": {
+              "observation": 0.9964695475485567,
+              "boundary": -0.2720386623713309,
+              "thermal": 0.3420560497767254,
+              "phase": -0.5212536561643892,
+              "C": 1.0,
+              "F": 0.047660864215758866,
+              "C_plus_F": 0.9999988718821345
+            },
+            "F": {
+              "observation": 0.06940408075393845,
+              "boundary": -0.26411347748494013,
+              "thermal": 0.8323425766021828,
+              "phase": 0.2226817343285691,
+              "C": 0.047660864215758866,
+              "F": 1.0,
+              "C_plus_F": 0.049161180167168084
+            },
+            "C_plus_F": {
+              "observation": 0.996501373584189,
+              "boundary": -0.2724160280584319,
+              "thermal": 0.3432828129769851,
+              "phase": -0.5208808433830341,
+              "C": 0.9999988718821345,
+              "F": 0.049161180167168084,
+              "C_plus_F": 1.0000000000000002
+            }
+          },
+          "local_slopes_along_negative_unit_block_gradient": {
+            "observation": {
+              "observation": -0.9673361703664953,
+              "boundary": 0.34037366080906306,
+              "thermal": -0.366090558228165,
+              "phase": 0.5306776448010965,
+              "C": -0.963921036012455,
+              "F": -0.0671370776843218,
+              "C_plus_F": -0.9639518224878817
+            },
+            "boundary": {
+              "observation": 0.02969601413152984,
+              "boundary": -0.08439556843752853,
+              "thermal": 0.044228752473247646,
+              "phase": -0.040197668963993405,
+              "C": 0.02295885754781337,
+              "F": 0.02229000706435391,
+              "C_plus_F": 0.02299070553948508
+            },
+            "thermal": {
+              "observation": -0.0005584791603402234,
+              "boundary": 0.0007733585974922216,
+              "thermal": -0.0014756925029907665,
+              "phase": 0.0005238666922375052,
+              "C": -0.00050476954825815,
+              "F": -0.0012282817002118587,
+              "C_plus_F": -0.0005065798735157181
+            },
+            "phase": {
+              "observation": 0.00046026485952432384,
+              "boundary": -0.0003996093849753879,
+              "thermal": 0.00029783749342565885,
+              "phase": -0.0008389854951086353,
+              "C": 0.00043732425679426646,
+              "F": -0.00018682674512730414,
+              "C_plus_F": 0.00043701147227831835
+            },
+            "C": {
+              "observation": -0.9376401562349653,
+              "boundary": 0.25597809237153457,
+              "thermal": -0.3218618057549173,
+              "phase": 0.49047997583710284,
+              "C": -0.9409621784646414,
+              "F": -0.044847070619967934,
+              "C_plus_F": -0.9409611169483971
+            },
+            "F": {
+              "observation": -9.821430081589954e-05,
+              "boundary": 0.00037374921251683355,
+              "thermal": -0.0011778550095651078,
+              "phase": -0.00031511880287112985,
+              "C": -6.744529146388347e-05,
+              "F": -0.0014151084453391627,
+              "C_plus_F": -6.95684012373997e-05
+            },
+            "C_plus_F": {
+              "observation": -0.9377383705357812,
+              "boundary": 0.25635184158405133,
+              "thermal": -0.32303966076448254,
+              "phase": 0.490164857034232,
+              "C": -0.9410296237561061,
+              "F": -0.046262179065307024,
+              "C_plus_F": -0.9410306853496343
+            }
+          }
+        },
+        "phase": {
+          "norms": {
+            "observation": 0.8040953815240698,
+            "boundary": 0.44953882673414736,
+            "thermal": 0.0002845204346118547,
+            "phase": 9.158268221595708e-05,
+            "C": 0.8074156999548455,
+            "F": 0.00027558756143744,
+            "C_plus_F": 0.8074557818213799
+          },
+          "cosines": {
+            "observation": {
+              "observation": 1.0,
+              "boundary": -0.2721294808757245,
+              "thermal": 0.2389085622201144,
+              "phase": -0.13138425891533156,
+              "C": 0.8443762166249078,
+              "F": 0.20299118302419308,
+              "C_plus_F": 0.8444035836594879
+            },
+            "boundary": {
+              "observation": -0.2721294808757245,
+              "boundary": 1.0000000000000002,
+              "thermal": -0.086652763028473,
+              "phase": -0.03822871547530995,
+              "C": 0.28575214477293137,
+              "F": -0.10216560555644028,
+              "C_plus_F": 0.2857030906323597
+            },
+            "thermal": {
+              "observation": 0.2389085622201144,
+              "boundary": -0.086652763028473,
+              "thermal": 1.0000000000000002,
+              "phase": -0.25694990006287627,
+              "C": 0.18968109001499828,
+              "F": 0.9470248664623426,
+              "C_plus_F": 0.18999489729353863
+            },
+            "phase": {
+              "observation": -0.13138425891533156,
+              "boundary": -0.03822871547530995,
+              "thermal": -0.25694990006287627,
+              "phase": 1.0,
+              "C": -0.15212828745833704,
+              "F": 0.06703925561890378,
+              "C_plus_F": -0.1520978551161037
+            },
+            "C": {
+              "observation": 0.8443762166249078,
+              "boundary": 0.28575214477293137,
+              "thermal": 0.18968109001499828,
+              "phase": -0.15212828745833704,
+              "C": 1.0,
+              "F": 0.14527444327871605,
+              "C_plus_F": 0.9999999429851478
+            },
+            "F": {
+              "observation": 0.20299118302419308,
+              "boundary": -0.10216560555644028,
+              "thermal": 0.9470248664623426,
+              "phase": 0.06703925561890378,
+              "C": 0.14527444327871605,
+              "F": 1.0,
+              "C_plus_F": 0.14560853549362662
+            },
+            "C_plus_F": {
+              "observation": 0.8444035836594879,
+              "boundary": 0.2857030906323597,
+              "thermal": 0.18999489729353863,
+              "phase": -0.1520978551161037,
+              "C": 0.9999999429851478,
+              "F": 0.14560853549362662,
+              "C_plus_F": 0.9999999999999998
+            }
+          },
+          "local_slopes_along_negative_unit_block_gradient": {
+            "observation": {
+              "observation": -0.8040953815240699,
+              "boundary": 0.21881805874871274,
+              "thermal": -0.19210527148774983,
+              "phase": 0.10564547579878071,
+              "C": -0.6789590160568558,
+              "F": -0.16322427275986082,
+              "C_plus_F": -0.6789810217629677
+            },
+            "boundary": {
+              "observation": 0.12233276755264579,
+              "boundary": -0.4495388267341474,
+              "thermal": 0.03895378142509185,
+              "phase": 0.017185291902324377,
+              "C": -0.12845668389798978,
+              "F": 0.045927406454425855,
+              "C_plus_F": -0.12843463215719075
+            },
+            "thermal": {
+              "observation": -6.797436795536028e-05,
+              "boundary": 2.4654481797179194e-05,
+              "thermal": -0.00028452043461185477,
+              "phase": 7.31074972393622e-05,
+              "C": -5.396814616871764e-05,
+              "F": -0.0002694479265940994,
+              "C_plus_F": -5.405743075199231e-05
+            },
+            "phase": {
+              "observation": 1.2032522832421838e-05,
+              "boundary": 3.501088300899552e-06,
+              "thermal": 2.353216104288033e-05,
+              "phase": -9.158268221595708e-05,
+              "C": 1.393231660635465e-05,
+              "F": -6.139634843340381e-06,
+              "C_plus_F": 1.3929529530826807e-05
+            },
+            "C": {
+              "observation": -0.6817626139714242,
+              "boundary": -0.23072076798543473,
+              "thermal": -0.15315149006265788,
+              "phase": 0.12283076770110514,
+              "C": -0.8074156999548456,
+              "F": -0.11729686630543501,
+              "C_plus_F": -0.8074156539201588
+            },
+            "F": {
+              "observation": -5.594184512293844e-05,
+              "boundary": 2.8155570098078748e-05,
+              "thermal": -0.00026098827356897425,
+              "phase": -1.8475184976594892e-05,
+              "C": -4.003582956236305e-05,
+              "F": -0.00027558756143744,
+              "C_plus_F": -4.012790122116549e-05
+            },
+            "C_plus_F": {
+              "observation": -0.6818185558165468,
+              "boundary": -0.23069261241533656,
+              "thermal": -0.153412478336227,
+              "phase": 0.12281229251612846,
+              "C": -0.8074557357844079,
+              "F": -0.11757245386687243,
+              "C_plus_F": -0.8074557818213798
+            }
+          }
+        }
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 4,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 50,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.7701257532943686e-15,
+          "max_adjoint_scaled_residual": 2.7755575615628914e-16
+        }
+      }
+    }
+  },
+  "selection": {
+    "identifiable": true,
+    "G": 1.3384754079926395,
+    "norm_gF": 0.001441693592997228,
+    "ratio": 0.0010771162356724869,
+    "unclipped_kappa": 92.84049082926133,
+    "kappa": 92.84049082926133,
+    "cap_hit": false,
+    "run_P_kappa": true,
+    "selection_information": "original calibration pool only; no reference",
+    "local_gradient_is_not_trajectory_causality": true
+  },
+  "counts": {
+    "forward_solves": 250,
+    "adjoint_solves": 100
+  },
+  "gradient_scans": 8,
+  "optimizer_updates": 0,
+  "reference_read": false,
+  "solve_budget_resolution": {
+    "per_evaluation_nonzero_solves": {
+      "D_C": 34,
+      "P1": 50,
+      "P_kappa": 50
+    },
+    "common_evaluation_limit": 223,
+    "maximum_forward_and_adjoint_each": 29882,
+    "reason": "simultaneous per-arm 300 and total 30000 caps; equal evaluation caps, not equal compute"
+  }
+}

@@ -1,6 +1,10 @@
 # 文档库地图
 
-## 最新路由：电学消元匹配冲刺已完成
+## 当前：剩余 PDE 固定目标反事实已完成
+
+VERIFIED：D_C/P1/P_kappa 已完成，未通过冻结的剩余 PDE 独立预测增量。当前 [paper_v29](../paper/paper_v29/README.md)和[项目状态](../PROJECT_STATE.md)保存实际数值与论文；真实实例已回收关闭。用户已另行明确授权本轮成果发布及[V29 独立复评交付](notes/2026-09-13-lf11-v29-results-cloud-review-handoff.md)。下一计划为 PROPOSED_NOT_AUTHORIZED，授权只以 [active_phase](../active_phase.md)为准。以下段落保存各轮历史事实及当时授权，不产生继续执行权限。
+
+## 历史 V28路由：电学消元匹配冲刺已完成
 
 2026-09-13 的[完整执行指令](notes/2026-09-13-lf11-elimination-authorized-sprint.md)已完成。实际同层强基线收益和未达标 PDE 独立增量见[终局](experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)、[paper_v28](../paper/paper_v28/README.md)。当前授权见 [active_phase.md](../active_phase.md)，已核验事实见 [PROJECT_STATE.md](../PROJECT_STATE.md)，下一未授权提案见[唯一计划](plans/NEXT_ACTIONS.md)。本轮另获明确授权的成果发布与研究评估见 [V28 云端交接](notes/2026-09-13-lf11-v28-results-cloud-review-handoff.md)；它不产生新科研执行授权。下列 V27 入口保持历史身份。
 
@@ -40,9 +44,10 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[剩余热/相态 PDE 有效影响与独立增量提案](plans/NEXT_ACTIONS.md)。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。电学消元已收口，当前无新科研执行授权。
-- 最新终局：[电学消元与同层强基线](experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)，D_E/P_E 对 B_E A/B 通过，P_E 对 D_E 未过；P_F 未触发。
+- 当前唯一 current/most-recent plan：[V29 之后的最小数值适配提案](plans/NEXT_ACTIONS.md)，未获科学执行授权。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。剩余 PDE 反事实已收口，用户另行授权发布和研究评估交付。
+- 最新终局：[剩余 PDE 实际影响与同父反事实](experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)，保留强基线收益，未获得冻结匹配增量；P_F 未触发。
+- 保留 V28：[电学消元与同层强基线](experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)，D_E/P_E 对 B_E A/B 通过，P_E 对 D_E 未过。
 - 保留 V27：[同父三臂与电学归一化](experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)，记录实际六个终点与 D_N 未触发。
 - 原 LF11 终局入口：[2026-09-11 LF11 terminal closeout](experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)。记录6000更新、合法四臂、无匹配增量、必要方向诊断、latent未触发、后验波形强基线及实际回收关机。
 - 历史 LF10 终局入口：[2026-09-09 LF10 terminal closeout](experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md)。它记录两条有效 25-step prefix、无 extended feasible path、多流 interface/forgetting 复现、回收关机与本地裁决。

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scientific_optimizer_updates": 0,
+  "scientific_checkpoints_loaded": false,
+  "checks": [
+    {
+      "name": "fixed_blocks_reproduce_old_joint_functional_and_complete_gradient",
+      "status": "PASS",
+      "scope": "small artificial network and observations; new block composition only"
+    },
+    {
+      "name": "reference_decision_rejects_win_over_degraded_continued_control",
+      "status": "PASS",
+      "scope": "synthetic metric records; same-layer historical noninferiority and simple P1 priority"
+    }
+  ],
+  "historical_interface_tests_rerun": false
+}

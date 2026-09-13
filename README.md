@@ -4,20 +4,23 @@ PINN × 相变材料与器件的纯软件研究；当前对象为二维合成、
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF11_ELECTRICAL_ELIMINATION_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_REMAINING_PDE_COUNTERFACTUAL_COMPLETE`
 - `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_STRONG_BASELINE_GAIN_NO_MATCHED_REMAINING_PDE_INCREMENT`
+- `claim_status`: `VALID_MEASURED_PDE_INFLUENCE_NO_MATCHED_PREDICTIVE_INCREMENT`
 - `next_research_execution_authorized`: `false`
 
-VERIFIED：电学消元四角色已完成评价。D_E、P_E 均对同层强插值 B_E 通过重建 A / 功能 B；P_E 的 S、raw Ephi、电流和功率误差分别降低 41.85%、32.69%、59.85%、61.18%。但 P_E 对同父 D_E 未达 A/B 独立增量，严格器件门均未通过，P_F 未触发、未运行。
+VERIFIED：本轮 D_C/P1/P_kappa 固定目标反事实已完整完成，未通过冻结的剩余 PDE 独立预测增量。共同父態的完整剩余 PDE 梯度为规定尺度的0.1077%，触发参考盲 kappa=92.84049；完整执行与科学解释见[终局](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)。这不是仅凭小 loss 推断作用，也不把一次调权当作创新。
 
-实际完成 3000 Adam / 600 次完整评估、回收关机及本地评分。[paper_v28](paper/paper_v28/README.md)已包含正文、四组图、匹配数表和主张矩阵。SUPPORTED_INTERPRETATION：强基线差距已缩小，下一优先是证明剩余热/相态 PDE 的实际独立作用。用户已另行授权本轮成果发布和独立评估交付，下一科学执行未授权；paper_v27 与更早证据保留。
+实际 669 次完整评估、零 Adam、29882 次训练正解与 29882 次伴随；当前 GPU 已回收关闭并确认，之后才本地评分。[paper_v29](paper/paper_v29/README.md)包含英文初稿、四组图、完整数表、主张矩阵和接受优化状态。用户已另行授权本轮重要成果发布及[V29 云端独立复评交接](docs/notes/2026-09-13-lf11-v29-results-cloud-review-handoff.md)，发布版本以本包所属提交和交付消息为准。下一方案为[PROPOSED_NOT_AUTHORIZED](docs/plans/NEXT_ACTIONS.md)。
+
+保留 V28：D_E/P_E 均胜同电学层 B_E，但原 P_E−D_E 未通过匹配 A/B。电学接口修复、强基线收益、剩余 PDE 独立增量和消元必要性是不同证据层；新结论不改写旧终局。
 
 ## 当前入口
 
-- 最新终局：[电学消元与同层强基线](docs/experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)
-- 当前论文：[paper_v28](paper/paper_v28/README.md)、[复现](paper/paper_v28/reproducibility.md)
+- 最新终局：[剩余 PDE 固定目标反事实](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)
+- 保留 V28：[电学消元与同层强基线](docs/experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)
+- 当前论文：[paper_v29](paper/paper_v29/README.md)、[复现](paper/paper_v29/reproducibility.md)
 - 保留 V27：[同父三臂与电学归一化](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)、[论文](paper/paper_v27/README.md)
 - 本轮云端复评与下一步规划请求：[V27 交接](docs/notes/2026-09-12-lf11-v27-results-cloud-review-handoff.md)
 - 保留上轮：[V-only终局](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)、[paper_v26](paper/paper_v26/README.md)
@@ -67,6 +70,6 @@ VERIFIED：电学消元四角色已完成评价。D_E、P_E 均对同层强插�
 - 文档地图：[docs/README.md](docs/README.md)
 - 当前研究口径：[CONTEXT.md](CONTEXT.md)
 
-## 本轮执行记录
+## 历史 V28 执行与发布记录
 
 [完整指令](docs/notes/2026-09-13-lf11-elimination-authorized-sprint.md)已完成；P_F 的冻结条件为 false。实际实例已关闭并确认，随后本地评分。当前结果和接受优化状态均已保存；用户随后明确授权本轮提交、推送及[云端独立复评交接](docs/notes/2026-09-13-lf11-v28-results-cloud-review-handoff.md)。此发布不产生下一研究执行授权；实际远端版本由交付消息提供。

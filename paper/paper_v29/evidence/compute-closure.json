@@ -1,0 +1,28 @@
+{
+  "mode": "cloud",
+  "started_utc": "2026-09-13T08:56:45.731649+00:00",
+  "destination": "root@region-46.seetacloud.com",
+  "remote_directory": "/root/autodl-tmp/lf11-remaining-20260913",
+  "reference_read": false,
+  "recovery_verified": true,
+  "shutdown_requested": true,
+  "instance_shutdown_confirmed": true,
+  "training_complete": true,
+  "compute_stopped_before_reference_read": true,
+  "job_exit_code": 0,
+  "recovery_archive": ".t\\lf11-remaining-deployment\\recovery.tar.gz",
+  "recovery_sha256": "b199c0cad1bc2bc44b06ba618a353b5535ec20c26254ae052fd81d94f3a3cfbf",
+  "recovered_utc": "2026-09-13T10:34:02.337346+00:00",
+  "shutdown_requested_utc": "2026-09-13T10:34:02.948686+00:00",
+  "shutdown_returncode": 0,
+  "shutdown_stdout": "",
+  "shutdown_stderr": "",
+  "shutdown_confirmation": "CURRENT_AUTHENTICATED_SHUTDOWN_THEN_CONNECTION_REFUSED",
+  "shutdown_probes": [
+    {
+      "returncode": 255,
+      "stderr": "banner exchange: Connection to UNKNOWN port -1: Connection refused"
+    }
+  ],
+  "completed_utc": "2026-09-13T10:34:10.347028+00:00"
+}

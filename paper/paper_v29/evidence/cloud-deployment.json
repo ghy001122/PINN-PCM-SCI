@@ -1,0 +1,17 @@
+{
+  "destination": "root@region-46.seetacloud.com",
+  "port": 28355,
+  "hostname": "autodl-container-97b911b700-9a605845",
+  "device": "Tesla V100-PCIE-32GB",
+  "python": "3.11.9",
+  "torch": "2.5.1+cu118",
+  "numpy": "2.1.1",
+  "scipy": "1.14.1",
+  "remote_directory": "/root/autodl-tmp/lf11-remaining-20260913",
+  "training_dispatch_confirmed_by_current_logs": true,
+  "source_bundle_sha256": "443a16da782b366269b5508a0969dcdb0fda229147f823eea9bdb9f684b24a9a",
+  "local_ssh_dispatch_connection_released": true,
+  "scientific_process_interrupted": false,
+  "independent_recovery_supervisor_started": true,
+  "reference_read": false
+}

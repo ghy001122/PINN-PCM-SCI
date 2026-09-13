@@ -1,17 +1,15 @@
 # 当前阶段
 
-- `phase_id`: `PHK_V23_LF11_ELECTRICAL_ELIMINATION_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_REMAINING_PDE_COUNTERFACTUAL_COMPLETE`
 - `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_STRONG_BASELINE_GAIN_NO_MATCHED_REMAINING_PDE_INCREMENT`
+- `claim_status`: `VALID_MEASURED_PDE_INFLUENCE_NO_MATCHED_PREDICTIVE_INCREMENT`
 - `next_research_execution_authorized`: `false`
 
-PHASE_ID=PHK_V23_LF11_ELECTRICAL_ELIMINATION_COMPLETE
+PHASE_ID=PHK_V23_LF11_REMAINING_PDE_COUNTERFACTUAL_COMPLETE
 BLOCKER_ID=NONE
 NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
 
-用户于 2026-09-13 授权的[完整冲刺](docs/notes/2026-09-13-lf11-elimination-authorized-sprint.md)已按冻结边界完成。P_F 条件未触发，不能作为剩余预算自动执行。实际证据见[项目状态](PROJECT_STATE.md)、[终局报告](docs/experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)和[paper_v28](paper/paper_v28/README.md)。
+本轮[完整授权冲刺](docs/notes/2026-09-13-lf11-remaining-pde-authorized-sprint.md)已完成并[收口](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)。D_C/P1/P_kappa 固定终点、共同目标审计、当前实例回收关机及本地正式评价均完成；[paper_v29](paper/paper_v29/README.md)保存实际结果。用户随后明确授权本轮重要成果 commit/push 至指定仓库，并向“推进PINN相变研究”[交付独立评估请求](docs/notes/2026-09-13-lf11-v29-results-cloud-review-handoff.md)。此授权不包含新科研：下一科学计划为 PROPOSED_NOT_AUTHORIZED；不追加同配方、不执行 P_F、新初始化或新案例，不读取 stress。
 
-当前允许复用、阅读和整理已保存的研究产物；新方程块诊断、训练、求解、初始化或完整案例确认须按[下一提案](docs/plans/NEXT_ACTIONS.md)另批。实际 GPU 已关闭并确认；stress 仍未读。用户随后明确授权本轮重要成果提交、推送，以及向“推进PINN相变研究”交付[独立评估请求](docs/notes/2026-09-13-lf11-v28-results-cloud-review-handoff.md)；此授权只覆盖成果发布与评估规划，不覆盖新数值研究。
-
-保留 [V27 终局](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)及旧论文。下一提案不授权重开旧归一化、V-only、hard-lift 或额外模块救援。
+只剩正常阅读、解释和用户明确提出的后续操作。旧 [V28](paper/paper_v28/README.md) 的已发布成果及当时边界保持不变。

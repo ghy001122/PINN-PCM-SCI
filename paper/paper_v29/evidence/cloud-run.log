@@ -1,0 +1,61 @@
+{"event": "FIXED_TRAIN_POOL_COMPARISON", "role": "E0", "values": {"observation": 5.937255597408749e-05, "obs_V": 2.4920663789227887e-05, "obs_T": 5.5317739018535704e-05, "obs_phase": 9.787926511449889e-05, "boundary": 0.2803728502259995, "initial": 2.7515275174803178e-33, "thermal": 0.011536777247715473, "phase": 0.0010481653843067388, "objective": 1.1211437137320421, "J_Tphi": 0.0041949808773407374, "C": 1.1207822811899786, "F": 0.0003614325420632723, "common_C_plus_F": 1.121143713732042}}
+{"event": "FIXED_TRAIN_POOL_COMPARISON", "role": "D_E", "values": {"observation": 3.200424817016725e-05, "obs_V": 1.7233570189025208e-06, "obs_T": 3.451199413784969e-05, "obs_phase": 5.977739335374952e-05, "boundary": 0.042308578632685806, "initial": 2.7515275174803178e-33, "thermal": 0.017032875571729417, "phase": 0.0005792872172509444, "objective": 0.5577730985175361, "J_Tphi": 0.00587072092966012, "C": 0.5572672870129329, "F": 0.0005058115046036157, "common_C_plus_F": 0.5577730985175365}}
+{"event": "FIXED_TRAIN_POOL_COMPARISON", "role": "P_E", "values": {"observation": 3.3155678762854994e-05, "obs_V": 1.9831061174126996e-06, "obs_T": 3.532949596591286e-05, "obs_phase": 6.215443420523943e-05, "boundary": 0.038647340961994445, "initial": 2.7515275174803178e-33, "thermal": 0.017138070800219472, "phase": 0.0006282980344858637, "objective": 0.5755936101559702, "J_Tphi": 0.005922122944901779, "C": 0.5750833699396324, "F": 0.0005102402163377548, "common_C_plus_F": 0.5755936101559701}}
+{"event": "COMPLETE_FIRST_ORDER_BLOCKS", "role": "E0", "norms": {"observation": 4.028667126399396, "boundary": 1.266077260077933, "thermal": 0.0015614570028217186, "phase": 0.0015694174026872503, "C": 4.587609146150948, "F": 0.0015222838310733745, "C_plus_F": 4.587957168532135}}
+{"event": "COMPLETE_FIRST_ORDER_BLOCKS", "role": "D_E", "norms": {"observation": 1.2578985050820497, "boundary": 0.45739235751530366, "thermal": 0.0015028706667890193, "phase": 0.0008439692225931883, "C": 1.239891097570467, "F": 0.001441693592997228, "C_plus_F": 1.2399691892810796}}
+{"event": "DIAGNOSIS_FROZEN", "selection": {"identifiable": true, "G": 1.3384754079926395, "norm_gF": 0.001441693592997228, "ratio": 0.0010771162356724869, "unclipped_kappa": 92.84049082926133, "kappa": 92.84049082926133, "cap_hit": false, "run_P_kappa": true, "selection_information": "original calibration pool only; no reference", "local_gradient_is_not_trajectory_causality": true}, "budget": {"per_evaluation_nonzero_solves": {"D_C": 34, "P1": 50, "P_kappa": 50}, "common_evaluation_limit": 223, "maximum_forward_and_adjoint_each": 29882, "reason": "simultaneous per-arm 300 and total 30000 caps; equal evaluation caps, not equal compute"}, "counts": {"forward_solves": 250, "adjoint_solves": 100}}
+{"role": "D_C", "evaluations": 3, "loss": 0.5571801708024542}
+{"role": "D_C", "evaluations": 21, "loss": 0.5525710633722097}
+{"role": "D_C", "evaluations": 42, "loss": 0.5443398091129106}
+{"role": "D_C", "evaluations": 63, "loss": 0.5338322404669216}
+{"role": "D_C", "evaluations": 83, "loss": 0.5199543752546082}
+{"role": "D_C", "evaluations": 103, "loss": 0.5016207295284155}
+{"role": "D_C", "evaluations": 124, "loss": 0.49085213154735197}
+{"role": "D_C", "evaluations": 145, "loss": 0.4833785978599996}
+{"role": "D_C", "evaluations": 166, "loss": 0.47516558238450335}
+{"role": "D_C", "evaluations": 186, "loss": 0.4678350649366695}
+{"role": "D_C", "evaluations": 207, "loss": 0.4572134269220679}
+{"event": "FIXED_ENDPOINT", "role": "D_C", "lbfgs": {"evaluations": 223, "accepted_steps": 107, "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK", "last_accepted_loss": 0.4495054139316536, "initial_loss": 0.5572672870129324, "history_resumed": false, "first_gate_accepted_evaluation": null}, "solves": {"forward_queries": 28098, "zero_drive_queries": 20516, "factorizations": 7582, "forward_solves": 7582, "adjoint_solves": 7582, "zero_adjoint_queries": 0, "max_forward_scaled_residual": 3.989366031561498e-15, "max_adjoint_scaled_residual": 3.885780586188048e-16}}
+{"role": "P1", "evaluations": 3, "loss": 0.5576859881793008}
+{"role": "P1", "evaluations": 21, "loss": 0.5530768630174387}
+{"role": "P1", "evaluations": 42, "loss": 0.5448807634415521}
+{"role": "P1", "evaluations": 63, "loss": 0.5344416295379997}
+{"role": "P1", "evaluations": 83, "loss": 0.5197536246038078}
+{"role": "P1", "evaluations": 103, "loss": 0.5028030458466559}
+{"role": "P1", "evaluations": 125, "loss": 0.4917560970769843}
+{"role": "P1", "evaluations": 145, "loss": 0.4817872159480339}
+{"role": "P1", "evaluations": 165, "loss": 0.4743481882037855}
+{"role": "P1", "evaluations": 185, "loss": 0.4653342029218036}
+{"role": "P1", "evaluations": 205, "loss": 0.45381993541611176}
+{"event": "FIXED_ENDPOINT", "role": "P1", "lbfgs": {"evaluations": 223, "accepted_steps": 108, "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK", "last_accepted_loss": 0.44623626029553803, "initial_loss": 0.5577730985175361, "history_resumed": false, "first_gate_accepted_evaluation": null}, "solves": {"forward_queries": 35234, "zero_drive_queries": 24084, "factorizations": 11150, "forward_solves": 11150, "adjoint_solves": 11150, "zero_adjoint_queries": 0, "max_forward_scaled_residual": 3.835931836819191e-15, "max_adjoint_scaled_residual": 3.3306690738754696e-16}}
+{"role": "P_kappa", "evaluations": 3, "loss": 0.6041372518192596}
+{"role": "P_kappa", "evaluations": 21, "loss": 0.5994096393495126}
+{"role": "P_kappa", "evaluations": 41, "loss": 0.5912211586215477}
+{"role": "P_kappa", "evaluations": 61, "loss": 0.5792290035038945}
+{"role": "P_kappa", "evaluations": 81, "loss": 0.563290083194564}
+{"role": "P_kappa", "evaluations": 101, "loss": 0.5437035413322696}
+{"role": "P_kappa", "evaluations": 123, "loss": 0.5345778719718505}
+{"role": "P_kappa", "evaluations": 143, "loss": 0.5250460242701791}
+{"role": "P_kappa", "evaluations": 163, "loss": 0.5184905980339111}
+{"role": "P_kappa", "evaluations": 183, "loss": 0.508471959998405}
+{"role": "P_kappa", "evaluations": 204, "loss": 0.4978658310614316}
+{"event": "FIXED_ENDPOINT", "role": "P_kappa", "lbfgs": {"evaluations": 223, "accepted_steps": 108, "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK", "last_accepted_loss": 0.4899749850489657, "initial_loss": 0.6042270753674192, "history_resumed": false, "first_gate_accepted_evaluation": null}, "solves": {"forward_queries": 35234, "zero_drive_queries": 24084, "factorizations": 11150, "forward_solves": 11150, "adjoint_solves": 11150, "zero_adjoint_queries": 0, "max_forward_scaled_residual": 3.537777991021955e-15, "max_adjoint_scaled_residual": 2.2418262492790362e-15}}
+{"event": "ENDPOINT_COMMON_AUDIT", "counts": {"forward_solves": 550, "adjoint_solves": 100}}
+{"prediction_role": "D_C", "time_index": 0, "total": 1001}
+{"prediction_role": "D_C", "time_index": 200, "total": 1001}
+{"prediction_role": "D_C", "time_index": 400, "total": 1001}
+{"prediction_role": "D_C", "time_index": 600, "total": 1001}
+{"prediction_role": "D_C", "time_index": 800, "total": 1001}
+{"prediction_role": "D_C", "time_index": 1000, "total": 1001}
+{"prediction_role": "P1", "time_index": 0, "total": 1001}
+{"prediction_role": "P1", "time_index": 200, "total": 1001}
+{"prediction_role": "P1", "time_index": 400, "total": 1001}
+{"prediction_role": "P1", "time_index": 600, "total": 1001}
+{"prediction_role": "P1", "time_index": 800, "total": 1001}
+{"prediction_role": "P1", "time_index": 1000, "total": 1001}
+{"prediction_role": "P_kappa", "time_index": 0, "total": 1001}
+{"prediction_role": "P_kappa", "time_index": 200, "total": 1001}
+{"prediction_role": "P_kappa", "time_index": 400, "total": 1001}
+{"prediction_role": "P_kappa", "time_index": 600, "total": 1001}
+{"prediction_role": "P_kappa", "time_index": 800, "total": 1001}
+{"prediction_role": "P_kappa", "time_index": 1000, "total": 1001}

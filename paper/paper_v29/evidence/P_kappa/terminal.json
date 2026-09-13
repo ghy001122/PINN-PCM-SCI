@@ -1,0 +1,36 @@
+{
+  "status": "VALID_FIXED_ENDPOINT",
+  "role": "P_kappa",
+  "adam_updates": 0,
+  "lbfgs": {
+    "evaluations": 223,
+    "accepted_steps": 108,
+    "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+    "last_accepted_loss": 0.4899749850489657,
+    "initial_loss": 0.6042270753674192,
+    "history_resumed": false,
+    "first_gate_accepted_evaluation": null
+  },
+  "statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 223,
+      "adam_objective_gradient_evaluations": 0,
+      "audit_objective_evaluations": 0,
+      "audit_objective_gradient_evaluations": 0,
+      "optimizer_updates": 0
+    },
+    "electrical": {
+      "forward_queries": 35234,
+      "zero_drive_queries": 24084,
+      "factorizations": 11150,
+      "forward_solves": 11150,
+      "adjoint_solves": 11150,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 3.537777991021955e-15,
+      "max_adjoint_scaled_residual": 2.2418262492790362e-15
+    }
+  },
+  "kappa": 92.84049082926133,
+  "reference_read": false,
+  "device": "cuda:0"
+}

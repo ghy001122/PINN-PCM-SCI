@@ -1,0 +1,774 @@
+{
+  "selection": {
+    "comparisons": {
+      "P1": {
+        "D_C": {
+          "A": {
+            "passed": false,
+            "gain": {
+              "S": false,
+              "Ephi": false
+            },
+            "noninferior": {
+              "ET": true,
+              "EI": true,
+              "EV": true
+            },
+            "relative_changes": {
+              "S": -0.012089119792186923,
+              "Ephi": -0.006519678909409698,
+              "ET": -0.010175387007574681,
+              "EI": 0.00577429624180234,
+              "EV": 0.010655042919095895
+            }
+          },
+          "B": {
+            "passed": false,
+            "gain": {
+              "bottom_current_NRMSE": false,
+              "power_trace_NRMSE": false
+            },
+            "noninferior": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EV": true,
+              "EI": true
+            },
+            "relative_changes": {
+              "bottom_current_NRMSE": 0.005774296241912141,
+              "power_trace_NRMSE": 0.007753825309859943,
+              "S": -0.012089119792186923,
+              "Ephi": -0.006519678909409698,
+              "ET": -0.010175387007574681,
+              "EV": 0.010655042919095895,
+              "EI": 0.00577429624180234
+            },
+            "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+          }
+        },
+        "D_E": {
+          "A": {
+            "passed": false,
+            "gain": {
+              "S": false,
+              "Ephi": false
+            },
+            "noninferior": {
+              "ET": true,
+              "EI": true,
+              "EV": true
+            },
+            "relative_changes": {
+              "S": -0.018463371054198797,
+              "Ephi": -0.08452139488118665,
+              "ET": -0.05524815349829299,
+              "EI": 0.007536687559814976,
+              "EV": -0.006330950370696207
+            }
+          },
+          "B": {
+            "passed": false,
+            "gain": {
+              "bottom_current_NRMSE": false,
+              "power_trace_NRMSE": false
+            },
+            "noninferior": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EV": true,
+              "EI": true
+            },
+            "relative_changes": {
+              "bottom_current_NRMSE": 0.0075366875597472046,
+              "power_trace_NRMSE": 0.005220596550421553,
+              "S": -0.018463371054198797,
+              "Ephi": -0.08452139488118665,
+              "ET": -0.05524815349829299,
+              "EV": -0.006330950370696207,
+              "EI": 0.007536687559814976
+            },
+            "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+          }
+        },
+        "B_E": {
+          "A": {
+            "passed": true,
+            "gain": {
+              "S": true,
+              "Ephi": true
+            },
+            "noninferior": {
+              "ET": true,
+              "EI": true,
+              "EV": true
+            },
+            "relative_changes": {
+              "S": -0.45151985799866884,
+              "Ephi": -0.39986414787995195,
+              "ET": -0.23764336783968115,
+              "EI": -0.5777669263500907,
+              "EV": -0.5693418060585188
+            }
+          },
+          "B": {
+            "passed": true,
+            "gain": {
+              "bottom_current_NRMSE": true,
+              "power_trace_NRMSE": true
+            },
+            "noninferior": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EV": true,
+              "EI": true
+            },
+            "relative_changes": {
+              "bottom_current_NRMSE": -0.5777669263499965,
+              "power_trace_NRMSE": -0.5871333109460121,
+              "S": -0.45151985799866884,
+              "Ephi": -0.39986414787995195,
+              "ET": -0.23764336783968115,
+              "EV": -0.5693418060585188,
+              "EI": -0.5777669263500907
+            },
+            "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+          }
+        }
+      },
+      "P_kappa": {
+        "D_C": {
+          "A": {
+            "passed": false,
+            "gain": {
+              "S": false,
+              "Ephi": false
+            },
+            "noninferior": {
+              "ET": true,
+              "EI": false,
+              "EV": false
+            },
+            "relative_changes": {
+              "S": -0.013487860925167114,
+              "Ephi": -0.007315673627190535,
+              "ET": -0.020002463204073107,
+              "EI": 0.0502702480162202,
+              "EV": 0.052674523736098905
+            }
+          },
+          "B": {
+            "passed": false,
+            "gain": {
+              "bottom_current_NRMSE": false,
+              "power_trace_NRMSE": false
+            },
+            "noninferior": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EV": false,
+              "EI": false
+            },
+            "relative_changes": {
+              "bottom_current_NRMSE": 0.0502702480160218,
+              "power_trace_NRMSE": 0.05712307528987885,
+              "S": -0.013487860925167114,
+              "Ephi": -0.007315673627190535,
+              "ET": -0.020002463204073107,
+              "EV": 0.052674523736098905,
+              "EI": 0.0502702480162202
+            },
+            "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+          }
+        },
+        "D_E": {
+          "A": {
+            "passed": false,
+            "gain": {
+              "S": false,
+              "Ephi": false
+            },
+            "noninferior": {
+              "ET": true,
+              "EI": false,
+              "EV": true
+            },
+            "relative_changes": {
+              "S": -0.019853087155052355,
+              "Ephi": -0.08525489318854718,
+              "ET": -0.06462774283209137,
+              "EI": 0.05211060839686146,
+              "EV": 0.034982312608480906
+            }
+          },
+          "B": {
+            "passed": false,
+            "gain": {
+              "bottom_current_NRMSE": false,
+              "power_trace_NRMSE": false
+            },
+            "noninferior": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EV": true,
+              "EI": false
+            },
+            "relative_changes": {
+              "bottom_current_NRMSE": 0.05211060839647708,
+              "power_trace_NRMSE": 0.05446574518669926,
+              "S": -0.019853087155052355,
+              "Ephi": -0.08525489318854718,
+              "ET": -0.06462774283209137,
+              "EV": 0.034982312608480906,
+              "EI": 0.05211060839686146
+            },
+            "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+          }
+        },
+        "B_E": {
+          "A": {
+            "passed": true,
+            "gain": {
+              "S": true,
+              "Ephi": true
+            },
+            "noninferior": {
+              "ET": true,
+              "EI": true,
+              "EV": true
+            },
+            "relative_changes": {
+              "S": -0.45229642777901047,
+              "Ephi": -0.4003449877698796,
+              "ET": -0.24521211953044428,
+              "EI": -0.5590871265650963,
+              "EV": -0.5514365535732177
+            }
+          },
+          "B": {
+            "passed": true,
+            "gain": {
+              "bottom_current_NRMSE": true,
+              "power_trace_NRMSE": true
+            },
+            "noninferior": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EV": true,
+              "EI": true
+            },
+            "relative_changes": {
+              "bottom_current_NRMSE": -0.5590871265651294,
+              "power_trace_NRMSE": -0.5669072217281798,
+              "S": -0.45229642777901047,
+              "Ephi": -0.4003449877698796,
+              "ET": -0.24521211953044428,
+              "EV": -0.5514365535732177,
+              "EI": -0.5590871265650963
+            },
+            "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+          }
+        },
+        "P1": {
+          "A": {
+            "passed": false,
+            "gain": {
+              "S": false,
+              "Ephi": false
+            },
+            "noninferior": {
+              "ET": true,
+              "EI": true,
+              "EV": true
+            },
+            "relative_changes": {
+              "S": -0.0014158576051778657,
+              "Ephi": -0.0008012184045145817,
+              "ET": -0.009928098440378577,
+              "EI": 0.04424049405585565,
+              "EV": 0.04157648162090724
+            }
+          },
+          "B": {
+            "passed": false,
+            "gain": {
+              "bottom_current_NRMSE": false,
+              "power_trace_NRMSE": false
+            },
+            "noninferior": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EV": true,
+              "EI": true
+            },
+            "relative_changes": {
+              "bottom_current_NRMSE": 0.04424049405554439,
+              "power_trace_NRMSE": 0.048989394770929354,
+              "S": -0.0014158576051778657,
+              "Ephi": -0.0008012184045145817,
+              "ET": -0.009928098440378577,
+              "EV": 0.04157648162090724,
+              "EI": 0.04424049405585565
+            },
+            "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+          }
+        }
+      }
+    },
+    "support": {
+      "P1": {
+        "A": {
+          "matched_vs_D_C": false,
+          "historical_noninferiority": {
+            "D_E": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EI": true,
+              "EV": true
+            },
+            "B_E": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EI": true,
+              "EV": true
+            }
+          },
+          "supported": false
+        },
+        "B": {
+          "matched_vs_D_C": false,
+          "historical_noninferiority": {
+            "D_E": {
+              "bottom_current_NRMSE": true,
+              "power_trace_NRMSE": true,
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EI": true,
+              "EV": true
+            },
+            "B_E": {
+              "bottom_current_NRMSE": true,
+              "power_trace_NRMSE": true,
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EI": true,
+              "EV": true
+            }
+          },
+          "supported": false
+        }
+      },
+      "P_kappa": {
+        "A": {
+          "matched_vs_D_C": false,
+          "historical_noninferiority": {
+            "D_E": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EI": false,
+              "EV": true
+            },
+            "B_E": {
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EI": true,
+              "EV": true
+            }
+          },
+          "supported": false
+        },
+        "B": {
+          "matched_vs_D_C": false,
+          "historical_noninferiority": {
+            "D_E": {
+              "bottom_current_NRMSE": false,
+              "power_trace_NRMSE": false,
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EI": false,
+              "EV": true
+            },
+            "B_E": {
+              "bottom_current_NRMSE": true,
+              "power_trace_NRMSE": true,
+              "S": true,
+              "Ephi": true,
+              "ET": true,
+              "EI": true,
+              "EV": true
+            }
+          },
+          "supported": false
+        }
+      }
+    },
+    "selected_simple_first": null,
+    "P_F_proposal_supported": false,
+    "run_P_F": false,
+    "P_F_status": "NOT_TRIGGERED_NOT_RUN",
+    "kappa_increment_vs_P1": {
+      "A": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.0014158576051778657,
+          "Ephi": -0.0008012184045145817,
+          "ET": -0.009928098440378577,
+          "EI": 0.04424049405585565,
+          "EV": 0.04157648162090724
+        }
+      },
+      "B": {
+        "passed": false,
+        "gain": {
+          "bottom_current_NRMSE": false,
+          "power_trace_NRMSE": false
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": true,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": 0.04424049405554439,
+          "power_trace_NRMSE": 0.048989394770929354,
+          "S": -0.0014158576051778657,
+          "Ephi": -0.0008012184045145817,
+          "ET": -0.009928098440378577,
+          "EV": 0.04157648162090724,
+          "EI": 0.04424049405585565
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      }
+    },
+    "same_layer_required": true,
+    "strict_device_gate_separate": true,
+    "no_reference_endpoint_or_kappa_selection": true
+  },
+  "execution": [
+    {
+      "role": "D_C",
+      "Adam": 0,
+      "evaluations": 223,
+      "accepted": 107,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "forward": 7582,
+      "adjoint": 7582,
+      "inference": 278
+    },
+    {
+      "role": "P1",
+      "Adam": 0,
+      "evaluations": 223,
+      "accepted": 108,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "forward": 11150,
+      "adjoint": 11150,
+      "inference": 278
+    },
+    {
+      "role": "P_kappa",
+      "Adam": 0,
+      "evaluations": 223,
+      "accepted": 108,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "forward": 11150,
+      "adjoint": 11150,
+      "inference": 278
+    }
+  ],
+  "diagnostic_counts": {
+    "forward_solves": 550,
+    "adjoint_solves": 100
+  },
+  "matched_percentage_changes": [
+    {
+      "candidate": "P1",
+      "baseline": "D_C",
+      "A": false,
+      "B": false,
+      "S": -1.2089119792186964,
+      "Ephi": -0.6519678909409743,
+      "ET": -1.0175387007574699,
+      "EV": 1.0655042919095914,
+      "EI": 0.5774296241802368,
+      "bottom_current_NRMSE": 0.5774296241912058,
+      "power_trace_NRMSE": 0.7753825309859907,
+      "energy_error": -1.1127293195958399,
+      "local_joule_NRMSE": -0.7720226021417975
+    },
+    {
+      "candidate": "P1",
+      "baseline": "D_E",
+      "A": false,
+      "B": false,
+      "S": -1.8463371054198818,
+      "Ephi": -8.45213948811866,
+      "ET": -5.524815349829304,
+      "EV": -0.6330950370696198,
+      "EI": 0.753668755981507,
+      "bottom_current_NRMSE": 0.7536687559747124,
+      "power_trace_NRMSE": 0.5220596550421508,
+      "energy_error": -4.04495037872612,
+      "local_joule_NRMSE": -6.786940534651709
+    },
+    {
+      "candidate": "P1",
+      "baseline": "B_E",
+      "A": true,
+      "B": true,
+      "S": -45.15198579986688,
+      "Ephi": -39.986414787995194,
+      "ET": -23.76433678396811,
+      "EV": -56.93418060585188,
+      "EI": -57.77669263500908,
+      "bottom_current_NRMSE": -57.77669263499965,
+      "power_trace_NRMSE": -58.713331094601216,
+      "energy_error": -76.66204310589455,
+      "local_joule_NRMSE": -59.65197730893944
+    },
+    {
+      "candidate": "P_kappa",
+      "baseline": "D_C",
+      "A": false,
+      "B": false,
+      "S": -1.3487860925167072,
+      "Ephi": -0.7315673627190544,
+      "ET": -2.000246320407306,
+      "EV": 5.267452373609882,
+      "EI": 5.0270248016220265,
+      "bottom_current_NRMSE": 5.027024801602176,
+      "power_trace_NRMSE": 5.712307528987881,
+      "energy_error": 3.7329936678588638,
+      "local_joule_NRMSE": 1.2605257763424804
+    },
+    {
+      "candidate": "P_kappa",
+      "baseline": "D_E",
+      "A": false,
+      "B": false,
+      "S": -1.9853087155052407,
+      "Ephi": -8.525489318854717,
+      "ET": -6.462774283209138,
+      "EV": 3.4982312608480948,
+      "EI": 5.2110608396861435,
+      "bottom_current_NRMSE": 5.211060839647708,
+      "power_trace_NRMSE": 5.446574518669922,
+      "energy_error": 0.6570864609285465,
+      "local_joule_NRMSE": -4.877599461315052
+    },
+    {
+      "candidate": "P_kappa",
+      "baseline": "B_E",
+      "A": true,
+      "B": true,
+      "S": -45.22964277790105,
+      "Ephi": -40.03449877698796,
+      "ET": -24.521211953044432,
+      "EV": -55.14365535732178,
+      "EI": -55.90871265650963,
+      "bottom_current_NRMSE": -55.90871265651294,
+      "power_trace_NRMSE": -56.69072217281798,
+      "energy_error": -75.51842498979254,
+      "local_joule_NRMSE": -58.82550366464714
+    },
+    {
+      "candidate": "P_kappa",
+      "baseline": "P1",
+      "A": false,
+      "B": false,
+      "S": -0.1415857605177817,
+      "Ephi": -0.08012184045146364,
+      "ET": -0.9928098440378563,
+      "EV": 4.157648162090721,
+      "EI": 4.424049405585562,
+      "bottom_current_NRMSE": 4.424049405554431,
+      "power_trace_NRMSE": 4.898939477092945,
+      "energy_error": 4.900249500378773,
+      "local_joule_NRMSE": 2.0483621976236543
+    }
+  ],
+  "common_objectives": [
+    {
+      "role": "E0",
+      "pool": "lbfgs",
+      "Lobs": 5.937255597408749e-05,
+      "LBC": 0.2803728502259995,
+      "thermal": 0.011536777247715473,
+      "phase": 0.0010481653843067388,
+      "J_Tphi": 0.0041949808773407374,
+      "C": 1.1207822811899786,
+      "F": 0.0003614325420632723,
+      "common_C_plus_F": 1.121143713732042,
+      "role_functional": null
+    },
+    {
+      "role": "E0",
+      "pool": "audit",
+      "Lobs": 5.937255597408733e-05,
+      "LBC": 0.2402159279760523,
+      "thermal": 0.01894318957614047,
+      "phase": 0.0009041913343967693,
+      "J_Tphi": 0.006615793636845747,
+      "C": 1.1034830146204506,
+      "F": 0.0005700057239467023,
+      "common_C_plus_F": 1.1040530203443972,
+      "role_functional": null
+    },
+    {
+      "role": "D_E",
+      "pool": "lbfgs",
+      "Lobs": 3.200424817016725e-05,
+      "LBC": 0.042308578632685806,
+      "thermal": 0.017032875571729417,
+      "phase": 0.0005792872172509444,
+      "J_Tphi": 0.00587072092966012,
+      "C": 0.5572672870129329,
+      "F": 0.0005058115046036157,
+      "common_C_plus_F": 0.5577730985175365,
+      "role_functional": 0.5572672870129329
+    },
+    {
+      "role": "D_E",
+      "pool": "audit",
+      "Lobs": 3.200424817016722e-05,
+      "LBC": 0.06201680397150302,
+      "thermal": 0.018864771304421442,
+      "phase": 0.0003446281781471992,
+      "J_Tphi": 0.006403133160856213,
+      "C": 0.5657574258145662,
+      "F": 0.0005516832527172252,
+      "common_C_plus_F": 0.5663091090672835,
+      "role_functional": 0.5657574258145662
+    },
+    {
+      "role": "P_E",
+      "pool": "lbfgs",
+      "Lobs": 3.3155678762854994e-05,
+      "LBC": 0.038647340961994445,
+      "thermal": 0.017138070800219472,
+      "phase": 0.0006282980344858637,
+      "J_Tphi": 0.005922122944901779,
+      "C": 0.5750833699396324,
+      "F": 0.0005102402163377548,
+      "common_C_plus_F": 0.5755936101559701,
+      "role_functional": 0.5755936101559701
+    },
+    {
+      "role": "P_E",
+      "pool": "audit",
+      "Lobs": 3.3155678762855035e-05,
+      "LBC": 0.059030740916738024,
+      "thermal": 0.018947481542708918,
+      "phase": 0.00037304825667238187,
+      "J_Tphi": 0.0064401765997937665,
+      "C": 0.5838643683243093,
+      "F": 0.0005548748535119474,
+      "common_C_plus_F": 0.5844192431778212,
+      "role_functional": 0.5844192431778212
+    },
+    {
+      "role": "D_C",
+      "pool": "lbfgs",
+      "Lobs": 2.577923423788154e-05,
+      "LBC": 0.03554146173927236,
+      "thermal": 0.016660912071517875,
+      "phase": 0.0004883197262551777,
+      "J_Tphi": 0.005716410599257684,
+      "C": 0.4495054139316539,
+      "F": 0.0004925163844076612,
+      "common_C_plus_F": 0.44999793031606156,
+      "role_functional": 0.4495054139316539
+    },
+    {
+      "role": "D_C",
+      "pool": "audit",
+      "Lobs": 2.577923423788154e-05,
+      "LBC": 0.05663873534909705,
+      "thermal": 0.018546992080132246,
+      "phase": 0.0003035779833203463,
+      "J_Tphi": 0.006283523354484197,
+      "C": 0.4585939431220862,
+      "F": 0.000541377871682893,
+      "common_C_plus_F": 0.4591353209937691,
+      "role_functional": 0.4585939431220862
+    },
+    {
+      "role": "P1",
+      "pool": "lbfgs",
+      "Lobs": 2.5536857196464036e-05,
+      "LBC": 0.03629302905024845,
+      "thermal": 0.016551572272477787,
+      "phase": 0.0004886304190067168,
+      "J_Tphi": 0.005680067563828169,
+      "C": 0.44574687516632927,
+      "F": 0.0004893851292087311,
+      "common_C_plus_F": 0.446236260295538,
+      "role_functional": 0.446236260295538
+    },
+    {
+      "role": "P1",
+      "pool": "audit",
+      "Lobs": 2.5536857196464036e-05,
+      "LBC": 0.05770216329192318,
+      "thermal": 0.01852177826349295,
+      "phase": 0.00029942754405648634,
+      "J_Tphi": 0.006273735269183144,
+      "C": 0.4549697513111754,
+      "F": 0.0005405345466104473,
+      "common_C_plus_F": 0.45551028585778586,
+      "role_functional": 0.45551028585778586
+    },
+    {
+      "role": "P_kappa",
+      "pool": "lbfgs",
+      "Lobs": 2.565899970369164e-05,
+      "LBC": 0.03503798955179534,
+      "thermal": 0.015535764109487132,
+      "phase": 0.00048310599671218946,
+      "J_Tphi": 0.005339623368733107,
+      "C": 0.4472634362813266,
+      "F": 0.0004600530262834147,
+      "common_C_plus_F": 0.44772348930761,
+      "role_functional": 0.48997498504896586
+    },
+    {
+      "role": "P_kappa",
+      "pool": "audit",
+      "Lobs": 2.565899970369164e-05,
+      "LBC": 0.0557015666160244,
+      "thermal": 0.01810454729906691,
+      "phase": 0.00030395441819874804,
+      "J_Tphi": 0.0061361672390885524,
+      "C": 0.45616513262371733,
+      "F": 0.000528681915030576,
+      "common_C_plus_F": 0.4566938145387479,
+      "role_functional": 0.5052482211077098
+    }
+  ],
+  "diagnostic_gradient_scans": 8,
+  "kappa": 92.84049082926133
+}

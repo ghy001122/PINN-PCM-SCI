@@ -2,7 +2,7 @@
 
 `paper/` is the canonical root for all manuscript packages in this repository. Every versioned package lives in a `paper_vxx/` subdirectory; future versions must follow the same layout instead of creating a new repository-root `paper_vxx/` directory.
 
-Latest: [paper_v28](paper_v28/README.md). Both trained electrical-layer roles outperform an equally solved strong interpolant; the added thermal/phase PDEs do not pass the matched increment over D_E. [V27](paper_v27/README.md), [V26](paper_v26/README.md), [V25](paper_v25/README.md) and [V24](paper_v24/README.md) retain their distinct historical evidence.
+Latest: [paper_v29](paper_v29/README.md). Completed same-parent remaining-PDE counterfactual and measured complete gradients; no declared independent predictive increment. V28 electrical-interface and strong-baseline results remain intact.
 
 | Version | Package | Evidence boundary |
 |---|---|---|
@@ -14,5 +14,6 @@ Latest: [paper_v28](paper_v28/README.md). Both trained electrical-layer roles ou
 | V2.6 | [paper_v26](paper_v26/README.md) | V-only device improvement and exact contact-trace attribution; fit gate unmet, new PDE arms unrun. |
 | V27 | [paper_v27](paper_v27/README.md) | Joint constraints and electrical-normalization counterfactuals: six valid endpoints, no declared A/B increment; D_N unrun. |
 | V28 | [paper_v28](paper_v28/README.md) | Electrical-interface repair and D_E/P_E gains over equally solved B_E; P_E−D_E A/B not passed, P_F untriggered, strict events unmet. |
+| V29 | [paper_v29](paper_v29/README.md) | Fixed D_E-parent D_C/P1/P_kappa; measured first-order influence and complete residual/event/device contrasts; P_F not executed; user-authorized release package. |
 
 This index changes only repository organization. It does not supersede any scientific contract, terminal disposition, package manifest, or claim boundary.

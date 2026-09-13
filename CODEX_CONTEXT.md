@@ -1,6 +1,10 @@
 # Codex 项目上下文
 
-## 最新：电学消元匹配冲刺已完成
+## 当前：剩余 PDE 固定目标反事实已完成
+
+VERIFIED：D_C/P1/P_kappa 已完成，未通过冻结的剩余 PDE 独立预测增量。当前 [paper_v29](paper/paper_v29/README.md)和[项目状态](PROJECT_STATE.md)保存实际数值与论文；真实实例已回收关闭。用户已另行明确授权本轮成果发布及[独立复评交付](docs/notes/2026-09-13-lf11-v29-results-cloud-review-handoff.md)。下一计划为 PROPOSED_NOT_AUTHORIZED，授权只以 [active_phase](active_phase.md)为准。以下段落保存各轮历史事实及当时授权，不产生继续执行权限。
+
+## 历史 V28：电学消元匹配冲刺已完成
 
 VERIFIED：2026-09-13 的[电学消元完整执行](docs/notes/2026-09-13-lf11-elimination-authorized-sprint.md)已完成。D_E/P_E 均超过同层 B_E，P_E−D_E 未通过冻结 A/B，P_F 未触发。GPU 已回收关机，实际证据见 [PROJECT_STATE.md](PROJECT_STATE.md)、[终局](docs/experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)与 [paper_v28](paper/paper_v28/README.md)。用户已另行授权本轮成果发布与[独立复评交付](docs/notes/2026-09-13-lf11-v28-results-cloud-review-handoff.md)；下一科学执行未授权，见 [active_phase.md](active_phase.md)。以下 V27 和更早段落只保留各自历史身份。
 

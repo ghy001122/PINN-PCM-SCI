@@ -1,0 +1,170 @@
+{
+  "records": {
+    "D_C": {
+      "lbfgs": {
+        "observation": 2.577923423788154e-05,
+        "obs_V": 1.6485621258510705e-06,
+        "obs_T": 3.0357436455978876e-05,
+        "obs_phase": 4.5331704131814626e-05,
+        "boundary": 0.03554146173927236,
+        "initial": 2.7515275174803178e-33,
+        "thermal": 0.016660912071517875,
+        "phase": 0.0004883197262551777,
+        "objective": 0.44999793031606133,
+        "J_Tphi": 0.005716410599257684,
+        "C": 0.4495054139316539,
+        "F": 0.0004925163844076612,
+        "common_C_plus_F": 0.44999793031606156,
+        "actual_role_functional": 0.4495054139316539
+      },
+      "audit": {
+        "observation": 2.577923423788154e-05,
+        "obs_V": 1.6485621258510705e-06,
+        "obs_T": 3.0357436455978876e-05,
+        "obs_phase": 4.5331704131814626e-05,
+        "boundary": 0.05663873534909705,
+        "initial": 2.8211864419734907e-33,
+        "thermal": 0.018546992080132246,
+        "phase": 0.0003035779833203463,
+        "objective": 0.45913532099376886,
+        "J_Tphi": 0.006283523354484197,
+        "C": 0.4585939431220862,
+        "F": 0.000541377871682893,
+        "common_C_plus_F": 0.4591353209937691,
+        "actual_role_functional": 0.4585939431220862
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 2,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 316,
+          "zero_drive_queries": 216,
+          "factorizations": 100,
+          "forward_solves": 100,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.0707833943525294e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      }
+    },
+    "P1": {
+      "lbfgs": {
+        "observation": 2.5536857196464036e-05,
+        "obs_V": 1.7191759344684034e-06,
+        "obs_T": 3.0050497314697976e-05,
+        "obs_phase": 4.484089834022572e-05,
+        "boundary": 0.03629302905024845,
+        "initial": 2.7515275174803178e-33,
+        "thermal": 0.016551572272477787,
+        "phase": 0.0004886304190067168,
+        "objective": 0.44623626029553803,
+        "J_Tphi": 0.005680067563828169,
+        "C": 0.44574687516632927,
+        "F": 0.0004893851292087311,
+        "common_C_plus_F": 0.446236260295538,
+        "actual_role_functional": 0.446236260295538
+      },
+      "audit": {
+        "observation": 2.5536857196464036e-05,
+        "obs_V": 1.7191759344684034e-06,
+        "obs_T": 3.0050497314697976e-05,
+        "obs_phase": 4.484089834022572e-05,
+        "boundary": 0.05770216329192318,
+        "initial": 2.8211864419734907e-33,
+        "thermal": 0.01852177826349295,
+        "phase": 0.00029942754405648634,
+        "objective": 0.4555102858577861,
+        "J_Tphi": 0.006273735269183144,
+        "C": 0.4549697513111754,
+        "F": 0.0005405345466104473,
+        "common_C_plus_F": 0.45551028585778586,
+        "actual_role_functional": 0.45551028585778586
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 2,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 316,
+          "zero_drive_queries": 216,
+          "factorizations": 100,
+          "forward_solves": 100,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.4615465176468486e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      }
+    },
+    "P_kappa": {
+      "lbfgs": {
+        "observation": 2.565899970369164e-05,
+        "obs_V": 1.891809712024407e-06,
+        "obs_T": 3.018940385712711e-05,
+        "obs_phase": 4.4895785541923376e-05,
+        "boundary": 0.03503798955179534,
+        "initial": 2.7515275174803178e-33,
+        "thermal": 0.015535764109487132,
+        "phase": 0.00048310599671218946,
+        "objective": 0.44772348930760986,
+        "J_Tphi": 0.005339623368733107,
+        "C": 0.4472634362813266,
+        "F": 0.0004600530262834147,
+        "common_C_plus_F": 0.44772348930761,
+        "actual_role_functional": 0.48997498504896586
+      },
+      "audit": {
+        "observation": 2.565899970369164e-05,
+        "obs_V": 1.891809712024407e-06,
+        "obs_T": 3.018940385712711e-05,
+        "obs_phase": 4.4895785541923376e-05,
+        "boundary": 0.0557015666160244,
+        "initial": 2.8211864419734907e-33,
+        "thermal": 0.01810454729906691,
+        "phase": 0.00030395441819874804,
+        "objective": 0.45669381453874797,
+        "J_Tphi": 0.0061361672390885524,
+        "C": 0.45616513262371733,
+        "F": 0.000528681915030576,
+        "common_C_plus_F": 0.4566938145387479,
+        "actual_role_functional": 0.5052482211077098
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 2,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 316,
+          "zero_drive_queries": 216,
+          "factorizations": 100,
+          "forward_solves": 100,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.6153850711220464e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      }
+    }
+  },
+  "diagnostic_counts_including_pretraining": {
+    "forward_solves": 550,
+    "adjoint_solves": 100
+  },
+  "optimizer_updates": 0,
+  "parameter_gradient_scans": 0,
+  "reference_read": false
+}

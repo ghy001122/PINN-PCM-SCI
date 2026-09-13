@@ -1,0 +1,99 @@
+{
+  "actual_budget": {
+    "Adam_updates": 0,
+    "P_F_executed": false,
+    "accepted_LBFGS_steps": 323,
+    "complete_fixed_objective_gradient_evaluations": 669,
+    "diagnostic_adjoint_solves": 100,
+    "diagnostic_forward_solves": 550,
+    "diagnostic_gradient_scans": 8,
+    "fine_inference_solves": 834,
+    "full_thermal_phase_trajectory_solves": 0,
+    "new_cases": 0,
+    "new_initializations": 0,
+    "new_labels": 0,
+    "scientific_retries": 0,
+    "training_adjoint_solves": 29882,
+    "training_forward_solves": 29882
+  },
+  "artifacts": {
+    "closeout": "docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md",
+    "compute_closure": "outputs/runs/20260913-lf11-remaining-pde/compute-closure.json",
+    "diagnosis": "outputs/runs/20260913-lf11-remaining-pde/diagnosis.json",
+    "evaluation": "outputs/runs/20260913-lf11-remaining-pde/evaluation/results.json",
+    "paper": "paper/paper_v29/manuscript.md",
+    "reproducibility": "paper/paper_v29/reproducibility.md",
+    "selected_evidence": "paper/paper_v29/evidence/README.md",
+    "terminal_summary": "outputs/runs/20260913-lf11-remaining-pde/terminal-summary.json"
+  },
+  "case_id": "PHK_V21_NOMINAL_FULL",
+  "checkpoint": {
+    "D_C": "outputs/runs/20260913-lf11-remaining-pde/D_C/checkpoint.pt",
+    "P1": "outputs/runs/20260913-lf11-remaining-pde/P1/checkpoint.pt",
+    "P_kappa": "outputs/runs/20260913-lf11-remaining-pde/P_kappa/checkpoint.pt",
+    "accepted_optimizer_in_each_final_checkpoint": true,
+    "parent": "outputs/runs/20260913-lf11-remaining-pde/parent.pt"
+  },
+  "claim_status": "VALID_MEASURED_PDE_INFLUENCE_NO_MATCHED_PREDICTIVE_INCREMENT",
+  "code_identity": {
+    "actual_deployed_sources": "outputs/runs/20260913-lf11-remaining-pde/deployed-source-manifest.json",
+    "base_commit": "4bd28c126911ae521b0949b5bd59aa56d01388cd",
+    "core_training_sources_frozen_during_updates": true,
+    "published": false
+  },
+  "command": [
+    "cloud/phk_v23_lf11_remaining_pde/run.sh",
+    "cloud/phk_v23_lf11_remaining_pde/recover_when_finished.py",
+    "python -m pinn_pcm_sci.phk_v23_lf11_remaining_pde_evaluate",
+    "python -m pinn_pcm_sci.phk_v23_lf11_remaining_pde_report"
+  ],
+  "ended_at": "2026-09-13T10:36:10.427767+00:00",
+  "environment": {
+    "compute_stopped_before_reference_read": true,
+    "device": "Tesla V100-PCIE-32GB",
+    "dtype": "float64",
+    "gpu_shutdown_confirmed": true,
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1",
+    "start_marker": "Local recovery-supervisor launch; not first optimizer step",
+    "torch": "2.5.1+cu118"
+  },
+  "evaluator_id": "lf11-remaining-pde-fixed-nominal-v1",
+  "evidence_identity": "ONE_INHERITED_INITIALIZATION_EXPOSED_NOMINAL_SPARSE_DEVELOPMENT",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF11_REMAINING_PDE_COUNTERFACTUAL",
+  "failure_class": null,
+  "gate": "SEPARATE_RECONSTRUCTION_A_AND_LIMITED_FUNCTION_B",
+  "gate_outcome": "NO_MATCHED_INCREMENT",
+  "method_id": "lf11-fixed-parent-remaining-pde-reference-blind-strength",
+  "numerical_validity": "VALID_FIXED_ENDPOINTS_ACCEPTED_OPTIMIZERS_COMPLETE_FIRST_ORDER_GRADIENTS",
+  "physical_contract_id": "PHK_V21_FIXED_DISCRETIZATION_FULL_NOMINAL",
+  "planned_budget": {
+    "adam": 0,
+    "adjoint_solves": 30000,
+    "all_roles_complete_evaluations": 900,
+    "common_evaluation_limit": 223,
+    "diagnostic_each": 600,
+    "forward_solves": 30000,
+    "inference_forward": 834,
+    "maximum_forward_and_adjoint_each": 29882,
+    "per_evaluation_nonzero_solves": {
+      "D_C": 34,
+      "P1": 50,
+      "P_kappa": 50
+    },
+    "per_role_complete_evaluations": 300,
+    "reason": "simultaneous per-arm 300 and total 30000 caps; equal evaluation caps, not equal compute"
+  },
+  "replay_of": null,
+  "route_disposition": "BOUNDED_FIXED_COUNTERFACTUAL_COMPLETE_P_F_NOT_EXECUTED",
+  "run_id": "20260913-lf11-remaining-pde-terminal",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "FIXED_PARENT_CONTINUATION_ORIGINAL_PDE_AND_REFERENCE_BLIND_GLOBAL_STRENGTH",
+  "seed": 17,
+  "split_id": "EXPOSED_NOMINAL_TRAINING_DEVELOPMENT_NO_HOLDOUT",
+  "started_at": "2026-09-13T08:56:45.731649+00:00",
+  "supersedes": null,
+  "tier": "development"
+}

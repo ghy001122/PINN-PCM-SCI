@@ -1,0 +1,469 @@
+{
+  "comparisons": {
+    "P1": {
+      "D_C": {
+        "A": {
+          "passed": false,
+          "gain": {
+            "S": false,
+            "Ephi": false
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.012089119792186923,
+            "Ephi": -0.006519678909409698,
+            "ET": -0.010175387007574681,
+            "EI": 0.00577429624180234,
+            "EV": 0.010655042919095895
+          }
+        },
+        "B": {
+          "passed": false,
+          "gain": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": true
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": 0.005774296241912141,
+            "power_trace_NRMSE": 0.007753825309859943,
+            "S": -0.012089119792186923,
+            "Ephi": -0.006519678909409698,
+            "ET": -0.010175387007574681,
+            "EV": 0.010655042919095895,
+            "EI": 0.00577429624180234
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "D_E": {
+        "A": {
+          "passed": false,
+          "gain": {
+            "S": false,
+            "Ephi": false
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.018463371054198797,
+            "Ephi": -0.08452139488118665,
+            "ET": -0.05524815349829299,
+            "EI": 0.007536687559814976,
+            "EV": -0.006330950370696207
+          }
+        },
+        "B": {
+          "passed": false,
+          "gain": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": true
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": 0.0075366875597472046,
+            "power_trace_NRMSE": 0.005220596550421553,
+            "S": -0.018463371054198797,
+            "Ephi": -0.08452139488118665,
+            "ET": -0.05524815349829299,
+            "EV": -0.006330950370696207,
+            "EI": 0.007536687559814976
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "B_E": {
+        "A": {
+          "passed": true,
+          "gain": {
+            "S": true,
+            "Ephi": true
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.45151985799866884,
+            "Ephi": -0.39986414787995195,
+            "ET": -0.23764336783968115,
+            "EI": -0.5777669263500907,
+            "EV": -0.5693418060585188
+          }
+        },
+        "B": {
+          "passed": true,
+          "gain": {
+            "bottom_current_NRMSE": true,
+            "power_trace_NRMSE": true
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": true
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": -0.5777669263499965,
+            "power_trace_NRMSE": -0.5871333109460121,
+            "S": -0.45151985799866884,
+            "Ephi": -0.39986414787995195,
+            "ET": -0.23764336783968115,
+            "EV": -0.5693418060585188,
+            "EI": -0.5777669263500907
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      }
+    },
+    "P_kappa": {
+      "D_C": {
+        "A": {
+          "passed": false,
+          "gain": {
+            "S": false,
+            "Ephi": false
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": false,
+            "EV": false
+          },
+          "relative_changes": {
+            "S": -0.013487860925167114,
+            "Ephi": -0.007315673627190535,
+            "ET": -0.020002463204073107,
+            "EI": 0.0502702480162202,
+            "EV": 0.052674523736098905
+          }
+        },
+        "B": {
+          "passed": false,
+          "gain": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": false,
+            "EI": false
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": 0.0502702480160218,
+            "power_trace_NRMSE": 0.05712307528987885,
+            "S": -0.013487860925167114,
+            "Ephi": -0.007315673627190535,
+            "ET": -0.020002463204073107,
+            "EV": 0.052674523736098905,
+            "EI": 0.0502702480162202
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "D_E": {
+        "A": {
+          "passed": false,
+          "gain": {
+            "S": false,
+            "Ephi": false
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": false,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.019853087155052355,
+            "Ephi": -0.08525489318854718,
+            "ET": -0.06462774283209137,
+            "EI": 0.05211060839686146,
+            "EV": 0.034982312608480906
+          }
+        },
+        "B": {
+          "passed": false,
+          "gain": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": false
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": 0.05211060839647708,
+            "power_trace_NRMSE": 0.05446574518669926,
+            "S": -0.019853087155052355,
+            "Ephi": -0.08525489318854718,
+            "ET": -0.06462774283209137,
+            "EV": 0.034982312608480906,
+            "EI": 0.05211060839686146
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "B_E": {
+        "A": {
+          "passed": true,
+          "gain": {
+            "S": true,
+            "Ephi": true
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.45229642777901047,
+            "Ephi": -0.4003449877698796,
+            "ET": -0.24521211953044428,
+            "EI": -0.5590871265650963,
+            "EV": -0.5514365535732177
+          }
+        },
+        "B": {
+          "passed": true,
+          "gain": {
+            "bottom_current_NRMSE": true,
+            "power_trace_NRMSE": true
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": true
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": -0.5590871265651294,
+            "power_trace_NRMSE": -0.5669072217281798,
+            "S": -0.45229642777901047,
+            "Ephi": -0.4003449877698796,
+            "ET": -0.24521211953044428,
+            "EV": -0.5514365535732177,
+            "EI": -0.5590871265650963
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "P1": {
+        "A": {
+          "passed": false,
+          "gain": {
+            "S": false,
+            "Ephi": false
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.0014158576051778657,
+            "Ephi": -0.0008012184045145817,
+            "ET": -0.009928098440378577,
+            "EI": 0.04424049405585565,
+            "EV": 0.04157648162090724
+          }
+        },
+        "B": {
+          "passed": false,
+          "gain": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": true
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": 0.04424049405554439,
+            "power_trace_NRMSE": 0.048989394770929354,
+            "S": -0.0014158576051778657,
+            "Ephi": -0.0008012184045145817,
+            "ET": -0.009928098440378577,
+            "EV": 0.04157648162090724,
+            "EI": 0.04424049405585565
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      }
+    }
+  },
+  "support": {
+    "P1": {
+      "A": {
+        "matched_vs_D_C": false,
+        "historical_noninferiority": {
+          "D_E": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "B_E": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EI": true,
+            "EV": true
+          }
+        },
+        "supported": false
+      },
+      "B": {
+        "matched_vs_D_C": false,
+        "historical_noninferiority": {
+          "D_E": {
+            "bottom_current_NRMSE": true,
+            "power_trace_NRMSE": true,
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "B_E": {
+            "bottom_current_NRMSE": true,
+            "power_trace_NRMSE": true,
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EI": true,
+            "EV": true
+          }
+        },
+        "supported": false
+      }
+    },
+    "P_kappa": {
+      "A": {
+        "matched_vs_D_C": false,
+        "historical_noninferiority": {
+          "D_E": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EI": false,
+            "EV": true
+          },
+          "B_E": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EI": true,
+            "EV": true
+          }
+        },
+        "supported": false
+      },
+      "B": {
+        "matched_vs_D_C": false,
+        "historical_noninferiority": {
+          "D_E": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false,
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EI": false,
+            "EV": true
+          },
+          "B_E": {
+            "bottom_current_NRMSE": true,
+            "power_trace_NRMSE": true,
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EI": true,
+            "EV": true
+          }
+        },
+        "supported": false
+      }
+    }
+  },
+  "selected_simple_first": null,
+  "P_F_proposal_supported": false,
+  "run_P_F": false,
+  "P_F_status": "NOT_TRIGGERED_NOT_RUN",
+  "kappa_increment_vs_P1": {
+    "A": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.0014158576051778657,
+        "Ephi": -0.0008012184045145817,
+        "ET": -0.009928098440378577,
+        "EI": 0.04424049405585565,
+        "EV": 0.04157648162090724
+      }
+    },
+    "B": {
+      "passed": false,
+      "gain": {
+        "bottom_current_NRMSE": false,
+        "power_trace_NRMSE": false
+      },
+      "noninferior": {
+        "S": true,
+        "Ephi": true,
+        "ET": true,
+        "EV": true,
+        "EI": true
+      },
+      "relative_changes": {
+        "bottom_current_NRMSE": 0.04424049405554439,
+        "power_trace_NRMSE": 0.048989394770929354,
+        "S": -0.0014158576051778657,
+        "Ephi": -0.0008012184045145817,
+        "ET": -0.009928098440378577,
+        "EV": 0.04157648162090724,
+        "EI": 0.04424049405585565
+      },
+      "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+    }
+  },
+  "same_layer_required": true,
+  "strict_device_gate_separate": true,
+  "no_reference_endpoint_or_kappa_selection": true
+}
