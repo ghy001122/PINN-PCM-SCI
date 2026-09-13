@@ -1,0 +1,137 @@
+{
+  "status": "COMMON_FIXED_ENDPOINT_UNLABELED_AUDIT",
+  "records": {
+    "E0": {
+      "values": {
+        "observation": 5.937255597408733e-05,
+        "obs_V": 2.4920663789227494e-05,
+        "obs_T": 5.5317739018535684e-05,
+        "obs_phase": 9.787926511449887e-05,
+        "boundary": 0.2402159279760523,
+        "initial": 2.681868592987145e-33,
+        "thermal": 0.01894318957614047,
+        "phase": 0.0009041913343967693,
+        "electric": 0.0,
+        "objective": 1.1040530203443981,
+        "J_Tphi": 0.006615793636845747,
+        "weighted_terms_at_lambda_max": {
+          "observation": 1.0,
+          "boundary": 0.10348301462045068,
+          "thermal": 0.0005440378524944274,
+          "phase": 2.5967871452274875e-05,
+          "initial": 2.31065316239882e-34
+        }
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.7157475994682585e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      },
+      "checkpoint_role": "E0"
+    },
+    "D_E": {
+      "values": {
+        "observation": 3.200424817016722e-05,
+        "obs_V": 1.7233570189024313e-06,
+        "obs_T": 3.451199413784969e-05,
+        "obs_phase": 5.9777393353749536e-05,
+        "boundary": 0.06201680397150302,
+        "initial": 2.681868592987145e-33,
+        "thermal": 0.018864771304421442,
+        "phase": 0.0003446281781471992,
+        "electric": 0.0,
+        "objective": 0.5663091090672833,
+        "J_Tphi": 0.006403133160856213,
+        "weighted_terms_at_lambda_max": {
+          "observation": 0.5390411048521342,
+          "boundary": 0.026716320962432035,
+          "thermal": 0.0005417857234128455,
+          "phase": 9.897529304379637e-06,
+          "initial": 2.31065316239882e-34
+        }
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.7654728296861014e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      },
+      "checkpoint_role": "D_E"
+    },
+    "P_E": {
+      "values": {
+        "observation": 3.3155678762855035e-05,
+        "obs_V": 1.9831061174128157e-06,
+        "obs_T": 3.532949596591284e-05,
+        "obs_phase": 6.215443420523945e-05,
+        "boundary": 0.059030740916738024,
+        "initial": 2.681868592987145e-33,
+        "thermal": 0.018947481542708918,
+        "phase": 0.00037304825667238187,
+        "electric": 0.0,
+        "objective": 0.5844192431778216,
+        "J_Tphi": 0.0064401765997937665,
+        "weighted_terms_at_lambda_max": {
+          "observation": 0.558434418375479,
+          "boundary": 0.02542994994883031,
+          "thermal": 0.0005441611153834721,
+          "phase": 1.071373812847533e-05,
+          "initial": 2.31065316239882e-34
+        }
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.4573374926220394e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      },
+      "checkpoint_role": "P_E"
+    }
+  },
+  "pool": "audit-pool.json",
+  "reference_fields_read": false,
+  "parameter_gradient_evaluations": 0,
+  "optimizer_updates": 0,
+  "objective_evaluations": 3,
+  "meaning": "Same full observations plus frozen independent unlabeled residual pool; post-training mechanism audit only, never endpoint selection or unseen validation."
+}

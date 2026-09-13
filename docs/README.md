@@ -1,6 +1,10 @@
 # 文档库地图
 
-## 最新路由：同父三臂与条件归一化终局
+## 最新路由：电学消元匹配冲刺已完成
+
+2026-09-13 的[完整执行指令](notes/2026-09-13-lf11-elimination-authorized-sprint.md)已完成。实际同层强基线收益和未达标 PDE 独立增量见[终局](experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)、[paper_v28](../paper/paper_v28/README.md)。当前授权见 [active_phase.md](../active_phase.md)，已核验事实见 [PROJECT_STATE.md](../PROJECT_STATE.md)，下一未授权提案见[唯一计划](plans/NEXT_ACTIONS.md)。本轮另获明确授权的成果发布与研究评估见 [V28 云端交接](notes/2026-09-13-lf11-v28-results-cloud-review-handoff.md)；它不产生新科研执行授权。下列 V27 入口保持历史身份。
+
+## 历史路由：同父三臂与条件归一化终局
 
 当前成果见 [paper_v27](../paper/paper_v27/README.md)与[同父三臂终局](experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)。授权和事实分别以 [active_phase.md](../active_phase.md)、[PROJECT_STATE.md](../PROJECT_STATE.md)为准；[唯一下一计划](plans/NEXT_ACTIONS.md)已关闭本轮并列出未授权提案。以下旧入口按对应历史轮次读取。
 
@@ -36,9 +40,10 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[PLAN-LF11-JOINT terminal及下一提案](plans/NEXT_ACTIONS.md)。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。同父三臂及条件 R/G/N 已收口，当前无新科研执行授权。
-- 最新终局：[同父三臂与电学归一化](experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)，记录实际六个终点与 D_N 未触发。
+- 当前唯一 current/most-recent plan：[剩余热/相态 PDE 有效影响与独立增量提案](plans/NEXT_ACTIONS.md)。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。电学消元已收口，当前无新科研执行授权。
+- 最新终局：[电学消元与同层强基线](experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)，D_E/P_E 对 B_E A/B 通过，P_E 对 D_E 未过；P_F 未触发。
+- 保留 V27：[同父三臂与电学归一化](experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)，记录实际六个终点与 D_N 未触发。
 - 原 LF11 终局入口：[2026-09-11 LF11 terminal closeout](experiment/2026-09-11-phk-v23-lf11-terminal-closeout.md)。记录6000更新、合法四臂、无匹配增量、必要方向诊断、latent未触发、后验波形强基线及实际回收关机。
 - 历史 LF10 终局入口：[2026-09-09 LF10 terminal closeout](experiment/2026-09-09-phk-v23-lf10-terminal-closeout.md)。它记录两条有效 25-step prefix、无 extended feasible path、多流 interface/forgetting 复现、回收关机与本地裁决。
 - 历史 LF10 关闭决定：[ADR 0074](adr/0074-close-phk-v23-lf10-feasible-direction-replication.md)。
@@ -57,7 +62,7 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 - 上一 PHK-V2.3 LF6 终局入口：[2026-09-06 LF6 terminal closeout](experiment/2026-09-06-phk-v23-lf6-terminal-closeout.md)。它记录 matched mechanism result、safety selection、P0 physics-forgetting、工程修复 provenance、回收关机、本地 nominal 裁决与强基线差距。
 - 上一 PHK-V2.3 LF5 终局入口：[2026-09-05 LF5 terminal closeout](experiment/2026-09-05-phk-v23-lf5-terminal-closeout.md)。它记录 CPU premise rejection、用户覆盖后的 400-step exploratory run、temporal stream 首批漂移、P0 未运行、产物回收关机与论文更新。
 - 上一 PHK-V2.3 LF4 终局入口：[2026-09-05 LF4 terminal closeout](experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)。它记录界面暴露相对等预算全局监督的有界 minimum-recall 增量、threshold BCE 的 field-quality 代价、三臂无完整 entry、P0 未运行、关机后 nominal 裁决与论文更新。
-- 当前论文初稿：[paper_v27](../paper/paper_v27/README.md)。它保存同父三臂、条件 R/G/N、六图、完整数表与主张边界。
+- 当前论文初稿：[paper_v28](../paper/paper_v28/README.md)。它保存电学消元四角色、四组图、实际数表及归因边界；[paper_v27](../paper/paper_v27/README.md)保留原同父三臂与 R/G/N 证据。
 - 保留论文：[paper_v24](../paper/paper_v24/README.md)，原稀疏四臂及后验波形基线保持历史身份。
 - 保留论文快照：[paper_v23](../paper/paper_v23/README.md)。它保存既有界面暴露、物理遗忘、failure-analysis与复现边界。
 - 上一 PHK-V2.3 LF3 终局入口：[2026-09-05 LF3 terminal closeout](experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)。它记录 T0 高 precision/质量及时序通过但两周期 recall 失败、P0 未触发、关机后 nominal 裁决、local role-label 修复及 `LF3_CARRIER_NOT_ESTABLISHED`。

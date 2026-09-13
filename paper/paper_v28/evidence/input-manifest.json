@@ -1,0 +1,14 @@
+{
+  "parent": "paper/paper_v27/evidence/D_I/checkpoint.pt",
+  "parent_sha256": "baf15aee6326126d6e3f059216f6abdb46a7f56f9d02e6be876b55925143ad74",
+  "sparse": "paper/paper_v24/evidence/input/sparse.npz",
+  "sparse_sha256": "27ea0a29e69e7179e775144c7dca362aa92c676bb0942964c47946715d5002d8",
+  "source_commit": "9c70031b6b561f3fd5a9a9684af41a40c0a422da",
+  "runtime": {
+    "torch": "2.5.1+cpu",
+    "scipy": "1.14.1",
+    "python": "3.11.9"
+  },
+  "reference_read": false,
+  "created_utc": "2026-09-12T16:52:45.938937+00:00"
+}

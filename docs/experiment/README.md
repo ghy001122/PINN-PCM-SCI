@@ -1,6 +1,6 @@
 # Experiment ledger protocol
 
-最新：[同父三臂与电学归一化终局](2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)。六个合法终点、6500 新增 Adam / 1500 完整评估；A/B 无预声明增量，D_N 未触发。
+最新：[电学消元与同层强基线终局](2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)。四角色合法，3000 Adam / 600 完整评估；D_E/P_E 对 B_E A/B 通过，P_E−D_E 未达，P_F 未触发。实际 GPU 已回收关机，paper_v28 已收口。
 
 This directory stores compact, reviewable facts for every attempted run. Raw
 checkpoints and arrays stay under `outputs/runs/<run_id>/` and are not evidence
@@ -24,7 +24,7 @@ view. Smoke and pilot entries never vote in formal adjudication. A run's
 
 ## Latest bounded campaign
 
-The specified-parent D_I/D_B/P_U comparison and conditional R/G/N are complete. All six fixed endpoints are valid, no declared contrast passes reconstruction A or limited function B, and D_N was not triggered. The [latest closeout](2026-09-12-phk-v23-lf11-joint-terminal-closeout.md) and paper_v27 preserve actual endpoint, event, contact and optimization evidence. This completed campaign authorizes no further research or publication.
+The shared electrical-layer E0/D_E/P_E/B_E comparison is complete. Both trained roles pass A/B against the equally solved B_E, but P_E−D_E does not; P_F was not triggered. The [latest closeout](2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md) and paper_v28 preserve actual endpoints, accepted optimizers, function/phase evidence, counts and current-instance shutdown. The [V27 closeout](2026-09-12-phk-v23-lf11-joint-terminal-closeout.md) retains its six-endpoint negative comparisons and unrun D_N. Completion authorizes no new research or publication.
 
 ## Historical LF10 campaign
 

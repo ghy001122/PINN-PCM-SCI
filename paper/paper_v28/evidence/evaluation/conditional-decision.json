@@ -1,0 +1,132 @@
+{
+  "run_P_F": false,
+  "layers": {
+    "A": {
+      "matched_pass": false,
+      "B_E_noninferior": {
+        "S": true,
+        "Ephi": true,
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "B_E_core_gain": {
+        "S": true,
+        "Ephi": true
+      },
+      "triggered": false
+    },
+    "B": {
+      "matched_pass": false,
+      "B_E_noninferior": {
+        "bottom_current_NRMSE": true,
+        "power_trace_NRMSE": true,
+        "S": true,
+        "Ephi": true,
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "B_E_core_gain": {
+        "bottom_current_NRMSE": true,
+        "power_trace_NRMSE": true
+      },
+      "triggered": false
+    }
+  },
+  "comparisons": {
+    "D_E": {
+      "A": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": 0.04069882866785806,
+          "Ephi": 0.026797133059248843,
+          "ET": -0.0048991299625635535,
+          "EI": -0.04202685311054999,
+          "EV": -0.02165609481036928
+        }
+      },
+      "B": {
+        "passed": false,
+        "gain": {
+          "bottom_current_NRMSE": false,
+          "power_trace_NRMSE": false
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": true,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.04202685311029909,
+          "power_trace_NRMSE": -0.054888338817074264,
+          "S": 0.04069882866785806,
+          "Ephi": 0.026797133059248843,
+          "ET": -0.0048991299625635535,
+          "EV": -0.02165609481036928,
+          "EI": -0.04202685311054999
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      }
+    },
+    "B_E": {
+      "A": {
+        "passed": true,
+        "gain": {
+          "S": true,
+          "Ephi": true
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.41846017306412253,
+          "Ephi": -0.3268900343957681,
+          "ET": -0.19701480261655938,
+          "EI": -0.5985377492656365,
+          "EV": -0.5759837549334929
+        }
+      },
+      "B": {
+        "passed": true,
+        "gain": {
+          "bottom_current_NRMSE": true,
+          "power_trace_NRMSE": true
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": true,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.5985377492654148,
+          "power_trace_NRMSE": -0.6118214015132981,
+          "S": -0.41846017306412253,
+          "Ephi": -0.3268900343957681,
+          "ET": -0.19701480261655938,
+          "EV": -0.5759837549334929,
+          "EI": -0.5985377492656365
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      }
+    }
+  },
+  "not_run_is_not_failure": true,
+  "same_layer_required": true,
+  "reference_used_for_branch_trigger_only": true
+}

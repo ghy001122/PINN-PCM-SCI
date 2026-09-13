@@ -1,0 +1,116 @@
+{
+  "D_E_vs_B_E": {
+    "A": {
+      "passed": true,
+      "gain": {
+        "S": true,
+        "Ephi": true
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.4412025737741293,
+        "Ephi": -0.344456715029227,
+        "ET": -0.19306150606296654,
+        "EI": -0.5809253609687117,
+        "EV": -0.5665979592479592
+      }
+    },
+    "B": {
+      "passed": true,
+      "gain": {
+        "bottom_current_NRMSE": true,
+        "power_trace_NRMSE": true
+      },
+      "noninferior": {
+        "S": true,
+        "Ephi": true,
+        "ET": true,
+        "EV": true,
+        "EI": true
+      },
+      "relative_changes": {
+        "bottom_current_NRMSE": -0.58092536096859,
+        "power_trace_NRMSE": -0.5892775272703252,
+        "S": -0.4412025737741293,
+        "Ephi": -0.344456715029227,
+        "ET": -0.19306150606296654,
+        "EV": -0.5665979592479592,
+        "EI": -0.5809253609687117
+      },
+      "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+    }
+  },
+  "relative_changes_percent": {
+    "D_E_vs_B_E": {
+      "S": -44.12025737741293,
+      "Ephi": -34.44567150292269,
+      "ET": -19.306150606296658,
+      "EV": -56.65979592479592,
+      "EI": -58.09253609687117,
+      "bottom_current_NRMSE": -58.09253609685901,
+      "power_trace_NRMSE": -58.92775272703253,
+      "energy_error": -75.6782399819308,
+      "local_joule_NRMSE": -56.714195497402564
+    },
+    "P_E_vs_B_E": {
+      "S": -41.84601730641225,
+      "Ephi": -32.6890034395768,
+      "ET": -19.701480261655934,
+      "EV": -57.598375493349295,
+      "EI": -59.85377492656365,
+      "bottom_current_NRMSE": -59.85377492654148,
+      "power_trace_NRMSE": -61.18214015132981,
+      "energy_error": -81.532355222446,
+      "local_joule_NRMSE": -55.89011377800743
+    },
+    "D_E_vs_E0": {
+      "S": -30.259605399792346,
+      "Ephi": -33.45149873501923,
+      "ET": -13.755657825229072,
+      "EV": -71.05764497411704,
+      "EI": -71.65228880051883,
+      "bottom_current_NRMSE": -71.652288800513,
+      "power_trace_NRMSE": -72.69230424996415,
+      "energy_error": -76.67576284466509,
+      "local_joule_NRMSE": -61.74075380899377
+    },
+    "P_E_vs_D_E": {
+      "S": 4.069882866785801,
+      "Ephi": 2.679713305924891,
+      "ET": -0.48991299625635865,
+      "EV": -2.165609481036923,
+      "EI": -4.202685311054999,
+      "bottom_current_NRMSE": -4.202685311029908,
+      "power_trace_NRMSE": -5.488833881707422,
+      "energy_error": -24.069455648629233,
+      "local_joule_NRMSE": 1.9038151857514451
+    }
+  },
+  "zero_training_E0_vs_published_D_I": {
+    "unchanged_T_phase_scores": {
+      "S": true,
+      "Ephi": true,
+      "ET": true,
+      "phase_max": true
+    },
+    "changes_percent": {
+      "EV": 3.793393009364876,
+      "EI": -34.97738113148194,
+      "bottom_current_NRMSE": -99.49581676911606,
+      "power_trace_NRMSE": -90.59012101895769,
+      "energy_error": -95.09763683668152
+    }
+  },
+  "unlabeled_P_E_vs_D_E_percent": {
+    "observation": 3.5977429826366647,
+    "boundary": -4.8149257355105,
+    "thermal": 0.4384375349840042,
+    "phase": 8.246591639132816,
+    "J_Tphi": 0.5785205149880124
+  },
+  "same_reference_identity": true
+}

@@ -1,0 +1,18 @@
+{
+  "status": "LIVE_DEPLOYMENT_VERIFIED_BEFORE_MAIN_UPDATES",
+  "instance_hostname": "autodl-container-97b911b700-9a605845",
+  "device": "Tesla V100-PCIE-32GB",
+  "initial_device_memory_used_MiB": 0,
+  "initial_device_utilization_percent": 0,
+  "python": "3.11.9",
+  "torch": "2.5.1+cu118",
+  "numpy": "2.1.1",
+  "scipy": "1.14.1",
+  "selected_archive_sha256": "5576103ee9d419eec72e71618cb9f8d909ced401099e5cc05ff21edc57ee5549",
+  "source_identity": "selected-files.json in the verified deployment archive; inherits published parent 9c70031b6b561f3fd5a9a9684af41a40c0a422da",
+  "remote_directory": "/root/autodl-tmp/lf11-elimination-20260913",
+  "reference_fields_uploaded": false,
+  "stress_fields_uploaded": false,
+  "authorization": "User explicitly provided this GPU endpoint and required execution of the bounded sprint with prompt shutdown.",
+  "record_kind": "Recorded from current live SSH observations; not a historical instance receipt."
+}

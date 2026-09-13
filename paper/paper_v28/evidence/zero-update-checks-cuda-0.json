@@ -1,0 +1,209 @@
+{
+  "status": "ZERO_UPDATE_INTERFACE_CHECKS",
+  "reference_read": false,
+  "optimizer_updates": 0,
+  "times": [
+    0.0,
+    0.175,
+    0.7,
+    1.425,
+    2.0
+  ],
+  "records": {
+    "E0": {
+      "values": [
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 0.0,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.0,
+          "phase_max": 0.029947898547040934
+        },
+        {
+          "top_current": 1.16884868904239,
+          "bottom_current": 1.1688486890424046,
+          "joule_power": 0.8415710561105301,
+          "internal_power": 0.8192110208583948,
+          "top_power": 0.00857436701144813,
+          "bottom_power": 0.013785668240687103,
+          "time": 0.175,
+          "current_gap": -1.4654943925052066e-14,
+          "power_gap": 9.325873406851315e-15,
+          "temperature_max": 0.7536128591104411,
+          "phase_max": 0.6418043167217464
+        },
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 0.7,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.09762032062366686,
+          "phase_max": 0.7872016153239004
+        },
+        {
+          "top_current": 1.0868199394057296,
+          "bottom_current": 1.0868199394057267,
+          "joule_power": 0.7825103563721222,
+          "internal_power": 0.7528397781802301,
+          "top_power": 0.007419704626378198,
+          "bottom_power": 0.02225087356551406,
+          "time": 1.425,
+          "current_gap": 2.886579864025407e-15,
+          "power_gap": -3.1086244689504383e-15,
+          "temperature_max": 0.8214647210757421,
+          "phase_max": 0.1383728635870562
+        },
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 2.0,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.07799858320382493,
+          "phase_max": 0.6371353215642699
+        }
+      ],
+      "electrical_counts": {
+        "forward_queries": 5,
+        "zero_drive_queries": 3,
+        "factorizations": 2,
+        "forward_solves": 2,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 1.5372239466139647e-15,
+        "max_adjoint_scaled_residual": 0.0
+      }
+    },
+    "B_E": {
+      "values": [
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 0.0,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.0,
+          "phase_max": 0.029947898547040934
+        },
+        {
+          "top_current": 1.0849885382583704,
+          "bottom_current": 1.0849885382583548,
+          "joule_power": 0.7811917475460146,
+          "internal_power": 0.7515881374927429,
+          "top_power": 0.007391200320776739,
+          "bottom_power": 0.022212409732494935,
+          "time": 0.175,
+          "current_gap": 1.554312234475219e-14,
+          "power_gap": -1.199040866595169e-14,
+          "temperature_max": 0.8293495647938152,
+          "phase_max": 0.17326814619836217
+        },
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 0.7,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.09142952507034527,
+          "phase_max": 0.7508372640129676
+        },
+        {
+          "top_current": 1.0836974493188332,
+          "bottom_current": 1.08369744931883,
+          "joule_power": 0.7802621635095575,
+          "internal_power": 0.7503954977500427,
+          "top_power": 0.007374677952070234,
+          "bottom_power": 0.022491987807444533,
+          "time": 1.425,
+          "current_gap": 3.1086244689504383e-15,
+          "power_gap": -2.3314683517128287e-15,
+          "temperature_max": 0.8344039632118166,
+          "phase_max": 0.12489594961139451
+        },
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 2.0,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.07346734741822666,
+          "phase_max": 0.6326980039500757
+        }
+      ],
+      "electrical_counts": {
+        "forward_queries": 5,
+        "zero_drive_queries": 3,
+        "factorizations": 2,
+        "forward_solves": 2,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 1.9943191079910184e-15,
+        "max_adjoint_scaled_residual": 0.0
+      }
+    }
+  },
+  "gradients": {
+    "temperature": {
+      "analytic": -6.7411312217330925,
+      "central_difference": -6.741131197163241,
+      "absolute_error": 2.4569851930777986e-08,
+      "relative_error": 3.6447668978117395e-09,
+      "passed": true
+    },
+    "phase": {
+      "analytic": 32.80487790917809,
+      "central_difference": 32.80487791252895,
+      "absolute_error": 3.3508626984257717e-09,
+      "relative_error": 1.0214525740228403e-10,
+      "passed": true
+    }
+  },
+  "joint_check_statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 0,
+      "adam_objective_gradient_evaluations": 0,
+      "audit_objective_evaluations": 4,
+      "audit_objective_gradient_evaluations": 1,
+      "optimizer_updates": 0
+    },
+    "electrical": {
+      "forward_queries": 5,
+      "zero_drive_queries": 0,
+      "factorizations": 5,
+      "forward_solves": 5,
+      "adjoint_solves": 1,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 1.8445673241972658e-15,
+      "max_adjoint_scaled_residual": 1.871715951594024e-14
+    }
+  },
+  "joint_loss": 9.391925117231628,
+  "device": "cuda:0"
+}

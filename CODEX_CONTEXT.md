@@ -1,8 +1,12 @@
 # Codex 项目上下文
 
-## 最新：同父三臂与条件归一化已完成
+## 最新：电学消元匹配冲刺已完成
 
-VERIFIED：D_I/D_B/P_U 与 R/G/N 六个合法固定终点，新增 6500 Adam updates、1500 次完整评估；五个匹配差分的 A/B 均未通过，D_N 未触发。当前入口为 [paper_v27](paper/paper_v27/README.md)、[终局](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)和 [active_phase.md](active_phase.md)。CPU 训练已结束；用户后续授权本轮发布及[云端独立复评交接](docs/notes/2026-09-12-lf11-v27-results-cloud-review-handoff.md)，未授权新科研执行。旧门、旧分支和以下旧阶段口径均按各自日期保留。
+VERIFIED：2026-09-13 的[电学消元完整执行](docs/notes/2026-09-13-lf11-elimination-authorized-sprint.md)已完成。D_E/P_E 均超过同层 B_E，P_E−D_E 未通过冻结 A/B，P_F 未触发。GPU 已回收关机，实际证据见 [PROJECT_STATE.md](PROJECT_STATE.md)、[终局](docs/experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)与 [paper_v28](paper/paper_v28/README.md)。用户已另行授权本轮成果发布与[独立复评交付](docs/notes/2026-09-13-lf11-v28-results-cloud-review-handoff.md)；下一科学执行未授权，见 [active_phase.md](active_phase.md)。以下 V27 和更早段落只保留各自历史身份。
+
+## 历史：同父三臂与条件归一化已完成
+
+VERIFIED：D_I/D_B/P_U 与 R/G/N 六个合法固定终点，新增 6500 Adam updates、1500 次完整评估；五个匹配差分的 A/B 均未通过，D_N 未触发。该轮入口为 [paper_v27](paper/paper_v27/README.md)、[终局](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)。CPU 训练及随后授权的[云端独立复评交接](docs/notes/2026-09-12-lf11-v27-results-cloud-review-handoff.md)均为历史。当前授权仅以本页顶部和 active_phase 为准；旧门、旧分支按各自日期保留。
 
 
 ## 历史：paper_v26 V续拟合与接触读出终局

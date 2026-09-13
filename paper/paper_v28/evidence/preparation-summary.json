@@ -1,0 +1,114 @@
+{
+  "status": "IMPLEMENTATION_VERIFIED_AWAITING_GPU_CONNECTION",
+  "scientific_optimizer_updates": 0,
+  "formal_complete_objective_gradient_evaluations": 0,
+  "reference_read": false,
+  "stress_read": false,
+  "gpu_job_started": false,
+  "authenticated_instance_connection": false,
+  "instance_power_state": "UNKNOWN",
+  "instance_shutdown_confirmed": false,
+  "blocking_error": "SSH authentication rejected (publickey,password); usable connection configuration requested",
+  "tests_passed": 5,
+  "calibration": {
+    "aE": 5.937255597408733e-05,
+    "bE": 1.160653895023754,
+    "components": {
+      "observation": 5.937255597408733e-05,
+      "obs_V": 2.4920663789227494e-05,
+      "obs_T": 5.5317739018535684e-05,
+      "obs_phase": 9.787926511449887e-05,
+      "boundary": 0.2308750537370423,
+      "initial": 3.970558696110838e-33,
+      "thermal": 0.017294147999020813,
+      "phase": 0.001541731016606139,
+      "electric": 0.0,
+      "objective": 1.1607132675797278
+    },
+    "status": "FROZEN_ONCE_AT_E0",
+    "reference_read": false,
+    "statistics": {
+      "objectives": {
+        "complete_objective_gradient_evaluations": 0,
+        "adam_objective_gradient_evaluations": 0,
+        "audit_objective_evaluations": 1,
+        "optimizer_updates": 0
+      },
+      "electrical": {
+        "forward_queries": 158,
+        "zero_drive_queries": 108,
+        "factorizations": 50,
+        "forward_solves": 50,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 2.459787049637258e-15,
+        "max_adjoint_scaled_residual": 0.0
+      }
+    }
+  },
+  "gradient_checks": {
+    "temperature": {
+      "analytic": -6.741131221732925,
+      "central_difference": -6.741131215104445,
+      "absolute_error": 6.628479987114133e-09,
+      "relative_error": 9.832889717002375e-10,
+      "passed": true
+    },
+    "phase": {
+      "analytic": 32.804877909178686,
+      "central_difference": 32.80487790959796,
+      "absolute_error": 4.192770575173199e-10,
+      "relative_error": 1.2780936380032952e-11,
+      "passed": true
+    }
+  },
+  "own_predictions": {
+    "E0": {
+      "status": "FIXED_OWN_PREDICTION",
+      "role": "E0",
+      "grid": [
+        160,
+        80
+      ],
+      "times": 1001,
+      "electrical_counts": {
+        "forward_queries": 1001,
+        "zero_drive_queries": 723,
+        "factorizations": 278,
+        "forward_solves": 278,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 4.4598137859747965e-15,
+        "max_adjoint_scaled_residual": 0.0
+      },
+      "reference_read": false,
+      "fine_electrical_solve_used": true,
+      "device": "cpu",
+      "created_utc": "2026-09-12T17:09:03.727643+00:00"
+    },
+    "B_E": {
+      "status": "FIXED_OWN_PREDICTION",
+      "role": "B_E",
+      "grid": [
+        160,
+        80
+      ],
+      "times": 1001,
+      "electrical_counts": {
+        "forward_queries": 1001,
+        "zero_drive_queries": 723,
+        "factorizations": 278,
+        "forward_solves": 278,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 4.6153348779832076e-15,
+        "max_adjoint_scaled_residual": 0.0
+      },
+      "reference_read": false,
+      "fine_electrical_solve_used": true,
+      "device": "cpu",
+      "created_utc": "2026-09-12T17:09:49.718049+00:00"
+    }
+  },
+  "next_action": "Authenticate current GPU instance, run the prepared D_E/P_E campaign, recover and shut down, then evaluate; P_F only if the frozen condition triggers."
+}

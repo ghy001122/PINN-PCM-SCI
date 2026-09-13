@@ -1,0 +1,22 @@
+# Claims and evidence: completed V28 study
+
+Status: actual fixed-endpoint evidence, 2026-09-13. The selected artifacts accompany the release containing this file. Unpublished flags in original runtime records describe the earlier scientific-closeout snapshot. The experiment uses one inherited initialization and previously exposed nominal support; no independent replication is claimed.
+
+| Claim | Status | Direct evidence | Boundary / counterevidence |
+|---|---|---|---|
+| Electrical forward, mixed boundaries and unequal half-resistance Joule allocation agree with the inherited numerical operator | VERIFIED, implementation | CPU tests; `evidence/zero-update-checks-cpu.json` | Discrete-operator agreement, not continuum validation or originality |
+| Full VJP includes boundary RHS and explicit local-heat derivatives | VERIFIED, implementation | CPU finite differences and actual CUDA T/phase relative errors 3.64e-9 / 1.02e-10 in `zero-update-checks-cuda-0.json` | No detached temperature/phase electrical channel; established implicit differentiation |
+| Original observation measure and data budget are retained | VERIFIED, implementation | Same-function observation integral difference 6.78e-21; frozen config and input manifest | Time grouping changes estimator, not target measure; old data remain seen |
+| Voltage-only electrical replacement repairs much of the historical bottom-current/power error | VERIFIED, fixed-conductivity intervention | E0 vs published D_I: bottom 506.741%→2.555%, power 28.071%→2.641%; summary and V27 evidence | T/phase unchanged; EV worsens 3.79%; zero training, no phase or PINN increment |
+| D_E outperforms the equally solved B_E under A and B | VERIFIED, bounded matched evidence | S/Ephi −44.12%/−34.45%; current/power −58.09%/−58.93%; `endpoint-comparison-summary.json` | Learned reconstruction + BC/IC, no internal thermal/phase PDE; cannot isolate adapter or solver necessity |
+| P_E outperforms the equally solved B_E under A and B | VERIFIED, bounded matched evidence | S/Ephi −41.85%/−32.69%; current/power −59.85%/−61.18%; `evaluation/results.json` | D_E also wins; P_E−B_E alone cannot establish the added PDE contribution |
+| Added thermal/phase PDEs establish the declared independent increment | VERIFIED: not established within this protocol | P_E−D_E fails A and B; S/Ephi +4.07%/+2.68%, current/power −4.20%/−5.49% | Not statistical zero effect, universal failure or an adequately trained upper bound |
+| Added PDEs lower the common fixed unlabeled remaining-PDE objective | VERIFIED: not observed | P_E J_Tphi 0.00644018 vs D_E 0.00640313; +0.58% | Lower BC is separate; old “internal residual down / event worse” cannot be imported here |
+| Small weighted PDE loss explains the missing increment | HYPOTHESIS | E0 calibration weighted thermal + phase ≈0.000541 versus observation 1 | Loss value does not measure parameter-gradient influence; not a demonstrated root cause |
+| P_E improves both cycle timing errors relative to D_E | VERIFIED, submetric effect | 0.00345→0.00130 and 0.00904→0.00753; cycle table | Both recalls decline; first recall <0.9 and second timing >0.005; all strict flags false |
+| Current balance, power identity and electric residual provide separate method gains | Not supported | All follow from the same electrical solve | Numerical consistency, never three independent advantages |
+| Electrical elimination is necessary relative to matched soft P_F | UNKNOWN | `evaluation/conditional-decision.json`: trigger false; P_F unrun | P_F is not a failed endpoint; E0 voltage replacement cannot substitute for its training ablation |
+| Positive independent PINN-method advantage is established | UNKNOWN / not established | Strong B_E comparison succeeds, remaining-PDE comparison does not | Usable interface and positive reconstruction evidence do not close the full causal chain |
+| Two new initializations, fresh support, complete protocol/OOD, oxide calibration or speedup | UNKNOWN / not executed | Scope and actual solve counts in terminal record | No new case, label, full thermal/phase solve, stress or independent confirmation |
+
+The [manuscript](manuscript.md) maps these links to the paper argument. Retained exposure, forgetting, fitting and contact evidence appears in Appendix A with separate historical identities. The [selected evidence index](evidence/README.md) identifies full raw artifacts outside the compact package.

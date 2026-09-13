@@ -1,0 +1,211 @@
+{
+  "status": "ZERO_UPDATE_INTERFACE_CHECKS",
+  "reference_read": false,
+  "optimizer_updates": 0,
+  "times": [
+    0.0,
+    0.175,
+    0.7,
+    1.425,
+    2.0
+  ],
+  "records": {
+    "E0": {
+      "values": [
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 0.0,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.0,
+          "phase_max": 0.029947898547040934
+        },
+        {
+          "top_current": 1.1688486890423868,
+          "bottom_current": 1.1688486890424037,
+          "joule_power": 0.8415710561105301,
+          "internal_power": 0.8192110208583949,
+          "top_power": 0.008574367011448087,
+          "bottom_power": 0.013785668240687079,
+          "time": 0.175,
+          "current_gap": -1.687538997430238e-14,
+          "power_gap": 1.1546319456101628e-14,
+          "temperature_max": 0.7536128591104411,
+          "phase_max": 0.6418043167217465
+        },
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 0.7,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.0976203206236669,
+          "phase_max": 0.7872016153239002
+        },
+        {
+          "top_current": 1.0868199394057263,
+          "bottom_current": 1.0868199394057276,
+          "joule_power": 0.7825103563721223,
+          "internal_power": 0.7528397781802301,
+          "top_power": 0.007419704626378149,
+          "bottom_power": 0.022250873565514084,
+          "time": 1.425,
+          "current_gap": -1.3322676295501878e-15,
+          "power_gap": -5.551115123125783e-16,
+          "temperature_max": 0.8214647210757416,
+          "phase_max": 0.13837286358705672
+        },
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 2.0,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.07799858320382494,
+          "phase_max": 0.6371353215642692
+        }
+      ],
+      "electrical_counts": {
+        "forward_queries": 5,
+        "zero_drive_queries": 3,
+        "factorizations": 2,
+        "forward_solves": 2,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 1.5372239466139647e-15,
+        "max_adjoint_scaled_residual": 0.0
+      }
+    },
+    "B_E": {
+      "values": [
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 0.0,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.0,
+          "phase_max": 0.029947898547040934
+        },
+        {
+          "top_current": 1.0849885382583655,
+          "bottom_current": 1.0849885382583557,
+          "joule_power": 0.7811917475460146,
+          "internal_power": 0.7515881374927429,
+          "top_power": 0.007391200320776669,
+          "bottom_power": 0.022212409732494963,
+          "time": 0.175,
+          "current_gap": 9.769962616701378e-15,
+          "power_gap": -8.548717289613705e-15,
+          "temperature_max": 0.8293495647938152,
+          "phase_max": 0.17326814619836217
+        },
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 0.7,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.09142952507034527,
+          "phase_max": 0.7508372640129676
+        },
+        {
+          "top_current": 1.0836974493188338,
+          "bottom_current": 1.0836974493188296,
+          "joule_power": 0.7802621635095575,
+          "internal_power": 0.7503954977500427,
+          "top_power": 0.007374677952070244,
+          "bottom_power": 0.022491987807444505,
+          "time": 1.425,
+          "current_gap": 4.218847493575595e-15,
+          "power_gap": -2.886579864025407e-15,
+          "temperature_max": 0.8344039632118166,
+          "phase_max": 0.12489594961139451
+        },
+        {
+          "top_current": 0.0,
+          "bottom_current": 0.0,
+          "joule_power": 0.0,
+          "internal_power": 0.0,
+          "top_power": 0.0,
+          "bottom_power": 0.0,
+          "time": 2.0,
+          "current_gap": 0.0,
+          "power_gap": 0.0,
+          "temperature_max": 0.07346734741822666,
+          "phase_max": 0.6326980039500757
+        }
+      ],
+      "electrical_counts": {
+        "forward_queries": 5,
+        "zero_drive_queries": 3,
+        "factorizations": 2,
+        "forward_solves": 2,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 1.9943191079910184e-15,
+        "max_adjoint_scaled_residual": 0.0
+      }
+    }
+  },
+  "gradients": {
+    "temperature": {
+      "analytic": -6.741131221732925,
+      "central_difference": -6.741131215104445,
+      "absolute_error": 6.628479987114133e-09,
+      "relative_error": 9.832889717002375e-10,
+      "passed": true
+    },
+    "phase": {
+      "analytic": 32.804877909178686,
+      "central_difference": 32.80487790959796,
+      "absolute_error": 4.192770575173199e-10,
+      "relative_error": 1.2780936380032952e-11,
+      "passed": true
+    }
+  },
+  "complete_observation_identity_error": 6.776263578034403e-21,
+  "joint_check_statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 0,
+      "audit_objective_evaluations": 4,
+      "optimizer_updates": 0,
+      "audit_objective_gradient_evaluations": 1,
+      "adam_objective_gradient_evaluations": 0
+    },
+    "electrical": {
+      "forward_queries": 5,
+      "zero_drive_queries": 0,
+      "factorizations": 5,
+      "forward_solves": 5,
+      "adjoint_solves": 1,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 1.8445673241972658e-15,
+      "max_adjoint_scaled_residual": 1.8717159515940242e-14
+    }
+  },
+  "joint_loss": 9.391925117231898,
+  "device": "cpu",
+  "diagnostic_correction": "Power-gap readout uses FP64 waveform; numerical predictions and gradients unchanged. Zero-update derivative count is audit, not Adam."
+}
