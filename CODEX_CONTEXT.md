@@ -1,6 +1,12 @@
 # Codex 项目上下文
 
-## 当前：剩余 PDE 固定目标反事实已完成
+## 当前：训练期电学耦合与事后修复已完成
+
+本轮结果见[paper_v30](paper/paper_v30/README.md)、[当前终局](docs/experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)和[状态](PROJECT_STATE.md)。实际实例已关闭；[后续计划](docs/plans/NEXT_ACTIONS.md)只作待批提案。旧 P_F 未触发记录及 V29 结论保留。
+
+用户于2026-09-14另行授权本轮重要成果发布及[V30独立复评交付](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)。该操作不产生新训练、求解或stress授权。
+
+## 历史 V29：剩余 PDE 固定目标反事实已完成
 
 VERIFIED：D_C/P1/P_kappa 已完成，未通过冻结的剩余 PDE 独立预测增量。当前 [paper_v29](paper/paper_v29/README.md)和[项目状态](PROJECT_STATE.md)保存实际数值与论文；真实实例已回收关闭。用户已另行明确授权本轮成果发布及[独立复评交付](docs/notes/2026-09-13-lf11-v29-results-cloud-review-handoff.md)。下一计划为 PROPOSED_NOT_AUTHORIZED，授权只以 [active_phase](active_phase.md)为准。以下段落保存各轮历史事实及当时授权，不产生继续执行权限。
 

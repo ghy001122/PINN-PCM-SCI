@@ -1,0 +1,41 @@
+{
+  "status": "PREDICTION_MAPPING_ALIAS_FALSE_ASSERTION_FIXED",
+  "cause": "inherited inference adds potential to supplied dict; loop then incorrectly required network and solved voltage equality",
+  "physical_state_fields_changed": false,
+  "training_repeated": false,
+  "regression": "mocked unequal voltages pass, exact temperature and phase retained; no solve or scientific checkpoint in regression",
+  "failed_projection_forward_solves": 1,
+  "failed_at_role": "F_raw",
+  "failed_at_time_index": 1,
+  "failed_at_time": 0.0025,
+  "successful_prediction_arrays_persisted": false,
+  "training_endpoints": {
+    "F_raw": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "adam_updates": 1500,
+      "lbfgs": {
+        "evaluations": 300,
+        "accepted_steps": 146,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+        "last_accepted_loss": 1.0107801179232343,
+        "initial_loss": 1.7165690984153228,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      }
+    },
+    "F_bal": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "adam_updates": 1500,
+      "lbfgs": {
+        "evaluations": 300,
+        "accepted_steps": 144,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+        "last_accepted_loss": 0.7600927883519641,
+        "initial_loss": 1.09955971702823,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      }
+    }
+  },
+  "reference_read": false
+}

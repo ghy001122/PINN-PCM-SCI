@@ -1,0 +1,578 @@
+{
+  "status": "FROZEN_DISTINCT_BALANCED_CONTROL",
+  "G0": 1.709122793916351,
+  "electric_gradient_norm": 67.04036247675924,
+  "eta_bal": 0.02549393724577264,
+  "blocks": {
+    "observation": {
+      "weighted_objective": 1.0128639376914559,
+      "norm": 1.1296968878659375,
+      "raw_components": {
+        "observation": 6.0136320834720494e-05,
+        "obs_V": 2.7211958371126837e-05,
+        "obs_T": 5.5317739018535704e-05,
+        "obs_phase": 9.787926511449889e-05,
+        "boundary": 0.0,
+        "initial": 0.0,
+        "thermal": 0.0,
+        "phase": 0.0,
+        "electric": 0.0,
+        "objective": 1.0128639376914559,
+        "C": 1.0128639376914563,
+        "F_Tphi": 0.0,
+        "E_e": 0.0
+      }
+    },
+    "boundary": {
+      "weighted_objective": 0.09945904404702716,
+      "norm": 1.266077260077933,
+      "raw_components": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.23087505373704229,
+        "initial": 4.0750470828505976e-33,
+        "thermal": 0.0,
+        "phase": 0.0,
+        "electric": 0.0,
+        "objective": 0.09945904404702716,
+        "C": 0.09945904404702713,
+        "F_Tphi": 0.0,
+        "E_e": 0.0
+      }
+    },
+    "thermal": {
+      "weighted_objective": 0.006928442082944962,
+      "norm": 0.2047720065658842,
+      "raw_components": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.0,
+        "initial": 0.0,
+        "thermal": 0.24124569870049686,
+        "phase": 0.0,
+        "electric": 0.0,
+        "objective": 0.006928442082944962,
+        "C": 0.0,
+        "F_Tphi": 0.0069284420829449625,
+        "E_e": 0.0
+      }
+    },
+    "phase": {
+      "weighted_objective": 4.4277655989617386e-05,
+      "norm": 0.001569417402687251,
+      "raw_components": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.0,
+        "initial": 0.0,
+        "thermal": 0.0,
+        "phase": 0.0015417310166061385,
+        "electric": 0.0,
+        "objective": 4.4277655989617386e-05,
+        "C": 0.0,
+        "F_Tphi": 4.42776559896174e-05,
+        "E_e": 0.0
+      }
+    },
+    "electric": {
+      "weighted_objective": 4.0762660671637345,
+      "norm": 67.04036247675924,
+      "raw_components": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.0,
+        "initial": 0.0,
+        "thermal": 0.0,
+        "phase": 0.0,
+        "electric": 141.93402264020241,
+        "objective": 4.0762660671637345,
+        "C": 0.0,
+        "F_Tphi": 0.0,
+        "E_e": 4.0762660671637345
+      }
+    }
+  },
+  "parameter_layout": [
+    {
+      "name": "heads.potential.u.weight",
+      "shape": [
+        64,
+        3
+      ],
+      "start": 0,
+      "stop": 192
+    },
+    {
+      "name": "heads.potential.u.bias",
+      "shape": [
+        64
+      ],
+      "start": 192,
+      "stop": 256
+    },
+    {
+      "name": "heads.potential.v.weight",
+      "shape": [
+        64,
+        3
+      ],
+      "start": 256,
+      "stop": 448
+    },
+    {
+      "name": "heads.potential.v.bias",
+      "shape": [
+        64
+      ],
+      "start": 448,
+      "stop": 512
+    },
+    {
+      "name": "heads.potential.input.weight",
+      "shape": [
+        64,
+        3
+      ],
+      "start": 512,
+      "stop": 704
+    },
+    {
+      "name": "heads.potential.input.bias",
+      "shape": [
+        64
+      ],
+      "start": 704,
+      "stop": 768
+    },
+    {
+      "name": "heads.potential.hidden.0.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "start": 768,
+      "stop": 4864
+    },
+    {
+      "name": "heads.potential.hidden.0.bias",
+      "shape": [
+        64
+      ],
+      "start": 4864,
+      "stop": 4928
+    },
+    {
+      "name": "heads.potential.hidden.1.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "start": 4928,
+      "stop": 9024
+    },
+    {
+      "name": "heads.potential.hidden.1.bias",
+      "shape": [
+        64
+      ],
+      "start": 9024,
+      "stop": 9088
+    },
+    {
+      "name": "heads.potential.hidden.2.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "start": 9088,
+      "stop": 13184
+    },
+    {
+      "name": "heads.potential.hidden.2.bias",
+      "shape": [
+        64
+      ],
+      "start": 13184,
+      "stop": 13248
+    },
+    {
+      "name": "heads.potential.output.weight",
+      "shape": [
+        1,
+        64
+      ],
+      "start": 13248,
+      "stop": 13312
+    },
+    {
+      "name": "heads.potential.output.bias",
+      "shape": [
+        1
+      ],
+      "start": 13312,
+      "stop": 13313
+    },
+    {
+      "name": "heads.temperature.base.u.weight",
+      "shape": [
+        64,
+        3
+      ],
+      "start": 13313,
+      "stop": 13505
+    },
+    {
+      "name": "heads.temperature.base.u.bias",
+      "shape": [
+        64
+      ],
+      "start": 13505,
+      "stop": 13569
+    },
+    {
+      "name": "heads.temperature.base.v.weight",
+      "shape": [
+        64,
+        3
+      ],
+      "start": 13569,
+      "stop": 13761
+    },
+    {
+      "name": "heads.temperature.base.v.bias",
+      "shape": [
+        64
+      ],
+      "start": 13761,
+      "stop": 13825
+    },
+    {
+      "name": "heads.temperature.base.input.weight",
+      "shape": [
+        64,
+        3
+      ],
+      "start": 13825,
+      "stop": 14017
+    },
+    {
+      "name": "heads.temperature.base.input.bias",
+      "shape": [
+        64
+      ],
+      "start": 14017,
+      "stop": 14081
+    },
+    {
+      "name": "heads.temperature.base.hidden.0.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "start": 14081,
+      "stop": 18177
+    },
+    {
+      "name": "heads.temperature.base.hidden.0.bias",
+      "shape": [
+        64
+      ],
+      "start": 18177,
+      "stop": 18241
+    },
+    {
+      "name": "heads.temperature.base.hidden.1.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "start": 18241,
+      "stop": 22337
+    },
+    {
+      "name": "heads.temperature.base.hidden.1.bias",
+      "shape": [
+        64
+      ],
+      "start": 22337,
+      "stop": 22401
+    },
+    {
+      "name": "heads.temperature.base.hidden.2.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "start": 22401,
+      "stop": 26497
+    },
+    {
+      "name": "heads.temperature.base.hidden.2.bias",
+      "shape": [
+        64
+      ],
+      "start": 26497,
+      "stop": 26561
+    },
+    {
+      "name": "heads.temperature.base.output.weight",
+      "shape": [
+        1,
+        64
+      ],
+      "start": 26561,
+      "stop": 26625
+    },
+    {
+      "name": "heads.temperature.base.output.bias",
+      "shape": [
+        1
+      ],
+      "start": 26625,
+      "stop": 26626
+    },
+    {
+      "name": "heads.temperature.residual.u.weight",
+      "shape": [
+        32,
+        21
+      ],
+      "start": 26626,
+      "stop": 27298
+    },
+    {
+      "name": "heads.temperature.residual.u.bias",
+      "shape": [
+        32
+      ],
+      "start": 27298,
+      "stop": 27330
+    },
+    {
+      "name": "heads.temperature.residual.v.weight",
+      "shape": [
+        32,
+        21
+      ],
+      "start": 27330,
+      "stop": 28002
+    },
+    {
+      "name": "heads.temperature.residual.v.bias",
+      "shape": [
+        32
+      ],
+      "start": 28002,
+      "stop": 28034
+    },
+    {
+      "name": "heads.temperature.residual.input.weight",
+      "shape": [
+        32,
+        21
+      ],
+      "start": 28034,
+      "stop": 28706
+    },
+    {
+      "name": "heads.temperature.residual.input.bias",
+      "shape": [
+        32
+      ],
+      "start": 28706,
+      "stop": 28738
+    },
+    {
+      "name": "heads.temperature.residual.hidden.0.weight",
+      "shape": [
+        32,
+        32
+      ],
+      "start": 28738,
+      "stop": 29762
+    },
+    {
+      "name": "heads.temperature.residual.hidden.0.bias",
+      "shape": [
+        32
+      ],
+      "start": 29762,
+      "stop": 29794
+    },
+    {
+      "name": "heads.temperature.residual.output.weight",
+      "shape": [
+        1,
+        32
+      ],
+      "start": 29794,
+      "stop": 29826
+    },
+    {
+      "name": "heads.temperature.residual.output.bias",
+      "shape": [
+        1
+      ],
+      "start": 29826,
+      "stop": 29827
+    },
+    {
+      "name": "heads.phase.u.weight",
+      "shape": [
+        64,
+        3
+      ],
+      "start": 29827,
+      "stop": 30019
+    },
+    {
+      "name": "heads.phase.u.bias",
+      "shape": [
+        64
+      ],
+      "start": 30019,
+      "stop": 30083
+    },
+    {
+      "name": "heads.phase.v.weight",
+      "shape": [
+        64,
+        3
+      ],
+      "start": 30083,
+      "stop": 30275
+    },
+    {
+      "name": "heads.phase.v.bias",
+      "shape": [
+        64
+      ],
+      "start": 30275,
+      "stop": 30339
+    },
+    {
+      "name": "heads.phase.input.weight",
+      "shape": [
+        64,
+        3
+      ],
+      "start": 30339,
+      "stop": 30531
+    },
+    {
+      "name": "heads.phase.input.bias",
+      "shape": [
+        64
+      ],
+      "start": 30531,
+      "stop": 30595
+    },
+    {
+      "name": "heads.phase.hidden.0.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "start": 30595,
+      "stop": 34691
+    },
+    {
+      "name": "heads.phase.hidden.0.bias",
+      "shape": [
+        64
+      ],
+      "start": 34691,
+      "stop": 34755
+    },
+    {
+      "name": "heads.phase.hidden.1.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "start": 34755,
+      "stop": 38851
+    },
+    {
+      "name": "heads.phase.hidden.1.bias",
+      "shape": [
+        64
+      ],
+      "start": 38851,
+      "stop": 38915
+    },
+    {
+      "name": "heads.phase.hidden.2.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "start": 38915,
+      "stop": 43011
+    },
+    {
+      "name": "heads.phase.hidden.2.bias",
+      "shape": [
+        64
+      ],
+      "start": 43011,
+      "stop": 43075
+    },
+    {
+      "name": "heads.phase.output.weight",
+      "shape": [
+        1,
+        64
+      ],
+      "start": 43075,
+      "stop": 43139
+    },
+    {
+      "name": "heads.phase.output.bias",
+      "shape": [
+        1
+      ],
+      "start": 43139,
+      "stop": 43140
+    }
+  ],
+  "statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 0,
+      "adam_objective_gradient_evaluations": 0,
+      "audit_objective_evaluations": 0,
+      "audit_objective_gradient_evaluations": 5,
+      "optimizer_updates": 0
+    },
+    "electrical": {
+      "forward_queries": 32,
+      "zero_drive_queries": 32,
+      "factorizations": 0,
+      "forward_solves": 0,
+      "adjoint_solves": 0,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 0.0,
+      "max_adjoint_scaled_residual": 0.0
+    },
+    "explicit_work": {
+      "full_grid_network_evaluations": 32,
+      "explicit_face_evaluations": 32,
+      "thermal_phase_groups": 64,
+      "boundary_groups": 32,
+      "observation_groups": 126
+    }
+  },
+  "full_gradient_scans": 5,
+  "lambda_at_calibration": 0.1,
+  "optimizer_updates": 0,
+  "reference_read": false,
+  "created_utc": "2026-09-13T14:57:43.965052+00:00"
+}

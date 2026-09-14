@@ -1,0 +1,21 @@
+{
+  "status": "USER_APPROVED",
+  "authorization_date": "2026-09-14",
+  "user_instruction": "是的，我批准授权，请修改相关文件并继续执行。以后出现类似的情况均采取上述操作。",
+  "original_forward_cap": 556,
+  "additional_forward_solves": 1,
+  "amended_forward_cap": 557,
+  "per_role_caps": {
+    "F_raw": 279,
+    "F_bal": 278
+  },
+  "reason": "Replace the one unsaved projected readout after the corrected mapping-alias assertion.",
+  "training_budget_changed": false,
+  "physical_settings_changed": false,
+  "reference_selection_changed": false,
+  "gpu_restart_required": false,
+  "standing_similar_recovery_authorization": true,
+  "standing_policy": "docs/governance/PINN_PCM_Norms_2026-08-14.md",
+  "recorded_utc": "2026-09-14T02:39:53.241285+00:00",
+  "standing_policy_clause": "56a"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "FIXED_OWN_PREDICTION",
+  "role": "F_bal",
+  "readout": "network",
+  "grid": [
+    160,
+    80
+  ],
+  "times": 1001,
+  "electrical_counts": {
+    "forward_solves": 0,
+    "adjoint_solves": 0
+  },
+  "reference_read": false,
+  "fine_electrical_solve_used": false,
+  "same_temperature_phase": true,
+  "device": "cpu",
+  "recovered_after_cloud_shutdown": true,
+  "created_utc": "2026-09-13T17:21:49.146305+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "record_type": "DERIVED_PUBLIC_EXECUTION_SUMMARY",
+  "source_scope": "Original local V30 operational receipts; no numerical rerun.",
+  "original_combined_cloud_job_exit_code": 1,
+  "original_combined_job_training_complete_flag": false,
+  "interpretation": "The original combined job flag does not replace the separate completed training endpoints and local inference completion.",
+  "recovery_verified": true,
+  "instance_shutdown_confirmed": true,
+  "compute_stopped_before_reference_read": true,
+  "shutdown_evidence_type": "Authenticated shutdown followed by refused connection; original receipt retained locally.",
+  "local_completion_status": "COMPLETE_AFTER_LOCAL_INFERENCE_REPAIR",
+  "training_complete": true,
+  "own_inference_complete": true,
+  "gpu_remained_off": true,
+  "training_repeated": false,
+  "environment": {
+    "python": "3.11.9",
+    "torch": "2.5.1+cu118",
+    "scipy": "1.14.1",
+    "numpy": "2.1.1",
+    "cuda": true,
+    "gpu": "Tesla V100-PCIE-32GB"
+  },
+  "reference_uploaded": false,
+  "stress_uploaded": false,
+  "publication_omits": [
+    "SSH destination and port",
+    "remote directory",
+    "local key paths",
+    "raw cloud log",
+    "raw deployment and shutdown receipts",
+    "operational cloud wrappers"
+  ],
+  "scope_limitation": "This derived summary supports publication routing; the complete original operational receipts remain local and have not been independently rechecked by a cloud reader."
+}

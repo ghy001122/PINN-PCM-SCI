@@ -1,0 +1,14 @@
+{
+  "status": "NOT_TRIGGERED_MAIN_METHOD_SIGNAL_ESTABLISHED",
+  "executed": false,
+  "forward_solves": 0,
+  "reason": "The frozen B layer passes against both valid complete projected controls. The predeclared numerical-sensitivity branch requires no main increment plus a next decision depending on the thermal interface; that prerequisite is false. Preserve the present interface and plan independent/strong-control confirmation instead.",
+  "prerequisite_no_main_increment": false,
+  "main_supported_layers": {
+    "A": false,
+    "B": true
+  },
+  "parameter_gradients": 0,
+  "adjoint_solves": 0,
+  "created_utc": "2026-09-14T02:48:01.266360+00:00"
+}

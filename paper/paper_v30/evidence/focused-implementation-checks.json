@@ -1,0 +1,13 @@
+{
+  "status": "FOCUSED_NEW_IMPLEMENTATION_CHECKS_PASS",
+  "artificial_model": true,
+  "scientific_checkpoint_loaded": false,
+  "optimizer_updates": 0,
+  "checks": [
+    "eta=1 objective and complete parameter gradient equal inherited P_F",
+    "five actual weighted block gradients sum to full gradient",
+    "full explicit parameter direction matches central difference",
+    "no training electrical forward/adjoint solve",
+    "same A or B layer across both complete projected controls required"
+  ]
+}

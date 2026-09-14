@@ -1,16 +1,22 @@
 # PINN-PCM-SCI
 
+当前：[paper_v30](paper/paper_v30/README.md) 已完成训练期电学耦合与事后修复的有界比较。VERIFIED：同一冻结层面对两种有效、完整 F/projected 的训练方法包增量成立。当前 GPU 已关闭；后续[计划](docs/plans/NEXT_ACTIONS.md)待批。下文 V29 数值保留其历史身份，最新数表以 V30 为准。
+
 PINN × 相变材料与器件的纯软件研究；当前对象为二维合成、无量纲电—热—相态wall-cell，尚非实验标定氧化物器件。
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF11_REMAINING_PDE_COUNTERFACTUAL_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_TRAINING_COUPLING_VS_POSTHOC_REPAIR_COMPLETE`
 - `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_MEASURED_PDE_INFLUENCE_NO_MATCHED_PREDICTIVE_INCREMENT`
+- `claim_status`: `VALID_TRAINING_COUPLING_INCREMENT_OVER_POSTHOC_CONTROLS`
 - `next_research_execution_authorized`: `false`
 
-VERIFIED：本轮 D_C/P1/P_kappa 固定目标反事实已完整完成，未通过冻结的剩余 PDE 独立预测增量。共同父態的完整剩余 PDE 梯度为规定尺度的0.1077%，触发参考盲 kappa=92.84049；完整执行与科学解释见[终局](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)。这不是仅凭小 loss 推断作用，也不把一次调权当作创新。
+VERIFIED：V30的E对两种有效F/projected均通过同一器件功能层B；底部电流/功率误差分别下降35.22%/35.99%与56.85%/58.70%。A与严格双周期未全过，剩余热/phase PDE独立必要性和独立初始化稳健性仍UNKNOWN。用户于2026-09-14另行授权成果发布及[V30云端独立复评](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)，不启动新研究。
+
+## 保留V29历史结果
+
+VERIFIED：V29的D_C/P1/P_kappa固定目标反事实已完整完成，未通过冻结的剩余 PDE 独立预测增量。共同父態的完整剩余 PDE 梯度为规定尺度的0.1077%，触发参考盲 kappa=92.84049；完整执行与科学解释见[终局](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)。这不是仅凭小 loss 推断作用，也不把一次调权当作创新。
 
 实际 669 次完整评估、零 Adam、29882 次训练正解与 29882 次伴随；当前 GPU 已回收关闭并确认，之后才本地评分。[paper_v29](paper/paper_v29/README.md)包含英文初稿、四组图、完整数表、主张矩阵和接受优化状态。用户已另行授权本轮重要成果发布及[V29 云端独立复评交接](docs/notes/2026-09-13-lf11-v29-results-cloud-review-handoff.md)，发布版本以本包所属提交和交付消息为准。下一方案为[PROPOSED_NOT_AUTHORIZED](docs/plans/NEXT_ACTIONS.md)。
 
@@ -18,11 +24,12 @@ VERIFIED：本轮 D_C/P1/P_kappa 固定目标反事实已完整完成，未通�
 
 ## 当前入口
 
-- 最新终局：[剩余 PDE 固定目标反事实](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)
+- 最新终局：[训练期电学耦合与事后修复](docs/experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)
+- 保留V29：[剩余 PDE 固定目标反事实](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)
 - 保留 V28：[电学消元与同层强基线](docs/experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)
-- 当前论文：[paper_v29](paper/paper_v29/README.md)、[复现](paper/paper_v29/reproducibility.md)
+- 当前论文：[paper_v30](paper/paper_v30/README.md)、[复现](paper/paper_v30/reproducibility.md)
 - 保留 V27：[同父三臂与电学归一化](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)、[论文](paper/paper_v27/README.md)
-- 本轮云端复评与下一步规划请求：[V27 交接](docs/notes/2026-09-12-lf11-v27-results-cloud-review-handoff.md)
+- 本轮云端复评与下一步规划请求：[V30交接](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)
 - 保留上轮：[V-only终局](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)、[paper_v26](paper/paper_v26/README.md)
 - 上轮云端复评交接：[V26交接](docs/notes/2026-09-12-lf11-v26-results-cloud-review-handoff.md)
 

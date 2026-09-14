@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE_AFTER_LOCAL_INFERENCE_REPAIR",
+  "training_complete": true,
+  "own_inference_complete": true,
+  "original_cloud_exit_code": 1,
+  "gpu_remained_off": true,
+  "training_repeated": false,
+  "actual_projection_forward_solves": 557,
+  "per_role_forward_solves": {
+    "F_raw": 279,
+    "F_bal": 278
+  },
+  "reference_read": false,
+  "completed_utc": "2026-09-14T02:41:01.806719+00:00"
+}
