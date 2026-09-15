@@ -1,18 +1,20 @@
 # PINN-PCM-SCI
 
-当前：[paper_v30](paper/paper_v30/README.md) 已完成训练期电学耦合与事后修复的有界比较。VERIFIED：同一冻结层面对两种有效、完整 F/projected 的训练方法包增量成立。当前 GPU 已关闭；后续[计划](docs/plans/NEXT_ACTIONS.md)待批。下文 V29 数值保留其历史身份，最新数表以 V30 为准。
+最新完成稿：[paper_v31](paper/paper_v31/README.md)。全网格反事实及两个全新初始化配对均已完成，GPU已回收关闭；[V31云端复评交接](docs/notes/2026-09-15-lf11-v31-results-cloud-review-handoff.md)总结证据与未决问题，下一提案见[计划](docs/plans/NEXT_ACTIONS.md)。
 
 PINN × 相变材料与器件的纯软件研究；当前对象为二维合成、无量纲电—热—相态wall-cell，尚非实验标定氧化物器件。
 
+VERIFIED：两个新初始化均确认E相对锁定soft＋相同电学重求解的器件层B；相态层A及相对同求解层插值B_E的冻结增量仅seed29通过。严格双周期与剩余热/phase PDE独立必要性仍未建立。V31实际数表及完整事件见[项目状态](PROJECT_STATE.md)；旧稿结论保留原边界。
+
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF11_TRAINING_COUPLING_VS_POSTHOC_REPAIR_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_FULLGRID_CONFIRMATION_COMPLETE`
 - `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_TRAINING_COUPLING_INCREMENT_OVER_POSTHOC_CONTROLS`
+- `claim_status`: `VALID_FULLGRID_AND_TWO_CLEAN_PAIRS_COMPLETE`
 - `next_research_execution_authorized`: `false`
 
-VERIFIED：V30的E对两种有效F/projected均通过同一器件功能层B；底部电流/功率误差分别下降35.22%/35.99%与56.85%/58.70%。A与严格双周期未全过，剩余热/phase PDE独立必要性和独立初始化稳健性仍UNKNOWN。用户于2026-09-14另行授权成果发布及[V30云端独立复评](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)，不启动新研究。
+历史V30（VERIFIED）：E对两种有效F/projected均通过同一器件功能层B；底部电流/功率误差分别下降35.22%/35.99%与56.85%/58.70%。当时A与严格双周期未全过，剩余热/phase PDE独立必要性和独立初始化稳健性仍UNKNOWN。用户于2026-09-14另行授权成果发布及[V30云端独立复评](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)，随后另行授权F_full与条件确认；其新结果以V31为准。
 
 ## 保留V29历史结果
 
@@ -24,7 +26,9 @@ VERIFIED：V29的D_C/P1/P_kappa固定目标反事实已完整完成，未通过�
 
 ## 当前入口
 
-- 最新终局：[训练期电学耦合与事后修复](docs/experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)
+- 最新V31：[全网格反事实](paper/paper_v31/README.md)、[终局](docs/experiment/2026-09-14-phk-v23-lf11-fullgrid-terminal-closeout.md)
+
+- 保留V30：[训练期电学耦合与事后修复](docs/experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)
 - 保留V29：[剩余 PDE 固定目标反事实](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)
 - 保留 V28：[电学消元与同层强基线](docs/experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)
 - 当前论文：[paper_v30](paper/paper_v30/README.md)、[复现](paper/paper_v30/reproducibility.md)

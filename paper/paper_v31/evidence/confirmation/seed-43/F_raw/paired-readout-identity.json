@@ -1,0 +1,18 @@
+{
+  "T_phase_exactly_equal": true,
+  "learned_models": 1,
+  "readouts": 2,
+  "network_solves": 0,
+  "projection_counts": {
+    "forward_queries": 1001,
+    "zero_drive_queries": 723,
+    "factorizations": 278,
+    "forward_solves": 278,
+    "adjoint_solves": 0,
+    "zero_adjoint_queries": 0,
+    "max_forward_scaled_residual": 4.3536397429958834e-15,
+    "max_adjoint_scaled_residual": 0.0
+  },
+  "full_thermal_phase_trajectory_solved": false,
+  "reference_read": false
+}

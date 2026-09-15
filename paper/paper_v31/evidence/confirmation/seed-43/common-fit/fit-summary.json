@@ -1,0 +1,53 @@
+{
+  "status": "LEGAL_FIXED_PARENT_NO_FIT_GATE",
+  "seed": 43,
+  "adam_updates": 2400,
+  "complete_evaluations": 600,
+  "lbfgs": {
+    "potential": {
+      "evaluations": 200,
+      "accepted_steps": 94,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "last_accepted_loss": 3.809226449240809e-05,
+      "initial_loss": 7.956068220903737e-05,
+      "history_resumed": false,
+      "first_gate_accepted_evaluation": null
+    },
+    "temperature": {
+      "evaluations": 200,
+      "accepted_steps": 98,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "last_accepted_loss": 2.565699759863186e-05,
+      "initial_loss": 0.00019472638273184206,
+      "history_resumed": false,
+      "first_gate_accepted_evaluation": null
+    },
+    "phase": {
+      "evaluations": 200,
+      "accepted_steps": 99,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "last_accepted_loss": 5.658077361903664e-05,
+      "initial_loss": 0.0002115553128651235,
+      "history_resumed": false,
+      "first_gate_accepted_evaluation": null
+    }
+  },
+  "original_complete_objective": 0.5713689924174986,
+  "final_complete_objective": 0.00012033003571007657,
+  "original_components": {
+    "obs_V": 0.00439269334568193,
+    "obs_T": 1.6675296699292752,
+    "obs_phase": 0.0421846139775381
+  },
+  "final_components": {
+    "obs_V": 0.00011427679347722429,
+    "obs_T": 7.69709927958956e-05,
+    "obs_phase": 0.00016974232085710989
+  },
+  "electrical_forward": 0,
+  "electrical_adjoint": 0,
+  "reference_read": false,
+  "seed_rescue": false,
+  "old_V_gate_applied": false,
+  "observation_only_audits": 2
+}

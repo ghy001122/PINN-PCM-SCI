@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scientific_checkpoint_loaded": false,
+  "optimizer_updates": 0,
+  "reference_read": false,
+  "checks": [
+    "full cell-volume mean and derivative, no factor 25",
+    "T/phase cell draws and RNG identical",
+    "unchanged V30 sampled objective and complete gradient",
+    "same original A/B layer predicates"
+  ]
+}

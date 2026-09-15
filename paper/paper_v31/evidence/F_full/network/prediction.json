@@ -1,0 +1,19 @@
+{
+  "status": "FIXED_OWN_PREDICTION",
+  "role": "F_full",
+  "readout": "network",
+  "grid": [
+    160,
+    80
+  ],
+  "times": 1001,
+  "electrical_counts": {
+    "forward_solves": 0,
+    "adjoint_solves": 0
+  },
+  "reference_read": false,
+  "fine_electrical_solve_used": false,
+  "same_temperature_phase": true,
+  "device": "cuda:0",
+  "created_utc": "2026-09-14T10:19:44.597531+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "UNIQUE_COMPARATOR_LOCKED",
+  "selected": "F_raw",
+  "stage_B_enabled": true,
+  "development_selection": true,
+  "scalarization_used": false,
+  "source": "V31 Stage A frozen Pareto relation with original field guards",
+  "clean_seeds": [
+    29,
+    43
+  ],
+  "seed_rescue": false,
+  "training_labels": "original sparse only",
+  "historical_weights_allowed": false
+}

@@ -1,0 +1,44 @@
+{
+  "derived_summary": true,
+  "raw_operational_receipts_retained_locally": true,
+  "actual_budget": {
+    "Adam_updates": 12300,
+    "complete_fixed_objective_gradient_evaluations": 2700,
+    "accepted_LBFGS_steps": 1311,
+    "training_forward_solves": 39172,
+    "training_adjoint_solves": 39172,
+    "calibration_audit_forward_solves": 100,
+    "calibration_audit_adjoint_solves": 0,
+    "projection_forward_solves": 1390,
+    "new_independent_initializations": 2,
+    "new_labels": 0,
+    "new_cases": 0,
+    "full_thermal_phase_trajectory_solves": 0,
+    "scientific_retries": 0,
+    "seed_rescues": 0
+  },
+  "gpu_shutdown_confirmed": true,
+  "reference_read_after_shutdown": true,
+  "stage_A_job_exit_code": 0,
+  "scientific_retries": 0,
+  "stage_B_job_exit_code": 0,
+  "stage_B_actual_shutdown_confirmed": true,
+  "environment": {
+    "python": "3.11.9",
+    "torch": "2.5.1+cu118",
+    "scipy": "1.14.1",
+    "numpy": "2.1.1",
+    "cuda": true,
+    "gpu": "Tesla V100-PCIE-32GB"
+  },
+  "stage_B_environment": {
+    "python": "3.11.9",
+    "torch": "2.5.1+cu118",
+    "scipy": "1.14.1",
+    "numpy": "2.1.1",
+    "cuda": true,
+    "gpu": "Tesla V100-PCIE-32GB"
+  },
+  "reference_uploaded": false,
+  "stress_uploaded": false
+}

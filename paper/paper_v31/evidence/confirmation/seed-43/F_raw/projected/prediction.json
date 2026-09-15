@@ -1,0 +1,25 @@
+{
+  "status": "FIXED_OWN_PREDICTION",
+  "role": "F_raw",
+  "readout": "projected",
+  "grid": [
+    160,
+    80
+  ],
+  "times": 1001,
+  "electrical_counts": {
+    "forward_queries": 1001,
+    "zero_drive_queries": 723,
+    "factorizations": 278,
+    "forward_solves": 278,
+    "adjoint_solves": 0,
+    "zero_adjoint_queries": 0,
+    "max_forward_scaled_residual": 4.3536397429958834e-15,
+    "max_adjoint_scaled_residual": 0.0
+  },
+  "reference_read": false,
+  "fine_electrical_solve_used": true,
+  "same_temperature_phase": true,
+  "device": "cuda:0",
+  "created_utc": "2026-09-14T15:36:18.530912+00:00"
+}

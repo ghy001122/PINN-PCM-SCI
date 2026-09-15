@@ -1,6 +1,10 @@
 # 文档库地图
 
-## 当前：训练期电学耦合与事后修复已完成
+## 当前V31：全空间反事实与确认已完成
+
+实际结果以[paper_v31](../paper/paper_v31/README.md)、[状态](../PROJECT_STATE.md)和[下一计划](../docs/plans/NEXT_ACTIONS.md)为准。本轮实际GPU批次均已回收关闭；新的科学扩展另行授权，后续V30及更早段落保留历史身份。
+
+## 历史V30：训练期电学耦合与事后修复已完成
 
 本轮结果见[paper_v30](../paper/paper_v30/README.md)、[当前终局](../docs/experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)和[状态](../PROJECT_STATE.md)。实际实例已关闭；[后续计划](../docs/plans/NEXT_ACTIONS.md)只作待批提案。旧 P_F 未触发记录及 V29 结论保留。
 

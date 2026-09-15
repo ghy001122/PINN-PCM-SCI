@@ -1,0 +1,4 @@
+| seed | comparator | A | B | S_relative_percent | Ephi_relative_percent | ET_relative_percent | EV_relative_percent | EI_relative_percent | bottom_current_NRMSE_relative_percent | power_trace_NRMSE_relative_percent | energy_error_relative_percent | local_joule_NRMSE_relative_percent | current_percentage_point_change | power_percentage_point_change |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 29 | F_raw | True | True | -15.9119898 | -16.4451488 | -3.019466277 | -50.23353633 | -49.14978572 | -49.14978572 | -50.07108042 | 70.99019399 | -48.86666161 | -0.8295719673 | -0.8649448085 |
+| 43 | F_raw | False | True | -9.649451098 | -11.69395577 | -1.108916811 | -49.27854878 | -48.79611441 | -48.79611441 | -49.84651279 | -46.11744983 | -38.61859631 | -1.497873957 | -1.583001755 |

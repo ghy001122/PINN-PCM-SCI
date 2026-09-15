@@ -1,36 +1,47 @@
 # 项目状态
 
-更新时间：2026-09-14
+更新时间：2026-09-15
 
-- `phase_id`: `PHK_V23_LF11_TRAINING_COUPLING_VS_POSTHOC_REPAIR_COMPLETE`
+- `phase_id`: `PHK_V23_LF11_FULLGRID_CONFIRMATION_COMPLETE`
 - `lifecycle_state`: `COMPLETE`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_TRAINING_COUPLING_INCREMENT_OVER_POSTHOC_CONTROLS`
+- `claim_status`: `VALID_FULLGRID_AND_TWO_CLEAN_PAIRS_COMPLETE`
 - `next_research_execution_authorized`: `false`
 
-VERIFIED：本轮用户授权的新协议已按终局收口；已核对当前实际实例回收与关机，之后本地读取 nominal 参考。训练/自身预测不读完整参考或 stress。旧 P_F 条件未触发的历史记录不改写。
+VERIFIED：本轮F_full已完成全空间软电学反事实。保留原父态、eta=1及原128单元T/phase抽样，只改变电学残差积分；固定模型的network/projected保留相同T/phase与完整事件。实际实例已回收关闭，随后本地读取nominal参考。
 
-实际新增 3000 Adam、600 完整固定目标评估、290 个接受步；一次五块梯度校准；训练电学正/伴随解 0/0；事后投影实际正解 557（有效保存556，修复前丢弃1，补充授权增加1次）；条件敏感性正解 0。
-
-VERIFIED：本轮获得**器件功能层B的训练方法包增量**。两种有效完整F/projected均使用与E相同的事后电学求解；E相对F_raw/projected的底部电流/功率误差降低35.2244%/35.9950%，相对F_bal/projected降低56.8459%/58.6963%，两组均满足原五项非劣条件。共同层B通过，层A未通过，不拼接不同层或比较者。
-
-| 方法 | 底部电流NRMSE | 功率轨迹NRMSE | S | raw Ephi |
+| 方法 | 底流NRMSE | 功率NRMSE | raw Ephi | S |
 |---|---:|---:|---:|---:|
-| E＝V28 P_E | 0.69382% | 0.68173% | 0.0008190625 | 0.0159996773 |
-| F_raw/projected | 1.07111% | 1.06512% | 0.0008582031 | 0.0166913896 |
-| F_bal/projected | 1.60777% | 1.65053% | 0.0008628906 | 0.0171664543 |
+| P_E | 0.693819% | 0.681731% | 0.0159996773 | 0.0008190625 |
+| F_raw/projected | 1.071112% | 1.065121% | 0.0166913896 | 0.000858203125 |
+| F_full/projected | 1.186645% | 1.190184% | 0.0172242878 | 0.000905078125 |
+| F_bal/projected | 1.607770% | 1.650530% | 0.0171664543 | 0.000862890625 |
+| D_E | 0.724257% | 0.721323% | 0.0155821211 | 0.00078703125 |
+| B_E | 1.728229% | 1.756229% | 0.0237697822 | 0.0014084375 |
 
-VERIFIED：事后修复本身作用很大。F_raw底流279.3000%→1.0711%、功率20.1181%→1.0651%；F_bal底流332.0882%→1.6078%、功率16.8942%→1.6505%。配对T/phase、S/Ephi/ET和全部事件逐项相同；它们是每个已训练模型的两种读出。E的局部q误差还分别低30.8108%/41.2717%。
+VERIFIED：E对全部三个有效soft/projected的同层裁决为A=False、B=True。完整增益、非劣子项和反向比较均保留；未过10%不等于等效。
 
-SUPPORTED_INTERPRETATION：在本次比较中，E的收益不能全部解释为最后重求电学。双方相同电学读出后仍有功能差距，支持训练方法包对所学状态的作用。它仍包含初始V映射、可训练参数、V观测梯度与全网格硬约束/抽样软约束覆盖差异，不能只归因于VJP，也没有直接证明全局导电率场误差更低。
+VERIFIED：预声明规则的非支配集合为F_raw；选择状态UNIQUE_COMPARATOR_LOCKED。阶段B：TWO_CLEAN_PAIRS_COMPLETE。
 
-VERIFIED：相态层A未达10%增量，严格双周期未全过。E第一周期recall=0.882492，第二周期timing=0.00752857；两个F的第二周期timing=0.00252857/0.00489091反而更好，因此不能写成事件全面改善。UNKNOWN：热/phase残差独立必要性、新初始化/干净观测/完整案例稳健性、材料标定与加速。
+实际新增12300 Adam、2700完整目标/梯度评估；训练正/伴随39172/39172，正式推理解1390。均在总上限内。
 
-当前可入稿的方法主体为“训练期电学约束＋一致焦耳接口”，以“原读出→固定状态电学修复→共同读出后的训练差异”组织证据。通用求解、隐式微分、优化器及一次标量校准各自不算原创。V28同层B_E收益与V29剩余PDE未获增量的结论完整保留。
+SUPPORTED_INTERPRETATION：新比较检验空间积分解释，仍没有单独隔离初始电势、有限罚项与精确约束、时间位置或VJP。V30阳性按原边界保留。剩余热/phase PDE独立必要性、完整新case、材料标定与实验验证仍UNKNOWN。
 
-下一步优先做一个全网格软电学反事实，再以两个从头初始化确认最近强控制并保留D_E；随后检验干净观测位置和一个完整新协议。它们均为待批新科学任务。条件数值敏感性未触发，不是运行失败。
+## 两个干净初始化的实际配对
 
+| 新初始化 | 方法 | 底流NRMSE | 功率NRMSE | raw Ephi | S | E对soft的A/B |
+|---|---|---:|---:|---:|---:|---|
+| 29 | E/projected | 0.858273% | 0.862489% | 0.0200420628 | 0.00103007812 | True/True |
+| 29 | F_raw/projected | 1.687845% | 1.727434% | 0.0239867136 | 0.001225 | 同父强对照 |
+| 43 | E/projected | 1.571784% | 1.592751% | 0.0216191612 | 0.00113164062 | False/True |
+| 43 | F_raw/projected | 3.069658% | 3.175752% | 0.0244820854 | 0.0012525 | 同父强对照 |
 
-本轮交付：[paper_v30](paper/paper_v30/README.md)、[完整终局](docs/experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)、[下一提案](docs/plans/NEXT_ACTIONS.md)。[V29](paper/paper_v29/README.md)及此前结果按历史原边界保留，不作为本轮重跑。
+VERIFIED：每seed使用全新网络及零输出T适配器，经同一冻结纯观测配方形成共同父态，再分叉E与锁定F_raw；没有加载旧训练权重、重新挑seed或使用reference选终点。历史17具有不同培养流程，未计入本配对集合。完整事件、拟合程度与尺度、实际计数分别见paper_v31的clean-complete-events、clean-common-fit、clean-execution数表。
 
-2026-09-14用户另行授权成果发布及[V30云端独立复评](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)。发布提交号以交付消息核对值为准；此次没有新科学执行。
+SUPPORTED_INTERPRETATION：E对锁定soft＋projection的原器件功能层B在两个预声明新初始化上均得到支持，构成有限的干净初始化确认；不推断总体成功概率、精确置信区间、新case泛化或剩余PDE独立必要性。
+
+VERIFIED：seed29/43的相对电流改善分别49.1498%/48.7961%，功率改善50.0711%/49.8465%，所有原场非劣条件通过。相态A只通过seed29；seed43的S改善9.64945%，不能四舍五入当10%。对同求解层B_E，seed29通过A/B，seed43均未通过：其raw Ephi/电流/功率改善约9.04771%/9.05231%/9.30851%。因此，强插值基线的冻结效应门尚未在两组同时确认。
+
+VERIFIED：四个新模型均未过严格双周期。seed29的E第二周期timing由soft的0.0042375变为0.00643333，能量积分误差由0.160928%变为0.275172%；seed43的E第一周期recall由0.840581变为0.802726，虽精度与timing改善，仍不能声称逐事件或全指标领先。父态V拟合程度、phase拟合及公共尺度同时变化，不能仅凭两组记录将绝对性能差异归因于V拟合一个因素。
+
+[初稿](paper/paper_v31/manuscript.md) · [主张矩阵](paper/paper_v31/claim_evidence_matrix.md) · [终局](docs/experiment/2026-09-14-phk-v23-lf11-fullgrid-terminal-closeout.md) · [下一计划](docs/plans/NEXT_ACTIONS.md)。旧稿保留原边界。本轮没有自动Git发布。

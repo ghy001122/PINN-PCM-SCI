@@ -1,0 +1,10 @@
+{
+  "parent": "paper/paper_v28/evidence/parent.pt",
+  "sparse": "paper/paper_v24/evidence/input/sparse.npz",
+  "reference_read": false,
+  "calibration_reused": true,
+  "eta": 1.0,
+  "only_change": "electric spatial volume mean over all 3200 cells at original physics times",
+  "thermal_phase_samples_and_rng_unchanged": true,
+  "created_utc": "2026-09-14T09:24:30.314273+00:00"
+}

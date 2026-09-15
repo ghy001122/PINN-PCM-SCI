@@ -1,0 +1,37 @@
+{
+  "aE": 0.0001092001577613529,
+  "bE": 0.6092410287493,
+  "components": {
+    "observation": 0.0001092001577613529,
+    "obs_V": 8.088715963105324e-05,
+    "obs_T": 7.69709927958956e-05,
+    "obs_phase": 0.00016974232085710989,
+    "boundary": 0.12091069515308117,
+    "initial": 4.0750470828505976e-33,
+    "thermal": 0.00977658878258105,
+    "phase": 0.0042860701691012654,
+    "electric": 0.0,
+    "objective": 0.6093502289070614
+  },
+  "status": "ONCE_PER_CLEAN_PARENT_SHARED",
+  "statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 0,
+      "adam_objective_gradient_evaluations": 0,
+      "audit_objective_evaluations": 1,
+      "audit_objective_gradient_evaluations": 0,
+      "optimizer_updates": 0
+    },
+    "electrical": {
+      "forward_queries": 158,
+      "zero_drive_queries": 108,
+      "factorizations": 50,
+      "forward_solves": 50,
+      "adjoint_solves": 0,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 2.6332375338462584e-15,
+      "max_adjoint_scaled_residual": 0.0
+    }
+  },
+  "reference_read": false
+}

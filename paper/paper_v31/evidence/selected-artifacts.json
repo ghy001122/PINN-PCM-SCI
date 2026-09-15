@@ -1,0 +1,39 @@
+{
+  "source_run": "outputs/runs/20260914-lf11-fullgrid",
+  "paths": [
+    "terminal-summary.json",
+    "frozen-config.json",
+    "calibration.json",
+    "calibration-pool.json",
+    "lbfgs-pool.json",
+    "audit-pool.json",
+    "parent.pt",
+    "focused-implementation-checks.json",
+    "input-identity.json",
+    "deployed-source-manifest.json",
+    "training-and-own-inference-complete.json",
+    "evaluation/results.json",
+    "evaluation/method-decision.json",
+    "evaluation/traces.npz",
+    "evaluation/snapshots.npz",
+    "phase-figure-input.npz",
+    "F_full/checkpoint.pt",
+    "F_full/terminal.json",
+    "F_full/adam-telemetry.jsonl",
+    "F_full/lbfgs-telemetry.jsonl",
+    "F_full/spatial-electric-diagnostic.json",
+    "F_full/paired-readout-identity.json",
+    "F_full/network/prediction.json",
+    "F_full/network/own-readout.npz",
+    "F_full/projected/prediction.json",
+    "F_full/projected/own-readout.npz"
+  ],
+  "full_predictions_included": false,
+  "full_reference_fields_included": false,
+  "operational_metadata_included": false,
+  "clean_seeds": [
+    29,
+    43
+  ],
+  "publication_status": "LOCAL_ONLY_UNPUBLISHED"
+}

@@ -1,0 +1,772 @@
+{
+  "status": "REPORTING_ONLY",
+  "pool": "original lbfgs physics times",
+  "rows": [
+    {
+      "time": 0.010215015633166138,
+      "mass": 0.0175,
+      "sampled": 8.954695341812787,
+      "full": 2.113861290440545,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 164.7752563845534,
+          "full_volume_contribution": 1.4932757609850151
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 6.8169793625939015,
+          "full_volume_contribution": 0.440973352517793
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.19391328144425038,
+          "full_volume_contribution": 0.1796121769377369
+        }
+      }
+    },
+    {
+      "time": 0.08074786095087089,
+      "mass": 0.0175,
+      "sampled": 6.94663325168902,
+      "full": 27.452244247324707,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 1220.7674333142813,
+          "full_volume_contribution": 11.063204864410675
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 170.10287074509878,
+          "full_volume_contribution": 11.003529451323578
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 5.814315715617232,
+          "full_volume_contribution": 5.3855099315904615
+        }
+      }
+    },
+    {
+      "time": 0.1115341188306147,
+      "mass": 0.0175,
+      "sampled": 1.8618224105531125,
+      "full": 23.960988650195056,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 786.1793778101196,
+          "full_volume_contribution": 7.124750611404209
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 169.3198149262947,
+          "full_volume_contribution": 10.952875528044688
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 6.351808378673319,
+          "full_volume_contribution": 5.883362510746162
+        }
+      }
+    },
+    {
+      "time": 0.1626578770684817,
+      "mass": 0.0175,
+      "sampled": 91.12079022083151,
+      "full": 22.606492612256357,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 706.136397590419,
+          "full_volume_contribution": 6.399361103163172
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 158.5546453079836,
+          "full_volume_contribution": 10.256503618360188
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 6.424429571641555,
+          "full_volume_contribution": 5.950627890732991
+        }
+      }
+    },
+    {
+      "time": 0.19524625074967625,
+      "mass": 0.0175,
+      "sampled": 9.287835626781055,
+      "full": 28.55845890749619,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 1369.2976388900283,
+          "full_volume_contribution": 12.409259852440883
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 158.69617546285886,
+          "full_volume_contribution": 10.265658850253683
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 6.352000221108365,
+          "full_volume_contribution": 5.883540204801623
+        }
+      }
+    },
+    {
+      "time": 0.23483468295698726,
+      "mass": 0.0175,
+      "sampled": 3.408628709610568,
+      "full": 48.15548673562828,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 2444.806364815163,
+          "full_volume_contribution": 22.156057681137412
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 236.188623906269,
+          "full_volume_contribution": 15.278451608936775
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 11.574604529613042,
+          "full_volume_contribution": 10.72097744555408
+        }
+      }
+    },
+    {
+      "time": 0.28874249561588555,
+      "mass": 0.0175,
+      "sampled": 19.605211273369317,
+      "full": 51.95684756835784,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 1259.001251806178,
+          "full_volume_contribution": 11.409698844493489
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 321.2979925798884,
+          "full_volume_contribution": 20.783963895011528
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 21.336771745050278,
+          "full_volume_contribution": 19.763184828852822
+        }
+      }
+    },
+    {
+      "time": 0.3315303608031147,
+      "mass": 0.0175,
+      "sampled": 3.6987449406815998,
+      "full": 5.117650496092228,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 74.40131372058434,
+          "full_volume_contribution": 0.6742619055927956
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 31.42025018245889,
+          "full_volume_contribution": 2.0324974336778094
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 2.6028514513593786,
+          "full_volume_contribution": 2.4108911568216245
+        }
+      }
+    },
+    {
+      "time": 0.37428833099639963,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 0.5444100243543254,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 0.5832664703726964,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 0.7978610062840701,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 0.8983164404301638,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 0.9343078849383412,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 1.0556806600129813,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 1.2243679774396625,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 1.2529616830276766,
+      "mass": 0.0175,
+      "sampled": 0.06392226459355735,
+      "full": 0.13317847445480294,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 5.594450990505275,
+          "full_volume_contribution": 0.050699712101454054
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.5624377742476022,
+          "full_volume_contribution": 0.03638269352164177
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.049766336120601495,
+          "full_volume_contribution": 0.04609606883170714
+        }
+      }
+    },
+    {
+      "time": 1.295273664212207,
+      "mass": 0.0175,
+      "sampled": 70.58048587994347,
+      "full": 28.487832359967776,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 1111.3362149394193,
+          "full_volume_contribution": 10.071484447888487
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 128.95370937255404,
+          "full_volume_contribution": 8.34169307503709
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 10.876820336887665,
+          "full_volume_contribution": 10.074654837042198
+        }
+      }
+    },
+    {
+      "time": 1.358693578064957,
+      "mass": 0.0175,
+      "sampled": 22.14090541797671,
+      "full": 29.83977930272001,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 951.5044707392793,
+          "full_volume_contribution": 8.62300926607472
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 165.5563185812375,
+          "full_volume_contribution": 10.709424358223801
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 11.34396294566423,
+          "full_volume_contribution": 10.507345678421494
+        }
+      }
+    },
+    {
+      "time": 1.3909157530963028,
+      "mass": 0.0175,
+      "sampled": 12.47561162520435,
+      "full": 25.86610222187038,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 681.4592456171238,
+          "full_volume_contribution": 6.175724413405184
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 163.44598249398666,
+          "full_volume_contribution": 10.572911992579762
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 9.843417884896558,
+          "full_volume_contribution": 9.117465815885437
+        }
+      }
+    },
+    {
+      "time": 1.4301578357113252,
+      "mass": 0.0175,
+      "sampled": 37.18770639899944,
+      "full": 21.759261929831837,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 446.2115744156789,
+          "full_volume_contribution": 4.04379239314209
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 157.3433563733072,
+          "full_volume_contribution": 10.17814836539831
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 8.137458754430696,
+          "full_volume_contribution": 7.537321171291433
+        }
+      }
+    },
+    {
+      "time": 1.4968523536829095,
+      "mass": 0.0175,
+      "sampled": 7.742575957622128,
+      "full": 66.57855640801276,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 4427.071362462805,
+          "full_volume_contribution": 40.12033422231917
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 247.58775342365908,
+          "full_volume_contribution": 16.015832799592946
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 11.273834694845485,
+          "full_volume_contribution": 10.442389386100631
+        }
+      }
+    },
+    {
+      "time": 1.5462443048405037,
+      "mass": 0.0175,
+      "sampled": 32.214756784155036,
+      "full": 55.76084883580042,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 1505.5781452783604,
+          "full_volume_contribution": 13.644301941585141
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 343.2655748530901,
+          "full_volume_contribution": 22.204991873309265
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 21.496955488157642,
+          "full_volume_contribution": 19.911555020906018
+        }
+      }
+    },
+    {
+      "time": 1.581426565887188,
+      "mass": 0.0175,
+      "sampled": 2.459421847555982,
+      "full": 5.500167992970848,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 91.67926239831381,
+          "full_volume_contribution": 0.8308433154847189
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 36.38855608886482,
+          "full_volume_contribution": 2.3538847219984427
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 2.499800221849055,
+          "full_volume_contribution": 2.315439955487687
+        }
+      }
+    },
+    {
+      "time": 1.6047156256917585,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 1.791683952848225,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 1.8745871702536712,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 2.045082321378088,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 2.0941874483797323,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 2.191695620729683,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 2.3042948668897743,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    },
+    {
+      "time": 2.4626651740955947,
+      "mass": 0.045,
+      "sampled": 0.0,
+      "full": 0.0,
+      "bins": {
+        "heater_adjacent": {
+          "cells": 29,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "other_boundary": {
+          "cells": 207,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        },
+        "interior": {
+          "cells": 2964,
+          "mean": 0.0,
+          "full_volume_contribution": 0.0
+        }
+      }
+    }
+  ],
+  "sampled_integral": 5.770620589149144,
+  "full_integral": 7.767335765584852,
+  "statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 0,
+      "adam_objective_gradient_evaluations": 0,
+      "audit_objective_evaluations": 0,
+      "audit_objective_gradient_evaluations": 0,
+      "optimizer_updates": 0
+    },
+    "electrical": {
+      "forward_queries": 16,
+      "zero_drive_queries": 16,
+      "factorizations": 0,
+      "forward_solves": 0,
+      "adjoint_solves": 0,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 0.0,
+      "max_adjoint_scaled_residual": 0.0
+    },
+    "explicit_work": {
+      "full_grid_network_evaluations": 16,
+      "explicit_face_evaluations": 16,
+      "thermal_phase_groups": 0,
+      "boundary_groups": 0,
+      "observation_groups": 0
+    }
+  },
+  "optimizer_updates": 0,
+  "reference_read": false
+}
