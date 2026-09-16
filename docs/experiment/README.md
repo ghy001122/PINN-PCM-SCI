@@ -1,6 +1,6 @@
 # Experiment ledger protocol
 
-最新：[电学消元与同层强基线终局](2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)。四角色合法，3000 Adam / 600 完整评估；D_E/P_E 对 B_E A/B 通过，P_E−D_E 未达，P_F 未触发。实际 GPU 已回收关机，paper_v28 已收口。
+最新：[完整新脉冲历史确认终局](2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)。新协议两组E均对F/projected及B_E通过A/B，严格双周期未过。两条参考/支持轨迹和四个固定终点已完成，实际GPU已回收关闭；paper_v32已收口。
 
 This directory stores compact, reviewable facts for every attempted run. Raw
 checkpoints and arrays stay under `outputs/runs/<run_id>/` and are not evidence
@@ -24,7 +24,7 @@ view. Smoke and pilot entries never vote in formal adjudication. A run's
 
 ## Latest bounded campaign
 
-The shared electrical-layer E0/D_E/P_E/B_E comparison is complete. Both trained roles pass A/B against the equally solved B_E, but P_E−D_E does not; P_F was not triggered. The [latest closeout](2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md) and paper_v28 preserve actual endpoints, accepted optimizers, function/phase evidence, counts and current-instance shutdown. The [V27 closeout](2026-09-12-phk-v23-lf11-joint-terminal-closeout.md) retains its six-endpoint negative comparisons and unrun D_N. Completion authorizes no new research or publication.
+The new finite two-pulse protocol is complete: both clean seeds pass A/B against the locked projected soft PINN and the same-solver interpolant. All strict event gates remain separate; no time-refinement branch was triggered. The [latest closeout](2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md) and paper_v32 preserve endpoints, optimizer states, actual counts, pulse-history evidence and current-instance shutdown. The [original-protocol confirmation](2026-09-14-phk-v23-lf11-fullgrid-terminal-closeout.md) and [electrical-layer comparison](2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md) remain historical evidence. Completion authorizes no new research or publication.
 
 ## Historical LF10 campaign
 

@@ -1,0 +1,392 @@
+{
+  "totals": {
+    "adam": 10800,
+    "complete_evaluations": 2400,
+    "E_forward": 39186,
+    "E_adjoint": 39186,
+    "calibration_forward": 100,
+    "calibration_adjoint": 0,
+    "inference_forward": 1390
+  },
+  "caps": {
+    "adam": 10800,
+    "complete_evaluations": 2400,
+    "E_forward": 54000,
+    "E_adjoint": 54000,
+    "calibration_forward": 1000,
+    "calibration_adjoint": 1000,
+    "inference_forward": 1390
+  },
+  "records": {
+    "29": {
+      "parent": {
+        "status": "LEGAL_FIXED_PARENT_NO_FIT_GATE",
+        "seed": 29,
+        "adam_updates": 2400,
+        "complete_evaluations": 600,
+        "lbfgs": {
+          "potential": {
+            "evaluations": 200,
+            "accepted_steps": 95,
+            "termination": "EVALUATION_BUDGET_EXHAUSTED",
+            "last_accepted_loss": 2.5620429680521207e-05,
+            "initial_loss": 8.585473497113702e-05,
+            "history_resumed": false,
+            "first_gate_accepted_evaluation": null
+          },
+          "temperature": {
+            "evaluations": 200,
+            "accepted_steps": 98,
+            "termination": "EVALUATION_BUDGET_EXHAUSTED",
+            "last_accepted_loss": 3.278380518865699e-05,
+            "initial_loss": 0.0002756423762950057,
+            "history_resumed": false,
+            "first_gate_accepted_evaluation": null
+          },
+          "phase": {
+            "evaluations": 200,
+            "accepted_steps": 99,
+            "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+            "last_accepted_loss": 3.936827025403947e-05,
+            "initial_loss": 0.00012039524833674462,
+            "history_resumed": false,
+            "first_gate_accepted_evaluation": null
+          }
+        },
+        "original_complete_objective": 0.5703990771345635,
+        "final_complete_objective": 9.77725051232177e-05,
+        "original_components": {
+          "obs_V": 0.004623708009124819,
+          "obs_T": 1.6648933185139836,
+          "obs_phase": 0.04168020488058211
+        },
+        "final_components": {
+          "obs_V": 7.686128904156364e-05,
+          "obs_T": 9.835141556597098e-05,
+          "obs_phase": 0.00011810481076211838
+        },
+        "electrical_forward": 0,
+        "electrical_adjoint": 0,
+        "reference_read": false,
+        "seed_rescue": false,
+        "old_V_gate_applied": false,
+        "observation_only_audits": 2
+      },
+      "calibration": {
+        "aE": 9.046665007474575e-05,
+        "bE": 0.4278354366241891,
+        "components": {
+          "observation": 9.046665007474575e-05,
+          "obs_V": 5.494372389614781e-05,
+          "obs_T": 9.835141556597098e-05,
+          "obs_phase": 0.00011810481076211838,
+          "boundary": 0.08502314249269644,
+          "initial": 3.866070309371079e-33,
+          "thermal": 0.0062693069470631,
+          "phase": 0.0018898655350577233,
+          "electric": 0.0,
+          "objective": 0.42792590327426383
+        },
+        "status": "ONCE_PER_CLEAN_PARENT_SHARED",
+        "statistics": {
+          "objectives": {
+            "complete_objective_gradient_evaluations": 0,
+            "adam_objective_gradient_evaluations": 0,
+            "audit_objective_evaluations": 1,
+            "audit_objective_gradient_evaluations": 0,
+            "optimizer_updates": 0
+          },
+          "electrical": {
+            "forward_queries": 158,
+            "zero_drive_queries": 108,
+            "factorizations": 50,
+            "forward_solves": 50,
+            "adjoint_solves": 0,
+            "zero_adjoint_queries": 0,
+            "max_forward_scaled_residual": 2.4550473614596076e-15,
+            "max_adjoint_scaled_residual": 0.0
+          }
+        },
+        "reference_read": false
+      },
+      "branches": {
+        "E": {
+          "complete": true,
+          "terminal": {
+            "status": "VALID_FIXED_ENDPOINT",
+            "role": "P_E",
+            "adam_updates": 1500,
+            "lbfgs": {
+              "evaluations": 300,
+              "accepted_steps": 145,
+              "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+              "last_accepted_loss": 0.47307251481563023,
+              "initial_loss": 0.9277074954378867,
+              "history_resumed": false,
+              "first_gate_accepted_evaluation": null
+            },
+            "statistics": {
+              "objectives": {
+                "complete_objective_gradient_evaluations": 300,
+                "adam_objective_gradient_evaluations": 1500,
+                "audit_objective_evaluations": 0,
+                "audit_objective_gradient_evaluations": 0,
+                "optimizer_updates": 1500
+              },
+              "electrical": {
+                "forward_queries": 59320,
+                "zero_drive_queries": 39712,
+                "factorizations": 19608,
+                "forward_solves": 19608,
+                "adjoint_solves": 19608,
+                "zero_adjoint_queries": 0,
+                "max_forward_scaled_residual": 4.037320241657616e-15,
+                "max_adjoint_scaled_residual": 2.6878880746898416e-14
+              }
+            },
+            "reference_read": false,
+            "elapsed_seconds_internal": 3621.895992713049,
+            "device": "cuda:0"
+          }
+        },
+        "F_raw": {
+          "complete": true,
+          "terminal": {
+            "status": "VALID_FIXED_ENDPOINT",
+            "role": "F_raw",
+            "adam_updates": 1500,
+            "lbfgs": {
+              "evaluations": 300,
+              "accepted_steps": 147,
+              "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+              "last_accepted_loss": 1.0008103837808455,
+              "initial_loss": 5.889452071997812,
+              "history_resumed": false,
+              "first_gate_accepted_evaluation": null
+            },
+            "statistics": {
+              "objectives": {
+                "complete_objective_gradient_evaluations": 300,
+                "adam_objective_gradient_evaluations": 1500,
+                "audit_objective_evaluations": 0,
+                "audit_objective_gradient_evaluations": 0,
+                "optimizer_updates": 1500
+              },
+              "electrical": {
+                "forward_queries": 7800,
+                "zero_drive_queries": 7800,
+                "factorizations": 0,
+                "forward_solves": 0,
+                "adjoint_solves": 0,
+                "zero_adjoint_queries": 0,
+                "max_forward_scaled_residual": 0.0,
+                "max_adjoint_scaled_residual": 0.0
+              },
+              "explicit_work": {
+                "full_grid_network_evaluations": 7800,
+                "explicit_face_evaluations": 7800,
+                "thermal_phase_groups": 15600,
+                "boundary_groups": 15600,
+                "observation_groups": 43720
+              }
+            },
+            "eta": 1.0,
+            "reference_read": false,
+            "device": "cuda:0"
+          }
+        }
+      }
+    },
+    "43": {
+      "parent": {
+        "status": "LEGAL_FIXED_PARENT_NO_FIT_GATE",
+        "seed": 43,
+        "adam_updates": 2400,
+        "complete_evaluations": 600,
+        "lbfgs": {
+          "potential": {
+            "evaluations": 200,
+            "accepted_steps": 96,
+            "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+            "last_accepted_loss": 5.9912007865299095e-05,
+            "initial_loss": 8.597079457991981e-05,
+            "history_resumed": false,
+            "first_gate_accepted_evaluation": null
+          },
+          "temperature": {
+            "evaluations": 200,
+            "accepted_steps": 99,
+            "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+            "last_accepted_loss": 3.1967955352486344e-05,
+            "initial_loss": 0.0002896892149062471,
+            "history_resumed": false,
+            "first_gate_accepted_evaluation": null
+          },
+          "phase": {
+            "evaluations": 200,
+            "accepted_steps": 99,
+            "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+            "last_accepted_loss": 3.770346253362045e-05,
+            "initial_loss": 0.0001320258056038443,
+            "history_resumed": false,
+            "first_gate_accepted_evaluation": null
+          }
+        },
+        "original_complete_objective": 0.5707392357111664,
+        "final_complete_objective": 0.00012958342575140593,
+        "original_components": {
+          "obs_V": 0.0046106674617052154,
+          "obs_T": 1.66592607741603,
+          "obs_phase": 0.041680962255763974
+        },
+        "final_components": {
+          "obs_V": 0.00017973602359589735,
+          "obs_T": 9.590386605745906e-05,
+          "obs_phase": 0.0001131103876008613
+        },
+        "electrical_forward": 0,
+        "electrical_adjoint": 0,
+        "reference_read": false,
+        "seed_rescue": false,
+        "old_V_gate_applied": false,
+        "observation_only_audits": 2
+      },
+      "calibration": {
+        "aE": 8.733967722147966e-05,
+        "bE": 0.5222233032660305,
+        "components": {
+          "observation": 8.733967722147966e-05,
+          "obs_V": 5.3004778006118665e-05,
+          "obs_T": 9.590386605745906e-05,
+          "obs_phase": 0.0001131103876008613,
+          "boundary": 0.10373521191305941,
+          "initial": 4.0750470828505976e-33,
+          "thermal": 0.008517585879833875,
+          "phase": 0.0021241452223664838,
+          "electric": 0.0,
+          "objective": 0.5223106429432519
+        },
+        "status": "ONCE_PER_CLEAN_PARENT_SHARED",
+        "statistics": {
+          "objectives": {
+            "complete_objective_gradient_evaluations": 0,
+            "adam_objective_gradient_evaluations": 0,
+            "audit_objective_evaluations": 1,
+            "audit_objective_gradient_evaluations": 0,
+            "optimizer_updates": 0
+          },
+          "electrical": {
+            "forward_queries": 158,
+            "zero_drive_queries": 108,
+            "factorizations": 50,
+            "forward_solves": 50,
+            "adjoint_solves": 0,
+            "zero_adjoint_queries": 0,
+            "max_forward_scaled_residual": 3.375180176912485e-15,
+            "max_adjoint_scaled_residual": 0.0
+          }
+        },
+        "reference_read": false
+      },
+      "branches": {
+        "E": {
+          "complete": true,
+          "terminal": {
+            "status": "VALID_FIXED_ENDPOINT",
+            "role": "P_E",
+            "adam_updates": 1500,
+            "lbfgs": {
+              "evaluations": 300,
+              "accepted_steps": 146,
+              "termination": "EVALUATION_BUDGET_EXHAUSTED",
+              "last_accepted_loss": 0.43788431990681936,
+              "initial_loss": 0.9558675175093653,
+              "history_resumed": false,
+              "first_gate_accepted_evaluation": null
+            },
+            "statistics": {
+              "objectives": {
+                "complete_objective_gradient_evaluations": 300,
+                "adam_objective_gradient_evaluations": 1500,
+                "audit_objective_evaluations": 0,
+                "audit_objective_gradient_evaluations": 0,
+                "optimizer_updates": 1500
+              },
+              "electrical": {
+                "forward_queries": 59308,
+                "zero_drive_queries": 39730,
+                "factorizations": 19578,
+                "forward_solves": 19578,
+                "adjoint_solves": 19578,
+                "zero_adjoint_queries": 0,
+                "max_forward_scaled_residual": 3.904140646319619e-15,
+                "max_adjoint_scaled_residual": 3.507596432595645e-14
+              }
+            },
+            "reference_read": false,
+            "elapsed_seconds_internal": 3566.8687950363383,
+            "device": "cuda:0"
+          }
+        },
+        "F_raw": {
+          "complete": true,
+          "terminal": {
+            "status": "VALID_FIXED_ENDPOINT",
+            "role": "F_raw",
+            "adam_updates": 1500,
+            "lbfgs": {
+              "evaluations": 300,
+              "accepted_steps": 149,
+              "termination": "EVALUATION_BUDGET_EXHAUSTED",
+              "last_accepted_loss": 0.9262118290971517,
+              "initial_loss": 2.634133579665014,
+              "history_resumed": false,
+              "first_gate_accepted_evaluation": null
+            },
+            "statistics": {
+              "objectives": {
+                "complete_objective_gradient_evaluations": 300,
+                "adam_objective_gradient_evaluations": 1500,
+                "audit_objective_evaluations": 0,
+                "audit_objective_gradient_evaluations": 0,
+                "optimizer_updates": 1500
+              },
+              "electrical": {
+                "forward_queries": 7800,
+                "zero_drive_queries": 7800,
+                "factorizations": 0,
+                "forward_solves": 0,
+                "adjoint_solves": 0,
+                "zero_adjoint_queries": 0,
+                "max_forward_scaled_residual": 0.0,
+                "max_adjoint_scaled_residual": 0.0
+              },
+              "explicit_work": {
+                "full_grid_network_evaluations": 7800,
+                "explicit_face_evaluations": 7800,
+                "thermal_phase_groups": 15600,
+                "boundary_groups": 15600,
+                "observation_groups": 43708
+              }
+            },
+            "eta": 1.0,
+            "reference_read": false,
+            "device": "cuda:0"
+          }
+        }
+      }
+    }
+  },
+  "cross_case_random_initial_identity": {
+    "29": {
+      "exact_same_zero_update_tensors": true,
+      "old_trained_weights_loaded": false,
+      "verification_after_training": true
+    },
+    "43": {
+      "exact_same_zero_update_tensors": true,
+      "old_trained_weights_loaded": false,
+      "verification_after_training": true
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "METADATA_CLARIFICATION_NO_SCIENTIFIC_CHANGE",
+  "run_base_commit": "c347b3f561c033271d2e480fa62191d68cb42870",
+  "actual_implementation_identity": "deployed selected-files.json and uploaded archive; not inherited source_commit alone",
+  "retained_template_fields": {
+    "source_commit": "7f4d553f... is inherited template provenance, not the current runtime checkout",
+    "budget": "legacy single-soft-arm accounting; current campaign bounds are case-and-budget.json plus per-seed hard limits",
+    "parameter_change": "legacy F_full description, unused by new protocol entry",
+    "electric_spatial_reduction": "top-level template full is overridden to sampled by prepare_seed(selected=F_raw) before either branch starts; B_E does not use residual reduction",
+    "confirmation.conditional_on_unique_comparator": "unused legacy field; F_raw is explicitly locked by the current user protocol",
+    "confirmation.inference_limit": {
+      "value": 1112,
+      "scope": "four neural projections only",
+      "new_shared_B_E": 278,
+      "campaign_total": 1390
+    },
+    "zero_update_times": "unused legacy diagnostic list; no extra zero-update diagnostic run"
+  },
+  "effective_protocol": {
+    "case_id": "lf11-history-gap-1p01",
+    "seeds": [
+      29,
+      43
+    ],
+    "soft": "F_raw",
+    "eta": 1.0,
+    "electric_spatial_reduction": "sampled",
+    "electric_cells": 128,
+    "parent_adam_per_seed": 2400,
+    "parent_full_evaluations_per_seed": 600,
+    "branch_adam": 1500,
+    "branch_full_evaluations": 300,
+    "total_adam": 10800,
+    "total_full_evaluations": 2400,
+    "total_E_forward_cap": 54000,
+    "total_E_adjoint_cap": 54000,
+    "total_inference_forward_cap": 1390
+  },
+  "no_runtime_config_rewritten": true,
+  "no_retraining": true,
+  "no_budget_expansion": true,
+  "reason": "Retain the actual frozen runtime while preventing unused template metadata from being mistaken for V32 scientific settings."
+}

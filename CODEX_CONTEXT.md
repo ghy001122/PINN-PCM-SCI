@@ -1,6 +1,12 @@
 # Codex 项目上下文
 
-## 当前V31：全空间反事实与确认已完成
+## 当前V32：完整新脉冲协议确认已完成
+
+2026-09-16用户另行授权V32精选成果提交云端及[独立复评交付](docs/notes/2026-09-16-lf11-v32-results-cloud-review-handoff.md)。发布分支为`codex/v32-research-results`，与科学执行阶段分开记录；不授权新训练、求解或stress读取。
+
+VERIFIED：按[用户原指令](docs/notes/2026-09-15-lf11-protocol-authorized-sprint.md)，两个新seed的E均对F/projected和B_E通过原A/B。新参考/支持、训练、物理历史与完整事件评价已完成；严格双周期仍未通过，GPU已回收关闭，条件时间细化未触发。本轮[paper_v32](paper/paper_v32/README.md)与[终局](docs/experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)保存实际结果。按结果路由进入成稿，不继续加模块；新科学执行未授权，见[当前阶段](active_phase.md)和[下一计划](docs/plans/NEXT_ACTIONS.md)。新case使用自身support是适配，不是零样本/formal OOD；以下保留历史。
+
+## 历史V31：全空间反事实与确认已完成
 
 实际结果以[paper_v31](paper/paper_v31/README.md)、[状态](PROJECT_STATE.md)和[下一计划](docs/plans/NEXT_ACTIONS.md)为准。本轮实际GPU批次均已回收关闭；新的科学扩展另行授权，后续V30及更早段落保留历史身份。
 

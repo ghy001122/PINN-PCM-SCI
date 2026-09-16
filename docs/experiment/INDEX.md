@@ -134,48 +134,4 @@ This is a generated view of the append-only `index.jsonl` ledger.
 | 20260913-lf11-remaining-pde-terminal | development | FIXED_PARENT_CONTINUATION_ORIGINAL_PDE_AND_REFERENCE_BLIND_GLOBAL_STRENGTH | SEPARATE_RECONSTRUCTION_A_AND_LIMITED_FUNCTION_B | lf11-fixed-parent-remaining-pde-reference-blind-strength | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | NO_MATCHED_INCREMENT | [manifests/20260913-lf11-remaining-pde-terminal.json](manifests/20260913-lf11-remaining-pde-terminal.json) |
 | 20260913-lf11-training-coupling-terminal | development | TWO_EXPLICIT_SOFT_ELECTRIC_PINNS_WITH_PAIRED_NETWORK_AND_FIXED_STATE_SOLVED_READOUTS | SEPARATE_RECONSTRUCTION_A_AND_LIMITED_FUNCTION_B | lf11-training-coupling-versus-posthoc-electrical-repair | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | MATCHED_SAME_LAYER_OVER_BOTH_PROJECTED_CONTROLS | [manifests/20260913-lf11-training-coupling-terminal.json](manifests/20260913-lf11-training-coupling-terminal.json) |
 | 20260914-lf11-fullgrid-terminal | development | FULL_SPATIAL_SOFT_ELECTRIC_COUNTERFACTUAL_AND_CONDITIONAL_CLEAN_PAIRS | SEPARATE_RECONSTRUCTION_A_AND_LIMITED_FUNCTION_B | lf11-fullgrid-counterfactual-clean-confirmation | PHK_V21_NOMINAL_FULL | 17 | COMPLETE | UNIQUE_COMPARATOR_LOCKED | [manifests/20260914-lf11-fullgrid-terminal.json](manifests/20260914-lf11-fullgrid-terminal.json) |
-
-# PHK-V2.3 LF5 temporal zero-level pilot (2026-09-05)
-
-- [CPU-T qualification](2026-09-05-phk-v23-lf5-cpu-qualification.md): `LF5_TZL_ALIGNMENT_NOT_SUPPORTED_CPU`; zero updates. A later explicit user override authorizes the unchanged DEV-T only as post-qualification exploratory evidence.
-- [Prior-art closure](../references/2026-09-05-phk-v23-lf5-temporal-zero-level-prior-art.md): bounded eight-source nearest-neighbour closure.
-- [ADR 0063](../adr/0063-activate-phk-v23-lf5-temporal-zero-level-pilot.md): frozen combination pilot and CPU-first stop semantics.
-- [Terminal closeout](2026-09-05-phk-v23-lf5-terminal-closeout.md): exploratory DEV-T completed 400 updates, then failed the frozen temporal-stream identity; P0 was not run and no candidate was established.
-- [ADR 0064](../adr/0064-close-phk-v23-lf5-temporal-zero-level-pilot.md): closes LF5 as `LF5_NUMERICAL_OR_IDENTITY_INVALID` with `STOP_NO_SCIENTIFIC_RETRY`.
-
-# PHK-V2.3 LF6 event-frontier pilot (2026-09-06)
-
-- [CPU-F qualification](2026-09-06-phk-v23-lf6-cpu-qualification.md): `LF6_CPU_F_QUALIFICATION_PASS`; zero optimizer updates, with exact rank geometry, matched streams, fixed blind pool and historical DEV-M fallback re-audited.
-- [Prior-art closure](../references/2026-09-06-phk-v23-lf6-event-frontier-prior-art.md): bounded six-source nearest-neighbour closure with no exact functional collision found.
-- [ADR 0065](../adr/0065-activate-phk-v23-lf6-event-frontier-pilot.md): freezes the matched DEV-U/DEV-R screen, safety-gated endpoint selection and conditional P0.
-- [Terminal closeout](2026-09-06-phk-v23-lf6-terminal-closeout.md): DEV-R passed safety and entered P0; neither development arm passed strict, and P0 reduced the blind physics objective while catastrophically failing field and event preservation.
-- [ADR 0066](../adr/0066-close-phk-v23-lf6-event-frontier-pilot.md): closes LF6 as `LF6_P0_PRESERVATION_FAILED`, with `NO_RANK_SPECIFIC_INCREMENT`, no candidate and no next authorization.
-
-# PHK-V2.3 LF7 competence-filtered refinement (2026-09-07)
-
-- [CPU qualification](2026-09-07-phk-v23-lf7-cpu-qualification.md): `LF7_CPU_QUALIFICATION_PASS`; zero optimizer updates, exact DEV-R and all 1,200 physics batches revalidated with rollback/RNG checks.
-- [Prior-art closure](../references/2026-09-07-phk-v23-lf7-constrained-refinement-prior-art.md): bounded six-source primary-source closure; constrained-optimization primitives remain attributed.
-- [ADR 0067](../adr/0067-activate-phk-v23-lf7-competence-filtered-refinement.md): freezes P0-S versus fresh P0-F and the safety/strict/local/direct evidence hierarchy.
-- [Terminal closeout](2026-09-07-phk-v23-lf7-terminal-closeout.md): P0-S completed as a valid negative arm; P0-F had no valid endpoint after a post-step rollback identity failure, so the matched filter screen is incomplete.
-- [ADR 0068](../adr/0068-close-phk-v23-lf7-competence-filtered-refinement.md): closes LF7 as `LF7_MATCHED_SCREEN_INCOMPLETE_IDENTITY_INVALID`, with no mechanism attribution, candidate or next authorization.
-
-# PHK-V2.3 LF8 identity-correct competence-filter completion (2026-09-08)
-
-- [CPU qualification](2026-09-08-phk-v23-lf8-cpu-qualification.md): `LF8_CPU_QUALIFICATION_PASS`; zero scientific updates, with two real-model nonempty-Adam mutate/reject/restore cycles and a finite real physics backward.
-- [ADR 0069](../adr/0069-activate-phk-v23-lf8-competence-filter-completion.md): freezes mandatory P0-F*, valid-prefix semantics and the conditional accepted-schedule control.
-- [Terminal closeout](2026-09-08-phk-v23-lf8-terminal-closeout.md): the corrected filter retained one safety-valid 25-update prefix, then stalled at the minimum frozen rate because temperature preservation failed; the conditional control was not run.
-- [ADR 0070](../adr/0070-close-phk-v23-lf8-competence-filter-completion.md): closes LF8 as `LF8_FILTER_STALLED_WITH_VALID_PREFIX`, closes further strong-form rescue and leaves mixed weak/control-volume physics as an unauthorized next recommendation.
-
-# PHK-V2.3 LF9 equation-routed thermal-CV refinement (2026-09-08)
-
-- [CPU qualification](2026-09-08-phk-v23-lf9-cpu-qualification.md): `LF9_CPU_QUALIFICATION_PASS`; zero scientific updates, with causal CV training ledger, disjoint one-cell/2×2 blind ledgers, exact normalization, routing/coupling and rollback checks.
-- [ADR 0071](../adr/0071-activate-phk-v23-lf9-equation-routed-thermal-cv-refinement.md): freezes mandatory ER-S/ER-CV screens, conditional filtered continuation, cloud-only `PRELOCAL_INTERNAL_PARETO` and post-shutdown complete Pareto semantics.
-- [Terminal closeout](2026-09-08-phk-v23-lf9-terminal-closeout.md): both valid matched screens retained one 25-update safety prefix and stalled at the minimum frozen rate on temperature preservation; full/control were not run.
-- [ADR 0072](../adr/0072-close-phk-v23-lf9-equation-routed-thermal-cv-refinement.md): closes LF9 as `LF9_NO_SAFE_MIXED_FORM_SCREEN`, with no complete internal PINN Pareto, candidate, rescue or next authorization.
-
-# PHK-V2.3 LF10 feasible-direction and headline replication (2026-09-09)
-
-- [CPU qualification](2026-09-09-phk-v23-lf10-cpu-qualification.md): `LF10_CPU_QUALIFICATION_PASS`; zero scientific updates, same-batch DEV-R preservation baselines, projection geometry and all mandatory streams materialized.
-- [ADR 0073](../adr/0073-activate-phk-v23-lf10-feasible-direction-replication.md): activates mandatory CTRL/PROJ screens, a conditional full path, and LF4/LF6 streams 23/29 evidence replications.
-- [Terminal closeout](2026-09-09-phk-v23-lf10-terminal-closeout.md): CTRL/PROJ each retained a valid 25-update safety prefix but no extended feasible path; full/control were not run, while interface exposure and physics forgetting replicated under the frozen multi-stream rules.
-- [ADR 0074](../adr/0074-close-phk-v23-lf10-feasible-direction-replication.md): closes LF10 with no PINN Pareto or candidate, stress sealed/unread and no next research execution authorization.
+| 20260915-lf11-protocol-terminal | development | COMPLETE_NEW_PROTOCOL_CASE_ADAPTATION_TWO_CLEAN_PAIRED_INITIALIZATIONS | SEPARATE_RECONSTRUCTION_A_AND_LIMITED_FUNCTION_B | lf11-training-electrical-elimination-vs-locked-soft-projection | lf11-history-gap-1p01 | 29 | COMPLETE | BOTH_NEW_SEEDS_PASS_A_B_VS_SOFT_AND_B_E_STRICT_NOT_PASSED | [manifests/20260915-lf11-protocol-terminal.json](manifests/20260915-lf11-protocol-terminal.json) |

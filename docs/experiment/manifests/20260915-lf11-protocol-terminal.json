@@ -1,0 +1,199 @@
+{
+  "actual_budget": {
+    "E_adjoint": 39186,
+    "E_forward": 39186,
+    "F_training_linear_solves": 0,
+    "accepted_LBFGS_steps": 1173,
+    "adam": 10800,
+    "calibration_adjoint": 0,
+    "calibration_forward": 100,
+    "complete_evaluations": 2400,
+    "conditional_reference_steps": 0,
+    "inference_forward": 1390,
+    "new_analytic_IC_positions": 231,
+    "new_case_count": 1,
+    "new_fresh_parents": 2,
+    "new_observation_scalar_values": 86625,
+    "primary_internal_solver_counts": {
+      "reference": {
+        "coupled_blocks_total": 12909,
+        "electric_linear_solves_total": 16910,
+        "final_residual_evaluations_total": 4000,
+        "linear_solves_total": 46027,
+        "maximum_phase_candidate_residual_inf": 9.983286961869065e-11,
+        "output_clipping_count": 0,
+        "phase_bound_rejections_total": 0,
+        "phase_decrease_rejections_total": 0,
+        "phase_iterations_total": 16208,
+        "phase_jacobian_evaluations_total": 29117,
+        "phase_linear_solves_total": 16208,
+        "phase_residual_evaluations_total": 45325,
+        "phase_solver_calls_total": 12909,
+        "thermal_linear_solves_total": 12909,
+        "time_steps_total": 4000
+      },
+      "support": {
+        "coupled_blocks_total": 3707,
+        "electric_linear_solves_total": 4717,
+        "final_residual_evaluations_total": 1009,
+        "linear_solves_total": 14476,
+        "maximum_phase_candidate_residual_inf": 9.930573637711992e-11,
+        "output_clipping_count": 0,
+        "phase_bound_rejections_total": 0,
+        "phase_decrease_rejections_total": 0,
+        "phase_iterations_total": 6052,
+        "phase_jacobian_evaluations_total": 9759,
+        "phase_linear_solves_total": 6052,
+        "phase_residual_evaluations_total": 15811,
+        "phase_solver_calls_total": 3707,
+        "thermal_linear_solves_total": 3707,
+        "time_steps_total": 1000
+      }
+    },
+    "primary_main_steps": 5000,
+    "primary_trajectories": 2,
+    "reference_linear_solves": 60503,
+    "scientific_retries": 0,
+    "seed_rescues": 0,
+    "seed_values": [
+      29,
+      43
+    ]
+  },
+  "artifacts": {
+    "closeout": "docs/experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md",
+    "compute_closure": "outputs/runs/20260915-lf11-protocol-history/compute-closure.json",
+    "conditional_decision": "outputs/runs/20260915-lf11-protocol-history/conditional-decision.json",
+    "evaluation": "outputs/runs/20260915-lf11-protocol-history/evaluation/results.json",
+    "paper": "paper/paper_v32/manuscript.md",
+    "reproduction": "paper/paper_v32/reproduction.md",
+    "selected_evidence": "paper/paper_v32/evidence/README.md",
+    "terminal_summary": "outputs/runs/20260915-lf11-protocol-history/terminal-summary.json"
+  },
+  "case_id": "lf11-history-gap-1p01",
+  "checkpoint": {
+    "accepted_optimizer_in_final_checkpoint": true,
+    "actual_paired_seeds": [
+      29,
+      43
+    ],
+    "aggregate_seed_field": 29,
+    "pairs": {
+      "29": {
+        "E": "outputs/runs/20260915-lf11-protocol-history/seed-29/E/checkpoint.pt",
+        "F_raw": "outputs/runs/20260915-lf11-protocol-history/seed-29/F_raw/checkpoint.pt"
+      },
+      "43": {
+        "E": "outputs/runs/20260915-lf11-protocol-history/seed-43/E/checkpoint.pt",
+        "F_raw": "outputs/runs/20260915-lf11-protocol-history/seed-43/F_raw/checkpoint.pt"
+      }
+    },
+    "parents": {
+      "29": "outputs/runs/20260915-lf11-protocol-history/seed-29/parent.pt",
+      "43": "outputs/runs/20260915-lf11-protocol-history/seed-43/parent.pt"
+    }
+  },
+  "claim_status": "VALID_NEW_PROTOCOL_TWO_CLEAN_PAIRS_COMPLETE",
+  "code_identity": {
+    "actual_deployed_sources": "paper/paper_v32/evidence/deployed-files.json",
+    "base_commit": "c347b3f561c033271d2e480fa62191d68cb42870",
+    "exact_runtime_sources": "paper/paper_v32/evidence/runtime-sources",
+    "metadata_clarification": "paper/paper_v32/evidence/metadata-clarification.json",
+    "published": false,
+    "scientific_training_sources_frozen_during_updates": true
+  },
+  "command": [
+    "python -m pinn_pcm_sci.phk_v23_lf11_protocol_reference support",
+    "python -m pinn_pcm_sci.phk_v23_lf11_protocol_reference reference",
+    "python -m pinn_pcm_sci.phk_v23_lf11_protocol_train --device cuda:0",
+    "python -m pinn_pcm_sci.phk_v23_lf11_protocol_evaluate",
+    "python -m pinn_pcm_sci.phk_v23_lf11_protocol_paper"
+  ],
+  "ended_at": "2026-09-15T15:37:22.266820+00:00",
+  "environment": {
+    "compute_stopped_before_reference_read": true,
+    "device": "Tesla V100-PCIE-32GB",
+    "dtype": "float64",
+    "gpu_shutdown_confirmed": true,
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1",
+    "torch": "2.5.1+cu118"
+  },
+  "evaluator_id": "lf11-v32-finite-two-pulse-common-FV-inherited-gates",
+  "evidence_identity": "ONE_NEW_COMPLETE_PROTOCOL_TWO_FRESH_PAIRED_SEEDS_CASE_SPECIFIC_SUPPORT",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_LF11_NEW_PROTOCOL",
+  "failure_class": null,
+  "gate": "SEPARATE_RECONSTRUCTION_A_AND_LIMITED_FUNCTION_B",
+  "gate_outcome": "BOTH_NEW_SEEDS_PASS_A_B_VS_SOFT_AND_B_E_STRICT_NOT_PASSED",
+  "method_id": "lf11-training-electrical-elimination-vs-locked-soft-projection",
+  "numerical_validity": "VALID_PRIMARY_REFERENCES_AND_FOUR_FIXED_ENDPOINTS",
+  "physical_contract_id": "PHK_V21_MATERIAL_WITH_AUTHORIZED_FINITE_TWO_PULSE_GAP_1P01",
+  "planned_budget": {
+    "E_adjoint": 54000,
+    "E_forward": 54000,
+    "adam": 10800,
+    "calibration_adjoint": 1000,
+    "calibration_forward": 1000,
+    "complete_evaluations": 2400,
+    "conditional_reference": {
+      "coupled_blocks": 240000,
+      "dt": 0.0003125,
+      "electric_linear_solves": 480001,
+      "final_residual_evaluations": 240000,
+      "main_steps": 8000,
+      "note": "Phase line-search residual helper also builds Jacobians; reported Jacobian counter counts Newton bases only.",
+      "nx": 160,
+      "nz": 80,
+      "phase_calls": 240000,
+      "phase_jacobian_evaluations_reported": 7440000,
+      "phase_linear_solves": 7200000,
+      "phase_residual_evaluations": 158640000,
+      "save_every": 8,
+      "thermal_factorizations": 1,
+      "thermal_linear_solves": 240000,
+      "trigger_required": true
+    },
+    "inference_forward": 1390,
+    "primary_internal_bounds": {
+      "reference": {
+        "coupled_blocks": 120000,
+        "electric_linear_solves": 240001,
+        "final_residual_evaluations": 120000,
+        "main_steps": 4000,
+        "note": "Phase line-search residual helper also builds Jacobians; reported Jacobian counter counts Newton bases only.",
+        "phase_calls": 120000,
+        "phase_jacobian_evaluations_reported": 3720000,
+        "phase_linear_solves": 3600000,
+        "phase_residual_evaluations": 79320000,
+        "thermal_factorizations": 1,
+        "thermal_linear_solves": 120000
+      },
+      "support": {
+        "coupled_blocks": 30000,
+        "electric_linear_solves": 60001,
+        "final_residual_evaluations": 30000,
+        "main_steps": 1000,
+        "note": "Phase line-search residual helper also builds Jacobians; reported Jacobian counter counts Newton bases only.",
+        "phase_calls": 30000,
+        "phase_jacobian_evaluations_reported": 930000,
+        "phase_linear_solves": 900000,
+        "phase_residual_evaluations": 19830000,
+        "thermal_factorizations": 1,
+        "thermal_linear_solves": 30000
+      }
+    },
+    "primary_main_steps": 5000
+  },
+  "replay_of": null,
+  "route_disposition": "ENTER_MANUSCRIPT_NO_ADDITIONAL_MODULE",
+  "run_id": "20260915-lf11-protocol-terminal",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "COMPLETE_NEW_PROTOCOL_CASE_ADAPTATION_TWO_CLEAN_PAIRED_INITIALIZATIONS",
+  "seed": 29,
+  "split_id": "NEW_COMPLETE_PROTOCOL_CASE_ADAPTATION_NO_ZERO_SHOT_OR_FORMAL_OOD",
+  "started_at": "2026-09-15T10:52:14.989310+00:00",
+  "supersedes": null,
+  "tier": "development"
+}

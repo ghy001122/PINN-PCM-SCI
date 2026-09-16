@@ -1,0 +1,476 @@
+{
+  "status": "VALID_NEW_PROTOCOL_TWO_CLEAN_PAIRS_COMPLETE",
+  "phase": "COMPLETE",
+  "case_id": "lf11-history-gap-1p01",
+  "seeds": [
+    29,
+    43
+  ],
+  "result_route": "ENTER_MANUSCRIPT_NO_ADDITIONAL_MODULE",
+  "decisions": {
+    "29": {
+      "E_vs_soft": {
+        "A": {
+          "passed": true,
+          "gain": {
+            "S": true,
+            "Ephi": true
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.13881318136769083,
+            "Ephi": -0.2021982252362632,
+            "ET": -0.05728174569683686,
+            "EI": -0.5619668946834568,
+            "EV": -0.5788651406348853
+          }
+        },
+        "B": {
+          "passed": true,
+          "gain": {
+            "bottom_current_NRMSE": true,
+            "power_trace_NRMSE": true
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": true
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": -0.5619668946833628,
+            "power_trace_NRMSE": -0.5720784634702211,
+            "S": -0.13881318136769083,
+            "Ephi": -0.2021982252362632,
+            "ET": -0.05728174569683686,
+            "EV": -0.5788651406348853,
+            "EI": -0.5619668946834568
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "soft_vs_E": {
+        "A": {
+          "passed": false,
+          "gain": {
+            "S": false,
+            "Ephi": false
+          },
+          "noninferior": {
+            "ET": false,
+            "EI": false,
+            "EV": false
+          },
+          "relative_changes": {
+            "S": 0.16118823275552047,
+            "Ephi": 0.253444190815623,
+            "ET": 0.06076231730463126,
+            "EI": 1.2829324721412398,
+            "EV": 1.3745362744550715
+          }
+        },
+        "B": {
+          "passed": false,
+          "gain": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false
+          },
+          "noninferior": {
+            "S": false,
+            "Ephi": false,
+            "ET": false,
+            "EV": false,
+            "EI": false
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": 1.2829324721407498,
+            "power_trace_NRMSE": 1.3368770081297607,
+            "S": 0.16118823275552047,
+            "Ephi": 0.253444190815623,
+            "ET": 0.06076231730463126,
+            "EV": 1.3745362744550715,
+            "EI": 1.2829324721412398
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "E_vs_B_E": {
+        "A": {
+          "passed": true,
+          "gain": {
+            "S": true,
+            "Ephi": true
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.31057225032232477,
+            "Ephi": -0.2554942812405865,
+            "ET": -0.1389406394364185,
+            "EI": -0.503641859423105,
+            "EV": -0.47828443706591495
+          }
+        },
+        "B": {
+          "passed": true,
+          "gain": {
+            "bottom_current_NRMSE": true,
+            "power_trace_NRMSE": true
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": true
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": -0.5036418594229781,
+            "power_trace_NRMSE": -0.512268450164135,
+            "S": -0.31057225032232477,
+            "Ephi": -0.2554942812405865,
+            "ET": -0.1389406394364185,
+            "EV": -0.47828443706591495,
+            "EI": -0.503641859423105
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "soft_vs_B_E": {
+        "A": {
+          "passed": false,
+          "gain": {
+            "S": true,
+            "Ephi": false
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": false,
+            "EV": false
+          },
+          "relative_changes": {
+            "S": -0.19944460973916492,
+            "Ephi": -0.06680363179200309,
+            "ET": -0.08662067735173126,
+            "EI": 0.13315211693463982,
+            "EV": 0.23883252913473277
+          }
+        },
+        "B": {
+          "passed": false,
+          "gain": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": false,
+            "EI": false
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": 0.13315211693468634,
+            "power_trace_NRMSE": 0.13976864495092733,
+            "S": -0.19944460973916492,
+            "Ephi": -0.06680363179200309,
+            "ET": -0.08662067735173126,
+            "EV": 0.23883252913473277,
+            "EI": 0.13315211693463982
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      }
+    },
+    "43": {
+      "E_vs_soft": {
+        "A": {
+          "passed": true,
+          "gain": {
+            "S": true,
+            "Ephi": true
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.1037114343487054,
+            "Ephi": -0.20305428005290768,
+            "ET": -0.03925397189361796,
+            "EI": -0.7719988678728424,
+            "EV": -0.7644081553871558
+          }
+        },
+        "B": {
+          "passed": true,
+          "gain": {
+            "bottom_current_NRMSE": true,
+            "power_trace_NRMSE": true
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": true
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": -0.7719988678728242,
+            "power_trace_NRMSE": -0.7826085123528717,
+            "S": -0.1037114343487054,
+            "Ephi": -0.20305428005290768,
+            "ET": -0.03925397189361796,
+            "EV": -0.7644081553871558,
+            "EI": -0.7719988678728424
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "soft_vs_E": {
+        "A": {
+          "passed": false,
+          "gain": {
+            "S": false,
+            "Ephi": false
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": false,
+            "EV": false
+          },
+          "relative_changes": {
+            "S": 0.11571210246706956,
+            "Ephi": 0.25479060238429796,
+            "ET": 0.04085780294193569,
+            "EI": 3.385943134011696,
+            "EV": 3.244629102689581
+          }
+        },
+        "B": {
+          "passed": false,
+          "gain": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false
+          },
+          "noninferior": {
+            "S": false,
+            "Ephi": false,
+            "ET": true,
+            "EV": false,
+            "EI": false
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": 3.385943134011344,
+            "power_trace_NRMSE": 3.599996121390036,
+            "S": 0.11571210246706956,
+            "Ephi": 0.25479060238429796,
+            "ET": 0.04085780294193569,
+            "EV": 3.244629102689581,
+            "EI": 3.385943134011696
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "E_vs_B_E": {
+        "A": {
+          "passed": true,
+          "gain": {
+            "S": true,
+            "Ephi": true
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": true,
+            "EV": true
+          },
+          "relative_changes": {
+            "S": -0.31860557373797505,
+            "Ephi": -0.27050756777196927,
+            "ET": -0.14368608182872591,
+            "EI": -0.6594829325321182,
+            "EV": -0.6405948604678643
+          }
+        },
+        "B": {
+          "passed": true,
+          "gain": {
+            "bottom_current_NRMSE": true,
+            "power_trace_NRMSE": true
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": true,
+            "EI": true
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": -0.6594829325320847,
+            "power_trace_NRMSE": -0.6716551565110066,
+            "S": -0.31860557373797505,
+            "Ephi": -0.27050756777196927,
+            "ET": -0.14368608182872591,
+            "EV": -0.6405948604678643,
+            "EI": -0.6594829325321182
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      },
+      "soft_vs_B_E": {
+        "A": {
+          "passed": false,
+          "gain": {
+            "S": true,
+            "Ephi": false
+          },
+          "noninferior": {
+            "ET": true,
+            "EI": false,
+            "EV": false
+          },
+          "relative_changes": {
+            "S": -0.23975999206585352,
+            "Ephi": -0.08463975152980269,
+            "ET": -0.10869897650364717,
+            "EI": 0.4934884940745536,
+            "EV": 0.525541514914313
+          }
+        },
+        "B": {
+          "passed": false,
+          "gain": {
+            "bottom_current_NRMSE": false,
+            "power_trace_NRMSE": false
+          },
+          "noninferior": {
+            "S": true,
+            "Ephi": true,
+            "ET": true,
+            "EV": false,
+            "EI": false
+          },
+          "relative_changes": {
+            "bottom_current_NRMSE": 0.49348849407458095,
+            "power_trace_NRMSE": 0.510385006527788,
+            "S": -0.23975999206585352,
+            "Ephi": -0.08463975152980269,
+            "ET": -0.10869897650364717,
+            "EV": 0.525541514914313,
+            "EI": 0.4934884940745536
+          },
+          "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+        }
+      }
+    }
+  },
+  "strict_device_pass": {
+    "B_E": false,
+    "29/E/projected": false,
+    "29/F_raw/network": false,
+    "29/F_raw/projected": false,
+    "43/E/projected": false,
+    "43/F_raw/network": false,
+    "43/F_raw/projected": false
+  },
+  "E_missing_strict_condition": {
+    "29": {
+      "cycle": 1,
+      "condition": "recall >= 0.9",
+      "actual": 0.8666065795403333
+    },
+    "43": {
+      "cycle": 1,
+      "condition": "recall >= 0.9",
+      "actual": 0.8755069851284363
+    }
+  },
+  "actual_training_and_inference": {
+    "adam": 10800,
+    "complete_evaluations": 2400,
+    "E_forward": 39186,
+    "E_adjoint": 39186,
+    "calibration_forward": 100,
+    "calibration_adjoint": 0,
+    "inference_forward": 1390
+  },
+  "accepted_lbfgs_steps": 1173,
+  "actual_reference_generation": {
+    "support": {
+      "time_steps_total": 1000,
+      "coupled_blocks_total": 3707,
+      "electric_linear_solves_total": 4717,
+      "thermal_linear_solves_total": 3707,
+      "phase_solver_calls_total": 3707,
+      "phase_iterations_total": 6052,
+      "phase_residual_evaluations_total": 15811,
+      "phase_jacobian_evaluations_total": 9759,
+      "phase_linear_solves_total": 6052,
+      "phase_bound_rejections_total": 0,
+      "phase_decrease_rejections_total": 0,
+      "output_clipping_count": 0,
+      "final_residual_evaluations_total": 1009,
+      "maximum_phase_candidate_residual_inf": 9.930573637711992e-11,
+      "linear_solves_total": 14476
+    },
+    "reference": {
+      "time_steps_total": 4000,
+      "coupled_blocks_total": 12909,
+      "electric_linear_solves_total": 16910,
+      "thermal_linear_solves_total": 12909,
+      "phase_solver_calls_total": 12909,
+      "phase_iterations_total": 16208,
+      "phase_residual_evaluations_total": 45325,
+      "phase_jacobian_evaluations_total": 29117,
+      "phase_linear_solves_total": 16208,
+      "phase_bound_rejections_total": 0,
+      "phase_decrease_rejections_total": 0,
+      "output_clipping_count": 0,
+      "final_residual_evaluations_total": 4000,
+      "maximum_phase_candidate_residual_inf": 9.983286961869065e-11,
+      "linear_solves_total": 46027
+    }
+  },
+  "primary_trajectory_count": 2,
+  "primary_main_steps": 5000,
+  "reference_linear_solves": 60503,
+  "conditional_time_refinement": "NOT_TRIGGERED_NOT_RUN",
+  "reference_read_for_training": false,
+  "reference_checkpoint_selection": false,
+  "new_case_count": 1,
+  "independent_seed_values": [
+    29,
+    43
+  ],
+  "two_cases_times_two_seeds_are_four_independent_cases": false,
+  "same_zero_update_tensors_cross_protocol": {
+    "29": {
+      "exact_same_zero_update_tensors": true,
+      "old_trained_weights_loaded": false,
+      "verification_after_training": true
+    },
+    "43": {
+      "exact_same_zero_update_tensors": true,
+      "old_trained_weights_loaded": false,
+      "verification_after_training": true
+    }
+  },
+  "old_trained_weights_loaded": false,
+  "scientific_retries": 0,
+  "seed_rescues": 0,
+  "stress_read": false,
+  "git_published": false,
+  "gpu_shutdown_confirmed": true,
+  "compute_stopped_before_reference_read": true,
+  "evidence_scope": "One new complete protocol with its own sparse observations and two clean paired initializations; case adaptation, not zero-shot or formal OOD.",
+  "ended_utc": "2026-09-15T15:37:22.266820+00:00"
+}

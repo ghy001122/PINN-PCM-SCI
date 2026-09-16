@@ -1,0 +1,89 @@
+{
+  "status": "FIXED_OWN_PREDICTION",
+  "role": "F_raw",
+  "readout": "projected",
+  "case_spec": {
+    "schema_id": "lf11-finite-pulse-case-v1",
+    "case_id": "lf11-history-gap-1p01",
+    "pulse_starts": [
+      0.0,
+      1.01
+    ],
+    "amplitude": 0.72,
+    "rise_end": 0.05,
+    "hold_end": 0.27,
+    "fall_end": 0.35,
+    "time_end": 2.5,
+    "recovery_cycles": [
+      [
+        0.0,
+        1.01
+      ],
+      [
+        1.01,
+        2.02
+      ]
+    ],
+    "tail": [
+      2.02,
+      2.5
+    ],
+    "windows": [
+      [
+        0.0,
+        0.35
+      ],
+      [
+        0.35,
+        1.01
+      ],
+      [
+        1.01,
+        1.36
+      ],
+      [
+        1.36,
+        2.5
+      ]
+    ],
+    "window_masses": [
+      0.14,
+      0.264,
+      0.14,
+      0.456
+    ],
+    "support": {
+      "nx": 80,
+      "nz": 40,
+      "dt": 0.0025,
+      "save_every": 2,
+      "main_steps": 1000
+    },
+    "reference": {
+      "nx": 160,
+      "nz": 80,
+      "dt": 0.000625,
+      "save_every": 4,
+      "main_steps": 4000
+    },
+    "sampling_rule": "indices 0,4,8,... plus last on each support axis",
+    "changed_physics": "second pulse start only; finite two-pulse experiment"
+  },
+  "grid": [
+    160,
+    80
+  ],
+  "times": 1001,
+  "electrical_counts": {
+    "forward_queries": 1001,
+    "zero_drive_queries": 723,
+    "factorizations": 278,
+    "forward_solves": 278,
+    "adjoint_solves": 0,
+    "zero_adjoint_queries": 0,
+    "max_forward_scaled_residual": 4.004365857168595e-15,
+    "max_adjoint_scaled_residual": 0.0
+  },
+  "reference_read": false,
+  "created_utc": "2026-09-15T15:06:45.510760+00:00"
+}

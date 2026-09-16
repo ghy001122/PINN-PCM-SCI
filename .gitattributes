@@ -2,3 +2,5 @@
 # Their upstream/generated whitespace is not a project source-style failure.
 .agents/** -text -whitespace
 archive/2026-08-18-ideaspark-high-frequency-pinn-pcm/** -text -whitespace
+# Preserve captured V32 evidence and deployed runtime bytes during publication.
+paper/paper_v32/evidence/** -text -whitespace

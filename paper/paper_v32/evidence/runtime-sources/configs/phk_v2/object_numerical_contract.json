@@ -1,0 +1,243 @@
+{
+  "schema_id": "phk-v2-object-numerical-contract-v1",
+  "contract_id": "PHK_REDUCED_WALL_CELL_2D_V1_NUMERICAL_V1",
+  "status": "PRE_FIRST_PHK_SOLVE_FREEZE",
+  "effective_date": "2026-08-27",
+  "evidence_identity": [
+    "TRANSPARENT_DIMENSIONLESS_REDUCED_BENCHMARK",
+    "TWO_DIMENSIONAL_CARTESIAN_WALL_CELL_CROSS_SECTION",
+    "ELECTROTHERMAL_PHASE_FIELD",
+    "LITERATURE_INSPIRED_NOT_AUTHOR_REPRODUCTION",
+    "NOT_MATERIAL_CALIBRATED_OR_EXPERIMENTALLY_VALIDATED"
+  ],
+  "source_roles": {
+    "miquel_2024": "WALL_CELL_TOPOLOGY_AND_CAUSAL_CHAIN_INSPIRATION_ONLY",
+    "sharp_pinns": "COUPLED_PHASE_FIELD_PINN_DOMAIN_ANCHOR_ONLY",
+    "phase_change_heat_pinn": "LATENT_HEAT_AND_INTERFACE_DIFFICULTY_BACKGROUND_ONLY",
+    "all_numeric_coefficients": "ENGINEERING_DIMENSIONLESS_CONTRACT_VALUES"
+  },
+  "coordinates": {
+    "x_min": -1.0,
+    "x_max": 1.0,
+    "z_min": 0.0,
+    "z_max": 1.0,
+    "time_start": 0.0,
+    "time_end": 2.0,
+    "time_period": 1.0,
+    "pulse_cycles": 2
+  },
+  "geometry": {
+    "top_electrode": "FULL_Z_MAX_BOUNDARY",
+    "bottom_heater": "CENTERED_SEGMENT_ON_Z_MIN",
+    "nominal_heater_width_fraction_of_total_x": 0.35,
+    "electrical_side_and_bottom_outside_heater": "NO_NORMAL_CURRENT",
+    "thermal_top": "DIRICHLET_ZERO_REDUCED_TEMPERATURE",
+    "thermal_sides_and_bottom": "ROBIN_TO_ZERO_REDUCED_TEMPERATURE",
+    "thermal_robin_biot": 0.25,
+    "phase_all_boundaries": "NO_NORMAL_PHASE_FLUX"
+  },
+  "fields": {
+    "potential": {
+      "symbol": "v",
+      "unit": "dimensionless",
+      "range_guard": [-1.0e-12, 1.0]
+    },
+    "reduced_temperature": {
+      "symbol": "theta",
+      "unit": "dimensionless",
+      "range_guard": [-0.02, 2.5]
+    },
+    "phase_fraction": {
+      "symbol": "phi",
+      "unit": "dimensionless",
+      "range_guard": [1.0e-8, 0.99999999]
+    }
+  },
+  "governing_equations": {
+    "electric": "div(sigma(theta,phi)*grad(v))=0",
+    "thermal": "dtheta_dt + latent_ratio*dphi_dt = thermal_diffusivity*laplacian(theta) - volumetric_cooling*theta + joule_gain*sigma(theta,phi)*norm(grad(v))^2",
+    "phase": "dphi_dt = mobility(theta)*(interface_width^2*laplacian(phi)-dW_dphi(phi,theta))",
+    "phase_free_energy": "W=barrier_scale*phi^2*(1-phi)^2 + thermal_drive*(theta_transition-theta)*phi^2*(3-2*phi)",
+    "conductivity": "sigma=exp(log(conductivity_phase_ratio)*h(phi)+conductivity_temperature_gain*theta), h(phi)=phi^2*(3-2*phi)",
+    "mobility": "M=m_cold+(m_hot-m_cold)*sigmoid((theta-theta_transition)/mobility_width)"
+  },
+  "coefficients": {
+    "thermal_diffusivity": 0.10,
+    "volumetric_cooling": 1.50,
+    "latent_ratio": 0.15,
+    "joule_gain": 4.0,
+    "conductivity_phase_ratio": 8.0,
+    "conductivity_temperature_gain": 0.25,
+    "interface_width": 0.04,
+    "barrier_scale": 1.0,
+    "thermal_drive": 4.0,
+    "theta_transition": 0.45,
+    "mobility_cold": 0.20,
+    "mobility_hot": 5.0,
+    "mobility_width": 0.08,
+    "initial_phase_background": 0.02,
+    "initial_seed_excess": 0.01,
+    "initial_seed_sigma_x": 0.18,
+    "initial_seed_sigma_z": 0.10,
+    "initial_seed_center_x": 0.0,
+    "initial_seed_center_z": 0.12
+  },
+  "waveform": {
+    "id": "TWO_CYCLE_UNIPOLAR_TRAPEZOID_V1",
+    "amplitude": 0.75,
+    "ramp_up_end": 0.05,
+    "hold_end": 0.30,
+    "ramp_down_end": 0.35,
+    "period_end": 1.0,
+    "continuity": "C0_PIECEWISE_LINEAR",
+    "breakpoints_are_segment_boundaries": true
+  },
+  "discretization": {
+    "spatial_scheme": "CELL_CENTERED_FINITE_VOLUME_HARMONIC_ELECTRIC_FACES",
+    "electric": "QUASISTATIC_SPARSE_LINEAR_SOLVE_EACH_COUPLED_BLOCK",
+    "thermal": "BACKWARD_EULER_DIFFUSION_ROBIN_BOUNDARY_WITH_ITERATED_JOULE_AND_LATENT_SOURCE",
+    "phase": "BACKWARD_EULER_NONLINEAR_REACTION_DIFFUSION_NEWTON_WITH_BOUND_PRESERVING_LINE_SEARCH",
+    "coupling": "FIXED_POINT_ELECTRIC_THERMAL_PHASE_WITH_FINAL_RESIDUAL_RECHECK",
+    "cross_configuration_warm_start": false,
+    "clipping_as_acceptance": false,
+    "float_dtype": "float64"
+  },
+  "resolutions": {
+    "coarse": {
+      "nx": 40,
+      "nz": 20,
+      "dt": 0.005,
+      "save_every": 2
+    },
+    "medium": {
+      "nx": 80,
+      "nz": 40,
+      "dt": 0.0025,
+      "save_every": 2
+    },
+    "fine": {
+      "nx": 120,
+      "nz": 60,
+      "dt": 0.00125,
+      "save_every": 2
+    },
+    "medium_half_dt": {
+      "nx": 80,
+      "nz": 40,
+      "dt": 0.00125,
+      "save_every": 4
+    }
+  },
+  "nonlinear_solver": {
+    "transport_newton_residual_tolerance": 1.0e-10,
+    "transport_newton_max_iterations": 30,
+    "newton_initial_step": 1.0,
+    "line_search_reduction": 0.5,
+    "line_search_min_step": 0.000244140625,
+    "coupled_relative_change_tolerance": 1.0e-8,
+    "coupled_residual_tolerance": 1.0e-9,
+    "coupled_max_blocks": 30,
+    "coupled_relaxation": 1.0,
+    "linear_residual_tolerance": 1.0e-11,
+    "failure_is_consumed_intent": true,
+    "result_adaptive_rescue": false
+  },
+  "qualification_event": {
+    "roi": {
+      "abs_x_max": 0.55,
+      "z_min": 0.0,
+      "z_max": 0.55
+    },
+    "phase_threshold": 0.5,
+    "minimum_peak_roi_fraction": 0.02,
+    "maximum_peak_full_domain_fraction": 0.45,
+    "maximum_peak_outside_roi_fraction": 0.10,
+    "minimum_peak_minus_pre_fraction": 0.02,
+    "minimum_recovery_fraction": 0.70,
+    "maximum_cycle_peak_relative_drift": 0.20,
+    "minimum_event_saved_steps": 3,
+    "event_time_definition": "FIRST_UPWARD_ROI_PHASE_FRACTION_CROSSING_AT_0_02_LINEAR_INTERPOLATION",
+    "event_threshold_roi_fraction": 0.02,
+    "require_two_complete_cycles": true
+  },
+  "hard_guard_thresholds": {
+    "maximum_electric_current_balance_relative": 1.0e-8,
+    "maximum_thermal_balance_relative": 1.0e-6,
+    "maximum_phase_equation_residual_scaled": 1.0e-9,
+    "maximum_no_flux_residual_scaled": 1.0e-8,
+    "maximum_replay_component_difference": 1.0e-12,
+    "maximum_nonfinite_count": 0
+  },
+  "convergence": {
+    "space_comparison": "MEDIUM_VS_FINE_COMMON_GRID_AND_TIME",
+    "time_comparison": "MEDIUM_VS_MEDIUM_HALF_DT_COMMON_SAVED_TIME",
+    "replay_comparison": "FINE_VS_EXACT_FINE_REPLAY",
+    "component_order": [
+      "PHASE_FIELD_ROI_RMS",
+      "TEMPERATURE_FIELD_ROI_RMS",
+      "CURRENT_TRACE_RMS",
+      "EVENT_TIME",
+      "PHASE_REGION_SYMMETRIC_DIFFERENCE",
+      "RECOVERY"
+    ],
+    "normalizers": {
+      "phase_field": 0.5,
+      "temperature": 0.45,
+      "current": "FINE_ORACLE_RMS_WITH_POSITIVE_FLOOR_1E_12",
+      "event_time": 1.0,
+      "phase_region": 1.0,
+      "recovery": 1.0
+    },
+    "component_floor": "max(space_delta,time_delta,replay_delta,2*declared_component_solver_tolerance)",
+    "seal_before_neural_work": true
+  },
+  "qualification_intents": [
+    {"order": 1, "id": "Q_MANUFACTURED_OPERATORS", "role": "NO_SCIENTIFIC_FIELD_RESULT"},
+    {"order": 2, "id": "Q_ZERO_DRIVE_MEDIUM", "resolution": "medium", "control": "ZERO_DRIVE"},
+    {"order": 3, "id": "Q_NOMINAL_COARSE", "resolution": "coarse", "control": "FULL"},
+    {"order": 4, "id": "Q_NOMINAL_MEDIUM", "resolution": "medium", "control": "FULL"},
+    {"order": 5, "id": "Q_NOMINAL_FINE", "resolution": "fine", "control": "FULL"},
+    {"order": 6, "id": "Q_NOMINAL_MEDIUM_HALF_DT", "resolution": "medium_half_dt", "control": "FULL"},
+    {"order": 7, "id": "Q_NOMINAL_FINE_REPLAY", "resolution": "fine", "control": "EXACT_REPLAY_OF_Q_NOMINAL_FINE"},
+    {"order": 8, "id": "Q_JOULE_OFF_MEDIUM", "resolution": "medium", "control": "JOULE_GAIN_ZERO"},
+    {"order": 9, "id": "Q_PHASE_CONDUCTIVITY_FEEDBACK_OFF_MEDIUM", "resolution": "medium", "control": "CONDUCTIVITY_PHASE_RATIO_ONE"},
+    {"order": 10, "id": "Q_LATENT_HEAT_OFF_MEDIUM", "resolution": "medium", "control": "LATENT_RATIO_ZERO"},
+    {"order": 11, "id": "Q_WIDE_HEATER_MEDIUM", "resolution": "medium", "control": "HEATER_WIDTH_0_50"},
+    {"order": 12, "id": "Q_NARROW_INTERFACE_MEDIUM", "resolution": "medium", "control": "INTERFACE_WIDTH_0_025"}
+  ],
+  "factor_supports": {
+    "heater_width_fraction": [0.20, 0.35, 0.50],
+    "interface_width": [0.025, 0.04, 0.065],
+    "waveform_amplitude": [0.65, 0.75, 0.85],
+    "pulse_hold_end": [0.25, 0.30],
+    "initial_phase_background": [0.015, 0.02, 0.03],
+    "constitutive_branch": ["NOMINAL", "LOWER_PHASE_CONDUCTIVITY_FEEDBACK"]
+  },
+  "split_rules": {
+    "case_id": "SHA256_CANONICAL_JSON_OF_COMPLETE_CASE",
+    "enumerate_full_cartesian_candidate_universe": true,
+    "orthogonal_holdouts": {
+      "F_O_HEATER": "heater_width_fraction=0.20",
+      "F_O_INTERFACE": "interface_width=0.025"
+    },
+    "reserve": "constitutive_branch=LOWER_PHASE_CONDUCTIVITY_FEEDBACK AND waveform_amplitude=0.85",
+    "remaining_hash_partition_prefix_mod_100": {
+      "D": [0, 39],
+      "I1": [40, 54],
+      "I2": [55, 69],
+      "F_A": [70, 89],
+      "R": [90, 99]
+    },
+    "formal_prefix_counts_selected_only_by_preformal_power_rule": true,
+    "same_case_never_crosses_pools": true
+  },
+  "prohibitions": [
+    "NO_PARAMETER_TUNING_TO_CREATE_METHOD_ADVANTAGE",
+    "NO_OUTCOME_ADAPTIVE_EVENT_OR_THRESHOLD",
+    "NO_POST_RESULT_CASE_SUBSTITUTION",
+    "NO_FORMAL_PEEKING_OR_RESEAL",
+    "NO_CROSS_CONFIGURATION_WARM_START",
+    "NO_CLIPPING_TO_HIDE_PHASE_BOUND_FAILURE",
+    "NO_EXPERIMENTAL_OR_AUTHOR_REPRODUCTION_CLAIM"
+  ]
+}

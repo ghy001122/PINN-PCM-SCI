@@ -1,6 +1,10 @@
 # 文档库地图
 
-## 当前V31：全空间反事实与确认已完成
+## 当前V32：完整新脉冲协议确认已完成
+
+VERIFIED：新协议两组E均对F/projected及B_E通过A/B；严格双周期未通过，实际GPU已回收关闭。当前入口为[paper_v32](../paper/paper_v32/README.md)、[终局](experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)、[状态](../PROJECT_STATE.md)和[下一计划](plans/NEXT_ACTIONS.md)。条件时间细化未触发；按原结果路由进入成稿。2026-09-16用户另行授权成果发布及[V32独立复评交付](notes/2026-09-16-lf11-v32-results-cloud-review-handoff.md)，未授权新科研执行。
+
+## 历史V31：全空间反事实与确认已完成
 
 实际结果以[paper_v31](../paper/paper_v31/README.md)、[状态](../PROJECT_STATE.md)和[下一计划](../docs/plans/NEXT_ACTIONS.md)为准。本轮实际GPU批次均已回收关闭；新的科学扩展另行授权，后续V30及更早段落保留历史身份。
 
@@ -52,9 +56,11 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[V30之后的强对照与独立确认提案](plans/NEXT_ACTIONS.md)，未获科学执行授权。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。训练期电学耦合与事后修复已收口，用户另行授权发布和[V30研究评估交付](notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)。
-- 最新终局：[训练期电学耦合与事后修复](experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)，E对两种F/projected通过同一器件功能层B；A与严格事件未全过。
+- 当前唯一 current/most-recent plan：[新脉冲确认后的成稿路线](plans/NEXT_ACTIONS.md)，无新科学执行授权。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。新脉冲确认已收口，条件时间细化未触发，GPU已关闭。
+- 最新终局：[完整新脉冲历史确认](experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)，两组E对F/projected及B_E均通过A/B；严格双周期未过。
+- 保留V31：[全空间反事实与原协议干净配对](experiment/2026-09-14-phk-v23-lf11-fullgrid-terminal-closeout.md)。
+- 保留V30：[训练期电学耦合与事后修复](experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)。
 - 保留V29：[剩余 PDE 实际影响与同父反事实](experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)，保留强基线收益，未获得冻结剩余PDE增量；旧P_F未触发。
 - 保留 V28：[电学消元与同层强基线](experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)，D_E/P_E 对 B_E A/B 通过，P_E 对 D_E 未过。
 - 保留 V27：[同父三臂与电学归一化](experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)，记录实际六个终点与 D_N 未触发。

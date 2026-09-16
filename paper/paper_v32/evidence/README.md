@@ -1,0 +1,9 @@
+# Curated V32 evidence
+
+Contains the finite case and original authorization budgets, sparse input, accepted model/optimizer states, calibration/pools, optimization telemetry, formal scores, traces/snapshots, reference generator summaries and current compute-closure summary. No raw access credentials or provider logs are included.
+
+The user separately authorized this selected-results publication on 2026-09-16. Execution-stage records such as `git_published: false` retain their original meaning and were not rewritten. See the [publication and independent-review handoff](../../../docs/notes/2026-09-16-lf11-v32-results-cloud-review-handoff.md) for current publication scope and scientific limitations.
+
+Complete support/reference trajectories and full own-field prediction arrays remain under `outputs/runs/20260915-lf11-protocol-history` locally; this curated package does not pretend to include them. Reproduction requires their explicitly described generation and compute budget. Source dependencies are recorded in `deployed-files.json`, and the exact deployed code/config bytes are retained under `runtime-sources/`; historical numerical cores and public contracts retain their identities. The new case must be reconstructed from the finite case spec, not from the legacy period field alone. `terminal-summary.json` records the final route and counts; `conditional-decision.json` records the untriggered time-refinement branch.
+
+`metadata-clarification.json` identifies unused inherited template fields. In particular the old source_commit is template provenance, not the new runtime identity, and prepare_seed sets both actual branch configurations to sampled F_raw before training. The 1112 neural projection allocation plus the new shared B_E's278 gives the predeclared total1390. No scientific settings, accepted trajectory or frozen runtime files were rewritten to correct these descriptive leftovers.

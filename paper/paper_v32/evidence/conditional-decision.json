@@ -1,0 +1,18 @@
+{
+  "status": "NOT_TRIGGERED_NOT_RUN",
+  "training_performed": false,
+  "extra_reference_main_steps": 0,
+  "close_component": {
+    "seed": 43,
+    "comparison": "E_vs_soft",
+    "layer": "A",
+    "metric": "S",
+    "reduction_percent": 10.37114343487054,
+    "effect_threshold_percent": 10
+  },
+  "observed_decision_changing_temporal_discrepancy": false,
+  "reason": "The manuscript route requires both seeds to retain B against soft and practical gains against B_E. These margins are large. The close A/S component is disclosed but does not change that route. No observed time-discretization discrepancy satisfies the additional frozen trigger. No temporal or spatial convergence conclusion follows.",
+  "current_route": "ENTER_MANUSCRIPT_NO_ADDITIONAL_MODULE",
+  "fixed_reference_preserved": true,
+  "thresholds_unchanged": true
+}

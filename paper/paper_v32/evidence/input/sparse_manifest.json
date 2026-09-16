@@ -1,0 +1,31 @@
+{
+  "schema_id": "lf11-sparse-observations-v1",
+  "status": "SPARSE_ONLY_EXPORTED",
+  "source_sha256": "a35c567b47375e96ab0319f2968aa1fcb7edc2308abd608315f3580bd1977045",
+  "bundle_sha256": "2258bfa927a84cec7cb09056191700e858137460becca076674df1e1ea18a14e",
+  "shape_tzx": [
+    126,
+    11,
+    21
+  ],
+  "selected_positions_including_ic": 29106,
+  "analytic_ic_positions": 231,
+  "observed_positions_t_positive": 28875,
+  "observed_scalar_values_t_positive": 86625,
+  "interface_cells": 373,
+  "interface_endpoints": 1008,
+  "exported_keys": [
+    "x",
+    "z",
+    "time",
+    "coordinates",
+    "targets",
+    "global_probability",
+    "interface_probability",
+    "cell_lower",
+    "cell_upper",
+    "straddles"
+  ],
+  "teacher_current_power_exported": false,
+  "dense_weights_exported": false
+}

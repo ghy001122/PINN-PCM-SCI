@@ -1,0 +1,43 @@
+{
+  "status": "VALID_FIXED_ENDPOINT",
+  "role": "F_raw",
+  "adam_updates": 1500,
+  "lbfgs": {
+    "evaluations": 300,
+    "accepted_steps": 149,
+    "termination": "EVALUATION_BUDGET_EXHAUSTED",
+    "last_accepted_loss": 0.9262118290971517,
+    "initial_loss": 2.634133579665014,
+    "history_resumed": false,
+    "first_gate_accepted_evaluation": null
+  },
+  "statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 300,
+      "adam_objective_gradient_evaluations": 1500,
+      "audit_objective_evaluations": 0,
+      "audit_objective_gradient_evaluations": 0,
+      "optimizer_updates": 1500
+    },
+    "electrical": {
+      "forward_queries": 7800,
+      "zero_drive_queries": 7800,
+      "factorizations": 0,
+      "forward_solves": 0,
+      "adjoint_solves": 0,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 0.0,
+      "max_adjoint_scaled_residual": 0.0
+    },
+    "explicit_work": {
+      "full_grid_network_evaluations": 7800,
+      "explicit_face_evaluations": 7800,
+      "thermal_phase_groups": 15600,
+      "boundary_groups": 15600,
+      "observation_groups": 43708
+    }
+  },
+  "eta": 1.0,
+  "reference_read": false,
+  "device": "cuda:0"
+}
