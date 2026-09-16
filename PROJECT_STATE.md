@@ -8,6 +8,16 @@
 - `claim_status`: `VALID_NEW_PROTOCOL_TWO_CLEAN_PAIRS_COMPLETE`
 - `next_research_execution_authorized`: `false`
 
+## 最新写作交付：投稿候选稿完成
+
+用户随后另行授权本轮重要结果提交云端并交付独立评估。本包发布分支为`codex/paper-submission-results`；[本次交接](docs/notes/2026-09-16-paper-submission-cloud-review-handoff.md)要求评估论文质量与最优先补证，允许修正当前计划。下文“未commit/push/PR”专指此前成稿阶段；本次出版物打包和评估交付不产生新的科研执行授权。
+
+VERIFIED：2026-09-16按用户Paper_Sprint授权，将V28—V32已有证据整理为[完整英文投稿候选稿](paper/paper_submission/README.md)，包括正文/PDF、六组可重绘主图、统一数表、准确参考文献与一份合并补充材料。没有新增训练、模型推理、电学/参考求解或stress读取，未启GPU，未commit/push/PR；`paper_v32`不覆盖。
+
+VERIFIED：新增报告性分析从保存事件表得到第二事件延迟缩短0.0316；E29/E43预测0.0279417/0.0307400，F29/F43预测0.0350000/0.0155800，B_E预测0.0252714。F29在该差值误差上略优于E29的反证保留。统一结果将每协议B_E只计一次；正文并列绝对误差、百分点与相对效应，完整披露严格事件失败及能量抵消。
+
+SUPPORTED_INTERPRETATION：成稿核心为训练期电学约束相对共同事后修复的方法包收益；剩余PDE独立必要性、孤立VJP因果、连续体和材料验证仍UNKNOWN。最优先后续为针对初稿的科学/投稿审阅；唯一可提科研补证为固定模型的两协议时间参考敏感性，详见补充S9，仅`PROPOSED_NOT_AUTHORIZED`。
+
 ## 当前V32：完整新脉冲历史确认已完成
 
 VERIFIED：第二脉冲固定从1.25提前到1.01，完成新support/reference、seed29/43两个全新父态及四个E/F_raw终点。E在两个新seed上均对F_raw/projected和同层B_E通过原相态层A、器件层B及全部非劣要求。实际GPU已回收关闭，随后完成本地参考评价与[paper_v32](paper/paper_v32/README.md)。

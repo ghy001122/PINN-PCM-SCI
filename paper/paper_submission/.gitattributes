@@ -1,0 +1,3 @@
+# Preserve rendered assets byte-for-byte and avoid treating PDFs as text diffs.
+*.pdf binary
+*.png binary

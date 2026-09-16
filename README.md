@@ -1,6 +1,10 @@
 # PINN-PCM-SCI
 
-最新完成稿：[paper_v32](paper/paper_v32/README.md)。完整新脉冲协议与两个全新初始化配对已完成，GPU已回收关闭；[终局](docs/experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)与[下一计划](docs/plans/NEXT_ACTIONS.md)给出结果和成稿路线。
+最新投稿候选稿：[paper_submission](paper/paper_submission/README.md)，含完整英文正文、可审阅PDF、六组主图、统一数表与合并补充材料。2026-09-16按用户Paper_Sprint授权完成已有证据成稿与报告性分析，零新训练/模型推理/求解，未启GPU；成稿阶段未执行Git发布。
+
+用户随后另行授权本包提交云端及[论文改进独立评估交接](docs/notes/2026-09-16-paper-submission-cloud-review-handoff.md)。本包发布分支为`codex/paper-submission-results`，继承V32；实际发布提交以交付消息和远端分支为准。评估重点为固定模型参考敏感性、严格事件、剩余PDE独立贡献与材料关联，不授权新科研执行。
+
+保留研究快照：[paper_v32](paper/paper_v32/README.md)。完整新脉冲协议与两个全新初始化配对已完成，GPU已回收关闭；[终局](docs/experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)与[下一计划](docs/plans/NEXT_ACTIONS.md)给出科学边界和待批项。
 
 V32发布分支：`codex/v32-research-results`；[云端独立复评交接](docs/notes/2026-09-16-lf11-v32-results-cloud-review-handoff.md)汇总新增成果、历史反证和论文优先问题。用户于2026-09-16另行授权成果发布与评估交付，不产生新的科研执行授权。
 
@@ -36,10 +40,10 @@ VERIFIED：V29的D_C/P1/P_kappa固定目标反事实已完整完成，未通过�
 - 保留V30：[训练期电学耦合与事后修复](docs/experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)
 - 保留V29：[剩余 PDE 固定目标反事实](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)
 - 保留 V28：[电学消元与同层强基线](docs/experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)
-- 当前论文：[paper_v32](paper/paper_v32/README.md)、[复现](paper/paper_v32/reproduction.md)
+- 当前论文：[投稿候选稿与合并补充](paper/paper_submission/README.md)；保留[paper_v32](paper/paper_v32/README.md)、[数值复现](paper/paper_v32/reproduction.md)
 - 历史V30：[paper_v30](paper/paper_v30/README.md)、[复现](paper/paper_v30/reproducibility.md)
 - 保留 V27：[同父三臂与电学归一化](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)、[论文](paper/paper_v27/README.md)
-- 本轮云端复评与下一步规划请求：[V30交接](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)
+- 本轮云端复评与论文改进请求：[投稿候选稿交接](docs/notes/2026-09-16-paper-submission-cloud-review-handoff.md)；保留[V30交接](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)
 - 保留上轮：[V-only终局](docs/experiment/2026-09-12-phk-v23-lf11-v-continuation-terminal-closeout.md)、[paper_v26](paper/paper_v26/README.md)
 - 上轮云端复评交接：[V26交接](docs/notes/2026-09-12-lf11-v26-results-cloud-review-handoff.md)
 
