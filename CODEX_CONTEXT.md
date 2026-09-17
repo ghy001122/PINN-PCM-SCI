@@ -1,6 +1,12 @@
 # Codex 项目上下文
 
-## 当前V32：完整新脉冲协议确认已完成
+**2026-09-18发布与第二轮审核：**用户另行授权近期成果提交云端及academic-research-suite全面复审。[发布范围与重要结果](docs/notes/2026-09-18-revision-results-release.md)、[新Revision Roadmap](paper/review_20260917_round2/Revision_Roadmap.md)记录本次交付。科学阶段仍CLOSED，无新增训练/推理/求解授权；先前“未发布”措辞保留其历史阶段身份。公开包是精简证据，不含全部数组。
+
+## 当前：2026-09-17空间参考补证与论文修订已完成
+
+VERIFIED：用户批准的两个CPU空间参考及16套固定预测评分已完成；四组E/F完整器件优势在三参考下保持，三项历史A/B改变，空间参考下无严格双周期通过。实际计数和边界见[终局](docs/experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)，当前正文21页/补充35页见[修订稿](paper/paper_revision_20260917/README.md)及[Roadmap响应](paper/review_20260917/Roadmap_Execution_Report.md)。本轮零新训练、模型前反向、预测电学求解、GPU、stress或Git发布；执行已关闭，无追加科研授权。下方旧授权按历史读取。
+
+## 历史V32：完整新脉冲协议确认已完成
 
 2026-09-16用户另行授权V32精选成果提交云端及[独立复评交付](docs/notes/2026-09-16-lf11-v32-results-cloud-review-handoff.md)。发布分支为`codex/v32-research-results`，与科学执行阶段分开记录；不授权新训练、求解或stress读取。
 

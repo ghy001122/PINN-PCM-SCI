@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": [
+    "zero insertion",
+    "IC/range",
+    "complete logit/field interface",
+    "gate coordinate second derivatives",
+    "full implicit electrothermal VJP",
+    "checkpoint reload"
+  ],
+  "forward_solves": 3,
+  "adjoint_solves": 1,
+  "scientific_optimizer_updates": 0
+}

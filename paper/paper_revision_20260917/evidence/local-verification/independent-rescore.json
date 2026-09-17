@@ -1,0 +1,30 @@
+{
+  "status": "PASS_CLEAN_ARCHIVE_ONLY_RESCORING",
+  "archive": "outputs/PINN-PCM-revision-20260916-array-archive.zip",
+  "archive_sha256": "f32b2c7d2719677c3d6f3e8cfb121e8630e6bb10700fe80f139c9bea83fb9f6a",
+  "independent_results": ".t/independent-rescore-20260916/independently-rescored/results.json",
+  "historical_main_table_and_events_reproduced": true,
+  "old_and_refined_objects_each": 16,
+  "all_matched_and_gate_decisions_reproduced": true,
+  "reference_sensitivity_reproduced": true,
+  "scientific_dependencies": [
+    "numpy==2.1.1"
+  ],
+  "torch_available": false,
+  "scipy_available": false,
+  "private_checkout_imported": false,
+  "model_loads": 0,
+  "model_forwards": 0,
+  "linear_solves": 0,
+  "publicly_uploaded": false,
+  "independent_execution": {
+    "python": "3.11.9 | packaged by Anaconda, Inc. | (main, Apr 19 2024, 16:40:41) [MSC v.1916 64 bit (AMD64)]",
+    "numpy": "2.1.1",
+    "isolated_python": true,
+    "neural_models_loaded": 0,
+    "neural_forwards": 0,
+    "linear_solves": 0,
+    "private_repository_imports": false
+  },
+  "full_training_rerun": false
+}

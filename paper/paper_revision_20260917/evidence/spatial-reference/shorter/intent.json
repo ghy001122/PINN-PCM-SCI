@@ -1,0 +1,112 @@
+{
+  "status": "AUTHORIZED_STARTED",
+  "config": {
+    "schema_id": "lf11-fixed-prediction-spatial-reference-20260917",
+    "authorization": "User explicitly approved the two 240x120 references and authority-state updates: 我批准授权，继续执行。 (2026-09-17)",
+    "execution_authorized": true,
+    "protocols": [
+      "original",
+      "shorter"
+    ],
+    "source_archive": "outputs/submission-archive-20260916",
+    "baseline_reference": "refined",
+    "reference": {
+      "nx": 240,
+      "nz": 120,
+      "dt": 0.0003125,
+      "time_end": 2.5,
+      "save_every": 8,
+      "main_steps": 8000
+    },
+    "scoring_grid": {
+      "nx": 160,
+      "nz": 80
+    },
+    "per_trajectory_linear_solve_cap": 200000,
+    "total_trajectory_cap": 2,
+    "total_main_step_cap": 16000,
+    "new_training": 0,
+    "new_checkpoint_forward_backward": 0,
+    "new_prediction_electric_solves": 0,
+    "reference_restriction": "exact cell-overlap volume average",
+    "device_reference": "native fine-grid terminal currents and Joule power",
+    "threshold_primary": "threshold of restricted phase, original frozen criteria",
+    "threshold_diagnostic": "restricted fine active fraction; report only, no changed gate",
+    "stress_read": false,
+    "gpu_required": false,
+    "git_publish": false,
+    "result_adaptive_rescue": false
+  },
+  "protocol": "shorter",
+  "case_spec": {
+    "schema_id": "lf11-finite-pulse-case-v1",
+    "case_id": "lf11-spatial-reference-shorter",
+    "pulse_starts": [
+      0.0,
+      1.01
+    ],
+    "amplitude": 0.72,
+    "rise_end": 0.05,
+    "hold_end": 0.27,
+    "fall_end": 0.35,
+    "time_end": 2.5,
+    "recovery_cycles": [
+      [
+        0.0,
+        1.01
+      ],
+      [
+        1.01,
+        2.02
+      ]
+    ],
+    "tail": [
+      2.02,
+      2.5
+    ],
+    "windows": [
+      [
+        0.0,
+        0.35
+      ],
+      [
+        0.35,
+        1.01
+      ],
+      [
+        1.01,
+        1.36
+      ],
+      [
+        1.36,
+        2.5
+      ]
+    ],
+    "window_masses": [
+      0.14,
+      0.264,
+      0.14,
+      0.456
+    ],
+    "support": {
+      "nx": 80,
+      "nz": 40,
+      "dt": 0.0025,
+      "save_every": 2,
+      "main_steps": 1000
+    },
+    "reference": {
+      "nx": 240,
+      "nz": 120,
+      "dt": 0.0003125,
+      "time_end": 2.5,
+      "save_every": 8,
+      "main_steps": 8000
+    },
+    "sampling_rule": "indices 0,4,8,... plus last on each support axis",
+    "changed_physics": "none; spatial reference only"
+  },
+  "inherited_algorithms": true,
+  "neural_inputs_received": false,
+  "created_utc": "2026-09-17T04:59:05.783318+00:00"
+}

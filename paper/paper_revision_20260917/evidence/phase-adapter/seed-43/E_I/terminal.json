@@ -1,0 +1,35 @@
+{
+  "status": "VALID_FIXED_ENDPOINT",
+  "role": "P_E",
+  "adam_updates": 600,
+  "lbfgs": {
+    "evaluations": 100,
+    "accepted_steps": 49,
+    "termination": "EVALUATION_BUDGET_EXHAUSTED",
+    "last_accepted_loss": 0.3671914578237053,
+    "initial_loss": 0.4263115044893548,
+    "history_resumed": false,
+    "first_gate_accepted_evaluation": null
+  },
+  "statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 100,
+      "adam_objective_gradient_evaluations": 600,
+      "audit_objective_evaluations": 0,
+      "audit_objective_gradient_evaluations": 0,
+      "optimizer_updates": 600
+    },
+    "electrical": {
+      "forward_queries": 20557,
+      "zero_drive_queries": 13740,
+      "factorizations": 6817,
+      "forward_solves": 6817,
+      "adjoint_solves": 6817,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 3.6819935448593026e-15,
+      "max_adjoint_scaled_residual": 1.1546319456101628e-14
+    }
+  },
+  "reference_read": false,
+  "device": "cuda:0"
+}

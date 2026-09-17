@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "scope": "Saved spatial scores, original rules, prediction invariants, manuscript and rendered text",
+  "reference_trajectories": 2,
+  "main_steps": 16000,
+  "linear_solves": {
+    "original": {
+      "electric": 32093,
+      "thermal": 24092,
+      "phase": 28776
+    },
+    "shorter": {
+      "electric": 32358,
+      "thermal": 24357,
+      "phase": 29303
+    }
+  },
+  "full_objects": 16,
+  "three_reference_metric_rows": 48,
+  "event_rows": 96,
+  "reference_independent_event_scalars_checked": 192,
+  "primary_threshold_scores_verified": true,
+  "complete_rules_reproduced": true,
+  "complete_E_F_device_passes": 4,
+  "historical_rule_changes": [
+    {
+      "protocol": "original",
+      "seed": "29",
+      "control": "B_E",
+      "layer": "A",
+      "previous": true,
+      "spatial": false
+    },
+    {
+      "protocol": "original",
+      "seed": "43",
+      "control": "B_E",
+      "layer": "B",
+      "previous": false,
+      "spatial": true
+    },
+    {
+      "protocol": "shorter",
+      "seed": "43",
+      "control": "F",
+      "layer": "A",
+      "previous": true,
+      "spatial": false
+    }
+  ],
+  "strict_objects": [],
+  "pre_spatial_equations_preserved": true,
+  "pages": {
+    "manuscript": 21,
+    "supplement": 35
+  },
+  "new_training": 0,
+  "new_model_evaluations": 0,
+  "new_prediction_electric_solves": 0
+}

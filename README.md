@@ -1,6 +1,28 @@
 # PINN-PCM-SCI
 
-最新投稿候选稿：[paper_submission](paper/paper_submission/README.md)，含完整英文正文、可审阅PDF、六组主图、统一数表与合并补充材料。2026-09-16按用户Paper_Sprint授权完成已有证据成稿与报告性分析，零新训练/模型推理/求解，未启GPU；成稿阶段未执行Git发布。
+**2026-09-18发布与第二轮审核：**用户另行授权近期成果提交云端及academic-research-suite全面复审。[发布范围与重要结果](docs/notes/2026-09-18-revision-results-release.md)、[新Revision Roadmap](paper/review_20260917_round2/Revision_Roadmap.md)记录本次交付。科学阶段仍CLOSED，无新增训练/推理/求解授权；先前“未发布”措辞保留其历史阶段身份。公开包是精简证据，不含全部数组。
+
+## 当前：固定预测空间参考与优先修订已完成
+
+**VERIFIED：**2026-09-17按用户批准的[实施方案](paper/review_20260917/Implementation_Plan.md)，完成两个既有协议的240×120、dt=0.0003125参考，共16000主步、170979内部线性解。16套预测与原电学读出固定，四组E/F完整器件优势在原、时间细化、空间参考下均保持。实际证据见[终局](docs/experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)。
+
+**VERIFIED：**三项历史A/B随空间参考改变：original/29对B_E及shorter/43对F的相态判据失去通过；original/43对B_E器件判据从未过变为通过。空间参考下16对象均无严格双周期通过；shorter/43/E_I的第一周期recall由时间参考下0.902063降至0.897527。原阈值、预测及旧结论均未改写。
+
+**SUPPORTED_INTERPRETATION：**核心器件收益在所测数值参考改变下保持，部分阈值结论需收窄。**UNKNOWN：**空间收敛、连续体精度、预测电学读出网格独立性、剩余PDE独立必要性、孤立VJP因果与材料验证。本轮零新训练/模型前反向/预测电学重求解，不读stress、未启GPU、未发布Git。
+
+[完整修订稿](paper/paper_revision_20260917/README.md)为正文21页、补充35页；[逐项Revision响应](paper/review_20260917/Roadmap_Execution_Report.md)记录全部落实及作者待办。本轮有界执行已关闭，无自动追加科研授权；下方保留各轮历史身份。
+
+## 历史已完成：相态网络反事实、时间参考补证与论文修订
+
+**VERIFIED：**按[用户完整指令](docs/notes/2026-09-16-phase-adapter-authorized-sprint.md)，六个耦合PINN终点、两条时间细化参考、16套固定预测的两参考评分及一次干净归档复算均已完成。实际GPU已回收关机。本轮3600 Adam、600完整评估；参考16000主步、170722内部线性解，均在预算内。没有读取stress、重推旧模型或自动Git/公开上传。
+
+**VERIFIED：**历史四组E/F器件优势与全部历史A/B裁决在此次时间细化下保持。新E_R/E_I对继续训练E_C均未建立A/B增量；仅E_I/seed43在细化参考下跨严格双周期门，旧参考不通过。此参考特定信号不证明稳定严格能力，也不支持把门控升级为已验证核心创新。
+
+完整交付：[修订稿、正文/PDF、补充与图表](paper/paper_revision_20260916/README.md)；[科研终局和下一步](docs/experiment/2026-09-16-phase-adapter-reference-closeout.md)。时间参考补证已完成；剩余PDE独立必要性、空间收敛、材料验证和参考稳定的严格能力仍UNKNOWN。后续新科学执行保持PROPOSED_NOT_AUTHORIZED。
+
+以下保留此前各轮的完成记录及当时授权身份；本轮不覆盖历史结果。
+
+保留投稿候选稿：[paper_submission](paper/paper_submission/README.md)，含完整英文正文、可审阅PDF、六组主图、统一数表与合并补充材料。2026-09-16按用户Paper_Sprint授权完成已有证据成稿与报告性分析，零新训练/模型推理/求解，未启GPU；成稿阶段未执行Git发布。
 
 用户随后另行授权本包提交云端及[论文改进独立评估交接](docs/notes/2026-09-16-paper-submission-cloud-review-handoff.md)。本包发布分支为`codex/paper-submission-results`，继承V32；实际发布提交以交付消息和远端分支为准。评估重点为固定模型参考敏感性、严格事件、剩余PDE独立贡献与材料关联，不授权新科研执行。
 
@@ -16,10 +38,10 @@ VERIFIED：新协议中两个初始化的E均对锁定soft＋相同电学重求�
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_LF11_NEW_PROTOCOL_COMPLETE`
-- `lifecycle_state`: `COMPLETE`
+- `phase_id`: `PHK_V23_FIXED_PREDICTION_SPATIAL_REFERENCE`
+- `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_NEW_PROTOCOL_TWO_CLEAN_PAIRS_COMPLETE`
+- `claim_status`: `VERIFIED_SPATIAL_REFERENCE_SENSITIVITY_BOUNDED`
 - `next_research_execution_authorized`: `false`
 
 历史V30（VERIFIED）：E对两种有效F/projected均通过同一器件功能层B；底部电流/功率误差分别下降35.22%/35.99%与56.85%/58.70%。当时A与严格双周期未全过，剩余热/phase PDE独立必要性和独立初始化稳健性仍UNKNOWN。用户于2026-09-14另行授权成果发布及[V30云端独立复评](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)，随后另行授权F_full与条件确认；其新结果以V31为准。
@@ -40,7 +62,7 @@ VERIFIED：V29的D_C/P1/P_kappa固定目标反事实已完整完成，未通过�
 - 保留V30：[训练期电学耦合与事后修复](docs/experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)
 - 保留V29：[剩余 PDE 固定目标反事实](docs/experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)
 - 保留 V28：[电学消元与同层强基线](docs/experiment/2026-09-13-phk-v23-lf11-electrical-elimination-terminal-closeout.md)
-- 当前论文：[投稿候选稿与合并补充](paper/paper_submission/README.md)；保留[paper_v32](paper/paper_v32/README.md)、[数值复现](paper/paper_v32/reproduction.md)
+- 当前论文：[网络实验与参考补证修订稿](paper/paper_revision_20260916/README.md)；保留[原投稿稿](paper/paper_submission/README.md)与[paper_v32](paper/paper_v32/README.md)、[数值复现](paper/paper_v32/reproduction.md)
 - 历史V30：[paper_v30](paper/paper_v30/README.md)、[复现](paper/paper_v30/reproducibility.md)
 - 保留 V27：[同父三臂与电学归一化](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)、[论文](paper/paper_v27/README.md)
 - 本轮云端复评与论文改进请求：[投稿候选稿交接](docs/notes/2026-09-16-paper-submission-cloud-review-handoff.md)；保留[V30交接](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)

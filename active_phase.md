@@ -1,14 +1,36 @@
 # 当前阶段
 
-- `phase_id`: `PHK_V23_LF11_NEW_PROTOCOL_COMPLETE`
-- `lifecycle_state`: `COMPLETE`
+**2026-09-18发布与第二轮审核：**用户另行授权近期成果提交云端及academic-research-suite全面复审。[发布范围与重要结果](docs/notes/2026-09-18-revision-results-release.md)、[新Revision Roadmap](paper/review_20260917_round2/Revision_Roadmap.md)记录本次交付。科学阶段仍CLOSED，无新增训练/推理/求解授权；先前“未发布”措辞保留其历史阶段身份。公开包是精简证据，不含全部数组。
+
+## 当前：固定预测空间参考与优先修订已完成
+
+**VERIFIED：**2026-09-17按用户批准的[实施方案](paper/review_20260917/Implementation_Plan.md)，完成两个既有协议的240×120、dt=0.0003125参考，共16000主步、170979内部线性解。16套预测与原电学读出固定，四组E/F完整器件优势在原、时间细化、空间参考下均保持。实际证据见[终局](docs/experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)。
+
+**VERIFIED：**三项历史A/B随空间参考改变：original/29对B_E及shorter/43对F的相态判据失去通过；original/43对B_E器件判据从未过变为通过。空间参考下16对象均无严格双周期通过；shorter/43/E_I的第一周期recall由时间参考下0.902063降至0.897527。原阈值、预测及旧结论均未改写。
+
+**SUPPORTED_INTERPRETATION：**核心器件收益在所测数值参考改变下保持，部分阈值结论需收窄。**UNKNOWN：**空间收敛、连续体精度、预测电学读出网格独立性、剩余PDE独立必要性、孤立VJP因果与材料验证。本轮零新训练/模型前反向/预测电学重求解，不读stress、未启GPU、未发布Git。
+
+[完整修订稿](paper/paper_revision_20260917/README.md)为正文21页、补充35页；[逐项Revision响应](paper/review_20260917/Roadmap_Execution_Report.md)记录全部落实及作者待办。本轮有界执行已关闭，无自动追加科研授权；下方保留各轮历史身份。
+
+## 历史已完成：相态网络反事实、时间参考补证与论文修订
+
+**VERIFIED：**按[用户完整指令](docs/notes/2026-09-16-phase-adapter-authorized-sprint.md)，六个耦合PINN终点、两条时间细化参考、16套固定预测的两参考评分及一次干净归档复算均已完成。实际GPU已回收关机。本轮3600 Adam、600完整评估；参考16000主步、170722内部线性解，均在预算内。没有读取stress、重推旧模型或自动Git/公开上传。
+
+**VERIFIED：**历史四组E/F器件优势与全部历史A/B裁决在此次时间细化下保持。新E_R/E_I对继续训练E_C均未建立A/B增量；仅E_I/seed43在细化参考下跨严格双周期门，旧参考不通过。此参考特定信号不证明稳定严格能力，也不支持把门控升级为已验证核心创新。
+
+完整交付：[修订稿、正文/PDF、补充与图表](paper/paper_revision_20260916/README.md)；[科研终局和下一步](docs/experiment/2026-09-16-phase-adapter-reference-closeout.md)。时间参考补证已完成；剩余PDE独立必要性、空间收敛、材料验证和参考稳定的严格能力仍UNKNOWN。后续新科学执行保持PROPOSED_NOT_AUTHORIZED。
+
+以下保留此前各轮的完成记录及当时授权身份；本轮不覆盖历史结果。
+
+- `phase_id`: `PHK_V23_FIXED_PREDICTION_SPATIAL_REFERENCE`
+- `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_NEW_PROTOCOL_TWO_CLEAN_PAIRS_COMPLETE`
+- `claim_status`: `VERIFIED_SPATIAL_REFERENCE_SENSITIVITY_BOUNDED`
 - `next_research_execution_authorized`: `false`
 
 2026-09-16用户另行明确授权完整投稿候选稿及重要结果提交云端，并交付论文改进独立评估；本包使用`codex/paper-submission-results`，详见[交接](docs/notes/2026-09-16-paper-submission-cloud-review-handoff.md)。范围为已有成果发布、评估与方案设计，不授权新训练、求解、checkpoint前反向或stress读取，不改变下文科学终局。
 
-PHASE_ID=PHK_V23_LF11_NEW_PROTOCOL_COMPLETE
+PHASE_ID=PHK_V23_FIXED_PREDICTION_SPATIAL_REFERENCE
 BLOCKER_ID=NONE
 NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
 

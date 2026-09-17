@@ -1,0 +1,271 @@
+{
+  "schema_id": "pinn-pcm-array-rescore-20260916",
+  "source_commit": "4081ba09b8a6aefa2141b10c707fdf4b327898eb",
+  "grid_metadata": {
+    "nx": 160,
+    "nz": 80,
+    "dx": 0.0125,
+    "dz": 0.0125,
+    "x_min": -1.0,
+    "x_max": 1.0,
+    "z_min": 0.0,
+    "z_max": 1.0,
+    "cell_count": 12800,
+    "heater_width_fraction": 0.35
+  },
+  "grid_arrays": "definitions/grid.npz",
+  "protocols": {
+    "original": {
+      "physics": {
+        "x_min": -1.0,
+        "x_max": 1.0,
+        "z_min": 0.0,
+        "z_max": 1.0,
+        "time_start": 0.0,
+        "time_end": 2.5,
+        "period": 1.25,
+        "heater_width_fraction": 0.35,
+        "waveform_amplitude": 0.72,
+        "ramp_up_end": 0.05,
+        "hold_end": 0.27,
+        "ramp_down_end": 0.35,
+        "thermal_diffusivity": 0.1,
+        "volumetric_cooling": 4.0,
+        "latent_ratio": 0.05,
+        "joule_gain": 4.0,
+        "conductivity_phase_ratio": 8.0,
+        "conductivity_temperature_gain": 0.25,
+        "interface_width": 0.04,
+        "barrier_scale": 1.0,
+        "thermal_drive": 6.0,
+        "theta_transition": 0.45,
+        "mobility_cold": 0.5,
+        "mobility_hot": 5.0,
+        "mobility_width": 0.08,
+        "thermal_robin_biot": 0.25,
+        "initial_phase_background": 0.02,
+        "initial_seed_excess": 0.01,
+        "initial_seed_sigma_x": 0.18,
+        "initial_seed_sigma_z": 0.1,
+        "initial_seed_center_x": 0.0,
+        "initial_seed_center_z": 0.12
+      },
+      "config": "definitions/original.json",
+      "references": {
+        "old": "data/original/reference-old.npz",
+        "refined": "data/original/reference-refined.npz"
+      },
+      "sparse": "data/original/sparse.npz",
+      "expected_decisions": "expected/original-decisions.json"
+    },
+    "shorter": {
+      "physics": {
+        "x_min": -1.0,
+        "x_max": 1.0,
+        "z_min": 0.0,
+        "z_max": 1.0,
+        "time_start": 0.0,
+        "time_end": 2.5,
+        "period": 1.01,
+        "heater_width_fraction": 0.35,
+        "waveform_amplitude": 0.72,
+        "ramp_up_end": 0.05,
+        "hold_end": 0.27,
+        "ramp_down_end": 0.35,
+        "thermal_diffusivity": 0.1,
+        "volumetric_cooling": 4.0,
+        "latent_ratio": 0.05,
+        "joule_gain": 4.0,
+        "conductivity_phase_ratio": 8.0,
+        "conductivity_temperature_gain": 0.25,
+        "interface_width": 0.04,
+        "barrier_scale": 1.0,
+        "thermal_drive": 6.0,
+        "theta_transition": 0.45,
+        "mobility_cold": 0.5,
+        "mobility_hot": 5.0,
+        "mobility_width": 0.08,
+        "thermal_robin_biot": 0.25,
+        "initial_phase_background": 0.02,
+        "initial_seed_excess": 0.01,
+        "initial_seed_sigma_x": 0.18,
+        "initial_seed_sigma_z": 0.1,
+        "initial_seed_center_x": 0.0,
+        "initial_seed_center_z": 0.12
+      },
+      "config": "definitions/shorter.json",
+      "references": {
+        "old": "data/shorter/reference-old.npz",
+        "refined": "data/shorter/reference-refined.npz"
+      },
+      "sparse": "data/shorter/sparse.npz",
+      "expected_decisions": "expected/shorter-decisions.json"
+    }
+  },
+  "objects": [
+    {
+      "id": "original/29/E",
+      "protocol": "original",
+      "seed": 29,
+      "role": "E",
+      "origin": "historical",
+      "prediction": "data/original/29/E/prediction.npz",
+      "readout": "data/original/29/E/readout.npz",
+      "expected_record": "expected/original-29-E.json"
+    },
+    {
+      "id": "original/29/F",
+      "protocol": "original",
+      "seed": 29,
+      "role": "F",
+      "origin": "historical",
+      "prediction": "data/original/29/F/prediction.npz",
+      "readout": "data/original/29/F/readout.npz",
+      "expected_record": "expected/original-29-F.json"
+    },
+    {
+      "id": "original/43/E",
+      "protocol": "original",
+      "seed": 43,
+      "role": "E",
+      "origin": "historical",
+      "prediction": "data/original/43/E/prediction.npz",
+      "readout": "data/original/43/E/readout.npz",
+      "expected_record": "expected/original-43-E.json"
+    },
+    {
+      "id": "original/43/F",
+      "protocol": "original",
+      "seed": 43,
+      "role": "F",
+      "origin": "historical",
+      "prediction": "data/original/43/F/prediction.npz",
+      "readout": "data/original/43/F/readout.npz",
+      "expected_record": "expected/original-43-F.json"
+    },
+    {
+      "id": "original/B_E",
+      "protocol": "original",
+      "seed": null,
+      "role": "B_E",
+      "origin": "historical",
+      "prediction": "data/original/B_E/prediction.npz",
+      "readout": "data/original/B_E/readout.npz",
+      "expected_record": "expected/original-B_E.json"
+    },
+    {
+      "id": "shorter/29/E",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "E",
+      "origin": "historical",
+      "prediction": "data/shorter/29/E/prediction.npz",
+      "readout": "data/shorter/29/E/readout.npz",
+      "expected_record": "expected/shorter-29-E.json"
+    },
+    {
+      "id": "shorter/29/F",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "F",
+      "origin": "historical",
+      "prediction": "data/shorter/29/F/prediction.npz",
+      "readout": "data/shorter/29/F/readout.npz",
+      "expected_record": "expected/shorter-29-F.json"
+    },
+    {
+      "id": "shorter/43/E",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "E",
+      "origin": "historical",
+      "prediction": "data/shorter/43/E/prediction.npz",
+      "readout": "data/shorter/43/E/readout.npz",
+      "expected_record": "expected/shorter-43-E.json"
+    },
+    {
+      "id": "shorter/43/F",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "F",
+      "origin": "historical",
+      "prediction": "data/shorter/43/F/prediction.npz",
+      "readout": "data/shorter/43/F/readout.npz",
+      "expected_record": "expected/shorter-43-F.json"
+    },
+    {
+      "id": "shorter/B_E",
+      "protocol": "shorter",
+      "seed": null,
+      "role": "B_E",
+      "origin": "historical",
+      "prediction": "data/shorter/B_E/prediction.npz",
+      "readout": "data/shorter/B_E/readout.npz",
+      "expected_record": "expected/shorter-B_E.json"
+    },
+    {
+      "id": "shorter/29/E_C",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "E_C",
+      "origin": "new_phase_adapter",
+      "prediction": "data/shorter/29/E_C/prediction.npz",
+      "readout": "data/shorter/29/E_C/readout.npz",
+      "display": "data/shorter/29/E_C/fixed-display.npz"
+    },
+    {
+      "id": "shorter/29/E_R",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "E_R",
+      "origin": "new_phase_adapter",
+      "prediction": "data/shorter/29/E_R/prediction.npz",
+      "readout": "data/shorter/29/E_R/readout.npz",
+      "display": "data/shorter/29/E_R/fixed-display.npz"
+    },
+    {
+      "id": "shorter/29/E_I",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "E_I",
+      "origin": "new_phase_adapter",
+      "prediction": "data/shorter/29/E_I/prediction.npz",
+      "readout": "data/shorter/29/E_I/readout.npz",
+      "display": "data/shorter/29/E_I/fixed-display.npz"
+    },
+    {
+      "id": "shorter/43/E_C",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "E_C",
+      "origin": "new_phase_adapter",
+      "prediction": "data/shorter/43/E_C/prediction.npz",
+      "readout": "data/shorter/43/E_C/readout.npz",
+      "display": "data/shorter/43/E_C/fixed-display.npz"
+    },
+    {
+      "id": "shorter/43/E_R",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "E_R",
+      "origin": "new_phase_adapter",
+      "prediction": "data/shorter/43/E_R/prediction.npz",
+      "readout": "data/shorter/43/E_R/readout.npz",
+      "display": "data/shorter/43/E_R/fixed-display.npz"
+    },
+    {
+      "id": "shorter/43/E_I",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "E_I",
+      "origin": "new_phase_adapter",
+      "prediction": "data/shorter/43/E_I/prediction.npz",
+      "readout": "data/shorter/43/E_I/readout.npz",
+      "display": "data/shorter/43/E_I/fixed-display.npz"
+    }
+  ],
+  "scope": "fixed array rescore and time-reference perturbation; not continuum validation or new training",
+  "paths": "all relative to archive root",
+  "publicly_uploaded": false,
+  "reference_read_in_preparation": false
+}

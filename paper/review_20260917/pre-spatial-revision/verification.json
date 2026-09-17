@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "Saved scalar rules, formulas, assets and rendered text; no array rescoring",
+  "original_rules_reproduced": 16,
+  "original_component_decisions_checked": 96,
+  "observed_reference_triangle_checks": 192,
+  "original_AB_outcomes_preserved": true,
+  "E_F_actual_device_passes": 4,
+  "E_F_gain_certificates": 4,
+  "E_F_complete_device_certificates": 2,
+  "total_complete_certificates": 9,
+  "core_equations_unchanged": true,
+  "old_tables_figures_references_preserved": true,
+  "pages": {
+    "manuscript": 20,
+    "supplement": 30
+  },
+  "new_training": 0,
+  "new_model_evaluations": 0,
+  "new_PDE_solves": 0,
+  "spatial_execution_authorized": false
+}

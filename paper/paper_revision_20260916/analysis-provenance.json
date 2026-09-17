@@ -1,0 +1,58 @@
+{
+  "activity": "saved-result arithmetic and plotting only",
+  "new_training": 0,
+  "checkpoint_loads_or_model_evaluations": 0,
+  "new_electrical_or_reference_solves": 0,
+  "stress_access": false,
+  "unique_main_rows": 10,
+  "unique_event_rows": 20,
+  "clean_protocols": 2,
+  "initialization_seeds": [
+    29,
+    43
+  ],
+  "main_figures": {
+    "fig01-method": [
+      "implemented mathematical interfaces; see supplement source map"
+    ],
+    "fig02-repair": [
+      "paper/paper_v32/tables/historical-mechanism-controls.csv"
+    ],
+    "fig03-controls": [
+      "paper/paper_v32/tables/historical-mechanism-controls.csv"
+    ],
+    "fig04-clean-pairs": [
+      "paper/paper_v32/tables/cross-protocol-metrics.csv"
+    ],
+    "fig05-history": [
+      "paper/paper_v32/tables/reference-history.csv",
+      "paper/paper_v32/tables/complete-events.csv",
+      "paper/paper_v32/tables/per-pulse-power-energy.csv",
+      "paper/paper_v32/evidence/evaluation/traces.npz"
+    ],
+    "fig06-limits": [
+      "paper/paper_v32/tables/complete-events.csv",
+      "paper/paper_v32/tables/second-cycle.csv",
+      "paper/paper_v32/tables/cross-protocol-metrics.csv"
+    ]
+  },
+  "inputs": {
+    "paper_v32/cross-protocol-metrics": "paper/paper_v32/tables/cross-protocol-metrics.csv",
+    "paper_v32/complete-events": "paper/paper_v32/tables/complete-events.csv",
+    "paper_v32/historical-mechanism-controls": "paper/paper_v32/tables/historical-mechanism-controls.csv",
+    "paper_v32/reference-history": "paper/paper_v32/tables/reference-history.csv",
+    "paper_v32/prepulse-state": "paper/paper_v32/tables/prepulse-state.csv",
+    "paper_v32/per-pulse-power-energy": "paper/paper_v32/tables/per-pulse-power-energy.csv",
+    "paper_v32/second-cycle": "paper/paper_v32/tables/second-cycle.csv",
+    "paper_v32/common-parents-and-calibration": "paper/paper_v32/tables/common-parents-and-calibration.csv",
+    "paper_v32/execution-budget": "paper/paper_v32/tables/execution-budget.csv",
+    "paper_v32/new-protocol-adjudication": "paper/paper_v32/tables/new-protocol-adjudication.csv",
+    "paper_v32/new-protocol-all-readouts": "paper/paper_v32/tables/new-protocol-all-readouts.csv",
+    "paper_v31/clean-execution": "paper/paper_v31/tables/clean-execution.csv",
+    "paper_v31/clean-adjudication": "paper/paper_v31/tables/clean-adjudication.csv",
+    "paper_v29/fixed-endpoints": "paper/paper_v29/tables/fixed-endpoints.csv",
+    "saved_traces": "paper/paper_v32/evidence/evaluation/traces.npz"
+  },
+  "latency_comparison_is_report_only": true,
+  "F29_shortening_error_is_smaller_than_E29": true
+}

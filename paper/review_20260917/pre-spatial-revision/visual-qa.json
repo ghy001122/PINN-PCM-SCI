@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "review_mode": "INLINE: same assistant inspected rendered pages; not independent peer review",
+  "manuscript_pages": 20,
+  "supplement_pages": 30,
+  "all_pages_contact_sheets_inspected": true,
+  "final_changed_pages_inspected_at_full_size": [
+    "supplement-27.png",
+    "supplement-28.png",
+    "supplement-29.png"
+  ],
+  "resolved_layout_issue": "Replaced machine field names and split headers in Table S17 with reader-facing labels and adjusted column widths.",
+  "formulas": "S9-S11 inspected for complete symbols, subscripts, inequality directions and equation labels.",
+  "figure": "S5 inspected for legible axes, four paired groups, r=1 line, labels and conditional interpretation.",
+  "automated_text_checks": "No outside-page characters, body/footer collisions, replacement characters or blank pages.",
+  "document_consistency": "DOCUMENT_CONSISTENCY_VALID",
+  "scientific_execution": false
+}

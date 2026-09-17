@@ -1,0 +1,199 @@
+{
+  "schema_id": "phk-v21-program-contract-v1",
+  "contract_id": "PHK_V21_REPEATABLE_EVENT_PROGRAM_V1",
+  "effective_date": "2026-08-27",
+  "status": "PRE_NEW_SCIENTIFIC_RESULT_PROGRAM_CONTRACT",
+  "source_review": {
+    "path_external": "E:/PINN-PCM/总体审查结论.md",
+    "sha256": "7699E601DE20A968FA54F9E773D75F93D985019DE421A90829E211EEB27CD3F6",
+    "bytes": 23693,
+    "role": "USER_APPROVED_REVIEW_AND_EXECUTION_INPUT"
+  },
+  "preserves_without_superseding": [
+    "PHK_V2_COMPLETE_ORACLE_NO_GO",
+    "PHK_V2_ORACLE_NO_GO_EVENT_CONTRACT_AND_CONTROL_EXECUTION_FAILURE",
+    "PHK_V2_FAILED_INTENT_09_AND_NOT_REACHED_10_TO_12",
+    "PHK_V2_PAPER_AND_REPRODUCIBILITY_PACKAGE",
+    "GOAL_PAPER_ONE_SHOT_V1_COMPLETE",
+    "ALL_PRIOR_NO_GO_AND_FAILED_INTENTS"
+  ],
+  "authorization": {
+    "scope": "BOUNDED_LOCAL_ENGINEERING_AND_SCIENCE_E0_TO_S7",
+    "automatic_gate_progression": true,
+    "engineering_changes_are_non_voting": true,
+    "local_cpu_compute": true,
+    "local_gpu_if_available": true,
+    "paid_or_cloud_compute": false,
+    "credential_disclosure": false,
+    "author_contact_or_submission": false,
+    "external_upload_or_git_remote": false
+  },
+  "route": {
+    "id": "PHK_V21_REPEATABLE_EVENT",
+    "task": "TWO_CYCLE_LOCALIZED_FORMATION_RECOVERY_FORMATION_RECOVERY",
+    "excluded_routes": [
+      "CUMULATIVE_MULTIPULSE_PROGRAMMING",
+      "SRPG",
+      "HISTORY_ENCODER",
+      "PHK_V2_OBJECT_RESCUE_OR_REWRITE"
+    ],
+    "object_identity": [
+      "TWO_DIMENSIONAL_CARTESIAN",
+      "LOCALIZED_ELECTROTHERMAL_PHASE_FIELD",
+      "TRANSPARENT_DIMENSIONLESS_SYNTHETIC_BENCHMARK",
+      "NOT_AUTHOR_MODEL_REPRODUCTION",
+      "NOT_MATERIAL_CALIBRATED_OR_EXPERIMENTALLY_VALIDATED"
+    ]
+  },
+  "engineering_contract_path": "configs/phk_v21/engineering_contract.json",
+  "required_pre_science_freezes": [
+    "configs/phk_v21/object_numerical_contract.json",
+    "configs/phk_v21/case_split_manifest.json",
+    "configs/phk_v21/oracle_and_floor_contract.json",
+    "configs/phk_v21/baseline_replication_contract.json",
+    "configs/phk_v21/method_contract.json"
+  ],
+  "baseline_identities": {
+    "sharp_paper": "SHARP_PINNS_PAPER_REPLICATION_V1",
+    "sharp_repo": "SHARP_PINNS_REPO_RECIPE_4B7029E",
+    "pf_repo": "PF_PINNS_SUPPORT_COMPARATOR_A25F75B",
+    "general_strong": "JAXPI2_ADAPTIVE_PSEUDOTIME_77A5C13",
+    "source_refresh_required_before_run": true,
+    "gpl_code_in_main_repository": false
+  },
+  "method_sequence": {
+    "bottleneck_arms": [
+      "STRONG_RAW",
+      "GLOBAL_MULTI_FREQUENCY",
+      "PHASE_AWARE_SAMPLING",
+      "GLOBAL_MULTI_FREQUENCY_PLUS_PHASE_AWARE_SAMPLING"
+    ],
+    "factorial_arms": [
+      "STRONG_RAW",
+      "PHA_MF_ONLY",
+      "FIELD_SELECTIVE_KC_ONLY",
+      "PHA_MF_PLUS_FIELD_SELECTIVE_KC"
+    ],
+    "required_capacity_compute_controls": [
+      "WIDER_RAW",
+      "EXTRA_WORK_RAW",
+      "GLOBAL_MULTI_FREQUENCY"
+    ],
+    "required_pha_controls": [
+      "PHASE_ONLY_GATE",
+      "JOULE_ONLY_GATE",
+      "GENERIC_GATE",
+      "SHUFFLED_WRONG_LOCATION_GATE"
+    ],
+    "required_kc_controls": [
+      "IDENTITY_CLOCK",
+      "GENERIC_MONOTONE_CLOCK",
+      "RANDOM_FIXED_CLOCK",
+      "ALL_FIELD_WARP",
+      "WRONG_SEGMENT_CLOCK",
+      "ADAPTIVE_PSEUDOTIME",
+      "SMOOTH_DYNAMICS_CONTROL"
+    ]
+  },
+  "case_identity_fields": [
+    "geometry",
+    "constitutive_branch",
+    "initial_state",
+    "full_waveform",
+    "full_history"
+  ],
+  "case_pools": {
+    "Q": "ORACLE_EVENT_CONTROL_AND_FLOOR_QUALIFICATION_ONLY",
+    "D": "TRAINING_AND_HYPERPARAMETER_DEVELOPMENT_ONLY",
+    "I1": "BOTTLENECK_AND_SINGLE_MODULE_ATTRIBUTION_OPEN_ONCE",
+    "I2": "FACTORIAL_COMBINATION_AND_CHALLENGER_SELECTION_OPEN_ONCE",
+    "F_A": "SEALED_COMPLETE_PROTOCOL_AXIS_FORMAL",
+    "F_O": "SEALED_WHOLE_GEOMETRY_OR_DYNAMICS_FACTOR_FORMAL",
+    "R": "UNOPENED_RESERVE"
+  },
+  "formal_endpoints": {
+    "co_primary": [
+      "TIME_AVERAGED_PHASE_REGION_SYMMETRIC_DIFFERENCE",
+      "TERMINAL_CURRENT_TRACE_ERROR"
+    ],
+    "direction": "LOWER_ERROR_IS_BETTER",
+    "positive_route": "AT_LEAST_ONE_CO_PRIMARY_SUPERIOR_AND_THE_OTHER_NONINFERIOR",
+    "superiority_margin_floor_units": 0.5,
+    "noninferiority_margin_floor_units": 0.5,
+    "minimum_effect": "max(2*oracle_floor,2*seed_uncertainty,0.5_floor_units)",
+    "important_noninferiority_endpoints": [
+      "INTERFACE_HAUSDORFF_DISTANCE",
+      "EVENT_TIME",
+      "RECOVERY",
+      "HOTSPOT_PEAK",
+      "HOTSPOT_CENTROID",
+      "PHASE_VOLUME",
+      "PULSE_ENERGY"
+    ]
+  },
+  "formal_statistics": {
+    "scientific_unit": "COMPLETE_CASE",
+    "seed_is_nested_repeat": true,
+    "case_estimator": "SEED_MEDIAN",
+    "paired_estimator": "BASELINE_ERROR_MINUS_PROPOSED_ERROR",
+    "interval": "SHARED_RESAMPLE_CASE_LEVEL_STUDENTIZED_BOOTSTRAP",
+    "familywise_one_sided_alpha": 0.05,
+    "co_primary_bonferroni_alpha_each": 0.025,
+    "minimum_power": 0.8,
+    "candidate_formal_case_counts": [8, 12, 16, 20, 24, 32],
+    "formal_split_is_complete_case_exclusive": true
+  },
+  "budgets": {
+    "cpu_process_core_hours_total": 128.0,
+    "engineering_cpu_core_hours": 24.0,
+    "oracle_cpu_core_hours": 32.0,
+    "official_baseline_cpu_core_hours": 24.0,
+    "method_and_package_cpu_core_hours": 48.0,
+    "local_development_gpu_exclusive_hours_if_available": 64.0,
+    "local_formal_gpu_exclusive_hours_if_available": 64.0,
+    "paid_or_cloud_compute": 0,
+    "failed_intents_count_against_budget": true,
+    "replacement_seed_or_case": false,
+    "maximum_external_primary_carriers": 6
+  },
+  "stage_order": [
+    "E0_AUTHORITY_SOURCE_REFRESH_AND_ENGINEERING_CONTRACT",
+    "E1_CONTROL_SOLVER_DIAGNOSIS_AND_FIXED_SCHEME_SELECTION",
+    "E2_BOUNDED_NON_VOTING_OBJECT_DESIGN",
+    "S0_NEW_OBJECT_SPLIT_ORACLE_BASELINE_AND_METHOD_FREEZE",
+    "S1_ORACLE_EVENT_CONTROLS_CONVERGENCE_AND_NEURAL_FLOOR",
+    "S2_SHARP_PF_METRIC_REPLICATION",
+    "S3_STRONG_RAW_AND_FOUR_ARM_BOTTLENECK_DIAGNOSIS",
+    "S4_EQUAL_BUDGET_PHA_KC_FACTORIAL",
+    "S5_CAPACITY_COMPUTE_GATE_AND_CLOCK_CHALLENGERS",
+    "S6_SEALED_COMPLETE_CASE_FORMAL_OOD",
+    "S7_POSITIVE_OR_BOUNDARY_PRESERVING_V2_MANUSCRIPT_PACKAGE"
+  ],
+  "stop_rules": {
+    "engineering_no_admissible_object": "STOP_WITH_PHK_V21_ENGINEERING_NO_GO_PACKAGE",
+    "oracle_or_control_or_floor_failure": "STOP_BEFORE_PINN_TRAINING",
+    "official_baseline_replication_failure": "STOP_BEFORE_METHOD_CLAIM_AND_REPORT_REPLICATION_FAILURE",
+    "strong_raw_incompetent": "STOP_METHOD_ATTRIBUTION_AS_NON_ESTIMABLE",
+    "no_identified_bottleneck": "STOP_PHA_KC_HEADLINE_ROUTE",
+    "factorial_or_challenger_failure": "FREEZE_BOUNDED_METHOD_NO_GO",
+    "formal_power_or_gate_failure": "NO_POSITIVE_FORMAL_CLAIM",
+    "never_change_after_open": [
+      "OBJECT",
+      "EVENT_THRESHOLDS",
+      "CASE_SPLIT",
+      "METHOD_ARMS",
+      "SEEDS",
+      "BUDGETS",
+      "MARGINS"
+    ]
+  },
+  "completion_requires": [
+    "TERMINAL_MACHINE_SUMMARY",
+    "ALL_FAILED_AND_NOT_REACHED_INTENTS_ACCOUNTED",
+    "ENGLISH_AND_CHINESE_V2_MANUSCRIPTS",
+    "FINAL_FIGURES_TABLES_AND_REFERENCES",
+    "SUPPLEMENT_AND_REPRODUCIBILITY_GUIDE",
+    "CLAIM_EVIDENCE_MATRIX_AND_REVIEWER_RISK_AUDIT",
+    "PACKAGE_MANIFEST_AND_VALIDATION"
+  ]
+}

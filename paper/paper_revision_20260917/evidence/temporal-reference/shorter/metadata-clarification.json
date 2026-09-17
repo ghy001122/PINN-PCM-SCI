@@ -1,0 +1,76 @@
+{
+  "status": "DESCRIPTIVE_METADATA_CLARIFICATION_NO_NUMERICAL_CHANGE",
+  "protocol": "shorter",
+  "corrected_case_spec": {
+    "schema_id": "lf11-finite-pulse-case-v1",
+    "case_id": "lf11-reference-sensitivity-shorter",
+    "pulse_starts": [
+      0.0,
+      1.01
+    ],
+    "amplitude": 0.72,
+    "rise_end": 0.05,
+    "hold_end": 0.27,
+    "fall_end": 0.35,
+    "time_end": 2.5,
+    "recovery_cycles": [
+      [
+        0.0,
+        1.01
+      ],
+      [
+        1.01,
+        2.02
+      ]
+    ],
+    "tail": [
+      2.02,
+      2.5
+    ],
+    "windows": [
+      [
+        0.0,
+        0.35
+      ],
+      [
+        0.35,
+        1.01
+      ],
+      [
+        1.01,
+        1.36
+      ],
+      [
+        1.36,
+        2.5
+      ]
+    ],
+    "window_masses": [
+      0.14,
+      0.264,
+      0.14,
+      0.456
+    ],
+    "support": {
+      "nx": 80,
+      "nz": 40,
+      "dt": 0.0025,
+      "save_every": 2,
+      "main_steps": 1000
+    },
+    "reference": {
+      "nx": 160,
+      "nz": 80,
+      "dt": 0.0003125,
+      "save_every": 8,
+      "main_steps": 8000
+    },
+    "sampling_rule": "indices 0,4,8,... plus last on each support axis",
+    "changed_physics": "none; fixed spatial grid and halved reference integration time step"
+  },
+  "affected_fields": "Only descriptive windows/recovery/tail/reference resolution; not read by the running reference solver",
+  "original_job_used_correct_pulse_starts_and_actual_resolution": true,
+  "waveform_all_8001_steps_identical": true,
+  "original_records_retained": true,
+  "scientific_reexecution": 0
+}

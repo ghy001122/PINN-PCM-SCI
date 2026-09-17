@@ -1,0 +1,32 @@
+{
+  "status": "UNEXECUTED_SCORER_ALIGNED_TO_ORIGINAL_CONTRACT_BEFORE_FIRST_REFERENCE_SCORE",
+  "created_utc": "2026-09-16T14:19:37.492492+00:00",
+  "requirement": "New head must pass original A or B versus E_C and corresponding original noninferiority versus parent E",
+  "original_A_parent_guards": [
+    "ET",
+    "EI",
+    "EV"
+  ],
+  "original_B_parent_guards": [
+    "S",
+    "Ephi",
+    "ET",
+    "EV",
+    "EI"
+  ],
+  "correction": "Draft scorer had also gated parent primary errors. These additional checks are retained only as report-only diagnostics, rather than silently strengthening the prescribed gate.",
+  "strict_increment_guards_unchanged": [
+    "S",
+    "Ephi",
+    "ET",
+    "EV",
+    "EI",
+    "power_trace_NRMSE"
+  ],
+  "thresholds_changed": false,
+  "training_changed": false,
+  "checkpoint_selection_changed": false,
+  "old_results_or_decisions_changed": false,
+  "reference_fields_read_for_correction": false,
+  "scientific_execution": 0
+}

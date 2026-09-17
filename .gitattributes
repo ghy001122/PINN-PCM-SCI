@@ -4,3 +4,8 @@
 archive/2026-08-18-ideaspark-high-frequency-pinn-pcm/** -text -whitespace
 # Preserve captured V32 evidence and deployed runtime bytes during publication.
 paper/paper_v32/evidence/** -text -whitespace
+# Preserve the current revision evidence and rendered manuscript snapshots.
+paper/paper_revision_20260917/evidence/** -text -whitespace
+paper/paper_revision_20260916/*.pdf binary
+paper/paper_revision_20260917/*.pdf binary
+paper/review_20260917/**/*.pdf binary

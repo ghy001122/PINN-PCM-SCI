@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "device": "cuda:0",
+  "records": [
+    {
+      "seed": 29,
+      "role": "E_C",
+      "objective": 0.007985035221169362,
+      "trainable_parameters": 29827,
+      "total_parameters": 43140,
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 2,
+          "zero_drive_queries": 0,
+          "factorizations": 2,
+          "forward_solves": 2,
+          "adjoint_solves": 2,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 1.2299826211251995e-15,
+          "max_adjoint_scaled_residual": 1.3877787807814457e-16
+        }
+      }
+    },
+    {
+      "seed": 29,
+      "role": "E_R",
+      "objective": 0.007985035221169362,
+      "trainable_parameters": 31044,
+      "total_parameters": 44357,
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 2,
+          "zero_drive_queries": 0,
+          "factorizations": 2,
+          "forward_solves": 2,
+          "adjoint_solves": 2,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 1.2299826211251995e-15,
+          "max_adjoint_scaled_residual": 1.3877787807814457e-16
+        }
+      }
+    },
+    {
+      "seed": 29,
+      "role": "E_I",
+      "objective": 0.007985035221169362,
+      "trainable_parameters": 31044,
+      "total_parameters": 57670,
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 2,
+          "zero_drive_queries": 0,
+          "factorizations": 2,
+          "forward_solves": 2,
+          "adjoint_solves": 2,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 1.2299826211251995e-15,
+          "max_adjoint_scaled_residual": 1.3877787807814457e-16
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "role": "E_C",
+      "objective": 0.006411100591005374,
+      "trainable_parameters": 29827,
+      "total_parameters": 43140,
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 2,
+          "zero_drive_queries": 0,
+          "factorizations": 2,
+          "forward_solves": 2,
+          "adjoint_solves": 2,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 1.2299652002708367e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-16
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "role": "E_R",
+      "objective": 0.006411100591005374,
+      "trainable_parameters": 31044,
+      "total_parameters": 44357,
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 2,
+          "zero_drive_queries": 0,
+          "factorizations": 2,
+          "forward_solves": 2,
+          "adjoint_solves": 2,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 1.2299652002708367e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-16
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "role": "E_I",
+      "objective": 0.006411100591005374,
+      "trainable_parameters": 31044,
+      "total_parameters": 57670,
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 2,
+          "zero_drive_queries": 0,
+          "factorizations": 2,
+          "forward_solves": 2,
+          "adjoint_solves": 2,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 1.2299652002708367e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-16
+        }
+      }
+    }
+  ],
+  "counts": {
+    "forward": 12,
+    "adjoint": 12
+  },
+  "optimizer_updates": 0,
+  "reference_read": false
+}

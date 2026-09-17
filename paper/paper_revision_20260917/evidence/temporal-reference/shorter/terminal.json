@@ -1,0 +1,98 @@
+{
+  "status": "VALID_FIXED_TEMPORAL_REFERENCE",
+  "protocol": "shorter",
+  "case_spec": {
+    "schema_id": "lf11-finite-pulse-case-v1",
+    "case_id": "lf11-reference-sensitivity-shorter",
+    "pulse_starts": [
+      0.0,
+      1.01
+    ],
+    "amplitude": 0.72,
+    "rise_end": 0.05,
+    "hold_end": 0.27,
+    "fall_end": 0.35,
+    "time_end": 2.5,
+    "recovery_cycles": [
+      [
+        0.0,
+        1.01
+      ],
+      [
+        1.01,
+        2.02
+      ]
+    ],
+    "tail": [
+      2.02,
+      2.5
+    ],
+    "windows": [
+      [
+        0.0,
+        0.35
+      ],
+      [
+        0.35,
+        1.01
+      ],
+      [
+        1.01,
+        1.36
+      ],
+      [
+        1.36,
+        2.5
+      ]
+    ],
+    "window_masses": [
+      0.14,
+      0.264,
+      0.14,
+      0.456
+    ],
+    "support": {
+      "nx": 80,
+      "nz": 40,
+      "dt": 0.0025,
+      "save_every": 2,
+      "main_steps": 1000
+    },
+    "reference": {
+      "nx": 160,
+      "nz": 80,
+      "dt": 0.000625,
+      "save_every": 4,
+      "main_steps": 4000
+    },
+    "sampling_rule": "indices 0,4,8,... plus last on each support axis",
+    "changed_physics": "second pulse start only; finite two-pulse experiment"
+  },
+  "solver_statistics": {
+    "time_steps_total": 8000,
+    "coupled_blocks_total": 24315,
+    "electric_linear_solves_total": 32316,
+    "thermal_linear_solves_total": 24315,
+    "phase_solver_calls_total": 24315,
+    "phase_iterations_total": 29246,
+    "phase_residual_evaluations_total": 82807,
+    "phase_jacobian_evaluations_total": 53561,
+    "phase_linear_solves_total": 29246,
+    "phase_bound_rejections_total": 0,
+    "phase_decrease_rejections_total": 0,
+    "output_clipping_count": 0,
+    "final_residual_evaluations_total": 8000,
+    "maximum_phase_candidate_residual_inf": 9.990615970857577e-11,
+    "linear_solves_total": 85877
+  },
+  "linear_counts": {
+    "electric": 32316,
+    "thermal": 24315,
+    "phase": 29246
+  },
+  "new_training": 0,
+  "stress_read": false,
+  "resolution_identity": "USER_AUTHORIZED_TIME_REFINEMENT_20260916",
+  "old_frozen_resolution_name_not_a_new_qualification": true,
+  "created_utc": "2026-09-16T14:33:22.478515+00:00"
+}

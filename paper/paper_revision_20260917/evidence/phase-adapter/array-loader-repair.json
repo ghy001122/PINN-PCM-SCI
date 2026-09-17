@@ -1,0 +1,11 @@
+{
+  "status": "ARRAY_LOADER_COMPATIBILITY_REPAIR_BEFORE_FIRST_SCORE",
+  "initial_error": "reference coordinate shape 12800 versus independent axis shape 160",
+  "repair": "Exact per-cell coordinates checked against frozen grid.cell_x/cell_z; axis representation normalized only after exact match",
+  "field_values_changed": false,
+  "field_order_changed": false,
+  "interpolation": false,
+  "metrics_completed_before_stop": 0,
+  "independent_rescore_started": false,
+  "training_or_solver_reruns": 0
+}

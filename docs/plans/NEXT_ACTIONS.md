@@ -1,31 +1,19 @@
-# V32科学终局保留：投稿候选稿已完成，进入针对性审阅
+# 固定预测空间参考与优先修订：已完成
 
-- `phase_id`: `PHK_V23_LF11_NEW_PROTOCOL_COMPLETE`
-- `lifecycle_state`: `COMPLETE`
+**2026-09-18发布与第二轮审核：**用户另行授权近期成果提交云端及academic-research-suite全面复审。[发布范围与重要结果](../notes/2026-09-18-revision-results-release.md)、[新Revision Roadmap](../../paper/review_20260917_round2/Revision_Roadmap.md)记录本次交付。科学阶段仍CLOSED，无新增训练/推理/求解授权；先前“未发布”措辞保留其历史阶段身份。公开包是精简证据，不含全部数组。
+
+- `phase_id`: `PHK_V23_FIXED_PREDICTION_SPATIAL_REFERENCE`
+- `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VALID_NEW_PROTOCOL_TWO_CLEAN_PAIRS_COMPLETE`
+- `claim_status`: `VERIFIED_SPATIAL_REFERENCE_SENSITIVITY_BOUNDED`
 - `next_research_execution_authorized`: `false`
 
-VERIFIED：按[已批准指令](../notes/2026-09-15-lf11-protocol-authorized-sprint.md)，两个新seed的E均对F_raw/projected与B_E通过原A/B；两条新数值轨迹、全部配对、事件/历史分析及[paper_v32](../../paper/paper_v32/README.md)已完成，GPU已关闭。条件时间细化未触发。旧提案[归档](../../archive/2026-09-15-lf11-v31-next-proposal.md)，V31及旧裁决不变。
+用户2026-09-17回复“我批准授权，继续执行”，明确承接前一回复中列出的两协议240×120、dt=0.0003125、16000主步／400000内部线性解及状态更新。前一计划保存在[归档](../../archive/2026-09-17-pre-spatial-reference-plan.md)。
 
-## 当前已完成的成稿与下一步
+1. **VERIFIED，已完成：**两条数值有效参考共16000主步、170979内部线性解；固定16套预测和读出，完成保守限制、原生参考端口量评分及阈值映射诊断。实际[终局](../experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)和[评分汇总](../../paper/paper_revision_20260917/spatial-summary.json)保留全部结果。
+2. **VERIFIED，已完成：**四组E/F完整器件判据在三参考下均保持；三项历史A/B改变，空间参考下无严格双周期通过对象。没有选择性报告或改阈值，原历史结论不追溯替换。
+3. **VERIFIED，已完成：**[完整修订稿](../../paper/paper_revision_20260917/README.md)为正文21页、补充35页；[逐项响应](../../paper/review_20260917/Roadmap_Execution_Report.md)记录方法、来源、比较、数学界限、科学反证和版面落实。零新训练、checkpoint前反向、预测电学求解、stress、GPU或Git发布。
+4. **作者待办：**依[作者清单](../../paper/review_20260917/Author_Actions.md)确认真实署名、机构、基金、利益、责任、期刊和公开材料；这些事实不由助手代填。现有稿为完整作者审阅稿。
+5. **未授权的新科学事项：**仅当拟提升论文主张时，另行提出具体反事实和预算。稳定strict、剩余PDE独立必要性、预测读出网格独立性及材料/实验验证仍未建立，不默认追加第三参考、训练臂或模块。
 
-用户随后另行授权投稿候选稿提交云端及[论文改进独立评估](../notes/2026-09-16-paper-submission-cloud-review-handoff.md)，本包发布分支`codex/paper-submission-results`。评估须比较参考敏感性、严格事件、剩余PDE必要性与材料关联对当前主张的实际影响，允许推翻本页优先顺序，提出可审阅的最小补证计划；不自动执行新研究。
-
-VERIFIED：用户2026-09-16的`Paper_Sprint.md`已执行为本地[paper_submission](../../paper/paper_submission/README.md)：完整英文正文/PDF、六组主图、统一去重数表、参考文献及合并补充。新增延迟变化与分脉冲抵消分析仅消费保存结果。零新科学执行，未启GPU，未commit/push/PR；V32快照和所有历史裁决不变。
-
-1. **先审阅完整候选稿。** 核心定位为部分消元混合PINN的受限方法包收益；根据明确目标期刊做针对性编辑，补齐真实作者/基金/声明与完整数据归档安排。不得以重新训练拖延写作，也不把行政缺项变成科学成果缺失。
-2. **保留最重要边界。** 原协议seed43对B_E未跨优势门、严格事件仍失败、D_E强、剩余PDE及孤立VJP因果UNKNOWN。新协议seed43的S裕量4.4453125e-6属于固定参考的窄裕量，不称连续体稳健。
-3. **唯一可提科研补证，不自动执行。** 若论文主张需要参考敏感性，按补充S9冻结现有八个神经状态及两个B_E，两个协议各160×80、dt=0.0003125、save_every=8，总计最多16000主时间步；内部求解上限须执行前另行冻结。只用已保存预测重评分，零训练/模型梯度/新增推理电解；原/新参考并列。状态`PROPOSED_NOT_AUTHORIZED`，不阻塞当前固定离散范围稿件。
-
-## 已落实的成稿依据
-
-1. **把方法包贡献写成可审阅主张。** 训练期电学约束、完整隐式梯度和一致局部产热接口组成混合PINN，以相同事后电学求解的强soft和B_E为对照。新协议相态与功能增益已成立，不再为了增加模块数追加实验。V32已按“同状态修复→共同投影→全空间反事实→干净配对→完整协议”整合正文、六组图、数表和复现入口。
-2. **优先完善初稿定位与证据表达。** 下一轮先审阅摘要、最近邻差异、方法定义和结果讨论；逐seed报告绝对值、百分点和效应，不汇成四个独立case。以已有原始来源说明合成无量纲模型的材料关联，不改称实验氧化物器件。先采用现有材料，不以再跑训练作为成稿前提。
-3. **保留科学缺口。** 新协议E两周期timing达标但第一周期recall仅0.866607/0.875507；原协议seed43对B_E门不足、D_E强、剩余PDE必要性UNKNOWN仍限制主张。若后续定位要求更强事件、材料或连续体结论，应先提出能改变主张的独立最小计划，再授权执行。
-
-## 停止与后续授权
-
-本轮进入预声明成稿路由，停止新增seed、case、权重、结构、逐残差控制及单门救援。参考时间细化为`NOT_TRIGGERED_NOT_RUN`：seed43 A/S虽接近10%，但B及B_E成稿裁决裕量大，没有观察到会改变路线的时间离散差异；这不等于已证明收敛。
-
-后续新科研执行保持`PROPOSED_NOT_AUTHORIZED`；本页不授予新训练、求解或stress权限。2026-09-16用户另行授权本轮成果提交/推送及[独立复评交付](../notes/2026-09-16-lf11-v32-results-cloud-review-handoff.md)，以决定论文优先问题和下一方案；此授权不改变科学终局或自动启动本页建议。无需为填满未知扩充控制矩阵。完整事实见[终局](../experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)及[主张矩阵](../../paper/paper_v32/claim_evidence_matrix.md)。
+SUPPORTED_INTERPRETATION：所测参考下的核心器件优势保持，部分阈值相态/事件主张收窄。空间两点仅支持敏感性判断，不证明收敛阶或连续体真值。已执行配置留在运行快照；当前配置已关闭执行权限，原批准不复用于追加计算。

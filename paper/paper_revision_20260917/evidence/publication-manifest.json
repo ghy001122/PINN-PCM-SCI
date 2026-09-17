@@ -1,0 +1,732 @@
+{
+  "date": "2026-09-18",
+  "status": "CURATED_EXISTING_RESULTS_NO_NEW_SCIENCE",
+  "records": [
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/execution-summary.json",
+      "published": "phase-adapter/execution-summary.json",
+      "bytes": 5978,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/frozen-config.json",
+      "published": "phase-adapter/frozen-config.json",
+      "bytes": 6669,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/focused-checks.json",
+      "published": "phase-adapter/focused-checks.json",
+      "bytes": 319,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/actual-parent-interface-checks.json",
+      "published": "phase-adapter/actual-parent-interface-checks.json",
+      "bytes": 5128,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/score-contract-clarification.json",
+      "published": "phase-adapter/score-contract-clarification.json",
+      "bytes": 995,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/array-loader-repair.json",
+      "published": "phase-adapter/array-loader-repair.json",
+      "bytes": 511,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/training-environment.json",
+      "published": "phase-adapter/training-environment.json",
+      "bytes": 255,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/frozen-config.json",
+      "published": "phase-adapter/seed-29/frozen-config.json",
+      "bytes": 6479,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/gate-calibration.json",
+      "published": "phase-adapter/seed-29/gate-calibration.json",
+      "bytes": 479,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/calibration.json",
+      "published": "phase-adapter/seed-29/calibration.json",
+      "bytes": 1089,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/calibration-pool.json",
+      "published": "phase-adapter/seed-29/calibration-pool.json",
+      "bytes": 179822,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/lbfgs-pool.json",
+      "published": "phase-adapter/seed-29/lbfgs-pool.json",
+      "bytes": 180126,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/audit-pool.json",
+      "published": "phase-adapter/seed-29/audit-pool.json",
+      "bytes": 179818,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/E_C/checkpoint.pt",
+      "published": "phase-adapter/seed-29/E_C/checkpoint.pt",
+      "bytes": 22854199,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/E_C/terminal.json",
+      "published": "phase-adapter/seed-29/E_C/terminal.json",
+      "bytes": 1069,
+      "treatment": "derived JSON; elapsed/wall duration fields omitted; scientific values retained"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/E_R/checkpoint.pt",
+      "published": "phase-adapter/seed-29/E_R/checkpoint.pt",
+      "bytes": 24776454,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/E_R/terminal.json",
+      "published": "phase-adapter/seed-29/E_R/terminal.json",
+      "bytes": 1050,
+      "treatment": "derived JSON; elapsed/wall duration fields omitted; scientific values retained"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/E_I/checkpoint.pt",
+      "published": "phase-adapter/seed-29/E_I/checkpoint.pt",
+      "bytes": 24390288,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-29/E_I/terminal.json",
+      "published": "phase-adapter/seed-29/E_I/terminal.json",
+      "bytes": 1068,
+      "treatment": "derived JSON; elapsed/wall duration fields omitted; scientific values retained"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/frozen-config.json",
+      "published": "phase-adapter/seed-43/frozen-config.json",
+      "bytes": 6480,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/gate-calibration.json",
+      "published": "phase-adapter/seed-43/gate-calibration.json",
+      "bytes": 479,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/calibration.json",
+      "published": "phase-adapter/seed-43/calibration.json",
+      "bytes": 1090,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/calibration-pool.json",
+      "published": "phase-adapter/seed-43/calibration-pool.json",
+      "bytes": 179869,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/lbfgs-pool.json",
+      "published": "phase-adapter/seed-43/lbfgs-pool.json",
+      "bytes": 179813,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/audit-pool.json",
+      "published": "phase-adapter/seed-43/audit-pool.json",
+      "bytes": 179963,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/E_C/checkpoint.pt",
+      "published": "phase-adapter/seed-43/E_C/checkpoint.pt",
+      "bytes": 23810751,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/E_C/terminal.json",
+      "published": "phase-adapter/seed-43/E_C/terminal.json",
+      "bytes": 1050,
+      "treatment": "derived JSON; elapsed/wall duration fields omitted; scientific values retained"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/E_R/checkpoint.pt",
+      "published": "phase-adapter/seed-43/E_R/checkpoint.pt",
+      "bytes": 24776454,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/E_R/terminal.json",
+      "published": "phase-adapter/seed-43/E_R/terminal.json",
+      "bytes": 1050,
+      "treatment": "derived JSON; elapsed/wall duration fields omitted; scientific values retained"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/E_I/checkpoint.pt",
+      "published": "phase-adapter/seed-43/E_I/checkpoint.pt",
+      "bytes": 24888020,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/seed-43/E_I/terminal.json",
+      "published": "phase-adapter/seed-43/E_I/terminal.json",
+      "bytes": 1051,
+      "treatment": "derived JSON; elapsed/wall duration fields omitted; scientific values retained"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/local-reference/original/terminal.json",
+      "published": "temporal-reference/original/terminal.json",
+      "bytes": 2263,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/local-reference/original/metadata-clarification.json",
+      "published": "temporal-reference/original/metadata-clarification.json",
+      "bytes": 1628,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/local-reference/shorter/terminal.json",
+      "published": "temporal-reference/shorter/terminal.json",
+      "bytes": 2261,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260916-lf11-phase-adapter-reference/local-reference/shorter/metadata-clarification.json",
+      "published": "temporal-reference/shorter/metadata-clarification.json",
+      "bytes": 1632,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/results.json",
+      "published": "temporal-reference/results.json",
+      "bytes": 589765,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/manifest.json",
+      "published": "local-array-manifest.json",
+      "bytes": 8529,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "paper/paper_revision_20260916/build/independent-rescore.json",
+      "published": "local-verification/independent-rescore.json",
+      "bytes": 1118,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "paper/paper_revision_20260916/build/reproduction-entry-check.json",
+      "published": "local-verification/reproduction-entry-check.json",
+      "bytes": 282,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/configs/phk_v2/object_numerical_contract.json",
+      "published": "phase-runtime-source/configs/phk_v2/object_numerical_contract.json",
+      "bytes": 9186,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/configs/phk_v2/program_contract.json",
+      "published": "phase-runtime-source/configs/phk_v2/program_contract.json",
+      "bytes": 8077,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/configs/phk_v21/e1_solver_selection.json",
+      "published": "phase-runtime-source/configs/phk_v21/e1_solver_selection.json",
+      "bytes": 5286,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/configs/phk_v21/engineering_contract.json",
+      "published": "phase-runtime-source/configs/phk_v21/engineering_contract.json",
+      "bytes": 6887,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/configs/phk_v21/object_numerical_contract.json",
+      "published": "phase-runtime-source/configs/phk_v21/object_numerical_contract.json",
+      "bytes": 7915,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/configs/phk_v21/program_contract.json",
+      "published": "phase-runtime-source/configs/phk_v21/program_contract.json",
+      "bytes": 7185,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/configs/phk_v23/lf11_phase_adapter_sprint.json",
+      "published": "phase-runtime-source/configs/phk_v23/lf11_phase_adapter_sprint.json",
+      "bytes": 6669,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/outputs/runs/20260827T-phk-v21-e2-engineering-search-001/summary.json",
+      "published": "phase-runtime-source/outputs/runs/20260827T-phk-v21-e2-engineering-search-001/summary.json",
+      "bytes": 64415,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/__init__.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/__init__.py",
+      "bytes": 164,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/artifacts.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/artifacts.py",
+      "bytes": 23723,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_benchmark.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_benchmark.py",
+      "bytes": 62707,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_contract.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_contract.py",
+      "bytes": 13691,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v21_benchmark.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v21_benchmark.py",
+      "bytes": 63543,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v21_solver.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v21_solver.py",
+      "bytes": 15741,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v22r_pinn.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v22r_pinn.py",
+      "bytes": 45991,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v22r_prediction.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v22r_prediction.py",
+      "bytes": 12967,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v22r_training.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v22r_training.py",
+      "bytes": 45091,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11.py",
+      "bytes": 23607,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_electric_layer.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_electric_layer.py",
+      "bytes": 7801,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_elimination.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_elimination.py",
+      "bytes": 19417,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_elimination_physics.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_elimination_physics.py",
+      "bytes": 5720,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_elimination_predict.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_elimination_predict.py",
+      "bytes": 9504,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_followup.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_followup.py",
+      "bytes": 8602,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_followup_fit.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_followup_fit.py",
+      "bytes": 15310,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_joint.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_joint.py",
+      "bytes": 15419,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_protocol.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_protocol.py",
+      "bytes": 3133,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_readout.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_readout.py",
+      "bytes": 6145,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_lf11_v_continue.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_lf11_v_continue.py",
+      "bytes": 10460,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/pinn_pcm_sci/phk_v23_phase_adapter.py",
+      "published": "phase-runtime-source/pinn_pcm_sci/phk_v23_phase_adapter.py",
+      "bytes": 13313,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/training/runtime-source/tests/test_phk_v21_benchmark.py",
+      "published": "phase-runtime-source/tests/test_phk_v21_benchmark.py",
+      "bytes": 11494,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/results.json",
+      "published": "spatial-reference/results.json",
+      "bytes": 160659,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/reference/original/terminal.json",
+      "published": "spatial-reference/original/terminal.json",
+      "bytes": 2429,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/reference/original/mapping.json",
+      "published": "spatial-reference/original/mapping.json",
+      "bytes": 511,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/reference/original/intent.json",
+      "published": "spatial-reference/original/intent.json",
+      "bytes": 2709,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/reference/shorter/terminal.json",
+      "published": "spatial-reference/shorter/terminal.json",
+      "bytes": 2434,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/reference/shorter/mapping.json",
+      "published": "spatial-reference/shorter/mapping.json",
+      "bytes": 512,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/reference/shorter/intent.json",
+      "published": "spatial-reference/shorter/intent.json",
+      "bytes": 2713,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/configs/phk_v2/object_numerical_contract.json",
+      "published": "spatial-runtime-source/configs/phk_v2/object_numerical_contract.json",
+      "bytes": 9186,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/configs/phk_v2/program_contract.json",
+      "published": "spatial-runtime-source/configs/phk_v2/program_contract.json",
+      "bytes": 8077,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/configs/phk_v21/object_numerical_contract.json",
+      "published": "spatial-runtime-source/configs/phk_v21/object_numerical_contract.json",
+      "bytes": 7915,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/configs/phk_v21/program_contract.json",
+      "published": "spatial-runtime-source/configs/phk_v21/program_contract.json",
+      "bytes": 7185,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/configs/phk_v23/lf11_spatial_reference_sprint.json",
+      "published": "spatial-runtime-source/configs/phk_v23/lf11_spatial_reference_sprint.json",
+      "bytes": 1253,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/pinn_pcm_sci/phk_benchmark.py",
+      "published": "spatial-runtime-source/pinn_pcm_sci/phk_benchmark.py",
+      "bytes": 62707,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/pinn_pcm_sci/phk_v21_benchmark.py",
+      "published": "spatial-runtime-source/pinn_pcm_sci/phk_v21_benchmark.py",
+      "bytes": 63543,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/pinn_pcm_sci/phk_v21_solver.py",
+      "published": "spatial-runtime-source/pinn_pcm_sci/phk_v21_solver.py",
+      "bytes": 15741,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/pinn_pcm_sci/phk_v23_lf11_protocol.py",
+      "published": "spatial-runtime-source/pinn_pcm_sci/phk_v23_lf11_protocol.py",
+      "bytes": 3133,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/pinn_pcm_sci/phk_v23_reference_sensitivity.py",
+      "published": "spatial-runtime-source/pinn_pcm_sci/phk_v23_reference_sensitivity.py",
+      "bytes": 5561,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/source/pinn_pcm_sci/phk_v23_spatial_reference.py",
+      "published": "spatial-runtime-source/pinn_pcm_sci/phk_v23_spatial_reference.py",
+      "bytes": 6561,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/original_29_E-traces.npz",
+      "published": "temporal-reference/traces/original_29_E-traces.npz",
+      "bytes": 24097,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/original_29_F-traces.npz",
+      "published": "temporal-reference/traces/original_29_F-traces.npz",
+      "bytes": 24026,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/original_43_E-traces.npz",
+      "published": "temporal-reference/traces/original_43_E-traces.npz",
+      "bytes": 24088,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/original_43_F-traces.npz",
+      "published": "temporal-reference/traces/original_43_F-traces.npz",
+      "bytes": 24086,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/original_B_E-traces.npz",
+      "published": "temporal-reference/traces/original_B_E-traces.npz",
+      "bytes": 23777,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_29_E-traces.npz",
+      "published": "temporal-reference/traces/shorter_29_E-traces.npz",
+      "bytes": 24282,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_29_E_C-traces.npz",
+      "published": "temporal-reference/traces/shorter_29_E_C-traces.npz",
+      "bytes": 24276,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_29_E_I-traces.npz",
+      "published": "temporal-reference/traces/shorter_29_E_I-traces.npz",
+      "bytes": 24266,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_29_E_R-traces.npz",
+      "published": "temporal-reference/traces/shorter_29_E_R-traces.npz",
+      "bytes": 24300,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_29_F-traces.npz",
+      "published": "temporal-reference/traces/shorter_29_F-traces.npz",
+      "bytes": 24333,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_43_E-traces.npz",
+      "published": "temporal-reference/traces/shorter_43_E-traces.npz",
+      "bytes": 24303,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_43_E_C-traces.npz",
+      "published": "temporal-reference/traces/shorter_43_E_C-traces.npz",
+      "bytes": 24252,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_43_E_I-traces.npz",
+      "published": "temporal-reference/traces/shorter_43_E_I-traces.npz",
+      "bytes": 24259,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_43_E_R-traces.npz",
+      "published": "temporal-reference/traces/shorter_43_E_R-traces.npz",
+      "bytes": 24316,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_43_F-traces.npz",
+      "published": "temporal-reference/traces/shorter_43_F-traces.npz",
+      "bytes": 24225,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/submission-archive-20260916/rescore-output/refined/shorter_B_E-traces.npz",
+      "published": "temporal-reference/traces/shorter_B_E-traces.npz",
+      "bytes": 24075,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/original_29_E-traces.npz",
+      "published": "spatial-reference/traces/original_29_E-traces.npz",
+      "bytes": 24152,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/original_29_F-traces.npz",
+      "published": "spatial-reference/traces/original_29_F-traces.npz",
+      "bytes": 24076,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/original_43_E-traces.npz",
+      "published": "spatial-reference/traces/original_43_E-traces.npz",
+      "bytes": 24113,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/original_43_F-traces.npz",
+      "published": "spatial-reference/traces/original_43_F-traces.npz",
+      "bytes": 24111,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/original_B_E-traces.npz",
+      "published": "spatial-reference/traces/original_B_E-traces.npz",
+      "bytes": 23814,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_29_E-traces.npz",
+      "published": "spatial-reference/traces/shorter_29_E-traces.npz",
+      "bytes": 24257,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_29_E_C-traces.npz",
+      "published": "spatial-reference/traces/shorter_29_E_C-traces.npz",
+      "bytes": 24264,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_29_E_I-traces.npz",
+      "published": "spatial-reference/traces/shorter_29_E_I-traces.npz",
+      "bytes": 24261,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_29_E_R-traces.npz",
+      "published": "spatial-reference/traces/shorter_29_E_R-traces.npz",
+      "bytes": 24282,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_29_F-traces.npz",
+      "published": "spatial-reference/traces/shorter_29_F-traces.npz",
+      "bytes": 24337,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_43_E-traces.npz",
+      "published": "spatial-reference/traces/shorter_43_E-traces.npz",
+      "bytes": 24302,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_43_E_C-traces.npz",
+      "published": "spatial-reference/traces/shorter_43_E_C-traces.npz",
+      "bytes": 24273,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_43_E_I-traces.npz",
+      "published": "spatial-reference/traces/shorter_43_E_I-traces.npz",
+      "bytes": 24246,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_43_E_R-traces.npz",
+      "published": "spatial-reference/traces/shorter_43_E_R-traces.npz",
+      "bytes": 24311,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_43_F-traces.npz",
+      "published": "spatial-reference/traces/shorter_43_F-traces.npz",
+      "bytes": 24219,
+      "treatment": "byte copy"
+    },
+    {
+      "source": "outputs/runs/20260917-lf11-spatial-reference/scoring/spatial/shorter_B_E-traces.npz",
+      "published": "spatial-reference/traces/shorter_B_E-traces.npz",
+      "bytes": 24052,
+      "treatment": "byte copy"
+    }
+  ],
+  "operational_records_excluded": true,
+  "scientific_checkpoints_copied_without_loading": true,
+  "full_array_archive_public": false,
+  "spatial_native_fields_public": false,
+  "omitted": [
+    "complete reference and predicted fields",
+    "cloud connections and shutdown credentials",
+    "environment secrets",
+    "intermediate trial checkpoints",
+    "large local archive ZIP"
+  ],
+  "note": "Historical terminal/configuration snapshots are evidence, not current execution authorization."
+}

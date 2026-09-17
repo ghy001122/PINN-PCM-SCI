@@ -1,0 +1,107 @@
+{
+  "status": "VALID_FIXED_SPATIAL_REFERENCE",
+  "protocol": "original",
+  "case_spec": {
+    "schema_id": "lf11-finite-pulse-case-v1",
+    "case_id": "lf11-spatial-reference-original",
+    "pulse_starts": [
+      0.0,
+      1.25
+    ],
+    "amplitude": 0.72,
+    "rise_end": 0.05,
+    "hold_end": 0.27,
+    "fall_end": 0.35,
+    "time_end": 2.5,
+    "recovery_cycles": [
+      [
+        0.0,
+        1.25
+      ],
+      [
+        1.25,
+        2.5
+      ]
+    ],
+    "tail": [
+      2.5,
+      2.5
+    ],
+    "windows": [
+      [
+        0.0,
+        0.35
+      ],
+      [
+        0.35,
+        1.25
+      ],
+      [
+        1.25,
+        1.6
+      ],
+      [
+        1.6,
+        2.5
+      ]
+    ],
+    "window_masses": [
+      0.14,
+      0.36,
+      0.14,
+      0.36
+    ],
+    "support": {
+      "nx": 80,
+      "nz": 40,
+      "dt": 0.0025,
+      "save_every": 2,
+      "main_steps": 1000
+    },
+    "reference": {
+      "nx": 240,
+      "nz": 120,
+      "dt": 0.0003125,
+      "time_end": 2.5,
+      "save_every": 8,
+      "main_steps": 8000
+    },
+    "sampling_rule": "indices 0,4,8,... plus last on each support axis",
+    "changed_physics": "none; spatial reference only"
+  },
+  "solver_statistics": {
+    "time_steps_total": 8000,
+    "coupled_blocks_total": 24092,
+    "electric_linear_solves_total": 32093,
+    "thermal_linear_solves_total": 24092,
+    "phase_solver_calls_total": 24092,
+    "phase_iterations_total": 28776,
+    "phase_residual_evaluations_total": 81644,
+    "phase_jacobian_evaluations_total": 52868,
+    "phase_linear_solves_total": 28776,
+    "phase_bound_rejections_total": 0,
+    "phase_decrease_rejections_total": 0,
+    "output_clipping_count": 0,
+    "final_residual_evaluations_total": 8000,
+    "maximum_phase_candidate_residual_inf": 9.994525010121463e-11,
+    "linear_solves_total": 84961
+  },
+  "linear_counts": {
+    "electric": 32093,
+    "thermal": 24092,
+    "phase": 28776
+  },
+  "numerical_checks": {
+    "phase_range": [
+      1.952812902296937e-12,
+      0.9918656581502433
+    ],
+    "max_thermal_residual": 1.7223333870219903e-10,
+    "max_phase_residual": 1.3918175683150236e-10,
+    "max_current_balance": 1.643745715648763e-13
+  },
+  "output_clipping_allowed": false,
+  "stress_read": false,
+  "new_training": 0,
+  "created_utc": "2026-09-17T12:32:01.015684+00:00"
+}

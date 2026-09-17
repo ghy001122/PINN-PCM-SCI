@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "identity": true,
+  "constant_preservation": true,
+  "integral_preservation": true,
+  "threshold_difference_bound": true,
+  "production_shape": [
+    12800,
+    28800
+  ],
+  "production_nonzeros": 62304,
+  "synthetic_S_difference": 0.01649305555555558,
+  "synthetic_bound": 0.31047453703703703,
+  "new_pde_solves": 0,
+  "new_checkpoint_evaluations": 0
+}

@@ -1,6 +1,12 @@
 # 文档库地图
 
-## 当前V32：完整新脉冲协议确认已完成
+**2026-09-18发布与第二轮审核：**用户另行授权近期成果提交云端及academic-research-suite全面复审。[发布范围与重要结果](notes/2026-09-18-revision-results-release.md)、[新Revision Roadmap](../paper/review_20260917_round2/Revision_Roadmap.md)记录本次交付。科学阶段仍CLOSED，无新增训练/推理/求解授权；先前“未发布”措辞保留其历史阶段身份。公开包是精简证据，不含全部数组。
+
+## 当前：2026-09-17空间参考补证与论文修订已完成
+
+VERIFIED：用户批准的两个CPU空间参考及16套固定预测评分已完成；四组E/F完整器件优势在三参考下保持，三项历史A/B改变，空间参考下无严格双周期通过。实际计数和边界见[终局](experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)，当前正文21页/补充35页见[修订稿](../paper/paper_revision_20260917/README.md)及[Roadmap响应](../paper/review_20260917/Roadmap_Execution_Report.md)。本轮零新训练、模型前反向、预测电学求解、GPU、stress或Git发布；执行已关闭，无追加科研授权。下方旧授权按历史读取。
+
+## 历史V32：完整新脉冲协议确认已完成
 
 VERIFIED：新协议两组E均对F/projected及B_E通过A/B；严格双周期未通过，实际GPU已回收关闭。当前入口为[paper_v32](../paper/paper_v32/README.md)、[终局](experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)、[状态](../PROJECT_STATE.md)和[下一计划](plans/NEXT_ACTIONS.md)。条件时间细化未触发；按原结果路由进入成稿。2026-09-16用户另行授权成果发布及[V32独立复评交付](notes/2026-09-16-lf11-v32-results-cloud-review-handoff.md)，未授权新科研执行。
 
@@ -56,9 +62,10 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[新脉冲确认后的成稿路线](plans/NEXT_ACTIONS.md)，无新科学执行授权。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。新脉冲确认已收口，条件时间细化未触发，GPU已关闭。
-- 最新终局：[完整新脉冲历史确认](experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)，两组E对F/projected及B_E均通过A/B；严格双周期未过。
+- 当前唯一 current/most-recent plan：[空间参考与优先修订完成状态](plans/NEXT_ACTIONS.md)，无新科学执行授权。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。本轮CPU空间参考和论文修订已收口，未启GPU。
+- 最新终局：[固定预测空间参考敏感性](experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)，四组E/F器件优势保持，阈值与strict结果按新参考收窄。
+- 保留前轮：[相态头反事实与时间参考](experiment/2026-09-16-phase-adapter-reference-closeout.md)、[完整新脉冲历史确认](experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)。
 - 保留V31：[全空间反事实与原协议干净配对](experiment/2026-09-14-phk-v23-lf11-fullgrid-terminal-closeout.md)。
 - 保留V30：[训练期电学耦合与事后修复](experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)。
 - 保留V29：[剩余 PDE 实际影响与同父反事实](experiment/2026-09-13-phk-v23-lf11-remaining-pde-terminal-closeout.md)，保留强基线收益，未获得冻结剩余PDE增量；旧P_F未触发。

@@ -1,0 +1,20 @@
+{
+  "method": "nonnegative cell-overlap volume restriction",
+  "source_grid": [
+    240,
+    120
+  ],
+  "target_grid": [
+    160,
+    80
+  ],
+  "max_integral_discrepancy": {
+    "potential": 6.661338147750939e-16,
+    "temperature": 2.7755575615628914e-16,
+    "phase": 1.0408340855860843e-16
+  },
+  "native_q_power_max_error": 4.440892098500626e-16,
+  "model_arrays_changed": false,
+  "new_electrical_solves": 0,
+  "terminal_reference": "native fine grid, not recomputed from restricted V"
+}

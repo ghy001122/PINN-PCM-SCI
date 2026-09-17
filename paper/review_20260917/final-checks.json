@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-17",
+  "status": "PASS",
+  "pdf_pages": {
+    "manuscript": 19,
+    "supplement": 27
+  },
+  "all_page_render_review": "PASS",
+  "document_consistency": "DOCUMENT_CONSISTENCY_VALID",
+  "scientific_data_check": "verification.json",
+  "findings": {
+    "FIXED": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R7",
+      "R8",
+      "R11"
+    ],
+    "PARTIAL_AUTHOR_ACTION": [
+      "R9"
+    ],
+    "OPEN_EVIDENCE": [
+      "R6",
+      "R10"
+    ]
+  },
+  "scientific_execution": false,
+  "gpu_used": false,
+  "git_writes": false
+}

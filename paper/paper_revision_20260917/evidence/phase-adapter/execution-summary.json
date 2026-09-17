@@ -1,0 +1,183 @@
+{
+  "status": "SIX_VALID_FIXED_ENDPOINTS_AND_TWO_COMPLETED_REFERENCES",
+  "records": [
+    {
+      "seed": 29,
+      "role": "E_C",
+      "objective_role": "P_E",
+      "adam": 600,
+      "complete_evaluations": 100,
+      "accepted_lbfgs": 47,
+      "optimizer_stop": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "training_forward": 6875,
+      "training_adjoint": 6875,
+      "inference_forward": 278,
+      "fixed_objective_after_adam": 0.4609794862137852,
+      "fixed_objective_final_accepted": 0.40496569087318635,
+      "inference_times": 1001,
+      "trainable_parameters": 29827,
+      "total_parameters": 43140,
+      "extra_trainable_phase_parameters": 0,
+      "extra_frozen_parent_phase_forward_and_coordinate_derivatives": false,
+      "extra_frozen_gate_parameters": 0
+    },
+    {
+      "seed": 29,
+      "role": "E_R",
+      "objective_role": "P_E",
+      "adam": 600,
+      "complete_evaluations": 100,
+      "accepted_lbfgs": 49,
+      "optimizer_stop": "EVALUATION_BUDGET_EXHAUSTED",
+      "training_forward": 6875,
+      "training_adjoint": 6875,
+      "inference_forward": 278,
+      "fixed_objective_after_adam": 0.4617318163046608,
+      "fixed_objective_final_accepted": 0.3958850658277134,
+      "inference_times": 1001,
+      "trainable_parameters": 31044,
+      "total_parameters": 44357,
+      "extra_trainable_phase_parameters": 1217,
+      "extra_frozen_parent_phase_forward_and_coordinate_derivatives": false,
+      "extra_frozen_gate_parameters": 0
+    },
+    {
+      "seed": 29,
+      "role": "E_I",
+      "objective_role": "P_E",
+      "adam": 600,
+      "complete_evaluations": 100,
+      "accepted_lbfgs": 48,
+      "optimizer_stop": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "training_forward": 6875,
+      "training_adjoint": 6875,
+      "inference_forward": 278,
+      "fixed_objective_after_adam": 0.4593031896324597,
+      "fixed_objective_final_accepted": 0.4048756498993254,
+      "inference_times": 1001,
+      "trainable_parameters": 31044,
+      "total_parameters": 57670,
+      "extra_trainable_phase_parameters": 1217,
+      "extra_frozen_parent_phase_forward_and_coordinate_derivatives": true,
+      "extra_frozen_gate_parameters": 13313
+    },
+    {
+      "seed": 43,
+      "role": "E_C",
+      "objective_role": "P_E",
+      "adam": 600,
+      "complete_evaluations": 100,
+      "accepted_lbfgs": 49,
+      "optimizer_stop": "EVALUATION_BUDGET_EXHAUSTED",
+      "training_forward": 6817,
+      "training_adjoint": 6817,
+      "inference_forward": 278,
+      "fixed_objective_after_adam": 0.42314169158919196,
+      "fixed_objective_final_accepted": 0.3656296117640352,
+      "inference_times": 1001,
+      "trainable_parameters": 29827,
+      "total_parameters": 43140,
+      "extra_trainable_phase_parameters": 0,
+      "extra_frozen_parent_phase_forward_and_coordinate_derivatives": false,
+      "extra_frozen_gate_parameters": 0
+    },
+    {
+      "seed": 43,
+      "role": "E_R",
+      "objective_role": "P_E",
+      "adam": 600,
+      "complete_evaluations": 100,
+      "accepted_lbfgs": 49,
+      "optimizer_stop": "EVALUATION_BUDGET_EXHAUSTED",
+      "training_forward": 6817,
+      "training_adjoint": 6817,
+      "inference_forward": 278,
+      "fixed_objective_after_adam": 0.4241240525033036,
+      "fixed_objective_final_accepted": 0.3676226555285684,
+      "inference_times": 1001,
+      "trainable_parameters": 31044,
+      "total_parameters": 44357,
+      "extra_trainable_phase_parameters": 1217,
+      "extra_frozen_parent_phase_forward_and_coordinate_derivatives": false,
+      "extra_frozen_gate_parameters": 0
+    },
+    {
+      "seed": 43,
+      "role": "E_I",
+      "objective_role": "P_E",
+      "adam": 600,
+      "complete_evaluations": 100,
+      "accepted_lbfgs": 49,
+      "optimizer_stop": "EVALUATION_BUDGET_EXHAUSTED",
+      "training_forward": 6817,
+      "training_adjoint": 6817,
+      "inference_forward": 278,
+      "fixed_objective_after_adam": 0.4263115044893548,
+      "fixed_objective_final_accepted": 0.3671914578237053,
+      "inference_times": 1001,
+      "trainable_parameters": 31044,
+      "total_parameters": 57670,
+      "extra_trainable_phase_parameters": 1217,
+      "extra_frozen_parent_phase_forward_and_coordinate_derivatives": true,
+      "extra_frozen_gate_parameters": 13313
+    }
+  ],
+  "totals": {
+    "adam": 3600,
+    "complete_evaluations": 600,
+    "training_forward": 41076,
+    "training_adjoint": 41076,
+    "inference_forward": 1668
+  },
+  "caps": {
+    "adam": 3600,
+    "complete_evaluations": 600,
+    "training_forward": 68400,
+    "training_adjoint": 68400,
+    "inference_forward": 1668
+  },
+  "references": {
+    "original": {
+      "main_steps": 8000,
+      "linear_solves": {
+        "electric": 32059,
+        "thermal": 24058,
+        "phase": 28728
+      },
+      "total_linear_solves": 84845
+    },
+    "shorter": {
+      "main_steps": 8000,
+      "linear_solves": {
+        "electric": 32316,
+        "thermal": 24315,
+        "phase": 29246
+      },
+      "total_linear_solves": 85877
+    }
+  },
+  "actual_parent_interface_checks": {
+    "forward": 12,
+    "adjoint": 12
+  },
+  "focused_checks": {
+    "status": "PASS",
+    "checks": [
+      "zero insertion",
+      "IC/range",
+      "complete logit/field interface",
+      "gate coordinate second derivatives",
+      "full implicit electrothermal VJP",
+      "checkpoint reload"
+    ],
+    "forward_solves": 3,
+    "adjoint_solves": 1,
+    "scientific_optimizer_updates": 0
+  },
+  "all_formal_arms_cuda": true,
+  "reference_fields_used_for_selection": false,
+  "stress_read": false,
+  "gpu_recovery_and_shutdown_confirmed": true,
+  "checkpoint_loading_in_this_summary": 0,
+  "cost_scope": "Counts and explicit extra gate forward/coordinate differentiation; no speedup or wall-time claim"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "scientific_execution": false,
+  "core_equations_unchanged": true,
+  "all_baseline_figures_and_table_includes_preserved": true,
+  "manuscript_figure_count": 7,
+  "supplement_figure_count": 4,
+  "evidence_objects": {
+    "historical_learned": 8,
+    "interpolants": 2,
+    "continuations": 6
+  },
+  "historical_comparisons": 8,
+  "unchanged_historical_AB_decisions": 16,
+  "strict_reference_specific_outcomes": {
+    "old": [],
+    "refined": [
+      "shorter/43/E_I"
+    ]
+  },
+  "numeric_claim_checks": [
+    {
+      "seed": "29",
+      "continued_phase_reduction": 7.649449995415891,
+      "gated_power_reduction": 7.536056714425932,
+      "gated_phase_change": -1.5753676166389563
+    },
+    {
+      "seed": "43",
+      "continued_phase_reduction": 8.892311306907496,
+      "gated_power_reduction": 7.2352800542322075,
+      "gated_phase_change": 2.037730373264224
+    }
+  ],
+  "scope": "Source/artifact consistency and arithmetic against saved JSON; no models, solver or rescoring of arrays"
+}

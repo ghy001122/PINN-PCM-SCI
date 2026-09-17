@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-17",
+  "skill": "academic-research-suite",
+  "route": "project-bound INLINE comprehensive rereview",
+  "reviewed_manuscript": "paper/paper_revision_20260917",
+  "roles": [
+    "EIC",
+    "R1_methodology",
+    "R2_domain",
+    "R3_reproducibility",
+    "DA"
+  ],
+  "role_separated": true,
+  "separate_invocation_contexts": false,
+  "blind_to_peer_outputs": false,
+  "model_family_distinct": false,
+  "provider_distinct": false,
+  "human_reviewers": 0,
+  "independence_claim": false,
+  "calibration": "NOT_CALIBRATED",
+  "journal_binding": "criteria_binding_unavailable",
+  "correlated_error_disclosure": "All perspectives were produced by the same assistant in the same context. Role diversity is not independent verification.",
+  "read_scope": [
+    "complete main and supplemental scientific text",
+    "saved three-reference tables and summaries",
+    "recent closeouts and prior roadmap response",
+    "selected implementation and reproduction entry points",
+    "prior full visual QA record and current selected rendered pages"
+  ],
+  "not_executed": [
+    "scientific checkpoint deserialization",
+    "neural inference or gradients",
+    "training",
+    "new reference or electrical solves",
+    "stress access",
+    "new independent array rescoring",
+    "GPU operations",
+    "external manuscript upload"
+  ],
+  "fresh_primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2207.08675v2",
+      "scope": "author full text; differentiable constrained layer and learned-basis setting"
+    },
+    {
+      "url": "https://arxiv.org/abs/2007.00016",
+      "scope": "author abstract and bibliographic record"
+    },
+    {
+      "url": "https://arxiv.org/abs/2101.00962",
+      "scope": "author abstract and bibliographic record"
+    },
+    {
+      "url": "https://arxiv.org/abs/2102.04626",
+      "scope": "author abstract and bibliographic record"
+    }
+  ],
+  "inherited_source_access": "paper/paper_revision_20260916/source/source-verification.md; distinguished from current fresh access",
+  "scope_limit": "Not an exhaustive novelty search, calibrated peer review, journal acceptance prediction, or independent experimental replication.",
+  "completed_date": "2026-09-18",
+  "current_selected_pages": [
+    "main p18 Figure8",
+    "supplement p31 Tables S21/S22"
+  ]
+}
