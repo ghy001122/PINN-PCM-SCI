@@ -1,8 +1,14 @@
 # 文档库地图
 
+## 当前：共同读出、干净PDE消融与投稿修订成果发布
+
+**VERIFIED：**四组E/F完整器件优势在三套参考、两种共同电学读出网格下均保留；两个干净D_E对照未证明剩余热／相态PDE的独立收益。原协议seed43对B_E在空间参考、细读出下失去器件优势门，反例完整保留。结果见[发布总结](../docs/notes/2026-09-20-readout-clean-pde-results-release.md)、[完整修订稿](../paper/paper_revision_20260918/README.md)和[科学终局](../docs/experiment/2026-09-18-readout-clean-pde-revision-closeout.md)。
+
+2026-09-20用户另行授权重要结果提交云端；发布分支为`codex/paper-revision-results`。精简证据、源码和稿件纳入此次发布，完整大型数组仍本地分包保存。科学执行保持CLOSED；本次无新增计算或实际投稿。GPU已按完成记录关闭。作者事实、目标期刊、完整数据公开及最终作者批准仍需落实。下方旧权限、未发布措辞及数值按各自历史阶段理解。
+
 **2026-09-18发布与第二轮审核：**用户另行授权近期成果提交云端及academic-research-suite全面复审。[发布范围与重要结果](notes/2026-09-18-revision-results-release.md)、[新Revision Roadmap](../paper/review_20260917_round2/Revision_Roadmap.md)记录本次交付。科学阶段仍CLOSED，无新增训练/推理/求解授权；先前“未发布”措辞保留其历史阶段身份。公开包是精简证据，不含全部数组。
 
-## 当前：2026-09-17空间参考补证与论文修订已完成
+## 历史：2026-09-17空间参考补证与论文修订已完成
 
 VERIFIED：用户批准的两个CPU空间参考及16套固定预测评分已完成；四组E/F完整器件优势在三参考下保持，三项历史A/B改变，空间参考下无严格双周期通过。实际计数和边界见[终局](experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)，当前正文21页/补充35页见[修订稿](../paper/paper_revision_20260917/README.md)及[Roadmap响应](../paper/review_20260917/Roadmap_Execution_Report.md)。本轮零新训练、模型前反向、预测电学求解、GPU、stress或Git发布；执行已关闭，无追加科研授权。下方旧授权按历史读取。
 
@@ -62,9 +68,9 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 
 ## 当前状态入口
 
-- 当前唯一 current/most-recent plan：[空间参考与优先修订完成状态](plans/NEXT_ACTIONS.md)，无新科学执行授权。
-- 当前阶段与授权：[active_phase.md](../active_phase.md)。本轮CPU空间参考和论文修订已收口，未启GPU。
-- 最新终局：[固定预测空间参考敏感性](experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)，四组E/F器件优势保持，阈值与strict结果按新参考收窄。
+- 当前唯一 current/most-recent plan：[共同读出、干净PDE消融与投稿修订完成状态](plans/NEXT_ACTIONS.md)，无新科学执行授权。
+- 当前阶段与授权：[active_phase.md](../active_phase.md)。共同细读出和两个干净D_E已完成，GPU已关闭；本次仅授权成果发布。
+- 最新终局：[共同读出与干净PDE消融](experiment/2026-09-18-readout-clean-pde-revision-closeout.md)。此前[空间参考敏感性](experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)保留历史身份。
 - 保留前轮：[相态头反事实与时间参考](experiment/2026-09-16-phase-adapter-reference-closeout.md)、[完整新脉冲历史确认](experiment/2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)。
 - 保留V31：[全空间反事实与原协议干净配对](experiment/2026-09-14-phk-v23-lf11-fullgrid-terminal-closeout.md)。
 - 保留V30：[训练期电学耦合与事后修复](experiment/2026-09-13-phk-v23-lf11-training-coupling-terminal-closeout.md)。
@@ -89,7 +95,7 @@ R1X E1 两次历史工程启动都在模型构造前因隔离部署传递依赖�
 - 上一 PHK-V2.3 LF6 终局入口：[2026-09-06 LF6 terminal closeout](experiment/2026-09-06-phk-v23-lf6-terminal-closeout.md)。它记录 matched mechanism result、safety selection、P0 physics-forgetting、工程修复 provenance、回收关机、本地 nominal 裁决与强基线差距。
 - 上一 PHK-V2.3 LF5 终局入口：[2026-09-05 LF5 terminal closeout](experiment/2026-09-05-phk-v23-lf5-terminal-closeout.md)。它记录 CPU premise rejection、用户覆盖后的 400-step exploratory run、temporal stream 首批漂移、P0 未运行、产物回收关机与论文更新。
 - 上一 PHK-V2.3 LF4 终局入口：[2026-09-05 LF4 terminal closeout](experiment/2026-09-05-phk-v23-lf4-terminal-closeout.md)。它记录界面暴露相对等预算全局监督的有界 minimum-recall 增量、threshold BCE 的 field-quality 代价、三臂无完整 entry、P0 未运行、关机后 nominal 裁决与论文更新。
-- 当前论文初稿：[paper_v30](../paper/paper_v30/README.md)。它保存两个新软电学控制及各自network/projected读出、三组图、完整数表和归因边界；[paper_v29](../paper/paper_v29/README.md)、[paper_v28](../paper/paper_v28/README.md)及更早结果保持历史身份。
+- 当前论文：[完整投稿修订稿](../paper/paper_revision_20260918/README.md)。三参考、两读出、干净PDE消融和负结果统一呈现；[paper_v30](../paper/paper_v30/README.md)及其他旧稿保持历史身份。
 - 保留论文：[paper_v24](../paper/paper_v24/README.md)，原稀疏四臂及后验波形基线保持历史身份。
 - 保留论文快照：[paper_v23](../paper/paper_v23/README.md)。它保存既有界面暴露、物理遗忘、failure-analysis与复现边界。
 - 上一 PHK-V2.3 LF3 终局入口：[2026-09-05 LF3 terminal closeout](experiment/2026-09-05-phk-v23-lf3-terminal-closeout.md)。它记录 T0 高 precision/质量及时序通过但两周期 recall 失败、P0 未触发、关机后 nominal 裁决、local role-label 修复及 `LF3_CARRIER_NOT_ESTABLISHED`。

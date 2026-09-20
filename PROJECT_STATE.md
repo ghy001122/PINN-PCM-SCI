@@ -1,8 +1,14 @@
 # 项目状态
 
+## 当前：共同读出、干净PDE消融与投稿修订成果发布
+
+**VERIFIED：**四组E/F完整器件优势在三套参考、两种共同电学读出网格下均保留；两个干净D_E对照未证明剩余热／相态PDE的独立收益。原协议seed43对B_E在空间参考、细读出下失去器件优势门，反例完整保留。结果见[发布总结](docs/notes/2026-09-20-readout-clean-pde-results-release.md)、[完整修订稿](paper/paper_revision_20260918/README.md)和[科学终局](docs/experiment/2026-09-18-readout-clean-pde-revision-closeout.md)。
+
+2026-09-20用户另行授权重要结果提交云端；发布分支为`codex/paper-revision-results`。精简证据、源码和稿件纳入此次发布，完整大型数组仍本地分包保存。科学执行保持CLOSED；本次无新增计算或实际投稿。GPU已按完成记录关闭。作者事实、目标期刊、完整数据公开及最终作者批准仍需落实。下方旧权限、未发布措辞及数值按各自历史阶段理解。
+
 **2026-09-18发布与第二轮审核：**用户另行授权近期成果提交云端及academic-research-suite全面复审。[发布范围与重要结果](docs/notes/2026-09-18-revision-results-release.md)、[新Revision Roadmap](paper/review_20260917_round2/Revision_Roadmap.md)记录本次交付。科学阶段仍CLOSED，无新增训练/推理/求解授权；先前“未发布”措辞保留其历史阶段身份。公开包是精简证据，不含全部数组。
 
-## 当前：固定预测空间参考与优先修订已完成
+## 历史：固定预测空间参考与优先修订已完成
 
 **VERIFIED：**2026-09-17按用户批准的[实施方案](paper/review_20260917/Implementation_Plan.md)，完成两个既有协议的240×120、dt=0.0003125参考，共16000主步、170979内部线性解。16套预测与原电学读出固定，四组E/F完整器件优势在原、时间细化、空间参考下均保持。实际证据见[终局](docs/experiment/2026-09-17-fixed-prediction-spatial-reference-closeout.md)。
 
@@ -22,12 +28,12 @@
 
 以下保留此前各轮的完成记录及当时授权身份；本轮不覆盖历史结果。
 
-更新时间：2026-09-17
+更新时间：2026-09-20
 
-- `phase_id`: `PHK_V23_FIXED_PREDICTION_SPATIAL_REFERENCE`
+- `phase_id`: `PHK_V23_READOUT_AND_CLEAN_PDE_REVISION`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_SPATIAL_REFERENCE_SENSITIVITY_BOUNDED`
+- `claim_status`: `VERIFIED_READOUT_ROBUST_CLEAN_PDE_ABLATION_BOUNDED`
 - `next_research_execution_authorized`: `false`
 
 ## 历史写作交付：原投稿候选稿完成

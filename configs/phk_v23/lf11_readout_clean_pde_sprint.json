@@ -1,0 +1,64 @@
+{
+  "schema_id": "lf11-readout-clean-pde-revision-v1",
+  "execution_authorized": true,
+  "authorization": "User: PLEASE IMPLEMENT THIS PLAN (2026-09-18)",
+  "inherited_commit": "17ad7c9ccaf3f0ae0c4eea986005a772dd7a2184",
+  "run": "outputs/runs/20260918-lf11-readout-clean-pde",
+  "historical": {
+    "original": "outputs/runs/20260914-lf11-clean-confirmation",
+    "shorter": "outputs/runs/20260915-lf11-protocol-history"
+  },
+  "seeds": [
+    29,
+    43
+  ],
+  "historical_roles": [
+    "E",
+    "F_raw"
+  ],
+  "fine_grid": [
+    240,
+    120
+  ],
+  "coarse_grid": [
+    160,
+    80
+  ],
+  "train_grid": [
+    80,
+    40
+  ],
+  "inference_times": 1001,
+  "per_prediction_forward_limit": 278,
+  "fine_historical_objects": 10,
+  "de_roles": 2,
+  "de_adam_per_role": 1500,
+  "de_complete_per_role": 300,
+  "thresholds_unchanged": true,
+  "phase_threshold_band": 0.05,
+  "budgets": {
+    "historical_fine_forward": 2780,
+    "de_train_forward": 54000,
+    "de_train_adjoint": 54000,
+    "de_inference_forward": 1112,
+    "checks_audits_forward": 500,
+    "checks_audits_adjoint": 500,
+    "total_forward": 58392,
+    "total_adjoint": 54500,
+    "adam_updates": 3000,
+    "complete_evaluations": 600,
+    "new_reference_steps": 0
+  },
+  "information_boundary": "sparse-only training; no reference fields, no stress, no reference-selected endpoint",
+  "inference_identity": "direct frozen T/phase queries, shared electrical projection; old state/event measure retained",
+  "numerical_tolerance": 1e-10,
+  "score_rtol": 2e-10,
+  "score_atol": 2e-12,
+  "result_routes": [
+    "bounded independent increment",
+    "bounded tradeoff/no established residual increment",
+    "readout-sensitive claim restriction"
+  ],
+  "no_auto_extension": true,
+  "no_git_publication": true
+}

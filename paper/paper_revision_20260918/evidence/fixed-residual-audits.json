@@ -1,0 +1,147 @@
+{
+  "records": {
+    "29/E": {
+      "components": {
+        "observation": 4.005479555057301e-05,
+        "obs_V": 4.035545144847073e-06,
+        "obs_T": 4.2085277325105264e-05,
+        "obs_phase": 7.404356418176665e-05,
+        "boundary": 0.0390204205625301,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.0044777156054374,
+        "phase": 0.0007474554692164983,
+        "electric": 0.0,
+        "objective": 0.48876682396575877
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.4620249489627288e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      },
+      "source": "outputs/runs/20260915-lf11-protocol-history/seed-29/E/checkpoint.pt"
+    },
+    "29/D_E": {
+      "components": {
+        "observation": 3.8779545199764135e-05,
+        "obs_V": 3.3190077791989573e-06,
+        "obs_T": 4.075208489513944e-05,
+        "obs_phase": 7.226754292495397e-05,
+        "boundary": 0.036745605339312044,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.004418778252195503,
+        "phase": 0.0007133035832390545,
+        "electric": 0.0,
+        "objective": 0.47200469592270017
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.7692435425213266e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      },
+      "source": "outputs/runs/20260918-lf11-readout-clean-pde/clean-pde/seed-29/D_E/checkpoint.pt"
+    },
+    "43/E": {
+      "components": {
+        "observation": 3.625887910636112e-05,
+        "obs_V": 1.940920920360737e-06,
+        "obs_T": 4.305244956663335e-05,
+        "obs_phase": 6.378326683208932e-05,
+        "boundary": 0.02854751810581777,
+        "initial": 4.14470600734377e-33,
+        "thermal": 0.022056216593414817,
+        "phase": 0.0012774879577416506,
+        "electric": 0.0,
+        "objective": 0.4439699045537192
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.923745012102943e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      },
+      "source": "outputs/runs/20260915-lf11-protocol-history/seed-43/E/checkpoint.pt"
+    },
+    "43/D_E": {
+      "components": {
+        "observation": 3.570634348571321e-05,
+        "obs_V": 1.9677507559417132e-06,
+        "obs_T": 4.260301196012743e-05,
+        "obs_phase": 6.25482677410704e-05,
+        "boundary": 0.026282447115147607,
+        "initial": 4.14470600734377e-33,
+        "thermal": 0.02200254541118589,
+        "phase": 0.0012540636422180946,
+        "electric": 0.0,
+        "objective": 0.4354700188660029
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.885402315569123e-15,
+          "max_adjoint_scaled_residual": 0.0
+        }
+      },
+      "source": "outputs/runs/20260918-lf11-readout-clean-pde/clean-pde/seed-43/D_E/checkpoint.pt"
+    }
+  },
+  "counts": {
+    "forward_solves": 200,
+    "adjoint_solves": 0
+  },
+  "reference_read": false,
+  "optimizer_updates": 0,
+  "pool": "same seed-specific V32 independent audit pool"
+}

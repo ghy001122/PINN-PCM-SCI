@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "id": "original/29/E",
+      "max_difference": {
+        "temperature": 8.673617379884035e-19,
+        "phase": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "original/29/F",
+      "max_difference": {
+        "temperature": 4.336808689942018e-19,
+        "phase": 0.0
+      }
+    },
+    {
+      "id": "original/43/E",
+      "max_difference": {
+        "temperature": 4.336808689942018e-19,
+        "phase": 3.469446951953614e-18
+      }
+    },
+    {
+      "id": "original/43/F",
+      "max_difference": {
+        "temperature": 4.336808689942018e-19,
+        "phase": 0.0
+      }
+    },
+    {
+      "id": "shorter/29/E",
+      "max_difference": {
+        "temperature": 4.336808689942018e-19,
+        "phase": 0.0
+      }
+    },
+    {
+      "id": "shorter/29/F",
+      "max_difference": {
+        "temperature": 0.0,
+        "phase": 6.5052130349130266e-18
+      }
+    },
+    {
+      "id": "shorter/43/E",
+      "max_difference": {
+        "temperature": 0.0,
+        "phase": 3.469446951953614e-18
+      }
+    },
+    {
+      "id": "shorter/43/F",
+      "max_difference": {
+        "temperature": 0.0,
+        "phase": 0.0
+      }
+    }
+  ],
+  "linear_solves": 0,
+  "optimizer_updates": 0,
+  "reference_read": false,
+  "device": "cuda:0"
+}

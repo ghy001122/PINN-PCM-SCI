@@ -1,0 +1,18 @@
+{
+  "status": "ALL_FIXED_ARTIFACTS_COMPLETE",
+  "counts": {
+    "adam": 3000,
+    "complete_evaluations": 600,
+    "train_forward": 23586,
+    "train_adjoint": 23586,
+    "historical_readout_forward": 2780,
+    "de_readout_forward": 1112,
+    "checks_audits_forward": 210,
+    "checks_audits_adjoint": 10,
+    "total_forward": 27688,
+    "total_adjoint": 23596
+  },
+  "reference_read": false,
+  "stress_read": false,
+  "completed_utc": "2026-09-18T09:14:09.934744+00:00"
+}

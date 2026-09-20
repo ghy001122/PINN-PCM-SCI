@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "seed": 29,
+      "common_components_equal": true,
+      "full_minus_control_equals_residual": true,
+      "gradient_relative_error": 5.446033364786608e-14,
+      "voltage_observation_head_gradient_norms": {
+        "temperature": 2.7063855434515425e-06,
+        "phase": 3.20970736182775e-05
+      }
+    },
+    {
+      "seed": 43,
+      "common_components_equal": true,
+      "full_minus_control_equals_residual": true,
+      "gradient_relative_error": 3.63572304515218e-13,
+      "voltage_observation_head_gradient_norms": {
+        "temperature": 2.3704859851653716e-06,
+        "phase": 2.789943910956245e-05
+      }
+    }
+  ],
+  "batching": "same direct function",
+  "finite_pulse_powered_times": 278,
+  "counts": {
+    "forward_solves": 10,
+    "adjoint_solves": 10
+  },
+  "reference_read": false,
+  "optimizer_updates": 0
+}

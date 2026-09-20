@@ -1,0 +1,14 @@
+{
+  "reader_robust": true,
+  "fine_reader_B_counts": {
+    "old": 4,
+    "refined": 4,
+    "spatial": 4
+  },
+  "reader_robust_scope": "E/F complete device criterion only",
+  "B_E_spatial_seed43_reader_gate_changed": true,
+  "clean_phase_increment_all": false,
+  "clean_device_increment_all": false,
+  "reader_conclusion": "The complete E/F device criterion remains satisfied in 4/4, 4/4 and 4/4 pairs with the finer reader under the original, time-refined and space-refined references, respectively. This supports the two tested reader levels, without certifying arbitrary-grid or continuum accuracy. The original-protocol seed-43 comparison against B_E loses its device-advantage criterion under the spatial reference with the finer reader; robustness is therefore specific to the E/F comparison.",
+  "residual_conclusion": "Neither clean pair meets either prescribed residual-increment criterion under any of the three references or two readers. D_E has lower raw phase, current and power RMS errors throughout these comparisons, with other outcomes mixed. This bounded counterexample does not prove equivalence or universal residual redundancy."
+}
