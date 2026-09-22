@@ -166,10 +166,10 @@ def prepare(root,config,device):
     return config
 
 
-def train(root,arm,config,device):
+def train(root,arm,config,device,*,experiment_type=SoftExperiment,data_type=SparseData):
     folder=root/arm;folder.mkdir(exist_ok=False)
     state=torch.load(root/'parent.pt',map_location='cpu',weights_only=False)
-    exp=SoftExperiment(config,state['model_state_dict'],SparseData(ROOT/config['sparse']),device,
+    exp=experiment_type(config,state['model_state_dict'],data_type(ROOT/config['sparse']),device,
                        1. if arm in ('F_raw','F_full') else config['eta_bal'])
     cal=read(root/'calibration.json')
     pool=deserialize_pool(read(root/'lbfgs-pool.json'))

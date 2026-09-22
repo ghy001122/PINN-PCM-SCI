@@ -1,0 +1,28 @@
+{"stage": "Adam", "step": 1, "loss": 1.0673135521668295, "components": {"obs_V": 0.0, "obs_T": 3.166647383442669, "obs_phase": 0.035293273057820415}}
+{"stage": "Adam", "step": 200, "loss": 0.013978300603285735, "components": {"obs_V": 2.171732333447039e-05, "obs_T": 0.03669787290050064, "obs_phase": 0.005215311586022105}}
+{"stage": "Adam", "step": 400, "loss": 0.018352325163829685, "components": {"obs_V": 0.0018822243853597654, "obs_T": 0.051893149811383585, "obs_phase": 0.0012816012947457053}}
+{"stage": "Adam", "step": 600, "loss": 0.0017950040681575046, "components": {"obs_V": 0.0, "obs_T": 0.002773898771414084, "obs_phase": 0.00261111343305843}}
+{"stage": "Adam", "step": 800, "loss": 0.004013986128282946, "components": {"obs_V": 0.0017394743182796446, "obs_T": 0.008589980218534961, "obs_phase": 0.0017125038480342311}}
+{"stage": "Adam", "step": 1000, "loss": 0.0018934192050380804, "components": {"obs_V": 0.00048339032795774814, "obs_T": 0.0047578466124362576, "obs_phase": 0.0004390206747202361}}
+{"stage": "Adam", "step": 1200, "loss": 0.0007195190458902431, "components": {"obs_V": 0.00010102081571627314, "obs_T": 0.0015114046559121278, "obs_phase": 0.0005461316660423281}}
+{"stage": "Adam", "step": 1400, "loss": 0.0026644382354326576, "components": {"obs_V": 0.0014925922077909568, "obs_T": 0.006364438020502026, "obs_phase": 0.00013628447800499005}}
+{"stage": "Adam", "step": 1600, "loss": 0.0002449420759536523, "components": {"obs_V": 0.0, "obs_T": 0.0005708337758681289, "obs_phase": 0.00016399245199282773}}
+{"stage": "Adam", "step": 1800, "loss": 0.0003850820025790019, "components": {"obs_V": 5.562235938695381e-05, "obs_T": 0.0007060205260234964, "obs_phase": 0.0003936031223265557}}
+{"stage": "Adam", "step": 2000, "loss": 0.00023989267670294537, "components": {"obs_V": 0.0, "obs_T": 0.00046740794803336604, "obs_phase": 0.00025227008207547025}}
+{"stage": "Adam", "step": 2200, "loss": 0.0013032601330999628, "components": {"obs_V": 0.001894312335179214, "obs_T": 0.0018368888512080373, "obs_phase": 0.00017857921291263774}}
+{"stage": "Adam", "step": 2400, "loss": 0.0006911888536064556, "components": {"obs_V": 0.000719888203826392, "obs_T": 0.0012215267811997261, "obs_phase": 0.0001321515757932487}}
+{"stage": "LBFGS", "head": "potential", "evaluations": 3, "accepted_steps": 1, "loss": 8.713400672629149e-05, "gradient_max": 0.0001546393545343707, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "potential", "evaluations": 41, "accepted_steps": 20, "loss": 7.965677180351904e-05, "gradient_max": 8.568850413579695e-06, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "potential", "evaluations": 81, "accepted_steps": 40, "loss": 7.531059079858874e-05, "gradient_max": 1.2922877646529449e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "potential", "evaluations": 121, "accepted_steps": 60, "loss": 7.098476098694671e-05, "gradient_max": 1.5254613426451504e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "potential", "evaluations": 166, "accepted_steps": 80, "loss": 6.0353312976859994e-05, "gradient_max": 4.487975424569103e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "temperature", "evaluations": 2, "accepted_steps": 1, "loss": 0.0003235428184598953, "gradient_max": 0.0005004083465105227, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "temperature", "evaluations": 40, "accepted_steps": 20, "loss": 0.00017552474807190147, "gradient_max": 8.324969442271723e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "temperature", "evaluations": 80, "accepted_steps": 40, "loss": 9.571174678631832e-05, "gradient_max": 4.7487858022505904e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "temperature", "evaluations": 120, "accepted_steps": 60, "loss": 5.589056238831106e-05, "gradient_max": 1.6032414129206776e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "temperature", "evaluations": 162, "accepted_steps": 80, "loss": 3.9893303204993453e-05, "gradient_max": 2.264194119423659e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "phase", "evaluations": 3, "accepted_steps": 1, "loss": 9.205709484074415e-05, "gradient_max": 7.099291008804463e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "phase", "evaluations": 41, "accepted_steps": 20, "loss": 8.195584055511485e-05, "gradient_max": 4.247424378588762e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "phase", "evaluations": 82, "accepted_steps": 40, "loss": 6.825872581498819e-05, "gradient_max": 3.130490261434557e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "phase", "evaluations": 123, "accepted_steps": 60, "loss": 5.406099273730537e-05, "gradient_max": 3.178096929085131e-05, "wolfe_verified": true}
+{"stage": "LBFGS", "head": "phase", "evaluations": 163, "accepted_steps": 80, "loss": 4.3279745485008e-05, "gradient_max": 1.2129256812246006e-05, "wolfe_verified": true}

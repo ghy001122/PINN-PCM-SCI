@@ -11,3 +11,9 @@ paper/paper_revision_20260917/*.pdf binary
 paper/review_20260917/**/*.pdf binary
 paper/paper_revision_20260918/evidence/** -text -whitespace
 paper/paper_revision_20260918/*.pdf binary
+# Preserve B1 frozen evidence and rendered artifacts during publication.
+paper/paper_revision_20260921/evidence/** -text -whitespace
+paper/paper_revision_20260921/*.pdf binary
+paper/paper_revision_20260921/figures/*.pdf binary
+# SVG path serialization includes valid spaces before line breaks.
+paper/paper_revision_20260921/figures/*.svg -text whitespace=-blank-at-eol

@@ -127,6 +127,8 @@ def deserialize_pool(value):
 
 
 class Experiment:
+    observation_type = ObservationTimes
+
     def __init__(self, config, state, data, device='cpu', role='D_E'):
         self.c, self.role, self.device = config, role, device
         self.model = fit_model(config, state, adapter=True).to(device)
@@ -135,7 +137,7 @@ class Experiment:
         self.parameters = [p for p in self.model.parameters() if p.requires_grad]
         self.grid = grid_for(self.model.physics, *config['grid'])
         self.layer = ElectricalLayer(self.grid, self.model.physics.heater_width_fraction, config['linear_tolerance'])
-        self.obs = ObservationTimes(data, self.grid, self.model.physics, config, device)
+        self.obs = self.observation_type(data, self.grid, self.model.physics, config, device)
         self.calls = {'complete_objective_gradient_evaluations': 0, 'adam_objective_gradient_evaluations': 0,
                       'audit_objective_evaluations': 0, 'audit_objective_gradient_evaluations': 0, 'optimizer_updates': 0}
 
@@ -251,7 +253,7 @@ def save_checkpoint(path, exp, optimizer, config, cal, updates, **extra):
                 'statistics': exp.statistics(), 'reference_read': False, **extra}, path)
 
 
-def train_role(root, role, config, device, *, output_role=None, experiment_type=Experiment):
+def train_role(root, role, config, device, *, output_role=None, experiment_type=Experiment, data_type=SparseData):
     if role not in {'D_E', 'P_E', 'P_F'}:
         raise ValueError('invalid training role')
     if role == 'P_F':
@@ -265,7 +267,7 @@ def train_role(root, role, config, device, *, output_role=None, experiment_type=
         raise ValueError('configuration changed after E0 calibration')
     cal = json.loads((root/'calibration.json').read_text())
     parent = torch.load(root/'parent.pt', map_location='cpu', weights_only=False)
-    data = SparseData(ROOT/config['sparse'])
+    data = data_type(ROOT/config['sparse'])
     exp = experiment_type(config, parent['model_state_dict'], data, device, role)
     sampler = TimeSampler(config, exp.model.physics, exp.grid, config['sampling_seed'])
     obs_rng = np.random.default_rng(config['observation_seed'])

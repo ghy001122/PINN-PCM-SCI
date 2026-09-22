@@ -1,6 +1,24 @@
+# 当前收口：B1第二周期相态缺测与论文修订
+
+2026-09-22 用户另行授权本轮成果提交云端；发布分支为 `codex/paper-revision-results`，范围和远端核验状态见[发布记录](docs/notes/2026-09-22-b1-sprint-results-release.md)。科研阶段保持CLOSED，完整时空数组仍未公开。
+
+2026-09-22 用户另行授权本轮成果提交云端；发布分支为 `codex/paper-revision-results`，范围和远端核验状态见[发布记录](docs/notes/2026-09-22-b1-sprint-results-release.md)。科研阶段保持CLOSED，完整时空数组仍未公开。
+
+**VERIFIED：**E/D_E的完整A_w通过0/12项参考／读出／seed检查；独立初始化只有两个。相态RMS相对改善范围为-4.231%至1.234%；负值表示E误差更大。窗外非劣代价出现在6/12项检查。 全部七个B1对象在每个参考／读出条件下均未通过完整严格双周期门。 全部冻结科学工作与PDF逐页检查已完成，实际GPU已回收关闭。**SUPPORTED_INTERPRETATION：**未建立对两个seed、三参考和双读出都稳定的额外动态残差增量；保留各项连续收益与失败，不能将不同条件的优点拼接成完整成功。
+
+本段 supersedes 本轮执行中／准备待批状态；历史数值、授权和未执行措辞保留其原阶段身份。结果路由 `PREDECLARED_INCREMENT_NOT_ESTABLISHED`。交付与下一步见本仓库 `paper/paper_revision_20260921/README.md` 和 `docs/experiment/2026-09-21-b1-phase-gap-sprint-closeout.md`。
+
+唯一下一步是作者作论文路线决策：以现有配置收益和条件性消融形成较窄的方法评估稿，或另立具有实质新方法贡献的研究任务。建议先据本轮完整证据评估较窄成稿的可投性；若继续以更强方法创新为目标，应单独设计并批准新任务。本轮不自动降级原研究目标，也不追加救援训练。
+
+- `phase_id`: `PHK_V23_B1_SECOND_CYCLE_PHASE_GAP`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `VERIFIED_B1_PREDECLARED_INCREMENT_NOT_ESTABLISHED`
+- `next_research_execution_authorized`: `false`
+
 # PINN-PCM-SCI
 
-## 当前：共同读出、干净PDE消融与投稿修订成果发布
+## 历史：共同读出、干净PDE消融与投稿修订成果发布
 
 **VERIFIED：**四组E/F完整器件优势在三套参考、两种共同电学读出网格下均保留；两个干净D_E对照未证明剩余热／相态PDE的独立收益。原协议seed43对B_E在空间参考、细读出下失去器件优势门，反例完整保留。结果见[发布总结](docs/notes/2026-09-20-readout-clean-pde-results-release.md)、[完整修订稿](paper/paper_revision_20260918/README.md)和[科学终局](docs/experiment/2026-09-18-readout-clean-pde-revision-closeout.md)。
 
@@ -44,11 +62,11 @@ VERIFIED：新协议中两个初始化的E均对锁定soft＋相同电学重求�
 
 ## 当前状态
 
-- `phase_id`: `PHK_V23_READOUT_AND_CLEAN_PDE_REVISION`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_READOUT_ROBUST_CLEAN_PDE_ABLATION_BOUNDED`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_READOUT_AND_CLEAN_PDE_REVISION`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `VERIFIED_READOUT_ROBUST_CLEAN_PDE_ABLATION_BOUNDED`
+- `historical_next_research_execution_authorized`: `false`
 
 历史V30（VERIFIED）：E对两种有效F/projected均通过同一器件功能层B；底部电流/功率误差分别下降35.22%/35.99%与56.85%/58.70%。当时A与严格双周期未全过，剩余热/phase PDE独立必要性和独立初始化稳健性仍UNKNOWN。用户于2026-09-14另行授权成果发布及[V30云端独立复评](docs/notes/2026-09-14-lf11-v30-results-cloud-review-handoff.md)，随后另行授权F_full与条件确认；其新结果以V31为准。
 

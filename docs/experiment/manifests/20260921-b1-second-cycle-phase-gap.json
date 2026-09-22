@@ -1,0 +1,106 @@
+{
+  "actual_budget": {
+    "adam": 13800,
+    "calibration_adjoint_solves": 0,
+    "calibration_forward_solves": 100,
+    "calibration_zero_drive_queries": 216,
+    "complete_evaluations": 3000,
+    "cost_policy": "USER_NO_COST_LIMIT",
+    "new_reference_steps": 0,
+    "readout_adjoint": 0,
+    "readout_forward": 3892,
+    "scientific_retries": 0,
+    "seed_values": [
+      29,
+      43
+    ],
+    "training_adjoint_solves": 62536,
+    "training_forward_solves": 62536,
+    "training_zero_drive_queries": 159068
+  },
+  "artifacts": {
+    "closeout": "docs/experiment/2026-09-21-b1-phase-gap-sprint-closeout.md",
+    "compute_closure": "outputs/runs/20260921-b1-second-cycle-phase-gap/compute-closure.json",
+    "endpoints": "outputs/runs/20260921-b1-second-cycle-phase-gap/all-endpoints-locked.json",
+    "paper": "paper/paper_revision_20260921/manuscript.md",
+    "readers": "outputs/runs/20260921-b1-second-cycle-phase-gap/readout-manifest.json",
+    "score": "outputs/submission-rescore-20260921/b1/first-score/results.json"
+  },
+  "case_id": "lf11-history-gap-1p01",
+  "checkpoint": {
+    "actual_seeds": [
+      29,
+      43
+    ],
+    "aggregate_seed_field": 29,
+    "branches": {
+      "29": {
+        "D_E": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/D_E/checkpoint.pt",
+        "E": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/checkpoint.pt",
+        "F_raw": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/F_raw/checkpoint.pt"
+      },
+      "43": {
+        "D_E": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/D_E/checkpoint.pt",
+        "E": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/E/checkpoint.pt",
+        "F_raw": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/F_raw/checkpoint.pt"
+      }
+    },
+    "parents": {
+      "29": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/parent.pt",
+      "43": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/parent.pt"
+    }
+  },
+  "claim_status": "VERIFIED_B1_PREDECLARED_INCREMENT_NOT_ESTABLISHED",
+  "code_identity": {
+    "base_commit": "218bb66069da52b2ccfe9dd68ac519edbe4584d0",
+    "published": false,
+    "source_bundle": "outputs/b1-runtime-20260921.tar.gz",
+    "source_bundle_sha256": "f497b6caaece6c985ba0cb0565215e0fd8f4c16365d464879e91f7a3d318fb15",
+    "training_sources_frozen": true
+  },
+  "command": [
+    "python -m pinn_pcm_sci.phk_v23_b1 train --device cuda:0 --approval outputs/runs/20260921-b1-second-cycle-phase-gap/resource-approval.json",
+    "python -m pinn_pcm_sci.phk_v23_b1 readout --device cuda:0 --approval outputs/runs/20260921-b1-second-cycle-phase-gap/resource-approval.json",
+    "python -I outputs/submission-rescore-20260921/b1/portable/score_b1.py --out outputs/submission-rescore-20260921/b1/first-score"
+  ],
+  "ended_at": "2026-09-21T16:39:49.825952+00:00",
+  "environment": {
+    "dtype": "float64",
+    "gpu_model": "Tesla V100-PCIE-32GB",
+    "gpu_shutdown_confirmed": true,
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "reference_scoring_after_shutdown": true,
+    "scipy": "1.14.1",
+    "torch": "2.5.1+cu118"
+  },
+  "evaluator_id": "FROZEN_FULL_HISTORY_KERNELS_PLUS_B1_WINDOW_AND_DISJOINT_OUTSIDE",
+  "evidence_identity": "TWO_INITIALIZATIONS_ONE_PHASE_OBSERVATION_GAP_EXISTING_PROTOCOL_OFFLINE_RECONSTRUCTION",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PHK_V23_B1",
+  "failure_class": null,
+  "gate": "A_W_WITH_UNCHANGED_FULL_A_B_AND_STRICT",
+  "gate_outcome": "PREDECLARED_INCREMENT_NOT_ESTABLISHED",
+  "method_id": "MATCHED_E_D_E_F_AND_VISIBLE_B_E",
+  "numerical_validity": "SIX_VALID_FIXED_ENDPOINTS_AND_FOURTEEN_READERS",
+  "physical_contract_id": "UNCHANGED_PHK_V21_FINITE_TWO_PULSE_GAP_1P01",
+  "planned_budget": {
+    "adam": 13800,
+    "calibration_forward": 1000,
+    "complete_evaluations": 3000,
+    "new_reference_steps": 0,
+    "readout_forward": 3892,
+    "training_adjoint": 108000,
+    "training_forward": 108000
+  },
+  "replay_of": null,
+  "route_disposition": "BOUNDED_CAMPAIGN_CLOSED_AUTHOR_ROUTE_DECISION",
+  "run_id": "20260921-b1-second-cycle-phase-gap",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "ONE_PRESCRIBED_PHASE_GAP_TWO_FRESH_MATCHED_INITIALIZATIONS",
+  "seed": 29,
+  "split_id": "COMPLETE_SECOND_CYCLE_PHASE_WITHHELD_V_T_AND_POST_WINDOW_PHASE_VISIBLE",
+  "started_at": "2026-09-21T11:24:36.737692+00:00",
+  "supersedes": null,
+  "tier": "development"
+}

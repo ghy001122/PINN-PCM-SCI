@@ -1,0 +1,139 @@
+{
+  "analytic_bottom_normal_derivative": -0.0584102707151966,
+  "fixed_pools": [
+    {
+      "protocol": "original",
+      "seed": 29,
+      "pool": "calibration",
+      "source": "outputs/runs/20260914-lf11-clean-confirmation/seed-29/calibration-pool.json",
+      "times": 32,
+      "minimum_time": 0.019168028415765235,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "original",
+      "seed": 29,
+      "pool": "lbfgs",
+      "source": "outputs/runs/20260914-lf11-clean-confirmation/seed-29/lbfgs-pool.json",
+      "times": 32,
+      "minimum_time": 0.022192677710292052,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "original",
+      "seed": 29,
+      "pool": "audit",
+      "source": "outputs/runs/20260914-lf11-clean-confirmation/seed-29/audit-pool.json",
+      "times": 32,
+      "minimum_time": 0.0111508869454107,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "original",
+      "seed": 43,
+      "pool": "calibration",
+      "source": "outputs/runs/20260914-lf11-clean-confirmation/seed-43/calibration-pool.json",
+      "times": 32,
+      "minimum_time": 0.02814784814360922,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "original",
+      "seed": 43,
+      "pool": "lbfgs",
+      "source": "outputs/runs/20260914-lf11-clean-confirmation/seed-43/lbfgs-pool.json",
+      "times": 32,
+      "minimum_time": 0.013234942499024559,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "original",
+      "seed": 43,
+      "pool": "audit",
+      "source": "outputs/runs/20260914-lf11-clean-confirmation/seed-43/audit-pool.json",
+      "times": 32,
+      "minimum_time": 0.012282766254038523,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "shorter",
+      "seed": 29,
+      "pool": "calibration",
+      "source": "outputs/runs/20260915-lf11-protocol-history/seed-29/calibration-pool.json",
+      "times": 32,
+      "minimum_time": 0.019168028415765235,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "shorter",
+      "seed": 29,
+      "pool": "lbfgs",
+      "source": "outputs/runs/20260915-lf11-protocol-history/seed-29/lbfgs-pool.json",
+      "times": 32,
+      "minimum_time": 0.022192677710292052,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "shorter",
+      "seed": 29,
+      "pool": "audit",
+      "source": "outputs/runs/20260915-lf11-protocol-history/seed-29/audit-pool.json",
+      "times": 32,
+      "minimum_time": 0.0111508869454107,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "shorter",
+      "seed": 43,
+      "pool": "calibration",
+      "source": "outputs/runs/20260915-lf11-protocol-history/seed-43/calibration-pool.json",
+      "times": 32,
+      "minimum_time": 0.02814784814360922,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "shorter",
+      "seed": 43,
+      "pool": "lbfgs",
+      "source": "outputs/runs/20260915-lf11-protocol-history/seed-43/lbfgs-pool.json",
+      "times": 32,
+      "minimum_time": 0.013234942499024559,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    },
+    {
+      "protocol": "shorter",
+      "seed": 43,
+      "pool": "audit",
+      "source": "outputs/runs/20260915-lf11-protocol-history/seed-43/audit-pool.json",
+      "times": 32,
+      "minimum_time": 0.012282766254038523,
+      "zero_time_count": 0,
+      "zero_time_mass": 0,
+      "boundary_points_at_zero": 0
+    }
+  ],
+  "physical_problem_changed": false,
+  "training_effect": "UNKNOWN"
+}

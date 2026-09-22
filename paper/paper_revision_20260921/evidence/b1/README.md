@@ -1,0 +1,11 @@
+# Curated B1 run excerpt
+
+This directory publishes byte-identical copies from the completed run `outputs/runs/20260921-b1-second-cycle-phase-gap`. All local copies were checked byte-for-byte before staging; scoped Git attributes exempt the frozen evidence from text conversion. [publication-provenance.json](publication-provenance.json) maps every copied file to its original workspace-relative path, including the separately published port traces and their byte sizes. Copy verification did not load models or recompute scientific results.
+
+The excerpt contains both fresh parents, all six accepted `E`, `D_E` and `F_raw` checkpoint/terminal pairs, their training telemetry and work records, the visible-field input, frozen configurations, calibration and fixed pools. `F_raw` is the trained soft-electric comparator reported as `F` after the common electrical readout. The final checkpoints retain their original contents, including saved optimizer state; they have not been converted or resaved.
+
+For path interpretation, files under this directory preserve the suffix after the original run root. Configuration and readout manifests keep their original paths and historical preparation/authorization fields. In particular, `readout-manifest.json` identifies full prediction and port arrays that are not all included here. Copying this excerpt alone into the original run path does not create a complete inference or scoring package, and this publication performs no such copy or execution.
+
+The 42 already scored port/error traces are published in [../b1-port-traces/](../b1-port-traces/); their original source is `outputs/submission-rescore-20260921/b1/first-score/traces/`. Full prediction/reference field arrays and intermediate checkpoints remain local. The published run excerpt therefore supports endpoint and provenance inspection, not a claim of complete public array reproduction or new training authorization.
+
+See the [data and reproduction statement](../../data-and-reproduction.md) and [publication record](../../../../docs/notes/2026-09-22-b1-sprint-results-release.md) for the current access boundary. The original run, including operational metadata, remains unchanged locally; the public shutdown extract is [../b1-compute-closure-public.json](../b1-compute-closure-public.json).

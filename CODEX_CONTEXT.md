@@ -1,6 +1,12 @@
 # Codex 项目上下文
 
-## 当前：共同读出、干净PDE消融与投稿修订成果发布
+## 当前：B1有界冲刺已收口
+
+2026-09-22 本轮重要结果另行授权发布至 `codex/paper-revision-results`；范围和远端核验状态见[发布记录](docs/notes/2026-09-22-b1-sprint-results-release.md)。科研执行仍关闭，完整时空数组仍未公开。
+
+**VERIFIED：**E/D_E的完整A_w通过0/12项参考／读出／seed检查；独立初始化只有两个。相态RMS相对改善范围为-4.231%至1.234%；负值表示E误差更大。窗外非劣代价出现在6/12项检查。 GPU已回收关闭；新科研授权结束。当前[完整稿与证据](paper/paper_revision_20260921/README.md)、[收口](docs/experiment/2026-09-21-b1-phase-gap-sprint-closeout.md)和[当前阶段](active_phase.md)取代下方历史入口的当前地位。
+
+## 历史：共同读出、干净PDE消融与投稿修订成果发布
 
 **VERIFIED：**四组E/F完整器件优势在三套参考、两种共同电学读出网格下均保留；两个干净D_E对照未证明剩余热／相态PDE的独立收益。原协议seed43对B_E在空间参考、细读出下失去器件优势门，反例完整保留。结果见[发布总结](docs/notes/2026-09-20-readout-clean-pde-results-release.md)、[完整修订稿](paper/paper_revision_20260918/README.md)和[科学终局](docs/experiment/2026-09-18-readout-clean-pde-revision-closeout.md)。
 

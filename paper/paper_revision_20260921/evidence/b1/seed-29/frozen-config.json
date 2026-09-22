@@ -1,0 +1,303 @@
+{
+  "seed": 29,
+  "width": 64,
+  "layers": 4,
+  "dtype": "float64",
+  "branch_updates": 1500,
+  "branch_lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "gradient_clip": 10,
+  "windows": [
+    [
+      0.0,
+      0.35
+    ],
+    [
+      0.35,
+      1.01
+    ],
+    [
+      1.01,
+      1.36
+    ],
+    [
+      1.36,
+      2.5
+    ]
+  ],
+  "window_masses": [
+    0.14,
+    0.264,
+    0.14,
+    0.456
+  ],
+  "boundary_counts_per_side": [
+    4,
+    12,
+    4,
+    12
+  ],
+  "initial_points": 128,
+  "lambda_max": 0.1,
+  "lambda_ramp": 200,
+  "phase_logit_divisor": 36.84136146790473,
+  "phase_logit_epsilon": 1e-08,
+  "pde_scales": {
+    "electric": 1,
+    "thermal": 4,
+    "phase": 5
+  },
+  "decision": {
+    "relative_improvement": 0.1,
+    "relative_noninferiority": 0.05,
+    "absolute_tolerance": {
+      "S": 1e-08,
+      "Ephi": 1e-06,
+      "ET": 1e-06,
+      "EI": 1e-06,
+      "EV": 1e-07
+    },
+    "strict_device_gate_separate": true
+  },
+  "functional_rule": {
+    "gain": [
+      "bottom_current_NRMSE",
+      "power_trace_NRMSE"
+    ],
+    "relative_improvement": 0.1,
+    "noninferior": [
+      "S",
+      "Ephi",
+      "ET",
+      "EV",
+      "EI"
+    ],
+    "relative_noninferiority": 0.05,
+    "extra_normalized_absolute_tolerance": 1e-06,
+    "reported_separately_from_reconstruction": true
+  },
+  "lbfgs_evaluations": 300,
+  "checkpoint_steps": [
+    500,
+    1000,
+    1500
+  ],
+  "observation_seed": 60129,
+  "sampling_seed": 60229,
+  "cpu_threads": 4,
+  "schema_id": "lf11-b1-second-cycle-phase-gap-v1",
+  "status": "PREPARED_RESOURCE_APPROVAL_PENDING",
+  "parent": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/common-fit/parent.pt",
+  "sparse": "outputs/runs/20260921-b1-second-cycle-phase-gap/input/visible-fields.npz",
+  "roles": [
+    "E",
+    "D_E",
+    "F_raw"
+  ],
+  "conditional_role": null,
+  "grid": [
+    80,
+    40
+  ],
+  "inference_grid": [
+    160,
+    80
+  ],
+  "adam_observation_times": 4,
+  "adam_physics_cells": 128,
+  "fixed_physics_cells": 128,
+  "fixed_times_per_window": 8,
+  "calibration_seed": 130929,
+  "lbfgs_pool_seed": 230929,
+  "audit_pool_seed": 330929,
+  "linear_tolerance": 1e-10,
+  "gradient_relative_tolerance": 1e-05,
+  "gradient_absolute_tolerance": 1e-08,
+  "observation_time_proposal": "half global time marginal plus half phase time marginal; exact inverse probability weighting; all visible spatial points at each sampled time",
+  "thermal_interface": "midpoint cell values and unique shared-face AD gradients; original Robin/top BC; Q times half-resistance Joule density once",
+  "electric_backend": "SciPy SuperLU CSC MMD_AT_PLUS_A, same-forward factor reuse in full adjoint",
+  "normalizers": "one E0 calibration: exact complete Lobs and 32-time fixed J_Tphi+5BC_Tphi+IC; denominators 3 and 13 retained",
+  "information_boundary": "only V/T and visible phi; exact analytic IC; no full-label parents/statistics, no hidden phi, no reference arrays",
+  "balance_gradient_floor": 1e-12,
+  "balance_equivalence_rtol": 1e-06,
+  "balance_equivalence_atol": 1e-12,
+  "readouts": [
+    "network",
+    "projected"
+  ],
+  "eta_bal": 1.0,
+  "electric_spatial_reduction": "sampled",
+  "confirmation": {
+    "seeds": [
+      29,
+      43
+    ],
+    "conditional_on_unique_comparator": false,
+    "parent_adam": 2400,
+    "parent_lbfgs_by_head": {
+      "potential": 200,
+      "temperature": 200,
+      "phase": 200
+    },
+    "parent_lr": 0.001,
+    "parent_observation_times": 4,
+    "arm_adam": 1500,
+    "arm_evaluations": 300,
+    "optional_seed_rescue_used": false,
+    "maximum_adam": 13800,
+    "maximum_evaluations": 3000,
+    "training_forward_limit": 108000,
+    "training_adjoint_limit": 108000,
+    "calibration_audit_forward_limit": 1000,
+    "calibration_audit_adjoint_limit": 0,
+    "inference_limit": 3892
+  },
+  "case_spec": {
+    "schema_id": "lf11-finite-pulse-case-v1",
+    "case_id": "lf11-history-gap-1p01",
+    "pulse_starts": [
+      0.0,
+      1.01
+    ],
+    "amplitude": 0.72,
+    "rise_end": 0.05,
+    "hold_end": 0.27,
+    "fall_end": 0.35,
+    "time_end": 2.5,
+    "recovery_cycles": [
+      [
+        0.0,
+        1.01
+      ],
+      [
+        1.01,
+        2.02
+      ]
+    ],
+    "tail": [
+      2.02,
+      2.5
+    ],
+    "windows": [
+      [
+        0.0,
+        0.35
+      ],
+      [
+        0.35,
+        1.01
+      ],
+      [
+        1.01,
+        1.36
+      ],
+      [
+        1.36,
+        2.5
+      ]
+    ],
+    "window_masses": [
+      0.14,
+      0.264,
+      0.14,
+      0.456
+    ],
+    "support": {
+      "nx": 80,
+      "nz": 40,
+      "dt": 0.0025,
+      "save_every": 2,
+      "main_steps": 1000
+    },
+    "reference": {
+      "nx": 160,
+      "nz": 80,
+      "dt": 0.000625,
+      "save_every": 4,
+      "main_steps": 4000
+    },
+    "sampling_rule": "indices 0,4,8,... plus last on each support axis",
+    "changed_physics": "second pulse start only; finite two-pulse experiment"
+  },
+  "selected_soft": "F_raw",
+  "source_parent": "fresh observation-only fit",
+  "per_E_forward_limit": 27000,
+  "task_id": "PCM-20260921-FINAL-SPRINT-B1-01",
+  "execution_authorized": false,
+  "source_commit": "218bb66069da52b2ccfe9dd68ac519edbe4584d0",
+  "source_recipe": "outputs/runs/20260915-lf11-protocol-history/seed-29/frozen-config.json",
+  "run": "outputs/runs/20260921-b1-second-cycle-phase-gap",
+  "source_sparse": "outputs/runs/20260915-lf11-protocol-history/input/sparse.npz",
+  "paired_roles": [
+    "E",
+    "D_E",
+    "F_raw"
+  ],
+  "phase_missing_window": [
+    1.01,
+    2.02
+  ],
+  "execution_order": [
+    [
+      29,
+      "E"
+    ],
+    [
+      29,
+      "D_E"
+    ],
+    [
+      29,
+      "F_raw"
+    ],
+    [
+      43,
+      "E"
+    ],
+    [
+      43,
+      "D_E"
+    ],
+    [
+      43,
+      "F_raw"
+    ]
+  ],
+  "figure_times": [
+    0.27,
+    1.28
+  ],
+  "fine_grid": [
+    240,
+    120
+  ],
+  "observation_measure": "original full-coordinate dual-volume x time-trapezoid; phi visible restriction before normalization; half global + half valid straddling endpoints; original proposal importance correction",
+  "budgets": {
+    "parents": 2,
+    "branches": 6,
+    "parent_adam_each": 2400,
+    "parent_complete_evaluations_each": 600,
+    "branch_adam_each": 1500,
+    "branch_complete_evaluations_each": 300,
+    "total_adam": 13800,
+    "total_complete_evaluations": 3000,
+    "training_forward": 108000,
+    "training_adjoint": 108000,
+    "calibration_forward": 1000,
+    "calibration_adjoint": 0,
+    "readout_forward": 3892,
+    "readout_adjoint": 0,
+    "new_reference_steps": 0
+  },
+  "evaluation_reference_files": [
+    "outputs/submission-archive-20260918/data/shorter/reference-old.npz",
+    "outputs/submission-archive-20260918/data/shorter/reference-refined.npz",
+    "outputs/submission-archive-20260918/spatial/shorter/mapped-reference.npz",
+    "outputs/submission-archive-20260918/spatial/shorter/result.npz"
+  ],
+  "reject_invalid_line_search": true
+}

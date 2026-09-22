@@ -1,0 +1,42 @@
+{
+  "aE": 0.00011769403895000681,
+  "bE": 1.2864279366000937,
+  "components": {
+    "observation": 0.00011769403895000681,
+    "obs_V": 0.0001562688863118947,
+    "obs_T": 9.335441270937514e-05,
+    "obs_phase": 0.00010345881782875045,
+    "boundary": 0.2554136588789427,
+    "initial": 4.0750470828505976e-33,
+    "thermal": 0.026580876135684335,
+    "phase": 0.0014980504804566188,
+    "electric": 0.0,
+    "objective": 1.2865456306390428
+  },
+  "status": "ONCE_PER_CLEAN_PARENT_SHARED",
+  "statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 0,
+      "adam_objective_gradient_evaluations": 0,
+      "audit_objective_evaluations": 1,
+      "audit_objective_gradient_evaluations": 0,
+      "optimizer_updates": 0
+    },
+    "electrical": {
+      "forward_queries": 158,
+      "zero_drive_queries": 108,
+      "factorizations": 50,
+      "forward_solves": 50,
+      "adjoint_solves": 0,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 2.863658706579705e-15,
+      "max_adjoint_scaled_residual": 0.0
+    },
+    "model_work": {
+      "head_forward_calls": 738,
+      "head_coordinate_queries": 420848,
+      "head_output_derivative_calls": 416
+    }
+  },
+  "reference_read": false
+}

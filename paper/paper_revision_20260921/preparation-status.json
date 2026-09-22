@@ -1,0 +1,26 @@
+{
+  "task_id": "PCM-20260921-FINAL-SPRINT-B1-01",
+  "status": "STAGES_0_2_COMPLETE_RESOURCE_CONFIRMATION_PENDING",
+  "scientific_claim_status": "UNKNOWN_B1_NOT_EXECUTED",
+  "stage3_executed": false,
+  "stage4_executed": false,
+  "scientific_counts": {
+    "parent_updates": 0,
+    "branch_updates": 0,
+    "new_readout_solves": 0,
+    "new_reference_steps": 0
+  },
+  "gpu_started_in_this_task": false,
+  "git_write": false,
+  "public_data_upload": false,
+  "core_records_reproduced": 72,
+  "tests_passed": 12,
+  "blockers": [
+    "actual enabled GPU instance/model; approved wallclock/cost; staging/recovery/shutdown"
+  ],
+  "nonblocking_author_items": [
+    "data access location/permission/license",
+    "real author declarations",
+    "journal target/final approval"
+  ]
+}

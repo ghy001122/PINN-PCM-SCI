@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "core": {
+    "records": 72,
+    "comparison": {
+      "passed": true,
+      "checked_values": 8868,
+      "rtol": 2e-10,
+      "atol": 2e-12,
+      "booleans": "exact"
+    },
+    "execution": {
+      "isolated_python": true,
+      "numpy": "2.1.1",
+      "python": "3.11.9 | packaged by Anaconda, Inc. | (main, Apr 19 2024, 16:40:41) [MSC v.1916 64 bit (AMD64)]",
+      "neural_models_loaded": 0,
+      "neural_forwards": 0,
+      "linear_solves": 0
+    }
+  },
+  "original43": {
+    "records": 18,
+    "comparison": {
+      "passed": true,
+      "checked_values": 1893,
+      "rtol": 2e-10,
+      "atol": 2e-12,
+      "booleans": "exact"
+    }
+  },
+  "historical_E_vs_F_B": {
+    "passed": 24,
+    "tested_comparisons": 24,
+    "independent_pairs": 4
+  },
+  "extension": {
+    "objects": 6,
+    "historical_records": 18,
+    "input_validation": "PASS",
+    "rerun_in_this_task": false
+  },
+  "new_training": 0,
+  "new_neural_inference": 0,
+  "new_electrical_solves": 0
+}

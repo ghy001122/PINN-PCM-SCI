@@ -1,0 +1,86 @@
+{
+  "status": "ALL_FIXED_READERS_COMPLETE",
+  "objects": [
+    {
+      "id": "shorter/29/E",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "E",
+      "origin": "b1_missing_phase",
+      "prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/E/coarse/prediction.npz",
+      "readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/E/coarse/own-readout.npz",
+      "fine_prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/E/fine/prediction.npz",
+      "fine_readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/E/fine/own-readout.npz"
+    },
+    {
+      "id": "shorter/29/D_E",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "D_E",
+      "origin": "b1_missing_phase",
+      "prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/D_E/coarse/prediction.npz",
+      "readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/D_E/coarse/own-readout.npz",
+      "fine_prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/D_E/fine/prediction.npz",
+      "fine_readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/D_E/fine/own-readout.npz"
+    },
+    {
+      "id": "shorter/29/F",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "F",
+      "origin": "b1_missing_phase",
+      "prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/F/coarse/prediction.npz",
+      "readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/F/coarse/own-readout.npz",
+      "fine_prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/F/fine/prediction.npz",
+      "fine_readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/F/fine/own-readout.npz"
+    },
+    {
+      "id": "shorter/43/E",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "E",
+      "origin": "b1_missing_phase",
+      "prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/E/coarse/prediction.npz",
+      "readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/E/coarse/own-readout.npz",
+      "fine_prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/E/fine/prediction.npz",
+      "fine_readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/E/fine/own-readout.npz"
+    },
+    {
+      "id": "shorter/43/D_E",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "D_E",
+      "origin": "b1_missing_phase",
+      "prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/D_E/coarse/prediction.npz",
+      "readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/D_E/coarse/own-readout.npz",
+      "fine_prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/D_E/fine/prediction.npz",
+      "fine_readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/D_E/fine/own-readout.npz"
+    },
+    {
+      "id": "shorter/43/F",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "F",
+      "origin": "b1_missing_phase",
+      "prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/F/coarse/prediction.npz",
+      "readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/F/coarse/own-readout.npz",
+      "fine_prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/F/fine/prediction.npz",
+      "fine_readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/43/F/fine/own-readout.npz"
+    },
+    {
+      "id": "shorter/B_E",
+      "protocol": "shorter",
+      "seed": null,
+      "role": "B_E",
+      "origin": "b1_missing_phase",
+      "prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/B_E/coarse/prediction.npz",
+      "readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/B_E/coarse/own-readout.npz",
+      "fine_prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/B_E/fine/prediction.npz",
+      "fine_readout": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/B_E/fine/own-readout.npz"
+    }
+  ],
+  "projected_forward_solves": 3892,
+  "adjoint_solves": 0,
+  "expected_score_records": 42,
+  "reference_read": false
+}

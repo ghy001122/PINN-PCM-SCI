@@ -1,0 +1,21 @@
+{
+  "times": [
+    0.27,
+    1.28
+  ],
+  "selection": "frozen waveform plateau endpoints before B1 outcomes",
+  "reference": "spatial/shorter/result.npz",
+  "grid": [
+    240,
+    120
+  ],
+  "new_neural_queries": 0,
+  "new_linear_solves": 0,
+  "new_reference_steps": 0,
+  "q_source": "saved Joule density when present; otherwise algebraic deposition from saved native V/T/phase at the two display times",
+  "primary_T_phase_event_measure_unchanged": [
+    160,
+    80
+  ],
+  "all_B1_seeds_and_controls_included": true
+}

@@ -2,7 +2,7 @@
 
 `paper/` is the canonical root for all manuscript packages in this repository. Every versioned package lives in a `paper_vxx/` subdirectory; future versions must follow the same layout instead of creating a new repository-root `paper_vxx/` directory.
 
-Latest: [paper_v29](paper_v29/README.md). Completed same-parent remaining-PDE counterfactual and measured complete gradients; no declared independent predictive increment. V28 electrical-interface and strong-baseline results remain intact.
+Latest: [B1 final sprint revision](paper_revision_20260921/README.md), with an 18-page manuscript and 57-page supplement. The prescribed phase-gap study did not establish the declared incremental benefit; earlier positive results and counterexamples retain their original scope. See the [2026-09-22 publication record](../docs/notes/2026-09-22-b1-sprint-results-release.md) for the curated Git scope and remote verification.
 
 | Version | Package | Evidence boundary |
 |---|---|---|

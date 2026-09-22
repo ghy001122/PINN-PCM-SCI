@@ -1,6 +1,8 @@
 # Experiment ledger protocol
 
-最新：[完整新脉冲历史确认终局](2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)。新协议两组E均对F/projected及B_E通过A/B，严格双周期未过。两条参考/支持轨迹和四个固定终点已完成，实际GPU已回收关闭；paper_v32已收口。
+最新：[B1第二周期相态缺测收口](2026-09-21-b1-phase-gap-sprint-closeout.md)。两个新父态、六终点与共同读出已完成；全部结果和代价保留，GPU已回收关闭。
+
+历史2026-09-15：[完整新脉冲历史确认终局](2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)。新协议两组E均对F/projected及B_E通过A/B，严格双周期未过。两条参考/支持轨迹和四个固定终点已完成，实际GPU已回收关闭；paper_v32已收口。
 
 This directory stores compact, reviewable facts for every attempted run. Raw
 checkpoints and arrays stay under `outputs/runs/<run_id>/` and are not evidence

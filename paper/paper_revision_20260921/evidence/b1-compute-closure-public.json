@@ -1,0 +1,37 @@
+{
+  "task_id": "PCM-20260921-FINAL-SPRINT-B1-01",
+  "started_utc": "2026-09-21T16:42:22.231635+00:00",
+  "reference_read": false,
+  "recovery_verified": true,
+  "shutdown_requested": true,
+  "instance_shutdown_confirmed": true,
+  "monitor_engineering_fix": "Parse exit code without trailing newline; completed scientific work is not restarted",
+  "job_exit_code": 0,
+  "gpu_work_ended_observed_utc": "2026-09-21T16:42:22.709750+00:00",
+  "recovery_sha256": "06abbc3d47bc2561187bf5e2b2da35b57e75339aae0b419ae8a5acad2ce0097d",
+  "recovered_utc": "2026-09-21T17:17:25.719556+00:00",
+  "shutdown_requested_utc": "2026-09-21T17:17:26.321787+00:00",
+  "shutdown_returncode": 0,
+  "shutdown_stdout": "",
+  "shutdown_stderr": "",
+  "shutdown_probes": [
+    {
+      "returncode": 255,
+      "stderr": "banner exchange: Connection to UNKNOWN port -1: Connection refused"
+    }
+  ],
+  "completed_utc": "2026-09-21T17:17:33.622723+00:00",
+  "training_and_readout_complete": true,
+  "compute_stopped_before_reference_read": true,
+  "extracted_new_files": 142,
+  "publication_metadata": {
+    "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/compute-closure.json",
+    "omitted_fields": [
+      "destination",
+      "remote_directory",
+      "recovery_archive"
+    ],
+    "reason": "Connection endpoint and machine-specific paths excluded; original retained locally.",
+    "scientific_fields_changed": false
+  }
+}

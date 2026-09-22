@@ -1,0 +1,60 @@
+{
+  "source_archive": "outputs/submission-archive-20260918/training/new-execution-runtime.tar.gz",
+  "check": "targeted source text equality; no extraction or execution",
+  "records": [
+    {
+      "file": "phk_v23_lf11_electric_layer.py",
+      "archive_member": "pinn_pcm_sci/phk_v23_lf11_electric_layer.py",
+      "deployed_matches_review_baseline": true,
+      "current_matches_deployed": true
+    },
+    {
+      "file": "phk_v23_lf11_elimination_physics.py",
+      "archive_member": "pinn_pcm_sci/phk_v23_lf11_elimination_physics.py",
+      "deployed_matches_review_baseline": true,
+      "current_matches_deployed": true
+    },
+    {
+      "file": "phk_v23_lf11_elimination.py",
+      "archive_member": "pinn_pcm_sci/phk_v23_lf11_elimination.py",
+      "deployed_matches_review_baseline": true,
+      "current_matches_deployed": false
+    },
+    {
+      "file": "phk_v23_lf11_training_coupling.py",
+      "archive_member": "pinn_pcm_sci/phk_v23_lf11_training_coupling.py",
+      "deployed_matches_review_baseline": true,
+      "current_matches_deployed": false
+    },
+    {
+      "file": "phk_v23_lf11_clean_confirmation.py",
+      "archive_member": "pinn_pcm_sci/phk_v23_lf11_clean_confirmation.py",
+      "deployed_matches_review_baseline": true,
+      "current_matches_deployed": false
+    },
+    {
+      "file": "phk_v23_lf11_followup_fit.py",
+      "archive_member": "pinn_pcm_sci/phk_v23_lf11_followup_fit.py",
+      "deployed_matches_review_baseline": true,
+      "current_matches_deployed": true
+    },
+    {
+      "file": "phk_v23_lf11_protocol.py",
+      "archive_member": "pinn_pcm_sci/phk_v23_lf11_protocol.py",
+      "deployed_matches_review_baseline": true,
+      "current_matches_deployed": true
+    },
+    {
+      "file": "phk_v23_readout_clean_pde.py",
+      "archive_member": "pinn_pcm_sci/phk_v23_readout_clean_pde.py",
+      "deployed_matches_review_baseline": true,
+      "current_matches_deployed": true
+    },
+    {
+      "file": "phk_v23_lf11.py",
+      "archive_member": "pinn_pcm_sci/phk_v23_lf11.py",
+      "deployed_matches_review_baseline": true,
+      "current_matches_deployed": true
+    }
+  ]
+}

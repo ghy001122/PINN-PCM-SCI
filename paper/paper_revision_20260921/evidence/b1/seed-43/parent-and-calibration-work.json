@@ -1,0 +1,29 @@
+{
+  "elapsed_seconds": 166.3305684076622,
+  "parent_forward_solves": 0,
+  "parent_adjoint_solves": 0,
+  "calibration": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 0,
+      "adam_objective_gradient_evaluations": 0,
+      "audit_objective_evaluations": 1,
+      "audit_objective_gradient_evaluations": 0,
+      "optimizer_updates": 0
+    },
+    "electrical": {
+      "forward_queries": 158,
+      "zero_drive_queries": 108,
+      "factorizations": 50,
+      "forward_solves": 50,
+      "adjoint_solves": 0,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 2.863658706579705e-15,
+      "max_adjoint_scaled_residual": 0.0
+    },
+    "model_work": {
+      "head_forward_calls": 738,
+      "head_coordinate_queries": 420848,
+      "head_output_derivative_calls": 416
+    }
+  }
+}

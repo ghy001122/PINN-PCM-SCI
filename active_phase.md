@@ -1,6 +1,28 @@
+# 当前收口：B1第二周期相态缺测与论文修订
+
+2026-09-22 用户另行授权本轮成果提交云端；发布分支为 `codex/paper-revision-results`，范围和远端核验状态见[发布记录](docs/notes/2026-09-22-b1-sprint-results-release.md)。科研阶段保持CLOSED，完整时空数组仍未公开。
+
+**VERIFIED：**E/D_E的完整A_w通过0/12项参考／读出／seed检查；独立初始化只有两个。相态RMS相对改善范围为-4.231%至1.234%；负值表示E误差更大。窗外非劣代价出现在6/12项检查。 全部七个B1对象在每个参考／读出条件下均未通过完整严格双周期门。 全部冻结科学工作与PDF逐页检查已完成，实际GPU已回收关闭。**SUPPORTED_INTERPRETATION：**未建立对两个seed、三参考和双读出都稳定的额外动态残差增量；保留各项连续收益与失败，不能将不同条件的优点拼接成完整成功。
+
+本段 supersedes 本轮执行中／准备待批状态；历史数值、授权和未执行措辞保留其原阶段身份。结果路由 `PREDECLARED_INCREMENT_NOT_ESTABLISHED`。交付与下一步见本仓库 `paper/paper_revision_20260921/README.md` 和 `docs/experiment/2026-09-21-b1-phase-gap-sprint-closeout.md`。
+
+唯一下一步是作者作论文路线决策：以现有配置收益和条件性消融形成较窄的方法评估稿，或另立具有实质新方法贡献的研究任务。建议先据本轮完整证据评估较窄成稿的可投性；若继续以更强方法创新为目标，应单独设计并批准新任务。本轮不自动降级原研究目标，也不追加救援训练。
+
+- `phase_id`: `PHK_V23_B1_SECOND_CYCLE_PHASE_GAP`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `VERIFIED_B1_PREDECLARED_INCREMENT_NOT_ESTABLISHED`
+- `next_research_execution_authorized`: `false`
+
 # 当前阶段
 
-## 当前：共同读出、干净PDE消融与投稿修订成果发布
+## 历史准备：2026-09-21最终冲刺阶段0—2
+
+用户明确授权执行 `PCM-20260921-FINAL-SPRINT-B1-01` 的本地修稿、可见数据接口、聚焦测试、既有数组重评分和本地打包，见[本轮交付](paper/paper_revision_20260921/README.md)。此项覆盖下方历史关闭记录对这些准备动作的限制；不重开旧科学轨迹。B1新父态、六分支及模型读出仍须本轮GPU实例与资源确认，`next_research_execution_authorized`保持`false`。
+
+**VERIFIED（准备）：**核心72条保存数组记录按原容差和精确布尔值复算通过；B1可见训练包、接口测试与独立暂存包已准备。**UNKNOWN：**B1科学增量及其对论文目标的实质提升。完整B1评分和最终PDF尚未执行；旧正反证据及下方历史身份保留。
+
+## 历史：共同读出、干净PDE消融与投稿修订成果发布
 
 **VERIFIED：**四组E/F完整器件优势在三套参考、两种共同电学读出网格下均保留；两个干净D_E对照未证明剩余热／相态PDE的独立收益。原协议seed43对B_E在空间参考、细读出下失去器件优势门，反例完整保留。结果见[发布总结](docs/notes/2026-09-20-readout-clean-pde-results-release.md)、[完整修订稿](paper/paper_revision_20260918/README.md)和[科学终局](docs/experiment/2026-09-18-readout-clean-pde-revision-closeout.md)。
 
@@ -28,17 +50,17 @@
 
 以下保留此前各轮的完成记录及当时授权身份；本轮不覆盖历史结果。
 
-- `phase_id`: `PHK_V23_READOUT_AND_CLEAN_PDE_REVISION`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_READOUT_ROBUST_CLEAN_PDE_ABLATION_BOUNDED`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_READOUT_AND_CLEAN_PDE_REVISION`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `VERIFIED_READOUT_ROBUST_CLEAN_PDE_ABLATION_BOUNDED`
+- `historical_next_research_execution_authorized`: `false`
 
 2026-09-16用户另行明确授权完整投稿候选稿及重要结果提交云端，并交付论文改进独立评估；本包使用`codex/paper-submission-results`，详见[交接](docs/notes/2026-09-16-paper-submission-cloud-review-handoff.md)。范围为已有成果发布、评估与方案设计，不授权新训练、求解、checkpoint前反向或stress读取，不改变下文科学终局。
 
-PHASE_ID=PHK_V23_READOUT_AND_CLEAN_PDE_REVISION
-BLOCKER_ID=NONE
-NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
+HISTORICAL_PHASE_ID=PHK_V23_READOUT_AND_CLEAN_PDE_REVISION
+HISTORICAL_BLOCKER_ID=NONE
+HISTORICAL_NEXT_RESEARCH_EXECUTION_AUTHORIZED=false
 
 VERIFIED：用户于2026-09-15授权的[新脉冲协议冲刺](docs/notes/2026-09-15-lf11-protocol-authorized-sprint.md)已完成。两条新参考/支持轨迹和两个全新父态E/F_raw配对形成有效终点；E在两组均对F/projected及B_E通过原A/B。严格双周期未通过，条件时间细化未触发。实际GPU已回收关闭，stress未读；科学执行阶段未执行Git发布。
 

@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "b1_tests": [
+    "test_hidden_labels_cannot_change_export_sampling_calibration_or_baseline",
+    "test_measure_normalization_and_exact_enumerated_importance_estimator",
+    "test_full_visible_compatibility_and_per_head_parent_loss",
+    "test_e_minus_de_is_exact_interior_value_and_gradient_with_voltage_feedback",
+    "test_lbfgs_trials_count_and_restore_last_accepted_state",
+    "test_scientific_config_and_resource_boundary",
+    "test_masked_parent_phase_objective_never_transforms_missing_values",
+    "test_window_quadrature_decomposes_history_and_uses_own_denominators"
+  ],
+  "inherited_checks": {
+    "continued_lbfgs": 2,
+    "soft_interface_and_comparator": 2
+  },
+  "total_tests": 12,
+  "scope": "synthetic CPU fixtures only; not research training",
+  "additional": {
+    "train_readout_score_commands": "PARSED_NOT_EXECUTED",
+    "missing_file": "PASS_EXIT_2_NO_REGENERATION",
+    "doi_link": "PASS_SINGLE_VISIBLE_DOI_AND_COMPLETE_ENCODED_URL",
+    "runtime_isolation": "PASS_ZERO_MODEL_FORWARDS",
+    "source_identity": "nine deployed files match fixed review commit; three wrappers intentionally adapted",
+    "document_consistency": "DOCUMENT_CONSISTENCY_VALID"
+  },
+  "runtime": {
+    "python": "3.11.9",
+    "numpy": "2.1.1",
+    "scipy": "1.14.1",
+    "torch": "2.5.1+cpu"
+  },
+  "notes": "pytest is not installed; existing module/unittest entrypoints used without adding dependencies"
+}

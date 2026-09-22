@@ -45,6 +45,9 @@ def full_observation_head(model,obs,head,backward=True,chunk=4096):
     """Exact complete head target in chunks, avoiding unrelated head forwards."""
     q=obs.q.reshape(-1,3);target=obs.target.reshape(-1,3)
     weight=(obs.phase_weight if head=='phase' else obs.global_weight).reshape(-1)
+    if hasattr(obs, 'head_observations'):
+        # A missing field must be removed before any transform, including logit.
+        q,target,weight=obs.head_observations(head)
     total=torch.zeros((),dtype=torch.float64,device=obs.device)
     for lo in range(0,len(q),chunk):
         coords=obs.tensor(q[lo:lo+chunk]);values=obs.tensor(target[lo:lo+chunk]);mass=obs.tensor(weight[lo:lo+chunk])
@@ -64,13 +67,14 @@ def full_observation_head(model,obs,head,backward=True,chunk=4096):
     return total
 
 
-def fit_parent(folder,cfg,device):
+def fit_parent(folder,cfg,device,*,data_type=SparseData,observation_type=ObservationTimes,model_observer=None):
     """One fresh zero-adapter parent; no imported trained state is accepted."""
     folder.mkdir(parents=True,exist_ok=False)
     model=fit_model(cfg,adapter=True).to(device)
+    model_work=model_observer(model) if model_observer else None
     adapter=model.heads['temperature'].residual.output
     assert torch.count_nonzero(adapter.weight)==0 and torch.count_nonzero(adapter.bias)==0
-    obs=ObservationTimes(SparseData(ROOT/cfg['sparse']),grid_for(model.physics,*cfg['grid']),model.physics,cfg,device)
+    obs=observation_type(data_type(ROOT/cfg['sparse']),grid_for(model.physics,*cfg['grid']),model.physics,cfg,device)
     plan=cfg['confirmation'];parameters=list(model.parameters())
     torch.save(dict(model_state_dict=model.state_dict(),seed=cfg['seed'],temperature_adapter=True,
         loaded_trained_weights=False,adapter_zero_output=True,optimizer_updates=0),folder/'initial.pt')
@@ -99,6 +103,9 @@ def fit_parent(folder,cfg,device):
                 if row['accepted_steps']==1 or row['accepted_steps']%20==0:record(dict(stage='LBFGS',head=head,**row))
             result,optimizer=continued_lbfgs(phead,
                 lambda:full_observation_head(model,obs,head),limit,progress)
+            if cfg.get('reject_invalid_line_search',False) and result['termination'].startswith(('NONFINITE','LINE_SEARCH_FAILED')):
+                save_json(folder/'invalid-parent.json',dict(head=head,result=result,status='NUMERICALLY_INVALID'))
+                raise FloatingPointError('Invalid parent line search; stop before common calibration')
             used+=result['evaluations'];history[head]=result
             torch.save(dict(optimizer_state_dict=optimizer.state_dict(),result=result,
                 parameter_names=[n for n,p in model.named_parameters() if p.requires_grad]),folder/('lbfgs-'+head+'.pt'))
@@ -113,23 +120,25 @@ def fit_parent(folder,cfg,device):
             original_components=initial_parts,final_components=final_parts,
             electrical_forward=0,electrical_adjoint=0,reference_read=False,
             seed_rescue=False,old_V_gate_applied=False,observation_only_audits=2)
+        if model_work is not None:summary['model_work']=dict(model_work)
         save_json(folder/'fit-summary.json',summary)
     return folder/'parent.pt'
 
 
-def prepare_seed(root,cfg,seed,selected,device):
-    cfg=copy.deepcopy(cfg);cfg.update(seed=seed,selected_soft=selected,roles=['E',selected],
+def prepare_seed(root,cfg,seed,selected,device,*,data_type=SparseData,
+                 observation_type=ObservationTimes,electric_type=BoundedElectricExperiment,model_observer=None):
+    cfg=copy.deepcopy(cfg);cfg.update(seed=seed,selected_soft=selected,roles=cfg.get('paired_roles',['E',selected]),
         source_parent='fresh observation-only fit',per_E_forward_limit=27000,
         observation_seed=60100+seed,sampling_seed=60200+seed,calibration_seed=130900+seed,
         lbfgs_pool_seed=230900+seed,audit_pool_seed=330900+seed,
         electric_spatial_reduction='full' if selected=='F_full' else 'sampled')
     root.mkdir(parents=True,exist_ok=False)
     save_json(root/'frozen-fit-config.json',cfg)
-    parent=fit_parent(root/'common-fit',cfg,device)
+    parent=fit_parent(root/'common-fit',cfg,device,data_type=data_type,observation_type=observation_type,model_observer=model_observer)
     state=torch.load(parent,map_location='cpu',weights_only=False)
     cfg['parent']=parent.relative_to(ROOT).as_posix()
-    data=SparseData(ROOT/cfg['sparse'])
-    exp=BoundedElectricExperiment(cfg,state['model_state_dict'],data,device,'P_E')
+    data=data_type(ROOT/cfg['sparse'])
+    exp=electric_type(cfg,state['model_state_dict'],data,device,'P_E')
     pools={}
     for label in ('calibration','lbfgs','audit'):
         key=label+'_seed' if label=='calibration' else label+'_pool_seed'

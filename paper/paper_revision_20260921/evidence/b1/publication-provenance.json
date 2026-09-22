@@ -1,0 +1,493 @@
+{
+  "status": "BYTE_IDENTICAL_CURATED_COPIES",
+  "source_run": "outputs/runs/20260921-b1-second-cycle-phase-gap",
+  "scientific_reexecution": false,
+  "complete_field_arrays_included": false,
+  "files": [
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/frozen-config.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/frozen-config.json",
+      "bytes": 7164
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/all-endpoints-locked.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/all-endpoints-locked.json",
+      "bytes": 14041
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/readout-manifest.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/readout-manifest.json",
+      "bytes": 4516
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/visible-statistics.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/visible-statistics.json",
+      "bytes": 1551
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/input/visible-fields.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1/input/visible-fields.npz",
+      "bytes": 518715
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/parent.pt",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/parent.pt",
+      "bytes": 370458
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/frozen-config.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/frozen-config.json",
+      "bytes": 6914
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/frozen-fit-config.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/frozen-fit-config.json",
+      "bytes": 6862
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/calibration.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/calibration.json",
+      "bytes": 1235
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/calibration-pool.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/calibration-pool.json",
+      "bytes": 179822
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/lbfgs-pool.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/lbfgs-pool.json",
+      "bytes": 180126
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/audit-pool.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/audit-pool.json",
+      "bytes": 179818
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/parent-and-calibration-work.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/parent-and-calibration-work.json",
+      "bytes": 822
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/common-fit/fit-summary.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/common-fit/fit-summary.json",
+      "bytes": 1758
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/common-fit/fit-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/common-fit/fit-telemetry.jsonl",
+      "bytes": 4849
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/checkpoint.pt",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/E/checkpoint.pt",
+      "bytes": 24768135
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/terminal.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/E/terminal.json",
+      "bytes": 1222
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/execution-work.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/E/execution-work.json",
+      "bytes": 743
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/adam-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/E/adam-telemetry.jsonl",
+      "bytes": 30666
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/lbfgs-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/E/lbfgs-telemetry.jsonl",
+      "bytes": 111621
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/D_E/checkpoint.pt",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/D_E/checkpoint.pt",
+      "bytes": 24768135
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/D_E/terminal.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/D_E/terminal.json",
+      "bytes": 1219
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/D_E/execution-work.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/D_E/execution-work.json",
+      "bytes": 742
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/D_E/adam-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/D_E/adam-telemetry.jsonl",
+      "bytes": 29511
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/D_E/lbfgs-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/D_E/lbfgs-telemetry.jsonl",
+      "bytes": 112074
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/F_raw/checkpoint.pt",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/F_raw/checkpoint.pt",
+      "bytes": 35630983
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/F_raw/terminal.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/F_raw/terminal.json",
+      "bytes": 1356
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/F_raw/execution-work.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/F_raw/execution-work.json",
+      "bytes": 693
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/F_raw/adam-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/F_raw/adam-telemetry.jsonl",
+      "bytes": 37727
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/F_raw/lbfgs-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-29/F_raw/lbfgs-telemetry.jsonl",
+      "bytes": 131191
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/parent.pt",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/parent.pt",
+      "bytes": 370458
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/frozen-config.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/frozen-config.json",
+      "bytes": 6914
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/frozen-fit-config.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/frozen-fit-config.json",
+      "bytes": 6862
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/calibration.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/calibration.json",
+      "bytes": 1234
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/calibration-pool.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/calibration-pool.json",
+      "bytes": 179869
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/lbfgs-pool.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/lbfgs-pool.json",
+      "bytes": 179813
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/audit-pool.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/audit-pool.json",
+      "bytes": 179963
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/parent-and-calibration-work.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/parent-and-calibration-work.json",
+      "bytes": 820
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/common-fit/fit-summary.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/common-fit/fit-summary.json",
+      "bytes": 1757
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/common-fit/fit-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/common-fit/fit-telemetry.jsonl",
+      "bytes": 4855
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/E/checkpoint.pt",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/E/checkpoint.pt",
+      "bytes": 24768135
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/E/terminal.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/E/terminal.json",
+      "bytes": 1223
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/E/execution-work.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/E/execution-work.json",
+      "bytes": 743
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/E/adam-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/E/adam-telemetry.jsonl",
+      "bytes": 30605
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/E/lbfgs-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/E/lbfgs-telemetry.jsonl",
+      "bytes": 111467
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/D_E/checkpoint.pt",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/D_E/checkpoint.pt",
+      "bytes": 24768199
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/D_E/terminal.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/D_E/terminal.json",
+      "bytes": 1237
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/D_E/execution-work.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/D_E/execution-work.json",
+      "bytes": 742
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/D_E/adam-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/D_E/adam-telemetry.jsonl",
+      "bytes": 29482
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/D_E/lbfgs-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/D_E/lbfgs-telemetry.jsonl",
+      "bytes": 112705
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/F_raw/checkpoint.pt",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/F_raw/checkpoint.pt",
+      "bytes": 35631047
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/F_raw/terminal.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/F_raw/terminal.json",
+      "bytes": 1376
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/F_raw/execution-work.json",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/F_raw/execution-work.json",
+      "bytes": 693
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/F_raw/adam-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/F_raw/adam-telemetry.jsonl",
+      "bytes": 37722
+    },
+    {
+      "source": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-43/F_raw/lbfgs-telemetry.jsonl",
+      "published": "paper/paper_revision_20260921/evidence/b1/seed-43/F_raw/lbfgs-telemetry.jsonl",
+      "bytes": 131207
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/coarse/shorter_29_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/coarse/shorter_29_D_E.npz",
+      "bytes": 30371
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/coarse/shorter_29_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/coarse/shorter_29_E.npz",
+      "bytes": 30344
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/coarse/shorter_29_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/coarse/shorter_29_F.npz",
+      "bytes": 29628
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/coarse/shorter_43_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/coarse/shorter_43_D_E.npz",
+      "bytes": 30274
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/coarse/shorter_43_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/coarse/shorter_43_E.npz",
+      "bytes": 30305
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/coarse/shorter_43_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/coarse/shorter_43_F.npz",
+      "bytes": 29522
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/coarse/shorter_B_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/coarse/shorter_B_E.npz",
+      "bytes": 29482
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/fine/shorter_29_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/fine/shorter_29_D_E.npz",
+      "bytes": 30387
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/fine/shorter_29_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/fine/shorter_29_E.npz",
+      "bytes": 30357
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/fine/shorter_29_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/fine/shorter_29_F.npz",
+      "bytes": 29635
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/fine/shorter_43_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/fine/shorter_43_D_E.npz",
+      "bytes": 30336
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/fine/shorter_43_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/fine/shorter_43_E.npz",
+      "bytes": 30297
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/fine/shorter_43_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/fine/shorter_43_F.npz",
+      "bytes": 29544
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/old/fine/shorter_B_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/old/fine/shorter_B_E.npz",
+      "bytes": 29550
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/coarse/shorter_29_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/coarse/shorter_29_D_E.npz",
+      "bytes": 30418
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/coarse/shorter_29_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/coarse/shorter_29_E.npz",
+      "bytes": 30369
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/coarse/shorter_29_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/coarse/shorter_29_F.npz",
+      "bytes": 29608
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/coarse/shorter_43_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/coarse/shorter_43_D_E.npz",
+      "bytes": 30298
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/coarse/shorter_43_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/coarse/shorter_43_E.npz",
+      "bytes": 30273
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/coarse/shorter_43_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/coarse/shorter_43_F.npz",
+      "bytes": 29531
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/coarse/shorter_B_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/coarse/shorter_B_E.npz",
+      "bytes": 29482
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/fine/shorter_29_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/fine/shorter_29_D_E.npz",
+      "bytes": 30427
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/fine/shorter_29_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/fine/shorter_29_E.npz",
+      "bytes": 30395
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/fine/shorter_29_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/fine/shorter_29_F.npz",
+      "bytes": 29648
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/fine/shorter_43_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/fine/shorter_43_D_E.npz",
+      "bytes": 30314
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/fine/shorter_43_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/fine/shorter_43_E.npz",
+      "bytes": 30329
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/fine/shorter_43_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/fine/shorter_43_F.npz",
+      "bytes": 29567
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/refined/fine/shorter_B_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/refined/fine/shorter_B_E.npz",
+      "bytes": 29545
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/coarse/shorter_29_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/coarse/shorter_29_D_E.npz",
+      "bytes": 30404
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/coarse/shorter_29_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/coarse/shorter_29_E.npz",
+      "bytes": 30325
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/coarse/shorter_29_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/coarse/shorter_29_F.npz",
+      "bytes": 29602
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/coarse/shorter_43_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/coarse/shorter_43_D_E.npz",
+      "bytes": 30262
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/coarse/shorter_43_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/coarse/shorter_43_E.npz",
+      "bytes": 30245
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/coarse/shorter_43_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/coarse/shorter_43_F.npz",
+      "bytes": 29481
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/coarse/shorter_B_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/coarse/shorter_B_E.npz",
+      "bytes": 29472
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/fine/shorter_29_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/fine/shorter_29_D_E.npz",
+      "bytes": 30412
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/fine/shorter_29_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/fine/shorter_29_E.npz",
+      "bytes": 30372
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/fine/shorter_29_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/fine/shorter_29_F.npz",
+      "bytes": 29668
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/fine/shorter_43_D_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/fine/shorter_43_D_E.npz",
+      "bytes": 30328
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/fine/shorter_43_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/fine/shorter_43_E.npz",
+      "bytes": 30309
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/fine/shorter_43_F.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/fine/shorter_43_F.npz",
+      "bytes": 29540
+    },
+    {
+      "source": "outputs/submission-rescore-20260921/b1/first-score/traces/spatial/fine/shorter_B_E.npz",
+      "published": "paper/paper_revision_20260921/evidence/b1-port-traces/spatial/fine/shorter_B_E.npz",
+      "bytes": 29532
+    }
+  ]
+}
