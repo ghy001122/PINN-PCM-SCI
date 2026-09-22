@@ -2,13 +2,14 @@
 
 2026-09-22，用户另行授权将本轮重要结果提交并推送至 `ghy001122/PINN-PCM-SCI`。本次沿用 `codex/paper-revision-results`，继承 `218bb66069da52b2ccfe9dd68ac519edbe4584d0`；只发布已完成的论文、证据和源码。
 
-- 发布状态：`LOCAL_COMMITTED_PUSH_BLOCKED_PENDING_PAYLOAD_CONFIRMATION`。
-- 已完成的本地成果提交：`63e578a2acaed568a3e084f7532dd1aa70b72750`；尚未推送。
+- 发布状态：`PUBLISHED_REMOTE_VERIFIED`。
+- 已发布成果提交：[63e578a2acaed568a3e084f7532dd1aa70b72750](https://github.com/ghy001122/PINN-PCM-SCI/commit/63e578a2acaed568a3e084f7532dd1aa70b72750)。
+- 首次成果推送于 `2026-09-22T02:05:37Z` 核验：远端 `codex/paper-revision-results` 指向 `93a862fec14839d766c23f5556cfa8190506808a`，包含上述成果提交及此前阻塞状态记录。本条记录首次推送事实，后续状态说明提交继续沿用同一分支。
 - 目的地已只读核验为用户指定的公开仓库 `ghy001122/PINN-PCM-SCI`，当前账号拥有 `ADMIN` 权限。
 - 科研状态：`CLOSED`；`next_research_execution_authorized=false`。
 - 科学结论：`VERIFIED_B1_PREDECLARED_INCREMENT_NOT_ESTABLISHED`。
 
-执行后端的自动审批拒绝了首次推送尝试，实际传输未开始。其理由是此前“重要结果”授权尚未明确覆盖这组约211 MB的论文、检查点、输入和轨迹等研究数据的具体对外传输范围。已请求用户确认上文所述完整精选成果，或改为仅发布稿件、源码与文本证据；获得确认前不重试传输。
+首次推送尝试曾被执行后端自动审批拒绝，当时未发生传输。2026-09-22，用户对约211 MB精选成果公开推送明确回复“确认”，范围包括论文、源码、六个最终检查点、两个父态、可见输入、固定积分池及42组端口轨迹。此后对同一已审阅提交执行普通推送成功，并以远端分支指针完成核验；未强制覆盖历史。本状态 supersedes 此前等待具体传输范围确认的阻塞记录。
 
 本地核验已完成：文档一致性门禁通过，暂存差异检查通过，B1源码依赖齐全；限定提交清单准确，冻结文件和图件的Git对象与本地原件字节一致。原有无关改动未纳入提交。
 
