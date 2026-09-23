@@ -1,0 +1,339 @@
+{
+  "task_id": "PCM-20260922-RELATIVE-PHASE-MOMENTS-01",
+  "route": "NO_INCREMENT_WITHIN_SCREEN_BUDGET",
+  "claim_status": "VERIFIED_PHASE_MOMENTS_NO_INCREMENT_WITHIN_SCREEN_BUDGET",
+  "summary_zh": "八臂数值有效且预算完整；所有候选均未对D和P建立原A_w增量。RIM相对D的W相态RMS改善1.918%、S改善2.202%；相对P分别改善2.264%、2.633%，低于原10%门。电热非劣与窗外代价不是此次失败原因。",
+  "discussion_zh": "### 科学裁决与机制边界\n\n**VERIFIED：**56个有序内部比较的A_W、全轨迹A及B均无通过；这些比较不是56个独立样本。八个终点均未通过原严格双周期门。所有有序比较的七项窗外代价标志均为false，原非劣标准没有被放宽。\n\n**VERIFIED：**RIM相对RI的S／Ephi改善仅0.187%／0.295%，相对简单完整logit控制L仅0.054%／0.139%，相对固定标量G为0.703%／0.718%。R相对L的S／Ephi反而增加2.589%／2.045%。RI相对R存在约2.394%／1.851%的连续改善，但仍未建立主门增量。I相对P的变化也很小。保留全部连续差异，不把它们称为显著性或模块必要性证据。\n\n**SUPPORTED_INTERPRETATION：**本次固定预算没有支持完整组合、一阶矩、有限截断或相态度量的独立方法贡献。L和G都能获得与完整候选接近的小幅变化。这里不选择STATE_METRIC_ONLY_SIGNAL或GENERIC_INTEGRAL_OR_SCALAR_SUFFICIENT，因为没有候选先满足对D/P的原主问题。完整候选在W的S与Ephi数值最小也不足以触发确认。\n\n### 剩余误差在哪里\n\n**VERIFIED：**RIM第二周期onset为1.22715，原参考1.2268，时差0.00035；recovery=1仍通过。其recall=0.641734、precision=0.824945、mass ratio=0.777911，事件覆盖不足。活跃面积峰值出现在1.5425，原参考为1.3475；峰值时差0.195不等于原onset时差。RIM的W集合误差约78.24%来自加热结束后的FP；八臂该份额为78.24%—79.76%。不能因onset接近而宣称相态重建或严格事件能力成立，也不能把通过的恢复指标改写成失败。\n\n**VERIFIED：**RIM独立原raw审计的热项／相态项为0.00611736／0.00300684。相对D分别变化−1.690%／+0.450%；相对P为+0.505%／+0.586%。这些是原尺度下的残差平方诊断，未新增一个事后物理成功阈值。\n\n**SUPPORTED_INTERPRETATION：**初始phase损失占比很小，且短片上Mζ与Pζ已很接近，可以解释为什么本轮模块变化有限；这不是唯一优化根因的证明，也没有证明一般PINN、积分约束或更长预算都无效。\n\n### 唯一后续动作\n\n按预声明停止条件收口本轮，不追加训练、调权、片宽搜索、seed、第二读出或另外两参考复评分；没有触发阶段4确认申请。原论文的独立相态PDE贡献与严格事件能力仍未补齐。本轮不自动改写为D_E主导的窄稿。若继续追求更强方法创新，下一任务须提出真正不同且可区分的科学假设，并重新固定强控制、预期效应与停止条件；不能把本次失败简单改名或续跑。\n",
+  "independent_initializations": 1,
+  "seed": 29,
+  "primary_candidate": "RIM",
+  "selected_candidate_for_confirmation": null,
+  "confirmation_triggered": false,
+  "confirmation_executed": false,
+  "further_training_authorized": false,
+  "scoring_reference": "old",
+  "scoring_reader": [
+    160,
+    80
+  ],
+  "scientific_thresholds_unchanged": true,
+  "RIM_continuous_effects": {
+    "D": {
+      "S": {
+        "candidate_error": 0.007129873143564357,
+        "control_error": 0.007290377475247525,
+        "signed_difference": -0.00016050433168316846,
+        "relative_error_reduction": 0.022015915119363405
+      },
+      "Ephi": {
+        "candidate_error": 0.08212006428674308,
+        "control_error": 0.08372554186835324,
+        "signed_difference": -0.0016054775816101569,
+        "relative_error_reduction": 0.019175481529095983
+      },
+      "ET": {
+        "candidate_error": 0.012945669969151119,
+        "control_error": 0.013099879478694463,
+        "signed_difference": -0.00015420950954334392,
+        "relative_error_reduction": 0.01177182658772924
+      },
+      "EV": {
+        "candidate_error": 0.00453136454553612,
+        "control_error": 0.004515535102656693,
+        "signed_difference": 1.58294428794269e-05,
+        "relative_error_reduction": -0.003505551948896013
+      },
+      "EI": {
+        "candidate_error": 0.02528719082851269,
+        "control_error": 0.025084495538905512,
+        "signed_difference": 0.00020269528960717778,
+        "relative_error_reduction": -0.008080500933048462
+      },
+      "bottom_current_NRMSE": {
+        "candidate_error": 0.0252871908285133,
+        "control_error": 0.025084495538905665,
+        "signed_difference": 0.00020269528960763575,
+        "relative_error_reduction": -0.00808050093306667
+      },
+      "power_trace_NRMSE": {
+        "candidate_error": 0.025052263783638905,
+        "control_error": 0.024857287943693022,
+        "signed_difference": 0.0001949758399458837,
+        "relative_error_reduction": -0.007843809847138061
+      }
+    },
+    "P": {
+      "S": {
+        "candidate_error": 0.007129873143564357,
+        "control_error": 0.00732267172029703,
+        "signed_difference": -0.000192798576732673,
+        "relative_error_reduction": 0.02632899358280294
+      },
+      "Ephi": {
+        "candidate_error": 0.08212006428674308,
+        "control_error": 0.08402211803796795,
+        "signed_difference": -0.0019020537512248747,
+        "relative_error_reduction": 0.022637536349242926
+      },
+      "ET": {
+        "candidate_error": 0.012945669969151119,
+        "control_error": 0.013051286778545834,
+        "signed_difference": -0.00010561680939471553,
+        "relative_error_reduction": 0.008092444154114586
+      },
+      "EV": {
+        "candidate_error": 0.00453136454553612,
+        "control_error": 0.00446896518936352,
+        "signed_difference": 6.23993561726004e-05,
+        "relative_error_reduction": -0.013962819921067071
+      },
+      "EI": {
+        "candidate_error": 0.02528719082851269,
+        "control_error": 0.024891997696745053,
+        "signed_difference": 0.000395193131767637,
+        "relative_error_reduction": -0.015876312402974158
+      },
+      "bottom_current_NRMSE": {
+        "candidate_error": 0.0252871908285133,
+        "control_error": 0.02489199769674201,
+        "signed_difference": 0.00039519313177129034,
+        "relative_error_reduction": -0.015876312403122927
+      },
+      "power_trace_NRMSE": {
+        "candidate_error": 0.025052263783638905,
+        "control_error": 0.02476325445088178,
+        "signed_difference": 0.00028900933275712373,
+        "relative_error_reduction": -0.01167089460435733
+      }
+    },
+    "L": {
+      "S": {
+        "candidate_error": 0.007129873143564357,
+        "control_error": 0.0071337407178217824,
+        "signed_difference": -3.867574257425746e-06,
+        "relative_error_reduction": 0.0005421523448089216
+      },
+      "Ephi": {
+        "candidate_error": 0.08212006428674308,
+        "control_error": 0.08223462407391231,
+        "signed_difference": -0.00011455978716923276,
+        "relative_error_reduction": 0.0013930845852261342
+      },
+      "ET": {
+        "candidate_error": 0.012945669969151119,
+        "control_error": 0.013006857115739748,
+        "signed_difference": -6.118714658862913e-05,
+        "relative_error_reduction": 0.004704222245555889
+      },
+      "EV": {
+        "candidate_error": 0.00453136454553612,
+        "control_error": 0.004468025504303467,
+        "signed_difference": 6.33390412326535e-05,
+        "relative_error_reduction": -0.014176069758699228
+      },
+      "EI": {
+        "candidate_error": 0.02528719082851269,
+        "control_error": 0.024968570540132733,
+        "signed_difference": 0.00031862028837995743,
+        "relative_error_reduction": -0.012760854205403183
+      },
+      "bottom_current_NRMSE": {
+        "candidate_error": 0.0252871908285133,
+        "control_error": 0.024968570540130058,
+        "signed_difference": 0.000318620288383243,
+        "relative_error_reduction": -0.012760854205536187
+      },
+      "power_trace_NRMSE": {
+        "candidate_error": 0.025052263783638905,
+        "control_error": 0.024737158322497014,
+        "signed_difference": 0.0003151054611418916,
+        "relative_error_reduction": -0.012738143041083339
+      }
+    },
+    "R": {
+      "S": {
+        "candidate_error": 0.007129873143564357,
+        "control_error": 0.007318417388613862,
+        "signed_difference": -0.00018854424504950555,
+        "relative_error_reduction": 0.02576298057867621
+      },
+      "Ephi": {
+        "candidate_error": 0.08212006428674308,
+        "control_error": 0.08391661453962938,
+        "signed_difference": -0.001796550252886303,
+        "relative_error_reduction": 0.021408755140352898
+      },
+      "ET": {
+        "candidate_error": 0.012945669969151119,
+        "control_error": 0.01300548201363149,
+        "signed_difference": -5.9812044480371876e-05,
+        "relative_error_reduction": 0.004598987136169241
+      },
+      "EV": {
+        "candidate_error": 0.00453136454553612,
+        "control_error": 0.0043970616088141136,
+        "signed_difference": 0.0001343029367220066,
+        "relative_error_reduction": -0.030543792348233234
+      },
+      "EI": {
+        "candidate_error": 0.02528719082851269,
+        "control_error": 0.024548156142677045,
+        "signed_difference": 0.0007390346858356447,
+        "relative_error_reduction": -0.03010550696925174
+      },
+      "bottom_current_NRMSE": {
+        "candidate_error": 0.0252871908285133,
+        "control_error": 0.02454815614267577,
+        "signed_difference": 0.0007390346858375321,
+        "relative_error_reduction": -0.030105506969330342
+      },
+      "power_trace_NRMSE": {
+        "candidate_error": 0.025052263783638905,
+        "control_error": 0.024359902552367092,
+        "signed_difference": 0.0006923612312718132,
+        "relative_error_reduction": -0.02842216752646798
+      }
+    },
+    "I": {
+      "S": {
+        "candidate_error": 0.007129873143564357,
+        "control_error": 0.007327699566831684,
+        "signed_difference": -0.00019782642326732734,
+        "relative_error_reduction": 0.026997070699073755
+      },
+      "Ephi": {
+        "candidate_error": 0.08212006428674308,
+        "control_error": 0.08398839577114178,
+        "signed_difference": -0.0018683314843987026,
+        "relative_error_reduction": 0.022245114545224598
+      },
+      "ET": {
+        "candidate_error": 0.012945669969151119,
+        "control_error": 0.01305906425268701,
+        "signed_difference": -0.00011339428353589198,
+        "relative_error_reduction": 0.008683185972728547
+      },
+      "EV": {
+        "candidate_error": 0.00453136454553612,
+        "control_error": 0.004544169484837897,
+        "signed_difference": -1.2804939301776924e-05,
+        "relative_error_reduction": 0.0028178832995781056
+      },
+      "EI": {
+        "candidate_error": 0.02528719082851269,
+        "control_error": 0.025266658237404704,
+        "signed_difference": 2.0532591107985665e-05,
+        "relative_error_reduction": -0.0008126358030833281
+      },
+      "bottom_current_NRMSE": {
+        "candidate_error": 0.0252871908285133,
+        "control_error": 0.025266658237402772,
+        "signed_difference": 2.053259111052877e-05,
+        "relative_error_reduction": -0.0008126358031841363
+      },
+      "power_trace_NRMSE": {
+        "candidate_error": 0.025052263783638905,
+        "control_error": 0.02515923485066171,
+        "signed_difference": -0.00010697106702280482,
+        "relative_error_reduction": 0.004251761536380405
+      }
+    },
+    "RI": {
+      "S": {
+        "candidate_error": 0.007129873143564357,
+        "control_error": 0.007143216274752476,
+        "signed_difference": -1.3343131188119257e-05,
+        "relative_error_reduction": 0.0018679444489564379
+      },
+      "Ephi": {
+        "candidate_error": 0.08212006428674308,
+        "control_error": 0.08236329816575065,
+        "signed_difference": -0.00024323387900757054,
+        "relative_error_reduction": 0.002953182842655
+      },
+      "ET": {
+        "candidate_error": 0.012945669969151119,
+        "control_error": 0.013043712343431909,
+        "signed_difference": -9.804237428078996e-05,
+        "relative_error_reduction": 0.007516447135554882
+      },
+      "EV": {
+        "candidate_error": 0.00453136454553612,
+        "control_error": 0.004482353261528931,
+        "signed_difference": 4.901128400718914e-05,
+        "relative_error_reduction": -0.010934275178139607
+      },
+      "EI": {
+        "candidate_error": 0.02528719082851269,
+        "control_error": 0.025079562895168838,
+        "signed_difference": 0.00020762793334385202,
+        "relative_error_reduction": -0.008278770017313475
+      },
+      "bottom_current_NRMSE": {
+        "candidate_error": 0.0252871908285133,
+        "control_error": 0.025079562895168977,
+        "signed_difference": 0.00020762793334432386,
+        "relative_error_reduction": -0.008278770017332349
+      },
+      "power_trace_NRMSE": {
+        "candidate_error": 0.025052263783638905,
+        "control_error": 0.02483982425049104,
+        "signed_difference": 0.00021243953314786443,
+        "relative_error_reduction": -0.008552376659575867
+      }
+    },
+    "G": {
+      "S": {
+        "candidate_error": 0.007129873143564357,
+        "control_error": 0.007180344987623763,
+        "signed_difference": -5.047184405940642e-05,
+        "relative_error_reduction": 0.007029167003312686
+      },
+      "Ephi": {
+        "candidate_error": 0.08212006428674308,
+        "control_error": 0.08271367425910706,
+        "signed_difference": -0.000593609972363976,
+        "relative_error_reduction": 0.007176684842997605
+      },
+      "ET": {
+        "candidate_error": 0.012945669969151119,
+        "control_error": 0.0130130528262305,
+        "signed_difference": -6.738285707938094e-05,
+        "relative_error_reduction": 0.005178097559364159
+      },
+      "EV": {
+        "candidate_error": 0.00453136454553612,
+        "control_error": 0.004499991156291548,
+        "signed_difference": 3.137338924457181e-05,
+        "relative_error_reduction": -0.0069718779781839935
+      },
+      "EI": {
+        "candidate_error": 0.02528719082851269,
+        "control_error": 0.025126648135045532,
+        "signed_difference": 0.00016054269346715833,
+        "relative_error_reduction": -0.0063893398197922835
+      },
+      "bottom_current_NRMSE": {
+        "candidate_error": 0.0252871908285133,
+        "control_error": 0.02512664813504292,
+        "signed_difference": 0.00016054269347038144,
+        "relative_error_reduction": -0.006389339819921291
+      },
+      "power_trace_NRMSE": {
+        "candidate_error": 0.025052263783638905,
+        "control_error": 0.02493946780794235,
+        "signed_difference": 0.00011279597569655714,
+        "relative_error_reduction": -0.0045227900035875734
+      }
+    }
+  },
+  "all_ordered_A_w_passes": 0,
+  "all_ordered_full_A_passes": 0,
+  "all_ordered_full_B_passes": 0,
+  "strict_passes": 0,
+  "outside_cost_flags": 0,
+  "numerical_validity": "EIGHT_VALID_ENDPOINTS_WITH_8_16_AND_16_32_AGREEMENT",
+  "compute_shutdown_confirmed": true,
+  "existing_B1_0_of_12_unchanged": true,
+  "created_utc": "2026-09-23T12:22:47.272941+00:00"
+}

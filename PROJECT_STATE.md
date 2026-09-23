@@ -1,4 +1,16 @@
-# 当前收口：B1第二周期相态缺测与论文修订
+# 当前：相对相态残差与时间矩开发已收口
+
+**VERIFIED：**八臂数值有效且预算完整；所有候选均未对D和P建立原A_w增量。RIM相对D的W相态RMS改善1.918%、S改善2.202%；相对P分别改善2.264%、2.633%，低于原10%门。电热非劣与窗外代价不是此次失败原因。 全部八臂严格双周期未通过；16/32与补充8/16数值检查通过。GPU结果已回收并关机。完整事实见[本轮结果](paper/phase_moments_20260923/results.md)与[实验收口](docs/experiment/2026-09-23-relative-phase-moments-closeout.md)。本段supersedes本轮执行中状态；下方旧B1结论与发布记录保留历史身份。
+
+**SUPPORTED_INTERPRETATION：**本轮没有建立独立相态目标或时间矩增量。按预声明条件停止，不追加确认、调权或训练，不自动转为D_E主导窄稿。原论文的相态PDE贡献与严格事件证据仍未补齐；不同科学假设须另立任务，当前无新增科研或Git发布授权。
+
+- `phase_id`: `PHK_V23_RELATIVE_PHASE_MOMENTS`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `VERIFIED_PHASE_MOMENTS_NO_INCREMENT_WITHIN_SCREEN_BUDGET`
+- `next_research_execution_authorized`: `false`
+
+# 历史收口：B1第二周期相态缺测与论文修订
 
 2026-09-22 用户另行授权本轮成果提交云端；发布分支为 `codex/paper-revision-results`，范围和远端核验状态见[发布记录](docs/notes/2026-09-22-b1-sprint-results-release.md)。科研阶段保持CLOSED，完整时空数组仍未公开。
 
@@ -8,11 +20,11 @@
 
 唯一下一步是作者作论文路线决策：以现有配置收益和条件性消融形成较窄的方法评估稿，或另立具有实质新方法贡献的研究任务。建议先据本轮完整证据评估较窄成稿的可投性；若继续以更强方法创新为目标，应单独设计并批准新任务。本轮不自动降级原研究目标，也不追加救援训练。
 
-- `phase_id`: `PHK_V23_B1_SECOND_CYCLE_PHASE_GAP`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_B1_PREDECLARED_INCREMENT_NOT_ESTABLISHED`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_B1_SECOND_CYCLE_PHASE_GAP`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `VERIFIED_B1_PREDECLARED_INCREMENT_NOT_ESTABLISHED`
+- `historical_next_research_execution_authorized`: `false`
 
 # 项目状态
 

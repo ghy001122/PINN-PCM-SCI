@@ -15,7 +15,7 @@ def grid_for(physics, nx=80, nz=40):
                          z_min=physics.z_min, z_max=physics.z_max)
 
 
-def fields(model, q, *, potential=False):
+def fields(model, q, *, potential=False, phase_latent=False):
     """Exact inherited independent-head outputs without computing a discarded V."""
     p = model.physics
     normalized = p.normalize(q)
@@ -26,8 +26,11 @@ def fields(model, q, *, potential=False):
     t = model.temperature_scale*startup*(1-zfrac)*torch.sigmoid(latent["temperature"])
     initial = p.initial_phase(q).clamp(1e-8, 1-1e-8)
     delta = model.phase_latent_scale*startup*latent["phase"]
-    phase = torch.sigmoid(torch.logit(initial)+delta)
+    psi = torch.logit(initial)+delta
+    phase = torch.sigmoid(psi)
     result = {"temperature": t[:, 0], "phase": phase[:, 0], "delta_logit": delta[:, 0]}
+    if phase_latent:
+        result["phase_latent"] = psi[:, 0]
     if potential:
         result["potential"] = (p.waveform(q[:, 2:3]) *
             range_preserving_exact_top_fraction(latent["potential"], zfrac))[:, 0]
@@ -61,12 +64,11 @@ def face_quadrature(grid, cells):
     return xy, inverse.reshape(-1, 4)
 
 
-def thermal_phase_residual(model, grid, time, cells, joule_density):
+def thermal_phase_residual(model, grid, time, cells, joule_density, *, include_phase=True):
     device = next(model.parameters()).device
     q = coordinates(grid, time, cells=cells, device=device, requires_grad=True)
     f = fields(model, q)
     dt, dp = _gradient(f["temperature"], q), _gradient(f["phase"], q)
-    lap_phase = (_gradient(dp[:, 0], q)[:, 0] + _gradient(dp[:, 1], q)[:, 1])
     xy, incidence = face_quadrature(grid, cells)
     face = torch.tensor(np.column_stack([xy, np.full(len(xy), time)]),
                         dtype=torch.float64, device=device, requires_grad=True)
@@ -80,6 +82,10 @@ def thermal_phase_residual(model, grid, time, cells, joule_density):
     thermal = (dt[:, 2]+p.latent_ratio*dp[:, 2]+p.volumetric_cooling*f["temperature"]
                -p.thermal_diffusivity*flux/(grid.dx*grid.dz)
                -p.joule_gain*joule_density[torch.as_tensor(cells, device=device)])
+    if not include_phase:
+        return {"thermal": thermal, "temperature": f["temperature"],
+                "phase_value": f["phase"], "thermal_surface_flux": flux}
+    lap_phase = (_gradient(dp[:, 0], q)[:, 0] + _gradient(dp[:, 1], q)[:, 1])
     phase = f["phase"]
     potential_derivative = (2*p.barrier_scale*phase*(1-phase)*(1-2*phase)
                             +6*p.thermal_drive*(p.theta_transition-f["temperature"])*phase*(1-phase))

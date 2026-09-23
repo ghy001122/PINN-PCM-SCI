@@ -1,0 +1,476 @@
+{
+  "status": "VERIFIED_ZERO_UPDATE_DIAGNOSTICS",
+  "records": {
+    "parent29": {
+      "source": "outputs\\runs\\20260921-b1-second-cycle-phase-gap\\seed-29\\parent.pt",
+      "sample_count": 32768,
+      "quadrature_order": 32,
+      "near_pure_definition": "phi < 0.01 or phi > 0.99; diagnostic only",
+      "empirical_unweighted_quantiles": {
+        "s": [
+          4.4883703852047365e-09,
+          7.31318213049716e-09,
+          2.135411311485069e-08,
+          2.602934020413352e-05,
+          0.011325046382177262,
+          0.04300491086113214,
+          0.24999884949791812
+        ],
+        "psi": [
+          -19.221776135256846,
+          -18.733587341957666,
+          -17.662021432530153,
+          -10.55623412636844,
+          -4.457693672883132,
+          -3.054284625926062,
+          0.7918303948792063
+        ],
+        "attenuation": [
+          0.30979125496242577,
+          0.4224054331203045,
+          0.6810625863364538,
+          0.9996159856801105,
+          0.9999991370021539,
+          0.9999997874682854,
+          0.9999999799998164
+        ]
+      },
+      "nonfinite": {
+        "phi": 0,
+        "psi": 0,
+        "zeta": 0,
+        "s": 0,
+        "attenuation": 0,
+        "temperature": 0,
+        "Fphi": 0,
+        "rphi": 0,
+        "dphi": 0,
+        "Fpsi": 0,
+        "rpsi": 0,
+        "Fzeta": 0,
+        "rzeta": 0,
+        "dpsi": 0,
+        "weight": 0,
+        "time": 0
+      },
+      "rounded_zero_count": 0,
+      "rounded_one_count": 0,
+      "weighted_near_pure_mass": 0.9222781530048364,
+      "weighted_below_clip_mass": 0.06946353167397196,
+      "residual_distribution": {
+        "rphi": {
+          "weighted_square": 0.007005179937570655,
+          "near_pure_share": 0.0012871135353448126,
+          "transition_share": 0.9987128864646552,
+          "below_clip_share": 5.695628219899306e-14
+        },
+        "rpsi": {
+          "weighted_square": 20.463170405879254,
+          "near_pure_share": 0.9048562589086995,
+          "transition_share": 0.09514374109130055,
+          "below_clip_share": 0.2846360949994535
+        },
+        "rzeta": {
+          "weighted_square": 9.546018631255588,
+          "near_pure_share": 0.7960467787542287,
+          "transition_share": 0.2039532212457712,
+          "below_clip_share": 0.12324630529416382
+        }
+      },
+      "residual_distribution_by_physics_window": [
+        {
+          "interval": [
+            0.0,
+            0.35
+          ],
+          "sample_mass": 0.14,
+          "residual_square_contribution": {
+            "rphi": 0.0019958774078043776,
+            "rpsi": 0.43717480726241775,
+            "rzeta": 0.4371741830276926
+          }
+        },
+        {
+          "interval": [
+            0.35,
+            1.01
+          ],
+          "sample_mass": 0.264,
+          "residual_square_contribution": {
+            "rphi": 0.0030123281772827413,
+            "rpsi": 0.32812387180483504,
+            "rzeta": 0.32810172285961364
+          }
+        },
+        {
+          "interval": [
+            1.01,
+            1.36
+          ],
+          "sample_mass": 0.14,
+          "residual_square_contribution": {
+            "rphi": 0.001754148552945303,
+            "rpsi": 2.0225048185727728,
+            "rzeta": 2.0199323974020182
+          }
+        },
+        {
+          "interval": [
+            1.36,
+            2.5
+          ],
+          "sample_mass": 0.45600000000000007,
+          "residual_square_contribution": {
+            "rphi": 0.00024282579953823275,
+            "rpsi": 17.675366908239226,
+            "rzeta": 6.760810327966263
+          }
+        }
+      ],
+      "derivative_rms": {
+        "dphi": [
+          0.38474047267113093,
+          0.5219818478732099,
+          0.17533706238461635
+        ],
+        "dpsi": [
+          11.588785346470011,
+          10.873450913760168,
+          6.713431801075342
+        ]
+      },
+      "visible_clip": {
+        "count": 4502,
+        "total": 17325,
+        "fraction": 0.25985569985569984,
+        "below_count": 4502,
+        "above_count": 0,
+        "below_fraction": 0.25985569985569984,
+        "above_fraction": 0.0,
+        "includes_analytic_initial_labels": true,
+        "phase_weight_mass": 0.12902423469387753,
+        "loss_from_clipped_labels": 3.1202516558793427e-06,
+        "total_phase_observation_loss": 3.8088894844088645e-05,
+        "fraction_of_phase_loss": 0.08192024653515517,
+        "meaning": "numerical target clipping, not observation noise"
+      },
+      "optimizer_updates": 0,
+      "electrical_solves": 0,
+      "reference_read": false
+    },
+    "old_E29": {
+      "source": "outputs\\runs\\20260921-b1-second-cycle-phase-gap\\seed-29\\E\\checkpoint.pt",
+      "sample_count": 32768,
+      "quadrature_order": 32,
+      "near_pure_definition": "phi < 0.01 or phi > 0.99; diagnostic only",
+      "empirical_unweighted_quantiles": {
+        "s": [
+          5.537946585358214e-09,
+          8.729630349760602e-09,
+          2.732153911681193e-08,
+          2.2935327164059922e-05,
+          0.010693163846613868,
+          0.12197620526886124,
+          0.24999973404518586
+        ],
+        "psi": [
+          -19.011642046282347,
+          -18.55654279368607,
+          -17.415590564384196,
+          -10.682786529020273,
+          -4.516412891632063,
+          -1.1692340544848723,
+          3.127201564985051
+        ],
+        "attenuation": [
+          0.3564143196176422,
+          0.4660866398317119,
+          0.7320581789817251,
+          0.9995642011970768,
+          0.999999084823923,
+          0.9999999380162622,
+          0.9999999799999579
+        ]
+      },
+      "nonfinite": {
+        "phi": 0,
+        "psi": 0,
+        "zeta": 0,
+        "s": 0,
+        "attenuation": 0,
+        "temperature": 0,
+        "Fphi": 0,
+        "rphi": 0,
+        "dphi": 0,
+        "Fpsi": 0,
+        "rpsi": 0,
+        "Fzeta": 0,
+        "rzeta": 0,
+        "dpsi": 0,
+        "weight": 0,
+        "time": 0
+      },
+      "rounded_zero_count": 0,
+      "rounded_one_count": 0,
+      "weighted_near_pure_mass": 0.9249933478609584,
+      "weighted_below_clip_mass": 0.06366867039163786,
+      "residual_distribution": {
+        "rphi": {
+          "weighted_square": 0.08877439474015109,
+          "near_pure_share": 0.00028205628044482555,
+          "transition_share": 0.9997179437195552,
+          "below_clip_share": 4.9551533145506e-15
+        },
+        "rpsi": {
+          "weighted_square": 23.795480081711084,
+          "near_pure_share": 0.8502157208754977,
+          "transition_share": 0.1497842791245026,
+          "below_clip_share": 0.235055773805938
+        },
+        "rzeta": {
+          "weighted_square": 14.1773451736161,
+          "near_pure_share": 0.748599803534513,
+          "transition_share": 0.25140019646548706,
+          "below_clip_share": 0.08663624910825077
+        }
+      },
+      "residual_distribution_by_physics_window": [
+        {
+          "interval": [
+            0.0,
+            0.35
+          ],
+          "sample_mass": 0.14,
+          "residual_square_contribution": {
+            "rphi": 0.00017651711580679818,
+            "rpsi": 0.36044919694001315,
+            "rzeta": 0.36044805178567285
+          }
+        },
+        {
+          "interval": [
+            0.35,
+            1.01
+          ],
+          "sample_mass": 0.264,
+          "residual_square_contribution": {
+            "rphi": 0.0012814178717498188,
+            "rpsi": 0.24032750453621937,
+            "rzeta": 0.24028447102939632
+          }
+        },
+        {
+          "interval": [
+            1.01,
+            1.36
+          ],
+          "sample_mass": 0.14,
+          "residual_square_contribution": {
+            "rphi": 0.008017592680303815,
+            "rpsi": 5.17018213951668,
+            "rzeta": 5.164451638465076
+          }
+        },
+        {
+          "interval": [
+            1.36,
+            2.5
+          ],
+          "sample_mass": 0.45600000000000007,
+          "residual_square_contribution": {
+            "rphi": 0.07929886707229065,
+            "rpsi": 18.024521240718173,
+            "rzeta": 8.412161012335956
+          }
+        }
+      ],
+      "derivative_rms": {
+        "dphi": [
+          1.0412276790173862,
+          0.6070863385097564,
+          0.26321318689435214
+        ],
+        "dpsi": [
+          14.779706031595534,
+          14.015759158424189,
+          6.972629056313811
+        ]
+      },
+      "visible_clip": {
+        "count": 4502,
+        "total": 17325,
+        "fraction": 0.25985569985569984,
+        "below_count": 4502,
+        "above_count": 0,
+        "below_fraction": 0.25985569985569984,
+        "above_fraction": 0.0,
+        "includes_analytic_initial_labels": true,
+        "phase_weight_mass": 0.12902423469387753,
+        "loss_from_clipped_labels": 1.5847021709795638e-06,
+        "total_phase_observation_loss": 1.7051721350820087e-05,
+        "fraction_of_phase_loss": 0.0929350262285015,
+        "meaning": "numerical target clipping, not observation noise"
+      },
+      "optimizer_updates": 0,
+      "electrical_solves": 0,
+      "reference_read": false
+    },
+    "old_D_E29": {
+      "source": "outputs\\runs\\20260921-b1-second-cycle-phase-gap\\seed-29\\D_E\\checkpoint.pt",
+      "sample_count": 32768,
+      "quadrature_order": 32,
+      "near_pure_definition": "phi < 0.01 or phi > 0.99; diagnostic only",
+      "empirical_unweighted_quantiles": {
+        "s": [
+          5.458236685940574e-09,
+          8.484793301403705e-09,
+          2.7670685456501726e-08,
+          2.3817485917551167e-05,
+          0.010678577837867433,
+          0.12257473034732315,
+          0.24999981655514156
+        ],
+        "psi": [
+          -19.02614003972606,
+          -18.584990282117882,
+          -17.402892215766624,
+          -10.645042913723797,
+          -4.517808011466374,
+          -1.1794445419193653,
+          3.0756995345675247
+        ],
+        "attenuation": [
+          0.3530956907109633,
+          0.4590147851046228,
+          0.7345416097139732,
+          0.9995803365953049,
+          0.9999990835465606,
+          0.9999999384166397,
+          0.9999999799999711
+        ]
+      },
+      "nonfinite": {
+        "phi": 0,
+        "psi": 0,
+        "zeta": 0,
+        "s": 0,
+        "attenuation": 0,
+        "temperature": 0,
+        "Fphi": 0,
+        "rphi": 0,
+        "dphi": 0,
+        "Fpsi": 0,
+        "rpsi": 0,
+        "Fzeta": 0,
+        "rzeta": 0,
+        "dpsi": 0,
+        "weight": 0,
+        "time": 0
+      },
+      "rounded_zero_count": 0,
+      "rounded_one_count": 0,
+      "weighted_near_pure_mass": 0.9245092287656776,
+      "weighted_below_clip_mass": 0.07431518305915587,
+      "residual_distribution": {
+        "rphi": {
+          "weighted_square": 0.10026223611131375,
+          "near_pure_share": 0.0002230227481482268,
+          "transition_share": 0.9997769772518519,
+          "below_clip_share": 5.139123390377008e-15
+        },
+        "rpsi": {
+          "weighted_square": 22.953490550620504,
+          "near_pure_share": 0.8444524873328827,
+          "transition_share": 0.15554751266711744,
+          "below_clip_share": 0.282527921977638
+        },
+        "rzeta": {
+          "weighted_square": 13.40482833695593,
+          "near_pure_share": 0.7336514319495264,
+          "transition_share": 0.26634856805047374,
+          "below_clip_share": 0.1066999811496554
+        }
+      },
+      "residual_distribution_by_physics_window": [
+        {
+          "interval": [
+            0.0,
+            0.35
+          ],
+          "sample_mass": 0.14,
+          "residual_square_contribution": {
+            "rphi": 0.00022251862686437855,
+            "rpsi": 0.3459223934369462,
+            "rzeta": 0.3459213291851143
+          }
+        },
+        {
+          "interval": [
+            0.35,
+            1.01
+          ],
+          "sample_mass": 0.264,
+          "residual_square_contribution": {
+            "rphi": 0.0011944986564492493,
+            "rpsi": 0.2447116951685946,
+            "rzeta": 0.24467139582140235
+          }
+        },
+        {
+          "interval": [
+            1.01,
+            1.36
+          ],
+          "sample_mass": 0.14,
+          "residual_square_contribution": {
+            "rphi": 0.009603366428083748,
+            "rpsi": 4.673572649862027,
+            "rzeta": 4.668384356175718
+          }
+        },
+        {
+          "interval": [
+            1.36,
+            2.5
+          ],
+          "sample_mass": 0.45600000000000007,
+          "residual_square_contribution": {
+            "rphi": 0.08924185239991637,
+            "rpsi": 17.689283812152937,
+            "rzeta": 8.145851255773696
+          }
+        }
+      ],
+      "derivative_rms": {
+        "dphi": [
+          1.0601400837877635,
+          0.6096045440977513,
+          0.2678316693671418
+        ],
+        "dpsi": [
+          14.776589937382822,
+          13.837173757231579,
+          6.958156898369706
+        ]
+      },
+      "visible_clip": {
+        "count": 4502,
+        "total": 17325,
+        "fraction": 0.25985569985569984,
+        "below_count": 4502,
+        "above_count": 0,
+        "below_fraction": 0.25985569985569984,
+        "above_fraction": 0.0,
+        "includes_analytic_initial_labels": true,
+        "phase_weight_mass": 0.12902423469387753,
+        "loss_from_clipped_labels": 1.5358870577273247e-06,
+        "total_phase_observation_loss": 1.7271051971580483e-05,
+        "fraction_of_phase_loss": 0.08892840229157013,
+        "meaning": "numerical target clipping, not observation noise"
+      },
+      "optimizer_updates": 0,
+      "electrical_solves": 0,
+      "reference_read": false
+    }
+  }
+}

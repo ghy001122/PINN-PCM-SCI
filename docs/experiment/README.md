@@ -1,6 +1,8 @@
 # Experiment ledger protocol
 
-最新：[B1第二周期相态缺测收口](2026-09-21-b1-phase-gap-sprint-closeout.md)。两个新父态、六终点与共同读出已完成；全部结果和代价保留，GPU已回收关闭。
+最新：[相对相态残差与时间矩八臂开发收口](2026-09-23-relative-phase-moments-closeout.md)。八个有效终点与原生读出完成，未建立原A_w增量；全部数值检查通过，GPU已回收关闭。
+
+历史2026-09-21：[B1第二周期相态缺测收口](2026-09-21-b1-phase-gap-sprint-closeout.md)。两个新父态、六终点与共同读出已完成；全部结果和代价保留，GPU已回收关闭。
 
 历史2026-09-15：[完整新脉冲历史确认终局](2026-09-15-phk-v23-lf11-protocol-terminal-closeout.md)。新协议两组E均对F/projected及B_E通过A/B，严格双周期未过。两条参考/支持轨迹和四个固定终点已完成，实际GPU已回收关闭；paper_v32已收口。
 

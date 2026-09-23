@@ -1,0 +1,34 @@
+unittest.case.FunctionTestCase (test_original_fields_and_thermal_value_gradient_unchanged) ... ok
+unittest.case.FunctionTestCase (test_complete_latent_residual_chain_and_parameter_gradients) ... ok
+unittest.case.FunctionTestCase (test_stable_coordinate_derivatives_in_saturated_tails) ... ok
+unittest.case.FunctionTestCase (test_endpoint_moments_and_their_cancellation_blind_spot) ... ok
+unittest.case.FunctionTestCase (test_panel_measure_and_frozen_calibration) ... ok
+unittest.case.FunctionTestCase (test_eight_arm_objective_differences_and_electrical_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.011s
+
+OK
+test_hidden_labels_cannot_change_export_sampling_calibration_or_baseline: PASS
+test_measure_normalization_and_exact_enumerated_importance_estimator: PASS
+test_full_visible_compatibility_and_per_head_parent_loss: PASS
+test_e_minus_de_is_exact_interior_value_and_gradient_with_voltage_feedback: PASS
+test_lbfgs_trials_count_and_restore_last_accepted_state: PASS
+test_scientific_config_and_resource_boundary: PASS
+test_masked_parent_phase_objective_never_transforms_missing_values: PASS
+test_window_quadrature_decomposes_history_and_uses_own_denominators: PASS
+unittest.case.FunctionTestCase (test_forward_mixed_boundary_and_half_resistance_deposition) ... ok
+unittest.case.FunctionTestCase (test_uniform_full_electrode_exact_linear_voltage_and_zero_drive) ... ok
+unittest.case.FunctionTestCase (test_full_conductivity_vjp_voltage_local_heat_and_combined_loss) ... ok
+unittest.case.FunctionTestCase (test_outputs_phase_equation_and_joint_neural_gradient) ... ok
+unittest.case.FunctionTestCase (test_conditional_trigger_does_not_mix_claim_layers) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.968s
+
+OK
+..
+----------------------------------------------------------------------
+Ran 2 tests in 3.409s
+
+OK

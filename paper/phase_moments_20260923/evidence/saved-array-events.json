@@ -1,0 +1,1301 @@
+{
+  "source": "existing first-score/results.json; no event redefinition",
+  "records": {
+    "old/shorter/29/E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23761000000000002,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06740702479338843,
+          "peak_full_domain_fraction": 0.020390625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 152,
+          "recall": 0.9210229833258226,
+          "precision": 0.9417117843566407,
+          "mass_ratio": 0.9780306444344303,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.002989999999999965,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.000678203125,
+          "true_positive_target_mass": 0.0006386718749999998,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 5.476562499999991e-05,
+          "false_positive_target_mass": 3.953125000000018e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2248,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09607438016528926,
+          "peak_full_domain_fraction": 0.0290625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 629,
+          "recall": 0.7716703710035906,
+          "precision": 0.8548295454545455,
+          "mass_ratio": 0.9027184134040009,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": 0.0020000000000000018,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.00091390625,
+          "predicted_active_target_mass": 0.0008250000000000002,
+          "true_positive_target_mass": 0.0007052343750000002,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00020867187499999976,
+          "false_positive_target_mass": 0.00011976562499999997
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "old/shorter/29/D_E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2356777777777778,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06740702479338843,
+          "peak_full_domain_fraction": 0.020390625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 151,
+          "recall": 0.9214736367733215,
+          "precision": 0.9332496576905526,
+          "mass_ratio": 0.9873817034700314,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.004922222222222189,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0006846874999999996,
+          "true_positive_target_mass": 0.0006389843749999999,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 5.4453124999999814e-05,
+          "false_positive_target_mass": 4.570312499999974e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2260166666666668,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09581611570247933,
+          "peak_full_domain_fraction": 0.028984375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 625,
+          "recall": 0.7644041716532745,
+          "precision": 0.8610495907558982,
+          "mass_ratio": 0.8877585912121733,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": 0.0007833333333333581,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.00091390625,
+          "predicted_active_target_mass": 0.0008113281250000002,
+          "true_positive_target_mass": 0.0006985937500000003,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00021531249999999968,
+          "false_positive_target_mass": 0.00011273437499999988
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "old/shorter/29/F": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2384,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0699896694214876,
+          "peak_full_domain_fraction": 0.021171875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 158,
+          "recall": 0.8884632717440291,
+          "precision": 0.9276555699329493,
+          "mass_ratio": 0.9577512392969806,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.0021999999999999797,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0006641406249999997,
+          "true_positive_target_mass": 0.0006160937499999999,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 7.734374999999983e-05,
+          "false_positive_target_mass": 4.8046874999999804e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": null,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "peak_time_index": 404,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mass_ratio": 0.0,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": null,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.00091390625,
+          "predicted_active_target_mass": 0.0,
+          "true_positive_target_mass": 0.0,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00091390625,
+          "false_positive_target_mass": 0.0
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_recovery_failure"
+      ]
+    },
+    "old/shorter/43/E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23734444444444447,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07076446280991736,
+          "peak_full_domain_fraction": 0.02140625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 149,
+          "recall": 0.9389364578639027,
+          "precision": 0.9191573839197089,
+          "mass_ratio": 1.0215187021180712,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.0032555555555555116,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0007083593749999997,
+          "true_positive_target_mass": 0.0006510937499999998,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 4.2343749999999955e-05,
+          "false_positive_target_mass": 5.7265624999999916e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2215857142857143,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09891528925619834,
+          "peak_full_domain_fraction": 0.029921875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 617,
+          "recall": 0.8017609847837238,
+          "precision": 0.8339112652262824,
+          "mass_ratio": 0.9614464010942044,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": 0.005214285714285838,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.00091390625,
+          "predicted_active_target_mass": 0.0008786718750000002,
+          "true_positive_target_mass": 0.0007327343750000001,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.0001811718749999999,
+          "false_positive_target_mass": 0.00014593750000000013
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "old/shorter/43/D_E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23711000000000002,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07050619834710743,
+          "peak_full_domain_fraction": 0.021328125,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 146,
+          "recall": 0.9423163587201442,
+          "precision": 0.9224660858056688,
+          "mass_ratio": 1.0215187021180714,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.0034899999999999654,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0007083593749999998,
+          "true_positive_target_mass": 0.0006534374999999997,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 3.9999999999999996e-05,
+          "false_positive_target_mass": 5.4921875000000066e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2217,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09659090909090909,
+          "peak_full_domain_fraction": 0.02921875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 623,
+          "recall": 0.7962899640964269,
+          "precision": 0.8478201510876489,
+          "mass_ratio": 0.9392203795520606,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": 0.0051000000000001044,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.00091390625,
+          "predicted_active_target_mass": 0.0008583593750000004,
+          "true_positive_target_mass": 0.0007277343750000002,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00018617187499999981,
+          "false_positive_target_mass": 0.0001306250000000002
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "old/shorter/43/F": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.24015714285714285,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06947314049586777,
+          "peak_full_domain_fraction": 0.021015625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 145,
+          "recall": 0.9337539432176655,
+          "precision": 0.9518777994716894,
+          "mass_ratio": 0.9809598918431724,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.00044285714285713373,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0006802343749999996,
+          "true_positive_target_mass": 0.0006474999999999996,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 4.593750000000008e-05,
+          "false_positive_target_mass": 3.2734374999999994e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": null,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "peak_time_index": 404,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mass_ratio": 0.0,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": null,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.00091390625,
+          "predicted_active_target_mass": 0.0,
+          "true_positive_target_mass": 0.0,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00091390625,
+          "false_positive_target_mass": 0.0
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_recovery_failure"
+      ]
+    },
+    "old/shorter/B_E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2558714285714286,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05965909090909091,
+          "peak_full_domain_fraction": 0.018046875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 135,
+          "recall": 0.7929247408742678,
+          "precision": 0.9879281302638967,
+          "mass_ratio": 0.8026137899954936,
+          "reference_event_time": 0.24059999999999998,
+          "timing_absolute": 0.015271428571428602,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006934374999999997,
+          "predicted_active_target_mass": 0.0005565624999999999,
+          "true_positive_target_mass": 0.0005498437499999999,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00014359374999999984,
+          "false_positive_target_mass": 6.718749999999997e-06
+        },
+        {
+          "cycle": 2,
+          "event_time": null,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "peak_time_index": 404,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mass_ratio": 0.0,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": null,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.00091390625,
+          "predicted_active_target_mass": 0.0,
+          "true_positive_target_mass": 0.0,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00091390625,
+          "false_positive_target_mass": 0.0
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_recovery_failure"
+      ]
+    },
+    "refined/shorter/29/E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23761000000000002,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06740702479338843,
+          "peak_full_domain_fraction": 0.020390625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 152,
+          "recall": 0.9247336204942191,
+          "precision": 0.939753484621587,
+          "mass_ratio": 0.9840172296531404,
+          "reference_event_time": 0.24143333333333333,
+          "timing_absolute": 0.0038233333333333175,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006892187499999996,
+          "predicted_active_target_mass": 0.000678203125,
+          "true_positive_target_mass": 0.0006373437499999998,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 5.187499999999984e-05,
+          "false_positive_target_mass": 4.0859375000000205e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2248,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09607438016528926,
+          "peak_full_domain_fraction": 0.0290625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 629,
+          "recall": 0.7722602739726029,
+          "precision": 0.8541666666666667,
+          "mass_ratio": 0.9041095890410961,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": 0.0020000000000000018,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009125000000000001,
+          "predicted_active_target_mass": 0.0008250000000000002,
+          "true_positive_target_mass": 0.0007046875000000002,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00020781249999999988,
+          "false_positive_target_mass": 0.00012031249999999998
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "refined/shorter/29/D_E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2356777777777778,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06740702479338843,
+          "peak_full_domain_fraction": 0.020390625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 151,
+          "recall": 0.9247336204942195,
+          "precision": 0.9308534915563674,
+          "mass_ratio": 0.9934255270913626,
+          "reference_event_time": 0.24143333333333333,
+          "timing_absolute": 0.0057555555555555415,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006892187499999996,
+          "predicted_active_target_mass": 0.0006846874999999996,
+          "true_positive_target_mass": 0.00063734375,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 5.187499999999962e-05,
+          "false_positive_target_mass": 4.734374999999964e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2260166666666668,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09581611570247933,
+          "peak_full_domain_fraction": 0.028984375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 625,
+          "recall": 0.7650684931506851,
+          "precision": 0.8604718343765048,
+          "mass_ratio": 0.8891267123287673,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": 0.0007833333333333581,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009125000000000001,
+          "predicted_active_target_mass": 0.0008113281250000002,
+          "true_positive_target_mass": 0.0006981250000000003,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00021437499999999983,
+          "false_positive_target_mass": 0.00011320312499999991
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "refined/shorter/29/F": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2384,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0699896694214876,
+          "peak_full_domain_fraction": 0.021171875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 158,
+          "recall": 0.8919746089322153,
+          "precision": 0.9256558051993885,
+          "mass_ratio": 0.963613693040127,
+          "reference_event_time": 0.24143333333333333,
+          "timing_absolute": 0.0030333333333333323,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006892187499999996,
+          "predicted_active_target_mass": 0.0006641406249999997,
+          "true_positive_target_mass": 0.0006147656249999999,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 7.445312499999976e-05,
+          "false_positive_target_mass": 4.937499999999983e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": null,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "peak_time_index": 404,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mass_ratio": 0.0,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": null,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009125000000000001,
+          "predicted_active_target_mass": 0.0,
+          "true_positive_target_mass": 0.0,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.0009125000000000001,
+          "false_positive_target_mass": 0.0
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_recovery_failure"
+      ]
+    },
+    "refined/shorter/43/E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23734444444444447,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07076446280991736,
+          "peak_full_domain_fraction": 0.02140625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 149,
+          "recall": 0.9420766266152804,
+          "precision": 0.9166207124738064,
+          "mass_ratio": 1.0277714803899343,
+          "reference_event_time": 0.24143333333333333,
+          "timing_absolute": 0.004088888888888864,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006892187499999996,
+          "predicted_active_target_mass": 0.0007083593749999997,
+          "true_positive_target_mass": 0.0006492968749999999,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 3.99218749999997e-05,
+          "false_positive_target_mass": 5.906249999999976e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2215857142857143,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09891528925619834,
+          "peak_full_domain_fraction": 0.029921875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 617,
+          "recall": 0.8020547945205478,
+          "precision": 0.8329332266382145,
+          "mass_ratio": 0.9629280821917809,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": 0.005214285714285838,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009125000000000001,
+          "predicted_active_target_mass": 0.0008786718750000002,
+          "true_positive_target_mass": 0.000731875,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00018062500000000012,
+          "false_positive_target_mass": 0.00014679687500000023
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "refined/shorter/43/D_E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23711000000000002,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07050619834710743,
+          "peak_full_domain_fraction": 0.021328125,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 146,
+          "recall": 0.9452505100884154,
+          "precision": 0.9197088342340354,
+          "mass_ratio": 1.0277714803899345,
+          "reference_event_time": 0.24143333333333333,
+          "timing_absolute": 0.004323333333333318,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006892187499999996,
+          "predicted_active_target_mass": 0.0007083593749999998,
+          "true_positive_target_mass": 0.0006514843749999997,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 3.77343749999999e-05,
+          "false_positive_target_mass": 5.687500000000007e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2217,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09659090909090909,
+          "peak_full_domain_fraction": 0.02921875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 623,
+          "recall": 0.7965753424657536,
+          "precision": 0.8468189678711202,
+          "mass_ratio": 0.9406678082191784,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": 0.0051000000000001044,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009125000000000001,
+          "predicted_active_target_mass": 0.0008583593750000004,
+          "true_positive_target_mass": 0.0007268750000000002,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00018562499999999992,
+          "false_positive_target_mass": 0.0001314843750000002
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "refined/shorter/43/F": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.24015714285714285,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06947314049586777,
+          "peak_full_domain_fraction": 0.021015625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 145,
+          "recall": 0.93708909544321,
+          "precision": 0.9494659469392441,
+          "mass_ratio": 0.9869644071639084,
+          "reference_event_time": 0.24143333333333333,
+          "timing_absolute": 0.0012761904761904863,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006892187499999996,
+          "predicted_active_target_mass": 0.0006802343749999996,
+          "true_positive_target_mass": 0.0006458593749999995,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 4.3359375000000104e-05,
+          "false_positive_target_mass": 3.437500000000012e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": null,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "peak_time_index": 404,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mass_ratio": 0.0,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": null,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009125000000000001,
+          "predicted_active_target_mass": 0.0,
+          "true_positive_target_mass": 0.0,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.0009125000000000001,
+          "false_positive_target_mass": 0.0
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_recovery_failure"
+      ]
+    },
+    "refined/shorter/B_E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2558714285714286,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05965909090909091,
+          "peak_full_domain_fraction": 0.018046875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 135,
+          "recall": 0.7974382226252553,
+          "precision": 0.9875070185289163,
+          "mass_ratio": 0.8075266379505783,
+          "reference_event_time": 0.24143333333333333,
+          "timing_absolute": 0.01443809523809525,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006892187499999996,
+          "predicted_active_target_mass": 0.0005565624999999999,
+          "true_positive_target_mass": 0.0005496093749999999,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00013960937499999976,
+          "false_positive_target_mass": 6.953125000000015e-06
+        },
+        {
+          "cycle": 2,
+          "event_time": null,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "peak_time_index": 404,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mass_ratio": 0.0,
+          "reference_event_time": 1.2268000000000001,
+          "timing_absolute": null,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009125000000000001,
+          "predicted_active_target_mass": 0.0,
+          "true_positive_target_mass": 0.0,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.0009125000000000001,
+          "false_positive_target_mass": 0.0
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_recovery_failure"
+      ]
+    },
+    "spatial/shorter/29/E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23761000000000002,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06740702479338843,
+          "peak_full_domain_fraction": 0.020390625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 152,
+          "recall": 0.9203114266086558,
+          "precision": 0.9259301923741499,
+          "mass_ratio": 0.9939317609342804,
+          "reference_event_time": 0.2409,
+          "timing_absolute": 0.0032899999999999874,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006823437499999996,
+          "predicted_active_target_mass": 0.000678203125,
+          "true_positive_target_mass": 0.0006279687499999996,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 5.437499999999995e-05,
+          "false_positive_target_mass": 5.0234375000000366e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2248,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09607438016528926,
+          "peak_full_domain_fraction": 0.0290625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 629,
+          "recall": 0.7799167533818943,
+          "precision": 0.8517045454545455,
+          "mass_ratio": 0.9157127991675341,
+          "reference_event_time": 1.2293,
+          "timing_absolute": 0.0044999999999999485,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009009374999999999,
+          "predicted_active_target_mass": 0.0008250000000000002,
+          "true_positive_target_mass": 0.0007026562500000003,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00019828124999999967,
+          "false_positive_target_mass": 0.00012234374999999995
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "spatial/shorter/29/D_E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2356777777777778,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06740702479338843,
+          "peak_full_domain_fraction": 0.020390625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 151,
+          "recall": 0.9204259216853676,
+          "precision": 0.9172752167959836,
+          "mass_ratio": 1.0034348523013512,
+          "reference_event_time": 0.2409,
+          "timing_absolute": 0.0052222222222222114,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006823437499999996,
+          "predicted_active_target_mass": 0.0006846874999999996,
+          "true_positive_target_mass": 0.0006280468749999997,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 5.4296874999999875e-05,
+          "false_positive_target_mass": 5.664062499999994e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2260166666666668,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09581611570247933,
+          "peak_full_domain_fraction": 0.028984375,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 625,
+          "recall": 0.7738466874783212,
+          "precision": 0.8593163216177176,
+          "mass_ratio": 0.9005376344086025,
+          "reference_event_time": 1.2293,
+          "timing_absolute": 0.003283333333333305,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009009374999999999,
+          "predicted_active_target_mass": 0.0008113281250000002,
+          "true_positive_target_mass": 0.0006971875,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00020374999999999994,
+          "false_positive_target_mass": 0.0001141406250000002
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "spatial/shorter/29/F": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2384,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0699896694214876,
+          "peak_full_domain_fraction": 0.021171875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 158,
+          "recall": 0.8895122509732083,
+          "precision": 0.9138924832372662,
+          "mass_ratio": 0.9733226471261738,
+          "reference_event_time": 0.2409,
+          "timing_absolute": 0.0025000000000000022,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006823437499999996,
+          "predicted_active_target_mass": 0.0006641406249999997,
+          "true_positive_target_mass": 0.0006069531249999997,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 7.539062499999983e-05,
+          "false_positive_target_mass": 5.718749999999995e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": null,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "peak_time_index": 404,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mass_ratio": 0.0,
+          "reference_event_time": 1.2293,
+          "timing_absolute": null,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009009374999999999,
+          "predicted_active_target_mass": 0.0,
+          "true_positive_target_mass": 0.0,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.0009009374999999999,
+          "false_positive_target_mass": 0.0
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_recovery_failure"
+      ]
+    },
+    "spatial/shorter/43/E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23734444444444447,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07076446280991736,
+          "peak_full_domain_fraction": 0.02140625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 149,
+          "recall": 0.934966796427754,
+          "precision": 0.9006286533583326,
+          "mass_ratio": 1.0381268605449967,
+          "reference_event_time": 0.2409,
+          "timing_absolute": 0.003555555555555534,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006823437499999996,
+          "predicted_active_target_mass": 0.0007083593749999997,
+          "true_positive_target_mass": 0.0006379687499999999,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 4.437499999999971e-05,
+          "false_positive_target_mass": 7.039062499999982e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2215857142857143,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09891528925619834,
+          "peak_full_domain_fraction": 0.029921875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 617,
+          "recall": 0.8061047519944504,
+          "precision": 0.8265315195163154,
+          "mass_ratio": 0.9752861602497401,
+          "reference_event_time": 1.2293,
+          "timing_absolute": 0.007714285714285785,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009009374999999999,
+          "predicted_active_target_mass": 0.0008786718750000002,
+          "true_positive_target_mass": 0.0007262500000000001,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00017468749999999982,
+          "false_positive_target_mass": 0.0001524218750000001
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "spatial/shorter/43/D_E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.23711000000000002,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.07050619834710743,
+          "peak_full_domain_fraction": 0.021328125,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 146,
+          "recall": 0.9386306388825284,
+          "precision": 0.9041579353700232,
+          "mass_ratio": 1.038126860544997,
+          "reference_event_time": 0.2409,
+          "timing_absolute": 0.003789999999999988,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006823437499999996,
+          "predicted_active_target_mass": 0.0007083593749999998,
+          "true_positive_target_mass": 0.0006404687499999999,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 4.18749999999997e-05,
+          "false_positive_target_mass": 6.789062499999992e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": 1.2217,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.09659090909090909,
+          "peak_full_domain_fraction": 0.02921875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 623,
+          "recall": 0.8009885535900105,
+          "precision": 0.8407208519159003,
+          "mass_ratio": 0.9527402011793276,
+          "reference_event_time": 1.2293,
+          "timing_absolute": 0.007600000000000051,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009009374999999999,
+          "predicted_active_target_mass": 0.0008583593750000004,
+          "true_positive_target_mass": 0.0007216406250000001,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00017929687499999988,
+          "false_positive_target_mass": 0.00013671875000000034
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": []
+    },
+    "spatial/shorter/43/F": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.24015714285714285,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.06947314049586777,
+          "peak_full_domain_fraction": 0.021015625,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 145,
+          "recall": 0.9329058850469432,
+          "precision": 0.9357987825887218,
+          "mass_ratio": 0.9969086329287842,
+          "reference_event_time": 0.2409,
+          "timing_absolute": 0.0007428571428571562,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006823437499999996,
+          "predicted_active_target_mass": 0.0006802343749999996,
+          "true_positive_target_mass": 0.0006365624999999998,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 4.5781249999999815e-05,
+          "false_positive_target_mass": 4.3671874999999874e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": null,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "peak_time_index": 404,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mass_ratio": 0.0,
+          "reference_event_time": 1.2293,
+          "timing_absolute": null,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009009374999999999,
+          "predicted_active_target_mass": 0.0,
+          "true_positive_target_mass": 0.0,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.0009009374999999999,
+          "false_positive_target_mass": 0.0
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_recovery_failure"
+      ]
+    },
+    "spatial/shorter/B_E": {
+      "cycles": [
+        {
+          "cycle": 1,
+          "event_time": 0.2558714285714286,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.05965909090909091,
+          "peak_full_domain_fraction": 0.018046875,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 1.0,
+          "peak_time_index": 135,
+          "recall": 0.7991756354476759,
+          "precision": 0.9797866367209431,
+          "mass_ratio": 0.8156629264941611,
+          "reference_event_time": 0.2409,
+          "timing_absolute": 0.01497142857142858,
+          "support_window": [
+            0.0,
+            0.35
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0006823437499999996,
+          "predicted_active_target_mass": 0.0005565624999999999,
+          "true_positive_target_mass": 0.0005453124999999998,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.00013703124999999978,
+          "false_positive_target_mass": 1.1250000000000084e-05
+        },
+        {
+          "cycle": 2,
+          "event_time": null,
+          "pre_roi_fraction": 0.0,
+          "peak_roi_fraction": 0.0,
+          "peak_full_domain_fraction": 0.0,
+          "peak_outside_roi_fraction": 0.0,
+          "recovery_fraction": 0.0,
+          "peak_time_index": 404,
+          "recall": 0.0,
+          "precision": 0.0,
+          "mass_ratio": 0.0,
+          "reference_event_time": 1.2293,
+          "timing_absolute": null,
+          "support_window": [
+            1.01,
+            1.36
+          ],
+          "support_measure": "global trapezoid time times cell volume",
+          "teacher_active_target_mass": 0.0009009374999999999,
+          "predicted_active_target_mass": 0.0,
+          "true_positive_target_mass": 0.0,
+          "reference_event_present": true,
+          "false_positive_event": false,
+          "false_negative_target_mass": 0.0009009374999999999,
+          "false_positive_target_mass": 0.0
+        }
+      ],
+      "strict_device_pass": false,
+      "event_failures": [
+        "cycle_2_event_missing",
+        "cycle_2_roi_peak_below_minimum",
+        "cycle_2_recovery_failure"
+      ]
+    }
+  }
+}

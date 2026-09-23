@@ -1,0 +1,19 @@
+{
+  "task_id": "PCM-20260922-RELATIVE-PHASE-MOMENTS-01",
+  "started_utc": "2026-09-23T09:20:43.252750+00:00",
+  "reference_read": false,
+  "recovery_verified": true,
+  "shutdown_requested": true,
+  "instance_shutdown_confirmed": true,
+  "job_exit_code": 0,
+  "gpu_work_ended_observed_utc": "2026-09-23T11:48:02.432571+00:00",
+  "recovery_sha256": "418d9bab71217287d72a26621a3bdf52b782af9d2f6c51fe7e1ba35be4f01554",
+  "recovered_utc": "2026-09-23T12:03:56.108417+00:00",
+  "shutdown_requested_utc": "2026-09-23T12:03:56.857161+00:00",
+  "shutdown_returncode": 0,
+  "completed_utc": "2026-09-23T12:04:04.148170+00:00",
+  "training_and_readout_complete": true,
+  "compute_stopped_before_reference_read": true,
+  "extracted_new_files": 88,
+  "redaction": "Cloud address, remote directory and machine-local archive path omitted from the public subset."
+}

@@ -1,0 +1,398 @@
+{
+  "status": "ZERO_UPDATE_PROFILE_COMPLETE",
+  "passes_per_arm": 1,
+  "arms": {
+    "D": {
+      "objective": 1.06267948810718,
+      "components": {
+        "observation": 0.000145399909095318,
+        "obs_V": 0.00022511801168905707,
+        "obs_T": 9.681503106463105e-05,
+        "obs_phase": 0.00011426668453226596,
+        "boundary": 0.0629969255612926,
+        "initial": 3.761581922631321e-33,
+        "thermal": 0.0,
+        "phase": 0.0,
+        "objective": 1.06267948810718
+      },
+      "gradient_norm": 2.2515833709508266,
+      "elapsed_seconds": 8.754351999959908,
+      "memory": {
+        "unavailable": "psutil not installed"
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 126,
+          "zero_drive_queries": 92,
+          "factorizations": 34,
+          "forward_solves": 34,
+          "adjoint_solves": 34,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.2241985597894803e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-15
+        },
+        "model_work": {
+          "head_forward_calls": 578,
+          "head_coordinate_queries": 278116,
+          "head_output_derivative_calls": 834
+        },
+        "phase_work": {
+          "phase_derivative_positions": 0,
+          "phase_spatial_second_ad_components": 0,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "optimizer_updates": 0
+    },
+    "P": {
+      "objective": 1.0654892502260669,
+      "components": {
+        "observation": 0.000145399909095318,
+        "obs_V": 0.00022511801168905707,
+        "obs_T": 9.681503106463105e-05,
+        "obs_phase": 0.00011426668453226596,
+        "boundary": 0.0629969255612926,
+        "initial": 3.761581922631321e-33,
+        "thermal": 0.041541133576134356,
+        "phase": 0.0008187469191657393,
+        "objective": 1.0654892502260669
+      },
+      "gradient_norm": 2.252966497907677,
+      "elapsed_seconds": 10.350532000069506,
+      "memory": {
+        "unavailable": "psutil not installed"
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 50,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.2241985597894803e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-15
+        },
+        "model_work": {
+          "head_forward_calls": 754,
+          "head_coordinate_queries": 437184,
+          "head_output_derivative_calls": 1098
+        },
+        "phase_work": {
+          "phase_derivative_positions": 8192,
+          "phase_spatial_second_ad_components": 16384,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "optimizer_updates": 0
+    },
+    "L": {
+      "objective": 1.0654593479098249,
+      "components": {
+        "observation": 0.000145399909095318,
+        "obs_V": 0.00022511801168905707,
+        "obs_T": 9.681503106463105e-05,
+        "obs_phase": 0.00011426668453226596,
+        "boundary": 0.0629969255612926,
+        "initial": 3.761581922631321e-33,
+        "thermal": 0.041541133576134356,
+        "phase": 0.0003679405914579029,
+        "objective": 1.0654593479098249
+      },
+      "gradient_norm": 2.2532032686163506,
+      "elapsed_seconds": 9.76089629996568,
+      "memory": {
+        "unavailable": "psutil not installed"
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 50,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.2241985597894803e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-15
+        },
+        "model_work": {
+          "head_forward_calls": 754,
+          "head_coordinate_queries": 437184,
+          "head_output_derivative_calls": 1098
+        },
+        "phase_work": {
+          "phase_derivative_positions": 8192,
+          "phase_spatial_second_ad_components": 16384,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "optimizer_updates": 0
+    },
+    "R": {
+      "objective": 1.0654568626083525,
+      "components": {
+        "observation": 0.000145399909095318,
+        "obs_V": 0.00022511801168905707,
+        "obs_T": 9.681503106463105e-05,
+        "obs_phase": 0.00011426668453226596,
+        "boundary": 0.0629969255612926,
+        "initial": 3.761581922631321e-33,
+        "thermal": 0.041541133576134356,
+        "phase": 0.0003304722689029809,
+        "objective": 1.0654568626083525
+      },
+      "gradient_norm": 2.2531870147802455,
+      "elapsed_seconds": 12.480724600027315,
+      "memory": {
+        "unavailable": "psutil not installed"
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 50,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.2241985597894803e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-15
+        },
+        "model_work": {
+          "head_forward_calls": 754,
+          "head_coordinate_queries": 437184,
+          "head_output_derivative_calls": 1098
+        },
+        "phase_work": {
+          "phase_derivative_positions": 8192,
+          "phase_spatial_second_ad_components": 16384,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "optimizer_updates": 0
+    },
+    "I": {
+      "objective": 1.0654907775484672,
+      "components": {
+        "observation": 0.000145399909095318,
+        "obs_V": 0.00022511801168905707,
+        "obs_T": 9.681503106463105e-05,
+        "obs_phase": 0.00011426668453226596,
+        "boundary": 0.0629969255612926,
+        "initial": 3.761581922631321e-33,
+        "thermal": 0.041541133576134356,
+        "phase": 0.0008417727810076118,
+        "objective": 1.0654907775484672
+      },
+      "gradient_norm": 2.2529406192413024,
+      "elapsed_seconds": 9.797888300032355,
+      "memory": {
+        "unavailable": "psutil not installed"
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 50,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.2241985597894803e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-15
+        },
+        "model_work": {
+          "head_forward_calls": 770,
+          "head_coordinate_queries": 441280,
+          "head_output_derivative_calls": 1106
+        },
+        "phase_work": {
+          "phase_derivative_positions": 8192,
+          "phase_spatial_second_ad_components": 16384,
+          "phase_endpoint_queries": 2048
+        }
+      },
+      "optimizer_updates": 0
+    },
+    "RI": {
+      "objective": 1.0654568288845123,
+      "components": {
+        "observation": 0.000145399909095318,
+        "obs_V": 0.00022511801168905707,
+        "obs_T": 9.681503106463105e-05,
+        "obs_phase": 0.00011426668453226596,
+        "boundary": 0.0629969255612926,
+        "initial": 3.761581922631321e-33,
+        "thermal": 0.041541133576134356,
+        "phase": 0.00032996384941021205,
+        "objective": 1.0654568288845123
+      },
+      "gradient_norm": 2.2531868896814427,
+      "elapsed_seconds": 11.45727219991386,
+      "memory": {
+        "unavailable": "psutil not installed"
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 50,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.2241985597894803e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-15
+        },
+        "model_work": {
+          "head_forward_calls": 770,
+          "head_coordinate_queries": 441280,
+          "head_output_derivative_calls": 1106
+        },
+        "phase_work": {
+          "phase_derivative_positions": 8192,
+          "phase_spatial_second_ad_components": 16384,
+          "phase_endpoint_queries": 2048
+        }
+      },
+      "optimizer_updates": 0
+    },
+    "RIM": {
+      "objective": 1.0654568600496686,
+      "components": {
+        "observation": 0.000145399909095318,
+        "obs_V": 0.00022511801168905707,
+        "obs_T": 9.681503106463105e-05,
+        "obs_phase": 0.00011426668453226596,
+        "boundary": 0.0629969255612926,
+        "initial": 3.761581922631321e-33,
+        "thermal": 0.041541133576134356,
+        "phase": 0.00033043369426950765,
+        "objective": 1.0654568600496686
+      },
+      "gradient_norm": 2.2531870088323895,
+      "elapsed_seconds": 8.904044099966995,
+      "memory": {
+        "unavailable": "psutil not installed"
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 50,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.2241985597894803e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-15
+        },
+        "model_work": {
+          "head_forward_calls": 770,
+          "head_coordinate_queries": 441280,
+          "head_output_derivative_calls": 1106
+        },
+        "phase_work": {
+          "phase_derivative_positions": 8192,
+          "phase_spatial_second_ad_components": 16384,
+          "phase_endpoint_queries": 2048
+        }
+      },
+      "optimizer_updates": 0
+    },
+    "G": {
+      "objective": 1.0654625471221775,
+      "components": {
+        "observation": 0.000145399909095318,
+        "obs_V": 0.00022511801168905707,
+        "obs_T": 9.681503106463105e-05,
+        "obs_phase": 0.00011426668453226596,
+        "boundary": 0.0629969255612926,
+        "initial": 3.761581922631321e-33,
+        "thermal": 0.041541133576134356,
+        "phase": 0.00041617181075263447,
+        "objective": 1.0654625471221775
+      },
+      "gradient_norm": 2.253093825419865,
+      "elapsed_seconds": 8.444994500023313,
+      "memory": {
+        "unavailable": "psutil not installed"
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 1,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 158,
+          "zero_drive_queries": 108,
+          "factorizations": 50,
+          "forward_solves": 50,
+          "adjoint_solves": 50,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.2241985597894803e-15,
+          "max_adjoint_scaled_residual": 1.1102230246251565e-15
+        },
+        "model_work": {
+          "head_forward_calls": 754,
+          "head_coordinate_queries": 437184,
+          "head_output_derivative_calls": 1098
+        },
+        "phase_work": {
+          "phase_derivative_positions": 8192,
+          "phase_spatial_second_ad_components": 16384,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "optimizer_updates": 0
+    }
+  }
+}

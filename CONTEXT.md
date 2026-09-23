@@ -1,6 +1,12 @@
 # PINN-PCM-SCI 当前研究设定与论文口径
 
-## 最新：同父三臂与条件归一化已完成
+## 当前研究问题（2026-09-23收口）
+
+**VERIFIED：**相对相态残差／时间矩八臂开发按NO_INCREMENT_WITHIN_SCREEN_BUDGET收口。RIM有小幅连续改善，但未对D/P通过原A_w；相对简单L、RI、G的变化不足以建立组合或一阶矩必要性。八个严格双周期均未通过；数值求积检查通过，GPU已关闭。见[完整结果](paper/phase_moments_20260923/results.md)。本轮仅一个初始化、离线相态缺测重建，不是forecasting、formal OOD或材料验证。
+
+**SUPPORTED_INTERPRETATION：**当前固定校准与短片目标未补齐论文的独立相态PDE贡献；不自动改写为D_E窄稿。初始loss尺度和时间矩接近是诊断线索，不是已证明的唯一根因。旧完整标签E/F配置收益、B1 0/12、B_E反例、六臂负续训及材料边界仍保留原身份。后续不同假设需另行规划授权，当前不追加训练或确认。下文仅为历史口径。
+
+## 历史：同父三臂与条件归一化已完成
 
 VERIFIED：D_I/D_B/P_U 与 R/G/N 六个合法固定终点，新增 6500 Adam updates、1500 次完整评估；五个匹配差分的 A/B 均未通过，D_N 未触发。当前入口为 [paper_v27](paper/paper_v27/README.md)、[终局](docs/experiment/2026-09-12-phk-v23-lf11-joint-terminal-closeout.md)和 [active_phase.md](active_phase.md)。CPU 训练已结束；用户后续授权本轮发布及独立复评，未授权新科研执行。旧门、旧分支和以下旧阶段口径均按各自日期保留。
 
@@ -14,7 +20,7 @@ VERIFIED：温度包络下界0.1504%；可见T误差17.8233%→1.1375%，三个T
 - `document_role`: `CURRENT_RESEARCH_SETTING_AND_PAPER_LANGUAGE`
 - `updated_at`: `2026-09-12`
 
-## 当前研究问题
+## 历史研究问题（2026-09-12）
 
 SUPPORTED_INTERPRETATION：汇总 BC、连续 AD 残差、事件及双端器件读出不能互相替代。本轮已用嵌套目标和 R/G/N 排除所测试归一化作为充分修复；局部相态优势仍未转化为器件优势。HYPOTHESIS：下一步电学子问题消元与同信息 D_E/P_E/B_E 对照，见[唯一下一计划](docs/plans/NEXT_ACTIONS.md)。尚无竞争性 PINN 方法优势、独立确认、formal OOD 或材料标定。
 

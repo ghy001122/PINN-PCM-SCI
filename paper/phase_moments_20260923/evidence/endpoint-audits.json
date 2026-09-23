@@ -1,0 +1,912 @@
+{
+  "status": "ALL_EIGHT_ZERO_UPDATE_AUDITS_COMPLETE",
+  "arms": {
+    "D": {
+      "raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.08272982243119928,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.0062225317015689625,
+        "phase": 0.0029933810505250835,
+        "electric": 0.0,
+        "objective": 0.41672108307336114
+      },
+      "raw_statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 32,
+          "zero_drive_queries": 16,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.1532391828164665e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "model_work": {
+          "head_forward_calls": 802,
+          "head_coordinate_queries": 251532,
+          "head_output_derivative_calls": 2432
+        }
+      },
+      "quadrature": {
+        "16": {
+          "values": {
+            "Pphi": 0.0034695507492741944,
+            "Ppsi": 0.7831034030612324,
+            "Pzeta": 0.41106017928282784,
+            "Iphi": 0.0034219816011829794,
+            "Izeta": 0.40714534786892603,
+            "Mzeta": 0.4108351899847098
+          },
+          "gradient_norms": {
+            "Pphi": 0.05131840114941347,
+            "Ppsi": 3.677636884576115,
+            "Pzeta": 5.488661084294228,
+            "Iphi": 0.05067023767861203,
+            "Izeta": 5.458098169062887,
+            "Mzeta": 5.486717431994986
+          },
+          "elapsed_seconds": 5.098090505227447
+        },
+        "32": {
+          "values": {
+            "Pphi": 0.0034695507492735773,
+            "Ppsi": 0.7831034030611467,
+            "Pzeta": 0.411060179282742,
+            "Iphi": 0.0034219816011826698,
+            "Izeta": 0.4071453478688831,
+            "Mzeta": 0.41083518998467505
+          },
+          "gradient_norms": {
+            "Pphi": 0.0513184011494096,
+            "Ppsi": 3.6776368845779555,
+            "Pzeta": 5.488661084295486,
+            "Iphi": 0.050670237678610515,
+            "Izeta": 5.45809816906351,
+            "Mzeta": 5.486717431996079
+          },
+          "elapsed_seconds": 9.544643509201705
+        }
+      },
+      "quadrature_comparison": {
+        "Pphi": {
+          "value_relative_change": 1.7786967857667385e-13,
+          "gradient_norm_relative_change": 7.531341230261207e-14,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 1.0944814843866755e-13,
+          "gradient_norm_relative_change": 5.004044018962063e-13,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 2.0877779976954262e-13,
+          "gradient_norm_relative_change": 2.29137966979575e-13,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 9.04879618157043e-14,
+          "gradient_norm_relative_change": 2.9853399951394437e-14,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 1.0539263220460781e-13,
+          "gradient_norm_relative_change": 1.1423415836737634e-13,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 8.458374919651756e-14,
+          "gradient_norm_relative_change": 1.992717227016176e-13,
+          "passed": true
+        }
+      },
+      "quadrature_pass": true,
+      "zero_updates": true,
+      "reference_read": false
+    },
+    "P": {
+      "raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.08211652109930476,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.006086648642759192,
+        "phase": 0.0029893323727590185,
+        "electric": 0.0,
+        "objective": 0.4136079325016966
+      },
+      "raw_statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 32,
+          "zero_drive_queries": 16,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.886579864025407e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "model_work": {
+          "head_forward_calls": 802,
+          "head_coordinate_queries": 251532,
+          "head_output_derivative_calls": 2432
+        }
+      },
+      "quadrature": {
+        "16": {
+          "values": {
+            "Pphi": 0.0034630721827888567,
+            "Ppsi": 0.7878364396584916,
+            "Pzeta": 0.4150727793846297,
+            "Iphi": 0.003414464540359303,
+            "Izeta": 0.41111346116315883,
+            "Mzeta": 0.41484407595680695
+          },
+          "gradient_norms": {
+            "Pphi": 0.050752463299845424,
+            "Ppsi": 3.7248558592539553,
+            "Pzeta": 5.585674280018866,
+            "Iphi": 0.050122421817309214,
+            "Izeta": 5.554476572171531,
+            "Mzeta": 5.583683988155161
+          },
+          "elapsed_seconds": 4.707873038947582
+        },
+        "32": {
+          "values": {
+            "Pphi": 0.0034630721827880787,
+            "Ppsi": 0.7878364396583983,
+            "Pzeta": 0.4150727793845365,
+            "Iphi": 0.003414464540358912,
+            "Izeta": 0.4111134611631121,
+            "Mzeta": 0.41484407595676887
+          },
+          "gradient_norms": {
+            "Pphi": 0.050752463299842246,
+            "Ppsi": 3.7248558592560297,
+            "Pzeta": 5.585674280020276,
+            "Iphi": 0.050122421817308326,
+            "Izeta": 5.55447657217224,
+            "Mzeta": 5.5836839881563805
+          },
+          "elapsed_seconds": 9.530454155057669
+        }
+      },
+      "quadrature_comparison": {
+        "Pphi": {
+          "value_relative_change": 2.246627958962208e-13,
+          "gradient_norm_relative_change": 6.261791450818879e-14,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 1.183732172999635e-13,
+          "gradient_norm_relative_change": 5.568915355623864e-13,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 2.2454670011240483e-13,
+          "gradient_norm_relative_change": 2.525079801965608e-13,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.145655897752129e-13,
+          "gradient_norm_relative_change": 1.772018165717241e-14,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 1.136921890236392e-13,
+          "gradient_norm_relative_change": 1.2760273082644694e-13,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 9.179509109974918e-14,
+          "gradient_norm_relative_change": 2.1839863660531332e-13,
+          "passed": true
+        }
+      },
+      "quadrature_pass": true,
+      "zero_updates": true,
+      "reference_read": false
+    },
+    "L": {
+      "raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.0823210470669975,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.006044194038262195,
+        "phase": 0.0030005743795930824,
+        "electric": 0.0,
+        "objective": 0.41462015814093933
+      },
+      "raw_statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 32,
+          "zero_drive_queries": 16,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.000095982004776e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "model_work": {
+          "head_forward_calls": 802,
+          "head_coordinate_queries": 251532,
+          "head_output_derivative_calls": 2432
+        }
+      },
+      "quadrature": {
+        "16": {
+          "values": {
+            "Pphi": 0.003502598523849695,
+            "Ppsi": 0.7852241277013522,
+            "Pzeta": 0.41245457846472416,
+            "Iphi": 0.00345390297891701,
+            "Izeta": 0.40850854337907694,
+            "Mzeta": 0.4122257013924355
+          },
+          "gradient_norms": {
+            "Pphi": 0.051297069126645625,
+            "Ppsi": 3.732681303443206,
+            "Pzeta": 5.5669323709635306,
+            "Iphi": 0.050607091754348,
+            "Izeta": 5.535708316910164,
+            "Mzeta": 5.564930804494758
+          },
+          "elapsed_seconds": 4.751510930247605
+        },
+        "32": {
+          "values": {
+            "Pphi": 0.003502598523848897,
+            "Ppsi": 0.785224127701259,
+            "Pzeta": 0.41245457846463107,
+            "Iphi": 0.00345390297891661,
+            "Izeta": 0.40850854337903025,
+            "Mzeta": 0.412225701392398
+          },
+          "gradient_norms": {
+            "Pphi": 0.051297069126646,
+            "Ppsi": 3.732681303445788,
+            "Pzeta": 5.566932370965295,
+            "Iphi": 0.05060709175434895,
+            "Izeta": 5.5357083169110455,
+            "Mzeta": 5.5649308044961785
+          },
+          "elapsed_seconds": 9.610945113934577
+        }
+      },
+      "quadrature_comparison": {
+        "Pphi": {
+          "value_relative_change": 2.2782308435180395e-13,
+          "gradient_norm_relative_change": 7.304516168085599e-15,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 1.186256362737353e-13,
+          "gradient_norm_relative_change": 6.917104505238035e-13,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 2.25702914879395e-13,
+          "gradient_norm_relative_change": 3.17016698307426e-13,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.1576867203666407e-13,
+          "gradient_norm_relative_change": 1.8784491103533872e-14,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 1.1428127744729141e-13,
+          "gradient_norm_relative_change": 1.5916174442409343e-13,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 9.089687264654875e-14,
+          "gradient_norm_relative_change": 2.552048431497214e-13,
+          "passed": true
+        }
+      },
+      "quadrature_pass": true,
+      "zero_updates": true,
+      "reference_read": false
+    },
+    "R": {
+      "raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.08205229349063187,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.006038158374952638,
+        "phase": 0.0029762194544943857,
+        "electric": 0.0,
+        "objective": 0.4132662600629751
+      },
+      "raw_statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 32,
+          "zero_drive_queries": 16,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.7700957996526773e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "model_work": {
+          "head_forward_calls": 802,
+          "head_coordinate_queries": 251532,
+          "head_output_derivative_calls": 2432
+        }
+      },
+      "quadrature": {
+        "16": {
+          "values": {
+            "Pphi": 0.0034944615473282573,
+            "Ppsi": 0.788277542963007,
+            "Pzeta": 0.4128872287775589,
+            "Iphi": 0.003445762581779288,
+            "Izeta": 0.40892225423659223,
+            "Mzeta": 0.41265736729489244
+          },
+          "gradient_norms": {
+            "Pphi": 0.05136975849626572,
+            "Ppsi": 3.7409087984830784,
+            "Pzeta": 5.568290327457284,
+            "Iphi": 0.05072596429223405,
+            "Izeta": 5.536875762417654,
+            "Mzeta": 5.566275478054195
+          },
+          "elapsed_seconds": 4.732040863484144
+        },
+        "32": {
+          "values": {
+            "Pphi": 0.0034944615473274402,
+            "Ppsi": 0.7882775429629115,
+            "Pzeta": 0.41288722877746326,
+            "Iphi": 0.0034457625817788783,
+            "Izeta": 0.4089222542365444,
+            "Mzeta": 0.4126573672948536
+          },
+          "gradient_norms": {
+            "Pphi": 0.051369758496261984,
+            "Ppsi": 3.740908798485229,
+            "Pzeta": 5.568290327458759,
+            "Iphi": 0.05072596429223297,
+            "Izeta": 5.536875762418397,
+            "Mzeta": 5.566275478055463
+          },
+          "elapsed_seconds": 9.81071259174496
+        }
+      },
+      "quadrature_comparison": {
+        "Pphi": {
+          "value_relative_change": 2.3381420745921744e-13,
+          "gradient_norm_relative_change": 7.267164630672221e-14,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 1.2112381098525822e-13,
+          "gradient_norm_relative_change": 5.749202023248269e-13,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 2.316509373628703e-13,
+          "gradient_norm_relative_change": 2.649402722137129e-13,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.1893692948164362e-13,
+          "gradient_norm_relative_change": 2.120272271039513e-14,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 1.1701640560179606e-13,
+          "gradient_norm_relative_change": 1.3426440635256373e-13,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 9.416481793748188e-14,
+          "gradient_norm_relative_change": 2.276981457185885e-13,
+          "passed": true
+        }
+      },
+      "quadrature_pass": true,
+      "zero_updates": true,
+      "reference_read": false
+    },
+    "I": {
+      "raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.08212784943954,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.006109753495262768,
+        "phase": 0.003038933715654861,
+        "electric": 0.0,
+        "objective": 0.41368880960133914
+      },
+      "raw_statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 32,
+          "zero_drive_queries": 16,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.7693991480589487e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "model_work": {
+          "head_forward_calls": 802,
+          "head_coordinate_queries": 251532,
+          "head_output_derivative_calls": 2432
+        }
+      },
+      "quadrature": {
+        "16": {
+          "values": {
+            "Pphi": 0.0034740948649976304,
+            "Ppsi": 0.7855953785489301,
+            "Pzeta": 0.4145055498307045,
+            "Iphi": 0.00342534835958125,
+            "Izeta": 0.4105418032700699,
+            "Mzeta": 0.41427636605026996
+          },
+          "gradient_norms": {
+            "Pphi": 0.051392623953999524,
+            "Ppsi": 3.7187564223855003,
+            "Pzeta": 5.552656081616571,
+            "Iphi": 0.05074814574013024,
+            "Izeta": 5.521122318304523,
+            "Mzeta": 5.550647281324244
+          },
+          "elapsed_seconds": 4.780261806212366
+        },
+        "32": {
+          "values": {
+            "Pphi": 0.0034740948649968906,
+            "Ppsi": 0.7855953785488414,
+            "Pzeta": 0.41450554983061555,
+            "Iphi": 0.003425348359580879,
+            "Izeta": 0.4105418032700253,
+            "Mzeta": 0.4142763660502348
+          },
+          "gradient_norms": {
+            "Pphi": 0.051392623954004485,
+            "Ppsi": 3.7187564223882696,
+            "Pzeta": 5.5526560816184585,
+            "Iphi": 0.050748145740133345,
+            "Izeta": 5.521122318305461,
+            "Mzeta": 5.550647281325719
+          },
+          "elapsed_seconds": 9.995213859714568
+        }
+      },
+      "quadrature_comparison": {
+        "Pphi": {
+          "value_relative_change": 2.1296469764212108e-13,
+          "gradient_norm_relative_change": 9.653737753756171e-14,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 1.1291667707033869e-13,
+          "gradient_norm_relative_change": 7.446952685452997e-13,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 2.1454203522441407e-13,
+          "gradient_norm_relative_change": 3.3990564409540074e-13,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.0837753854164486e-13,
+          "gradient_norm_relative_change": 6.111919026419942e-14,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 1.085771389993663e-13,
+          "gradient_norm_relative_change": 1.6987785401776732e-13,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 8.481912464474338e-14,
+          "gradient_norm_relative_change": 2.657823998446457e-13,
+          "passed": true
+        }
+      },
+      "quadrature_pass": true,
+      "zero_updates": true,
+      "reference_read": false
+    },
+    "RI": {
+      "raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.08331609137838669,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.0060334364704453134,
+        "phase": 0.002991051780451039,
+        "electric": 0.0,
+        "objective": 0.4195886196422323
+      },
+      "raw_statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 32,
+          "zero_drive_queries": 16,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.301452283265744e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "model_work": {
+          "head_forward_calls": 802,
+          "head_coordinate_queries": 251532,
+          "head_output_derivative_calls": 2432
+        }
+      },
+      "quadrature": {
+        "16": {
+          "values": {
+            "Pphi": 0.003509981499527352,
+            "Ppsi": 0.7870057193050792,
+            "Pzeta": 0.41162201198448733,
+            "Iphi": 0.0034613513384124505,
+            "Izeta": 0.4076652217206287,
+            "Mzeta": 0.41139258644358934
+          },
+          "gradient_norms": {
+            "Pphi": 0.050501925588231286,
+            "Ppsi": 3.739851240274906,
+            "Pzeta": 5.578451444692241,
+            "Iphi": 0.0498201010950124,
+            "Izeta": 5.547112124802831,
+            "Mzeta": 5.576439161227549
+          },
+          "elapsed_seconds": 4.95203114580363
+        },
+        "32": {
+          "values": {
+            "Pphi": 0.0035099814995265257,
+            "Ppsi": 0.7870057193049848,
+            "Pzeta": 0.4116220119843929,
+            "Iphi": 0.003461351338412037,
+            "Izeta": 0.40766522172058123,
+            "Mzeta": 0.41139258644355114
+          },
+          "gradient_norms": {
+            "Pphi": 0.05050192558822904,
+            "Ppsi": 3.7398512402771975,
+            "Pzeta": 5.578451444693808,
+            "Iphi": 0.04982010109501206,
+            "Izeta": 5.5471121248036175,
+            "Mzeta": 5.576439161228865
+          },
+          "elapsed_seconds": 9.780501703731716
+        }
+      },
+      "quadrature_comparison": {
+        "Pphi": {
+          "value_relative_change": 2.3537504557941354e-13,
+          "gradient_norm_relative_change": 4.4517146597474527e-14,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 1.200499273106139e-13,
+          "gradient_norm_relative_change": 6.127249924134622e-13,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 2.2939606118039616e-13,
+          "gradient_norm_relative_change": 2.8101614333523445e-13,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.1940361660630578e-13,
+          "gradient_norm_relative_change": 6.824671042779061e-15,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 1.1642404545182544e-13,
+          "gradient_norm_relative_change": 1.4186229918368023e-13,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 9.283510035333566e-14,
+          "gradient_norm_relative_change": 2.358839039653427e-13,
+          "passed": true
+        }
+      },
+      "quadrature_pass": true,
+      "zero_updates": true,
+      "reference_read": false
+    },
+    "RIM": {
+      "raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.08144298384930963,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.006117358717330091,
+        "phase": 0.003006843695078067,
+        "electric": 0.0,
+        "objective": 0.41025632005068424
+      },
+      "raw_statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 32,
+          "zero_drive_queries": 16,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.3070474033868906e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "model_work": {
+          "head_forward_calls": 802,
+          "head_coordinate_queries": 251532,
+          "head_output_derivative_calls": 2432
+        }
+      },
+      "quadrature": {
+        "16": {
+          "values": {
+            "Pphi": 0.0034662342006383474,
+            "Ppsi": 0.7825677784569283,
+            "Pzeta": 0.41021047450753917,
+            "Iphi": 0.003418141087444945,
+            "Izeta": 0.4063101251797346,
+            "Mzeta": 0.4099845420835033
+          },
+          "gradient_norms": {
+            "Pphi": 0.051356048049356,
+            "Ppsi": 3.706935687154258,
+            "Pzeta": 5.524672105774561,
+            "Iphi": 0.050658673121339017,
+            "Izeta": 5.49389637592916,
+            "Mzeta": 5.522694880401139
+          },
+          "elapsed_seconds": 4.857753450982273
+        },
+        "32": {
+          "values": {
+            "Pphi": 0.0034662342006375616,
+            "Ppsi": 0.7825677784568298,
+            "Pzeta": 0.4102104745074406,
+            "Iphi": 0.003418141087444551,
+            "Izeta": 0.4063101251796851,
+            "Mzeta": 0.4099845420834621
+          },
+          "gradient_norms": {
+            "Pphi": 0.05135604804934117,
+            "Ppsi": 3.7069356871555335,
+            "Pzeta": 5.52467210577544,
+            "Iphi": 0.05065867312133229,
+            "Izeta": 5.493896375929605,
+            "Mzeta": 5.52269488040208
+          },
+          "elapsed_seconds": 9.807891760021448
+        }
+      },
+      "quadrature_comparison": {
+        "Pphi": {
+          "value_relative_change": 2.2670993623943588e-13,
+          "gradient_norm_relative_change": 2.8873748732385133e-13,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 1.2583802322968225e-13,
+          "gradient_norm_relative_change": 3.4406429415776006e-13,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 2.4033468356724195e-13,
+          "gradient_norm_relative_change": 1.589973921104103e-13,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.1520362061506718e-13,
+          "gradient_norm_relative_change": 1.327272859433566e-13,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 1.2173074871116618e-13,
+          "gradient_norm_relative_change": 8.099486372173693e-14,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 1.0060083035137508e-13,
+          "gradient_norm_relative_change": 1.7031195219569212e-13,
+          "passed": true
+        }
+      },
+      "quadrature_pass": true,
+      "zero_updates": true,
+      "reference_read": false
+    },
+    "G": {
+      "raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.08250754699199511,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.006075218983285629,
+        "phase": 0.0030271616497066114,
+        "electric": 0.0,
+        "objective": 0.41557186183763956
+      },
+      "raw_statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 0,
+          "adam_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 1,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 32,
+          "zero_drive_queries": 16,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.4616710032778037e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "model_work": {
+          "head_forward_calls": 802,
+          "head_coordinate_queries": 251532,
+          "head_output_derivative_calls": 2432
+        }
+      },
+      "quadrature": {
+        "16": {
+          "values": {
+            "Pphi": 0.00349992290994834,
+            "Ppsi": 0.7845470817068501,
+            "Pzeta": 0.4119681936878453,
+            "Iphi": 0.0034512601166835485,
+            "Izeta": 0.40800487886940257,
+            "Mzeta": 0.4117393723906874
+          },
+          "gradient_norms": {
+            "Pphi": 0.05100601417261664,
+            "Ppsi": 3.720198478652466,
+            "Pzeta": 5.547682160274906,
+            "Iphi": 0.050327224605168606,
+            "Izeta": 5.5160231125396395,
+            "Mzeta": 5.5456639931029095
+          },
+          "elapsed_seconds": 5.09181312751025
+        },
+        "32": {
+          "values": {
+            "Pphi": 0.0034999229099475586,
+            "Ppsi": 0.7845470817067576,
+            "Pzeta": 0.41196819368775267,
+            "Iphi": 0.0034512601166831573,
+            "Izeta": 0.408004878869356,
+            "Mzeta": 0.41173937239065
+          },
+          "gradient_norms": {
+            "Pphi": 0.05100601417261534,
+            "Ppsi": 3.720198478654858,
+            "Pzeta": 5.5476821602765405,
+            "Iphi": 0.05032722460516866,
+            "Izeta": 5.516023112540456,
+            "Mzeta": 5.545663993104259
+          },
+          "elapsed_seconds": 10.633452736772597
+        }
+      },
+      "quadrature_comparison": {
+        "Pphi": {
+          "value_relative_change": 2.232886112166571e-13,
+          "gradient_norm_relative_change": 2.5439611016053607e-14,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 1.1787893946413614e-13,
+          "gradient_norm_relative_change": 6.429400199951921e-13,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 2.2489141837777665e-13,
+          "gradient_norm_relative_change": 2.94582177751648e-13,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.1334414984887164e-13,
+          "gradient_norm_relative_change": 1.1030044209025738e-15,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 1.1415024254633572e-13,
+          "gradient_norm_relative_change": 1.4797544373023666e-13,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 9.086941506864114e-14,
+          "gradient_norm_relative_change": 2.432788970269527e-13,
+          "passed": true
+        }
+      },
+      "quadrature_pass": true,
+      "zero_updates": true,
+      "reference_read": false
+    }
+  },
+  "audit_electrical_forward_solves": 128,
+  "audit_electrical_adjoint_solves": 0,
+  "reference_read": false
+}

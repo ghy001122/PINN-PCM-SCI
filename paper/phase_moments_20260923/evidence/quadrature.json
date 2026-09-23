@@ -1,0 +1,260 @@
+{
+  "status": "QUADRATURE_VALID",
+  "selected_order": 8,
+  "comparisons": {
+    "8_to_16": {
+      "Pphi": {
+        "value_relative_change": 8.163676509195826e-08,
+        "gradient_norm_relative_change": 2.857858726170609e-07,
+        "passed": true
+      },
+      "Ppsi": {
+        "value_relative_change": 3.416858813092764e-08,
+        "gradient_norm_relative_change": 8.610265458941226e-07,
+        "passed": true
+      },
+      "Pzeta": {
+        "value_relative_change": 7.324482621768466e-08,
+        "gradient_norm_relative_change": 3.1413909665277217e-07,
+        "passed": true
+      },
+      "Iphi": {
+        "value_relative_change": 3.428217111445539e-08,
+        "gradient_norm_relative_change": 1.1205244136359938e-07,
+        "passed": true
+      },
+      "Izeta": {
+        "value_relative_change": 2.6297224706873468e-08,
+        "gradient_norm_relative_change": 1.133083180271442e-07,
+        "passed": true
+      },
+      "Mzeta": {
+        "value_relative_change": 6.06208459492363e-08,
+        "gradient_norm_relative_change": 1.5512547596317666e-07,
+        "passed": true
+      }
+    },
+    "16_to_32": {
+      "Pphi": {
+        "value_relative_change": 4.89464853300326e-14,
+        "gradient_norm_relative_change": 7.220766139401095e-13,
+        "passed": true
+      },
+      "Ppsi": {
+        "value_relative_change": 2.5553960321232063e-13,
+        "gradient_norm_relative_change": 1.315810709029973e-12,
+        "passed": true
+      },
+      "Pzeta": {
+        "value_relative_change": 5.476380121537745e-13,
+        "gradient_norm_relative_change": 4.759412245584547e-13,
+        "passed": true
+      },
+      "Iphi": {
+        "value_relative_change": 2.5439706642926115e-14,
+        "gradient_norm_relative_change": 3.2790872945571286e-13,
+        "passed": true
+      },
+      "Izeta": {
+        "value_relative_change": 2.572172486959036e-13,
+        "gradient_norm_relative_change": 1.7621363810604954e-13,
+        "passed": true
+      },
+      "Mzeta": {
+        "value_relative_change": 1.9926420956284238e-13,
+        "gradient_norm_relative_change": 3.8273866785799833e-13,
+        "passed": true
+      }
+    }
+  },
+  "parent": {
+    "8": {
+      "values": {
+        "Pphi": 0.0002802072203780491,
+        "Ppsi": 0.818526844203285,
+        "Pzeta": 0.3818407732182917,
+        "Iphi": 0.00026849656785337317,
+        "Izeta": 0.378538229118661,
+        "Mzeta": 0.38165550132617454
+      },
+      "gradient_norms": {
+        "Pphi": 0.008235460975060555,
+        "Ppsi": 3.4283518494217526,
+        "Pzeta": 5.702960708603785,
+        "Iphi": 0.008168167256406565,
+        "Izeta": 5.680475150388088,
+        "Mzeta": 5.70168341740498
+      },
+      "elapsed_seconds": 9.257632300024852
+    },
+    "16": {
+      "values": {
+        "Pphi": 0.00028020719750283997,
+        "Ppsi": 0.8185268162353794,
+        "Pzeta": 0.38184074525043266,
+        "Iphi": 0.0002684965586487282,
+        "Izeta": 0.37853821916415636,
+        "Mzeta": 0.3816554781898966
+      },
+      "gradient_norms": {
+        "Pphi": 0.008235458621482826,
+        "Ppsi": 3.4283488975223433,
+        "Pzeta": 5.702958917081422,
+        "Iphi": 0.008168166341143585,
+        "Izeta": 5.680474506743076,
+        "Mzeta": 5.701682532928763
+      },
+      "elapsed_seconds": 15.250175000051968
+    },
+    "32": {
+      "values": {
+        "Pphi": 0.00028020719750282625,
+        "Ppsi": 0.8185268162351702,
+        "Pzeta": 0.38184074525022355,
+        "Iphi": 0.00026849655864872137,
+        "Izeta": 0.378538219164059,
+        "Mzeta": 0.38165547818982054
+      },
+      "gradient_norms": {
+        "Pphi": 0.008235458621488773,
+        "Ppsi": 3.4283488975268543,
+        "Pzeta": 5.702958917084136,
+        "Iphi": 0.008168166341146263,
+        "Izeta": 5.680474506744077,
+        "Mzeta": 5.7016825329309455
+      },
+      "elapsed_seconds": 20.315857500070706
+    }
+  },
+  "manufactured": {
+    "8": {
+      "values": {
+        "Pphi": 5.657443952650087,
+        "Ppsi": 186.20597573020027,
+        "Pzeta": 186.2059201003621,
+        "Iphi": 5.652320502279667,
+        "Izeta": 186.1831829269723,
+        "Mzeta": 186.20589317637163
+      },
+      "gradient_norms": {
+        "Pphi": 16.441738955767025,
+        "Ppsi": 235.50605671828842,
+        "Pzeta": 235.5060317402216,
+        "Iphi": 16.4607316774732,
+        "Izeta": 235.44714441412654,
+        "Mzeta": 235.5059818622933
+      },
+      "elapsed_seconds": 0.3441476000007242
+    },
+    "16": {
+      "values": {
+        "Pphi": 5.657443952650087,
+        "Ppsi": 186.20597573020032,
+        "Pzeta": 186.20592010036216,
+        "Iphi": 5.652320502279667,
+        "Izeta": 186.18318292697236,
+        "Mzeta": 186.20589317637166
+      },
+      "gradient_norms": {
+        "Pphi": 16.441738955767025,
+        "Ppsi": 235.50605671828842,
+        "Pzeta": 235.5060317402216,
+        "Iphi": 16.460731677473195,
+        "Izeta": 235.4471444141266,
+        "Mzeta": 235.50598186229334
+      },
+      "elapsed_seconds": 0.6450192000484094
+    },
+    "32": {
+      "values": {
+        "Pphi": 5.6574439526500875,
+        "Ppsi": 186.2059757302003,
+        "Pzeta": 186.20592010036214,
+        "Iphi": 5.652320502279669,
+        "Izeta": 186.18318292697236,
+        "Mzeta": 186.20589317637166
+      },
+      "gradient_norms": {
+        "Pphi": 16.441738955767022,
+        "Ppsi": 235.50605671828848,
+        "Pzeta": 235.50603174022163,
+        "Iphi": 16.460731677473195,
+        "Izeta": 235.4471444141266,
+        "Mzeta": 235.5059818622934
+      },
+      "elapsed_seconds": 2.594336000038311
+    }
+  },
+  "manufactured_decision": {
+    "status": "QUADRATURE_VALID",
+    "selected_order": 8,
+    "comparisons": {
+      "8_to_16": {
+        "Pphi": {
+          "value_relative_change": 0.0,
+          "gradient_norm_relative_change": 0.0,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 3.0527172201589397e-16,
+          "gradient_norm_relative_change": 0.0,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 3.052718132171645e-16,
+          "gradient_norm_relative_change": 0.0,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 0.0,
+          "gradient_norm_relative_change": 2.1582963311785545e-16,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 3.053090938030854e-16,
+          "gradient_norm_relative_change": 2.414275144523582e-16,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 1.526359286786018e-16,
+          "gradient_norm_relative_change": 1.2068359880142213e-16,
+          "passed": true
+        }
+      },
+      "16_to_32": {
+        "Pphi": {
+          "value_relative_change": 1.5699288002386313e-16,
+          "gradient_norm_relative_change": 2.1607894933487974e-16,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 1.52635861007947e-16,
+          "gradient_norm_relative_change": 2.413671208838757e-16,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 1.5263590660858227e-16,
+          "gradient_norm_relative_change": 1.206835732417885e-16,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 3.1427036713219253e-16,
+          "gradient_norm_relative_change": 0.0,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 0.0,
+          "gradient_norm_relative_change": 0.0,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 0.0,
+          "gradient_norm_relative_change": 2.413671976028442e-16,
+          "passed": true
+        }
+      }
+    }
+  },
+  "reference_read": false,
+  "optimizer_updates": 0
+}

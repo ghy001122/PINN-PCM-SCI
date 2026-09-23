@@ -1,0 +1,367 @@
+{
+  "status": "ALL_EIGHT_FIXED_ENDPOINTS_LOCKED",
+  "arms": {
+    "D": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "D",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 100,
+        "accepted_steps": 46,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+        "last_accepted_loss": 0.5504500494452995,
+        "initial_loss": 1.0116538690668473,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 100,
+          "adam_objective_gradient_evaluations": 600,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 14961,
+          "zero_drive_queries": 10930,
+          "factorizations": 4031,
+          "forward_solves": 4031,
+          "adjoint_solves": 4031,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.4632863346073912e-15,
+          "max_adjoint_scaled_residual": 3.019806626980426e-14
+        },
+        "model_work": {
+          "head_forward_calls": 84184,
+          "head_coordinate_queries": 33247982,
+          "head_output_derivative_calls": 128984
+        },
+        "phase_work": {
+          "phase_derivative_positions": 0,
+          "phase_spatial_second_ad_components": 0,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "elapsed_seconds": 705.1843397784978,
+      "reference_read": false
+    },
+    "P": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "P",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 100,
+        "accepted_steps": 47,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED",
+        "last_accepted_loss": 0.5487347530168529,
+        "initial_loss": 1.0144458970651116,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 100,
+          "adam_objective_gradient_evaluations": 600,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 20561,
+          "zero_drive_queries": 13730,
+          "factorizations": 6831,
+          "forward_solves": 6831,
+          "adjoint_solves": 6831,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 4.296432824851919e-15,
+          "max_adjoint_scaled_residual": 2.7518992584503787e-14
+        },
+        "model_work": {
+          "head_forward_calls": 114984,
+          "head_coordinate_queries": 61087374,
+          "head_output_derivative_calls": 175184
+        },
+        "phase_work": {
+          "phase_derivative_positions": 1433600,
+          "phase_spatial_second_ad_components": 2867200,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "elapsed_seconds": 1072.3862615879625,
+      "reference_read": false
+    },
+    "L": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "L",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 100,
+        "accepted_steps": 47,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED",
+        "last_accepted_loss": 0.547120873596235,
+        "initial_loss": 1.014400783905301,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 100,
+          "adam_objective_gradient_evaluations": 600,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 20561,
+          "zero_drive_queries": 13730,
+          "factorizations": 6831,
+          "forward_solves": 6831,
+          "adjoint_solves": 6831,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.862069238742612e-15,
+          "max_adjoint_scaled_residual": 2.945721707891586e-14
+        },
+        "model_work": {
+          "head_forward_calls": 114984,
+          "head_coordinate_queries": 61087374,
+          "head_output_derivative_calls": 175184
+        },
+        "phase_work": {
+          "phase_derivative_positions": 1433600,
+          "phase_spatial_second_ad_components": 2867200,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "elapsed_seconds": 1074.0282429875806,
+      "reference_read": false
+    },
+    "R": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "R",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 100,
+        "accepted_steps": 47,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED",
+        "last_accepted_loss": 0.5447992924869356,
+        "initial_loss": 1.0143982405738847,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 100,
+          "adam_objective_gradient_evaluations": 600,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 20561,
+          "zero_drive_queries": 13730,
+          "factorizations": 6831,
+          "forward_solves": 6831,
+          "adjoint_solves": 6831,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.6873227201602354e-15,
+          "max_adjoint_scaled_residual": 3.749402846151868e-14
+        },
+        "model_work": {
+          "head_forward_calls": 114984,
+          "head_coordinate_queries": 61087374,
+          "head_output_derivative_calls": 175184
+        },
+        "phase_work": {
+          "phase_derivative_positions": 1433600,
+          "phase_spatial_second_ad_components": 2867200,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "elapsed_seconds": 1069.432022220455,
+      "reference_read": false
+    },
+    "I": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "I",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 100,
+        "accepted_steps": 47,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED",
+        "last_accepted_loss": 0.5520630584511333,
+        "initial_loss": 1.0144478921407258,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 100,
+          "adam_objective_gradient_evaluations": 600,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 20561,
+          "zero_drive_queries": 13730,
+          "factorizations": 6831,
+          "forward_solves": 6831,
+          "adjoint_solves": 6831,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 4.001516277992707e-15,
+          "max_adjoint_scaled_residual": 3.3262202994830136e-14
+        },
+        "model_work": {
+          "head_forward_calls": 117784,
+          "head_coordinate_queries": 61804174,
+          "head_output_derivative_calls": 176584
+        },
+        "phase_work": {
+          "phase_derivative_positions": 1433600,
+          "phase_spatial_second_ad_components": 2867200,
+          "phase_endpoint_queries": 358400
+        }
+      },
+      "elapsed_seconds": 1085.7015188224614,
+      "reference_read": false
+    },
+    "RI": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "RI",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 100,
+        "accepted_steps": 47,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED",
+        "last_accepted_loss": 0.5456750227196184,
+        "initial_loss": 1.014398190228068,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 100,
+          "adam_objective_gradient_evaluations": 600,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 20561,
+          "zero_drive_queries": 13730,
+          "factorizations": 6831,
+          "forward_solves": 6831,
+          "adjoint_solves": 6831,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 4.000684069494858e-15,
+          "max_adjoint_scaled_residual": 3.015221525075659e-14
+        },
+        "model_work": {
+          "head_forward_calls": 117784,
+          "head_coordinate_queries": 61804174,
+          "head_output_derivative_calls": 176584
+        },
+        "phase_work": {
+          "phase_derivative_positions": 1433600,
+          "phase_spatial_second_ad_components": 2867200,
+          "phase_endpoint_queries": 358400
+        }
+      },
+      "elapsed_seconds": 1076.6541136633605,
+      "reference_read": false
+    },
+    "RIM": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "RIM",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 100,
+        "accepted_steps": 47,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED",
+        "last_accepted_loss": 0.5498995667727534,
+        "initial_loss": 1.0143982361821346,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 100,
+          "adam_objective_gradient_evaluations": 600,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 20561,
+          "zero_drive_queries": 13730,
+          "factorizations": 6831,
+          "forward_solves": 6831,
+          "adjoint_solves": 6831,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.551805434211382e-15,
+          "max_adjoint_scaled_residual": 3.7490670141161717e-14
+        },
+        "model_work": {
+          "head_forward_calls": 117784,
+          "head_coordinate_queries": 61804174,
+          "head_output_derivative_calls": 176584
+        },
+        "phase_work": {
+          "phase_derivative_positions": 1433600,
+          "phase_spatial_second_ad_components": 2867200,
+          "phase_endpoint_queries": 358400
+        }
+      },
+      "elapsed_seconds": 1081.5290794372559,
+      "reference_read": false
+    },
+    "G": {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "G",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 100,
+        "accepted_steps": 47,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED",
+        "last_accepted_loss": 0.5479786375575525,
+        "initial_loss": 1.0144122877580095,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "statistics": {
+        "objectives": {
+          "complete_objective_gradient_evaluations": 100,
+          "adam_objective_gradient_evaluations": 600,
+          "audit_objective_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 20561,
+          "zero_drive_queries": 13730,
+          "factorizations": 6831,
+          "forward_solves": 6831,
+          "adjoint_solves": 6831,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.3826229152066547e-15,
+          "max_adjoint_scaled_residual": 3.13470831350842e-14
+        },
+        "model_work": {
+          "head_forward_calls": 114984,
+          "head_coordinate_queries": 61087374,
+          "head_output_derivative_calls": 175184
+        },
+        "phase_work": {
+          "phase_derivative_positions": 1433600,
+          "phase_spatial_second_ad_components": 2867200,
+          "phase_endpoint_queries": 0
+        }
+      },
+      "elapsed_seconds": 1092.3299079285935,
+      "reference_read": false
+    }
+  },
+  "reference_read": false,
+  "created_utc": "2026-09-23T11:38:02.598530+00:00"
+}

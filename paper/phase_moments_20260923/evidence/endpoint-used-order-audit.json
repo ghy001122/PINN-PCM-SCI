@@ -1,0 +1,448 @@
+{
+  "status": "COMPLETE_USED_ORDER_ENDPOINT_AUDIT",
+  "arms": {
+    "D": {
+      "order8": {
+        "values": {
+          "Pphi": 0.0034695508725315545,
+          "Ppsi": 0.7831034228267714,
+          "Pzeta": 0.411060199047795,
+          "Iphi": 0.003421981663071053,
+          "Izeta": 0.407145357816626,
+          "Mzeta": 0.4108352074126449
+        },
+        "gradient_norms": {
+          "Pphi": 0.05131842568853304,
+          "Ppsi": 3.677639047155746,
+          "Pzeta": 5.488662552091118,
+          "Iphi": 0.050670249739332665,
+          "Izeta": 5.45809887622728,
+          "Mzeta": 5.486718307627294
+        },
+        "elapsed_seconds": 23.39300529996399
+      },
+      "comparison_8_to_16": {
+        "Pphi": {
+          "value_relative_change": 3.552545241582953e-08,
+          "gradient_norm_relative_change": 4.781738912370236e-07,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 2.524001160771593e-08,
+          "gradient_norm_relative_change": 5.880351157006208e-07,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 4.808290405901695e-08,
+          "gradient_norm_relative_change": 2.674234877524717e-07,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.8085448980050627e-08,
+          "gradient_norm_relative_change": 2.38023762863962e-07,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 2.4432797755463513e-08,
+          "gradient_norm_relative_change": 1.295624173324064e-07,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 4.242074564187127e-08,
+          "gradient_norm_relative_change": 1.5959128911740785e-07,
+          "passed": true
+        }
+      },
+      "all_targets_pass": true
+    },
+    "P": {
+      "order8": {
+        "values": {
+          "Pphi": 0.003463072315869943,
+          "Ppsi": 0.7878364605028902,
+          "Pzeta": 0.415072800228423,
+          "Iphi": 0.0034144646081778387,
+          "Izeta": 0.4111134718047327,
+          "Mzeta": 0.41484409437219927
+        },
+        "gradient_norms": {
+          "Pphi": 0.050752491468774336,
+          "Ppsi": 3.7248581611976497,
+          "Pzeta": 5.58567583495008,
+          "Iphi": 0.05012243578901186,
+          "Izeta": 5.554477329846037,
+          "Mzeta": 5.583684921633845
+        },
+        "elapsed_seconds": 14.83241969998926
+      },
+      "comparison_8_to_16": {
+        "Pphi": {
+          "value_relative_change": 3.842862032823837e-08,
+          "gradient_norm_relative_change": 5.55025846632171e-07,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 2.645777423117368e-08,
+          "gradient_norm_relative_change": 6.179953752058174e-07,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 5.0217201266182896e-08,
+          "gradient_norm_relative_change": 2.783784259622568e-07,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.9862129100481852e-08,
+          "gradient_norm_relative_change": 2.787515475593217e-07,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 2.5884761384924607e-08,
+          "gradient_norm_relative_change": 1.3640790385948405e-07,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 4.439111798739049e-08,
+          "gradient_norm_relative_change": 1.6717971247383588e-07,
+          "passed": true
+        }
+      },
+      "all_targets_pass": true
+    },
+    "L": {
+      "order8": {
+        "values": {
+          "Pphi": 0.003502598673658866,
+          "Ppsi": 0.785224149866207,
+          "Pzeta": 0.41245460062893113,
+          "Iphi": 0.0034539030550623418,
+          "Izeta": 0.40850855466870933,
+          "Mzeta": 0.412225720627854
+        },
+        "gradient_norms": {
+          "Pphi": 0.051297099880726206,
+          "Ppsi": 3.732683679686745,
+          "Pzeta": 5.566933985222803,
+          "Iphi": 0.05060710699530058,
+          "Izeta": 5.53570910197976,
+          "Mzeta": 5.564931768514504
+        },
+        "elapsed_seconds": 10.898550699930638
+      },
+      "comparison_8_to_16": {
+        "Pphi": {
+          "value_relative_change": 4.277086572285766e-08,
+          "gradient_norm_relative_change": 5.995290004748276e-07,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 2.8227424576594165e-08,
+          "gradient_norm_relative_change": 6.366049886537086e-07,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 5.3737328004134333e-08,
+          "gradient_norm_relative_change": 2.8997285479004417e-07,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 2.20461698716407e-08,
+          "gradient_norm_relative_change": 3.011623874843417e-07,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 2.763622102544257e-08,
+          "gradient_norm_relative_change": 1.4181917670781026e-07,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 4.6662346551400425e-08,
+          "gradient_norm_relative_change": 1.732312188014367e-07,
+          "passed": true
+        }
+      },
+      "all_targets_pass": true
+    },
+    "R": {
+      "order8": {
+        "values": {
+          "Pphi": 0.003494461682848678,
+          "Ppsi": 0.7882775639662426,
+          "Pzeta": 0.41288724978011393,
+          "Iphi": 0.0034457626510636056,
+          "Izeta": 0.4089222649898168,
+          "Mzeta": 0.41265738589295975
+        },
+        "gradient_norms": {
+          "Pphi": 0.05136978729418695,
+          "Ppsi": 3.740911129315226,
+          "Pzeta": 5.568291914160019,
+          "Iphi": 0.05072597860479844,
+          "Izeta": 5.536876537281076,
+          "Mzeta": 5.566276431529187
+        },
+        "elapsed_seconds": 10.342541699996218
+      },
+      "comparison_8_to_16": {
+        "Pphi": {
+          "value_relative_change": 3.8781488651315256e-08,
+          "gradient_norm_relative_change": 5.606006739794581e-07,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 2.6644467779998115e-08,
+          "gradient_norm_relative_change": 6.230657504079176e-07,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 5.0867533710457424e-08,
+          "gradient_norm_relative_change": 2.849533056132561e-07,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 2.010710714630226e-08,
+          "gradient_norm_relative_change": 2.821546044576097e-07,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 2.6296501296118976e-08,
+          "gradient_norm_relative_change": 1.3994596511886838e-07,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 4.506903010198018e-08,
+          "gradient_norm_relative_change": 1.712949700683171e-07,
+          "passed": true
+        }
+      },
+      "all_targets_pass": true
+    },
+    "I": {
+      "order8": {
+        "values": {
+          "Pphi": 0.003474095016772047,
+          "Ppsi": 0.7855954013613458,
+          "Pzeta": 0.41450557264254173,
+          "Iphi": 0.0034253484363888716,
+          "Izeta": 0.41054181484406876,
+          "Mzeta": 0.41427638554683816
+        },
+        "gradient_norms": {
+          "Pphi": 0.051392653788264506,
+          "Ppsi": 3.718758801877529,
+          "Pzeta": 5.552657695228236,
+          "Iphi": 0.050748160465385425,
+          "Izeta": 5.521123100559179,
+          "Mzeta": 5.550648241185934
+        },
+        "elapsed_seconds": 10.231964299920946
+      },
+      "comparison_8_to_16": {
+        "Pphi": {
+          "value_relative_change": 4.3687470343618936e-08,
+          "gradient_norm_relative_change": 5.805164766212796e-07,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 2.903837808379476e-08,
+          "gradient_norm_relative_change": 6.398622976283787e-07,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 5.5033852409981014e-08,
+          "gradient_norm_relative_change": 2.906017662560702e-07,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 2.242330221569415e-08,
+          "gradient_norm_relative_change": 2.9016341320673156e-07,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 2.8192010602155304e-08,
+          "gradient_norm_relative_change": 1.416839929672358e-07,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 4.706174378013308e-08,
+          "gradient_norm_relative_change": 1.7292788424953337e-07,
+          "passed": true
+        }
+      },
+      "all_targets_pass": true
+    },
+    "RI": {
+      "order8": {
+        "values": {
+          "Pphi": 0.003509981644560405,
+          "Ppsi": 0.7870057406574806,
+          "Pzeta": 0.4116220333362211,
+          "Iphi": 0.0034613514123034753,
+          "Izeta": 0.40766523261894794,
+          "Mzeta": 0.4113926052112731
+        },
+        "gradient_norms": {
+          "Pphi": 0.05050195641964811,
+          "Ppsi": 3.7398535857857196,
+          "Pzeta": 5.5784530379870425,
+          "Iphi": 0.04982011639845585,
+          "Izeta": 5.547112901062881,
+          "Mzeta": 5.576440116009821
+        },
+        "elapsed_seconds": 10.500956099946052
+      },
+      "comparison_8_to_16": {
+        "Pphi": {
+          "value_relative_change": 4.1320175988087294e-08,
+          "gradient_norm_relative_change": 6.10499826754094e-07,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 2.7131189620078457e-08,
+          "gradient_norm_relative_change": 6.271668745306574e-07,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 5.187218649215767e-08,
+          "gradient_norm_relative_change": 2.856159666653579e-07,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 2.1347450052013713e-08,
+          "gradient_norm_relative_change": 3.071740745925051e-07,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 2.6733502556475662e-08,
+          "gradient_norm_relative_change": 1.3993949149617695e-07,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 4.561988805552212e-08,
+          "gradient_norm_relative_change": 1.712171951143805e-07,
+          "passed": true
+        }
+      },
+      "all_targets_pass": true
+    },
+    "RIM": {
+      "order8": {
+        "values": {
+          "Pphi": 0.0034662343197081023,
+          "Ppsi": 0.7825677968292758,
+          "Pzeta": 0.4102104928792909,
+          "Iphi": 0.003418141147804031,
+          "Izeta": 0.4063101345103439,
+          "Mzeta": 0.40998455907657266
+        },
+        "gradient_norms": {
+          "Pphi": 0.05135607513888287,
+          "Ppsi": 3.70693790365002,
+          "Pzeta": 5.524673612539283,
+          "Iphi": 0.05065868654720799,
+          "Izeta": 5.493897107748992,
+          "Mzeta": 5.522695789777759
+        },
+        "elapsed_seconds": 10.419444200000726
+      },
+      "comparison_8_to_16": {
+        "Pphi": {
+          "value_relative_change": 3.435133001167225e-08,
+          "gradient_norm_relative_change": 5.274846469038768e-07,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 2.3477004852462303e-08,
+          "gradient_norm_relative_change": 5.979320789736764e-07,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 4.4786159478456065e-08,
+          "gradient_norm_relative_change": 2.7273378275363416e-07,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 1.7658453725166374e-08,
+          "gradient_norm_relative_change": 2.6502606848722284e-07,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 2.2964255041862762e-08,
+          "gradient_norm_relative_change": 1.3320597663537744e-07,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 4.144807327173069e-08,
+          "gradient_norm_relative_change": 1.646617529886666e-07,
+          "passed": true
+        }
+      },
+      "all_targets_pass": true
+    },
+    "G": {
+      "order8": {
+        "values": {
+          "Pphi": 0.0034999230534013873,
+          "Ppsi": 0.784547103392886,
+          "Pzeta": 0.411968215373273,
+          "Iphi": 0.003451260189496549,
+          "Izeta": 0.40800488990115724,
+          "Mzeta": 0.4117393913057169
+        },
+        "gradient_norms": {
+          "Pphi": 0.05100604418567524,
+          "Ppsi": 3.720200843242381,
+          "Pzeta": 5.547683766190023,
+          "Iphi": 0.05032723947009965,
+          "Izeta": 5.516023893012813,
+          "Mzeta": 5.545664953040975
+        },
+        "elapsed_seconds": 10.489874899969436
+      },
+      "comparison_8_to_16": {
+        "Pphi": {
+          "value_relative_change": 4.098748768905841e-08,
+          "gradient_norm_relative_change": 5.884219554840317e-07,
+          "passed": true
+        },
+        "Ppsi": {
+          "value_relative_change": 2.7641471713580958e-08,
+          "gradient_norm_relative_change": 6.356085377033908e-07,
+          "passed": true
+        },
+        "Pzeta": {
+          "value_relative_change": 5.2638596882089824e-08,
+          "gradient_norm_relative_change": 2.8947496811229066e-07,
+          "passed": true
+        },
+        "Iphi": {
+          "value_relative_change": 2.1097511621550217e-08,
+          "gradient_norm_relative_change": 2.9536560300400807e-07,
+          "passed": true
+        },
+        "Izeta": {
+          "value_relative_change": 2.703829107876495e-08,
+          "gradient_norm_relative_change": 1.4149200561299091e-07,
+          "passed": true
+        },
+        "Mzeta": {
+          "value_relative_change": 4.593932656310378e-08,
+          "gradient_norm_relative_change": 1.7309704791332115e-07,
+          "passed": true
+        }
+      },
+      "all_targets_pass": true
+    }
+  },
+  "optimizer_updates": 0,
+  "reference_read": false,
+  "electrical_forward_solves": 0,
+  "electrical_adjoint_solves": 0,
+  "phase_derivative_positions": 65536,
+  "phase_endpoint_coordinate_queries": 16384,
+  "low_order_device": "CPU FP64",
+  "high_order_device": "CUDA FP64",
+  "comparison_rule": "Existing 1% value / 5% gradient-norm numerical tolerances; no metric or training change",
+  "reason": "16/32 consistency alone does not test the actual order8 used in training",
+  "frozen_16_to_32_flags_unchanged": true
+}

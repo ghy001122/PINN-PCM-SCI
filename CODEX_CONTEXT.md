@@ -1,6 +1,10 @@
+# 当前：相对相态残差与时间矩开发已收口
+
+**VERIFIED — NO_INCREMENT_WITHIN_SCREEN_BUDGET：**八臂单初始化开发完成，RIM相对D/P没有达到原A_w；全部严格双周期未过。数值检查通过，GPU已回收关闭。见[完整结果](paper/phase_moments_20260923/results.md)、[收口](docs/experiment/2026-09-23-relative-phase-moments-closeout.md)及[当前阶段](active_phase.md)。阶段4未触发，新科研与Git发布均未授权；旧B1证据按历史身份保留。
+
 # Codex 项目上下文
 
-## 当前：B1有界冲刺已收口
+## 历史：B1有界冲刺已收口
 
 2026-09-22 本轮重要结果另行授权发布至 `codex/paper-revision-results`；范围和远端核验状态见[发布记录](docs/notes/2026-09-22-b1-sprint-results-release.md)。科研执行仍关闭，完整时空数组仍未公开。
 

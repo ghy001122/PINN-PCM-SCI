@@ -1,0 +1,239 @@
+{
+  "seed": 29,
+  "width": 64,
+  "layers": 4,
+  "dtype": "float64",
+  "branch_updates": 600,
+  "branch_lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "gradient_clip": 10,
+  "windows": [
+    [
+      0.0,
+      0.35
+    ],
+    [
+      0.35,
+      1.01
+    ],
+    [
+      1.01,
+      1.36
+    ],
+    [
+      1.36,
+      2.5
+    ]
+  ],
+  "window_masses": [
+    0.14,
+    0.264,
+    0.14,
+    0.456
+  ],
+  "boundary_counts_per_side": [
+    4,
+    12,
+    4,
+    12
+  ],
+  "initial_points": 128,
+  "lambda_max": 0.1,
+  "lambda_ramp": 200,
+  "phase_logit_divisor": 36.84136146790473,
+  "phase_logit_epsilon": 1e-08,
+  "pde_scales": {
+    "electric": 1,
+    "thermal": 4,
+    "phase": 5
+  },
+  "decision": {
+    "relative_improvement": 0.1,
+    "relative_noninferiority": 0.05,
+    "absolute_tolerance": {
+      "S": 1e-08,
+      "Ephi": 1e-06,
+      "ET": 1e-06,
+      "EI": 1e-06,
+      "EV": 1e-07
+    },
+    "strict_device_gate_separate": true
+  },
+  "functional_rule": {
+    "gain": [
+      "bottom_current_NRMSE",
+      "power_trace_NRMSE"
+    ],
+    "relative_improvement": 0.1,
+    "noninferior": [
+      "S",
+      "Ephi",
+      "ET",
+      "EV",
+      "EI"
+    ],
+    "relative_noninferiority": 0.05,
+    "extra_normalized_absolute_tolerance": 1e-06,
+    "reported_separately_from_reconstruction": true
+  },
+  "lbfgs_evaluations": 100,
+  "checkpoint_steps": [
+    600
+  ],
+  "observation_seed": 60129,
+  "sampling_seed": 60229,
+  "cpu_threads": 2,
+  "schema_id": "phase-moments-development-v1",
+  "status": "LOCAL_QUALIFICATION",
+  "parent": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/parent.pt",
+  "sparse": "outputs/runs/20260921-b1-second-cycle-phase-gap/input/visible-fields.npz",
+  "grid": [
+    80,
+    40
+  ],
+  "inference_grid": [
+    160,
+    80
+  ],
+  "adam_observation_times": 4,
+  "adam_physics_cells": 128,
+  "fixed_physics_cells": 128,
+  "fixed_times_per_window": 8,
+  "calibration_seed": 130929,
+  "lbfgs_pool_seed": 230929,
+  "audit_pool_seed": 330929,
+  "linear_tolerance": 1e-10,
+  "gradient_relative_tolerance": 1e-05,
+  "gradient_absolute_tolerance": 1e-08,
+  "observation_time_proposal": "half global time marginal plus half phase time marginal; exact inverse probability weighting; all visible spatial points at each sampled time",
+  "thermal_interface": "midpoint cell values and unique shared-face AD gradients; original Robin/top BC; Q times half-resistance Joule density once",
+  "electric_backend": "SciPy SuperLU CSC MMD_AT_PLUS_A, same-forward factor reuse in full adjoint",
+  "normalizers": "one E0 calibration: exact complete Lobs and 32-time fixed J_Tphi+5BC_Tphi+IC; denominators 3 and 13 retained",
+  "information_boundary": "only V/T and visible phi; exact analytic IC; no full-label parents/statistics, no hidden phi, no reference arrays",
+  "balance_gradient_floor": 1e-12,
+  "balance_equivalence_rtol": 1e-06,
+  "balance_equivalence_atol": 1e-12,
+  "case_spec": {
+    "schema_id": "lf11-finite-pulse-case-v1",
+    "case_id": "lf11-history-gap-1p01",
+    "pulse_starts": [
+      0.0,
+      1.01
+    ],
+    "amplitude": 0.72,
+    "rise_end": 0.05,
+    "hold_end": 0.27,
+    "fall_end": 0.35,
+    "time_end": 2.5,
+    "recovery_cycles": [
+      [
+        0.0,
+        1.01
+      ],
+      [
+        1.01,
+        2.02
+      ]
+    ],
+    "tail": [
+      2.02,
+      2.5
+    ],
+    "windows": [
+      [
+        0.0,
+        0.35
+      ],
+      [
+        0.35,
+        1.01
+      ],
+      [
+        1.01,
+        1.36
+      ],
+      [
+        1.36,
+        2.5
+      ]
+    ],
+    "window_masses": [
+      0.14,
+      0.264,
+      0.14,
+      0.456
+    ],
+    "support": {
+      "nx": 80,
+      "nz": 40,
+      "dt": 0.0025,
+      "save_every": 2,
+      "main_steps": 1000
+    },
+    "reference": {
+      "nx": 160,
+      "nz": 80,
+      "dt": 0.000625,
+      "save_every": 4,
+      "main_steps": 4000
+    },
+    "sampling_rule": "indices 0,4,8,... plus last on each support axis",
+    "changed_physics": "second pulse start only; finite two-pulse experiment"
+  },
+  "source_parent": "reused legal B1 observation-only seed29 parent; no endpoint or optimizer reuse",
+  "per_E_forward_limit": 6831,
+  "task_id": "PCM-20260922-RELATIVE-PHASE-MOMENTS-01",
+  "execution_authorized": true,
+  "source_commit": "192f9551692e7b1f63add946cc8fb77295818542",
+  "run": "outputs/runs/20260923-relative-phase-moments",
+  "phase_missing_window": [
+    1.01,
+    2.02
+  ],
+  "execution_order": [
+    "D",
+    "P",
+    "L",
+    "R",
+    "I",
+    "RI",
+    "RIM",
+    "G"
+  ],
+  "figure_times": [
+    0.27,
+    1.28
+  ],
+  "observation_measure": "original full-coordinate dual-volume x time-trapezoid; phi visible restriction before normalization; half global + half valid straddling endpoints; original proposal importance correction",
+  "reject_invalid_line_search": true,
+  "source_b1": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29",
+  "phase_panels": {
+    "widths": [
+      0.025,
+      0.1
+    ],
+    "space_points": 16,
+    "fixed_per_window_scale": 8,
+    "order": 8,
+    "chunk_panels": 8,
+    "calibration_seed": 430929,
+    "fixed_seed": 530929,
+    "adam_seed": 630929
+  },
+  "readout_forward_limit": 2224,
+  "readout_adjoint_limit": 0,
+  "training_solve_caps": {
+    "D": 4031,
+    "P": 6831,
+    "L": 6831,
+    "R": 6831,
+    "I": 6831,
+    "RI": 6831,
+    "RIM": 6831,
+    "G": 6831
+  }
+}
