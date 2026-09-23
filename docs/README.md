@@ -1,6 +1,6 @@
 # 当前：相对相态残差与时间矩开发已收口
 
-**VERIFIED — NO_INCREMENT_WITHIN_SCREEN_BUDGET：**八臂单初始化开发完成，RIM相对D/P没有达到原A_w；全部严格双周期未过。数值检查通过，GPU已回收关闭。见[完整结果](../paper/phase_moments_20260923/results.md)、[收口](../docs/experiment/2026-09-23-relative-phase-moments-closeout.md)及[当前阶段](../active_phase.md)。阶段4未触发，新科研与Git发布均未授权；旧B1证据按历史身份保留。
+**VERIFIED — NO_INCREMENT_WITHIN_SCREEN_BUDGET：**八臂单初始化开发完成，RIM相对D/P没有达到原A_w；全部严格双周期未过。数值检查通过，GPU已回收关闭。见[完整结果](../paper/phase_moments_20260923/results.md)、[收口](experiment/2026-09-23-relative-phase-moments-closeout.md)及[发布记录](notes/2026-09-23-phase-moments-results-release.md)。精简成果已发布至 `codex/paper-revision-results`；阶段4和新科研仍未授权，旧B1证据按历史身份保留。
 
 # 文档库地图
 

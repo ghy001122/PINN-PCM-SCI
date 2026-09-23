@@ -64,7 +64,7 @@ On the independent full optimization pool with λ=0.1, the weighted phase contri
 
 On the parent calibration pool, the zeroth- and first-moment squares represented approximately 98.2702% and 1.6328% of the finite-coordinate point residual square, giving uncalibrated Mζ/Pζ≈0.999515. Thus, these short-panel targets are already numerically close at the parent. This is a diagnostic of the declared discretization and state, not proof that their gradients or training paths coincide. Neither the initial scale nor the moment decomposition licenses a post-hoc weight or panel-width search.
 
-Data-availability wording for the next working manuscript: **The September 22 repository release includes selected B1 results, code and manuscript evidence. Complete native space-time arrays remain locally archived and have not been publicly deposited. The present phase-moment development results are local until separately authorized for publication.** This updates availability without altering frozen experimental results.
+Data-availability wording for the next working manuscript: **The September 22 repository release includes selected B1 results, code and manuscript evidence. The September 23 release additionally includes selected phase-moment code, compact evidence, complete result tables and figures. Complete native space-time arrays remain locally archived and have not been publicly deposited.** This updates availability without altering frozen experimental results.
 
 
 ## Completed development result

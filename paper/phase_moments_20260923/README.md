@@ -2,6 +2,10 @@
 
 任务 `PCM-20260922-RELATIVE-PHASE-MOMENTS-01`，执行日期 2026-09-23。新实验独立于已收口B1，不覆盖其0/12结论。
 
+2026-09-23用户另行授权将本轮精简成果发布至
+`codex/paper-revision-results`；范围、提交和远端核验见
+[发布记录](../../docs/notes/2026-09-23-phase-moments-results-release.md)。完整原生数组与权重仍保留在本地。
+
 **VERIFIED_PHASE_MOMENTS_NO_INCREMENT_WITHIN_SCREEN_BUDGET — NO_INCREMENT_WITHIN_SCREEN_BUDGET。** 八臂数值有效且预算完整；所有候选均未对D和P建立原A_w增量。RIM相对D的W相态RMS改善1.918%、S改善2.202%；相对P分别改善2.264%、2.633%，低于原10%门。电热非劣与窗外代价不是此次失败原因。 见[完整结果、科学图和机制对照](results.md)。
 
 ## 已有数组事后分析

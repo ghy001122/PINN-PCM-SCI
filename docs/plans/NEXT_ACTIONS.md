@@ -2,7 +2,7 @@
 
 **VERIFIED：**八臂数值有效且预算完整；所有候选均未对D和P建立原A_w增量。RIM相对D的W相态RMS改善1.918%、S改善2.202%；相对P分别改善2.264%、2.633%，低于原10%门。电热非劣与窗外代价不是此次失败原因。 全部八臂严格双周期未通过；16/32与补充8/16数值检查通过。GPU结果已回收并关机。完整事实见[本轮结果](../../paper/phase_moments_20260923/results.md)与[实验收口](../../docs/experiment/2026-09-23-relative-phase-moments-closeout.md)。本段supersedes本轮执行中状态；下方旧B1结论与发布记录保留历史身份。
 
-**SUPPORTED_INTERPRETATION：**本轮没有建立独立相态目标或时间矩增量。按预声明条件停止，不追加确认、调权或训练，不自动转为D_E主导窄稿。原论文的相态PDE贡献与严格事件证据仍未补齐；不同科学假设须另立任务，当前无新增科研或Git发布授权。
+**SUPPORTED_INTERPRETATION：**本轮没有建立独立相态目标或时间矩增量。按预声明条件停止，不追加确认、调权或训练，不自动转为D_E主导窄稿。原论文的相态PDE贡献与严格事件证据仍未补齐；不同科学假设须另立任务。用户已另行授权并完成[精简成果发布](../notes/2026-09-23-phase-moments-results-release.md)，但没有新增科研授权。
 
 - `phase_id`: `PHK_V23_RELATIVE_PHASE_MOMENTS`
 - `lifecycle_state`: `CLOSED`
