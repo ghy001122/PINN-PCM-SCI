@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@page { size: 8.5in 11in; margin: 0.68in 0.70in 0.68in 0.70in; }
+body { font-family: "Times New Roman", serif; font-size: 9.8pt; line-height: 1.18; color: #000; }
+p { margin: 0 0 5pt 0; text-align: justify; }
+.title { font-size: 15pt; line-height: 1.1; font-weight: bold; text-align: center; margin: 18pt 0 8pt 0; }
+.subtitle { font-size: 11pt; text-align: center; margin: 0 0 12pt 0; }
+h1 { font-size: 12.5pt; font-weight: bold; color: #000; margin: 13pt 0 6pt 0; page-break-after: avoid; }
+h2 { font-size: 11pt; font-weight: bold; color: #000; margin: 9pt 0 4pt 0; page-break-after: avoid; }
+.equation { text-align: center; margin: 4pt 0 6pt 0; page-break-inside: avoid; }
+.equation img { max-width: 6.25in; height: auto; }
+.figure { text-align: center; margin: 7pt 0 3pt 0; page-break-inside: avoid; }
+.figure img { max-width: 7.0in; height: auto; }
+.caption { font-size: 8.3pt; line-height: 1.1; text-align: left; margin: 3pt 0 7pt 0; }
+table { border-collapse: collapse; width: 100%; margin: 5pt 0 8pt 0; font-size: 8.0pt; page-break-inside: auto; }
+th, td { border: 1px solid #d9d9d9; padding: 3.5pt 4pt; vertical-align: middle; }
+th { background: #404040; color: white; text-align: center; font-weight: bold; }
+td.num { text-align: center; }
+tr:nth-child(even) td { background: #f5f5f5; }
+.tablecaption { font-size: 8.6pt; font-weight: bold; margin: 7pt 0 3pt 0; page-break-after: avoid; }
+.small { font-size: 8.4pt; }
+.refs p { font-size: 8.2pt; line-height: 1.08; margin-bottom: 3pt; text-align: left; }
+.newpage { page-break-before: always; }
+</style>
+</head>
+<body>
+<p class="title">Supplementary Material</p>
+<p class="subtitle">Training Time Electrical Elimination in Physics Informed Electrothermal Phase Reconstruction</p>
+
+<h1>S1 Numerical Object and Observations</h1>
+<p>The benchmark uses Ω = [-1,1] × [0,1] and 0 ≤ t ≤ 2.5. The electrical equation is quasi-static. Temperature includes latent heat, boundary cooling and local Joule deposition. Phase follows a nonconserved Allen-Cahn-type equation with temperature-dependent mobility. Table S1 lists every dimensionless coefficient used in the reported experiments.</p>
+<p class="tablecaption">Table S1 Model coefficients</p>
+<table>
+<tr><th>Quantity</th><th>Symbol</th><th>Value</th><th>Role</th></tr>
+<tr><td>Thermal diffusivity</td><td class="num">α</td><td class="num">0.10</td><td>Temperature diffusion</td></tr>
+<tr><td>Cooling coefficient</td><td class="num">γ</td><td class="num">4</td><td>Volumetric cooling</td></tr>
+<tr><td>Latent ratio</td><td class="num">L</td><td class="num">0.05</td><td>Phase contribution to heat balance</td></tr>
+<tr><td>Joule gain</td><td class="num">Q</td><td class="num">4</td><td>Electrical-to-thermal scale</td></tr>
+<tr><td>Thermal conductivity factor</td><td class="num">β</td><td class="num">0.25</td><td>Conductivity dependence on T</td></tr>
+<tr><td>Phase conductivity ratio</td><td class="num">R</td><td class="num">8</td><td>Conductivity contrast</td></tr>
+<tr><td>Interface width</td><td class="num">ε</td><td class="num">0.04</td><td>Phase-gradient scale</td></tr>
+<tr><td>Barrier coefficient</td><td class="num">B</td><td class="num">1</td><td>Double-well barrier</td></tr>
+<tr><td>Thermal phase drive</td><td class="num">D</td><td class="num">6</td><td>Temperature-phase coupling</td></tr>
+<tr><td>Transition temperature</td><td class="num">T<sub>c</sub></td><td class="num">0.45</td><td>Reduced transition point</td></tr>
+<tr><td>Cold mobility</td><td class="num">m<sub>c</sub></td><td class="num">0.5</td><td>Low-temperature mobility</td></tr>
+<tr><td>Hot mobility</td><td class="num">m<sub>h</sub></td><td class="num">5</td><td>High-temperature mobility</td></tr>
+<tr><td>Mobility width</td><td class="num">w<sub>M</sub></td><td class="num">0.08</td><td>Mobility transition width</td></tr>
+</table>
+<p>The full top electrode is driven, and a centered bottom segment |x| ≤ 0.35 is grounded. Other electrical faces are insulating. Temperature is fixed to zero at the top and obeys ∂<sub>n</sub>T + 0.25T = 0 elsewhere. Phase obeys ∂<sub>n</sub>φ = 0. Initially T = 0 and φ consists of a 0.02 background plus a small Gaussian seed near the lower electrode. The initial phase derivative is not pointwise compatible with the no-flux condition at the bottom corner; the discrete reference applies the stated boundary operator after t = 0. This limitation is unchanged in every comparison.</p>
+<p>The support grid has 80 × 40 cells and time step 0.0025. The primary reference uses 160 × 80 cells and time step 0.000625. A temporal reference halves the step; a spatial reference uses 240 × 120 cells at the halved step. All references store 1,001 times. The observation mask contains 231 analytic initial positions and 28,875 positive-time positions. V, T and φ give 86,625 positive-time scalar labels in the full-label condition.</p>
+
+<h1>S2 Neural Representation and Training</h1>
+<h2>State Maps and Electrical Solve</h2>
+<p>The modified multilayer perceptron has width 64 and four hidden layers. Independent heads predict potential, temperature and phase in the soft model; E and D<sub>E</sub> use only the temperature and phase heads. The temperature and phase output maps preserve the exact initial fields. Phase is represented in a bounded logit form, and all training and inference use FP64.</p>
+<p>E assembles the finite-volume electrical matrix from the current T and φ fields. Internal and electrode conductances use series half-cell resistances. A sparse factorization returns the potential. Its transpose solve gives the first-order adjoint, including conductivity effects in the matrix, electrode right-hand side and local heating. At zero drive, the exact electrical solution and Joule source are zero.</p>
+<p>F uses the same face network but learns a bounded potential and penalizes the cell electrical imbalance. E and F share observation, boundary, initial, thermal and phase terms. D<sub>E</sub> removes only the interior thermal and phase residuals. B<sub>E</sub> applies temporal PCHIP and spatial interpolation to visible T and φ, restores the analytic initial state, and then uses the common electrical solve. It does not use reference current, hidden fields or derivative labels.</p>
+
+<h2>Training Budgets</h2>
+<p class="tablecaption">Table S2 Frozen optimization and information conditions</p>
+<table>
+<tr><th>Stage</th><th>Data or branches</th><th>Adam</th><th>Complete L-BFGS evaluations</th><th>Selection rule</th></tr>
+<tr><td>Clean parent</td><td>One parent per protocol and seed</td><td class="num">2,400</td><td class="num">600</td><td>Visible-data fit only</td></tr>
+<tr><td>Full-label branch</td><td>E and F from each common parent</td><td class="num">1,500</td><td class="num">300</td><td>Fixed endpoint, no reference selection</td></tr>
+<tr><td>Full-label control</td><td>D<sub>E</sub> from shorter-protocol parents</td><td class="num">1,500</td><td class="num">300</td><td>Same branch budget</td></tr>
+<tr><td>Phase-gap branch</td><td>E, D<sub>E</sub> and F for seeds 29 and 43</td><td class="num">1,500</td><td class="num">300</td><td>New observation-only parents</td></tr>
+<tr><td>Phase-residual screen</td><td>D, P, L, R, I, RI, RIM and G</td><td class="num">600 each</td><td class="num">100 each</td><td>All endpoints locked before scoring</td></tr>
+</table>
+<p>Adam uses learning rate 10<sup>-4</sup>, β = (0.9,0.999), ε = 10<sup>-8</sup> and gradient clipping at 10. The physics weight reaches 0.1 after 200 updates. L-BFGS uses a fixed pool, history 50 and strong-Wolfe line search. Every repeated closure counts; budget exhaustion during a trial restores the last accepted state.</p>
+
+<h1>S3 Metrics and Decision Rules</h1>
+<p>State errors use trapezoidal time weights and cell-volume spatial means. Raw phase RMS and normalized temperature RMS use the fixed region of interest. Active-set error S and potential RMS use the full domain. Current and power NRMSE divide time-RMS error by the corresponding reference RMS. Signed pulse-energy errors are retained because total energy can hide cancellation.</p>
+<p class="tablecaption">Table S3 Main criteria</p>
+<table>
+<tr><th>Criterion</th><th>Required gain</th><th>Noninferiority guards</th><th>Interpretation</th></tr>
+<tr><td>Reconstruction A</td><td>At least 10% in S and phase RMS, subject to absolute floors</td><td>Temperature, top current and potential within 5%</td><td>Whole-history state criterion</td></tr>
+<tr><td>Device B</td><td>At least 10% in bottom-current and power NRMSE</td><td>S, phase, temperature, potential and top current within 5%</td><td>Whole-history device criterion</td></tr>
+<tr><td>Phase-gap A<sub>w</sub></td><td>Same 10% phase gains inside W</td><td>Temperature, top current and potential within 5%</td><td>Missing-window criterion</td></tr>
+<tr><td>Strict two-cycle rule</td><td>Both cycles pass all event requirements</td><td>Onset ≤ 0.005; recall ≥ 0.9; precision ≥ 0.8; mass ratio 0.8-1.2; peak, locality and recovery limits</td><td>Event fidelity, separate from A and B</td></tr>
+</table>
+<p>These are fixed practical thresholds, not significance tests. A failed threshold does not prove equivalence, and a favorable continuous change does not count as a pass. Reference and reader variants are sensitivity checks on the same trained endpoints.</p>
+
+<h1>S4 Full Label Evidence</h1>
+<p class="tablecaption">Table S4 Complete full-label values under the spatial reference and fine reader</p>
+<table>
+<tr><th>Protocol</th><th>Seed</th><th>Method</th><th>Phase RMS</th><th>Current %</th><th>Power %</th></tr>
+<tr><td>Original</td><td class="num">29</td><td>E</td><td class="num">0.021062</td><td class="num">0.8833</td><td class="num">0.8900</td></tr>
+<tr><td>Original</td><td class="num">29</td><td>F</td><td class="num">0.024750</td><td class="num">1.6673</td><td class="num">1.7070</td></tr>
+<tr><td>Original</td><td class="num">43</td><td>E</td><td class="num">0.022458</td><td class="num">1.5978</td><td class="num">1.6216</td></tr>
+<tr><td>Original</td><td class="num">43</td><td>F</td><td class="num">0.025165</td><td class="num">3.0748</td><td class="num">3.1821</td></tr>
+<tr><td>Original</td><td>Shared</td><td>B<sub>E</sub></td><td class="num">0.023310</td><td class="num">1.6112</td><td class="num">1.6366</td></tr>
+<tr><td>Shorter</td><td class="num">29</td><td>E</td><td class="num">0.019936</td><td class="num">1.0156</td><td class="num">1.0237</td></tr>
+<tr><td>Shorter</td><td class="num">29</td><td>F</td><td class="num">0.024450</td><td class="num">2.2768</td><td class="num">2.3432</td></tr>
+<tr><td>Shorter</td><td class="num">43</td><td>E</td><td class="num">0.019763</td><td class="num">0.7005</td><td class="num">0.6947</td></tr>
+<tr><td>Shorter</td><td class="num">43</td><td>F</td><td class="num">0.024099</td><td class="num">2.9838</td><td class="num">3.0871</td></tr>
+<tr><td>Shorter</td><td>Shared</td><td>B<sub>E</sub></td><td class="num">0.025217</td><td class="num">1.9043</td><td class="num">1.9475</td></tr>
+<tr><td>Shorter</td><td class="num">29</td><td>D<sub>E</sub></td><td class="num">0.019468</td><td class="num">0.9581</td><td class="num">0.9652</td></tr>
+<tr><td>Shorter</td><td class="num">43</td><td>D<sub>E</sub></td><td class="num">0.019709</td><td class="num">0.6429</td><td class="num">0.6245</td></tr>
+</table>
+<p>E/F passes the complete device criterion for all four pairs under every tested numerical reference and reader. D<sub>E</sub> is nevertheless better than E for both shorter-protocol seeds. The separation between these findings is deliberate: E/F tests the electrical-constraint package, whereas E/D<sub>E</sub> tests the added interior residuals.</p>
+<p class="tablecaption">Table S5 Strong-interpolant counterexample for original-protocol seed 43</p>
+<table>
+<tr><th>Reference</th><th>E current %</th><th>B<sub>E</sub> current %</th><th>E power %</th><th>B<sub>E</sub> power %</th><th>Original A B</th></tr>
+<tr><td>Original</td><td class="num">1.6311</td><td class="num">1.6200</td><td class="num">1.6574</td><td class="num">1.6464</td><td class="num">False False</td></tr>
+<tr><td>Time refined</td><td class="num">1.6533</td><td class="num">1.5705</td><td class="num">1.6819</td><td class="num">1.5961</td><td class="num">False False</td></tr>
+<tr><td>Space refined</td><td class="num">1.5978</td><td class="num">1.6112</td><td class="num">1.6216</td><td class="num">1.6366</td><td class="num">False False</td></tr>
+</table>
+<div class="figure"><img src="../paper_revision_20260921/figures/fig02-full-label-physics-seed29.png"></div>
+<p class="caption"><b>Figure S1</b> Full-label shorter-protocol fields and signed errors for seed 29. State and Joule-density panels are descriptive native-grid views; the primary phase metric uses the fixed 160 × 80 measure.</p>
+
+<h1>S5 Missing Second Cycle Phase</h1>
+<p>The phase-gap condition removes 11,781 φ labels in W = [1.01,2.02]. It retains 17,094 positive-time φ labels, including samples after W, and all 28,875 V and T labels. New parents are fitted for seeds 29 and 43. Complete-label weights, calibration pools and endpoints are not reused.</p>
+<p class="tablecaption">Table S6 Phase-gap errors under the spatial reference and fine reader</p>
+<table>
+<tr><th>Seed</th><th>Method</th><th>1000 S</th><th>Phase RMS</th><th>Temperature %</th><th>Current %</th><th>Power %</th></tr>
+<tr><td class="num">29</td><td>E</td><td class="num">8.9242</td><td class="num">0.102408</td><td class="num">1.1400</td><td class="num">1.1049</td><td class="num">1.1199</td></tr>
+<tr><td class="num">29</td><td>D<sub>E</sub></td><td class="num">9.0420</td><td class="num">0.103548</td><td class="num">1.1348</td><td class="num">1.1556</td><td class="num">1.1708</td></tr>
+<tr><td class="num">29</td><td>F</td><td class="num">7.7502</td><td class="num">0.121882</td><td class="num">1.1689</td><td class="num">8.9601</td><td class="num">8.4221</td></tr>
+<tr><td class="num">43</td><td>E</td><td class="num">8.0082</td><td class="num">0.090626</td><td class="num">1.1075</td><td class="num">0.9310</td><td class="num">0.9504</td></tr>
+<tr><td class="num">43</td><td>D<sub>E</sub></td><td class="num">7.6116</td><td class="num">0.086987</td><td class="num">1.1269</td><td class="num">0.9961</td><td class="num">1.0099</td></tr>
+<tr><td class="num">43</td><td>F</td><td class="num">7.7502</td><td class="num">0.109148</td><td class="num">1.1194</td><td class="num">8.9002</td><td class="num">8.3830</td></tr>
+<tr><td>-</td><td>B<sub>E</sub></td><td class="num">7.7502</td><td class="num">0.127808</td><td class="num">1.4138</td><td class="num">9.0885</td><td class="num">8.5569</td></tr>
+</table>
+<p>E versus D<sub>E</sub> passes A<sub>w</sub> in 0 of 12 reference-reader checks. The phase gains are 1.10-1.23% for seed 29 and -4.23 to -4.18% for seed 43. Outside-window costs occur in 6 of 12 checks and affect top current, potential, bottom current or power. Every tested object fails the strict two-cycle rule.</p>
+<div class="figure"><img src="../paper_revision_20260921/figures/b1-phase-t2.png"></div>
+<p class="caption"><b>Figure S2</b> Phase at t = 1.28 inside the missing-label interval. The reference, shared interpolant, and E, D<sub>E</sub> and F endpoints for both seeds use the same color scale.</p>
+<p>The active-set error is dominated by activity that persists or moves beyond the reference support after heating. A correct onset in one metric does not imply adequate recall, precision or mass. Recovery values are reported independently and are not relabeled as failures when they pass.</p>
+
+<h1>S6 Relative Phase Residual Screen</h1>
+<p>The screen tests whether the original phase residual is downweighted near pure states. D omits the internal thermal and phase terms. P uses the raw phase residual on a common panel support. L uses the complete phase logit residual. R uses a finite logit coordinate with δ = 10<sup>-8</sup>. I adds a zeroth interval moment in the raw coordinate. RI combines the finite coordinate and zeroth moment. RIM adds the first Legendre moment. G rescales the raw phase term to match the initial RIM phase-gradient norm. All calibrations are fixed before training and do not use reference fields.</p>
+<p class="tablecaption">Table S7 Eight-arm missing-window results</p>
+<table>
+<tr><th>Arm</th><th>Phase target</th><th>Phase RMS</th><th>1000 S</th><th>Temperature</th><th>Current</th><th>Potential</th><th>Strict</th></tr>
+<tr><td>D</td><td>None</td><td class="num">0.08373</td><td class="num">7.290</td><td class="num">0.01310</td><td class="num">0.02508</td><td class="num">0.00452</td><td class="num">Fail</td></tr>
+<tr><td>P</td><td>Raw point residual</td><td class="num">0.08402</td><td class="num">7.323</td><td class="num">0.01305</td><td class="num">0.02489</td><td class="num">0.00447</td><td class="num">Fail</td></tr>
+<tr><td>L</td><td>Complete logit</td><td class="num">0.08223</td><td class="num">7.134</td><td class="num">0.01301</td><td class="num">0.02497</td><td class="num">0.00447</td><td class="num">Fail</td></tr>
+<tr><td>R</td><td>Finite logit</td><td class="num">0.08392</td><td class="num">7.318</td><td class="num">0.01301</td><td class="num">0.02455</td><td class="num">0.00440</td><td class="num">Fail</td></tr>
+<tr><td>I</td><td>Raw plus zeroth moment</td><td class="num">0.08399</td><td class="num">7.328</td><td class="num">0.01306</td><td class="num">0.02527</td><td class="num">0.00454</td><td class="num">Fail</td></tr>
+<tr><td>RI</td><td>Finite logit plus zeroth moment</td><td class="num">0.08236</td><td class="num">7.143</td><td class="num">0.01304</td><td class="num">0.02508</td><td class="num">0.00448</td><td class="num">Fail</td></tr>
+<tr><td>RIM</td><td>Finite logit plus two moments</td><td class="num">0.08212</td><td class="num">7.130</td><td class="num">0.01295</td><td class="num">0.02529</td><td class="num">0.00453</td><td class="num">Fail</td></tr>
+<tr><td>G</td><td>Gradient-matched raw residual</td><td class="num">0.08271</td><td class="num">7.180</td><td class="num">0.01301</td><td class="num">0.02513</td><td class="num">0.00450</td><td class="num">Fail</td></tr>
+</table>
+<p>RIM improves phase RMS and S by 1.92% and 2.20% relative to D, and by 2.26% and 2.63% relative to P. It improves phase RMS by 0.14% over L, 0.30% over RI and 0.72% over G. All 56 ordered comparisons fail A<sub>w</sub>, whole-history A and whole-history B. No outside-window cost flag is raised. These ordered comparisons are not independent samples.</p>
+<div class="figure"><img src="../phase_moments_20260923/figures/eight-arm-development.png"></div>
+<p class="caption"><b>Figure S3</b> Complete eight-arm development result. The panels separate phase errors, temperature and electrical costs, event support, wall time, the independent raw-physics audit and numerical validity.</p>
+<p>RIM second-cycle onset differs from the reference by 0.00035 and recovery equals 1, but recall is 0.6417, precision 0.8249 and mass ratio 0.7779. Its active-area peak occurs at 1.5425 rather than 1.3475. After-pulse false-positive area contributes 78.24% of its window set error. The original raw phase residual is 0.45% higher than D and 0.59% higher than P at the RIM endpoint.</p>
+
+<h1>S7 Numerical Sensitivity and Validation</h1>
+<p>Reference changes keep learned states fixed. Temporal refinement changes no historical A/B decision. Spatial refinement changes three historical decisions, including a B<sub>E</sub> crossing that disappears with the finer prediction reader. The complete E/F device criterion remains true in every tested condition. These checks bound the observed ranking but do not establish a convergence rate.</p>
+<p class="tablecaption">Table S8 Numerical qualification of the phase-residual screen</p>
+<table>
+<tr><th>Check</th><th>Maximum objective change</th><th>Maximum gradient-norm change</th><th>Outcome</th></tr>
+<tr><td>Parent 8 versus 16 Gauss points</td><td class="num">8.16 × 10<sup>-8</sup></td><td class="num">8.61 × 10<sup>-7</sup></td><td class="num">Pass</td></tr>
+<tr><td>Endpoint 8 versus 16</td><td class="num">5.50 × 10<sup>-8</sup></td><td class="num">6.40 × 10<sup>-7</sup></td><td class="num">Pass</td></tr>
+<tr><td>Endpoint 16 versus 32</td><td class="num">2.41 × 10<sup>-13</sup></td><td class="num">7.45 × 10<sup>-13</sup></td><td class="num">Pass</td></tr>
+</table>
+<p>The predeclared tolerances are 1% for objective values and 5% for gradient norms. The checks use fixed fields and no optimizer updates. Twenty-one focused and inherited tests cover the latent phase chain rule, finite-coordinate derivatives, moment identities, panel weights, electrical counts, thermal-block preservation, fixed L-BFGS targets and rollback behavior.</p>
+
+<h1>S8 Work Counts and Reproduction Boundary</h1>
+<p class="tablecaption">Table S9 Actual work for the two final campaigns</p>
+<table>
+<tr><th>Campaign</th><th>Adam updates</th><th>Complete evaluations</th><th>Training forward adjoint</th><th>Common readout forward</th><th>Independent trainings</th></tr>
+<tr><td>Second-cycle phase gap</td><td class="num">13,800</td><td class="num">3,000</td><td class="num">62,536 / 62,536</td><td class="num">3,892</td><td class="num">2 parents with 6 branches</td></tr>
+<tr><td>Relative phase moments</td><td class="num">4,800</td><td class="num">800</td><td class="num">51,848 / 51,848</td><td class="num">2,224</td><td class="num">1 parent with 8 branches</td></tr>
+</table>
+<p>The published repository contains source code, frozen configurations, tests, complete tables, figures, compact scoring evidence and sanitized compute-closure records. The phase-gap package also includes selected parent and endpoint states and finite port traces. Complete native space-time arrays, optimizer states and full recovery archives remain local. The public subset supports review of the reported numbers and gates but does not reproduce every array-level score from scratch.</p>
+<p>No sealed stress case, experimental device data or material calibration enters these results. Reproduction of a new scientific run requires a separately named output directory and a new execution authorization; the archived endpoints must not be overwritten.</p>
+
+<h1>Additional References</h1>
+<div class="refs">
+<p>Feng X, Shangguan H, Tang T, Wan X. Integral regularization PINNs for evolution equations. Communications in Computational Physics 39, 356-386, 2026. DOI 10.4208/cicp.OA-2025-0082.</p>
+<p>Kharazmi E, Zhang Z, Karniadakis GE. Variational physics-informed neural networks for solving partial differential equations. arXiv:1912.00873, 2019.</p>
+<p>Saleh E et al. Learning from integral losses in physics informed neural networks. Proceedings of Machine Learning Research 235, 43077-43111, 2024.</p>
+<p>De Ryck T et al. An operator preconditioning perspective on training in physics-informed machine learning. International Conference on Learning Representations, 2024.</p>
+</div>
+</body>
+</html>
