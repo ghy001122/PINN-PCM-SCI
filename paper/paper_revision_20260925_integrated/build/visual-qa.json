@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "reviewed_utc": "2026-09-25T15:07:24.586242+00:00",
+  "page_counts": {
+    "manuscript": 16,
+    "supplement": 52
+  },
+  "renderer": "Microsoft Word COM export; bundled Poppler at 130 dpi",
+  "visual_review": {
+    "manuscript": "All 16 pages visually inspected in the prior render; final render has identical page PNG hashes.",
+    "supplement": "All 52 final page PNGs individually viewed after final changes."
+  },
+  "checks": [
+    "Equation and figure legibility",
+    "Tables within page; repeated headers remain with first data row",
+    "Physical field and Joule panels retained",
+    "No word boxes outside page or replacement glyphs",
+    "Final PDF exported from the delivered DOCX"
+  ],
+  "corrected": [
+    "Removed inherited title border and theme font substitutions",
+    "Corrected figure/section references",
+    "Prevented orphaned table headers",
+    "Distinguished historical and actual current build procedures",
+    "Added explicit active-support recall tradeoff"
+  ],
+  "pdf_sha256": {
+    "manuscript": "ec538ee57cbc1fa28dd206853e35a4703f61b82931c35a0d3226d9062b0a8aaf",
+    "supplement": "a22c2fe939c998472e06eab8bb256bc3b9a338db48e5d5908c2d1fa7451586fa"
+  },
+  "remaining_layout_issues": []
+}

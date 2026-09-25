@@ -1,6 +1,8 @@
 # Experiment ledger protocol
 
-最新：[相对相态残差与时间矩八臂开发收口](2026-09-23-relative-phase-moments-closeout.md)。八个有效终点与原生读出完成，未建立原A_w增量；全部数值检查通过，GPU已回收关闭。
+最新：[W+A 连续成稿与条件演化收口](2026-09-25-integrated-manuscript-conditional-ivp-closeout.md)。两条轨迹数值资格通过；支持考虑原修正族证人搜索，原族可行性仍未知；实例已回收关闭。
+
+历史2026-09-23：[相对相态残差与时间矩八臂开发收口](2026-09-23-relative-phase-moments-closeout.md)。八个有效终点与原生读出完成，未建立原A_w增量；全部数值检查通过，GPU已回收关闭。
 
 历史2026-09-21：[B1第二周期相态缺测收口](2026-09-21-b1-phase-gap-sprint-closeout.md)。两个新父态、六终点与共同读出已完成；全部结果和代价保留，GPU已回收关闭。
 

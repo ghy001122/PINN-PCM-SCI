@@ -1,3 +1,7 @@
+2026-09-25 W+A 成果云端提交已获用户另行授权，范围与核验见[发布记录](docs/notes/2026-09-25-integrated-manuscript-conditional-ivp-release.md)。科研保持 CLOSED，后续执行未授权。
+
+2026-09-25 W+A：用户已批准连续主稿与有界条件演化。当前状态以 [active_phase](active_phase.md) 和[本轮交付](paper/paper_revision_20260925_integrated/README.md)为准；下方旧阶段保留历史身份。
+
 2026-09-25 当前补充：[物理目标、采样与固定温度定向诊断](paper/observation_preserving_phase_20260924/physics-objective-diagnostic.md)已完成，结果回收且GPU已关闭。当前授权状态见 active_phase.md；下文观测补全训练与发布按各自历史时点读取。
 
 # 当前：观测保持相态补全已收口

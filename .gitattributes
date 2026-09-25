@@ -17,3 +17,10 @@ paper/paper_revision_20260921/*.pdf binary
 paper/paper_revision_20260921/figures/*.pdf binary
 # SVG path serialization includes valid spaces before line breaks.
 paper/paper_revision_20260921/figures/*.svg -text whitespace=-blank-at-eol
+
+# Preserve W+A captured artifacts and their recorded byte identities.
+paper/paper_revision_20260925_integrated/** -text whitespace=cr-at-eol
+paper/paper_revision_20260925_integrated/evidence/** -whitespace
+paper/paper_revision_20260925_integrated/build/*.log -whitespace
+paper/paper_revision_20260925_integrated/figures/*.svg whitespace=cr-at-eol,-blank-at-eol
+paper/paper_revision_20260925_integrated/conditional-evolution-report.md whitespace=cr-at-eol,-blank-at-eof

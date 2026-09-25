@@ -1,0 +1,12 @@
+# W+A execution authorization
+
+Task: `PCM-20260925-INTEGRATED-MANUSCRIPT-FEASIBILITY-02`.
+The user explicitly requested implementation of the complete revised W+A plan on 25 September 2026. This supersedes the preceding planning-only status for this task only. The baseline is `e2e14b5ce390de930646e1cba9a606a8191cff80`; prior closed experiments retain their conclusions.
+
+W delivers one continuous manuscript source, supplement, evidence map and Markdown/PDF/DOCX review outputs. It retains all matched controls and adverse results. A performs at most two original fixed-temperature phase trajectories on 80x40 cells, D=[1.36,2.02], dt=0.000625 and 0.0003125, starting from old B1 E/29. It uses the unchanged logit Newton phase solver with own-previous-state guesses, unscaled algebraic tolerance 1e-10, 30 iterations and the original line search. No additional trajectory, training arm, spatial simulation, electrical solve, reference generation, formal OOD, Git publication or automatic A+ is authorized.
+
+The exact machine-readable contract is [the frozen configuration](../../configs/phk_v23/fixed_temperature_phase_probe_20260925.json). Three residual layers, two separately paired thermal measures, one-sided endpoint jets, full-domain/ROI development reference metrics and four outcome routes implement the approved R1-R6 additions. Numerical qualification precedes A-specific reference access. W may independently use existing reference-backed figures; this does not permit tuning A.
+
+The explicitly authorized instance is the existing V100 32 GB instance, SSH port 28355, with a verified 6-CPU/25-GiB container and existing Python 3.11 environment. GPU performs frozen coordinate queries/AD; four CPU threads perform the unchanged SciPy phase solve and array evaluation. There is no monetary cap; finite scientific caps and the configuration's memory stops remain binding. Credentials are not part of the scientific package. Recover and verify complete or partial evidence, then shut down promptly before manuscript layout work.
+
+Numerical failures stop without solver switching, clipping or time-step rescue. Resource interruption is identified separately. Minimal engineering recovery follows the existing project rule and must not alter scientific identity or accepted states. Neither a successful IVP nor a failed IVP proves feasibility or infeasibility of the original C2 correction family. Mixed or unresolved evidence closes as CONDITIONAL_IVP_FEASIBILITY_UNKNOWN. W remains independently deliverable.

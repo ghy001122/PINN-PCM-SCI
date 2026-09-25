@@ -1,0 +1,295 @@
+{
+  "status": "CONDITIONAL_IVP_SUPPORTS_FURTHER_WITNESS_SEARCH",
+  "numerical_qualification_passed": true,
+  "qualification": {
+    "phase_difference_RMS": 3.92139700027625e-05,
+    "phase_RMS_limit": 0.0001,
+    "endpoint_max_absolute": 0.00029046818646669137,
+    "endpoint_limit": 0.001,
+    "primary_thermal_difference": 9.416219267158188e-08,
+    "primary_thermal_difference_limit": 0.00011034352868787909,
+    "phase_RMS_pass": true,
+    "endpoint_pass": true,
+    "primary_thermal_pass": true,
+    "passed": true,
+    "interpretation": "Finite two-time-step consistency only; no spatial/continuum convergence or order claim"
+  },
+  "thermal": {
+    "conditional_semidiscrete": {
+      "base": 0.011034352868787909,
+      "coarse": 0.010400642638120057,
+      "fine": 0.010400736800312728,
+      "upper": 0.011586070512227304,
+      "margins": {
+        "coarse": 0.0011854278741072477,
+        "fine": 0.0011853337119145761
+      },
+      "observed_step_difference": 9.416219267158188e-08,
+      "direction": "WITHIN_BUDGET",
+      "interpretation": "step difference is sensitivity, not an error bound or confidence interval"
+    },
+    "common_fd": {
+      "base": 0.011034351980706243,
+      "coarse": 0.01039997275084324,
+      "fine": 0.010400403029728545,
+      "upper": 0.011586069579741556,
+      "margins": {
+        "coarse": 0.0011860968288983156,
+        "fine": 0.001185666550013011
+      },
+      "observed_step_difference": 4.302788853046552e-07,
+      "direction": "WITHIN_BUDGET",
+      "interpretation": "step difference is sensitivity, not an error bound or confidence interval"
+    }
+  },
+  "seams": {
+    "coarse": {
+      "left": {
+        "0": {
+          "rms": 0.0,
+          "max_absolute": 0.0,
+          "max_cell": 0,
+          "x": -0.9875,
+          "z": 0.0125,
+          "scaled_rms": 0.0,
+          "scaled_max_absolute": 0.0
+        },
+        "1": {
+          "rms": 0.4977026268295451,
+          "max_absolute": 5.260424671185357,
+          "max_cell": 262,
+          "x": -0.4375,
+          "z": 0.08750000000000001,
+          "scaled_rms": 0.3284837337074997,
+          "scaled_max_absolute": 3.471880282982335
+        },
+        "2": {
+          "rms": 10.05618413954702,
+          "max_absolute": 143.3055005545742,
+          "max_cell": 29,
+          "x": -0.26249999999999996,
+          "z": 0.0125,
+          "scaled_rms": 4.380473811186681,
+          "scaled_max_absolute": 62.4238760415725
+        }
+      },
+      "right": {
+        "0": {
+          "rms": 0.020566840805140277,
+          "max_absolute": 0.2785185964267599,
+          "max_cell": 27,
+          "x": -0.3125,
+          "z": 0.0125,
+          "scaled_rms": 0.020566840805140277,
+          "scaled_max_absolute": 0.2785185964267599
+        },
+        "1": {
+          "rms": 0.26351984107564913,
+          "max_absolute": 3.274125285070057,
+          "max_cell": 27,
+          "x": -0.3125,
+          "z": 0.0125,
+          "scaled_rms": 0.1739230951099284,
+          "scaled_max_absolute": 2.1609226881462376
+        },
+        "2": {
+          "rms": 2.3457692073854766,
+          "max_absolute": 25.75012585610305,
+          "max_cell": 24,
+          "x": -0.38749999999999996,
+          "z": 0.0125,
+          "scaled_rms": 1.0218170667371134,
+          "scaled_max_absolute": 11.216754822918485
+        }
+      }
+    },
+    "fine": {
+      "left": {
+        "0": {
+          "rms": 0.0,
+          "max_absolute": 0.0,
+          "max_cell": 0,
+          "x": -0.9875,
+          "z": 0.0125,
+          "scaled_rms": 0.0,
+          "scaled_max_absolute": 0.0
+        },
+        "1": {
+          "rms": 0.4977026268295451,
+          "max_absolute": 5.260424671185357,
+          "max_cell": 262,
+          "x": -0.4375,
+          "z": 0.08750000000000001,
+          "scaled_rms": 0.3284837337074997,
+          "scaled_max_absolute": 3.471880282982335
+        },
+        "2": {
+          "rms": 10.05618413954702,
+          "max_absolute": 143.3055005545742,
+          "max_cell": 29,
+          "x": -0.26249999999999996,
+          "z": 0.0125,
+          "scaled_rms": 4.380473811186681,
+          "scaled_max_absolute": 62.4238760415725
+        }
+      },
+      "right": {
+        "0": {
+          "rms": 0.020562588479018772,
+          "max_absolute": 0.2784991680621889,
+          "max_cell": 27,
+          "x": -0.3125,
+          "z": 0.0125,
+          "scaled_rms": 0.020562588479018772,
+          "scaled_max_absolute": 0.2784991680621889
+        },
+        "1": {
+          "rms": 0.26349295113769655,
+          "max_absolute": 3.2741024109965715,
+          "max_cell": 27,
+          "x": -0.3125,
+          "z": 0.0125,
+          "scaled_rms": 0.1739053477508797,
+          "scaled_max_absolute": 2.160907591257737
+        },
+        "2": {
+          "rms": 2.3458265539316745,
+          "max_absolute": 25.74556897707873,
+          "max_cell": 24,
+          "x": -0.38749999999999996,
+          "z": 0.0125,
+          "scaled_rms": 1.021842046892637,
+          "scaled_max_absolute": 11.214769846415491
+        }
+      }
+    }
+  },
+  "boundaries": {
+    "left": {
+      "B0_AD_normal_MS": 1.0193354922477664e-14,
+      "B0_AD_max_absolute": 6.211653490393072e-07,
+      "face_count": 40,
+      "IVP_discrete_boundary_flux": 0.0,
+      "interpretation": "zero flux is imposed by the discrete operator; not the same layer as neural AD BC"
+    },
+    "right": {
+      "B0_AD_normal_MS": 6.394554859190576e-15,
+      "B0_AD_max_absolute": 1.0808270405551225e-06,
+      "face_count": 40,
+      "IVP_discrete_boundary_flux": 0.0,
+      "interpretation": "zero flux is imposed by the discrete operator; not the same layer as neural AD BC"
+    },
+    "bottom": {
+      "B0_AD_normal_MS": 0.8835471534106292,
+      "B0_AD_max_absolute": 8.887749527194934,
+      "face_count": 80,
+      "IVP_discrete_boundary_flux": 0.0,
+      "interpretation": "zero flux is imposed by the discrete operator; not the same layer as neural AD BC"
+    },
+    "top": {
+      "B0_AD_normal_MS": 3.815886021533393e-15,
+      "B0_AD_max_absolute": 3.205606346894716e-07,
+      "face_count": 80,
+      "IVP_discrete_boundary_flux": 0.0,
+      "interpretation": "zero flux is imposed by the discrete operator; not the same layer as neural AD BC"
+    }
+  },
+  "left_step_difference": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0
+  },
+  "left_decomposition": {
+    "rms": 5.519178454163002e-17,
+    "max_absolute": 8.881784197001252e-16,
+    "max_cell": 22,
+    "x": -0.4375,
+    "z": 0.0125,
+    "scaled_rms": 5.519178454163002e-17,
+    "scaled_max_absolute": 8.881784197001252e-16
+  },
+  "left_structural_note": "Identical left input makes RHS jets identical across dt. Nonzero mismatch to B0 is structural for this semidiscrete IVP, not temporal error; zero inter-dt difference is not proof of physical compatibility.",
+  "reference_read": true,
+  "seconds": 2.926029340364039,
+  "resources": {
+    "peak_rss_bytes": 547450880,
+    "minimum_container_headroom_bytes": 25872924672
+  },
+  "utc": "2026-09-25T14:29:50.557040+00:00",
+  "recommendation_status": "SUPPORTED_INTERPRETATION",
+  "reference": {
+    "reference": "outputs/submission-rescore-20260921/data/shorter/reference-old.npz",
+    "reference_sha256": "7943255c94f51d8b242bd1d6b45aa03eb52b06fe8f9ac727cc4650b687dc0de7",
+    "reference_read": true,
+    "utc": "2026-09-25T14:29:50.556120+00:00",
+    "grid": [
+      80,
+      40
+    ],
+    "interval": [
+      1.36,
+      2.02
+    ],
+    "time_count": 265,
+    "records": {
+      "full": {
+        "B0": {
+          "Ephi_D_80": 0.06694357573739856,
+          "cells": 3200
+        },
+        "coarse": {
+          "Ephi_D_80": 0.02075959087255291,
+          "cells": 3200
+        },
+        "fine": {
+          "Ephi_D_80": 0.0207429571471433,
+          "cells": 3200
+        },
+        "direction": {
+          "Ephi_D_80_B0": 0.06694357573739856,
+          "Ephi_D_80_coarse": 0.02075959087255291,
+          "Ephi_D_80_fine": 0.0207429571471433,
+          "gains": {
+            "coarse": 0.04618398486484565,
+            "fine": 0.04620061859025526
+          },
+          "observed_step_difference": 1.663372540960939e-05,
+          "direction": "IMPROVES"
+        }
+      },
+      "roi": {
+        "B0": {
+          "Ephi_D_80": 0.12171558984865839,
+          "cells": 968
+        },
+        "coarse": {
+          "Ephi_D_80": 0.03774470345445067,
+          "cells": 968
+        },
+        "fine": {
+          "Ephi_D_80": 0.03771446031846351,
+          "cells": 968
+        },
+        "direction": {
+          "Ephi_D_80_B0": 0.12171558984865839,
+          "Ephi_D_80_coarse": 0.03774470345445067,
+          "Ephi_D_80_fine": 0.03771446031846351,
+          "gains": {
+            "coarse": 0.08397088639420772,
+            "fine": 0.08400112953019488
+          },
+          "observed_step_difference": 3.0243135987158276e-05,
+          "direction": "IMPROVES"
+        }
+      }
+    },
+    "seconds": 2.4746800251305103,
+    "formal_A_w": false,
+    "formal_ood": false,
+    "interpretation": "Observed step differences are sensitivity indicators, not true-error bounds or confidence intervals"
+  },
+  "recommendation_reason": "Both thermal conventions and both reference scopes give resolved favorable evidence; original-family seam accommodation remains unproved.",
+  "original_C2_family_feasibility": "UNKNOWN",
+  "additional_runs_authorized": false,
+  "new_training_updates": 0
+}

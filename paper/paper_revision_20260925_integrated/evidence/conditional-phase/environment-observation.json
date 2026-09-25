@@ -1,0 +1,15 @@
+{
+  "source": "Direct SSH prelaunch hardware and interpreter output, recorded in this task; transcribed locally after verified shutdown",
+  "gpu": "Tesla V100-PCIE-32GB",
+  "cpu_quota_cores": 6,
+  "container_memory_bytes": 26843545600,
+  "python": "3.11.9",
+  "torch": "2.5.1+cu118",
+  "numpy": "2.1.1",
+  "scipy": "1.14.1",
+  "cpu_threads": 4,
+  "coordinate_chunk": 1024,
+  "gpu_peak_allocated_bytes": null,
+  "gpu_peak_note": "GPU limits were checked during execution; peak allocation was not persisted. No peak value is inferred.",
+  "gpu_memory_class_gb": 32
+}

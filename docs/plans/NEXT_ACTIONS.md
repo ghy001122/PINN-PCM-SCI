@@ -1,14 +1,29 @@
-# 当前：物理目标、采样与固定温度诊断已完成
+<!-- WA_CURRENT_BEGIN -->
+# 当前：连续主稿与固定温度条件演化
+
+W连续主稿与完整补充材料已完成；A两条轨迹完成并通过数值资格，两热口径及开发参考方向支持后续证人搜索，但原C²修正族可行性仍为UNKNOWN。结果已回收核验、实例已关闭。无自动A+或新训练。
+
+任务 `PCM-20260925-INTEGRATED-MANUSCRIPT-FEASIBILITY-02` 已由用户明确批准实施 W+A，见[授权与边界](../../docs/notes/2026-09-25-integrated-manuscript-conditional-ivp-authorized.md)及[本轮交付](../../paper/paper_revision_20260925_integrated/README.md)。本段 supersedes 下方旧任务的当前状态；旧结果不变。仅至多两条条件轨迹，无新训练、电学求解、参考生成或自动 A+。用户随后明确授权本轮成果提交云端，见[发布记录](../notes/2026-09-25-integrated-manuscript-conditional-ivp-release.md)；该授权 supersedes 此前本轮 Git 未授权措辞，不扩展科研授权。
+
+- `phase_id`: `PHK_V23_INTEGRATED_MANUSCRIPT_CONDITIONAL_IVP`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `WA_COMPLETE_CONDITIONAL_IVP_SUPPORTS_FURTHER_WITNESS_SEARCH_ORIGINAL_FAMILY_UNKNOWN`
+- `next_research_execution_authorized`: `false`
+
+<!-- WA_CURRENT_END -->
+
+# 历史：物理目标、采样与固定温度诊断已完成
 
 **VERIFIED：** 四个保存状态的零更新诊断完成，确认标量目标/独立资格不一致及空间采样敏感；固定T的严格热一致性存在范围/端点障碍，原5%容限下能否有效补全仍 **UNKNOWN**。见[诊断结果、图表及唯一后续决策](../../paper/observation_preserving_phase_20260924/physics-objective-diagnostic.md)。V100诊断112.589秒，零参数更新/电学求解/参考场读取；结果已回收，实例已关闭。
 
 用户2026-09-25指定交接任务已收口；历史 NO_COMPLETION_INCREMENT 与E/F正向结果保持。新训练和条件相态推进未执行或追加授权；用户随后明确授权本轮诊断成果提交云端，见[发布记录](../notes/2026-09-25-physics-objective-diagnostic-release.md)。P02/P03仍开放。
 
-- `phase_id`: `PHK_V23_PHYSICS_OBJECTIVE_FEASIBILITY`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_OBJECTIVE_MISMATCH_SAMPLING_SENSITIVITY_FIXED_T_LIMITS`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_PHYSICS_OBJECTIVE_FEASIBILITY`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `VERIFIED_OBJECTIVE_MISMATCH_SAMPLING_SENSITIVITY_FIXED_T_LIMITS`
+- `historical_next_research_execution_authorized`: `false`
 
 # 历史：观测保持相态补全已收口
 
