@@ -2,7 +2,9 @@
 
 2026-09-25 用户明确授权将本轮重要交付结果及研究进程提交至 `ghy001122/PINN-PCM-SCI`，沿用 `codex/paper-revision-results`，继承 `a96303c2110ae1a79984ed7dcddf0c01ab07bec1`。
 
-- 发布状态：`PREPARED_PENDING_PUSH`；推送后另行记录远端核验。
+- 发布状态：`PUBLISHED_REMOTE_VERIFIED`。
+- 成果提交：[e8dd33761dacb3bb3b2d14d09b6d0e58d2607b16](https://github.com/ghy001122/PINN-PCM-SCI/commit/e8dd33761dacb3bb3b2d14d09b6d0e58d2607b16)。
+- 远端核验：成果推送后，远端 `codex/paper-revision-results` 与本地成果提交一致；本记录随后单独提交，保留核验时点身份。
 - 科研状态：`CLOSED`；`next_research_execution_authorized=false`。
 - 科学裁决：**VERIFIED：NO_COMPLETION_INCREMENT**。
 
@@ -18,4 +20,4 @@
 
 ## 核验
 
-科研收口已有聚焦、继承接口及设备传播回归记录；本次不重新运行科学计算。发布前核验文档一致性、提交差异和精确文件清单，推送后核对远端提交身份。本次授权不新增训练、求解、GPU任务或投稿。
+科研收口已有聚焦、继承接口及设备传播回归记录；本次不重新运行科学计算。发布前文档门禁返回 `DOCUMENT_CONSISTENCY_VALID`，提交差异检查通过，暂存内容与精确发布清单一致；成果推送成功，远端提交身份已核对一致。本次授权不新增训练、求解、GPU任务或投稿。
