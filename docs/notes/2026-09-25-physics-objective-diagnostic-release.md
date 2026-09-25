@@ -2,7 +2,9 @@
 
 2026-09-25 用户另行明确要求将本轮重要交付结果提交至 `ghy001122/PINN-PCM-SCI`。沿用 `codex/paper-revision-results`，继承 `51f561023ef7a233ba5639f5e8d22c3e314fe8f2`。
 
-- 发布状态：`PREPARED_PENDING_PUSH`。
+- 发布状态：`PUBLISHED_REMOTE_VERIFIED`。
+- 成果提交：[f6b175cfc232513819ffe540022c3f54b23fe1e1](https://github.com/ghy001122/PINN-PCM-SCI/commit/f6b175cfc232513819ffe540022c3f54b23fe1e1)。
+- 推送后远端分支与本地成果提交一致；本发布核验记录随后单独同步。
 - 科研阶段：`CLOSED`；后续研究执行授权为 `false`。
 - 本轮任务：`PCM-20260925-PHYSICS-OBJECTIVE-FEASIBILITY-01`。
 
@@ -18,4 +20,4 @@ GPU零更新诊断耗时112.589秒，参数更新、电学求解和参考场读�
 
 ## 验证
 
-沿用已完成的实际检查点一致性核验、原判据复核、累计积分恒等式与图件检查记录。发布前检查文档一致性、差异和精确提交范围；推送后记录远端提交身份。无关外部Skill及其他工作区改动保持原状。Git交付不构成新增科学增量或投稿。
+沿用已完成的实际检查点一致性核验、原判据复核、累计积分恒等式与图件检查记录。发布前文档门禁返回 `DOCUMENT_CONSISTENCY_VALID`，差异检查通过，暂存内容与21文件限定清单一致。成果提交已推送，远端提交身份核对一致。无关外部Skill及其他工作区改动保持原状。Git交付不构成新增科学增量或投稿。
