@@ -1,0 +1,37 @@
+{
+  "task_id": "PCM-20260925-PHYSICS-OBJECTIVE-FEASIBILITY-01",
+  "baseline": "51f561023ef7a233ba5639f5e8d22c3e314fe8f2",
+  "states": [
+    "B0",
+    "N-Adam",
+    "N-final",
+    "S-final"
+  ],
+  "D": [
+    1.36,
+    2.02
+  ],
+  "segments": 16,
+  "orders": [
+    8,
+    16,
+    32
+  ],
+  "relative_change_trigger": 0.01,
+  "square_floor": 1e-12,
+  "spatial_seeds": [
+    25092501,
+    25092502
+  ],
+  "cells": 128,
+  "boundary_per_side": 32,
+  "thermal_cells": "reuse theory-diagnostics.json 64 cells",
+  "endpoint_distances": "64 log-spaced values from 1e-9 to D_length/16 plus exact endpoints, same primary spatial sample",
+  "optimizer_updates": 0,
+  "electrical_solves": 0,
+  "reference_fields_access": false,
+  "G": "saved tables only",
+  "device": "cuda:0 on already running V100 instance",
+  "sample_selection": "uniform original physics grid without replacement; seeds frozen before reading new residuals",
+  "scope": "four immutable states; original pools; bounded time and one spatial comparison; fixed-T feasibility; no training or Git publication"
+}

@@ -1,0 +1,980 @@
+{
+  "task_id": "PCM-20260925-PHYSICS-OBJECTIVE-FEASIBILITY-01",
+  "status": "BOUNDED_DIAGNOSTIC_COMPLETE",
+  "route": "A_CONFIRMED_B_CONFIRMED_C_EXACT_CONSTRAINT_SUPPORTED",
+  "original_identity_checks": "PASS",
+  "objective_qualification_mismatch": true,
+  "spatial_sampling_sensitive": true,
+  "temporal_status": "TIME_CHECK_PASSED_ON_SAMPLED_SPATIAL_SUPPORT",
+  "quad_max_relative_change": 0.00028510949969425757,
+  "continuum_certificate": false,
+  "detail": {
+    "fixed-training/B0": {
+      "edge_phase_residual_fraction": 0.22803876910650536,
+      "psi_min": -18.642337853908977,
+      "psi_max": 4.677321758942224,
+      "delta_psi_min": 0.0,
+      "delta_psi_max": 0.0,
+      "phi_t_abs_max": 4.387827452002586,
+      "phase_grad_abs_max": 20.91464241938444,
+      "phase_laplacian_abs_max": 739.5282143721371,
+      "phase_time_hotspot": 1.4134618790839548,
+      "phase_hotspot_xy": [
+        -0.26249999999999996,
+        0.0625
+      ],
+      "boundary_time_hotspot": 1.3878127321846787,
+      "boundary_hotspot_xy": [
+        -0.4445286340896557,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 1.1444181972573574e-14,
+        "right": 4.053829135158968e-15,
+        "bottom": 0.9205865495145998,
+        "top": 3.292578357148286e-15
+      }
+    },
+    "fixed-training/N-Adam": {
+      "edge_phase_residual_fraction": 0.17582233029467867,
+      "psi_min": -18.642337587095216,
+      "psi_max": 5.093662600161564,
+      "delta_psi_min": -0.8706896196651606,
+      "delta_psi_max": 0.6731781586957197,
+      "phi_t_abs_max": 4.633849205723267,
+      "phase_grad_abs_max": 21.353804488371946,
+      "phase_laplacian_abs_max": 776.0738176825336,
+      "phase_time_hotspot": 1.4134618790839548,
+      "phase_hotspot_xy": [
+        -0.26249999999999996,
+        0.0625
+      ],
+      "boundary_time_hotspot": 1.3878127321846787,
+      "boundary_hotspot_xy": [
+        -0.4445286340896557,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 1.2050082932959378e-14,
+        "right": 5.321882921744697e-15,
+        "bottom": 0.9097534280052789,
+        "top": 1.3206341668716689e-15
+      }
+    },
+    "fixed-training/N-final": {
+      "edge_phase_residual_fraction": 0.9622231062305349,
+      "psi_min": -732.6226129316948,
+      "psi_max": 1.038552743642319,
+      "delta_psi_min": -715.4441972613031,
+      "delta_psi_max": -0.00015794742292385422,
+      "phi_t_abs_max": 45.792692616546844,
+      "phase_grad_abs_max": 37.392239610971934,
+      "phase_laplacian_abs_max": 10825.576688119705,
+      "phase_time_hotspot": 1.3878127321846787,
+      "phase_hotspot_xy": [
+        0.36250000000000004,
+        0.1375
+      ],
+      "boundary_time_hotspot": 2.018415889087018,
+      "boundary_hotspot_xy": [
+        0.33835774254557505,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 3.5297471036388915e-15,
+        "right": 1.788555981130389e-15,
+        "bottom": 0.017635982311765934,
+        "top": 4.589010212714136e-16
+      }
+    },
+    "fixed-training/S-final": {
+      "edge_phase_residual_fraction": 0.17569611296636806,
+      "psi_min": -18.642337853908977,
+      "psi_max": 18.91141650291588,
+      "delta_psi_min": -5.564701256349213,
+      "delta_psi_max": 14.234094743973657,
+      "phi_t_abs_max": 6.517890564358604,
+      "phase_grad_abs_max": 37.564276393756494,
+      "phase_laplacian_abs_max": 2956.7870806502733,
+      "phase_time_hotspot": 1.5088976155131673,
+      "phase_hotspot_xy": [
+        -0.4625,
+        0.0125
+      ],
+      "boundary_time_hotspot": 1.3878127321846787,
+      "boundary_hotspot_xy": [
+        -0.25839894959405685,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 1.1444171916821647e-14,
+        "right": 4.053827700402921e-15,
+        "bottom": 0.04547006879437598,
+        "top": 3.2925796586608538e-15
+      }
+    },
+    "independent-D/B0": {
+      "edge_phase_residual_fraction": 0.37599697515213787,
+      "psi_min": -18.66129746108847,
+      "psi_max": 5.375362735338264,
+      "delta_psi_min": 0.0,
+      "delta_psi_max": 0.0,
+      "phi_t_abs_max": 4.531239078312206,
+      "phase_grad_abs_max": 21.390124561029683,
+      "phase_laplacian_abs_max": 904.9905534340111,
+      "phase_time_hotspot": 1.385805498415447,
+      "phase_hotspot_xy": [
+        -0.2875,
+        0.08750000000000001
+      ],
+      "boundary_time_hotspot": 1.4562827556211155,
+      "boundary_hotspot_xy": [
+        -0.46235001678075704,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 8.500191404990847e-15,
+        "right": 5.720937538651311e-15,
+        "bottom": 0.926182475362624,
+        "top": 3.952998011153696e-15
+      }
+    },
+    "independent-D/N-Adam": {
+      "edge_phase_residual_fraction": 0.31048221396618053,
+      "psi_min": -18.6610748855363,
+      "psi_max": 5.734678094305574,
+      "delta_psi_min": -0.8724391156092466,
+      "delta_psi_max": 0.6808325497648546,
+      "phi_t_abs_max": 4.6203625224814004,
+      "phase_grad_abs_max": 22.054183991423987,
+      "phase_laplacian_abs_max": 931.404476333864,
+      "phase_time_hotspot": 1.385805498415447,
+      "phase_hotspot_xy": [
+        -0.2875,
+        0.08750000000000001
+      ],
+      "boundary_time_hotspot": 1.4562827556211155,
+      "boundary_hotspot_xy": [
+        -0.46235001678075704,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 9.063022086424646e-15,
+        "right": 7.531684489277228e-15,
+        "bottom": 0.8916152923162054,
+        "top": 2.118705813111432e-15
+      }
+    },
+    "independent-D/N-final": {
+      "edge_phase_residual_fraction": 0.9823912827603556,
+      "psi_min": -732.8961161922562,
+      "psi_max": 2.8064274200787414,
+      "delta_psi_min": -715.5912940142558,
+      "delta_psi_max": -0.0011019423295017816,
+      "phi_t_abs_max": 51.9125698108957,
+      "phase_grad_abs_max": 21.556543027134627,
+      "phase_laplacian_abs_max": 3898.9055601296504,
+      "phase_time_hotspot": 1.385805498415447,
+      "phase_hotspot_xy": [
+        -0.2875,
+        0.08750000000000001
+      ],
+      "boundary_time_hotspot": 1.3805188667506618,
+      "boundary_hotspot_xy": [
+        -0.2841557646673616,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 8.117982258030957e-16,
+        "right": 6.759539112475604e-16,
+        "bottom": 0.139310820802442,
+        "top": 1.8797738663586337e-15
+      }
+    },
+    "independent-D/S-final": {
+      "edge_phase_residual_fraction": 0.2478866131696481,
+      "psi_min": -18.66129746108839,
+      "psi_max": 25.210254739224148,
+      "delta_psi_min": -10.328152070624755,
+      "delta_psi_max": 21.015616510890453,
+      "phi_t_abs_max": 15.032195730403602,
+      "phase_grad_abs_max": 110.21801544364311,
+      "phase_laplacian_abs_max": 11060.962867053307,
+      "phase_time_hotspot": 1.385805498415447,
+      "phase_hotspot_xy": [
+        -0.2875,
+        0.08750000000000001
+      ],
+      "boundary_time_hotspot": 1.4386119802567507,
+      "boundary_hotspot_xy": [
+        -0.47407561350902316,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 8.500181813280136e-15,
+        "right": 5.720935943760812e-15,
+        "bottom": 6.4755916223330665,
+        "top": 3.952999268904767e-15
+      }
+    },
+    "common-256/B0": {
+      "edge_phase_residual_fraction": 0.4241943463184393,
+      "psi_min": -18.670512855539013,
+      "psi_max": 3.544875901865301,
+      "delta_psi_min": 0.0,
+      "delta_psi_max": 0.0,
+      "phi_t_abs_max": 3.9080385082310256,
+      "phase_grad_abs_max": 15.474182526383299,
+      "phase_laplacian_abs_max": 711.311672783063,
+      "phase_time_hotspot": 1.374816926765178,
+      "phase_hotspot_xy": [
+        -0.2875,
+        0.037500000000000006
+      ],
+      "boundary_time_hotspot": 1.4916313024591954,
+      "boundary_hotspot_xy": [
+        -0.46576263684377706,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 1.1856062422224242e-14,
+        "right": 1.0177846584482417e-14,
+        "bottom": 1.5277892875920418,
+        "top": 3.3377727280718383e-15
+      }
+    },
+    "common-256/N-Adam": {
+      "edge_phase_residual_fraction": 0.3574765529862856,
+      "psi_min": -18.670512854944842,
+      "psi_max": 3.9768656185046587,
+      "delta_psi_min": -0.8557880171421282,
+      "delta_psi_max": 0.655217570757431,
+      "phi_t_abs_max": 4.096916381305298,
+      "phase_grad_abs_max": 15.461472653529624,
+      "phase_laplacian_abs_max": 711.3039321110698,
+      "phase_time_hotspot": 1.378665366984599,
+      "phase_hotspot_xy": [
+        -0.2875,
+        0.037500000000000006
+      ],
+      "boundary_time_hotspot": 1.486521356450751,
+      "boundary_hotspot_xy": [
+        -0.46576263684377706,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 1.2582684433915774e-14,
+        "right": 1.329752534238448e-14,
+        "bottom": 1.3675676794506517,
+        "top": 1.467364747228126e-15
+      }
+    },
+    "common-256/N-final": {
+      "edge_phase_residual_fraction": 0.8560165254382546,
+      "psi_min": -732.7780000891929,
+      "psi_max": 2.425736638797576,
+      "delta_psi_min": -715.7269265779852,
+      "delta_psi_max": -4.1913231285661823e-07,
+      "phi_t_abs_max": 53.38571064570129,
+      "phase_grad_abs_max": 15.533605699451941,
+      "phase_laplacian_abs_max": 5631.857759885298,
+      "phase_time_hotspot": 1.3984786435492493,
+      "phase_hotspot_xy": [
+        0.3125,
+        0.0125
+      ],
+      "boundary_time_hotspot": 1.4001068598508857,
+      "boundary_hotspot_xy": [
+        -0.3386103860543892,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 1.803820758529852e-15,
+        "right": 2.131287899812989e-15,
+        "bottom": 0.12946524690781486,
+        "top": 9.186171968473e-16
+      }
+    },
+    "common-256/S-final": {
+      "edge_phase_residual_fraction": 0.2233672417865662,
+      "psi_min": -18.670512855539013,
+      "psi_max": 13.387327540198289,
+      "delta_psi_min": -3.2890673903582996,
+      "delta_psi_max": 10.648936333056112,
+      "phi_t_abs_max": 8.13079937320404,
+      "phase_grad_abs_max": 17.1150827060572,
+      "phase_laplacian_abs_max": 1455.0373566715373,
+      "phase_time_hotspot": 1.899021356450751,
+      "phase_hotspot_xy": [
+        0.3125,
+        0.0125
+      ],
+      "boundary_time_hotspot": 1.4346186975408046,
+      "boundary_hotspot_xy": [
+        -0.47924290162124095,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 1.185605145362808e-14,
+        "right": 1.017784439707278e-14,
+        "bottom": 12.419067378367687,
+        "top": 3.337774494868921e-15
+      }
+    },
+    "spatial-256/B0": {
+      "edge_phase_residual_fraction": 0.22005638697601101,
+      "psi_min": -18.670512855539013,
+      "psi_max": 4.022761587167475,
+      "delta_psi_min": 0.0,
+      "delta_psi_max": 0.0,
+      "phi_t_abs_max": 4.374027521813665,
+      "phase_grad_abs_max": 20.931889252205167,
+      "phase_laplacian_abs_max": 564.4134973256824,
+      "phase_time_hotspot": 1.3602186057157974,
+      "phase_hotspot_xy": [
+        -0.4125,
+        0.0125
+      ],
+      "boundary_time_hotspot": 1.4238346330154013,
+      "boundary_hotspot_xy": [
+        -0.45998775177747153,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 7.992883539463198e-15,
+        "right": 8.423137870162786e-15,
+        "bottom": 0.7833740941943964,
+        "top": 3.70351108644887e-15
+      }
+    },
+    "spatial-256/N-Adam": {
+      "edge_phase_residual_fraction": 0.16512724716592078,
+      "psi_min": -18.670512854944842,
+      "psi_max": 4.4205123752340665,
+      "delta_psi_min": -0.8365656627966196,
+      "delta_psi_max": 0.5846055107617474,
+      "phi_t_abs_max": 4.7586064496008325,
+      "phase_grad_abs_max": 21.83047781446378,
+      "phase_laplacian_abs_max": 564.5148598946452,
+      "phase_time_hotspot": 1.3602186057157974,
+      "phase_hotspot_xy": [
+        -0.4125,
+        0.0125
+      ],
+      "boundary_time_hotspot": 1.4199153669845987,
+      "boundary_hotspot_xy": [
+        -0.45998775177747153,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 8.483808416244796e-15,
+        "right": 1.1047168373486517e-14,
+        "bottom": 0.718882020876372,
+        "top": 1.7795802056528506e-15
+      }
+    },
+    "spatial-256/N-final": {
+      "edge_phase_residual_fraction": 0.8413443310760826,
+      "psi_min": -733.0434036860357,
+      "psi_max": 1.9367628579802845,
+      "delta_psi_min": -715.8073477804026,
+      "delta_psi_max": -4.1751476231866036e-07,
+      "phi_t_abs_max": 48.657166160147035,
+      "phase_grad_abs_max": 13.367490304653275,
+      "phase_laplacian_abs_max": 773.9911270338126,
+      "phase_time_hotspot": 1.3984786435492493,
+      "phase_hotspot_xy": [
+        -0.4125,
+        0.0125
+      ],
+      "boundary_time_hotspot": 1.3962052159223222,
+      "boundary_hotspot_xy": [
+        -0.3083465481381893,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 1.3051266534067173e-15,
+        "right": 1.7234844397140055e-15,
+        "bottom": 0.1386443565278662,
+        "top": 8.310516550095e-16
+      }
+    },
+    "spatial-256/S-final": {
+      "edge_phase_residual_fraction": 0.11320325733407077,
+      "psi_min": -18.670512855539013,
+      "psi_max": 17.617986110036156,
+      "delta_psi_min": -1.5186478711412992,
+      "delta_psi_max": 14.32799856213024,
+      "phi_t_abs_max": 9.340631675675152,
+      "phase_grad_abs_max": 19.665734345681038,
+      "phase_laplacian_abs_max": 583.8723418429579,
+      "phase_time_hotspot": 1.9110669267651779,
+      "phase_hotspot_xy": [
+        -0.4125,
+        0.0125
+      ],
+      "boundary_time_hotspot": 1.4160669267651778,
+      "boundary_hotspot_xy": [
+        -0.45998775177747153,
+        0.0
+      ],
+      "bc_by_side": {
+        "left": 7.992877541908733e-15,
+        "right": 8.423135815373571e-15,
+        "bottom": 2.3118172796288134,
+        "top": 3.703512250787403e-15
+      }
+    }
+  },
+  "N_actual_sampled_layer": {
+    "peak_time": 1.3984786435492493,
+    "peak_cell": 52,
+    "peak_phi_t": -53.38571064570129,
+    "sampled_halfmax_interval": [
+      1.3933686975408048,
+      1.4040213564507509
+    ],
+    "halfmax_node_count": 8,
+    "max_local_node_gap": 0.003297101501624322,
+    "statement": "Finite sampled layer is resolved by this numerical comparison; no uniform continuum certificate."
+  },
+  "spatial_sensitivity": {
+    "B0": {
+      "phase_raw": 0.3617010258116632,
+      "thermal_raw": 0.9258250512340631,
+      "phase_BC": 0.5127500896599977,
+      "H": 0.5126750747779301
+    },
+    "N-Adam": {
+      "phase_raw": 0.40523416276290164,
+      "thermal_raw": 0.9238243008431184,
+      "phase_BC": 0.5256646758171072,
+      "H": 0.5255846291009338
+    },
+    "N-final": {
+      "phase_raw": 0.4709928692705312,
+      "thermal_raw": 0.9378001482556828,
+      "phase_BC": 1.070900182398648,
+      "H": 0.9754965978465999
+    },
+    "S-final": {
+      "phase_raw": 0.3747158459318307,
+      "thermal_raw": 0.9082473090037719,
+      "phase_BC": 0.18615063508357307,
+      "H": 0.1862491899382006
+    }
+  },
+  "thermal": {
+    "order": 16,
+    "n_times": 256,
+    "C": [
+      0.04005094878858684,
+      0.007737747744199774,
+      -0.03865000835800586,
+      -0.017061582298130568,
+      0.016018821311991005,
+      0.011365892572834602,
+      0.043133663200567385,
+      0.0141397756715049,
+      -0.03633369380768983,
+      -0.03228286036737582,
+      0.09332676240238051,
+      -0.0009238846217848318,
+      0.012179523540015613,
+      -0.006427493379527666,
+      0.022111583444977767,
+      0.008320007669673946,
+      -0.017200367408269857,
+      -0.0105079887912371,
+      0.015468596963104042,
+      0.07610330932097067,
+      0.037007239060515285,
+      -0.027981560318581955,
+      -0.032108278764990617,
+      -0.02466454731250317,
+      0.008190292865709659,
+      0.02289098759667746,
+      -0.008145623383057188,
+      0.0025407972760667086,
+      0.06938225647464591,
+      0.005248031742544179,
+      -0.0327455004619126,
+      0.0028699403859231976,
+      -0.0014756050991262537,
+      0.000866075792490345,
+      -0.008329546655072531,
+      0.0026228861891478827,
+      0.044524846800449575,
+      0.048968046825930533,
+      0.01730101355189234,
+      -0.0004900391553459837,
+      0.042962601073531004,
+      -0.031214015491045355,
+      -0.03979415181819518,
+      -0.023155726028504464,
+      0.009468205153907915,
+      0.06449967507234033,
+      -0.05319493085493032,
+      0.07751344066711152,
+      -0.07390221072301223,
+      0.01044936292027275,
+      -0.06172024097296519,
+      0.018193603800036234,
+      -0.00021031800928381084,
+      -0.0006723422208188418,
+      0.025530191515903272,
+      -0.03315930613034812,
+      -0.020902105578868485,
+      -0.05896760762324685,
+      0.0652722909575021,
+      0.03801258436957422,
+      -0.025279999844466286,
+      0.028922122948750136,
+      0.016672654671566783,
+      -0.03625449486627602
+    ],
+    "endpoint_offset": [
+      -0.8010189757717386,
+      -0.15475495488399857,
+      0.7730001671601171,
+      0.3412316459626117,
+      -0.3203764262398199,
+      -0.2273178514566892,
+      -0.8626732640113466,
+      -0.28279551343010007,
+      0.7266738761537966,
+      0.6456572073475161,
+      -1.8665352480476096,
+      0.018477692435695425,
+      -0.24359047080031349,
+      0.12854986759055415,
+      -0.44223166889955495,
+      -0.16640015339348158,
+      0.3440073481653981,
+      0.21015977582474107,
+      -0.30937193926208,
+      -1.5220661864194143,
+      -0.7401447812103047,
+      0.5596312063716395,
+      0.6421655752998119,
+      0.4932909462500619,
+      -0.16380585731419087,
+      -0.45781975193354535,
+      0.16291246766114847,
+      -0.05081594552133333,
+      -1.3876451294929155,
+      -0.1049606348508835,
+      0.6549100092382523,
+      -0.057398807718463826,
+      0.029512101982525175,
+      -0.017321515849806925,
+      0.1665909331014509,
+      -0.05245772378295867,
+      -0.8904969360089922,
+      -0.9793609365186113,
+      -0.34602027103784666,
+      0.00980078310692087,
+      -0.8592520214706203,
+      0.6242803098209063,
+      0.7958830363639016,
+      0.46311452057008695,
+      -0.18936410307815915,
+      -1.2899935014467996,
+      1.0638986170986071,
+      -1.550268813342237,
+      1.4780442144602424,
+      -0.20898725840545743,
+      1.2344048194593036,
+      -0.3638720760007241,
+      0.00420636018567674,
+      0.013446844416376287,
+      -0.5106038303180677,
+      0.663186122606964,
+      0.4180421115773694,
+      1.1793521524649366,
+      -1.3054458191500415,
+      -0.7602516873914825,
+      0.5055999968893256,
+      -0.5784424589750028,
+      -0.33345309343133717,
+      0.7250898973255208
+    ],
+    "phi_min": -1.8665054492512272,
+    "phi_max": 1.4782309158592515,
+    "outside_time_cell_fraction": 0.5645801725464026,
+    "cells_ever_outside_fraction": 0.78125,
+    "max_undershoot": 1.8665054492512272,
+    "max_overshoot": 0.4782309158592515,
+    "endpoint_identity_max_absolute": 7.105427357601002e-15,
+    "endpoint_absolute_quantiles": [
+      0.00420636018567674,
+      0.1836708105839821,
+      0.4604671362518161,
+      0.7787208844610632,
+      1.273316896850551,
+      1.8665352480476096
+    ],
+    "mean_raw_square_lower_bound": 0.002922264517625866,
+    "base_mean_raw_square": 0.013519655731384405,
+    "lower_to_base": 0.21614932922013302,
+    "C_vs_historical64_max_absolute": 3.001072584885023e-10,
+    "latent_ratio": 0.05,
+    "not_a_phase_solution": true
+  },
+  "thermal_endpoint_change_128_to_256": 7.532807710930456e-12,
+  "tolerated_thermal_feasibility": "UNKNOWN; exact-zero thermal incompatibility does not exclude the original 5-percent tolerance",
+  "P02_closed": false,
+  "P03_closed": false,
+  "new_training_authorized": false,
+  "execution": {
+    "status": "BOUNDED_ZERO_UPDATE_DIAGNOSTIC_COMPLETE",
+    "finished_utc": "2026-09-25T03:13:49.223680+00:00",
+    "seconds": 112.58945538569242,
+    "device": "cuda:0",
+    "gpu": "Tesla V100-PCIE-32GB",
+    "python": "3.11.9",
+    "torch": "2.5.1+cu118",
+    "numpy": "2.1.1",
+    "optimizer_updates": 0,
+    "electrical_solves": 0,
+    "model_parameter_backward_calls": 0,
+    "reference_field_reads": 0,
+    "phase_pde_advances": 0,
+    "state_work": {
+      "B0": {
+        "base_value_positions": 231936,
+        "base_first_derivative_positions": 231680,
+        "base_second_derivative_components": 204800,
+        "correction_value_positions": 215040,
+        "correction_first_derivative_positions": 215040,
+        "correction_second_derivative_components": 204800,
+        "thermal_face_first_derivative_positions": 0,
+        "cache_builds": 4198
+      },
+      "N-Adam": {
+        "base_value_positions": 0,
+        "base_first_derivative_positions": 0,
+        "base_second_derivative_components": 0,
+        "correction_value_positions": 190464,
+        "correction_first_derivative_positions": 190464,
+        "correction_second_derivative_components": 204800,
+        "thermal_face_first_derivative_positions": 0,
+        "cache_builds": 0
+      },
+      "N-final": {
+        "base_value_positions": 0,
+        "base_first_derivative_positions": 0,
+        "base_second_derivative_components": 0,
+        "correction_value_positions": 207104,
+        "correction_first_derivative_positions": 207104,
+        "correction_second_derivative_components": 204800,
+        "thermal_face_first_derivative_positions": 0,
+        "cache_builds": 0
+      },
+      "S-final": {
+        "base_value_positions": 0,
+        "base_first_derivative_positions": 0,
+        "base_second_derivative_components": 0,
+        "correction_value_positions": 190464,
+        "correction_first_derivative_positions": 190464,
+        "correction_second_derivative_components": 204800,
+        "thermal_face_first_derivative_positions": 0,
+        "cache_builds": 0
+      }
+    },
+    "shared_thermal_face_AD_positions": 496190,
+    "maximum_time_nodes": 256,
+    "conditioned_phi_is_not_teacher": true
+  },
+  "compute_closure": {
+    "started_utc": "2026-09-25T03:11:54.417011+00:00",
+    "task": "PCM-20260925-PHYSICS-OBJECTIVE-FEASIBILITY-01",
+    "already_running_instance": true,
+    "diagnostic_exit": 0,
+    "compute_finished_utc": "2026-09-25T03:13:51.160437+00:00",
+    "recovery_sha256": "f8316fd45a814eac5a756024c9086401b957a63fa5d9484435419628dfa59f84",
+    "recovery_verified": true,
+    "recovery_verified_utc": "2026-09-25T03:13:55.523769+00:00",
+    "shutdown_requested_utc": "2026-09-25T03:13:55.524786+00:00",
+    "shutdown_returncode": 0,
+    "instance_shutdown_confirmed": true,
+    "shutdown_probes": [
+      {
+        "time": "2026-09-25T03:14:02.471655+00:00",
+        "returncode": 255
+      }
+    ],
+    "completed_utc": "2026-09-25T03:14:02.471655+00:00"
+  },
+  "optimization_history": {
+    "N": {
+      "adam_record_count": 13,
+      "adam_recorded_steps": [
+        1,
+        50,
+        100,
+        150,
+        200,
+        250,
+        300,
+        350,
+        400,
+        450,
+        500,
+        550,
+        600
+      ],
+      "adam_scope": "pre-update objective on changing sampled pools; not comparable as fixed-pool curve",
+      "adam_records": [
+        {
+          "step": 1,
+          "objective": 0.003576722928566336,
+          "scaled_phase": 0.0008203793446236142,
+          "scaled_thermal": 0.00016777538781794125,
+          "phase_boundary": 0.0035289600991320427
+        },
+        {
+          "step": 50,
+          "objective": 0.032867098337266164,
+          "scaled_phase": 0.0003017783360113759,
+          "scaled_thermal": 0.000180704811622138,
+          "phase_boundary": 0.03300138673836124
+        },
+        {
+          "step": 100,
+          "objective": 0.02998446383278516,
+          "scaled_phase": 0.001034466086380521,
+          "scaled_thermal": 0.0001866139429893938,
+          "phase_boundary": 0.030054913468705223
+        },
+        {
+          "step": 150,
+          "objective": 0.006703365301155486,
+          "scaled_phase": 0.0003863733257081869,
+          "scaled_thermal": 0.00017384931402973392,
+          "phase_boundary": 0.006699966017856288
+        },
+        {
+          "step": 200,
+          "objective": 0.013042711632141225,
+          "scaled_phase": 0.0025122931632539703,
+          "scaled_thermal": 0.00022627814183387188,
+          "phase_boundary": 0.012926194439433469
+        },
+        {
+          "step": 250,
+          "objective": 0.0017273569794396281,
+          "scaled_phase": 0.0006985430315180739,
+          "scaled_thermal": 0.00017895463388910288,
+          "phase_boundary": 0.0016776052569681193
+        },
+        {
+          "step": 300,
+          "objective": 0.0035524813379016616,
+          "scaled_phase": 0.000641118571596086,
+          "scaled_thermal": 0.0001624316390836075,
+          "phase_boundary": 0.0035169027061370023
+        },
+        {
+          "step": 350,
+          "objective": 0.007108448092076601,
+          "scaled_phase": 0.0014101281779519753,
+          "scaled_thermal": 0.000236626811063116,
+          "phase_boundary": 0.00703466484243784
+        },
+        {
+          "step": 400,
+          "objective": 0.029842576024922747,
+          "scaled_phase": 0.00128550019243262,
+          "scaled_thermal": 0.00014888660751087815,
+          "phase_boundary": 0.029898086625037033
+        },
+        {
+          "step": 450,
+          "objective": 0.020636433622711878,
+          "scaled_phase": 0.0009476052924284378,
+          "scaled_thermal": 0.00017693310014688964,
+          "phase_boundary": 0.020665976688344332
+        },
+        {
+          "step": 500,
+          "objective": 0.01221298626828957,
+          "scaled_phase": 0.0009994023578760813,
+          "scaled_thermal": 0.00015749827583587118,
+          "phase_boundary": 0.012197711680144342
+        },
+        {
+          "step": 550,
+          "objective": 0.018149653003364075,
+          "scaled_phase": 0.0005152373607215028,
+          "scaled_thermal": 0.00016776351307707258,
+          "phase_boundary": 0.018196037714755524
+        },
+        {
+          "step": 600,
+          "objective": 0.016373359886677413,
+          "scaled_phase": 0.0008153626417187076,
+          "scaled_thermal": 0.00017477045484199424,
+          "phase_boundary": 0.016390273159791854
+        }
+      ],
+      "lbfgs_accepted_records": 68,
+      "lbfgs_last": {
+        "evaluations": 199,
+        "accepted_steps": 68,
+        "loss": 0.0006184129031671683,
+        "gradient_max": 0.003914908636201114,
+        "wolfe_verified": true
+      },
+      "all_logged_wolfe_verified": true,
+      "terminal": {
+        "evaluations": 200,
+        "accepted_steps": 68,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+        "last_accepted_loss": 0.0006184129031671683,
+        "initial_loss": 0.01845812474223283,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      }
+    },
+    "S": {
+      "adam_record_count": 13,
+      "adam_recorded_steps": [
+        1,
+        50,
+        100,
+        150,
+        200,
+        250,
+        300,
+        350,
+        400,
+        450,
+        500,
+        550,
+        600
+      ],
+      "adam_scope": "pre-update objective on changing sampled pools; not comparable as fixed-pool curve",
+      "adam_records": [
+        {
+          "step": 1,
+          "objective": 0.003576722928566336,
+          "scaled_phase": 0.0008203793446236142,
+          "scaled_thermal": 0.00016777538781794125,
+          "phase_boundary": 0.0035289600991320427
+        },
+        {
+          "step": 50,
+          "objective": 0.028888041305233307,
+          "scaled_phase": 0.0003091093386839083,
+          "scaled_thermal": 0.0001807685588018009,
+          "phase_boundary": 0.02900168496726842
+        },
+        {
+          "step": 100,
+          "objective": 0.023706932564971597,
+          "scaled_phase": 0.001023089723817638,
+          "scaled_thermal": 0.00018651217991208936,
+          "phase_boundary": 0.0237463551339324
+        },
+        {
+          "step": 150,
+          "objective": 0.005709377821073662,
+          "scaled_phase": 0.00037186322317542345,
+          "scaled_thermal": 0.0001737359914645979,
+          "phase_boundary": 0.005701919427803811
+        },
+        {
+          "step": 200,
+          "objective": 0.006038791387673205,
+          "scaled_phase": 0.0024109671475941994,
+          "scaled_thermal": 0.00022596241459822683,
+          "phase_boundary": 0.0058935792714553195
+        },
+        {
+          "step": 250,
+          "objective": 0.0004525700975810248,
+          "scaled_phase": 0.0006679459830194392,
+          "scaled_thermal": 0.00017875585082659324,
+          "phase_boundary": 0.0003984153296032883
+        },
+        {
+          "step": 300,
+          "objective": 0.00043910984249358165,
+          "scaled_phase": 0.0005400608512037275,
+          "scaled_thermal": 0.00016167338618010223,
+          "phase_boundary": 0.0003945514120889395
+        },
+        {
+          "step": 350,
+          "objective": 0.003746182379076332,
+          "scaled_phase": 0.001234312069885248,
+          "scaled_thermal": 0.00023616954924885662,
+          "phase_boundary": 0.00366712264364336
+        },
+        {
+          "step": 400,
+          "objective": 0.022042546946815157,
+          "scaled_phase": 0.001039135472208699,
+          "scaled_thermal": 0.0001484086614221198,
+          "phase_boundary": 0.022075010827526293
+        },
+        {
+          "step": 450,
+          "objective": 0.009019829881422161,
+          "scaled_phase": 0.0007541884095577121,
+          "scaled_thermal": 0.00017542009602092103,
+          "phase_boundary": 0.009003536504624508
+        },
+        {
+          "step": 500,
+          "objective": 0.0035895712659586086,
+          "scaled_phase": 0.000872035185632434,
+          "scaled_thermal": 0.00015725407749646702,
+          "phase_boundary": 0.003539131204306511
+        },
+        {
+          "step": 550,
+          "objective": 0.003443502529222578,
+          "scaled_phase": 0.00021759540703892067,
+          "scaled_thermal": 0.000166761314383763,
+          "phase_boundary": 0.003435318211790074
+        },
+        {
+          "step": 600,
+          "objective": 0.001680744369019688,
+          "scaled_phase": 0.000455857623304521,
+          "scaled_thermal": 0.0001732769112282842,
+          "phase_boundary": 0.0016473141211332321
+        }
+      ],
+      "lbfgs_accepted_records": 98,
+      "lbfgs_last": {
+        "evaluations": 200,
+        "accepted_steps": 98,
+        "loss": 0.000992432952982754,
+        "gradient_max": 0.0007693498653121406,
+        "wolfe_verified": true
+      },
+      "all_logged_wolfe_verified": true,
+      "terminal": {
+        "evaluations": 200,
+        "accepted_steps": 98,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED",
+        "last_accepted_loss": 0.000992432952982754,
+        "initial_loss": 0.00997929881724596,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      }
+    }
+  },
+  "figure_visual_check": {
+    "status": "INSPECTED_CLEAR",
+    "file": "figures/physics-objective-diagnostic.png",
+    "scope": "six panels readable; axis labels and source roles match saved measures"
+  },
+  "local_reporting_failure": {
+    "error": "Matplotlib Axes.set unexpected linthresh argument",
+    "recovery": "set_yscale call fixed; saved records rendered; no additional model computation"
+  }
+}

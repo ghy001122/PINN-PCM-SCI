@@ -1,3 +1,5 @@
+2026-09-25 当前补充：[物理目标、采样与固定温度定向诊断](../paper/observation_preserving_phase_20260924/physics-objective-diagnostic.md)已完成，结果回收且GPU已关闭。当前授权状态见 active_phase.md；下文观测补全训练与发布按各自历史时点读取。
+
 # 当前：观测保持相态补全已收口
 
 2026-09-25 用户另行明确授权将本轮重要结果与研究进程提交云端；精简发布范围和核验状态见[发布记录](notes/2026-09-25-observation-preserving-phase-results-release.md)。本次仅更新交付状态，科研仍为 CLOSED，完整数组外部访问仍未闭合。该授权 supersedes 本任务此前 Git 未授权措辞。

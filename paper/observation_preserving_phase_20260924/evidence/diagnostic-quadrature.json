@@ -1,0 +1,37 @@
+{
+  "128_to_256": {
+    "relative_changes": {
+      "B0": {
+        "phase_raw": 6.234466434046824e-14,
+        "thermal_raw": 1.5635162668478572e-12,
+        "phase_BC": 1.1808646844613774e-16,
+        "H": 7.542933163510091e-16
+      },
+      "N-Adam": {
+        "phase_raw": 5.269800119787664e-14,
+        "thermal_raw": 1.5563714296347166e-12,
+        "phase_BC": 0.0,
+        "H": 8.42166517971786e-16
+      },
+      "N-final": {
+        "phase_raw": 0.0001005746052714438,
+        "thermal_raw": 2.041909353316031e-05,
+        "phase_BC": 0.00028510949969425757,
+        "H": 0.0002549085810164755
+      },
+      "S-final": {
+        "phase_raw": 6.236391766833858e-07,
+        "thermal_raw": 3.443854947330131e-08,
+        "phase_BC": 5.572924876004717e-07,
+        "H": 5.572861344189563e-07
+      }
+    },
+    "ranking_changed": {
+      "phase_raw": false,
+      "thermal_raw": false,
+      "phase_BC": false,
+      "H": false
+    },
+    "requires_higher_order": false
+  }
+}

@@ -1,5 +1,7 @@
 # 2026-09-24观测保持相态补全交付
 
+2026-09-25 后续[定向诊断结果与图表](physics-objective-diagnostic.md)：确认目标取舍、空间采样敏感和严格固定温度约束；没有新训练，旧裁决保持。用户随后授权[诊断成果发布](../../docs/notes/2026-09-25-physics-objective-diagnostic-release.md)。
+
 **VERIFIED：NO_COMPLETION_INCREMENT。** 阶段0—3完成，三臂1800 Adam/600完整L-BFGS；N/G/S对基础的原A_w和独立物理资格均未通过。N集合误差降低34.21%，但相态RMS增加7.95%。不触发阶段4。
 
 先读[完整结果与裁决](results.md)和[可直接入稿的短段落](manuscript-revision-blocks.md)。[方法/信息边界](method-and-information-boundary.md)、[来源](SOURCES.md)、[主稿整合位置](integration-guide.md)、[验证及偏差](validation-and-deviations.md)、[数据与复现](data-and-reproduction.md)说明可复用部分与未闭合问题。

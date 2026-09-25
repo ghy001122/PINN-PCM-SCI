@@ -1,0 +1,415 @@
+{
+  "source": "actual frozen run audit and scalar metrics; no reference arrays",
+  "weighted_D": {
+    "B0": {
+      "phase": 0.0013654014698507933,
+      "thermal": 0.00022446007043123314,
+      "boundary": 0.35622402898563144,
+      "H": 0.35781389052591345
+    },
+    "G": {
+      "phase": 0.0013460009105729664,
+      "thermal": 0.00022441699666122782,
+      "boundary": 0.3411949548224866,
+      "H": 0.34276537272972074
+    },
+    "N": {
+      "phase": 0.014046398713302925,
+      "thermal": 0.00024089949283263108,
+      "boundary": 0.05358108492401743,
+      "H": 0.06786838313015299
+    },
+    "S": {
+      "phase": 0.0020083642422855192,
+      "thermal": 0.0002279628642605112,
+      "boundary": 2.4906121624358013,
+      "H": 2.4928484895423475
+    }
+  },
+  "pairs": {
+    "B0_vs_D_E": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.014496788008565466,
+        "Ephi": -0.012289207211004408,
+        "ET": 0.0028940738150921267,
+        "EI": -0.04058681293087067,
+        "EV": -0.030628585720342077
+      }
+    },
+    "B0_vs_G": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.017352668110879998,
+        "Ephi": 0.013929267785526158,
+        "ET": 0.0,
+        "EI": -0.01963243139109215,
+        "EV": -0.015899835551495923
+      }
+    },
+    "B0_vs_N": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.5199643317150499,
+        "Ephi": -0.07361303723551806,
+        "ET": 0.0,
+        "EI": 0.0,
+        "EV": 0.0
+      }
+    },
+    "B0_vs_S": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.20640121628351998,
+        "Ephi": 0.052904235526629755,
+        "ET": 0.0,
+        "EI": 0.0,
+        "EV": 0.0
+      }
+    },
+    "D_E_vs_B0": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.014710036286204884,
+        "Ephi": 0.012442110889872345,
+        "ET": -0.002885722321683316,
+        "EI": 0.0423037888971045,
+        "EV": 0.031596336831432405
+      }
+    },
+    "D_E_vs_G": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.0323179627746584,
+        "Ephi": 0.026544688169800747,
+        "ET": -0.002885722321683316,
+        "EI": 0.021840831272906695,
+        "EV": 0.015194124720287031
+      }
+    },
+    "D_E_vs_N": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.5423230621883154,
+        "Ephi": -0.062086827917870326,
+        "ET": -0.002885722321683316,
+        "EI": 0.0423037888971045,
+        "EV": 0.031596336831432405
+      }
+    },
+    "D_E_vs_S": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.22414742195077225,
+        "Ephi": 0.06600458678146835,
+        "ET": -0.002885722321683316,
+        "EI": 0.0423037888971045,
+        "EV": 0.031596336831432405
+      }
+    },
+    "G_vs_B0": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.01705668904678073,
+        "Ephi": -0.013737908775380751,
+        "ET": 0.0,
+        "EI": 0.02002558226089586,
+        "EV": 0.016156724819171523
+      }
+    },
+    "G_vs_D_E": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.03130620985010699,
+        "Ephi": -0.02585828797879863,
+        "ET": 0.0028940738150921267,
+        "EI": -0.02137400523102955,
+        "EV": -0.014966718532254526
+      }
+    },
+    "G_vs_N": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.49403877274678837,
+        "Ephi": -0.08633965682067855,
+        "ET": 0.0,
+        "EI": 0.02002558226089586,
+        "EV": 0.016156724819171523
+      }
+    },
+    "G_vs_S": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.1858240058717139,
+        "Ephi": 0.038439533189752906,
+        "ET": 0.0,
+        "EI": 0.02002558226089586,
+        "EV": 0.016156724819171523
+      }
+    },
+    "N_vs_B0": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.3420898246528909,
+        "Ephi": 0.07946251425629454,
+        "ET": 0.0,
+        "EI": 0.0,
+        "EV": 0.0
+      }
+    },
+    "N_vs_D_E": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.35162740899357603,
+        "Ephi": 0.06619677574208714,
+        "ET": 0.0028940738150921267,
+        "EI": -0.04058681293087067,
+        "EV": -0.030628585720342077
+      }
+    },
+    "N_vs_G": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.33067332773332164,
+        "Ephi": 0.09449863668180782,
+        "ET": 0.0,
+        "EI": -0.01963243139109215,
+        "EV": -0.015899835551495923
+      }
+    },
+    "N_vs_S": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.20629636425594367,
+        "Ephi": 0.13657065335267748,
+        "ET": 0.0,
+        "EI": 0.0,
+        "EV": 0.0
+      }
+    },
+    "S_vs_B0": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.1710883688590488,
+        "Ephi": -0.050246008840650835,
+        "ET": 0.0,
+        "EI": 0.0,
+        "EV": 0.0
+      }
+    },
+    "S_vs_D_E": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.18310492505353337,
+        "Ephi": -0.06191773243748653,
+        "ET": 0.0028940738150921267,
+        "EI": -0.04058681293087067,
+        "EV": -0.030628585720342077
+      }
+    },
+    "S_vs_G": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.1567045404306117,
+        "Ephi": -0.037016631167420024,
+        "ET": 0.0,
+        "EI": -0.01963243139109215,
+        "EV": -0.015899835551495923
+      }
+    },
+    "S_vs_N": {
+      "passed": false,
+      "gain": {
+        "S": false,
+        "Ephi": true
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": 0.2599161134779878,
+        "Ephi": -0.12016028475644588,
+        "ET": 0.0,
+        "EI": 0.0,
+        "EV": 0.0
+      }
+    }
+  },
+  "transcribed_inputs_match": true,
+  "passed_A_w": 0,
+  "constructed_example_not_rerun": true,
+  "cumulative_quadrature_polynomial_identity": "passed orders 8,16,32"
+}

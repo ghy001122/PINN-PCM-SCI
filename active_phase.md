@@ -1,4 +1,16 @@
-# 当前：观测保持相态补全已收口
+# 当前：物理目标、采样与固定温度诊断已完成
+
+**VERIFIED：** 四个保存状态的零更新诊断完成，确认标量目标/独立资格不一致及空间采样敏感；固定T的严格热一致性存在范围/端点障碍，原5%容限下能否有效补全仍 **UNKNOWN**。见[诊断结果、图表及唯一后续决策](paper/observation_preserving_phase_20260924/physics-objective-diagnostic.md)。V100诊断112.589秒，零参数更新/电学求解/参考场读取；结果已回收，实例已关闭。
+
+用户2026-09-25指定交接任务已收口；历史 NO_COMPLETION_INCREMENT 与E/F正向结果保持。新训练和条件相态推进未执行或追加授权；用户随后明确授权本轮诊断成果提交云端，见[发布记录](docs/notes/2026-09-25-physics-objective-diagnostic-release.md)。P02/P03仍开放。
+
+- `phase_id`: `PHK_V23_PHYSICS_OBJECTIVE_FEASIBILITY`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `VERIFIED_OBJECTIVE_MISMATCH_SAMPLING_SENSITIVITY_FIXED_T_LIMITS`
+- `next_research_execution_authorized`: `false`
+
+# 历史：观测保持相态补全已收口
 
 2026-09-25 用户另行明确授权将本轮重要结果与研究进程提交云端；精简发布范围和核验状态见[发布记录](docs/notes/2026-09-25-observation-preserving-phase-results-release.md)。本次仅更新交付状态，科研仍为 CLOSED，完整数组外部访问仍未闭合。该授权 supersedes 本任务此前 Git 未授权措辞。
 
@@ -6,11 +18,11 @@
 
 **SUPPORTED_INTERPRETATION：**本轮未建立合格或神经特有补全增量，阶段4条件未触发，停止新增科研计算。理论边界、代码、直接控制及阴性证据可复用；P02方法增量和P03完整数据外部访问仍未补齐。本段supersedes本任务此前准备/执行中状态，下方旧科学结论保留原身份。
 
-- `phase_id`: `PHK_V23_OBSERVATION_PRESERVING_PHASE`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_OBSERVATION_PRESERVING_PHASE_NO_COMPLETION_INCREMENT`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_OBSERVATION_PRESERVING_PHASE`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `VERIFIED_OBSERVATION_PRESERVING_PHASE_NO_COMPLETION_INCREMENT`
+- `historical_next_research_execution_authorized`: `false`
 
 # 历史收口：相对相态残差与时间矩开发
 
