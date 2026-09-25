@@ -1,0 +1,237 @@
+{
+  "status": "ALL_THREE_AND_BASE_RAW_AUDITS_COMPLETE",
+  "arms": {
+    "B0": {
+      "full_raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.046031550961034,
+        "phase_boundary": 0.0436843565450414,
+        "thermal_boundary": 0.0023471944159925793,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.003917731379833812,
+        "phase": 0.001709017793608383,
+        "objective": 0.023203333786298404
+      },
+      "D": {
+        "phase_raw_mean_square": 0.1024051102388095,
+        "thermal_raw_mean_square": 0.010774083380699191,
+        "phase_BC_mean_square_original_denominator": 0.07124480579712629,
+        "scaled_phase": 0.00409620440955238,
+        "scaled_thermal": 0.0006733802112936994
+      },
+      "statistics": {
+        "objectives": {
+          "adam_objective_gradient_evaluations": 0,
+          "complete_objective_gradient_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 2,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 96,
+          "zero_drive_queries": 80,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.0676361858967406e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "coordinate_work": {
+          "base_value_positions": 76992,
+          "base_first_derivative_positions": 25600,
+          "base_second_derivative_components": 40960,
+          "correction_value_positions": 76992,
+          "correction_first_derivative_positions": 25600,
+          "correction_second_derivative_components": 40960,
+          "thermal_face_first_derivative_positions": 76539,
+          "cache_builds": 498
+        }
+      },
+      "reference_read": false
+    },
+    "G": {
+      "full_raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.04449425493107285,
+        "phase_boundary": 0.04214706051508028,
+        "thermal_boundary": 0.0023471944159925793,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.003916087279513778,
+        "phase": 0.001697469383046988,
+        "objective": 0.022434246020955118
+      },
+      "D": {
+        "phase_raw_mean_square": 0.10095006829297248,
+        "thermal_raw_mean_square": 0.010772015839738936,
+        "phase_BC_mean_square_original_denominator": 0.06823899096449731,
+        "scaled_phase": 0.0040380027317189,
+        "scaled_thermal": 0.0006732509899836835
+      },
+      "statistics": {
+        "objectives": {
+          "adam_objective_gradient_evaluations": 0,
+          "complete_objective_gradient_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 2,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 96,
+          "zero_drive_queries": 80,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 2.1094237467877974e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "coordinate_work": {
+          "base_value_positions": 76992,
+          "base_first_derivative_positions": 25600,
+          "base_second_derivative_components": 40960,
+          "correction_value_positions": 76992,
+          "correction_first_derivative_positions": 25600,
+          "correction_second_derivative_components": 40960,
+          "thermal_face_first_derivative_positions": 76539,
+          "cache_builds": 498
+        }
+      },
+      "reference_read": false,
+      "physical_completion": {
+        "phase_10_percent": false,
+        "thermal_noninferior": true,
+        "phase_BC_noninferior": true,
+        "passed": false
+      }
+    },
+    "N": {
+      "full_raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.02815330769381085,
+        "phase_boundary": 0.025806113277818267,
+        "thermal_boundary": 0.0023471944159925793,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.003909352748912903,
+        "phase": 0.0014233700866455022,
+        "objective": 0.014254411274757371
+      },
+      "D": {
+        "phase_raw_mean_square": 1.0534799034977194,
+        "thermal_raw_mean_square": 0.011563175655966292,
+        "phase_BC_mean_square_original_denominator": 0.010716216984803486,
+        "scaled_phase": 0.042139196139908776,
+        "scaled_thermal": 0.0007226984784978932
+      },
+      "statistics": {
+        "objectives": {
+          "adam_objective_gradient_evaluations": 0,
+          "complete_objective_gradient_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 2,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 96,
+          "zero_drive_queries": 80,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.0676361858967406e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "coordinate_work": {
+          "base_value_positions": 76992,
+          "base_first_derivative_positions": 25600,
+          "base_second_derivative_components": 40960,
+          "correction_value_positions": 76992,
+          "correction_first_derivative_positions": 25600,
+          "correction_second_derivative_components": 40960,
+          "thermal_face_first_derivative_positions": 76539,
+          "cache_builds": 498
+        }
+      },
+      "reference_read": false,
+      "physical_completion": {
+        "phase_10_percent": false,
+        "thermal_noninferior": false,
+        "phase_BC_noninferior": true,
+        "passed": false
+      }
+    },
+    "S": {
+      "full_raw": {
+        "observation": 0.0,
+        "obs_V": 0.0,
+        "obs_T": 0.0,
+        "obs_phase": 0.0,
+        "boundary": 0.031111040680139125,
+        "phase_boundary": 0.028763846264146548,
+        "thermal_boundary": 0.0023471944159925793,
+        "initial": 4.2143649318369435e-33,
+        "thermal": 0.0039192694897833644,
+        "phase": 0.0020136994754318452,
+        "objective": 0.015753285972243403
+      },
+      "D": {
+        "phase_raw_mean_square": 0.15062731817141395,
+        "thermal_raw_mean_square": 0.010942217484504538,
+        "phase_BC_mean_square_original_denominator": 0.49812243248716026,
+        "scaled_phase": 0.006025092726856558,
+        "scaled_thermal": 0.0006838885927815336
+      },
+      "statistics": {
+        "objectives": {
+          "adam_objective_gradient_evaluations": 0,
+          "complete_objective_gradient_evaluations": 0,
+          "audit_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 2,
+          "optimizer_updates": 0
+        },
+        "electrical": {
+          "forward_queries": 96,
+          "zero_drive_queries": 80,
+          "factorizations": 16,
+          "forward_solves": 16,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.0676361858967406e-15,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "coordinate_work": {
+          "base_value_positions": 76992,
+          "base_first_derivative_positions": 25600,
+          "base_second_derivative_components": 40960,
+          "correction_value_positions": 76992,
+          "correction_first_derivative_positions": 25600,
+          "correction_second_derivative_components": 40960,
+          "thermal_face_first_derivative_positions": 76539,
+          "cache_builds": 498
+        }
+      },
+      "reference_read": false,
+      "physical_completion": {
+        "phase_10_percent": false,
+        "thermal_noninferior": true,
+        "phase_BC_noninferior": false,
+        "passed": false
+      }
+    }
+  },
+  "electrical_forward_solves": 64,
+  "electrical_adjoint_solves": 0,
+  "D_time_mass": 0.264,
+  "D_pool_time_count": 64,
+  "D_pool_cells_per_time": 256,
+  "reference_read": false
+}

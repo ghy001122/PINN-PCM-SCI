@@ -1,0 +1,38 @@
+{
+  "status": "ALL_THREE_COMPLETE_NATIVE_COMPOSITE_READERS",
+  "objects": [
+    {
+      "id": "shorter/29/G",
+      "role": "G",
+      "protocol": "shorter",
+      "seed": 29,
+      "origin": "observation_preserving_phase_completion",
+      "prediction": "outputs/runs/20260924-observation-preserving-phase/predictions/G/prediction.npz",
+      "readout": "outputs/runs/20260924-observation-preserving-phase/predictions/G/own-readout.npz",
+      "local_base_array_composition_required": false
+    },
+    {
+      "id": "shorter/29/N",
+      "role": "N",
+      "protocol": "shorter",
+      "seed": 29,
+      "origin": "observation_preserving_phase_completion",
+      "prediction": "outputs/runs/20260924-observation-preserving-phase/predictions/N/prediction.npz",
+      "readout": "outputs/runs/20260924-observation-preserving-phase/predictions/N/own-readout.npz",
+      "local_base_array_composition_required": false
+    },
+    {
+      "id": "shorter/29/S",
+      "role": "S",
+      "protocol": "shorter",
+      "seed": 29,
+      "origin": "observation_preserving_phase_completion",
+      "prediction": "outputs/runs/20260924-observation-preserving-phase/predictions/S/prediction.npz",
+      "readout": "outputs/runs/20260924-observation-preserving-phase/predictions/S/own-readout.npz",
+      "local_base_array_composition_required": false
+    }
+  ],
+  "electrical_forward_solves": 282,
+  "electrical_adjoint_solves": 0,
+  "reference_read": false
+}

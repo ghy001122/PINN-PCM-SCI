@@ -1,0 +1,145 @@
+{
+  "status": "ALL_THREE_FIXED_ENDPOINTS_LOCKED",
+  "objects": [
+    {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "G",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 200,
+        "accepted_steps": 95,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+        "last_accepted_loss": 0.2718157279436954,
+        "initial_loss": 0.27548836191247944,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "elapsed_seconds": 1245.312067068182,
+      "statistics": {
+        "objectives": {
+          "adam_objective_gradient_evaluations": 600,
+          "complete_objective_gradient_evaluations": 200,
+          "audit_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 49961,
+          "zero_drive_queries": 36930,
+          "factorizations": 13031,
+          "forward_solves": 13031,
+          "adjoint_solves": 13031,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 3.867568120857235e-15,
+          "max_adjoint_scaled_residual": 8.43769498715119e-15
+        },
+        "coordinate_work": {
+          "base_value_positions": 11252449,
+          "base_first_derivative_positions": 780288,
+          "base_second_derivative_components": 1245184,
+          "correction_value_positions": 51342591,
+          "correction_first_derivative_positions": 3225600,
+          "correction_second_derivative_components": 4505600,
+          "thermal_face_first_derivative_positions": 2442052,
+          "cache_builds": 54489
+        }
+      },
+      "base_exactly_preserved": true,
+      "reference_read": false
+    },
+    {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "N",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 200,
+        "accepted_steps": 68,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+        "last_accepted_loss": 0.0006184129031671683,
+        "initial_loss": 0.01845812474223283,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "elapsed_seconds": 457.82461202703416,
+      "statistics": {
+        "objectives": {
+          "adam_objective_gradient_evaluations": 600,
+          "complete_objective_gradient_evaluations": 200,
+          "audit_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 0,
+          "zero_drive_queries": 0,
+          "factorizations": 0,
+          "forward_solves": 0,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 0.0,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "coordinate_work": {
+          "base_value_positions": 390144,
+          "base_first_derivative_positions": 390144,
+          "base_second_derivative_components": 622592,
+          "correction_value_positions": 1612800,
+          "correction_first_derivative_positions": 1612800,
+          "correction_second_derivative_components": 2252800,
+          "thermal_face_first_derivative_positions": 1221125,
+          "cache_builds": 24160
+        }
+      },
+      "base_exactly_preserved": true,
+      "reference_read": false
+    },
+    {
+      "status": "VALID_FIXED_ENDPOINT",
+      "arm": "S",
+      "adam_updates": 600,
+      "lbfgs": {
+        "evaluations": 200,
+        "accepted_steps": 98,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED",
+        "last_accepted_loss": 0.000992432952982754,
+        "initial_loss": 0.00997929881724596,
+        "history_resumed": false,
+        "first_gate_accepted_evaluation": null
+      },
+      "elapsed_seconds": 370.2835575612262,
+      "statistics": {
+        "objectives": {
+          "adam_objective_gradient_evaluations": 600,
+          "complete_objective_gradient_evaluations": 200,
+          "audit_objective_gradient_evaluations": 0,
+          "audit_objective_evaluations": 0,
+          "optimizer_updates": 600
+        },
+        "electrical": {
+          "forward_queries": 0,
+          "zero_drive_queries": 0,
+          "factorizations": 0,
+          "forward_solves": 0,
+          "adjoint_solves": 0,
+          "zero_adjoint_queries": 0,
+          "max_forward_scaled_residual": 0.0,
+          "max_adjoint_scaled_residual": 0.0
+        },
+        "coordinate_work": {
+          "base_value_positions": 390144,
+          "base_first_derivative_positions": 390144,
+          "base_second_derivative_components": 622592,
+          "correction_value_positions": 1612800,
+          "correction_first_derivative_positions": 1612800,
+          "correction_second_derivative_components": 2252800,
+          "thermal_face_first_derivative_positions": 1221125,
+          "cache_builds": 24160
+        }
+      },
+      "base_exactly_preserved": true,
+      "reference_read": false
+    }
+  ],
+  "created_utc": "2026-09-24T16:31:58.703527+00:00",
+  "reference_read": false
+}

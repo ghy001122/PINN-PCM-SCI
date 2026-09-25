@@ -1,0 +1,49 @@
+{
+  "task_id": "PCM-20260924-OBSERVATION-PRESERVING-PHASE-01",
+  "status": "FIXED_SUPPORT_NECESSARY_CONDITION_PASSED",
+  "base_prediction": "outputs/runs/20260921-b1-second-cycle-phase-gap/predictions/shorter/29/E/coarse/prediction.npz",
+  "reference": "existing original shorter reference",
+  "support": [
+    1.36,
+    2.02
+  ],
+  "window": [
+    1.01,
+    2.02
+  ],
+  "support_is_open": true,
+  "endpoint_nodes_mutable": {
+    "1.36": false,
+    "2.02": false
+  },
+  "window_duration": 1.01,
+  "mutable_time_weight": 0.6575,
+  "metrics": {
+    "Ephi": {
+      "D_unnormalized_contribution": 0.009769718745727095,
+      "fixed_unnormalized_contribution": 0.0007842521008403079,
+      "total_unnormalized_contribution": 0.010553970846567402,
+      "mutable_fraction": 0.925691276559156,
+      "base": 0.10222267892063042,
+      "optimistic_lower_bound": 0.027865520424976104,
+      "required_reduction": 0.010222267892063042,
+      "absolute_tolerance": 1e-06,
+      "necessary_condition_passed": true
+    },
+    "S": {
+      "D_unnormalized_contribution": 0.008167773437500001,
+      "fixed_unnormalized_contribution": 0.0008210937500000003,
+      "total_unnormalized_contribution": 0.0089888671875,
+      "mutable_fraction": 0.9086543684679401,
+      "base": 0.008899868502475247,
+      "optimistic_lower_bound": 0.0008129641089108914,
+      "required_reduction": 0.0008899868502475248,
+      "absolute_tolerance": 1e-08,
+      "necessary_condition_passed": true
+    }
+  },
+  "reference_used_for": "necessary feasibility bound only; no selection of support, weights or endpoint",
+  "model_evaluations": 0,
+  "electrical_solves": 0,
+  "optimizer_updates": 0
+}

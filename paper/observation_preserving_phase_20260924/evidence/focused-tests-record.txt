@@ -1,0 +1,6 @@
+Actual local commands and observed results:
+python -m tests.test_phk_v23_observation_preserving_phase : initial seven real-source tests passed, 17.476 s.
+python -m tests.test_phk_v23_observation_preserving_phase CompletionTests.test_spline_full_objective_and_finite_neural_intervention : one added test passed, 3.684 s; separate raw log saved.
+Two inherited B1 hidden-label / importance-measure tests passed; raw log saved.
+python -m tests.test_phk_v23_lf11_v_continue : two tests passed, 7.503 s; raw log saved.
+These are implementation checks, not scientific optimizer runs.

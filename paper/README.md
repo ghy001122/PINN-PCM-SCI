@@ -4,6 +4,8 @@
 
 Latest: [B1 final sprint revision](paper_revision_20260921/README.md), with an 18-page manuscript and 57-page supplement. The prescribed phase-gap study did not establish the declared incremental benefit; earlier positive results and counterexamples retain their original scope. See the [2026-09-22 publication record](../docs/notes/2026-09-22-b1-sprint-results-release.md) for the curated Git scope and remote verification.
 
+Latest research supplement: [observation-preserving phase completion, 2026-09-24](observation_preserving_phase_20260924/README.md). The three fixed branches did not establish completion increment (`NO_COMPLETION_INCREMENT`); this is an evidence and manuscript module, not a replacement full manuscript. [Publication scope](../docs/notes/2026-09-25-observation-preserving-phase-results-release.md).
+
 | Version | Package | Evidence boundary |
 |---|---|---|
 | V1 | [paper_v1](paper_v1/README.md) | `SYN_EDT_2D_V1_NUMERICAL_CONTRACT_NO_GO`; no driven oracle, event, PINN, GPU, OOD, formal, or experimental evidence. |

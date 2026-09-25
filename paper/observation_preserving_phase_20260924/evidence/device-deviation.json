@@ -1,0 +1,21 @@
+{
+  "task_id": "PCM-20260924-OBSERVATION-PRESERVING-PHASE-01",
+  "status": "EXECUTION_RESOURCE_DEVIATION_PRESERVED_NO_RESTART",
+  "requested_training_device": "cuda:0",
+  "actual_training_device_all_three_arms": "cpu",
+  "cause": "The executed train function called inputs(cfg, arm) without passing device; inputs defaults to CPU.",
+  "discovered_during": "G Adam trajectory, before reference scoring",
+  "remote_evidence": "CUDA availability verified; nvidia-smi during G Adam 500 reported 0 percent utilization and 4 MiB; source default establishes tensor placement.",
+  "decision": "Preserve all updates and complete G, N and S on the same CPU device on the authorized cloud instance. Do not restart, alter weights, sampling, optimizer, precision or budget. Report measured CPU training costs only.",
+  "audit_and_readout_device": "cuda:0 (separate reader forwards device explicitly)",
+  "executed_runner": "outputs/runs/20260924-observation-preserving-phase/executed-source/phk_v23_observation_preserving_phase_run.py",
+  "executed_source_package": "outputs/staging-observation-preserving-phase-20260924.tar.gz",
+  "executed_source_package_sha256": "e0768c8e9802ce2810b45e0bfc1f30f48c555f450c09e4ed17bef12bc3a5e4f0",
+  "local_runner_repaired_for_future_use": true,
+  "local_repair_applied_to_live_remote_process": false,
+  "extra_scientific_updates": 0,
+  "limitations": "No GPU training speed or universal efficiency claim; sequential three-arm schedule and electrical work counts remain reportable. Future GPU execution requires its own authorization and cannot replace these observed endpoints.",
+  "cpu_model": "Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz",
+  "torch_threads": 4,
+  "openblas_threads": 1
+}

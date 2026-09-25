@@ -1,14 +1,28 @@
-# 当前：相对相态残差与时间矩开发已收口
+# 当前：观测保持相态补全已收口
+
+2026-09-25 用户另行明确授权将本轮重要结果与研究进程提交云端；精简发布范围和核验状态见[发布记录](../notes/2026-09-25-observation-preserving-phase-results-release.md)。本次仅更新交付状态，科研仍为 CLOSED，完整数组外部访问仍未闭合。该授权 supersedes 本任务此前 Git 未授权措辞。
+
+**VERIFIED：NO_COMPLETION_INCREMENT。** 阶段0—3完成，N/G/S均未对冻结E29通过原A_w，也均未通过独立D物理资格。N集合误差降低34.209%，但相态RMS增加7.946%；其D内raw相态平方为基点10.287倍、热增加7.324%。不变性质和完整原生数组验证通过，严格双周期仍失败。全部1800 Adam/600完整L-BFGS已完成，实际为同一CPU训练，后续GPU审计/读出；产物已校验回收并关闭实例。见[完整结果](../../paper/observation_preserving_phase_20260924/results.md)和[实验收口](../experiment/2026-09-24-observation-preserving-phase-closeout.md)。
+
+**SUPPORTED_INTERPRETATION：**本轮未建立合格或神经特有补全增量，阶段4条件未触发，停止新增科研计算。理论边界、代码、直接控制及阴性证据可复用；P02方法增量和P03完整数据外部访问仍未补齐。本段supersedes本任务此前准备/执行中状态，下方旧科学结论保留原身份。
+
+- `phase_id`: `PHK_V23_OBSERVATION_PRESERVING_PHASE`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `VERIFIED_OBSERVATION_PRESERVING_PHASE_NO_COMPLETION_INCREMENT`
+- `next_research_execution_authorized`: `false`
+
+# 历史收口：相对相态残差与时间矩开发
 
 **VERIFIED：**八臂数值有效且预算完整；所有候选均未对D和P建立原A_w增量。RIM相对D的W相态RMS改善1.918%、S改善2.202%；相对P分别改善2.264%、2.633%，低于原10%门。电热非劣与窗外代价不是此次失败原因。 全部八臂严格双周期未通过；16/32与补充8/16数值检查通过。GPU结果已回收并关机。完整事实见[本轮结果](../../paper/phase_moments_20260923/results.md)与[实验收口](../../docs/experiment/2026-09-23-relative-phase-moments-closeout.md)。本段supersedes本轮执行中状态；下方旧B1结论与发布记录保留历史身份。
 
 **SUPPORTED_INTERPRETATION：**本轮没有建立独立相态目标或时间矩增量。按预声明条件停止，不追加确认、调权或训练，不自动转为D_E主导窄稿。原论文的相态PDE贡献与严格事件证据仍未补齐；不同科学假设须另立任务。用户已另行授权并完成[精简成果发布](../notes/2026-09-23-phase-moments-results-release.md)，但没有新增科研授权。
 
-- `phase_id`: `PHK_V23_RELATIVE_PHASE_MOMENTS`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_PHASE_MOMENTS_NO_INCREMENT_WITHIN_SCREEN_BUDGET`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_RELATIVE_PHASE_MOMENTS`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `VERIFIED_PHASE_MOMENTS_NO_INCREMENT_WITHIN_SCREEN_BUDGET`
+- `historical_next_research_execution_authorized`: `false`
 
 # 历史收口：B1第二周期相态缺测与论文修订
 

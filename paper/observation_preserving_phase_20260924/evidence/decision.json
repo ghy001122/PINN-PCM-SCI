@@ -1,0 +1,480 @@
+{
+  "task_id": "PCM-20260924-OBSERVATION-PRESERVING-PHASE-01",
+  "route": "NO_COMPLETION_INCREMENT",
+  "status": "VERIFIED_BOUNDED_NEGATIVE_DEVELOPMENT",
+  "independent_base_initializations": 1,
+  "primary_reason": "N reduces thresholded set error but increases raw phase RMS; N, G and S each fail original A_w against B0.",
+  "N_vs_base": {
+    "A_w": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.3420898246528909,
+        "Ephi": 0.07946251425629454,
+        "ET": 0.0,
+        "EI": 0.0,
+        "EV": 0.0
+      }
+    },
+    "full": {
+      "A": {
+        "passed": false,
+        "gain": {
+          "S": true,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.3044672210404179,
+          "Ephi": 0.07732230598310155,
+          "ET": 0.0,
+          "EI": 0.0,
+          "EV": 0.0
+        }
+      },
+      "B": {
+        "passed": false,
+        "gain": {
+          "bottom_current_NRMSE": false,
+          "power_trace_NRMSE": false
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": false,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": 0.0,
+          "power_trace_NRMSE": 0.0,
+          "S": -0.3044672210404179,
+          "Ephi": 0.07732230598310155,
+          "ET": 0.0,
+          "EV": 0.0,
+          "EI": 0.0
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      }
+    },
+    "outside_cost": {
+      "S": false,
+      "Ephi": false,
+      "ET": false,
+      "EI": false,
+      "EV": false,
+      "bottom_current_NRMSE": false,
+      "power_trace_NRMSE": false
+    },
+    "relative_reduction": {
+      "window": {
+        "S": 0.34208982465289084,
+        "Ephi": -0.07946251425629458,
+        "ET": 0.0,
+        "EV": 0.0,
+        "EI": 0.0,
+        "bottom_current_NRMSE": 0.0,
+        "power_trace_NRMSE": 0.0
+      },
+      "outside": {
+        "S": 0.0,
+        "Ephi": 0.0,
+        "ET": 0.0,
+        "EV": 0.0,
+        "EI": 0.0,
+        "bottom_current_NRMSE": 0.0,
+        "power_trace_NRMSE": 0.0
+      },
+      "full": {
+        "S": 0.30446722104041757,
+        "Ephi": -0.07732230598310186,
+        "ET": 0.0,
+        "EV": 0.0,
+        "EI": 0.0,
+        "bottom_current_NRMSE": 0.0,
+        "power_trace_NRMSE": 0.0
+      }
+    }
+  },
+  "N_vs_historical_D_E": {
+    "A_w": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.35162740899357603,
+        "Ephi": 0.06619677574208714,
+        "ET": 0.0028940738150921267,
+        "EI": -0.04058681293087067,
+        "EV": -0.030628585720342077
+      }
+    },
+    "full": {
+      "A": {
+        "passed": false,
+        "gain": {
+          "S": true,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.31598866510716805,
+          "Ephi": 0.06282498718852594,
+          "ET": -0.0030108081432853842,
+          "EI": -0.07349232492496142,
+          "EV": -0.06076635077783336
+        }
+      },
+      "B": {
+        "passed": false,
+        "gain": {
+          "bottom_current_NRMSE": false,
+          "power_trace_NRMSE": false
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": false,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.07349232492521104,
+          "power_trace_NRMSE": -0.07565034258928836,
+          "S": -0.31598866510716805,
+          "Ephi": 0.06282498718852594,
+          "ET": -0.0030108081432853842,
+          "EV": -0.06076635077783336,
+          "EI": -0.07349232492496142
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      }
+    },
+    "outside_cost": {
+      "S": false,
+      "Ephi": false,
+      "ET": false,
+      "EI": false,
+      "EV": false,
+      "bottom_current_NRMSE": false,
+      "power_trace_NRMSE": false
+    },
+    "relative_reduction": {
+      "window": {
+        "S": 0.35162740899357603,
+        "Ephi": -0.06619677574208715,
+        "ET": -0.002894073815092213,
+        "EV": 0.030628585720342105,
+        "EI": 0.04058681293087063,
+        "bottom_current_NRMSE": 0.040586812931160954,
+        "power_trace_NRMSE": 0.039811476883575336
+      },
+      "outside": {
+        "S": 0.03298758714504357,
+        "Ephi": 0.0516730325144108,
+        "ET": 0.006724909556658942,
+        "EV": 0.25384567213005305,
+        "EI": 0.27921525886029097,
+        "bottom_current_NRMSE": 0.27921525886040854,
+        "power_trace_NRMSE": 0.33321251640658156
+      },
+      "full": {
+        "S": 0.31598866510716817,
+        "Ephi": -0.06282498718852603,
+        "ET": 0.0030108081432855816,
+        "EV": 0.06076635077783332,
+        "EI": 0.07349232492496127,
+        "bottom_current_NRMSE": 0.07349232492521085,
+        "power_trace_NRMSE": 0.07565034258928838
+      }
+    }
+  },
+  "N_vs_G": {
+    "A_w": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.33067332773332164,
+        "Ephi": 0.09449863668180782,
+        "ET": 0.0,
+        "EI": -0.01963243139109215,
+        "EV": -0.015899835551495923
+      }
+    },
+    "full": {
+      "A": {
+        "passed": false,
+        "gain": {
+          "S": true,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.29360699204556634,
+          "Ephi": 0.09208501030942168,
+          "ET": 0.0,
+          "EI": -0.015623637189143879,
+          "EV": -0.009018660410301482
+        }
+      },
+      "B": {
+        "passed": false,
+        "gain": {
+          "bottom_current_NRMSE": false,
+          "power_trace_NRMSE": false
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": false,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.0156236371898259,
+          "power_trace_NRMSE": -0.013182833514510267,
+          "S": -0.29360699204556634,
+          "Ephi": 0.09208501030942168,
+          "ET": 0.0,
+          "EV": -0.009018660410301482,
+          "EI": -0.015623637189143879
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      }
+    },
+    "outside_cost": {
+      "S": false,
+      "Ephi": false,
+      "ET": false,
+      "EI": false,
+      "EV": true,
+      "bottom_current_NRMSE": false,
+      "power_trace_NRMSE": false
+    },
+    "relative_reduction": {
+      "window": {
+        "S": 0.3306733277333216,
+        "Ephi": -0.09449863668180791,
+        "ET": 0.0,
+        "EV": 0.015899835551495878,
+        "EI": 0.019632431391092164,
+        "bottom_current_NRMSE": 0.019632431391772842,
+        "power_trace_NRMSE": 0.01754777348389902
+      },
+      "outside": {
+        "S": -0.001761493746697207,
+        "Ephi": -0.005927711949621495,
+        "ET": 0.0,
+        "EV": -0.06489358391770983,
+        "EI": -0.025885986035091513,
+        "bottom_current_NRMSE": -0.02588598603441139,
+        "power_trace_NRMSE": -0.047233513145517936
+      },
+      "full": {
+        "S": 0.2936069920455662,
+        "Ephi": -0.09208501030942173,
+        "ET": 0.0,
+        "EV": 0.009018660410301305,
+        "EI": 0.015623637189143724,
+        "bottom_current_NRMSE": 0.015623637189825734,
+        "power_trace_NRMSE": 0.013182833514510217
+      }
+    }
+  },
+  "N_vs_S": {
+    "A_w": {
+      "passed": false,
+      "gain": {
+        "S": true,
+        "Ephi": false
+      },
+      "noninferior": {
+        "ET": true,
+        "EI": true,
+        "EV": true
+      },
+      "relative_changes": {
+        "S": -0.20629636425594367,
+        "Ephi": 0.13657065335267748,
+        "ET": 0.0,
+        "EI": 0.0,
+        "EV": 0.0
+      }
+    },
+    "full": {
+      "A": {
+        "passed": false,
+        "gain": {
+          "S": true,
+          "Ephi": false
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.17953280408796432,
+          "Ephi": 0.13260039303600257,
+          "ET": 0.0,
+          "EI": 0.0,
+          "EV": 0.0
+        }
+      },
+      "B": {
+        "passed": false,
+        "gain": {
+          "bottom_current_NRMSE": false,
+          "power_trace_NRMSE": false
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": false,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": 0.0,
+          "power_trace_NRMSE": 0.0,
+          "S": -0.17953280408796432,
+          "Ephi": 0.13260039303600257,
+          "ET": 0.0,
+          "EV": 0.0,
+          "EI": 0.0
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      }
+    },
+    "outside_cost": {
+      "S": false,
+      "Ephi": false,
+      "ET": false,
+      "EI": false,
+      "EV": false,
+      "bottom_current_NRMSE": false,
+      "power_trace_NRMSE": false
+    },
+    "relative_reduction": {
+      "window": {
+        "S": 0.20629636425594367,
+        "Ephi": -0.13657065335267737,
+        "ET": 0.0,
+        "EV": 0.0,
+        "EI": 0.0,
+        "bottom_current_NRMSE": 0.0,
+        "power_trace_NRMSE": 0.0
+      },
+      "outside": {
+        "S": 0.0,
+        "Ephi": 0.0,
+        "ET": 0.0,
+        "EV": 0.0,
+        "EI": 0.0,
+        "bottom_current_NRMSE": 0.0,
+        "power_trace_NRMSE": 0.0
+      },
+      "full": {
+        "S": 0.17953280408796435,
+        "Ephi": -0.13260039303600268,
+        "ET": 0.0,
+        "EV": 0.0,
+        "EI": 0.0,
+        "bottom_current_NRMSE": 0.0,
+        "power_trace_NRMSE": 0.0
+      }
+    }
+  },
+  "physical_ratios": {
+    "G": {
+      "phase_raw_mean_square": 0.9857913150775011,
+      "thermal_raw_mean_square": 0.9998081005235249,
+      "phase_BC_mean_square_original_denominator": 0.9578100494625783
+    },
+    "N": {
+      "phase_raw_mean_square": 10.287376294415349,
+      "thermal_raw_mean_square": 1.0732398522811406,
+      "phase_BC_mean_square_original_denominator": 0.15041401074653124
+    },
+    "S": {
+      "phase_raw_mean_square": 1.4708964994046674,
+      "thermal_raw_mean_square": 1.0156054206993186,
+      "phase_BC_mean_square_original_denominator": 6.991701737605864
+    }
+  },
+  "physical_completion": {
+    "G": {
+      "phase_10_percent": false,
+      "thermal_noninferior": true,
+      "phase_BC_noninferior": true,
+      "passed": false
+    },
+    "N": {
+      "phase_10_percent": false,
+      "thermal_noninferior": false,
+      "phase_BC_noninferior": true,
+      "passed": false
+    },
+    "S": {
+      "phase_10_percent": false,
+      "thermal_noninferior": true,
+      "phase_BC_noninferior": false,
+      "passed": false
+    }
+  },
+  "all_ordered_A_w_passes": 0,
+  "all_ordered_full_A_passes": 0,
+  "all_ordered_full_B_passes": 0,
+  "strict_new_endpoint_passes": 0,
+  "N_S_invariance_verified": true,
+  "original_thresholds_unchanged": true,
+  "reference": "original only",
+  "native_reader": [
+    160,
+    80
+  ],
+  "numerical_status": "VALID_FIXED_ENDPOINTS_WITH_RECORDED_CPU_DEVICE_DEVIATION",
+  "training_device": "CPU; device argument omission preserved without restart",
+  "stage_4_triggered": false,
+  "new_scientific_execution_authorized": false,
+  "complete_native_arrays_local": true,
+  "complete_arrays_public": false,
+  "P02_closed": false,
+  "P03_closed": false,
+  "created_utc": "2026-09-24T16:55:24.231402+00:00"
+}

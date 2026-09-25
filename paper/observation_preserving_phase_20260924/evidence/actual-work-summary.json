@@ -1,0 +1,249 @@
+{
+  "adam_updates": 1800,
+  "complete_lbfgs_evaluations": 600,
+  "training_seconds": 2073.4202366564423,
+  "training_device": "CPU (entrypoint deviation)",
+  "training_forward": 13031,
+  "training_adjoint": 13031,
+  "raw_audit_forward": 64,
+  "native_reader_forward": 282,
+  "profile_complete_forward": 100,
+  "profile_complete_adjoint": 100,
+  "profile_partial_local_oom_cost": "not fully instrumented; preserved failure record, no optimizer updates",
+  "theoretical_counterexample_forward": 6,
+  "local_spot_tests": "diagnostic work separately preserved; no science optimizer steps",
+  "results": {
+    "B0": {
+      "S": 0.008899868502475247,
+      "Ephi": 0.10222267892063042,
+      "ET": 0.010955653718149778,
+      "EV": 0.002034643145393356,
+      "EI": 0.010875342126990694,
+      "bottom_current_NRMSE": 0.010875342126985928,
+      "power_trace_NRMSE": 0.010989354654614992
+    },
+    "D_E": {
+      "S": 0.00903078589108911,
+      "Ephi": 0.10349454482722072,
+      "ET": 0.01092403874366668,
+      "EV": 0.0020989304155469694,
+      "EI": 0.011335410304514695,
+      "bottom_current_NRMSE": 0.011335410304513158,
+      "power_trace_NRMSE": 0.01144499688347401
+    },
+    "G": {
+      "S": 0.008748066212871289,
+      "Ephi": 0.10081835308284376,
+      "ET": 0.010955653718149778,
+      "EV": 0.00206751631479869,
+      "EI": 0.011093127185370132,
+      "bottom_current_NRMSE": 0.011093127185372973,
+      "power_trace_NRMSE": 0.011185637691091224
+    },
+    "N": {
+      "S": 0.005855314047029703,
+      "Ephi": 0.11034555000167763,
+      "ET": 0.010955653718149778,
+      "EV": 0.002034643145393356,
+      "EI": 0.010875342126990694,
+      "bottom_current_NRMSE": 0.010875342126985928,
+      "power_trace_NRMSE": 0.010989354654614992
+    },
+    "S": {
+      "S": 0.007377204517326732,
+      "Ephi": 0.09708639729186941,
+      "ET": 0.010955653718149778,
+      "EV": 0.002034643145393356,
+      "EI": 0.010875342126990694,
+      "bottom_current_NRMSE": 0.010875342126985928,
+      "power_trace_NRMSE": 0.010989354654614992
+    }
+  },
+  "physical": {
+    "G": {
+      "phase_10_percent": false,
+      "thermal_noninferior": true,
+      "phase_BC_noninferior": true,
+      "passed": false
+    },
+    "N": {
+      "phase_10_percent": false,
+      "thermal_noninferior": false,
+      "phase_BC_noninferior": true,
+      "passed": false
+    },
+    "S": {
+      "phase_10_percent": false,
+      "thermal_noninferior": true,
+      "phase_BC_noninferior": false,
+      "passed": false
+    }
+  },
+  "cost": [
+    {
+      "arm": "G",
+      "device": "CPU",
+      "torch_threads": 4,
+      "parameters": 1217,
+      "adam_updates": 600,
+      "lbfgs_evaluations": 200,
+      "lbfgs_termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "training_seconds": 1245.312067068182,
+      "forward_solves": 13031,
+      "adjoint_solves": 13031,
+      "electrical_counts": {
+        "forward_queries": 49961,
+        "zero_drive_queries": 36930,
+        "factorizations": 13031,
+        "forward_solves": 13031,
+        "adjoint_solves": 13031,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 3.867568120857235e-15,
+        "max_adjoint_scaled_residual": 8.43769498715119e-15
+      },
+      "coordinate_work": {
+        "base_value_positions": 11252449,
+        "base_first_derivative_positions": 780288,
+        "base_second_derivative_components": 1245184,
+        "correction_value_positions": 51342591,
+        "correction_first_derivative_positions": 3225600,
+        "correction_second_derivative_components": 4505600,
+        "thermal_face_first_derivative_positions": 2442052,
+        "cache_builds": 54489
+      },
+      "objectives": {
+        "adam_objective_gradient_evaluations": 600,
+        "complete_objective_gradient_evaluations": 200,
+        "audit_objective_gradient_evaluations": 0,
+        "audit_objective_evaluations": 0,
+        "optimizer_updates": 600
+      },
+      "profile_seconds": 8.948370232246816,
+      "profile_memory": {
+        "peak_rss_bytes": 531460096
+      },
+      "native_reader_seconds": 57.24730974715203,
+      "native_reader_device": "cuda:0",
+      "native_reader_counts": {
+        "forward_queries": 1001,
+        "zero_drive_queries": 723,
+        "factorizations": 278,
+        "forward_solves": 278,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 3.4936954158453753e-15,
+        "max_adjoint_scaled_residual": 0.0
+      }
+    },
+    {
+      "arm": "N",
+      "device": "CPU",
+      "torch_threads": 4,
+      "parameters": 1217,
+      "adam_updates": 600,
+      "lbfgs_evaluations": 200,
+      "lbfgs_termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "training_seconds": 457.82461202703416,
+      "forward_solves": 0,
+      "adjoint_solves": 0,
+      "electrical_counts": {
+        "forward_queries": 0,
+        "zero_drive_queries": 0,
+        "factorizations": 0,
+        "forward_solves": 0,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 0.0,
+        "max_adjoint_scaled_residual": 0.0
+      },
+      "coordinate_work": {
+        "base_value_positions": 390144,
+        "base_first_derivative_positions": 390144,
+        "base_second_derivative_components": 622592,
+        "correction_value_positions": 1612800,
+        "correction_first_derivative_positions": 1612800,
+        "correction_second_derivative_components": 2252800,
+        "thermal_face_first_derivative_positions": 1221125,
+        "cache_builds": 24160
+      },
+      "objectives": {
+        "adam_objective_gradient_evaluations": 600,
+        "complete_objective_gradient_evaluations": 200,
+        "audit_objective_gradient_evaluations": 0,
+        "audit_objective_evaluations": 0,
+        "optimizer_updates": 600
+      },
+      "profile_seconds": 4.175564397126436,
+      "profile_memory": {
+        "peak_rss_bytes": 488615936
+      },
+      "native_reader_seconds": 6.216177847236395,
+      "native_reader_device": "cuda:0",
+      "native_reader_counts": {
+        "forward_queries": 4,
+        "zero_drive_queries": 2,
+        "factorizations": 2,
+        "forward_solves": 2,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 1.6915140545203716e-15,
+        "max_adjoint_scaled_residual": 0.0
+      }
+    },
+    {
+      "arm": "S",
+      "device": "CPU",
+      "torch_threads": 4,
+      "parameters": 7749,
+      "adam_updates": 600,
+      "lbfgs_evaluations": 200,
+      "lbfgs_termination": "EVALUATION_BUDGET_EXHAUSTED",
+      "training_seconds": 370.2835575612262,
+      "forward_solves": 0,
+      "adjoint_solves": 0,
+      "electrical_counts": {
+        "forward_queries": 0,
+        "zero_drive_queries": 0,
+        "factorizations": 0,
+        "forward_solves": 0,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 0.0,
+        "max_adjoint_scaled_residual": 0.0
+      },
+      "coordinate_work": {
+        "base_value_positions": 390144,
+        "base_first_derivative_positions": 390144,
+        "base_second_derivative_components": 622592,
+        "correction_value_positions": 1612800,
+        "correction_first_derivative_positions": 1612800,
+        "correction_second_derivative_components": 2252800,
+        "thermal_face_first_derivative_positions": 1221125,
+        "cache_builds": 24160
+      },
+      "objectives": {
+        "adam_objective_gradient_evaluations": 600,
+        "complete_objective_gradient_evaluations": 200,
+        "audit_objective_gradient_evaluations": 0,
+        "audit_objective_evaluations": 0,
+        "optimizer_updates": 600
+      },
+      "profile_seconds": 4.027678387239575,
+      "profile_memory": {
+        "peak_rss_bytes": 510332928
+      },
+      "native_reader_seconds": 30.271735502406955,
+      "native_reader_device": "cuda:0",
+      "native_reader_counts": {
+        "forward_queries": 4,
+        "zero_drive_queries": 2,
+        "factorizations": 2,
+        "forward_solves": 2,
+        "adjoint_solves": 0,
+        "zero_adjoint_queries": 0,
+        "max_forward_scaled_residual": 1.6915140545203716e-15,
+        "max_adjoint_scaled_residual": 0.0
+      }
+    }
+  ]
+}

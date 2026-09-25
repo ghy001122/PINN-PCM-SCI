@@ -1,0 +1,18 @@
+{
+  "task_id": "PCM-20260924-OBSERVATION-PRESERVING-PHASE-01",
+  "parent": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/checkpoint.pt",
+  "parent_sha256": "9873df898c44b3568ccd79c367d5c7a0c90b361be03d8f7577e58b63ddeef966",
+  "visible_data": "outputs/runs/20260921-b1-second-cycle-phase-gap/input/visible-fields.npz",
+  "visible_sha256": "4c2316c116d2faf015bc2b823fb826c59b4ea33772ae41c06f7d0d0b5b48f869",
+  "base_config": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/frozen-config.json",
+  "base_calibration": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/calibration.json",
+  "source_commit": "a96303c2110ae1a79984ed7dcddf0c01ab07bec1",
+  "scientific_optimizer_updates": 0,
+  "new_parents": 0,
+  "new_support_or_reference_solves": 0,
+  "created_utc": "2026-09-24T15:36:57.079835+00:00",
+  "runtime": {
+    "python": "3.11.9",
+    "torch": "2.5.1+cpu"
+  }
+}

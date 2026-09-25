@@ -1,0 +1,11 @@
+{
+  "status": "STORAGE_ONLY_SCORING_RECOVERY",
+  "failure": "NumPy allocation failure for 29.6 MiB during D_E phase RMS evaluation after B0 completed",
+  "completed_score_reused": "B0 records and window metrics from partial-results.json",
+  "remedy": "Stream original compressed NPY members to task-local read-only memory maps. Bind this storage adapter only in the isolated imported reader; keep all frozen scoring formulas, field values, labels, weights, event rules and thresholds unchanged.",
+  "extra_training_or_model_inference": 0,
+  "extra_electrical_or_reference_solves": 0,
+  "instance_restarted": false,
+  "unused_fine_readers": "Old B0/D_E fine-reader keys are excluded before scoring; only the authorized common 160x80 reader is evaluated.",
+  "completion_status": "COMPLETE_ALL_SCORES_AND_INVARIANCE_CHECKS_PASSED"
+}

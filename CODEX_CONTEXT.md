@@ -1,4 +1,10 @@
-# 当前：相对相态残差与时间矩开发已收口
+# 当前：观测保持相态补全已收口
+
+2026-09-25 用户另行明确授权将本轮重要结果与研究进程提交云端；精简发布范围和核验状态见[发布记录](docs/notes/2026-09-25-observation-preserving-phase-results-release.md)。本次仅更新交付状态，科研仍为 CLOSED，完整数组外部访问仍未闭合。该授权 supersedes 本任务此前 Git 未授权措辞。
+
+**VERIFIED：NO_COMPLETION_INCREMENT。** N/G/S三臂开发完整，主增量与独立物理资格均未成立；阶段4不触发。N集合改善34.209%但相态RMS恶化7.946%。实际CPU训练/GPU读出已如实记录，产物回收、实例关闭。见[结果与论文模块](paper/observation_preserving_phase_20260924/README.md)、[实验收口](docs/experiment/2026-09-24-observation-preserving-phase-closeout.md)及[当前阶段](active_phase.md)。新科研与完整数据公开仍未授权；旧时间矩与B1结果保持历史身份。
+
+# 历史：相对相态残差与时间矩开发已收口
 
 **VERIFIED — NO_INCREMENT_WITHIN_SCREEN_BUDGET：**八臂单初始化开发完成，RIM相对D/P没有达到原A_w；全部严格双周期未过。数值检查通过，GPU已回收关闭。见[完整结果](paper/phase_moments_20260923/results.md)、[收口](docs/experiment/2026-09-23-relative-phase-moments-closeout.md)及[发布记录](docs/notes/2026-09-23-phase-moments-results-release.md)。精简成果已发布至 `codex/paper-revision-results`；阶段4和新科研仍未授权，旧B1证据按历史身份保留。
 

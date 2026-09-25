@@ -1,0 +1,13 @@
+# Sources and attribution
+
+This section adapts established data-consistency ideas to one fixed synthetic electrical–thermal–phase model. It does not introduce a general null-space projection theorem. No external implementation was copied. The formulas, gates, baseline identity and budgets come from the user-authorized September 24 execution document, preserved under the local run's `input/` directory.
+
+| Source | Verified reading and use | Boundary |
+|---|---|---|
+| Schwab, Antholzer and Haltmeier, *Deep Null Space Learning for Inverse Problems: Convergence Analysis and Rates*, Inverse Problems 35 (2019), 025008. [Formal DOI](https://doi.org/10.1088/1361-6420/aaf14a); [author manuscript, v3](https://arxiv.org/html/1806.06137v3). | Introduction Eq. (1.3), §3.1 Definition 3.2 and §3.2 inspected. The linear construction preserves data through a correction in the kernel of the forward map. | Their phantom-based learned correction and convergence assumptions are not reproduced. Our finite nonlinear observation-equivalent family is not their orthogonal projector. |
+| Boink, Haltmeier, Holman and Schwab, *Data-consistent neural networks for solving nonlinear inverse problems*, Inverse Problems and Imaging 17 (2023), 203–229. [Publisher / DOI](https://www.aimsciences.org/article/doi/10.3934/ipi.2022037). | Publisher metadata and abstract inspected, establishing nonlinear data consistency as prior work. | Full proof text was not available through the inspected publisher HTML route. No theorem or convergence rate is imported. |
+| Project electrical elimination, phase dynamics, B1 observation masks and fixed-array scoring. [Source baseline](https://github.com/ghy001122/PINN-PCM-SCI/tree/ac8c63686398399e0190ede5b78de5a1054be337). | Local original modules and immutable E/29 endpoint inspected; actual-interface tests and fixed-array readers reused. | This source link does not provide the complete local arrays or constitute independent retraining. Local HEAD a96303c contains only a later advisor-document addition relative to this scientific baseline. |
+
+The arXiv manuscript is used for attribution and paraphrase, not redistribution of source assets. B-spline derivatives use the already installed SciPy implementation and were checked against an independent dense basis on small inputs. There was no dependency upgrade or third-party code import. The new neural and spline implementations are project-local code.
+
+The earlier eight-arm relative-residual/time-moment study remains a bounded negative result; its own [method attribution](../phase_moments_20260923/method-and-claim-boundaries.md) and [complete tables](../phase_moments_20260923/README.md) remain authoritative for that distinct experiment.

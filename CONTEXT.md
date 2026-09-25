@@ -1,6 +1,14 @@
 # PINN-PCM-SCI 当前研究设定与论文口径
 
-## 当前研究问题（2026-09-23收口）
+2026-09-25 用户另行明确授权将本轮重要结果与研究进程提交云端；精简发布范围和核验状态见[发布记录](docs/notes/2026-09-25-observation-preserving-phase-results-release.md)。本次仅更新交付状态，科研仍为 CLOSED，完整数组外部访问仍未闭合。该授权 supersedes 本任务此前 Git 未授权措辞。
+
+## 当前研究问题（2026-09-25收口）
+
+**VERIFIED：NO_COMPLETION_INCREMENT。** 冻结E29的观测保持相态补全三臂均未通过原A_w/独立物理资格。N的集合误差降低34.209%，连续相态RMS增加7.946%；D内raw相态平方为基点10.287倍。N/S保持观测预测、T/端口及加热事件，不能据此补齐原严格失败。一个基点、原参考、共同160×80读出，不是formal OOD或材料验证。见[完整结果](paper/observation_preserving_phase_20260924/results.md)。
+
+**SUPPORTED_INTERPRETATION：**观测等价构造成立不等于合格物理/状态补全。当前配方及预算已收口，阶段4不触发；旧全标签配置收益与时间矩阴性均保留。实际CPU训练/GPU审计读出、内存恢复及关机证据已透明记录。P02/P03仍开放，没有新科研授权。以下均为历史口径。
+
+## 历史研究问题（2026-09-23收口）
 
 **VERIFIED：**相对相态残差／时间矩八臂开发按NO_INCREMENT_WITHIN_SCREEN_BUDGET收口。RIM有小幅连续改善，但未对D/P通过原A_w；相对简单L、RI、G的变化不足以建立组合或一阶矩必要性。八个严格双周期均未通过；数值求积检查通过，GPU已关闭。见[完整结果](paper/phase_moments_20260923/results.md)。本轮仅一个初始化、离线相态缺测重建，不是forecasting、formal OOD或材料验证。
 
