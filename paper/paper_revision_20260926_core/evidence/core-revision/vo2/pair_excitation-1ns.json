@@ -1,0 +1,16 @@
+{
+  "case": "pair_excitation",
+  "dt": 1e-09,
+  "system_steps": 20000,
+  "states": 20001,
+  "max_KCL_defect_A": 4.336808689942018e-19,
+  "max_mutual_heat_sum_W": 0.0,
+  "total_Euler_energy_defect_J": 6.40585468325604e-11,
+  "max_corrected_energy_defect_J": 3.689012478651893e-24,
+  "temperature_range_K": [
+    325.0,
+    377.7012495820693
+  ],
+  "clipping_of_evolved_state": false,
+  "initialization_shared": false
+}

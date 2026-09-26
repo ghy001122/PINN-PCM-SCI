@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-09-26T13:52:48.941044+00:00",
+  "documents": {
+    "manuscript": {
+      "pages": 16,
+      "all_pages_visually_reviewed": true,
+      "contact_sheets": [
+        "manuscript-final-contact-1.png",
+        "manuscript-final-contact-2.png",
+        "manuscript-final-contact-3.png"
+      ],
+      "layout_checks": "manuscript-final-layout-check.json"
+    },
+    "supplement": {
+      "pages": 58,
+      "all_pages_visually_reviewed": true,
+      "contact_sheets": [
+        "supplement-final-contact-1.png",
+        "supplement-final-contact-10.png",
+        "supplement-final-contact-2.png",
+        "supplement-final-contact-3.png",
+        "supplement-final-contact-4.png",
+        "supplement-final-contact-5.png",
+        "supplement-final-contact-6.png",
+        "supplement-final-contact-7.png",
+        "supplement-final-contact-8.png",
+        "supplement-final-contact-9.png"
+      ],
+      "layout_checks": "supplement-final-layout-check.json"
+    }
+  },
+  "detail_views": {
+    "manuscript": [
+      10
+    ],
+    "supplement": [
+      1,
+      54,
+      55
+    ],
+    "additional_preliminary_method_views": [
+      45,
+      48
+    ]
+  },
+  "final_supplement_rerender": {
+    "changed_pages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "all_changed_pages_rechecked": true,
+    "remaining_pages_pixel_identical_to_reviewed_render": true
+  },
+  "review_notes": [
+    "All 16 main and 58 supplementary pages viewed as rendered page contacts. New dense coverage table and formulas checked at full page resolution.",
+    "Repeated headers and table continuations are readable. No missing images, replacement characters or content outside PDF page bounds.",
+    "All physical field figures retained. The five standalone VO2 waveform figures and both new F_cov physical panels were visually inspected.",
+    "DOCX visual validation uses its actual Microsoft Word PDF export; no separately authored PDF body. Author metadata placeholders are explicit review requirements."
+  ],
+  "manuscript_abstract_words": 227,
+  "final_files": {
+    "manuscript.docx": "152b0e9d850ba3325a127189fb49e376d0faffa8834d32d7f0e3a0640bf9ccc1",
+    "manuscript.pdf": "d18fa3ac4043fbbaea1bbc2ff77b9057f9a9d3a0d0838698c0b46646449bbefe",
+    "supplement.docx": "5c09b5bab98a73fcdeb652364b51d824e51f8e8710363b6a33286d30132b021d",
+    "supplement.pdf": "94e001233e2f7efc28f5ceb0ccdbc11b3c21bee3cd8acb9ce259b413b46ec60a"
+  }
+}

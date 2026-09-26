@@ -1,0 +1,651 @@
+{
+  "records": [
+    {
+      "archive_member": "data/rate_coding/Ben012_1_325K_1A2_12k_11V_many spikes_3.418us_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.1c group",
+      "possible_panel_by_protocol": "1c",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "protocol metadata compatible; individual figure device IDs not supplied",
+      "sample": "Ben012_1",
+      "devices": [
+        "1A2"
+      ],
+      "source_voltages_V": [
+        11.0
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 125000,
+      "verified_data_rows": 125000,
+      "channels": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH3": 1,
+        "CH4": 2
+      },
+      "channel_meaning": {
+        "CH3": "50ohm_shunt_voltage",
+        "CH4": "device_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/rate_coding/Ben012_1_325K_1A2_12k_13V_many spikes_2.324us_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.1c group",
+      "possible_panel_by_protocol": "1c",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "protocol metadata compatible; individual figure device IDs not supplied",
+      "sample": "Ben012_1",
+      "devices": [
+        "1A2"
+      ],
+      "source_voltages_V": [
+        13.0
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 125000,
+      "verified_data_rows": 125000,
+      "channels": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH3": 1,
+        "CH4": 2
+      },
+      "channel_meaning": {
+        "CH3": "50ohm_shunt_voltage",
+        "CH4": "device_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/rate_coding/Ben012_1_325K_1A2_12k_15V_many spikes_1.828us_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.1c group",
+      "possible_panel_by_protocol": "1c",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "protocol metadata compatible; individual figure device IDs not supplied",
+      "sample": "Ben012_1",
+      "devices": [
+        "1A2"
+      ],
+      "source_voltages_V": [
+        15.0
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 125000,
+      "verified_data_rows": 125000,
+      "channels": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH3": 1,
+        "CH4": 2
+      },
+      "channel_meaning": {
+        "CH3": "50ohm_shunt_voltage",
+        "CH4": "device_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/rate_coding/Ben012_1_325K_1A2_12k_17V_1 spike_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.1c group",
+      "possible_panel_by_protocol": "1c",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "protocol metadata compatible; individual figure device IDs not supplied",
+      "sample": "Ben012_1",
+      "devices": [
+        "1A2"
+      ],
+      "source_voltages_V": [
+        17.0
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 125000,
+      "verified_data_rows": 125000,
+      "channels": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH3": 1,
+        "CH4": 2
+      },
+      "channel_meaning": {
+        "CH3": "50ohm_shunt_voltage",
+        "CH4": "device_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/rate_coding/Ben012_1_325K_1A2_12k_9V_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.1c group",
+      "possible_panel_by_protocol": "1c",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "protocol metadata compatible; individual figure device IDs not supplied",
+      "sample": "Ben012_1",
+      "devices": [
+        "1A2"
+      ],
+      "source_voltages_V": [
+        9.0
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 125000,
+      "verified_data_rows": 125000,
+      "channels": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH3": 1,
+        "CH4": 2
+      },
+      "channel_meaning": {
+        "CH3": "50ohm_shunt_voltage",
+        "CH4": "device_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_2.6V_1E2_12K_2.6V_sync_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.5 group",
+      "possible_panel_by_protocol": "5a",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "protocol metadata compatible; individual figure device IDs not supplied",
+      "sample": "Ben012_1",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "source_voltages_V": [
+        2.6,
+        2.6
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000,
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 31250,
+      "verified_data_rows": 31250,
+      "channels": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH1": 1,
+        "CH2": 2,
+        "CH3": 3,
+        "CH4": 4
+      },
+      "channel_meaning": {
+        "CH1": "device_A_voltage",
+        "CH2": "A_50ohm_shunt_voltage",
+        "CH3": "B_50ohm_shunt_voltage",
+        "CH4": "device_B_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_3.7V_sync_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.5 group",
+      "possible_panel_by_protocol": "5d",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "UNRESOLVED: fixed-4.1-V files name 1E3 first; paper Fig.5d-f labels the fixed-4.1-V device B",
+      "sample": "Ben012_1",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "source_voltages_V": [
+        4.1,
+        3.7
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000,
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 31250,
+      "verified_data_rows": 31250,
+      "channels": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH1": 1,
+        "CH2": 2,
+        "CH3": 3,
+        "CH4": 4
+      },
+      "channel_meaning": {
+        "CH1": "device_A_voltage",
+        "CH2": "A_50ohm_shunt_voltage",
+        "CH3": "B_50ohm_shunt_voltage",
+        "CH4": "device_B_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_3.9V_sync_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.5 group",
+      "possible_panel_by_protocol": "5e",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "UNRESOLVED: fixed-4.1-V files name 1E3 first; paper Fig.5d-f labels the fixed-4.1-V device B",
+      "sample": "Ben012_1",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "source_voltages_V": [
+        4.1,
+        3.9
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000,
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 31250,
+      "verified_data_rows": 31250,
+      "channels": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH1": 1,
+        "CH2": 2,
+        "CH3": 3,
+        "CH4": 4
+      },
+      "channel_meaning": {
+        "CH1": "device_A_voltage",
+        "CH2": "A_50ohm_shunt_voltage",
+        "CH3": "B_50ohm_shunt_voltage",
+        "CH4": "device_B_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "COMPLETE_PROTOCOL_HOLDOUT_NOT_SCORED",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_4V_sync_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.5 group",
+      "possible_panel_by_protocol": "5f",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "UNRESOLVED: fixed-4.1-V files name 1E3 first; paper Fig.5d-f labels the fixed-4.1-V device B",
+      "sample": "Ben012_1",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "source_voltages_V": [
+        4.1,
+        4.0
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000,
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 31250,
+      "verified_data_rows": 31250,
+      "channels": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH1": 1,
+        "CH2": 2,
+        "CH3": 3,
+        "CH4": 4
+      },
+      "channel_meaning": {
+        "CH1": "device_A_voltage",
+        "CH2": "A_50ohm_shunt_voltage",
+        "CH3": "B_50ohm_shunt_voltage",
+        "CH4": "device_B_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4V_1E2_12K_2.6V_sync_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.5 group",
+      "possible_panel_by_protocol": "5b",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "protocol metadata compatible; individual figure device IDs not supplied",
+      "sample": "Ben012_1",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "source_voltages_V": [
+        4.0,
+        2.6
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000,
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 31250,
+      "verified_data_rows": 31250,
+      "channels": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH1": 1,
+        "CH2": 2,
+        "CH3": 3,
+        "CH4": 4
+      },
+      "channel_meaning": {
+        "CH1": "device_A_voltage",
+        "CH2": "A_50ohm_shunt_voltage",
+        "CH3": "B_50ohm_shunt_voltage",
+        "CH4": "device_B_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_5V_1E2_12K_2.6V_sync_000_ALL.csv",
+      "evidence": "EXPERIMENTAL_OSCILLOSCOPE_RECORD",
+      "source_work": "Collective dynamics and long-range order in thermal neuristor networks",
+      "source_version": "arXiv:2312.12899v1, as linked by the pinned repository README",
+      "figure": "Fig.5 group",
+      "possible_panel_by_protocol": "5c",
+      "exact_trace_linkage": "UNKNOWN; repository figure group and protocol metadata only, no waveform matching",
+      "paper_device_label_alignment": "protocol metadata compatible; individual figure device IDs not supplied",
+      "sample": "Ben012_1",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "source_voltages_V": [
+        5.0,
+        2.6
+      ],
+      "source_voltage_provenance": "original filename; not a measured complete Vin waveform",
+      "base_temperature_K": 325,
+      "load_resistance_ohm": [
+        12000,
+        12000
+      ],
+      "capacitance": "UNKNOWN for this record; 145.34619293 pF is an author fitted model parameter, not a per-file measurement",
+      "sample_interval_s": 3.2e-09,
+      "record_length": 31250,
+      "verified_data_rows": 31250,
+      "channels": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "original_header": [
+        "TIME",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4"
+      ],
+      "zero_based_columns": {
+        "TIME": 0,
+        "CH1": 1,
+        "CH2": 2,
+        "CH3": 3,
+        "CH4": 4
+      },
+      "channel_meaning": {
+        "CH1": "device_A_voltage",
+        "CH2": "A_50ohm_shunt_voltage",
+        "CH3": "B_50ohm_shunt_voltage",
+        "CH4": "device_B_voltage"
+      },
+      "raw_vertical_units": "V",
+      "current_branch_relative_to_capacitor": "UNKNOWN",
+      "current_conversion_author_instruction": "shunt voltage / 50 ohm",
+      "device_current_scoring_eligible": false,
+      "data_use_this_round": "header, channel and provenance qualification only; no fitting or waveform scoring",
+      "proposed_split": "development/source qualification",
+      "license": "code MIT retained; experimental-data redistribution rights not established"
+    }
+  ],
+  "code_commit": "217d4f0ed6bfc680240021b07142a121cb4963d1",
+  "field_blindness": "No held-out waveform metric or parameter fit in this round",
+  "publicly_released": false
+}

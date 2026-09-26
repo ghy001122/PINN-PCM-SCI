@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE_NUMERIC_CACHE",
+  "seconds": 114.7937393616885,
+  "work": {
+    "temperature_head_positions": 13906920,
+    "phase_head_positions": 3636080,
+    "first_derivative_positions": 13910120,
+    "second_derivative_components": 19200,
+    "head_query_batches": 16908,
+    "thermal_face_positions": 6891640,
+    "boundary_positions": 253680
+  },
+  "base_model_sha256_before": "8090be284676a9340fb7cd12fca8ba951672ea5649d60dd324aaef9a0f4c48df",
+  "base_model_sha256_after": "8090be284676a9340fb7cd12fca8ba951672ea5649d60dd324aaef9a0f4c48df",
+  "model_parameters_unchanged": true,
+  "reference_read": false,
+  "training_updates": 0,
+  "electrical_forward": 0,
+  "electrical_adjoint": 0,
+  "query_device": "cuda:0",
+  "utc": "2026-09-25T14:26:48.853713+00:00",
+  "mobility_argument_range": [
+    -5.621672968769959,
+    0.7088004494260385
+  ]
+}

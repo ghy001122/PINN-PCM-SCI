@@ -1,0 +1,46 @@
+{
+  "counts": {
+    "E_vs_F_cov_A": 12,
+    "E_vs_F_cov_B": 12,
+    "F_cov_vs_F_A": 0,
+    "F_cov_vs_F_B": 0,
+    "F_cov_strict_passes": 0
+  },
+  "conclusion": "Against the mixed-measure coverage control F_cov, E satisfies the original whole-history A/B criteria in 12/12 and 12/12 reference/reader/initialization conditions. The device-criterion advantage is retained in all twelve sensitivity conditions. F_cov satisfies A/B against its historical F in 0/12 and 0/12 conditions, and satisfies the unchanged strict rule in 0/12. These are twelve sensitivity records for two new continuations, not twelve independent runs.",
+  "costs": [
+    {
+      "seed": 29,
+      "status": "VALID_FIXED_ENDPOINT",
+      "phase": "L-BFGS",
+      "adam_updates": 1500,
+      "lbfgs_charged": 300,
+      "lbfgs_complete": 300,
+      "lbfgs_accepted": 148,
+      "interruptions": 0,
+      "training_seconds": 3710.590010488406,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED",
+      "profile_seconds": 8.753250020556152,
+      "profile_GPU_peak_GiB": 0.09835386276245117,
+      "full_grid_network_evaluations": 31547,
+      "readout_electrical_solves": 556,
+      "discarded_readout_solve_upper_bound": 0
+    },
+    {
+      "seed": 43,
+      "status": "VALID_FIXED_ENDPOINT",
+      "phase": "L-BFGS",
+      "adam_updates": 1500,
+      "lbfgs_charged": 300,
+      "lbfgs_complete": 300,
+      "lbfgs_accepted": 146,
+      "interruptions": 0,
+      "training_seconds": 3742.5178169291466,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK",
+      "profile_seconds": 7.542297933250666,
+      "profile_GPU_peak_GiB": 0.10341072082519531,
+      "full_grid_network_evaluations": 31524,
+      "readout_electrical_solves": 556,
+      "discarded_readout_solve_upper_bound": 1
+    }
+  ]
+}

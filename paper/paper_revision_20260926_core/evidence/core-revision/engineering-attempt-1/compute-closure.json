@@ -1,0 +1,25 @@
+{
+  "recovery_verified": true,
+  "recovery_sha256": "891fe043d6df94473a605eb430a35def3dc496b381da73bb7ba56c3cc08cbf30",
+  "recovered_utc": "2026-09-26T10:38:50.391813+00:00",
+  "remote_persistent_path": "/root/autodl-tmp/pinn-core-20260926",
+  "scientific_status": {
+    "status": "STOPPED",
+    "error": "No module named 'psutil'",
+    "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/pinn-core-20260926/cloud/phk_v23_coverage/run_cloud.py\", line 16, in <module>\n    if not (folder/'zero-update-profile.json').exists():profile(folder,'cuda:0')\n                                                        ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/pinn-core-20260926/pinn_pcm_sci/phk_v23_lf11_coverage.py\", line 151, in profile\n    resources=check_resources(device), device=device,\n              ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/pinn-core-20260926/pinn_pcm_sci/phk_v23_lf11_coverage.py\", line 66, in check_resources\n    status = resource_status(device)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/pinn-core-20260926/pinn_pcm_sci/phk_v23_lf11_coverage.py\", line 47, in resource_status\n    import psutil\nModuleNotFoundError: No module named 'psutil'\n",
+    "reference_read": false,
+    "seconds": 9.540756728500128,
+    "created_utc": "2026-09-26T10:38:41.847345+00:00"
+  },
+  "shutdown_requested_utc": "2026-09-26T10:38:50.391813+00:00",
+  "shutdown_returncode": 0,
+  "shutdown_stderr": "",
+  "instance_shutdown_confirmed": true,
+  "shutdown_probes": [
+    {
+      "returncode": 255,
+      "stderr": "banner exchange: Connection to UNKNOWN port -1: Connection refused"
+    }
+  ],
+  "closed_utc": "2026-09-26T10:38:57.237783+00:00"
+}

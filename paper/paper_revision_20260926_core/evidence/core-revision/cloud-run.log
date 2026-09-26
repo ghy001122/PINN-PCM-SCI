@@ -1,0 +1,139 @@
+{"event": "PROFILE_PASS", "seed": 29, "seconds": 8.753250020556152, "resources": {"rss": 956866560, "host_available": 25917341696, "gpu_allocated": 18318848, "gpu_free": 33531625472}}
+{"event": "PROFILE_PASS", "seed": 43, "seconds": 7.542297933250666, "resources": {"rss": 958529536, "host_available": 25917341696, "gpu_allocated": 18318848, "gpu_free": 33527431168}}
+{"event": "ADAM", "seed": 29, "step": 1, "objective": 1.3099804835569884}
+{"event": "ADAM", "seed": 29, "step": 50, "objective": 5.5247765024887014}
+{"event": "ADAM", "seed": 29, "step": 100, "objective": 5.259798149721272}
+{"event": "ADAM", "seed": 29, "step": 150, "objective": 4.978665851397956}
+{"event": "ADAM", "seed": 29, "step": 200, "objective": 2.042419275486979}
+{"event": "ADAM", "seed": 29, "step": 250, "objective": 1.2335470196573228}
+{"event": "ADAM", "seed": 29, "step": 300, "objective": 2.460797514472024}
+{"event": "ADAM", "seed": 29, "step": 350, "objective": 1.910943092421143}
+{"event": "ADAM", "seed": 29, "step": 400, "objective": 1.660103715739896}
+{"event": "ADAM", "seed": 29, "step": 450, "objective": 1.655905049190387}
+{"event": "ADAM", "seed": 29, "step": 500, "objective": 3.058555931004168}
+{"event": "ADAM", "seed": 29, "step": 550, "objective": 4.041844723349213}
+{"event": "ADAM", "seed": 29, "step": 600, "objective": 2.682795092497542}
+{"event": "ADAM", "seed": 29, "step": 650, "objective": 1.7338625252679551}
+{"event": "ADAM", "seed": 29, "step": 700, "objective": 4.226531461587123}
+{"event": "ADAM", "seed": 29, "step": 750, "objective": 2.98114693632213}
+{"event": "ADAM", "seed": 29, "step": 800, "objective": 1.4379001503297395}
+{"event": "ADAM", "seed": 29, "step": 850, "objective": 2.056766600918151}
+{"event": "ADAM", "seed": 29, "step": 900, "objective": 5.291905784541639}
+{"event": "ADAM", "seed": 29, "step": 950, "objective": 2.8284627748792794}
+{"event": "ADAM", "seed": 29, "step": 1000, "objective": 2.421779870052549}
+{"event": "ADAM", "seed": 29, "step": 1050, "objective": 0.8973821796856737}
+{"event": "ADAM", "seed": 29, "step": 1100, "objective": 3.9436778719044474}
+{"event": "ADAM", "seed": 29, "step": 1150, "objective": 1.541739838335033}
+{"event": "ADAM", "seed": 29, "step": 1200, "objective": 5.1654042548282915}
+{"event": "ADAM", "seed": 29, "step": 1250, "objective": 7.722338489419369}
+{"event": "ADAM", "seed": 29, "step": 1300, "objective": 6.300881944123424}
+{"event": "ADAM", "seed": 29, "step": 1350, "objective": 2.498188464626419}
+{"event": "ADAM", "seed": 29, "step": 1400, "objective": 1.8976816628499371}
+{"event": "ADAM", "seed": 29, "step": 1450, "objective": 1.5262431982928653}
+{"event": "ADAM", "seed": 29, "step": 1500, "objective": 11.599521245923297}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 2, "lbfgs_complete": 2, "lbfgs_accepted": 1, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 20, "lbfgs_complete": 20, "lbfgs_accepted": 10, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 40, "lbfgs_complete": 40, "lbfgs_accepted": 20, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 60, "lbfgs_complete": 60, "lbfgs_accepted": 30, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 80, "lbfgs_complete": 80, "lbfgs_accepted": 40, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 100, "lbfgs_complete": 100, "lbfgs_accepted": 50, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 121, "lbfgs_complete": 121, "lbfgs_accepted": 60, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 142, "lbfgs_complete": 142, "lbfgs_accepted": 70, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 163, "lbfgs_complete": 163, "lbfgs_accepted": 80, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 183, "lbfgs_complete": 183, "lbfgs_accepted": 90, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 204, "lbfgs_complete": 204, "lbfgs_accepted": 100, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 224, "lbfgs_complete": 224, "lbfgs_accepted": 110, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 244, "lbfgs_complete": 244, "lbfgs_accepted": 120, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 264, "lbfgs_complete": 264, "lbfgs_accepted": 130, "interruptions": 0}
+{"event": "LBFGS", "seed": 29, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 284, "lbfgs_complete": 284, "lbfgs_accepted": 140, "interruptions": 0}
+{"event": "ADAM", "seed": 43, "step": 1, "objective": 2.1940682564335594}
+{"event": "ADAM", "seed": 43, "step": 50, "objective": 10.582579855946545}
+{"event": "ADAM", "seed": 43, "step": 100, "objective": 7.157440724131197}
+{"event": "ADAM", "seed": 43, "step": 150, "objective": 8.268609986480675}
+{"event": "ADAM", "seed": 43, "step": 200, "objective": 4.923420086782169}
+{"event": "ADAM", "seed": 43, "step": 250, "objective": 4.666963382235416}
+{"event": "ADAM", "seed": 43, "step": 300, "objective": 1.9171071232588017}
+{"event": "ADAM", "seed": 43, "step": 350, "objective": 8.975717000117516}
+{"event": "ADAM", "seed": 43, "step": 400, "objective": 2.9803410294856327}
+{"event": "ADAM", "seed": 43, "step": 450, "objective": 1.9433144194473164}
+{"event": "ADAM", "seed": 43, "step": 500, "objective": 2.813209813354999}
+{"event": "ADAM", "seed": 43, "step": 550, "objective": 1.7024245309310753}
+{"event": "ADAM", "seed": 43, "step": 600, "objective": 2.596727018438856}
+{"event": "ADAM", "seed": 43, "step": 650, "objective": 2.803946654499624}
+{"event": "ADAM", "seed": 43, "step": 700, "objective": 4.3560892464228225}
+{"event": "ADAM", "seed": 43, "step": 750, "objective": 2.8637491375761894}
+{"event": "ADAM", "seed": 43, "step": 800, "objective": 1.253717972861584}
+{"event": "ADAM", "seed": 43, "step": 850, "objective": 6.531001090741178}
+{"event": "ADAM", "seed": 43, "step": 900, "objective": 7.548459784757839}
+{"event": "ADAM", "seed": 43, "step": 950, "objective": 0.7950952477005606}
+{"event": "ADAM", "seed": 43, "step": 1000, "objective": 11.044841725850926}
+{"event": "ADAM", "seed": 43, "step": 1050, "objective": 2.314911342815289}
+{"event": "ADAM", "seed": 43, "step": 1100, "objective": 13.06069434916336}
+{"event": "ADAM", "seed": 43, "step": 1150, "objective": 3.8436251583198353}
+{"event": "ADAM", "seed": 43, "step": 1200, "objective": 2.4721172197930947}
+{"event": "ADAM", "seed": 43, "step": 1250, "objective": 6.731580013808158}
+{"event": "ADAM", "seed": 43, "step": 1300, "objective": 1.949914343780722}
+{"event": "ADAM", "seed": 43, "step": 1350, "objective": 4.155586150751419}
+{"event": "ADAM", "seed": 43, "step": 1400, "objective": 10.958687126943138}
+{"event": "ADAM", "seed": 43, "step": 1450, "objective": 1.3485680994790497}
+{"event": "ADAM", "seed": 43, "step": 1500, "objective": 4.0381140293554765}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 3, "lbfgs_complete": 3, "lbfgs_accepted": 1, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 21, "lbfgs_complete": 21, "lbfgs_accepted": 10, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 41, "lbfgs_complete": 41, "lbfgs_accepted": 20, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 61, "lbfgs_complete": 61, "lbfgs_accepted": 30, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 81, "lbfgs_complete": 81, "lbfgs_accepted": 40, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 101, "lbfgs_complete": 101, "lbfgs_accepted": 50, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 122, "lbfgs_complete": 122, "lbfgs_accepted": 60, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 143, "lbfgs_complete": 143, "lbfgs_accepted": 70, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 165, "lbfgs_complete": 165, "lbfgs_accepted": 80, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 185, "lbfgs_complete": 185, "lbfgs_accepted": 90, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 205, "lbfgs_complete": 205, "lbfgs_accepted": 100, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 227, "lbfgs_complete": 227, "lbfgs_accepted": 110, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 247, "lbfgs_complete": 247, "lbfgs_accepted": 120, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 267, "lbfgs_complete": 267, "lbfgs_accepted": 130, "interruptions": 0}
+{"event": "LBFGS", "seed": 43, "phase": "L-BFGS", "adam_updates": 1500, "lbfgs_charged": 287, "lbfgs_complete": 287, "lbfgs_accepted": 140, "interruptions": 0}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 0}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 100}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 200}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 300}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 400}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 500}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 600}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 700}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 800}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 900}
+{"event": "READOUT", "seed": 29, "grid": "coarse", "index": 1000}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 0}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 100}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 200}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 300}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 400}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 500}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 600}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 700}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 800}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 900}
+{"event": "READOUT", "seed": 29, "grid": "fine", "index": 1000}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 0}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 100}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 200}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 300}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 400}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 500}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 600}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 700}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 800}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 900}
+{"event": "READOUT", "seed": 43, "grid": "coarse", "index": 1000}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 0}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 100}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 200}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 300}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 400}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 500}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 600}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 700}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 800}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 900}
+{"event": "READOUT", "seed": 43, "grid": "fine", "index": 1000}
+{"status": "COMPLETE", "reference_read": false, "training_resumed": false, "checkpoint_weights_unchanged": true, "seconds": 261.6275658765808, "duration_scope": "readout_resumption_only", "created_utc": "2026-09-26T13:23:32.179559+00:00"}

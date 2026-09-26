@@ -1,0 +1,20 @@
+{
+  "status": "PASS_F_COV_ARRAY_RESCORING",
+  "record_count": 12,
+  "verification": {
+    "checked_values": 4586,
+    "rtol": 2e-10,
+    "atol": 2e-12,
+    "booleans": "exact",
+    "passed": true
+  },
+  "all_required_inputs_present": true,
+  "original_repository_access_denied": true,
+  "seconds": 97.70947460003663,
+  "python": "3.11.9 | packaged by Anaconda, Inc. | (main, Apr 19 2024, 16:40:41) [MSC v.1916 64 bit (AMD64)]",
+  "isolated_python": true,
+  "rtol": 2e-10,
+  "atol": 2e-12,
+  "booleans": "exact",
+  "checkpoint_inference_executed": false
+}

@@ -1,0 +1,67 @@
+{
+  "task_id": "PCM-20260925-INTEGRATED-MANUSCRIPT-FEASIBILITY-02",
+  "execution_authorized": true,
+  "authorization": "User explicitly requested implementation of the complete W+A plan, including R1-R6 and the authorized cloud instance.",
+  "source_commit": "e2e14b5ce390de930646e1cba9a606a8191cff80",
+  "parent": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/checkpoint.pt",
+  "parent_config": "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/frozen-config.json",
+  "run": "outputs/runs/20260925-fixed-temperature-phase-probe",
+  "grid": [
+    80,
+    40
+  ],
+  "interval": [
+    1.36,
+    2.02
+  ],
+  "steps": [
+    1056,
+    2112
+  ],
+  "dt": [
+    0.000625,
+    0.0003125
+  ],
+  "export_every": [
+    4,
+    8
+  ],
+  "export_count": 265,
+  "algorithm": "LOGIT_NEWTON_ANALYTIC_JACOBIAN",
+  "phase_old_and_initial_guess": "own_previous_accepted_phase",
+  "phase_bounds": [
+    0.0,
+    1.0
+  ],
+  "algebraic_tolerance": 1e-10,
+  "maximum_newton_iterations": 30,
+  "minimum_line_search_step": 9.5367431640625e-07,
+  "numerical_qualification": {
+    "phase_RMS": 0.0001,
+    "endpoint_max_absolute": 0.001,
+    "thermal_difference_fraction": 0.01
+  },
+  "thermal_relative_noninferiority": 0.05,
+  "thermal_absolute_floor": 1e-12,
+  "common_derivative": "second_order_central_interior_second_order_one_sided_endpoints",
+  "measure": "full_cell_volume_and_normalized_trapezoid_on_D",
+  "roi": {
+    "abs_x_max": 0.55,
+    "z_min": 0.0,
+    "z_max": 0.55
+  },
+  "reference": "outputs/submission-rescore-20260921/data/shorter/reference-old.npz",
+  "reference_read_gate": "both_trajectories_locked_and_numerical_qualification_passed",
+  "cpu_threads": 4,
+  "coordinate_chunk": 1024,
+  "process_rss_limit_gib": 12,
+  "gpu_allocation_limit_gib": 16,
+  "minimum_container_headroom_gib": 4,
+  "minimum_gpu_headroom_gib": 4,
+  "training_updates": 0,
+  "electrical_solves": 0,
+  "reference_generation": 0,
+  "formal_ood": false,
+  "git_publication_authorized": false,
+  "new_routes_authorized": false
+}

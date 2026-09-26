@@ -1,0 +1,175 @@
+{
+  "moments-metrics": {
+    "source": "paper\\phase_moments_20260923\\all-metrics.csv",
+    "columns": [
+      "arm",
+      "scope",
+      "S",
+      "Ephi",
+      "ET",
+      "bottom_current_NRMSE",
+      "power_trace_NRMSE"
+    ],
+    "complete_csv": "tables/moments-metrics.csv",
+    "display_headers": [
+      "Arm",
+      "Scope",
+      "S",
+      "Phase RMS",
+      "T NRMSE",
+      "I NRMSE",
+      "P NRMSE"
+    ]
+  },
+  "moments-events": {
+    "source": "paper\\phase_moments_20260923\\both-cycle-events.csv",
+    "columns": [
+      "arm",
+      "cycle",
+      "event_time",
+      "timing_absolute",
+      "recall",
+      "precision",
+      "mass_ratio"
+    ],
+    "complete_csv": "tables/moments-events.csv",
+    "display_headers": [
+      "Arm",
+      "Cycle",
+      "Onset",
+      "Time error",
+      "Recall",
+      "Precision",
+      "Mass ratio"
+    ]
+  },
+  "moments-cost": {
+    "source": "paper\\phase_moments_20260923\\actual-training-cost.csv",
+    "columns": [
+      "arm",
+      "adam_updates",
+      "lbfgs_evaluations",
+      "training_seconds",
+      "forward_solves",
+      "adjoint_solves"
+    ],
+    "complete_csv": "tables/moments-cost.csv",
+    "display_headers": [
+      "Arm",
+      "Adam",
+      "L-BFGS eval.",
+      "Train s",
+      "Forward solves",
+      "Adjoint solves"
+    ]
+  },
+  "completion-metrics": {
+    "source": "paper\\observation_preserving_phase_20260924\\all-metrics.csv",
+    "columns": [
+      "arm",
+      "scope",
+      "S",
+      "Ephi",
+      "ET",
+      "bottom_current_NRMSE",
+      "power_trace_NRMSE"
+    ],
+    "complete_csv": "tables/completion-metrics.csv",
+    "display_headers": [
+      "Arm",
+      "Scope",
+      "S",
+      "Phase RMS",
+      "T NRMSE",
+      "I NRMSE",
+      "P NRMSE"
+    ]
+  },
+  "completion-events": {
+    "source": "paper\\observation_preserving_phase_20260924\\both-cycle-events.csv",
+    "columns": [
+      "arm",
+      "cycle",
+      "event_time",
+      "timing_absolute",
+      "recall",
+      "precision",
+      "mass_ratio"
+    ],
+    "complete_csv": "tables/completion-events.csv",
+    "display_headers": [
+      "Arm",
+      "Cycle",
+      "Onset",
+      "Time error",
+      "Recall",
+      "Precision",
+      "Mass ratio"
+    ]
+  },
+  "completion-cost": {
+    "source": "paper\\observation_preserving_phase_20260924\\actual-training-cost.csv",
+    "columns": [
+      "arm",
+      "adam_updates",
+      "lbfgs_evaluations",
+      "training_seconds",
+      "forward_solves",
+      "adjoint_solves"
+    ],
+    "complete_csv": "tables/completion-cost.csv",
+    "display_headers": [
+      "Arm",
+      "Adam",
+      "L-BFGS eval.",
+      "Train s",
+      "Forward solves",
+      "Adjoint solves"
+    ]
+  },
+  "fcov-metrics": {
+    "source": "outputs/runs/20260926-core-revision-vo2-bridge/fcov-scoring/results.json",
+    "complete_csv": "tables/fcov-all-metrics.csv",
+    "columns": [
+      "reference",
+      "reader",
+      "seed",
+      "role",
+      "Ephi",
+      "EI",
+      "power_trace_NRMSE",
+      "local_joule_NRMSE",
+      "strict_device_pass"
+    ],
+    "historical_comparators": "outputs/submission-rescore-20260921/primary-rescore/results.json"
+  },
+  "fcov-decisions": {
+    "source": "outputs/runs/20260926-core-revision-vo2-bridge/fcov-scoring/results.json",
+    "complete_csv": "tables/fcov-all-decisions.csv",
+    "complete_effects": "tables/fcov-all-effects.csv",
+    "displayed_pairs": [
+      "E_vs_F_cov",
+      "F_cov_vs_F"
+    ],
+    "retained_other_pairs": [
+      "F_cov_vs_E",
+      "F_cov_vs_B_E",
+      "F_cov_vs_D_E"
+    ],
+    "thresholds_changed": false
+  },
+  "fcov-work": {
+    "source": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-{29,43}/F_cov/terminal.json",
+    "complete_csv": "tables/fcov-work.csv"
+  },
+  "vo2-summary": {
+    "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/report.json",
+    "other_csvs": [
+      "tables/vo2-waveform-differences.csv",
+      "tables/vo2-end-states.csv",
+      "tables/vo2-peak-records.csv"
+    ],
+    "waveform_alignment": false,
+    "quantitative_reproduction_tolerance": null
+  }
+}

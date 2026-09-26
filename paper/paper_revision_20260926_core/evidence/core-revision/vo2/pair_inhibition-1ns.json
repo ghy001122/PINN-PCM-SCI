@@ -1,0 +1,16 @@
+{
+  "case": "pair_inhibition",
+  "dt": 1e-09,
+  "system_steps": 20000,
+  "states": 20001,
+  "max_KCL_defect_A": 8.673617379884035e-19,
+  "max_mutual_heat_sum_W": 0.0,
+  "total_Euler_energy_defect_J": 5.615537551323512e-11,
+  "max_corrected_energy_defect_J": 3.445135433386549e-24,
+  "temperature_range_K": [
+    325.0,
+    391.0138774706828
+  ],
+  "clipping_of_evolved_state": false,
+  "initialization_shared": false
+}

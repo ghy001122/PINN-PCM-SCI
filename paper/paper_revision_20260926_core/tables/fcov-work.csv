@@ -1,0 +1,3 @@
+seed,status,phase,adam_updates,lbfgs_charged,lbfgs_complete,lbfgs_accepted,interruptions,training_seconds,termination,profile_seconds,profile_GPU_peak_GiB,full_grid_network_evaluations,readout_electrical_solves,discarded_readout_solve_upper_bound
+29,VALID_FIXED_ENDPOINT,L-BFGS,1500,300,300,148,0,3710.590010488406,EVALUATION_BUDGET_EXHAUSTED,8.753250020556152,0.09835386276245117,31547,556,0
+43,VALID_FIXED_ENDPOINT,L-BFGS,1500,300,300,146,0,3742.5178169291466,EVALUATION_BUDGET_EXHAUSTED_TRIAL_ROLLED_BACK,7.542297933250666,0.10341072082519531,31524,556,1

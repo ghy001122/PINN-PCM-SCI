@@ -1,0 +1,345 @@
+{
+  "scope": "Compact execution records only; full arrays and checkpoints remain local",
+  "files": [
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/cloud-finished.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/cloud-finished.json",
+      "sha256": "ba7ab9f47c64be1c9a7fe86e90602a35214a2d04b6c68cb0e3b156a789af9f3c"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/cloud-run.log",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/cloud-run.log",
+      "sha256": "9cda19f92842275bc8724f43f440fd1e7bee8632fe09941aeae140e3771ee207"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/compute-closure.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/compute-closure.json",
+      "sha256": "37801e78b52630f8cc2bdc3475ece13977fe1cc6bb743f7e1a92fd5af0ec2ce5"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/endpoints-locked.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/endpoints-locked.json",
+      "sha256": "28981ad5c126ddaf649c0f235567122fa90c5a4652ff70ff3aff2e72fda55216"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/engineering-attempt-1/cloud-finished.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/engineering-attempt-1/cloud-finished.json",
+      "sha256": "3935a5bd29509a216bbf6cba7245d54f9a15da380d860afa57dd38134bec94bb"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/engineering-attempt-1/cloud-run.log",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/engineering-attempt-1/cloud-run.log",
+      "sha256": "f6900fc58d3b48b167ce44a382932d3eec130b1cd295ee26de21e0fb5251830f"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/engineering-attempt-1/compute-closure.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/engineering-attempt-1/compute-closure.json",
+      "sha256": "a79efeadbf0934607be387c6eff5e330d8b1e4d6e29b61a37d544b36dc972cd8"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/engineering-attempt-1/environment.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/engineering-attempt-1/environment.json",
+      "sha256": "fb6a34552dbf026d82ff32ba370489af1cc14e7d71c81b59fafbbb862d48f07c"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/engineering-attempt-1/remote-engineering-tests.log",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/engineering-attempt-1/remote-engineering-tests.log",
+      "sha256": "960e2c3f04b8a2dec498ee801396e1a7f74ea905d9948a0693532e47881acd1c"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/engineering-attempt-1/runtime-manifest.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/engineering-attempt-1/runtime-manifest.json",
+      "sha256": "e122db713ee746549213f40f01bda564e6eec9a78d499e73aee94dc90ed3c2f2"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/engineering-recovery.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/engineering-recovery.json",
+      "sha256": "f57b7252f373a7387e20ce49b4d49dac29ee3f9af8af1799546a50ca231d6e94"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/environment.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/environment.json",
+      "sha256": "193c1bf82095663fbc42655d90b27ddfd152d198fe29e48ebc5ef2cd1a2fbca2"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/calibration.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/calibration.json",
+      "sha256": "39added7d893ce21bf6b3d6471cd4aee1b21339417661c01167d8ed8729bd331"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/adam-telemetry.jsonl",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/adam-telemetry.jsonl",
+      "sha256": "4917b9bfa68ba892283189ebb088589ade9a3b2631e38081a53814583569b937"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/coarse/network/prediction.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/coarse/network/prediction.json",
+      "sha256": "1b13f0932a48b73a020036e32d61844563fa2e68308697f018b0c7a1cfb39747"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/coarse/progress.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/coarse/progress.json",
+      "sha256": "4e14d693aebed2f70d651fa7e55e420c49d3f855f9dcaee32f36ccc154e0f6b8"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/coarse/projected/prediction.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/coarse/projected/prediction.json",
+      "sha256": "932f9d1a3b9be58ab01ebfc51416d88a0d9b2db80845eb4cc0aeba74e3f643d8"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/coarse/readers-complete.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/coarse/readers-complete.json",
+      "sha256": "0f99d2d2104199d3e82200c380684886cf9db605fe8f0de5dac8eac066c916b1"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/cost-journal.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/cost-journal.json",
+      "sha256": "e77fc7bc88f38233401aa2892315df8203d3255486f4b51dda03ce786893bca2"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/fine/network/prediction.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/fine/network/prediction.json",
+      "sha256": "d0fcf2332e8a4e5f2bd3864c20ff84ba702d88cac9adf0821cf1e615cc596a1b"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/fine/progress.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/fine/progress.json",
+      "sha256": "4e14d693aebed2f70d651fa7e55e420c49d3f855f9dcaee32f36ccc154e0f6b8"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/fine/projected/prediction.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/fine/projected/prediction.json",
+      "sha256": "87a149a9744f20af432cbb6e5ff8be999f11844b51307ee428a760250ae7b87d"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/fine/readers-complete.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/fine/readers-complete.json",
+      "sha256": "0f99d2d2104199d3e82200c380684886cf9db605fe8f0de5dac8eac066c916b1"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/lbfgs-telemetry.jsonl",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/lbfgs-telemetry.jsonl",
+      "sha256": "7f2386fce25880e29f1dc5f52e18dd2513b05bc0a9a364ff68eeebdcf7bd4f35"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/terminal.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/F_cov/terminal.json",
+      "sha256": "46ea055d407fd6cd5013c21b49ed179e73955f8d5e54cc4273217a97bfc59298"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/frozen-config.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/frozen-config.json",
+      "sha256": "ef1babddf6cb68e99e07aad41ab9afa500aaffd895dc0637fa2dd366494dcb43"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/lbfgs-pool.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/lbfgs-pool.json",
+      "sha256": "fd039e5f4bfa6d2c878c5e6192e7d408f831aa4adf9c78677476b3107b6fa0dd"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/zero-update-profile.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-29/zero-update-profile.json",
+      "sha256": "8c603ffcb2e4e42ebc840a0e3fa202770d64628b649d55cc4f0f40a84e9c2397"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/calibration.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/calibration.json",
+      "sha256": "6d21e34558f96772988540d04fe374a81d1f816c0b355eebcd51e290445e13dd"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/adam-telemetry.jsonl",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/adam-telemetry.jsonl",
+      "sha256": "7b74bb94e2730e04a04d876db7b8f919234b36a3f05641354ca207d4c447cf83"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/coarse/network/prediction.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/coarse/network/prediction.json",
+      "sha256": "74be83c0bc77a672e2ebafeef65611042ea59e1af008b4057d3ccac63fdb5437"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/coarse/progress.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/coarse/progress.json",
+      "sha256": "4e14d693aebed2f70d651fa7e55e420c49d3f855f9dcaee32f36ccc154e0f6b8"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/coarse/projected/prediction.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/coarse/projected/prediction.json",
+      "sha256": "fa099114af944541e19974965910388b85439900bda001b8634adbda8a88767a"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/coarse/readers-complete.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/coarse/readers-complete.json",
+      "sha256": "0f99d2d2104199d3e82200c380684886cf9db605fe8f0de5dac8eac066c916b1"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/cost-journal.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/cost-journal.json",
+      "sha256": "e5bbd8b3b2265bfef538994896b58e8f74692ead5714bbb25b1b74fbb365d45f"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/fine/network/prediction.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/fine/network/prediction.json",
+      "sha256": "a8f1a1c0a1bc407b255adf3338a056297bc33f2eed6eb6d3fc2a58f0cb7201ec"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/fine/progress.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/fine/progress.json",
+      "sha256": "d6aa61624c19970f9fa0d3410df86221f819d452817bebe32a88d6dd8f492e08"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/fine/projected/prediction.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/fine/projected/prediction.json",
+      "sha256": "a57b0ac805b9d87008b3f58c79e8cacaaa3ca2ded2a399e5d676f3d19247df03"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/fine/readers-complete.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/fine/readers-complete.json",
+      "sha256": "9e30e79e1cb82d297ee46b8cb09824007ead96818fb06c98dd9e04f256c6a149"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/lbfgs-telemetry.jsonl",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/lbfgs-telemetry.jsonl",
+      "sha256": "78b5343130913d1fc2226f1cef69084032fb1dea0f3531433621d11e09066941"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/terminal.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/F_cov/terminal.json",
+      "sha256": "10aef47c9c615e6f404030f52f0f7b3ce4a62c24d2f36123f6d8d318aaf8c764"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/frozen-config.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/frozen-config.json",
+      "sha256": "60641939a4ebe14a73a6803a683722117b2f013b175c2f8757dde21cabf84376"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/lbfgs-pool.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/lbfgs-pool.json",
+      "sha256": "5b319b3ff16f77bd9fea17e4ceca5b140d1ba97588a75211f5e9199b6a7428e5"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/zero-update-profile.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov/seed-43/zero-update-profile.json",
+      "sha256": "6dfe5dcc097dc29a9f28d32d9145eb53909b3fe9822dc09907fa5eefb64852b3"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/fcov-scoring/results.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/fcov-scoring/results.json",
+      "sha256": "c486cb842a0eb0ae9d038c38ad8539816e95d92ca11cb790db87e7ede36c1600"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/local-extraction.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/local-extraction.json",
+      "sha256": "50820f58098bcb370412a350cec5f8ce2593f9f6fb6404a7236a91f7cdd944b7"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/monitor-transport.jsonl",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/monitor-transport.jsonl",
+      "sha256": "a0b155a69f16c194c675e387a3c01945e2e7b4762e595442d9ab6d67a7607bb8"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/monitoring-recovery.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/monitoring-recovery.json",
+      "sha256": "238e7110ef2f1a402471f073598630aacfe80c9c1a291206cc6ae6f45e1badb6"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/readout-cache-release.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/readout-cache-release.json",
+      "sha256": "db5518cf6b541f9813bbdc7eb3c4f43162541f1a135a66c51ef2ffb066a216e0"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/readout-recovery.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/readout-recovery.json",
+      "sha256": "16a933f0fd540d29cfdc3de1f762b2410aecaccd54599e8de4005d9f4bb29588"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/remote-engineering-tests.log",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/remote-engineering-tests.log",
+      "sha256": "7091b526e64e7d80f639cfc77ce90ceac72cb5fcf5e88bde295cb66449822d45"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/remote-resource-check.txt",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/remote-resource-check.txt",
+      "sha256": "84d5a74fe309a9d9eb1967880c5d593ccba023e8dfcc48bc980189a801660d3b"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/result.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/result.json",
+      "sha256": "0a357d7bad3f74fdc071303f43166f918249ee1c5dcb729c849f9aee2da02cde"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/runtime-manifest.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/runtime-manifest.json",
+      "sha256": "0c51609565e7fd5257a0bc38c7326f25496165c28432203545f1bfd2556f9ae2"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/execution-identity.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/execution-identity.json",
+      "sha256": "cbbc08c941d8170179d7b3215dd45ecc4aa530903b54a917de7e5bbad4101516"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/frozen-config.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/frozen-config.json",
+      "sha256": "e6b76ec3aa2227681e121bfba859c0f8c43b045fd4c232770becd72acfbbba6a"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/functional-interpretation.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/functional-interpretation.json",
+      "sha256": "6c1612f2bb111c99916c1ee261fdb0fbc3c38e8a578042940ca86a5ad6db3643"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-0p5ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/pair_excitation-0p5ns.json",
+      "sha256": "c8f4ed8e6c1ed6765b5c3bd2df8d4e5d8eca0dd9c8324ee280ade3ac41998868"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-1ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/pair_excitation-1ns.json",
+      "sha256": "15e59e481d0c28405fe412bade3f6f62909b57963106ef40e120a4e8470a936e"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-0p5ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/pair_inhibition-0p5ns.json",
+      "sha256": "d9aa912011d61a6631bd09533a02ae8298cc15fbd8f0f34dc8f4214981a0c7e1"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-1ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/pair_inhibition-1ns.json",
+      "sha256": "3dd83d5a5118d5713689868bdc79a2172663530d106f861efe0461ebd8ab81b3"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/report.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/report.json",
+      "sha256": "162af2720048ecadee632f2e193dccf46d8e8f7aea2aee808ab98217f31ee12a"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-0p5ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/single_12p5V-0p5ns.json",
+      "sha256": "c756b3584d64f1b59c4f098a3ee58f32a7f6039dd892e9fe9df78db2763d5be1"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-1ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/single_12p5V-1ns.json",
+      "sha256": "2fba35a3c42fb5877745f4d283bd8ea0487e03474a7d7ecdb8dc57cd37d0b78f"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-0p5ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/single_15p8V-0p5ns.json",
+      "sha256": "ce37fc0f09a75dea7aff673e1e4c1f31419769c4efde07682196881db1a04d9e"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-1ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/single_15p8V-1ns.json",
+      "sha256": "dc9d9a0e2fd134c3a876cfe5f98fcbd8f5d20dd0a08466b4d757cb96f090e024"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-0p5ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/single_9V-0p5ns.json",
+      "sha256": "68b2c8f616c712a131b57811afc475633c0d115144172bc7ea6f753574a8c145"
+    },
+    {
+      "original": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-1ns.json",
+      "published": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/single_9V-1ns.json",
+      "sha256": "de8575d399f7ced2bea05cc80574766067cb406490cd07d4ad26bf3790b6d079"
+    }
+  ]
+}

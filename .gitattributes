@@ -24,3 +24,16 @@ paper/paper_revision_20260925_integrated/evidence/** -whitespace
 paper/paper_revision_20260925_integrated/build/*.log -whitespace
 paper/paper_revision_20260925_integrated/figures/*.svg whitespace=cr-at-eol,-blank-at-eol
 paper/paper_revision_20260925_integrated/conditional-evolution-report.md whitespace=cr-at-eol,-blank-at-eof
+
+# Preserve CORE26 manuscript, upstream MIT sources and captured evidence identities.
+paper/paper_revision_20260926_core/** -text whitespace=cr-at-eol
+paper/paper_revision_20260926_core/evidence/** -whitespace
+paper/paper_revision_20260926_core/literature/** -whitespace
+paper/paper_revision_20260926_core/build/*.log -whitespace
+paper/paper_revision_20260926_core/figures/*.svg whitespace=cr-at-eol,-blank-at-eol
+pinn_pcm_sci/phk_v23_lf11_coverage*.py -text whitespace=cr-at-eol
+pinn_pcm_sci/vo2_author_reproduction.py -text whitespace=cr-at-eol
+cloud/phk_v23_coverage/run_cloud.py -text whitespace=cr-at-eol
+cloud/phk_v23_coverage/resume_readout.py -text whitespace=cr-at-eol
+paper/paper_revision_20260926_core/conditional-evolution-report.md whitespace=cr-at-eol,-blank-at-eof
+paper/paper_revision_20260926_core/vo2-author-reproduction.md whitespace=cr-at-eol,-blank-at-eof

@@ -1,3 +1,18 @@
+<!-- CORE26_CURRENT_BEGIN -->
+# 当前：现稿补强与 VO2 作者模型任务已完成
+
+`PCM-20260926-CORE-REVISION-VO2-BRIDGE-01` 已完成批准范围。两条 F_cov 有效终点、五工况两步长、完整复算包和修订稿已交付，GPU 已回收核验并关闭。E 相对 F_cov 在原 A/B 规则下通过 12/12、12/12 条敏感性条件；F_cov 相对旧 F 分别通过 0/12、0/12。十二条记录对应两个初始化。
+
+见[交付入口](paper/paper_revision_20260926_core/README.md)和[收口记录](docs/experiment/2026-09-26-core-revision-vo2-bridge-closeout.md)。下一研究仅有待审有限观测重构计划，未授权执行。P02、严格双周期、材料／泛化与 P03 外部访问保持开放；用户随后另行授权本轮精简成果云端提交，见[发布记录](docs/notes/2026-09-26-core-revision-vo2-bridge-release.md)；完整数据公开与投稿未执行。本段 supersedes 下方历史任务的当前状态，旧证据保留。
+
+- `phase_id`: `PHK_V23_CORE_REVISION_VO2_BRIDGE`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `VERIFIED_CORE_REVISION_WITH_BOUNDED_INTERPRETATION`
+- `next_research_execution_authorized`: `false`
+
+<!-- CORE26_CURRENT_END -->
+
 <!-- WA_CURRENT_BEGIN -->
 # 当前：连续主稿与固定温度条件演化
 
@@ -5,11 +20,11 @@ W连续主稿与完整补充材料已完成；A两条轨迹完成并通过数值
 
 任务 `PCM-20260925-INTEGRATED-MANUSCRIPT-FEASIBILITY-02` 已由用户明确批准实施 W+A，见[授权与边界](docs/notes/2026-09-25-integrated-manuscript-conditional-ivp-authorized.md)及[本轮交付](paper/paper_revision_20260925_integrated/README.md)。本段 supersedes 下方旧任务的当前状态；旧结果不变。仅至多两条条件轨迹，无新训练、电学求解、参考生成或自动 A+。用户随后明确授权本轮成果提交云端，见[发布记录](docs/notes/2026-09-25-integrated-manuscript-conditional-ivp-release.md)；该授权 supersedes 此前本轮 Git 未授权措辞，不扩展科研授权。
 
-- `phase_id`: `PHK_V23_INTEGRATED_MANUSCRIPT_CONDITIONAL_IVP`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `WA_COMPLETE_CONDITIONAL_IVP_SUPPORTS_FURTHER_WITNESS_SEARCH_ORIGINAL_FAMILY_UNKNOWN`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_INTEGRATED_MANUSCRIPT_CONDITIONAL_IVP`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `WA_COMPLETE_CONDITIONAL_IVP_SUPPORTS_FURTHER_WITNESS_SEARCH_ORIGINAL_FAMILY_UNKNOWN`
+- `historical_next_research_execution_authorized`: `false`
 
 <!-- WA_CURRENT_END -->
 

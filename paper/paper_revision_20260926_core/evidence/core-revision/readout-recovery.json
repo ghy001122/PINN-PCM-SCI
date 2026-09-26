@@ -1,0 +1,39 @@
+{
+  "reason": "Original detached process absent without final exception/completion marker",
+  "observed_storage_failure": "Persistent volume had zero free bytes; file upload failed",
+  "cause": "Storage exhaustion supported; exact process exit signal unavailable",
+  "original_pid": 1403,
+  "original_training_resumed": false,
+  "new_optimizer_updates": 0,
+  "committed_readout_times": 139,
+  "pending_readout_index": 139,
+  "discarded_powered_solve_upper_bound": 1,
+  "pre_resume_saved_rows_finite": true,
+  "cgroup_evidence": {
+    "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0\n",
+    "memory.failcnt": "0\n",
+    "memory.max_usage_in_bytes": "7085568000\n",
+    "memory.limit_in_bytes": "26843545600\n"
+  },
+  "resume_source_sha256": "4ee1bc51bad06506277fb69fe3c413facd728c4e45a9522c4b28056b32b86248",
+  "created_utc": "2026-09-26T13:19:07.765751+00:00",
+  "resume_started_utc": "2026-09-26T13:19:10.551574+00:00",
+  "checkpoint_sha256": {
+    "29": "472415104426a54e9ff0bbcb290f76373dbe2728e85f53e77af4e3e1887cc61f",
+    "43": "6005c40fa1a638af159f4d1b4800d3c970188b6d9bce1ddf31f7f5988cc673d3"
+  },
+  "resources_before": {
+    "rss": 390856704,
+    "host_available": 23796969472,
+    "gpu_allocated": 0,
+    "gpu_free": 33745534976
+  },
+  "resume_result": {
+    "status": "COMPLETE",
+    "reference_read": false,
+    "training_resumed": false,
+    "checkpoint_weights_unchanged": true
+  },
+  "readout_resume_seconds": 261.6275658765808,
+  "resume_finished_utc": "2026-09-26T13:23:32.178904+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "FIXED_OWN_PREDICTION",
+  "role": "F_cov",
+  "seed": 43,
+  "grid": [
+    240,
+    120
+  ],
+  "times": 1001,
+  "readout": "projected",
+  "same_temperature_phase": true,
+  "reference_read": false,
+  "electrical_counts": {
+    "forward_solves": 278,
+    "adjoint_solves": 0
+  },
+  "device": "cuda:0"
+}

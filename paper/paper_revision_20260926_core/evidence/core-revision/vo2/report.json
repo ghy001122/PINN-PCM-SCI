@@ -1,0 +1,2500 @@
+{
+  "status": "COMPLETE",
+  "claim_status": "VERIFIED",
+  "step_records": [
+    {
+      "case": "single_9V",
+      "dt": 1e-09,
+      "system_steps": 20000,
+      "states": 20001,
+      "max_KCL_defect_A": 1.0842021724855044e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 1.335433688276705e-12,
+      "max_corrected_energy_defect_J": 2.2396184633038418e-24,
+      "temperature_range_K": [
+        325.0,
+        331.10769340790256
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    },
+    {
+      "case": "single_9V",
+      "dt": 5e-10,
+      "system_steps": 40000,
+      "states": 40001,
+      "max_KCL_defect_A": 1.0842021724855044e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 6.67595182221972e-13,
+      "max_corrected_energy_defect_J": 2.221994221665775e-24,
+      "temperature_range_K": [
+        325.0,
+        331.10769333557874
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    },
+    {
+      "case": "single_12p5V",
+      "dt": 1e-09,
+      "system_steps": 20000,
+      "states": 20001,
+      "max_KCL_defect_A": 8.673617379884035e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 5.710260088257446e-11,
+      "max_corrected_energy_defect_J": 2.109708034507697e-24,
+      "temperature_range_K": [
+        325.0,
+        386.0342223847068
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    },
+    {
+      "case": "single_12p5V",
+      "dt": 5e-10,
+      "system_steps": 40000,
+      "states": 40001,
+      "max_KCL_defect_A": 8.673617379884035e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 2.8542760818890472e-11,
+      "max_corrected_energy_defect_J": 2.2559297634814597e-24,
+      "temperature_range_K": [
+        325.0,
+        385.91771159148476
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    },
+    {
+      "case": "single_15p8V",
+      "dt": 1e-09,
+      "system_steps": 20000,
+      "states": 20001,
+      "max_KCL_defect_A": 8.673617379884035e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 1.6043722110817254e-11,
+      "max_corrected_energy_defect_J": 3.0832151219715588e-24,
+      "temperature_range_K": [
+        325.0,
+        398.9127561716708
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    },
+    {
+      "case": "single_15p8V",
+      "dt": 5e-10,
+      "system_steps": 40000,
+      "states": 40001,
+      "max_KCL_defect_A": 8.673617379884035e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 7.987100409515987e-12,
+      "max_corrected_energy_defect_J": 3.053885667945894e-24,
+      "temperature_range_K": [
+        325.0,
+        398.7474380279538
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    },
+    {
+      "case": "pair_excitation",
+      "dt": 1e-09,
+      "system_steps": 20000,
+      "states": 20001,
+      "max_KCL_defect_A": 4.336808689942018e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 6.40585468325604e-11,
+      "max_corrected_energy_defect_J": 3.689012478651893e-24,
+      "temperature_range_K": [
+        325.0,
+        377.7012495820693
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    },
+    {
+      "case": "pair_excitation",
+      "dt": 5e-10,
+      "system_steps": 40000,
+      "states": 40001,
+      "max_KCL_defect_A": 4.336808689942018e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 3.199127170256771e-11,
+      "max_corrected_energy_defect_J": 3.631916202364705e-24,
+      "temperature_range_K": [
+        325.0,
+        377.6106564025187
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    },
+    {
+      "case": "pair_inhibition",
+      "dt": 1e-09,
+      "system_steps": 20000,
+      "states": 20001,
+      "max_KCL_defect_A": 8.673617379884035e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 5.615537551323512e-11,
+      "max_corrected_energy_defect_J": 3.445135433386549e-24,
+      "temperature_range_K": [
+        325.0,
+        391.0138774706828
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    },
+    {
+      "case": "pair_inhibition",
+      "dt": 5e-10,
+      "system_steps": 40000,
+      "states": 40001,
+      "max_KCL_defect_A": 8.673617379884035e-19,
+      "max_mutual_heat_sum_W": 0.0,
+      "total_Euler_energy_defect_J": 2.8044323230836607e-11,
+      "max_corrected_energy_defect_J": 3.837668170155981e-24,
+      "temperature_range_K": [
+        325.0,
+        390.8769858411528
+      ],
+      "clipping_of_evolved_state": false,
+      "initialization_shared": false
+    }
+  ],
+  "cases": [
+    {
+      "case": {
+        "id": "single_9V",
+        "Vin": [
+          9.0
+        ],
+        "eta": 0.0,
+        "figure": "Fig.2A",
+        "evidence": "experiment_and_author_fitted_simulation"
+      },
+      "devices": [
+        {
+          "device": 0,
+          "waveforms": {
+            "voltage": {
+              "unaligned_rms": 0.0001624520807187801,
+              "max_abs": 0.0004773864098961411,
+              "relative_rms": 2.5098420593913778e-05
+            },
+            "device_current": {
+              "unaligned_rms": 5.610140776817682e-09,
+              "max_abs": 1.3996615023757894e-08,
+              "relative_rms": 3.2322897452976666e-05
+            },
+            "temperature": {
+              "unaligned_rms": 0.0002540788251666096,
+              "max_abs": 0.0006864425906201177,
+              "relative_rms": 7.69034399948756e-07
+            },
+            "resistance": {
+              "unaligned_rms": 0.6420625868726881,
+              "max_abs": 1.6899552467366448,
+              "relative_rms": 1.6627509956933742e-05
+            }
+          },
+          "events": {
+            "full": {
+              "coarse": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_INSULATING_BRANCH",
+                "g_range": [
+                  0.9356604266390744,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  331.10769340790256
+                ],
+                "resistance_range_ohm": [
+                  36570.2491448444,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 6.107672134312622,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_INSULATING_BRANCH",
+                "g_range": [
+                  0.9356604288403705,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  331.10769333557874
+                ],
+                "resistance_range_ohm": [
+                  36570.249349370686,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 6.107672134308643,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [],
+              "paired_peak_height_differences_A": [],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "transient": {
+              "coarse": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_INSULATING_BRANCH",
+                "g_range": [
+                  0.9356620422554489,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  331.10764032603396
+                ],
+                "resistance_range_ohm": [
+                  36570.39925589664,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 6.107640326033959,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_INSULATING_BRANCH",
+                "g_range": [
+                  0.9356620644837013,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  331.10763959570517
+                ],
+                "resistance_range_ohm": [
+                  36570.40132119893,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 6.107639595705166,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [],
+              "paired_peak_height_differences_A": [],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "tail": {
+              "coarse": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_INSULATING_BRANCH",
+                "g_range": [
+                  0.9356604266390744,
+                  0.9356620422554489
+                ],
+                "temperature_range_K": [
+                  331.10764032603396,
+                  331.10769340790256
+                ],
+                "resistance_range_ohm": [
+                  36570.2491448444,
+                  36570.39925589664
+                ],
+                "temperature_change_K": 3.180827866344771e-05,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_INSULATING_BRANCH",
+                "g_range": [
+                  0.9356604288403705,
+                  0.9356620644837013
+                ],
+                "temperature_range_K": [
+                  331.10763959570517,
+                  331.10769333557874
+                ],
+                "resistance_range_ohm": [
+                  36570.249349370686,
+                  36570.40132119893
+                ],
+                "temperature_change_K": 3.253860347740556e-05,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [],
+              "paired_peak_height_differences_A": [],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            }
+          },
+          "end_state": {
+            "voltage": {
+              "coarse": 6.776419348634434,
+              "fine": 6.776419348634388,
+              "difference": 4.618527782440651e-14
+            },
+            "temperature": {
+              "coarse": 331.1076721343126,
+              "fine": 331.10767213430864,
+              "difference": 3.979039320256561e-12
+            },
+            "resistance": {
+              "coarse": 36570.309304868,
+              "fine": 36570.309304879265,
+              "difference": -1.1263182386755943e-08
+            },
+            "g": {
+              "coarse": 0.9356610741332558,
+              "fine": 0.9356610741333768,
+              "difference": -1.2101430968414206e-13
+            },
+            "delta": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "reversed": {
+              "coarse": 0.0,
+              "fine": 0.0,
+              "difference": 0.0
+            },
+            "Tr": {
+              "coarse": 324.9,
+              "fine": 324.9,
+              "difference": 0.0
+            },
+            "gr": {
+              "coarse": 0.9970282893828744,
+              "fine": 0.9970282893828744,
+              "difference": 0.0
+            },
+            "Tpr": {
+              "coarse": 0.0,
+              "fine": 0.0,
+              "difference": 0.0
+            },
+            "T_last": {
+              "coarse": 331.1029239764918,
+              "fine": 331.1030226276177,
+              "difference": -9.865112588158809e-05
+            }
+          }
+        }
+      ],
+      "numerical_claim": "TWO_STEP_SENSITIVITY_ONLY",
+      "quantitative_reproduction_certified": false,
+      "experimental_fit_performed": false
+    },
+    {
+      "case": {
+        "id": "single_12p5V",
+        "Vin": [
+          12.5
+        ],
+        "eta": 0.0,
+        "figure": "Fig.2B",
+        "evidence": "experiment_and_author_fitted_simulation"
+      },
+      "devices": [
+        {
+          "device": 0,
+          "waveforms": {
+            "voltage": {
+              "unaligned_rms": 0.016583204673539596,
+              "max_abs": 0.12529811158081117,
+              "relative_rms": 0.0034369215260298663
+            },
+            "device_current": {
+              "unaligned_rms": 3.972076604225144e-05,
+              "max_abs": 0.0008636425567626386,
+              "relative_rms": 0.03505576674395728
+            },
+            "temperature": {
+              "unaligned_rms": 0.19461534858479992,
+              "max_abs": 2.137005076724563,
+              "relative_rms": 0.0005770203070919642
+            },
+            "resistance": {
+              "unaligned_rms": 80.5837850633066,
+              "max_abs": 847.0855139066084,
+              "relative_rms": 0.003315645230829297
+            }
+          },
+          "events": {
+            "full": {
+              "coarse": {
+                "count": 7,
+                "times_s": [
+                  2.612e-06,
+                  5.531e-06,
+                  8.383000000000001e-06,
+                  1.1234000000000001e-05,
+                  1.4085000000000002e-05,
+                  1.6936000000000002e-05,
+                  1.9787000000000002e-05
+                ],
+                "heights_A": [
+                  0.005632069612627492,
+                  0.004779779804527826,
+                  0.004772851893541676,
+                  0.004772591561836427,
+                  0.0047725969666012405,
+                  0.004772604773156223,
+                  0.004772613376795493
+                ],
+                "first_peak_s": 2.612e-06,
+                "intervals_s": [
+                  2.919e-06,
+                  2.852000000000001e-06,
+                  2.8510000000000003e-06,
+                  2.8510000000000003e-06,
+                  2.8510000000000003e-06,
+                  2.8510000000000003e-06
+                ],
+                "frequency_Hz": 349344.9781659388,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  386.0342223847068
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 44.663881731579124,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 7,
+                "times_s": [
+                  2.611e-06,
+                  5.5295e-06,
+                  8.3805e-06,
+                  1.1231000000000001e-05,
+                  1.40815e-05,
+                  1.6932e-05,
+                  1.9782500000000002e-05
+                ],
+                "heights_A": [
+                  0.005631232459028424,
+                  0.004776394560901464,
+                  0.004771163731232572,
+                  0.004770763338459612,
+                  0.004770632661328441,
+                  0.004770621248195681,
+                  0.004770607691583953
+                ],
+                "first_peak_s": 2.611e-06,
+                "intervals_s": [
+                  2.9185e-06,
+                  2.8510000000000003e-06,
+                  2.850500000000001e-06,
+                  2.8504999999999992e-06,
+                  2.8504999999999992e-06,
+                  2.8505000000000026e-06
+                ],
+                "frequency_Hz": 349416.18379291263,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  385.91771159148476
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 44.271975890359386,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                1.0000000000000751e-09,
+                1.499999999999901e-09,
+                2.5000000000003996e-09,
+                2.999999999999802e-09,
+                3.5000000000008982e-09,
+                4.0000000000019946e-09,
+                4.499999999999703e-09
+              ],
+              "paired_peak_height_differences_A": [
+                8.371535990684201e-07,
+                3.385243626361986e-06,
+                1.6881623091042144e-06,
+                1.8282233768150344e-06,
+                1.964305272799359e-06,
+                1.983524960541723e-06,
+                2.005685211539654e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "transient": {
+              "coarse": {
+                "count": 3,
+                "times_s": [
+                  2.612e-06,
+                  5.531e-06,
+                  8.383000000000001e-06
+                ],
+                "heights_A": [
+                  0.005632069612627492,
+                  0.004779779804527826,
+                  0.004772851893541676
+                ],
+                "first_peak_s": 2.612e-06,
+                "intervals_s": [
+                  2.919e-06,
+                  2.852000000000001e-06
+                ],
+                "frequency_Hz": 346560.3881476346,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  386.0342223847068
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 3.0614294503750443,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 3,
+                "times_s": [
+                  2.611e-06,
+                  5.5295e-06,
+                  8.3805e-06
+                ],
+                "heights_A": [
+                  0.005631232459028424,
+                  0.004776394560901464,
+                  0.004771163731232572
+                ],
+                "first_peak_s": 2.611e-06,
+                "intervals_s": [
+                  2.9185e-06,
+                  2.8510000000000003e-06
+                ],
+                "frequency_Hz": 346650.4896438166,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  385.91771159148476
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 3.0698686345857595,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                1.0000000000000751e-09,
+                1.499999999999901e-09,
+                2.5000000000003996e-09
+              ],
+              "paired_peak_height_differences_A": [
+                8.371535990684201e-07,
+                3.385243626361986e-06,
+                1.6881623091042144e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "tail": {
+              "coarse": {
+                "count": 4,
+                "times_s": [
+                  1.1234000000000001e-05,
+                  1.4085000000000002e-05,
+                  1.6936000000000002e-05,
+                  1.9787000000000002e-05
+                ],
+                "heights_A": [
+                  0.004772591561836427,
+                  0.0047725969666012405,
+                  0.004772604773156223,
+                  0.004772613376795493
+                ],
+                "first_peak_s": 1.1234000000000001e-05,
+                "intervals_s": [
+                  2.8510000000000003e-06,
+                  2.8510000000000003e-06,
+                  2.8510000000000003e-06
+                ],
+                "frequency_Hz": 350754.12136092596,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.6648276522496439
+                ],
+                "temperature_range_K": [
+                  327.8544392973374,
+                  373.69385026120625
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  30602.90877182843
+                ],
+                "temperature_change_K": 41.60245228120408,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 4,
+                "times_s": [
+                  1.1231000000000001e-05,
+                  1.40815e-05,
+                  1.6932e-05,
+                  1.9782500000000002e-05
+                ],
+                "heights_A": [
+                  0.004770763338459612,
+                  0.004770632661328441,
+                  0.004770621248195681,
+                  0.004770607691583953
+                ],
+                "first_peak_s": 1.1231000000000001e-05,
+                "intervals_s": [
+                  2.8504999999999992e-06,
+                  2.8504999999999992e-06,
+                  2.8505000000000026e-06
+                ],
+                "frequency_Hz": 350815.6463778284,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.6642796421414507
+                ],
+                "temperature_range_K": [
+                  327.85930151994665,
+                  373.60152108705927
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  30571.82702486079
+                ],
+                "temperature_change_K": 41.202107255773626,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                2.999999999999802e-09,
+                3.5000000000008982e-09,
+                4.0000000000019946e-09,
+                4.499999999999703e-09
+              ],
+              "paired_peak_height_differences_A": [
+                1.8282233768150344e-06,
+                1.964305272799359e-06,
+                1.983524960541723e-06,
+                2.005685211539654e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            }
+          },
+          "end_state": {
+            "voltage": {
+              "coarse": 2.6310463079520794,
+              "fine": 2.5979289200083717,
+              "difference": 0.033117387943707666
+            },
+            "temperature": {
+              "coarse": 369.6638817315791,
+              "fine": 369.2719758903594,
+              "difference": 0.3919058412197387
+            },
+            "resistance": {
+              "coarse": 1286.316817278625,
+              "fine": 1286.3168266387731,
+              "difference": -9.360148169434979e-06
+            },
+            "g": {
+              "coarse": 4.2967399971338693e-08,
+              "fine": 4.359441380108464e-08,
+              "difference": -6.270138297459482e-10
+            },
+            "delta": {
+              "coarse": -1.0,
+              "fine": -1.0,
+              "difference": 0.0
+            },
+            "reversed": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "Tr": {
+              "coarse": 369.9663099160783,
+              "fine": 369.955124366389,
+              "difference": 0.0111855496892872
+            },
+            "gr": {
+              "coarse": 4.26793729801922e-08,
+              "fine": 4.29214227493091e-08,
+              "difference": -2.4204976911690324e-10
+            },
+            "Tpr": {
+              "coarse": -7.193570640130645,
+              "fine": -7.193570640855569,
+              "difference": 7.249241207318846e-10
+            },
+            "T_last": {
+              "coarse": 369.6638817315791,
+              "fine": 369.2719758903594,
+              "difference": 0.3919058412197387
+            }
+          }
+        }
+      ],
+      "numerical_claim": "TWO_STEP_SENSITIVITY_ONLY",
+      "quantitative_reproduction_certified": false,
+      "experimental_fit_performed": false
+    },
+    {
+      "case": {
+        "id": "single_15p8V",
+        "Vin": [
+          15.8
+        ],
+        "eta": 0.0,
+        "figure": "Fig.2C",
+        "evidence": "experiment_and_author_fitted_simulation"
+      },
+      "devices": [
+        {
+          "device": 0,
+          "waveforms": {
+            "voltage": {
+              "unaligned_rms": 0.011749615047707933,
+              "max_abs": 0.04809468875348344,
+              "relative_rms": 0.0038762467380296694
+            },
+            "device_current": {
+              "unaligned_rms": 7.986514251201599e-06,
+              "max_abs": 0.0003570237308239896,
+              "relative_rms": 0.0068076388409925095
+            },
+            "temperature": {
+              "unaligned_rms": 0.07109573207502938,
+              "max_abs": 0.7626161390839457,
+              "relative_rms": 0.00020978727614712753
+            },
+            "resistance": {
+              "unaligned_rms": 17.451415290939178,
+              "max_abs": 218.13168981438048,
+              "relative_rms": 0.0013149602513348629
+            }
+          },
+          "events": {
+            "full": {
+              "coarse": {
+                "count": 3,
+                "times_s": [
+                  1.779e-06,
+                  3.829e-06,
+                  5.567e-06
+                ],
+                "heights_A": [
+                  0.0063062883863887675,
+                  0.0023141593889109456,
+                  0.0015990297056129549
+                ],
+                "first_peak_s": 1.779e-06,
+                "intervals_s": [
+                  2.05e-06,
+                  1.7380000000000001e-06
+                ],
+                "frequency_Hz": 527983.1045406547,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  398.9127561716708
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 13.337892196730138,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 3,
+                "times_s": [
+                  1.7785000000000002e-06,
+                  3.830000000000001e-06,
+                  5.569500000000001e-06
+                ],
+                "heights_A": [
+                  0.006303339989004783,
+                  0.002300331582722858,
+                  0.00155831310429997
+                ],
+                "first_peak_s": 1.7785000000000002e-06,
+                "intervals_s": [
+                  2.0515000000000006e-06,
+                  1.7395e-06
+                ],
+                "frequency_Hz": 527565.2862041676,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  398.7474380279538
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 13.37690236481393,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                4.999999999998258e-10,
+                -1.0000000000004986e-09,
+                -2.5000000000003996e-09
+              ],
+              "paired_peak_height_differences_A": [
+                2.9483973839842387e-06,
+                1.3827806188087752e-05,
+                4.071660131298497e-05
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "transient": {
+              "coarse": {
+                "count": 3,
+                "times_s": [
+                  1.779e-06,
+                  3.829e-06,
+                  5.567e-06
+                ],
+                "heights_A": [
+                  0.0063062883863887675,
+                  0.0023141593889109456,
+                  0.0015990297056129549
+                ],
+                "first_peak_s": 1.779e-06,
+                "intervals_s": [
+                  2.05e-06,
+                  1.7380000000000001e-06
+                ],
+                "frequency_Hz": 527983.1045406547,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  398.9127561716708
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 13.337918181845623,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 3,
+                "times_s": [
+                  1.7785000000000002e-06,
+                  3.830000000000001e-06,
+                  5.569500000000001e-06
+                ],
+                "heights_A": [
+                  0.006303339989004783,
+                  0.002300331582722858,
+                  0.00155831310429997
+                ],
+                "first_peak_s": 1.7785000000000002e-06,
+                "intervals_s": [
+                  2.0515000000000006e-06,
+                  1.7395e-06
+                ],
+                "frequency_Hz": 527565.2862041676,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  398.7474380279538
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 13.37692658379558,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                4.999999999998258e-10,
+                -1.0000000000004986e-09,
+                -2.5000000000003996e-09
+              ],
+              "paired_peak_height_differences_A": [
+                2.9483973839842387e-06,
+                1.3827806188087752e-05,
+                4.071660131298497e-05
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "tail": {
+              "coarse": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_METALLIC_BRANCH",
+                "g_range": [
+                  0.034738600013393184,
+                  0.03473862336593686
+                ],
+                "temperature_range_K": [
+                  338.3378868492443,
+                  338.3379181818456
+                ],
+                "resistance_range_ohm": [
+                  2221.6004498587754,
+                  2221.602415029603
+                ],
+                "temperature_change_K": -2.5985115485127608e-05,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_METALLIC_BRANCH",
+                "g_range": [
+                  0.03515259597169362,
+                  0.035152617748750226
+                ],
+                "temperature_range_K": [
+                  338.3768976366765,
+                  338.3769265837956
+                ],
+                "resistance_range_ohm": [
+                  2231.0646878822618,
+                  2231.0665200510853
+                ],
+                "temperature_change_K": -2.421898165039238e-05,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [],
+              "paired_peak_height_differences_A": [],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            }
+          },
+          "end_state": {
+            "voltage": {
+              "coarse": 2.4681686818193014,
+              "fine": 2.4770348012981023,
+              "difference": -0.008866119478800893
+            },
+            "temperature": {
+              "coarse": 338.33789219673014,
+              "fine": 338.37690236481393,
+              "difference": -0.03901016808379154
+            },
+            "resistance": {
+              "coarse": 2221.6020796364387,
+              "fine": 2231.0662207895807,
+              "difference": -9.464141153142009
+            },
+            "g": {
+              "coarse": 0.03473861938038503,
+              "fine": 0.035152614191742426,
+              "difference": -0.0004139948113573988
+            },
+            "delta": {
+              "coarse": -1.0,
+              "fine": -1.0,
+              "difference": 0.0
+            },
+            "reversed": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "Tr": {
+              "coarse": 338.39808547062717,
+              "fine": 338.4247259789151,
+              "difference": -0.026640508287925968
+            },
+            "gr": {
+              "coarse": 0.03469394249196589,
+              "fine": 0.035116731113597865,
+              "difference": -0.0004227886216319754
+            },
+            "Tpr": {
+              "coarse": -2.6108494701566656,
+              "fine": -2.6623136482258474,
+              "difference": 0.0514641780691818
+            },
+            "T_last": {
+              "coarse": 338.3377443477907,
+              "fine": 338.37463895945285,
+              "difference": -0.03689461166214869
+            }
+          }
+        }
+      ],
+      "numerical_claim": "TWO_STEP_SENSITIVITY_ONLY",
+      "quantitative_reproduction_certified": false,
+      "experimental_fit_performed": false
+    },
+    {
+      "case": {
+        "id": "pair_excitation",
+        "Vin": [
+          11.0,
+          9.4
+        ],
+        "eta": 0.12,
+        "figure": "Fig.S11D",
+        "evidence": "author_simulation"
+      },
+      "devices": [
+        {
+          "device": 0,
+          "waveforms": {
+            "voltage": {
+              "unaligned_rms": 0.017476495602516528,
+              "max_abs": 0.17061354233385995,
+              "relative_rms": 0.0037969701868074838
+            },
+            "device_current": {
+              "unaligned_rms": 3.475220424264227e-05,
+              "max_abs": 0.0008679492472203764,
+              "relative_rms": 0.0387911934257258
+            },
+            "temperature": {
+              "unaligned_rms": 0.17709143287995302,
+              "max_abs": 2.3848543796108856,
+              "relative_rms": 0.0005281351924506595
+            },
+            "resistance": {
+              "unaligned_rms": 93.78413420032086,
+              "max_abs": 992.1985838116489,
+              "relative_rms": 0.0038618203796828396
+            }
+          },
+          "events": {
+            "full": {
+              "coarse": {
+                "count": 5,
+                "times_s": [
+                  3.227e-06,
+                  6.698e-06,
+                  1.0096000000000001e-05,
+                  1.3480000000000001e-05,
+                  1.6852e-05
+                ],
+                "heights_A": [
+                  0.005083632571032561,
+                  0.004292547928050513,
+                  0.004222330888469474,
+                  0.0041758408383222225,
+                  0.004133031430872594
+                ],
+                "first_peak_s": 3.227e-06,
+                "intervals_s": [
+                  3.471e-06,
+                  3.398000000000001e-06,
+                  3.384e-06,
+                  3.3719999999999992e-06
+                ],
+                "frequency_Hz": 293577.9816513761,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  377.7012495820693
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 10.617356087617623,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 5,
+                "times_s": [
+                  3.226e-06,
+                  6.6965e-06,
+                  1.0093000000000001e-05,
+                  1.3476000000000001e-05,
+                  1.6845000000000002e-05
+                ],
+                "heights_A": [
+                  0.005083592000902992,
+                  0.004290581586920382,
+                  0.00421967120878586,
+                  0.004172709525208515,
+                  0.0041280776047700665
+                ],
+                "first_peak_s": 3.226e-06,
+                "intervals_s": [
+                  3.4705e-06,
+                  3.3965000000000013e-06,
+                  3.3829999999999996e-06,
+                  3.369000000000001e-06
+                ],
+                "frequency_Hz": 293707.3206549673,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  377.6106564025187
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 10.737802922492051,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                1.0000000000000751e-09,
+                1.499999999999901e-09,
+                2.999999999999802e-09,
+                4.0000000000003005e-09,
+                6.999999999998408e-09
+              ],
+              "paired_peak_height_differences_A": [
+                4.057012956918543e-08,
+                1.9663411301310343e-06,
+                2.65967968361442e-06,
+                3.131313113707672e-06,
+                4.953826102527779e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "transient": {
+              "coarse": {
+                "count": 2,
+                "times_s": [
+                  3.227e-06,
+                  6.698e-06
+                ],
+                "heights_A": [
+                  0.005083632571032561,
+                  0.004292547928050513
+                ],
+                "first_peak_s": 3.227e-06,
+                "intervals_s": [
+                  3.471e-06
+                ],
+                "frequency_Hz": 288101.4116969173,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  377.7012495820693
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 12.262990085962997,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 2,
+                "times_s": [
+                  3.226e-06,
+                  6.6965e-06
+                ],
+                "heights_A": [
+                  0.005083592000902992,
+                  0.004290581586920382
+                ],
+                "first_peak_s": 3.226e-06,
+                "intervals_s": [
+                  3.4705e-06
+                ],
+                "frequency_Hz": 288142.91888776835,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  377.6106564025187
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 12.322232988168253,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                1.0000000000000751e-09,
+                1.499999999999901e-09
+              ],
+              "paired_peak_height_differences_A": [
+                4.057012956918543e-08,
+                1.9663411301310343e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "tail": {
+              "coarse": {
+                "count": 3,
+                "times_s": [
+                  1.0096000000000001e-05,
+                  1.3480000000000001e-05,
+                  1.6852e-05
+                ],
+                "heights_A": [
+                  0.004222330888469474,
+                  0.0041758408383222225,
+                  0.004133031430872594
+                ],
+                "first_peak_s": 1.0096000000000001e-05,
+                "intervals_s": [
+                  3.384e-06,
+                  3.3719999999999992e-06
+                ],
+                "frequency_Hz": 296033.1557134399,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  2.3253730485617297e-07,
+                  0.6243743394899787
+                ],
+                "temperature_range_K": [
+                  328.2039814974498,
+                  366.6131452956832
+                ],
+                "resistance_range_ohm": [
+                  1286.3184089628476,
+                  28356.083805793365
+                ],
+                "temperature_change_K": -1.6456339983453745,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 3,
+                "times_s": [
+                  1.0093000000000001e-05,
+                  1.3476000000000001e-05,
+                  1.6845000000000002e-05
+                ],
+                "heights_A": [
+                  0.00421967120878586,
+                  0.004172709525208515,
+                  0.0041280776047700665
+                ],
+                "first_peak_s": 1.0093000000000001e-05,
+                "intervals_s": [
+                  3.3829999999999996e-06,
+                  3.369000000000001e-06
+                ],
+                "frequency_Hz": 296208.5308056872,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  2.427753758582618e-07,
+                  0.6235881983054449
+                ],
+                "temperature_range_K": [
+                  328.2106085277082,
+                  366.5279265125074
+                ],
+                "resistance_range_ohm": [
+                  1286.318499411577,
+                  28313.319026353733
+                ],
+                "temperature_change_K": -1.5844300656762016,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                2.999999999999802e-09,
+                4.0000000000003005e-09,
+                6.999999999998408e-09
+              ],
+              "paired_peak_height_differences_A": [
+                2.65967968361442e-06,
+                3.131313113707672e-06,
+                4.953826102527779e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            }
+          },
+          "end_state": {
+            "voltage": {
+              "coarse": 6.173035781669115,
+              "fine": 6.161041578241719,
+              "difference": 0.011994203427395433
+            },
+            "temperature": {
+              "coarse": 335.6173560876176,
+              "fine": 335.73780292249205,
+              "difference": -0.12044683487442853
+            },
+            "resistance": {
+              "coarse": 14419.842669730737,
+              "fine": 14100.412187531872,
+              "difference": 319.4304821988644
+            },
+            "g": {
+              "coarse": 0.4304576386116554,
+              "fine": 0.4223383791405152,
+              "difference": 0.008119259471140228
+            },
+            "delta": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "reversed": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "Tr": {
+              "coarse": 328.46696756695843,
+              "fine": 328.4881690959143,
+              "difference": -0.021201528955884896
+            },
+            "gr": {
+              "coarse": 0.5927132461395825,
+              "fine": 0.5901230035029688,
+              "difference": 0.002590242636613782
+            },
+            "Tpr": {
+              "coarse": 7.193570639999962,
+              "fine": 7.193570639999962,
+              "difference": 0.0
+            },
+            "T_last": {
+              "coarse": 335.6173560876176,
+              "fine": 335.73780292249205,
+              "difference": -0.12044683487442853
+            }
+          }
+        },
+        {
+          "device": 1,
+          "waveforms": {
+            "voltage": {
+              "unaligned_rms": 0.007715685918950454,
+              "max_abs": 0.05462054475989486,
+              "relative_rms": 0.0017818756032839523
+            },
+            "device_current": {
+              "unaligned_rms": 1.2592065126552186e-05,
+              "max_abs": 0.0002146288692928609,
+              "relative_rms": 0.016260737869934306
+            },
+            "temperature": {
+              "unaligned_rms": 0.07125541432658046,
+              "max_abs": 0.6319971373108615,
+              "relative_rms": 0.00021379775053996525
+            },
+            "resistance": {
+              "unaligned_rms": 56.93807092384628,
+              "max_abs": 257.6832266672968,
+              "relative_rms": 0.0019387138907132225
+            }
+          },
+          "events": {
+            "full": {
+              "coarse": {
+                "count": 5,
+                "times_s": [
+                  3.5380000000000003e-06,
+                  7.128e-06,
+                  1.0584e-05,
+                  1.4009000000000001e-05,
+                  1.7422e-05
+                ],
+                "heights_A": [
+                  0.004422654350832809,
+                  0.0037993260587384004,
+                  0.0037316290915987626,
+                  0.003689605740383487,
+                  0.0036516127790182634
+                ],
+                "first_peak_s": 3.5380000000000003e-06,
+                "intervals_s": [
+                  3.59e-06,
+                  3.4560000000000005e-06,
+                  3.4250000000000002e-06,
+                  3.4129999999999993e-06
+                ],
+                "frequency_Hz": 288101.4116969173,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.910334411301065e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  369.68898896662034
+                ],
+                "resistance_range_ohm": [
+                  1286.316861619916,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 5.479453825848623,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 5,
+                "times_s": [
+                  3.537e-06,
+                  7.1265e-06,
+                  1.0582000000000001e-05,
+                  1.4007000000000002e-05,
+                  1.7420000000000003e-05
+                ],
+                "heights_A": [
+                  0.004421113818119903,
+                  0.003797214663085583,
+                  0.003728879285937427,
+                  0.0036861750254857575,
+                  0.0036463270811960425
+                ],
+                "first_peak_s": 3.537e-06,
+                "intervals_s": [
+                  3.5895e-06,
+                  3.455500000000001e-06,
+                  3.4250000000000002e-06,
+                  3.413000000000001e-06
+                ],
+                "frequency_Hz": 288122.1637974501,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  5.111072332031341e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  369.60974099363034
+                ],
+                "resistance_range_ohm": [
+                  1286.3168773519074,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 5.5000283000378545,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                1.0000000000000751e-09,
+                1.499999999999901e-09,
+                1.9999999999993032e-09,
+                1.9999999999993032e-09,
+                1.999999999997609e-09
+              ],
+              "paired_peak_height_differences_A": [
+                1.5405327129054333e-06,
+                2.1113956528173196e-06,
+                2.7498056613356296e-06,
+                3.430714897729569e-06,
+                5.285697822220853e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "transient": {
+              "coarse": {
+                "count": 2,
+                "times_s": [
+                  3.5380000000000003e-06,
+                  7.128e-06
+                ],
+                "heights_A": [
+                  0.004422654350832809,
+                  0.0037993260587384004
+                ],
+                "first_peak_s": 3.5380000000000003e-06,
+                "intervals_s": [
+                  3.59e-06
+                ],
+                "frequency_Hz": 278551.53203342616,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.910334411301065e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  369.68898896662034
+                ],
+                "resistance_range_ohm": [
+                  1286.316861619916,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 6.297264840597109,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 2,
+                "times_s": [
+                  3.537e-06,
+                  7.1265e-06
+                ],
+                "heights_A": [
+                  0.004421113818119903,
+                  0.003797214663085583
+                ],
+                "first_peak_s": 3.537e-06,
+                "intervals_s": [
+                  3.5895e-06
+                ],
+                "frequency_Hz": 278590.3329154478,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  5.111072332031341e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  369.60974099363034
+                ],
+                "resistance_range_ohm": [
+                  1286.3168773519074,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 6.305367669991597,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                1.0000000000000751e-09,
+                1.499999999999901e-09
+              ],
+              "paired_peak_height_differences_A": [
+                1.5405327129054333e-06,
+                2.1113956528173196e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "tail": {
+              "coarse": {
+                "count": 3,
+                "times_s": [
+                  1.0584e-05,
+                  1.4009000000000001e-05,
+                  1.7422e-05
+                ],
+                "heights_A": [
+                  0.0037316290915987626,
+                  0.003689605740383487,
+                  0.0036516127790182634
+                ],
+                "first_peak_s": 1.0584e-05,
+                "intervals_s": [
+                  3.4250000000000002e-06,
+                  3.4129999999999993e-06
+                ],
+                "frequency_Hz": 292483.1822170225,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  3.673043765584083e-06,
+                  0.7379242891385239
+                ],
+                "temperature_range_K": [
+                  327.16153981854353,
+                  361.1547408367706
+                ],
+                "resistance_range_ohm": [
+                  1286.3538123387507,
+                  34942.30033796307
+                ],
+                "temperature_change_K": -0.8178110147484858,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 3,
+                "times_s": [
+                  1.0582000000000001e-05,
+                  1.4007000000000002e-05,
+                  1.7420000000000003e-05
+                ],
+                "heights_A": [
+                  0.003728879285937427,
+                  0.0036861750254857575,
+                  0.0036463270811960425
+                ],
+                "first_peak_s": 1.0582000000000001e-05,
+                "intervals_s": [
+                  3.4250000000000002e-06,
+                  3.413000000000001e-06
+                ],
+                "frequency_Hz": 292483.18221702246,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  3.8131047664369255e-06,
+                  0.7375746345762196
+                ],
+                "temperature_range_K": [
+                  327.16511430187643,
+                  361.08072231546777
+                ],
+                "resistance_range_ohm": [
+                  1286.3553499055888,
+                  34920.48869381302
+                ],
+                "temperature_change_K": -0.8053393699537423,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                1.9999999999993032e-09,
+                1.9999999999993032e-09,
+                1.999999999997609e-09
+              ],
+              "paired_peak_height_differences_A": [
+                2.7498056613356296e-06,
+                3.430714897729569e-06,
+                5.285697822220853e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            }
+          },
+          "end_state": {
+            "voltage": {
+              "coarse": 5.519241682118155,
+              "fine": 5.520275630149429,
+              "difference": -0.0010339480312744342
+            },
+            "temperature": {
+              "coarse": 330.4794538258486,
+              "fine": 330.50002830003785,
+              "difference": -0.02057447418923175
+            },
+            "resistance": {
+              "coarse": 28865.93880878062,
+              "fine": 28807.435347236227,
+              "difference": 58.50346154439103
+            },
+            "g": {
+              "coarse": 0.7097620000411716,
+              "fine": 0.7089532425081162,
+              "difference": 0.0008087575330554264
+            },
+            "delta": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "reversed": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "Tr": {
+              "coarse": 327.19835615397966,
+              "fine": 327.2041378549169,
+              "difference": -0.005781700937234291
+            },
+            "gr": {
+              "coarse": 0.734308568464167,
+              "fine": 0.7337378660573619,
+              "difference": 0.0005707024068051236
+            },
+            "Tpr": {
+              "coarse": 7.193570639999962,
+              "fine": 7.193570639999962,
+              "difference": 0.0
+            },
+            "T_last": {
+              "coarse": 330.4794538258486,
+              "fine": 330.50002830003785,
+              "difference": -0.02057447418923175
+            }
+          }
+        }
+      ],
+      "numerical_claim": "TWO_STEP_SENSITIVITY_ONLY",
+      "quantitative_reproduction_certified": false,
+      "experimental_fit_performed": false
+    },
+    {
+      "case": {
+        "id": "pair_inhibition",
+        "Vin": [
+          11.0,
+          14.0
+        ],
+        "eta": 0.1,
+        "figure": "Fig.S13D",
+        "evidence": "author_simulation"
+      },
+      "devices": [
+        {
+          "device": 0,
+          "waveforms": {
+            "voltage": {
+              "unaligned_rms": 0.011661069618222697,
+              "max_abs": 0.07475772932059677,
+              "relative_rms": 0.002772434774596647
+            },
+            "device_current": {
+              "unaligned_rms": 2.2382852834276866e-05,
+              "max_abs": 0.0003551036011299703,
+              "relative_rms": 0.023362807413483094
+            },
+            "temperature": {
+              "unaligned_rms": 0.10982739717937913,
+              "max_abs": 0.9877856425207483,
+              "relative_rms": 0.00032695566985065544
+            },
+            "resistance": {
+              "unaligned_rms": 68.8569825201578,
+              "max_abs": 460.1425393769109,
+              "relative_rms": 0.0031123217811519005
+            }
+          },
+          "events": {
+            "full": {
+              "coarse": {
+                "count": 7,
+                "times_s": [
+                  2.3720000000000003e-06,
+                  5.218000000000001e-06,
+                  8.139000000000001e-06,
+                  1.1062e-05,
+                  1.3975000000000001e-05,
+                  1.6883e-05,
+                  1.9788e-05
+                ],
+                "heights_A": [
+                  0.0047597788200946,
+                  0.0038946405219342003,
+                  0.0038441420389195725,
+                  0.0038069667674453093,
+                  0.003792739371096313,
+                  0.003788207075968304,
+                  0.0037836877223448536
+                ],
+                "first_peak_s": 2.3720000000000003e-06,
+                "intervals_s": [
+                  2.8460000000000004e-06,
+                  2.9210000000000005e-06,
+                  2.922999999999999e-06,
+                  2.9130000000000007e-06,
+                  2.908e-06,
+                  2.905e-06
+                ],
+                "frequency_Hz": 344510.79467156634,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  374.7022146612484
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 33.40231133861806,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 7,
+                "times_s": [
+                  2.3715e-06,
+                  5.2185e-06,
+                  8.141e-06,
+                  1.1065e-05,
+                  1.3978e-05,
+                  1.6886e-05,
+                  1.97905e-05
+                ],
+                "heights_A": [
+                  0.004757289288468056,
+                  0.003892260677439431,
+                  0.0038425346093882624,
+                  0.003807083342220845,
+                  0.003793285175051834,
+                  0.0037866536223334925,
+                  0.0037811050555400763
+                ],
+                "first_peak_s": 2.3715e-06,
+                "intervals_s": [
+                  2.847e-06,
+                  2.9225000000000004e-06,
+                  2.9239999999999994e-06,
+                  2.9130000000000007e-06,
+                  2.908e-06,
+                  2.904499999999999e-06
+                ],
+                "frequency_Hz": 344451.46104828065,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  374.6003600285742
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 33.49220037554551,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                5.000000000002493e-10,
+                -4.999999999994023e-10,
+                -1.9999999999993032e-09,
+                -2.999999999999802e-09,
+                -2.999999999999802e-09,
+                -2.999999999999802e-09,
+                -2.4999999999987055e-09
+              ],
+              "paired_peak_height_differences_A": [
+                2.4895316265436188e-06,
+                2.3798444947690893e-06,
+                1.6074295313100832e-06,
+                -1.1657477553585205e-07,
+                -5.458039555213123e-07,
+                1.5534536348116301e-06,
+                2.5826668047772977e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "transient": {
+              "coarse": {
+                "count": 3,
+                "times_s": [
+                  2.3720000000000003e-06,
+                  5.218000000000001e-06,
+                  8.139000000000001e-06
+                ],
+                "heights_A": [
+                  0.0047597788200946,
+                  0.0038946405219342003,
+                  0.0038441420389195725
+                ],
+                "first_peak_s": 2.3720000000000003e-06,
+                "intervals_s": [
+                  2.8460000000000004e-06,
+                  2.9210000000000005e-06
+                ],
+                "frequency_Hz": 346800.76296167844,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  374.7022146612484
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 5.161986790239496,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 3,
+                "times_s": [
+                  2.3715e-06,
+                  5.2185e-06,
+                  8.141e-06
+                ],
+                "heights_A": [
+                  0.004757289288468056,
+                  0.003892260677439431,
+                  0.0038425346093882624
+                ],
+                "first_peak_s": 2.3715e-06,
+                "intervals_s": [
+                  2.847e-06,
+                  2.9225000000000004e-06
+                ],
+                "frequency_Hz": 346650.4896438166,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  374.6003600285742
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 5.149758242376606,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                5.000000000002493e-10,
+                -4.999999999994023e-10,
+                -1.9999999999993032e-09
+              ],
+              "paired_peak_height_differences_A": [
+                2.4895316265436188e-06,
+                2.3798444947690893e-06,
+                1.6074295313100832e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "tail": {
+              "coarse": {
+                "count": 4,
+                "times_s": [
+                  1.1062e-05,
+                  1.3975000000000001e-05,
+                  1.6883e-05,
+                  1.9788e-05
+                ],
+                "heights_A": [
+                  0.0038069667674453093,
+                  0.003792739371096313,
+                  0.003788207075968304,
+                  0.0037836877223448536
+                ],
+                "first_peak_s": 1.1062e-05,
+                "intervals_s": [
+                  2.9130000000000007e-06,
+                  2.908e-06,
+                  2.905e-06
+                ],
+                "frequency_Hz": 343800.137520055,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  2.2681060763973804e-06,
+                  0.5498373107519009
+                ],
+                "temperature_range_K": [
+                  328.8134517692627,
+                  362.10822979236383
+                ],
+                "resistance_range_ohm": [
+                  1286.3386816714085,
+                  24431.97047124061
+                ],
+                "temperature_change_K": 28.240324548378567,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 4,
+                "times_s": [
+                  1.1065e-05,
+                  1.3978e-05,
+                  1.6886e-05,
+                  1.97905e-05
+                ],
+                "heights_A": [
+                  0.003807083342220845,
+                  0.003793285175051834,
+                  0.0037866536223334925,
+                  0.0037811050555400763
+                ],
+                "first_peak_s": 1.1065e-05,
+                "intervals_s": [
+                  2.9130000000000007e-06,
+                  2.908e-06,
+                  2.904499999999999e-06
+                ],
+                "frequency_Hz": 343819.838404676,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  2.3195824095378903e-06,
+                  0.5497991768464162
+                ],
+                "temperature_range_K": [
+                  328.81375649109117,
+                  362.0638421357337
+                ],
+                "resistance_range_ohm": [
+                  1286.3392251238947,
+                  24430.024681123654
+                ],
+                "temperature_change_K": 28.342442133168902,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                -2.999999999999802e-09,
+                -2.999999999999802e-09,
+                -2.999999999999802e-09,
+                -2.4999999999987055e-09
+              ],
+              "paired_peak_height_differences_A": [
+                -1.1657477553585205e-07,
+                -5.458039555213123e-07,
+                1.5534536348116301e-06,
+                2.5826668047772977e-06
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            }
+          },
+          "end_state": {
+            "voltage": {
+              "coarse": 2.1869376753214174,
+              "fine": 2.2050998017918215,
+              "difference": -0.01816212647040416
+            },
+            "temperature": {
+              "coarse": 358.40231133861806,
+              "fine": 358.4922003755455,
+              "difference": -0.08988903692744543
+            },
+            "resistance": {
+              "coarse": 1286.34983211927,
+              "fine": 1286.3505202409783,
+              "difference": -0.0006881217082082003
+            },
+            "g": {
+              "coarse": 2.936428662170254e-06,
+              "fine": 3.0080235966511992e-06,
+              "difference": -7.159493448094523e-08
+            },
+            "delta": {
+              "coarse": -1.0,
+              "fine": -1.0,
+              "difference": 0.0
+            },
+            "reversed": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "Tr": {
+              "coarse": 361.8644920692751,
+              "fine": 361.7946829315378,
+              "difference": 0.0698091377373089
+            },
+            "gr": {
+              "coarse": 2.565560158207525e-06,
+              "fine": 2.6577282837281224e-06,
+              "difference": -9.21681255205975e-08
+            },
+            "Tpr": {
+              "coarse": -7.193570640003031,
+              "fine": -7.193570639990696,
+              "difference": -1.233502189279534e-11
+            },
+            "T_last": {
+              "coarse": 358.40231133861806,
+              "fine": 358.4922003755455,
+              "difference": -0.08988903692744543
+            }
+          }
+        },
+        {
+          "device": 1,
+          "waveforms": {
+            "voltage": {
+              "unaligned_rms": 0.011034427769162084,
+              "max_abs": 0.0662438440616242,
+              "relative_rms": 0.0035175253673417916
+            },
+            "device_current": {
+              "unaligned_rms": 9.996903866959229e-06,
+              "max_abs": 0.00027566252636793045,
+              "relative_rms": 0.009603714566018523
+            },
+            "temperature": {
+              "unaligned_rms": 0.06940429236704745,
+              "max_abs": 0.7517536428294989,
+              "relative_rms": 0.00020528900333816128
+            },
+            "resistance": {
+              "unaligned_rms": 24.879470032515865,
+              "max_abs": 273.37775614270595,
+              "relative_rms": 0.0017205095015783447
+            }
+          },
+          "events": {
+            "full": {
+              "coarse": {
+                "count": 2,
+                "times_s": [
+                  2.0610000000000003e-06,
+                  4.519e-06
+                ],
+                "heights_A": [
+                  0.005877346615951585,
+                  0.0037696641884200875
+                ],
+                "first_peak_s": 2.0610000000000003e-06,
+                "intervals_s": [
+                  2.458e-06
+                ],
+                "frequency_Hz": 406834.8250610252,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  391.0138774706828
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 14.698995125654903,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 2,
+                "times_s": [
+                  2.0605e-06,
+                  4.5165e-06
+                ],
+                "heights_A": [
+                  0.005876378579595258,
+                  0.003759170303099599
+                ],
+                "first_peak_s": 2.0605e-06,
+                "intervals_s": [
+                  2.456e-06
+                ],
+                "frequency_Hz": 407166.12377850164,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  390.8769858411528
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 14.660842153874228,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                5.000000000002493e-10,
+                2.5000000000003996e-09
+              ],
+              "paired_peak_height_differences_A": [
+                9.680363563272995e-07,
+                1.0493885320488668e-05
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "transient": {
+              "coarse": {
+                "count": 2,
+                "times_s": [
+                  2.0610000000000003e-06,
+                  4.519e-06
+                ],
+                "heights_A": [
+                  0.005877346615951585,
+                  0.0037696641884200875
+                ],
+                "first_peak_s": 2.0610000000000003e-06,
+                "intervals_s": [
+                  2.458e-06
+                ],
+                "frequency_Hz": 406834.8250610252,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  391.0138774706828
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 12.150808330521784,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 2,
+                "times_s": [
+                  2.0605e-06,
+                  4.5165e-06
+                ],
+                "heights_A": [
+                  0.005876378579595258,
+                  0.003759170303099599
+                ],
+                "first_peak_s": 2.0605e-06,
+                "intervals_s": [
+                  2.456e-06
+                ],
+                "frequency_Hz": 407166.12377850164,
+                "functional_description": "DETECTED_SPIKING",
+                "g_range": [
+                  4.195855224375933e-08,
+                  0.9968746605204751
+                ],
+                "temperature_range_K": [
+                  325.0,
+                  390.8769858411528
+                ],
+                "resistance_range_ohm": [
+                  1286.3168060368876,
+                  51843.35107927904
+                ],
+                "temperature_change_K": 12.107216162817906,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [
+                5.000000000002493e-10,
+                2.5000000000003996e-09
+              ],
+              "paired_peak_height_differences_A": [
+                9.680363563272995e-07,
+                1.0493885320488668e-05
+              ],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            },
+            "tail": {
+              "coarse": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_METALLIC_BRANCH",
+                "g_range": [
+                  0.043054260682698076,
+                  0.05215364300473363
+                ],
+                "temperature_range_K": [
+                  336.75511113854066,
+                  339.8442747615012
+                ],
+                "resistance_range_ohm": [
+                  2376.9796129632487,
+                  2786.9806261765298
+                ],
+                "temperature_change_K": 2.5481867951331196,
+                "equilibrium_certified": false
+              },
+              "fine": {
+                "count": 0,
+                "times_s": [],
+                "heights_A": [],
+                "first_peak_s": null,
+                "intervals_s": [],
+                "frequency_Hz": null,
+                "functional_description": "NO_DETECTED_PEAKS_METALLIC_BRANCH",
+                "g_range": [
+                  0.04262302880860719,
+                  0.05183885660100834
+                ],
+                "temperature_range_K": [
+                  336.7277845763097,
+                  339.80899680907027
+                ],
+                "resistance_range_ohm": [
+                  2368.666092677977,
+                  2778.930727940401
+                ],
+                "temperature_change_K": 2.5536259910563217,
+                "equilibrium_certified": false
+              },
+              "paired_peak_time_differences_s": [],
+              "paired_peak_height_differences_A": [],
+              "unmatched_coarse": [],
+              "unmatched_fine": [],
+              "count_equal": true,
+              "labels_equal": true
+            }
+          },
+          "end_state": {
+            "voltage": {
+              "coarse": 2.5057066440720877,
+              "fine": 2.501805174325575,
+              "difference": 0.0039014697465127313
+            },
+            "temperature": {
+              "coarse": 339.6989951256549,
+              "fine": 339.6608421538742,
+              "difference": 0.03815297178067567
+            },
+            "resistance": {
+              "coarse": 2463.042525157034,
+              "fine": 2460.760298905265,
+              "difference": 2.282226251769316
+            },
+            "g": {
+              "coarse": 0.04649362731982293,
+              "fine": 0.04632342034621201,
+              "difference": 0.0001702069736109202
+            },
+            "delta": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "reversed": {
+              "coarse": 1.0,
+              "fine": 1.0,
+              "difference": 0.0
+            },
+            "Tr": {
+              "coarse": 336.8866884844965,
+              "fine": 336.8721233450696,
+              "difference": 0.014565139426906626
+            },
+            "gr": {
+              "coarse": 0.05215335101007201,
+              "fine": 0.05183792508512336,
+              "difference": 0.0003154259249486535
+            },
+            "Tpr": {
+              "coarse": 5.2517881048011645,
+              "fine": 5.279009950968884,
+              "difference": -0.027221846167719832
+            },
+            "T_last": {
+              "coarse": 339.6989951256549,
+              "fine": 339.6608421538742,
+              "difference": 0.03815297178067567
+            }
+          }
+        }
+      ],
+      "numerical_claim": "TWO_STEP_SENSITIVITY_ONLY",
+      "quantitative_reproduction_certified": false,
+      "experimental_fit_performed": false
+    }
+  ],
+  "total_system_steps": 300000,
+  "seconds": 28.803251900011674,
+  "interpretation": "Author-model reproduction and sensitivity; not validation of the old synthetic PINN material"
+}

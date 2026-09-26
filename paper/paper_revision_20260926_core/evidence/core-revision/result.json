@@ -1,0 +1,81 @@
+{
+  "task_id": "PCM-20260926-CORE-REVISION-VO2-BRIDGE-01",
+  "status": "COMPLETE_APPROVED_SCOPE",
+  "completed_utc": "2026-09-26T13:53:09.713704+00:00",
+  "scientific_facts_status": "VERIFIED",
+  "interpretation_status": "SUPPORTED_INTERPRETATION",
+  "coverage_counts": {
+    "E_vs_F_cov_A": 12,
+    "E_vs_F_cov_B": 12,
+    "F_cov_vs_F_A": 0,
+    "F_cov_vs_F_B": 0,
+    "F_cov_strict_passes": 0
+  },
+  "coverage_independent_initializations": 2,
+  "author_model": {
+    "cases": 5,
+    "step_sizes_s": [
+      1e-09,
+      5e-10
+    ],
+    "system_steps": 300000,
+    "quantitative_experimental_reproduction": "UNKNOWN",
+    "synthetic_material_validation": false
+  },
+  "standalone": {
+    "root": "D:\\Temp\\PINN-PCM-Standalone-20260926",
+    "scopes": [
+      "core",
+      "extension",
+      "b1",
+      "s21",
+      "s22",
+      "s23",
+      "residuals",
+      "vo2",
+      "fcov"
+    ],
+    "external_access": false,
+    "P03": "OPEN",
+    "neural_AD_recomputation": false
+  },
+  "compute_recovery_and_shutdown": {
+    "recovery_verified": true,
+    "recovery_sha256": "9dc96d66d85517992f1fd209e271a8058670780715a70a4ba45ea0f6661ee197",
+    "recovered_utc": "2026-09-26T13:28:49.035276+00:00",
+    "remote_persistent_path": "/root/autodl-tmp/pinn-core-20260926",
+    "transient_recovery_archive": "/root/pinn-core-20260926-recovery.tar",
+    "scientific_status": {
+      "status": "COMPLETE",
+      "reference_read": false,
+      "training_resumed": false,
+      "checkpoint_weights_unchanged": true,
+      "seconds": 261.6275658765808,
+      "duration_scope": "readout_resumption_only",
+      "created_utc": "2026-09-26T13:23:32.179559+00:00"
+    },
+    "shutdown_requested_utc": "2026-09-26T13:28:49.036276+00:00",
+    "shutdown_returncode": 0,
+    "shutdown_stderr": "",
+    "instance_shutdown_confirmed": true,
+    "shutdown_probes": [
+      {
+        "returncode": 255,
+        "stderr": "banner exchange: Connection to UNKNOWN port -1: Connection refused"
+      }
+    ],
+    "closed_utc": "2026-09-26T13:28:55.965599+00:00"
+  },
+  "open_science_items": [
+    "P02 method increment",
+    "strict two-cycle usability",
+    "material validation",
+    "generalization",
+    "P03 external full-array access"
+  ],
+  "next_research": "Finite-observation offline reconstruction input qualification and plan review only",
+  "next_research_execution_authorized": false,
+  "git_published": false,
+  "data_published": false,
+  "submitted": false
+}

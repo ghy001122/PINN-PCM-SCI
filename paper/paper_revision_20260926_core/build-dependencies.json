@@ -1,0 +1,570 @@
+{
+  "authoritative_text": [
+    "source/manuscript.md",
+    "source/supplement.md"
+  ],
+  "review_build_inputs": [
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-joule_density-error-t1.png",
+      "sha256": "e9f9504a0a50940f95c8d57e2c05472770cdf3a75e913c570cfa345fa932efb3",
+      "bytes": 134231,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-joule_density-error-t1.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-joule_density-error-t2.png",
+      "sha256": "691ecea73be6b3883eecad6a02221bfebf712f1a310f03891b10ee86a759786c",
+      "bytes": 140042,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-joule_density-error-t2.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-joule_density-t1.png",
+      "sha256": "cbf0e92f278f0fc64901a0c49448a1b59574c36cd64b24cf5c726b0ac7fa64d5",
+      "bytes": 162481,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-joule_density-t1.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-joule_density-t2.png",
+      "sha256": "1e2b564aff4e271222d23e9652dfe0d3e6f38a8810c092d46758cbb18e14e8a5",
+      "bytes": 161943,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-joule_density-t2.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-phase-error-t1.png",
+      "sha256": "b9a17e1a0e476e8ff7d5736b6498fe0a3148f03699e4949172121ea277f1f358",
+      "bytes": 150190,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-phase-error-t1.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-phase-error-t2.png",
+      "sha256": "9bdf2987777514e677d9a1970bf0d78eb057fdaeb4c3e5ae6094596a9cdf32b4",
+      "bytes": 159771,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-phase-error-t2.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-phase-t1.png",
+      "sha256": "f0c0c82230ced1492d4093c86d83cefe71a12915efee2fdc52a7c1d3dd59d490",
+      "bytes": 174289,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-phase-t1.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-phase-t2.png",
+      "sha256": "c3797e5bb42bfb43ae587680a54f797647776a1f35c181cdcf2fd9ee858ff794",
+      "bytes": 165097,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-phase-t2.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-temperature-error-t1.png",
+      "sha256": "5799ebd9508e2605b638522114409a52248a1bc6de4b928410aa99760436d1ec",
+      "bytes": 230385,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-temperature-error-t1.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-temperature-error-t2.png",
+      "sha256": "a6d75e7e1d2bba1745f6e23712142854f34514d2fb16cf2ee7d91152e41d8d1d",
+      "bytes": 235089,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-temperature-error-t2.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-temperature-t1.png",
+      "sha256": "fa92d2e7ed3e1f0518c47023a53d5f84b13e065d28957dd6cb97a9f0601dc8f6",
+      "bytes": 287490,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-temperature-t1.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/b1-temperature-t2.png",
+      "sha256": "ea9e1977d890420a0f2b984ea9beda500bcd481d6ddf7cd42bf5b4eecdbdc83c",
+      "bytes": 290110,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/b1-temperature-t2.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/conditional-phase-fields.png",
+      "sha256": "ac7ca890003ac90f1ddf48c75b667616c5599341d7edbc6d8ad27a8a0ce9ab63",
+      "bytes": 127665,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/conditional-residuals.png",
+      "sha256": "d787ece77875deb5b05d18c81a4e2fe3ab14ee4e83ee9c86fd12fa47ef03fdd9",
+      "bytes": 110750,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fcov-physics-29.png",
+      "sha256": "02e12695a8bd81d0bedac9995d6901bc8705b5a95b4b3eb0ed1606fcdb8ee116",
+      "bytes": 229348
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fcov-physics-43.png",
+      "sha256": "982f3a67a29e0a6a09d1ba830352a6dea6bf2898f0a139c5a51aa23dfad74211",
+      "bytes": 229162
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig02-full-label-physics-seed29.png",
+      "sha256": "6a8449011eb2a0b6930e91ada837f934f571a449862a384090c878071c4f76f0",
+      "bytes": 253143,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig02-full-label-physics-seed29.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig02-full-label-physics-seed43.png",
+      "sha256": "4f8d0da90c1f5d224d8fd0ac352fcf639142b345bf7a5370ea3150425bfb7d41",
+      "bytes": 255664,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig02-full-label-physics-seed43.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig05-b1-matched-effects.png",
+      "sha256": "10a2c319b50cca52190db7590ef3947292f4f3cf86c5f005eb8bd11f3c300063",
+      "bytes": 235650,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig05-b1-matched-effects.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig07-phase-adapter.png",
+      "sha256": "cf6319de0e3a1d4f00e83c055cdd202dcccde181cf78fe3f66ab1ad65fcf73e3",
+      "bytes": 267073,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig07-phase-adapter.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig08-support-gate-seed29.png",
+      "sha256": "81b50b0ac2e0c64385d1896433bb297c7ae94ca72cd9566877e3990c1c76ce9a",
+      "bytes": 427603,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig08-support-gate-seed29.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig08-support-gate-seed43.png",
+      "sha256": "31d0ae542a2f75534307533875b66016e5bbe689a0653986ebe0cbb915832ce5",
+      "bytes": 426430,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig08-support-gate-seed43.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig10-event-reference-sensitivity.png",
+      "sha256": "08635bbb90b38d37a8ba25457ee2ff2110919b002bfe4775abda1ba4b36e2313",
+      "bytes": 168297,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig10-event-reference-sensitivity.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig11-complete-reference-certificates.png",
+      "sha256": "59192f775d60465d5d8c3c3efce0203ae59d814348b4a382179cf558f07b4b8c",
+      "bytes": 62428,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig11-complete-reference-certificates.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig13-spatial-native-traces.png",
+      "sha256": "80c1411c4ec0714685c98cc1bbca526aa279dd2c57fa5e022e9ce4fd9bf833d5",
+      "bytes": 154063,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig13-spatial-native-traces.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig14-spatial-threshold-mapping.png",
+      "sha256": "e000de4194df98f6916cb4e61316b1fa9261b41ad11eec1f0ca080d2c9934033",
+      "bytes": 129105,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig14-spatial-threshold-mapping.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig15-common-reader.png",
+      "sha256": "a74446246419b3860652da5ff4bf0a0c58449404f446951c4b90c8cedd53369c",
+      "bytes": 238069,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig15-common-reader.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig17-threshold-errors.png",
+      "sha256": "88596a5d6aaf1289ef0fbbf66f16c9b174fcaa5d37aec288b2f196eddeb0df8f",
+      "bytes": 134704,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig17-threshold-errors.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig18-conductivity-errors.png",
+      "sha256": "3391861cc22786b5b0afa35f915c9fe7d1d5af49775ac9e598d5358df9711584",
+      "bytes": 372481,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig18-conductivity-errors.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/fig19-power-cancellation.png",
+      "sha256": "7840bd0dfce83305537c25858dc92da4857138395cfe20609fc3161e8c7b1d03",
+      "bytes": 373246,
+      "historical_asset_source": "paper/paper_revision_20260921/figures/fig19-power-cancellation.png"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/figures/physics-objective-diagnostic.png",
+      "sha256": "6f964b1c6ed9d151c4846df6339da0aa96c30cbaa0451b8e1ed8c8297a839c5b",
+      "bytes": 484343,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/references.md",
+      "sha256": "b2ea74421c403ca9760d3b7503f52fbffb65740a220bf52b214bfcc9b2301e7b",
+      "bytes": 5970,
+      "historical_asset_source": "paper/paper_revision_20260921/references.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/source/manuscript.md",
+      "sha256": "0364a9930c2db07c286c9aedec290f6bd2f896baa01dba9e29f96e4604718365",
+      "bytes": 51952,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/source/supplement.md",
+      "sha256": "6bdffcf865036ef9a72f221e978eab58e8a3dfb4f6e4d390fd70b1d6da1479b7",
+      "bytes": 128043,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/b1-continuous-ranges.md",
+      "sha256": "7ad51164f1464f416c4ed085855e08b08a46ec960b5fb39e5c97d89364c4fe6b",
+      "bytes": 634,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/b1-energy-spatial-fine.md",
+      "sha256": "e11b87269bfc35c86d9c1e97bec4c1731b139ad2b6ca8c65f1f368941a1b35fb",
+      "bytes": 589,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/b1-energy-spatial-fine.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/b1-event-extent-spatial.md",
+      "sha256": "c1e5fcfb6648441f51c7f1e0a4d5217cfdbb11f77450e3d6bb9a860e1c3e9f4c",
+      "bytes": 1088,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/b1-event-extent-spatial.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/b1-event-support-spatial.md",
+      "sha256": "6106f15924c693f484779f0df57534b324e9bebd8b9ee3a04abacecfbb1724c4",
+      "bytes": 1094,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/b1-event-support-spatial.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/b1-full-fine.md",
+      "sha256": "91fae73a30b5574bddb01858ea17919dcd45e0835d0e4c09554c3281304a3ee4",
+      "bytes": 2046,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/b1-full-fine.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/b1-main.md",
+      "sha256": "e74543bb304256b6313f8b1a0acd407db5c6973947aec504e575a44c8e199087",
+      "bytes": 599,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/b1-main.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/b1-outside-fine.md",
+      "sha256": "f74679e191c485619885744e1c7cbf1714d2a87995b166705e91c0dcce9c7f33",
+      "bytes": 2097,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/b1-outside-fine.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/b1-primary-decisions.md",
+      "sha256": "f9635f02274647e0b276d9db89ab67148d469da542bfe8a2d1debde9d49f0a13",
+      "bytes": 789,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/b1-primary-decisions.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/b1-window-fine.md",
+      "sha256": "db8daf45abe92309cb387cb40283a9ad95e4ec84905f5cc80c06f35ded9588e7",
+      "bytes": 2011,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/b1-window-fine.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/claim-reference-scope.md",
+      "sha256": "70af73cf3dc310f6143be3f6f352ce7641a1f57f3f9a19741b019d52fb4c04aa",
+      "bytes": 645,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/claim-reference-scope.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/clean-pde-audits.md",
+      "sha256": "f8e3a09ca05c75ec707e8f5ee0e04a950d7d3186e5f2ed0418beb28ea59d9f5b",
+      "bytes": 359,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/clean-pde-audits.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/clean-pde-primary.md",
+      "sha256": "643fb94c241917da507d1666d704bae5d7cf25269e5260af91c33fd82755ed8a",
+      "bytes": 806,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/clean-pde-primary.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/completion-cost.md",
+      "sha256": "22846e6dac71864fab4f6417ede09953c51715f35bb2481ce0da0e4dd7b221ed",
+      "bytes": 221,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/completion-events.md",
+      "sha256": "3872ec4ee2e72370284ba597b2ff0dcb6b87bddd7fae5aa4f027e0208413b624",
+      "bytes": 736,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/completion-metrics.md",
+      "sha256": "53a6e2238eb90e53c142029fc6ef372f78298cb89552ca59f5f5c276eb852291",
+      "bytes": 1270,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/diagnostic-components.md",
+      "sha256": "01f0247d961ac1af1d9ef0dd3ad30bd93e5c5947cf55cd317e77c8fb6f89633e",
+      "bytes": 2540,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/event-masses.md",
+      "sha256": "7290aa19477981ad036242f3fa335912a9c8ba412fa37df50e727438c89d7815",
+      "bytes": 1466,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/event-masses.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/event-quality.md",
+      "sha256": "4923812e3d6a033df071a415d69a9b99529cfe3e6dda3954425efaae243de754",
+      "bytes": 1857,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/event-quality.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/event-shape.md",
+      "sha256": "50222060b5c975ba72d2b513d73f8c4923fa06ab5c3a1f148099a120d7154203",
+      "bytes": 1348,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/event-shape.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/execution-budget.md",
+      "sha256": "0d3d8a1c3fc57eacf5d9eab7427a62d57be1ef51f1ade8cd387efc30657f5d5d",
+      "bytes": 288,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/execution-budget.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/fcov-decisions.md",
+      "sha256": "9184e9a5ed8c32f7896ccb1818ed62eceae69902dcd034435f6f24a299e4bb8f",
+      "bytes": 776
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/fcov-metrics.md",
+      "sha256": "307af3d782ac3e9ef84d22cfe496e86140c585326cb3dd072874a2d78cfc8e7a",
+      "bytes": 3897
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/fcov-work.md",
+      "sha256": "f4ab650546f23f86c305e762c81857fcbe8aec3ec72a5916acc0086111b58884",
+      "bytes": 230
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/full-label-main.md",
+      "sha256": "f135f9e196f1978a7ff7a8b65d792403fe6c2b055506ba0c80a6668e28331574",
+      "bytes": 813,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/full-label-main.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/historical-summary.md",
+      "sha256": "1722cf8fca4de8277710b778cdddacc63ff47dc7a6af94f91d41d17a885a399a",
+      "bytes": 877,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/historical-summary.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/history-summary.md",
+      "sha256": "4c646925de24f522cac61dd9c623f7775ca6004751f77d09e3d2c76edad9bc34",
+      "bytes": 264,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/history-summary.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/latency-summary.md",
+      "sha256": "d78ab043fa228009b3cf5821fae73cde7a70070e1c2a9a37ea2cd557e7c5791b",
+      "bytes": 428,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/latency-summary.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/moments-cost.md",
+      "sha256": "7f071bfe87e16bf1b148db418dba44ae8f944fc14c1202a73bf76707c6230b63",
+      "bytes": 448,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/moments-events.md",
+      "sha256": "e0e42d643fd57320c602b53e9ae7c5b57752d74a9f5181f49274032616683ae8",
+      "bytes": 1130,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/moments-metrics.md",
+      "sha256": "089cbdbf50ba22ee62259dc25d25d8cf89dcd0f6346ec0d75d485445c540d6b8",
+      "bytes": 1932,
+      "historical_asset_source": "current authoritative source or derived saved-data asset"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/parent-summary.md",
+      "sha256": "7c8971c10dc38661fc0fd20fd44cec3c68f367a82835109c4a38d6067d786a54",
+      "bytes": 392,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/parent-summary.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/phase-adapter-decisions.md",
+      "sha256": "71b4cebb8875c014cbc875f73ed17135ccce6a616cd3ca712e9df21ff59a436b",
+      "bytes": 515,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/phase-adapter-decisions.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/phase-adapter-events.md",
+      "sha256": "71356c23deffddd780d9cf30caa49ced72613df5d6dd984694a7402e6c9755eb",
+      "bytes": 5030,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/phase-adapter-events.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/phase-adapter-metrics.md",
+      "sha256": "bf7207f0d6f3bdb6094eb38d60bd15e464901acf9494ad926dca89b964317bb5",
+      "bytes": 2171,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/phase-adapter-metrics.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/phase-adapter-secondary.md",
+      "sha256": "d0d5290b940747fe07513951a280c319c66f9906f472dbe2ea02349ffeb37287",
+      "bytes": 1753,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/phase-adapter-secondary.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/pulse-summary.md",
+      "sha256": "139d6f75a4ff0cdf48dc954b5d2d93c4b33e0b19c950f3d45dd638641cab517b",
+      "bytes": 1004,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/pulse-summary.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/reader-gates.md",
+      "sha256": "a0cd78dccd1977dd4a7e8ba1dc84dc42686e7f06165810ce4e29ea2550a04062",
+      "bytes": 3657,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/reader-gates.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/reader-spatial-primary.md",
+      "sha256": "3b23becae9dd4f7477bd83fb177f38b4950988101c717d06d02a845a7634b2b2",
+      "bytes": 876,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/reader-spatial-primary.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/reference-certificates.md",
+      "sha256": "09888d8d7e9dec157d7c3d402e4d1870a895e4f74704e32565febb422ed23a90",
+      "bytes": 1163,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/reference-certificates.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/reference-events.md",
+      "sha256": "2a3fb29c94e7af391794b037455e8070531bd2033850cc07115dd91842bd97ff",
+      "bytes": 366,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/reference-events.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/remaining-pde-controls.md",
+      "sha256": "108f25985c9e9ca3ec4a3abfc9f13bef3d6bdc7f53028679e12428642609045e",
+      "bytes": 355,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/remaining-pde-controls.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/revision-execution.md",
+      "sha256": "d618e3b91b39cc124bc9e5f97fc821b7a842fd8551312a22c001d770cbbdb640",
+      "bytes": 526,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/revision-execution.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/spatial-continuation-decisions.md",
+      "sha256": "6e3e4d5ccf6a39c0fa36cc6464a65077443783e72105bc1a5b2d26f0047a1fd6",
+      "bytes": 651,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/spatial-continuation-decisions.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/spatial-execution.md",
+      "sha256": "fb6c494973c176dbb7f4af85bddd5f5905a50a57750d90f4464e56f70510631d",
+      "bytes": 221,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/spatial-execution.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/spatial-fixed-endpoints.md",
+      "sha256": "d65c05c2346ed2f28c66c06635c4d612eb8c36f1a95bc7caa670ebb27349183b",
+      "bytes": 1269,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/spatial-fixed-endpoints.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/spatial-historical-comparisons.md",
+      "sha256": "5c912eedbccb8beff5fc7c5f9ea02ced527b24f6cb381c79d47ace99491a8c85",
+      "bytes": 641,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/spatial-historical-comparisons.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/spatial-reference-deltas.md",
+      "sha256": "212f0fdeac41e422b9513e643fe7384b02f4c8003df1926938391cc83b2c26ae",
+      "bytes": 354,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/spatial-reference-deltas.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/spatial-strict-counterexample.md",
+      "sha256": "07edf6ddd6a80bda6c7a6d88f450edc9d81e1608c0348fceb4e0342b0570751e",
+      "bytes": 326,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/spatial-strict-counterexample.md"
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/tables/spatial-threshold-mapping.md",
+      "sha256": "1ec705e4a3c40e42c831889c8129266854ca8aa7bcf1977cfd9440738c386754",
+      "bytes": 1310,
+      "historical_asset_source": "paper/paper_revision_20260921/tables/spatial-threshold-mapping.md"
+    }
+  ],
+  "builders": [
+    {
+      "path": "paper/paper_revision_20260926_core/prepare_document.py",
+      "sha256": "2e43e20e1e60dc486b812fb9e985e9983ee5be88f10c1f6e5bd02ec83c593982",
+      "bytes": 4340
+    },
+    {
+      "path": "paper/paper_revision_20260926_core/build_docx.py",
+      "sha256": "84126ef630d2a9cb4a003773e25eec0f9bac1184e26fc8ab8bab7604462f0fa7",
+      "bytes": 8006
+    },
+    {
+      "path": "paper/advisor_review_20260924/render_with_word.ps1",
+      "sha256": "5ec20d00717d483b0277728c973e326fb8cb1d361ca15ed40d8e1e6cbadbc031",
+      "bytes": 1403
+    }
+  ],
+  "equations": "Regenerated from the same Markdown formulas by prepare_document.py; DOCX equations are embedded images, with editable formula source in Markdown.",
+  "pdf_derivation": "Installed Microsoft Word exports the final DOCX. No separately authored PDF text.",
+  "runtime": {
+    "numeric_and_markdown_preparation": "Project Python 3.11 with NumPy, SciPy and Matplotlib",
+    "docx": "Bundled Python 3.12.14 with python-docx 1.2.0 and Pillow",
+    "pdf": "Installed Microsoft Word COM; bundled Poppler at 130 dpi",
+    "visual_QA": "Rendered page PNGs, project PyMuPDF and Pillow; see build/visual-review.json"
+  },
+  "renderer_fallback": "Bundled render_docx.py was attempted; Windows LibreOffice was unavailable. The existing Word renderer was used. See build/packaged-render.log.",
+  "scientific_regeneration": {
+    "historical": {
+      "B1_and_physical_figures": "paper/paper_revision_20260921/plot_physics.py; outputs/submission-rescore-20260921/manifest.json, outputs/runs/20260921-b1-second-cycle-phase-gap and saved physical-panels.npz",
+      "common_reader": "paper/paper_revision_20260918/report_results.py; outputs/submission-archive-20260918/isolated-rescore",
+      "objective_diagnostic": "paper/observation_preserving_phase_20260924/build_diagnostic_report.py; outputs/runs/20260924-observation-preserving-phase/diagnostic-20260925",
+      "conditional": "paper/paper_revision_20260925_integrated/finalize_conditional_report.py consumes outputs/runs/20260925-fixed-temperature-phase-probe; no new network query or propagation in this revision."
+    },
+    "coverage": "finalize_coverage.py reads locked saved scores and fields; no new training, inference or electrical solve.",
+    "author_model": "build_vo2_report.py reads the ten saved trajectories and metadata; no Euler rerun."
+  },
+  "archived_unused_renderer": "build_pdf.py is inherited and was not used for the delivered PDF.",
+  "outputs": {
+    "manuscript.md": {
+      "path": "paper/paper_revision_20260926_core/manuscript.md",
+      "sha256": "818c951f71450df81a7f4dc563af9fdf778da8407017053e56bc55c78672519e",
+      "bytes": 60620
+    },
+    "manuscript.docx": {
+      "path": "paper/paper_revision_20260926_core/manuscript.docx",
+      "sha256": "152b0e9d850ba3325a127189fb49e376d0faffa8834d32d7f0e3a0640bf9ccc1",
+      "bytes": 1801665
+    },
+    "manuscript.pdf": {
+      "path": "paper/paper_revision_20260926_core/manuscript.pdf",
+      "sha256": "d18fa3ac4043fbbaea1bbc2ff77b9057f9a9d3a0d0838698c0b46646449bbefe",
+      "bytes": 1551193
+    },
+    "supplement.md": {
+      "path": "paper/paper_revision_20260926_core/supplement.md",
+      "sha256": "a06cde95cc54f2fb18b0fd8f11f984c6061961e3ff0686ab300d8faba21c4180",
+      "bytes": 186405
+    },
+    "supplement.docx": {
+      "path": "paper/paper_revision_20260926_core/supplement.docx",
+      "sha256": "5c09b5bab98a73fcdeb652364b51d824e51f8e8710363b6a33286d30132b021d",
+      "bytes": 5825070
+    },
+    "supplement.pdf": {
+      "path": "paper/paper_revision_20260926_core/supplement.pdf",
+      "sha256": "94e001233e2f7efc28f5ceb0ccdbc11b3c21bee3cd8acb9ce259b413b46ec60a",
+      "bytes": 5654257
+    }
+  }
+}
