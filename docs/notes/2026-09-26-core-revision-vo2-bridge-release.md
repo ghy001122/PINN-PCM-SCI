@@ -2,7 +2,7 @@
 
 2026-09-26 用户另行明确要求将重要交付结果提交至 `ghy001122/PINN-PCM-SCI`。沿用 `codex/paper-revision-results`，基线 `90508f05a6f233a485413c7589cc74420015cbea`。此授权 supersedes 本轮此前 Git 未授权措辞；科研仍为 CLOSED，下一研究执行授权为 false。
 
-发布状态：`PREPARED_PENDING_PUSH`。
+发布状态：`PUBLISHED_REMOTE_VERIFIED`。
 
 ## 纳入范围
 
@@ -23,3 +23,5 @@
 不重复训练、推理、作者模型积分或稿件渲染。发布前核对限定清单、依赖、既有构建制品身份及文档一致性；推送后核对远端提交。
 
 发布前文档门禁返回 `DOCUMENT_CONSISTENCY_VALID`。限定清单416个文件，排除了无关工作区修改；92项实际构建输入、构建入口及交付输出身份一致。现有报告的末尾空行按原产物保留，不改写冻结证据。
+
+成果提交：[539130a2837594c4d8ae3d67fadddda3e862548a](https://github.com/ghy001122/PINN-PCM-SCI/commit/539130a2837594c4d8ae3d67fadddda3e862548a)。已推送并通过远端分支核验；此核验记录随后单独同步。科研保持 CLOSED，完整数据外部访问仍未闭合。
