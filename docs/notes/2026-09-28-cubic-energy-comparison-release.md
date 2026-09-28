@@ -2,7 +2,9 @@
 
 2026-09-28 用户另行明确要求将重要交付结果整合并提交至 `ghy001122/PINN-PCM-SCI`。沿用 `codex/paper-revision-results`，发布基线为 `9414c1da37cb9a101bf3ed812d248f63d4454470`。此授权 supersedes 本任务科研收口时的 Git 未授权措辞；科研阶段仍为 `CLOSED`，下一研究执行授权仍为 `false`。
 
-发布状态：`PUBLISHING_PENDING_REMOTE_VERIFICATION`。
+发布状态：`PUBLISHED_REMOTE_VERIFIED`。
+
+成果提交：[709b10fd28fc8fc80c9103acd68be02c35ac2816](https://github.com/ghy001122/PINN-PCM-SCI/commit/709b10fd28fc8fc80c9103acd68be02c35ac2816)。已推送至 `codex/paper-revision-results`，并核对远端分支指向同一提交；本核验记录随后单独同步。
 
 ## 纳入范围
 
@@ -25,4 +27,4 @@
 
 ## 发布核验
 
-发布前运行与本轮新增接口相关的聚焦测试、文档一致性门禁、限定暂存清单检查、对象完整性检查和敏感信息模式检查；不重算科学结果或重建稿件。成果提交身份、文件数、体积和远端分支核验将在推送后写入本节。
+发布前运行与本轮新增接口相关的聚焦测试、文档一致性门禁、限定暂存清单检查、对象完整性检查和敏感信息模式检查；不重算科学结果或重建稿件。八项聚焦测试通过，文档门禁返回 `DOCUMENT_CONSISTENCY_VALID`；限定清单189个文件、约66.9 MiB，最大单文件3.05 MiB。可移交清单38项的长度与SHA-256全部匹配，未暂存第三方原始资产、凭据、实例登录信息、外部Skill或工作区其他修改。首次成果推送后，远端分支身份与成果提交一致。
