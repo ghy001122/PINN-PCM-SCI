@@ -1,0 +1,275 @@
+{
+  "task": "PCM-20260928-CUBIC-ENERGY-DISCRIMINATION-01",
+  "authoritative_text": "source/manuscript.md",
+  "source_change": "Published release identity and actual access status only",
+  "build_inputs": [
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-01.png",
+      "bytes": 6573,
+      "sha256": "09c435c58bd6f5cf6dde6144de1851deca30bccf3ecb27ee7a1200b1027706f8"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-02.png",
+      "bytes": 10489,
+      "sha256": "0cffa73c3d65de9260db6658e5d3fddabedcc65f00345fa896a9d2221c2f895a"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-03.png",
+      "bytes": 10283,
+      "sha256": "7b435299701358ef8129b8b3fbca8a5c9e8f19116cc042a02fae4e61bdf0810a"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-04.png",
+      "bytes": 10855,
+      "sha256": "5e591b93f06b75b1cdc8b78e6209a3669b900b2429edaa7e67055244b0528e20"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-05.png",
+      "bytes": 12604,
+      "sha256": "d30319824217bf92501dea4e3630413c68b3eebb60c930867033ec43551e1b98"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-06.png",
+      "bytes": 12090,
+      "sha256": "3acf73af623e0d77cef5c49d26399e0f8ee12304b7ce18878ab32ea47c5fa04d"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-07.png",
+      "bytes": 16124,
+      "sha256": "9d23a23eec034b5d187daee84be39f2fd007a066e4fa0cca1b0501022ebef075"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-08.png",
+      "bytes": 10088,
+      "sha256": "9e993a7b5d1cf68d6362a4a68c8938ce913dfc7cae248ea1a22bc4beff3bc9f1"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-09.png",
+      "bytes": 12133,
+      "sha256": "222650e1c85b4ba64b26d1ebeb0ec231e7140717c5379d0d019cb5bfb82f8b15"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-10.png",
+      "bytes": 7373,
+      "sha256": "78472cd535de3b86f27660a98114d546ee9f5b80d640202b6ba398aaaedc38ca"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-11.png",
+      "bytes": 15373,
+      "sha256": "d760970a4ba1baeb408a9460878a2d270a89d19319952d3c910a1a592bba6d3f"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-12.png",
+      "bytes": 12772,
+      "sha256": "50d2dff252a6413dc535457dc63f32fbc1305e8500898b88c535539188170f0d"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-13.png",
+      "bytes": 12047,
+      "sha256": "966c0e96c3710d53e7366bcee07a9bbd6ccd713e3e509865f50257ece55d45c8"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-14.png",
+      "bytes": 5361,
+      "sha256": "a94c9591306b0e959077f47fc0a6402bd06accd2d6799c64483ccdab651b7d73"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-15.png",
+      "bytes": 15375,
+      "sha256": "53bac8cb791a9a356b46e989bd7abba6ad92c9d688fa8635bb8a04e6b33506d0"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-16.png",
+      "bytes": 18549,
+      "sha256": "1cf52387300d6058d8e11458ccbad83ad504f220402c4193efd661bae539045b"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-17.png",
+      "bytes": 9829,
+      "sha256": "e2250f40a1bd7c3d1c63389095a8796e417863babc95238cbc98d42192d99b1f"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-18.png",
+      "bytes": 10077,
+      "sha256": "e15e474dab4d62aa2a1b24008c12269955a9ef508e963fdd8a67f9abcda0c930"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-19.png",
+      "bytes": 11070,
+      "sha256": "e5f0999785b3cd02a99ca62b977a3aceb95bc9b86b708b762e4baa0621071628"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-20.png",
+      "bytes": 15102,
+      "sha256": "e873f8c80afb9b5b29c36f6d89aad5232bce582540dcd206b432e9afe5b293b1"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-21.png",
+      "bytes": 9215,
+      "sha256": "077a20489ccf9f6d42e700209b70fdb066ee0a38dca795dde536a9bf51b8c5ca"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-22.png",
+      "bytes": 16540,
+      "sha256": "b130ab25b2b1d57d6c794fce55af6807ed833f262529fa60afd300cc3b611137"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-23.png",
+      "bytes": 14093,
+      "sha256": "2e006ddfece3e344e63af9e0651f134cc9d7d9d20ea6a19535dca1ed14c84f5d"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/equations/manuscript-24.png",
+      "bytes": 10890,
+      "sha256": "22feb3090f2ae7a49deb1e0b43ba0b67fe727f8e5eed5974f2e8317303973246"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build/render-manifest.json",
+      "bytes": 83891,
+      "sha256": "f39e15f0e6bacfaab0e0b8c364da4de775c7befb09f70bd7e17d349f4be0176b"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/figures/b1-phase-t2.png",
+      "bytes": 165097,
+      "sha256": "c3797e5bb42bfb43ae587680a54f797647776a1f35c181cdcf2fd9ee858ff794"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/figures/fig01-object-information.png",
+      "bytes": 188041,
+      "sha256": "7ecdddd698057777b81fc1049aa805bfd217dadb1cc52013409a081a238cf959"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/figures/fig02-full-label-physics-seed29.png",
+      "bytes": 253143,
+      "sha256": "6a8449011eb2a0b6930e91ada837f934f571a449862a384090c878071c4f76f0"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/figures/fig05-b1-matched-effects.png",
+      "bytes": 235650,
+      "sha256": "10a2c319b50cca52190db7590ef3947292f4f3cf86c5f005eb8bd11f3c300063"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/figures/fig15-common-reader.png",
+      "bytes": 238069,
+      "sha256": "a74446246419b3860652da5ff4bf0a0c58449404f446951c4b90c8cedd53369c"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/figures/physics-objective-diagnostic.png",
+      "bytes": 484343,
+      "sha256": "6f964b1c6ed9d151c4846df6339da0aa96c30cbaa0451b8e1ed8c8297a839c5b"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/references.md",
+      "bytes": 5970,
+      "sha256": "b2ea74421c403ca9760d3b7503f52fbffb65740a220bf52b214bfcc9b2301e7b"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/source/manuscript.md",
+      "bytes": 53194,
+      "sha256": "c5723a69c74bc653868e0b9e46e4553d31bd9945d2eb32d0cadde47d41b8a87c"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/tables/b1-continuous-ranges.md",
+      "bytes": 634,
+      "sha256": "7ad51164f1464f416c4ed085855e08b08a46ec960b5fb39e5c97d89364c4fe6b"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/tables/b1-main.md",
+      "bytes": 599,
+      "sha256": "e74543bb304256b6313f8b1a0acd407db5c6973947aec504e575a44c8e199087"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/tables/b1-primary-decisions.md",
+      "bytes": 789,
+      "sha256": "f9635f02274647e0b276d9db89ab67148d469da542bfe8a2d1debde9d49f0a13"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/tables/fcov-continuous-primary.md",
+      "bytes": 275,
+      "sha256": "4b4684922560e16465e3e497b4f1f6d2594812ea839ccba0537937a35f5c387f"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/tables/full-label-main.md",
+      "bytes": 813,
+      "sha256": "f135f9e196f1978a7ff7a8b65d792403fe6c2b055506ba0c80a6668e28331574"
+    }
+  ],
+  "builders": [
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/prepare_document.py",
+      "bytes": 4597,
+      "sha256": "3c2df8ab088c008016ae4eb43f968fde9833e1cea00ed7170a130b17becffbd0"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/build_docx.py",
+      "bytes": 8159,
+      "sha256": "9266c5b08a951c5e45fc806249f1a0b422bb0091cca222e359e47325c0f72862"
+    },
+    {
+      "path": "paper/advisor_review_20260924/render_with_word.ps1",
+      "bytes": 1403,
+      "sha256": "5ec20d00717d483b0277728c973e326fb8cb1d361ca15ed40d8e1e6cbadbc031"
+    }
+  ],
+  "unchanged_formula_cache": {
+    "source_manifest": {
+      "path": "paper/paper_revision_20260927_circuit_screen/build/render-manifest.json",
+      "bytes": 401928,
+      "sha256": "09fc06980be7903ce5ae5eb0dfbe1aec33262c57e5438a0e7572ccfa478debfc"
+    },
+    "count": 24,
+    "qualification": "Each formula string matched exactly before copying the saved PNG",
+    "representation": "Embedded PNG; editable mathematics remain in Markdown"
+  },
+  "inherited_assets": [
+    "references.md",
+    "tables/full-label-main.md",
+    "tables/fcov-continuous-primary.md",
+    "tables/b1-main.md",
+    "tables/b1-primary-decisions.md",
+    "tables/b1-continuous-ranges.md",
+    "figures/fig02-full-label-physics-seed29.png",
+    "figures/fig15-common-reader.png",
+    "figures/fig05-b1-matched-effects.png",
+    "figures/physics-objective-diagnostic.png",
+    "figures/fig01-object-information.png",
+    "figures/b1-phase-t2.png",
+    "tables/P04-original43-fine-continuous-effects.csv"
+  ],
+  "storage": "Inherited figure/table/reference hardlinks are not independent backups",
+  "runtime": {
+    "preparation": "Project Python 3.11; cached equation PNG reuse",
+    "docx": "Bundled documents-runtime Python 3.12.14; python-docx 1.2.0 and Pillow",
+    "pdf": "Installed Microsoft Word COM exports the final DOCX",
+    "page_images": "Bundled Poppler at 130 dpi"
+  },
+  "render_fallback": "Existing Windows LibreOffice absence documented in the prior build; reused successful Word/Poppler path",
+  "successful_manuscript_build_count": 1,
+  "engineering_record": "build/preparation-engineering-record.json",
+  "review": "build/visual-review-manuscript.json",
+  "supplement": {
+    "rebuilt": false,
+    "pages": 58,
+    "pdf": "../paper_revision_20260927_circuit_screen/supplement.pdf",
+    "docx": "../paper_revision_20260927_circuit_screen/supplement.docx",
+    "source": "../paper_revision_20260927_circuit_screen/source/supplement.md"
+  },
+  "scientific_regeneration": "None for manuscript. New circuit comparison is a separate report.",
+  "outputs": [
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/manuscript.md",
+      "bytes": 62100,
+      "sha256": "8fac80e7c3195c5a58ba3efe6bfb732a386b089fdf1a0044723f5ccccd6e1b22"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/manuscript.docx",
+      "bytes": 1802382,
+      "sha256": "30f302c0df1eeacffd59ec0c8fbf011a7d3ea6f968d4ca9a066ee32748bf1f95"
+    },
+    {
+      "path": "paper/paper_revision_20260928_circuit_comparison/manuscript.pdf",
+      "bytes": 1560638,
+      "sha256": "4a3fd1e295b9c8d77b72c71cfbfc369f5ecba770ecf780253b96a22e981baf47"
+    }
+  ]
+}

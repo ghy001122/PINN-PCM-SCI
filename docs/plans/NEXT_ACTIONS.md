@@ -1,18 +1,18 @@
-<!-- CIRCUIT27_CURRENT_BEGIN -->
-# 当前：现稿局部修订与固定电路筛查已收口
+<!-- CUBIC28_CURRENT_BEGIN -->
+# 当前：固定样条对照与焦耳能量辨别已完成
 
-用户批准的 PCM-20260927-MANUSCRIPT-CIRCUIT-SCREEN-01 已完成。主稿17页、补充58页；十条保存系统记录的十四套PCHIP重构与完整合法分析完成，五条实验开发记录因测量合同未闭合未评分。封存协议未读取数值；零新轨迹、推理或训练。结果已回收核验，关机命令成功且三次SSH不可达。
+PCM-20260928-CUBIC-ENERGY-DISCRIMINATION-01完成批准范围。十套锁定CS、十四条配对、三窗口/196区间焦耳能量、独立评分子集、测量草稿与17页局部修订主稿已交付；58页补充沿用不变。见[结果入口](../../paper/paper_revision_20260928_circuit_comparison/README.md)。
 
-VERIFIED为保存数组分析事实；绝对用途充分性和实验方法增量为UNKNOWN。唯一下一研究建议是取得低阈值记录的测量与用途合同，未授权后续研究。P02、严格双周期、材料/泛化及P03继续开放；用户随后明确授权本轮重要成果提交至 `codex/paper-revision-results`，范围与核验见[发布记录](../notes/2026-09-28-manuscript-circuit-screen-release.md)。精选Git成果不等于完整数据公开，AutoDL已关闭后的少量最终文件仍按原记录待同步；未投稿。
+VERIFIED：CS对不同角色有相反RMS效应，伴随保存时刻负电流/负耗散；能量总量、时间分配与电流波形不能互相认证。独立目录结果与首次评分精确一致。UNKNOWN：用途充分性、实验和PINN增量、内部热状态。唯一后续建议为取得五条开发记录测量说明，未授权校准或新pilot。
 
-- `phase_id`: `PHK_V23_MANUSCRIPT_CIRCUIT_SCREEN`
+零新增系统轨迹、训练、实验CSV读取或GPU作业。用户随后明确授权将本轮精选成果提交至 `codex/paper-revision-results`；发布范围与远端核验见[发布记录](../notes/2026-09-28-cubic-energy-comparison-release.md)。精选Git成果只闭合本轮最小评分子集的Git获取，不关闭全论文P03；未创建DOI或投稿。
+
+- `phase_id`: `PHK_V23_CUBIC_ENERGY_DISCRIMINATION`
 - `lifecycle_state`: `CLOSED`
 - `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_SAVED_ARRAY_SCREEN_SUFFICIENCY_UNKNOWN`
+- `claim_status`: `VERIFIED_CS_MIXED_EFFECTS_ENERGY_TIME_DISTRIBUTION`
 - `next_research_execution_authorized`: `false`
 
-<!-- CIRCUIT27_CURRENT_END -->
+<!-- CUBIC28_CURRENT_END -->
 
-[完整交付](../../paper/paper_revision_20260927_circuit_screen/README.md) · [收口](../experiment/2026-09-28-manuscript-circuit-screen-closeout.md) · [冻结执行合同](../../paper/paper_revision_20260927_circuit_screen/instructions.md)。
-
-本轮已完成，不继续运行。下一测量与用途合同任务为PROPOSED_NOT_AUTHORIZED，4000/800训练预算未启动。外部数据访问与正式归档位置另待批准。
+[收口](../experiment/2026-09-28-cubic-energy-comparison-closeout.md) · [执行合同](../../paper/paper_revision_20260928_circuit_comparison/instructions.md)。本包关闭；测量说明、C校准或PINN研究不自动启动。

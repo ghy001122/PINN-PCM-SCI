@@ -1,0 +1,129 @@
+{
+  "generated_at": "2026-09-28T09:07:53.572908+00:00",
+  "source_root": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260928_circuit_comparison\\scoring-subset",
+  "results_directory": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260928_circuit_comparison\\scoring-subset\\results",
+  "figures": [
+    {
+      "path": "figures/circuit-waveform-single_9V-A.png",
+      "bytes": 183393,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "21de92b949438a779510c734a6d79e5abf21f98813259a66f79b2a7ff79ca88e"
+    },
+    {
+      "path": "figures/circuit-waveform-single_12p5V-A.png",
+      "bytes": 394662,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "145f05fe5ba3747901428409a20975ab74b2b1e642f84cce34922a5926554752"
+    },
+    {
+      "path": "figures/circuit-waveform-single_12p5V-A-first-peak.png",
+      "bytes": 280060,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "d47313c8e0f0958738733f349afd2569ff68780f4052ad2d8a61bbb764e65f83"
+    },
+    {
+      "path": "figures/circuit-waveform-single_15p8V-A.png",
+      "bytes": 218166,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "da361d2939ed16f1482647b2e82b4c12933bff9af6225d2057afa6f16d8864b9"
+    },
+    {
+      "path": "figures/circuit-waveform-pair_excitation-A.png",
+      "bytes": 356078,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "1e46ed9404d4deb5318dbfb8fe9240ffc3a34d093c3f47fc5b2893e45b35fbf1"
+    },
+    {
+      "path": "figures/circuit-waveform-pair_excitation-B.png",
+      "bytes": 355635,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "41fea7bc4913ae05890fd79c406a9c41349ab258c3f88a91cfde046f1c5ae951"
+    },
+    {
+      "path": "figures/circuit-waveform-pair_inhibition-A.png",
+      "bytes": 389197,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "580defedcabde5316a3bcd636574197873705394ff9cf8dbc7e00783b42e4bd8"
+    },
+    {
+      "path": "figures/circuit-waveform-pair_inhibition-B.png",
+      "bytes": 244664,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "4dce97859d95a6bdfb28e5f1cbcd53eaf635108250858fc1091b8f6d53524c4c"
+    },
+    {
+      "path": "figures/circuit-energy-single_9V-A.png",
+      "bytes": 153441,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "632b22ec993801189a6f78dc7d92b25303ed9957adbdf32d77f7551c80c1e25e"
+    },
+    {
+      "path": "figures/circuit-energy-single_12p5V-A.png",
+      "bytes": 207226,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "2b21244a2c724ac456915438185a8eb9611551816592702d9eee24345605c035"
+    },
+    {
+      "path": "figures/circuit-energy-single_15p8V-A.png",
+      "bytes": 170511,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "df635301dc8e69c94a4c953192185b20b374b800bda7cf4cd9adff442539bcd2"
+    },
+    {
+      "path": "figures/circuit-energy-pair_excitation-A.png",
+      "bytes": 197220,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "4da0811ff266ac25f14b0c313f69b91bb0243f2ec2712b03e1d3cc133d90bfc2"
+    },
+    {
+      "path": "figures/circuit-energy-pair_excitation-B.png",
+      "bytes": 203704,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "1cd09542bc793420f4d905a01eaf964db310408a02cd6d05c907d0d94a60a080"
+    },
+    {
+      "path": "figures/circuit-energy-pair_inhibition-A.png",
+      "bytes": 204261,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "dcbc559cdf6989de46c9b27986fdb597226e652e5d30872b74542ac06434f04e"
+    },
+    {
+      "path": "figures/circuit-energy-pair_inhibition-B.png",
+      "bytes": 173691,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "642fe4a2551c2bbf553267420a495c77086674f3afa58523b3417a6d9e5fac5d"
+    }
+  ],
+  "prespecified_zoom": {
+    "source_id": "single_12p5V-1ns",
+    "first_reference_peak_s": 2.612e-06,
+    "bounds_s": [
+      2.362e-06,
+      2.8620000000000003e-06
+    ],
+    "both_columns_share_same_absolute_time_window": true,
+    "used_for_score": false
+  },
+  "new_interpolation_fits": 0,
+  "new_scoring_runs": 0,
+  "read_only_saved_arrays": true,
+  "no_waveform_alignment": true,
+  "current_observations_drawn": false,
+  "visual_review_status": "PASS",
+  "visual_review_record": "figure-review-complete.json"
+}

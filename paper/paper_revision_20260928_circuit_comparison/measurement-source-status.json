@@ -1,0 +1,253 @@
+{
+  "task": "PCM-20260928-CUBIC-ENERGY-DISCRIMINATION-01",
+  "status": "DRAFT_PREPARED_NOT_SENT",
+  "new_external_contact": false,
+  "new_web_source_search": false,
+  "experiment_numeric_csv_read": false,
+  "heldout_4p1_3p9_read": false,
+  "source_qualification": "UNKNOWN unchanged from existing pinned assessment",
+  "device_identity_rule": "1E3 and 1E2 from filenames; no paper A/B relabeling",
+  "sources": [
+    {
+      "id": "prior_qualification",
+      "path": "../paper_revision_20260927_circuit_screen/experimental-qualification.json",
+      "sha256": "532957e9a3faf2a0fc4786c9e92c7ea62e57de14310d01d25324be899a72a5aa"
+    },
+    {
+      "id": "prior_qualification_explanation",
+      "path": "../paper_revision_20260927_circuit_screen/experimental-qualification.md"
+    },
+    {
+      "id": "pinned_author_code",
+      "commit": "217d4f0ed6bfc680240021b07142a121cb4963d1",
+      "use": "README/data conventions as previously inspected; no current CSV read"
+    },
+    {
+      "id": "Qiu",
+      "doi": "10.1002/adma.202306818",
+      "prior_detail": "arXiv2307.11256v2 Fig1B p11, methods p17; ideal RC and acquisition impedance do not establish record-level wiring"
+    },
+    {
+      "id": "Zhang",
+      "doi": "10.1038/s41467-024-51254-4",
+      "prior_detail": "methods and SI Appendix B distinguish low-threshold setup; no parameter transplantation"
+    }
+  ],
+  "records": [
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_2.6V_1E2_12K_2.6V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        2.6,
+        2.6
+      ],
+      "name_only_RL_ohm": [
+        12000,
+        12000
+      ],
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "missing": [
+        {
+          "item": "voltage nodes/reference ground and 50-ohm position",
+          "source_status": "UNKNOWN; ideal RC diagram and channel names do not resolve wiring"
+        },
+        {
+          "item": "record interval drive/trigger",
+          "source_status": "UNKNOWN; filename nominal voltage is not a waveform/trigger contract"
+        },
+        {
+          "item": "gain/polarity/delay",
+          "source_status": "UNKNOWN; no record-specific qualification"
+        },
+        {
+          "item": "capacitance for the same wiring",
+          "source_status": "UNKNOWN; high-threshold fitted C not applicable by default"
+        },
+        {
+          "item": "load and extra series components",
+          "source_status": "PARTIAL; filename 12 kOhm, actual measurement-node correspondence unresolved"
+        }
+      ]
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_3.7V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        4.1,
+        3.7
+      ],
+      "name_only_RL_ohm": [
+        12000,
+        12000
+      ],
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "missing": [
+        {
+          "item": "voltage nodes/reference ground and 50-ohm position",
+          "source_status": "UNKNOWN; ideal RC diagram and channel names do not resolve wiring"
+        },
+        {
+          "item": "record interval drive/trigger",
+          "source_status": "UNKNOWN; filename nominal voltage is not a waveform/trigger contract"
+        },
+        {
+          "item": "gain/polarity/delay",
+          "source_status": "UNKNOWN; no record-specific qualification"
+        },
+        {
+          "item": "capacitance for the same wiring",
+          "source_status": "UNKNOWN; high-threshold fitted C not applicable by default"
+        },
+        {
+          "item": "load and extra series components",
+          "source_status": "PARTIAL; filename 12 kOhm, actual measurement-node correspondence unresolved"
+        }
+      ]
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_4V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        4.1,
+        4.0
+      ],
+      "name_only_RL_ohm": [
+        12000,
+        12000
+      ],
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "missing": [
+        {
+          "item": "voltage nodes/reference ground and 50-ohm position",
+          "source_status": "UNKNOWN; ideal RC diagram and channel names do not resolve wiring"
+        },
+        {
+          "item": "record interval drive/trigger",
+          "source_status": "UNKNOWN; filename nominal voltage is not a waveform/trigger contract"
+        },
+        {
+          "item": "gain/polarity/delay",
+          "source_status": "UNKNOWN; no record-specific qualification"
+        },
+        {
+          "item": "capacitance for the same wiring",
+          "source_status": "UNKNOWN; high-threshold fitted C not applicable by default"
+        },
+        {
+          "item": "load and extra series components",
+          "source_status": "PARTIAL; filename 12 kOhm, actual measurement-node correspondence unresolved"
+        }
+      ]
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4V_1E2_12K_2.6V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        4.0,
+        2.6
+      ],
+      "name_only_RL_ohm": [
+        12000,
+        12000
+      ],
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "missing": [
+        {
+          "item": "voltage nodes/reference ground and 50-ohm position",
+          "source_status": "UNKNOWN; ideal RC diagram and channel names do not resolve wiring"
+        },
+        {
+          "item": "record interval drive/trigger",
+          "source_status": "UNKNOWN; filename nominal voltage is not a waveform/trigger contract"
+        },
+        {
+          "item": "gain/polarity/delay",
+          "source_status": "UNKNOWN; no record-specific qualification"
+        },
+        {
+          "item": "capacitance for the same wiring",
+          "source_status": "UNKNOWN; high-threshold fitted C not applicable by default"
+        },
+        {
+          "item": "load and extra series components",
+          "source_status": "PARTIAL; filename 12 kOhm, actual measurement-node correspondence unresolved"
+        }
+      ]
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_5V_1E2_12K_2.6V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        5.0,
+        2.6
+      ],
+      "name_only_RL_ohm": [
+        12000,
+        12000
+      ],
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "missing": [
+        {
+          "item": "voltage nodes/reference ground and 50-ohm position",
+          "source_status": "UNKNOWN; ideal RC diagram and channel names do not resolve wiring"
+        },
+        {
+          "item": "record interval drive/trigger",
+          "source_status": "UNKNOWN; filename nominal voltage is not a waveform/trigger contract"
+        },
+        {
+          "item": "gain/polarity/delay",
+          "source_status": "UNKNOWN; no record-specific qualification"
+        },
+        {
+          "item": "capacitance for the same wiring",
+          "source_status": "UNKNOWN; high-threshold fitted C not applicable by default"
+        },
+        {
+          "item": "load and extra series components",
+          "source_status": "PARTIAL; filename 12 kOhm, actual measurement-node correspondence unresolved"
+        }
+      ]
+    }
+  ],
+  "future_calibration": {
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "requires": [
+      "qualified topology",
+      "qualified gains and channel delays",
+      "qualified device-current branch",
+      "only capacitance remains missing",
+      "predeclared intervals with identifiable voltage changes",
+      "constant C grouping by actual device and wiring"
+    ],
+    "forbidden_joint_fits": [
+      "topology",
+      "arbitrary delay",
+      "gain",
+      "per-protocol free capacitance",
+      "thermal parameters"
+    ],
+    "heldout_excluded": true
+  },
+  "nonblockers": [
+    "unknown initial T/H",
+    "unobserved pre-record thermal history",
+    "missing absolute task tolerance",
+    "missing low-threshold peak rule for waveform errors"
+  ]
+}

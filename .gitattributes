@@ -48,3 +48,14 @@ paper/paper_revision_20260927_circuit_screen/circuit-screen-report.md whitespace
 paper/paper_revision_20260927_circuit_screen/conditional-evolution-report.md whitespace=cr-at-eol,-blank-at-eof
 paper/paper_revision_20260927_circuit_screen/vo2-author-reproduction.md whitespace=cr-at-eol,-blank-at-eof
 paper/paper_revision_20260927_circuit_screen/manuscript-changes.diff -whitespace
+
+# Preserve the CUBIC28 manuscript package, portable scoring subset, and locked predictions.
+paper/paper_revision_20260928_circuit_comparison/** -text whitespace=cr-at-eol
+paper/paper_revision_20260928_circuit_comparison/build/*.log -whitespace
+paper/paper_revision_20260928_circuit_comparison/build/manuscript-changes.diff -whitespace
+configs/cubic_energy_comparison_20260928.json -text whitespace=cr-at-eol
+scripts/circuit_energy_tools.py -text whitespace=cr-at-eol
+scripts/circuit_screen_metrics.py -text whitespace=cr-at-eol
+scripts/run_cubic_energy_comparison.py -text whitespace=cr-at-eol
+tests/test_circuit_energy_tools.py -text whitespace=cr-at-eol
+tests/test_cubic_energy_comparison.py -text whitespace=cr-at-eol

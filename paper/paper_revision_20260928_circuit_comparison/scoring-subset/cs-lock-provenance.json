@@ -1,0 +1,216 @@
+{
+  "task_id": "PCM-20260928-CUBIC-ENERGY-DISCRIMINATION-01",
+  "records": [
+    {
+      "id": "single_9V-1ns",
+      "case": "single_9V",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_9V-1ns.npz",
+      "source_voltage_V": [
+        9.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "654dd0ff0ddca2f1a24c8aefeaa00f05233d034b7180e4f6fba9399397c8de12",
+      "method": "CS",
+      "states": 20001,
+      "devices": 1,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:10.944861+00:00",
+      "score_fields_read_before_lock": false
+    },
+    {
+      "id": "single_9V-0p5ns",
+      "case": "single_9V",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_9V-0p5ns.npz",
+      "source_voltage_V": [
+        9.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "df3a685849cff33c5832e32fdbf31b19aa0c65c5c8994bc4c8b5b0fa0fb6a0a6",
+      "method": "CS",
+      "states": 40001,
+      "devices": 1,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:11.057832+00:00",
+      "score_fields_read_before_lock": false
+    },
+    {
+      "id": "single_12p5V-1ns",
+      "case": "single_12p5V",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_12p5V-1ns.npz",
+      "source_voltage_V": [
+        12.5
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "842c27aee6ba83e3470fda948c5a3cfe8d9b8e91d2a8105f430944ca1e92dd0b",
+      "method": "CS",
+      "states": 20001,
+      "devices": 1,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:11.112403+00:00",
+      "score_fields_read_before_lock": false
+    },
+    {
+      "id": "single_12p5V-0p5ns",
+      "case": "single_12p5V",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_12p5V-0p5ns.npz",
+      "source_voltage_V": [
+        12.5
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "f1c231bedf824d61db3c2939aba4cc1d0588474c6beed22abc3dd0fb28876903",
+      "method": "CS",
+      "states": 40001,
+      "devices": 1,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:11.206496+00:00",
+      "score_fields_read_before_lock": false
+    },
+    {
+      "id": "single_15p8V-1ns",
+      "case": "single_15p8V",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_15p8V-1ns.npz",
+      "source_voltage_V": [
+        15.8
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "643b8f49e5d4bc30f2387b91d45aa6d0ab8282f7a16de51832a9f6312e8c8fac",
+      "method": "CS",
+      "states": 20001,
+      "devices": 1,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:11.266370+00:00",
+      "score_fields_read_before_lock": false
+    },
+    {
+      "id": "single_15p8V-0p5ns",
+      "case": "single_15p8V",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_15p8V-0p5ns.npz",
+      "source_voltage_V": [
+        15.8
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "744293d6e8007630da57f2b68fe00c2e7e19155e8cae7c4a03d88eaed92c7dd7",
+      "method": "CS",
+      "states": 40001,
+      "devices": 1,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:11.363506+00:00",
+      "score_fields_read_before_lock": false
+    },
+    {
+      "id": "pair_excitation-1ns",
+      "case": "pair_excitation",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_excitation-1ns.npz",
+      "source_voltage_V": [
+        11.0,
+        9.4
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "afb04d8b2fadf1894a94ed8e8ad5789a0eedb28f5e3890d2e314e8a01678ecbd",
+      "method": "CS",
+      "states": 20001,
+      "devices": 2,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:11.452562+00:00",
+      "score_fields_read_before_lock": false
+    },
+    {
+      "id": "pair_excitation-0p5ns",
+      "case": "pair_excitation",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_excitation-0p5ns.npz",
+      "source_voltage_V": [
+        11.0,
+        9.4
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "7f07a1add22fa38a6cc5545595a90566503f250c50e59a4d92dbf012d4b4a6b3",
+      "method": "CS",
+      "states": 40001,
+      "devices": 2,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:11.635760+00:00",
+      "score_fields_read_before_lock": false
+    },
+    {
+      "id": "pair_inhibition-1ns",
+      "case": "pair_inhibition",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_inhibition-1ns.npz",
+      "source_voltage_V": [
+        11.0,
+        14.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "bf91b34e05716e0bc0f16f544dc187cf123e786f820c7f9eb2b1e25d7cfe290f",
+      "method": "CS",
+      "states": 20001,
+      "devices": 2,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:11.734470+00:00",
+      "score_fields_read_before_lock": false
+    },
+    {
+      "id": "pair_inhibition-0p5ns",
+      "case": "pair_inhibition",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_inhibition-0p5ns.npz",
+      "source_voltage_V": [
+        11.0,
+        14.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "prediction_sha256": "794d1a7e3654ce3a7a001ac3077966da62484cc9f3ebca09d329276c299320a4",
+      "method": "CS",
+      "states": 40001,
+      "devices": 2,
+      "observations": 197,
+      "frozen_at": "2026-09-28T09:01:11.939096+00:00",
+      "score_fields_read_before_lock": false
+    }
+  ],
+  "started": "2026-09-28T09:01:10.874573+00:00",
+  "locked_at": "2026-09-28T09:01:11.940099+00:00",
+  "elapsed_seconds": 1.0660470000002533,
+  "source_identity": {
+    "run_cubic_energy_comparison.py": "cf90f51826235b5bb1b3c0f618eca004395d26dea13f83675746d7447c9a1ea7",
+    "circuit_screen_metrics.py": "0b5e26462eeb5dc72ac992595c65f299d51e68db0b1ae258d1b87019bdf669d8",
+    "circuit_energy_tools.py": "a32b19faf5e7a24b08d3f32546a5341d51fad903292bdafa5257b10be86f5d60"
+  },
+  "source_score_arrays_opened": false,
+  "new_system_steps": 0,
+  "new_training_steps": 0,
+  "environment": {
+    "python": "3.11.9",
+    "numpy": "2.1.1",
+    "scipy": "1.14.1",
+    "device": "local CPU FP64"
+  }
+}

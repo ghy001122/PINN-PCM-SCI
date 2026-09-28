@@ -1,0 +1,29 @@
+{
+  "task_id": "PCM-20260928-CUBIC-ENERGY-DISCRIMINATION-01",
+  "baseline": "9414c1da37cb9a101bf3ed812d248f63d4454470",
+  "actual_HEAD": "9414c1da37cb9a101bf3ed812d248f63d4454470",
+  "frozen_at_utc": "2026-09-28T08:52:20.492285+00:00",
+  "reused_functions": [
+    "now",
+    "save_json",
+    "sha",
+    "resolve",
+    "trap_weights",
+    "prediction_charge",
+    "peak_matches",
+    "metrics",
+    "circuit_checks",
+    "decomposition",
+    "charge_accounting",
+    "summarize_peaks",
+    "write_csv",
+    "detect_peaks"
+  ],
+  "reused_function_identity": "verbatim source equality checked against successful old scoring snapshot",
+  "old_scoring_sha256": "a4a2b693d8d2a1452f9e6324e537478f50bf362ff4cfa605a1ea7a86120d1ae7",
+  "unrelated_preexisting_tracked_change": "docs/governance/EXTERNAL_SKILLS.md",
+  "scientific_source_arrays_read": false,
+  "external_csv_numeric_read": false,
+  "filename_resolution": "PLAN_Review_Amendments is prior PCHIP review; new Review_and_Next_Plan plus explicit new instruction authorize this one CS comparator",
+  "remote": "OFFLINE_PENDING_NEXT_AUTHORIZED_SESSION_SYNC; no instance startup for CPU work"
+}

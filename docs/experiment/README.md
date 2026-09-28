@@ -1,6 +1,8 @@
 # Experiment ledger protocol
 
-最新：[现稿局部修订与固定电路筛查收口](2026-09-28-manuscript-circuit-screen-closeout.md)。保存数组分析完成；实验资格与用途充分性未知，无后续训练授权。
+最新：[固定CS与焦耳能量比较收口](2026-09-28-cubic-energy-comparison-closeout.md)。本地有界对照及独立子集完成，无后续科研授权。
+
+历史：[现稿局部修订与固定电路筛查收口](2026-09-28-manuscript-circuit-screen-closeout.md)。保存数组分析完成；实验资格与用途充分性未知，无后续训练授权。
 
 历史2026-09-25：[W+A 连续成稿与条件演化收口](2026-09-25-integrated-manuscript-conditional-ivp-closeout.md)。两条轨迹数值资格通过；支持考虑原修正族证人搜索，原族可行性仍未知；实例已回收关闭。
 

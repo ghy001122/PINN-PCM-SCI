@@ -1,0 +1,207 @@
+{
+  "files": [
+    {
+      "path": "config.json",
+      "bytes": 11439,
+      "sha256": "922f4cd7f4056c858f7565cb28066d3a5bd26fec640cc856c8986e524b20e3d4"
+    },
+    {
+      "path": "cs-lock-provenance.json",
+      "bytes": 7983,
+      "sha256": "28e95ce045dbc024b0cd505cb2b71b3a9f52de7c31beca93f7849f20d49f340d"
+    },
+    {
+      "path": "expected-pchip-results.json",
+      "bytes": 251476,
+      "sha256": "26215d4c6cc177001ad24846071974d64a6639fad9c6411d462cfdefdaa7c6cd"
+    },
+    {
+      "path": "inputs/pair_excitation-0p5ns.npz",
+      "bytes": 2585921,
+      "sha256": "cff7d92fff8549c901a77ad970e73143c6014294ccafa3f640fb92a54b4cdd2f"
+    },
+    {
+      "path": "inputs/pair_excitation-1ns.npz",
+      "bytes": 1315392,
+      "sha256": "127e01d8e12a8dc018734ce2cf0a55028204613e01299b26b69f3245d5d5b0c2"
+    },
+    {
+      "path": "inputs/pair_inhibition-0p5ns.npz",
+      "bytes": 2502723,
+      "sha256": "89b16a8be838aabaf2d08e71d831422bb8c2600c268b70062282843b3e69aa83"
+    },
+    {
+      "path": "inputs/pair_inhibition-1ns.npz",
+      "bytes": 1275169,
+      "sha256": "473f7586cffcea497172faf6d58603bf2466c907dcb6e17376e7fc38a416e3a4"
+    },
+    {
+      "path": "inputs/single_12p5V-0p5ns.npz",
+      "bytes": 1422953,
+      "sha256": "6f5259516c60a2d39a42be74e18739b8ad4a124086a75d1710c3c09d1081eaec"
+    },
+    {
+      "path": "inputs/single_12p5V-1ns.npz",
+      "bytes": 723345,
+      "sha256": "ee99c8f437f569aa954e834e0fd5d98232c2a0ce98829f085d07a0f527b83692"
+    },
+    {
+      "path": "inputs/single_15p8V-0p5ns.npz",
+      "bytes": 898591,
+      "sha256": "7ae839fa7f12276889d12005d71ac85e42c54cf378c635a8d41cc11fa7fc69b4"
+    },
+    {
+      "path": "inputs/single_15p8V-1ns.npz",
+      "bytes": 459602,
+      "sha256": "1690ed2e40568e13cb285401f5748e160b64e30d0c3bb8075e2ccdc136bfdb12"
+    },
+    {
+      "path": "inputs/single_9V-0p5ns.npz",
+      "bytes": 1019873,
+      "sha256": "4f1e04b91b747ea619f719afa4110fa81c70ca3f71275d9b16be245aba109837"
+    },
+    {
+      "path": "inputs/single_9V-1ns.npz",
+      "bytes": 525944,
+      "sha256": "6f954d063107523e01e9ed1e1e42cd101b3c3d537d380a2a3919c868b7cb9a08"
+    },
+    {
+      "path": "predictions/CS/pair_excitation-0p5ns.npz",
+      "bytes": 2951026,
+      "sha256": "4bf4d6f8ab245271b88d5f040a748ac25e066fdf7cc15b7c545b9c144270ea1b"
+    },
+    {
+      "path": "predictions/CS/pair_excitation-1ns.npz",
+      "bytes": 1505885,
+      "sha256": "5a5b6e572d9f4c6f2022e0d68fa16607069510565f1eae1c169cfaf6290f303f"
+    },
+    {
+      "path": "predictions/CS/pair_inhibition-0p5ns.npz",
+      "bytes": 2890066,
+      "sha256": "88884fe50c15557cb2fe20bf77906899471a4492615d7378797b004a1cca49f7"
+    },
+    {
+      "path": "predictions/CS/pair_inhibition-1ns.npz",
+      "bytes": 1475976,
+      "sha256": "f1694695685aff38de28d2598259a8ddb66cb44356c695aba137c31a71af7425"
+    },
+    {
+      "path": "predictions/CS/single_12p5V-0p5ns.npz",
+      "bytes": 1486062,
+      "sha256": "39480e8393d29cf64057111f6b65866f5adab0788eed0dbdcaa2d2eca8740054"
+    },
+    {
+      "path": "predictions/CS/single_12p5V-1ns.npz",
+      "bytes": 758770,
+      "sha256": "025265ef84194d77892164f90ae3b6e45afb82de6b51108f205913c9fae2fbaf"
+    },
+    {
+      "path": "predictions/CS/single_15p8V-0p5ns.npz",
+      "bytes": 1100070,
+      "sha256": "1e6fff4652c6ba5958f658ced93fd2e69f73da05d4a9fdc75f07f913a6bc72e0"
+    },
+    {
+      "path": "predictions/CS/single_15p8V-1ns.npz",
+      "bytes": 564304,
+      "sha256": "8d4a378a54a92cbe14bce0aaac3121ed27d1f8e387bb3d55cd46f3fb918cda6e"
+    },
+    {
+      "path": "predictions/CS/single_9V-0p5ns.npz",
+      "bytes": 1167051,
+      "sha256": "6ac241fa8650635667b129d108a976895fa88f0dae30f0321539939614bd5a65"
+    },
+    {
+      "path": "predictions/CS/single_9V-1ns.npz",
+      "bytes": 604037,
+      "sha256": "d9dac7b391a2307faf685e76a74e489dc52ccd53ebb744f92bf33c108ad89b79"
+    },
+    {
+      "path": "predictions/PCHIP/pair_excitation-0p5ns.npz",
+      "bytes": 2947797,
+      "sha256": "2e7357455e408dc6bfbb52bbe70d65ef13fbb45f51bf97ffa1f59b1e3e704109"
+    },
+    {
+      "path": "predictions/PCHIP/pair_excitation-1ns.npz",
+      "bytes": 1504377,
+      "sha256": "764b2faa3b93c12d33bf9b7bc94b3ba791679ac991a550a4e1f3f02cbabb288b"
+    },
+    {
+      "path": "predictions/PCHIP/pair_inhibition-0p5ns.npz",
+      "bytes": 2886005,
+      "sha256": "df8ca937c60137dbd3b5855c972756f84ec52b6abeb2f7384c66151dd6afb042"
+    },
+    {
+      "path": "predictions/PCHIP/pair_inhibition-1ns.npz",
+      "bytes": 1474087,
+      "sha256": "de1978e7a7baab9b073fcd11b4d90bed61a8704b953ff46be47212d1277ee6ec"
+    },
+    {
+      "path": "predictions/PCHIP/single_12p5V-0p5ns.npz",
+      "bytes": 1482606,
+      "sha256": "1f8aa183c6734892e1e2f0f03a0c00fb7ea5adecf60ef29b35bdb268d264b55d"
+    },
+    {
+      "path": "predictions/PCHIP/single_12p5V-1ns.npz",
+      "bytes": 757902,
+      "sha256": "2f34d4d27558ff5e7d8bbd969c79726aec12f89944e25f8855b73264c582e2f5"
+    },
+    {
+      "path": "predictions/PCHIP/single_15p8V-0p5ns.npz",
+      "bytes": 951435,
+      "sha256": "dd7df81c71ddcc3ff0a734f4310e7620aa55c1af927c5cdc572f377b2a5bed17"
+    },
+    {
+      "path": "predictions/PCHIP/single_15p8V-1ns.npz",
+      "bytes": 486322,
+      "sha256": "ed70a3469470b852652b4cdf4599249c93fe799a953d97f3f4c672f4100a18af"
+    },
+    {
+      "path": "predictions/PCHIP/single_9V-0p5ns.npz",
+      "bytes": 1166677,
+      "sha256": "bd51cf76a9ebb3c82b38bb409c27e7b1888f288ab74deda10b9eefd2b3b3edcd"
+    },
+    {
+      "path": "predictions/PCHIP/single_9V-1ns.npz",
+      "bytes": 603722,
+      "sha256": "bbd0793b285ff4ae27fdbeb480c0c89b0be5ebc3c114abb99f8cb2bfce86dfb0"
+    },
+    {
+      "path": "scripts/circuit_energy_tools.py",
+      "bytes": 10800,
+      "sha256": "a32b19faf5e7a24b08d3f32546a5341d51fad903292bdafa5257b10be86f5d60"
+    },
+    {
+      "path": "scripts/circuit_screen_metrics.py",
+      "bytes": 10257,
+      "sha256": "0b5e26462eeb5dc72ac992595c65f299d51e68db0b1ae258d1b87019bdf669d8"
+    },
+    {
+      "path": "scripts/run_cubic_energy_comparison.py",
+      "bytes": 22927,
+      "sha256": "cf90f51826235b5bb1b3c0f618eca004395d26dea13f83675746d7447c9a1ea7"
+    },
+    {
+      "path": "tests/test_circuit_energy_tools.py",
+      "bytes": 6583,
+      "sha256": "ccf295f44bd1289d279f496b9a67470902bb655738aa4a5dc35b5e9dfce35fc9"
+    },
+    {
+      "path": "tests/test_cubic_energy_comparison.py",
+      "bytes": 2295,
+      "sha256": "38daa30c2919ab8f076152391fd77cb0c13e00341619c5fb32a2e4fe6ff0bedb"
+    }
+  ],
+  "elapsed_seconds": 3.9702242999337614,
+  "shared_arrays": "time/observations/source arrays once per system; method predictions refer to the shared input",
+  "source_fields": [
+    "time",
+    "voltage",
+    "device_current",
+    "load_current",
+    "capacitor_current"
+  ],
+  "no_experimental_CSV": true,
+  "no_model_states": true,
+  "external_access": "NOT_PUBLISHED_P03_OPEN",
+  "remote": "PENDING_NEXT_AUTHORIZED_SESSION_SYNC"
+}

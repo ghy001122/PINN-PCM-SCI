@@ -1,0 +1,32 @@
+{
+  "task_id": "PCM-20260928-CUBIC-ENERGY-DISCRIMINATION-01",
+  "started_utc": "2026-09-28T09:07:48.330302+00:00",
+  "completed_utc": "2026-09-28T09:07:59.004744+00:00",
+  "elapsed_seconds": 10.673823799937963,
+  "original_subset": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260928_circuit_comparison\\scoring-subset",
+  "independent_directory": "C:\\Users\\CJ\\.codex\\visualizations\\2026\\09\\20\\01a0bdc5-2887-7920-bbae-fab752dd28b8\\cubic-energy-independent-20260928",
+  "returncode": 0,
+  "copied_files": 38,
+  "copied_bytes": 41817450,
+  "transfer_integrity": "PASS",
+  "command": [
+    "E:\\Python demo\\PINN-PCM-SCI\\.venv\\Scripts\\python.exe",
+    "-I",
+    "C:\\Users\\CJ\\.codex\\visualizations\\2026\\09\\20\\01a0bdc5-2887-7920-bbae-fab752dd28b8\\cubic-energy-independent-20260928\\run_isolated.py"
+  ],
+  "full_historical_pack_rerun": false,
+  "new_prediction_fits": 0,
+  "new_system_steps": 0,
+  "new_training_steps": 0,
+  "complete_results_exact_match": true,
+  "isolation": {
+    "repository_access_probe_denied": true,
+    "missing_input_failed_without_fallback": true,
+    "denied_paths": [
+      "E:\\Python demo\\PINN-PCM-SCI\\README.md"
+    ],
+    "dependency_exception": "Only the pre-existing project .venv runtime; research files unavailable",
+    "isolated_python_flag": true
+  },
+  "status": "PASS"
+}

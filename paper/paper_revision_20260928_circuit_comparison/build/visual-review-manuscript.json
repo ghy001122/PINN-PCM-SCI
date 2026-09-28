@@ -1,0 +1,46 @@
+{
+  "status": "VISUALLY_CHECKED",
+  "pages": 17,
+  "inspected_page_images": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "method": "Opened each rendered page PNG at its full displayed resolution; main changed availability page 16 plus unchanged equations/table/figures and references",
+  "changed_pages": [
+    16
+  ],
+  "special_checks": {
+    "abstract_page": 1,
+    "formula_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "Table_2a_page": 10,
+    "reference_continuation_page": 17
+  },
+  "findings": "No clipping, overlap or missing glyphs observed. Original scientific figure page breaks and white space retained. Table headers repeat on continued page.",
+  "renderer": "Microsoft Word COM PDF and bundled Poppler 130 dpi",
+  "warnings": "Poppler Symbol/ArialUnicode display-font alias warnings; actual rendered mathematics readable",
+  "supplement": "Not rebuilt; linked previously verified 58-page version",
+  "successful_docx_builds": 1,
+  "successful_pdf_exports": 1
+}

@@ -1,0 +1,20 @@
+{
+  "id": "pair_inhibition-1ns",
+  "case": "pair_inhibition",
+  "dt_s": 1e-09,
+  "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-1ns.npz",
+  "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_inhibition-1ns.npz",
+  "source_voltage_V": [
+    11.0,
+    14.0
+  ],
+  "C_F": 1.4534619293e-10,
+  "RL_ohm": 12000.0,
+  "prediction_sha256": "bf91b34e05716e0bc0f16f544dc187cf123e786f820c7f9eb2b1e25d7cfe290f",
+  "method": "CS",
+  "states": 20001,
+  "devices": 2,
+  "observations": 197,
+  "frozen_at": "2026-09-28T09:01:11.734470+00:00",
+  "score_fields_read_before_lock": false
+}

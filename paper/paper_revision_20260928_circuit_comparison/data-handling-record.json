@@ -1,0 +1,61 @@
+{
+  "task_id": "PCM-20260928-CUBIC-ENERGY-DISCRIMINATION-01",
+  "policy": "docs/governance/PINN_PCM_Data_Handling_Norms_2026-09-28.md",
+  "blocks": [
+    {
+      "name": "old_source_arrays_and_PCHIP",
+      "purpose": "unchanged historical evidence",
+      "status": "REUSED_READ_ONLY",
+      "local": [
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2",
+        "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions"
+      ],
+      "remote": "Prior task transfer record retained; not contacted in this CPU-only task"
+    },
+    {
+      "name": "new_CS_predictions_scores_energy_figures_manuscript",
+      "purpose": "scientific evidence and deliverable",
+      "local": "paper/paper_revision_20260928_circuit_comparison",
+      "remote": null,
+      "status": "PENDING_NEXT_AUTHORIZED_SESSION_SYNC",
+      "GPU_started": false,
+      "restart_for_sync": false
+    },
+    {
+      "name": "portable_subset",
+      "purpose": "required handoff and saved-array rescoring",
+      "local": "paper/paper_revision_20260928_circuit_comparison/scoring-subset",
+      "status": "INDEPENDENT_RESCORING_VERIFIED_LOCAL",
+      "bytes_from_input_transfer": 41817450,
+      "shared_arrays": "one source/time/observation block per system; FP64/native times retained"
+    },
+    {
+      "name": "temporary_independent_copy",
+      "local": "C:\\Users\\CJ\\.codex\\visualizations\\2026\\09\\20\\01a0bdc5-2887-7920-bbae-fab752dd28b8\\cubic-energy-independent-20260928",
+      "purpose": "completed isolated verification only",
+      "status": "VERIFIED_TEMPORARY_COPY_CLEANED_CANONICAL_RETAINED",
+      "canonical": "paper/paper_revision_20260928_circuit_comparison/scoring-subset",
+      "evidence": "build/independent-reproduction.json"
+    },
+    {
+      "name": "inherited_manuscript_assets",
+      "purpose": "unchanged layout input",
+      "status": "HARDLINKS_NOT_INDEPENDENT_BACKUP",
+      "evidence": "build-dependencies.json"
+    },
+    {
+      "name": "experimental_CSV_and_historical_full_pack",
+      "status": "UNCHANGED_NOT_OPENED_NUMERICALLY_NOT_MOVED_NOT_DELETED"
+    }
+  ],
+  "external_access": "NOT_ESTABLISHED_P03_OPEN",
+  "remote_sync": "PENDING_NEXT_AUTHORIZED_SESSION",
+  "local_cleanup": {
+    "status": "COMPLETED",
+    "record": "build/cleanup-result.json",
+    "files": 75,
+    "freed_bytes": 52409805.0
+  },
+  "no_raw_precision_reduction": true,
+  "no_original_or_expensive_cache_deleted": true
+}

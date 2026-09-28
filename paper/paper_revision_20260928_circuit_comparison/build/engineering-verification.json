@@ -1,0 +1,23 @@
+{
+  "task_id": "PCM-20260928-CUBIC-ENERGY-DISCRIMINATION-01",
+  "tests": [
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -m unittest discover -s tests -p test_cubic_energy_comparison.py -v",
+      "tests": 3,
+      "outcome": "PASS",
+      "scope": "constant/linear/cubic; units/short ending; endpoints/no extrapolation; no hidden scoring interface"
+    },
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -m unittest tests.test_circuit_energy_tools -v",
+      "tests": 5,
+      "outcome": "PASS",
+      "scope": "analytic energy versus independent Gauss4; piecewise-linear reference; 196 interval partition; Euler signs/closure"
+    }
+  ],
+  "source_review": "Relevant eight metric functions and detector equal to frozen successful code; no solver entry in portable helper",
+  "scientific_pipeline": "All fourteen KCL/decomposition/charge checks and all window Euler energy checks passed",
+  "pchip_reproduction": "14 role records within fixed FP64 scale; exact peak lists",
+  "independent_reproduction": "Exact complete result JSON equality and required-input failure, see independent-reproduction.json",
+  "initial_engineering_event": "One hand-computed synthetic expected reference area corrected before real scoring; integration formula unchanged",
+  "numerical_faults_during_real_prediction_or_scoring": 0
+}

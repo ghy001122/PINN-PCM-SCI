@@ -1,0 +1,166 @@
+{
+  "task_id": "PCM-20260928-CUBIC-ENERGY-DISCRIMINATION-01",
+  "baseline": "9414c1da37cb9a101bf3ed812d248f63d4454470",
+  "previous_science_commit": "fa475c257651c17fcfe83007ab0fe238c6c5995c",
+  "frozen_at_utc": "2026-09-28T08:52:20.492285+00:00",
+  "output": "paper/paper_revision_20260928_circuit_comparison/comparison",
+  "subset": "paper/paper_revision_20260928_circuit_comparison/scoring-subset",
+  "simulation_inputs": [
+    {
+      "id": "single_9V-1ns",
+      "case": "single_9V",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_9V-1ns.npz",
+      "source_voltage_V": [
+        9.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    },
+    {
+      "id": "single_9V-0p5ns",
+      "case": "single_9V",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_9V-0p5ns.npz",
+      "source_voltage_V": [
+        9.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    },
+    {
+      "id": "single_12p5V-1ns",
+      "case": "single_12p5V",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_12p5V-1ns.npz",
+      "source_voltage_V": [
+        12.5
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    },
+    {
+      "id": "single_12p5V-0p5ns",
+      "case": "single_12p5V",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_12p5V-0p5ns.npz",
+      "source_voltage_V": [
+        12.5
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    },
+    {
+      "id": "single_15p8V-1ns",
+      "case": "single_15p8V",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_15p8V-1ns.npz",
+      "source_voltage_V": [
+        15.8
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    },
+    {
+      "id": "single_15p8V-0p5ns",
+      "case": "single_15p8V",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_15p8V-0p5ns.npz",
+      "source_voltage_V": [
+        15.8
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    },
+    {
+      "id": "pair_excitation-1ns",
+      "case": "pair_excitation",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_excitation-1ns.npz",
+      "source_voltage_V": [
+        11.0,
+        9.4
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    },
+    {
+      "id": "pair_excitation-0p5ns",
+      "case": "pair_excitation",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_excitation-0p5ns.npz",
+      "source_voltage_V": [
+        11.0,
+        9.4
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    },
+    {
+      "id": "pair_inhibition-1ns",
+      "case": "pair_inhibition",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-1ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_inhibition-1ns.npz",
+      "source_voltage_V": [
+        11.0,
+        14.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    },
+    {
+      "id": "pair_inhibition-0p5ns",
+      "case": "pair_inhibition",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-0p5ns.npz",
+      "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_inhibition-0p5ns.npz",
+      "source_voltage_V": [
+        11.0,
+        14.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0
+    }
+  ],
+  "method": "CubicSpline",
+  "bc_type": "not-a-knot",
+  "extrapolate": false,
+  "scipy_version": "1.14.1",
+  "time_scale_s": 1e-06,
+  "engineering_safety_factor": 64,
+  "peak_match_max_gap_s": 2.5e-07,
+  "observation_rule": "Reuse old locked 197 times and voltages exactly",
+  "windows_s": {
+    "full": [
+      0.0,
+      2e-05
+    ],
+    "transient": [
+      0.0,
+      1e-05
+    ],
+    "tail": [
+      1e-05,
+      2e-05
+    ]
+  },
+  "energy_reference": "Exact integral of native piecewise-linear saved power V*I_D",
+  "energy_prediction": "Analytic piecewise-polynomial integral; square before integration",
+  "energy_intervals": "All 196 intervals between the unchanged observation times",
+  "tau_task": null,
+  "experimental_numeric_read_authorized": false,
+  "GPU_authorized": false,
+  "new_system_steps": 0,
+  "new_training_steps": 0,
+  "CS_system_prediction_limit": 10,
+  "original_results": "paper/paper_revision_20260927_circuit_screen/circuit-screen/results.json"
+}

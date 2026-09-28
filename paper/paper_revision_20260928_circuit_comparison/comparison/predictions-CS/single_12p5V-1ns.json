@@ -1,0 +1,19 @@
+{
+  "id": "single_12p5V-1ns",
+  "case": "single_12p5V",
+  "dt_s": 1e-09,
+  "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-1ns.npz",
+  "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_12p5V-1ns.npz",
+  "source_voltage_V": [
+    12.5
+  ],
+  "C_F": 1.4534619293e-10,
+  "RL_ohm": 12000.0,
+  "prediction_sha256": "842c27aee6ba83e3470fda948c5a3cfe8d9b8e91d2a8105f430944ca1e92dd0b",
+  "method": "CS",
+  "states": 20001,
+  "devices": 1,
+  "observations": 197,
+  "frozen_at": "2026-09-28T09:01:11.112403+00:00",
+  "score_fields_read_before_lock": false
+}

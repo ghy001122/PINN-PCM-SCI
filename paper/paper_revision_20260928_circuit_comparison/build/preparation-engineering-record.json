@@ -1,0 +1,6 @@
+{
+  "first_attempt": "MemoryError in Matplotlib RendererAgg during regeneration of unchanged equation PNGs; DOCX builder then lacked manifest; no DOCX produced",
+  "correction": "Reuse 24 old formula images only after exact Markdown formula equality; no scientific or source-text change",
+  "document_builds_completed_before_correction": 0,
+  "asset_resolution_correction": "Preparation regex missed an image whose alt text contains bracketed interval notation; resolved all image assets from parsed manifest. A first correction read used Windows default encoding and stopped before writes; repeated with explicit UTF-8. No DOCX existed at these failures."
+}

@@ -1,0 +1,134 @@
+{
+  "reviewed_at": "2026-09-28T09:09:02.402036+00:00",
+  "status": "PASS",
+  "figures_reviewed": 15,
+  "method": "All15 scientific figures inspected in two contact sheets; detailed image inspection of named12.5V first-peak view, named12.5V energy plot, and pair_inhibition/B waveform. Revised waveform contact sheet and named zoom checked again after legend relocation.",
+  "correction": "Initial waveform legends covered part of voltage peaks; moved common legend outside every waveform data panel. Only figure layout/text regenerated; no prediction or score rerun.",
+  "checks": [
+    "All seven roles and both source steps visible",
+    "Full0-20usnative axes and same absolute zoom window",
+    "Device/load branches separate; observation markers only on voltage",
+    "Negative CS device-current excursions remain visible",
+    "Cumulative and196interval energy errors retain both signs and nJ units",
+    "Final32nsinterval kept at true width",
+    "No title, label, legend or footnote clipping observed after correction"
+  ],
+  "detailed_views": [
+    "figures/circuit-waveform-single_12p5V-A-first-peak.png",
+    "figures/circuit-energy-single_12p5V-A.png",
+    "figures/circuit-waveform-pair_inhibition-B.png"
+  ],
+  "contact_sheets": [
+    "build/figure-review-waveforms.png",
+    "build/figure-review-energy.png"
+  ],
+  "no_interpolator_refit": true,
+  "no_scoring_rerun": true,
+  "final_files": [
+    {
+      "path": "figures/circuit-waveform-single_9V-A.png",
+      "bytes": 183393,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "21de92b949438a779510c734a6d79e5abf21f98813259a66f79b2a7ff79ca88e"
+    },
+    {
+      "path": "figures/circuit-waveform-single_12p5V-A.png",
+      "bytes": 394662,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "145f05fe5ba3747901428409a20975ab74b2b1e642f84cce34922a5926554752"
+    },
+    {
+      "path": "figures/circuit-waveform-single_12p5V-A-first-peak.png",
+      "bytes": 280060,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "d47313c8e0f0958738733f349afd2569ff68780f4052ad2d8a61bbb764e65f83"
+    },
+    {
+      "path": "figures/circuit-waveform-single_15p8V-A.png",
+      "bytes": 218166,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "da361d2939ed16f1482647b2e82b4c12933bff9af6225d2057afa6f16d8864b9"
+    },
+    {
+      "path": "figures/circuit-waveform-pair_excitation-A.png",
+      "bytes": 356078,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "1e46ed9404d4deb5318dbfb8fe9240ffc3a34d093c3f47fc5b2893e45b35fbf1"
+    },
+    {
+      "path": "figures/circuit-waveform-pair_excitation-B.png",
+      "bytes": 355635,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "41fea7bc4913ae05890fd79c406a9c41349ab258c3f88a91cfde046f1c5ae951"
+    },
+    {
+      "path": "figures/circuit-waveform-pair_inhibition-A.png",
+      "bytes": 389197,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "580defedcabde5316a3bcd636574197873705394ff9cf8dbc7e00783b42e4bd8"
+    },
+    {
+      "path": "figures/circuit-waveform-pair_inhibition-B.png",
+      "bytes": 244664,
+      "width": 2412,
+      "height": 1710,
+      "sha256": "4dce97859d95a6bdfb28e5f1cbcd53eaf635108250858fc1091b8f6d53524c4c"
+    },
+    {
+      "path": "figures/circuit-energy-single_9V-A.png",
+      "bytes": 153441,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "632b22ec993801189a6f78dc7d92b25303ed9957adbdf32d77f7551c80c1e25e"
+    },
+    {
+      "path": "figures/circuit-energy-single_12p5V-A.png",
+      "bytes": 207226,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "2b21244a2c724ac456915438185a8eb9611551816592702d9eee24345605c035"
+    },
+    {
+      "path": "figures/circuit-energy-single_15p8V-A.png",
+      "bytes": 170511,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "df635301dc8e69c94a4c953192185b20b374b800bda7cf4cd9adff442539bcd2"
+    },
+    {
+      "path": "figures/circuit-energy-pair_excitation-A.png",
+      "bytes": 197220,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "4da0811ff266ac25f14b0c313f69b91bb0243f2ec2712b03e1d3cc133d90bfc2"
+    },
+    {
+      "path": "figures/circuit-energy-pair_excitation-B.png",
+      "bytes": 203704,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "1cd09542bc793420f4d905a01eaf964db310408a02cd6d05c907d0d94a60a080"
+    },
+    {
+      "path": "figures/circuit-energy-pair_inhibition-A.png",
+      "bytes": 204261,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "dcbc559cdf6989de46c9b27986fdb597226e652e5d30872b74542ac06434f04e"
+    },
+    {
+      "path": "figures/circuit-energy-pair_inhibition-B.png",
+      "bytes": 173691,
+      "width": 2412,
+      "height": 1350,
+      "sha256": "642fe4a2551c2bbf553267420a495c77086674f3afa58523b3417a6d9e5fac5d"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "pair_excitation-1ns",
+  "case": "pair_excitation",
+  "dt_s": 1e-09,
+  "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-1ns.npz",
+  "pchip": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_excitation-1ns.npz",
+  "source_voltage_V": [
+    11.0,
+    9.4
+  ],
+  "C_F": 1.4534619293e-10,
+  "RL_ohm": 12000.0,
+  "prediction_sha256": "afb04d8b2fadf1894a94ed8e8ad5789a0eedb28f5e3890d2e314e8a01678ecbd",
+  "method": "CS",
+  "states": 20001,
+  "devices": 2,
+  "observations": 197,
+  "frozen_at": "2026-09-28T09:01:11.452562+00:00",
+  "score_fields_read_before_lock": false
+}
