@@ -1,0 +1,7 @@
+{
+  "status": "PASS_MISSING_INPUT_REFUSAL",
+  "missing_input": "outputs/submission-rescore-20260921/definitions/grid.npz",
+  "returncode": 1,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Temp\\PINN-PCM-Standalone-20260926\\recompute.py\", line 173, in <module>\n    if a.validate_only:print(json.dumps(validate()))\n                                        ^^^^^^^^^^\n  File \"D:\\Temp\\PINN-PCM-Standalone-20260926\\recompute.py\", line 28, in validate\n    if missing:raise FileNotFoundError('Missing fixed input(s); no fallback or regeneration: '+', '.join(missing))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: Missing fixed input(s); no fallback or regeneration: outputs/submission-rescore-20260921/definitions/grid.npz\n",
+  "automatic_regeneration": false
+}

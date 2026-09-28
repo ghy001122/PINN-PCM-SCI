@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/pinn-circuit-screen-20260927/scripts/run_voltage_circuit_screen.py", line 441, in <module>
+    main()
+  File "/root/autodl-tmp/pinn-circuit-screen-20260927/scripts/run_voltage_circuit_screen.py", line 433, in main
+    if args.mode in ['score','all']:score(config,root,out)
+                                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/pinn-circuit-screen-20260927/scripts/run_voltage_circuit_screen.py", line 314, in score
+    raise ArithmeticError('Algebra verification failed')
+ArithmeticError: Algebra verification failed

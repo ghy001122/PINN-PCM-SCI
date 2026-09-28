@@ -1,0 +1,178 @@
+[
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "29",
+    "comparison": "E_vs_F_cov",
+    "metric": "S",
+    "candidate": "0.0011464843750000002",
+    "control": "0.00145984375",
+    "signed_candidate_minus_control": "-0.00031335937499999984",
+    "relative_error_reduction": "0.21465268115166425"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "29",
+    "comparison": "E_vs_F_cov",
+    "metric": "Ephi",
+    "candidate": "0.01993633340127953",
+    "control": "0.024154429842371147",
+    "signed_candidate_minus_control": "-0.004218096441091616",
+    "relative_error_reduction": "0.1746303460118246"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "29",
+    "comparison": "E_vs_F_cov",
+    "metric": "ET",
+    "candidate": "0.011343039201857766",
+    "control": "0.011869153505457612",
+    "signed_candidate_minus_control": "-0.000526114303599846",
+    "relative_error_reduction": "0.044326185802376794"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "29",
+    "comparison": "E_vs_F_cov",
+    "metric": "EV",
+    "candidate": "0.0016035756891280488",
+    "control": "0.0033089634461256775",
+    "signed_candidate_minus_control": "-0.0017053877569976287",
+    "relative_error_reduction": "0.5153842841613719"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "29",
+    "comparison": "E_vs_F_cov",
+    "metric": "EI",
+    "candidate": "0.010155780433280285",
+    "control": "0.021463049087218446",
+    "signed_candidate_minus_control": "-0.011307268653938161",
+    "relative_error_reduction": "0.5268248983631968"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "29",
+    "comparison": "E_vs_F_cov",
+    "metric": "bottom_current_NRMSE",
+    "candidate": "0.010155780433277767",
+    "control": "0.021463049087222068",
+    "signed_candidate_minus_control": "-0.0113072686539443",
+    "relative_error_reduction": "0.5268248983633939"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "29",
+    "comparison": "E_vs_F_cov",
+    "metric": "power_trace_NRMSE",
+    "candidate": "0.010236978192969806",
+    "control": "0.02153375864327583",
+    "signed_candidate_minus_control": "-0.011296780450306023",
+    "relative_error_reduction": "0.5246079255111172"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "29",
+    "comparison": "E_vs_F_cov",
+    "metric": "local_joule_NRMSE",
+    "candidate": "0.055495696303370354",
+    "control": "0.11947343657736198",
+    "signed_candidate_minus_control": "-0.06397774027399163",
+    "relative_error_reduction": "0.5354976144221353"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "43",
+    "comparison": "E_vs_F_cov",
+    "metric": "S",
+    "candidate": "0.001155078125",
+    "control": "0.001427578125",
+    "signed_candidate_minus_control": "-0.00027249999999999996",
+    "relative_error_reduction": "0.19088272314343568"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "43",
+    "comparison": "E_vs_F_cov",
+    "metric": "Ephi",
+    "candidate": "0.01976311723656693",
+    "control": "0.02443368588145337",
+    "signed_candidate_minus_control": "-0.004670568644886439",
+    "relative_error_reduction": "0.1911528480617687"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "43",
+    "comparison": "E_vs_F_cov",
+    "metric": "ET",
+    "candidate": "0.011319799708226538",
+    "control": "0.01187904729149679",
+    "signed_candidate_minus_control": "-0.0005592475832702521",
+    "relative_error_reduction": "0.047078487823730586"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "43",
+    "comparison": "E_vs_F_cov",
+    "metric": "EV",
+    "candidate": "0.00111391957420713",
+    "control": "0.003269140964683902",
+    "signed_candidate_minus_control": "-0.002155221390476772",
+    "relative_error_reduction": "0.6592622997170645"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "43",
+    "comparison": "E_vs_F_cov",
+    "metric": "EI",
+    "candidate": "0.0070045995877591714",
+    "control": "0.02094236005946979",
+    "signed_candidate_minus_control": "-0.013937760471710619",
+    "relative_error_reduction": "0.6655295980076608"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "43",
+    "comparison": "E_vs_F_cov",
+    "metric": "bottom_current_NRMSE",
+    "candidate": "0.007004599587763097",
+    "control": "0.020942360059472677",
+    "signed_candidate_minus_control": "-0.01393776047170958",
+    "relative_error_reduction": "0.6655295980075193"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "43",
+    "comparison": "E_vs_F_cov",
+    "metric": "power_trace_NRMSE",
+    "candidate": "0.006946930546888452",
+    "control": "0.02094358709755491",
+    "signed_candidate_minus_control": "-0.01399665655066646",
+    "relative_error_reduction": "0.6683027356044715"
+  },
+  {
+    "reference": "spatial",
+    "reader": "fine",
+    "seed": "43",
+    "comparison": "E_vs_F_cov",
+    "metric": "local_joule_NRMSE",
+    "candidate": "0.04767007775214124",
+    "control": "0.11423318769549934",
+    "signed_candidate_minus_control": "-0.0665631099433581",
+    "relative_error_reduction": "0.582695023102998"
+  }
+]

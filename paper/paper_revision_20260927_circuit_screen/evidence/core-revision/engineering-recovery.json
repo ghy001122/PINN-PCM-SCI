@@ -1,0 +1,8 @@
+{
+  "reason": "Remote psutil dependency missing after first zero-update gradient",
+  "fix": "Linux resource measurements now read proc and cgroup directly; no package installation",
+  "scientific_updates": 0,
+  "discarded_complete_zero_update_gradients": 1,
+  "scientific_identity_changed": false,
+  "created_utc": "2026-09-26T10:46:50.261847+00:00"
+}

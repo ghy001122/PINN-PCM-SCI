@@ -1,0 +1,90 @@
+{
+  "actual_budget": {
+    "experimental_numeric_records_read": 0,
+    "figures": "local saved-array rendering; one plot-limit adjustment",
+    "interrupted_scoring": "Engineering cancellation-scale check only; predictions retained",
+    "new_network_queries": 0,
+    "new_system_steps": 0,
+    "new_training_steps": 0,
+    "prediction_device_roles": 14,
+    "prediction_generations": 1,
+    "prediction_seconds": 1.1931141214445233,
+    "prediction_system_files": 10,
+    "score_attempts": 2,
+    "successful_score_seconds": 2.405714012682438
+  },
+  "artifacts": {
+    "config": "configs/voltage_circuit_screen_20260927.json",
+    "data_handling": "paper/paper_revision_20260927_circuit_screen/data-handling-record.json",
+    "delivery": "paper/paper_revision_20260927_circuit_screen/README.md",
+    "engineering_failure": "paper/paper_revision_20260927_circuit_screen/circuit-screen/attempt1-analysis.log",
+    "experimental": "paper/paper_revision_20260927_circuit_screen/experimental-qualification.json",
+    "inputs": "paper/paper_revision_20260927_circuit_screen/input-inventory.json",
+    "recovery": "paper/paper_revision_20260927_circuit_screen/build/cloud/recovery.json",
+    "results": "paper/paper_revision_20260927_circuit_screen/circuit-screen/results.json",
+    "shutdown": "paper/paper_revision_20260927_circuit_screen/build/cloud/shutdown.json"
+  },
+  "case_id": "THREE_SINGLE_AND_TWO_PAIR_SAVED_CASES",
+  "checkpoint": {
+    "kind": "no_neural_checkpoint",
+    "manifest": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions-locked.json",
+    "predictions_locked": true
+  },
+  "claim_status": "VERIFIED_SAVED_ARRAY_SCREEN_SUFFICIENCY_UNKNOWN",
+  "code_identity": {
+    "baseline": "6dd147af757bf5788e9c5d1535b49e7f965b2600",
+    "current_analysis_entry": "scripts/run_voltage_circuit_screen.py",
+    "initial_engineering_interruption": "paper/paper_revision_20260927_circuit_screen/circuit-screen/attempt1-analysis-source.py",
+    "successful_scoring": "paper/paper_revision_20260927_circuit_screen/circuit-screen/scoring-source.py",
+    "successful_scoring_sha256": "a4a2b693d8d2a1452f9e6324e537478f50bf362ff4cfa605a1ea7a86120d1ae7"
+  },
+  "command": [
+    "python",
+    "scripts/run_voltage_circuit_screen.py",
+    "--config",
+    "configs/voltage_circuit_screen_20260927.json",
+    "--mode",
+    "predict then score; figures from saved outputs"
+  ],
+  "ended_at": "2026-09-27T18:42:15.750934+00:00",
+  "environment": {
+    "GPU": "name, memory.total [MiB], memory.free [MiB]\nTesla V100-PCIE-32GB, 32768 MiB, 32495 MiB\n",
+    "GPU_arithmetic": false,
+    "actual_device": "CPU on GPU instance",
+    "disk_free_bytes": 32943124480,
+    "memory_available_bytes": 26170056704,
+    "numpy": "2.1.1",
+    "python": "3.11.9",
+    "scipy": "1.14.1",
+    "threads": 4
+  },
+  "evaluator_id": "NATIVE_TRAPEZOID_1MA_NORMALIZATION_WITH_SEPARATE_NONENDPOINT_DECOMPOSITION",
+  "evidence_identity": "TEN_LOCKED_PCHIP_PREDICTION_ARRAYS_FROM_SAVED_AUTHOR_MODEL",
+  "execution_status": "COMPLETE_WITH_EXPERIMENTAL_INPUT_UNCLOSED",
+  "experiment_group_id": "PCM-20260927-MANUSCRIPT-CIRCUIT-SCREEN-01",
+  "failure_class": null,
+  "gate": "SERIALIZATION_KCL_ALGEBRA_AND_BRANCH_QUALIFICATION",
+  "gate_outcome": "VERIFIED_CONTINUOUS_ERRORS_ABSOLUTE_SUFFICIENCY_UNKNOWN",
+  "method_id": "SCIPY_1P14P1_FIXED_PCHIP_ANALYTIC_CIRCUIT",
+  "numerical_validity": "ALL_TEN_SAVED_SIMULATION_RECORDS_VALID",
+  "physical_contract_id": "UNCHANGED_PINNED_AUTHOR_MODEL_C_AND_RL_ONLY_IN_PREDICTION",
+  "planned_budget": {
+    "experimental_development_records_max": 5,
+    "new_ODE_PDE_steps": 0,
+    "new_training_steps": 0,
+    "observations_per_record": 197,
+    "saved_systems": 10,
+    "seed_field_semantics": "unused deterministic analysis",
+    "voltage_reconstructions": 14
+  },
+  "replay_of": null,
+  "route_disposition": "CLOSE_NEXT_MEASUREMENT_CONTRACT_ONLY_PROPOSED",
+  "run_id": "20260928-manuscript-circuit-screen",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "FIXED_VOLTAGE_ONLY_SAVED_ARRAY_SCREEN_NO_NEW_TRAJECTORY",
+  "seed": 0,
+  "split_id": "FIVE_SIMULATION_CASES_TWO_SAVED_STEPS_EXPERIMENTAL_HOLDOUT_SEALED",
+  "started_at": "2026-09-27T18:07:49.505556+00:00",
+  "supersedes": null,
+  "tier": "development"
+}

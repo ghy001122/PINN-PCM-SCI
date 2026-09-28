@@ -1,0 +1,149 @@
+{
+  "task_id": "PCM-20260926-CORE-REVISION-VO2-BRIDGE-01",
+  "parameters_SI": {
+    "R0": 0.00535882879,
+    "Ea": 5220.47417,
+    "beta": 0.252796285,
+    "w": 7.19357064,
+    "Tc": 332.805839,
+    "gamma": 0.956269682,
+    "Rm0": 262.5,
+    "k": 4.90025335,
+    "C": 1.4534619293e-10,
+    "Cth": 4.962776831e-11,
+    "Sth": 0.00020558726,
+    "RL": 12000.0,
+    "Tbase": 325.0
+  },
+  "units": {
+    "R0": "ohm",
+    "Ea": "K",
+    "beta": "1/K",
+    "w": "K",
+    "Tc": "K",
+    "gamma": "dimensionless",
+    "Rm0": "ohm",
+    "k": "dimensionless",
+    "C": "F",
+    "Cth": "J/K",
+    "Sth": "W/K",
+    "RL": "ohm",
+    "Tbase": "K"
+  },
+  "author_unit_conversion": {
+    "time_ns_to_s": 1e-09,
+    "resistance_kohm_to_ohm": 1000.0,
+    "capacitance_pF_to_F": 1e-12,
+    "thermal_capacity_mW_ns_per_K_to_J_per_K": 1e-12,
+    "conductance_mW_per_K_to_W_per_K": 0.001,
+    "current_mA_to_A": 0.001
+  },
+  "author_commit": "217d4f0ed6bfc680240021b07142a121cb4963d1",
+  "cases": [
+    {
+      "id": "single_9V",
+      "Vin": [
+        9.0
+      ],
+      "eta": 0.0,
+      "figure": "Fig.2A",
+      "evidence": "experiment_and_author_fitted_simulation"
+    },
+    {
+      "id": "single_12p5V",
+      "Vin": [
+        12.5
+      ],
+      "eta": 0.0,
+      "figure": "Fig.2B",
+      "evidence": "experiment_and_author_fitted_simulation"
+    },
+    {
+      "id": "single_15p8V",
+      "Vin": [
+        15.8
+      ],
+      "eta": 0.0,
+      "figure": "Fig.2C",
+      "evidence": "experiment_and_author_fitted_simulation"
+    },
+    {
+      "id": "pair_excitation",
+      "Vin": [
+        11.0,
+        9.4
+      ],
+      "eta": 0.12,
+      "figure": "Fig.S11D",
+      "evidence": "author_simulation"
+    },
+    {
+      "id": "pair_inhibition",
+      "Vin": [
+        11.0,
+        14.0
+      ],
+      "eta": 0.1,
+      "figure": "Fig.S13D",
+      "evidence": "author_simulation"
+    }
+  ],
+  "dt_seconds": [
+    1e-09,
+    5e-10
+  ],
+  "end_seconds": 2e-05,
+  "maximum_system_steps": 300000,
+  "dtype": "float64",
+  "initial": {
+    "V": 0.0,
+    "T": 325.0,
+    "hysteresis_initial_T": 324.9,
+    "delta": 1.0,
+    "reversed": 0.0,
+    "other_history": "author initialization formulas"
+  },
+  "width_factor": 1.0,
+  "Cth_factor": 1.0,
+  "noise_strength": 0.0,
+  "clamp": {
+    "lower_K": 305.0,
+    "upper_K": 370.0,
+    "scope": "resistance and reversal; state T is not clipped"
+  },
+  "reversal_trigger": {
+    "max_vector_abs_dT_K": 0.01,
+    "strict_greater": true,
+    "comparison": "last trigger state"
+  },
+  "denominator_regularizer_K": 1e-06,
+  "S3_choice": "author code atanh; preprint equation discrepancy retained",
+  "scheme": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update",
+  "topology": "single S_env=Sth; pair S_env=(1-eta)Sth, mutual=eta Sth",
+  "peak_rule": {
+    "current": "device current",
+    "threshold_A": 0.0015,
+    "minimum_interval_s": 5e-07,
+    "near_peak_choice": "higher, ties earlier",
+    "smoothing": false,
+    "alignment": false
+  },
+  "analysis_windows_s": {
+    "full": [
+      0.0,
+      2e-05
+    ],
+    "transient": [
+      0.0,
+      1e-05
+    ],
+    "tail": [
+      1e-05,
+      2e-05
+    ]
+  },
+  "branch_description": "all tail g>0.5 insulating; all g<0.5 metallic; otherwise unresolved; no equilibrium certification",
+  "quantitative_reproduction_tolerance": null,
+  "refitting": false,
+  "extra_cases": false
+}

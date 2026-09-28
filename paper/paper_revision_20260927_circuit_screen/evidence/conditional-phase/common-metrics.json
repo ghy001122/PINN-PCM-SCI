@@ -1,0 +1,33 @@
+{
+  "measure": "full_cell_volume_and_normalized_trapezoid_on_D",
+  "time_count": 1057,
+  "cell_count": 3200,
+  "derivative": "second_order_central_interior_second_order_one_sided_endpoints",
+  "state_metrics": {
+    "B0": {
+      "phase_common_MS": 0.07915624427521972,
+      "thermal_conditional_semidiscrete_MS": 0.011034352868787909,
+      "thermal_common_fd_MS": 0.011034351980706243,
+      "phase_min": 7.74892712638616e-09,
+      "phase_max": 0.9955216029771975,
+      "neural_AD_strong_residual": "endpoint only"
+    },
+    "coarse": {
+      "phase_common_MS": 2.2984504134669728e-07,
+      "thermal_conditional_semidiscrete_MS": 0.010400642638120057,
+      "thermal_common_fd_MS": 0.01039997275084324,
+      "phase_min": 3.1074302778049674e-10,
+      "phase_max": 0.9705840066028688,
+      "neural_AD_strong_residual": "NOT_APPLICABLE"
+    },
+    "fine": {
+      "phase_common_MS": 5.697408803205389e-08,
+      "thermal_conditional_semidiscrete_MS": 0.010400736800312728,
+      "thermal_common_fd_MS": 0.010400403029728545,
+      "phase_min": 3.0827743630507087e-10,
+      "phase_max": 0.9705959643280337,
+      "neural_AD_strong_residual": "NOT_APPLICABLE"
+    }
+  },
+  "AD_note": "No conditional neural AD residual is constructed; common residual uses independent finite differences, not RHS minus itself."
+}

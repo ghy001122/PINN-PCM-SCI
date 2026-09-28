@@ -1,0 +1,15 @@
+case,step_ns,device,same_level_max_A,kappa_max_A,kappa_RMS_A,kappa_max_at_s,max_kappa_to_allowance,engineering_pass,interpretation
+single_9V,1.0,A,1.0842021724855044e-19,1.1416648876272362e-16,3.737329292608688e-17,2.0840000000000003e-06,0.0039004234394040558,True,Saved-array timing/serialization check; not independent experimental physics
+single_9V,0.5,A,1.0842021724855044e-19,2.3570555229834866e-16,7.503706270975547e-17,1.1495000000000002e-06,0.004284087896130588,True,Saved-array timing/serialization check; not independent experimental physics
+single_12p5V,1.0,A,8.673617379884035e-19,9.325873406851315e-15,8.760852325935199e-16,1.9786e-05,0.004941797582790089,True,Saved-array timing/serialization check; not independent experimental physics
+single_12p5V,0.5,A,8.673617379884035e-19,1.9470536294363683e-14,1.74701994999907e-15,1.6934500000000002e-05,0.00514980938304656,True,Saved-array timing/serialization check; not independent experimental physics
+single_15p8V,1.0,A,8.673617379884035e-19,9.28510740516586e-16,7.779039530716597e-17,1.9150000000000003e-06,0.005931193150812596,True,Saved-array timing/serialization check; not independent experimental physics
+single_15p8V,0.5,A,8.673617379884035e-19,2.2039661762285334e-15,1.5145221358159782e-16,1.7785000000000002e-06,0.00521027358892299,True,Saved-array timing/serialization check; not independent experimental physics
+pair_excitation,1.0,A,4.336808689942018e-19,8.035672821593565e-15,6.050077178012199e-16,1.6853e-05,0.0052865144863751675,True,Saved-array timing/serialization check; not independent experimental physics
+pair_excitation,1.0,B,4.336808689942018e-19,7.213847574849552e-15,5.59627543780293e-16,1.7422e-05,0.005229260035360226,True,Saved-array timing/serialization check; not independent experimental physics
+pair_excitation,0.5,A,4.336808689942018e-19,1.6816409376119168e-14,1.2107085257966045e-15,1.6848000000000002e-05,0.005089132216149723,True,Saved-array timing/serialization check; not independent experimental physics
+pair_excitation,0.5,B,4.336808689942018e-19,1.496589310812091e-14,1.1189760615153389e-15,1.7418500000000003e-05,0.005195920577549597,True,Saved-array timing/serialization check; not independent experimental physics
+pair_inhibition,1.0,A,4.336808689942018e-19,7.26935872608081e-15,7.0853712190548e-16,1.6881e-05,0.005087215415425685,True,Saved-array timing/serialization check; not independent experimental physics
+pair_inhibition,1.0,B,8.673617379884035e-19,1.8431436932253575e-15,1.2061560068282942e-16,2.0620000000000003e-06,0.005505525494773333,True,Saved-array timing/serialization check; not independent experimental physics
+pair_inhibition,0.5,A,4.336808689942018e-19,1.518880507478393e-14,1.4135675129824045e-15,1.6885000000000002e-05,0.005090366770201826,True,Saved-array timing/serialization check; not independent experimental physics
+pair_inhibition,0.5,B,8.673617379884035e-19,3.652460278669167e-15,2.5085857070147056e-16,4.518000000000001e-06,0.0049483217861973905,True,Saved-array timing/serialization check; not independent experimental physics

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "optimizer_updates": 0,
+  "seconds": 8.753250020556152,
+  "gradient_norm": 1205.2642518491425,
+  "components": {
+    "observation": 9.77725051232177e-05,
+    "obs_V": 7.686128904156364e-05,
+    "obs_T": 9.835141556597098e-05,
+    "obs_phase": 0.00011810481076211838,
+    "boundary": 0.07002562988274835,
+    "initial": 4.005388158357425e-33,
+    "thermal": 6.5594204731400545,
+    "phase": 0.0027389422141032575,
+    "electric": 927.9628917239936,
+    "objective": 73.97291452476524,
+    "C": 1.16259454806549,
+    "F_Tphi": 0.5112681850395954,
+    "E_e": 72.29905179166018
+  },
+  "resources": {
+    "rss": 956866560,
+    "host_available": 25917341696,
+    "gpu_allocated": 18318848,
+    "gpu_free": 33531625472
+  },
+  "device": "cuda:0",
+  "gpu_peak_allocated": 105606656,
+  "statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 0,
+      "adam_objective_gradient_evaluations": 0,
+      "audit_objective_evaluations": 0,
+      "audit_objective_gradient_evaluations": 1,
+      "optimizer_updates": 0
+    },
+    "electrical": {
+      "forward_queries": 32,
+      "zero_drive_queries": 32,
+      "factorizations": 0,
+      "forward_solves": 0,
+      "adjoint_solves": 0,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 0.0,
+      "max_adjoint_scaled_residual": 0.0
+    },
+    "explicit_work": {
+      "full_grid_network_evaluations": 66,
+      "explicit_face_evaluations": 66,
+      "thermal_phase_groups": 32,
+      "boundary_groups": 32,
+      "observation_groups": 126
+    }
+  },
+  "reference_read": false,
+  "created_utc": "2026-09-26T10:47:13.901204+00:00",
+  "powered_observation_times": 34,
+  "physical_times": 32,
+  "electric_union_size": 66
+}

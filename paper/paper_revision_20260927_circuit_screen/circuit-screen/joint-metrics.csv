@@ -1,0 +1,25 @@
+case,step_ns,window,branch,MSE_A2,RMS_uA,NRMSE_1mA,device_weight
+pair_excitation,1.0,full,device_current,1.3553118099029143e-08,116.41785987995632,0.11641785987995631,equal MSE weights
+pair_excitation,1.0,full,load_current,3.2189844581309332e-12,1.7941528524991768,0.0017941528524991767,equal MSE weights
+pair_excitation,1.0,transient,device_current,9.349114697219447e-09,96.69082012900422,0.09669082012900422,equal MSE weights
+pair_excitation,1.0,transient,load_current,2.043750923372638e-12,1.4295981684979306,0.0014295981684979305,equal MSE weights
+pair_excitation,1.0,tail,device_current,1.7757121500838836e-08,133.25584978093394,0.13325584978093394,equal MSE weights
+pair_excitation,1.0,tail,load_current,4.394217992889229e-12,2.0962390113937936,0.0020962390113937936,equal MSE weights
+pair_excitation,0.5,full,device_current,1.228387742293484e-08,110.83265503873324,0.11083265503873324,equal MSE weights
+pair_excitation,0.5,full,load_current,2.7954643019273227e-12,1.671964204738643,0.0016719642047386429,equal MSE weights
+pair_excitation,0.5,transient,device_current,8.9368018380284e-09,94.53465945370725,0.09453465945370725,equal MSE weights
+pair_excitation,0.5,transient,load_current,1.8639165270112533e-12,1.3652532830985076,0.0013652532830985074,equal MSE weights
+pair_excitation,0.5,tail,device_current,1.563095300784128e-08,125.0238097637457,0.1250238097637457,equal MSE weights
+pair_excitation,0.5,tail,load_current,3.7270120768433925e-12,1.9305470926251431,0.001930547092625143,equal MSE weights
+pair_inhibition,1.0,full,device_current,2.2890529088485835e-08,151.2961634955951,0.15129616349559508,equal MSE weights
+pair_inhibition,1.0,full,load_current,5.2976480620481714e-12,2.301662021680892,0.002301662021680892,equal MSE weights
+pair_inhibition,1.0,transient,device_current,3.223602017809318e-08,179.54392269885713,0.17954392269885713,equal MSE weights
+pair_inhibition,1.0,transient,load_current,7.53211427897253e-12,2.7444697628089347,0.0027444697628089348,equal MSE weights
+pair_inhibition,1.0,tail,device_current,1.3545037998878482e-08,116.38315169679193,0.11638315169679192,equal MSE weights
+pair_inhibition,1.0,tail,load_current,3.0631818451238116e-12,1.750194802050278,0.0017501948020502778,equal MSE weights
+pair_inhibition,0.5,full,device_current,2.338870997317406e-08,152.93367834840717,0.15293367834840715,equal MSE weights
+pair_inhibition,0.5,full,load_current,5.441790162986311e-12,2.3327644893958563,0.0023327644893958565,equal MSE weights
+pair_inhibition,0.5,transient,device_current,3.344793431198305e-08,182.88776424895968,0.18288776424895967,equal MSE weights
+pair_inhibition,0.5,transient,load_current,7.882598900900973e-12,2.8075966414178826,0.0028075966414178822,equal MSE weights
+pair_inhibition,0.5,tail,device_current,1.3329485634365082e-08,115.45339161048965,0.11545339161048965,equal MSE weights
+pair_inhibition,0.5,tail,load_current,3.0009814250716473e-12,1.7323340974164445,0.0017323340974164444,equal MSE weights

@@ -1,0 +1,11 @@
+{
+  "python": "3.11.9",
+  "numpy": "2.1.1",
+  "scipy": "1.14.1",
+  "GPU": "name, memory.total [MiB], memory.free [MiB]\nTesla V100-PCIE-32GB, 32768 MiB, 32495 MiB\n",
+  "disk_free_bytes": 32943124480,
+  "memory_available_bytes": 26170056704,
+  "threads": 4,
+  "actual_device": "CPU on GPU instance",
+  "GPU_arithmetic": false
+}

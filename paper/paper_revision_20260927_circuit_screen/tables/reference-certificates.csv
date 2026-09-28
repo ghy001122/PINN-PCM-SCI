@@ -1,0 +1,17 @@
+protocol,seed,baseline,layer,nominal_pass,all_gain_components_certified,full_gate_certified,sufficient_radius,limiting_component
+original,29,F,A,True,True,False,0.9546165684240985,noninferior:ET
+original,29,F,B,True,True,False,0.9546165684240985,noninferior:ET
+original,29,B_E,A,True,True,True,1.8212507478608673,gain:Ephi
+original,29,B_E,B,True,True,True,3.638877894618539,noninferior:ET
+original,43,F,A,False,False,False,0.0,gain:S
+original,43,F,B,True,True,False,0.6949853891321379,noninferior:ET
+original,43,B_E,A,False,False,False,0.0,gain:Ephi
+original,43,B_E,B,False,False,False,0.0,gain:bottom_current_NRMSE
+shorter,29,F,A,True,True,True,1.5317498287842066,noninferior:ET
+shorter,29,F,B,True,True,True,1.5317498287842066,noninferior:ET
+shorter,29,B_E,A,True,True,True,2.953494822046701,noninferior:ET
+shorter,29,B_E,B,True,True,True,2.953494822046701,noninferior:ET
+shorter,43,F,A,True,False,False,0.13994097393016286,gain:S
+shorter,43,F,B,True,True,True,1.2435486775419726,noninferior:ET
+shorter,43,B_E,A,True,True,True,3.0276749432520034,noninferior:ET
+shorter,43,B_E,B,True,True,True,3.0276749432520034,noninferior:ET

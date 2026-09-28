@@ -1,6 +1,8 @@
 # Experiment ledger protocol
 
-最新：[W+A 连续成稿与条件演化收口](2026-09-25-integrated-manuscript-conditional-ivp-closeout.md)。两条轨迹数值资格通过；支持考虑原修正族证人搜索，原族可行性仍未知；实例已回收关闭。
+最新：[现稿局部修订与固定电路筛查收口](2026-09-28-manuscript-circuit-screen-closeout.md)。保存数组分析完成；实验资格与用途充分性未知，无后续训练授权。
+
+历史2026-09-25：[W+A 连续成稿与条件演化收口](2026-09-25-integrated-manuscript-conditional-ivp-closeout.md)。两条轨迹数值资格通过；支持考虑原修正族证人搜索，原族可行性仍未知；实例已回收关闭。
 
 历史2026-09-23：[相对相态残差与时间矩八臂开发收口](2026-09-23-relative-phase-moments-closeout.md)。八个有效终点与原生读出完成，未建立原A_w增量；全部数值检查通过，GPU已回收关闭。
 

@@ -37,3 +37,14 @@ cloud/phk_v23_coverage/run_cloud.py -text whitespace=cr-at-eol
 cloud/phk_v23_coverage/resume_readout.py -text whitespace=cr-at-eol
 paper/paper_revision_20260926_core/conditional-evolution-report.md whitespace=cr-at-eol,-blank-at-eof
 paper/paper_revision_20260926_core/vo2-author-reproduction.md whitespace=cr-at-eol,-blank-at-eof
+
+# Preserve the CIRCUIT27 manuscript package, compact evidence and locked predictions.
+paper/paper_revision_20260927_circuit_screen/** -text whitespace=cr-at-eol
+paper/paper_revision_20260927_circuit_screen/circuit-screen/** -whitespace
+paper/paper_revision_20260927_circuit_screen/build/*.log -whitespace
+paper/paper_revision_20260927_circuit_screen/build/cloud/*.log -whitespace
+paper/paper_revision_20260927_circuit_screen/figures/*.svg whitespace=cr-at-eol,-blank-at-eol
+paper/paper_revision_20260927_circuit_screen/circuit-screen-report.md whitespace=cr-at-eol,-blank-at-eof
+paper/paper_revision_20260927_circuit_screen/conditional-evolution-report.md whitespace=cr-at-eol,-blank-at-eof
+paper/paper_revision_20260927_circuit_screen/vo2-author-reproduction.md whitespace=cr-at-eol,-blank-at-eof
+paper/paper_revision_20260927_circuit_screen/manuscript-changes.diff -whitespace

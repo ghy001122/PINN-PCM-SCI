@@ -1,0 +1,300 @@
+{
+  "task_id": "PCM-20260927-MANUSCRIPT-CIRCUIT-SCREEN-01",
+  "baseline": "6dd147af757bf5788e9c5d1535b49e7f965b2600",
+  "frozen_at_utc": "2026-09-27T18:07:49.505556+00:00",
+  "source_contract": "paper/paper_revision_20260926_core/evidence/core-revision/vo2/frozen-config.json",
+  "output": "paper/paper_revision_20260927_circuit_screen/circuit-screen",
+  "simulation_inputs": [
+    {
+      "id": "single_9V-1ns",
+      "case": "single_9V",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-1ns.npz"
+    },
+    {
+      "id": "single_9V-0p5ns",
+      "case": "single_9V",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-0p5ns.npz"
+    },
+    {
+      "id": "single_12p5V-1ns",
+      "case": "single_12p5V",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-1ns.npz"
+    },
+    {
+      "id": "single_12p5V-0p5ns",
+      "case": "single_12p5V",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-0p5ns.npz"
+    },
+    {
+      "id": "single_15p8V-1ns",
+      "case": "single_15p8V",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-1ns.npz"
+    },
+    {
+      "id": "single_15p8V-0p5ns",
+      "case": "single_15p8V",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-0p5ns.npz"
+    },
+    {
+      "id": "pair_excitation-1ns",
+      "case": "pair_excitation",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-1ns.npz"
+    },
+    {
+      "id": "pair_excitation-0p5ns",
+      "case": "pair_excitation",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-0p5ns.npz"
+    },
+    {
+      "id": "pair_inhibition-1ns",
+      "case": "pair_inhibition",
+      "dt_s": 1e-09,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-1ns.npz"
+    },
+    {
+      "id": "pair_inhibition-0p5ns",
+      "case": "pair_inhibition",
+      "dt_s": 5e-10,
+      "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-0p5ns.npz"
+    }
+  ],
+  "observation_interval_s": 1.024e-07,
+  "time_scale_s": 1e-06,
+  "engineering_safety_factor": 64,
+  "engineering_tolerance": "FP64 operation scales in analysis code, current-scale propagation for MSE cancellation; never a scientific accuracy threshold",
+  "peak_match_max_gap_s": 2.5e-07,
+  "experimental_development_allowlist": [
+    "data/thermal_coupling/Ben012_1_325K_1E3_12k_2.6V_1E2_12K_2.6V_sync_000_ALL.csv",
+    "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_3.7V_sync_000_ALL.csv",
+    "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_4V_sync_000_ALL.csv",
+    "data/thermal_coupling/Ben012_1_325K_1E3_12k_4V_1E2_12K_2.6V_sync_000_ALL.csv",
+    "data/thermal_coupling/Ben012_1_325K_1E3_12k_5V_1E2_12K_2.6V_sync_000_ALL.csv"
+  ],
+  "sealed_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_3.9V_sync_000_ALL.csv",
+  "experimental_qualification": [
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_2.6V_1E2_12K_2.6V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        2.6,
+        2.6
+      ],
+      "RL_ohm": [
+        12000,
+        12000
+      ],
+      "record_length_from_prior_manifest": 31250,
+      "legal_voltage": false,
+      "interval_drive": false,
+      "load_resistance": true,
+      "equivalent_topology": false,
+      "capacitance_known": false,
+      "independent_load_measurement": false,
+      "independent_device_measurement": false,
+      "raw_numeric_read_this_task": false,
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+      "sufficiency": "UNKNOWN",
+      "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+      "missing": [
+        "50-ohm sensor connection relative to device, capacitance, and reference ground",
+        "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+        "record-interval source waveform or explicit constant-bias timing qualification",
+        "capacitance for this low-threshold device/cabling configuration (device branch only)",
+        "polarity, gain and channel delay qualification at the required accuracy"
+      ],
+      "not_blockers": [
+        "initial T/H",
+        "pre-record thermal history",
+        "tau_task",
+        "low-threshold peak rule for waveform scoring"
+      ],
+      "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_3.7V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        4.1,
+        3.7
+      ],
+      "RL_ohm": [
+        12000,
+        12000
+      ],
+      "record_length_from_prior_manifest": 31250,
+      "legal_voltage": false,
+      "interval_drive": false,
+      "load_resistance": true,
+      "equivalent_topology": false,
+      "capacitance_known": false,
+      "independent_load_measurement": false,
+      "independent_device_measurement": false,
+      "raw_numeric_read_this_task": false,
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+      "sufficiency": "UNKNOWN",
+      "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+      "missing": [
+        "50-ohm sensor connection relative to device, capacitance, and reference ground",
+        "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+        "record-interval source waveform or explicit constant-bias timing qualification",
+        "capacitance for this low-threshold device/cabling configuration (device branch only)",
+        "polarity, gain and channel delay qualification at the required accuracy"
+      ],
+      "not_blockers": [
+        "initial T/H",
+        "pre-record thermal history",
+        "tau_task",
+        "low-threshold peak rule for waveform scoring"
+      ],
+      "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_4V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        4.1,
+        4.0
+      ],
+      "RL_ohm": [
+        12000,
+        12000
+      ],
+      "record_length_from_prior_manifest": 31250,
+      "legal_voltage": false,
+      "interval_drive": false,
+      "load_resistance": true,
+      "equivalent_topology": false,
+      "capacitance_known": false,
+      "independent_load_measurement": false,
+      "independent_device_measurement": false,
+      "raw_numeric_read_this_task": false,
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+      "sufficiency": "UNKNOWN",
+      "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+      "missing": [
+        "50-ohm sensor connection relative to device, capacitance, and reference ground",
+        "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+        "record-interval source waveform or explicit constant-bias timing qualification",
+        "capacitance for this low-threshold device/cabling configuration (device branch only)",
+        "polarity, gain and channel delay qualification at the required accuracy"
+      ],
+      "not_blockers": [
+        "initial T/H",
+        "pre-record thermal history",
+        "tau_task",
+        "low-threshold peak rule for waveform scoring"
+      ],
+      "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4V_1E2_12K_2.6V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        4.0,
+        2.6
+      ],
+      "RL_ohm": [
+        12000,
+        12000
+      ],
+      "record_length_from_prior_manifest": 31250,
+      "legal_voltage": false,
+      "interval_drive": false,
+      "load_resistance": true,
+      "equivalent_topology": false,
+      "capacitance_known": false,
+      "independent_load_measurement": false,
+      "independent_device_measurement": false,
+      "raw_numeric_read_this_task": false,
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+      "sufficiency": "UNKNOWN",
+      "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+      "missing": [
+        "50-ohm sensor connection relative to device, capacitance, and reference ground",
+        "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+        "record-interval source waveform or explicit constant-bias timing qualification",
+        "capacitance for this low-threshold device/cabling configuration (device branch only)",
+        "polarity, gain and channel delay qualification at the required accuracy"
+      ],
+      "not_blockers": [
+        "initial T/H",
+        "pre-record thermal history",
+        "tau_task",
+        "low-threshold peak rule for waveform scoring"
+      ],
+      "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+    },
+    {
+      "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_5V_1E2_12K_2.6V_sync_000_ALL.csv",
+      "devices": [
+        "1E3",
+        "1E2"
+      ],
+      "nominal_source_voltages_V": [
+        5.0,
+        2.6
+      ],
+      "RL_ohm": [
+        12000,
+        12000
+      ],
+      "record_length_from_prior_manifest": 31250,
+      "legal_voltage": false,
+      "interval_drive": false,
+      "load_resistance": true,
+      "equivalent_topology": false,
+      "capacitance_known": false,
+      "independent_load_measurement": false,
+      "independent_device_measurement": false,
+      "raw_numeric_read_this_task": false,
+      "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+      "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+      "sufficiency": "UNKNOWN",
+      "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+      "missing": [
+        "50-ohm sensor connection relative to device, capacitance, and reference ground",
+        "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+        "record-interval source waveform or explicit constant-bias timing qualification",
+        "capacitance for this low-threshold device/cabling configuration (device branch only)",
+        "polarity, gain and channel delay qualification at the required accuracy"
+      ],
+      "not_blockers": [
+        "initial T/H",
+        "pre-record thermal history",
+        "tau_task",
+        "low-threshold peak rule for waveform scoring"
+      ],
+      "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+    }
+  ],
+  "tau_task": null,
+  "tau_task_reason": "No branch-, interval- and application-matched externally justified tolerance identified in the bounded sources before prediction",
+  "no_parameter_scan": true,
+  "no_new_system_integration": true,
+  "no_new_training": true,
+  "scipy": "1.14.1"
+}

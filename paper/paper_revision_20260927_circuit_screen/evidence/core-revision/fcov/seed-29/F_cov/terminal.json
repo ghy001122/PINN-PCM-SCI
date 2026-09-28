@@ -1,0 +1,49 @@
+{
+  "status": "VALID_FIXED_ENDPOINT",
+  "seed": 29,
+  "role": "F_cov",
+  "progress": {
+    "phase": "L-BFGS",
+    "adam_updates": 1500,
+    "lbfgs_charged": 300,
+    "lbfgs_complete": 300,
+    "lbfgs_accepted": 148,
+    "interruptions": 0
+  },
+  "lbfgs": {
+    "evaluations": 300,
+    "accepted_steps": 148,
+    "termination": "EVALUATION_BUDGET_EXHAUSTED",
+    "last_accepted_loss": 1.419333029286798
+  },
+  "statistics": {
+    "objectives": {
+      "complete_objective_gradient_evaluations": 300,
+      "adam_objective_gradient_evaluations": 1500,
+      "audit_objective_evaluations": 0,
+      "audit_objective_gradient_evaluations": 0,
+      "optimizer_updates": 1500
+    },
+    "electrical": {
+      "forward_queries": 15600,
+      "zero_drive_queries": 15600,
+      "factorizations": 0,
+      "forward_solves": 0,
+      "adjoint_solves": 0,
+      "zero_adjoint_queries": 0,
+      "max_forward_scaled_residual": 0.0,
+      "max_adjoint_scaled_residual": 0.0
+    },
+    "explicit_work": {
+      "full_grid_network_evaluations": 31547,
+      "explicit_face_evaluations": 31547,
+      "thermal_phase_groups": 15600,
+      "boundary_groups": 15600,
+      "observation_groups": 43720
+    }
+  },
+  "reference_read": false,
+  "device": "cuda:0",
+  "current_session_seconds": 3710.590010488406,
+  "created_utc": "2026-09-26T11:49:13.184887+00:00"
+}

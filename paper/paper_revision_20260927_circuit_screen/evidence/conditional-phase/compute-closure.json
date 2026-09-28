@@ -1,0 +1,20 @@
+{
+  "task_id": "PCM-20260925-INTEGRATED-MANUSCRIPT-FEASIBILITY-02",
+  "scientific_work_ended_observed_utc": "2026-09-25T14:29:52.067977+00:00",
+  "recovery_verified": true,
+  "recovery_archive": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\recovery-wa-20260925.tar",
+  "recovery_sha256": "dc324bda26b60b833e24798b029ae937580962add10d02714c38a0b3f70b45bc",
+  "recovered_utc": "2026-09-25T14:30:19.899793+00:00",
+  "shutdown_requested_utc": "2026-09-25T14:30:19.899793+00:00",
+  "shutdown_command_returncode": 0,
+  "shutdown_stdout": "",
+  "shutdown_stderr": "",
+  "instance_shutdown_confirmed": true,
+  "shutdown_probes": [
+    {
+      "returncode": 255,
+      "stderr": "banner exchange: Connection to UNKNOWN port -1: Connection refused"
+    }
+  ],
+  "closed_utc": "2026-09-25T14:30:26.785254+00:00"
+}

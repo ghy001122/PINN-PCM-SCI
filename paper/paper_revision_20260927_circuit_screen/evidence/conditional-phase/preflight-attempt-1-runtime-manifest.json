@@ -1,0 +1,43 @@
+{
+  "task_id": "PCM-20260925-INTEGRATED-MANUSCRIPT-FEASIBILITY-02",
+  "source_commit": "e2e14b5ce390de930646e1cba9a606a8191cff80",
+  "created_utc": "2026-09-25T14:19:20.281190+00:00",
+  "files": {
+    "cloud/phk_v23_conditional_phase/run_cloud.py": "332405d691b8fc2a6be3e47fe6b110c195d75f47eb8af59c42bd53f2b2514006",
+    "configs/phk_v2/object_numerical_contract.json": "3b3b9a369f4afdffb201394dd294e7196baf04e5b36bafe126291ca9cb3ea157",
+    "configs/phk_v2/program_contract.json": "0e1d89dd23f93c90160ac82ece60ada154410f4ddc33578cb892207fe8b445a8",
+    "configs/phk_v21/e1_solver_selection.json": "a452d4e387a2c2e2ad0924d7cecd0e941a68088a48070f2f105ae81bf978a2dc",
+    "configs/phk_v21/engineering_contract.json": "df835e701660e4bc91f585f4dfaa22075dbcaaa754b7716921e766066bd7605a",
+    "configs/phk_v21/object_numerical_contract.json": "bdc86ae4c1417e16a8772a88f7738b59d4f0d7bb3b272d1ffec9e9572cf9cbdd",
+    "configs/phk_v21/program_contract.json": "b47cb3e131326077ef8d3ec50473b4f6a06d61e63b09861ecef834901be4d2a2",
+    "configs/phk_v22r/program_contract.json": "a413f56a2317ceff15fff2d3bd183c11d990f2e47e8ba33f7316f11567275272",
+    "configs/phk_v23/fixed_temperature_phase_probe_20260925.json": "42a6115a98994a5741b3fa44783aacbe89e2c915402e62e9fb8307b5c93cb8d4",
+    "outputs/runs/20260827T-phk-v21-e2-engineering-search-001/summary.json": "dac816914abfc686cd26d93ec643f642031f4ab62b85e4cbe6b52496e2613e19",
+    "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/checkpoint.pt": "9873df898c44b3568ccd79c367d5c7a0c90b361be03d8f7577e58b63ddeef966",
+    "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/frozen-config.json": "b47f8014fc8ab80385cd07dca69b97a9bf2d6241c2292fdefce838446a9d77c7",
+    "pinn_pcm_sci/__init__.py": "f3bf1d6d9ce9d3770db32f2a2a8fb9b57f0444f6c8e9eea97eadf8dda4035641",
+    "pinn_pcm_sci/artifacts.py": "cf90905a9ce91b54d9927a67ea32d9f9965d42a3676644f60641f88e4658161b",
+    "pinn_pcm_sci/phk_benchmark.py": "b18afa4f9005735ef46e3958f325c5bc40cecd0bf5e419854b140faf76df9645",
+    "pinn_pcm_sci/phk_contract.py": "3d01fd699f194005e4d6395209bc0c59f0579c482dc5bc2caa634273caaf47bb",
+    "pinn_pcm_sci/phk_v21_benchmark.py": "2ca60ccb157ea2b5f06c887f363c9d21bec221225ce67d9a1352b73ed446822d",
+    "pinn_pcm_sci/phk_v21_solver.py": "a4a70be2f580ef7aaacbebd0e3735b703e4e4045dd297b3b1bfc7b8a93b879fa",
+    "pinn_pcm_sci/phk_v22r_pinn.py": "bc6ecf0447ba3937da5573ad60d630c57fa7c381dbdee237a7caa53d7ed0115b",
+    "pinn_pcm_sci/phk_v22r_prediction.py": "d6353e129b2a3e54e94d5f834ab03b7e394874800dc09683e9b3ae967dade750",
+    "pinn_pcm_sci/phk_v22r_training.py": "b01b779b7197d9114b0f953b9f1cf6cb869c0924b422a809b1f5481f8d17b69b",
+    "pinn_pcm_sci/phk_v23_conditional_phase.py": "ce11518571d2a34860e9df3e9dcbe74cc2b7f17ea658882919e75bff01058ad1",
+    "pinn_pcm_sci/phk_v23_conditional_phase_evaluate.py": "63596a7316d24cc8123dafee9704266dbed95b08cc94caccfd22f5fc70a34866",
+    "pinn_pcm_sci/phk_v23_conditional_phase_run.py": "eae1ecd10cb2ab6fee19758b31fae684245442bc8c5329996ccb8ad9c188b3c0",
+    "pinn_pcm_sci/phk_v23_lf11.py": "b753f288ca3f6d7152c70628564aab67e54ca1aa05c200361bc7af489f1f5d19",
+    "pinn_pcm_sci/phk_v23_lf11_elimination_physics.py": "3a4acd3e7f06f7edd2c50536d3303dc9e2a5afce40f0c32fd5919b896da9550e",
+    "pinn_pcm_sci/phk_v23_lf11_followup.py": "2cc6846f86a6669829991af0ad45b4e3729f4facab05abda4dc3047f8624ec21",
+    "pinn_pcm_sci/phk_v23_lf11_followup_fit.py": "0d8fa603c8693ba9bff901aa1370e37ffb0e4e155298a44c13beb2d309550320",
+    "pinn_pcm_sci/phk_v23_lf11_protocol.py": "d8c927c211713412706b437c606970444d885bf53f42d54219003227af7a63f9",
+    "pinn_pcm_sci/phk_v23_spatial_comparison.py": "d9cddfd37985fd7d80eb3d840f823bfc08661adcbb683ee1263b25a884436209",
+    "tests/test_phk_v23_conditional_phase.py": "c6c1c468c75a065b7ec21ced8dddb32053289ade6941d93931c65e55c386df1a"
+  },
+  "reference_arrays": 0,
+  "model_checkpoints": [
+    "outputs/runs/20260921-b1-second-cycle-phase-gap/seed-29/E/checkpoint.pt"
+  ],
+  "scientific_config_sha256": "42a6115a98994a5741b3fa44783aacbe89e2c915402e62e9fb8307b5c93cb8d4"
+}

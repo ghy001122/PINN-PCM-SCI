@@ -1,0 +1,76 @@
+{
+  "status": "VERIFIED",
+  "recomputed_historical_scores": false,
+  "records": [
+    {
+      "seed": 29,
+      "display": [
+        "2.14630",
+        "1.01558",
+        "52.68",
+        "0.0241544",
+        "0.0199363",
+        "17.46"
+      ],
+      "source_rows": [
+        {
+          "reference": "spatial",
+          "reader": "fine",
+          "seed": "29",
+          "comparison": "E_vs_F_cov",
+          "metric": "bottom_current_NRMSE",
+          "candidate": "0.010155780433277767",
+          "control": "0.021463049087222068",
+          "signed_candidate_minus_control": "-0.0113072686539443",
+          "relative_error_reduction": "0.5268248983633939"
+        },
+        {
+          "reference": "spatial",
+          "reader": "fine",
+          "seed": "29",
+          "comparison": "E_vs_F_cov",
+          "metric": "Ephi",
+          "candidate": "0.01993633340127953",
+          "control": "0.024154429842371147",
+          "signed_candidate_minus_control": "-0.004218096441091616",
+          "relative_error_reduction": "0.1746303460118246"
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "display": [
+        "2.09424",
+        "0.70046",
+        "66.55",
+        "0.0244337",
+        "0.0197631",
+        "19.12"
+      ],
+      "source_rows": [
+        {
+          "reference": "spatial",
+          "reader": "fine",
+          "seed": "43",
+          "comparison": "E_vs_F_cov",
+          "metric": "bottom_current_NRMSE",
+          "candidate": "0.007004599587763097",
+          "control": "0.020942360059472677",
+          "signed_candidate_minus_control": "-0.01393776047170958",
+          "relative_error_reduction": "0.6655295980075193"
+        },
+        {
+          "reference": "spatial",
+          "reader": "fine",
+          "seed": "43",
+          "comparison": "E_vs_F_cov",
+          "metric": "Ephi",
+          "candidate": "0.01976311723656693",
+          "control": "0.02443368588145337",
+          "signed_candidate_minus_control": "-0.004670568644886439",
+          "relative_error_reduction": "0.1911528480617687"
+        }
+      ]
+    }
+  ]
+}

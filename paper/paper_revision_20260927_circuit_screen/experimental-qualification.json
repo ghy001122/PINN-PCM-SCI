@@ -1,0 +1,212 @@
+[
+  {
+    "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_2.6V_1E2_12K_2.6V_sync_000_ALL.csv",
+    "devices": [
+      "1E3",
+      "1E2"
+    ],
+    "nominal_source_voltages_V": [
+      2.6,
+      2.6
+    ],
+    "RL_ohm": [
+      12000,
+      12000
+    ],
+    "record_length_from_prior_manifest": 31250,
+    "legal_voltage": false,
+    "interval_drive": false,
+    "load_resistance": true,
+    "equivalent_topology": false,
+    "capacitance_known": false,
+    "independent_load_measurement": false,
+    "independent_device_measurement": false,
+    "raw_numeric_read_this_task": false,
+    "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+    "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+    "sufficiency": "UNKNOWN",
+    "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+    "missing": [
+      "50-ohm sensor connection relative to device, capacitance, and reference ground",
+      "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+      "record-interval source waveform or explicit constant-bias timing qualification",
+      "capacitance for this low-threshold device/cabling configuration (device branch only)",
+      "polarity, gain and channel delay qualification at the required accuracy"
+    ],
+    "not_blockers": [
+      "initial T/H",
+      "pre-record thermal history",
+      "tau_task",
+      "low-threshold peak rule for waveform scoring"
+    ],
+    "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+  },
+  {
+    "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_3.7V_sync_000_ALL.csv",
+    "devices": [
+      "1E3",
+      "1E2"
+    ],
+    "nominal_source_voltages_V": [
+      4.1,
+      3.7
+    ],
+    "RL_ohm": [
+      12000,
+      12000
+    ],
+    "record_length_from_prior_manifest": 31250,
+    "legal_voltage": false,
+    "interval_drive": false,
+    "load_resistance": true,
+    "equivalent_topology": false,
+    "capacitance_known": false,
+    "independent_load_measurement": false,
+    "independent_device_measurement": false,
+    "raw_numeric_read_this_task": false,
+    "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+    "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+    "sufficiency": "UNKNOWN",
+    "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+    "missing": [
+      "50-ohm sensor connection relative to device, capacitance, and reference ground",
+      "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+      "record-interval source waveform or explicit constant-bias timing qualification",
+      "capacitance for this low-threshold device/cabling configuration (device branch only)",
+      "polarity, gain and channel delay qualification at the required accuracy"
+    ],
+    "not_blockers": [
+      "initial T/H",
+      "pre-record thermal history",
+      "tau_task",
+      "low-threshold peak rule for waveform scoring"
+    ],
+    "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+  },
+  {
+    "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4.1V_1E2_12K_4V_sync_000_ALL.csv",
+    "devices": [
+      "1E3",
+      "1E2"
+    ],
+    "nominal_source_voltages_V": [
+      4.1,
+      4.0
+    ],
+    "RL_ohm": [
+      12000,
+      12000
+    ],
+    "record_length_from_prior_manifest": 31250,
+    "legal_voltage": false,
+    "interval_drive": false,
+    "load_resistance": true,
+    "equivalent_topology": false,
+    "capacitance_known": false,
+    "independent_load_measurement": false,
+    "independent_device_measurement": false,
+    "raw_numeric_read_this_task": false,
+    "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+    "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+    "sufficiency": "UNKNOWN",
+    "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+    "missing": [
+      "50-ohm sensor connection relative to device, capacitance, and reference ground",
+      "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+      "record-interval source waveform or explicit constant-bias timing qualification",
+      "capacitance for this low-threshold device/cabling configuration (device branch only)",
+      "polarity, gain and channel delay qualification at the required accuracy"
+    ],
+    "not_blockers": [
+      "initial T/H",
+      "pre-record thermal history",
+      "tau_task",
+      "low-threshold peak rule for waveform scoring"
+    ],
+    "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+  },
+  {
+    "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_4V_1E2_12K_2.6V_sync_000_ALL.csv",
+    "devices": [
+      "1E3",
+      "1E2"
+    ],
+    "nominal_source_voltages_V": [
+      4.0,
+      2.6
+    ],
+    "RL_ohm": [
+      12000,
+      12000
+    ],
+    "record_length_from_prior_manifest": 31250,
+    "legal_voltage": false,
+    "interval_drive": false,
+    "load_resistance": true,
+    "equivalent_topology": false,
+    "capacitance_known": false,
+    "independent_load_measurement": false,
+    "independent_device_measurement": false,
+    "raw_numeric_read_this_task": false,
+    "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+    "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+    "sufficiency": "UNKNOWN",
+    "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+    "missing": [
+      "50-ohm sensor connection relative to device, capacitance, and reference ground",
+      "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+      "record-interval source waveform or explicit constant-bias timing qualification",
+      "capacitance for this low-threshold device/cabling configuration (device branch only)",
+      "polarity, gain and channel delay qualification at the required accuracy"
+    ],
+    "not_blockers": [
+      "initial T/H",
+      "pre-record thermal history",
+      "tau_task",
+      "low-threshold peak rule for waveform scoring"
+    ],
+    "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+  },
+  {
+    "archive_member": "data/thermal_coupling/Ben012_1_325K_1E3_12k_5V_1E2_12K_2.6V_sync_000_ALL.csv",
+    "devices": [
+      "1E3",
+      "1E2"
+    ],
+    "nominal_source_voltages_V": [
+      5.0,
+      2.6
+    ],
+    "RL_ohm": [
+      12000,
+      12000
+    ],
+    "record_length_from_prior_manifest": 31250,
+    "legal_voltage": false,
+    "interval_drive": false,
+    "load_resistance": true,
+    "equivalent_topology": false,
+    "capacitance_known": false,
+    "independent_load_measurement": false,
+    "independent_device_measurement": false,
+    "raw_numeric_read_this_task": false,
+    "execution": "NOT_RUN_INPUT_QUALIFICATION_UNCLOSED",
+    "measurement": "EXPERIMENTAL_OSCILLOSCOPE_BRANCH_UNRESOLVED",
+    "sufficiency": "UNKNOWN",
+    "implication": "Stop affected circuit comparisons; not evidence that reconstruction fails",
+    "missing": [
+      "50-ohm sensor connection relative to device, capacitance, and reference ground",
+      "per-record mapping from CH1/CH4 to the capacitor node without hidden-current correction",
+      "record-interval source waveform or explicit constant-bias timing qualification",
+      "capacitance for this low-threshold device/cabling configuration (device branch only)",
+      "polarity, gain and channel delay qualification at the required accuracy"
+    ],
+    "not_blockers": [
+      "initial T/H",
+      "pre-record thermal history",
+      "tau_task",
+      "low-threshold peak rule for waveform scoring"
+    ],
+    "minimal_resolution": "Provide a record-specific circuit/channel wiring and bias metadata sheet; do not infer topology by fitting currents"
+  }
+]

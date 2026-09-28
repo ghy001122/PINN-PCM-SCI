@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETE",
+  "dt": 0.0003125,
+  "expected_steps": 2112,
+  "initial_guess": "own_previous_accepted",
+  "counts": {
+    "accepted_main_steps": 2112,
+    "newton_iterations": 4224,
+    "linear_solves": 4224,
+    "residual_evaluations": 10560,
+    "jacobian_evaluations": 6336,
+    "decrease_rejections": 0,
+    "output_clipping_count": 0
+  },
+  "seconds": 100.86376451607794,
+  "last_time": 2.02,
+  "all_algebraic_tolerances_passed": true,
+  "phase_sha256": "0288820b776b12121368892f5a0aee1bdb174aec84fea0b6462bc0220daff72a"
+}

@@ -1,0 +1,74 @@
+{
+  "task_id": "PCM-20260927-MANUSCRIPT-CIRCUIT-SCREEN-01",
+  "policy": "docs/governance/PINN_PCM_Data_Handling_Norms_2026-09-28.md",
+  "blocks": [
+    {
+      "name": "ten_original_VO2_NPZ",
+      "purpose": "original numerical evidence, full precision and native times",
+      "local": "outputs/runs/20260926-core-revision-vo2-bridge/vo2",
+      "remote": "/root/autodl-tmp/pinn-circuit-screen-20260927/outputs/runs/20260926-core-revision-vo2-bridge/vo2",
+      "status": "TRANSFER_VERIFIED",
+      "identity": "input-inventory.json and build/cloud/deployment.json"
+    },
+    {
+      "name": "locked_PCHIP_predictions_and_core_scores",
+      "purpose": "new analysis evidence, no regenerated trajectory",
+      "local": "paper/paper_revision_20260927_circuit_screen/circuit-screen",
+      "remote": "/root/autodl-tmp/pinn-circuit-screen-20260927/paper/paper_revision_20260927_circuit_screen/circuit-screen",
+      "status": "RECOVERED_AND_READBACK_VERIFIED",
+      "identity": "build/cloud/recovery.json",
+      "local_only_additions": "derived CSV summaries, figures and report after shutdown; scores and prediction arrays unchanged"
+    },
+    {
+      "name": "manuscript_and_final_small_records",
+      "purpose": "final deliverable",
+      "local": "paper/paper_revision_20260927_circuit_screen",
+      "remote": null,
+      "status": "PENDING_NEXT_AUTHORIZED_SESSION_SYNC",
+      "restart_instance_for_sync": false
+    },
+    {
+      "name": "inherited_tables_figures_evidence",
+      "purpose": "unchanged history reused by hardlink",
+      "local": "paper/paper_revision_20260927_circuit_screen",
+      "status": "REUSED_LOCAL_LINKS_NOT_INDEPENDENT_BACKUP",
+      "identity": "preparation.json"
+    },
+    {
+      "name": "historical_complete_standalone_package",
+      "purpose": "independent rescoring inputs",
+      "local": "D:\\Temp\\PINN-PCM-Standalone-20260926",
+      "status": "EXISTING_MANIFEST_AND_VERIFICATION_READ_ONLY; LONG_TERM_ARCHIVE_LOCATION_PENDING",
+      "inputs": 445,
+      "input_bytes_from_existing_manifest": 24616803766,
+      "moved_or_deleted": false
+    },
+    {
+      "name": "third_party_experimental_archive_and_sealed_protocol",
+      "purpose": "original provenance and sealed data",
+      "local": "paper/paper_revision_20260926_core/literature/data.zip",
+      "status": "RETAINED; NO_NUMERIC_CSV_READ_OR_DEPLOYMENT",
+      "remote": "NOT_DEPLOYED_INFORMATION_ISOLATION"
+    }
+  ],
+  "remote_temporary_cleanup": [
+    {
+      "path": "/root/autodl-tmp/pinn-circuit-screen-20260927/stage-inputs.tar",
+      "bytes": 27258880
+    },
+    {
+      "path": "/root/autodl-tmp/pinn-circuit-screen-20260927/recovered-output.tar",
+      "bytes": 16517120
+    }
+  ],
+  "local_cleanup": {
+    "status": "COMPLETED",
+    "record": "build/cleanup-result.json",
+    "files": 96,
+    "bytes": 85771021.0,
+    "scope": "Current-task verified transfer wrappers and disposable render/source-inspection images only"
+  },
+  "no_precision_or_sampling_reduction": true,
+  "no_historical_evidence_deleted": true,
+  "external_access": "NOT_ESTABLISHED_P03_OPEN"
+}

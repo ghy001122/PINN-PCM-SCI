@@ -1,0 +1,33 @@
+{
+  "command": "/usr/bin/shutdown -h now",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "probes": [
+    {
+      "time": "2026-09-27T18:19:09.459776+00:00",
+      "ssh_port_reachable": false
+    },
+    {
+      "time": "2026-09-27T18:19:16.697330+00:00",
+      "ssh_port_reachable": false
+    },
+    {
+      "time": "2026-09-27T18:19:23.945985+00:00",
+      "ssh_port_reachable": false
+    }
+  ],
+  "remote_transfer_wrappers_removed": [
+    {
+      "path": "/root/autodl-tmp/pinn-circuit-screen-20260927/stage-inputs.tar",
+      "bytes": 27258880
+    },
+    {
+      "path": "/root/autodl-tmp/pinn-circuit-screen-20260927/recovered-output.tar",
+      "bytes": 16517120
+    }
+  ],
+  "status": "SHUTDOWN_SENT_SSH_UNREACHABLE",
+  "limitation": "Provider billing/power state not available through SSH; evidence is shutdown command and port reachability",
+  "final_local_manuscript_sync": "PENDING_NEXT_AUTHORIZED_INSTANCE_SESSION; do not restart for documents"
+}

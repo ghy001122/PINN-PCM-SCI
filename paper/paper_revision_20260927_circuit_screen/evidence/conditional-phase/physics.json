@@ -1,0 +1,17 @@
+{
+  "x_min": -1.0,
+  "x_max": 1.0,
+  "z_min": 0.0,
+  "z_max": 1.0,
+  "interface_width": 0.04,
+  "barrier_scale": 1.0,
+  "thermal_drive": 6.0,
+  "theta_transition": 0.45,
+  "mobility_cold": 0.5,
+  "mobility_hot": 5.0,
+  "mobility_width": 0.08,
+  "thermal_diffusivity": 0.1,
+  "volumetric_cooling": 4.0,
+  "latent_ratio": 0.05,
+  "thermal_robin_biot": 0.25
+}

@@ -1,0 +1,7 @@
+{
+  "scientific_parameters_changed": false,
+  "prediction_regeneration": false,
+  "reason": "Initial near-zero device current subtracts nonzero load/capacitive terms; include these operation scales in the algebra identity allowance. KCL tolerances unchanged.",
+  "engineering_safety_factor": 64,
+  "expected_action": "score locked predictions and create figures only"
+}

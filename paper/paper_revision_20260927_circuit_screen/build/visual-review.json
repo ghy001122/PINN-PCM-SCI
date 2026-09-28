@@ -1,0 +1,17 @@
+{
+  "status": "PASS_REVIEW_LAYOUT",
+  "manuscript_pages": 17,
+  "supplement_pages": 58,
+  "all_pages_contact_sheet_review": true,
+  "full_page_focus": [
+    "manuscript 2: equations",
+    "manuscript 10: all revised rows, adjacent text",
+    "supplement 45: retained equations and eight-arm definitions"
+  ],
+  "new_figures_reviewed": 6,
+  "corrected": "Signed decomposition plot limits extended to avoid touching the upper edge; same saved scores, no new prediction",
+  "renderer": "Installed Microsoft Word then bundled Poppler at 130 dpi",
+  "warnings": "Poppler reported display-font aliases Symbol/ArialUnicode; reviewed page renders showed formulas and symbols readable",
+  "scope": "Visual/layout review, not an independent scientific replication",
+  "temporary_page_images": "eligible for cleanup after this record; final PDF and DOCX retained"
+}

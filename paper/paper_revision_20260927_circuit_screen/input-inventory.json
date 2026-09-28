@@ -1,0 +1,1652 @@
+[
+  {
+    "id": "single_9V-1ns",
+    "case": "single_9V",
+    "dt_s": 1e-09,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-1ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          20001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 1239694,
+    "sha256": "a615e0552830b29805763d1a70307164264e69dea4b29f58a570cc1dba7be92c",
+    "file_mtime_utc": "2026-09-26T10:47:37.540616+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  },
+  {
+    "id": "single_9V-0p5ns",
+    "case": "single_9V",
+    "dt_s": 5e-10,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-0p5ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          40001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 2420630,
+    "sha256": "9a11d87007f1703b4b531a75b97900f2302a2a39026fca3bc857bbe6a56f1733",
+    "file_mtime_utc": "2026-09-26T10:47:40.986125+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  },
+  {
+    "id": "single_12p5V-1ns",
+    "case": "single_12p5V",
+    "dt_s": 1e-09,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-1ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          20001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 1598750,
+    "sha256": "640df9fa57ff5bf0388350a3f142e8275b3f5e926072b734bab5200f6905444a",
+    "file_mtime_utc": "2026-09-26T10:47:42.765054+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  },
+  {
+    "id": "single_12p5V-0p5ns",
+    "case": "single_12p5V",
+    "dt_s": 5e-10,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-0p5ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          40001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 3106565,
+    "sha256": "6db53f9b2faef9b15890caad43684abfbc1d0231ff8b5846e8ca7ae44e3a29d4",
+    "file_mtime_utc": "2026-09-26T10:47:46.362336+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  },
+  {
+    "id": "single_15p8V-1ns",
+    "case": "single_15p8V",
+    "dt_s": 1e-09,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-1ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          20001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          20001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 1039635,
+    "sha256": "08a9edfbd9c547be0a00b1bec5cb7442328bb04741f46cfef0189bcdc06d557c",
+    "file_mtime_utc": "2026-09-26T10:47:48.062318+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  },
+  {
+    "id": "single_15p8V-0p5ns",
+    "case": "single_15p8V",
+    "dt_s": 5e-10,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-0p5ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          40001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          40001,
+          1
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 2018212,
+    "sha256": "efdc62db9223c9b36d49fad7d3e5b38a52fd33505f3a49bb0744cfdbd217fa16",
+    "file_mtime_utc": "2026-09-26T10:47:51.735942+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  },
+  {
+    "id": "pair_excitation-1ns",
+    "case": "pair_excitation",
+    "dt_s": 1e-09,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-1ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          20001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 2688430,
+    "sha256": "ace02fe922ecb0d75965153caa572e207fdc42da3548cbbc637bb91635bfbe56",
+    "file_mtime_utc": "2026-09-26T10:47:53.896434+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  },
+  {
+    "id": "pair_excitation-0p5ns",
+    "case": "pair_excitation",
+    "dt_s": 5e-10,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-0p5ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          40001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 5219797,
+    "sha256": "5710050aa8c19cee9c29f2bc95443a24f917001eecc40a5aeba8b47f8025848c",
+    "file_mtime_utc": "2026-09-26T10:47:57.768473+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  },
+  {
+    "id": "pair_inhibition-1ns",
+    "case": "pair_inhibition",
+    "dt_s": 1e-09,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-1ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          20001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          20001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          20000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 2641039,
+    "sha256": "0d3860edeac1fe53d5bd565c6cad2fe164eb761466ae6bf78427c039f913db76",
+    "file_mtime_utc": "2026-09-26T10:47:59.655298+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  },
+  {
+    "id": "pair_inhibition-0p5ns",
+    "case": "pair_inhibition",
+    "dt_s": 5e-10,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-0p5ns.npz",
+    "fields": {
+      "time": {
+        "shape": [
+          40001
+        ],
+        "dtype": "float64",
+        "unit": "s",
+        "role": "observation exporter/query axis"
+      },
+      "voltage": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "V",
+        "role": "observation exporter/query axis"
+      },
+      "temperature": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "resistance": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "ohm",
+        "role": "scoring or historical background only"
+      },
+      "device_current": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "load_current": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "capacitor_current": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "A",
+        "role": "scoring or historical background only"
+      },
+      "g": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "delta": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "reversed": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tr": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "gr": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "dimensionless",
+        "role": "scoring or historical background only"
+      },
+      "Tpr": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "T_last": {
+        "shape": [
+          40001,
+          2
+        ],
+        "dtype": "float64",
+        "unit": "K",
+        "role": "scoring or historical background only"
+      },
+      "net_external_energy_step_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "euler_capacitive_energy_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      },
+      "discrete_energy_balance_defect_J": {
+        "shape": [
+          40000
+        ],
+        "dtype": "float64",
+        "unit": "J",
+        "role": "scoring or historical background only"
+      }
+    },
+    "bytes": 5119692,
+    "sha256": "2b5e6d9d8a8f403a0758649ce03f8790ff1e7a0f016ad5415b9eeda2a92ccf65",
+    "file_mtime_utc": "2026-09-26T10:48:03.320913+00:00",
+    "time_extent_s": [
+      0,
+      2e-05
+    ],
+    "saved_order": "explicit Euler, history then same-level R/I/RHS and record, then simultaneous state update"
+  }
+]

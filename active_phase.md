@@ -1,3 +1,18 @@
+<!-- CIRCUIT27_CURRENT_BEGIN -->
+# 当前：现稿局部修订与固定电路筛查已收口
+
+用户批准的 PCM-20260927-MANUSCRIPT-CIRCUIT-SCREEN-01 已完成。主稿17页、补充58页；十条保存系统记录的十四套PCHIP重构与完整合法分析完成，五条实验开发记录因测量合同未闭合未评分。封存协议未读取数值；零新轨迹、推理或训练。结果已回收核验，关机命令成功且三次SSH不可达。
+
+VERIFIED为保存数组分析事实；绝对用途充分性和实验方法增量为UNKNOWN。唯一下一研究建议是取得低阈值记录的测量与用途合同，未授权后续研究。P02、严格双周期、材料/泛化及P03继续开放；用户随后明确授权本轮重要成果提交至 `codex/paper-revision-results`，范围与核验见[发布记录](docs/notes/2026-09-28-manuscript-circuit-screen-release.md)。精选Git成果不等于完整数据公开，AutoDL已关闭后的少量最终文件仍按原记录待同步；未投稿。
+
+- `phase_id`: `PHK_V23_MANUSCRIPT_CIRCUIT_SCREEN`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `VERIFIED_SAVED_ARRAY_SCREEN_SUFFICIENCY_UNKNOWN`
+- `next_research_execution_authorized`: `false`
+
+<!-- CIRCUIT27_CURRENT_END -->
+
 <!-- CORE26_CURRENT_BEGIN -->
 # 当前：现稿补强与 VO2 作者模型任务已完成
 
@@ -5,11 +20,11 @@
 
 见[交付入口](paper/paper_revision_20260926_core/README.md)和[收口记录](docs/experiment/2026-09-26-core-revision-vo2-bridge-closeout.md)。下一研究仅有待审有限观测重构计划，未授权执行。P02、严格双周期、材料／泛化与 P03 外部访问保持开放；用户随后另行授权本轮精简成果云端提交，见[发布记录](docs/notes/2026-09-26-core-revision-vo2-bridge-release.md)；完整数据公开与投稿未执行。本段 supersedes 下方历史任务的当前状态，旧证据保留。
 
-- `phase_id`: `PHK_V23_CORE_REVISION_VO2_BRIDGE`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_CORE_REVISION_WITH_BOUNDED_INTERPRETATION`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_CORE_REVISION_VO2_BRIDGE`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `VERIFIED_CORE_REVISION_WITH_BOUNDED_INTERPRETATION`
+- `historical_next_research_execution_authorized`: `false`
 
 <!-- CORE26_CURRENT_END -->
 

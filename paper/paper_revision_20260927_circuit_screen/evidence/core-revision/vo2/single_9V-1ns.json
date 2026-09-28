@@ -1,0 +1,16 @@
+{
+  "case": "single_9V",
+  "dt": 1e-09,
+  "system_steps": 20000,
+  "states": 20001,
+  "max_KCL_defect_A": 1.0842021724855044e-19,
+  "max_mutual_heat_sum_W": 0.0,
+  "total_Euler_energy_defect_J": 1.335433688276705e-12,
+  "max_corrected_energy_defect_J": 2.2396184633038418e-24,
+  "temperature_range_K": [
+    325.0,
+    331.10769340790256
+  ],
+  "clipping_of_evolved_state": false,
+  "initialization_shared": false
+}

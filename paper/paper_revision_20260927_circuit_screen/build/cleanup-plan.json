@@ -1,0 +1,398 @@
+{
+  "task_id": "PCM-20260927-MANUSCRIPT-CIRCUIT-SCREEN-01",
+  "allowed_root": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build",
+  "preconditions": [
+    "all document/figure visual checks completed",
+    "Word and render processes exited",
+    "recovered numeric fields/shapes verified",
+    "final PDFs retained in package root",
+    "remote persistent inputs and scores retained",
+    "no scientific cache or original asset in whitelist"
+  ],
+  "files": [
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-01.png",
+      "bytes": 433558
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-02.png",
+      "bytes": 380939
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-03.png",
+      "bytes": 369560
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-04.png",
+      "bytes": 345659
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-05.png",
+      "bytes": 399165
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-06.png",
+      "bytes": 419586
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-07.png",
+      "bytes": 347710
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-08.png",
+      "bytes": 151095
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-09.png",
+      "bytes": 310888
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-10.png",
+      "bytes": 395042
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-11.png",
+      "bytes": 134689
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-12.png",
+      "bytes": 247915
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-13.png",
+      "bytes": 446249
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-14.png",
+      "bytes": 409556
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-15.png",
+      "bytes": 412498
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-16.png",
+      "bytes": 476514
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\page-17.png",
+      "bytes": 139993
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-manuscript\\manuscript.pdf",
+      "bytes": 1560282
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-01.png",
+      "bytes": 409083
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-02.png",
+      "bytes": 412706
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-03.png",
+      "bytes": 392403
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-04.png",
+      "bytes": 435433
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-05.png",
+      "bytes": 394069
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-06.png",
+      "bytes": 238904
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-07.png",
+      "bytes": 233711
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-08.png",
+      "bytes": 303080
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-09.png",
+      "bytes": 439125
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-10.png",
+      "bytes": 391828
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-11.png",
+      "bytes": 318041
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-12.png",
+      "bytes": 439531
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-13.png",
+      "bytes": 275898
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-14.png",
+      "bytes": 270652
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-15.png",
+      "bytes": 161336
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-16.png",
+      "bytes": 327516
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-17.png",
+      "bytes": 398488
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-18.png",
+      "bytes": 411589
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-19.png",
+      "bytes": 221395
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-20.png",
+      "bytes": 188594
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-21.png",
+      "bytes": 277199
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-22.png",
+      "bytes": 350629
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-23.png",
+      "bytes": 263095
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-24.png",
+      "bytes": 282046
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-25.png",
+      "bytes": 176527
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-26.png",
+      "bytes": 288836
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-27.png",
+      "bytes": 197291
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-28.png",
+      "bytes": 301399
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-29.png",
+      "bytes": 188698
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-30.png",
+      "bytes": 297147
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-31.png",
+      "bytes": 289253
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-32.png",
+      "bytes": 413358
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-33.png",
+      "bytes": 434348
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-34.png",
+      "bytes": 235402
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-35.png",
+      "bytes": 258996
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-36.png",
+      "bytes": 228037
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-37.png",
+      "bytes": 299710
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-38.png",
+      "bytes": 390744
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-39.png",
+      "bytes": 428512
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-40.png",
+      "bytes": 259770
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-41.png",
+      "bytes": 183114
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-42.png",
+      "bytes": 192294
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-43.png",
+      "bytes": 175390
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-44.png",
+      "bytes": 288503
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-45.png",
+      "bytes": 358174
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-46.png",
+      "bytes": 242865
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-47.png",
+      "bytes": 339937
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-48.png",
+      "bytes": 345666
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-49.png",
+      "bytes": 246868
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-50.png",
+      "bytes": 379903
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-51.png",
+      "bytes": 293276
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-52.png",
+      "bytes": 296881
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-53.png",
+      "bytes": 304720
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-54.png",
+      "bytes": 415092
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-55.png",
+      "bytes": 275530
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-56.png",
+      "bytes": 290374
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-57.png",
+      "bytes": 309836
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\page-58.png",
+      "bytes": 346457
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\render-supplement\\supplement.pdf",
+      "bytes": 5655024
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-manuscript-001.png",
+      "bytes": 1053202
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-manuscript-007.png",
+      "bytes": 679168
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-manuscript-013.png",
+      "bytes": 811372
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-001.png",
+      "bytes": 1063148
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-007.png",
+      "bytes": 995194
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-013.png",
+      "bytes": 872745
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-019.png",
+      "bytes": 700658
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-025.png",
+      "bytes": 689146
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-031.png",
+      "bytes": 794626
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-037.png",
+      "bytes": 541696
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-043.png",
+      "bytes": 780304
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-049.png",
+      "bytes": 864685
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\qa-supplement-055.png",
+      "bytes": 536966
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\source-check\\qiu-page11.png",
+      "bytes": 174694
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\source-check\\qiu-page21.png",
+      "bytes": 110569
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\source-check\\qiu-page3.png",
+      "bytes": 266304
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\source-check\\qiu-page4.png",
+      "bytes": 215363
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\cloud\\stage-inputs.tar",
+      "bytes": 27258880
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260927_circuit_screen\\build\\cloud\\recovered-output.tar",
+      "bytes": 16517120
+    }
+  ]
+}

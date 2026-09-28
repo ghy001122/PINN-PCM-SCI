@@ -1,0 +1,51 @@
+{
+  "input": {
+    "id": "single_9V-1ns",
+    "case": "single_9V",
+    "dt_s": 1e-09,
+    "path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-1ns.npz"
+  },
+  "source_fields": [
+    "time",
+    "voltage",
+    "temperature",
+    "resistance",
+    "device_current",
+    "load_current",
+    "capacitor_current",
+    "g",
+    "delta",
+    "reversed",
+    "Tr",
+    "gr",
+    "Tpr",
+    "T_last",
+    "net_external_energy_step_J",
+    "euler_capacitive_energy_defect_J",
+    "discrete_energy_balance_defect_J"
+  ],
+  "consumed_prediction_fields": [
+    "time",
+    "voltage"
+  ],
+  "shape": [
+    20001,
+    1
+  ],
+  "dtype": "float64",
+  "time_unit": "s",
+  "voltage_unit": "V",
+  "current_unit": "A",
+  "saved_native_step_s": 1e-09,
+  "states": 20001,
+  "observations": 197,
+  "last_observation_interval_s": 3.2000000000002404e-08,
+  "C_F": 1.4534619293e-10,
+  "RL_ohm": 12000.0,
+  "source_voltage_V": [
+    9.0
+  ],
+  "fixed_at": "2026-09-27T18:12:35.946228+00:00",
+  "prediction_sha256": "2f8a5b46714c4790947a94d994af7552f490f1336a78e3aa562bf268a0b8a0eb",
+  "score_read_before_prediction_lock": false
+}

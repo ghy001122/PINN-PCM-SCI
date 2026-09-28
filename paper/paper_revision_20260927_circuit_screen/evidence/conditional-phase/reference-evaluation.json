@@ -1,0 +1,71 @@
+{
+  "reference": "outputs/submission-rescore-20260921/data/shorter/reference-old.npz",
+  "reference_sha256": "7943255c94f51d8b242bd1d6b45aa03eb52b06fe8f9ac727cc4650b687dc0de7",
+  "reference_read": true,
+  "utc": "2026-09-25T14:29:50.556120+00:00",
+  "grid": [
+    80,
+    40
+  ],
+  "interval": [
+    1.36,
+    2.02
+  ],
+  "time_count": 265,
+  "records": {
+    "full": {
+      "B0": {
+        "Ephi_D_80": 0.06694357573739856,
+        "cells": 3200
+      },
+      "coarse": {
+        "Ephi_D_80": 0.02075959087255291,
+        "cells": 3200
+      },
+      "fine": {
+        "Ephi_D_80": 0.0207429571471433,
+        "cells": 3200
+      },
+      "direction": {
+        "Ephi_D_80_B0": 0.06694357573739856,
+        "Ephi_D_80_coarse": 0.02075959087255291,
+        "Ephi_D_80_fine": 0.0207429571471433,
+        "gains": {
+          "coarse": 0.04618398486484565,
+          "fine": 0.04620061859025526
+        },
+        "observed_step_difference": 1.663372540960939e-05,
+        "direction": "IMPROVES"
+      }
+    },
+    "roi": {
+      "B0": {
+        "Ephi_D_80": 0.12171558984865839,
+        "cells": 968
+      },
+      "coarse": {
+        "Ephi_D_80": 0.03774470345445067,
+        "cells": 968
+      },
+      "fine": {
+        "Ephi_D_80": 0.03771446031846351,
+        "cells": 968
+      },
+      "direction": {
+        "Ephi_D_80_B0": 0.12171558984865839,
+        "Ephi_D_80_coarse": 0.03774470345445067,
+        "Ephi_D_80_fine": 0.03771446031846351,
+        "gains": {
+          "coarse": 0.08397088639420772,
+          "fine": 0.08400112953019488
+        },
+        "observed_step_difference": 3.0243135987158276e-05,
+        "direction": "IMPROVES"
+      }
+    }
+  },
+  "seconds": 2.4746800251305103,
+  "formal_A_w": false,
+  "formal_ood": false,
+  "interpretation": "Observed step differences are sensitivity indicators, not true-error bounds or confidence intervals"
+}

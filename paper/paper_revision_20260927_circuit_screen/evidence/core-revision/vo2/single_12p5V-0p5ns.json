@@ -1,0 +1,16 @@
+{
+  "case": "single_12p5V",
+  "dt": 5e-10,
+  "system_steps": 40000,
+  "states": 40001,
+  "max_KCL_defect_A": 8.673617379884035e-19,
+  "max_mutual_heat_sum_W": 0.0,
+  "total_Euler_energy_defect_J": 2.8542760818890472e-11,
+  "max_corrected_energy_defect_J": 2.2559297634814597e-24,
+  "temperature_range_K": [
+    325.0,
+    385.91771159148476
+  ],
+  "clipping_of_evolved_state": false,
+  "initialization_shared": false
+}
