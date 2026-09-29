@@ -15,4 +15,8 @@
 - [仅更新访问段的新主稿PDF](manuscript/manuscript.pdf)、[DOCX](manuscript/manuscript.docx)、[权威Markdown](manuscript/source/manuscript.md)
 - [访问段修改说明](access-change.md)、[既有请求的发送确认项](author-contact-status.md)
 
-旧稿科学结论不变。旧电路V/I评分子集已公开，旧二维全场及本轮新热数组不因此获得外部访问，P03仍开放。测量请求未发送。新产物已本地保存，待下一授权实例会话同步；本轮没有使用GPU、发布、投稿或读取实验/留出数值。
+旧稿科学结论不变。旧电路V/I评分子集已公开，旧二维全场P03仍开放。测量请求未发送；本轮没有使用GPU、投稿或读取实验/留出数值。
+
+## 后续发布状态
+
+用户在科研收口后另行明确批准包含科研数组、稿件和运行产物的170文件完整批次公开推送。本轮派生交付已随[成果提交 `d068bdf`](https://github.com/ghy001122/PINN-PCM-SCI/commit/d068bdf466ccc40f73a2b4c11e5ade7179fd9eeb)发布并核验远端分支；范围和限制见[发布记录](../../docs/notes/2026-09-29-conditional-thermal-closure-release.md)。该发布使本目录派生数组、表格、图件和源码可通过Git获取；完整原始T/R/g/H源轨迹及旧二维PINN全场仍未包含，因而不关闭全论文P03，也不产生新科研执行授权。
