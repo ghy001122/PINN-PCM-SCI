@@ -1,0 +1,55 @@
+{
+  "mode": "saved_arrays_only",
+  "figures": [
+    "conditional-single_9V-A",
+    "conditional-single_12p5V-A",
+    "single_12p5V-history-closure",
+    "single_12p5V-fixed-first-peak",
+    "conditional-single_15p8V-A",
+    "conditional-pair_excitation-A",
+    "conditional-pair_excitation-B",
+    "conditional-pair_inhibition-A",
+    "conditional-pair_inhibition-B"
+  ],
+  "native_time_points_used": true,
+  "smoothing": false,
+  "time_alignment": false,
+  "temperature_or_history_recomputation": false,
+  "fixed_zoom_us": [
+    2.362,
+    2.862
+  ],
+  "figure_window_source": "preceding cubic-energy comparison",
+  "runtime": {
+    "numpy": "2.1.1",
+    "matplotlib": "3.11.1"
+  },
+  "visual_review_status": "PASS",
+  "visual_review": {
+    "all_figures_reviewed_in_contact_sheet": [
+      "conditional-single_9V-A",
+      "conditional-single_12p5V-A",
+      "single_12p5V-history-closure",
+      "single_12p5V-fixed-first-peak",
+      "conditional-single_15p8V-A",
+      "conditional-pair_excitation-A",
+      "conditional-pair_excitation-B",
+      "conditional-pair_inhibition-A",
+      "conditional-pair_inhibition-B"
+    ],
+    "full_size_after_final_layout": [
+      "conditional-single_12p5V-A",
+      "single_12p5V-history-closure"
+    ],
+    "first_peak_content_reviewed_full_size_before_legend_reposition": true,
+    "findings_resolved": [
+      "Moved legends above axes to preserve visible spikes and temperature maxima"
+    ],
+    "remaining_layout_defects": [],
+    "interpretation_boundaries": [
+      "No visual proximity qualification",
+      "No PINN or material validation",
+      "R-law current is supplemental and no feedback"
+    ]
+  }
+}

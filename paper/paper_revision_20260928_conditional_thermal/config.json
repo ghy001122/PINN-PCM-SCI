@@ -1,0 +1,557 @@
+{
+  "task_id": "PCM-20260928-CONDITIONAL-THERMAL-CLOSURE-01",
+  "baseline": "390ca72aee60a0f483697d52b72674bf07dd7297",
+  "previous_science_commit": "709b10fd28fc8fc80c9103acd68be02c35ac2816",
+  "frozen_at_utc": "2026-09-28T15:58:20.414529+00:00",
+  "records": [
+    {
+      "id": "single_9V-1ns",
+      "case": "single_9V",
+      "dt_s": 1e-09,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-1ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_9V-1ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_9V-1ns.npz"
+      },
+      "source_voltage_V": [
+        9.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-1ns.npz",
+        "original_size_bytes": 1239694,
+        "original_mtime_ns": 1790419657540615500,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_9V-1ns.npz",
+        "locked_CS_sha256": "654dd0ff0ddca2f1a24c8aefeaa00f05233d034b7180e4f6fba9399397c8de12"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        20001,
+        1
+      ],
+      "dtype": "float64",
+      "eta": 0.0,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-1ns.npz": {
+          "bytes": 1239694,
+          "sha256": "a615e0552830b29805763d1a70307164264e69dea4b29f58a570cc1dba7be92c"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_9V-1ns.npz": {
+          "bytes": 603722,
+          "sha256": "bbd0793b285ff4ae27fdbeb480c0c89b0be5ebc3c114abb99f8cb2bfce86dfb0"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_9V-1ns.npz": {
+          "bytes": 604037,
+          "sha256": "d9dac7b391a2307faf685e76a74e489dc52ccd53ebb744f92bf33c108ad89b79"
+        }
+      }
+    },
+    {
+      "id": "single_9V-0p5ns",
+      "case": "single_9V",
+      "dt_s": 5e-10,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-0p5ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_9V-0p5ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_9V-0p5ns.npz"
+      },
+      "source_voltage_V": [
+        9.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-0p5ns.npz",
+        "original_size_bytes": 2420630,
+        "original_mtime_ns": 1790419660986124400,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_9V-0p5ns.npz",
+        "locked_CS_sha256": "df3a685849cff33c5832e32fdbf31b19aa0c65c5c8994bc4c8b5b0fa0fb6a0a6"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        40001,
+        1
+      ],
+      "dtype": "float64",
+      "eta": 0.0,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_9V-0p5ns.npz": {
+          "bytes": 2420630,
+          "sha256": "9a11d87007f1703b4b531a75b97900f2302a2a39026fca3bc857bbe6a56f1733"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_9V-0p5ns.npz": {
+          "bytes": 1166677,
+          "sha256": "bd51cf76a9ebb3c82b38bb409c27e7b1888f288ab74deda10b9eefd2b3b3edcd"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_9V-0p5ns.npz": {
+          "bytes": 1167051,
+          "sha256": "6ac241fa8650635667b129d108a976895fa88f0dae30f0321539939614bd5a65"
+        }
+      }
+    },
+    {
+      "id": "single_12p5V-1ns",
+      "case": "single_12p5V",
+      "dt_s": 1e-09,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-1ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_12p5V-1ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_12p5V-1ns.npz"
+      },
+      "source_voltage_V": [
+        12.5
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-1ns.npz",
+        "original_size_bytes": 1598750,
+        "original_mtime_ns": 1790419662765054100,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_12p5V-1ns.npz",
+        "locked_CS_sha256": "842c27aee6ba83e3470fda948c5a3cfe8d9b8e91d2a8105f430944ca1e92dd0b"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        20001,
+        1
+      ],
+      "dtype": "float64",
+      "eta": 0.0,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-1ns.npz": {
+          "bytes": 1598750,
+          "sha256": "640df9fa57ff5bf0388350a3f142e8275b3f5e926072b734bab5200f6905444a"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_12p5V-1ns.npz": {
+          "bytes": 757902,
+          "sha256": "2f34d4d27558ff5e7d8bbd969c79726aec12f89944e25f8855b73264c582e2f5"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_12p5V-1ns.npz": {
+          "bytes": 758770,
+          "sha256": "025265ef84194d77892164f90ae3b6e45afb82de6b51108f205913c9fae2fbaf"
+        }
+      }
+    },
+    {
+      "id": "single_12p5V-0p5ns",
+      "case": "single_12p5V",
+      "dt_s": 5e-10,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-0p5ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_12p5V-0p5ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_12p5V-0p5ns.npz"
+      },
+      "source_voltage_V": [
+        12.5
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-0p5ns.npz",
+        "original_size_bytes": 3106565,
+        "original_mtime_ns": 1790419666362336400,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_12p5V-0p5ns.npz",
+        "locked_CS_sha256": "f1c231bedf824d61db3c2939aba4cc1d0588474c6beed22abc3dd0fb28876903"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        40001,
+        1
+      ],
+      "dtype": "float64",
+      "eta": 0.0,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_12p5V-0p5ns.npz": {
+          "bytes": 3106565,
+          "sha256": "6db53f9b2faef9b15890caad43684abfbc1d0231ff8b5846e8ca7ae44e3a29d4"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_12p5V-0p5ns.npz": {
+          "bytes": 1482606,
+          "sha256": "1f8aa183c6734892e1e2f0f03a0c00fb7ea5adecf60ef29b35bdb268d264b55d"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_12p5V-0p5ns.npz": {
+          "bytes": 1486062,
+          "sha256": "39480e8393d29cf64057111f6b65866f5adab0788eed0dbdcaa2d2eca8740054"
+        }
+      }
+    },
+    {
+      "id": "single_15p8V-1ns",
+      "case": "single_15p8V",
+      "dt_s": 1e-09,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-1ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_15p8V-1ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_15p8V-1ns.npz"
+      },
+      "source_voltage_V": [
+        15.8
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-1ns.npz",
+        "original_size_bytes": 1039635,
+        "original_mtime_ns": 1790419668062317500,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_15p8V-1ns.npz",
+        "locked_CS_sha256": "643b8f49e5d4bc30f2387b91d45aa6d0ab8282f7a16de51832a9f6312e8c8fac"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        20001,
+        1
+      ],
+      "dtype": "float64",
+      "eta": 0.0,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-1ns.npz": {
+          "bytes": 1039635,
+          "sha256": "08a9edfbd9c547be0a00b1bec5cb7442328bb04741f46cfef0189bcdc06d557c"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_15p8V-1ns.npz": {
+          "bytes": 486322,
+          "sha256": "ed70a3469470b852652b4cdf4599249c93fe799a953d97f3f4c672f4100a18af"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_15p8V-1ns.npz": {
+          "bytes": 564304,
+          "sha256": "8d4a378a54a92cbe14bce0aaac3121ed27d1f8e387bb3d55cd46f3fb918cda6e"
+        }
+      }
+    },
+    {
+      "id": "single_15p8V-0p5ns",
+      "case": "single_15p8V",
+      "dt_s": 5e-10,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-0p5ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_15p8V-0p5ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_15p8V-0p5ns.npz"
+      },
+      "source_voltage_V": [
+        15.8
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-0p5ns.npz",
+        "original_size_bytes": 2018212,
+        "original_mtime_ns": 1790419671735941600,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/single_15p8V-0p5ns.npz",
+        "locked_CS_sha256": "744293d6e8007630da57f2b68fe00c2e7e19155e8cae7c4a03d88eaed92c7dd7"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        40001,
+        1
+      ],
+      "dtype": "float64",
+      "eta": 0.0,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/single_15p8V-0p5ns.npz": {
+          "bytes": 2018212,
+          "sha256": "efdc62db9223c9b36d49fad7d3e5b38a52fd33505f3a49bb0744cfdbd217fa16"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/single_15p8V-0p5ns.npz": {
+          "bytes": 951435,
+          "sha256": "dd7df81c71ddcc3ff0a734f4310e7620aa55c1af927c5cdc572f377b2a5bed17"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/single_15p8V-0p5ns.npz": {
+          "bytes": 1100070,
+          "sha256": "1e6fff4652c6ba5958f658ced93fd2e69f73da05d4a9fdc75f07f913a6bc72e0"
+        }
+      }
+    },
+    {
+      "id": "pair_excitation-1ns",
+      "case": "pair_excitation",
+      "dt_s": 1e-09,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-1ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/pair_excitation-1ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/pair_excitation-1ns.npz"
+      },
+      "source_voltage_V": [
+        11.0,
+        9.4
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-1ns.npz",
+        "original_size_bytes": 2688430,
+        "original_mtime_ns": 1790419673896433600,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_excitation-1ns.npz",
+        "locked_CS_sha256": "afb04d8b2fadf1894a94ed8e8ad5789a0eedb28f5e3890d2e314e8a01678ecbd"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        20001,
+        2
+      ],
+      "dtype": "float64",
+      "eta": 0.12,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-1ns.npz": {
+          "bytes": 2688430,
+          "sha256": "ace02fe922ecb0d75965153caa572e207fdc42da3548cbbc637bb91635bfbe56"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/pair_excitation-1ns.npz": {
+          "bytes": 1504377,
+          "sha256": "764b2faa3b93c12d33bf9b7bc94b3ba791679ac991a550a4e1f3f02cbabb288b"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/pair_excitation-1ns.npz": {
+          "bytes": 1505885,
+          "sha256": "5a5b6e572d9f4c6f2022e0d68fa16607069510565f1eae1c169cfaf6290f303f"
+        }
+      }
+    },
+    {
+      "id": "pair_excitation-0p5ns",
+      "case": "pair_excitation",
+      "dt_s": 5e-10,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-0p5ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/pair_excitation-0p5ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/pair_excitation-0p5ns.npz"
+      },
+      "source_voltage_V": [
+        11.0,
+        9.4
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-0p5ns.npz",
+        "original_size_bytes": 5219797,
+        "original_mtime_ns": 1790419677768473100,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_excitation-0p5ns.npz",
+        "locked_CS_sha256": "7f07a1add22fa38a6cc5545595a90566503f250c50e59a4d92dbf012d4b4a6b3"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        40001,
+        2
+      ],
+      "dtype": "float64",
+      "eta": 0.12,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-0p5ns.npz": {
+          "bytes": 5219797,
+          "sha256": "5710050aa8c19cee9c29f2bc95443a24f917001eecc40a5aeba8b47f8025848c"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/pair_excitation-0p5ns.npz": {
+          "bytes": 2947797,
+          "sha256": "2e7357455e408dc6bfbb52bbe70d65ef13fbb45f51bf97ffa1f59b1e3e704109"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/pair_excitation-0p5ns.npz": {
+          "bytes": 2951026,
+          "sha256": "4bf4d6f8ab245271b88d5f040a748ac25e066fdf7cc15b7c545b9c144270ea1b"
+        }
+      }
+    },
+    {
+      "id": "pair_inhibition-1ns",
+      "case": "pair_inhibition",
+      "dt_s": 1e-09,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-1ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/pair_inhibition-1ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/pair_inhibition-1ns.npz"
+      },
+      "source_voltage_V": [
+        11.0,
+        14.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-1ns.npz",
+        "original_size_bytes": 2641039,
+        "original_mtime_ns": 1790419679655298400,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_inhibition-1ns.npz",
+        "locked_CS_sha256": "bf91b34e05716e0bc0f16f544dc187cf123e786f820c7f9eb2b1e25d7cfe290f"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        20001,
+        2
+      ],
+      "dtype": "float64",
+      "eta": 0.1,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-1ns.npz": {
+          "bytes": 2641039,
+          "sha256": "0d3860edeac1fe53d5bd565c6cad2fe164eb761466ae6bf78427c039f913db76"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/pair_inhibition-1ns.npz": {
+          "bytes": 1474087,
+          "sha256": "de1978e7a7baab9b073fcd11b4d90bed61a8704b953ff46be47212d1277ee6ec"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/pair_inhibition-1ns.npz": {
+          "bytes": 1475976,
+          "sha256": "f1694695685aff38de28d2598259a8ddb66cb44356c695aba137c31a71af7425"
+        }
+      }
+    },
+    {
+      "id": "pair_inhibition-0p5ns",
+      "case": "pair_inhibition",
+      "dt_s": 5e-10,
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-0p5ns.npz",
+      "predictions": {
+        "PCHIP": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/pair_inhibition-0p5ns.npz",
+        "CS": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/pair_inhibition-0p5ns.npz"
+      },
+      "source_voltage_V": [
+        11.0,
+        14.0
+      ],
+      "C_F": 1.4534619293e-10,
+      "RL_ohm": 12000.0,
+      "provenance": {
+        "original_path": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-0p5ns.npz",
+        "original_size_bytes": 5119692,
+        "original_mtime_ns": 1790419683320913200,
+        "original_prediction_path": "paper/paper_revision_20260927_circuit_screen/circuit-screen/predictions/pair_inhibition-0p5ns.npz",
+        "locked_CS_sha256": "794d1a7e3654ce3a7a001ac3077966da62484cc9f3ebca09d329276c299320a4"
+      },
+      "units": {
+        "time": "s",
+        "voltage": "V",
+        "currents": "A",
+        "energy": "J"
+      },
+      "shape": [
+        40001,
+        2
+      ],
+      "dtype": "float64",
+      "eta": 0.1,
+      "input_identity": {
+        "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_inhibition-0p5ns.npz": {
+          "bytes": 5119692,
+          "sha256": "2b5e6d9d8a8f403a0758649ce03f8790ff1e7a0f016ad5415b9eeda2a92ccf65"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/PCHIP/pair_inhibition-0p5ns.npz": {
+          "bytes": 2886005,
+          "sha256": "df8ca937c60137dbd3b5855c972756f84ec52b6abeb2f7384c66151dd6afb042"
+        },
+        "paper/paper_revision_20260928_circuit_comparison/scoring-subset/predictions/CS/pair_inhibition-0p5ns.npz": {
+          "bytes": 2890066,
+          "sha256": "88884fe50c15557cb2fe20bf77906899471a4492615d7378797b004a1cca49f7"
+        }
+      }
+    }
+  ],
+  "parameters_SI": {
+    "R0": 0.00535882879,
+    "Ea": 5220.47417,
+    "beta": 0.252796285,
+    "w": 7.19357064,
+    "Tc": 332.805839,
+    "gamma": 0.956269682,
+    "Rm0": 262.5,
+    "k": 4.90025335,
+    "C": 1.4534619293e-10,
+    "Cth": 4.962776831e-11,
+    "Sth": 0.00020558726,
+    "RL": 12000.0,
+    "Tbase": 325.0
+  },
+  "source_contract": "paper/paper_revision_20260927_circuit_screen/evidence/core-revision/vo2/frozen-config.json",
+  "methods": [
+    "Q_ref",
+    "V_ref",
+    "P",
+    "CS"
+  ],
+  "dtype": "float64",
+  "threads": 4,
+  "device": "local_CPU",
+  "initial_temperature_K": 325.0,
+  "hysteresis_initial_temperature_K": 324.9,
+  "gauss_main": 4,
+  "gauss_verification": 8,
+  "temperature_quadrature_max_difference_K": 1e-06,
+  "limits": {
+    "main_system_responses": 40,
+    "verification_responses": 40,
+    "source_history_checks": 10,
+    "prediction_history_replays": 20
+  },
+  "windows_s": {
+    "full": [
+      0.0,
+      2e-05
+    ],
+    "transient": [
+      0.0,
+      1e-05
+    ],
+    "tail": [
+      1e-05,
+      2e-05
+    ]
+  },
+  "metrics": "Normalized trapezoid time weights; RMS/max/signed mean/end and absolute K range; no alignment",
+  "source_replay_tolerance": "Discrete delta/reversed exact; float fields 64*eps*max(1,max(abs(saved field))); report actual errors and bitwise equality",
+  "source_representation": "Q_ref native V*I_device linear; V_ref native V linear; P/CS exact saved PPoly in original scaled time",
+  "prediction_input_boundary": "Temperature solve and history prediction receive only frozen voltage polynomials, parameters and legal initial state; source T/R/g/H used only controls/scoring",
+  "discontinuity_rule": "Union of actual polynomial breakpoints and native output times; continuous state, never reset",
+  "clipping": "No clipping of voltage, forcing, I or evolved temperature; source constitutive clip305to370 retained only inside author law",
+  "closure": "No feedback from I_R to voltage or temperature; old I_KCL and historical energy scores remain unchanged",
+  "tau_task": null,
+  "no_training": true,
+  "no_GPU": true,
+  "no_experimental_csv": true,
+  "no_heldout_protocol": true,
+  "output": "paper/paper_revision_20260928_conditional_thermal",
+  "remote": "PENDING_NEXT_AUTHORIZED_SESSION_SYNC",
+  "local_free_bytes_before": 27102638080
+}

@@ -1,6 +1,8 @@
 # Experiment ledger protocol
 
-最新：[固定CS与焦耳能量比较收口](2026-09-28-cubic-energy-comparison-closeout.md)。本地有界对照及独立子集完成，无后续科研授权。
+最新：[条件热响应与迟滞本构闭合](2026-09-29-conditional-thermal-closure-closeout.md)。完整有界包已完成；唯一建议为热输入时序/合法状态估计，无下一轮执行授权。
+
+历史：[固定CS与焦耳能量比较收口](2026-09-28-cubic-energy-comparison-closeout.md)。本地有界对照及独立子集完成，无后续科研授权。
 
 历史：[现稿局部修订与固定电路筛查收口](2026-09-28-manuscript-circuit-screen-closeout.md)。保存数组分析完成；实验资格与用途充分性未知，无后续训练授权。
 

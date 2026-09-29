@@ -1,0 +1,81 @@
+{
+  "actual_budget": {
+    "GPU_jobs": 0,
+    "experimental_numeric_reads": 0,
+    "main_system_responses": 40,
+    "prediction_history_replays": 20,
+    "score_passes": 1,
+    "seconds": 84.27863970003091,
+    "seed_semantics": "unused deterministic analysis",
+    "source_history_checks": 10,
+    "source_trajectory_steps": 0,
+    "training_updates": 0,
+    "verification_responses": 40
+  },
+  "artifacts": {
+    "config": "paper/paper_revision_20260928_conditional_thermal/config.json",
+    "data_handling": "paper/paper_revision_20260928_conditional_thermal/data-handling-record.json",
+    "decision": "paper/paper_revision_20260928_conditional_thermal/decision.json",
+    "delivery": "paper/paper_revision_20260928_conditional_thermal/README.md",
+    "execution": "paper/paper_revision_20260928_conditional_thermal/execution.json",
+    "figures": "paper/paper_revision_20260928_conditional_thermal/figures-index.md",
+    "report": "paper/paper_revision_20260928_conditional_thermal/results-report.md",
+    "reproduction": "paper/paper_revision_20260928_conditional_thermal/reproduction.md"
+  },
+  "case_id": "THREE_SINGLE_TWO_PAIR_TWO_SOURCE_STEPS",
+  "checkpoint": {
+    "kind": "full_native_FP64_conditional_arrays",
+    "path": "paper/paper_revision_20260928_conditional_thermal/arrays"
+  },
+  "claim_status": "VERIFIED_CONDITIONAL_THERMAL_HISTORY_ERRORS_TASK_SUFFICIENCY_UNKNOWN",
+  "code_identity": {
+    "actual_source": {
+      "pinn_pcm_sci/vo2_author_reproduction.py": "64b6837a057cdd2908b1ee26ef77616a618e47f0181012369c1cc99a70b67851",
+      "scripts/conditional_history_tools.py": "24941baf3fcc2dc6adc03a0f8bb1d4c9f099acc586189bd1a97be2ace89358d4",
+      "scripts/conditional_thermal_tools.py": "234df42be0a1c63803c06ddb2eed5636d908f6cf00323e8d186385bb2b726bf7",
+      "scripts/run_conditional_thermal_closure.py": "4de02d8f9299766c45a4919883cea03b25f66c7dda840126b1802142699d65e1"
+    },
+    "baseline": "390ca72aee60a0f483697d52b72674bf07dd7297",
+    "snapshot": "paper/paper_revision_20260928_conditional_thermal/code"
+  },
+  "command": [
+    "python",
+    "scripts/run_conditional_thermal_closure.py",
+    "compute"
+  ],
+  "ended_at": "2026-09-28T16:07:04.547471+00:00",
+  "environment": {
+    "device": "CPU",
+    "numpy": "2.1.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9 | packaged by Anaconda, Inc. | (main, Apr 19 2024, 16:40:41) [MSC v.1916 64 bit (AMD64)]",
+    "scipy": "1.14.1",
+    "threads": 4
+  },
+  "evaluator_id": "NATIVE_TRAPEZOID_ABSOLUTE_K_AND_THREE_LAYER_DIFFERENCE_WITH_NO_FEEDBACK_CLOSURE",
+  "evidence_identity": "FIVE_CASES_TWO_SAVED_STEPS_FOUR_FIXED_FORCINGS_NO_NEW_CLOSED_LOOP_SOURCE",
+  "execution_status": "COMPLETE",
+  "experiment_group_id": "PCM-20260928-CONDITIONAL-THERMAL-CLOSURE-01",
+  "failure_class": null,
+  "gate": "GAUSS4_VS8_AND_EXACT_SOURCE_HISTORY",
+  "gate_outcome": "RESOLVED_TEMPERATURE_AND_CONSTITUTIVE_ERRORS_WITH_SOURCE_LIMITS",
+  "method_id": "EXPONENTIAL_GAUSS4_TRANSFORMED_THERMAL_PLUS_PINNED_NO_FEEDBACK_HISTORY",
+  "numerical_validity": "40_RESPONSES_QUALIFIED_10_SOURCE_HISTORIES_BITWISE_EQUAL",
+  "physical_contract_id": "PINNED_AUTHOR_SI_TWO_NODE_WITH_FIXED_324P9K_HISTORY",
+  "planned_budget": {
+    "main_system_responses": 40,
+    "prediction_history_replays": 20,
+    "source_history_checks": 10,
+    "verification_responses": 40
+  },
+  "replay_of": null,
+  "route_disposition": "CLOSED_HEAT_INPUT_TIMING_LEGAL_STATE_ESTIMATION_ONLY_PROPOSED",
+  "run_id": "20260929-conditional-thermal-closure",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "FIXED_VOLTAGE_CONDITIONAL_THERMAL_AND_NO_FEEDBACK_HISTORY_DIAGNOSTIC",
+  "seed": 0,
+  "split_id": "TEN_SAVED_DEVELOPMENT_SYSTEMS_EXPERIMENT_AND_HOLDOUT_UNREAD",
+  "started_at": "2026-09-28T16:05:40.269439+00:00",
+  "supersedes": null,
+  "tier": "development"
+}

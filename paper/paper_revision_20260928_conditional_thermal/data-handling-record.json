@@ -1,0 +1,29 @@
+{
+  "task_id": "PCM-20260928-CONDITIONAL-THERMAL-CLOSURE-01",
+  "policy": "docs/governance/PINN_PCM_Data_Handling_Norms_2026-09-28.md",
+  "local": "paper/paper_revision_20260928_conditional_thermal",
+  "remote": "PENDING_NEXT_AUTHORIZED_SESSION_SYNC",
+  "GPU_used": false,
+  "GPU_shutdown": "NOT_APPLICABLE_NO_INSTANCE_USED_OR_STARTED",
+  "historical_inputs": "REUSED_READ_ONLY_NO_DUPLICATE_ARRAY_COPY",
+  "arrays": {
+    "files": 40,
+    "bytes": 48189406,
+    "dtype": "FP64",
+    "all_native_times_saved": true,
+    "content": "40 main temperatures, 40 verification differences, pointwise decomposition, 20 full history replays"
+  },
+  "code": "Exact runtime source snapshot retained; root scoring mode does not propagate",
+  "temporary_cleanup": {
+    "status": "COMPLETE",
+    "files": 18,
+    "bytes": 7419144.0,
+    "details": "manuscript/build/cleanup.json"
+  },
+  "prior_manuscript_assets": "Hard-linked build inputs, not an independent backup",
+  "no_originals_or_scientific_caches_deleted": true,
+  "no_precision_reduction": true,
+  "new_results_external_access": "NOT_PUBLISHED",
+  "old_circuit_subset_access": "PUBLIC_AT_709b10f",
+  "old_2D_full_field_access": "P03_OPEN"
+}

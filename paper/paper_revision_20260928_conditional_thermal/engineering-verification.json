@@ -1,0 +1,26 @@
+{
+  "task_id": "PCM-20260928-CONDITIONAL-THERMAL-CLOSURE-01",
+  "status": "PASS",
+  "tests": [
+    {
+      "command": ".venv/Scripts/python.exe -m unittest tests.test_conditional_thermal_tools -v",
+      "tests": 5,
+      "status": "PASS",
+      "scope": "constant power; common/differential modes; transformed/direct heat equivalence including negative forcing; continuity; units/initial state"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m unittest tests.test_conditional_history_tools -q",
+      "tests": 4,
+      "status": "PASS",
+      "scope": "same-time law; legal initial state; joint trigger and repeated reversal; source field checks; no-feedback diagnostics"
+    }
+  ],
+  "test_execution": "Delegated agents ran these before scientific execution; their tool outputs were reviewed; no scientific data in synthetic checks",
+  "execution_gate": "DOCUMENT_CONSISTENCY_VALID before compute",
+  "numerical_max_4_minus_8_K": 1.1368683772161603e-13,
+  "source_history_checks": 10,
+  "source_history_bitwise_identical": true,
+  "pointwise_decomposition_max_K": 0.0,
+  "no_rerun_of_old_interpolation_or_energy": true,
+  "actual_source_snapshot": "code/"
+}

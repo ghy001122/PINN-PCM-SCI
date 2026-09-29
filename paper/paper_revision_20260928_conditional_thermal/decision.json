@@ -1,0 +1,22 @@
+{
+  "task_id": "PCM-20260928-CONDITIONAL-THERMAL-CLOSURE-01",
+  "claim_status": "SUPPORTED_INTERPRETATION",
+  "selected_exit": "TEMPERATURE_DEFECTS_FOCUS_HEAT_INPUT_TIMING_AND_LEGAL_STATE_ESTIMATION",
+  "unique_next_action": "聚焦热输入时序与合法状态估计；下一方案须以同信息传统物理估计为强基线，本轮不执行",
+  "not_authorized": [
+    "new_training",
+    "new_interpolation",
+    "closed_loop_feedback",
+    "PDE",
+    "experiment_calibration",
+    "publication"
+  ],
+  "numerical_facts_status": "VERIFIED",
+  "tau_task": null,
+  "scientific_execution_complete": true,
+  "continuum_error_bounds": false,
+  "experimental_validation": false,
+  "PINN_increment": false,
+  "source_history_closed": true,
+  "source_step_sensitivity_not_confidence_interval": true
+}

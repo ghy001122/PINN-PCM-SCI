@@ -1,3 +1,20 @@
+<!-- THERMAL28_CURRENT_BEGIN -->
+# 当前：条件热响应与迟滞本构闭合已完成
+
+PCM-20260928-CONDITIONAL-THERMAL-CLOSURE-01完成批准范围：40条主热响应、40条求积复核、10条源历史核对及20条无反馈重放。最大求积差1.14e-13 K，来源R/g/H逐位复现；全工况两步长完整交付。见[研究结果](paper/paper_revision_20260928_conditional_thermal/README.md)。
+
+VERIFIED：动态有限电压重构的偏差已进入温度、历史和本构闭合。SUPPORTED_INTERPRETATION：唯一下一建议聚焦热输入时序与合法状态估计，面对同信息传统强基线；没有自动后续计算。UNKNOWN：用途合格、连续真解误差界、PINN/二维/材料增量。旧科学主张及P02/P03保持原身份。
+
+新17页主稿仅更新访问段，旧公开电路子集与未公开二维全场分开说明；本轮新热产物未发布、待下一获准实例会话同步。测量请求复用未发送；无GPU、训练、实验CSV/封存协议读取、Git发布或投稿。
+
+- `phase_id`: `PHK_V23_CONDITIONAL_THERMAL_CLOSURE`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `VERIFIED_CONDITIONAL_THERMAL_HISTORY_ERRORS_TASK_SUFFICIENCY_UNKNOWN`
+- `next_research_execution_authorized`: `false`
+
+<!-- THERMAL28_CURRENT_END -->
+
 <!-- CUBIC28_CURRENT_BEGIN -->
 # 当前：固定样条对照与焦耳能量辨别已完成
 
@@ -7,11 +24,11 @@ VERIFIED：CS对不同角色有相反RMS效应，伴随保存时刻负电流/负
 
 零新增系统轨迹、训练、实验CSV读取或GPU作业。用户随后明确授权将本轮精选成果提交至 `codex/paper-revision-results`；发布范围与远端核验见[发布记录](docs/notes/2026-09-28-cubic-energy-comparison-release.md)。精选Git成果只闭合本轮最小评分子集的Git获取，不关闭全论文P03；未创建DOI或投稿。
 
-- `phase_id`: `PHK_V23_CUBIC_ENERGY_DISCRIMINATION`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_CS_MIXED_EFFECTS_ENERGY_TIME_DISTRIBUTION`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_CUBIC_ENERGY_DISCRIMINATION`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `VERIFIED_CS_MIXED_EFFECTS_ENERGY_TIME_DISTRIBUTION`
+- `historical_next_research_execution_authorized`: `false`
 
 <!-- CUBIC28_CURRENT_END -->
 

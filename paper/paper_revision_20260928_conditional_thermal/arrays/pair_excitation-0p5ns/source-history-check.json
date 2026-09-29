@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "all_bitwise_equal": true,
+  "native_rows": 40001,
+  "devices": 2,
+  "fields": {
+    "resistance": {
+      "bitwise_equal": true,
+      "max_abs_difference": 0.0,
+      "rms_difference": 0.0,
+      "tolerance": 7.367383301368454e-10,
+      "passed": true,
+      "worst_native_index": 0,
+      "worst_device": 0,
+      "different_entries": 0
+    },
+    "g": {
+      "bitwise_equal": true,
+      "max_abs_difference": 0.0,
+      "rms_difference": 0.0,
+      "tolerance": 1.4210854715202004e-14,
+      "passed": true,
+      "worst_native_index": 0,
+      "worst_device": 0,
+      "different_entries": 0
+    },
+    "delta": {
+      "bitwise_equal": true,
+      "max_abs_difference": 0.0,
+      "rms_difference": 0.0,
+      "tolerance": 0.0,
+      "passed": true,
+      "worst_native_index": 0,
+      "worst_device": 0,
+      "different_entries": 0
+    },
+    "reversed": {
+      "bitwise_equal": true,
+      "max_abs_difference": 0.0,
+      "rms_difference": 0.0,
+      "tolerance": 0.0,
+      "passed": true,
+      "worst_native_index": 0,
+      "worst_device": 0,
+      "different_entries": 0
+    },
+    "Tr": {
+      "bitwise_equal": true,
+      "max_abs_difference": 0.0,
+      "rms_difference": 0.0,
+      "tolerance": 5.257434229352713e-12,
+      "passed": true,
+      "worst_native_index": 0,
+      "worst_device": 0,
+      "different_entries": 0
+    },
+    "gr": {
+      "bitwise_equal": true,
+      "max_abs_difference": 0.0,
+      "rms_difference": 0.0,
+      "tolerance": 1.4210854715202004e-14,
+      "passed": true,
+      "worst_native_index": 0,
+      "worst_device": 0,
+      "different_entries": 0
+    },
+    "Tpr": {
+      "bitwise_equal": true,
+      "max_abs_difference": 0.0,
+      "rms_difference": 0.0,
+      "tolerance": 1.0222678725024863e-13,
+      "passed": true,
+      "worst_native_index": 0,
+      "worst_device": 0,
+      "different_entries": 0
+    },
+    "T_last": {
+      "bitwise_equal": true,
+      "max_abs_difference": 0.0,
+      "rms_difference": 0.0,
+      "tolerance": 5.258016244624741e-12,
+      "passed": true,
+      "worst_native_index": 0,
+      "worst_device": 0,
+      "different_entries": 0
+    }
+  },
+  "tolerance_scope": "source arithmetic replay only, not physical qualification",
+  "reversal_rule": "unchanged joint-vector max(abs(dT)) > 0.01 K"
+}

@@ -1,0 +1,497 @@
+{
+  "task_id": "PCM-20260928-CONDITIONAL-THERMAL-CLOSURE-01",
+  "start_utc": "2026-09-28T16:05:40.269439+00:00",
+  "status": "COMPLETE",
+  "counts": {
+    "main_system_responses": 40,
+    "verification_responses": 40,
+    "source_history_checks": 10,
+    "prediction_history_replays": 20
+  },
+  "records": [
+    {
+      "id": "single_9V-1ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.06750159990042448
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.06633439986035228
+        },
+        "P": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.06297249998897314
+        },
+        "CS": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.06380870006978512
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 0.7564304999541491,
+      "history_seconds": {
+        "P": 0.8165720000397414,
+        "CS": 1.5937932000961155
+      },
+      "seconds": 3.50405569979921
+    },
+    {
+      "id": "single_9V-0p5ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.20363570004701614
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.22000490012578666
+        },
+        "P": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.22320579993538558
+        },
+        "CS": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.22208170010708272
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 2.785047800047323,
+      "history_seconds": {
+        "P": 3.307679599849507,
+        "CS": 3.284860300133005
+      },
+      "seconds": 10.425097600091249
+    },
+    {
+      "id": "single_12p5V-1ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.08736929995939136
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.09946990013122559
+        },
+        "P": {
+          "max_quad_difference_K": 1.1368683772161603e-13,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.10335249989293516
+        },
+        "CS": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.08777869981713593
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 1.5284422000404447,
+      "history_seconds": {
+        "P": 1.4851050998549908,
+        "CS": 1.7932450999505818
+      },
+      "seconds": 5.271982900099829
+    },
+    {
+      "id": "single_12p5V-0p5ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.2004954000003636
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.2227382999844849
+        },
+        "P": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.21928979991935194
+        },
+        "CS": {
+          "max_quad_difference_K": 1.1368683772161603e-13,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.21510150004178286
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 3.249875199981034,
+      "history_seconds": {
+        "P": 2.7819578000344336,
+        "CS": 3.016122200060636
+      },
+      "seconds": 10.078863899921998
+    },
+    {
+      "id": "single_15p8V-1ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.11058340012095869
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.1179306001868099
+        },
+        "P": {
+          "max_quad_difference_K": 1.1368683772161603e-13,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.11754229990765452
+        },
+        "CS": {
+          "max_quad_difference_K": 1.1368683772161603e-13,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.12031879997812212
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 1.6393679999746382,
+      "history_seconds": {
+        "P": 1.8006176000926644,
+        "CS": 1.7244632001966238
+      },
+      "seconds": 5.714743899879977
+    },
+    {
+      "id": "single_15p8V-0p5ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.2103581998962909
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.17568919993937016
+        },
+        "P": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.18284490006044507
+        },
+        "CS": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.19700239994563162
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 2.521025599911809,
+      "history_seconds": {
+        "P": 3.1534507998730987,
+        "CS": 3.6415597999002784
+      },
+      "seconds": 10.205348100047559
+    },
+    {
+      "id": "pair_excitation-1ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.1320327001158148
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.13702289992943406
+        },
+        "P": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.13601139979436994
+        },
+        "CS": {
+          "max_quad_difference_K": 1.1368683772161603e-13,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.14824409992434084
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 1.5259056999348104,
+      "history_seconds": {
+        "P": 1.877093399874866,
+        "CS": 2.0197936999611557
+      },
+      "seconds": 6.146845099981874
+    },
+    {
+      "id": "pair_excitation-0p5ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.27192959981039166
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.3038518999237567
+        },
+        "P": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.3068180000409484
+        },
+        "CS": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.3378632999956608
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 3.252789900172502,
+      "history_seconds": {
+        "P": 3.5538650997914374,
+        "CS": 3.750054000178352
+      },
+      "seconds": 12.189448700053617
+    },
+    {
+      "id": "pair_inhibition-1ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.13044600002467632
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20000,
+          "main_forcing_evaluations": 80000,
+          "verification_forcing_evaluations": 160000,
+          "seconds": 0.15053959982469678
+        },
+        "P": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.16296080010943115
+        },
+        "CS": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 20166,
+          "main_forcing_evaluations": 80664,
+          "verification_forcing_evaluations": 161328,
+          "seconds": 0.20599439996294677
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 2.2263225000351667,
+      "history_seconds": {
+        "P": 2.5508596000727266,
+        "CS": 2.0339240999892354
+      },
+      "seconds": 7.686207100050524
+    },
+    {
+      "id": "pair_inhibition-0p5ns",
+      "status": "COMPLETE",
+      "responses": {
+        "Q_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.2781028999015689
+        },
+        "V_ref": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40000,
+          "main_forcing_evaluations": 160000,
+          "verification_forcing_evaluations": 320000,
+          "seconds": 0.49381079990416765
+        },
+        "P": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.3184768999926746
+        },
+        "CS": {
+          "max_quad_difference_K": 5.684341886080802e-14,
+          "numerical_pass": true,
+          "segments": 40166,
+          "main_forcing_evaluations": 160664,
+          "verification_forcing_evaluations": 321328,
+          "seconds": 0.3674186000134796
+        }
+      },
+      "temperature_numerical_pass": true,
+      "source_history_pass": true,
+      "source_history_seconds": 3.662275299895555,
+      "history_seconds": {
+        "P": 3.656910200137645,
+        "CS": 3.828945499844849
+      },
+      "seconds": 12.990678400034085
+    }
+  ],
+  "environment": {
+    "python": "3.11.9 | packaged by Anaconda, Inc. | (main, Apr 19 2024, 16:40:41) [MSC v.1916 64 bit (AMD64)]",
+    "numpy": "2.1.1",
+    "scipy": "1.14.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "threads": 4,
+    "device": "CPU"
+  },
+  "boundaries": {
+    "new_closed_loop_source_steps": 0,
+    "training_updates": 0,
+    "GPU_used": false,
+    "experimental_csv_read": false,
+    "heldout_read": false,
+    "reference_fields_in_prediction": false
+  },
+  "source_identity": {
+    "scripts/run_conditional_thermal_closure.py": "4de02d8f9299766c45a4919883cea03b25f66c7dda840126b1802142699d65e1",
+    "scripts/conditional_thermal_tools.py": "234df42be0a1c63803c06ddb2eed5636d908f6cf00323e8d186385bb2b726bf7",
+    "scripts/conditional_history_tools.py": "24941baf3fcc2dc6adc03a0f8bb1d4c9f099acc586189bd1a97be2ace89358d4",
+    "pinn_pcm_sci/vo2_author_reproduction.py": "64b6837a057cdd2908b1ee26ef77616a618e47f0181012369c1cc99a70b67851"
+  },
+  "seconds": 84.27863970003091,
+  "end_utc": "2026-09-28T16:07:04.547471+00:00"
+}
