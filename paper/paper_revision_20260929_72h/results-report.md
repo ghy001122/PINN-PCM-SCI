@@ -65,4 +65,4 @@ N_dyn最高377.189375 K、超出305—370 K本构区间383个器件—时刻样�
 - [最小评分包](scoring-subset/README.md)复算本轮保存数组的误差、离散缺陷和布尔门；不冒充检查点推理或重新计算神经AD残差。历史大包不重跑。
 - 配置、日志、接受终点及本轮数组位于 `outputs/runs/20260929-joint-reconstruction/`。评分数组源与单位、第三方许可、相对路径在包清单中说明。
 - GPU回收与关机实际记录为运行根 `recovery.json`、`shutdown.json`；最终稿件/本地评分在关机后完成的文件如未同步，明确列为待远端同步，不重新开GPU做小文件复制。
-- [作者终审清单](author-final-checklist.md)与[真实构建说明](manuscript-build.md)。本轮无Git发布、公开数据、邮件发送或投稿。
+- [作者终审清单](author-final-checklist.md)与[真实构建说明](manuscript-build.md)。科研执行收口时未执行Git发布、邮件发送或投稿；用户随后另行授权的精选云端交付及其数据边界见[发布记录](../../docs/notes/2026-09-29-joint-reconstruction-manuscript-release.md)。
