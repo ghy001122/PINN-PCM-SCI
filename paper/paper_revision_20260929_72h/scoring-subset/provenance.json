@@ -1,0 +1,41 @@
+{
+  "source": "outputs\\runs\\20260926-core-revision-vo2-bridge\\vo2\\pair_excitation-0p5ns.npz",
+  "observations": "outputs/runs/20260929-joint-reconstruction/input.npz",
+  "expected_results": "outputs/runs/20260929-joint-reconstruction/seed-*-results.json",
+  "checkpoint_location": "outputs/runs/20260929-joint-reconstruction/seed-<seed>/<role>/checkpoint.pt",
+  "checkpoint_included": false,
+  "provenance_paths_are_not_runtime_fallbacks": true,
+  "source_kind": "Project numerical arrays from the fixed published-author model; not experimental observations",
+  "upstream_model_commit": "217d4f0ed6bfc680240021b07142a121cb4963d1",
+  "upstream_model_url": "https://github.com/yuanhangzhang98/collective_dynamics_neuristor",
+  "scoring_source": "scripts/score_vo2_joint_sprint.py",
+  "peak_source": "scripts/circuit_screen_metrics.py",
+  "history_event_source": "scripts/conditional_history_tools.py:reversal_events",
+  "external_access": "NOT_PUBLISHED; local independent-score delivery only; full-paper P03 remains open",
+  "candidates": [
+    {
+      "seed": 29,
+      "method": "N_dyn",
+      "status": "VALID_COMPLETE",
+      "included": true,
+      "source": "outputs\\runs\\20260929-joint-reconstruction\\seed-29\\N_dyn\\endpoint.npz",
+      "native_voltage_reuses_common_only_if_bitwise_equal": true
+    },
+    {
+      "seed": 29,
+      "method": "F_dyn",
+      "status": "VALID_COMPLETE",
+      "included": true,
+      "source": "outputs\\runs\\20260929-joint-reconstruction\\seed-29\\F_dyn\\endpoint.npz",
+      "native_voltage_reuses_common_only_if_bitwise_equal": false
+    },
+    {
+      "seed": 29,
+      "method": "S_dyn",
+      "status": "VALID_COMPLETE",
+      "included": true,
+      "source": "outputs\\runs\\20260929-joint-reconstruction\\seed-29\\S_dyn\\endpoint.npz",
+      "native_voltage_reuses_common_only_if_bitwise_equal": true
+    }
+  ]
+}

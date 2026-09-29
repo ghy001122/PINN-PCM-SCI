@@ -1,0 +1,65 @@
+{
+  "recovery_verified": true,
+  "sha256": "55e8a304c814d5e1ead55e38cd98a2f369a00bf22e0b98f14e7edc41e9c5b390",
+  "time_utc": "2026-09-29T08:03:19.836614+00:00",
+  "remote_persistent_directory": "/root/autodl-tmp/pinn-joint-20260929",
+  "scientific_readability_checks": [
+    {
+      "role": "N_dyn",
+      "accepted_checkpoint_readable": true,
+      "optimizer_saved": true,
+      "full_arrays_readable": true
+    },
+    {
+      "role": "F_dyn",
+      "accepted_checkpoint_readable": true,
+      "optimizer_saved": true,
+      "full_arrays_readable": true
+    },
+    {
+      "role": "S_dyn",
+      "accepted_checkpoint_readable": true,
+      "optimizer_saved": true,
+      "full_arrays_readable": true
+    }
+  ],
+  "actual_runtime_source_archived": [
+    "pinn_pcm_sci/__init__.py",
+    "pinn_pcm_sci/artifacts.py",
+    "pinn_pcm_sci/kinetics_clock.py",
+    "pinn_pcm_sci/vo2_author_reproduction.py",
+    "pinn_pcm_sci/vo2_joint_history.py",
+    "pinn_pcm_sci/vo2_joint_rc.py",
+    "pinn_pcm_sci/vo2_joint_lbfgs.py",
+    "pinn_pcm_sci/vo2_joint_reconstruction.py",
+    "scripts/run_vo2_joint_sprint.py",
+    "tests/test_vo2_joint_history.py",
+    "tests/test_vo2_joint_rc.py"
+  ],
+  "initial_deployment_source_archived": "prestep-platform-roundoff/runtime-source",
+  "storage": {
+    "local_run_root": "E:\\Python demo\\PINN-PCM-SCI\\outputs\\runs\\20260929-joint-reconstruction",
+    "remote_run_root": "/root/autodl-tmp/pinn-joint-20260929/outputs/runs/20260929-joint-reconstruction",
+    "dual_copy_verified": "deployed legal inputs, config, actual execution source, admission, full endpoints, accepted checkpoints and optimizer histories, logs",
+    "pending_remote_sync": [
+      "local locked-endpoint scoring results and readout derivatives",
+      "paper/paper_revision_20260929_72h final manuscript/report/scoring-subset",
+      "local source archive organization and final closeout metadata"
+    ],
+    "isolation": "full scoring truth remained local throughout training; no later upload undertaken solely for backup",
+    "local_removed_transfers": [
+      {
+        "name": "recovery.tar",
+        "bytes": 92282880
+      },
+      {
+        "name": "runtime.tar.gz",
+        "bytes": 1356447
+      }
+    ],
+    "cleanup_basis": "SHA-verified extraction, accepted checkpoint/optimizer and full arrays readable; actual and initial deployment source separately archived; remote originals retained; no .npz/.pt/.docx or negative result removed",
+    "remote_redundant_transfers": "retained because instance already shut down; next authorized session may remove after exact verification",
+    "small_post_shutdown_outputs": "local retained; do not restart GPU solely for sync",
+    "recorded_utc": "2026-09-29T08:10:00.412715+00:00"
+  }
+}

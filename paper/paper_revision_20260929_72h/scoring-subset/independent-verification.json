@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "actual_isolated_scoring_runs": 1,
+  "seeds": [
+    29
+  ],
+  "all_selected_JSON_values_exactly_equal": false,
+  "metric_reproduction": {
+    "passed": true,
+    "seeds": [
+      29
+    ],
+    "mismatches": [],
+    "numpy": "2.1.1",
+    "python": "3.11.9 | packaged by Anaconda, Inc. | (main, Apr 19 2024, 16:40:41) [MSC v.1916 64 bit (AMD64)]",
+    "root_only_inputs": true,
+    "recomputed_discrete_residuals": true,
+    "new_hysteresis_replay": false,
+    "new_source_thermal_evolution": false,
+    "neural_inference": false,
+    "neural_AD": false,
+    "training": false,
+    "gate_booleans_exact": true,
+    "numerical_comparison": "Fixed FP64 arithmetic allowance only; no scientific gates relaxed"
+  },
+  "isolation": {
+    "repository_access_probe_denied": true,
+    "missing_input_failed_without_fallback": true,
+    "denied_paths": [
+      "E:\\Python demo\\PINN-PCM-SCI\\README.md"
+    ],
+    "dependency_exception": "Existing project .venv Python/NumPy only; scientific repository files denied",
+    "isolated_python_flag": true
+  },
+  "isolated_directory": "C:/Users/CJ/.codex/visualizations/2026/09/20/01a0bdc5-2887-7920-bbae-fab752dd28b8/joint-independent-20260929",
+  "new_thermal_or_hysteresis_replay": false,
+  "source_RC_readout_recomputed": true,
+  "remote_sync": "PENDING_NEXT_AUTHORIZED_SESSION",
+  "temporary_copy_cleanup": "COMPLETE_VERIFIED_TEMP_COPY_ONLY",
+  "comparison_note": "All scientific booleans/counts unchanged; floating metrics agree within declared FP64 arithmetic allowances, not bitwise JSON identity"
+}

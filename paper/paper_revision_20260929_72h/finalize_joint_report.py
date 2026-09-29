@@ -1,0 +1,98 @@
+"""Compose bounded scientific results from locked, previously scored records."""
+from pathlib import Path
+import json
+
+PAPER=Path(__file__).resolve().parent
+ROOT=PAPER.parents[1]
+RUN=ROOT/'outputs/runs/20260929-joint-reconstruction'
+def read(p):return json.loads(p.read_text(encoding='utf-8'))
+
+def main():
+    report=read(RUN/'seed-29-results.json');gate=read(RUN/'seed-29-gate.json')
+    admission=read(RUN/'admission.json');cfg=read(RUN/'config.json')
+    records=read(RUN/'seed-29-locked.json')['records']
+    if gate['trigger_seed43']:
+        second=read(RUN/'seed-43-results.json')
+        records+=read(RUN/'seed-43-locked.json')['records']
+    else:second=None
+    rows=['| 方法 | 电流联合RMS / μA | 温度RMS / K | 观测电压RMS / V | 重放热缺陷RMS / mW | RC缺陷RMS / A |',
+          '|---|---:|---:|---:|---:|---:|']
+    def fmt(x):return f'{x:.3e}' if x and abs(x)<1e-6 else f'{x:.6f}'
+    for x in report['joint_rows']:
+        rows.append(f"| {x['method']} | {fmt(x['joint_current_RMS_uA'])} | {fmt(x['temperature_RMS_K'])} | {fmt(x['observation_RMS_V'])} | {fmt(1e3*x['thermal_RMS_W'])} | {x['RC_RMS_A']:.3e} |")
+    costs=['| 配置 | Adam更新 | L-BFGS完整评价 | 接受步 | 训练总完整目标调用 | 实际秒数 | 终止原因 |','|---|---:|---:|---:|---:|---:|---|']
+    for x in records:
+        p=x['progress'];term=x.get('optimizer_termination',{}).get('termination',x['status'])
+        costs.append(f"| {x['role']}/{x['seed']} | {p['adam_updates']} | {p['lbfgs_evaluations']} | {p['lbfgs_accepted']} | {p['full_objective_calls']} | {x['seconds']:.3f} | {term} |")
+    gate_rows=['| 对照 | N电流改善 / μA | 相对改善 | 电流门 | 温度非劣 | 观测非劣 | 热非劣 | 联合门 |','|---|---:|---:|---|---|---|---|---|']
+    for k,g in gate['gates'].items():
+        ni=g['noninferiority'];mark=lambda b:'通过' if b else '未通过'
+        gate_rows.append(f"| {k} | {1e6*g['current_gain_A']:.6f} | {100*g['current_relative_gain']:.3f}% | {mark(g['current_pass'])} | {mark(ni['temperature_RMS_K'])} | {mark(ni['observation_RMS_V'])} | {mark(ni['thermal_RMS_W'])} | {mark(g['passed'])} |")
+    native=report['details'].get('F_dyn',{}).get('native_metrics')
+    nativetext=(f"F原网络读出：电流RMS {native['joint_current_RMS_uA']:.6f} μA，温度RMS {native['temperature_RMS_K']:.6f} K，观测RMS {native['observation_RMS_V']:.6f} V，热缺陷RMS {1e3*native['thermal_RMS_W']:.6f} mW，RC缺陷RMS {1e6*native['RC_RMS_A']:.6f} μA。它与共同重放行分别保留；不能混用其中的电压、功率或残差。" if native else 'F未形成有效完整终点；不参与胜出证明。')
+    passed=gate['joint_increment']
+    conclusion=('首轮满足预声明联合门；第二初始化的独立实际判决见 seed-43-results.json。' if passed else '首轮未满足预声明联合门，seed43不触发；按冻结规则终止本轮新训练。')
+    range_rows='；'.join(f"{x['method']}最高{x['temperature_max_K']:.6f} K、超出305—370 K本构区间{x['outside_constitutive_range_samples']}个器件—时刻样本" for x in report['joint_rows'])
+    text=f'''# 72小时成稿与唯一联合重构：实际结果
+
+任务 `{cfg['task_id']}`；起点 `{cfg['baseline']}`。
+
+**VERIFIED：**{conclusion} 本轮已完成的配置均保留其原预算、接受态、优化器历史、原生读出、共同读出和失败分项；未追加架构、支持、种子或救援扫描。
+
+## 实际比较与论文去向
+
+这是已查看开发记录的双节点作者数值模型，11/9.4 V、η=0.12，0—20 μs，0.5 ns原生网格，197个有限电压观测。二维PINN仍为主文主体；本原型是补充S25的辅助离散动力学比较。它不是材料实验、formal OOD或在线预测。
+
+{chr(10).join(rows)}
+
+所有主行从各自锁定T/H进行同一RC读出，T不随读出再修复；热残差使用重放电压的功率。源行来自既有已知参数前向数组，只重放RC读出，没有重新产生温度／历史轨迹。该信息充分的强参照不是学习候选，也不是独立验证。
+
+{nativetext}
+
+{chr(10).join(gate_rows)}
+
+电流需同时超过10%与10 μA；温度、有限观测、重放热缺陷分别按 `candidate <= max(1.05*control,control+floor)` 判断，预声明绝对下限依次为10⁻⁶ K、10⁻⁸ V、10⁻¹⁰ W。三项不合成为总分。低训练损失或代数消元自身的近零RC缺陷不替代参考误差或热资格。
+
+**SUPPORTED_INTERPRETATION：**联合门的实际分项决定本原型是否产生所需增量；此结果约束所测共同起点、表示、损失和有限预算，不能推广成所有神经表示或历史消元均无效。主文既有E/F及E/F_cov证据保持其二维配置身份。唯一后续动作是作者终审和确定稿件／数据访问安排，不自动启动新研究路线。
+
+具体而言，N相对F的电流误差增加13.937%，观测误差也未满足非劣；相对S的电流改善31.957%伴随更大的热缺陷，仍未过联合门。S的热缺陷最小，却有最大的电流和温度误差，显示在此有限预算内降低一个物理目标不等同于同时改善完整状态与端口。不能从S的提前线搜索停步推断其全局最优，也不能据这一个神经初始化形成普遍排序。已知参数及合法初态向所有方法开放，传统前向解在这个合成任务中足以确定轨迹；本轮没有证明神经重构优于该强参照。
+
+{range_rows}。源自身也越过本构温度区间；保留原模型内部电阻裁剪与未裁剪状态温度，不能把数值完成解释成该高温区间的真实材料验证。所有保存同层v²/R均非负，负耗散样本为零；这一事实同样不替代重构误差或逐方程资格。
+
+**UNKNOWN：**材料真实性、普遍算法增量、未见协议重构与在线能力；旧二维全场访问P03和原方法增量问题不因本轮交付关闭。
+
+## 数值资格、历史梯度与资源
+
+原生步长离散残差由保存T/R/v重新计算，不是网络坐标AD残差。完整历史自合法初态逐前向重建；所选事件分支的连续数值依赖通过Tr/Tpr事件链和RC反向递推传递，事件触发索引及离散符号在本次分支导数内固定。跨事件有限变化单列，不宣称事件切换点光滑。
+
+三角色四个差分步长均保留完整事件签名并通过固定方向检查；两条历史/RC原语共9项必要工程检查通过。准入耗时 {admission['seconds']:.3f} 秒，最大准入GPU已分配显存 {max(x['GPU_peak_allocated_bytes'] for x in admission['roles'])/1024**2:.3f} MiB；此数是准入测量，不能写成整轮训练峰值。详见[梯度说明](gradient-method-note.md)与运行根 `admission.json`。
+
+运行环境：V100 32 GB、容器CPU6核／25 GiB、实际4线程；Python3.11.9、Torch2.5.1+cu118、NumPy2.1.1、SciPy1.14.1。内存停止条件为主存12 GiB、GPU分配16 GiB，或可用低于4 GiB。
+
+{chr(10).join(costs)}
+
+上表只统计训练目标调用。另有准入的完整梯度测量／有限差分、零修正场检查及终点导出／共同读出；均保留在相应记录，不能把Adam更新数当作全部计算。线搜索试探评价已扣预算；未接受点不作为终点。优化器无进展或线搜索回滚不等于达到连续最优，接受态仍可作为该预算协议的数值结果，终止原因逐行原样公开。
+
+## 首步前工程修复及隔离
+
+部署元数据初次假设cgroup v2，而实例实际为v1；已在首个优化更新前改为系统原生v1/v2读取，不改变物理或预算。零修正准入另发现Windows生成v⁰与Linux同公式读出相差6.163958232718869×10⁻¹³ V。没有放宽位一致要求；在实际运行平台以同一T⁰、历史和RC公式重新生成共同v⁰一次，再核对N/F/S的T与v逐位相同。原输入及失败准入保存在 `prestep-platform-roundoff/`，新旧源码身份均保留。此时优化更新为零；额外工作为一次共同RC初始化与三次零场前向，原梯度检查未重复。
+
+远端训练输入仅含共同T⁰/v⁰、时间和有限观测；来源T/R/g/H与完整电流没有上传训练入口。实际评分在三端点锁定后本地进行。完整已接受权重、优化器和随机状态保存在运行根；`runtime-manifest.json` 与 `actual-runtime-manifest.json` 区分初始部署和真实执行源码。SSH曾短暂关闭连接；以实际锁定日志判断计算状态，不据网络瞬断重启训练。
+
+实际执行源码另存于运行根 `runtime-source/`；首步前部署源码保存在 `prestep-platform-roundoff/runtime-source/`。后续只更正了本地L-BFGS文件头的项目许可表述，函数实现不变；没有发现仓库根的统一许可，故不声称项目新代码自动使用MIT。作者上游MIT及Torch BSD-3-Clause分别保留其原来源，待作者决定本项目新增材料的对外许可。
+
+## 稿件、复算与保存
+
+- 权威稿源：`source/manuscript.md`、`source/supplement.md`及后者包含的S25文本；Markdown/DOCX/PDF由同一来源构建。
+- 主文6.3保留一个辅助解释段；S25整合全角色表、12.5 V图、两条有条件恒等式、联合方法和真实判决。历史S1—S24、B_E/D_E/B1、不利结果、空间相态及局部热源保留。
+- [最小评分包](scoring-subset/README.md)复算本轮保存数组的误差、离散缺陷和布尔门；不冒充检查点推理或重新计算神经AD残差。历史大包不重跑。
+- 配置、日志、接受终点及本轮数组位于 `outputs/runs/20260929-joint-reconstruction/`。评分数组源与单位、第三方许可、相对路径在包清单中说明。
+- GPU回收与关机实际记录为运行根 `recovery.json`、`shutdown.json`；最终稿件/本地评分在关机后完成的文件如未同步，明确列为待远端同步，不重新开GPU做小文件复制。
+- [作者终审清单](author-final-checklist.md)与[真实构建说明](manuscript-build.md)。本轮无Git发布、公开数据、邮件发送或投稿。
+'''
+    (PAPER/'results-report.md').write_text(text,encoding='utf-8')
+    (PAPER/'tables/joint-comparison-zh.md').write_text('\n'.join(rows)+'\n',encoding='utf-8')
+    (PAPER/'tables/joint-cost-zh.md').write_text('\n'.join(costs)+'\n',encoding='utf-8')
+    print('Bounded result report composed from saved records')
+
+if __name__=='__main__':main()

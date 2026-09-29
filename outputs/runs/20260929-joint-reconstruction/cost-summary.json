@@ -1,0 +1,80 @@
+{
+  "scope": "Counts of recorded bounded work, not a wall-clock acceleration benchmark",
+  "training": {
+    "adam_updates": 1200,
+    "lbfgs_evaluations": 387,
+    "lbfgs_accepted": 171,
+    "full_objective_calls": 1587
+  },
+  "sum_recorded_training_seconds": 602.3280818909407,
+  "admission": {
+    "seconds": 20.584152870811522,
+    "parameter_full_objective_gradient_calls": 3,
+    "native_field_objective_gradient_calls": 3,
+    "finite_difference_objective_value_calls": 24,
+    "extra_fields_only_forward_calls": 3,
+    "prestep_repair_zero_objective_checks": 3
+  },
+  "initialization": {
+    "common_RC_calls": 2,
+    "reason": "one Windows initialization plus one same-formula actual-runtime platform repair"
+  },
+  "endpoint_export": {
+    "model_objective_forward_calls": 3,
+    "legal_history_numerical_exports": 3,
+    "common_RC_readouts": 3
+  },
+  "scoring": {
+    "locked_seed_score_calls": 1,
+    "source_only_RC_readouts": 1,
+    "new_source_thermal_or_history_evolution": 0,
+    "new_optimizer_updates": 0
+  },
+  "independent_scoring": {
+    "isolated_runs": 1,
+    "source_only_RC_readouts": 1,
+    "new_training_or_AD": false
+  },
+  "engineering_primitive_checks": {
+    "history": 5,
+    "RC": 4,
+    "not_scientific_training_arms": true
+  },
+  "second_initialization": "NOT_TRIGGERED",
+  "resource_peak_note": "Admission allocated GPU peak only; full training peak not measured",
+  "role_records": [
+    {
+      "role": "N_dyn",
+      "progress": {
+        "adam_updates": 600,
+        "lbfgs_evaluations": 100,
+        "lbfgs_accepted": 47,
+        "full_objective_calls": 700
+      },
+      "seconds": 263.0847285762429,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED"
+    },
+    {
+      "role": "F_dyn",
+      "progress": {
+        "adam_updates": 600,
+        "lbfgs_evaluations": 100,
+        "lbfgs_accepted": 49,
+        "full_objective_calls": 700
+      },
+      "seconds": 265.89016372989863,
+      "termination": "EVALUATION_BUDGET_EXHAUSTED"
+    },
+    {
+      "role": "S_dyn",
+      "progress": {
+        "adam_updates": 0,
+        "lbfgs_evaluations": 187,
+        "lbfgs_accepted": 75,
+        "full_objective_calls": 187
+      },
+      "seconds": 73.35318958479911,
+      "termination": "LINE_SEARCH_FAILED_WOLFE_TRIAL_ROLLED_BACK"
+    }
+  ]
+}

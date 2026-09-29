@@ -1,0 +1,152 @@
+{
+  "actual_budget": {
+    "admission": {
+      "extra_fields_only_forward_calls": 3,
+      "finite_difference_objective_value_calls": 24,
+      "native_field_objective_gradient_calls": 3,
+      "parameter_full_objective_gradient_calls": 3,
+      "prestep_repair_zero_objective_checks": 3,
+      "seconds": 20.584152870811522
+    },
+    "endpoint_export": {
+      "common_RC_readouts": 3,
+      "legal_history_numerical_exports": 3,
+      "model_objective_forward_calls": 3
+    },
+    "engineering_primitive_checks": {
+      "RC": 4,
+      "history": 5,
+      "not_scientific_training_arms": true
+    },
+    "independent_scoring": {
+      "isolated_runs": 1,
+      "new_training_or_AD": false,
+      "source_only_RC_readouts": 1
+    },
+    "initialization": {
+      "common_RC_calls": 2,
+      "reason": "one Windows initialization plus one same-formula actual-runtime platform repair"
+    },
+    "resource_peak_note": "Admission allocated GPU peak only; full training peak not measured",
+    "role_records": [
+      {
+        "progress": {
+          "adam_updates": 600,
+          "full_objective_calls": 700,
+          "lbfgs_accepted": 47,
+          "lbfgs_evaluations": 100
+        },
+        "role": "N_dyn",
+        "seconds": 263.0847285762429,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED"
+      },
+      {
+        "progress": {
+          "adam_updates": 600,
+          "full_objective_calls": 700,
+          "lbfgs_accepted": 49,
+          "lbfgs_evaluations": 100
+        },
+        "role": "F_dyn",
+        "seconds": 265.89016372989863,
+        "termination": "EVALUATION_BUDGET_EXHAUSTED"
+      },
+      {
+        "progress": {
+          "adam_updates": 0,
+          "full_objective_calls": 187,
+          "lbfgs_accepted": 75,
+          "lbfgs_evaluations": 187
+        },
+        "role": "S_dyn",
+        "seconds": 73.35318958479911,
+        "termination": "LINE_SEARCH_FAILED_WOLFE_TRIAL_ROLLED_BACK"
+      }
+    ],
+    "scope": "Counts of recorded bounded work, not a wall-clock acceleration benchmark",
+    "scoring": {
+      "locked_seed_score_calls": 1,
+      "new_optimizer_updates": 0,
+      "new_source_thermal_or_history_evolution": 0,
+      "source_only_RC_readouts": 1
+    },
+    "second_initialization": "NOT_TRIGGERED",
+    "sum_recorded_training_seconds": 602.3280818909407,
+    "training": {
+      "adam_updates": 1200,
+      "full_objective_calls": 1587,
+      "lbfgs_accepted": 171,
+      "lbfgs_evaluations": 387
+    }
+  },
+  "artifacts": {
+    "config": "outputs/runs/20260929-joint-reconstruction/config.json",
+    "delivery": "paper/paper_revision_20260929_72h/README.md",
+    "independent_score": "paper/paper_revision_20260929_72h/scoring-subset/independent-verification.json",
+    "recovery": "outputs/runs/20260929-joint-reconstruction/recovery.json",
+    "report": "paper/paper_revision_20260929_72h/results-report.md",
+    "scores": "outputs/runs/20260929-joint-reconstruction/seed-29-results.json",
+    "shutdown": "outputs/runs/20260929-joint-reconstruction/shutdown.json"
+  },
+  "case_id": "PAIR_EXCITATION_11V_9P4V_ETA0P12_20US",
+  "checkpoint": {
+    "kind": "accepted_FP64_models_optimizer_histories_full_native_endpoint_arrays",
+    "path": "outputs/runs/20260929-joint-reconstruction/seed-29"
+  },
+  "claim_status": "VERIFIED_BOUNDED_JOINT_INCREMENT_NOT_ESTABLISHED",
+  "code_identity": {
+    "baseline": "adf34b5e22c2d8a6654dd2908c230c7a186239f7",
+    "runtime_manifest": "outputs/runs/20260929-joint-reconstruction/actual-runtime-manifest.json",
+    "source_archive": "outputs/runs/20260929-joint-reconstruction/runtime-source"
+  },
+  "command": [
+    "python",
+    "scripts/run_vo2_joint_sprint.py",
+    "train",
+    "--device",
+    "cuda:0",
+    "--seed",
+    "29"
+  ],
+  "ended_at": "2026-09-29T08:01:30.273281+00:00",
+  "environment": {
+    "GPU": "Tesla V100-PCIE-32GB",
+    "cpu_quota": "600000\n",
+    "gpu_memory": [
+      33745534976,
+      34072559616
+    ],
+    "memory_limit": "26843545600\n",
+    "numpy": "2.1.1",
+    "python": "3.11.9 (main, Apr 19 2024, 16:48:06) [GCC 11.2.0]",
+    "scipy": "1.14.1",
+    "torch": "2.5.1+cu118"
+  },
+  "evaluator_id": "NATIVE_TRAPEZOID_TWO_DEVICE_CURRENT_RMS_AND_ORIGINAL_DISCRETE_THERMAL_RC",
+  "evidence_identity": "ONE_INSPECTED_DEVELOPMENT_CASE_ONE_NEURAL_SEED_ONE_DETERMINISTIC_SPLINE",
+  "execution_status": "COMPLETE_BOUNDED_ACCEPTED_ENDPOINTS",
+  "experiment_group_id": "PCM-20260929-72H-MANUSCRIPT-JOINT-01",
+  "failure_class": "S_WOLFE_LINE_SEARCH_STOP_ACCEPTED_STATE_RETAINED_AND_JOINT_SCIENTIFIC_GATE_FAIL",
+  "gate": "CURRENT_10_PERCENT_AND_10UA_WITH_SEPARATE_T_OBSERVATION_HEAT_5_PERCENT_NI",
+  "gate_outcome": "JOINT_INCREMENT_NOT_ESTABLISHED_SEED43_NOT_TRIGGERED",
+  "method_id": "N_DYN_F_DYN_S_DYN_SAME_INITIAL_FIELD_DISCRETE_RC_COMMON_READOUT",
+  "numerical_validity": "GRADIENT_ADMISSION_PASS_THREE_ACCEPTED_STATES_S_WOLFE_STOP_ROLLED_BACK",
+  "physical_contract_id": "PINNED_AUTHOR_SI_PAIR_EULER_0P5NS_FULL_HISTORY",
+  "planned_budget": {
+    "conditional_seed43_neural_adam": 1200,
+    "conditional_seed43_neural_lbfgs": 200,
+    "first_neural_adam": 1200,
+    "first_neural_lbfgs_evaluations": 200,
+    "spline_lbfgs_cap": 700
+  },
+  "replay_of": null,
+  "route_disposition": "CLOSED_AUTHOR_REVIEW_ONLY_NO_NEW_RESEARCH",
+  "run_id": "20260929-joint-reconstruction",
+  "schema_version": "run-manifest-v1",
+  "scientific_role": "ONE_COMMON_START_NEURAL_SOFT_SPLINE_JOINT_RECONSTRUCTION",
+  "seed": 29,
+  "split_id": "PAIR_EXCITATION_197_VOLTAGES_SOURCE_STATE_SCORING_ONLY_AFTER_LOCK",
+  "started_at": "2026-09-29T07:30:00+00:00",
+  "supersedes": null,
+  "tier": "development"
+}

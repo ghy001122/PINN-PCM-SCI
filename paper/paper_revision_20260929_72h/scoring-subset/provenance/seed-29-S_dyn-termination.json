@@ -1,0 +1,27 @@
+{
+  "status": "VALID_COMPLETE",
+  "role": "S_dyn",
+  "seed": 29,
+  "progress": {
+    "adam_updates": 0,
+    "lbfgs_evaluations": 187,
+    "lbfgs_accepted": 75,
+    "full_objective_calls": 187
+  },
+  "optimizer_termination": {
+    "evaluations": 187,
+    "accepted_steps": 75,
+    "termination": "LINE_SEARCH_FAILED_WOLFE_TRIAL_ROLLED_BACK",
+    "last_accepted_loss": 0.05393629080203906
+  },
+  "endpoint": {
+    "loss": 0.05393629080203906,
+    "parts": {
+      "obs": 0.00023473039775627323,
+      "heat": 0.05370156040428278,
+      "RC": 5.080491513804045e-27
+    },
+    "time": "2026-09-29T08:01:30.270570+00:00"
+  },
+  "seconds": 73.35318958479911
+}

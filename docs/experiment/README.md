@@ -1,6 +1,8 @@
 # Experiment ledger protocol
 
-最新：[条件热响应与迟滞本构闭合](2026-09-29-conditional-thermal-closure-closeout.md)。完整有界包已完成；唯一建议为热输入时序/合法状态估计，无下一轮执行授权。
+最新：[72小时成稿与联合重构](2026-09-29-joint-reconstruction-closeout.md)。固定三端点未过联合门，完整稿件与独立复算完成；GPU已回收关闭，无新科研授权。
+
+历史：[条件热响应与迟滞本构闭合](2026-09-29-conditional-thermal-closure-closeout.md)。完整有界包已完成；唯一建议为热输入时序/合法状态估计，无下一轮执行授权。
 
 历史：[固定CS与焦耳能量比较收口](2026-09-28-cubic-energy-comparison-closeout.md)。本地有界对照及独立子集完成，无后续科研授权。
 

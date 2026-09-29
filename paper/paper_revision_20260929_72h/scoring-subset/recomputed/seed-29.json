@@ -1,0 +1,4569 @@
+{
+  "seed": 29,
+  "all_valid": true,
+  "joint_rows": [
+    {
+      "method": "N_dyn",
+      "joint_current_RMS_A": 0.00011682296028924,
+      "joint_current_RMS_uA": 116.82296028924,
+      "temperature_RMS_K": 0.5764088808526191,
+      "observation_RMS_V": 0.08826713204318556,
+      "thermal_RMS_W": 0.00043336490326437984,
+      "RC_RMS_A": 7.153368733644057e-17,
+      "full_voltage_RMS_V": 0.09167392695055027,
+      "negative_power_samples": 0,
+      "temperature_min_K": 325.0,
+      "temperature_max_K": 377.18937524329306,
+      "outside_constitutive_range_samples": 383
+    },
+    {
+      "method": "F_dyn",
+      "joint_current_RMS_A": 0.00010253271602633316,
+      "joint_current_RMS_uA": 102.53271602633316,
+      "temperature_RMS_K": 0.5776038048223077,
+      "observation_RMS_V": 0.06347290846828327,
+      "thermal_RMS_W": 0.0004820720770262745,
+      "RC_RMS_A": 7.245011820676911e-17,
+      "full_voltage_RMS_V": 0.06577223221292758,
+      "negative_power_samples": 0,
+      "temperature_min_K": 325.0,
+      "temperature_max_K": 377.1314334688761,
+      "outside_constitutive_range_samples": 381
+    },
+    {
+      "method": "S_dyn",
+      "joint_current_RMS_A": 0.00017169063380765917,
+      "joint_current_RMS_uA": 171.69063380765917,
+      "temperature_RMS_K": 1.3270315225590563,
+      "observation_RMS_V": 0.1685300511140641,
+      "thermal_RMS_W": 0.0002317359713214217,
+      "RC_RMS_A": 7.12770770623499e-17,
+      "full_voltage_RMS_V": 0.1753710842536462,
+      "negative_power_samples": 0,
+      "temperature_min_K": 325.0,
+      "temperature_max_K": 375.9859742890576,
+      "outside_constitutive_range_samples": 357
+    },
+    {
+      "method": "known_parameter_forward_common_RC",
+      "joint_current_RMS_A": 5.3377585780418474e-17,
+      "joint_current_RMS_uA": 5.337758578041847e-11,
+      "temperature_RMS_K": 0.0,
+      "observation_RMS_V": 2.363616908119365e-13,
+      "thermal_RMS_W": 1.7005376726223042e-15,
+      "RC_RMS_A": 9.629079081906565e-17,
+      "full_voltage_RMS_V": 2.3642792819684955e-13,
+      "negative_power_samples": 0,
+      "temperature_min_K": 325.0,
+      "temperature_max_K": 377.6106564025187,
+      "outside_constitutive_range_samples": 394
+    }
+  ],
+  "native_rows": [
+    {
+      "method": "N_dyn_native",
+      "joint_current_RMS_A": 0.00011682296028924,
+      "joint_current_RMS_uA": 116.82296028924,
+      "temperature_RMS_K": 0.5764088808526191,
+      "observation_RMS_V": 0.08826713204318556,
+      "thermal_RMS_W": 0.00043336490326437984,
+      "RC_RMS_A": 7.153368733644057e-17,
+      "full_voltage_RMS_V": 0.09167392695055027,
+      "negative_power_samples": 0,
+      "temperature_min_K": 325.0,
+      "temperature_max_K": 377.18937524329306,
+      "outside_constitutive_range_samples": 383
+    },
+    {
+      "method": "F_dyn_native",
+      "joint_current_RMS_A": 0.00010135862098070935,
+      "joint_current_RMS_uA": 101.35862098070935,
+      "temperature_RMS_K": 0.5776038048223077,
+      "observation_RMS_V": 0.13833943123344342,
+      "thermal_RMS_W": 0.00039537912465966883,
+      "RC_RMS_A": 8.388347737026262e-05,
+      "full_voltage_RMS_V": 0.1405292647688791,
+      "negative_power_samples": 0,
+      "temperature_min_K": 325.0,
+      "temperature_max_K": 377.1314334688761,
+      "outside_constitutive_range_samples": 381
+    },
+    {
+      "method": "S_dyn_native",
+      "joint_current_RMS_A": 0.00017169063380765917,
+      "joint_current_RMS_uA": 171.69063380765917,
+      "temperature_RMS_K": 1.3270315225590563,
+      "observation_RMS_V": 0.1685300511140641,
+      "thermal_RMS_W": 0.0002317359713214217,
+      "RC_RMS_A": 7.12770770623499e-17,
+      "full_voltage_RMS_V": 0.1753710842536462,
+      "negative_power_samples": 0,
+      "temperature_min_K": 325.0,
+      "temperature_max_K": 375.9859742890576,
+      "outside_constitutive_range_samples": 357
+    },
+    {
+      "method": "known_parameter_forward_native",
+      "joint_current_RMS_A": 0.0,
+      "joint_current_RMS_uA": 0.0,
+      "temperature_RMS_K": 0.0,
+      "observation_RMS_V": 0.0,
+      "thermal_RMS_W": 1.6267372747562741e-15,
+      "RC_RMS_A": 5.896911366879202e-17,
+      "full_voltage_RMS_V": 0.0,
+      "negative_power_samples": 0,
+      "temperature_min_K": 325.0,
+      "temperature_max_K": 377.6106564025187,
+      "outside_constitutive_range_samples": 394
+    }
+  ],
+  "devices": {
+    "N_dyn": [
+      {
+        "device": "A",
+        "current_RMS_A": 0.00011210405745068972,
+        "temperature_RMS_K": 0.5262770981956565,
+        "voltage_RMS_V": 0.10107892761720885,
+        "thermal_RMS_W": 0.00046563350195687707,
+        "observation_RMS_V": 0.09750647535795656,
+        "candidate_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6946,
+            9839,
+            13650,
+            16751,
+            20445,
+            23580,
+            27209,
+            30384,
+            33920,
+            37163
+          ],
+          "times_s": [
+            3.473e-06,
+            4.9195e-06,
+            6.825000000000001e-06,
+            8.3755e-06,
+            1.02225e-05,
+            1.179e-05,
+            1.3604500000000002e-05,
+            1.5192000000000001e-05,
+            1.696e-05,
+            1.85815e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6949,
+            9850,
+            13636,
+            16754,
+            20427,
+            23586,
+            27193,
+            30387,
+            33930,
+            37159
+          ],
+          "times_s": [
+            3.4745000000000004e-06,
+            4.925e-06,
+            6.818000000000001e-06,
+            8.377000000000001e-06,
+            1.0213500000000001e-05,
+            1.1793e-05,
+            1.3596500000000001e-05,
+            1.5193500000000001e-05,
+            1.6965e-05,
+            1.85795e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06,
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              3.2165e-06,
+              6.6965e-06,
+              1.0083e-05,
+              1.3464e-05,
+              1.6839000000000003e-05
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382,
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.004999945569249625,
+              0.004172139121128501,
+              0.004073537246271418,
+              0.003978202135945072,
+              0.0038909339137511894
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.2165e-06,
+                "signed_time_difference_s": -9.500000000000078e-09,
+                "signed_height_difference_A": -8.364643165336642e-05
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6965e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -0.00011844246579188061
+              },
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0083e-05,
+                "signed_time_difference_s": -1.0000000000001598e-08,
+                "signed_height_difference_A": -0.00014613396251444196
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.3464e-05,
+                "signed_time_difference_s": -1.2000000000000902e-08,
+                "signed_height_difference_A": -0.00019450738926344267
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6839000000000003e-05,
+                "signed_time_difference_s": -5.999999999999604e-09,
+                "signed_height_difference_A": -0.0002371436910188771
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 8.605230967266949e-09,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.2165e-06,
+            "reference_ISI_s": [
+              3.4705e-06,
+              3.3965000000000013e-06,
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.48e-06,
+              3.3864999999999997e-06,
+              3.3810000000000003e-06,
+              3.3750000000000024e-06
+            ],
+            "reference_frequency_Hz": 293707.3206549673,
+            "prediction_frequency_Hz": 293631.8590567076,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06
+            ],
+            "prediction_times_s": [
+              3.2165e-06,
+              6.6965e-06
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382
+            ],
+            "prediction_heights_A": [
+              0.004999945569249625,
+              0.004172139121128501
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.2165e-06,
+                "signed_time_difference_s": -9.500000000000078e-09,
+                "signed_height_difference_A": -8.364643165336642e-05
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6965e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -0.00011844246579188061
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 6.717514421272257e-09,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.2165e-06,
+            "reference_ISI_s": [
+              3.4705e-06
+            ],
+            "prediction_ISI_s": [
+              3.48e-06
+            ],
+            "reference_frequency_Hz": 288142.91888776835,
+            "prediction_frequency_Hz": 287356.3218390804,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              1.0083e-05,
+              1.3464e-05,
+              1.6839000000000003e-05
+            ],
+            "reference_heights_A": [
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.004073537246271418,
+              0.003978202135945072,
+              0.0038909339137511894
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0083e-05,
+                "signed_time_difference_s": -1.0000000000001598e-08,
+                "signed_height_difference_A": -0.00014613396251444196
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.3464e-05,
+                "signed_time_difference_s": -1.2000000000000902e-08,
+                "signed_height_difference_A": -0.00019450738926344267
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6839000000000003e-05,
+                "signed_time_difference_s": -5.999999999999604e-09,
+                "signed_height_difference_A": -0.0002371436910188771
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 9.660917830793802e-09,
+            "reference_first_peak_s": 1.0093000000000001e-05,
+            "prediction_first_peak_s": 1.0083e-05,
+            "reference_ISI_s": [
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.3810000000000003e-06,
+              3.3750000000000024e-06
+            ],
+            "reference_frequency_Hz": 296208.5308056872,
+            "prediction_frequency_Hz": 296033.1557134398,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      },
+      {
+        "device": "B",
+        "current_RMS_A": 0.00012135851187524983,
+        "temperature_RMS_K": 0.6225165152558584,
+        "voltage_RMS_V": 0.0811866254799687,
+        "thermal_RMS_W": 0.000398491807466685,
+        "observation_RMS_V": 0.07794010816984102,
+        "candidate_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7336,
+            10115,
+            14498,
+            17134,
+            21393,
+            23990,
+            28248,
+            30835,
+            35119,
+            37647
+          ],
+          "times_s": [
+            3.6680000000000003e-06,
+            5.0575e-06,
+            7.249e-06,
+            8.567000000000001e-06,
+            1.06965e-05,
+            1.1995000000000001e-05,
+            1.4124e-05,
+            1.54175e-05,
+            1.75595e-05,
+            1.88235e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7319,
+            10118,
+            14479,
+            17129,
+            21387,
+            24007,
+            28235,
+            30838,
+            35061,
+            37641
+          ],
+          "times_s": [
+            3.6595000000000003e-06,
+            5.059e-06,
+            7.239500000000001e-06,
+            8.5645e-06,
+            1.06935e-05,
+            1.2003500000000001e-05,
+            1.4117500000000002e-05,
+            1.5419000000000003e-05,
+            1.75305e-05,
+            1.88205e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06,
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              3.5285e-06,
+              7.118e-06,
+              1.05875e-05,
+              1.3990000000000002e-05,
+              1.7452500000000003e-05
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583,
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.004371049695628128,
+              0.0037596288068831077,
+              0.003627081873440696,
+              0.0034775024296533653,
+              0.0033929259221622196
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5285e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -5.006412249177524e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.118e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -3.7585856202475374e-05
+              },
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05875e-05,
+                "signed_time_difference_s": 5.499999999998507e-09,
+                "signed_height_difference_A": -0.00010179741249673104
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.3990000000000002e-05,
+                "signed_time_difference_s": -1.7000000000000007e-08,
+                "signed_height_difference_A": -0.00020867259583239213
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7452500000000003e-05,
+                "signed_time_difference_s": 3.250000000000011e-08,
+                "signed_height_difference_A": -0.0002534011590338229
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.7435595774162645e-08,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5285e-06,
+            "reference_ISI_s": [
+              3.5895e-06,
+              3.455500000000001e-06,
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.5895e-06,
+              3.4694999999999996e-06,
+              3.4025000000000017e-06,
+              3.462500000000001e-06
+            ],
+            "reference_frequency_Hz": 288122.1637974501,
+            "prediction_frequency_Hz": 287273.77190462506,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06
+            ],
+            "prediction_times_s": [
+              3.5285e-06,
+              7.118e-06
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583
+            ],
+            "prediction_heights_A": [
+              0.004371049695628128,
+              0.0037596288068831077
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5285e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -5.006412249177524e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.118e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -3.7585856202475374e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 8.500000000000003e-09,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5285e-06,
+            "reference_ISI_s": [
+              3.5895e-06
+            ],
+            "prediction_ISI_s": [
+              3.5895e-06
+            ],
+            "reference_frequency_Hz": 278590.3329154478,
+            "prediction_frequency_Hz": 278590.3329154478,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              1.05875e-05,
+              1.3990000000000002e-05,
+              1.7452500000000003e-05
+            ],
+            "reference_heights_A": [
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.003627081873440696,
+              0.0034775024296533653,
+              0.0033929259221622196
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05875e-05,
+                "signed_time_difference_s": 5.499999999998507e-09,
+                "signed_height_difference_A": -0.00010179741249673104
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.3990000000000002e-05,
+                "signed_time_difference_s": -1.7000000000000007e-08,
+                "signed_height_difference_A": -0.00020867259583239213
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7452500000000003e-05,
+                "signed_time_difference_s": 3.250000000000011e-08,
+                "signed_height_difference_A": -0.0002534011590338229
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 2.141261310536379e-08,
+            "reference_first_peak_s": 1.0582000000000001e-05,
+            "prediction_first_peak_s": 1.05875e-05,
+            "reference_ISI_s": [
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.4025000000000017e-06,
+              3.462500000000001e-06
+            ],
+            "reference_frequency_Hz": 292483.18221702246,
+            "prediction_frequency_Hz": 291332.8477785869,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      }
+    ],
+    "F_dyn": [
+      {
+        "device": "A",
+        "current_RMS_A": 0.00010403090693455025,
+        "temperature_RMS_K": 0.3841682343852667,
+        "voltage_RMS_V": 0.06824580561675346,
+        "thermal_RMS_W": 0.0004906561957825291,
+        "observation_RMS_V": 0.06583200989882196,
+        "candidate_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6945,
+            9847,
+            13650,
+            16760,
+            20445,
+            23580,
+            27209,
+            30385,
+            33940,
+            37154
+          ],
+          "times_s": [
+            3.4725e-06,
+            4.9235e-06,
+            6.825000000000001e-06,
+            8.380000000000001e-06,
+            1.02225e-05,
+            1.179e-05,
+            1.3604500000000002e-05,
+            1.51925e-05,
+            1.6970000000000002e-05,
+            1.8577000000000002e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6949,
+            9850,
+            13636,
+            16754,
+            20427,
+            23586,
+            27193,
+            30387,
+            33930,
+            37159
+          ],
+          "times_s": [
+            3.4745000000000004e-06,
+            4.925e-06,
+            6.818000000000001e-06,
+            8.377000000000001e-06,
+            1.0213500000000001e-05,
+            1.1793e-05,
+            1.3596500000000001e-05,
+            1.5193500000000001e-05,
+            1.6965e-05,
+            1.85795e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06,
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              3.2165e-06,
+              6.6970000000000004e-06,
+              1.0084e-05,
+              1.34655e-05,
+              1.6840500000000002e-05
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382,
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.005008679728157279,
+              0.0042137916103339,
+              0.004164191640428396,
+              0.004114167243932089,
+              0.004054497011014745
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.2165e-06,
+                "signed_time_difference_s": -9.500000000000078e-09,
+                "signed_height_difference_A": -7.491227274571306e-05
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6970000000000004e-06,
+                "signed_time_difference_s": 5.000000000002493e-10,
+                "signed_height_difference_A": -7.678997658648167e-05
+              },
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0084e-05,
+                "signed_time_difference_s": -9.0000000000011e-09,
+                "signed_height_difference_A": -5.5479568357463295e-05
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.34655e-05,
+                "signed_time_difference_s": -1.0500000000001e-08,
+                "signed_height_difference_A": -5.854228127642573e-05
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6840500000000002e-05,
+                "signed_time_difference_s": -4.499999999999703e-09,
+                "signed_height_difference_A": -7.358059375532112e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 7.771743691090692e-09,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.2165e-06,
+            "reference_ISI_s": [
+              3.4705e-06,
+              3.3965000000000013e-06,
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.4805000000000004e-06,
+              3.387e-06,
+              3.3814999999999997e-06,
+              3.3750000000000024e-06
+            ],
+            "reference_frequency_Hz": 293707.3206549673,
+            "prediction_frequency_Hz": 293599.53024075157,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06
+            ],
+            "prediction_times_s": [
+              3.2165e-06,
+              6.6970000000000004e-06
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382
+            ],
+            "prediction_heights_A": [
+              0.005008679728157279,
+              0.0042137916103339
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.2165e-06,
+                "signed_time_difference_s": -9.500000000000078e-09,
+                "signed_height_difference_A": -7.491227274571306e-05
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6970000000000004e-06,
+                "signed_time_difference_s": 5.000000000002493e-10,
+                "signed_height_difference_A": -7.678997658648167e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 6.72681202353692e-09,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.2165e-06,
+            "reference_ISI_s": [
+              3.4705e-06
+            ],
+            "prediction_ISI_s": [
+              3.4805000000000004e-06
+            ],
+            "reference_frequency_Hz": 288142.91888776835,
+            "prediction_frequency_Hz": 287315.0409423933,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              1.0084e-05,
+              1.34655e-05,
+              1.6840500000000002e-05
+            ],
+            "reference_heights_A": [
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.004164191640428396,
+              0.004114167243932089,
+              0.004054497011014745
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0084e-05,
+                "signed_time_difference_s": -9.0000000000011e-09,
+                "signed_height_difference_A": -5.5479568357463295e-05
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.34655e-05,
+                "signed_time_difference_s": -1.0500000000001e-08,
+                "signed_height_difference_A": -5.854228127642573e-05
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6840500000000002e-05,
+                "signed_time_difference_s": -4.499999999999703e-09,
+                "signed_height_difference_A": -7.358059375532112e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 8.396427811874089e-09,
+            "reference_first_peak_s": 1.0093000000000001e-05,
+            "prediction_first_peak_s": 1.0084e-05,
+            "reference_ISI_s": [
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.3814999999999997e-06,
+              3.3750000000000024e-06
+            ],
+            "reference_frequency_Hz": 296208.5308056872,
+            "prediction_frequency_Hz": 296011.2484274401,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      },
+      {
+        "device": "B",
+        "current_RMS_A": 0.00010101230674451648,
+        "temperature_RMS_K": 0.7208793785230092,
+        "voltage_RMS_V": 0.0632019230424426,
+        "thermal_RMS_W": 0.0004733323065638654,
+        "observation_RMS_V": 0.061022673585541455,
+        "candidate_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7336,
+            10123,
+            14498,
+            17143,
+            21393,
+            24013,
+            28248,
+            30834,
+            35094,
+            37626
+          ],
+          "times_s": [
+            3.6680000000000003e-06,
+            5.061500000000001e-06,
+            7.249e-06,
+            8.571500000000001e-06,
+            1.06965e-05,
+            1.2006500000000001e-05,
+            1.4124e-05,
+            1.5417e-05,
+            1.7547e-05,
+            1.8813e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7319,
+            10118,
+            14479,
+            17129,
+            21387,
+            24007,
+            28235,
+            30838,
+            35061,
+            37641
+          ],
+          "times_s": [
+            3.6595000000000003e-06,
+            5.059e-06,
+            7.239500000000001e-06,
+            8.5645e-06,
+            1.06935e-05,
+            1.2003500000000001e-05,
+            1.4117500000000002e-05,
+            1.5419000000000003e-05,
+            1.75305e-05,
+            1.88205e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06,
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              3.5285e-06,
+              7.1185000000000005e-06,
+              1.05885e-05,
+              1.3994500000000001e-05,
+              1.7447e-05
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583,
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.004366952451038038,
+              0.0037607995511513867,
+              0.0036939702615208644,
+              0.003658401898222396,
+              0.003478457205356194
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5285e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -5.416136708186539e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.1185000000000005e-06,
+                "signed_time_difference_s": -7.999999999999754e-09,
+                "signed_height_difference_A": -3.641511193419643e-05
+              },
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05885e-05,
+                "signed_time_difference_s": 6.499999999999006e-09,
+                "signed_height_difference_A": -3.490902441656259e-05
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.3994500000000001e-05,
+                "signed_time_difference_s": -1.2500000000000304e-08,
+                "signed_height_difference_A": -2.777312726336134e-05
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7447e-05,
+                "signed_time_difference_s": 2.6999999999998217e-08,
+                "signed_height_difference_A": -0.0001678698758398483
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.4585952145814098e-08,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5285e-06,
+            "reference_ISI_s": [
+              3.5895e-06,
+              3.455500000000001e-06,
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.5900000000000004e-06,
+              3.47e-06,
+              3.406000000000001e-06,
+              3.4524999999999996e-06
+            ],
+            "reference_frequency_Hz": 288122.1637974501,
+            "prediction_frequency_Hz": 287387.2902970866,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06
+            ],
+            "prediction_times_s": [
+              3.5285e-06,
+              7.1185000000000005e-06
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583
+            ],
+            "prediction_heights_A": [
+              0.004366952451038038,
+              0.0037607995511513867
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5285e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -5.416136708186539e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.1185000000000005e-06,
+                "signed_time_difference_s": -7.999999999999754e-09,
+                "signed_height_difference_A": -3.641511193419643e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 8.25378700960947e-09,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5285e-06,
+            "reference_ISI_s": [
+              3.5895e-06
+            ],
+            "prediction_ISI_s": [
+              3.5900000000000004e-06
+            ],
+            "reference_frequency_Hz": 278590.3329154478,
+            "prediction_frequency_Hz": 278551.53203342616,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              1.05885e-05,
+              1.3994500000000001e-05,
+              1.7447e-05
+            ],
+            "reference_heights_A": [
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.0036939702615208644,
+              0.003658401898222396,
+              0.003478457205356194
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05885e-05,
+                "signed_time_difference_s": 6.499999999999006e-09,
+                "signed_height_difference_A": -3.490902441656259e-05
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.3994500000000001e-05,
+                "signed_time_difference_s": -1.2500000000000304e-08,
+                "signed_height_difference_A": -2.777312726336134e-05
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7447e-05,
+                "signed_time_difference_s": 2.6999999999998217e-08,
+                "signed_height_difference_A": -0.0001678698758398483
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.7583135859869615e-08,
+            "reference_first_peak_s": 1.0582000000000001e-05,
+            "prediction_first_peak_s": 1.05885e-05,
+            "reference_ISI_s": [
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.406000000000001e-06,
+              3.4524999999999996e-06
+            ],
+            "reference_frequency_Hz": 292483.18221702246,
+            "prediction_frequency_Hz": 291608.9523948385,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      }
+    ],
+    "S_dyn": [
+      {
+        "device": "A",
+        "current_RMS_A": 0.00018737958249119647,
+        "temperature_RMS_K": 1.5983957816033623,
+        "voltage_RMS_V": 0.21888942636339,
+        "thermal_RMS_W": 0.0002690988784858461,
+        "observation_RMS_V": 0.21113575468603155,
+        "candidate_reversals": {
+          "device": 0,
+          "count": 14,
+          "native_indices": [
+            6875,
+            9695,
+            9739,
+            9989,
+            13637,
+            16601,
+            16770,
+            16883,
+            20392,
+            23611,
+            27152,
+            30283,
+            33909,
+            37088
+          ],
+          "times_s": [
+            3.4375e-06,
+            4.847500000000001e-06,
+            4.8695000000000006e-06,
+            4.9945e-06,
+            6.8185e-06,
+            8.300500000000001e-06,
+            8.385e-06,
+            8.4415e-06,
+            1.0196e-05,
+            1.18055e-05,
+            1.3576e-05,
+            1.51415e-05,
+            1.6954500000000002e-05,
+            1.8544e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6949,
+            9850,
+            13636,
+            16754,
+            20427,
+            23586,
+            27193,
+            30387,
+            33930,
+            37159
+          ],
+          "times_s": [
+            3.4745000000000004e-06,
+            4.925e-06,
+            6.818000000000001e-06,
+            8.377000000000001e-06,
+            1.0213500000000001e-05,
+            1.1793e-05,
+            1.3596500000000001e-05,
+            1.5193500000000001e-05,
+            1.6965e-05,
+            1.85795e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06,
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              3.204e-06,
+              6.693e-06,
+              1.0074e-05,
+              1.34555e-05,
+              1.6835e-05
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382,
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.00491451436136821,
+              0.0040917563541746724,
+              0.0038439242870702967,
+              0.003674205714350615,
+              0.0036989576447133423
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.204e-06,
+                "signed_time_difference_s": -2.199999999999996e-08,
+                "signed_height_difference_A": -0.00016907763953478202
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.693e-06,
+                "signed_time_difference_s": -3.500000000000051e-09,
+                "signed_height_difference_A": -0.00019882523274570955
+              },
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0074e-05,
+                "signed_time_difference_s": -1.9000000000001004e-08,
+                "signed_height_difference_A": -0.00037574692171556297
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.34555e-05,
+                "signed_time_difference_s": -2.0500000000000905e-08,
+                "signed_height_difference_A": -0.0004985038108578999
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6835e-05,
+                "signed_time_difference_s": -1.0000000000001598e-08,
+                "signed_height_difference_A": -0.00042911996005672417
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.659819267269847e-08,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.204e-06,
+            "reference_ISI_s": [
+              3.4705e-06,
+              3.3965000000000013e-06,
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.489e-06,
+              3.3810000000000003e-06,
+              3.3814999999999997e-06,
+              3.3795000000000004e-06
+            ],
+            "reference_frequency_Hz": 293707.3206549673,
+            "prediction_frequency_Hz": 293448.7565108943,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06
+            ],
+            "prediction_times_s": [
+              3.204e-06,
+              6.693e-06
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382
+            ],
+            "prediction_heights_A": [
+              0.00491451436136821,
+              0.0040917563541746724
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.204e-06,
+                "signed_time_difference_s": -2.199999999999996e-08,
+                "signed_height_difference_A": -0.00016907763953478202
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.693e-06,
+                "signed_time_difference_s": -3.500000000000051e-09,
+                "signed_height_difference_A": -0.00019882523274570955
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.5751984002023343e-08,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.204e-06,
+            "reference_ISI_s": [
+              3.4705e-06
+            ],
+            "prediction_ISI_s": [
+              3.489e-06
+            ],
+            "reference_frequency_Hz": 288142.91888776835,
+            "prediction_frequency_Hz": 286615.0759529951,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              1.0074e-05,
+              1.34555e-05,
+              1.6835e-05
+            ],
+            "reference_heights_A": [
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.0038439242870702967,
+              0.003674205714350615,
+              0.0036989576447133423
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0074e-05,
+                "signed_time_difference_s": -1.9000000000001004e-08,
+                "signed_height_difference_A": -0.00037574692171556297
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.34555e-05,
+                "signed_time_difference_s": -2.0500000000000905e-08,
+                "signed_height_difference_A": -0.0004985038108578999
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6835e-05,
+                "signed_time_difference_s": -1.0000000000001598e-08,
+                "signed_height_difference_A": -0.00042911996005672417
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.7139136501003652e-08,
+            "reference_first_peak_s": 1.0093000000000001e-05,
+            "prediction_first_peak_s": 1.0074e-05,
+            "reference_ISI_s": [
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.3814999999999997e-06,
+              3.3795000000000004e-06
+            ],
+            "reference_frequency_Hz": 296208.5308056872,
+            "prediction_frequency_Hz": 295814.2286643988,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      },
+      {
+        "device": "B",
+        "current_RMS_A": 0.0001544158008105917,
+        "temperature_RMS_K": 0.9834410247103739,
+        "voltage_RMS_V": 0.116608118975074,
+        "thermal_RMS_W": 0.00018705323949674176,
+        "observation_RMS_V": 0.11057327593129367,
+        "candidate_reversals": {
+          "device": 1,
+          "count": 16,
+          "native_indices": [
+            7286,
+            9989,
+            10057,
+            10186,
+            14446,
+            17141,
+            21408,
+            23850,
+            24063,
+            24201,
+            28210,
+            30664,
+            30871,
+            31010,
+            35123,
+            37626
+          ],
+          "times_s": [
+            3.643e-06,
+            4.9945e-06,
+            5.0285e-06,
+            5.093e-06,
+            7.223e-06,
+            8.5705e-06,
+            1.0704000000000001e-05,
+            1.1925e-05,
+            1.20315e-05,
+            1.21005e-05,
+            1.4105000000000001e-05,
+            1.5332e-05,
+            1.54355e-05,
+            1.5505e-05,
+            1.75615e-05,
+            1.8813e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7319,
+            10118,
+            14479,
+            17129,
+            21387,
+            24007,
+            28235,
+            30838,
+            35061,
+            37641
+          ],
+          "times_s": [
+            3.6595000000000003e-06,
+            5.059e-06,
+            7.239500000000001e-06,
+            8.5645e-06,
+            1.06935e-05,
+            1.2003500000000001e-05,
+            1.4117500000000002e-05,
+            1.5419000000000003e-05,
+            1.75305e-05,
+            1.88205e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06,
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              3.5150000000000002e-06,
+              7.105500000000001e-06,
+              1.05885e-05,
+              1.39965e-05,
+              1.74485e-05
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583,
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.004344772052922548,
+              0.0036648496882011484,
+              0.0036202473934421097,
+              0.003384566795711792,
+              0.0034806919521578328
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5150000000000002e-06,
+                "signed_time_difference_s": -2.199999999999996e-08,
+                "signed_height_difference_A": -7.634176519735573e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.105500000000001e-06,
+                "signed_time_difference_s": -2.099999999999946e-08,
+                "signed_height_difference_A": -0.00013236497488443473
+              },
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05885e-05,
+                "signed_time_difference_s": 6.499999999999006e-09,
+                "signed_height_difference_A": -0.00010863189249531733
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.39965e-05,
+                "signed_time_difference_s": -1.0500000000001e-08,
+                "signed_height_difference_A": -0.00030160822977396556
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.74485e-05,
+                "signed_time_difference_s": 2.8499999999998118e-08,
+                "signed_height_difference_A": -0.00016563512903820972
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.9440936191448582e-08,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5150000000000002e-06,
+            "reference_ISI_s": [
+              3.5895e-06,
+              3.455500000000001e-06,
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.5905000000000006e-06,
+              3.4829999999999995e-06,
+              3.4080000000000002e-06,
+              3.452e-06
+            ],
+            "reference_frequency_Hz": 288122.1637974501,
+            "prediction_frequency_Hz": 287077.9057666774,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06
+            ],
+            "prediction_times_s": [
+              3.5150000000000002e-06,
+              7.105500000000001e-06
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583
+            ],
+            "prediction_heights_A": [
+              0.004344772052922548,
+              0.0036648496882011484
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5150000000000002e-06,
+                "signed_time_difference_s": -2.199999999999996e-08,
+                "signed_height_difference_A": -7.634176519735573e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.105500000000001e-06,
+                "signed_time_difference_s": -2.099999999999946e-08,
+                "signed_height_difference_A": -0.00013236497488443473
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 2.1505813167606285e-08,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5150000000000002e-06,
+            "reference_ISI_s": [
+              3.5895e-06
+            ],
+            "prediction_ISI_s": [
+              3.5905000000000006e-06
+            ],
+            "reference_frequency_Hz": 278590.3329154478,
+            "prediction_frequency_Hz": 278512.7419579445,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              1.05885e-05,
+              1.39965e-05,
+              1.74485e-05
+            ],
+            "reference_heights_A": [
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.0036202473934421097,
+              0.003384566795711792,
+              0.0034806919521578328
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05885e-05,
+                "signed_time_difference_s": 6.499999999999006e-09,
+                "signed_height_difference_A": -0.00010863189249531733
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.39965e-05,
+                "signed_time_difference_s": -1.0500000000001e-08,
+                "signed_height_difference_A": -0.00030160822977396556
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.74485e-05,
+                "signed_time_difference_s": 2.8499999999998118e-08,
+                "signed_height_difference_A": -0.00016563512903820972
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.7932744723920547e-08,
+            "reference_first_peak_s": 1.0582000000000001e-05,
+            "prediction_first_peak_s": 1.05885e-05,
+            "reference_ISI_s": [
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.4080000000000002e-06,
+              3.452e-06
+            ],
+            "reference_frequency_Hz": 292483.18221702246,
+            "prediction_frequency_Hz": 291545.1895043732,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      }
+    ],
+    "known_parameter_forward_common_RC": [
+      {
+        "device": "A",
+        "current_RMS_A": 4.6714575017154207e-17,
+        "temperature_RMS_K": 0.0,
+        "voltage_RMS_V": 2.048714642528531e-13,
+        "thermal_RMS_W": 1.6914419056937073e-15,
+        "observation_RMS_V": 2.0485410841876256e-13,
+        "candidate_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6949,
+            9850,
+            13636,
+            16754,
+            20427,
+            23586,
+            27193,
+            30387,
+            33930,
+            37159
+          ],
+          "times_s": [
+            3.4745000000000004e-06,
+            4.925e-06,
+            6.818000000000001e-06,
+            8.377000000000001e-06,
+            1.0213500000000001e-05,
+            1.1793e-05,
+            1.3596500000000001e-05,
+            1.5193500000000001e-05,
+            1.6965e-05,
+            1.85795e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6949,
+            9850,
+            13636,
+            16754,
+            20427,
+            23586,
+            27193,
+            30387,
+            33930,
+            37159
+          ],
+          "times_s": [
+            3.4745000000000004e-06,
+            4.925e-06,
+            6.818000000000001e-06,
+            8.377000000000001e-06,
+            1.0213500000000001e-05,
+            1.1793e-05,
+            1.3596500000000001e-05,
+            1.5193500000000001e-05,
+            1.6965e-05,
+            1.85795e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06,
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              3.226e-06,
+              6.6965e-06,
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382,
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.005083592000902646,
+              0.004290581586920115,
+              0.004219671208785613,
+              0.004172709525208252,
+              0.004128077604769812
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.226e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.46077333457373e-16
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6965e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -2.671474153004283e-16
+              },
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0093000000000001e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -2.463307335887066e-16
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.3476000000000001e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -2.6281060661048627e-16
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6845000000000002e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -2.5413698923060224e-16
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 0.0,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.226e-06,
+            "reference_ISI_s": [
+              3.4705e-06,
+              3.3965000000000013e-06,
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.4705e-06,
+              3.3965000000000013e-06,
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "reference_frequency_Hz": 293707.3206549673,
+            "prediction_frequency_Hz": 293707.3206549673,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06
+            ],
+            "prediction_times_s": [
+              3.226e-06,
+              6.6965e-06
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382
+            ],
+            "prediction_heights_A": [
+              0.005083592000902646,
+              0.004290581586920115
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.226e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.46077333457373e-16
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6965e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -2.671474153004283e-16
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 0.0,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.226e-06,
+            "reference_ISI_s": [
+              3.4705e-06
+            ],
+            "prediction_ISI_s": [
+              3.4705e-06
+            ],
+            "reference_frequency_Hz": 288142.91888776835,
+            "prediction_frequency_Hz": 288142.91888776835,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "reference_heights_A": [
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.004219671208785613,
+              0.004172709525208252,
+              0.004128077604769812
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0093000000000001e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -2.463307335887066e-16
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.3476000000000001e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -2.6281060661048627e-16
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6845000000000002e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -2.5413698923060224e-16
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 0.0,
+            "reference_first_peak_s": 1.0093000000000001e-05,
+            "prediction_first_peak_s": 1.0093000000000001e-05,
+            "reference_ISI_s": [
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "reference_frequency_Hz": 296208.5308056872,
+            "prediction_frequency_Hz": 296208.5308056872,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      },
+      {
+        "device": "B",
+        "current_RMS_A": 5.929655815018722e-17,
+        "temperature_RMS_K": 0.0,
+        "voltage_RMS_V": 2.642423387684139e-13,
+        "thermal_RMS_W": 1.7095850466351788e-15,
+        "observation_RMS_V": 2.6413725983077213e-13,
+        "candidate_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7319,
+            10118,
+            14479,
+            17129,
+            21387,
+            24007,
+            28235,
+            30838,
+            35061,
+            37641
+          ],
+          "times_s": [
+            3.6595000000000003e-06,
+            5.059e-06,
+            7.239500000000001e-06,
+            8.5645e-06,
+            1.06935e-05,
+            1.2003500000000001e-05,
+            1.4117500000000002e-05,
+            1.5419000000000003e-05,
+            1.75305e-05,
+            1.88205e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7319,
+            10118,
+            14479,
+            17129,
+            21387,
+            24007,
+            28235,
+            30838,
+            35061,
+            37641
+          ],
+          "times_s": [
+            3.6595000000000003e-06,
+            5.059e-06,
+            7.239500000000001e-06,
+            8.5645e-06,
+            1.06935e-05,
+            1.2003500000000001e-05,
+            1.4117500000000002e-05,
+            1.5419000000000003e-05,
+            1.75305e-05,
+            1.88205e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06,
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              3.537e-06,
+              7.1265e-06,
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583,
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.004421113818119487,
+              0.0037972146630852253,
+              0.0037288792859371087,
+              0.003686175025485445,
+              0.0036463270811957294
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.537e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -4.163336342344337e-16
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.1265e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.5778671692021646e-16
+              },
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.0582000000000001e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.183217578417441e-16
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.4007000000000002e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.126839065448195e-16
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7420000000000003e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.131175874138137e-16
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 0.0,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.537e-06,
+            "reference_ISI_s": [
+              3.5895e-06,
+              3.455500000000001e-06,
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.5895e-06,
+              3.455500000000001e-06,
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "reference_frequency_Hz": 288122.1637974501,
+            "prediction_frequency_Hz": 288122.1637974501,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06
+            ],
+            "prediction_times_s": [
+              3.537e-06,
+              7.1265e-06
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583
+            ],
+            "prediction_heights_A": [
+              0.004421113818119487,
+              0.0037972146630852253
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.537e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -4.163336342344337e-16
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.1265e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.5778671692021646e-16
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 0.0,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.537e-06,
+            "reference_ISI_s": [
+              3.5895e-06
+            ],
+            "prediction_ISI_s": [
+              3.5895e-06
+            ],
+            "reference_frequency_Hz": 278590.3329154478,
+            "prediction_frequency_Hz": 278590.3329154478,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "reference_heights_A": [
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.0037288792859371087,
+              0.003686175025485445,
+              0.0036463270811957294
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.0582000000000001e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.183217578417441e-16
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.4007000000000002e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.126839065448195e-16
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7420000000000003e-05,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -3.131175874138137e-16
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 0.0,
+            "reference_first_peak_s": 1.0582000000000001e-05,
+            "prediction_first_peak_s": 1.0582000000000001e-05,
+            "reference_ISI_s": [
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "reference_frequency_Hz": 292483.18221702246,
+            "prediction_frequency_Hz": 292483.18221702246,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      }
+    ]
+  },
+  "native_devices": {
+    "N_dyn": [
+      {
+        "device": "A",
+        "current_RMS_A": 0.00011210405745068972,
+        "temperature_RMS_K": 0.5262770981956565,
+        "voltage_RMS_V": 0.10107892761720885,
+        "thermal_RMS_W": 0.00046563350195687707,
+        "observation_RMS_V": 0.09750647535795656,
+        "candidate_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6946,
+            9839,
+            13650,
+            16751,
+            20445,
+            23580,
+            27209,
+            30384,
+            33920,
+            37163
+          ],
+          "times_s": [
+            3.473e-06,
+            4.9195e-06,
+            6.825000000000001e-06,
+            8.3755e-06,
+            1.02225e-05,
+            1.179e-05,
+            1.3604500000000002e-05,
+            1.5192000000000001e-05,
+            1.696e-05,
+            1.85815e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6949,
+            9850,
+            13636,
+            16754,
+            20427,
+            23586,
+            27193,
+            30387,
+            33930,
+            37159
+          ],
+          "times_s": [
+            3.4745000000000004e-06,
+            4.925e-06,
+            6.818000000000001e-06,
+            8.377000000000001e-06,
+            1.0213500000000001e-05,
+            1.1793e-05,
+            1.3596500000000001e-05,
+            1.5193500000000001e-05,
+            1.6965e-05,
+            1.85795e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06,
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              3.2165e-06,
+              6.6965e-06,
+              1.0083e-05,
+              1.3464e-05,
+              1.6839000000000003e-05
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382,
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.004999945569249625,
+              0.004172139121128501,
+              0.004073537246271418,
+              0.003978202135945072,
+              0.0038909339137511894
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.2165e-06,
+                "signed_time_difference_s": -9.500000000000078e-09,
+                "signed_height_difference_A": -8.364643165336642e-05
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6965e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -0.00011844246579188061
+              },
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0083e-05,
+                "signed_time_difference_s": -1.0000000000001598e-08,
+                "signed_height_difference_A": -0.00014613396251444196
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.3464e-05,
+                "signed_time_difference_s": -1.2000000000000902e-08,
+                "signed_height_difference_A": -0.00019450738926344267
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6839000000000003e-05,
+                "signed_time_difference_s": -5.999999999999604e-09,
+                "signed_height_difference_A": -0.0002371436910188771
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 8.605230967266949e-09,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.2165e-06,
+            "reference_ISI_s": [
+              3.4705e-06,
+              3.3965000000000013e-06,
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.48e-06,
+              3.3864999999999997e-06,
+              3.3810000000000003e-06,
+              3.3750000000000024e-06
+            ],
+            "reference_frequency_Hz": 293707.3206549673,
+            "prediction_frequency_Hz": 293631.8590567076,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06
+            ],
+            "prediction_times_s": [
+              3.2165e-06,
+              6.6965e-06
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382
+            ],
+            "prediction_heights_A": [
+              0.004999945569249625,
+              0.004172139121128501
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.2165e-06,
+                "signed_time_difference_s": -9.500000000000078e-09,
+                "signed_height_difference_A": -8.364643165336642e-05
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6965e-06,
+                "signed_time_difference_s": 0.0,
+                "signed_height_difference_A": -0.00011844246579188061
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 6.717514421272257e-09,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.2165e-06,
+            "reference_ISI_s": [
+              3.4705e-06
+            ],
+            "prediction_ISI_s": [
+              3.48e-06
+            ],
+            "reference_frequency_Hz": 288142.91888776835,
+            "prediction_frequency_Hz": 287356.3218390804,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              1.0083e-05,
+              1.3464e-05,
+              1.6839000000000003e-05
+            ],
+            "reference_heights_A": [
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.004073537246271418,
+              0.003978202135945072,
+              0.0038909339137511894
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0083e-05,
+                "signed_time_difference_s": -1.0000000000001598e-08,
+                "signed_height_difference_A": -0.00014613396251444196
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.3464e-05,
+                "signed_time_difference_s": -1.2000000000000902e-08,
+                "signed_height_difference_A": -0.00019450738926344267
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6839000000000003e-05,
+                "signed_time_difference_s": -5.999999999999604e-09,
+                "signed_height_difference_A": -0.0002371436910188771
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 9.660917830793802e-09,
+            "reference_first_peak_s": 1.0093000000000001e-05,
+            "prediction_first_peak_s": 1.0083e-05,
+            "reference_ISI_s": [
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.3810000000000003e-06,
+              3.3750000000000024e-06
+            ],
+            "reference_frequency_Hz": 296208.5308056872,
+            "prediction_frequency_Hz": 296033.1557134398,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      },
+      {
+        "device": "B",
+        "current_RMS_A": 0.00012135851187524983,
+        "temperature_RMS_K": 0.6225165152558584,
+        "voltage_RMS_V": 0.0811866254799687,
+        "thermal_RMS_W": 0.000398491807466685,
+        "observation_RMS_V": 0.07794010816984102,
+        "candidate_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7336,
+            10115,
+            14498,
+            17134,
+            21393,
+            23990,
+            28248,
+            30835,
+            35119,
+            37647
+          ],
+          "times_s": [
+            3.6680000000000003e-06,
+            5.0575e-06,
+            7.249e-06,
+            8.567000000000001e-06,
+            1.06965e-05,
+            1.1995000000000001e-05,
+            1.4124e-05,
+            1.54175e-05,
+            1.75595e-05,
+            1.88235e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7319,
+            10118,
+            14479,
+            17129,
+            21387,
+            24007,
+            28235,
+            30838,
+            35061,
+            37641
+          ],
+          "times_s": [
+            3.6595000000000003e-06,
+            5.059e-06,
+            7.239500000000001e-06,
+            8.5645e-06,
+            1.06935e-05,
+            1.2003500000000001e-05,
+            1.4117500000000002e-05,
+            1.5419000000000003e-05,
+            1.75305e-05,
+            1.88205e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06,
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              3.5285e-06,
+              7.118e-06,
+              1.05875e-05,
+              1.3990000000000002e-05,
+              1.7452500000000003e-05
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583,
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.004371049695628128,
+              0.0037596288068831077,
+              0.003627081873440696,
+              0.0034775024296533653,
+              0.0033929259221622196
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5285e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -5.006412249177524e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.118e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -3.7585856202475374e-05
+              },
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05875e-05,
+                "signed_time_difference_s": 5.499999999998507e-09,
+                "signed_height_difference_A": -0.00010179741249673104
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.3990000000000002e-05,
+                "signed_time_difference_s": -1.7000000000000007e-08,
+                "signed_height_difference_A": -0.00020867259583239213
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7452500000000003e-05,
+                "signed_time_difference_s": 3.250000000000011e-08,
+                "signed_height_difference_A": -0.0002534011590338229
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.7435595774162645e-08,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5285e-06,
+            "reference_ISI_s": [
+              3.5895e-06,
+              3.455500000000001e-06,
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.5895e-06,
+              3.4694999999999996e-06,
+              3.4025000000000017e-06,
+              3.462500000000001e-06
+            ],
+            "reference_frequency_Hz": 288122.1637974501,
+            "prediction_frequency_Hz": 287273.77190462506,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06
+            ],
+            "prediction_times_s": [
+              3.5285e-06,
+              7.118e-06
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583
+            ],
+            "prediction_heights_A": [
+              0.004371049695628128,
+              0.0037596288068831077
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5285e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -5.006412249177524e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.118e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -3.7585856202475374e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 8.500000000000003e-09,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5285e-06,
+            "reference_ISI_s": [
+              3.5895e-06
+            ],
+            "prediction_ISI_s": [
+              3.5895e-06
+            ],
+            "reference_frequency_Hz": 278590.3329154478,
+            "prediction_frequency_Hz": 278590.3329154478,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              1.05875e-05,
+              1.3990000000000002e-05,
+              1.7452500000000003e-05
+            ],
+            "reference_heights_A": [
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.003627081873440696,
+              0.0034775024296533653,
+              0.0033929259221622196
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05875e-05,
+                "signed_time_difference_s": 5.499999999998507e-09,
+                "signed_height_difference_A": -0.00010179741249673104
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.3990000000000002e-05,
+                "signed_time_difference_s": -1.7000000000000007e-08,
+                "signed_height_difference_A": -0.00020867259583239213
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7452500000000003e-05,
+                "signed_time_difference_s": 3.250000000000011e-08,
+                "signed_height_difference_A": -0.0002534011590338229
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 2.141261310536379e-08,
+            "reference_first_peak_s": 1.0582000000000001e-05,
+            "prediction_first_peak_s": 1.05875e-05,
+            "reference_ISI_s": [
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.4025000000000017e-06,
+              3.462500000000001e-06
+            ],
+            "reference_frequency_Hz": 292483.18221702246,
+            "prediction_frequency_Hz": 291332.8477785869,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      }
+    ],
+    "F_dyn": [
+      {
+        "device": "A",
+        "current_RMS_A": 0.00010112798021876654,
+        "temperature_RMS_K": 0.3841682343852667,
+        "voltage_RMS_V": 0.13155613748162523,
+        "thermal_RMS_W": 0.00042454789099648346,
+        "observation_RMS_V": 0.12798107097719916,
+        "candidate_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6945,
+            9847,
+            13650,
+            16760,
+            20445,
+            23580,
+            27209,
+            30385,
+            33940,
+            37154
+          ],
+          "times_s": [
+            3.4725e-06,
+            4.9235e-06,
+            6.825000000000001e-06,
+            8.380000000000001e-06,
+            1.02225e-05,
+            1.179e-05,
+            1.3604500000000002e-05,
+            1.51925e-05,
+            1.6970000000000002e-05,
+            1.8577000000000002e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6949,
+            9850,
+            13636,
+            16754,
+            20427,
+            23586,
+            27193,
+            30387,
+            33930,
+            37159
+          ],
+          "times_s": [
+            3.4745000000000004e-06,
+            4.925e-06,
+            6.818000000000001e-06,
+            8.377000000000001e-06,
+            1.0213500000000001e-05,
+            1.1793e-05,
+            1.3596500000000001e-05,
+            1.5193500000000001e-05,
+            1.6965e-05,
+            1.85795e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06,
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              3.2170000000000003e-06,
+              6.6970000000000004e-06,
+              1.0084e-05,
+              1.34655e-05,
+              1.684e-05
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382,
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.004669371817807343,
+              0.004219165388132525,
+              0.00414159865656229,
+              0.004071041604027091,
+              0.004029199309849481
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.2170000000000003e-06,
+                "signed_time_difference_s": -8.999999999999829e-09,
+                "signed_height_difference_A": -0.00041422018309564875
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6970000000000004e-06,
+                "signed_time_difference_s": 5.000000000002493e-10,
+                "signed_height_difference_A": -7.14161987878572e-05
+              },
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0084e-05,
+                "signed_time_difference_s": -9.0000000000011e-09,
+                "signed_height_difference_A": -7.807255222357003e-05
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.34655e-05,
+                "signed_time_difference_s": -1.0500000000001e-08,
+                "signed_height_difference_A": -0.00010166792118142427
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.684e-05,
+                "signed_time_difference_s": -5.000000000000799e-09,
+                "signed_height_difference_A": -9.887829492058551e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 7.713624310271353e-09,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.2170000000000003e-06,
+            "reference_ISI_s": [
+              3.4705e-06,
+              3.3965000000000013e-06,
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.48e-06,
+              3.387e-06,
+              3.3814999999999997e-06,
+              3.3745000000000013e-06
+            ],
+            "reference_frequency_Hz": 293707.3206549673,
+            "prediction_frequency_Hz": 293621.08199368714,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06
+            ],
+            "prediction_times_s": [
+              3.2170000000000003e-06,
+              6.6970000000000004e-06
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382
+            ],
+            "prediction_heights_A": [
+              0.004669371817807343,
+              0.004219165388132525
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.2170000000000003e-06,
+                "signed_time_difference_s": -8.999999999999829e-09,
+                "signed_height_difference_A": -0.00041422018309564875
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.6970000000000004e-06,
+                "signed_time_difference_s": 5.000000000002493e-10,
+                "signed_height_difference_A": -7.14161987878572e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 6.373774391990871e-09,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.2170000000000003e-06,
+            "reference_ISI_s": [
+              3.4705e-06
+            ],
+            "prediction_ISI_s": [
+              3.48e-06
+            ],
+            "reference_frequency_Hz": 288142.91888776835,
+            "prediction_frequency_Hz": 287356.3218390804,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              1.0084e-05,
+              1.34655e-05,
+              1.684e-05
+            ],
+            "reference_heights_A": [
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.00414159865656229,
+              0.004071041604027091,
+              0.004029199309849481
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0084e-05,
+                "signed_time_difference_s": -9.0000000000011e-09,
+                "signed_height_difference_A": -7.807255222357003e-05
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.34655e-05,
+                "signed_time_difference_s": -1.0500000000001e-08,
+                "signed_height_difference_A": -0.00010166792118142427
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.684e-05,
+                "signed_time_difference_s": -5.000000000000799e-09,
+                "signed_height_difference_A": -9.887829492058551e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 8.490190417967645e-09,
+            "reference_first_peak_s": 1.0093000000000001e-05,
+            "prediction_first_peak_s": 1.0084e-05,
+            "reference_ISI_s": [
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.3814999999999997e-06,
+              3.3745000000000013e-06
+            ],
+            "reference_frequency_Hz": 296208.5308056872,
+            "prediction_frequency_Hz": 296033.15571343986,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      },
+      {
+        "device": "B",
+        "current_RMS_A": 0.0001015887381115395,
+        "temperature_RMS_K": 0.7208793785230092,
+        "voltage_RMS_V": 0.14896285175801097,
+        "thermal_RMS_W": 0.00036387964038089556,
+        "observation_RMS_V": 0.14797446380884222,
+        "candidate_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7336,
+            10123,
+            14498,
+            17143,
+            21393,
+            24013,
+            28248,
+            30834,
+            35094,
+            37626
+          ],
+          "times_s": [
+            3.6680000000000003e-06,
+            5.061500000000001e-06,
+            7.249e-06,
+            8.571500000000001e-06,
+            1.06965e-05,
+            1.2006500000000001e-05,
+            1.4124e-05,
+            1.5417e-05,
+            1.7547e-05,
+            1.8813e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7319,
+            10118,
+            14479,
+            17129,
+            21387,
+            24007,
+            28235,
+            30838,
+            35061,
+            37641
+          ],
+          "times_s": [
+            3.6595000000000003e-06,
+            5.059e-06,
+            7.239500000000001e-06,
+            8.5645e-06,
+            1.06935e-05,
+            1.2003500000000001e-05,
+            1.4117500000000002e-05,
+            1.5419000000000003e-05,
+            1.75305e-05,
+            1.88205e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06,
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              3.529e-06,
+              7.118e-06,
+              1.05885e-05,
+              1.3994500000000001e-05,
+              1.7447e-05
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583,
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.004126261121647298,
+              0.003725932341107215,
+              0.0036494190515134247,
+              0.0034966629106132894,
+              0.003101540462957085
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.529e-06,
+                "signed_time_difference_s": -8.000000000000178e-09,
+                "signed_height_difference_A": -0.00029485269647260524
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.118e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -7.128232197836822e-05
+              },
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05885e-05,
+                "signed_time_difference_s": 6.499999999999006e-09,
+                "signed_height_difference_A": -7.946023442400229e-05
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.3994500000000001e-05,
+                "signed_time_difference_s": -1.2500000000000304e-08,
+                "signed_height_difference_A": -0.00018951211487246806
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7447e-05,
+                "signed_time_difference_s": 2.6999999999998217e-08,
+                "signed_height_difference_A": -0.0005447866182389577
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.4585952145814146e-08,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.529e-06,
+            "reference_ISI_s": [
+              3.5895e-06,
+              3.455500000000001e-06,
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.5890000000000003e-06,
+              3.4705e-06,
+              3.406000000000001e-06,
+              3.4524999999999996e-06
+            ],
+            "reference_frequency_Hz": 288122.1637974501,
+            "prediction_frequency_Hz": 287397.6145997988,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06
+            ],
+            "prediction_times_s": [
+              3.529e-06,
+              7.118e-06
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583
+            ],
+            "prediction_heights_A": [
+              0.004126261121647298,
+              0.003725932341107215
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.529e-06,
+                "signed_time_difference_s": -8.000000000000178e-09,
+                "signed_height_difference_A": -0.00029485269647260524
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.118e-06,
+                "signed_time_difference_s": -8.500000000000003e-09,
+                "signed_height_difference_A": -7.128232197836822e-05
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 8.253787009609677e-09,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.529e-06,
+            "reference_ISI_s": [
+              3.5895e-06
+            ],
+            "prediction_ISI_s": [
+              3.5890000000000003e-06
+            ],
+            "reference_frequency_Hz": 278590.3329154478,
+            "prediction_frequency_Hz": 278629.144608526,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              1.05885e-05,
+              1.3994500000000001e-05,
+              1.7447e-05
+            ],
+            "reference_heights_A": [
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.0036494190515134247,
+              0.0034966629106132894,
+              0.003101540462957085
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05885e-05,
+                "signed_time_difference_s": 6.499999999999006e-09,
+                "signed_height_difference_A": -7.946023442400229e-05
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.3994500000000001e-05,
+                "signed_time_difference_s": -1.2500000000000304e-08,
+                "signed_height_difference_A": -0.00018951211487246806
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.7447e-05,
+                "signed_time_difference_s": 2.6999999999998217e-08,
+                "signed_height_difference_A": -0.0005447866182389577
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.7583135859869615e-08,
+            "reference_first_peak_s": 1.0582000000000001e-05,
+            "prediction_first_peak_s": 1.05885e-05,
+            "reference_ISI_s": [
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.406000000000001e-06,
+              3.4524999999999996e-06
+            ],
+            "reference_frequency_Hz": 292483.18221702246,
+            "prediction_frequency_Hz": 291608.9523948385,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      }
+    ],
+    "S_dyn": [
+      {
+        "device": "A",
+        "current_RMS_A": 0.00018737958249119647,
+        "temperature_RMS_K": 1.5983957816033623,
+        "voltage_RMS_V": 0.21888942636339,
+        "thermal_RMS_W": 0.0002690988784858461,
+        "observation_RMS_V": 0.21113575468603155,
+        "candidate_reversals": {
+          "device": 0,
+          "count": 14,
+          "native_indices": [
+            6875,
+            9695,
+            9739,
+            9989,
+            13637,
+            16601,
+            16770,
+            16883,
+            20392,
+            23611,
+            27152,
+            30283,
+            33909,
+            37088
+          ],
+          "times_s": [
+            3.4375e-06,
+            4.847500000000001e-06,
+            4.8695000000000006e-06,
+            4.9945e-06,
+            6.8185e-06,
+            8.300500000000001e-06,
+            8.385e-06,
+            8.4415e-06,
+            1.0196e-05,
+            1.18055e-05,
+            1.3576e-05,
+            1.51415e-05,
+            1.6954500000000002e-05,
+            1.8544e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 0,
+          "count": 10,
+          "native_indices": [
+            6949,
+            9850,
+            13636,
+            16754,
+            20427,
+            23586,
+            27193,
+            30387,
+            33930,
+            37159
+          ],
+          "times_s": [
+            3.4745000000000004e-06,
+            4.925e-06,
+            6.818000000000001e-06,
+            8.377000000000001e-06,
+            1.0213500000000001e-05,
+            1.1793e-05,
+            1.3596500000000001e-05,
+            1.5193500000000001e-05,
+            1.6965e-05,
+            1.85795e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06,
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              3.204e-06,
+              6.693e-06,
+              1.0074e-05,
+              1.34555e-05,
+              1.6835e-05
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382,
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.00491451436136821,
+              0.0040917563541746724,
+              0.0038439242870702967,
+              0.003674205714350615,
+              0.0036989576447133423
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.204e-06,
+                "signed_time_difference_s": -2.199999999999996e-08,
+                "signed_height_difference_A": -0.00016907763953478202
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.693e-06,
+                "signed_time_difference_s": -3.500000000000051e-09,
+                "signed_height_difference_A": -0.00019882523274570955
+              },
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0074e-05,
+                "signed_time_difference_s": -1.9000000000001004e-08,
+                "signed_height_difference_A": -0.00037574692171556297
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.34555e-05,
+                "signed_time_difference_s": -2.0500000000000905e-08,
+                "signed_height_difference_A": -0.0004985038108578999
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6835e-05,
+                "signed_time_difference_s": -1.0000000000001598e-08,
+                "signed_height_difference_A": -0.00042911996005672417
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.659819267269847e-08,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.204e-06,
+            "reference_ISI_s": [
+              3.4705e-06,
+              3.3965000000000013e-06,
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.489e-06,
+              3.3810000000000003e-06,
+              3.3814999999999997e-06,
+              3.3795000000000004e-06
+            ],
+            "reference_frequency_Hz": 293707.3206549673,
+            "prediction_frequency_Hz": 293448.7565108943,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.226e-06,
+              6.6965e-06
+            ],
+            "prediction_times_s": [
+              3.204e-06,
+              6.693e-06
+            ],
+            "reference_heights_A": [
+              0.005083592000902992,
+              0.004290581586920382
+            ],
+            "prediction_heights_A": [
+              0.00491451436136821,
+              0.0040917563541746724
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.226e-06,
+                "prediction_time_s": 3.204e-06,
+                "signed_time_difference_s": -2.199999999999996e-08,
+                "signed_height_difference_A": -0.00016907763953478202
+              },
+              {
+                "reference_time_s": 6.6965e-06,
+                "prediction_time_s": 6.693e-06,
+                "signed_time_difference_s": -3.500000000000051e-09,
+                "signed_height_difference_A": -0.00019882523274570955
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.5751984002023343e-08,
+            "reference_first_peak_s": 3.226e-06,
+            "prediction_first_peak_s": 3.204e-06,
+            "reference_ISI_s": [
+              3.4705e-06
+            ],
+            "prediction_ISI_s": [
+              3.489e-06
+            ],
+            "reference_frequency_Hz": 288142.91888776835,
+            "prediction_frequency_Hz": 286615.0759529951,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0093000000000001e-05,
+              1.3476000000000001e-05,
+              1.6845000000000002e-05
+            ],
+            "prediction_times_s": [
+              1.0074e-05,
+              1.34555e-05,
+              1.6835e-05
+            ],
+            "reference_heights_A": [
+              0.00421967120878586,
+              0.004172709525208515,
+              0.0041280776047700665
+            ],
+            "prediction_heights_A": [
+              0.0038439242870702967,
+              0.003674205714350615,
+              0.0036989576447133423
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0093000000000001e-05,
+                "prediction_time_s": 1.0074e-05,
+                "signed_time_difference_s": -1.9000000000001004e-08,
+                "signed_height_difference_A": -0.00037574692171556297
+              },
+              {
+                "reference_time_s": 1.3476000000000001e-05,
+                "prediction_time_s": 1.34555e-05,
+                "signed_time_difference_s": -2.0500000000000905e-08,
+                "signed_height_difference_A": -0.0004985038108578999
+              },
+              {
+                "reference_time_s": 1.6845000000000002e-05,
+                "prediction_time_s": 1.6835e-05,
+                "signed_time_difference_s": -1.0000000000001598e-08,
+                "signed_height_difference_A": -0.00042911996005672417
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.7139136501003652e-08,
+            "reference_first_peak_s": 1.0093000000000001e-05,
+            "prediction_first_peak_s": 1.0074e-05,
+            "reference_ISI_s": [
+              3.3829999999999996e-06,
+              3.369000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.3814999999999997e-06,
+              3.3795000000000004e-06
+            ],
+            "reference_frequency_Hz": 296208.5308056872,
+            "prediction_frequency_Hz": 295814.2286643988,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      },
+      {
+        "device": "B",
+        "current_RMS_A": 0.0001544158008105917,
+        "temperature_RMS_K": 0.9834410247103739,
+        "voltage_RMS_V": 0.116608118975074,
+        "thermal_RMS_W": 0.00018705323949674176,
+        "observation_RMS_V": 0.11057327593129367,
+        "candidate_reversals": {
+          "device": 1,
+          "count": 16,
+          "native_indices": [
+            7286,
+            9989,
+            10057,
+            10186,
+            14446,
+            17141,
+            21408,
+            23850,
+            24063,
+            24201,
+            28210,
+            30664,
+            30871,
+            31010,
+            35123,
+            37626
+          ],
+          "times_s": [
+            3.643e-06,
+            4.9945e-06,
+            5.0285e-06,
+            5.093e-06,
+            7.223e-06,
+            8.5705e-06,
+            1.0704000000000001e-05,
+            1.1925e-05,
+            1.20315e-05,
+            1.21005e-05,
+            1.4105000000000001e-05,
+            1.5332e-05,
+            1.54355e-05,
+            1.5505e-05,
+            1.75615e-05,
+            1.8813e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "source_reversals": {
+          "device": 1,
+          "count": 10,
+          "native_indices": [
+            7319,
+            10118,
+            14479,
+            17129,
+            21387,
+            24007,
+            28235,
+            30838,
+            35061,
+            37641
+          ],
+          "times_s": [
+            3.6595000000000003e-06,
+            5.059e-06,
+            7.239500000000001e-06,
+            8.5645e-06,
+            1.06935e-05,
+            1.2003500000000001e-05,
+            1.4117500000000002e-05,
+            1.5419000000000003e-05,
+            1.75305e-05,
+            1.88205e-05
+          ],
+          "from_delta": [
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0
+          ],
+          "to_delta": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ]
+        },
+        "peaks": {
+          "full": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06,
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              3.5150000000000002e-06,
+              7.105500000000001e-06,
+              1.05885e-05,
+              1.39965e-05,
+              1.74485e-05
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583,
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.004344772052922548,
+              0.0036648496882011484,
+              0.0036202473934421097,
+              0.003384566795711792,
+              0.0034806919521578328
+            ],
+            "reference_count": 5,
+            "prediction_count": 5,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5150000000000002e-06,
+                "signed_time_difference_s": -2.199999999999996e-08,
+                "signed_height_difference_A": -7.634176519735573e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.105500000000001e-06,
+                "signed_time_difference_s": -2.099999999999946e-08,
+                "signed_height_difference_A": -0.00013236497488443473
+              },
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05885e-05,
+                "signed_time_difference_s": 6.499999999999006e-09,
+                "signed_height_difference_A": -0.00010863189249531733
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.39965e-05,
+                "signed_time_difference_s": -1.0500000000001e-08,
+                "signed_height_difference_A": -0.00030160822977396556
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.74485e-05,
+                "signed_time_difference_s": 2.8499999999998118e-08,
+                "signed_height_difference_A": -0.00016563512903820972
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.9440936191448582e-08,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5150000000000002e-06,
+            "reference_ISI_s": [
+              3.5895e-06,
+              3.455500000000001e-06,
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.5905000000000006e-06,
+              3.4829999999999995e-06,
+              3.4080000000000002e-06,
+              3.452e-06
+            ],
+            "reference_frequency_Hz": 288122.1637974501,
+            "prediction_frequency_Hz": 287077.9057666774,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "transient": {
+            "reference_times_s": [
+              3.537e-06,
+              7.1265e-06
+            ],
+            "prediction_times_s": [
+              3.5150000000000002e-06,
+              7.105500000000001e-06
+            ],
+            "reference_heights_A": [
+              0.004421113818119903,
+              0.003797214663085583
+            ],
+            "prediction_heights_A": [
+              0.004344772052922548,
+              0.0036648496882011484
+            ],
+            "reference_count": 2,
+            "prediction_count": 2,
+            "pairs": [
+              {
+                "reference_time_s": 3.537e-06,
+                "prediction_time_s": 3.5150000000000002e-06,
+                "signed_time_difference_s": -2.199999999999996e-08,
+                "signed_height_difference_A": -7.634176519735573e-05
+              },
+              {
+                "reference_time_s": 7.1265e-06,
+                "prediction_time_s": 7.105500000000001e-06,
+                "signed_time_difference_s": -2.099999999999946e-08,
+                "signed_height_difference_A": -0.00013236497488443473
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 2.1505813167606285e-08,
+            "reference_first_peak_s": 3.537e-06,
+            "prediction_first_peak_s": 3.5150000000000002e-06,
+            "reference_ISI_s": [
+              3.5895e-06
+            ],
+            "prediction_ISI_s": [
+              3.5905000000000006e-06
+            ],
+            "reference_frequency_Hz": 278590.3329154478,
+            "prediction_frequency_Hz": 278512.7419579445,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          },
+          "tail": {
+            "reference_times_s": [
+              1.0582000000000001e-05,
+              1.4007000000000002e-05,
+              1.7420000000000003e-05
+            ],
+            "prediction_times_s": [
+              1.05885e-05,
+              1.39965e-05,
+              1.74485e-05
+            ],
+            "reference_heights_A": [
+              0.003728879285937427,
+              0.0036861750254857575,
+              0.0036463270811960425
+            ],
+            "prediction_heights_A": [
+              0.0036202473934421097,
+              0.003384566795711792,
+              0.0034806919521578328
+            ],
+            "reference_count": 3,
+            "prediction_count": 3,
+            "pairs": [
+              {
+                "reference_time_s": 1.0582000000000001e-05,
+                "prediction_time_s": 1.05885e-05,
+                "signed_time_difference_s": 6.499999999999006e-09,
+                "signed_height_difference_A": -0.00010863189249531733
+              },
+              {
+                "reference_time_s": 1.4007000000000002e-05,
+                "prediction_time_s": 1.39965e-05,
+                "signed_time_difference_s": -1.0500000000001e-08,
+                "signed_height_difference_A": -0.00030160822977396556
+              },
+              {
+                "reference_time_s": 1.7420000000000003e-05,
+                "prediction_time_s": 1.74485e-05,
+                "signed_time_difference_s": 2.8499999999998118e-08,
+                "signed_height_difference_A": -0.00016563512903820972
+              }
+            ],
+            "unmatched_reference_times_s": [],
+            "unmatched_prediction_times_s": [],
+            "timing_RMS_s": 1.7932744723920547e-08,
+            "reference_first_peak_s": 1.0582000000000001e-05,
+            "prediction_first_peak_s": 1.05885e-05,
+            "reference_ISI_s": [
+              3.4250000000000002e-06,
+              3.413000000000001e-06
+            ],
+            "prediction_ISI_s": [
+              3.4080000000000002e-06,
+              3.452e-06
+            ],
+            "reference_frequency_Hz": 292483.18221702246,
+            "prediction_frequency_Hz": 291545.1895043732,
+            "matching_max_gap_s": 2.5e-07,
+            "functional_state_prediction": null
+          }
+        }
+      }
+    ]
+  },
+  "gates": {
+    "F_dyn": {
+      "current_gain_A": -1.4290244262906844e-05,
+      "current_relative_gain": -0.13937253217048035,
+      "current_pass": false,
+      "noninferiority": {
+        "temperature_RMS_K": true,
+        "observation_RMS_V": false,
+        "thermal_RMS_W": true
+      },
+      "passed": false
+    },
+    "S_dyn": {
+      "current_gain_A": 5.4867673518419166e-05,
+      "current_relative_gain": 0.3195728986584445,
+      "current_pass": true,
+      "noninferiority": {
+        "temperature_RMS_K": true,
+        "observation_RMS_V": true,
+        "thermal_RMS_W": false
+      },
+      "passed": false
+    }
+  },
+  "joint_increment": false
+}

@@ -1,0 +1,27 @@
+{
+  "status": "VALID_COMPLETE",
+  "role": "F_dyn",
+  "seed": 29,
+  "progress": {
+    "adam_updates": 600,
+    "lbfgs_evaluations": 100,
+    "lbfgs_accepted": 49,
+    "full_objective_calls": 700
+  },
+  "optimizer_termination": {
+    "evaluations": 100,
+    "accepted_steps": 49,
+    "termination": "EVALUATION_BUDGET_EXHAUSTED",
+    "last_accepted_loss": 0.16351925361414188
+  },
+  "endpoint": {
+    "loss": 0.16351925361414188,
+    "parts": {
+      "obs": 0.00015816362176853408,
+      "heat": 0.156324652216646,
+      "RC": 0.00703643777572736
+    },
+    "time": "2026-09-29T08:00:16.883064+00:00"
+  },
+  "seconds": 265.89016372989863
+}

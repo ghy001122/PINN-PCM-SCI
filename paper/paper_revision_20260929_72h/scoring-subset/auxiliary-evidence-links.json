@@ -1,0 +1,12 @@
+{
+  "scope": "Existing auxiliary provenance only; not runtime inputs and not recomputed by this subset",
+  "paths_are_relative_to_original_repository": true,
+  "conditional_temperature_tables": "paper/paper_revision_20260928_conditional_thermal/results/temperature.csv",
+  "conditional_closure_tables": "paper/paper_revision_20260928_conditional_thermal/results/closure.csv",
+  "conditional_decomposition_tables": "paper/paper_revision_20260928_conditional_thermal/results/decomposition.csv",
+  "conditional_history_details": "paper/paper_revision_20260928_conditional_thermal/results/history-diagnostics.json",
+  "fixed_12p5V_and_all_cases_figure_index": "paper/paper_revision_20260928_conditional_thermal/figures-index.md",
+  "full_conditioned_arrays": "paper/paper_revision_20260928_conditional_thermal/arrays/",
+  "original_PCHIP_CS_voltage_and_current": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/",
+  "conditioned_readout_identity": "Original I_KCL and no-feedback I_R keep their different meanings; no score substituted"
+}

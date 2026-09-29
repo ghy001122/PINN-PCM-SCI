@@ -1,0 +1,15 @@
+{
+  "task_id": "PCM-20260929-72H-MANUSCRIPT-JOINT-01",
+  "completed_utc": "2026-09-29T08:25:32.663905+00:00",
+  "scientific_exit": "JOINT_INCREMENT_NOT_ESTABLISHED",
+  "new_training_closed": true,
+  "seed43_started": false,
+  "document_consistency": "DOCUMENT_CONSISTENCY_VALID",
+  "document_gate_note": "Initial closeout omitted standard ledger index registration; corrected with existing ExperimentLedger API, then gate passed. Scientific arrays and scores unchanged.",
+  "visual_review": "build/visual-review.json",
+  "independent_scoring": "scoring-subset/independent-verification.json",
+  "gpu_shutdown": "../../outputs/runs/20260929-joint-reconstruction/shutdown.json",
+  "data_retention": "../../outputs/runs/20260929-joint-reconstruction/recovery.json",
+  "published": false,
+  "post_shutdown_local_outputs_remote_sync": "PENDING_NEXT_AUTHORIZED_SESSION"
+}

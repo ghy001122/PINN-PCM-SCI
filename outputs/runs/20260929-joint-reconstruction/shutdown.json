@@ -1,0 +1,36 @@
+{
+  "requested_utc": "2026-09-29T08:05:28.608552+00:00",
+  "returncode": 0,
+  "stderr": "",
+  "probes": [
+    {
+      "returncode": 255,
+      "stderr": "banner exchange: Connection to UNKNOWN port -1: Connection refused\n"
+    }
+  ],
+  "confirmed": true,
+  "prior_attempt": {
+    "requested_utc": "2026-09-29T08:04:17.455348+00:00",
+    "returncode": 255,
+    "stderr": "Connection closed by 180.184.205.59 port 28355\n",
+    "probes": [
+      {
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "returncode": 255,
+        "stderr": "Connection closed by 180.184.205.59 port 28355\n"
+      },
+      {
+        "returncode": 0,
+        "stderr": ""
+      }
+    ],
+    "confirmed": false
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "task_id": "PCM-20260929-72H-MANUSCRIPT-JOINT-01",
+  "baseline": "adf34b5e22c2d8a6654dd2908c230c7a186239f7",
+  "started_utc": "2026-09-29T07:30:00+00:00",
+  "admission_deadline_utc": "2026-09-29T15:30:00+00:00",
+  "science_deadline_utc": "2026-09-30T19:30:00+00:00",
+  "delivery_deadline_utc": "2026-10-02T07:30:00+00:00",
+  "case": "pair_excitation",
+  "dt_s": 5e-10,
+  "end_s": 2e-05,
+  "Vin_V": [
+    11.0,
+    9.4
+  ],
+  "eta": 0.12,
+  "parameters_SI": {
+    "R0": 0.00535882879,
+    "Ea": 5220.47417,
+    "beta": 0.252796285,
+    "w": 7.19357064,
+    "Tc": 332.805839,
+    "gamma": 0.956269682,
+    "Rm0": 262.5,
+    "k": 4.90025335,
+    "C": 1.4534619293e-10,
+    "Cth": 4.962776831e-11,
+    "Sth": 0.00020558726,
+    "RL": 12000.0,
+    "Tbase": 325.0
+  },
+  "initial_temperature_K": 325.0,
+  "initial_voltage_V": [
+    0.0,
+    0.0
+  ],
+  "hysteresis_initial_K": 324.9,
+  "shared_temperature": "paper/paper_revision_20260928_conditional_thermal/arrays/pair_excitation-0p5ns/thermal.npz:T_P",
+  "finite_observations": "paper/paper_revision_20260928_circuit_comparison/scoring-subset/inputs/pair_excitation-0p5ns.npz:observation_time,observation_voltage",
+  "original_source_for_scoring_only": "outputs/runs/20260926-core-revision-vo2-bridge/vo2/pair_excitation-0p5ns.npz",
+  "methods": [
+    "N_dyn",
+    "F_dyn",
+    "S_dyn"
+  ],
+  "seeds": [
+    29,
+    43
+  ],
+  "seed43_requires_seed29_joint_increment": true,
+  "representation": {
+    "neural": "existing make_mlp, 1 input, 2 output, 64 width, 4 Tanh hidden layers",
+    "time_input": "2*t/end-1",
+    "initial_gate": "a=t/end",
+    "temperature_correction_units": "K",
+    "voltage_correction_units": "V",
+    "final_layer": "all weights and biases zero; N/F temperature parameters identical at each seed",
+    "spline": "cubic clamped B-splines on sorted union of 197 observations and196 midpoints; zero coefficients",
+    "T0": "same unchanged native FP64 array in all methods; no T0 supervision; native discrete representation"
+  },
+  "loss": {
+    "V_scale_V": 11.0,
+    "I_scale_A": 0.001,
+    "P_scale_W": 0.001,
+    "device_weights": [
+      0.5,
+      0.5
+    ],
+    "observation_weights": "normalized trapezoid weights on original197 times",
+    "observation_sampling": "linear interpolation of native voltages, no nearest-node substitution",
+    "physics_weights": "equal h per40000intervals; two devices equal",
+    "N_and_S": "obs + mean((rT/Pscale)^2)",
+    "F": "obs + mean((rT/Pscale)^2)+mean((rRC/Iscale)^2)"
+  },
+  "optimizer": {
+    "adam_updates": 600,
+    "adam_lr": 0.001,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_eps": 1e-08,
+    "adam_grad_clip": 10.0,
+    "neural_lbfgs_evals": 100,
+    "spline_lbfgs_evals": 700,
+    "lbfgs": "reuse accepted_lbfgs strong_wolfe max_iter1 history50 true full gradients; trial rollback"
+  },
+  "increment": {
+    "current_relative": 0.1,
+    "current_absolute_A": 1e-05,
+    "noninferiority_factor": 1.05,
+    "absolute_floors": {
+      "temperature_RMS_K": 1e-06,
+      "observation_RMS_V": 1e-08,
+      "thermal_RMS_W": 1e-10
+    },
+    "noninferiority_rule": "candidate <= max(1.05*control,control+absolute_floor) independently for T/obs/replayed heat",
+    "scope": "prospective development, not formal OOD; joint two-device native trapz RMS"
+  },
+  "gradient_admission": {
+    "relative_tolerance": 0.0002,
+    "absolute_tolerance": 1e-07,
+    "finite_steps_K": [
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06
+    ],
+    "fixed_events_only": true,
+    "rule": "report all directions/steps; qualify two smallest steps preserving full event signature, no smoothing of events; cross-event variation separate"
+  },
+  "resource": {
+    "threads": 4,
+    "host_stop_GiB": 12,
+    "GPU_allocated_stop_GiB": 16,
+    "minimum_free_GiB": 4
+  },
+  "gpu_endpoint": "region-46.seetacloud.com:28355",
+  "gpu_probe": "CONNECTION_REFUSED_USER_ASKED_FOR_CURRENT_ENDPOINT",
+  "no_source_T_R_H_or_full_current_in_training": true,
+  "no_experimental_or_holdout_numeric": true,
+  "no_publication": true,
+  "output": "outputs/runs/20260929-joint-reconstruction",
+  "remote_sync": "PENDING"
+}

@@ -1,0 +1,228 @@
+{
+  "task_id": "PCM-20260929-72H-MANUSCRIPT-JOINT-01",
+  "passed": true,
+  "full_zero_fields_identical": true,
+  "within_8h": true,
+  "roles": [
+    {
+      "role": "N_dyn",
+      "zero_loss": 0.2586487171294336,
+      "parts": {
+        "obs": 1.0959798543027568e-05,
+        "heat": 0.25863775733089056,
+        "RC": 5.261029220507682e-27
+      },
+      "full_objective_gradient_seconds": 0.9699537260457873,
+      "parameter_count": 12738,
+      "gradient_l2": 0.06128208253819008,
+      "gradients_finite": true,
+      "initial_T_max_difference_K": 0.0,
+      "initial_v_max_difference_V": 6.163958232718869e-13,
+      "directional_derivatives": [
+        {
+          "eps_K": 0.001,
+          "same_full_event_signature": true,
+          "analytic": 0.0025898537712536773,
+          "finite_difference": 0.002589851633899576,
+          "absolute_error": 2.1373541014314823e-09,
+          "tolerance": 6.179707542507355e-07,
+          "passed": true
+        },
+        {
+          "eps_K": 0.0001,
+          "same_full_event_signature": true,
+          "analytic": 0.0025898537712536773,
+          "finite_difference": 0.002589853768941719,
+          "absolute_error": 2.3119583504593866e-12,
+          "tolerance": 6.179707542507355e-07,
+          "passed": true
+        },
+        {
+          "eps_K": 1e-05,
+          "same_full_event_signature": true,
+          "analytic": 0.0025898537712536773,
+          "finite_difference": 0.002589853792533958,
+          "absolute_error": 2.128028092282519e-11,
+          "tolerance": 6.179707542507355e-07,
+          "passed": true
+        },
+        {
+          "eps_K": 1e-06,
+          "same_full_event_signature": true,
+          "analytic": 0.0025898537712536773,
+          "finite_difference": 0.002589853387302554,
+          "absolute_error": 3.8395112306535695e-10,
+          "tolerance": 6.179707542507355e-07,
+          "passed": true
+        }
+      ],
+      "derivative_pass": true,
+      "GPU_peak_allocated_bytes": 148109312,
+      "passed": true
+    },
+    {
+      "role": "F_dyn",
+      "zero_loss": 0.2586487171292687,
+      "parts": {
+        "obs": 1.0959798543061655e-05,
+        "heat": 0.25863775733072564,
+        "RC": 9.286864578987822e-27
+      },
+      "full_objective_gradient_seconds": 0.327601564116776,
+      "parameter_count": 25476,
+      "gradient_l2": 0.11673287783872144,
+      "gradients_finite": true,
+      "initial_T_max_difference_K": 0.0,
+      "initial_v_max_difference_V": 0.0,
+      "directional_derivatives": [
+        {
+          "eps_K": 0.001,
+          "same_full_event_signature": true,
+          "analytic": -0.0043365321047989375,
+          "finite_difference": -0.004336534184412599,
+          "absolute_error": 2.0796136618317362e-09,
+          "tolerance": 9.673064209597875e-07,
+          "passed": true
+        },
+        {
+          "eps_K": 0.0001,
+          "same_full_event_signature": true,
+          "analytic": -0.0043365321047989375,
+          "finite_difference": -0.004336532124504799,
+          "absolute_error": 1.9705861942220793e-11,
+          "tolerance": 9.673064209597875e-07,
+          "passed": true
+        },
+        {
+          "eps_K": 1e-05,
+          "same_full_event_signature": true,
+          "analytic": -0.0043365321047989375,
+          "finite_difference": -0.00433653208065099,
+          "absolute_error": 2.414794753047289e-11,
+          "tolerance": 9.673064209597875e-07,
+          "passed": true
+        },
+        {
+          "eps_K": 1e-06,
+          "same_full_event_signature": true,
+          "analytic": -0.0043365321047989375,
+          "finite_difference": -0.004336532272164462,
+          "absolute_error": 1.673655242173666e-10,
+          "tolerance": 9.673064209597875e-07,
+          "passed": true
+        }
+      ],
+      "derivative_pass": true,
+      "GPU_peak_allocated_bytes": 237851648,
+      "passed": true
+    },
+    {
+      "role": "S_dyn",
+      "zero_loss": 0.2586487171294336,
+      "parts": {
+        "obs": 1.0959798543027568e-05,
+        "heat": 0.25863775733089056,
+        "RC": 5.261029220507682e-27
+      },
+      "full_objective_gradient_seconds": 0.3555488856509328,
+      "parameter_count": 790,
+      "gradient_l2": 0.020236385090284394,
+      "gradients_finite": true,
+      "initial_T_max_difference_K": 0.0,
+      "initial_v_max_difference_V": 6.163958232718869e-13,
+      "directional_derivatives": [
+        {
+          "eps_K": 0.001,
+          "same_full_event_signature": true,
+          "analytic": 0.0025898537712536773,
+          "finite_difference": 0.002589851633899576,
+          "absolute_error": 2.1373541014314823e-09,
+          "tolerance": 6.179707542507355e-07,
+          "passed": true
+        },
+        {
+          "eps_K": 0.0001,
+          "same_full_event_signature": true,
+          "analytic": 0.0025898537712536773,
+          "finite_difference": 0.002589853768941719,
+          "absolute_error": 2.3119583504593866e-12,
+          "tolerance": 6.179707542507355e-07,
+          "passed": true
+        },
+        {
+          "eps_K": 1e-05,
+          "same_full_event_signature": true,
+          "analytic": 0.0025898537712536773,
+          "finite_difference": 0.002589853792533958,
+          "absolute_error": 2.128028092282519e-11,
+          "tolerance": 6.179707542507355e-07,
+          "passed": true
+        },
+        {
+          "eps_K": 1e-06,
+          "same_full_event_signature": true,
+          "analytic": 0.0025898537712536773,
+          "finite_difference": 0.002589853387302554,
+          "absolute_error": 3.8395112306535695e-10,
+          "tolerance": 6.179707542507355e-07,
+          "passed": true
+        }
+      ],
+      "derivative_pass": true,
+      "GPU_peak_allocated_bytes": 237851648,
+      "passed": true
+    }
+  ],
+  "seconds": 20.584152870811522,
+  "fixed_event_tolerance": {
+    "relative_tolerance": 0.0002,
+    "absolute_tolerance": 1e-07,
+    "finite_steps_K": [
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06
+    ],
+    "fixed_events_only": true,
+    "rule": "report all directions/steps; qualify two smallest steps preserving full event signature, no smoothing of events; cross-event variation separate"
+  },
+  "absolute_noninferiority_floors": {
+    "temperature_RMS_K": 1e-06,
+    "observation_RMS_V": 1e-08,
+    "thermal_RMS_W": 1e-10
+  },
+  "cross_reversal": "Separate synthetic test records discontinuous event change; not counted as fixed-event derivative accuracy",
+  "device": "cuda:0",
+  "created_utc": "2026-09-29T07:48:18.732129+00:00",
+  "reference_fields_read": false,
+  "zero_identity_recheck": [
+    {
+      "role": "N_dyn",
+      "loss": 0.2586487171294336,
+      "T_exact": true,
+      "v_exact": true
+    },
+    {
+      "role": "F_dyn",
+      "loss": 0.2586487171294336,
+      "T_exact": true,
+      "v_exact": true
+    },
+    {
+      "role": "S_dyn",
+      "loss": 0.2586487171294336,
+      "T_exact": true,
+      "v_exact": true
+    }
+  ],
+  "engineering_repair": {
+    "reason": "Windows-vs-Linux same-formula v0 rounding 6.16e-13 V; regenerate common runtime v0 once",
+    "old_failed_record": "prestep-platform-roundoff/admission.json",
+    "source_truth_read": false,
+    "optimizer_updates": 0,
+    "actual_extra_RC_initializations": 1,
+    "zero_forward_checks": 3,
+    "gradient_tests_repeated": false,
+    "scientific_formula_or_budget_changed": false
+  }
+}

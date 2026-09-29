@@ -1,0 +1,601 @@
+{
+  "status": "COMPLETE",
+  "scope": "Only current task inspected page PNGs and redundant rendered PDFs",
+  "files": 148,
+  "bytes": 59616590.0,
+  "preserved": "Final Markdown DOCX PDF; all scientific arrays, formulas, figures, accepted states and QA evidence",
+  "removed": [
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\manuscript.pdf",
+      "bytes": 1561947
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-01.png",
+      "bytes": 433869
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-02.png",
+      "bytes": 381175
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-03.png",
+      "bytes": 369900
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-04.png",
+      "bytes": 345979
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-05.png",
+      "bytes": 399371
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-06.png",
+      "bytes": 419915
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-07.png",
+      "bytes": 348067
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-08.png",
+      "bytes": 151350
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-09.png",
+      "bytes": 311175
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-10.png",
+      "bytes": 394980
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-11.png",
+      "bytes": 135028
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-12.png",
+      "bytes": 248239
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-13.png",
+      "bytes": 446610
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-14.png",
+      "bytes": 409858
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-15.png",
+      "bytes": 443583
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-16.png",
+      "bytes": 464105
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-manuscript\\page-17.png",
+      "bytes": 230237
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-01.png",
+      "bytes": 424155
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-02.png",
+      "bytes": 412341
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-03.png",
+      "bytes": 392124
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-04.png",
+      "bytes": 434793
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-05.png",
+      "bytes": 394833
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-06.png",
+      "bytes": 239091
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-07.png",
+      "bytes": 233916
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-08.png",
+      "bytes": 303352
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-09.png",
+      "bytes": 440053
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-10.png",
+      "bytes": 392355
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-11.png",
+      "bytes": 318547
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-12.png",
+      "bytes": 439892
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-13.png",
+      "bytes": 276317
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-14.png",
+      "bytes": 271099
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-15.png",
+      "bytes": 161850
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-16.png",
+      "bytes": 327927
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-17.png",
+      "bytes": 398929
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-18.png",
+      "bytes": 412042
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-19.png",
+      "bytes": 221976
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-20.png",
+      "bytes": 189059
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-21.png",
+      "bytes": 277627
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-22.png",
+      "bytes": 351065
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-23.png",
+      "bytes": 263587
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-24.png",
+      "bytes": 282414
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-25.png",
+      "bytes": 177058
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-26.png",
+      "bytes": 289264
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-27.png",
+      "bytes": 197816
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-28.png",
+      "bytes": 301947
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-29.png",
+      "bytes": 189334
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-30.png",
+      "bytes": 297570
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-31.png",
+      "bytes": 289726
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-32.png",
+      "bytes": 413902
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-33.png",
+      "bytes": 434727
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-34.png",
+      "bytes": 235898
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-35.png",
+      "bytes": 259532
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-36.png",
+      "bytes": 228502
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-37.png",
+      "bytes": 300252
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-38.png",
+      "bytes": 391275
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-39.png",
+      "bytes": 428951
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-40.png",
+      "bytes": 260241
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-41.png",
+      "bytes": 183482
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-42.png",
+      "bytes": 192688
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-43.png",
+      "bytes": 175802
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-44.png",
+      "bytes": 288917
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-45.png",
+      "bytes": 358681
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-46.png",
+      "bytes": 243239
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-47.png",
+      "bytes": 340343
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-48.png",
+      "bytes": 346191
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-49.png",
+      "bytes": 247394
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-50.png",
+      "bytes": 380397
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-51.png",
+      "bytes": 293746
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-52.png",
+      "bytes": 297269
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-53.png",
+      "bytes": 305189
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-54.png",
+      "bytes": 415660
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-55.png",
+      "bytes": 276049
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-56.png",
+      "bytes": 290914
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-57.png",
+      "bytes": 318378
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-58.png",
+      "bytes": 434101
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-59.png",
+      "bytes": 278800
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-60.png",
+      "bytes": 329031
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-61.png",
+      "bytes": 412472
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-62.png",
+      "bytes": 432258
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-63.png",
+      "bytes": 439787
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\page-64.png",
+      "bytes": 213410
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement\\supplement.pdf",
+      "bytes": 5996141
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-01.png",
+      "bytes": 424155
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-02.png",
+      "bytes": 412341
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-03.png",
+      "bytes": 392124
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-04.png",
+      "bytes": 434793
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-05.png",
+      "bytes": 394833
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-06.png",
+      "bytes": 239091
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-07.png",
+      "bytes": 233916
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-08.png",
+      "bytes": 303352
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-09.png",
+      "bytes": 440053
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-10.png",
+      "bytes": 392355
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-11.png",
+      "bytes": 318547
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-12.png",
+      "bytes": 439892
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-13.png",
+      "bytes": 276317
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-14.png",
+      "bytes": 271099
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-15.png",
+      "bytes": 161850
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-16.png",
+      "bytes": 327927
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-17.png",
+      "bytes": 398929
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-18.png",
+      "bytes": 412042
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-19.png",
+      "bytes": 221976
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-20.png",
+      "bytes": 189059
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-21.png",
+      "bytes": 277627
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-22.png",
+      "bytes": 351065
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-23.png",
+      "bytes": 263587
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-24.png",
+      "bytes": 282414
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-25.png",
+      "bytes": 177058
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-26.png",
+      "bytes": 289264
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-27.png",
+      "bytes": 197816
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-28.png",
+      "bytes": 301947
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-29.png",
+      "bytes": 189334
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-30.png",
+      "bytes": 297570
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-31.png",
+      "bytes": 289726
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-32.png",
+      "bytes": 413902
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-33.png",
+      "bytes": 434727
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-34.png",
+      "bytes": 235898
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-35.png",
+      "bytes": 259532
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-36.png",
+      "bytes": 228502
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-37.png",
+      "bytes": 300252
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-38.png",
+      "bytes": 391275
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-39.png",
+      "bytes": 428951
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-40.png",
+      "bytes": 260241
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-41.png",
+      "bytes": 183482
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-42.png",
+      "bytes": 192688
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-43.png",
+      "bytes": 175802
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-44.png",
+      "bytes": 288917
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-45.png",
+      "bytes": 358681
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-46.png",
+      "bytes": 243239
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-47.png",
+      "bytes": 340343
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-48.png",
+      "bytes": 346191
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-49.png",
+      "bytes": 247394
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-50.png",
+      "bytes": 380397
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-51.png",
+      "bytes": 293746
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-52.png",
+      "bytes": 297269
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-53.png",
+      "bytes": 305189
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-54.png",
+      "bytes": 415660
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-55.png",
+      "bytes": 276049
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-56.png",
+      "bytes": 290914
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-57.png",
+      "bytes": 318378
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-58.png",
+      "bytes": 434101
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-59.png",
+      "bytes": 278800
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-60.png",
+      "bytes": 329031
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-61.png",
+      "bytes": 412472
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-62.png",
+      "bytes": 432258
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-63.png",
+      "bytes": 439500
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\page-64.png",
+      "bytes": 243167
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_72h\\build\\render-supplement-final\\supplement.pdf",
+      "bytes": 5996517
+    }
+  ]
+}

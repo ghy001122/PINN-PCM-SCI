@@ -1,0 +1,76 @@
+{
+  "status": "BUILT_AND_VISUALLY_VERIFIED",
+  "python_executable": "C:/Users/CJ/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "python_packages": {
+    "python-docx": "1.2.0",
+    "Pillow": "12.3.0",
+    "pypdf": "6.10.0"
+  },
+  "renderer": "Microsoft Word COM via paper/advisor_review_20260924/render_with_word.ps1",
+  "pdftoppm": "C:/Users/CJ/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.exe",
+  "sources": [
+    {
+      "path": "paper/paper_revision_20260929_72h/source/auxiliary-section.md",
+      "bytes": 14635,
+      "sha256": "06cdf7e34dff465894a8d09e94df7332caa282f3c541215e59f4839c61245d57"
+    },
+    {
+      "path": "paper/paper_revision_20260929_72h/source/joint-result-section.md",
+      "bytes": 7789,
+      "sha256": "e448ee128c807904d58fa24a29dbab864911e9c97e0b16b42bbc546f8e8e539a"
+    },
+    {
+      "path": "paper/paper_revision_20260929_72h/source/manuscript.md",
+      "bytes": 54164,
+      "sha256": "5419d48d10bcafbf6b526d94e0fbf04a479bde2167ea80b2ba5c60c928b0e3e4"
+    },
+    {
+      "path": "paper/paper_revision_20260929_72h/source/supplement.md",
+      "bytes": 128226,
+      "sha256": "0b5475458e7f2ab9493980f3694a2cdd0c847bf8d5bbb2e55e4a889fa0b15a6e"
+    },
+    {
+      "path": "paper/paper_revision_20260929_72h/references.md",
+      "bytes": 5970,
+      "sha256": "b2ea74421c403ca9760d3b7503f52fbffb65740a220bf52b214bfcc9b2301e7b"
+    }
+  ],
+  "builders": [
+    {
+      "path": "paper/paper_revision_20260929_72h/prepare_document.py",
+      "bytes": 4381,
+      "sha256": "26ba5a2965e28b5a964b8035adade46128cbd87db0875e02e2e7e492009747cd"
+    },
+    {
+      "path": "paper/paper_revision_20260929_72h/build_docx.py",
+      "bytes": 8165,
+      "sha256": "daca29b33828f98a2734a7d916c0fe98709d0cf9c299b0f0f378c3ab2814c3a0"
+    },
+    {
+      "path": "paper/paper_revision_20260929_72h/draw_manuscript_auxiliary.py",
+      "bytes": 2836,
+      "sha256": "6849bd37f6ea6e5a995b4d4867148a0c0c1635fe60d17253121823441539469a"
+    },
+    {
+      "path": "paper/paper_revision_20260929_72h/record_manuscript_build.py",
+      "bytes": 5281,
+      "sha256": "c9cff9fbe855904d53c8c8dfc8eea58b17de8b4696c457827b972f8ec7ffeb89"
+    }
+  ],
+  "counts": {
+    "manuscript": {
+      "blocks": 183,
+      "equations": 24,
+      "scientific_figures": 6,
+      "tables": 6
+    },
+    "supplement": {
+      "blocks": 493,
+      "equations": 32,
+      "scientific_figures": 28,
+      "tables": 62
+    }
+  },
+  "formula_cache": "Unchanged formulas linked by exact canonical formula; six new equations rendered once; no old formula regeneration",
+  "license": "Build tools and upstream assets retain their own licenses; this record grants no new blanket publication license"
+}

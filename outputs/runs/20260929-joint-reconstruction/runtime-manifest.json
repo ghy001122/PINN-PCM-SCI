@@ -1,0 +1,21 @@
+{
+  "files": {
+    "pinn_pcm_sci/__init__.py": "f3bf1d6d9ce9d3770db32f2a2a8fb9b57f0444f6c8e9eea97eadf8dda4035641",
+    "pinn_pcm_sci/artifacts.py": "cf90905a9ce91b54d9927a67ea32d9f9965d42a3676644f60641f88e4658161b",
+    "pinn_pcm_sci/kinetics_clock.py": "34b27807365e443e21c5f8ec12d48afd9f9835721627df4e71a43de7bb01474e",
+    "pinn_pcm_sci/vo2_author_reproduction.py": "64b6837a057cdd2908b1ee26ef77616a618e47f0181012369c1cc99a70b67851",
+    "pinn_pcm_sci/vo2_joint_history.py": "b5c3322c95802f0d2bc89782c2ecedf29362a02a3feeb41ca76529bd71111dd4",
+    "pinn_pcm_sci/vo2_joint_rc.py": "dc451b89e6f4a412b44ccc000d75ca7fb5e6519bf587b66f5bebe59dad1528dc",
+    "pinn_pcm_sci/vo2_joint_lbfgs.py": "4e90ba32bc71d496018e5fdc722af66efb50864b0c7d51a3f1476ddd02b7b6f0",
+    "pinn_pcm_sci/vo2_joint_reconstruction.py": "8df518ee4c308353418073e8a295ebf666a65b84017aa76e769c17c634730186",
+    "scripts/run_vo2_joint_sprint.py": "29f4a2126f21f082682fe1b58308c541e575bc20570779d80fea0f70ebf13123",
+    "tests/test_vo2_joint_history.py": "fb463590cbe5546249011a9f772e0f72c76db9337331d0d8e1790555f96fa49b",
+    "tests/test_vo2_joint_rc.py": "13d56178bf94e3364ba87f23ac2c70f9f3d0f173ed8c79d18ceaf4d34d828058",
+    "outputs/runs/20260929-joint-reconstruction/config.json": "a4690940b0588f5d5003178c1591cf849d6c1e8e918781e81c4832afe42722e5",
+    "outputs/runs/20260929-joint-reconstruction/input.npz": "8eb1924248eb72240e30fb34a3562b176063f73907bc957ad38456d906750a4f",
+    "outputs/runs/20260929-joint-reconstruction/input-provenance.json": "645a107ddcd03d8f442bcc4536708060f4d8343fdd1ad12a0268bd3470155f33"
+  },
+  "time_utc": "2026-09-29T07:47:49.816809+00:00",
+  "source_truth_uploaded": false,
+  "remote": "/root/autodl-tmp/pinn-joint-20260929"
+}

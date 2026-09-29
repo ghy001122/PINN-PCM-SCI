@@ -1,0 +1,30 @@
+{
+  "all_valid": true,
+  "gates": {
+    "F_dyn": {
+      "current_gain_A": -1.4290244262906858e-05,
+      "current_relative_gain": -0.13937253217048048,
+      "current_pass": false,
+      "noninferiority": {
+        "temperature_RMS_K": true,
+        "observation_RMS_V": false,
+        "thermal_RMS_W": true
+      },
+      "passed": false
+    },
+    "S_dyn": {
+      "current_gain_A": 5.486767351841915e-05,
+      "current_relative_gain": 0.3195728986584444,
+      "current_pass": true,
+      "noninferiority": {
+        "temperature_RMS_K": true,
+        "observation_RMS_V": true,
+        "thermal_RMS_W": false
+      },
+      "passed": false
+    }
+  },
+  "trigger_seed43": false,
+  "joint_increment": false,
+  "interpretation": "Prospective development comparison; no formal OOD or material validation"
+}

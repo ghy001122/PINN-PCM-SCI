@@ -1,0 +1,19 @@
+{
+  "task_id": "PCM-20260929-72H-MANUSCRIPT-JOINT-01",
+  "created_utc": "2026-09-29T07:45:06.231903+00:00",
+  "fields": [
+    "time",
+    "T0",
+    "v0",
+    "observation_time",
+    "observation_voltage",
+    "observation_weights"
+  ],
+  "source_T_R_g_H_read": false,
+  "full_source_current_read": false,
+  "common_RC_initialization_calls": 1,
+  "T0_source": "paper/paper_revision_20260928_conditional_thermal/arrays/pair_excitation-0p5ns/thermal.npz:T_P",
+  "T0_representation": "exact same saved native array for all three",
+  "file_sha256": "8eb1924248eb72240e30fb34a3562b176063f73907bc957ad38456d906750a4f",
+  "no_new_conditional_heat_response": true
+}

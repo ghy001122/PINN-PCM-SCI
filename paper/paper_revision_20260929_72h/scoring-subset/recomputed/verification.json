@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "seeds": [
+    29
+  ],
+  "mismatches": [],
+  "numpy": "2.1.1",
+  "python": "3.11.9 | packaged by Anaconda, Inc. | (main, Apr 19 2024, 16:40:41) [MSC v.1916 64 bit (AMD64)]",
+  "root_only_inputs": true,
+  "recomputed_discrete_residuals": true,
+  "new_hysteresis_replay": false,
+  "new_source_thermal_evolution": false,
+  "neural_inference": false,
+  "neural_AD": false,
+  "training": false,
+  "gate_booleans_exact": true,
+  "numerical_comparison": "Fixed FP64 arithmetic allowance only; no scientific gates relaxed"
+}
