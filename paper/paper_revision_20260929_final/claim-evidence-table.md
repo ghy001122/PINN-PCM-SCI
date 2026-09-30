@@ -11,4 +11,4 @@
 | B1：改善端口及恢复事件不保证内部相态质量。 | 完整窗口／窗外／全程指标及事件；相态与严格事件失败相邻呈现。 | 只缺W内相态；V/T及未来相态仍可用，非在线预测。 | §5 Port improvement does not guarantee internal phase reconstruction；S20 |
 | 计算代价与辅助结果限定适用范围。 | 记录的父态／校准／训练／读出计数；S21—S25完整不利结果；VO₂ N/F/S联合门失败。 | 无跨环境加速比；集总辅助结果不改写二维收益，不构成材料或新算法验证。 | §4.5 Accuracy and actual numerical work；§3.5、§6.3；§6.4 Diagnostic studies beyond the primary 2D reconstruction task；S21—S26 |
 
-**复算与访问：**新核心ROI及I/P包已完成[本地隔离复算](core-scoring/independent-verification.json)，十个候选、两协议spatial参考的30/30指标通过；全部1001时刻，原160×80相态的3872个ROI单元及fine电学读出。原科研数据根与旧bundle均禁访问，缺输入测试通过，回退0次。原完整A/B仅冻结复制，未重新裁决；未执行检查点推理、神经AD重算或再训练。基线精选稿件／源码及具名辅助评分子集已公开；本轮新包与稿件尚未公开，完整二维场／大型检查点访问仍未闭合，P03保持开放。
+**复算与访问：**新核心ROI及I/P包已完成[本地隔离复算](core-scoring/independent-verification.json)，十个候选、两协议spatial参考的30/30指标通过；全部1001时刻，原160×80相态的3872个ROI单元及fine电学读出。原科研数据根与旧bundle均禁访问，缺输入测试通过，回退0次。原完整A/B仅冻结复制，未重新裁决；未执行检查点推理、神经AD重算或再训练。提交 `545c51a` 已公开本轮稿件、代码、源表、清单和复算结果，但未包含核心FP64数组、完整二维场或大型检查点；P03保持开放。

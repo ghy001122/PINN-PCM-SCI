@@ -7,7 +7,7 @@ VERIFIED：稿件主线为E/F → common repair → F_cov → D_E/B_E → B1，�
 
 SUPPORTED_INTERPRETATION：所测试条件下，物理子问题进入状态学习的位置留下共同末端电学修复未消除的差异；不隔离VJP因果，也不建立普遍优势或材料验证。P02/P03、严格双周期和泛化等仍开放。唯一后续动作是作者终审、真实声明与数据访问安排；无自动新实验。
 
-本轮没有新训练、推理、求解、参考轨迹或GPU任务；新稿和约320 MiB核心评分包仅本地交付，待远端同步，未Git发布、公开数据或实际投稿。仅本轮已核验临时复制/排版副本按规范清理，冻结历史不覆盖。
+本轮没有新训练、推理、求解、参考轨迹或GPU任务。用户已明确授权将重要结果提交云端；精选稿件、图表、源表及复算代码／结果由提交 [`545c51a`](https://github.com/ghy001122/PINN-PCM-SCI/commit/545c51a42ecc21e725c3bce854ae22e260acb8c7) 发布至 `codex/paper-revision-results`。约320 MiB核心FP64数组、完整二维场和检查点未纳入Git，P03保持开放；无GitHub Release、DOI或实际投稿。见[发布记录](../notes/2026-09-30-final-manuscript-consolidation-release.md)。
 
 - `phase_id`: `PHK_V23_FINAL_MANUSCRIPT_CONSOLIDATION`
 - `lifecycle_state`: `CLOSED`

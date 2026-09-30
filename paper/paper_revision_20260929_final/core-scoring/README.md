@@ -23,6 +23,6 @@ The required comparison tolerance is rtol=2e−10, atol=2e−12. `independent-ve
 
 ## Access and provenance
 
-This package is a local delivery and is **not externally published**. P03 remains **OPEN**; it does not provide the full-paper arrays, checkpoints or all historical evaluation inputs. No extra ZIP copy is maintained. Source paths in provenance are archival identities, never runtime fallback paths. No GPU was used; a remote copy has not been synchronized in this task.
+Repository commit `545c51a` publishes this scorer, configuration, provenance, expected values and the completed verification/result records. It deliberately excludes `arrays/*.npz`; therefore the Git checkout alone cannot rerun the 30 metrics. The complete array package remains local and has no public DOI or reviewer URL. P03 remains **OPEN** because the release does not provide the full-paper arrays, checkpoints or all historical evaluation inputs. No extra ZIP copy is maintained. Source paths in provenance are archival identities, never runtime fallback paths. No GPU was used.
 
 The arrays are project-generated synthetic numerical evidence. No third-party experimental records, publisher figures, author-model data or model checkpoints are included. Scoring code is project-authored; this local package does not grant a new public redistribution licence. NumPy is an external dependency and is not redistributed.

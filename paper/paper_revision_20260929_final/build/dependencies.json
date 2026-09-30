@@ -35,11 +35,11 @@
     },
     {
       "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\source\\manuscript.md",
-      "sha256": "35093cda0a5129dc6f28c337f26908538d2ee4e7400e8cebb0495f39c40ca9a0"
+      "sha256": "ee42f841013c46c812bacf250512681ee7b60b9dca7cd2d6de123bcddf877e58"
     },
     {
       "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\source\\supplement.md",
-      "sha256": "5c11e0f68de37d180bb836f0d077699ecc61938cc8860b8662f4280588772b16"
+      "sha256": "beca08ded82d904a5fbd4f6c5c29858868a1eb957c20b68ee0d92f806b48b59a"
     },
     {
       "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\references.md",
@@ -64,6 +64,14 @@
     {
       "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\advisor_review_20260924\\render_with_word.ps1",
       "sha256": "5ec20d00717d483b0277728c973e326fb8cb1d361ca15ed40d8e1e6cbadbc031"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\repair_b1_atlas_figures.py",
+      "sha256": "f06561e317a94b29c6b5b947c690c2bb953d41aa1500be4f5c30d029cc79d02f"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260921\\figure-data\\physical-panels.npz",
+      "sha256": "db32ebf09ca80f3f805232ef79082b30aef85cbd59132ba35a9cbe4d29dc10cb"
     }
   ],
   "source_manifest": "build/render-manifest.json",
@@ -75,23 +83,44 @@
     "electrical_solves": 0,
     "new_reference_trajectories": 0,
     "gpu": 0,
-    "git_publication": false
+    "git_publication": true
   },
   "build_route": "Markdown -> manifest -> python-docx -> Word COM -> PDF -> Poppler PNG at 130 dpi; no LibreOffice installation.",
   "outputs": {
     "manuscript": {
       "pages": 18,
-      "pdf_bytes": 1650631,
-      "docx_bytes": 1682927,
-      "pdf_sha256": "02e51bbe7d704f9ea4e1ff47c0f3ae9dadf67225ff1ff34325fc91052fd91732",
-      "docx_sha256": "123158e57eef20aa201897dd5644f2814e11adb9a41035cbf7770eabdbec55cc"
+      "pdf_bytes": 1643787,
+      "docx_bytes": 1679114,
+      "pdf_sha256": "727ba1ef82b89de2e1e78c3405209430e009c1ab54f95783fcd723013d0ede53",
+      "docx_sha256": "8ce336f46f09316b73afc2bde16741525cfdf821ef8df86f94d853db6c4eace7"
     },
     "supplement": {
       "pages": 68,
-      "pdf_bytes": 6260857,
-      "docx_bytes": 6563237,
-      "pdf_sha256": "af74b68421d9cf6cf57d5a382cbbf030717b42cb726d9a5f04b38ada55ad6a1e",
-      "docx_sha256": "63d805ace5d7063c2375c1d036bad23cdcc46005b755fe02c79442684ef1bc05"
+      "pdf_bytes": 6228462,
+      "docx_bytes": 6535511,
+      "pdf_sha256": "e5e1f46e0223123c3e8ee33e04e8a28d8117697b8e66502e1ac760235c3741df",
+      "docx_sha256": "303e6c1d9b9c3f9f36aed91a97076f6729d89f6fdaaf890c629aed82484b743a"
     }
+  },
+  "publication": {
+    "artifact_commit": "545c51a42ecc21e725c3bce854ae22e260acb8c7",
+    "branch": "codex/paper-revision-results",
+    "selected_artifacts_only": true,
+    "fp64_core_arrays_included": false
+  },
+  "figure_layout_repair": {
+    "source": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260921\\figure-data\\physical-panels.npz",
+    "source_sha256": "db32ebf09ca80f3f805232ef79082b30aef85cbd59132ba35a9cbe4d29dc10cb",
+    "figures": [
+      "b1-temperature-t2.png",
+      "b1-temperature-error-t2.png",
+      "b1-phase-t2.png",
+      "b1-phase-error-t2.png",
+      "b1-joule_density-t2.png",
+      "b1-joule_density-error-t2.png"
+    ],
+    "model_queries": 0,
+    "solver_steps": 0,
+    "metric_recomputations": 0
   }
 }
