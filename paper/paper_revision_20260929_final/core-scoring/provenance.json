@@ -1,0 +1,413 @@
+{
+  "original_local_source_root": "D:\\Temp\\PINN-PCM-Standalone-20260926",
+  "runtime_fallback": false,
+  "phase_selection": "coarse/prediction phase is the original fine-reader Ephi input; no restriction of fine phase",
+  "reference_selection": "existing mapped-reference phase; no new restriction or reference generation",
+  "selected_inputs": [
+    {
+      "source_path": "outputs/submission-rescore-20260921/spatial/original/mapped-reference.npz",
+      "source_bytes": 180257492,
+      "selected_members": {
+        "phase": {
+          "crc32": 2949954998,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        },
+        "top_current": {
+          "crc32": 3106536565,
+          "uncompressed_member_bytes": 8136
+        },
+        "bottom_current": {
+          "crc32": 1014064640,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 1835409797,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/spatial/shorter/mapped-reference.npz",
+      "source_bytes": 180385546,
+      "selected_members": {
+        "phase": {
+          "crc32": 2173692349,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        },
+        "top_current": {
+          "crc32": 2516997973,
+          "uncompressed_member_bytes": 8136
+        },
+        "bottom_current": {
+          "crc32": 2523471400,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 682878779,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/data/original/29/E/prediction.npz",
+      "source_bytes": 244166410,
+      "selected_members": {
+        "phase": {
+          "crc32": 444987683,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/fine/original/29/E/own-readout.npz",
+      "source_bytes": 16738,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 603011625,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 374315,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/data/original/29/F/prediction.npz",
+      "source_bytes": 244140804,
+      "selected_members": {
+        "phase": {
+          "crc32": 3870066492,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/fine/original/29/F/own-readout.npz",
+      "source_bytes": 16710,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 3327265906,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 3307950972,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/data/original/43/E/prediction.npz",
+      "source_bytes": 244446598,
+      "selected_members": {
+        "phase": {
+          "crc32": 1744340902,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/fine/original/43/E/own-readout.npz",
+      "source_bytes": 16750,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 2764014169,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 2611252755,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/data/original/43/F/prediction.npz",
+      "source_bytes": 244519673,
+      "selected_members": {
+        "phase": {
+          "crc32": 165113050,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/fine/original/43/F/own-readout.npz",
+      "source_bytes": 16732,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 2362701632,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 2537660579,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/data/shorter/29/E/prediction.npz",
+      "source_bytes": 244272597,
+      "selected_members": {
+        "phase": {
+          "crc32": 670846956,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/fine/shorter/29/E/own-readout.npz",
+      "source_bytes": 16752,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 4211154294,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 2322485045,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/data/shorter/29/F/prediction.npz",
+      "source_bytes": 244284543,
+      "selected_members": {
+        "phase": {
+          "crc32": 628134089,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/fine/shorter/29/F/own-readout.npz",
+      "source_bytes": 16755,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 2782235453,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 1552671762,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/data/shorter/43/E/prediction.npz",
+      "source_bytes": 244227270,
+      "selected_members": {
+        "phase": {
+          "crc32": 3139680129,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/fine/shorter/43/E/own-readout.npz",
+      "source_bytes": 16766,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 2493114937,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 1098339740,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/data/shorter/43/F/prediction.npz",
+      "source_bytes": 244326054,
+      "selected_members": {
+        "phase": {
+          "crc32": 2153368178,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/submission-rescore-20260921/fine/shorter/43/F/own-readout.npz",
+      "source_bytes": 16760,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 503126485,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 3437303144,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/coarse/projected/prediction.npz",
+      "source_bytes": 243981720,
+      "selected_members": {
+        "phase": {
+          "crc32": 2973731779,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/fine/projected/own-readout.npz",
+      "source_bytes": 16745,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 7200888,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 3017306928,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/coarse/projected/prediction.npz",
+      "source_bytes": 244195435,
+      "selected_members": {
+        "phase": {
+          "crc32": 116111552,
+          "uncompressed_member_bytes": 102502528
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    },
+    {
+      "source_path": "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/fine/projected/own-readout.npz",
+      "source_bytes": 16740,
+      "selected_members": {
+        "bottom_current": {
+          "crc32": 3022385438,
+          "uncompressed_member_bytes": 8136
+        },
+        "joule_power": {
+          "crc32": 663311385,
+          "uncompressed_member_bytes": 8136
+        },
+        "time": {
+          "crc32": 3037574269,
+          "uncompressed_member_bytes": 8136
+        }
+      },
+      "source_kind": "project synthetic numerical evidence"
+    }
+  ],
+  "expected_metric_sources": [
+    "outputs\\submission-rescore-20260921\\primary-rescore\\results.json",
+    "outputs\\runs\\20260926-core-revision-vo2-bridge\\fcov-scoring\\results.json"
+  ],
+  "expected_source_sha256": [
+    "a8327d0f9a4868045fbbbc43e41451d05fa0feb91dddd05b187ea8422c0e0028",
+    "c486cb842a0eb0ae9d038c38ad8539816e95d92ca11cb790db87e7ede36c1600"
+  ],
+  "public_access": false,
+  "remote_copy": "NOT_SYNCED_THIS_TASK",
+  "P03": "OPEN"
+}

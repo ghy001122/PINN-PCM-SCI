@@ -1,0 +1,95 @@
+{
+  "task_id": "PCM-20260929-FINAL-MANUSCRIPT-CONSOLIDATION-01",
+  "geometry": "arrays/geometry.npz",
+  "reference": "spatial",
+  "reader": "fine",
+  "phase_grid": [
+    160,
+    80
+  ],
+  "port_grid": [
+    240,
+    120
+  ],
+  "original_ROI": {
+    "abs_x_max": 0.55,
+    "z_min": 0,
+    "z_max": 0.55
+  },
+  "references": {
+    "original": "arrays/reference-original.npz",
+    "shorter": "arrays/reference-shorter.npz"
+  },
+  "candidates": [
+    {
+      "id": "original/29/E",
+      "protocol": "original",
+      "seed": 29,
+      "role": "E",
+      "path": "arrays/original-29-E.npz"
+    },
+    {
+      "id": "original/29/F",
+      "protocol": "original",
+      "seed": 29,
+      "role": "F",
+      "path": "arrays/original-29-F.npz"
+    },
+    {
+      "id": "original/43/E",
+      "protocol": "original",
+      "seed": 43,
+      "role": "E",
+      "path": "arrays/original-43-E.npz"
+    },
+    {
+      "id": "original/43/F",
+      "protocol": "original",
+      "seed": 43,
+      "role": "F",
+      "path": "arrays/original-43-F.npz"
+    },
+    {
+      "id": "shorter/29/E",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "E",
+      "path": "arrays/shorter-29-E.npz"
+    },
+    {
+      "id": "shorter/29/F",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "F",
+      "path": "arrays/shorter-29-F.npz"
+    },
+    {
+      "id": "shorter/43/E",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "E",
+      "path": "arrays/shorter-43-E.npz"
+    },
+    {
+      "id": "shorter/43/F",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "F",
+      "path": "arrays/shorter-43-F.npz"
+    },
+    {
+      "id": "shorter/29/F_cov",
+      "protocol": "shorter",
+      "seed": 29,
+      "role": "F_cov",
+      "path": "arrays/shorter-29-F_cov.npz"
+    },
+    {
+      "id": "shorter/43/F_cov",
+      "protocol": "shorter",
+      "seed": 43,
+      "role": "F_cov",
+      "path": "arrays/shorter-43-F_cov.npz"
+    }
+  ]
+}

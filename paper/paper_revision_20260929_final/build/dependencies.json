@@ -1,0 +1,97 @@
+{
+  "project": {
+    "executable": "E:\\Python demo\\PINN-PCM-SCI\\.venv\\Scripts\\python.exe",
+    "python": "3.11.9 | packaged by Anaconda, Inc. | (main, Apr 19 2024, 16:40:41) [MSC v.1916 64 bit (AMD64)]",
+    "libraries": {
+      "numpy": "2.1.1",
+      "matplotlib": "3.11.1",
+      "pillow": "12.3.0",
+      "scipy": "1.14.1"
+    }
+  },
+  "document": {
+    "executable": "C:\\Users\\CJ\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "libraries": {
+      "python-docx": "1.2.0",
+      "pillow": "12.3.0",
+      "pypdf": "6.10.0"
+    }
+  },
+  "render": {
+    "word_path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+    "word_version": "16.0.14332.20565",
+    "poppler_path": "C:\\Users\\CJ\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdftoppm.exe",
+    "poppler_version": "pdftoppm version 26.07.0"
+  },
+  "input_identity": [
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\source\\auxiliary-section.md",
+      "sha256": "9f7ca6afbc7ccc05f6721bdc5a42e2f61b25c9cc384010848f66ea1a7538f756"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\source\\joint-result-section.md",
+      "sha256": "9ab7ba51b576975cd90017fb432002fa83ae1d76a92bd70b4e730c0dec3160fb"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\source\\manuscript.md",
+      "sha256": "35093cda0a5129dc6f28c337f26908538d2ee4e7400e8cebb0495f39c40ca9a0"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\source\\supplement.md",
+      "sha256": "5c11e0f68de37d180bb836f0d077699ecc61938cc8860b8662f4280588772b16"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\references.md",
+      "sha256": "b2ea74421c403ca9760d3b7503f52fbffb65740a220bf52b214bfcc9b2301e7b"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\prepare_document.py",
+      "sha256": "facc818362faa3d06e633a4e34c0b5fcc68784d9797a4a0cd30382feb7a75407"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\build_docx.py",
+      "sha256": "ef41496d3df8478c02e957977327da149ba6aa8666227d2218a3a7712c0f143f"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\render_documents.ps1",
+      "sha256": "f96c0c42f4dc716bd82380daee64364494bd88e1ceea72d2ad5ef0731fccbfa3"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\paper_revision_20260929_final\\build_interface_evidence.py",
+      "sha256": "aedde3e513b818386db541e12f59028c2ff1bde57845ee7eb0ebe42da78c50ed"
+    },
+    {
+      "path": "E:\\Python demo\\PINN-PCM-SCI\\paper\\advisor_review_20260924\\render_with_word.ps1",
+      "sha256": "5ec20d00717d483b0277728c973e326fb8cb1d361ca15ed40d8e1e6cbadbc031"
+    }
+  ],
+  "source_manifest": "build/render-manifest.json",
+  "numeric_sources": "tables/interface-evidence-sources.json",
+  "table_and_figure_inputs": "Tables and image paths are enumerated by the source manifest; frozen historical assets are copied without changing numerical content.",
+  "operations": {
+    "new_training": 0,
+    "neural_queries": 0,
+    "electrical_solves": 0,
+    "new_reference_trajectories": 0,
+    "gpu": 0,
+    "git_publication": false
+  },
+  "build_route": "Markdown -> manifest -> python-docx -> Word COM -> PDF -> Poppler PNG at 130 dpi; no LibreOffice installation.",
+  "outputs": {
+    "manuscript": {
+      "pages": 18,
+      "pdf_bytes": 1650631,
+      "docx_bytes": 1682927,
+      "pdf_sha256": "02e51bbe7d704f9ea4e1ff47c0f3ae9dadf67225ff1ff34325fc91052fd91732",
+      "docx_sha256": "123158e57eef20aa201897dd5644f2814e11adb9a41035cbf7770eabdbec55cc"
+    },
+    "supplement": {
+      "pages": 68,
+      "pdf_bytes": 6260857,
+      "docx_bytes": 6563237,
+      "pdf_sha256": "af74b68421d9cf6cf57d5a382cbbf030717b42cb726d9a5f04b38ada55ad6a1e",
+      "docx_sha256": "63d805ace5d7063c2375c1d036bad23cdcc46005b755fe02c79442684ef1bc05"
+    }
+  }
+}

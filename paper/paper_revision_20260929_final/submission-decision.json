@@ -1,0 +1,64 @@
+{
+  "task_id": "PCM-20260929-FINAL-MANUSCRIPT-CONSOLIDATION-01",
+  "review_date": "2026-09-29",
+  "formal_review_instance": 1,
+  "decision": "STOP_SCIENTIFIC_DEVELOPMENT",
+  "question_count": 5,
+  "all_questions_pass": true,
+  "reviewed_source": "source/manuscript.md",
+  "reviewed_figure": "figures/electrical-interface-effects.png",
+  "locked_numeric_source": "tables/interface-effects-full.csv",
+  "full_figure_visually_inspected": true,
+  "new_scientific_computation": false,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Are the E/F B advantages after common repair and the A failures explicit?",
+      "result": "PASS",
+      "evidence": "All four paired E/F comparisons retain B; original/43 and shorter/43 explicitly fail A. Continuous phase improvements do not replace full A decisions, and sensitivity records are not independent runs.",
+      "locations": ["4.1 Four paired full-label comparisons", "Figure 2A", "Table 2"]
+    },
+    {
+      "id": 2,
+      "question": "Does the advantage persist against F_cov without a single-factor spatial, temporal or VJP causal claim?",
+      "result": "PASS",
+      "evidence": "Two valid endpoints retain E advantages; spatial/fine current reductions are 52.68% and 66.55%. The spatial support and temporal measure change together; F_cov/F adverse support metrics and failed original A/B decisions remain visible.",
+      "locations": ["4.2 Coverage-enhanced soft electrical control", "Figure 2B"]
+    },
+    {
+      "id": 3,
+      "question": "Are D_E and B_E actively presented as main-text counterexamples?",
+      "result": "PASS",
+      "evidence": "D_E improves the selected phase and port errors while retaining electrical feedback. B_E reverses current/power directions for original/43/fine under old and refined references; the opposite spatial-reference direction and original false A/B decisions remain explicit.",
+      "locations": ["4.3 Matched removal of the interior residual package", "4.4 The strong interpolation counterexample", "Figure 2C/D", "Table 4"]
+    },
+    {
+      "id": 4,
+      "question": "Are unqualified VJP causality, universal superiority and material-validation claims absent?",
+      "result": "PASS",
+      "evidence": "Claims are bounded to a synthetic two-dimensional known-model configuration comparison; co-varying initialization, variables, enforcement, time support and gradients are disclosed. Auxiliary fitted VO2 lumped-model results are not material validation. Actual work counts are not converted into speed or equal-cost superiority.",
+      "locations": ["Abstract", "1 Introduction", "3.3", "3.4", "4.5 Accuracy and actual numerical work", "6.3 What the experiment identifies", "6.4 Diagnostic studies beyond the primary 2D reconstruction task", "7 Conclusion"]
+    },
+    {
+      "id": 5,
+      "question": "Can Abstract, Introduction contributions, Figure 2 with its caption and Conclusion alone explain why the training-time solve matters?",
+      "result": "PASS",
+      "actual_one_sentence_readout": "在所测二维重构任务中，训练时将电学求解与T/φ状态学习耦合的配置留下了共同末端修复不能消除的E/F及E/F_cov差异，因此训练接口影响超出了最终电学读出，而D_E与B_E反例限定了这一结论的适用范围。",
+      "locations": ["Abstract", "1 Introduction: central question and contribution paragraph", "Figure 2A-D and full caption", "7 Conclusion"],
+      "numeric_status": "VERIFIED",
+      "interface_interpretation_status": "SUPPORTED_INTERPRETATION"
+    }
+  ],
+  "substantive_corrections_required": [],
+  "pending_delivery_checks_not_research_gates": [
+    "Final PDF/DOCX full-document visual checks, recorded independently",
+    "Post-manuscript core ROI phase and I/P array package and isolated rescoring, recorded independently",
+    "Actual external access, licensing and author submission metadata and approval; P03 remains open"
+  ],
+  "scope_limits": [
+    "Not journal acceptance or author submission approval",
+    "No new training, rescue scan, method route or second formal simulated review",
+    "Full Figure 2 inspection does not certify final PDF/DOCX visual quality",
+    "This review does not certify unperformed package checks or external publication"
+  ]
+}

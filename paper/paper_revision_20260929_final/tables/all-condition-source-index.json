@@ -1,0 +1,30 @@
+[
+  {
+    "source": "paper/paper_revision_20260918/tables/reader-all-effects.csv",
+    "copy": "tables/historical-reader-all-effects.csv",
+    "bytes": 119367,
+    "sha256": "a859d2fc1768a41b66fc8b5f88e2fd40c2d2569a3c0d2c10f3563cb9ea585cd0",
+    "operation": "exact historical CSV copy; no rescoring or qualification changes"
+  },
+  {
+    "source": "paper/paper_revision_20260918/tables/reader-all-decisions.csv",
+    "copy": "tables/historical-reader-all-decisions.csv",
+    "bytes": 4314,
+    "sha256": "51bb9220cc429e834eb024d42b399cce8966e41c6712488d478278c2a7af9154",
+    "operation": "exact historical CSV copy; no rescoring or qualification changes"
+  },
+  {
+    "source": "paper/paper_revision_20260926_core/tables/fcov-all-effects.csv",
+    "copy": "tables/historical-fcov-all-effects.csv",
+    "bytes": 57884,
+    "sha256": "dfb8b8cef8f61180eb0fdc34f7c001a53279e881bb66f7748d4b4a02b69e5e0f",
+    "operation": "exact historical CSV copy; no rescoring or qualification changes"
+  },
+  {
+    "source": "paper/paper_revision_20260926_core/tables/fcov-all-decisions.csv",
+    "copy": "tables/historical-fcov-all-decisions.csv",
+    "bytes": 1057,
+    "sha256": "00fbc7d7bfe9ec01516a3229124bc122a1ff60d56034019e95e0c1f2442ba4e6",
+    "operation": "exact historical CSV copy; no rescoring or qualification changes"
+  }
+]

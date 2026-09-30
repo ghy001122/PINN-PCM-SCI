@@ -1,3 +1,22 @@
+<!-- FINAL29_CURRENT_BEGIN -->
+# 当前：最终成稿与核心数组复算已收口
+
+PCM-20260929-FINAL-MANUSCRIPT-CONSOLIDATION-01完成授权范围：18页连续主稿、68页完整补充，新四面板图、完整精度比较及收益—代价表。正式五问裁决5/5 PASS，STOP SCIENTIFIC DEVELOPMENT。见[本轮交付入口](../../paper/paper_revision_20260929_final/README.md)与[收口报告](../../paper/paper_revision_20260929_final/delivery-report.md)。
+
+VERIFIED：稿件主线为E/F → common repair → F_cov → D_E/B_E → B1，保留全部不利结果及历史资格；核心十候选、两空间参考的ROI相态/I/P在独立目录重评分30/30通过原容差，最大绝对差7.98e-17，缺输入报错且无旧路径回退。完整A/B不从三个指标重判。全部86页完成视觉检查。
+
+SUPPORTED_INTERPRETATION：所测试条件下，物理子问题进入状态学习的位置留下共同末端电学修复未消除的差异；不隔离VJP因果，也不建立普遍优势或材料验证。P02/P03、严格双周期和泛化等仍开放。唯一后续动作是作者终审、真实声明与数据访问安排；无自动新实验。
+
+本轮没有新训练、推理、求解、参考轨迹或GPU任务；新稿和约320 MiB核心评分包仅本地交付，待远端同步，未Git发布、公开数据或实际投稿。仅本轮已核验临时复制/排版副本按规范清理，冻结历史不覆盖。
+
+- `phase_id`: `PHK_V23_FINAL_MANUSCRIPT_CONSOLIDATION`
+- `lifecycle_state`: `CLOSED`
+- `blocker_id`: `NONE`
+- `claim_status`: `VERIFIED_MANUSCRIPT_AND_SAVED_ARRAY_RESCORING`
+- `next_research_execution_authorized`: `false`
+
+<!-- FINAL29_CURRENT_END -->
+
 <!-- JOINT72_CURRENT_BEGIN -->
 # 当前：72小时成稿与联合重构已收口
 
@@ -7,11 +26,11 @@ VERIFIED：N/F/S完整电流联合RMS为116.823/102.533/171.691 μA。N比F差13
 
 SUPPORTED_INTERPRETATION：本次固定辅助神经消元原型未建立所需联合增量，原二维E/F和E/F_cov配置证据不变。UNKNOWN：普遍算法、formal OOD、实验/材料验证。P02/P03及严格双周期等旧未闭合项保持开放。唯一下一动作是作者终审及数据访问安排，无自动新训练或路线。用户随后明确授权将精选稿件、独立评分包、源码和紧凑运行证据提交至 `codex/paper-revision-results`；成果提交为 [`f4e6202`](https://github.com/ghy001122/PINN-PCM-SCI/commit/f4e6202487af65756c6fcea896dec353172a7902)，远端已核验，见[发布记录](../notes/2026-09-29-joint-reconstruction-manuscript-release.md)。大型检查点和重复端点数组未公开，P03保持开放；无DOI、GitHub Release、邮件或投稿。
 
-- `phase_id`: `PHK_V23_72H_MANUSCRIPT_JOINT_RECONSTRUCTION`
-- `lifecycle_state`: `CLOSED`
-- `blocker_id`: `NONE`
-- `claim_status`: `VERIFIED_BOUNDED_JOINT_INCREMENT_NOT_ESTABLISHED`
-- `next_research_execution_authorized`: `false`
+- `historical_phase_id`: `PHK_V23_72H_MANUSCRIPT_JOINT_RECONSTRUCTION`
+- `historical_lifecycle_state`: `CLOSED`
+- `historical_blocker_id`: `NONE`
+- `historical_claim_status`: `VERIFIED_BOUNDED_JOINT_INCREMENT_NOT_ESTABLISHED`
+- `historical_next_research_execution_authorized`: `false`
 
 <!-- JOINT72_CURRENT_END -->
 

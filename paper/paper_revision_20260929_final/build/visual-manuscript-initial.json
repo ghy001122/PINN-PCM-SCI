@@ -1,0 +1,37 @@
+{
+  "document": "manuscript",
+  "pass": "initial",
+  "pages_actually_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "reviewer": "root",
+  "findings": [
+    {
+      "pages": [
+        10,
+        11
+      ],
+      "severity": "minor_layout",
+      "issue": "The two-row Table 3 splits over two pages; retain header and both rows together in final export."
+    }
+  ],
+  "other_pages": "Readable figures, equations, repeated table headers, complete content; no clipping or overlap.",
+  "rebuild_required": true,
+  "page_identities": "initial-page-images.json"
+}

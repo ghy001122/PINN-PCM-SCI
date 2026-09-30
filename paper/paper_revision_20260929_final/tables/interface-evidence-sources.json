@@ -1,0 +1,142 @@
+{
+  "status": "VERIFIED_EXISTING_RECORD_DERIVATION",
+  "title": "What the electrical training interface changes—and what it does not",
+  "selections": "A: original/shorter x 29/43; B/C: shorter x 29/43; A-C spatial/fine; D: original/43/fine x old/refined/spatial",
+  "metric_rows": 33,
+  "paired_conditions": 11,
+  "metric_names": [
+    "Ephi",
+    "bottom_current_NRMSE",
+    "power_trace_NRMSE"
+  ],
+  "branch_cost_records": 10,
+  "separate_stage_records": 21,
+  "delta": "control minus E; positive favors E",
+  "qualification": "copied saved A/B; no metric subset re-adjudication",
+  "no_new_scoring": true,
+  "no_model_calls": true,
+  "no_solves": true,
+  "interpretation": "configuration-level comparisons; mixed-measure coverage enhancement, no isolated VJP attribution",
+  "timing_comparison": "not established; no wall-time speedup claim",
+  "inputs": {
+    "paper/paper_revision_20260918/tables/reader-all-effects.csv": {
+      "sha256": "a859d2fc1768a41b66fc8b5f88e2fd40c2d2569a3c0d2c10f3563cb9ea585cd0",
+      "bytes": 119367
+    },
+    "paper/paper_revision_20260926_core/tables/fcov-all-effects.csv": {
+      "sha256": "dfb8b8cef8f61180eb0fdc34f7c001a53279e881bb66f7748d4b4a02b69e5e0f",
+      "bytes": 57884
+    },
+    "paper/paper_revision_20260918/tables/reader-all-decisions.csv": {
+      "sha256": "51bb9220cc429e834eb024d42b399cce8966e41c6712488d478278c2a7af9154",
+      "bytes": 4314
+    },
+    "paper/paper_revision_20260926_core/tables/fcov-all-decisions.csv": {
+      "sha256": "00fbc7d7bfe9ec01516a3229124bc122a1ff60d56034019e95e0c1f2442ba4e6",
+      "bytes": 1057
+    },
+    "paper/paper_v31/evidence/public-execution-summary.json": {
+      "sha256": "aa82c1ddb9557c832fd2dfea937d33650afbe5c857f10e711a18cf75c38ab2e3",
+      "bytes": 1277
+    },
+    "outputs/runs/20260926-core-revision-vo2-bridge/environment.json": {
+      "sha256": "193c1bf82095663fbc42655d90b27ddfd152d198fe29e48ebc5ef2cd1a2fbca2",
+      "bytes": 200
+    },
+    "paper/paper_v31/evidence/confirmation/seed-29/E/terminal.json": {
+      "sha256": "5891cf7b6bd8ca4f1e462478d9ab4ef0f7cca60337018fc6a03f893201802468",
+      "bytes": 1069
+    },
+    "paper/paper_v31/evidence/confirmation/seed-29/F_raw/terminal.json": {
+      "sha256": "71b3b7426d3f77c315012ab711dce6c135125ccbaf5193232dbb03da7e087977",
+      "bytes": 1204
+    },
+    "paper/paper_v31/evidence/confirmation/seed-43/E/terminal.json": {
+      "sha256": "472ad2e7ded11ebdce8bfcc1936f82cdf9048c243d0d80d1eabc325bca9ab260",
+      "bytes": 1087
+    },
+    "paper/paper_v31/evidence/confirmation/seed-43/F_raw/terminal.json": {
+      "sha256": "b568a211003c351a8dfe77d0c0f9183329c410692ce28b92c4ff31ef4d73f22f",
+      "bytes": 1222
+    },
+    "paper/paper_v32/evidence/seed-29/E/terminal.json": {
+      "sha256": "61f15a59376be361e28bcf543cd2f0232a44919de111990b12f1a45def7b4489",
+      "bytes": 1089
+    },
+    "paper/paper_v32/evidence/seed-29/F_raw/terminal.json": {
+      "sha256": "918287c30228e4ce9292fa69ba9ddb6d14b9783c965a20fc220c819828d6d0b3",
+      "bytes": 1222
+    },
+    "paper/paper_v32/evidence/seed-43/E/terminal.json": {
+      "sha256": "d1b07af7a4211f238f5a32b43aa03741909057f49458d73c599ca176ce863189",
+      "bytes": 1071
+    },
+    "paper/paper_v32/evidence/seed-43/F_raw/terminal.json": {
+      "sha256": "ace2dc7a44a849aecd1d8a161b29d1aca4ddfc2d936a21b0a4274ace757edafa",
+      "bytes": 1204
+    },
+    "paper/paper_revision_20260926_core/tables/fcov-work.csv": {
+      "sha256": "e1e2f12d41e0a653aaf62962ba9a8188561494e49d994e2461b6e304d7039bc9",
+      "bytes": 561
+    },
+    "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/terminal.json": {
+      "sha256": "46ea055d407fd6cd5013c21b49ed179e73955f8d5e54cc4273217a97bfc59298",
+      "bytes": 1344
+    },
+    "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/terminal.json": {
+      "sha256": "10aef47c9c615e6f404030f52f0f7b3ce4a62c24d2f36123f6d8d318aaf8c764",
+      "bytes": 1364
+    },
+    "paper/paper_v32/evidence/execution-summary.json": {
+      "sha256": "a50ce73dae5ecd1672f031a1f55a5b01084091c4b4c94998990fbc0be9b94697",
+      "bytes": 14309
+    },
+    "paper/paper_v32/tables/common-parents-and-calibration.csv": {
+      "sha256": "625af966fad74825c306e2496591be6538db267afd3c2638b4d2e632814c7e90",
+      "bytes": 822
+    },
+    "paper/paper_v31/evidence/confirmation/seed-29/calibration.json": {
+      "sha256": "625311e1527c2eb42bba916f3a9392c44c96cdb3d54e29f85d705afe7b14b256",
+      "bytes": 1091
+    },
+    "paper/paper_v31/evidence/confirmation/seed-43/calibration.json": {
+      "sha256": "b756b51ea0e5725b9e8f361068c5230b435864e32d5c2f2e643c41736f231011",
+      "bytes": 1086
+    },
+    "paper/paper_v32/evidence/seed-29/calibration.json": {
+      "sha256": "39added7d893ce21bf6b3d6471cd4aee1b21339417661c01167d8ed8729bd331",
+      "bytes": 1089
+    },
+    "paper/paper_v32/evidence/seed-43/calibration.json": {
+      "sha256": "6d21e34558f96772988540d04fe374a81d1f816c0b355eebcd51e290445e13dd",
+      "bytes": 1090
+    },
+    "paper/paper_v31/tables/clean-execution.csv": {
+      "sha256": "9fb2f9d062dce65612c08f80159abd486dcaa80ff65bde902a1c4ee5037bb7bf",
+      "bytes": 396
+    },
+    "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/coarse/readers-complete.json": {
+      "sha256": "0f99d2d2104199d3e82200c380684886cf9db605fe8f0de5dac8eac066c916b1",
+      "bytes": 245
+    },
+    "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/fine/readers-complete.json": {
+      "sha256": "0f99d2d2104199d3e82200c380684886cf9db605fe8f0de5dac8eac066c916b1",
+      "bytes": 245
+    },
+    "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/coarse/readers-complete.json": {
+      "sha256": "0f99d2d2104199d3e82200c380684886cf9db605fe8f0de5dac8eac066c916b1",
+      "bytes": 245
+    },
+    "outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/fine/readers-complete.json": {
+      "sha256": "9e30e79e1cb82d297ee46b8cb09824007ead96818fb06c98dd9e04f256c6a149",
+      "bytes": 245
+    }
+  },
+  "validation": {
+    "unique_source_rows": true,
+    "saved_difference_consistency": true,
+    "saved_relative_effect_consistency": true,
+    "original_qualification_copied": true,
+    "shorter_direct_counters_match_aggregate": true
+  }
+}

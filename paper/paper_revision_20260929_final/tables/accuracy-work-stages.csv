@@ -1,0 +1,22 @@
+protocol,seed,role,stage,adam,lbfgs_evaluations,lbfgs_accepted,forward_solves,adjoint_solves,source,scope,discarded_forward_upper_bound
+original,29,shared parent,parent,2400,600,,,,paper/paper_v32/tables/common-parents-and-calibration.csv,"one parent shared by E/F; shorter parents reused by F_cov, not retrained",
+original,43,shared parent,parent,2400,600,,,,paper/paper_v32/tables/common-parents-and-calibration.csv,"one parent shared by E/F; shorter parents reused by F_cov, not retrained",
+shorter,29,shared parent,parent,2400,600,,,,paper/paper_v32/tables/common-parents-and-calibration.csv,"one parent shared by E/F; shorter parents reused by F_cov, not retrained",
+shorter,43,shared parent,parent,2400,600,,,,paper/paper_v32/tables/common-parents-and-calibration.csv,"one parent shared by E/F; shorter parents reused by F_cov, not retrained",
+original,29,shared calibration,calibration,0,0,,50,0,paper/paper_v31/evidence/confirmation/seed-29/calibration.json,"one shared calibration; F_cov inherits original scales, no recalibration",
+original,43,shared calibration,calibration,0,0,,50,0,paper/paper_v31/evidence/confirmation/seed-43/calibration.json,"one shared calibration; F_cov inherits original scales, no recalibration",
+shorter,29,shared calibration,calibration,0,0,,50,0,paper/paper_v32/evidence/seed-29/calibration.json,"one shared calibration; F_cov inherits original scales, no recalibration",
+shorter,43,shared calibration,calibration,0,0,,50,0,paper/paper_v32/evidence/seed-43/calibration.json,"one shared calibration; F_cov inherits original scales, no recalibration",
+original,29,E,historical_projected_readout,,,,278,0,paper/paper_v31/tables/clean-execution.csv,one historical readout per endpoint; not a measured total for both later common readers,
+original,29,F,historical_projected_readout,,,,278,0,paper/paper_v31/tables/clean-execution.csv,one historical readout per endpoint; not a measured total for both later common readers,
+original,43,E,historical_projected_readout,,,,278,0,paper/paper_v31/tables/clean-execution.csv,one historical readout per endpoint; not a measured total for both later common readers,
+original,43,F,historical_projected_readout,,,,278,0,paper/paper_v31/tables/clean-execution.csv,one historical readout per endpoint; not a measured total for both later common readers,
+shorter,aggregate,E/F/B_E,historical_projected_readout,,,,1390,0,paper/paper_v32/evidence/execution-summary.json#/totals,1390 aggregate: four endpoints plus one shared B_E; not allocated to individual endpoints,
+shorter,29,F_cov,common_readout_coarse,,,,278,0,outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/coarse/readers-complete.json,completed powered-time sparse solves; all 1001 times saved,
+shorter,29,F_cov,discarded_readout_coarse,,,,,,outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/coarse/readers-complete.json,"upper bound for discarded in-flight work, not an additional completed solve count",0
+shorter,29,F_cov,common_readout_fine,,,,278,0,outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/fine/readers-complete.json,completed powered-time sparse solves; all 1001 times saved,
+shorter,29,F_cov,discarded_readout_fine,,,,,,outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-29/F_cov/fine/readers-complete.json,"upper bound for discarded in-flight work, not an additional completed solve count",0
+shorter,43,F_cov,common_readout_coarse,,,,278,0,outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/coarse/readers-complete.json,completed powered-time sparse solves; all 1001 times saved,
+shorter,43,F_cov,discarded_readout_coarse,,,,,,outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/coarse/readers-complete.json,"upper bound for discarded in-flight work, not an additional completed solve count",0
+shorter,43,F_cov,common_readout_fine,,,,278,0,outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/fine/readers-complete.json,completed powered-time sparse solves; all 1001 times saved,
+shorter,43,F_cov,discarded_readout_fine,,,,,,outputs/runs/20260926-core-revision-vo2-bridge/fcov/seed-43/F_cov/fine/readers-complete.json,"upper bound for discarded in-flight work, not an additional completed solve count",1

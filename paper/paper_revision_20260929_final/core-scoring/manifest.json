@@ -1,0 +1,113 @@
+{
+  "files": [
+    {
+      "path": "arrays/geometry.npz",
+      "bytes": 12646,
+      "sha256": "94702b7c8a1e1153c90ed5ace5fe38e39575147b4baa9d0b5547121701e41973"
+    },
+    {
+      "path": "arrays/original-29-E.npz",
+      "bytes": 29332691,
+      "sha256": "a7ca0c77bd21a43336d4b5efaf5c03f9be09518e889693b34f4b2b90e0422216"
+    },
+    {
+      "path": "arrays/original-29-F.npz",
+      "bytes": 29302867,
+      "sha256": "58f4544ce38bdb417a2f04e7d7e24c6e1aa2cb952deb55481dbe32636e5ed4c5"
+    },
+    {
+      "path": "arrays/original-43-E.npz",
+      "bytes": 29374781,
+      "sha256": "833fab6fb6754c82d3d4c7091d8b3818b9b9b415cb7dd386346178be94b85be7"
+    },
+    {
+      "path": "arrays/original-43-F.npz",
+      "bytes": 29362859,
+      "sha256": "c56d2577bdbbcb283ee6a465e2b1717d9671260963a6355e54e6929dbd2ed41b"
+    },
+    {
+      "path": "arrays/reference-original.npz",
+      "bytes": 21019018,
+      "sha256": "b75703aeabec8143e4b4e648b98091812c74236bdcb748df2d17fe240eb71ab6"
+    },
+    {
+      "path": "arrays/reference-shorter.npz",
+      "bytes": 21069248,
+      "sha256": "6fcead58a3133fb482e0f68df0efee8a59a5e2f10c3c4853873e695d334e6acd"
+    },
+    {
+      "path": "arrays/shorter-29-E.npz",
+      "bytes": 29262826,
+      "sha256": "89673603c31a22a458d6a2ae2577ba227ca849f6d8da04a661fdec9f6c09c74e"
+    },
+    {
+      "path": "arrays/shorter-29-F.npz",
+      "bytes": 29316498,
+      "sha256": "11ff761611ead5ce3ce0a03d4e02a1e3db928ae80cc28c20f97fd0d67fc12c8b"
+    },
+    {
+      "path": "arrays/shorter-29-F_cov.npz",
+      "bytes": 29298207,
+      "sha256": "d88215aefba47d88a3fac55aad30db94f194df738e4d1f725e6b9cec1cfa4ebd"
+    },
+    {
+      "path": "arrays/shorter-43-E.npz",
+      "bytes": 29298619,
+      "sha256": "0b80cc103179fa11f3425fe13308c188cae08ca782a36062b316974c0426e329"
+    },
+    {
+      "path": "arrays/shorter-43-F.npz",
+      "bytes": 29287835,
+      "sha256": "f0b439ab60848a0a5aa5b6bc4baa5d3223def42fbdc1a3416b84264de785f79b"
+    },
+    {
+      "path": "arrays/shorter-43-F_cov.npz",
+      "bytes": 29344739,
+      "sha256": "77f6882991c6e27c397bbe79cf19c23f638cb65e345b11d91a59b377bb806677"
+    },
+    {
+      "path": "config.json",
+      "bytes": 2050,
+      "sha256": "d1a56b9a4664fd9f4759966c4df1be98c19b5b6800e566562d408d4c0aa72183"
+    },
+    {
+      "path": "expected.json",
+      "bytes": 10772,
+      "sha256": "5a0c9cb5a8db7534fc0dc1bc12068154b0a5d111c64fe5000286756eba9eb9ce"
+    },
+    {
+      "path": "frozen-metric-excerpt.py",
+      "bytes": 1041,
+      "sha256": "f1e7e33e2e94c6cb89b49c313a1c6f8624e7e67a4e3ad22c3c83b022da4c522a"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 13006,
+      "sha256": "6c189e724041651195ac7aeb119b7a913217b775920e5dafe1f69de8b1bbddd8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3109,
+      "sha256": "1674917c931e24fe455f9890512174e1d7ce6384086cbcc81df2156b0064e0cc"
+    },
+    {
+      "path": "score.py",
+      "bytes": 6976,
+      "sha256": "b66d9aeb2560c172744571f479dc222ca06d1c8053e5cf57e36170d3c1e43cfd"
+    },
+    {
+      "path": "verify_isolated.py",
+      "bytes": 3855,
+      "sha256": "3ac0e5bde37921961042fd41184522e0dd385e86fa345caac43708ab6e679237"
+    }
+  ],
+  "total_input_bytes": 335323643,
+  "format": "FP64 lossless NPZ",
+  "candidates": 10,
+  "references": 2,
+  "time_nodes": 1001,
+  "roi_cells": 3872,
+  "expected_primary_metrics": 30,
+  "publication": "LOCAL_NOT_PUBLIC",
+  "P03": "OPEN"
+}

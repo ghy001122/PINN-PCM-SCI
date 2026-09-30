@@ -1,0 +1,692 @@
+{
+  "status": "PASS_SAVED_ROI_AND_PORT_ARRAY_RESCORING",
+  "candidates": 10,
+  "checked_metrics": 30,
+  "reference": "spatial",
+  "electrical_reader": "fine",
+  "phase_grid": [
+    160,
+    80
+  ],
+  "roi_cells": 3872,
+  "saved_times": 1001,
+  "time_window": [
+    0,
+    2.5
+  ],
+  "rtol": 2e-10,
+  "atol": 2e-12,
+  "maximum_absolute_difference": 7.979727989493313e-17,
+  "records": {
+    "original/29/E": {
+      "metrics": {
+        "Ephi": 0.02106206955439538,
+        "bottom_current_NRMSE": 0.008832640170095739,
+        "power_trace_NRMSE": 0.008899831732555727
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5196102371806038,
+        "reference_joule_power_RMS": 0.3598780687433939
+      }
+    },
+    "original/29/F": {
+      "metrics": {
+        "Ephi": 0.02474980346122321,
+        "bottom_current_NRMSE": 0.016673330368959835,
+        "power_trace_NRMSE": 0.01707004469531779
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5196102371806038,
+        "reference_joule_power_RMS": 0.3598780687433939
+      }
+    },
+    "original/43/E": {
+      "metrics": {
+        "Ephi": 0.022457532935059362,
+        "bottom_current_NRMSE": 0.01597847719554664,
+        "power_trace_NRMSE": 0.016215560344076858
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5196102371806038,
+        "reference_joule_power_RMS": 0.3598780687433939
+      }
+    },
+    "original/43/F": {
+      "metrics": {
+        "Ephi": 0.025164809697257207,
+        "bottom_current_NRMSE": 0.03074835357152017,
+        "power_trace_NRMSE": 0.03182073988869371
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5196102371806038,
+        "reference_joule_power_RMS": 0.3598780687433939
+      }
+    },
+    "shorter/29/E": {
+      "metrics": {
+        "Ephi": 0.01993633340127958,
+        "bottom_current_NRMSE": 0.01015578043327777,
+        "power_trace_NRMSE": 0.010236978192969797
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5270178122387625,
+        "reference_joule_power_RMS": 0.3651402125145803
+      }
+    },
+    "shorter/29/F": {
+      "metrics": {
+        "Ephi": 0.024449647007894836,
+        "bottom_current_NRMSE": 0.022768117792109643,
+        "power_trace_NRMSE": 0.02343231001460205
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5270178122387625,
+        "reference_joule_power_RMS": 0.3651402125145803
+      }
+    },
+    "shorter/43/E": {
+      "metrics": {
+        "Ephi": 0.01976311723656697,
+        "bottom_current_NRMSE": 0.007004599587763077,
+        "power_trace_NRMSE": 0.0069469305468884334
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5270178122387625,
+        "reference_joule_power_RMS": 0.3651402125145803
+      }
+    },
+    "shorter/43/F": {
+      "metrics": {
+        "Ephi": 0.024099285343406173,
+        "bottom_current_NRMSE": 0.02983775681105972,
+        "power_trace_NRMSE": 0.030871099871096878
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5270178122387625,
+        "reference_joule_power_RMS": 0.3651402125145803
+      }
+    },
+    "shorter/29/F_cov": {
+      "metrics": {
+        "Ephi": 0.02415442984237119,
+        "bottom_current_NRMSE": 0.02146304908722207,
+        "power_trace_NRMSE": 0.021533758643275832
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5270178122387625,
+        "reference_joule_power_RMS": 0.3651402125145803
+      }
+    },
+    "shorter/43/F_cov": {
+      "metrics": {
+        "Ephi": 0.024433685881453403,
+        "bottom_current_NRMSE": 0.020942360059472677,
+        "power_trace_NRMSE": 0.02094358709755491
+      },
+      "normalizers": {
+        "reference_top_current_RMS": 0.5270178122387625,
+        "reference_joule_power_RMS": 0.3651402125145803
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "id": "original/29/E",
+      "metric": "Ephi",
+      "actual": 0.02106206955439538,
+      "expected": 0.021062069554395317,
+      "absolute_difference": 6.245004513516506e-17,
+      "passed": true
+    },
+    {
+      "id": "original/29/E",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.008832640170095739,
+      "expected": 0.008832640170095735,
+      "absolute_difference": 3.469446951953614e-18,
+      "passed": true
+    },
+    {
+      "id": "original/29/E",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.008899831732555727,
+      "expected": 0.00889983173255572,
+      "absolute_difference": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "id": "original/29/F",
+      "metric": "Ephi",
+      "actual": 0.02474980346122321,
+      "expected": 0.02474980346122313,
+      "absolute_difference": 7.979727989493313e-17,
+      "passed": true
+    },
+    {
+      "id": "original/29/F",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.016673330368959835,
+      "expected": 0.01667333036895981,
+      "absolute_difference": 2.42861286636753e-17,
+      "passed": true
+    },
+    {
+      "id": "original/29/F",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.01707004469531779,
+      "expected": 0.017070044695317803,
+      "absolute_difference": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "id": "original/43/E",
+      "metric": "Ephi",
+      "actual": 0.022457532935059362,
+      "expected": 0.022457532935059307,
+      "absolute_difference": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "id": "original/43/E",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.01597847719554664,
+      "expected": 0.015978477195546646,
+      "absolute_difference": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "id": "original/43/E",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.016215560344076858,
+      "expected": 0.016215560344076858,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "id": "original/43/F",
+      "metric": "Ephi",
+      "actual": 0.025164809697257207,
+      "expected": 0.025164809697257158,
+      "absolute_difference": 4.85722573273506e-17,
+      "passed": true
+    },
+    {
+      "id": "original/43/F",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.03074835357152017,
+      "expected": 0.030748353571520164,
+      "absolute_difference": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "id": "original/43/F",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.03182073988869371,
+      "expected": 0.03182073988869371,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "id": "shorter/29/E",
+      "metric": "Ephi",
+      "actual": 0.01993633340127958,
+      "expected": 0.01993633340127953,
+      "absolute_difference": 4.85722573273506e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/29/E",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.01015578043327777,
+      "expected": 0.010155780433277767,
+      "absolute_difference": 1.734723475976807e-18,
+      "passed": true
+    },
+    {
+      "id": "shorter/29/E",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.010236978192969797,
+      "expected": 0.010236978192969806,
+      "absolute_difference": 8.673617379884035e-18,
+      "passed": true
+    },
+    {
+      "id": "shorter/29/F",
+      "metric": "Ephi",
+      "actual": 0.024449647007894836,
+      "expected": 0.024449647007894794,
+      "absolute_difference": 4.163336342344337e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/29/F",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.022768117792109643,
+      "expected": 0.022768117792109625,
+      "absolute_difference": 1.734723475976807e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/29/F",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.02343231001460205,
+      "expected": 0.023432310014602054,
+      "absolute_difference": 3.469446951953614e-18,
+      "passed": true
+    },
+    {
+      "id": "shorter/43/E",
+      "metric": "Ephi",
+      "actual": 0.01976311723656697,
+      "expected": 0.01976311723656693,
+      "absolute_difference": 4.163336342344337e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/43/E",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.007004599587763077,
+      "expected": 0.007004599587763097,
+      "absolute_difference": 1.9949319973733282e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/43/E",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.0069469305468884334,
+      "expected": 0.006946930546888452,
+      "absolute_difference": 1.8214596497756474e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/43/F",
+      "metric": "Ephi",
+      "actual": 0.024099285343406173,
+      "expected": 0.024099285343406142,
+      "absolute_difference": 3.122502256758253e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/43/F",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.02983775681105972,
+      "expected": 0.029837756811059733,
+      "absolute_difference": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/43/F",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.030871099871096878,
+      "expected": 0.030871099871096888,
+      "absolute_difference": 1.0408340855860843e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/29/F_cov",
+      "metric": "Ephi",
+      "actual": 0.02415442984237119,
+      "expected": 0.024154429842371147,
+      "absolute_difference": 4.5102810375396984e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/29/F_cov",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.02146304908722207,
+      "expected": 0.021463049087222068,
+      "absolute_difference": 3.469446951953614e-18,
+      "passed": true
+    },
+    {
+      "id": "shorter/29/F_cov",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.021533758643275832,
+      "expected": 0.02153375864327583,
+      "absolute_difference": 3.469446951953614e-18,
+      "passed": true
+    },
+    {
+      "id": "shorter/43/F_cov",
+      "metric": "Ephi",
+      "actual": 0.024433685881453403,
+      "expected": 0.02443368588145337,
+      "absolute_difference": 3.469446951953614e-17,
+      "passed": true
+    },
+    {
+      "id": "shorter/43/F_cov",
+      "metric": "bottom_current_NRMSE",
+      "actual": 0.020942360059472677,
+      "expected": 0.020942360059472677,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "id": "shorter/43/F_cov",
+      "metric": "power_trace_NRMSE",
+      "actual": 0.02094358709755491,
+      "expected": 0.02094358709755491,
+      "absolute_difference": 0.0,
+      "passed": true
+    }
+  ],
+  "frozen_A_B": [
+    {
+      "protocol": "original",
+      "seed": 29,
+      "comparison": "E_vs_F",
+      "reference": "spatial",
+      "reader": "fine",
+      "A": {
+        "passed": true,
+        "gain": {
+          "S": true,
+          "Ephi": true
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.1405756618897254,
+          "Ephi": -0.14900053297819463,
+          "ET": -0.02747470899789071,
+          "EI": -0.4702533942146751,
+          "EV": -0.4826259942336979
+        }
+      },
+      "B": {
+        "passed": true,
+        "gain": {
+          "bottom_current_NRMSE": true,
+          "power_trace_NRMSE": true
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": true,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.47025339421456136,
+          "power_trace_NRMSE": -0.4786286801582375,
+          "S": -0.1405756618897254,
+          "Ephi": -0.14900053297819463,
+          "ET": -0.02747470899789071,
+          "EV": -0.4826259942336979,
+          "EI": -0.4702533942146751
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      },
+      "source": "outputs/submission-rescore-20260921/primary-rescore/results.json"
+    },
+    {
+      "protocol": "original",
+      "seed": 43,
+      "comparison": "E_vs_F",
+      "reference": "spatial",
+      "reader": "fine",
+      "A": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": true
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.08593562334854665,
+          "Ephi": -0.10758184920798076,
+          "ET": -0.004916574409934671,
+          "EI": -0.48034690187948326,
+          "EV": -0.4852483799517764
+        }
+      },
+      "B": {
+        "passed": true,
+        "gain": {
+          "bottom_current_NRMSE": true,
+          "power_trace_NRMSE": true
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": true,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.4803469018794463,
+          "power_trace_NRMSE": -0.49040907279976725,
+          "S": -0.08593562334854665,
+          "Ephi": -0.10758184920798076,
+          "ET": -0.004916574409934671,
+          "EV": -0.4852483799517764,
+          "EI": -0.48034690187948326
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      },
+      "source": "outputs/submission-rescore-20260921/primary-rescore/results.json"
+    },
+    {
+      "protocol": "shorter",
+      "seed": 29,
+      "comparison": "E_vs_F",
+      "reference": "spatial",
+      "reader": "fine",
+      "A": {
+        "passed": true,
+        "gain": {
+          "S": true,
+          "Ephi": true
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.12513413616310975,
+          "Ephi": -0.18459626861516296,
+          "ET": -0.0548189972845373,
+          "EI": -0.5539472992009666,
+          "EV": -0.5701694829486406
+        }
+      },
+      "B": {
+        "passed": true,
+        "gain": {
+          "bottom_current_NRMSE": true,
+          "power_trace_NRMSE": true
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": true,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.5539472992011096,
+          "power_trace_NRMSE": -0.5631255225545181,
+          "S": -0.12513413616310975,
+          "Ephi": -0.18459626861516296,
+          "ET": -0.0548189972845373,
+          "EV": -0.5701694829486406,
+          "EI": -0.5539472992009666
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      },
+      "source": "outputs/submission-rescore-20260921/primary-rescore/results.json"
+    },
+    {
+      "protocol": "shorter",
+      "seed": 43,
+      "comparison": "E_vs_F",
+      "reference": "spatial",
+      "reader": "fine",
+      "A": {
+        "passed": false,
+        "gain": {
+          "S": false,
+          "Ephi": true
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.08525644991647598,
+          "Ephi": -0.17992932342392637,
+          "ET": -0.03641296773610115,
+          "EI": -0.7652437603767032,
+          "EV": -0.7567694217534721
+        }
+      },
+      "B": {
+        "passed": true,
+        "gain": {
+          "bottom_current_NRMSE": true,
+          "power_trace_NRMSE": true
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": true,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.7652437603765591,
+          "power_trace_NRMSE": -0.7749697751004808,
+          "S": -0.08525644991647598,
+          "Ephi": -0.17992932342392637,
+          "ET": -0.03641296773610115,
+          "EV": -0.7567694217534721,
+          "EI": -0.7652437603767032
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      },
+      "source": "outputs/submission-rescore-20260921/primary-rescore/results.json"
+    },
+    {
+      "protocol": "shorter",
+      "seed": 29,
+      "comparison": "E_vs_F_cov",
+      "reference": "spatial",
+      "reader": "fine",
+      "A": {
+        "passed": true,
+        "gain": {
+          "S": true,
+          "Ephi": true
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.21465268115166425,
+          "Ephi": -0.17463034601182462,
+          "ET": -0.0443261858023768,
+          "EI": -0.5268248983631968,
+          "EV": -0.5153842841613719
+        }
+      },
+      "B": {
+        "passed": true,
+        "gain": {
+          "bottom_current_NRMSE": true,
+          "power_trace_NRMSE": true
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": true,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.5268248983633939,
+          "power_trace_NRMSE": -0.5246079255111172,
+          "S": -0.21465268115166425,
+          "Ephi": -0.17463034601182462,
+          "ET": -0.0443261858023768,
+          "EV": -0.5153842841613719,
+          "EI": -0.5268248983631968
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      },
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/fcov-scoring/results.json"
+    },
+    {
+      "protocol": "shorter",
+      "seed": 43,
+      "comparison": "E_vs_F_cov",
+      "reference": "spatial",
+      "reader": "fine",
+      "A": {
+        "passed": true,
+        "gain": {
+          "S": true,
+          "Ephi": true
+        },
+        "noninferior": {
+          "ET": true,
+          "EI": true,
+          "EV": true
+        },
+        "relative_changes": {
+          "S": -0.19088272314343563,
+          "Ephi": -0.19115284806176872,
+          "ET": -0.04707848782373064,
+          "EI": -0.6655295980076606,
+          "EV": -0.6592622997170645
+        }
+      },
+      "B": {
+        "passed": true,
+        "gain": {
+          "bottom_current_NRMSE": true,
+          "power_trace_NRMSE": true
+        },
+        "noninferior": {
+          "S": true,
+          "Ephi": true,
+          "ET": true,
+          "EV": true,
+          "EI": true
+        },
+        "relative_changes": {
+          "bottom_current_NRMSE": -0.6655295980075193,
+          "power_trace_NRMSE": -0.6683027356044715,
+          "S": -0.19088272314343563,
+          "Ephi": -0.19115284806176872,
+          "ET": -0.04707848782373064,
+          "EV": -0.6592622997170645,
+          "EI": -0.6655295980076606
+        },
+        "claim_layer": "limited device-function signal; separate from phase reconstruction and strict usability"
+      },
+      "source": "outputs/runs/20260926-core-revision-vo2-bridge/fcov-scoring/results.json"
+    }
+  ],
+  "qualification_action": "copied frozen records only; not re-adjudicated",
+  "execution": {
+    "neural_calls": 0,
+    "electrical_solves": 0,
+    "new_reference_trajectories": 0,
+    "neural_AD_recomputation": false,
+    "numpy": "2.1.1"
+  },
+  "public_access": false,
+  "P03": "OPEN"
+}

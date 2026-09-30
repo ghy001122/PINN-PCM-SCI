@@ -1,0 +1,341 @@
+{
+  "task_id": "PCM-20260929-FINAL-MANUSCRIPT-CONSOLIDATION-01",
+  "reviewer": "sprint_manuscript",
+  "reviewed_at_utc": "2026-09-29T15:08:33.598261+00:00",
+  "scope": "Word-exported supplement DOCX/PDF rendered page images 1-34; each page opened with view_image, in batches of 2-4",
+  "overall_status": "MINOR_LAYOUT_REVISION_REQUIRED",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "source_or_layout_edited": false,
+  "findings": [
+    {
+      "id": "SUPP-CAPTION-S35",
+      "severity": "minor",
+      "pages": [
+        25,
+        26
+      ],
+      "description": "Table S35 caption is split across the page boundary: it begins at page 25 foot and finishes with two lines at page 26 top, before the table. No text or numeric content is lost.",
+      "requested_action": "Keep this caption together and with the table header/first data row; recheck affected rendered pages after the local layout change.",
+      "status": "REPORTED_TO_ROOT"
+    }
+  ],
+  "other_findings": [],
+  "checks": {
+    "text_and_numeric_cells_legible": true,
+    "formula_glyphs_legible": true,
+    "no_cropped_or_overlapping_content": true,
+    "repeated_table_headers_visible": true,
+    "no_orphan_section_headings": true,
+    "scientific_figure_colorbars_and_labels_readable": true,
+    "data_access_pending_statement_not_treated_as_error": true
+  },
+  "pages": [
+    {
+      "page": 1,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-01.png",
+      "sha256": "1ae9d5f91cd8be1168bf31b0e0e939c79faddde60aab1a431a0a7b87ca44816f",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Title, navigation, primary evidence group and body readable; no orphan heading."
+    },
+    {
+      "page": 2,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-02.png",
+      "sha256": "f33ed626d836ac3b1bc57370c15b8db7c3b131a31bd1b44a899473edf5c34541",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Equations S1-S3 readable; headings have following content."
+    },
+    {
+      "page": 3,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-03.png",
+      "sha256": "a2fea5b1b98799e28de5d0265a0ff035f8a4f99e16b608bb6939efa1b3de8a79",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Equations S4a-S6 readable; Table S1 begins with caption/header/first row."
+    },
+    {
+      "page": 4,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-04.png",
+      "sha256": "578e86ad5efcd72e48c7c824a4fe205f6e34d62541115722e246b0b4bb3ab445",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Table S1 repeats header; continued rows and following methods readable."
+    },
+    {
+      "page": 5,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-05.png",
+      "sha256": "1755027792f6f433eaa0a7ad10ac63560366d6a79bcc037bbf2977a88ec03a74",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Tables S2-S3 and captions readable; no overflow."
+    },
+    {
+      "page": 6,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-06.png",
+      "sha256": "886fbc448f2a77853dd07044ca81f583198c399b8b5442502aa22c91f62d2acd",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Event Table S4 and start of S5 readable."
+    },
+    {
+      "page": 7,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-07.png",
+      "sha256": "6ec1e45b5591efc371916a09fc0c9c9815509e6259f2f28b74a2d2bc29099bac",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "S5 repeated header, Tables S6-S7 and prose readable."
+    },
+    {
+      "page": 8,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-08.png",
+      "sha256": "b5b1cdb34d9ffa8ba2f399369c718087f829acea365faa5ffb10833f98e94664",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Tables S8-S10 and cost text readable."
+    },
+    {
+      "page": 9,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-09.png",
+      "sha256": "b340e721829080a51e9d07c6455f6de4fc99df740c00dd5483af04be26f74aad",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "S10 repeats header; source/reproduction paths readable without clipping."
+    },
+    {
+      "page": 10,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-10.png",
+      "sha256": "3ddfb221f1aac5fb9b989f07f1ecfb6f175656e5ffbf0a8f1016f2a02e1ed992",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Source map table and citation/provenance prose readable."
+    },
+    {
+      "page": 11,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-11.png",
+      "sha256": "2b43d5333ad68221e35e571f8440c4e53ad7a617222ec3623bab18fbb82622af",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Historical claim matrix and outcome table readable."
+    },
+    {
+      "page": 12,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-12.png",
+      "sha256": "268740097e5beffa55a06434ee5b73cba27846d457530f4fe66e8d2106411aa2",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Reference Table S11 readable; S14/S14.1 headings have following text."
+    },
+    {
+      "page": 13,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-13.png",
+      "sha256": "b4ef01ef98ed91f211843e7f24edaea1a0586248e0cd2cea0f94bb5c0a235488",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Equations S9-S11 and Table S17 readable."
+    },
+    {
+      "page": 14,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-14.png",
+      "sha256": "78fe6fea03593490961a8157fabf239eda390a5af878d07d7cb2b0dff502f1b5",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Figure S5, caption, equation S12 and section text readable."
+    },
+    {
+      "page": 15,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-15.png",
+      "sha256": "7ef2cc0bcb19166acf8196f533c8777a3ab230d9842169316e0c6aa9e23799c4",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Tables S18-S21 readable; S21 continues with visible rows."
+    },
+    {
+      "page": 16,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-16.png",
+      "sha256": "63f593926a397be21dc94f08778bcadb32afabc97d5ab19711b87f7a75cd65f0",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "S21 repeated header and Tables S22-S23 readable; lower whitespace precedes next-page figure and is not missing content."
+    },
+    {
+      "page": 17,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-17.png",
+      "sha256": "8e4efa01d28cdae052945e3d87ff5783fdf523b95d7355ad8e58da360233d361",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Figure S6 and caption readable; equation S13 and start of S24 readable."
+    },
+    {
+      "page": 18,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-18.png",
+      "sha256": "854d36e635cd777a67be5d1f818beb0687ac18d87eec67b4fc8789b186b83887",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "S24 continued rows, Figure S7 and its caption readable."
+    },
+    {
+      "page": 19,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-19.png",
+      "sha256": "75ed8792ee2336358a9c5eb5ce186953fd4f9798debf4b0d17293f8b5a14917e",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Reader Tables S25-S26 readable."
+    },
+    {
+      "page": 20,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-20.png",
+      "sha256": "0a5aa01505db562d009d6d2495c070024bf2ab3d6f2be009f9de16f8107ee5fe",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Long S26 continuation repeats header; all cells fit within page."
+    },
+    {
+      "page": 21,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-21.png",
+      "sha256": "13003fdf6a2882097ca22747fa83ea0999be167aeb0bcb8bdbe5b92ce4be3737",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "S26 continuation header and Tables S27-S28 readable."
+    },
+    {
+      "page": 22,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-22.png",
+      "sha256": "0976d27ba99f9211c8d7144b6bb7dc034fe54ceadab3b1a84799594a3f338610",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "S19/S20/S20.1 headings and text readable."
+    },
+    {
+      "page": 23,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-23.png",
+      "sha256": "3dfb7beae9a7fcc79995c9ab9f1094cbd966722b8cea26154c7d68f96ca23b95",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "B1 Table S29 and beginning of S30 readable."
+    },
+    {
+      "page": 24,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-24.png",
+      "sha256": "97ec915ac0cb2ddb718551607658c9979ca49089671b5d6e543fca7becac74f6",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "S30 repeated header, S31 and start of S32 readable."
+    },
+    {
+      "page": 25,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-25.png",
+      "sha256": "d468fd8509182f3b3edb187417f74ade4698cfea86946e37afd48898f14b43c5",
+      "actually_viewed": true,
+      "status": "MINOR_LAYOUT_ISSUE",
+      "observation": "All data rows fit; Table S35 caption begins at page foot and splits before the table on next page."
+    },
+    {
+      "page": 26,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-26.png",
+      "sha256": "4a5f05797a204176aad8723845bbdf07d7171ef42ecd26e1d55a5c531d8f7c72",
+      "actually_viewed": true,
+      "status": "MINOR_LAYOUT_ISSUE",
+      "observation": "Table S35 caption ends in first two lines, followed by table; rest of source index/method text readable."
+    },
+    {
+      "page": 27,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-27.png",
+      "sha256": "31aefe9526767f667ef5e69d4050532822ffdbc4843c13b53dea1e973f231357",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Figures S11-S12, colorbars and captions readable."
+    },
+    {
+      "page": 28,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-28.png",
+      "sha256": "00975d337edf624ba68fbb2e94a7b0f7c621c646cd3409415cb256fb92508e25",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Figures S13-S14, labels/colorbars and captions readable."
+    },
+    {
+      "page": 29,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-29.png",
+      "sha256": "644548108b4db5228f18e6a2de206b31cc900f87a67aa38dab005bd0323570bb",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Figures S15-S16, labels/colorbars and captions readable."
+    },
+    {
+      "page": 30,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-30.png",
+      "sha256": "174b17b93b08adea8d0e655ebd4c428ea2f40efb073779b98b3b6fe57f9791f0",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Figures S17-S18, labels/colorbars and captions readable."
+    },
+    {
+      "page": 31,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-31.png",
+      "sha256": "26572a54cab092f1e903b33098ba85744ea71c843de64acf907967d7cd940565",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Figures S19-S20, labels/colorbars and captions readable."
+    },
+    {
+      "page": 32,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-32.png",
+      "sha256": "8597c72a377a3593a78f5ab1fb756a6f6b67b0f87ee67d40705a0d148eb9b2d9",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Figures S21-S22, labels/colorbars and captions readable."
+    },
+    {
+      "page": 33,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-33.png",
+      "sha256": "afb138d0cca77d9e878f989190520ab5ad5b92663f889ac221cbd8505746dd24",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "Figure S23 and caption readable; S24.1 equations and sampling contract readable."
+    },
+    {
+      "page": 34,
+      "image": "paper/paper_revision_20260929_final/build/render-supplement/page-34.png",
+      "sha256": "438da3b4a9dd7084a76f62e4bfbf0f8390409984bd9388adaff79d096a4d3692",
+      "actually_viewed": true,
+      "status": "PASS",
+      "observation": "S24.2 text and Table S24a readable; header and all visible data fit."
+    }
+  ]
+}

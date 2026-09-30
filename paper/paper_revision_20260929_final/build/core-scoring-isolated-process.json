@@ -1,0 +1,18 @@
+{
+  "returncode": 0,
+  "stdout": "{\"status\": \"PASS\", \"isolated_python\": true, \"independent_directory\": \"C:\\\\Users\\\\CJ\\\\AppData\\\\Local\\\\Temp\\\\pinn-pcm-core-scoring-594kozhn\\\\package\", \"scientific_roots_denied\": [\"E:\\\\Python demo\\\\PINN-PCM-SCI\", \"D:\\\\Temp\\\\PINN-PCM-Standalone-20260926\"], \"denial_probes_passed\": [true, true], \"runtime_exception\": \"E:\\\\Python demo\\\\PINN-PCM-SCI\\\\.venv\", \"source_fallback_attempts\": 0, \"missing_input_failed_without_fallback\": true, \"copied_input_hashes_verified\": 20, \"metric_comparison\": \"PASS_SAVED_ROI_AND_PORT_ARRAY_RESCORING\", \"checked_metrics\": 30, \"rtol\": 2e-10, \"atol\": 2e-12, \"maximum_absolute_difference\": 7.979727989493313e-17, \"frozen_qualification_action\": \"copied only; full A/B not recomputed\"}\n",
+  "stderr": "",
+  "command": [
+    "E:\\Python demo\\PINN-PCM-SCI\\.venv\\Scripts\\python.exe",
+    "-I",
+    "C:\\Users\\CJ\\AppData\\Local\\Temp\\pinn-pcm-core-scoring-594kozhn\\package\\verify_isolated.py",
+    "--root",
+    "C:\\Users\\CJ\\AppData\\Local\\Temp\\pinn-pcm-core-scoring-594kozhn\\package",
+    "--forbid-root",
+    "E:\\Python demo\\PINN-PCM-SCI",
+    "D:\\Temp\\PINN-PCM-Standalone-20260926",
+    "--runtime-root",
+    "E:\\Python demo\\PINN-PCM-SCI\\.venv"
+  ],
+  "copied_input_bytes": 335323643
+}

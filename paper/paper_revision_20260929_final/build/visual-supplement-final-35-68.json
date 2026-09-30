@@ -1,0 +1,324 @@
+{
+  "task_id": "PCM-20260929-FINAL-MANUSCRIPT-CONSOLIDATION-01",
+  "inspection_date": "2026-09-29",
+  "inspection_type": "FINAL_RENDER_VISUAL_QA",
+  "document": "supplement",
+  "final_document_page_count": 68,
+  "render_directory": "build/render-supplement",
+  "page_range": [
+    35,
+    68
+  ],
+  "pages_inspected": 34,
+  "method": "Every final page PNG was separately and actually opened with view_image after the 68-page rebuild. Earlier visual PASS results were not used to skip final pages.",
+  "overall_status": "PASS",
+  "defects": [],
+  "source_modified": false,
+  "formal_scientific_review_reopened": false,
+  "accepted_layout_observations": [
+    {
+      "pages": [
+        36,
+        45,
+        48,
+        49,
+        60
+      ],
+      "observation": "Lower-page whitespace allows the next complete figure to remain together. No missing content, orphan figure caption or clipping was seen.",
+      "action_required": false
+    },
+    {
+      "pages": [
+        36,
+        67
+      ],
+      "observation": "A continued table ends with one row on a new page; its repeated header preserves identification and readability.",
+      "action_required": false
+    },
+    {
+      "pages": [
+        68
+      ],
+      "observation": "Natural end-of-document whitespace after the complete final reference.",
+      "action_required": false
+    }
+  ],
+  "scope_limits": [
+    "Covers final supplement pages 35-68 only; pages 1-34 are assigned to the other reviewer.",
+    "No source changes, scientific rescoring or second formal simulated review were performed."
+  ],
+  "pages": [
+    {
+      "page": 35,
+      "image": "build/render-supplement/page-35.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S24a长表续页有重复表头；S24b表注、表头与数据相邻，表格无裁剪。",
+      "defects": []
+    },
+    {
+      "page": 36,
+      "image": "build/render-supplement/page-36.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S24b最后一行有重复表头；S24c完整，运行说明段落正常；页尾余白保留下一页完整空间图。",
+      "defects": []
+    },
+    {
+      "page": 37,
+      "image": "build/render-supplement/page-37.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S26和S27两组三行空间图、各自色条和图注均完整；S26标题后至少有完整引言段。",
+      "defects": []
+    },
+    {
+      "page": 38,
+      "image": "build/render-supplement/page-38.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S26a表注与十臂表及独立阶段表同页；长计数、链接与注释清楚，无行列重叠。",
+      "defects": []
+    },
+    {
+      "page": 39,
+      "image": "build/render-supplement/page-39.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "诊断分组标题和S10清楚；S12完整，S13在完整数据行后分页。",
+      "defects": []
+    },
+    {
+      "page": 40,
+      "image": "build/render-supplement/page-40.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S13续表表头及S14表注完整；密集数值仍可辨，无越界。",
+      "defects": []
+    },
+    {
+      "page": 41,
+      "image": "build/render-supplement/page-41.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S14续表有表头；S15完整，数值和列标题无重叠。",
+      "defects": []
+    },
+    {
+      "page": 42,
+      "image": "build/render-supplement/page-42.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S1完整，色条与图注清楚；S11/S12层级清楚，材料映射表在行边界续页。",
+      "defects": []
+    },
+    {
+      "page": 43,
+      "image": "build/render-supplement/page-43.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "材料表重复表头；S7/S8公式希腊字形、上下标和编号清楚。",
+      "defects": []
+    },
+    {
+      "page": 44,
+      "image": "build/render-supplement/page-44.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S13正文连续；S16表注连同表头及三行数据，未出现单独悬空表注。",
+      "defects": []
+    },
+    {
+      "page": 45,
+      "image": "build/render-supplement/page-45.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S16续页表头清楚；结果文字完整，页尾余白对应下一页整幅Figure S2。",
+      "defects": []
+    },
+    {
+      "page": 46,
+      "image": "build/render-supplement/page-46.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S2六行双列面板、轴标签、阈值线、图例与图注完整清楚。",
+      "defects": []
+    },
+    {
+      "page": 47,
+      "image": "build/render-supplement/page-47.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S3和S4完整；旋转标签与图例清楚，图注不跨页、无重叠。",
+      "defects": []
+    },
+    {
+      "page": 48,
+      "image": "build/render-supplement/page-48.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S8四面板及图例清楚；较大页尾留白对应下一幅独立完整图。",
+      "defects": []
+    },
+    {
+      "page": 49,
+      "image": "build/render-supplement/page-49.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S9四面板、微小数值注释及图注可读，页尾余白保留下一页完整Figure S10。",
+      "defects": []
+    },
+    {
+      "page": 50,
+      "image": "build/render-supplement/page-50.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S10八面板及图注完整；S21引言与底部目标公式位于页边距内。",
+      "defects": []
+    },
+    {
+      "page": 51,
+      "image": "build/render-supplement/page-51.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "相态公式的角括号、下标和希腊字符清楚；S21m所有臂文本正确换行。",
+      "defects": []
+    },
+    {
+      "page": 52,
+      "image": "build/render-supplement/page-52.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S21a完整；S21b表注、表头与四行数据共同在本页，无悬空表注。",
+      "defects": []
+    },
+    {
+      "page": 53,
+      "image": "build/render-supplement/page-53.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S21b续表表头和S21c完整；S22门函数显示公式及段落清楚。",
+      "defects": []
+    },
+    {
+      "page": 54,
+      "image": "build/render-supplement/page-54.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S22目标公式清楚；S22a表注相邻，表格在完整行后分页。",
+      "defects": []
+    },
+    {
+      "page": 55,
+      "image": "build/render-supplement/page-55.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S22a续表有表头；S22b/S22c/S22d各表注相邻，密集表格仍可读。",
+      "defects": []
+    },
+    {
+      "page": 56,
+      "image": "build/render-supplement/page-56.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S22d续表表头完整，长诊断段落无重叠或页边裁剪。",
+      "defects": []
+    },
+    {
+      "page": 57,
+      "image": "build/render-supplement/page-57.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S29六面板、图注与S23引言完整；S23a实际工作表留在一页。",
+      "defects": []
+    },
+    {
+      "page": 58,
+      "image": "build/render-supplement/page-58.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "残差和热预算表清楚；Figure S24三面板完整；S23d表注连同表头及首行。",
+      "defects": []
+    },
+    {
+      "page": 59,
+      "image": "build/render-supplement/page-59.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S23d续页表头与坐标列完整；边界表、参考误差表及正文可读。",
+      "defects": []
+    },
+    {
+      "page": 60,
+      "image": "build/render-supplement/page-60.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S23g完整表与长表注正确换行；较大留白对应下一页完整空间图。",
+      "defects": []
+    },
+    {
+      "page": 61,
+      "image": "build/render-supplement/page-61.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S25九面板及色条完整；长出口名称未越界，执行说明正常续页。",
+      "defects": []
+    },
+    {
+      "page": 62,
+      "image": "build/render-supplement/page-62.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S25标题、参数单位和希腊字形完整；S25.1公式及编号清楚。",
+      "defects": []
+    },
+    {
+      "page": 63,
+      "image": "build/render-supplement/page-63.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S25.2公式和S25a十四行角色表完整，列标题、单位及正文无重叠。",
+      "defects": []
+    },
+    {
+      "page": 64,
+      "image": "build/render-supplement/page-64.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "Figure S28三个面板、图例和时间轴完整；联合重构正文正常。",
+      "defects": []
+    },
+    {
+      "page": 65,
+      "image": "build/render-supplement/page-65.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S25.3至S25.6显示公式和编号清楚；S25b读出表完整，长表注与表格相邻。",
+      "defects": []
+    },
+    {
+      "page": 66,
+      "image": "build/render-supplement/page-66.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S25c判决表与梯度段落清楚；S25d表注、表头及两个方法行同页。",
+      "defects": []
+    },
+    {
+      "page": 67,
+      "image": "build/render-supplement/page-67.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "S25d续表有表头，S_dyn终止说明在单元格内完整换行；访问声明与参考文献起始段完整。",
+      "defects": []
+    },
+    {
+      "page": 68,
+      "image": "build/render-supplement/page-68.png",
+      "actual_view_image": true,
+      "status": "PASS",
+      "notes": "文献8至19和链接完整清楚；最后一条未截断，其后为自然文末留白。",
+      "defects": []
+    }
+  ]
+}
